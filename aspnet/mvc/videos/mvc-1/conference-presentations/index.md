@@ -1,0 +1,19 @@
+---
+uid: mvc/videos/mvc-1/conference-presentations/index
+title: Comunica con | Microsoft Docs
+author: rick-anderson
+description: Comunica con MVC ASP.NET 1
+ms.author: riande
+ms.date: 09/28/2011
+ms.assetid: 276507d5-e9bd-46ba-8e98-32a8957504fa
+msc.legacyurl: /mvc/videos/mvc-1/conference-presentations
+msc.type: chapter
+---
+<a name="talks"></a>Discussioni
+====================
+> Comunica con MVC ASP.NET 1
+
+
+- [Creazione di NerdDinner.com con Microsoft ASP.NET Model View Controller (MVC)](creating-nerddinnercom-with-microsoft-aspnet-model-view-controller-mvc.md)
+- [Framework Model View Controller per America's Next Top Model](americas-next-top-model-view-controller-framework.md)
+- [Ninja on Fire: suggerimenti per utenti avanzati](ninja-on-fire-black-belt-tips.md)
