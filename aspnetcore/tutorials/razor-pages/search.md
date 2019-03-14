@@ -1,0 +1,111 @@
+---
+title: Aggiungere la funzionalità di ricerca a pagine Razor in ASP.NET Core
+author: rick-anderson
+description: Illustra come aggiungere la funzionalità di ricerca alle pagine Razor di ASP.NET Core
+ms.author: riande
+ms.date: 12/3/2018
+uid: tutorials/razor-pages/search
+ms.openlocfilehash: 3900b33f31fef79327d01b0579208355b0bce90c
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57061518"
+---
+# <a name="add-search-to-aspnet-core-razor-pages"></a>Aggiungere la funzionalità di ricerca a pagine Razor in ASP.NET Core
+
+Di [Rick Anderson](https://twitter.com/RickAndMSFT)
+
+[!INCLUDE[](~/includes/rp/download.md)]
+
+Nelle sezioni seguenti viene aggiunta la funzionalità di ricerca di film in base al *genere* oppure al *nome*.
+
+Aggiungere le proprietà evidenziate seguenti in *Pages/Movies/Index.cshtml.cs*:
+
+[!code-csharp[](razor-pages-start/sample/RazorPagesMovie22/Pages/Movies/Index.cshtml.cs?name=snippet_newProps&highlight=11-999)]
+
+* `SearchString`: contiene il testo immesso dagli utenti nella casella di testo di ricerca. `SearchString` è decorato con l'attributo [`[BindProperty]`](/dotnet/api/microsoft.aspnetcore.mvc.bindpropertyattribute). `[BindProperty]` associa i valori modulo e le stringhe di query al nome della proprietà. `(SupportsGet = true)` è necessario per l'associazione alle richieste GET.
+* `Genres` contiene l'elenco dei generi. `Genres` consente all'utente di selezionare un genere dall'elenco. `SelectList` richiede `using Microsoft.AspNetCore.Mvc.Rendering;`
+* `MovieGenre`: contiene il genere specificato selezionato dall'utente, ad esempio "Western".
+* `Genres` e `MovieGenre` sono utilizzati più avanti in questa esercitazione.
+
+[!INCLUDE[](~/includes/bind-get.md)]
+
+Aggiornare il metodo `OnGetAsync` della pagina di indice con il codice seguente:
+
+[!code-csharp[](razor-pages-start/sample/RazorPagesMovie22/Pages/Movies/Index.cshtml.cs?name=snippet_1stSearch)]
+
+La prima riga del metodo `OnGetAsync` crea una query [LINQ](/dotnet/csharp/programming-guide/concepts/linq/) per selezionare i film:
+
+```csharp
+// using System.Linq;
+var movies = from m in _context.Movie
+             select m;
+```
+
+La query viene *solo* definita in questo punto, ma **non** viene eseguita nel database.
+
+Se la proprietà `SearchString` non è null o vuota, la query dei film viene modificata per filtrare gli elementi in base alla stringa di ricerca:
+
+[!code-csharp[](razor-pages-start/sample/RazorPagesMovie22/Pages/Movies/Index.cshtml.cs?name=snippet_SearchNull)]
+
+Il codice `s => s.Title.Contains()` è un'[espressione lambda](/dotnet/csharp/programming-guide/statements-expressions-operators/lambda-expressions). Le espressioni lambda vengono usate nelle query [LINQ](/dotnet/csharp/programming-guide/concepts/linq/) basate sul metodo come argomenti dei metodi di operatore query standard, ad esempio il metodo [Where](/dotnet/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq) o `Contains` (usato nel codice precedente). Le query LINQ non vengono eseguite al momento della definizione o della modifica chiamando un metodo, ad esempio `Where`, `Contains` o `OrderBy`. L'esecuzione della query viene invece posticipata. Per esecuzione posticipata si intende che la valutazione di un'espressione viene ritardata finché non viene eseguita l'iterazione del valore ottenuto o non viene chiamato il metodo `ToListAsync`. Per altre informazioni, vedere [Esecuzione di query](/dotnet/framework/data/adonet/ef/language-reference/query-execution).
+
+**Nota:** il metodo [Contains](/dotnet/api/system.data.objects.dataclasses.entitycollection-1.contains) viene eseguito nel database, non nel codice C#. La distinzione tra maiuscole/minuscole nella query dipende dal database e dalle regole di confronto. In SQL Server `Contains` esegue il mapping a [SQL LIKE](/sql/t-sql/language-elements/like-transact-sql) che fa distinzione tra maiuscole e minuscole. In SQLite, con le regole di confronto predefinite si fa distinzione tra maiuscole e minuscole.
+
+Passare alla pagina Movies e aggiungere una stringa di query, ad esempio `?searchString=Ghost` all'URL, ad esempio `https://localhost:5001/Movies?searchString=Ghost`. Vengono visualizzati i film filtrati.
+
+![Vista Index](search/_static/ghost.png)
+
+Se il modello di route seguente viene aggiunto alla pagina di indice, la stringa di ricerca può essere passata come segmento di URL, ad esempio `https://localhost:5001/Movies/Ghost`.
+
+```cshtml
+@page "{searchString?}"
+```
+
+Il vincolo di route precedente consente la ricerca del titolo come dati della route (un segmento URL), anziché come valore della stringa di query.  Il carattere `?` in `"{searchString?}"` indica che questo parametro di route è facoltativo.
+
+![Vista Index con la parola ghost aggiunta all'URL e un elenco restituito di due film: Ghostbusters e Ghostbusters 2](search/_static/g2.png)
+
+Il runtime di ASP.NET Core usa l'[associazione di modelli](xref:mvc/models/model-binding) per impostare il valore della proprietà `SearchString` dalla stringa di query (`?searchString=Ghost`) o dai dati della route (`https://localhost:5001/Movies/Ghost`). All'associazione di modelli non viene applicata la distinzione tra maiuscole e minuscole.
+
+Non è tuttavia possibile supporre che gli utenti modifichino l'URL per cercare un film. In questo passaggio viene aggiunta l'interfaccia utente per filtrare i film. Rimuovere il vincolo di route `"{searchString?}"`, se è stato aggiunto.
+
+Aprire il file *Pages/Movies/Index.cshtml* e aggiungere il markup `<form>` evidenziato nel codice seguente:
+
+[!code-cshtml[](razor-pages-start/sample/RazorPagesMovie22/Pages/Movies/Index2.cshtml?highlight=14-19&range=1-22)]
+
+Il tag HTML `<form>` usa gli [helper tag](xref:mvc/views/tag-helpers/intro) seguenti:
+
+* [Helper tag Form](xref:mvc/views/working-with-forms#the-form-tag-helper). Quando il modulo viene inviato, la stringa di filtro verrà inviata alla pagina *Pages/Movies/Index* tramite una stringa di query.
+* [Helper tag di input](xref:mvc/views/working-with-forms#the-input-tag-helper)
+
+Salvare le modifiche e testare il filtro.
+
+![Vista Index con la parola ghost digitata nella casella di testo del filtro del titolo](search/_static/filter.png)
+
+## <a name="search-by-genre"></a>Ricerca in base al genere
+
+Aggiornare il metodo `OnGetAsync` con il codice seguente:
+
+[!code-csharp[](razor-pages-start/sample/RazorPagesMovie22/Pages/Movies/Index.cshtml.cs?name=snippet_SearchGenre)]
+
+Il codice seguente è una query LINQ che recupera tutti i generi dal database.
+
+[!code-csharp[](razor-pages-start/sample/RazorPagesMovie22/Pages/Movies/Index.cshtml.cs?name=snippet_LINQ)]
+
+L'elenco `SelectList` di generi viene creato presentando generi distinti.
+
+[!code-csharp[](razor-pages-start/sample/RazorPagesMovie22/Pages/Movies/Index.cshtml.cs?name=snippet_SelectList)]
+
+### <a name="add-search-by-genre-to-the-razor-page"></a>Aggiungere la ricerca in base al genere alla pagina Razor
+
+Aggiornare *Index.cshtml* come indicato di seguito:
+
+[!code-cshtml[](razor-pages-start/sample/RazorPagesMovie22/Pages/Movies/IndexFormGenreNoRating.cshtml?highlight=16-18&range=1-26)]
+
+Eseguire il test dell'app effettuando una ricerca per genere, titolo del film e usando entrambi i filtri.
+
+> [!div class="step-by-step"]
+> [Precedente: Aggiornamento delle pagine](xref:tutorials/razor-pages/da1)
+> [Successivo: Aggiunta di un nuovo campo](xref:tutorials/razor-pages/new-field)
