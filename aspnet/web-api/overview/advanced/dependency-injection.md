@@ -8,12 +8,12 @@ ms.date: 01/20/2014
 ms.assetid: e3d3e7ba-87f0-4032-bdd3-31f3c1aa9d9c
 msc.legacyurl: /web-api/overview/advanced/dependency-injection
 msc.type: authoredcontent
-ms.openlocfilehash: 318a2f1c587feb360212a390bb5de7bdc127513d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d5011d42d0c2200bc782ab548f6bfa0d952f6e72
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57043868"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58420920"
 ---
 <a name="dependency-injection-in-aspnet-web-api-2"></a>Inserimento delle dipendenze in ASP.NET Web API 2
 ====================
@@ -49,7 +49,7 @@ Si noti che la classe controller dipende `ProductRepository`, e si sta consenten
 
 - Se si desidera sostituire `ProductRepository` con un'implementazione diversa, è anche necessario modificare la classe controller.
 - Se il `ProductRepository` ha dipendenze, è necessario configurare questi all'interno del controller. Per un progetto di grandi dimensioni con più controller, il codice di configurazione diventa sparsi tra il progetto.
-- È difficile allo unit test, perché il controller è hardcoded su query del database. Per uno unit test, è consigliabile usare un repository fittizi o stub, che non è possibile eseguire con la progettazione di imposta.
+- È difficile allo unit test, perché il controller è hardcoded su query del database. Per uno unit test, è consigliabile usare un repository fittizi o stub, che non è possibile eseguire con la progettazione corrente.
 
 Possiamo risolvere questi problemi dal *inserimento* il repository nel controller. In primo luogo, eseguire il refactoring di `ProductRepository` classe in un'interfaccia:
 

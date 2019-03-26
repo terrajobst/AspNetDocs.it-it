@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: f97a1145-6470-4bca-8f15-ccfb25fb903c
 msc.legacyurl: /web-forms/overview/deployment/deploying-web-applications-in-enterprise-scenarios/application-lifecycle-management-from-development-to-production
 msc.type: authoredcontent
-ms.openlocfilehash: 7cb9c949936c3af73d4c904d401c36d4d83f3e18
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 998191a21388d76fb18b59fca9bcea7a40507c86
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57045688"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425574"
 ---
 <a name="application-lifecycle-management-from-development-to-production"></a>Gestione del ciclo di vita delle applicazioni: dallo sviluppo alla produzione
 ====================
@@ -26,7 +26,7 @@ da [Jason Lee](https://github.com/jrjlee)
 > L'argomento è progettato per fornire una panoramica generale per un [serie di esercitazioni](deploying-web-applications-in-enterprise-scenarios.md) su distribuzione web aziendale. Non occorre preoccuparsi se non si ha familiarità con alcuni dei concetti descritti di seguito&#x2014;le esercitazioni che seguono forniscono informazioni dettagliate su tutte queste attività e tecniche.
 > 
 > > [!NOTE]
-> > I migliori risultati Forthe di semplicità, in questo argomento non vengono trattate aggiornamento database come parte del processo di distribuzione. Tuttavia, rendendo gli aggiornamenti incrementali per le funzionalità dei database è un requisito di molti scenari di distribuzione dell'organizzazione ed è possibile trovare istruzioni su come eseguire questa operazione più avanti in questa serie di esercitazioni. Per altre informazioni, vedere [distribuire progetti di Database](../web-deployment-in-the-enterprise/deploying-database-projects.md).
+> > Per ragioni di semplicità, in questo argomento non vengono trattate in aggiornamento database come parte del processo di distribuzione. Tuttavia, rendendo gli aggiornamenti incrementali per le funzionalità dei database è un requisito di molti scenari di distribuzione dell'organizzazione ed è possibile trovare istruzioni su come eseguire questa operazione più avanti in questa serie di esercitazioni. Per altre informazioni, vedere [distribuire progetti di Database](../web-deployment-in-the-enterprise/deploying-database-projects.md).
 
 
 ## <a name="overview"></a>Panoramica

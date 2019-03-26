@@ -8,12 +8,12 @@ ms.date: 06/12/2014
 ms.assetid: 7e97cfc3-d830-4002-8ff7-5790d1ff49e6
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/more-patterns-and-guidance
 msc.type: authoredcontent
-ms.openlocfilehash: 3de929ff7253928f2f9cd9b033ef6c643744e91c
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 87dbbc0b598a6592b511383a5487a04b302b0994
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57050798"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425665"
 ---
 <a name="more-patterns-and-guidance-building-real-world-cloud-apps-with-azure"></a>Più modelli e le indicazioni (creazione di App Cloud funzionanti con Azure)
 ====================
@@ -61,7 +61,7 @@ Video
 Esempio di codice
 
 - [Fix It applicazione che accompagna questo e-book](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4?cdn_id=2013-12-03-002).
-- [Sviluppo di servizi in Azure in c# per Visual Studio 2012 cloud](http://aka.ms/csf). Progetto scaricabile nel sito Microsoft Code Gallery include codice e documentazione sviluppati per il Microsoft Customer Advisory Team (CAT). Vengono illustrate molte delle procedure consigliate da tempo supportate la serie di video di operatore alternativo e big data di creazione e il white paper di operatore alternativo. La pagina Code Gallery contiene anche collegamenti a documentazione completa per gli autori del progetto, vedere in particolare la [raccolta di Cloud Service Fundamentals wiki](https://social.technet.microsoft.com/wiki/contents/articles/17987.cloud-service-fundamentals.aspx) collegamento nella casella blu nella parte superiore della descrizione del progetto. Questo progetto e la documentazione per tale ancora attivamente in fase di sviluppo, rendendo scelta migliore per informazioni sul numero di argomenti da white paper simili, ma meno recenti.
+- [Sviluppo di servizi in Azure in c# per Visual Studio 2012 cloud](https://aka.ms/csf). Progetto scaricabile nel sito Microsoft Code Gallery include codice e documentazione sviluppati per il Microsoft Customer Advisory Team (CAT). Vengono illustrate molte delle procedure consigliate da tempo supportate la serie di video di operatore alternativo e big data di creazione e il white paper di operatore alternativo. La pagina Code Gallery contiene anche collegamenti a documentazione completa per gli autori del progetto, vedere in particolare la [raccolta di Cloud Service Fundamentals wiki](https://social.technet.microsoft.com/wiki/contents/articles/17987.cloud-service-fundamentals.aspx) collegamento nella casella blu nella parte superiore della descrizione del progetto. Questo progetto e la documentazione per tale ancora attivamente in fase di sviluppo, rendendo scelta migliore per informazioni sul numero di argomenti da white paper simili, ma meno recenti.
 
 Documentazione stampata
 
@@ -101,7 +101,7 @@ Molti altri colleghi in Microsoft esaminato e aggiunto un commento su bozze e il
 - Edward Wu - fornito codice di esempio per il capitolo SSO.
 - Guang Yang - hanno creato gli script di automazione di PowerShell.
 
-I membri del [Advisory Council linee guida per sviluppatori Microsoft](http://aka.ms/DGAC) (DGAC) anche esaminato e aggiunto un commento su bozze:
+I membri del [Advisory Council linee guida per sviluppatori Microsoft](https://aka.ms/DGAC) (DGAC) anche esaminato e aggiunto un commento su bozze:
 
 - Jean-Luc Boucho
 - Catalin Gheorghiu

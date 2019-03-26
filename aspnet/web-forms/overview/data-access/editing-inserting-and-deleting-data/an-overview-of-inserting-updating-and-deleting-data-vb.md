@@ -8,12 +8,12 @@ ms.date: 07/17/2006
 ms.assetid: 35b40b8f-2ca8-4ab3-9c19-f361a91a3647
 msc.legacyurl: /web-forms/overview/data-access/editing-inserting-and-deleting-data/an-overview-of-inserting-updating-and-deleting-data-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 55fab6bb7a1041a14f8734a0d2ae1238b3801149
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 719999f47dea7172f32a5040c79e569d0ec41ab0
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57042958"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425905"
 ---
 <a name="an-overview-of-inserting-updating-and-deleting-data-vb"></a>Una panoramica di inserimento, aggiornamento ed eliminazione dei dati (VB)
 ====================
@@ -179,7 +179,7 @@ Il controllo GridView offre supporto predefinito per la modifica a livello di ri
 I valori assegnati per il `DeleteParameters` sono i valori del `DataKeyNames` uno o più campi per la riga è stato fatto clic sul pulsante la cui eliminazione. Pertanto è fondamentale che un controllo GridView `DataKeyNames` proprietà sia impostato correttamente. Se è presente, il `DeleteParameters` verrà assegnato un valore di `Nothing` nel passaggio 1, che a sua volta non comporterà eventuali record eliminati nel passaggio 2.
 
 > [!NOTE]
-> Il `DataKeys` raccolta viene archiviata nello stato del controllo GridView s, vale a dire che il `DataKeys` valori verranno memorizzati durante il postback anche se lo stato di visualizzazione GridView s è stato disabilitato. Tuttavia, è molto importante che lo stato di visualizzazione rimane abilitato per GridView che supportano la modifica o eliminazione (comportamento predefinito). Se si imposta la s GridView `EnableViewState` proprietà `false`, la modifica ed eliminazione comportamento funzionerà correttamente per un singolo utente, ma se sono presenti utenti simultanei, l'eliminazione dei dati, esiste la possibilità che questi utenti simultanei potrebbero accidentalmente eliminazione o modifica di record che essi t prevede. Vedere il post di blog, [avviso: Concorrenza emettere con ASP.NET 2.0 GridViews/DetailsView/FormViews che supporto la modifica e/o l'eliminazione e il cui stato di visualizzazione è disabilitato](http://scottonwriting.net/sowblog/posts/10054.aspx), per altre informazioni.
+> Il `DataKeys` raccolta viene archiviata nello stato del controllo GridView s, vale a dire che il `DataKeys` valori verranno memorizzati durante il postback anche se lo stato di visualizzazione GridView s è stato disabilitato. Tuttavia, è molto importante che lo stato di visualizzazione rimane abilitato per GridView che supportano la modifica o eliminazione (comportamento predefinito). Se si imposta la s GridView `EnableViewState` proprietà `false`, la modifica ed eliminazione comportamento funzionerà correttamente per un singolo utente, ma se sono presenti utenti simultanei, l'eliminazione dei dati, esiste la possibilità che questi utenti simultanei potrebbero accidentalmente eliminare o modificare i record che non intendono. Vedere il post di blog, [avviso: Concorrenza emettere con ASP.NET 2.0 GridViews/DetailsView/FormViews che supporto la modifica e/o l'eliminazione e il cui stato di visualizzazione è disabilitato](http://scottonwriting.net/sowblog/posts/10054.aspx), per altre informazioni.
 
 
 Questo avviso stesso si applica anche a maggior facilità ai DetailsView e FormViews.

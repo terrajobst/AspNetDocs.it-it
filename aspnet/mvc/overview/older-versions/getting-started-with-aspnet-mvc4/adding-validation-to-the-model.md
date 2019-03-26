@@ -8,12 +8,12 @@ ms.date: 08/28/2012
 ms.assetid: 5d9a2999-fcc4-4c45-a018-271fddf74a3b
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc4/adding-validation-to-the-model
 msc.type: authoredcontent
-ms.openlocfilehash: 5819d789f31b9452d40ae3aa7f821f101ae126ce
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c0cfd4f900c88f953cf7004a987bc267a1e1b4a2
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57049478"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422033"
 ---
 <a name="adding-validation-to-the-model"></a>Aggiunta della convalida al modello
 ====================
@@ -55,7 +55,7 @@ Si userà migrations per aggiornare lo schema. Compilare la soluzione e quindi a
 
 [!code-console[Main](adding-validation-to-the-model/samples/sample3.cmd)]
 
-Al termine di questo comando, Visual Studio apre il file di classe che definisce la nuova `DbMIgration` classe derivata con il nome specificato (*AddDataAnnotationsMig*) e nel `Up` metodo è possibile visualizzare il codice che aggiorna i vincoli dello schema. Il `Title` e `Genre` campi non sono più che ammette valori null (vale a dire, è necessario immettere un valore) e il `Rating` campo ha una lunghezza massima pari a 5.
+Al termine di questo comando, Visual Studio apre il file di classe che definisce la nuova `DbMigration` classe derivata con il nome specificato (*AddDataAnnotationsMig*) e nel `Up` metodo è possibile visualizzare il codice che aggiorna i vincoli dello schema. Il `Title` e `Genre` campi non sono più che ammette valori null (vale a dire, è necessario immettere un valore) e il `Rating` campo ha una lunghezza massima pari a 5.
 
 Gli attributi di convalida specificano il comportamento da applicare per le proprietà del modello a cui vengono applicati. Il `Required` attributo indica che una proprietà deve avere un valore; in questo esempio, un filmato deve avere i valori per il `Title`, `ReleaseDate`, `Genre`, e `Price` proprietà affinché sia valida. L'attributo `Range` vincola un valore all'interno di un intervallo specificato. L'attributo `StringLength` consente di impostare la lunghezza massima di una proprietà stringa e, facoltativamente, la lunghezza minima. Tipi intrinseci (ad esempio `decimal, int, float, DateTime`) sono obbligatorie per impostazione predefinita e non è necessario il `Required` attributo.
 

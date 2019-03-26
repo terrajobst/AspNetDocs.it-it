@@ -8,18 +8,18 @@ ms.date: 09/30/2015
 ms.assetid: 719727b7-bef3-45ad-bfe9-ba5bcdb2305f
 msc.legacyurl: /web-api/overview/getting-started-with-aspnet-web-api/build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs
 msc.type: authoredcontent
-ms.openlocfilehash: 3c3557bb2be2807b11874937fcc629b5b773e463
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 03409e2fda831a07bbc5321ad842633b23ec25e5
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57054568"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422409"
 ---
 <a name="hands-on-lab-build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs"></a>Lab pratico: Creare un'applicazione a pagina singola con l'API Web ASP.NET e Angular.js
 ====================
 da [Camp Web Team](https://twitter.com/webcamps)
 
-[Download Web Camp Kit di formazione](http://aka.ms/webcamps-training-kit)
+[Download Web Camp Kit di formazione](https://aka.ms/webcamps-training-kit)
 
 > Nelle applicazioni web tradizionali, il client (browser) avvia la comunicazione con il server richiede una pagina. Quindi, il server elabora la richiesta e invia il codice HTML della pagina al client. Nelle successive interazioni con la pagina, ad esempio, l'utente passa a un collegamento o invia un modulo con i dati, viene inviata una richiesta di nuovo al server e il flusso viene riavviata: il server elabora la richiesta e invia una nuova pagina nel browser in risposta a nuova richiesta di azione ed dal client.
 > 
@@ -29,7 +29,7 @@ da [Camp Web Team](https://twitter.com/webcamps)
 > 
 > In questo lab pratici, si sarà possibile avvalersi di queste tecnologie per implementare fanatico Quiz, un sito Web gli elementi semplici basato sul concetto di applicazione a singola pagina. Prima di tutto si implementerà il livello di servizio con l'API Web ASP.NET per esporre gli endpoint necessari per recuperare le domande di quiz e archiviare le risposte. Quindi, si compilerà un'interfaccia utente avanzata e reattiva usando AngularJS e CSS3 effetti di trasformazione.
 > 
-> Tutto il codice di esempio e frammenti di codice sono inclusi nel Web Camp Kit di formazione, disponibile all'indirizzo [ http://aka.ms/webcamps-training-kit ](http://aka.ms/webcamps-training-kit).
+> Tutto il codice di esempio e frammenti di codice sono inclusi nel Web Camp Kit di formazione, disponibile all'indirizzo [ https://aka.ms/webcamps-training-kit ](https://aka.ms/webcamps-training-kit).
 
 
 ## <a name="overview"></a>Panoramica
@@ -98,7 +98,7 @@ Il framework API Web fa parte dello Stack di ASP.NET ed è progettato per render
 <a id="Ex1Task1"></a>
 #### <a name="task-1--creating-the-initial-project-for-geek-quiz"></a>Attività 1: creazione del progetto iniziale per fanatico Quiz
 
-In questa attività si avvierà la creazione di un nuovo progetto MVC ASP.NET con supporto per API Web ASP.NET in base il **One ASP.NET** tipo fornito con Visual Studio di progetto. **One ASP.NET** unifica tutte le tecnologie di ASP.NET e offre la possibilità di combinare e abbinare in base alle esigenze. Si aggiungerà quindi initializator il database per inserire le domande di quiz e classi del modello di Entity Framework.
+In questa attività si avvierà la creazione di un nuovo progetto MVC ASP.NET con supporto per API Web ASP.NET in base il **One ASP.NET** tipo fornito con Visual Studio di progetto. **One ASP.NET** unifica tutte le tecnologie di ASP.NET e offre la possibilità di combinare e abbinare in base alle esigenze. Si aggiungerà quindi l'inizializzatore del database per inserire le domande di quiz e classi del modello di Entity Framework.
 
 1. Aprire **Visual Studio Express 2013 per il Web** e selezionare **File | Nuovo progetto...**  per avviare una nuova soluzione.
 

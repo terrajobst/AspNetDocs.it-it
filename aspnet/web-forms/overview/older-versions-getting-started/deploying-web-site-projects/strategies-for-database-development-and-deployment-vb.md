@@ -8,12 +8,12 @@ ms.date: 04/23/2009
 ms.assetid: 07b8905d-78ac-4252-97fb-8675b3fb0bbf
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/strategies-for-database-development-and-deployment-vb
 msc.type: authoredcontent
-ms.openlocfilehash: e07da4b5263ac3c6db19c375ca00cbcf87e0b35a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b44ef5e92df8cc3b8660a8ce9e4ccc9b74c135d2
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57042178"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422727"
 ---
 <a name="strategies-for-database-development-and-deployment-vb"></a>Strategie per lo sviluppo e la distribuzione del database (VB)
 ====================
@@ -66,7 +66,7 @@ Esistono una serie di svantaggi di questo approccio. Prima di tutto, non vi è a
 
 Il vantaggio principale di come documentare le modifiche del database nella prosa è la semplicità. Non è conoscenza della necessità t la sintassi SQL per la creazione e modifica di oggetti di database. In alternativa, è possibile registrare le modifiche nella prosa e implementarli tramite interfaccia utente grafica di SQL Server Management Studio s.
 
-Gestione del log delle modifiche nella prosa, è vero, non è molto sofisticati e vinti t funzionino bene con determinati progetti, ad esempio quelle che sono di grandi dimensioni nell'ambito, frequenti modifiche al modello di dati o implicano più sviluppatori. Ma ho visto questo approccio funziona piuttosto bene nei progetti di piccole dimensioni, atto che hanno solo modifiche occasionali al modello di dati e dove l'ideali per singoli sviluppatori non ha uno sfondo importante nella sintassi SQL per la creazione e modifica di oggetti di database.
+Gestione del log delle modifiche nella prosa è, è vero, non molto sofisticati e non funziona bene con determinati progetti, ad esempio quelle che sono di grandi dimensioni nell'ambito, frequenti modifiche al modello di dati o implicano più sviluppatori. Ma ho visto questo approccio funziona piuttosto bene nei progetti di piccole dimensioni, atto che hanno solo modifiche occasionali al modello di dati e dove l'ideali per singoli sviluppatori non ha uno sfondo importante nella sintassi SQL per la creazione e modifica di oggetti di database.
 
 > [!NOTE]
 > Sebbene le informazioni nel log delle modifiche, tecnicamente, necessari solo fino alla fase di distribuzione, consigliabile mantenere una cronologia delle modifiche. Ma anziché mantenere un singolo, in continua crescita di file di log delle modifiche, è consigliabile che un file di log di modifica diversi per ogni versione del database. In genere è opportuno alla versione del database ogni volta che viene distribuita. Tramite la gestione di un log di log delle modifiche è possibile, a partire dalla linea di base, ricreare tutte le versioni di database eseguendo gli script di log delle modifiche a partire dalla versione 1 e continuando fino a raggiungere la versione è necessario ricreare.

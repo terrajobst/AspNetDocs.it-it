@@ -8,12 +8,12 @@ ms.date: 05/30/2007
 ms.assetid: 84afe4ac-cc53-4f2e-a867-27eaf692c2df
 msc.legacyurl: /web-forms/overview/data-access/caching-data/caching-data-at-application-startup-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 9d997cb0af8487b2a9d849f24f3bff8df8611f6d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: ef0a99a1601f40995c81a12f457303e040f57e29
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57026648"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424612"
 ---
 <a name="caching-data-at-application-startup-vb"></a>Memorizzazione di dati nella cache all'avvio dell'applicazione (VB)
 ====================
@@ -103,7 +103,7 @@ Analogamente, la cache dei dati può costituire un archivio della cache, come il
 
 [!code-vb[Main](caching-data-at-application-startup-vb/samples/sample5.vb)]
 
-Per aggiungere un elemento alla cache dei dati senza alcuna scadenza basati sul tempo, usare il `System.Web.Caching.Cache.NoAbsoluteExpiration` e `System.Web.Caching.Cache.NoSlidingExpiration` valori come parametri di input. Questo specifico overload della cache dei dati s `Insert` metodo è stato selezionato in modo che potremmo specificare il *priorità* dell'elemento della cache. Consente di determinare quali elementi eliminare dalla cache quando la memoria disponibile è insufficiente per la priorità. Qui viene usata la priorità `NotRemovable`, che assicura che questo elemento della cache ha vinto t scavenging.
+Per aggiungere un elemento alla cache dei dati senza alcuna scadenza basati sul tempo, usare il `System.Web.Caching.Cache.NoAbsoluteExpiration` e `System.Web.Caching.Cache.NoSlidingExpiration` valori come parametri di input. Questo specifico overload della cache dei dati s `Insert` metodo è stato selezionato in modo che potremmo specificare il *priorità* dell'elemento della cache. Consente di determinare quali elementi eliminare dalla cache quando la memoria disponibile è insufficiente per la priorità. Qui viene usata la priorità `NotRemovable`, che assicura che questo elemento della cache non sarà possibile lo scavenging.
 
 > [!NOTE]
 > Questo download di esercitazione s implementa il `StaticCache` classe Usa l'approccio di variabile membro statico. Il codice per le tecniche di cache dello stato e i dati dell'applicazione è disponibile nei commenti nel file di classe.

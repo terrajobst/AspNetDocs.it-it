@@ -8,12 +8,12 @@ ms.date: 03/31/2010
 ms.assetid: 0f982827-f8f9-420d-b36b-57b23f5aa519
 msc.legacyurl: /web-forms/overview/data-access/masterdetail/master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 9d75c80b4c1bac5011acc896d91ff2fcd5a19298
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a5623c34ad7f8c9b5effed318a04b204ab66ecaa
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57064798"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425197"
 ---
 <a name="masterdetail-using-a-selectable-master-gridview-with-a-details-detailview-c"></a>Report master o di dettaglio con un controllo GridView master selezionabile e un controllo DetailView per i dettagli (C#)
 ====================
@@ -153,7 +153,7 @@ Una volta il `productDetailsDataSource` ObjectDataSource è stato configurato co
 
 In questo e le tre esercitazioni precedenti abbiamo visto una serie di tecniche per la visualizzazione dei report master o di dettaglio. In questa esercitazione che sono stati esaminati con GridView selezionabile per ospitare i record master e un DetailsView per visualizzare i dettagli del record master selezionato nella stessa pagina. Nelle esercitazioni precedenti è stato descritto come visualizzare i report master-details mediante controlli DropDownList e sulla visualizzazione di record master in una pagina web e i record di dettaglio in un altro.
 
-Questa esercitazione è terminata l'esame del report master o di dettaglio. Inizia con il successivo tutorialwe per iniziare l'esplorazione della formattazione personalizzata con il controllo GridView, DetailsView e FormView. Si vedrà come personalizzare l'aspetto di questi controlli in base ai dati associati ad essi, come riepilogare i dati in un piè di pagina del controllo GridView e come usare i modelli per ottenere un maggiore grado di controllare il layout.
+Questa esercitazione è terminata l'esame del report master o di dettaglio. Inizia con l'esercitazione successiva inizieremo l'esplorazione della formattazione personalizzata con il controllo GridView, DetailsView e FormView. Si vedrà come personalizzare l'aspetto di questi controlli in base ai dati associati ad essi, come riepilogare i dati in un piè di pagina del controllo GridView e come usare i modelli per ottenere un maggiore grado di controllare il layout.
 
 Buona programmazione!
 

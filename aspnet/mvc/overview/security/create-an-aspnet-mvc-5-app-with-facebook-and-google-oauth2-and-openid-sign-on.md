@@ -8,12 +8,12 @@ ms.date: 04/03/2015
 ms.assetid: 81ee500f-fc37-40d6-8722-f1b64720fbb6
 msc.legacyurl: /mvc/overview/security/create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on
 msc.type: authoredcontent
-ms.openlocfilehash: 611a4b59b2ea2eee771f4060fb5d5af041b2ccc6
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 132560c0280a2e4096ea4e9a715c32bc880a8b82
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57061888"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58421427"
 ---
 <a name="create-an-aspnet-mvc-5-app-with-facebook-twitter-linkedin-and-google-oauth2-sign-on-c"></a>Creare un'app ASP.NET MVC 5 con l'accesso OAuth2 di Facebook, Twitter, LinkedIn e Google (C#)
 ====================
@@ -92,7 +92,7 @@ Per connettersi ai provider di autenticazione, ad esempio Google e Facebook, è 
 6. Selezionare il **Web** scheda e quindi incollare l'URL SSL nel **Url progetto** casella. Salvare il file (CTRL + S). È necessario l'URL per configurare le app di autenticazione di Facebook e Google.  
   
     ![](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/_static/image10.png)
-7. Aggiungere il [RequireHttps](https://msdn.microsoft.com/library/system.web.mvc.requirehttpsattribute.aspx) dell'attributo di `Home` controller in modo da richiedere tutte le richieste devono utilizzare HTTPS. Un approccio più sicuro consiste nell'aggiungere il [RequireHttps](https://msdn.microsoft.com/library/system.web.mvc.requirehttpsattribute.aspx) filtro all'applicazione. Vedere la sezione &quot;proteggere l'applicazione con SSL e l'attributo autorizzare&quot; nella mio tutoral [creare un'app ASP.NET MVC con autenticazione e database SQL e distribuirla nel servizio App di Azure](https://docs.microsoft.com/aspnet/core/security/authorization/secure-data). Di seguito è riportata una parte del controller Home.
+7. Aggiungere il [RequireHttps](https://msdn.microsoft.com/library/system.web.mvc.requirehttpsattribute.aspx) dell'attributo di `Home` controller in modo da richiedere tutte le richieste devono utilizzare HTTPS. Un approccio più sicuro consiste nell'aggiungere il [RequireHttps](https://msdn.microsoft.com/library/system.web.mvc.requirehttpsattribute.aspx) filtro all'applicazione. Vedere la sezione &quot;proteggere l'applicazione con SSL e l'attributo autorizzare&quot; nella mio esercitazione [creare un'app ASP.NET MVC con autenticazione e database SQL e distribuirla nel servizio App di Azure](https://docs.microsoft.com/aspnet/core/security/authorization/secure-data). Di seguito è riportata una parte del controller Home.
 
     [!code-csharp[Main](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/samples/sample1.cs?highlight=1)]
 8. Premere CTRL+F5 per eseguire l'applicazione. Se il certificato è stato installato in precedenza, è possibile ignorare il resto di questa sezione e passare a [creazione di un'app Google per OAuth 2 e ci si connette l'app per il progetto](#goog), in caso contrario, seguire le istruzioni per considerare attendibile autofirmato certificato IIS Express è generato.  

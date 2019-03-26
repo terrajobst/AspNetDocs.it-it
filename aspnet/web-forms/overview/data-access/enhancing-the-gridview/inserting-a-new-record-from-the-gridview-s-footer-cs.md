@@ -8,12 +8,12 @@ ms.date: 03/06/2007
 ms.assetid: 49545652-98af-46ba-9dbc-9ab529805d9b
 msc.legacyurl: /web-forms/overview/data-access/enhancing-the-gridview/inserting-a-new-record-from-the-gridview-s-footer-cs
 msc.type: authoredcontent
-ms.openlocfilehash: ae27b25a0a7f37cc273d88d7165c8be33ce2f6cc
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 3524983e347cc5ca0d34b2abe463477244a1129e
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57052528"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425457"
 ---
 <a name="inserting-a-new-record-from-the-gridviews-footer-c"></a>Inserimento di un nuovo record dal piè di pagina di GridView (C#)
 ====================
@@ -207,7 +207,7 @@ Pertanto, per rispondere al clic sul pulsante Aggiungi dell'utente, è necessari
 [!code-csharp[Main](inserting-a-new-record-from-the-gridview-s-footer-cs/samples/sample6.cs)]
 
 > [!NOTE]
-> Si potrebbe chiedere perché il gestore eventi anche controllo di `Page.IsValid` proprietà. Dopo tutto, t vinti il postback eliminati se i dati non validi viene forniti nell'interfaccia di inserimento? Questa ipotesi è corretta, purché l'utente non ha disabilitato JavaScript o ha eseguito i passaggi per aggirare la logica di convalida lato client. In breve, uno non fare mai affidamento esclusivamente su convalida lato client; un controllo lato server per la validità deve essere sempre eseguito prima di usare i dati.
+> Si potrebbe chiedere perché il gestore eventi anche controllo di `Page.IsValid` proprietà. Dopo tutto, non sarà il postback eliminato se i dati non validi viene forniti nell'interfaccia di inserimento? Questa ipotesi è corretta, purché l'utente non ha disabilitato JavaScript o ha eseguito i passaggi per aggirare la logica di convalida lato client. In breve, uno non fare mai affidamento esclusivamente su convalida lato client; un controllo lato server per la validità deve essere sempre eseguito prima di usare i dati.
 
 
 Nel passaggio 1 è stato creato il `ProductsDataSource` ObjectDataSource in modo che relativo `Insert()` metodo viene eseguito il mapping per il `ProductsBLL` classe s `AddProduct` (metodo). Per inserire il nuovo record nel `Products` tabella, possiamo semplicemente richiamare gli oggetti ObjectDataSource `Insert()` metodo:

@@ -8,12 +8,12 @@ ms.date: 08/03/2007
 ms.assetid: 57459065-ed7c-4dfe-ac9c-54c093abc261
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/working-with-computed-columns-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 5ef548c627cd40159bb3961f479401657a2ac394
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 097d68bdcde7de713ce2e7c829c0611d4c82d64d
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57041938"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424752"
 ---
 <a name="working-with-computed-columns-c"></a>Uso di colonne calcolate (C#)
 ====================
@@ -32,7 +32,7 @@ Poiché un valore di colonna calcolata s è determinato da un'espressione, tali 
 
 Uno dei problemi di utilizzo di colonne con un TableAdapter che Usa istruzioni SQL ad-hoc calcolate è che i TableAdapter `INSERT` e `UPDATE` le query vengono rigenerate automaticamente ogni volta che viene completata la configurazione guidata TableAdapter. Di conseguenza, le colonne calcolate rimosse manualmente dal `INSERT` e `UPDATE` query verrà visualizzato nuovamente se la procedura guidata viene rieseguita. Anche se gli oggetti TableAdapter che utilizzano le stored procedure desidero soggette a questa inconvenienti, hanno i propri comportamenti anomali vengono descritte nel passaggio 3.
 
-In questa esercitazione si aggiungerà una colonna calcolata per il `Suppliers` tabella nel database Northwind e quindi creare un oggetto TableAdapter corrispondente per usare questa tabella e la relativa colonna calcolata. Si avrà il TableAdapter utilizzare stored procedure anziché le istruzioni SQL ad hoc in modo che i nostri t sono personalizzazioni persa quando viene utilizzata la configurazione guidata TableAdapter.
+In questa esercitazione si aggiungerà una colonna calcolata per il `Suppliers` tabella nel database Northwind e quindi creare un oggetto TableAdapter corrispondente per usare questa tabella e la relativa colonna calcolata. Si avrà il TableAdapter utilizzare stored procedure anziché le istruzioni SQL ad hoc in modo che i nostri personalizzazioni non vengono perse quando viene usata la configurazione guidata TableAdapter.
 
 Introduzione a ti permettono di s.
 

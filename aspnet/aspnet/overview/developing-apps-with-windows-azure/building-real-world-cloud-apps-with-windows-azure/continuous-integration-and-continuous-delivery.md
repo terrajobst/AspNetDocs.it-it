@@ -8,12 +8,12 @@ ms.date: 06/12/2014
 ms.assetid: eaece9f5-f80c-428b-b771-5db66d275b7d
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/continuous-integration-and-continuous-delivery
 msc.type: authoredcontent
-ms.openlocfilehash: f701488025ec84a17651f9abff43f84531d35689
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b384fe08ebd6a106b9469debfb13014e87534b8f
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57046938"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425925"
 ---
 <a name="continuous-integration-and-continuous-delivery-building-real-world-cloud-apps-with-azure"></a>Integrazione continua e recapito continuo (creazione di App Cloud funzionanti con Azure)
 ====================
@@ -32,7 +32,7 @@ Il cloud ti permette di ridurre al minimo i costi di manutenzione di un ambiente
 
 In genere è consigliabile eseguire la distribuzione continua per lo sviluppo e ambienti di staging. La maggior parte dei team, anche in Microsoft, richiedono un processo di revisione e approvazione manuale per la distribuzione di produzione. Per un ambiente di produzione è possibile assicurarsi che la distribuzione avviene quando persone chiave nel team di sviluppo sono disponibili per il supporto o durante i periodi di scarso traffico. Ma non esiste nulla a che non consentono di automatizzare completamente gli ambienti di sviluppo e test in modo che uno sviluppatore deve eseguire operazioni solo archiviare una modifica e un ambiente è configurato per i test di accettazione.
 
-Nel seguente diagramma da [un Microsoft Patterns and Practices e-book sul recapito continuo](http://aka.ms/ReleasePipeline) illustra un tipico flusso di lavoro. Fare clic sull'immagine per visualizzarla dimensione completa nel contesto originale.
+Nel seguente diagramma da [un Microsoft Patterns and Practices e-book sul recapito continuo](https://aka.ms/ReleasePipeline) illustra un tipico flusso di lavoro. Fare clic sull'immagine per visualizzarla dimensione completa nel contesto originale.
 
 [![Flusso di lavoro di recapito continuo](continuous-integration-and-continuous-delivery/_static/image1.png)](https://msdn.microsoft.com/library/dn449955.aspx)
 
@@ -66,7 +66,7 @@ Per altre informazioni, vedere [distribuire un'app web nel servizio App di Azure
 
 Vedere anche le risorse seguenti:
 
-- [Creazione di una Pipeline di rilascio con Team Foundation Server 2012](http://aka.ms/ReleasePipeline). Laboratori pratici E-book e codice di esempio da Microsoft Patterns and Practices, fornisce un'introduzione approfondita a recapito continuo. Illustra l'uso di Visual Studio Lab Management e Release Management per Visual Studio.
+- [Creazione di una Pipeline di rilascio con Team Foundation Server 2012](https://aka.ms/ReleasePipeline). Laboratori pratici E-book e codice di esempio da Microsoft Patterns and Practices, fornisce un'introduzione approfondita a recapito continuo. Illustra l'uso di Visual Studio Lab Management e Release Management per Visual Studio.
 - [Indicazioni e strumenti di ALM Rangers DevOps](https://aka.ms/vsarsolutions/). ALM Rangers ha introdotto la soluzione complementare di esempio DevOps Workbench e istruzioni pratiche in collaborazione con i modelli &amp; libro di procedure consigliate *creazione di una Pipeline di rilascio a TFS 2012*, come un ottimo modo per iniziare apprendimento dei concetti della metodologia DevOps &amp; Release Management per TFS 2012 e per provarla prima del. Le indicazioni fornite di seguito viene illustrato come compilare una sola volta e distribuire in più ambienti.
 - [Test per il recapito continuo con Visual Studio 2012](https://msdn.microsoft.com/library/jj159345.aspx). E-book Microsoft Patterns and Practices, spiega come integrare i test automatizzati con il recapito continuo.
 - [WindowsAzureDeploymentTracker](https://github.com/RyanTBerry/WindowsAzureDeploymentTracker). Codice sorgente per uno strumento progettato per acquisire una compilazione da TFS (basato su un'etichetta), compilarla, crearne il pacchetto, consentire ad altri utenti nel ruolo DevOps configurare alcuni aspetti specifici di esso ed eseguirne il push in Azure. Lo strumento registra il processo di distribuzione per consentire operazioni di "rollback" a una versione distribuita in precedenza. Lo strumento non presenta dipendenze esterne e può funzionare autonomo usando le API di TFS e il SDK di Azure.

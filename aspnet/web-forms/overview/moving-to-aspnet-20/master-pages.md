@@ -8,12 +8,12 @@ ms.date: 02/20/2005
 ms.assetid: 9c0cce4d-efd9-4c14-b0e8-a1a140abb3f4
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/master-pages
 msc.type: authoredcontent
-ms.openlocfilehash: f40eb338a1b6b8eebb6578dd7938e96a05b1617f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 644beb37bf893a590be03dd0929c5870af6fbe87
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57055118"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425769"
 ---
 <a name="master-pages"></a>Pagine master
 ====================
@@ -94,7 +94,7 @@ In questo laboratorio, si verrà creare una nuova pagina master e definire tre c
 
 1. Posizionare il cursore in ogni cella della tabella e impostare il *valign* proprietà *top*.
 2. Dalla casella degli strumenti, inserire un controllo ContentPlaceHolder nella prima cella della tabella (la cella di intestazione.)
-3. Quando si inserisce questo controllo ContentPlaceHolder, si noterà che l'altezza della riga verrà occupano quasi tutta la pagina come illustrato nella figura 4. Deve preoccuparsi che a questo punto.
+3. Quando si inserisce questo controllo ContentPlaceHolder, si noterà che l'altezza della riga verrà occupano quasi tutta la pagina come illustrato nella figura 4. Non c'è da preoccuparsi che a questo punto.
 
 
 ![Lo spazio vuoto è nella stessa cella come il controllo ContentPlaceHolder](master-pages/_static/image1.gif)
@@ -127,7 +127,7 @@ In questo laboratorio, si verrà creare una nuova pagina master e definire tre c
 2. Selezionare lo exercise1.master selezionare una finestra di dialogo pagina master come illustrato nella figura 7.
 3. Fare clic su OK per aggiungere la nuova pagina contenuta.
 
-La nuova pagina di contenuto viene visualizzato in Visual Studio con un controllo contenuto che per ogni controllo ContentPlaceHolder nella pagina master. Per impostazione predefinita, i controlli contenuto sono vuoti, in modo che sia possibile aggiungere il proprio contenuto. Se avessero, per poter usare il contenuto dal controllo ContentPlaceHolder nella pagina master, è sufficiente fare clic sul simbolo di smart tag (la piccola freccia nera nell'angolo superiore destro del controllo) e scegliere *Masters contenuto predefinito* nello smart tag come illustrato nella **figura 8**. Quando in questo caso, la voce di menu viene modificato in *creare contenuto personalizzato*. Clic su di esso a questo punto rimuove il contenuto della pagina master che consente di definire il contenuto personalizzato per tale controllo contenuto.
+La nuova pagina di contenuto viene visualizzato in Visual Studio con un controllo contenuto che per ogni controllo ContentPlaceHolder nella pagina master. Per impostazione predefinita, i controlli contenuto sono vuoti, in modo che sia possibile aggiungere il proprio contenuto. Se si desidera per poter usare il contenuto dal controllo ContentPlaceHolder nella pagina master, è sufficiente fare clic sul simbolo di smart tag (la piccola freccia nera nell'angolo superiore destro del controllo) e scegliere *Masters contenuto predefinito* nello smart tag come illustrato nella **figura 8**. Quando in questo caso, la voce di menu viene modificato in *creare contenuto personalizzato*. Clic su di esso a questo punto rimuove il contenuto della pagina master che consente di definire il contenuto personalizzato per tale controllo contenuto.
 
 
 ![L'impostazione di un controllo contenuto sul valore predefinito per il contenuto di pagine Master](master-pages/_static/image4.gif)

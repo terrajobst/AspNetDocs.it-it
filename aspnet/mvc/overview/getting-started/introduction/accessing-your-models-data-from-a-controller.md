@@ -8,12 +8,12 @@ ms.date: 10/17/2013
 ms.assetid: caa1ba4a-f9f0-4181-ba21-042e3997861d
 msc.legacyurl: /mvc/overview/getting-started/introduction/accessing-your-models-data-from-a-controller
 msc.type: authoredcontent
-ms.openlocfilehash: 00731fbc0d578afa2df881b205170fb6a4f686e1
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c561534a3fa1382c8af23c6ac779fac0c1dc8160
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57057868"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424183"
 ---
 <a name="accessing-your-models-data-from-a-controller"></a>Accesso ai dati del modello da un controller
 ====================
@@ -122,7 +122,7 @@ Ciò `@model` direttiva consente di accedere all'elenco di film che il controlle
 
 Poiché il `Model` oggetto è fortemente tipizzato (come un `IEnumerable<Movie>` oggetto), ognuno `item` oggetto nel ciclo viene tipizzato come `Movie`. Tra gli altri vantaggi, ciò significa che si ottiene controllo in fase di compilazione del codice e supporto di IntelliSense nell'editor di codice completo:
 
-![ModelIntellisene](accessing-your-models-data-from-a-controller/_static/image8.png)
+![ModelIntelliSense](accessing-your-models-data-from-a-controller/_static/image8.png)
 
 ## <a name="working-with-sql-server-localdb"></a>Utilizzo di SQL Server Local DB
 

@@ -8,12 +8,12 @@ ms.date: 07/17/2006
 ms.assetid: 6331e02e-c465-4cdf-bd3f-f07680c289d6
 msc.legacyurl: /web-forms/overview/data-access/editing-inserting-and-deleting-data/adding-client-side-confirmation-when-deleting-vb
 msc.type: authoredcontent
-ms.openlocfilehash: deae088d1daa63e2936aedf80eded18588b1ec60
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 2b0d7aeab357a0009c44a29ff66f22ce8a744a90
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57026898"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422149"
 ---
 <a name="adding-client-side-confirmation-when-deleting-vb"></a>Aggiunta di una conferma lato client durante l'eliminazione (VB)
 ====================
@@ -38,7 +38,7 @@ Il codice JavaScript `confirm(string)` funzione consente di visualizzare il para
 **Figura 1**: Il codice JavaScript `confirm(string)` metodo visualizza una finestra di messaggio modale, lato Client
 
 
-Durante l'invio di un modulo, se il valore `false` viene restituito da un gestore eventi lato client, l'invio del form è stata annullata. Utilizzare questa funzionalità, possiamo avere Delete pulsante s lato client `onclick` gestore eventi restituire il valore di una chiamata a `confirm("Are you sure you want to delete this product?")`. Se l'utente fa clic su Annulla, `confirm(string)` restituirà false, in tal modo che causa l'invio del modulo annullare. Con alcun postback, eliminare il prodotto è stato fatto clic sul pulsante la cui eliminazione ha vinto t. Se, tuttavia, l'utente fa clic su OK nella finestra di dialogo di conferma, il postback continueranno maniera e verrà eliminato il prodotto. Consultare [uso di JavaScript s `confirm()` metodo per l'invio di Form di controllo](http://www.webreference.com/programming/javascript/confirm/) per altre informazioni su questa tecnica.
+Durante l'invio di un modulo, se il valore `false` viene restituito da un gestore eventi lato client, l'invio del form è stata annullata. Utilizzare questa funzionalità, possiamo avere Delete pulsante s lato client `onclick` gestore eventi restituire il valore di una chiamata a `confirm("Are you sure you want to delete this product?")`. Se l'utente fa clic su Annulla, `confirm(string)` restituirà false, in tal modo che causa l'invio del modulo annullare. Con alcun postback, il prodotto è stato fatto clic sul pulsante la cui eliminazione non verrà eliminato. Se, tuttavia, l'utente fa clic su OK nella finestra di dialogo di conferma, il postback continueranno maniera e verrà eliminato il prodotto. Consultare [uso di JavaScript s `confirm()` metodo per l'invio di Form di controllo](http://www.webreference.com/programming/javascript/confirm/) per altre informazioni su questa tecnica.
 
 Aggiungere lo script lato client necessario differisce leggermente se usano i modelli rispetto all'uso di un CommandField. Pertanto, in questa esercitazione si esaminerà esempio un controllo FormView e GridView.
 

@@ -8,12 +8,12 @@ ms.date: 09/17/2012
 ms.assetid: 243db2ec-8f67-4a5e-a382-4ddcec4b4164
 msc.legacyurl: /web-api/overview/advanced/http-cookies
 msc.type: authoredcontent
-ms.openlocfilehash: 61e0c47efdd92a3a0b329930aeec757b446eb9b8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: ee717085a02f4c5f5d664cfd2fa82c21864e4055
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57044738"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425821"
 ---
 <a name="http-cookies-in-aspnet-web-api"></a>Cookie HTTP nell'API Web ASP.NET
 ====================
@@ -25,7 +25,7 @@ In questo argomento viene descritto come inviare e ricevere i cookie HTTP nell'A
 
 Questa sezione viene fornita una breve panoramica di come vengono implementati i cookie a livello HTTP. Per informazioni dettagliate, consultare [RFC 6265](http://tools.ietf.org/html/rfc6265).
 
-Un cookie è costituito da dati che invia un server nella risposta HTTP. Il client (facoltativamente) archivia il cookie e lo restituisce nel subsequet richieste. In questo modo il client e server condividere lo stato. Per impostare un cookie, il server include un'intestazione Set-Cookie nella risposta. Il formato di un cookie è una coppia nome-valore, con gli attributi facoltativi. Ad esempio:
+Un cookie è costituito da dati che invia un server nella risposta HTTP. (Facoltativamente), il client archivia il cookie e lo restituisce nelle richieste successive. In questo modo il client e server condividere lo stato. Per impostare un cookie, il server include un'intestazione Set-Cookie nella risposta. Il formato di un cookie è una coppia nome-valore, con gli attributi facoltativi. Ad esempio:
 
 [!code-powershell[Main](http-cookies/samples/sample1.ps1)]
 

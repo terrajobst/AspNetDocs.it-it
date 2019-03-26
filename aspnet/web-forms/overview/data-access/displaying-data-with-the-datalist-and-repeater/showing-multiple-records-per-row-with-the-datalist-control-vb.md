@@ -8,12 +8,12 @@ ms.date: 09/13/2006
 ms.assetid: f555c531-bf33-4699-9987-42dbfef23c1f
 msc.legacyurl: /web-forms/overview/data-access/displaying-data-with-the-datalist-and-repeater/showing-multiple-records-per-row-with-the-datalist-control-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 7a23e8897e4fbdf84c4d6916c22bad9687fa5ee6
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: e8b5493694b24e4187ecb69ca8d2eff6a8507985
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57046498"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58421219"
 ---
 <a name="showing-multiple-records-per-row-with-the-datalist-control-vb"></a>Visualizzazione di più record per riga con il controllo DataList (VB)
 ====================
@@ -66,7 +66,7 @@ Si consiglia di visitare la pagina in un browser. Come illustrato nella figura 2
 
 Durante il comportamento predefinito per il controllo DataList consiste nel disporre gli elementi verticalmente in una tabella a colonna singola, con più righe, questo comportamento può facilmente essere modificato tramite DataList 1!s [ `RepeatDirection` proprietà](https://msdn.microsoft.com/system.web.ui.webcontrols.datalist.repeatdirection.aspx). Il `RepeatDirection` proprietà può accettare uno dei due valori possibili: `Horizontal` o `Vertical` (predefinito).
 
-Modificando la `RepeatDirection` proprietà dal `Vertical` a `Horizontal`, DataList esegue il rendering dei relativi record in una singola riga, la creazione di una colonna per ogni elemento dell'origine dati. Per illustrare questo effetto, fare clic su DataList nella finestra di progettazione e quindi, dalla finestra delle proprietà, modificare il `RepeatDirection` proprietà dal `Vertical` a `Horiztonal`. Immediatamente in questo modo, la finestra di progettazione consente di regolare il layout di DataList s, la creazione di un'interfaccia a riga singola, a più colonne (vedere la figura 3).
+Modificando la `RepeatDirection` proprietà dal `Vertical` a `Horizontal`, DataList esegue il rendering dei relativi record in una singola riga, la creazione di una colonna per ogni elemento dell'origine dati. Per illustrare questo effetto, fare clic su DataList nella finestra di progettazione e quindi, dalla finestra delle proprietà, modificare il `RepeatDirection` proprietà dal `Vertical` a `Horizontal`. Immediatamente in questo modo, la finestra di progettazione consente di regolare il layout di DataList s, la creazione di un'interfaccia a riga singola, a più colonne (vedere la figura 3).
 
 
 [![Gli elementi RepeatDirection proprietà determina come la direzione s DataList sono layout orizzontale](showing-multiple-records-per-row-with-the-datalist-control-vb/_static/image8.png)](showing-multiple-records-per-row-with-the-datalist-control-vb/_static/image7.png)

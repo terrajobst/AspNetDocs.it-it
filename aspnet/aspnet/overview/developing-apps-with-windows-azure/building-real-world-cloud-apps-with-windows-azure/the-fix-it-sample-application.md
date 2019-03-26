@@ -8,12 +8,12 @@ ms.date: 06/12/2014
 ms.assetid: 1bc333c5-f096-4ea7-b170-779accc21c1a
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/the-fix-it-sample-application
 msc.type: authoredcontent
-ms.openlocfilehash: de3c8ea29f2c271136f58d8165bb92f4ab28ce83
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a73fac6107be45455465b506a019bcc9a41b1deb
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57034218"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425522"
 ---
 <a name="appendix-the-fix-it-sample-application-building-real-world-cloud-apps-with-azure"></a>Appendice: La correzione Application (compilazione di App per Cloud funzionanti con Azure) di esempio
 ====================
@@ -376,13 +376,13 @@ Successivamente, creare un nuovo servizio cloud di Azure. Gli script inclusi con
 
 Prima di poter distribuire il servizio cloud, è necessario aggiornare alcuni dei file di configurazione.
 
-In MyFixIt.WorkerRoler\app.config, sotto `connectionStrings`, sostituire il valore del `appdb` stringa di connessione con la stringa di connessione effettiva per il Database SQL. È possibile ottenere la stringa di connessione dal portale. Nel portale, fare clic su **database SQL** - **appdb** - **stringhe di connessione del Database SQL di visualizzazione per ADO .net, ODBC, PHP e JDBC**. Copiare la stringa di connessione ADO.NET e incollare il valore nel file app. config. Sostituire "{il\_password\_qui}" con la password del database. (Supponendo che gli script usato per distribuire l'app MVC, è specificata la password del database nel `SqlDatabasePassword` parametro di script.)
+In MyFixIt.WorkerRole\app.config, sotto `connectionStrings`, sostituire il valore del `appdb` stringa di connessione con la stringa di connessione effettiva per il Database SQL. È possibile ottenere la stringa di connessione dal portale. Nel portale, fare clic su **database SQL** - **appdb** - **stringhe di connessione del Database SQL di visualizzazione per ADO .net, ODBC, PHP e JDBC**. Copiare la stringa di connessione ADO.NET e incollare il valore nel file app. config. Sostituire "{il\_password\_qui}" con la password del database. (Supponendo che gli script usato per distribuire l'app MVC, è specificata la password del database nel `SqlDatabasePassword` parametro di script.)
 
 Il risultato dovrebbe essere simile al seguente:
 
 [!code-xml[Main](the-fix-it-sample-application/samples/sample32.xml)]
 
-Nello stesso file, MyFixIt.WorkerRoler\app.config sotto `appSettings`, sostituire i due valori di segnaposto per l'account di archiviazione di Azure.
+Nello stesso file, MyFixIt.WorkerRole\app.config sotto `appSettings`, sostituire i due valori di segnaposto per l'account di archiviazione di Azure.
 
 [!code-xml[Main](the-fix-it-sample-application/samples/sample33.xml?highlight=2-3)]
 

@@ -8,12 +8,12 @@ ms.date: 02/06/2013
 ms.assetid: b91e6424-1544-4747-bd0b-d1f8418c9653
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-security-guidance
 msc.type: authoredcontent
-ms.openlocfilehash: 4ba53e15dab83368097a58ba4d0d2e46d113d1d2
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 0e43ec6b1cbe922b00f0f71d08aed4d0f4c08af8
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57065248"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425860"
 ---
 <a name="security-guidance-for-aspnet-web-api-2-odata"></a>Guida alla sicurezza per ASP.NET Web API 2 OData
 ====================
@@ -25,7 +25,7 @@ In questo argomento vengono descritti alcuni dei problemi di sicurezza che è op
 
 La semantica di query è basata su entity data model (EDM), non i tipi di modello sottostante. È possibile escludere una proprietà dal modello EDM e non sarà visibile alla query. Si supponga, ad esempio, che il modello include un tipo di dipendente con una proprietà di stipendio. Si potrebbe voler escludere questa proprietà dal modello EDM per nasconderlo dai client.
 
-Esistono due modi per esclude una proprietà da EDM. È possibile impostare il **[IgnoreDataMember]** attributo sulla proprietà nella classe del modello:
+Esistono due modi per escludere una proprietà da EDM. È possibile impostare il **[IgnoreDataMember]** attributo sulla proprietà nella classe del modello:
 
 [!code-csharp[Main](odata-security-guidance/samples/sample1.cs)]
 

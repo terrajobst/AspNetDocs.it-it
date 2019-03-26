@@ -8,15 +8,15 @@ ms.date: 06/12/2014
 ms.assetid: e51fcecb-cb33-4f9e-8428-6d2b3d0fe1bf
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/data-storage-options
 msc.type: authoredcontent
-ms.openlocfilehash: 17e11c33d6bf2a75e99e3bda4d6ab89c5b1631f9
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 9969a68a3e1aa043845fb5affd6d3b73dec4136d
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57042858"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425392"
 ---
-<a name="data-storage-options-building-real-world-cloud-apps-with-azure"></a>Opzioni di archiviazione di dati (creazione di App Cloud funzionanti con Azure)
-====================
+# <a name="data-storage-options-building-real-world-cloud-apps-with-azure"></a>Opzioni di archiviazione di dati (creazione di App Cloud funzionanti con Azure)
+
 dal [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
 
 [Download risolverlo Project](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [Scarica l'E-book](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
@@ -62,13 +62,13 @@ I volumi elevati di dati che è possibile archiviare nei database NoSQL possono 
 
 In Azure, [HDInsight](https://azure.microsoft.com/services/hdinsight/) consente di elaborare, analizzare e Ottieni nuovi approfondimenti dai big data con la potenza di Hadoop. Ad esempio, è possibile usarlo per analizzare i log del server web:
 
-- Abilitare la registrazione del server web all'account di archiviazione. Si configura Azure per scrivere i log del servizio Blob per ogni richiesta HTTP all'applicazione. Il servizio Blob è fondamentalmente l'archiviazione file di cloud e si integra perfettamente con HDInsight. 
+- Abilitare la registrazione del server web all'account di archiviazione. Si configura Azure per scrivere i log del servizio Blob per ogni richiesta HTTP all'applicazione. Il servizio Blob è fondamentalmente l'archiviazione file di cloud e si integra perfettamente con HDInsight.
 
     ![Log nell'archiviazione BLOB](data-storage-options/_static/image2.png)
-- Quando l'applicazione diventa il traffico, i log IIS del server web vengono scritti nell'archiviazione Blob. 
+- Quando l'applicazione diventa il traffico, i log IIS del server web vengono scritti nell'archiviazione Blob.
 
     ![Log del server Web](data-storage-options/_static/image3.png)
-- Nel portale, fare clic su **New** - **Data Services** - **HDInsight** - **creazione rapida**, e specificare il nome di un cluster HDInsight, dimensioni del cluster (numero di nodi dati del cluster HDInsight) e un nome utente e password per il cluster HDInsight. 
+- Nel portale, fare clic su **New** - **Data Services** - **HDInsight** - **creazione rapida**, e specificare il nome di un cluster HDInsight, dimensioni del cluster (numero di nodi dati del cluster HDInsight) e un nome utente e password per il cluster HDInsight.
 
     ![HDInsight](data-storage-options/_static/image4.png)
 
@@ -175,7 +175,7 @@ Attendere alcuni secondi e si dispone di un database in Azure pronta da usare.
 
 ![Nuovo Database SQL creato](data-storage-options/_static/image10.png)
 
-In modo da Azure in pochi secondi, ciò che potrebbe richiedere è un giorno o settimana o più tempo per eseguire nell'ambiente locale. E poiché è semplicemente possibile creare automaticamente i database in uno script o utilizzando un'API di gestione, è la scalabilità orizzontale dinamica distribuendo i dati tra più database < o:p >, purché l'applicazione è stata programmata per cui. < /o : p >
+In modo da Azure in pochi secondi, ciò che potrebbe richiedere è un giorno o settimana o più tempo per eseguire nell'ambiente locale. E poiché è semplicemente possibile creare automaticamente i database in uno script o utilizzando un'API di gestione, è la scalabilità orizzontale dinamica distribuendo i dati tra più database, purché l'applicazione è stata programmata per tale.
 
 Questo è un esempio del modello Platform-as-a-Service. Non è necessario gestire i server, è eseguire questa operazione. Non è necessario preoccuparsi di backup, useremo. È in esecuzione in un'elevata disponibilità, i dati nel database vengono replicati in tre server automaticamente. Se si interrompe una macchina, viene eseguito il failover e non si perde alcun dato. Il server viene riparato regolarmente, non occorre preoccuparsi che.
 
@@ -267,7 +267,7 @@ Per altre informazioni, vedere le seguenti risorse.
 
 Scegliere una piattaforma di database:
 
-- [Accesso ai dati per le soluzioni altamente scalabili: Con SQL, NoSQL e persistenza poliglotta](http://aka.ms/dag-doc). E-book Microsoft Patterns and Practices che esamina in dettaglio i diversi tipi di dati archivia disponibili per le applicazioni cloud.
+- [Accesso ai dati per le soluzioni altamente scalabili: Con SQL, NoSQL e persistenza poliglotta](https://aka.ms/dag-doc). E-book Microsoft Patterns and Practices che esamina in dettaglio i diversi tipi di dati archivia disponibili per le applicazioni cloud.
 - [Microsoft Patterns and Practices - informazioni aggiuntive su Azure](https://msdn.microsoft.com/library/ff898430.aspx). Vedere Introduzione alla coerenza dei dati, la replica dei dati e indicazioni di sincronizzazione, il modello di tabella dell'indice, il modello di vista materializzata.
 - [BASE: In alternativa Acid](http://queue.acm.org/detail.cfm?id=1394128). L'articolo sui compromessi tra coerenza dei dati e scalabilità.
 - [Sette database di sette settimane: Una Guida per i database moderni e il movimento "NoSQL"](https://www.amazon.com/Seven-Databases-Weeks-Modern-Movement/dp/1934356921). Libro di Eric Redmond e Jim R. Wilson. Fortemente consigliato per l'introduzione di autonomamente la gamma di piattaforme di archiviazione di dati attualmente disponibili.

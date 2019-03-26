@@ -8,12 +8,12 @@ ms.date: 07/17/2006
 ms.assetid: 129d4338-1315-4f40-89b5-2b84b807707d
 msc.legacyurl: /web-forms/overview/data-access/editing-inserting-and-deleting-data/handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 86b8bb00e83f311d311a51a747086356833a8c93
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 968f222742e0bd5f145082e8b2c33bbc43ee78cd
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57060918"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423013"
 ---
 <a name="handling-bll--and-dal-level-exceptions-in-an-aspnet-page-vb"></a>Gestione delle eccezioni a livello BLL e DAL in una pagina ASP.NET (VB)
 ====================
@@ -98,7 +98,7 @@ A questo punto è disponibile un elenco di tutti i prodotti `ProductName`, `Quan
 
 ## <a name="step-2-gracefully-handling-dal-level-exceptions"></a>Passaggio 2: Normalmente la gestione delle eccezioni a livello DAL
 
-Anche se il controllo GridView modificabile funziona incredibile quando gli utenti immettono i valori validi per nome modificato del prodotto, prezzo e unità in magazzino, immettendo i valori non validi genera un'eccezione. Ad esempio, l'omissione il `ProductName` valore, un [NoNullAllowedException](https://msdn.microsoft.com/library/default.asp?url=/library/cpref/html/frlrfsystemdatanonullallowedexceptionclasstopic.asp) generata dal `ProductName` proprietà nel `ProdcutsRow` classe dispone di relativo `AllowDBNull` proprietà impostata su `false`; se il database non è attivo, un `SqlException` verrà generata dal TableAdapter quando si prova a connettersi al database. Senza eseguire alcuna azione, queste eccezioni intercetterà dal livello di accesso ai dati a livello della logica di Business, quindi nella pagina ASP.NET e infine al runtime di ASP.NET.
+Anche se il controllo GridView modificabile funziona incredibile quando gli utenti immettono i valori validi per nome modificato del prodotto, prezzo e unità in magazzino, immettendo i valori non validi genera un'eccezione. Ad esempio, l'omissione il `ProductName` valore, un [NoNullAllowedException](https://msdn.microsoft.com/library/default.asp?url=/library/cpref/html/frlrfsystemdatanonullallowedexceptionclasstopic.asp) generata dal `ProductName` proprietà nel `ProductsRow` classe dispone di relativo `AllowDBNull` proprietà impostata su `false`; se il database non è attivo, un `SqlException` verrà generata dal TableAdapter quando si prova a connettersi al database. Senza eseguire alcuna azione, queste eccezioni intercetterà dal livello di accesso ai dati a livello della logica di Business, quindi nella pagina ASP.NET e infine al runtime di ASP.NET.
 
 A seconda del modo in cui l'applicazione web viene configurata e se si sta visitando l'applicazione da `localhost`, può causare un'eccezione non gestita in una pagina di errore server generico, un report di errore dettagliati o una pagina web semplici da usare. Visualizzare [Error Handling dell'applicazione Web ASP.NET](http://www.15seconds.com/issue/030102.htm) e il [elemento customErrors](https://msdn.microsoft.com/library/h0hfz6fc(VS.80).aspx) per altre informazioni sul modo in cui il runtime ASP.NET risponde a un'eccezione non rilevata.
 

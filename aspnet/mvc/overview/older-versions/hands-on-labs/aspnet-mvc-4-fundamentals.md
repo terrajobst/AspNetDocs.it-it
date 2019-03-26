@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: b7dba543-73c3-4534-a9a0-ba70fa2c6a8a
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-fundamentals
 msc.type: authoredcontent
-ms.openlocfilehash: d8e837a5d56871d271590859c2e82336111cc87a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d3bc39a37cace003c3fda6691f0dd7f893128b07
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57029408"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425249"
 ---
 # <a name="aspnet-mvc-4-fundamentals"></a>Concetti fondamentali su ASP.NET MVC 4
 
@@ -389,7 +389,7 @@ Il file **~/Views/Shared/\_layout. cshtml** consente di configurare un modello p
    (C#)
 
     [!code-cshtml[Main](aspnet-mvc-4-fundamentals/samples/sample7.cshtml)]
-5. Includere un elemento div per eseguire il rendering di sezione del corpo di ogni pagina. Sostituire  <strong>@RenderBody()</strong> con il codice higlighted seguente: (C#)
+5. Includere un elemento div per eseguire il rendering di sezione del corpo di ogni pagina. Sostituire  <strong>@RenderBody()</strong> con il seguente codice evidenziato: (C#)
 
     [!code-cshtml[Main](aspnet-mvc-4-fundamentals/samples/sample8.cshtml)]
 
@@ -529,7 +529,7 @@ In questa attività si aggiungerà le 2 proprietà per il **StoreIndexViewModel*
     [!code-csharp[Main](aspnet-mvc-4-fundamentals/samples/sample11.cs)]
 
 > [!NOTE]
-> Il **{get; set;}**  notazione si avvale di # funzionalità di proprietà implementate automaticamente. Che offre i vantaggi di una proprietà senza la necessità di dichiarare un campo sottostante.
+> Il **{get; set;}**  notazione Usa C#del autoimplementate caratteristica delle proprietà. Che offre i vantaggi di una proprietà senza la necessità di dichiarare un campo sottostante.
 
 <a id="Ex5Task3"></a>
 
@@ -800,7 +800,7 @@ In questa attività si aggiungerà un collegamento degli Store per avere un coll
    > 
    > Sebbene questo approccio funzioni, a seconda stringa hardcoded. Se in un secondo momento si rinomina il Controller, sarà necessario modificare manualmente questa istruzione. Un'alternativa migliore consiste nell'utilizzare un **HTML Helper** (metodo). ASP.NET MVC include un metodo HTML Helper che è disponibile per tali attività. Il **Html.ActionLink()** metodo helper rende più semplice compilare HTML **&lt;una&gt;** collegamenti, assicurandosi che i percorsi URL siano URL correttamente codificati.
    > 
-   > Htlm.ActionLink dispone di diversi overload. In questo esercizio si userà uno che accetta tre parametri:
+   > HTML. ActionLink dispone di diversi overload. In questo esercizio si userà uno che accetta tre parametri:
    > 
    > 1. Testo del collegamento, che verrà visualizzato il nome genere
    > 2. Nome azione del controller (**esplorare**)
@@ -1017,7 +1017,7 @@ In questa appendice spiega come creare un nuovo sito web dal portale di gestione
 1. Andare alla [portale di gestione di Windows Azure](https://manage.windowsazure.com/) e accedere usando le credenziali di Microsoft associate alla sottoscrizione.
 
     > [!NOTE]
-    > Con Windows Azure Puoi ospitare gratuitamente 10 siti Web ASP.NET e la scalabilità orizzontale man mano che aumenta il traffico. È possibile effettuare l'iscrizione [qui](http://aka.ms/aspnet-hol-azure).
+    > Con Windows Azure Puoi ospitare gratuitamente 10 siti Web ASP.NET e la scalabilità orizzontale man mano che aumenta il traffico. È possibile effettuare l'iscrizione [qui](https://aka.ms/aspnet-hol-azure).
 
     ![Accedere al portale di Azure](aspnet-mvc-4-fundamentals/_static/image48.png "accedere al portale di Azure")
 

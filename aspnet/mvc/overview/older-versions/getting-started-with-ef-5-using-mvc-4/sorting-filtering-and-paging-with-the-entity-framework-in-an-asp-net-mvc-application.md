@@ -8,12 +8,12 @@ ms.date: 07/30/2013
 ms.assetid: 8af630e0-fffa-4110-9eca-c96e201b2724
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: 8bea3d4bc19a5a47240abeb2cc015116814a8fdf
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: afd1551d72fa3a5b925d7499c86731db4b6f0b61
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57043038"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422012"
 ---
 <a name="sorting-filtering-and-paging-with-the-entity-framework-in-an-aspnet-mvc-application-3-of-10"></a>L'ordinamento, filtro e Paging con Entity Framework in un'applicazione ASP.NET MVC (3 di 10)
 ====================
@@ -89,7 +89,7 @@ Nelle *Controllers\StudentController.cs*, sostituire il `Index` metodo con il co
 
 [!code-csharp[Main](sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample4.cs?highlight=1,7-11)]
 
-È stato aggiunto un parametro `searchString` al metodo `Index`. È stata anche aggiunta all'istruzione LINQ una `where` clausethat seleziona solo gli studenti il cui nome o cognome contengono la stringa di ricerca. Il valore di stringa di ricerca viene ricevuto da una casella di testo da aggiungere alla vista Index. L'istruzione che aggiunge il [in cui](https://msdn.microsoft.com/library/bb535040.aspx) clausola viene eseguita solo se è presente un valore per la ricerca.
+È stato aggiunto un parametro `searchString` al metodo `Index`. È stata anche aggiunta all'istruzione LINQ una `where` clausola che seleziona solo gli studenti il cui nome o cognome contengono la stringa di ricerca. Il valore di stringa di ricerca viene ricevuto da una casella di testo da aggiungere alla vista Index. L'istruzione che aggiunge il [in cui](https://msdn.microsoft.com/library/bb535040.aspx) clausola viene eseguita solo se è presente un valore per la ricerca.
 
 > [!NOTE]
 > In molti casi è possibile chiamare il metodo di stesso in un set di entità di Entity Framework o come metodo di estensione per una raccolta in memoria. I risultati sono in genere gli stessi ma in alcuni casi potrebbero essere diversi. Ad esempio, l'implementazione di .NET Framework del `Contains` metodo restituisce tutte le righe quando si passa una stringa vuota a esso, ma il provider di Entity Framework per SQL Server Compact 4.0 restituisce zero righe per le stringhe vuote. Di conseguenza il codice nell'esempio (inserire la `Where` istruzione all'interno di un `if` istruzione) garantisce che ottenere gli stessi risultati per tutte le versioni di SQL Server. Inoltre, l'implementazione di .NET Framework del `Contains` metodo esegue un confronto tra maiuscole e minuscole per impostazione predefinita, ma i provider di Entity Framework SQL Server eseguono confronti tra maiuscole e minuscole per impostazione predefinita. Pertanto, la chiamata di `ToUpper` metodo in modo che il test in modo esplicito tra maiuscole e minuscole assicura che non cambiano quando si modifica il codice in un secondo momento per usare un repository, che restituirà un `IEnumerable` raccolta anziché un `IQueryable` oggetto. Quando il metodo `Contains` viene chiamato su una raccolta `IEnumerable`, si ottiene l'implementazione di .NET Framework; quando viene chiamato su un oggetto `IQueryable`, si ottiene l'implementazione del provider di database.

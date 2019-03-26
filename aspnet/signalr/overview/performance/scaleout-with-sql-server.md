@@ -8,12 +8,12 @@ ms.date: 06/10/2014
 ms.assetid: 98358b6e-9139-4239-ba3a-2d7dd74dd664
 msc.legacyurl: /signalr/overview/performance/scaleout-with-sql-server
 msc.type: authoredcontent
-ms.openlocfilehash: 5984a5e6c3215e7dde8c09ef702bf6453730a3ee
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: ac023e7d52f01886ad9978897607396d8f1c31a4
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57053308"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422558"
 ---
 <a name="signalr-scaleout-with-sql-server"></a>Scale-out di SignalR con SQL Server
 ====================
@@ -118,7 +118,7 @@ Includere anche il servizio di gestione (elencati in "Strumenti di gestione").
 
 ![](scaleout-with-sql-server/_static/image5.png)
 
-**Installare Web Deploy 3.0.** Quando si esegue Gestione IIS, verrà richiesto di installare piattaforma Web Microsoft oppure è possibile [Scarica il intstaller](https://go.microsoft.com/fwlink/?LinkId=255386). Nel programma di installazione della piattaforma, eseguire la ricerca di Web Deploy e installare distribuzione Web 3.0
+**Installare Web Deploy 3.0.** Quando si esegue Gestione IIS, verrà richiesto di installare piattaforma Web Microsoft oppure è possibile [scaricare il programma di installazione](https://go.microsoft.com/fwlink/?LinkId=255386). Nel programma di installazione della piattaforma, eseguire la ricerca di Web Deploy e installare distribuzione Web 3.0
 
 ![](scaleout-with-sql-server/_static/image6.png)
 

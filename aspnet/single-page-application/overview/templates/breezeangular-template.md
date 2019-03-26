@@ -8,12 +8,12 @@ ms.date: 03/08/2013
 ms.assetid: db31e909-563a-4516-aadd-62aa210ac7e4
 msc.legacyurl: /single-page-application/overview/templates/breezeangular-template
 msc.type: authoredcontent
-ms.openlocfilehash: a3e8b42cdadf99df6971a278834b1429e129ce72
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a3021f166262ee953b0cbe9ea88762a385925b88
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57041188"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423102"
 ---
 <a name="breezeangular-template"></a>Modello Breeze/Angular
 ====================
@@ -89,7 +89,7 @@ A questo punto si trova il terreno di SPA. Tutto ciò che viene visualizzata e v
 
 La logica di convalida viene eseguita sul lato client, dal gioco da ragazzi. Gli attributi di convalida sulle classi del modello server siano propagati al client ed eseguiti automaticamente prima che il client contatta il server.
 
-Esaminare il traffico di rete. Si noti che non erano Nessuna chiamata al server quando Breeze ha rilevato un errore. Ogni modifica valido ha restituito una richiesta POST per "/ api/Todo/SaveChanges". Gioco da ragazzi aggrega le modifiche e li invia insieme come una singola richiesta per il controller Web API `SaveChanges` (metodo). Che è diverso dal modello di applicazione a singola pagina KockoutJS, rendendo PUT, POST e DELETE singolarmente le richieste per ogni elemento.
+Esaminare il traffico di rete. Si noti che non erano Nessuna chiamata al server quando Breeze ha rilevato un errore. Ogni modifica valido ha restituito una richiesta POST per "/ api/Todo/SaveChanges". Gioco da ragazzi aggrega le modifiche e li invia insieme come una singola richiesta per il controller Web API `SaveChanges` (metodo). Che è diverso dal modello Knockout. js SPA, rendendo PUT, POST e DELETE singolarmente le richieste per ogni elemento.
 
 Si noti, inoltre, che non vi è alcun traffico di rete quando si passa tra la TodoList e sulle pagine. Ciò avviene perché la query è stata vincolata alla cache locale Breeze.
 
@@ -107,7 +107,7 @@ Lo stack di server-side è costituito da codice per sviluppatori e tre le librer
 
 ![](http://www.breezejs.com/sites/all/images/spa-template/ServerArchitecture.png)
 
-L'architettura di base è lo stesso come il modello di applicazione a singola pagina KockoutJS. Tuttavia, l'implementazione è molto più semplice: Agli oggetti DTO sono stati eliminati e la maggior parte dei dettagli Entity Framework vengono delegata a Breeze.NET.
+L'architettura di base è lo stesso come il modello di applicazione a singola pagina Knockout. js. Tuttavia, l'implementazione è molto più semplice: Agli oggetti DTO sono stati eliminati e la maggior parte dei dettagli Entity Framework vengono delegata a Breeze.NET.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

@@ -8,12 +8,12 @@ ms.date: 02/20/2007
 ms.assetid: a8fa72ee-8328-4854-a419-c1b271772303
 msc.legacyurl: /web-forms/overview/data-access/accessing-the-database-directly-from-an-aspnet-page/implementing-optimistic-concurrency-with-the-sqldatasource-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 7695ffad0599701840da83670af3940569e01c21
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 879f0f491461ec49c4eef9dc8add747ac2b22f90
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57037778"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422103"
 ---
 <a name="implementing-optimistic-concurrency-with-the-sqldatasource-vb"></a>Implementazione della concorrenza ottimistica con SqlDataSource (VB)
 ====================
@@ -28,7 +28,7 @@ da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 Nell'esercitazione precedente abbiamo esaminato come aggiungere inserimento, aggiornamento ed eliminazione di funzionalità per il controllo SqlDataSource. In breve, per fornire queste funzionalità sono necessarie per specificare il corrispondente `INSERT`, `UPDATE`, o `DELETE` istruzione SQL nel controllo s `InsertCommand`, `UpdateCommand`, o `DeleteCommand` proprietà, insieme alle appropriato i parametri in di `InsertParameters`, `UpdateParameters`, e `DeleteParameters` raccolte. Anche se queste proprietà e le raccolte possono essere specificate manualmente, il pulsante Avanzate di creazione guidata s Configura origine dati offre una generazione `INSERT`, `UPDATE`, e `DELETE` istruzioni casella di controllo che crea automaticamente tali istruzioni in base il `SELECT` istruzione.
 
-E genera `INSERT`, `UPDATE`, e `DELETE` istruzioni casella di controllo di finestra di dialogo Opzioni avanzate generazione SQL è inclusa un'opzione di concorrenza ottimistica utilizzare (vedere la figura 1). Se selezionata, il `WHERE` clausole in quello generato automaticamente `UPDATE` e `DELETE` istruzioni sono state modificate per eseguire solo l'update o delete se t non abbia dati del database sottostante è stato modificato dall'utente ultimo caricamento dei dati nella griglia.
+E genera `INSERT`, `UPDATE`, e `DELETE` istruzioni casella di controllo di finestra di dialogo Opzioni avanzate generazione SQL è inclusa un'opzione di concorrenza ottimistica utilizzare (vedere la figura 1). Se selezionata, il `WHERE` clausole in quello generato automaticamente `UPDATE` e `DELETE` istruzioni sono state modificate per solo eseguire l'aggiornamento o eliminazione, se i dati del database sottostante non sono stati modificati dall'utente ultimo caricamento dei dati nella griglia.
 
 
 ![È possibile aggiungere il supporto della concorrenza ottimistica da avanzate finestra di dialogo Opzioni di generazione SQL](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image1.gif)
@@ -52,7 +52,7 @@ Figura 2 illustra questa interazione.
 **Figura 2**: Quando due utenti simultaneamente aggiornare un Record sono s potenziale per un utente s le modifiche ai sovrascrittura di altri spazi dei nomi ([fare clic per visualizzare l'immagine con dimensioni normali](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image2.png))
 
 
-Per impedire che unfolding, una forma di questo scenario [controllo della concorrenza](http://en.wikipedia.org/wiki/Concurrency_control) devono essere implementati. [La concorrenza ottimistica](http://en.wikipedia.org/wiki/Optimistic_concurrency_control) l'obiettivo di questa esercitazione funziona sul presupposto che possono essere anche i conflitti di concorrenza ogni ora e quindi, si verificano la maggior parte dei casi questi conflitti ha vinto t. Pertanto, se si verificano un conflitto, controllo della concorrenza ottimistica semplicemente informa l'utente che le modifiche Impossibile essere salvato perché un altro utente ha modificato gli stessi dati.
+Per impedire che unfolding, una forma di questo scenario [controllo della concorrenza](http://en.wikipedia.org/wiki/Concurrency_control) devono essere implementati. [La concorrenza ottimistica](http://en.wikipedia.org/wiki/Optimistic_concurrency_control) l'obiettivo di questa esercitazione funziona sul presupposto che, mentre, potrebbe essere ogni tanto in tanto conflitti di concorrenza la maggior parte dei casi non si verificheranno tali conflitti. Pertanto, se si verificano un conflitto, controllo della concorrenza ottimistica semplicemente informa l'utente che le modifiche Impossibile essere salvato perché un altro utente ha modificato gli stessi dati.
 
 > [!NOTE]
 > Per le applicazioni in cui si presuppone che siano presenti molti conflitti di concorrenza o se tali conflitti non vengono tollerabili, quindi il controllo della concorrenza pessimistica è utilizzabile in alternativa. Fare riferimento al [implementazione della concorrenza ottimistica](../editing-inserting-and-deleting-data/implementing-optimistic-concurrency-vb.md) esercitazione per una discussione più approfondita sul controllo della concorrenza pessimistica.
@@ -66,7 +66,7 @@ Controllo della concorrenza ottimistica funzionamento verificando che il record 
 **Figura 3**: Per Update o Delete su esito positivo, l'originale valori deve essere uguale per i valori del Database corrente ([fare clic per visualizzare l'immagine con dimensioni normali](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image4.png))
 
 
-Esistono vari approcci all'implementazione della concorrenza ottimistica (vedere [Peter A. Bromberg](http://peterbromberg.net/) s [per la logica di aggiornamento di concorrenza di Optmistic](http://www.eggheadcafe.com/articles/20050719.asp) per un rapido sguardo una serie di opzioni). La tecnica utilizzata da SqlDataSource (sia da ADO.NET tipizzata set di dati usati nel nostro livello di accesso ai dati) aumenta la `WHERE` clausola per includere un confronto di tutti i valori originali. Nell'esempio `UPDATE` istruzione, ad esempio, aggiorna il nome e il prezzo di un prodotto solo se sono uguali ai valori originariamente recuperati quando si aggiorna il record in GridView i valori del database corrente. Il `@ProductName` e `@UnitPrice` i parametri contengono i nuovi valori immessi dall'utente, mentre `@original_ProductName` e `@original_UnitPrice` contengono i valori che originariamente venivano caricati in GridView quando è stato fatto clic sul pulsante di modifica:
+Esistono vari approcci all'implementazione della concorrenza ottimistica (vedere [Peter A. Bromberg](http://peterbromberg.net/)del [logica di aggiornamento di concorrenza ottimistica](http://www.eggheadcafe.com/articles/20050719.asp) per un rapido sguardo una serie di opzioni). La tecnica utilizzata da SqlDataSource (sia da ADO.NET tipizzata set di dati usati nel nostro livello di accesso ai dati) aumenta la `WHERE` clausola per includere un confronto di tutti i valori originali. Nell'esempio `UPDATE` istruzione, ad esempio, aggiorna il nome e il prezzo di un prodotto solo se sono uguali ai valori originariamente recuperati quando si aggiorna il record in GridView i valori del database corrente. Il `@ProductName` e `@UnitPrice` i parametri contengono i nuovi valori immessi dall'utente, mentre `@original_ProductName` e `@original_UnitPrice` contengono i valori che originariamente venivano caricati in GridView quando è stato fatto clic sul pulsante di modifica:
 
 
 [!code-sql[Main](implementing-optimistic-concurrency-with-the-sqldatasource-vb/samples/sample1.sql)]
@@ -129,7 +129,7 @@ Sfortunatamente, l'elemento aumentata `UPDATE` e `DELETE` eseguire le istruzioni
 
 [!code-sql[Main](implementing-optimistic-concurrency-with-the-sqldatasource-vb/samples/sample6.sql)]
 
-Il `UnitPrice` colonna il `Products` tabella può includere `NULL` valori. Se un particolare record ha un `NULL` valore per `UnitPrice`, il `WHERE` parte clausola `[UnitPrice] = @original_UnitPrice` verrà *sempre* restituiscono False perché `NULL = NULL` restituisce sempre False. Di conseguenza, i record che contengono `NULL` valori non possono essere modificati o eliminati, come i `UPDATE` e `DELETE` istruzioni `WHERE` clausole ha vinto t restituiscono tutte le righe da aggiornare o eliminare.
+Il `UnitPrice` colonna il `Products` tabella può includere `NULL` valori. Se un particolare record ha un `NULL` valore per `UnitPrice`, il `WHERE` parte clausola `[UnitPrice] = @original_UnitPrice` verrà *sempre* restituiscono False perché `NULL = NULL` restituisce sempre False. Di conseguenza, i record che contengono `NULL` valori non possono essere modificati o eliminati, come i `UPDATE` e `DELETE` istruzioni `WHERE` clausole non restituiscono alcuna riga da aggiornare o eliminare.
 
 > [!NOTE]
 > Questo bug è stata innanzitutto segnalato a Microsoft nel giugno del 2004 nella [SqlDataSource genera SQL le istruzioni non corrette](https://connect.microsoft.com/VisualStudio/feedback/ViewFeedback.aspx?FeedbackID=93937) e quest'ultima è pianificata per essere corretto nella prossima versione di ASP.NET.
@@ -189,7 +189,7 @@ Quando la seconda finestra del browser aggiorna il record, il nome del prodotto 
 > Eliminare funziona allo stesso modo. Con due finestre del browser aperte, avviare la modifica di un prodotto specifico con uno e quindi salvando le modifiche. Dopo aver salvato le modifiche in un browser, fare clic sul pulsante Elimina per lo stesso prodotto in altro. Poiché l'originale don valori t corrispondere nel `DELETE` istruzione s `WHERE` clausola, l'eliminazione automatica ha esito negativo.
 
 
-Dalla prospettiva di s dell'utente finale nella seconda finestra del browser, dopo aver fatto clic sul pulsante Aggiorna della griglia restituisce alla modalità di pre-modifica, ma le modifiche apportate verranno perse. Tuttavia, qui s alcun feedback visivo che osserva le t le modifiche. In teoria, se le modifiche di un utente s vengono perse a una violazione della concorrenza, è il d avvisali e, forse, mantenere la griglia in modalità di modifica. Let s esaminare come eseguire questa operazione.
+Dalla prospettiva di s dell'utente finale nella seconda finestra del browser, dopo aver fatto clic sul pulsante Aggiorna della griglia restituisce alla modalità di pre-modifica, ma le modifiche apportate verranno perse. Tuttavia, qui s alcun feedback visivo che le modifiche non è stato attaccato. In teoria, se le modifiche di un utente s vengono perse a una violazione della concorrenza, è il d avvisali e, forse, mantenere la griglia in modalità di modifica. Let s esaminare come eseguire questa operazione.
 
 ## <a name="step-3-determining-when-a-concurrency-violation-has-occurred"></a>Passaggio 3: Determinare quando si è verificata una violazione di concorrenza
 

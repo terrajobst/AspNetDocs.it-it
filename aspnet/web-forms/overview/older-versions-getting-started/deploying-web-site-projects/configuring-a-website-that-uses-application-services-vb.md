@@ -8,12 +8,12 @@ ms.date: 04/23/2009
 ms.assetid: 9c31a42f-d8bb-4c0f-9ccc-597d4f70ac42
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/configuring-a-website-that-uses-application-services-vb
 msc.type: authoredcontent
-ms.openlocfilehash: d5fe8dc8486cf08e0aaf0e107069972eee7fbada
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 472770477e83fc0bbe24995e5558d0e8624082ae
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57041918"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58426003"
 ---
 <a name="configuring-a-website-that-uses-application-services-vb"></a>Configurazione di un sito Web che usa i servizi per le applicazioni (VB)
 ====================
@@ -138,7 +138,7 @@ Per verificare che gli oggetti di database di servizi di applicazione sono stati
 **Figura 4**: Verificare che gli oggetti di Database sono stati aggiunti al Database di produzione ([fare clic per visualizzare l'immagine con dimensioni normali](configuring-a-website-that-uses-application-services-vb/_static/image12.jpg))
 
 
-È necessario usare il `aspnet_regsql.exe` strumento quando si distribuisce l'applicazione web per la prima volta o per la prima volta dopo avere avviato usando i servizi delle applicazioni. Dopo aver installato questi oggetti di database nel database di produzione si ha vinto t dover essere nuovamente aggiunto o modificato.
+È necessario usare il `aspnet_regsql.exe` strumento quando si distribuisce l'applicazione web per la prima volta o per la prima volta dopo avere avviato usando i servizi delle applicazioni. Dopo aver installato questi oggetti di database nel database di produzione che non dovranno essere nuovamente aggiunto o modificato.
 
 ### <a name="copying-user-accounts-from-development-to-production"></a>Copia gli account utente, dallo sviluppo alla produzione
 
@@ -148,7 +148,7 @@ Il `SqlMembershipProvider` e `SqlRoleProvider` classi del provider sono state pr
 
 Oltre al `ApplicationId` colonna, il `aspnet_Applications` tabella include inoltre un `ApplicationName` colonna che fornisce un nome più Converto per l'applicazione. Quando un sito Web tenta di usare un account utente, ad esempio la convalida di credenziali di un utente s dalla pagina di accesso, è necessario indicare il `SqlMembershipProvider` classe dell'applicazione da usare. Avviene in genere ciò specificando il nome dell'applicazione e questo valore deriva dalla configurazione del provider s nel `Web.config` : in particolare tramite il `applicationName` attributo.
 
-Ma cosa succede se il `applicationName` attributo viene omesso in `Web.config`? In questo caso l'appartenenza al sistema utilizza il percorso radice dell'applicazione come il `applicationName` valore. Se il `applicationName` attributo non è impostato in modo esplicito `Web.config`, quindi, è possibile che l'ambiente di sviluppo e l'ambiente di produzione usare una radice dell'applicazione diverso e pertanto verrà associati a diversi dell'applicazione nomi dei servizi dell'applicazione. Se si verifica una mancata corrispondenza di questo tipo, quindi gli utenti creati nell'ambiente di sviluppo avrà un `ApplicationId` che non corrisponde al valore di `ApplicationId` valore per l'ambiente di produzione. Il risultato finale è che gli utenti ha vinto t potranno eseguire l'accesso.
+Ma cosa succede se il `applicationName` attributo viene omesso in `Web.config`? In questo caso l'appartenenza al sistema utilizza il percorso radice dell'applicazione come il `applicationName` valore. Se il `applicationName` attributo non è impostato in modo esplicito `Web.config`, quindi, è possibile che l'ambiente di sviluppo e l'ambiente di produzione usare una radice dell'applicazione diverso e pertanto verrà associati a diversi dell'applicazione nomi dei servizi dell'applicazione. Se si verifica una mancata corrispondenza di questo tipo, quindi gli utenti creati nell'ambiente di sviluppo avrà un `ApplicationId` che non corrisponde al valore di `ApplicationId` valore per l'ambiente di produzione. Il risultato finale è che gli utenti non saranno in grado di eseguire l'accesso.
 
 > [!NOTE]
 > Se ci si ritrova in questo caso - con gli account utente copiati nell'ambiente di produzione con una mancata corrispondenza `ApplicationId` valore, è possibile scrivere una query per aggiornare questi errato `ApplicationId` i valori per il `ApplicationId` utilizzata in produzione. Al termine dell'aggiornamento, gli utenti con account creati nell'ambiente di sviluppo a questo punto sarebbe in grado di accedere all'applicazione web in produzione.

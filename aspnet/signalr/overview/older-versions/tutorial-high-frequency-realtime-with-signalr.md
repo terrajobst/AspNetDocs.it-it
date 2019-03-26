@@ -8,12 +8,12 @@ ms.date: 04/16/2013
 ms.assetid: ad2a5da5-2e79-40ea-bc84-028d327f5982
 msc.legacyurl: /signalr/overview/older-versions/tutorial-high-frequency-realtime-with-signalr
 msc.type: authoredcontent
-ms.openlocfilehash: 6df35a420a0733003808a12d065b03f08ef56dd9
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 60fffd7cd5139b2be34968c1f33474be867f0962
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57048048"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422883"
 ---
 <a name="high-frequency-realtime-with-signalr-1x"></a>Messaggistica ad alta frequenza in tempo reale con SignalR 1.x
 ====================
@@ -136,7 +136,7 @@ In questa sezione si creerà un'applicazione browser che invia la posizione dell
 
 ## <a name="add-the-client-loop"></a>Aggiungere il ciclo di client
 
-Poiché la posizione della forma per ogni evento di spostamento del mouse di invio creerà una quantità non necessari di traffico di rete, i messaggi dal client devono essere limitate. Si userà il codice javascript `setInterval` funzione per impostare un ciclo che invia informazioni sulla posizione di nuovo al server a una tariffa fissa. Il ciclo è una rappresentazione di base di un "ciclo del gioco", una funzione chiamata più volte che controlla tutte le funzionalità di un gioco o in altra simulazione.
+Poiché la posizione della forma per ogni evento di spostamento del mouse di invio creerà una quantità di traffico di rete non necessaria, i messaggi dal client devono essere limitate. Si userà il codice javascript `setInterval` funzione per impostare un ciclo che invia informazioni sulla posizione di nuovo al server a una tariffa fissa. Il ciclo è una rappresentazione di base di un "ciclo del gioco", una funzione chiamata più volte che controlla tutte le funzionalità di un gioco o in altra simulazione.
 
 1. Aggiornare il codice client nella pagina HTML in modo che corrisponda il frammento di codice seguente.
 

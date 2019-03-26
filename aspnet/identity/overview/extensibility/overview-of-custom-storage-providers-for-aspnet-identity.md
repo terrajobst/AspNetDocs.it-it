@@ -8,12 +8,12 @@ ms.date: 10/13/2014
 ms.assetid: 681a9204-462e-4260-9a0b-19f0644d6ad7
 msc.legacyurl: /identity/overview/extensibility/overview-of-custom-storage-providers-for-aspnet-identity
 msc.type: authoredcontent
-ms.openlocfilehash: e7461098f93bf64d6ff0d0e4ecdb64338f96be8b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d819fabf4f367c8f6d0ce857bc248a2b812c2b21
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57064058"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422207"
 ---
 <a name="overview-of-custom-storage-providers-for-aspnet-identity"></a>Panoramica dei provider di archiviazione personalizzati per ASP.NET Identity
 ====================
@@ -82,7 +82,7 @@ In questo argomento si presuppone che si ha familiarità con il meccanismo di pe
 
 Si dispone di molta libertà quando si progetta il repository di codice per un oggetto personalizzato provider dell'archivio. È sufficiente creare i repository per le funzionalità che si intendono utilizzare nell'applicazione. Ad esempio, se non si usa i ruoli dell'applicazione, è necessario creare l'archivio per i ruoli o i ruoli utente. L'infrastruttura esistente e la tecnologia può richiedere una struttura che è molto diversa da un'implementazione predefinita di ASP.NET Identity. Nel livello di accesso ai dati, è fornire la logica da utilizzare con la struttura del repository.
 
-Per un'implementazione di MySQL dei repository di dati per ASP.NET Identity 2.0, vedere [MySQLIdentity.sql](https://aspnet.codeplex.com/SourceControl/latest#Samples/Identity/AspNet.Identity.MySQL/MySQLIdentity.sql).
+Per un'implementazione di MySQL di repository dei dati per ASP.NET Identity 2.0, vedere [MySQLIdentity.sql](https://aspnet.codeplex.com/SourceControl/latest#Samples/Identity/AspNet.Identity.MySQL/MySQLIdentity.sql).
 
 Nel livello di accesso ai dati, è fornire la logica per salvare i dati di ASP.NET Identity all'origine dati. Il livello di accesso ai dati per il provider di archiviazione personalizzato potrebbe includere le classi seguenti per archiviare le informazioni utente e il ruolo.
 

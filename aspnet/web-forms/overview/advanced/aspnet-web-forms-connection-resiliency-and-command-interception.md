@@ -8,12 +8,12 @@ ms.date: 03/31/2014
 ms.assetid: 6d497001-fa80-4765-b4cc-181fe90b894e
 msc.legacyurl: /web-forms/overview/advanced/aspnet-web-forms-connection-resiliency-and-command-interception
 msc.type: authoredcontent
-ms.openlocfilehash: 039923a91d957765fa8b2c0cfe11abc8790c1e88
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 067542e8b8aa9909bbb2147f8e11e34604986d87
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57052678"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424027"
 ---
 <a name="aspnet-web-forms-connection-resiliency-and-command-interception"></a>Resilienza della connessione e intercettazione dei comandi di Web Forms ASP.NET
 ====================
@@ -141,7 +141,7 @@ Successivamente, si creerà le classi di Entity Framework chiamerà in ogni volt
 
 Queste righe di codice sono gli eventi che generano il codice dell'intercettore da eseguire quando Entity Framework di inviare query al database. Si noti che poiché sono create classi di intercettore separato per la simulazione di errore temporaneo e la registrazione, è possibile in modo indipendente abilitare e disabilitarli.   
   
- È possibile aggiungere intercettori tramite il `DbInterception.Add` ovunque nel codice; non deve necessariamente trovarsi nel `Application_Start` (metodo). Un'altra opzione, se non è stato aggiunto intercettori nel `Application_Start` , è possibile aggiornare o aggiungere la classe denominata *WingtipToysConfiguration.cs* e inserire il codice sopra riportato alla fine del costruttore del `WingtipToysbConfiguration` classe.
+ È possibile aggiungere intercettori tramite il `DbInterception.Add` ovunque nel codice; non deve necessariamente trovarsi nel `Application_Start` (metodo). Un'altra opzione, se non è stato aggiunto intercettori nel `Application_Start` , è possibile aggiornare o aggiungere la classe denominata *WingtipToysConfiguration.cs* e inserire il codice sopra riportato alla fine del costruttore del `WingtipToysConfiguration` classe.
 
 Quando si inserisce questo codice, prestare attenzione a non eseguire `DbInterception.Add` dell'intercettore stesso più di una volta o si otterrà le istanze aggiuntive dell'intercettore. Ad esempio, se si aggiunta due volte l'intercettore di registrazione, si noterà due log per ogni query SQL.
 
@@ -156,7 +156,7 @@ Il codice di simulazione di errore temporaneo scritto in modo che è possibile c
 3. Immettere un nuovo prodotto denominato "Throw" con file di descrizione, prezzo e image appropriato.
 4. Premere il **Aggiungi prodotto** pulsante.  
    Si noterà che il browser sembra bloccarsi per diversi secondi mentre Entity Framework ritenterà l'esecuzione di query più volte. Il primo tentativo avviene molto rapidamente, quindi aumenta il tempo di attesa prima di ogni tentativo aggiuntivo. Questo processo di attesa più prima che venga chiamato ogni nuovo tentativo *backoff esponenziale* .
-5. Attendere che la pagina non è più atttempting da caricare.
+5. Attendere che la pagina non è più tenta di caricare.
 6. Arresta il progetto ed esaminare il Visual Studio **Output** finestra per visualizzare l'output di traccia. È possibile trovare il **Output** finestra selezionando **Debug**  - &gt; **Windows**  - &gt;  **Output**. Si potrebbe essere necessario scorrere oltre diversi altri log scritto da un logger.  
   
    Si noti che è possibile visualizzare le query SQL inviate al database. Vengono visualizzate alcune query iniziale e i comandi che Entity Framework esegue per iniziare, controllare la tabella di cronologia versione e la migrazione di database.   

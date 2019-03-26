@@ -8,12 +8,12 @@ ms.date: 10/17/2013
 ms.assetid: 4085de68-d243-4378-8a64-86236ea8d2da
 msc.legacyurl: /mvc/overview/getting-started/introduction/adding-a-new-field
 msc.type: authoredcontent
-ms.openlocfilehash: 950ae17ebd6b0f15520c2a4e9372703f5374dfbe
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: bcc1de15b49b51461f76c9ac8f1bee4555ea101d
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57034098"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422428"
 ---
 <a name="adding-a-new-field"></a>Aggiunta di un nuovo campo
 ====================
@@ -122,7 +122,7 @@ Aprire il *\Views\Movies\Index.cshtml* file e aggiungere un `<th>Rating</th>` in
 
 [!code-cshtml[Main](adding-a-new-field/samples/sample8.cshtml?highlight=31-33,52-54)]
 
-Successivamente, aprire il *\Views\Movies\Create.cshtml* file e aggiungere il `Rating` campo con il markup seguente highlighed. Si esegue il rendering di una casella di testo in modo che sia possibile specificare una classificazione uguale a quando viene creato un nuovo film.
+Successivamente, aprire il *\Views\Movies\Create.cshtml* file e aggiungere il `Rating` campo con il markup evidenziato seguente. Si esegue il rendering di una casella di testo in modo che sia possibile specificare una classificazione uguale a quando viene creato un nuovo film.
 
 [!code-cshtml[Main](adding-a-new-field/samples/sample9.cshtml?highlight=9-15)]
 

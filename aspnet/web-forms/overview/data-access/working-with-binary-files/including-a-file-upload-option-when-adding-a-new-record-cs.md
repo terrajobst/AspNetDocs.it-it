@@ -8,12 +8,12 @@ ms.date: 03/27/2007
 ms.assetid: 362ade25-3965-4fb2-88d2-835c4786244f
 msc.legacyurl: /web-forms/overview/data-access/working-with-binary-files/including-a-file-upload-option-when-adding-a-new-record-cs
 msc.type: authoredcontent
-ms.openlocfilehash: c3887f920126d70b300de5a0d6e09474fd33c332
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 8b7f839f16150b93645a9fe868642fa5f36248a9
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57061478"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424976"
 ---
 <a name="including-a-file-upload-option-when-adding-a-new-record-c"></a>Inclusione di un'opzione per il caricamento di file durante l'aggiunta di un nuovo record (C#)
 ====================
@@ -73,7 +73,7 @@ Poiché il livello di presentazione deve solo interfacciarsi con il livello di l
 [!code-csharp[Main](including-a-file-upload-option-when-adding-a-new-record-cs/samples/sample2.cs)]
 
 > [!NOTE]
-> Assicurarsi che sia stato salvato del DataSet tipizzato prima di aggiungere il `InsertWithPicture` metodo per il livello BLL. Poiché il `CategoriesTableAdapter` codice della classe viene generato automaticamente basata su set di dati tipizzati, se non si t prima di salvare le modifiche al set di dati tipizzato il `Adapter` proprietà ha vinto t a conoscenza di `InsertWithPicture` (metodo).
+> Assicurarsi che sia stato salvato del DataSet tipizzato prima di aggiungere il `InsertWithPicture` metodo per il livello BLL. Poiché il `CategoriesTableAdapter` codice della classe viene generato automaticamente basata su set di dati tipizzati, se non si t prima di tutto salvare le modifiche al set di dati tipizzati i `Adapter` proprietà non sarà a conoscenza di `InsertWithPicture` (metodo).
 
 
 ## <a name="step-3-listing-the-existing-categories-and-their-binary-data"></a>Passaggio 3: Elenca le categorie esistenti e i relativi dati binari
@@ -231,7 +231,7 @@ Let s si consiglia di testare l'interfaccia di inserimento e `ItemInserting` ges
 **Figura 9**: Un messaggio di avviso viene visualizzato se viene caricato un tipo di File non valido ([fare clic per visualizzare l'immagine con dimensioni normali](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image16.png))
 
 
-Dopo avere verificato che la pagina richiede un'immagine da caricare e vinti t accetta i file non PDF o non JPG, aggiungere una nuova categoria con un'immagine JPG valida, se si lascia vuoto il campo Brochure. Dopo aver fatto clic sul pulsante Inserisci, verrà postback della pagina e verrà aggiunto un nuovo record per il `Categories` tabella con il contenuto binario di immagine caricata s archiviati direttamente nel database. Il controllo GridView viene aggiornato e Mostra una riga per la categoria appena aggiunta, ma, come illustrato nella figura 10, la nuova immagine s categoria non viene visualizzata correttamente.
+Dopo avere verificato che la pagina richiede un'immagine da caricare e non accetta i file non PDF o non JPG, aggiungere una nuova categoria con un'immagine JPG valida, se si lascia vuoto il campo Brochure. Dopo aver fatto clic sul pulsante Inserisci, verrà postback della pagina e verrà aggiunto un nuovo record per il `Categories` tabella con il contenuto binario di immagine caricata s archiviati direttamente nel database. Il controllo GridView viene aggiornato e Mostra una riga per la categoria appena aggiunta, ma, come illustrato nella figura 10, la nuova immagine s categoria non viene visualizzata correttamente.
 
 
 [![La nuova categoria s che immagine non viene visualizzata](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image10.gif)](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image17.png)

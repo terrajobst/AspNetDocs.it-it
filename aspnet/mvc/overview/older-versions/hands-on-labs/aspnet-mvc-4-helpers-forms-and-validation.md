@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 187ee9cd-bc70-479b-bfed-f568b8da96eb
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-helpers-forms-and-validation
 msc.type: authoredcontent
-ms.openlocfilehash: 8671ae8e9408e6f05135fa27d56480477521c4ba
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 45aab00140f63cd84ea1b7ba22f655b0e4373f97
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57056778"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423078"
 ---
 # <a name="aspnet-mvc-4-helpers-forms-and-validation"></a>Helper, moduli e convalida di ASP.NET MVC 4
 
@@ -710,7 +710,7 @@ In questa attività si abiliterà jQuery **la convalida del client non intrusivi
     > 
     > Inoltre, è possibile assegnare attributi ClientValidationEnabled in qualsiasi controller di avere un comportamento personalizzato.
 2. Aprire **create. cshtml** alla **Views\StoreManager**.
-3. Assicurarsi che i file di script seguente, **jQuery. Validate** e **jquery.validate.unobtrusive**, viene fatto riferimento in tramite la vista il &quot; **~/bundles/jqueryval** &quot; bundle.
+3. Assicurarsi che i file di script seguente, **jQuery. Validate** e **jquery.validate.unobtrusive**, viene fatto riferimento nella visualizzazione tramite il &quot; **~/bundles/jqueryval** &quot; bundle.
 
     [!code-cshtml[Main](aspnet-mvc-4-helpers-forms-and-validation/samples/sample22.cshtml)]
 

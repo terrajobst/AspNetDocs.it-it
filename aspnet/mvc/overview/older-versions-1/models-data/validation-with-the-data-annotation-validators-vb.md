@@ -8,12 +8,12 @@ ms.date: 05/29/2009
 ms.assetid: 0d23ff2b-f2ec-434a-be3b-1180beeccba3
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/validation-with-the-data-annotation-validators-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 8159693adced7f102f6fe1457d7b103f8596d231
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 6bfe11a40bbdf0cd9dfe4d81d9c7436a5adb9491
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57025548"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58420686"
 ---
 <a name="validation-with-the-data-annotation-validators-vb"></a>Convalida con i validator di annotazione dei dati (VB)
 ====================
@@ -55,7 +55,7 @@ Questa riga di codice registra il DataAnnotationsModelBinder come il raccoglitor
 Quando si usa lo strumento individuerebbe annotazioni dei dati, si usano attributi di convalida per eseguire la convalida. Lo spazio dei nomi System.ComponentModel.DataAnnotations include gli attributi di convalida seguenti:
 
 - Intervallo: consente di verificare se il valore di una proprietà è compreso tra un determinato intervallo di valori.
-- ReqularExpression – consente di verificare se il valore di una proprietà corrisponde a un modello di espressione regolare specificata.
+- RegularExpression: consente di verificare se il valore di una proprietà corrisponde a un modello di espressione regolare specificata.
 - È necessario: consente di contrassegnare una proprietà in base alle esigenze.
 - StringLength – consente di specificare una lunghezza massima per una proprietà di stringa.
 - Convalida-classe di base per tutti gli attributi di convalida.

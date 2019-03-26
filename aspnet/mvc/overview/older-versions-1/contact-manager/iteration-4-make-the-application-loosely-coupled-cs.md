@@ -8,12 +8,12 @@ ms.date: 02/20/2009
 ms.assetid: 829f589f-e201-4f6e-9ae6-08ae84322065
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-4-make-the-application-loosely-coupled-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 955991c148d48020c66cbc63ec6da45e3a9cc282
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 389627e610eebcdabee9b4db524e5915186db099
+ms.sourcegitcommit: 62db31596a7da029263cf06335aff12236fb3186
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57045308"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58440352"
 ---
 <a name="iteration-4--make-the-application-loosely-coupled-c"></a>Iterazione #4-rendere l'applicazione regime di controllo (c#)
 ====================
@@ -61,7 +61,7 @@ Si supponga, ad esempio, che si decide di cambiare modalità di implementazione 
 
 Quando un'applicazione è regime di controllo, d'altra parte, è possibile apportare modifiche a una parte di un'applicazione senza modificare altre parti di un'applicazione. Ad esempio, è possibile passare tecnologie di accesso ai dati senza modificare la logica di convalida o un controller.
 
-In questa iterazione, possiamo usufruire dei diversi modelli di progettazione software che consentono di effettuare il refactoring applicazione Contact Manager in un'applicazione più regime. Quando è stata completata, ha vinto t di Contact Manager eseguire alcuna operazione che è t non prima. Tuttavia, sarà possibile modificare l'applicazione più facilmente in futuro.
+In questa iterazione, possiamo usufruire dei diversi modelli di progettazione software che consentono di effettuare il refactoring applicazione Contact Manager in un'applicazione più regime. Quando è stata completata, Contact Manager ha vinto t eseguire tutto ciò che non prima. Tuttavia, sarà possibile modificare l'applicazione più facilmente in futuro.
 
 > [!NOTE] 
 > 
@@ -79,7 +79,7 @@ Implementazione del pattern di Repository richiede di completare i due passaggi 
 
 In primo luogo, è necessario creare un'interfaccia che descrive tutti i metodi di accesso di dati che è necessario eseguire. L'interfaccia IContactManagerRepository è contenuta nel listato 1. Questa interfaccia vengono descritti i cinque metodi: CreateContact() DeleteContact(), EditContact(), GetContact e ListContacts().
 
-**Listato 1 - Models\IContactManagerRepositiory.cs**
+**Listato 1 - Models\IContactManagerRepository.cs**
 
 [!code-csharp[Main](iteration-4-make-the-application-loosely-coupled-cs/samples/sample1.cs)]
 
@@ -165,7 +165,7 @@ Si vuole essere in grado di separare completamente il livello di servizio dal no
 
 Tuttavia, il livello di servizio deve essere in grado di passare i messaggi di errore di convalida al livello di controller. Come è possibile abilitare il livello di servizio comunicare i messaggi di errore di convalida senza l'accoppiamento tra i livelli di servizio e il controller? Possiamo usufruire dei vantaggi di un modello di progettazione software denominato il [pattern Decorator](http://en.wikipedia.org/wiki/Decorator_pattern).
 
-Un controller Usa un ModelStateDictionary denominato ModelState per rappresentare errori di convalida. Pertanto, si potrebbe essere tentati di passare ModelState dal livello di controller per il livello di servizio. Tuttavia, utilizzando ModelState nel livello di servizio renderebbe il livello di servizio dipendente da una funzionalità del framework ASP.NET MVC. Sarebbe un grosso problema in quanto, un giorno, si potrebbe voler usare il livello di servizio con un'applicazione WPF invece di un'applicazione ASP.NET MVC. In tal caso, si sarebbe t desidera fare riferimento a framework di MVC ASP.NET per usare la classe ModelStateDictionary.
+Un controller Usa un ModelStateDictionary denominato ModelState per rappresentare errori di convalida. Pertanto, si potrebbe essere tentati di passare ModelState dal livello di controller per il livello di servizio. Tuttavia, utilizzando ModelState nel livello di servizio renderebbe il livello di servizio dipendente da una funzionalità del framework ASP.NET MVC. Sarebbe un grosso problema in quanto, un giorno, si potrebbe voler usare il livello di servizio con un'applicazione WPF invece di un'applicazione ASP.NET MVC. In tal caso, è preferibile fare riferimento a framework di MVC ASP.NET per usare la classe ModelStateDictionary.
 
 Il pattern Decorator consente di eseguire il wrapping di una classe esistente in una nuova classe per implementare un'interfaccia. Il progetto Contact Manager include la classe ModelStateWrapper contenuta nel listato 7. La classe ModelStateWrapper implementa l'interfaccia nel listato 8.
 

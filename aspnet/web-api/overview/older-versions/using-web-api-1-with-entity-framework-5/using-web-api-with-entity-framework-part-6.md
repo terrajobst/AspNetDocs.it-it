@@ -8,12 +8,12 @@ ms.date: 07/04/2012
 ms.assetid: 91ee29ee-0689-40ee-914a-e7dd733b6622
 msc.legacyurl: /web-api/overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-6
 msc.type: authoredcontent
-ms.openlocfilehash: 642ff4554ed3664af0b5cc8e49d6b236c568131b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 21cfbd0bf691ea033e9a5a873ab49c83507750d5
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57054438"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425964"
 ---
 <a name="part-6-creating-product-and-order-controllers"></a>Parte 6: Creazione di controller per prodotti e ordini
 ====================
@@ -96,7 +96,7 @@ Quest'ultimo metodo prenderla in considerazione `PostOrder`. Al momento, questo 
 
 [!code-json[Main](using-web-api-with-entity-framework-part-6/samples/sample10.json)]
 
-Si tratta di un ordine ben strutturato ed Entity Framework verrà Fortunatamente inserirlo nel database. Ma contiene un'entità Product che non esisteva in precedenza. Il client appena creato un nuovo prodotto nel nostro database! Questo sarà una grande sorpresa al reparto di produzione di ordine, quando viene visualizzato un ordine per orsi koala. È la morale, essere realmente necessario prestare particolare attenzione i dati che si accetta una richiesta POST o PUT.
+Si tratta di un ordine ben strutturato ed Entity Framework verrà Fortunatamente inserirlo nel database. Ma contiene un'entità Product che non esisteva in precedenza. Il client appena creato un nuovo prodotto nel nostro database! Questo sarà una grande sorpresa al reparto di evasione degli ordini, quando viene visualizzato un ordine per orsi koala. È la morale, essere realmente necessario prestare particolare attenzione i dati che si accetta una richiesta POST o PUT.
 
 Per evitare questo problema, modificare il `PostOrder` metodo per richiedere un `OrderDTO` istanza. Usare la `OrderDTO` per creare il `Order`.
 

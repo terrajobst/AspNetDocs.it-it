@@ -8,12 +8,12 @@ ms.date: 07/27/2010
 ms.assetid: 983f3ffa-08b8-4868-b8c9-aa34593fc683
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/create-a-database
 msc.type: authoredcontent
-ms.openlocfilehash: b6ab0740f251889f0fa0561809cac2bbe79bcb3a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 48ca2984ca8e4ec5b2bc49952a8718aa26138aea
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57064908"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423702"
 ---
 <a name="create-a-database"></a>Creare un database
 ====================
@@ -94,7 +94,7 @@ La nuova tabella Dinners verrà quindi visualizzato entro il database in Esplora
 
 Ora abbiamo due tabelle all'interno di database. L'ultimo passaggio della progettazione dello schema sarà per impostare una relazione "uno-a-molti" tra queste due tabelle, in modo che è possibile associare ogni riga Dinner con zero o più righe RSVP che si applicano a esso. Faremo configurando colonna "DinnerID" della tabella RSVP per avere una relazione di chiave esterna nella colonna "DinnerID" nella tabella "Dinners".
 
-A tale scopo che verrà aperto il contenuto della tabella RSVP all'interno di progettazione tabelle facendovi doppio clic in Esplora server. La colonna "DinnerID" all'interno di esso, quindi selezioniamo destro del mouse e scegliere il comando di menu di scelta rapida "Relationshps in corso":
+A tale scopo che verrà aperto il contenuto della tabella RSVP all'interno di progettazione tabelle facendovi doppio clic in Esplora server. La colonna "DinnerID" all'interno di esso, quindi selezioniamo destro del mouse e scegliere "Relazioni in corso" comando del menu di scelta rapida:
 
 ![](create-a-database/_static/image12.png)
 

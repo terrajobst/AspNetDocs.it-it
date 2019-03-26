@@ -8,12 +8,12 @@ ms.date: 10/30/2006
 ms.assetid: 3ecc21c5-da0e-40ab-abb4-fac1e47398ad
 msc.legacyurl: /web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/adding-validation-controls-to-the-datalist-s-editing-interface-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 2fe85d6513a229f11b3aad7c7cc6c7124c94d70f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c552dd54830152afbe100ed03fb6764ddfb590dd
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57047188"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422662"
 ---
 <a name="adding-validation-controls-to-the-datalists-editing-interface-c"></a>Aggiunta di controlli di convalida all'interfaccia di modifica di DataList (C#)
 ====================
@@ -156,10 +156,10 @@ Aggiungere il codice seguente all'inizio della `UpdateCommand` gestore eventi, i
 
 [!code-csharp[Main](adding-validation-controls-to-the-datalist-s-editing-interface-cs/samples/sample2.cs)]
 
-Grazie a questa aggiunta, il prodotto tenterà di essere aggiornata solo se i dati inviati sono validi. La maggior parte degli utenti ha vinto t in grado di dati non validi a causa di convalida i controlli lato client script di postback, ma gli utenti che usano browser si supporta JavaScript o che dispongono di JavaScript supportano disabilitato, ignorare i controlli sul lato client e inviare dati non validi.
+Grazie a questa aggiunta, il prodotto tenterà di essere aggiornata solo se i dati inviati sono validi. La maggior parte degli utenti non saranno in grado di eseguire il postback di dati non valido a causa degli script sul lato client, i controlli di convalida, ma gli utenti che usano browser desidero supportano JavaScript o che dispongono di supporto di JavaScript disabilitato, ignorare i controlli sul lato client e inviare dati non validi.
 
 > [!NOTE]
-> Il lettore astuto ricorderete che durante l'aggiornamento dei dati con il controllo GridView, abbiamo t è necessario verificare in modo esplicito il `Page.IsValid` proprietà nella classe code-behind pagina s. Infatti GridView consulta il `Page.IsValid` Stati Uniti e solo procede con l'aggiornamento solo se viene restituito un valore di proprietà `True`.
+> Il lettore astuto ricorderete che durante l'aggiornamento dei dati con il controllo GridView, non dobbiamo verificare in modo esplicito il `Page.IsValid` proprietà nella classe code-behind pagina s. Infatti GridView consulta il `Page.IsValid` Stati Uniti e solo procede con l'aggiornamento solo se viene restituito un valore di proprietà `True`.
 
 
 ## <a name="step-3-summarizing-data-entry-problems"></a>Passaggio 3: Riepilogo dei problemi nell'immissione dati

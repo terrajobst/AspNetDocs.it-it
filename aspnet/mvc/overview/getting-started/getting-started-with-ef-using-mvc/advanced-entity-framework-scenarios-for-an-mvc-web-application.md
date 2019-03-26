@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.assetid: f35a9b0c-49ef-4cde-b06d-19d1543feb0b
 msc.legacyurl: /mvc/overview/getting-started/getting-started-with-ef-using-mvc/advanced-entity-framework-scenarios-for-an-mvc-web-application
 msc.type: authoredcontent
-ms.openlocfilehash: d0208c8890467ec6044d807aeee7c7ae02e18790
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d7cc83a5b78a60f575f5c3065079679189296a0c
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57032518"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425275"
 ---
 # <a name="tutorial-learn-about-advanced-ef-scenarios-for-an-mvc-5-web-app"></a>Esercitazione: Informazioni sugli scenari avanzati di Entity Framework per un'app Web MVC 5
 
@@ -85,7 +85,7 @@ Eseguire la pagina di informazioni. Verificare che vengano visualizzati i dati s
 
 Si supponga che gli amministratori di Contoso University vogliono essere in grado di eseguire modifiche di massa nel database, ad esempio modificare il numero di crediti per ogni corso. Se il numero di corsi dell'università è elevato, potrebbe non essere utile recuperarli tutti come entità e modificarli singolarmente. In questa sezione è possibile implementare una pagina web che consente all'utente di specificare un fattore in base a cui si desidera modificare il numero di crediti per tutti i corsi e viene apportata la modifica tramite l'esecuzione di un database SQL `UPDATE` istruzione. 
 
-Nelle *CourseContoller.cs*, aggiungere `UpdateCourseCredits` per i metodi `HttpGet` e `HttpPost`:
+Nelle *CourseController.cs*, aggiungere `UpdateCourseCredits` per i metodi `HttpGet` e `HttpPost`:
 
 [!code-csharp[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample4.cs)]
 

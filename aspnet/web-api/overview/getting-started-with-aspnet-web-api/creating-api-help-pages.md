@@ -8,12 +8,12 @@ ms.date: 04/01/2013
 ms.assetid: 0150e67b-c50d-4613-83ea-7b4ef8cacc5a
 msc.legacyurl: /web-api/overview/getting-started-with-aspnet-web-api/creating-api-help-pages
 msc.type: authoredcontent
-ms.openlocfilehash: c081064a32151a71fc4f3ea407e0c48a1539432a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: fba368e4017fea65ff96e2540d486662cc6b45f8
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57042528"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423728"
 ---
 <a name="creating-help-pages-for-aspnet-web-api"></a>Creazione di pagine della Guida per l'API Web ASP.NET
 ====================
@@ -85,7 +85,7 @@ Sotto **Output**, controllare **file di documentazione XML**. Nella casella di m
 
 ![](creating-api-help-pages/_static/image7.png)
 
-Aprire quindi il codice per il `ValuesController` controller API, che viene definito in /Controllers/ValuesControler.cs. Aggiungere alcuni commenti della documentazione per i metodi del controller. Ad esempio:
+Aprire quindi il codice per il `ValuesController` controller API, che viene definito in /Controllers/ValuesController.cs. Aggiungere alcuni commenti della documentazione per i metodi del controller. Ad esempio:
 
 [!code-csharp[Main](creating-api-help-pages/samples/sample4.cs)]
 

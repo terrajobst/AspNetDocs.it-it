@@ -8,12 +8,12 @@ ms.date: 11/13/2006
 ms.assetid: 97c13898-0741-45f9-b3fa-7540ab1679e6
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting-with-the-datalist-and-repeater/sorting-data-in-a-datalist-or-repeater-control-vb
 msc.type: authoredcontent
-ms.openlocfilehash: ad940afd03b66c17a4d8b1e5c727c317022fbc0a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 58d4c14e2b888f933457fe421235499943354182
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57040978"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422923"
 ---
 <a name="sorting-data-in-a-datalist-or-repeater-control-vb"></a>Ordinamento dei dati in un controllo DataList o Repeater (VB)
 ====================
@@ -135,7 +135,7 @@ A questo punto, durante la prima visita la pagina dei prodotti verranno inizialm
 
 
 > [!NOTE]
-> Facendo clic sul pulsante di aggiornamento, i dati essere automaticamente nuovamente ordinato perché lo stato di visualizzazione Repeater s è stato disabilitato, determinando il Repeater riassociare all'origine dati in ogni postback. Se è stato lasciato il Repeater s lo stato di visualizzazione abilitato, la modifica dell'ordinamento elenco a discesa elenco ha vinto t ha alcun effetto sulla sequenza di ordinamento. Per risolvere questo problema, creare un gestore eventi per s pulsante Refresh `Click` evento e riassociazione di Repeater all'origine dati (chiamando il Repeater s `DataBind()` (metodo)).
+> Facendo clic sul pulsante di aggiornamento, i dati essere automaticamente nuovamente ordinato perché lo stato di visualizzazione Repeater s è stato disabilitato, determinando il Repeater riassociare all'origine dati in ogni postback. Se è stato lasciato il Repeater s lo stato di visualizzazione abilitato, la modifica dell'ordinamento elenco a discesa elenco non ha alcun effetto sulla sequenza di ordinamento. Per risolvere questo problema, creare un gestore eventi per s pulsante Refresh `Click` evento e riassociazione di Repeater all'origine dati (chiamando il Repeater s `DataBind()` (metodo)).
 
 
 ## <a name="remembering-the-sort-expression-and-direction"></a>Ricordare l'espressione di ordinamento e la direzione

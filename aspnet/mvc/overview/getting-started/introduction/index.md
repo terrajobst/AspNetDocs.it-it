@@ -15,7 +15,7 @@ msc.type: chapter
 
 [!INCLUDE [consider RP](../../../../includes/razor.md)]
 
-Questa serie di esercitazioni seguente vengono illustrati ASP.NET MVC: Origine che si trova su [GitHub](https://github.com/aspnet/Docs/tree/master/aspnet/mvc/overview/getting-started/introduction/sample/MvcMovie/MvcMovie)
+Questa serie di esercitazioni seguente vengono illustrati ASP.NET MVC: Origine che si trova su [GitHub](https://github.com/aspnet/AspNetDocs/tree/master/aspnet/mvc/overview/getting-started/introduction/sample/MvcMovie/MvcMovie)
 
 - [Introduzione](getting-started.md)
 - [Aggiunta di un controller](adding-a-controller.md)

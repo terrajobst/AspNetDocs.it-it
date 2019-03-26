@@ -8,12 +8,12 @@ ms.date: 08/03/2007
 ms.assetid: 9ed8ccb5-5f31-4eb4-976d-cabf4b45ca09
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/debugging-stored-procedures-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 5d951fab4fea59226e5d34bbf468377d436df944
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 106f7498a70339556d0662a986d71a01a21074ab
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57046198"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424534"
 ---
 <a name="debugging-stored-procedures-vb"></a>Debug di stored procedure (VB)
 ====================
@@ -48,7 +48,7 @@ Il [Panoramica di T-SQL e il debug di CLR in SQL Server 2005](https://blogs.msdn
 
 Visual Studio può eseguire il debug di stored procedure in istanze di SQL Server locali e remote. Un'istanza di SQL Server locale è ne sono installati nello stesso computer di Visual Studio. Se non si trova il database di SQL Server in uso nel computer di sviluppo, quindi viene considerato un'istanza remota. Per queste esercitazioni usati istanze locali di SQL Server. Debug di stored procedure in un'istanza remota di SQL server richiede ulteriori passaggi di configurazione rispetto a quando il debug di stored procedure in un'istanza locale.
 
-Se si usa un'istanza di SQL Server locale, è possibile iniziare con il passaggio 1 e funzionamento di questa esercitazione alla fine. Se si usa un'istanza remota di SQL Server, tuttavia, sarà prima necessario assicurarsi che durante il debug è effettuato l'accesso al computer di sviluppo con un account utente di Windows che dispone di un account di accesso di SQL Server nell'istanza remota. Moveover, sia l'account di accesso di database e l'accesso al database utilizzata per connettersi al database dell'applicazione ASP.NET in esecuzione devono essere membri del `sysadmin` ruolo. Alla fine di questa esercitazione per altre informazioni sulla configurazione di Visual Studio e SQL Server per eseguire il debug di un'istanza remota, vedere gli oggetti di Database di debug di T-SQL nella sezione istanze Remote.
+Se si usa un'istanza di SQL Server locale, è possibile iniziare con il passaggio 1 e funzionamento di questa esercitazione alla fine. Se si usa un'istanza remota di SQL Server, tuttavia, sarà prima necessario assicurarsi che durante il debug è effettuato l'accesso al computer di sviluppo con un account utente di Windows che dispone di un account di accesso di SQL Server nell'istanza remota. Inoltre, questo account di accesso di database sia l'account di accesso di database usato per connettersi al database dell'applicazione ASP.NET in esecuzione devono essere membri del `sysadmin` ruolo. Alla fine di questa esercitazione per altre informazioni sulla configurazione di Visual Studio e SQL Server per eseguire il debug di un'istanza remota, vedere gli oggetti di Database di debug di T-SQL nella sezione istanze Remote.
 
 Infine, comprendere che il supporto per oggetti di database T-SQL del debug non è come funzionalità avanzate come supporto per le applicazioni .NET per il debug. Ad esempio, le condizioni punto di interruzione e i filtri non sono supportati, solo un subset delle finestre di debug sono disponibili, è possibile usare modifica e continuazione, la finestra controllo immediato viene eseguito il rendering inutile e così via. Visualizzare [limitazioni sui comandi del Debugger e le funzionalità](https://msdn.microsoft.com/library/ms165035(VS.80).aspx) per altre informazioni.
 

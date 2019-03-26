@@ -8,12 +8,12 @@ ms.date: 01/28/2012
 ms.assetid: c125ca47-606a-4d6f-a1fc-1fc62928af93
 msc.legacyurl: /web-api/overview/older-versions/creating-a-web-api-that-supports-crud-operations
 msc.type: authoredcontent
-ms.openlocfilehash: ba061b26b8527e447f25f6046057542a54f989a8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: f3cb0004075ef7687ca1096bd407c342b4d0b7be
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57052918"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423749"
 ---
 <a name="enabling-crud-operations-in-aspnet-web-api-1"></a>Abilitare le operazioni CRUD nell'API Web ASP.NET 1
 ====================
@@ -109,7 +109,7 @@ Aggiungere l'implementazione seguente:
 
 [!code-csharp[Main](creating-a-web-api-that-supports-crud-operations/samples/sample2.cs)]
 
-Aggiungere ora un'altra classe nella cartella Models, denominato &quot;ProductRepository.&quot; Questa classe implementerà l'interfaccia `IProductRespository`. Aggiungere l'implementazione seguente:
+Aggiungere ora un'altra classe nella cartella Models, denominato &quot;ProductRepository.&quot; Questa classe implementerà l'interfaccia `IProductRepository`. Aggiungere l'implementazione seguente:
 
 [!code-csharp[Main](creating-a-web-api-that-supports-crud-operations/samples/sample3.cs)]
 
@@ -133,7 +133,7 @@ Nel **Aggiungi Controller** procedura guidata, nome del controller &quot;Product
 ![](creating-a-web-api-that-supports-crud-operations/_static/image7.png)
 
 > [!NOTE]
-> Non è necessario inserire il contollers in una cartella denominata controller. Il nome della cartella non è rilevante. è semplicemente un modo pratico per organizzare i file di origine.
+> Non è necessario inserire i controller in una cartella denominata controller. Il nome della cartella non è rilevante. è semplicemente un modo pratico per organizzare i file di origine.
 
 
 Il **Aggiungi Controller** procedura guidata creerà un file denominato ProductsController.cs nella cartella controller. Se non è già aperto questo file, fare doppio clic sul file per aprirlo. Aggiungere il codice seguente **usando** istruzione:
@@ -216,7 +216,7 @@ Il nome del metodo inizia con &quot;inserito... &quot;, in modo che l'API Web co
 
 ## <a name="deleting-a-resource"></a>L'eliminazione di una risorsa
 
-Per eliminare una risorsa memorizzata in una, definire un metodo di "Eliminazione in corso".
+Per eliminare una risorsa, definiscono un' "eliminazione in corso" metodo.
 
 [!code-csharp[Main](creating-a-web-api-that-supports-crud-operations/samples/sample12.cs)]
 

@@ -8,12 +8,12 @@ ms.date: 07/17/2006
 ms.assetid: 56e15b33-93b8-43ad-8e19-44c6647ea05c
 msc.legacyurl: /web-forms/overview/data-access/editing-inserting-and-deleting-data/implementing-optimistic-concurrency-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 700770946caa68fca2b3101dd91a683d10aae052
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 08a9e1db4f8c34b438d45c0fb74d852bbd249615
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57059628"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422779"
 ---
 <a name="implementing-optimistic-concurrency-c"></a>Implementazione della concorrenza ottimistica (C#)
 ====================
@@ -60,7 +60,7 @@ Controllo della concorrenza ottimistica funzionamento verificando che il record 
 **Figura 2**: Per Update o Delete su esito positivo, l'originale valori deve essere uguale per i valori del Database corrente ([fare clic per visualizzare l'immagine con dimensioni normali](implementing-optimistic-concurrency-cs/_static/image6.png))
 
 
-Esistono vari approcci all'implementazione della concorrenza ottimistica (vedere [Peter A. Bromberg](http://peterbromberg.net/)del [per la logica di aggiornamento di concorrenza di Optmistic](http://www.eggheadcafe.com/articles/20050719.asp) per un rapido sguardo una serie di opzioni). Il set di dati tipizzato ADO.NET fornisce un'implementazione che può essere configurata con solo il segno di graduazione di una casella di controllo. L'abilitazione della concorrenza ottimistica per un oggetto TableAdapter del dataset tipizzato aumenta dell'oggetto TableAdapter `UPDATE` e `DELETE` istruzioni per includere un confronto di tutti i valori originali di `WHERE` clausola. Nell'esempio `UPDATE` istruzione, ad esempio, aggiorna il nome e il prezzo di un prodotto solo se sono uguali ai valori originariamente recuperati quando si aggiorna il record in GridView i valori del database corrente. Il `@ProductName` e `@UnitPrice` i parametri contengono i nuovi valori immessi dall'utente, mentre `@original_ProductName` e `@original_UnitPrice` contengono i valori che originariamente venivano caricati in GridView quando è stato fatto clic sul pulsante di modifica:
+Esistono vari approcci all'implementazione della concorrenza ottimistica (vedere [Peter A. Bromberg](http://peterbromberg.net/)del [logica di aggiornamento di concorrenza ottimistica](http://www.eggheadcafe.com/articles/20050719.asp) per un rapido sguardo una serie di opzioni). Il set di dati tipizzato ADO.NET fornisce un'implementazione che può essere configurata con solo il segno di graduazione di una casella di controllo. L'abilitazione della concorrenza ottimistica per un oggetto TableAdapter del dataset tipizzato aumenta dell'oggetto TableAdapter `UPDATE` e `DELETE` istruzioni per includere un confronto di tutti i valori originali di `WHERE` clausola. Nell'esempio `UPDATE` istruzione, ad esempio, aggiorna il nome e il prezzo di un prodotto solo se sono uguali ai valori originariamente recuperati quando si aggiorna il record in GridView i valori del database corrente. Il `@ProductName` e `@UnitPrice` i parametri contengono i nuovi valori immessi dall'utente, mentre `@original_ProductName` e `@original_UnitPrice` contengono i valori che originariamente venivano caricati in GridView quando è stato fatto clic sul pulsante di modifica:
 
 
 [!code-sql[Main](implementing-optimistic-concurrency-cs/samples/sample1.sql)]

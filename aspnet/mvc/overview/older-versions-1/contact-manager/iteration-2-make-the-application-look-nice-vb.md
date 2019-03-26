@@ -8,12 +8,12 @@ ms.date: 02/20/2009
 ms.assetid: f65cb436-e493-46fd-9608-384b27385aa1
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-2-make-the-application-look-nice-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 7f27cbab17effc3b44649e06409893e6be09b011
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 9cda4153c4e4883586a83ac7f89b2f369f8157e5
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57050918"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422267"
 ---
 <a name="iteration-2--make-the-application-look-nice-vb"></a>Iterazione #2-migliorare l'applicazione aspetto interessante (VB)
 ====================
@@ -112,7 +112,7 @@ La raccolta di schemi di ASP.NET MVC offre una selezione valida di stili design 
 
 Tuttavia, si potrebbe essere necessario creare una struttura completamente univoca per il sito Web. In tal caso, è opportuno usare una società di progettazione di siti Web. Ho deciso di adottare questo approccio per la progettazione per l'applicazione Contact Manager.
 
-Compresso di Contact Manager dall'iterazione 1 e inviato il progetto per la società di progettazione. Essi non dispone di Visual Studio (peccato su di essi!), che però t presentano un problema. È stato possibile scaricare gratuitamente Microsoft Visual Web Developer dal [ https://www.asp.net ](https://www.asp.net) sito Web e aprire l'applicazione Contact Manager in Visual Web Developer. In un paio di giorni, si ha prodotto la progettazione nella figura 7.
+Compresso di Contact Manager dall'iterazione 1 e inviato il progetto per la società di progettazione. Non si dispone di Visual Studio (peccato su di essi), ma che non presentano un problema. È stato possibile scaricare gratuitamente Microsoft Visual Web Developer dal [ https://www.asp.net ](https://www.asp.net) sito Web e aprire l'applicazione Contact Manager in Visual Web Developer. In un paio di giorni, si ha prodotto la progettazione nella figura 7.
 
 
 [![La finestra di dialogo Nuovo progetto](iteration-2-make-the-application-look-nice-vb/_static/image7.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image13.png)

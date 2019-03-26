@@ -8,12 +8,12 @@ ms.date: 11/13/2006
 ms.assetid: bbd6b7f7-b98a-48b4-93f3-341d6a4f53c0
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting-with-the-datalist-and-repeater/paging-report-data-in-a-datalist-or-repeater-control-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 64615f126f87cec7a96f86385ee7a717fdcdd103
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 2d867c7ae073fafe1e9674deb7c03bf1cfd24dd7
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57057668"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425834"
 ---
 <a name="paging-report-data-in-a-datalist-or-repeater-control-vb"></a>Suddivisione in pagine dei dati dei report in un controllo DataList o Repeater (VB)
 ====================
@@ -127,7 +127,7 @@ Poiché il `GetProductsAsPagedDataSource` metodo prevede due parametri di input,
 
 L'indice della pagina e i valori di dimensioni di pagina devono essere memorizzati nella navigazione tra i postback. Essi possono essere archiviati nello stato di visualizzazione, persistente per la stringa di query, archiviati nelle variabili di sessione o memorizzata con un'altra tecnica. Per questa esercitazione si userà la stringa di query, che offre il vantaggio di una determinata pagina di dati a essere contrassegnato con un segnalibro.
 
-In particolare, usare il pageIndex campi querystring e pageSize per il `pageIndex` e `pageSize` parametri, rispettivamente (vedere la figura 7). Si consiglia di impostare i valori predefiniti per questi parametri, come i valori di stringa di query ha vinto t essere presente quando un utente prima visita questa pagina. Per la `pageIndex`, impostare il valore predefinito 0 (che verrà visualizzata la prima pagina di dati) e `pageSize` valore predefinito di s a 4.
+In particolare, usare il pageIndex campi querystring e pageSize per il `pageIndex` e `pageSize` parametri, rispettivamente (vedere la figura 7). Si consiglia di impostare i valori predefiniti per questi parametri, come i valori di stringa di query non può essere presenti quando un utente prima visita questa pagina. Per la `pageIndex`, impostare il valore predefinito 0 (che verrà visualizzata la prima pagina di dati) e `pageSize` valore predefinito di s a 4.
 
 
 [![Utilizzare il parametro QueryString come origine per i parametri pageIndex e pageSize](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image14.png)](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image13.png)

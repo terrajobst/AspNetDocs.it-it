@@ -8,12 +8,12 @@ ms.date: 07/04/2012
 ms.assetid: eb32a17b-626c-4373-9a7d-3387992f3c04
 msc.legacyurl: /web-api/overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-7
 msc.type: authoredcontent
-ms.openlocfilehash: bb4704e7f4f13fab04acdbdd642174884517e18a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 91a6496e2640668c58ec0493d47d909e2de67367
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57042408"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58421350"
 ---
 <a name="part-7-creating-the-main-page"></a>Parte 7: Creazione della pagina principale
 ====================
@@ -61,7 +61,7 @@ Si noti anche il `total` proprietà di `OrderDetailsViewModel`. Questa propriet�
 Successivamente, aggiungere queste funzioni per `AppViewModel`:
 
 - `resetCart` Rimuove tutti gli elementi del carrello.
-- `getDetails` Ottiene i dettagli per un ordine (da pGrazie a un nuovo `OrderDetailsViewModel` nella `details` elenco).
+- `getDetails` Ottiene i dettagli per un ordine (eseguendo il push di una nuova `OrderDetailsViewModel` nella `details` elenco).
 - `createOrder` Crea un nuovo ordine e lo svuota il carrello della spesa.
 
 
@@ -105,7 +105,7 @@ Di seguito sono le associazioni per i dettagli dell'ordine:
 
 [!code-html[Main](using-web-api-with-entity-framework-part-7/samples/sample11.html)]
 
-Questo scorre gli elementi nell'ordine e consente di visualizzare il prodotto, prezzo e Quantity. Il tag div circostante è visibile solo se la matrice di dettagli contiene uno o più elementi.
+Questo scorre gli elementi nell'ordine e consente di visualizzare il prodotto, prezzo e quantità. Il tag div circostante è visibile solo se la matrice di dettagli contiene uno o più elementi.
 
 ## <a name="conclusion"></a>Conclusione
 

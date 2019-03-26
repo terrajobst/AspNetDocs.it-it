@@ -8,12 +8,12 @@ ms.date: 03/06/2007
 ms.assetid: 32377145-ec25-4715-8370-a1c590a331d5
 msc.legacyurl: /web-forms/overview/data-access/enhancing-the-gridview/adding-a-gridview-column-of-radio-buttons-cs
 msc.type: authoredcontent
-ms.openlocfilehash: e1ac64a3c5023d83259f6e2d6facd8e248768c2d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 4b2e50a4ede0dfa97df6fa73dbd5b16bfde59745
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57046648"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58421675"
 ---
 <a name="adding-a-gridview-column-of-radio-buttons-c"></a>Aggiunta di una colonna GridView di pulsanti di opzione (C#)
 ====================
@@ -179,7 +179,7 @@ Esistono due approcci che possono essere eseguiti per inserire un modello di mar
 
 [!code-aspx[Main](adding-a-gridview-column-of-radio-buttons-cs/samples/sample5.aspx)]
 
-In questo caso, `GetUniqueRadioButton` e `GetRadioButtonValue` sarebbero metodi definiti nella classe code-behind che restituito appropriato `id` e `value` valori per ogni pulsante di opzione dell'attributo. Questo approccio funziona bene per assegnare il `id` e `value` attributi, ma è sufficiente in caso di necessità di specificare il `checked` valore dell'attributo perché la sintassi di associazione dati viene eseguita solo quando i dati prima di tutto sono associati a GridView. Pertanto, se il controllo GridView è abilitato lo stato di visualizzazione, i metodi di formattazione verranno generato solo quando la pagina viene caricata inizialmente o quando il controllo GridView è riassociato in modo esplicito all'origine dati e pertanto la funzione che imposta il `checked` attributo ha vinto t essere chiamata su postback. È un problema piuttosto complesso s e un po' esula dall'ambito di questo articolo, in modo che lo lascio in questo. , Tuttavia, è consigliabile provare a usare l'approccio precedente funzionano e tramite al punto in cui è possibile rimanere bloccati. Anche se tali una t esercizio ha vinto ottenere qualsiasi più prossimo a una versione di lavoro, e consentirà di promuovere una conoscenza più approfondita di GridView e il ciclo di vita di Data Binding.
+In questo caso, `GetUniqueRadioButton` e `GetRadioButtonValue` sarebbero metodi definiti nella classe code-behind che restituito appropriato `id` e `value` valori per ogni pulsante di opzione dell'attributo. Questo approccio funziona bene per assegnare il `id` e `value` attributi, ma è sufficiente in caso di necessità di specificare il `checked` valore dell'attributo perché la sintassi di associazione dati viene eseguita solo quando i dati prima di tutto sono associati a GridView. Pertanto, se il controllo GridView è abilitato lo stato di visualizzazione, i metodi di formattazione verranno generato solo quando la pagina viene caricata inizialmente o quando il controllo GridView è riassociato in modo esplicito all'origine dati e pertanto la funzione che imposta il `checked` attributo non può essere chiamato su postback. È un problema piuttosto complesso s e un po' esula dall'ambito di questo articolo, in modo che lo lascio in questo. , Tuttavia, è consigliabile provare a usare l'approccio precedente funzionano e tramite al punto in cui è possibile rimanere bloccati. Mentre tale esercizio otterranno è qualsiasi più prossimo a una versione di lavoro, e consentirà di promuovere una conoscenza più approfondita di GridView e il ciclo di vita di Data Binding.
 
 L'altro approccio a inserire personalizzato, markup di basso livello in un modello e l'approccio che verrà usato per questa esercitazione consiste nell'aggiungere un [controllo letterale](https://msdn.microsoft.com/library/sz4949ks(VS.80).aspx) al modello. Quindi, in s GridView `RowCreated` o `RowDataBound` gestore eventi, controllo Literal accessibili a livello di codice e la relativa `Text` proprietà è impostata su markup a generare.
 

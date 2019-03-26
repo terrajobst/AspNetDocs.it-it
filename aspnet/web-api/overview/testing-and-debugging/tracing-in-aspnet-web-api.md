@@ -8,12 +8,12 @@ ms.date: 02/25/2014
 ms.assetid: 66a837e9-600b-4b72-97a9-19804231c64a
 msc.legacyurl: /web-api/overview/testing-and-debugging/tracing-in-aspnet-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: e0d525e497cf41a79820417a9c832fa6b5cd7f8a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 59bce8c511167e8ba8a8db6f1842e352c90f3039
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57031538"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424898"
 ---
 <a name="tracing-in-aspnet-web-api-2"></a>Traccia in ASP.NET Web API 2
 ====================
@@ -89,7 +89,7 @@ Per creare una traccia, è possibile chiamare il **ITraceWriter.Trace** metodo d
 
 Questa sezione descrive come scrivere un writer di traccia personalizzato per l'API Web.
 
-Il pacchetto Microsoft.AspNet.WebApi.Tracing si basa su un'infrastruttura di traccia più generale in API Web. Invece di usare Microsoft.AspNet.WebApi.Tracing, è anche possibile collegare in qualche altra libreria di analisi/effettuato l'accesso, ad esempio [NLog](http://nlog-project.org/) oppure [log4net](http://logging.apache.org/log4net/).
+Il pacchetto Microsoft.AspNet.WebApi.Tracing si basa su un'infrastruttura di traccia più generale in API Web. Invece di usare Microsoft.AspNet.WebApi.Tracing, è anche possibile collegare in qualche altra libreria o la registrazione di traccia, ad esempio [NLog](http://nlog-project.org/) oppure [log4net](http://logging.apache.org/log4net/).
 
 Per raccogliere le tracce, implementare il **ITraceWriter** interfaccia. Ecco un esempio semplice:
 
@@ -113,7 +113,7 @@ Writer di traccia solo uno possono essere attivi. Per impostazione predefinita, 
 
 La traccia nell'API Web Usa un *facciata* modello: Quando la traccia è abilitata, l'API Web esegue il wrapping di diverse parti di pipeline della richiesta con le classi che eseguono chiamate di traccia.
 
-Ad esempio, quando si seleziona un controller, la pipeline Usa il **IHttpControllerSelector** interfaccia. Con la traccia abilitata, il pipleline inserisce una classe che implementa **IHttpControllerSelector** ma through delle chiamate per l'implementazione reale:
+Ad esempio, quando si seleziona un controller, la pipeline Usa il **IHttpControllerSelector** interfaccia. Con la traccia abilitata, la pipeline inserisce una classe che implementa **IHttpControllerSelector** ma through delle chiamate per l'implementazione reale:
 
 ![Traccia API Web Usa il modello di facciata.](tracing-in-aspnet-web-api/_static/image8.png)
 

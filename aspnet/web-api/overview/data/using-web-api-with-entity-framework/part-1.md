@@ -8,12 +8,12 @@ ms.date: 01/17/2019
 ms.assetid: e879487e-dbcd-4b33-b092-d67c37ae768c
 msc.legacyurl: /web-api/overview/data/using-web-api-with-entity-framework/part-1
 msc.type: authoredcontent
-ms.openlocfilehash: 266c808e3525787181038d2de473194989039e02
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d96f2bef5fff6fbee8e0767b0fa735cbd68e2779
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57038018"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58421544"
 ---
 <a name="using-web-api-2-with-entity-framework-6"></a>Uso dell'API Web 2 con Entity Framework 6
 ====================
@@ -91,7 +91,7 @@ Dopo aver creato il progetto, è possibile distribuire in App Web di servizio Ap
 
    [![](part-1/_static/image16.png)](part-1/_static/image16.png)
 
-   Accettare i valori predefiniti o immettere valori diversi. Immettere un **Adminstrator Username** e **Password dell'amministratore** per il nuovo database. Selezionare **OK** dopo aver completato. Il **Crea servizio App** pagina viene visualizzata di nuovo.
+   Accettare i valori predefiniti o immettere valori diversi. Immettere un **nome utente amministratore** e **Password dell'amministratore** per il nuovo database. Selezionare **OK** dopo aver completato. Il **Crea servizio App** pagina viene visualizzata di nuovo.
 
 5. Selezionare **Create** per creare il profilo. Viene visualizzato un messaggio nell'angolo in basso a destra che indica che la distribuzione è in corso. Dopo un breve periodo di tempo, il **pubblica** viene visualizzata la finestra.
 

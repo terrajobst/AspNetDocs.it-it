@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 969ab824-1b98-4552-81fe-b60ef5fc6887
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-custom-action-filters
 msc.type: authoredcontent
-ms.openlocfilehash: 0170fda6849c1dfb53b44908ea55ba2cad0dd067
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 4c8628cc289610e287c0a3bc3c8a4c7a833c9fde
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57036618"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423416"
 ---
 # <a name="aspnet-mvc-4-custom-action-filters"></a>Filtri per azioni personalizzati di ASP.NET MVC 4
 
@@ -261,7 +261,7 @@ In questa attività si creerà un nuovo filtro azioni personalizzato per inserir
     [!code-csharp[Main](aspnet-mvc-4-custom-action-filters/samples/sample9.cs)]
 
     > [!NOTE]
-    > Questo filtro azioni personalizzato è quasi uguale a quella creata nell'esercizio precedente. La differenza principale è che ha il *&quot;registrate dal&quot;* attributo aggiornato con il nome di questa nuova classe per identificare il filtro registrato nel log.
+    > Questo filtro azioni personalizzato è quasi uguale a quella creata nell'esercizio precedente. La differenza principale è che ha il *&quot;registrate dal&quot;* attributo aggiornato con il nome di questa nuova classe per identificare quali filtro registrato nel log.
 
 <a id="Ex2Task2"></a>
 
@@ -325,7 +325,7 @@ In questa attività si apprenderà come gestire l'ordine di esecuzione dei filtr
 <a id="Task_4_Registering_Filters_Globally"></a>
 #### <a name="task-4-registering-filters-globally"></a>Attività 4: La registrazione di filtri a livello globale
 
-In questa attività si aggiornerà la soluzione per registrare il nuovo filtro (**MyNewCustomActionFilter**) come filtro globale. In questo modo, si verrà attivato per tutte le eseguite le azioni nell'applicazione e non solo di quelli StoreController come nell'attività precedente.
+In questa attività si aggiornerà la soluzione per registrare il nuovo filtro (**MyNewCustomActionFilter**) come filtro globale. In questo modo, si verrà attivato per tutte le azioni eseguite nell'applicazione e non solo di quelli StoreController come nell'attività precedente.
 
 1. Nelle **StoreController** classe, rimuovere **[MyNewCustomActionFilter]** attributo e la proprietà dell'ordine dalla **[CustomActionFilter]**. Dovrebbe essere simile al seguente:
 
@@ -375,7 +375,7 @@ Completando questa pratica si è appreso come estendere un filtro azione per ese
 
 È possibile installare **Microsoft Visual Studio Express 2012 per Web** o da un'altra &quot;Express&quot; versione utilizzando il **[Microsoft Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx)**. Le istruzioni seguenti consentono di eseguire i passaggi necessari per installare *Visual studio Express 2012 per Web* utilizzando *installazione guidata piattaforma Web Microsoft*.
 
-1. Passare a [ [ https://go.microsoft.com/? linkid = 9810169](https://go.microsoft.com/?linkid=9810169)](https://go.microsoft.com/?linkid=9810169). In alternativa, se è già stato installato installazione guidata piattaforma Web, è possibile aprire e cercare il prodotto &quot; <em>Visual Studio Express 2012 per Web con Windows Azure SDK</em>&quot;.
+1. Passare a [https://go.microsoft.com/?linkid=9810169](https://go.microsoft.com/?linkid=9810169). In alternativa, se è già stato installato installazione guidata piattaforma Web, è possibile aprire e cercare il prodotto &quot; <em>Visual Studio Express 2012 per Web con Windows Azure SDK</em>&quot;.
 2. Fare clic su **Installa ora**. Se non hai **instalace Webové Platformy** si verrà reindirizzati per scaricarlo e installarlo prima di tutto.
 3. Una volta **instalace Webové Platformy** è aperto, fare clic su **installare** per avviare il programma di installazione.
 
@@ -419,7 +419,7 @@ In questa appendice spiega come creare un nuovo sito web dal portale di gestione
 1. Andare alla [portale di gestione di Windows Azure](https://manage.windowsazure.com/) e accedere usando le credenziali di Microsoft associate alla sottoscrizione.
 
     > [!NOTE]
-    > Con Windows Azure Puoi ospitare gratuitamente 10 siti Web ASP.NET e la scalabilità orizzontale man mano che aumenta il traffico. È possibile effettuare l'iscrizione [qui](http://aka.ms/aspnet-hol-azure).
+    > Con Windows Azure Puoi ospitare gratuitamente 10 siti Web ASP.NET e la scalabilità orizzontale man mano che aumenta il traffico. È possibile effettuare l'iscrizione [qui](https://aka.ms/aspnet-hol-azure).
 
     ![Accedere al portale di Azure](aspnet-mvc-4-custom-action-filters/_static/image17.png "accedere al portale di Azure")
 

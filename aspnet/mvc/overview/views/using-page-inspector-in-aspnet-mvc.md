@@ -8,12 +8,12 @@ ms.date: 08/15/2012
 ms.assetid: c7e4e1ab-4932-4614-9f53-aaf7c706d498
 msc.legacyurl: /mvc/overview/views/using-page-inspector-in-aspnet-mvc
 msc.type: authoredcontent
-ms.openlocfilehash: 0dea8b077878139a3f513cb51447b86a93fe55b8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: abb1ef355bd7614daaab8c205d9d53065856cd23
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57057708"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424365"
 ---
 <a name="using-page-inspector-in-aspnet-mvc"></a>Utilizzo di Controllo pagina in ASP.NET MVC
 ====================
@@ -139,7 +139,7 @@ Successivamente, si avrà un'occhiata alla finestra HTML e il relativo mapping e
 
 Fare clic su **Inspect** inserire controllo pagina in modalità controllo.
 
-Fare clic sulla parte superiore della pagina con la dicitura "Il logohere". Se si sta esaminando un particolare elemento in modo più dettagliato, in modo che la visualizzazione nella finestra del browser non è più viene modificato quando si sposta il puntatore del mouse.
+Fare clic sulla parte superiore della pagina con la dicitura "Inserire qui il logo". Se si sta esaminando un particolare elemento in modo più dettagliato, in modo che la visualizzazione nella finestra del browser non è più viene modificato quando si sposta il puntatore del mouse.
 
 Ora passare il puntatore del mouse per il **HTML** finestra. Quando si sposta il puntatore del mouse, controllo pagina vengono illustrati l'elemento all'interno di **HTML** finestra ed evidenzia l'elemento corrispondente nella finestra del browser.
 

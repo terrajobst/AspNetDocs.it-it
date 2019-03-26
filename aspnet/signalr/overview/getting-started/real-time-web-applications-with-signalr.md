@@ -8,12 +8,12 @@ ms.date: 07/16/2014
 ms.assetid: ba07958c-42e1-4da0-81db-ba6925ed6db0
 msc.legacyurl: /signalr/overview/getting-started/real-time-web-applications-with-signalr
 msc.type: authoredcontent
-ms.openlocfilehash: d4998c8b739b4b1a06699a17464a7399a87a8595
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 3db54a134e8f842cab1d3471c69f5a8e2039d83d
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57039488"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423611"
 ---
 <a name="hands-on-lab-real-time-web-applications-with-signalr"></a>Lab pratico: Applicazioni Web in tempo reale con SignalR
 ====================
@@ -22,7 +22,7 @@ da [Camp Web Team](https://twitter.com/webcamps)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
 
-[Download Web Camp Kit di formazione](http://aka.ms/webcamps-training-kit)
+[Download Web Camp Kit di formazione](https://aka.ms/webcamps-training-kit)
 
 > Applicazioni Web in tempo reale offrono la possibilità di eseguire il push del contenuto ai client connessi come accade, in tempo reale lato server. Per gli sviluppatori ASP.NET **ASP.NET SignalR** è una libreria per aggiungere funzionalità web in tempo reale alle applicazioni. Sfrutta i trasporti diversi, automaticamente selezionando il trasporto disponibile meglio assegnato del client e più disponibile il trasporto del server. Sfrutta **WebSocket**, un'API di HTML5 che consente la comunicazione bidirezionale tra il browser e server.
 > 
@@ -34,7 +34,7 @@ da [Camp Web Team](https://twitter.com/webcamps)
 > 
 > ![Architettura di SignalR](real-time-web-applications-with-signalr/_static/image1.png)
 > 
-> Tutto il codice di esempio e frammenti di codice sono inclusi nel Web Camp Kit di formazione, disponibile all'indirizzo [ http://aka.ms/webcamps-training-kit ](http://aka.ms/webcamps-training-kit).
+> Tutto il codice di esempio e frammenti di codice sono inclusi nel Web Camp Kit di formazione, disponibile all'indirizzo [ https://aka.ms/webcamps-training-kit ](https://aka.ms/webcamps-training-kit).
 
 
 <a id="Overview"></a>

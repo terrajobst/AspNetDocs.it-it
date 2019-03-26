@@ -8,12 +8,12 @@ ms.date: 06/26/2007
 ms.assetid: 4e849bcc-c557-4bc3-937e-f7453ee87265
 msc.legacyurl: /web-forms/overview/data-access/working-with-batched-data/batch-updating-cs
 msc.type: authoredcontent
-ms.openlocfilehash: c878056273ea821e4dd4481fa1b6f7690f22b285
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 27c043ff64b80dfbe05795c20bb1e71723f93c75
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57062478"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58421570"
 ---
 <a name="batch-updating-c"></a>Aggiornamento batch (C#)
 ====================
@@ -241,7 +241,7 @@ Questo metodo inizia recuperando tutti i prodotti in una `ProductsDataTable` tra
 
 Per ogni riga il `ProductID` acquisizione dal `DataKeys` raccolta e appropriato `ProductsRow` viene selezionato dal `ProductsDataTable`. I quattro controlli di input TemplateField fanno riferimento a livello di codice e i relativi valori assegnati al `ProductsRow` s delle proprietà dell'istanza. Dopo ogni GridView sono stati utilizzati i valori di riga o le righe per aggiornare il `ProductsDataTable`, è s passato a s BLL `UpdateWithTransaction` metodo che, come illustrato nell'esercitazione precedente, chiama semplicemente verso il basso in oggetti DAL `UpdateWithTransaction` (metodo).
 
-L'algoritmo di aggiornamento batch utilizzato per questa esercitazione Aggiorna ogni riga nel `ProductsDataTable` che corrisponde a una riga in GridView, indipendentemente dal fatto che le informazioni sul prodotto s è stati modificati. Mentre tale blind Aggiorna t sono in genere un problema di prestazioni, se si ri il controllo viene modificata alla tabella di database può causare ai record superfluo. Nel [esecuzione di aggiornamenti Batch](../editing-and-deleting-data-through-the-datalist/performing-batch-updates-cs.md) esercitazione abbiamo esplorato un batch di aggiornamento dell'interfaccia con DataList e avere aggiunto il codice che aggiorna solo i record che sono stati effettivamente modificati dall'utente. È possibile usare le tecniche da [esecuzione di aggiornamenti Batch](../editing-and-deleting-data-through-the-datalist/performing-batch-updates-cs.md) per aggiornare il codice in questa esercitazione, se lo si desidera.
+L'algoritmo di aggiornamento batch utilizzato per questa esercitazione Aggiorna ogni riga nel `ProductsDataTable` che corrisponde a una riga in GridView, indipendentemente dal fatto che le informazioni sul prodotto s è stati modificati. Anche se tali aggiornamenti non vedenti non sono in genere un problema di prestazioni, se si ri il controllo viene modificata alla tabella di database può causare ai record superfluo. Nel [esecuzione di aggiornamenti Batch](../editing-and-deleting-data-through-the-datalist/performing-batch-updates-cs.md) esercitazione abbiamo esplorato un batch di aggiornamento dell'interfaccia con DataList e avere aggiunto il codice che aggiorna solo i record che sono stati effettivamente modificati dall'utente. È possibile usare le tecniche da [esecuzione di aggiornamenti Batch](../editing-and-deleting-data-through-the-datalist/performing-batch-updates-cs.md) per aggiornare il codice in questa esercitazione, se lo si desidera.
 
 > [!NOTE]
 > Quando si associa l'origine dati a GridView mediante relativo smart tag, Visual Studio assegna automaticamente i valori di chiave primaria di origine s dei dati a GridView s `DataKeyNames` proprietà. Se non è stato associato ObjectDataSource di GridView tramite lo smart tag s di GridView come descritto nel passaggio 1, quindi è necessario impostare manualmente la s GridView `DataKeyNames` proprietà ProductID per poter accedere il `ProductID` valore per ogni riga tramite il `DataKeys` raccolta.
@@ -269,7 +269,7 @@ Per i tipi di situazioni, è consigliabile usare quanto segue `BatchUpdateAltern
 
 `BatchMethodAlternate` inizia creando una nuova classe vuota `ProductsDataTable` denominato `products`. Viene quindi i passaggi a s GridView `Rows` raccolta e per ogni riga Ottiene le informazioni di prodotto specifico usando il livello BLL s `GetProductByProductID(productID)` (metodo). Recuperato `ProductsRow` istanza ha le relative proprietà aggiornate nello stesso modo come `BatchUpdate`, ma dopo aver aggiornato la riga viene importato nelle `products``ProductsDataTable` tramite gli oggetti DataTable [ `ImportRow(DataRow)` metodo](https://msdn.microsoft.com/library/system.data.datatable.importrow(VS.80).aspx).
 
-Dopo il `foreach` ciclo viene completato, `products` contiene uno `ProductsRow` istanza per ogni riga in GridView. Poiché ogni del `ProductsRow` istanze sono state aggiunte ad il `products` (invece di aggiornato), se si passa alla cieca per il `UpdateWithTransaction` (metodo) il `ProductsTableAdatper` tenterà di inserire ogni record nel database. In alternativa, è necessario specificare che ognuna di queste righe è stata modificata (non aggiunto).
+Dopo il `foreach` ciclo viene completato, `products` contiene uno `ProductsRow` istanza per ogni riga in GridView. Poiché ogni del `ProductsRow` istanze sono state aggiunte ad il `products` (invece di aggiornato), se si passa alla cieca per il `UpdateWithTransaction` (metodo) il `ProductsTableAdapter` tenterà di inserire ogni record nel database. In alternativa, è necessario specificare che ognuna di queste righe è stata modificata (non aggiunto).
 
 Ciò può essere eseguita aggiungendo un nuovo metodo per il livello BLL denominato `UpdateProductsWithTransaction`. `UpdateProductsWithTransaction`, set mostrato di seguito, il `RowState` della ognuno del `ProductsRow` istanze nel `ProductsDataTable` a `Modified` e quindi passa il `ProductsDataTable` ai dispositivi DAL `UpdateWithTransaction` (metodo).
 

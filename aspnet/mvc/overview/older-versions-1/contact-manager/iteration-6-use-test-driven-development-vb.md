@@ -8,12 +8,12 @@ ms.date: 02/20/2009
 ms.assetid: e1fd226f-3f8e-4575-a179-5c75b240333d
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-6-use-test-driven-development-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 7b1700e0ccece543c381dbb4fa7d6243de57ed4d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: ac502a1f57b25dd596489d1e7abaa55a77ddb6c7
+ms.sourcegitcommit: 62db31596a7da029263cf06335aff12236fb3186
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57055008"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58440339"
 ---
 <a name="iteration-6--use-test-driven-development-vb"></a>Iterazione #6-usare lo sviluppo basato su test (VB)
 ====================
@@ -80,9 +80,9 @@ Si aggiungerà questa nuova funzionalità all'applicazione seguendo un processo 
 
 ## <a name="what-gets-tested"></a>Che cosa verrà sottoposta a test
 
-Come accennato nell'iterazione precedente, in genere non si scrivono unit test per la logica di accesso ai dati o visualizzare per la logica. Non si t scrivere unit test per la logica di accesso ai dati perché l'accesso a un database è un'operazione relativamente lenta. Poiché l'accesso a una vista richiede la rotazione di un server web che è un'operazione relativamente lenta non si t scrivere unit test per la logica di visualizzazione. Si t non deve scrivere uno unit test, a meno che il test può essere eseguito ripetutamente molto veloce
+Come accennato nell'iterazione precedente, in genere non si scrivono unit test per la logica di accesso ai dati o visualizzare per la logica. Non si t scrivere unit test per la logica di accesso ai dati perché l'accesso a un database è un'operazione relativamente lenta. Poiché l'accesso a una vista richiede la rotazione di un server web che è un'operazione relativamente lenta non si t scrivere unit test per la logica di visualizzazione. È consigliabile non scrivere uno unit test, a meno che il test può essere eseguito ripetutamente molto veloce
 
-Poiché è guidato lo sviluppo basato su test dagli unit test, viene analizzata inizialmente la scrittura di controller e logica di business. Microsoft non toccare il database o le viste. Abbiamo vinto t modificare il database oppure creare viste fino alla fine di questa esercitazione. Si inizia con ciò che può essere testato.
+Poiché è guidato lo sviluppo basato su test dagli unit test, viene analizzata inizialmente la scrittura di controller e logica di business. Microsoft non toccare il database o le viste. Microsoft non modificare il database o creare viste fino alla fine di questa esercitazione. Si inizia con ciò che può essere testato.
 
 ## <a name="creating-user-stories"></a>Creazione di storie utente
 
@@ -247,10 +247,10 @@ Purtroppo, anche se è stata soddisfatta tutti i requisiti espressi l'unit test,
 | **Nome della colonna** | **Tipo di dati** | **Consenti valori null** |
 | --- | --- | --- |
 | Id | int | False |
-| nome | nvarchar(50) | False |
+| Nome | nvarchar(50) | False |
 
 
-Successivamente, è necessario eliminare tutti i dati dalla tabella di contatti (in caso contrario, abbiamo vinto t in grado di creare una relazione tra le tabelle di contatti e gruppi). Attenersi ai passaggi riportati di seguito.
+Successivamente, è necessario eliminare tutti i dati dalla tabella di contatti (in caso contrario, non sarà in grado di creare una relazione tra le tabelle di contatti e gruppi). Attenersi ai passaggi riportati di seguito.
 
 1. La tabella Contacts e scegliere l'opzione di menu **Mostra dati tabella**.
 2. Eliminare tutte le righe.
@@ -310,7 +310,7 @@ Successivamente, è necessario implementare la classe di repository. Nel corso d
 
 [!code-vb[Main](iteration-6-use-test-driven-development-vb/samples/sample14.vb)]
 
-È ora implementato uno dei metodi correlati all'utilizzo dei gruppi di contatto nella nostra classe EntityContactManagerRepository reale haven t. Attualmente, la classe EntityContactManagerRepository dispone di metodi stub per ognuno dei metodi di contatto gruppo elencati nell'interfaccia IContactManagerRepository. Ad esempio, il metodo ListGroups() attualmente aspetto simile al seguente:
+In realtà è stato ancora implementato uno dei metodi correlati all'utilizzo dei gruppi di contatto nella nostra classe EntityContactManagerRepository reale. Attualmente, la classe EntityContactManagerRepository dispone di metodi stub per ognuno dei metodi di contatto gruppo elencati nell'interfaccia IContactManagerRepository. Ad esempio, il metodo ListGroups() attualmente aspetto simile al seguente:
 
 [!code-vb[Main](iteration-6-use-test-driven-development-vb/samples/sample15.vb)]
 

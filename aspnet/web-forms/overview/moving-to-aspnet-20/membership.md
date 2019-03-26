@@ -8,12 +8,12 @@ ms.date: 02/20/2005
 ms.assetid: f2339485-5d78-4c5e-8c0a-dc9b8a315345
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/membership
 msc.type: authoredcontent
-ms.openlocfilehash: d7fa3cb61608ea089141931cb9362359cdc92619
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d4fab68555eeb27420e60a28aca2f2c0fb9a73e3
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57031468"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58421518"
 ---
 <a name="membership"></a>Appartenenza
 ====================
@@ -42,7 +42,7 @@ L'appartenenza viene implementato seguendo i quattro passaggi. Tenere presente c
 
 ## <a name="creating-the-membership-database"></a>Creazione del Database di appartenenza
 
-Se si utilizza SQL Server 7.0 o versione successiva come archivio di appartenenza, è possibile usare aspnet\_utilità regsql (disponibile più facilmente da di Visual Studio .NET 2005 prompt dei comandi) per configurare il database. Aspnet\_regsql utilità può essere usato come uno strumento del prompt dei comandi o tramite una procedura guidata GUI. Il metodo di procedura guidata è il modo più semplice per configurare il database. Per accedere alla procedura guidata, è sufficiente eseguire il comando seguente:
+Se si usa SQL Server 7.0 o versioni successive come archivio di appartenenza, è possibile usare aspnet\_utilità regsql (disponibile più facilmente da di Visual Studio .NET 2005 prompt dei comandi) per configurare il database. Aspnet\_regsql utilità può essere usato come uno strumento del prompt dei comandi o tramite una procedura guidata GUI. Il metodo di procedura guidata è il modo più semplice per configurare il database. Per accedere alla procedura guidata, è sufficiente eseguire il comando seguente:
 
 `aspnet_regsql W`
 
@@ -107,7 +107,7 @@ I seguenti controlli di accesso sono disponibili in ASP.NET 2.0:
 
 ## <a name="login-control"></a>Controllo degli accessi
 
-Il controllo di accesso fornisce un'interfaccia per un utente per accedere al sistema di appartenenza. Vengono presentati textboxt un nome utente e password e un pulsante di accesso. Molte altre funzionalità comuni, ad esempio un collegamento per la registrazione per le persone che non hanno ancora stato fatto in modo che, una casella di controllo che consente all'utente di accesso in modalità automatica durante le successive visite, un collegamento per un promemoria della password e così via. Tutte le funzionalità di controllo di accesso sono personalizzabili mediante le proprietà del controllo.
+Il controllo di accesso fornisce un'interfaccia per un utente per accedere al sistema di appartenenza. Si fornisce una casella di testo Nome utente e password e un pulsante di accesso. Molte altre funzionalità comuni, ad esempio un collegamento per la registrazione per le persone che non hanno ancora stato fatto in modo che, una casella di controllo che consente all'utente di accesso in modalità automatica durante le successive visite, un collegamento per un promemoria della password e così via. Tutte le funzionalità di controllo di accesso sono personalizzabili mediante le proprietà del controllo.
 
 In ASP.NET 1.x, gli sviluppatori dovevano scrivere una notevole quantità di codice per eseguire una ricerca quando si usa l'autenticazione basata su form. Con l'appartenenza di ASP.NET 2.0, è possibile convalidare gli utenti senza scrivere alcun codice affatto. ASP.NET eseguirà automaticamente la ricerca dell'utente per l'utente. (Se si usa il controllo di accesso senza l'utilizzo di appartenenza ASP.NET, è possibile usare la **OnAuthenticate** metodo per convalidare l'utente.)
 

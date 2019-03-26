@@ -8,12 +8,12 @@ ms.date: 03/26/2015
 ms.assetid: c205805f-efdd-4fa7-9616-f26eab180611
 msc.legacyurl: /mvc/overview/performance/profile-and-debug-your-aspnet-mvc-app-with-glimpse
 msc.type: authoredcontent
-ms.openlocfilehash: 94a72f22cbcd7fa84528dde502cceaa1e26dcaa1
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: ea149b6450cf02c993c7690752a05396802336be
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57049228"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425054"
 ---
 <a name="profile-and-debug-your-aspnet-mvc-app-with-glimpse"></a>Eseguire la profilatura e il debug dell'app ASP.NET MVC con Glimpse
 ====================
@@ -58,7 +58,7 @@ Passare a http://localhost:&lt; porta &&gt;/glimpse.axd e fare clic sui <strong>
 
 Se hai sulla barra dei Preferiti visualizzata, è possibile trascinare e rilasciare i pulsanti di Glimpse e aggiungerli come bookmarklets:
 
-![Internet Explorer con Glimpse boookmarklets](profile-and-debug-your-aspnet-mvc-app-with-glimpse/_static/image5.png)
+![Internet Explorer con Glimpse bookmarklets](profile-and-debug-your-aspnet-mvc-app-with-glimpse/_static/image5.png)
 
 È ora possibile passare all'app e il **testine di visualizzazione** (HUD) viene visualizzato nella parte inferiore della pagina.
 
@@ -104,11 +104,11 @@ Il [scheda modello di associazione](http://getglimpse.com/Docs/Model-Binding-Tab
 <a id="da"></a>
 ## <a name="using-glimpse-on-azure"></a>Uso di Glimpse in Azure
 
-I criteri di sicurezza predefinito di Glimpse consentono solo dati di Glimpse deve essere visualizzato dall'host locale. È possibile modificare questo criterio di sicurezza in modo che è possibile visualizzare questi dati in un server remoto (ad esempio, un'app web in Azure). Per gli ambienti di test in Azure, aggiungere il marchio evidenziato fino a fondo le *web.confg* file per abilitare Glimpse:
+I criteri di sicurezza predefinito di Glimpse consentono solo dati di Glimpse deve essere visualizzato dall'host locale. È possibile modificare questo criterio di sicurezza in modo che è possibile visualizzare questi dati in un server remoto (ad esempio, un'app web in Azure). Per gli ambienti di test in Azure, aggiungere il marchio evidenziato fino a fondo le *Web. config* file per abilitare Glimpse:
 
 [!code-xml[Main](profile-and-debug-your-aspnet-mvc-app-with-glimpse/samples/sample3.xml?highlight=2-6)]
 
-Con questa modifica da solo, qualsiasi utente può visualizzare i dati di Glimpse in un sito remoto. È consigliabile aggiungere il markup precedente a un profilo di pubblicazione in modo che lo ha distribuito solo un applicato quando si usa tale profilo di pubblicazione (ad esempio, proifle i test di Azure.) Per limitare i dati di Glimpse, si aggiungerà il `canViewGlimpseData` ruolo e consentire solo agli utenti in questo ruolo per visualizzare i dati di Glimpse.
+Con questa modifica da solo, qualsiasi utente può visualizzare i dati di Glimpse in un sito remoto. È consigliabile aggiungere il markup precedente a un profilo di pubblicazione in modo che lo ha distribuito solo un applicato quando si usa tale profilo di pubblicazione (ad esempio, il profilo test di Azure.) Per limitare i dati di Glimpse, si aggiungerà il `canViewGlimpseData` ruolo e consentire solo agli utenti in questo ruolo per visualizzare i dati di Glimpse.
 
 Rimuovere i commenti dal *GlimpseSecurityPolicy.cs* file e modificare le [IsInRole](https://msdn.microsoft.com/library/system.security.principal.iprincipal.isinrole(v=vs.110).aspx) chiamare da `Administrator` per il `canViewGlimpseData` ruolo:
 

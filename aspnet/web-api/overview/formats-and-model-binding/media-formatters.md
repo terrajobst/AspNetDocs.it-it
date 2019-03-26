@@ -8,12 +8,12 @@ ms.date: 01/20/2014
 ms.assetid: 4c56f64a-086a-44ce-99c2-4c69604cd7fd
 msc.legacyurl: /web-api/overview/formats-and-model-binding/media-formatters
 msc.type: authoredcontent
-ms.openlocfilehash: 7b7ba2fb3f1bba0447e700c84a017266cba305e6
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: bd54a1d8ae3a2913c9d8a11c5b31ba1c829450d2
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57045018"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425314"
 ---
 <a name="media-formatters-in-aspnet-web-api-2"></a>Formattatori di Media in ASP.NET Web API 2
 ====================
@@ -46,7 +46,7 @@ Il tipo di supporti determina come API Web serializza e deserializza il corpo de
 Per creare un formattatore di media, derivare da una di queste classi:
 
 - [MediaTypeFormatter](https://msdn.microsoft.com/library/system.net.http.formatting.mediatypeformatter.aspx). Questa lettura asincrona Usa classi e metodi di scrittura.
-- [BufferedMediaTypeFormatter](https://msdn.microsoft.com/library/system.net.http.formatting.bufferedmediatypeformatter.aspx). Questa classe deriva da **MediaTypeFormatter** ma vengono utilizzati i metodi di lettura/scrittura sychronous.
+- [BufferedMediaTypeFormatter](https://msdn.microsoft.com/library/system.net.http.formatting.bufferedmediatypeformatter.aspx). Questa classe deriva da **MediaTypeFormatter** ma utilizza metodi sincroni di lettura/scrittura.
 
 Che deriva da **BufferedMediaTypeFormatter** è più semplice, perché non è presente codice asincrono, ma significa anche durante il / o può bloccare il thread chiamante.
 
@@ -56,7 +56,7 @@ L'esempio seguente illustra un formattatore di media type che può serializzare 
 
 [!code-csharp[Main](media-formatters/samples/sample3.cs)]
 
-Per implementare un formattatore CSV, definire una classe che deriva da **BufferedMediaTypeFormater**:
+Per implementare un formattatore CSV, definire una classe che deriva da **BufferedMediaTypeFormatter**:
 
 [!code-csharp[Main](media-formatters/samples/sample4.cs)]
 

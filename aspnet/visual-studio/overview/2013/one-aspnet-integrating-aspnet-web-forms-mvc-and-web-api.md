@@ -8,24 +8,24 @@ ms.date: 07/16/2014
 ms.assetid: 4fe2558d-67cc-4d12-a5c1-6fb9f6f16137
 msc.legacyurl: /visual-studio/overview/2013/one-aspnet-integrating-aspnet-web-forms-mvc-and-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: c18911680b59448cd67190f71e951a3fcf3d0478
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 85e4369ee458043eec59fb27e317d18466f61f32
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57044128"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422532"
 ---
 <a name="hands-on-lab-one-aspnet-integrating-aspnet-web-forms-mvc-and-web-api"></a>Lab pratico: One ASP.NET: integrazione di Web Forms ASP.NET, MVC e API Web
 ====================
 da [Camp Web Team](https://twitter.com/webcamps)
 
-[Download Web Camp Kit di formazione](http://aka.ms/webcamps-training-kit)
+[Download Web Camp Kit di formazione](https://aka.ms/webcamps-training-kit)
 
 > ASP.NET è un framework per la creazione di siti Web, App e servizi mediante tecnologie specializzate, ad esempio MVC, API Web e ad altri utenti. A causa dell'espansione ASP.NET ha rilevato dopo la creazione e l'espresso necessario disporre di queste tecnologie integrate, a favore di sono state apportate le attività recenti **One ASP.NET**.
 > 
 > Visual Studio 2013 introduce un nuovo sistema di progetto unificato che consente di creare un'applicazione e usare tutte le tecnologie ASP.NET in un unico progetto. Questa funzionalità Elimina la necessità di scegliere una tecnologia all'inizio di un progetto e stilizzata con esso e invece consiglia l'utilizzo di più framework ASP.NET all'interno di un progetto.
 > 
-> Tutto il codice di esempio e frammenti di codice sono inclusi nel Web Camp Kit di formazione, disponibile all'indirizzo [ http://aka.ms/webcamps-training-kit ](http://aka.ms/webcamps-training-kit).
+> Tutto il codice di esempio e frammenti di codice sono inclusi nel Web Camp Kit di formazione, disponibile all'indirizzo [ https://aka.ms/webcamps-training-kit ](https://aka.ms/webcamps-training-kit).
 
 
 <a id="Overview"></a>

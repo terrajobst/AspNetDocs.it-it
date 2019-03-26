@@ -8,12 +8,12 @@ ms.date: 02/20/2009
 ms.assetid: 28ad8f80-b8a5-444e-b478-8b15a846060c
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-5-create-unit-tests-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 68d0ae15db115685b3e1a44f8b3b5b7e33674a8b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b2e96c996905bc73698d1c0b11df97d1dd366172
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57036128"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422168"
 ---
 <a name="iteration-5--create-unit-tests-c"></a>Iterazione #5-creare gli unit test (c#)
 ====================
@@ -147,7 +147,7 @@ Inizialmente, si vuole testare il metodo CreateContact() esposto dalla classe Co
 
 - I test che CreateContact() CreateContact() - restituisce il valore true quando un contatto valido viene passato al metodo.
 - CreateContactRequiredFirstName() - test che un messaggio di errore viene aggiunto a quando un contatto con un nome mancano lo stato del modello viene passato al metodo CreateContact().
-- CreateContactRequredLastName() - test che un messaggio di errore viene aggiunto a quando un contatto con un cognome mancano lo stato del modello viene passato al metodo CreateContact().
+- CreateContactRequiredLastName() - test che un messaggio di errore viene aggiunto a quando un contatto con un cognome mancano lo stato del modello viene passato al metodo CreateContact().
 - CreateContactInvalidPhone() - test che viene aggiunto un messaggio di errore per lo stato del modello quando un contatto con un numero di telefono non valido viene passato al metodo CreateContact().
 - CreateContactInvalidEmail() - test che viene aggiunto un messaggio di errore per lo stato del modello quando un contatto con un indirizzo di posta elettronica non valido viene passato al metodo CreateContact()...
 

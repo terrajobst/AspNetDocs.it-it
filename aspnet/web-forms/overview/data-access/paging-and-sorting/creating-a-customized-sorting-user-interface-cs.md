@@ -8,12 +8,12 @@ ms.date: 08/15/2006
 ms.assetid: 6f81b633-9d01-4e52-ae4a-2ea6bc109475
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting/creating-a-customized-sorting-user-interface-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 28926276e183ae7cf7ed4087d8c73044741389e5
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 6733aa228bb96b5d34ae2770d32fe0063d7052f1
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57034508"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424104"
 ---
 <a name="creating-a-customized-sorting-user-interface-c"></a>Creazione di un'interfaccia utente per l'ordinamento personalizzato (C#)
 ====================
@@ -79,7 +79,7 @@ Quando il controllo GridView è associato a un'origine dati, viene creato un `Gr
 **Figura 3**: Una tecnica prevede l'aggiunta di separatore righe nell'origine dati
 
 
-Usare i record del termine separatore racchiuso tra virgolette perché non sono presenti record di separazione speciale; piuttosto, è necessario in qualche modo flag che un record specifico nell'origine dati viene usato come separatore anziché a una riga di dati normali. Per questi esempi si ri associazione un `ProductsDataTable` istanza per il controllo GridView, composto da `ProductRows`. È possibile contrassegnare un record come una riga del separatore impostando relativi `CategoryID` proprietà `-1` (perché tale valore non è stato t esiste in genere).
+Usare i record del termine separatore racchiuso tra virgolette perché non sono presenti record di separazione speciale; piuttosto, è necessario in qualche modo flag che un record specifico nell'origine dati viene usato come separatore anziché a una riga di dati normali. Per questi esempi si ri associazione un `ProductsDataTable` istanza per il controllo GridView, composto da `ProductRows`. È possibile contrassegnare un record come una riga del separatore impostando relativi `CategoryID` proprietà `-1` (perché tale valore non è stato esiste in genere).
 
 Per poter usare questa tecnica è il d necessari eseguire la procedura seguente:
 

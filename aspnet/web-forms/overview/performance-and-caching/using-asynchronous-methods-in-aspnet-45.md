@@ -8,12 +8,12 @@ ms.date: 01/02/2019
 ms.assetid: a585c9a2-7c8e-478b-9706-90f3739c50d1
 msc.legacyurl: /web-forms/overview/performance-and-caching/using-asynchronous-methods-in-aspnet-45
 msc.type: authoredcontent
-ms.openlocfilehash: c36749f82051ee8965035eca9c2e4e57a5dbd616
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d7985fcd48e1282437cc3a7d3c1b528af2e44ae0
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57028288"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425782"
 ---
 <a name="using-asynchronous-methods-in-aspnet-45"></a>Uso di metodi asincroni in ASP.NET 4.5
 ====================
@@ -100,7 +100,7 @@ L'immagine seguente mostra la pagina gizmo dal progetto di esempio.
 
 ## <a id="CreatingAsynchGizmos"></a>  Creazione di una pagina asincrona Gizmo
 
-L'esempio Usa il nuovo [async](https://msdn.microsoft.com/library/hh156513(VS.110).aspx) e [await](https://msdn.microsoft.com/library/hh156528(VS.110).aspx) parole chiave (disponibile in .NET 4.5 e Visual Studio 2012) per consentire al compilatore di essere responsabile della gestione necessarie per le trasformazioni complesse programmazione asincrona. Il compilatore consente di scrivere codice usando che costrutti di flusso di controllo sincrono del # e il compilatore applica automaticamente le trasformazioni necessarie per usare i callback per evitare di bloccare i thread.
+L'esempio Usa il nuovo [async](https://msdn.microsoft.com/library/hh156513(VS.110).aspx) e [await](https://msdn.microsoft.com/library/hh156528(VS.110).aspx) parole chiave (disponibile in .NET 4.5 e Visual Studio 2012) per consentire al compilatore di essere responsabile della gestione necessarie per le trasformazioni complesse programmazione asincrona. Il compilatore consente di scrivere codice usando il C#di costrutti di flusso di controllo sincrono e il compilatore applica automaticamente le trasformazioni necessarie per usare i callback per evitare di bloccare i thread.
 
 Le pagine asincrone ASP.NET devono includere il [pagina](https://msdn.microsoft.com/library/ydy4x04a.aspx) direttive con il `Async` attributo impostato su "true". Il codice seguente illustra il [pagina](https://msdn.microsoft.com/library/ydy4x04a.aspx) direttive con il `Async` attributo impostato su "true" per il *GizmosAsync.aspx* pagina.
 

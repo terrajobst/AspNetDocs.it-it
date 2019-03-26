@@ -2,18 +2,18 @@
 uid: web-forms/overview/data-access/paging-and-sorting/sorting-custom-paged-data-cs
 title: Ordinamento con paging personalizzato dei dati (c#) | Microsoft Docs
 author: rick-anderson
-description: Nell'esercitazione precedente abbiamo appreso come implementare il paging personalizzato quando presentating dati in una pagina web. In questa esercitazione viene illustrato come estendere il precedente...
+description: Nell'esercitazione precedente abbiamo appreso come implementare il paging personalizzato quando la presentazione dei dati in una pagina web. In questa esercitazione viene illustrato come estendere il precedente...
 ms.author: riande
 ms.date: 08/15/2006
 ms.assetid: 778baa4e-4af8-4665-947e-7a01d1a4dff2
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting/sorting-custom-paged-data-cs
 msc.type: authoredcontent
-ms.openlocfilehash: cc0ca571957f29afd7e3a2657e58272f804fc6ef
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: ebc6be8c41251190a0124fe5f3d2c154f1ad4450
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57034708"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425648"
 ---
 <a name="sorting-custom-paged-data-c"></a>Ordinamento dei dati con suddivisione in pagine personalizzata (C#)
 ====================
@@ -21,7 +21,7 @@ da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Scaricare l'App di esempio](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_26_CS.exe) o [Scarica il PDF](sorting-custom-paged-data-cs/_static/datatutorial26cs1.pdf)
 
-> Nell'esercitazione precedente abbiamo appreso come implementare il paging personalizzato quando presentating dati in una pagina web. In questa esercitazione viene illustrato come estendere l'esempio precedente in modo da supportare il paging personalizzato dell'ordinamento.
+> Nell'esercitazione precedente abbiamo appreso come implementare il paging personalizzato quando la presentazione dei dati in una pagina web. In questa esercitazione viene illustrato come estendere l'esempio precedente in modo da supportare il paging personalizzato dell'ordinamento.
 
 
 ## <a name="introduction"></a>Introduzione

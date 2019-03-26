@@ -8,12 +8,12 @@ ms.date: 10/30/2006
 ms.assetid: 8dac22a7-91de-4e3b-888f-a4c438b03851
 msc.legacyurl: /web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/performing-batch-updates-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 67ab034880c8140e6156721956059b7cdd3f077b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c903dd64ba7dd19a8af63224ee54629086279bf6
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57034938"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425886"
 ---
 <a name="performing-batch-updates-vb"></a>Esecuzione di aggiornamenti batch (VB)
 ====================
@@ -126,7 +126,7 @@ Quando l'utente fa clic su uno dei pulsanti, Aggiorna tutte le `UpdateAllSupplie
 
 ## <a name="updating-only-those-addresses-that-have-been-modified"></a>L'aggiornamento solo gli indirizzi che sono stati modificati
 
-L'algoritmo di aggiornamento batch utilizzato per le chiamate di questa esercitazione il `UpdateSupplierAddress` metodo per *ogni* fornitore in DataList, indipendentemente dal fatto che le informazioni sull'indirizzo è stati modificati. Mentre tale blind Aggiorna t sono in genere un problema di prestazioni, se si ri il controllo viene modificata alla tabella di database può causare ai record superfluo. Ad esempio, se si utilizzano trigger per registrare tutti `UPDATE` s per il `Suppliers` tabella a una tabella di controllo, ogni volta che un utente fa clic sul pulsante Aggiorna tutto verrà creato un nuovo record di controllo per ogni fornitore nel sistema, indipendentemente dal fatto che l'utente eseguita ogni modifiche.
+L'algoritmo di aggiornamento batch utilizzato per le chiamate di questa esercitazione il `UpdateSupplierAddress` metodo per *ogni* fornitore in DataList, indipendentemente dal fatto che le informazioni sull'indirizzo è stati modificati. Anche se tali aggiornamenti non vedenti non sono in genere un problema di prestazioni, se si ri il controllo viene modificata alla tabella di database può causare ai record superfluo. Ad esempio, se si utilizzano trigger per registrare tutti `UPDATE` s per il `Suppliers` tabella a una tabella di controllo, ogni volta che un utente fa clic sul pulsante Aggiorna tutto verrà creato un nuovo record di controllo per ogni fornitore nel sistema, indipendentemente dal fatto che l'utente eseguita ogni modifiche.
 
 Le classi DataTable di ADO.NET e DataAdapter sono progettate per supportare gli aggiornamenti in batch in cui solo modificati, eliminati e nuovi record risultante in tutte le comunicazioni del database. Ogni riga nella DataTable ha un [ `RowState` proprietà](https://msdn.microsoft.com/library/system.data.datarow.rowstate.aspx) che indica se la riga è stato aggiunto alla tabella di dati, da quest'ultimo, modificati, eliminato o rimane invariata. Quando un oggetto DataTable inizialmente è popolato, tutte le righe sono contrassegnate invariate. Modifica del valore di una o più colonne s riga la riga viene contrassegnata come modificata.
 

@@ -8,12 +8,12 @@ ms.date: 05/15/2013
 ms.assetid: eaa206c4-edb3-487e-8fcb-54a3261fed36
 msc.legacyurl: /signalr/overview/older-versions/dependency-injection
 msc.type: authoredcontent
-ms.openlocfilehash: c8aac09c3d3e06529f7834eb3f60dca2f3073922
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 311976a9d0e79083e02231ab056af3537a3d3d25
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57042638"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58420803"
 ---
 <a name="dependency-injection-in-signalr-1x"></a>Inserimento delle dipendenze in SignalR 1.x
 ====================
@@ -41,7 +41,7 @@ Un approccio migliore consiste nel "inserire" un `ILogger` nell'oggetto, ad esem
 
 [!code-csharp[Main](dependency-injection/samples/sample3.cs)]
 
-A questo punto l'oggetto non è responsabile della selezione che `ILogger` da usare. È possibile swich `ILogger` implementazioni senza modificare gli oggetti che dipendono da esso.
+A questo punto l'oggetto non è responsabile della selezione che `ILogger` da usare. È possibile passare `ILogger` implementazioni senza modificare gli oggetti che dipendono da esso.
 
 [!code-csharp[Main](dependency-injection/samples/sample4.cs)]
 
@@ -161,7 +161,7 @@ Creare un'associazione per **IHubConnectionContext** come indicato di seguito:
 
 [!code-csharp[Main](dependency-injection/samples/sample18.cs)]
 
-Questo codice creatres una funzione anonima che restituisce un **IHubConnection**. Il **WhenInjectedInto** metodo indica a Ninject usare questa funzione solo quando si crea `IStockTicker` istanze. Il motivo è che consente di creare SignalR **IHubConnectionContext** istanze internamente e non si desidera eseguire l'override come SignalR li crea. Questa funzione si applica solo ai nostri `StockTicker` classe.
+Questo codice crea una funzione anonima che restituisce un **IHubConnection**. Il **WhenInjectedInto** metodo indica a Ninject usare questa funzione solo quando si crea `IStockTicker` istanze. Il motivo è che consente di creare SignalR **IHubConnectionContext** istanze internamente e non si desidera eseguire l'override come SignalR li crea. Questa funzione si applica solo ai nostri `StockTicker` classe.
 
 Passare il resolver di dipendenza nel **MapHubs** metodo:
 

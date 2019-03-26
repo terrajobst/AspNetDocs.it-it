@@ -8,12 +8,12 @@ ms.date: 06/26/2007
 ms.assetid: cf025e08-48fc-4385-b176-8610aa7b5565
 msc.legacyurl: /web-forms/overview/data-access/working-with-batched-data/batch-inserting-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 561acc9b473bac7d39e7ed4d511d8b979657131d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: afcfc92b4e0db8092f83b67c6c227af91bdc0cbb
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57035748"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58426049"
 ---
 <a name="batch-inserting-c"></a>Inserimento batch (C#)
 ====================
@@ -195,7 +195,7 @@ Questo codice consente semplicemente di nascondere il `DisplayInterface` pannell
 Successivamente, creare i gestori eventi per i prodotti aggiungere dai controlli di spedizione e pulsante Annulla nell'interfaccia di inserimento. Quando viene scelto uno di questi pulsanti, è necessario ripristinare l'interfaccia di visualizzazione. Creare `Click` gestori eventi per i controlli pulsante in modo che chiamino `ReturnToDisplayInterface`, un metodo si aggiungeranno momentaneamente. Oltre a nascondere il `InsertingInterface` pannello e che mostra il `DisplayInterface` Pannello di `ReturnToDisplayInterface` metodo deve restituire i controlli Web al rispettivo stato di pre-editing. Ciò comporta l'impostazione di controlli DropDownList `SelectedIndex` delle proprietà su 0 e cancellare il `Text` proprietà dei controlli casella di testo.
 
 > [!NOTE]
-> Si consideri cosa potrebbe accadere se si t riportare i controlli al rispettivo stato di pre-modifica prima di tornare all'interfaccia di visualizzazione. Un utente può fare clic sul pulsante di spedizione del prodotto processo, immettere i prodotti dalla spedizione e quindi fare clic su Aggiungi prodotti da spedizione. Ciò Aggiungi i prodotti e restituire l'utente all'interfaccia di visualizzazione. A questo punto l'utente potrebbe voler aggiungere un'altra spedizione. Fare clic sul pulsante di spedizione del prodotto processo che restituiscono l'interfaccia di inserimento, ma il controllo DropDownList su valori nella casella di testo e le selezioni verrebbe comunque popolati con i valori precedenti.
+> Si consideri cosa potrebbe accadere se si non ha restituito i controlli al rispettivo stato di pre-modifica prima di tornare all'interfaccia di visualizzazione. Un utente può fare clic sul pulsante di spedizione del prodotto processo, immettere i prodotti dalla spedizione e quindi fare clic su Aggiungi prodotti da spedizione. Ciò Aggiungi i prodotti e restituire l'utente all'interfaccia di visualizzazione. A questo punto l'utente potrebbe voler aggiungere un'altra spedizione. Fare clic sul pulsante di spedizione del prodotto processo che restituiscono l'interfaccia di inserimento, ma il controllo DropDownList su valori nella casella di testo e le selezioni verrebbe comunque popolati con i valori precedenti.
 
 
 [!code-csharp[Main](batch-inserting-cs/samples/sample5.cs)]
@@ -215,7 +215,7 @@ Si consiglia di testare questa pagina in un browser. Durante la prima visita la 
 
 ## <a name="step-4-adding-the-products"></a>Passaggio 4: Aggiunta di prodotti
 
-Tutto ciò che rimane per questa esercitazione consiste nel salvare i prodotti per il database nei prodotti aggiungere dal pulsante di spedizione s `Click` gestore dell'evento. Questa operazione può essere eseguita mediante la creazione di un `ProductsDataTable` e l'aggiunta di un `ProductsRow` istanza per ognuno dei nomi di prodotto specificati. Una volta queste `ProductsRow` s sono state aggiunte si effettuerà una chiamata per il `ProductsBLL` classe s `UpdateWithTransaction` metodo passando la `ProductsDataTable`. Si tenga presente che il `UpdateWithTransaction` metodo, che è stato creato nel [wrapping delle modifiche al Database in una transazione](wrapping-database-modifications-within-a-transaction-cs.md) passaggi dell'esercitazione, il `ProductsDataTable` per il `ProductsTableAdapter` s `UpdateWithTransaction` (metodo). Da qui, viene avviata una transazione di ADO.NET e i problemi di TableAdatper un' `INSERT` istruzione per il database per ogni aggiunta `ProductsRow` nella DataTable. Presupponendo che tutti i prodotti vengono aggiunti senza errori, che viene eseguito il commit della transazione, in caso contrario viene eseguito il rollback.
+Tutto ciò che rimane per questa esercitazione consiste nel salvare i prodotti per il database nei prodotti aggiungere dal pulsante di spedizione s `Click` gestore dell'evento. Questa operazione può essere eseguita mediante la creazione di un `ProductsDataTable` e l'aggiunta di un `ProductsRow` istanza per ognuno dei nomi di prodotto specificati. Una volta queste `ProductsRow` s sono state aggiunte si effettuerà una chiamata per il `ProductsBLL` classe s `UpdateWithTransaction` metodo passando la `ProductsDataTable`. Si tenga presente che il `UpdateWithTransaction` metodo, che è stato creato nel [wrapping delle modifiche al Database in una transazione](wrapping-database-modifications-within-a-transaction-cs.md) passaggi dell'esercitazione, il `ProductsDataTable` per il `ProductsTableAdapter` s `UpdateWithTransaction` (metodo). Da qui, viene avviata una transazione di ADO.NET e i problemi di TableAdapter un' `INSERT` istruzione per il database per ogni aggiunta `ProductsRow` nella DataTable. Presupponendo che tutti i prodotti vengono aggiunti senza errori, che viene eseguito il commit della transazione, in caso contrario viene eseguito il rollback.
 
 Il codice per i prodotti dal pulsante di spedizione s aggiungere `Click` gestore eventi deve anche eseguire una sorta di controllo degli errori. Poiché non esistono Nessun RequiredFieldValidators utilizzato nell'interfaccia di inserimento, un utente può immettere un prezzo per un prodotto omettendo il relativo nome. Poiché il nome di prodotto s è obbligatorio, se tale condizione espande è necessario avvisare l'utente e non procedere con gli inserimenti. L'intero `Click` codice del gestore eventi seguente:
 

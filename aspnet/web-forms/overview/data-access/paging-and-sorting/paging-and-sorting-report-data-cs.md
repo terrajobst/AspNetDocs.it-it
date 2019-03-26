@@ -8,12 +8,12 @@ ms.date: 08/15/2006
 ms.assetid: 811a6ef2-ec66-4c8e-a089-6f795056e288
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting/paging-and-sorting-report-data-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 5ebef919deeda409cfa6805b603f67ef96ff003e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 15e23b09df13f11c69a2fd6c721981e632a25434
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57064958"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422116"
 ---
 <a name="paging-and-sorting-report-data-c"></a>Suddivisione in pagine e ordinamento dei dati dei report (C#)
 ====================
@@ -194,7 +194,7 @@ Successivamente, tornare al `DataBound` gestore dell'evento e aggiungere il codi
 
 [!code-csharp[Main](paging-and-sorting-report-data-cs/samples/sample6.cs)]
 
-Questo codice inizia con la cancellazione delle voci del `PageList` DropDownList. Ciò potrebbe sembrare superfluo, poiché una t sarebbe prevede che il numero di pagine da modificare, ma potrebbero utilizzano il sistema simultaneamente, aggiungere o rimuovere i record da altri utenti il `Products` tabella. Questo tipo gli inserimenti o eliminazioni è stato possibile modificare il numero di pagine di dati.
+Questo codice inizia con la cancellazione delle voci del `PageList` DropDownList. Ciò potrebbe sembrare superfluo, poiché uno non ci si aspetta il numero di pagine da modificare, ma potrebbero utilizzano il sistema simultaneamente, aggiungere o rimuovere i record da altri utenti il `Products` tabella. Questo tipo gli inserimenti o eliminazioni è stato possibile modificare il numero di pagine di dati.
 
 Successivamente, è necessario creare di nuovo i numeri di pagina e avere quello che esegue il mapping a GridView corrente `PageIndex` selezionata per impostazione predefinita. È effettuare questa operazione utilizzando un ciclo da 0 a `PageCount - 1`, aggiungendo un nuovo `ListItem` in ogni iterazione e l'impostazione relativa `Selected` la proprietà su true se l'indice di iterazione corrente è uguale a s GridView `PageIndex` proprietà.
 
@@ -253,7 +253,7 @@ Quando si associa un ObjectDataSource a GridView mediante l'elenco di riepilogo 
 
 [!code-aspx[Main](paging-and-sorting-report-data-cs/samples/sample9.aspx)]
 
-Un campo può essere configurato in modo che è non ordinabile cancellando s relativo `SortExpression` proprietà (assegnazione a una stringa vuota). Per illustrare questo concetto, si supponga che si desidera consentire ai clienti di ordinare i nostri prodotti in base al prezzo t. Il `UnitPrice` BoundField s `SortExpression` proprietà può essere rimosso dal markup dichiarativo o tramite la finestra di dialogo campi (che è accessibile facendo clic sul collegamento Modifica colonne nello smart tag GridView s).
+Un campo può essere configurato in modo che è non ordinabile cancellando s relativo `SortExpression` proprietà (assegnazione a una stringa vuota). Per illustrare questo concetto, si supponga che non si vuole consentire ai clienti di ordinare i nostri prodotti in base al prezzo. Il `UnitPrice` BoundField s `SortExpression` proprietà può essere rimosso dal markup dichiarativo o tramite la finestra di dialogo campi (che è accessibile facendo clic sul collegamento Modifica colonne nello smart tag GridView s).
 
 
 ![I risultati sono stati ordinati per l'elemento UnitPrice in ordine crescente](paging-and-sorting-report-data-cs/_static/image27.png)

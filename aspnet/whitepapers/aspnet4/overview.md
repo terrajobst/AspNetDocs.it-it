@@ -8,12 +8,12 @@ ms.date: 02/10/2010
 ms.assetid: d7729af4-1eda-4ff2-8b61-dbbe4fc11d10
 msc.legacyurl: /whitepapers/aspnet4
 msc.type: content
-ms.openlocfilehash: 775286df610df9040cbf04125b1742b6befa055b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 93ee29ae125e9442ee755998768a8105dfb485c0
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57043158"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424300"
 ---
 <a name="aspnet-4-and-visual-studio-2010-web-development-overview"></a>Panoramica sullo sviluppo Web con ASP.NET 4 e Visual Studio 2010
 ====================
@@ -945,7 +945,7 @@ Il valore per *controlRenderingCompatibility* è una stringa, che consente a pot
 
 In ASP.NET 3.5 SP1 e versioni precedenti, il framework esegue il rendering di *disabilitati* attributo nel markup HTML per qualsiasi controllo il cui *Enabled* proprietà impostata su *false*. Tuttavia, in base alle specifiche HTML 4.01, solo *input* elementi devono avere questo attributo.
 
-In ASP.NET 4, è possibile impostare il *controlRenderingCompatabilityVersion* proprietà su "3.5", come nell'esempio seguente:
+In ASP.NET 4, è possibile impostare il *controlRenderingCompatibilityVersion* proprietà su "3.5", come nell'esempio seguente:
 
 [!code-xml[Main](overview/samples/sample70.xml)]
 
@@ -957,7 +957,7 @@ Il *etichetta* controllo visualizzerebbe il codice HTML seguente:
 
 [!code-html[Main](overview/samples/sample72.html)]
 
-In ASP.NET 4, è possibile impostare il *controlRenderingCompatabilityVersion* su "4.0". In tal caso, controlla solo il cui rendering viene eseguito *input* verranno eseguito il rendering di elementi di un *disabilitato* attributo quando il controllo *abilitato* è impostata su *false* . I controlli che non eseguono il rendering HTML *input* elementi invece il rendering di un *classe* attributo che fa riferimento a una classe CSS che è possibile usare per definire un aspetto disabilitato per il controllo. Ad esempio, il *etichetta* controllo, illustrato nell'esempio precedente genera il markup seguente:
+In ASP.NET 4, è possibile impostare il *controlRenderingCompatibilityVersion* su "4.0". In tal caso, controlla solo il cui rendering viene eseguito *input* verranno eseguito il rendering di elementi di un *disabilitato* attributo quando il controllo *abilitato* è impostata su *false* . I controlli che non eseguono il rendering HTML *input* elementi invece il rendering di un *classe* attributo che fa riferimento a una classe CSS che è possibile usare per definire un aspetto disabilitato per il controllo. Ad esempio, il *etichetta* controllo, illustrato nell'esempio precedente genera il markup seguente:
 
 [!code-html[Main](overview/samples/sample73.html)]
 

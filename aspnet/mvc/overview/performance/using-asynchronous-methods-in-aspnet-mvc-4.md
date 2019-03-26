@@ -8,12 +8,12 @@ ms.date: 06/06/2012
 ms.assetid: a56572ba-81c3-47af-826d-941e9c4775ec
 msc.legacyurl: /mvc/overview/performance/using-asynchronous-methods-in-aspnet-mvc-4
 msc.type: authoredcontent
-ms.openlocfilehash: 757b15c34f6fa0078d0bca0dfb38d553bb73809d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 20f8d6f459cefc6c1a2e7d5f64c6df4199f8ad24
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57033268"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424469"
 ---
 <a name="using-asynchronous-methods-in-aspnet-mvc-4"></a>Utilizzo di metodi asincroni in ASP.NET MVC 4
 ====================
@@ -90,7 +90,7 @@ L'immagine seguente mostra la visualizzazione gizmo dal progetto di esempio.
 
 ## <a id="CreatingAsynchGizmos"></a>  Creazione di un metodo di azione asincrono Gizmo
 
-L'esempio Usa il nuovo [async](https://msdn.microsoft.com/library/hh156513(VS.110).aspx) e [await](https://msdn.microsoft.com/library/hh156528(VS.110).aspx) parole chiave (disponibile in .NET 4.5 e Visual Studio 2012) per consentire al compilatore di essere responsabile della gestione necessarie per le trasformazioni complesse programmazione asincrona. Il compilatore consente di scrivere codice usando che costrutti di flusso di controllo sincrono del # e il compilatore applica automaticamente le trasformazioni necessarie per usare i callback per evitare di bloccare i thread.
+L'esempio Usa il nuovo [async](https://msdn.microsoft.com/library/hh156513(VS.110).aspx) e [await](https://msdn.microsoft.com/library/hh156528(VS.110).aspx) parole chiave (disponibile in .NET 4.5 e Visual Studio 2012) per consentire al compilatore di essere responsabile della gestione necessarie per le trasformazioni complesse programmazione asincrona. Il compilatore consente di scrivere codice usando il C#di costrutti di flusso di controllo sincrono e il compilatore applica automaticamente le trasformazioni necessarie per usare i callback per evitare di bloccare i thread.
 
 Il codice seguente illustra il `Gizmos` metodo sincrono e il `GizmosAsync` metodo asincrono. Se il browser supporta il [HTML5 `<mark>` elemento](http://www.w3.org/wiki/HTML/Elements/mark), si noterà che le modifiche in `GizmosAsync` nell'evidenziazione di colore giallo.
 

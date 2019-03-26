@@ -8,12 +8,12 @@ ms.date: 05/20/2012
 ms.assetid: 0dd51b30-bf5a-419f-a1b7-2817ccca3c7d
 msc.legacyurl: /web-api/overview/formats-and-model-binding/content-negotiation
 msc.type: authoredcontent
-ms.openlocfilehash: e936bdfa52f786ec86d3e84eac3cd644225b6f92
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 9cfbed49c1022fbf26160e89aed3ab474f5e0fdc
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57039248"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425691"
 ---
 <a name="content-negotiation-in-aspnet-web-api"></a>Negoziazione del contenuto nell'API Web ASP.NET
 ====================
@@ -48,7 +48,7 @@ In risposta, il server potrebbe inviare:
 
 [!code-console[Main](content-negotiation/samples/sample3.cmd)]
 
-In questo esempio, il client ha richiesto JSON, Javascript o "qualsiasi" (\*/\*). Il server Delivery con una rappresentazione JSON del `Product` oggetto. Si noti che l'intestazione Content-Type nella risposta è impostata su &quot;application/json&quot;.
+In questo esempio, il client ha richiesto JSON, Javascript o "qualsiasi" (\*/\*). Il server ha risposto con una rappresentazione JSON del `Product` oggetto. Si noti che l'intestazione Content-Type nella risposta è impostata su &quot;application/json&quot;.
 
 Un controller può restituire anche un **HttpResponseMessage** oggetto. Per specificare un oggetto CLR per il corpo della risposta, chiamare il **CreateResponse** metodo di estensione:
 
@@ -62,7 +62,7 @@ L'oggetto che viene serializzata la risorsa viene chiamato un *formattatore di m
 
 In primo luogo, la pipeline Ottiene il **IContentNegotiator** servizio il **HttpConfiguration** oggetto. Ottiene anche l'elenco di formattatori di file multimediali dal **HttpConfiguration.Formatters** raccolta.
 
-Successivamente, chiama la pipeline **IContentNegotiatior.Negotiate**passando:
+Successivamente, chiama la pipeline **IContentNegotiator.Negotiate**passando:
 
 - Il tipo di oggetto da serializzare
 - La raccolta di formattatori di file multimediali
@@ -73,7 +73,7 @@ Il **Negotiate** metodo restituisce due tipi di informazioni:
 - Il formattatore da utilizzare
 - Il tipo di supporto per la risposta
 
-Se non viene trovato alcun formattatore, il **Negotiate** metodo restituisce **null**e l'errore del client riceve HTTP 406 (pagina non valida).
+Se non viene trovato alcun formattatore, il **Negotiate** metodo restituisce **null**, e il client riceve errori HTTP 406 (pagina non valida).
 
 Il codice seguente viene illustrato come un controller può richiamare direttamente la negoziazione del contenuto:
 

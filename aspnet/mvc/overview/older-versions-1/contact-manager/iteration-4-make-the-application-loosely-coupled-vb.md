@@ -8,12 +8,12 @@ ms.date: 02/20/2009
 ms.assetid: 92c70297-4430-4e4e-919a-9c2333a8d09a
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-4-make-the-application-loosely-coupled-vb
 msc.type: authoredcontent
-ms.openlocfilehash: be6ddbdfbe8da33871355c2a7917a7ce7008d81b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a319e2eb71da1bf693b1bd14ae368c844e7daeb1
+ms.sourcegitcommit: 62db31596a7da029263cf06335aff12236fb3186
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57054868"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58440261"
 ---
 <a name="iteration-4--make-the-application-loosely-coupled-vb"></a>Iterazione #4-rendere l'applicazione regime di controllo (VB)
 ====================
@@ -61,7 +61,7 @@ Si supponga, ad esempio, che si decide di cambiare modalità di implementazione 
 
 Quando un'applicazione è regime di controllo, d'altra parte, è possibile apportare modifiche a una parte di un'applicazione senza modificare altre parti di un'applicazione. Ad esempio, è possibile passare tecnologie di accesso ai dati senza modificare la logica di convalida o un controller.
 
-In questa iterazione, possiamo usufruire dei diversi modelli di progettazione software che consentono di effettuare il refactoring applicazione Contact Manager in un'applicazione più regime. Quando è stata completata, ha vinto t di Contact Manager eseguire alcuna operazione che è t non prima. Tuttavia, sarà possibile modificare l'applicazione più facilmente in futuro.
+In questa iterazione, possiamo usufruire dei diversi modelli di progettazione software che consentono di effettuare il refactoring applicazione Contact Manager in un'applicazione più regime. Quando è stata completata, Contact Manager ha vinto t eseguire tutto ciò che non prima. Tuttavia, sarà possibile modificare l'applicazione più facilmente in futuro.
 
 > [!NOTE] 
 > 
@@ -165,7 +165,7 @@ Si vuole essere in grado di separare completamente il livello di servizio dal no
 
 Tuttavia, il livello di servizio deve essere in grado di passare i messaggi di errore di convalida al livello di controller. Come è possibile abilitare il livello di servizio comunicare i messaggi di errore di convalida senza l'accoppiamento tra i livelli di servizio e il controller? Possiamo usufruire dei vantaggi di un modello di progettazione software denominato il [pattern Decorator](http://en.wikipedia.org/wiki/Decorator_pattern).
 
-Un controller Usa un ModelStateDictionary denominato ModelState per rappresentare errori di convalida. Pertanto, si potrebbe essere tentati di passare ModelState dal livello di controller per il livello di servizio. Tuttavia, utilizzando ModelState nel livello di servizio renderebbe il livello di servizio dipendente da una funzionalità del framework ASP.NET MVC. Sarebbe un grosso problema in quanto, un giorno, si potrebbe voler usare il livello di servizio con un'applicazione WPF invece di un'applicazione ASP.NET MVC. In tal caso, si sarebbe t desidera fare riferimento a framework di MVC ASP.NET per usare la classe ModelStateDictionary.
+Un controller Usa un ModelStateDictionary denominato ModelState per rappresentare errori di convalida. Pertanto, si potrebbe essere tentati di passare ModelState dal livello di controller per il livello di servizio. Tuttavia, utilizzando ModelState nel livello di servizio renderebbe il livello di servizio dipendente da una funzionalità del framework ASP.NET MVC. Sarebbe un grosso problema in quanto, un giorno, si potrebbe voler usare il livello di servizio con un'applicazione WPF invece di un'applicazione ASP.NET MVC. In tal caso, è preferibile fare riferimento a framework di MVC ASP.NET per usare la classe ModelStateDictionary.
 
 Il pattern Decorator consente di eseguire il wrapping di una classe esistente in una nuova classe per implementare un'interfaccia. Il progetto Contact Manager include la classe ModelStateWrapper contenuta nel listato 7. La classe ModelStateWrapper implementa l'interfaccia nel listato 8.
 
