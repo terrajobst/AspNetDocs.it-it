@@ -8,12 +8,12 @@ ms.date: 02/05/2013
 ms.assetid: a8367c6d-ef94-4dff-a010-5eff9e6eea96
 msc.legacyurl: /single-page-application/overview/introduction/other-libraries
 msc.type: authoredcontent
-ms.openlocfilehash: 53c97580b45bb40a6c3256c8038ec5c8b861b69f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5503a00df707ee79282a32c77ed2287e93cf8f48
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57025218"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425470"
 ---
 <a name="know-a-library-other-than-knockout"></a>Librerie diverse da Knockout
 ====================
@@ -48,7 +48,7 @@ Il modello di applicazione a singola pagina Ember è una nuova implementazione d
 
 [Modello di hot Towel SPA](../templates/hottowel-template.md). Questo modello offre diverse librerie JavaScript, tra cui gioco da ragazzi, Knockout, RequireJS e Twitter Bootstrap.
 
-Confrontato con altri modelli elencati di seguito, il teample Hot Towel fornisce un'applicazione più completa da cui è possibile compilare il proprio. Esistono altri concetti da tenere presenti, ma dopo aver appreso li, questo modello potrebbe essere semplicemente ciò che sta cercando. Se si vuole compilare un'applicazione a singola pagina, ma non è possibile decidere dove iniziare, usare Hot Towel e in pochi secondi si otterrà un'applicazione a singola pagina e tutti gli strumenti devi compilare su di esso.
+Confrontato con altri modelli elencati di seguito, il modello Hot Towel fornisce un'applicazione più completa da cui è possibile compilare il proprio. Esistono altri concetti da tenere presenti, ma dopo aver appreso li, questo modello potrebbe essere semplicemente ciò che sta cercando. Se si vuole compilare un'applicazione a singola pagina, ma non è possibile decidere dove iniziare, usare Hot Towel e in pochi secondi si otterrà un'applicazione a singola pagina e tutti gli strumenti devi compilare su di esso.
 
 ## <a name="feature-table"></a>Tabella delle funzionalità
 
@@ -60,7 +60,7 @@ Ecco le funzionalità fornite da ogni modello di applicazione a singola pagina:
 |      Esempio ToDo       |  &#10003;   |          |    &#10003;    | &#10003;  | &#10003; |           |
 |     Il modello      |             | &#10003; |                |           |          | &#10003;  |
 | Navigazione e la cronologia |             | &#10003; |    &#10003;    |           | &#10003; | &#10003;  |
-|        Indicazione        |             |          |                |           |          |           |
+|        Librerie       |             |          |                |           |          |           |
 |        Angular         |             |          |    &#10003;    |           |          |           |
 |    &#8195;Backbone     |             | &#10003; |                |           |          |           |
 |         Breeze         |             |          |    &#10003;    | &#10003;  |          | &#10003;  |

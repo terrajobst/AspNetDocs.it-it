@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 634ea84b-f904-4afe-b71b-49cccef4d9cc
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-models-and-data-access
 msc.type: authoredcontent
-ms.openlocfilehash: 26896e6ee3c02e8f939296ecbfb8b7d500940765
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 10c2f6379f6d3139dd3bcf1027ff456e074298c3
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57061028"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425093"
 ---
 # <a name="aspnet-mvc-4-models-and-data-access"></a>Modelli e accesso ai dati di ASP.NET MVC 4
 
@@ -148,7 +148,7 @@ In questa attività si creerà un modello di dati per interagire con i database 
     ![Aggiunta di StoreDB ADO.NET Entity Data Model](aspnet-mvc-4-models-and-data-access/_static/image6.png "aggiunta StoreDB ADO.NET Entity Data Model")
 
     *Aggiunta di StoreDB ADO.NET Entity Data Model*
-2. Il **procedura guidata Entity Data Model** verranno visualizzati. Questa procedura guidata guiderà è la creazione del livello del modello. Poiché il modello deve essere creato come base l'esistente recentyl database aggiunto, selezionare **genera da database** e fare clic su **successivo**.
+2. Il **procedura guidata Entity Data Model** verranno visualizzati. Questa procedura guidata guiderà è la creazione del livello del modello. Poiché il modello deve essere creato come base il database esistente aggiunto di recente, selezionare **genera da database** e fare clic su **successivo**.
 
     ![Scelta del contenuto dei modelli](aspnet-mvc-4-models-and-data-access/_static/image7.png "scegliendo il contenuto del modello")
 
@@ -580,7 +580,7 @@ In questa appendice spiega come creare un nuovo sito web dal portale di gestione
 1. Andare alla [portale di gestione di Windows Azure](https://manage.windowsazure.com/) e accedere usando le credenziali di Microsoft associate alla sottoscrizione.
 
     > [!NOTE]
-    > Con Windows Azure Puoi ospitare gratuitamente 10 siti Web ASP.NET e la scalabilità orizzontale man mano che aumenta il traffico. È possibile effettuare l'iscrizione [qui](http://aka.ms/aspnet-hol-azure).
+    > Con Windows Azure Puoi ospitare gratuitamente 10 siti Web ASP.NET e la scalabilità orizzontale man mano che aumenta il traffico. È possibile effettuare l'iscrizione [qui](https://aka.ms/aspnet-hol-azure).
 
     ![Accedere al portale di Azure](aspnet-mvc-4-models-and-data-access/_static/image31.png "accedere al portale di Azure")
 

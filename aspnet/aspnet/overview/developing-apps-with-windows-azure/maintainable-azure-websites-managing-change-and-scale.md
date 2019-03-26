@@ -8,18 +8,18 @@ ms.date: 07/16/2014
 ms.assetid: ecfd0eb4-c4ad-44e6-9db9-a2a66611ff6a
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/maintainable-azure-websites-managing-change-and-scale
 msc.type: authoredcontent
-ms.openlocfilehash: bc6de2f0c8b2cd958c198abb90fc4ad97613e973
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 315e89c81782edf0875c65afd27153102d733050
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57054538"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424248"
 ---
 <a name="hands-on-lab-maintainable-azure-websites-managing-change-and-scale"></a>Lab pratico: Siti Web di Azure di facile manutenzione: gestione di modifiche e scalabilità
 ====================
 da [Camp Web Team](https://twitter.com/webcamps)
 
-[Download Web Camp Kit di formazione](http://aka.ms/webcamps-training-kit)
+[Download Web Camp Kit di formazione](https://aka.ms/webcamps-training-kit)
 
 > Microsoft Azure semplifica compilare e distribuire siti Web nell'ambiente di produzione. Ma non abbiamo ancora finito quando l'applicazione è in tempo reale, appena agli inizi. È necessario gestire modifica i requisiti, gli aggiornamenti del database, scalabilità e altro ancora. Fortunatamente, servizio App di Azure è te, con una vasta gamma di funzionalità che consentono di mantenere i siti in esecuzione senza problemi.
 >
@@ -31,7 +31,7 @@ da [Camp Web Team](https://twitter.com/webcamps)
 >
 > Con i database SQL, è importante mantenere aggiornato il database produttività durante la distribuzione di nuove versioni dell'applicazione. Grazie a **migrazioni di Entity Framework Code First**, sviluppo e alla distribuzione del modello di dati è stata semplificata per aggiornare gli ambienti in pochi minuti. Questa esercitazione pratica illustra i diversi argomenti che potrebbe riscontrare quando si distribuisce l'app web in ambienti di produzione in Microsoft Azure.
 >
-> Tutto il codice di esempio e frammenti di codice sono inclusi nel Web Camp Kit di formazione, disponibile all'indirizzo [ http://aka.ms/webcamps-training-kit ](http://aka.ms/webcamps-training-kit).
+> Tutto il codice di esempio e frammenti di codice sono inclusi nel Web Camp Kit di formazione, disponibile all'indirizzo [ https://aka.ms/webcamps-training-kit ](https://aka.ms/webcamps-training-kit).
 >
 > Per una trattazione più approfondita di questo argomento, vedere la [creazione di App Cloud reali con e-book Azure](building-real-world-cloud-apps-with-windows-azure/introduction.md).
 
@@ -62,10 +62,10 @@ Di seguito è necessario per completare questo laboratorio pratico:
 - [Sistema di controllo della versione GIT](http://git-scm.com/download)
 - Una sottoscrizione di Microsoft Azure
 
-    - Iscriversi per una [versione di valutazione gratuita](http://aka.ms/watk-freetrial)
-    - Se sei un Visual Studio Professional, Test Professional, Premium o Ultimate con MSDN o MSDN Platforms sottoscrittore, attivare i [benefici MSDN per](http://aka.ms/watk-msdn) adesso per iniziare lo sviluppo e test in Azure
-    - [BizSpark](http://aka.ms/watk-bizspark) i membri ricevono automaticamente Azure vantaggio attraverso le Visual Studio sottoscrizioni Ultimate con MSDN
-    - I membri del [Microsoft Partner Network](http://aka.ms/watk-mpn) programma Cloud Essentials ricevono crediti mensili di Azure senza costi aggiuntivi
+    - Iscriversi per una [versione di valutazione gratuita](https://aka.ms/watk-freetrial)
+    - Se sei un Visual Studio Professional, Test Professional, Premium o Ultimate con MSDN o MSDN Platforms sottoscrittore, attivare i [benefici MSDN per](https://aka.ms/watk-msdn) adesso per iniziare lo sviluppo e test in Azure
+    - [BizSpark](https://aka.ms/watk-bizspark) i membri ricevono automaticamente Azure vantaggio attraverso le Visual Studio sottoscrizioni Ultimate con MSDN
+    - I membri del [Microsoft Partner Network](https://aka.ms/watk-mpn) programma Cloud Essentials ricevono crediti mensili di Azure senza costi aggiuntivi
 
 <a id="Setup"></a>
 ### <a name="setup"></a>Configurazione

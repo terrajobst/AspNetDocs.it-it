@@ -8,12 +8,12 @@ ms.date: 10/02/2014
 ms.assetid: 0a8d6044-5fab-4213-82d6-5618d5601358
 msc.legacyurl: /web-forms/overview/security/create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset
 msc.type: authoredcontent
-ms.openlocfilehash: acc13776840408756901e20589b9efacc83ff2a9
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1bd90f0ceddee7d9e18c1cac2fadfb2c84841f19
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57053648"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424638"
 ---
 <a name="create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset-c"></a>Creare un'app Web Forms ASP.NET sicura con registrazione utente, messaggi di posta elettronica di conferma e reimpostazione della password (C#)
 ====================
@@ -152,7 +152,7 @@ Anche se hai confermato l'account di posta elettronica, a questo punto sarebbe n
 <a id="rsend"></a>
 ## <a name="resend-email-confirmation-link"></a>Inviare di nuovo collegamento di conferma tramite posta elettronica
 
-Una volta che un utente crea un nuovo account locale, essi vengono inviati tramite posta elettronica un collegamento di conferma che viene richiesto di usare prima di poter accedere. Se l'utente accidentalmente Elimina il messaggio di posta elettronica di conferma o non arrivi mai il messaggio di posta elettronica, è necessario il collegamento di conferma inviato nuovamente. Le modifiche al codice seguente viene illustrato come abilitare questa opzione.
+Una volta che un utente crea un nuovo account locale, essi vengono inviati tramite posta elettronica un collegamento di conferma che viene richiesto di usare prima di poter accedere. Se l'utente elimina accidentalmente il messaggio di posta elettronica di conferma o non arrivi mai il messaggio di posta elettronica, è necessario il collegamento di conferma inviato nuovamente. Le modifiche al codice seguente viene illustrato come abilitare questa opzione.
 
 1. In Visual Studio, aprire il **Login.aspx.cs** code-behind e aggiungere il gestore eventi seguente dopo il `LogIn` gestore dell'evento:   
 
