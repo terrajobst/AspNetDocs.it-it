@@ -8,12 +8,12 @@ ms.date: 10/30/2006
 ms.assetid: f8fd58e2-f932-4f08-ab3d-fbf8ff3295d2
 msc.legacyurl: /web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/handling-bll-and-dal-level-exceptions-cs
 msc.type: authoredcontent
-ms.openlocfilehash: ebaca5ea34fabe3fcd4979eab2e3f684e8e221be
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 43a43c95e049acab734fa7d9fdcf2b96f12e78d9
+ms.sourcegitcommit: 62db31596a7da029263cf06335aff12236fb3186
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57038418"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58440274"
 ---
 <a name="handling-bll--and-dal-level-exceptions-c"></a>Gestione delle eccezioni a livello BLL e DAL (C#)
 ====================
@@ -30,7 +30,7 @@ Nel [Panoramica di modifica e l'eliminazione dei dati in DataList](an-overview-o
 
 Come abbiamo visto nel [BLL - la gestione e le eccezioni di livello in una pagina ASP.NET](../editing-inserting-and-deleting-data/handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs.md) esercitazione, se viene generata un'eccezione dalle profondità della logica di Business o livelli di accesso ai dati, i dettagli dell'eccezione vengono restituiti da ObjectDataSource e quindi a GridView. È stato illustrato come gestire queste eccezioni correttamente creando `Updated` o `RowUpdated` gestori eventi per l'oggetto ObjectDataSource o GridView, cercando un'eccezione e quindi che indica che è stata gestita l'eccezione.
 
-DataList esercitazioni, tuttavia, t utilizzando ObjectDataSource per l'aggiornamento ed eliminazione dei dati. Al contrario, Microsoft sta lavorando direttamente con il livello BLL. Per rilevare le eccezioni che provengono dal livello BLL o DAL, è necessario implementare codice all'interno di code-behind della nostra pagina ASP.NET di gestione delle eccezioni. In questa esercitazione, vedremo in che modo gestire più tactfully le eccezioni generate durante una s DataList modificabile l'aggiornamento del flusso di lavoro.
+Le esercitazioni di DataList, tuttavia, non si usa ObjectDataSource per l'aggiornamento ed eliminazione dei dati. Al contrario, Microsoft sta lavorando direttamente con il livello BLL. Per rilevare le eccezioni che provengono dal livello BLL o DAL, è necessario implementare codice all'interno di code-behind della nostra pagina ASP.NET di gestione delle eccezioni. In questa esercitazione, vedremo in che modo gestire più tactfully le eccezioni generate durante una s DataList modificabile l'aggiornamento del flusso di lavoro.
 
 > [!NOTE]
 > Nel *una panoramica di modifica e l'eliminazione dei dati in DataList* esercitazione sono illustrate le diverse tecniche per la modifica ed eliminazione dei dati da DataList, alcune tecniche coinvolte utilizzando ObjectDataSource per l'aggiornamento e l'eliminazione. Se si utilizzano queste tecniche, è possibile gestire le eccezioni dal livello BLL o DAL tramite gli oggetti ObjectDataSource `Updated` o `Deleted` gestori eventi.
@@ -131,7 +131,7 @@ Il controllo GridView e ObjectDataSource fornire gestori di evento di post-livel
 
 In questa esercitazione è stato illustrato come aggiungere una s DataList modificabile l'aggiornamento del flusso di lavoro aggiungendo la gestione delle eccezioni una `Try ... Catch` bloccare il `UpdateCommand` gestore dell'evento. Se viene generata un'eccezione durante l'aggiornamento del flusso di lavoro, il `Catch` viene eseguito il codice di blocco s, la visualizzazione di informazioni utili nella `ExceptionDetails` etichetta.
 
-A questo punto, il controllo DataList in alcun modo per evitare eccezioni che si verifichino problemi in primo luogo. Anche se sappiamo che un prezzo negativo genererà un'eccezione, è che t è ancora aggiunto alcuna funzionalità per impedire in modo proattivo un utente di immettere input di questo tipo non valido. Nell'esercitazione successiva si vedrà come limitare il eccezioni causate da input utente non valido aggiungendo i controlli di convalida nel `EditItemTemplate`.
+A questo punto, il controllo DataList in alcun modo per evitare eccezioni che si verifichino problemi in primo luogo. Anche se si sa che un prezzo negativo comporterà un'eccezione, è ancora stato ancora aggiunto alcuna funzionalità per impedire in modo proattivo un utente di immettere input di questo tipo non valido. Nell'esercitazione successiva si vedrà come limitare il eccezioni causate da input utente non valido aggiungendo i controlli di convalida nel `EditItemTemplate`.
 
 Buona programmazione!
 

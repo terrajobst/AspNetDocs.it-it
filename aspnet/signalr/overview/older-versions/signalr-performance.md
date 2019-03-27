@@ -8,12 +8,12 @@ ms.date: 07/03/2013
 ms.assetid: 9594d644-66b6-4223-acdd-23e29a6e4c46
 msc.legacyurl: /signalr/overview/older-versions/signalr-performance
 msc.type: authoredcontent
-ms.openlocfilehash: 4158cb055088f3da752020e577007ffe80856b60
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 55e38762dbc7caf31989d65ebf70516a458cfb00
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57055958"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425535"
 ---
 <a name="signalr-performance-signalr-1x"></a>Prestazioni di SignalR (SignalR 1.x)
 ====================
@@ -119,7 +119,7 @@ Questa sezione descrive come abilitare e usare contatori delle prestazioni di Si
 
 ### <a name="installing-signalrexe"></a>Installazione signalr.exe
 
-Contatori delle prestazioni possono essere aggiunti al server usando un'utilità denominata SignalR.exe. Per installare questa utilità, seguire questa procedura:
+I contatori delle prestazioni possono essere aggiunti al server usando un'utilità denominata SignalR.exe. Per installare questa utilità, seguire questa procedura:
 
 1. In Visual Studio, selezionare **strumenti di** > **Gestione pacchetti NuGet** > **Gestisci pacchetti NuGet per soluzione**
 2. Cercare **signalr.utils**e scegliere Installa.
@@ -148,7 +148,7 @@ Le metriche seguenti misurano gli eventi di durata connessione che si verificano
 
 - **Connessioni connesse**
 - **Connessioni riconnesse**
-- **Le connessioni Disonnected**
+- **Connessioni disconnesse**
 - **Connessioni correnti**
 
 **Metrica messaggio**
