@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 0a1f88bd-97da-4ed1-86f1-605199dc75a4
 msc.legacyurl: /web-forms/overview/getting-started/hands-on-labs/whats-new-in-web-forms-in-aspnet-45
 msc.type: authoredcontent
-ms.openlocfilehash: 54e0234d6f13ce62803dbe55a836414a93a207b2
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 78cb6dec71e6b4974fdea4f205d1a36ebdfc3104
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57026478"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424444"
 ---
 <a name="whats-new-in-web-forms-in-aspnet-45"></a>Novità di Web Forms in ASP.NET 4.5
 ====================
@@ -51,7 +51,7 @@ In questo laboratorio pratico, si apprenderà come:
 - Le nuove funzionalità di associazione del modello di Web Form
 - Usare i provider di valori per il mapping di dati della pagina per i metodi code-behind
 - Usare le annotazioni dei dati per la convalida dell'input utente
-- Richiedere advange di convalida sul lato client unobstrusive con jQuery in Web Form
+- Sfruttare i vantaggi della convalida lato client discreta con jQuery in Web Form
 - Implementare la convalida delle richieste granulari
 - Implementare l'elaborazione in Web Form della pagina asincrona
 
@@ -407,13 +407,13 @@ ASP.NET 4.5 introduce convalida le annotazioni dei dati per i Web Form. Anziché
     > [EmailAddress(ErrorMessage=&quot;Invalid Email&quot;), MaxLength(56)]: Two annotations in the same line.
     > 
     > È anche possibile definire i propri messaggi di errore all'interno di ogni attributo.
-3. Aprire **CustomerDetails.aspx** e rimuovere tutte le RequiredFieldvalidators per i campi nome e cognome nelle sezioni di EditItemTemplate e InsertItemTemplate del controllo FormView.
+3. Aprire **CustomerDetails.aspx** e rimuovere tutte le RequiredFieldValidators per i campi nome e cognome nelle sezioni di EditItemTemplate e InsertItemTemplate del controllo FormView.
 
     [!code-aspx[Main](whats-new-in-web-forms-in-aspnet-45/samples/sample24.aspx)]
 
     > [!NOTE]
     > Uno dei vantaggi dell'uso delle annotazioni dei dati è che la logica di convalida non è duplicata nelle pagine dell'applicazione. Si definiscono una sola volta nel modello e usarlo in tutte le pagine di applicazione che consentono di modificare i dati.
-4. Aprire **CustomerDetails.aspx** code-behind e individuare il metodo SaveCustomer. Questo metodo viene chiamato durante l'inserimento di un nuovo cliente e riceve il parametro dei clienti dai valori del controllo FormView. Quando il mapping tra i controlli di pagina e si verifica l'oggetto parametro, ASP.NET verrà eseguita la convalida del modello su tutte le annotazioni di dati di attributi e riempire il dizionario ModelState con gli errori rilevati, se presente.
+4. Aprire **CustomerDetails.aspx** code-behind e individuare il metodo SaveCustomer. Questo metodo viene chiamato durante l'inserimento di un nuovo cliente e riceve il parametro dei clienti dai valori del controllo FormView. Quando il mapping tra la pagina controlla e si verifica l'oggetto parameter, ASP.NET esegue la convalida del modello su tutti gli attributi di annotazione dei dati e compilare il dizionario ModelState con gli errori rilevati, se presente.
 
     Il ModelState solo restituirà true se tutti i campi nel modello sono validi dopo l'esecuzione della convalida.
 
@@ -623,7 +623,7 @@ In questa esercitazione pratica i concetti seguenti sono stati risolti e illustr
 - Le nuove funzionalità di associazione del modello di Web Form
 - Usare i provider di valori per il mapping di dati della pagina per i metodi code-behind
 - Usare le annotazioni dei dati per la convalida dell'input utente
-- Richiedere advange di convalida sul lato client unobstrusive con jQuery in Web Form
+- Sfruttare i vantaggi della convalida lato client discreta con jQuery in Web Form
 - Implementare la convalida delle richieste granulari
 - Implementare l'elaborazione in Web Form della pagina asincrona
 
@@ -678,7 +678,7 @@ In questa appendice spiega come creare un nuovo sito web dal portale di Azure e 
 1. Andare alla [portale di gestione Azure](https://manage.windowsazure.com/) e accedere usando le credenziali di Microsoft associate alla sottoscrizione.
 
     > [!NOTE]
-    > Con Azure Puoi ospitare gratuitamente 10 siti Web ASP.NET e la scalabilità orizzontale man mano che aumenta il traffico. È possibile effettuare l'iscrizione [qui](http://aka.ms/aspnet-hol-azure).
+    > Con Azure Puoi ospitare gratuitamente 10 siti Web ASP.NET e la scalabilità orizzontale man mano che aumenta il traffico. È possibile effettuare l'iscrizione [qui](https://aka.ms/aspnet-hol-azure).
 
     ![Accedere al portale di Azure](whats-new-in-web-forms-in-aspnet-45/_static/image30.png "accedere al portale di Azure")
 

@@ -7,12 +7,12 @@ ms.author: riande
 ms.date: 10/29/2018
 ms.technology: aspnet
 msc.type: content
-ms.openlocfilehash: 4dcc62573fad13ec8b37b2c59e884eec7ca80b92
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5e2f3781623af5a32149e1db1c17b67ce43b7da0
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57030648"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423970"
 ---
 # <a name="configuration-builders-for-aspnet"></a>Generatori di configurazioni per ASP.NET
 
@@ -104,7 +104,7 @@ Il codice precedente imposterà i valori delle proprietà:
 
 Ad esempio, utilizzando il precedente *Web. config* file, che sono impostati chiavi/valori in immagine editor ambiente precedente e il codice precedente, i valori seguenti:
 
-|  Chiave              | Valore |
+|  Chiave              | Value |
 | ----------------- | ------------ |
 |     AppSetting_ServiceID           | AppSetting_ServiceID dalle variabili di ambiente|
 |    AppSetting_default            | Valore AppSetting_default env |
@@ -191,7 +191,7 @@ Il [EnvironmentConfigBuilder](https://www.nuget.org/packages/Microsoft.Configura
 
 Questo generatore di configurazione offre una funzionalità simile a [ASP.NET Core Secret Manager](/aspnet/core/security/app-secrets).
 
-Il [UserSecretsConfigBuilder](https://www.nuget.org/packages/Microsoft.Configuration.ConfigurationBuilders.UserSecrets/) può essere usato nei progetti .NET Framework, ma è necessario specificare un file di segreti. In alternativa, è possibile definire il `UserSecretsId` proprietà nel progetto di file e crea il file non elaborati dei segreti nella posizione corretta per la lettura. Per mantenere le dipendenze esterne all'esterno del progetto, il file del segreto è in formato XML. La formattazione XML è un dettaglio di implementazione e il formato deve non è affidabile. Se è necessario condividere un *Secrets* file con i progetti .NET Core, è possibile usare i [SimpleJsonConfigBuilder](#simplejsonconfig). Il `SimpleJsonConfigBuilder` formattazione per .NET Core deve anche essere considerato un dettaglio di implementazione soggette a modifiche.
+Il [UserSecretsConfigBuilder](https://www.nuget.org/packages/Microsoft.Configuration.ConfigurationBuilders.UserSecrets/) può essere usato nei progetti .NET Framework, ma è necessario specificare un file di segreti. In alternativa, è possibile definire il `UserSecretsId` proprietà nel progetto di file e crea il file non elaborati dei segreti nella posizione corretta per la lettura. Per mantenere le dipendenze esterne all'esterno del progetto, il file del segreto è in formato XML. La formattazione XML è un dettaglio di implementazione e il formato deve non è affidabile. Se è necessario condividere un *Secrets* file con i progetti .NET Core, è possibile usare i [SimpleJsonConfigBuilder](#simplejsonconfigbuilder). Il `SimpleJsonConfigBuilder` formattazione per .NET Core deve anche essere considerato un dettaglio di implementazione soggette a modifiche.
 
 Configurazione degli attributi per `UserSecretsConfigBuilder`:
 
@@ -278,7 +278,7 @@ Dettagli attributo:
 
 * `jsonFile` - Obbligatorio. Specifica il file JSON da cui leggere. Il `~` carattere può essere utilizzato all'avvio a cui fare riferimento radice dell'app.
 * `optional` -Valore booleano, valore predefinito è `true`. Impedisce la generazione di eccezioni se non viene trovato il file JSON.
-* `jsonMode` - `[Flat|Sectional]`. Il valore predefinito è `Flat`. Quando `jsonMode` è `Flat`, il file JSON è un'origine singola flat chiave/valore. Il `EnvironmentConfigBuilder` e `AzureKeyVaultConfigBuilder` sono anche origini chiave-valore flat singolo. Quando la `SimpleJsonConfigBuilder` configurato in `Sectional` modalità:
+* `jsonMode` - `[Flat|Sectional]`. `Flat` è il valore predefinito. Quando `jsonMode` è `Flat`, il file JSON è un'origine singola flat chiave/valore. Il `EnvironmentConfigBuilder` e `AzureKeyVaultConfigBuilder` sono anche origini chiave-valore flat singolo. Quando la `SimpleJsonConfigBuilder` configurato in `Sectional` modalità:
 
   * Il file JSON è concettualmente diviso solo al primo livello in più dizionari.
   * Ognuno dei dizionari viene applicata solo alla sezione di configurazione che corrisponde al nome di proprietà di primo livello a cui è collegato. Ad esempio:
