@@ -6,7 +6,13 @@ author: Rick-Anderson
 ms.author: riande
 title: Documentazione di ASP.NET
 ms.date: 08/24/2018
-description: 'Informazioni su come sviluppatore per ASP.NET e applicazioni Web ASP.NET. Ottenere la documentazione, il codice di esempio, le esercitazioni e altro ancora.'
+description: Informazioni su come sviluppatore per ASP.NET e applicazioni Web ASP.NET. Ottenere la documentazione, il codice di esempio, le esercitazioni e altro ancora.
+ms.openlocfilehash: d46c4b3f39a540244905be3e6cb9a48373613190
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423747"
 ---
 <div id="main" class="v2">
     <div class="container">

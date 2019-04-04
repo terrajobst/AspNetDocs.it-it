@@ -2,12 +2,18 @@
 uid: mvc/overview/older-versions-1/controllers-and-routing/index
 title: Controller e Routing | Microsoft Docs
 author: rick-anderson
-description: 'In questa serie di esercitazioni, illustra il routing di ASP.NET, che esegue il mapping alle richieste del browser per le azioni del controller ASP.NET MVC.'
+description: In questa serie di esercitazioni, illustra il routing di ASP.NET, che esegue il mapping alle richieste del browser per le azioni del controller ASP.NET MVC.
 ms.author: riande
 ms.date: 09/28/2011
 ms.assetid: 124df537-428c-4861-b6c2-4830c094fe0c
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing
 msc.type: chapter
+ms.openlocfilehash: 5da0db768aaf39dc67bb2344e645c491c78a03a1
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57021118"
 ---
 <a name="controllers-and-routing"></a><span data-ttu-id="541e7-103">Controller e routing</span><span class="sxs-lookup"><span data-stu-id="541e7-103">Controllers and Routing</span></span>
 ====================

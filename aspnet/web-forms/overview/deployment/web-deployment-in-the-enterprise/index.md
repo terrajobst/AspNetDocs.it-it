@@ -8,6 +8,12 @@ ms.date: 05/16/2012
 ms.assetid: 83e0a572-428f-4bea-9638-1a031c6901c0
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise
 msc.type: chapter
+ms.openlocfilehash: 92bc3d18c417e73e198d0f7663489fd931bf75b5
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57020608"
 ---
 <a name="aspnet-4---enterprise-deployment-series-1"></a><span data-ttu-id="08365-103">ASP.NET 4 - Serie sulla distribuzione aziendale 1</span><span class="sxs-lookup"><span data-stu-id="08365-103">ASP.NET 4 - Enterprise Deployment Series 1</span></span>
 ====================

@@ -8,6 +8,12 @@ ms.date: 08/08/2011
 ms.assetid: b3fb4480-0f41-495b-add6-163ca92dc8a3
 msc.legacyurl: /web-forms/overview
 msc.type: book
+ms.openlocfilehash: 0c29a844bd227a79e6df5231e0903129e306742e
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57023668"
 ---
 <a name="aspnet-web-forms-guidance"></a><span data-ttu-id="d9f0f-102">Web Form ASP.NET materiale sussidiario</span><span class="sxs-lookup"><span data-stu-id="d9f0f-102">ASP.NET Web Forms Guidance</span></span>
 ====================

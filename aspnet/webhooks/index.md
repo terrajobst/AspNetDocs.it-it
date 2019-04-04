@@ -6,6 +6,12 @@ description: Introduzione ai Webhook ASP.NET.
 ms.author: riande
 ms.date: 01/17/2012
 ms.assetid: 5e2843f0-f499-448f-a712-33d4e9858321
+ms.openlocfilehash: 702cc0bf0d0bb887c64bec19e1faf249bd96617a
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57021298"
 ---
 # <a name="aspnet-webhooks-overview"></a><span data-ttu-id="1ce2e-103">Panoramica di Webhook ASP.NET</span><span class="sxs-lookup"><span data-stu-id="1ce2e-103">ASP.NET WebHooks overview</span></span>
 

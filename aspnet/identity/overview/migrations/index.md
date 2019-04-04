@@ -8,6 +8,12 @@ ms.date: 10/02/2013
 ms.assetid: 4a54fee1-d064-4d67-837a-87143a9205fd
 msc.legacyurl: /identity/overview/migrations
 msc.type: chapter
+ms.openlocfilehash: 27f5913631ed2fc12c53c7dcb027512c51c1a97d
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57022268"
 ---
 <a name="migrating-to-aspnet-identity"></a><span data-ttu-id="d9954-103">Eseguire la migrazione ad ASP.NET Identity</span><span class="sxs-lookup"><span data-stu-id="d9954-103">Migrating to ASP.NET Identity</span></span>
 ====================

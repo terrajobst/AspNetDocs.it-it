@@ -8,6 +8,12 @@ ms.date: 06/25/2013
 ms.assetid: 646edfc7-dc62-4fa0-84c2-926996c92aeb
 msc.legacyurl: /visual-studio/overview/2013
 msc.type: chapter
+ms.openlocfilehash: 74793becba663d163a31cb1b02654b7b6cb021af
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57022328"
 ---
 <a name="aspnet-and-visual-studio-2013"></a><span data-ttu-id="b5ca3-103">ASP.NET e Visual Studio 2013</span><span class="sxs-lookup"><span data-stu-id="b5ca3-103">ASP.NET and Visual Studio 2013</span></span>
 ====================

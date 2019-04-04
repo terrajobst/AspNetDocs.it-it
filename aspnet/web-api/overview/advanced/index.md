@@ -2,12 +2,18 @@
 uid: web-api/overview/advanced/index
 title: Argomenti avanzati per l'API Web ASP.NET | Microsoft Docs
 author: rick-anderson
-description: 'Argomenti per lo sviluppo di API Web ASP.NET più avanzati, dopo avere appreso le nozioni di base.'
+description: Argomenti per lo sviluppo di API Web ASP.NET più avanzati, dopo avere appreso le nozioni di base.
 ms.author: riande
 ms.date: 07/23/2014
 ms.assetid: 7404a0f1-52f7-410c-abd0-c96bab52d217
 msc.legacyurl: /web-api/overview/advanced
 msc.type: chapter
+ms.openlocfilehash: 9bd68317cb28763dd8ca3f2ec6a18159e9367d39
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57019908"
 ---
 <a name="advanced-topics-for-aspnet-web-api"></a><span data-ttu-id="d0b37-103">Argomenti avanzati per l'API Web ASP.NET</span><span class="sxs-lookup"><span data-stu-id="d0b37-103">Advanced Topics for ASP.NET Web API</span></span>
 ====================
