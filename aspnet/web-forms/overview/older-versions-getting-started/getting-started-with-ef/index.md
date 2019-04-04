@@ -8,6 +8,12 @@ ms.date: 10/05/2011
 ms.assetid: c801eeab-1469-42d7-a961-082dbbf4683e
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/getting-started-with-ef
 msc.type: chapter
+ms.openlocfilehash: 1a9fbd49d3d8fc54076efccfba9541287ad68f5b
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57023928"
 ---
 <a name="aspnet-4---getting-started-with-entity-framework-4-and-web-forms"></a>ASP.NET 4 - Introduzione a Entity Framework 4 e Web Forms
 ====================

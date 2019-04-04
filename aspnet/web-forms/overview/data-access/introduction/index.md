@@ -2,12 +2,18 @@
 uid: web-forms/overview/data-access/introduction/index
 title: Introduzione | Microsoft Docs
 author: rick-anderson
-description: 'Questo set di esercitazioni introduttivo illustra come creare una Data Access Layer (DAL), un livello di logica di Business (BLL) e un aspetto coerente tra il sito.'
+description: Questo set di esercitazioni introduttivo illustra come creare una Data Access Layer (DAL), un livello di logica di Business (BLL) e un aspetto coerente tra il sito.
 ms.author: riande
 ms.date: 11/11/2011
 ms.assetid: 74f3a86b-81fa-4d64-820a-304613f72caa
 msc.legacyurl: /web-forms/overview/data-access/introduction
 msc.type: chapter
+ms.openlocfilehash: 7f161727e5ad1dd509e308de939a11da4e061b70
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57019528"
 ---
 <a name="introduction"></a>Introduzione
 ====================

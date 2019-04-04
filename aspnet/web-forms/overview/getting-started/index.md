@@ -2,12 +2,18 @@
 uid: web-forms/overview/getting-started/index
 title: Introduzione a Web Form ASP.NET | Microsoft Docs
 author: rick-anderson
-description: 'Informazioni sui Web Form ASP.NET Web Form ASP.NET consente di creare siti Web dinamici usando un modello noto di trascinamento e rilascio, basata su eventi. Un''area di progettazione e hund...'
+description: Informazioni sui Web Form ASP.NET Web Form ASP.NET consente di creare siti Web dinamici usando un modello noto di trascinamento e rilascio, basata su eventi. Un'area di progettazione e hund...
 ms.author: riande
 ms.date: 08/08/2011
 ms.assetid: f645d3b1-1092-43c6-a28a-074b413924b4
 msc.legacyurl: /web-forms/overview/getting-started
 msc.type: chapter
+ms.openlocfilehash: de5f8df4a6247ae41971867cafda15835b4944e4
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57020328"
 ---
 <a name="getting-started-with-aspnet-web-forms"></a>Introduzione a Web Form ASP.NET
 ====================

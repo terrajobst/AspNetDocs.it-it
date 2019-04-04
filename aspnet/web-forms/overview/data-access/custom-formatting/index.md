@@ -2,12 +2,18 @@
 uid: web-forms/overview/data-access/custom-formatting/index
 title: Formattazione personalizzata | Microsoft Docs
 author: rick-anderson
-description: 'Queste esercitazioni è esaminiamo come personalizzare la visualizzazione dei dati durante l''associazione dati mediante i gestori eventi nei controlli GridView, DetailsView e FormView.'
+description: Queste esercitazioni è esaminiamo come personalizzare la visualizzazione dei dati durante l'associazione dati mediante i gestori eventi nei controlli GridView, DetailsView e FormView.
 ms.author: riande
 ms.date: 10/05/2011
 ms.assetid: 320b7d26-837f-4fa7-a242-1ab82f8bdbe9
 msc.legacyurl: /web-forms/overview/data-access/custom-formatting
 msc.type: chapter
+ms.openlocfilehash: 72a9b91b6d646d5c7d9d3105b4c36eec38a98236
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57020448"
 ---
 <a name="custom-formatting"></a>Formattazione personalizzata
 ====================
