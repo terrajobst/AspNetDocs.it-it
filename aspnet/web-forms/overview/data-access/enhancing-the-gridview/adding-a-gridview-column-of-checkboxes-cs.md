@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/enhancing-the-gridview/adding-a-gridview-column-of-checkboxes-cs
-title: Aggiunta di una colonna GridView di caselle di controllo (c#) | Microsoft Docs
+title: Aggiunta di una colonna GridView di caselle di controllo (C#) | Microsoft Docs
 author: rick-anderson
 description: Questa esercitazione verrà illustrato come aggiungere una colonna di caselle di controllo a un controllo GridView per fornire all'utente un modo molto intuitivo di selezione di più righe di G....
 ms.author: riande

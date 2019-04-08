@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/enhancing-the-gridview/inserting-a-new-record-from-the-gridview-s-footer-cs
-title: Inserimento di un nuovo Record dal piè di pagina del controllo GridView (c#) | Microsoft Docs
+title: Inserimento di un nuovo Record dal piè di pagina del controllo GridView (C#) | Microsoft Docs
 author: rick-anderson
 description: Mentre il controllo GridView non fornisce supporto incorporato per l'inserimento di un nuovo record di dati, questa esercitazione illustra come migliorare il controllo GridView per includere un...
 ms.author: riande

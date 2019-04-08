@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/security/create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on
-title: MVC 5 di creare App con Facebook, Twitter, LinkedIn e Google OAuth2 Sign-on (c#) | Microsoft Docs
+title: MVC 5 di creare App con Facebook, Twitter, LinkedIn e Google OAuth2 Sign-on (C#) | Microsoft Docs
 author: Rick-Anderson
 description: Questa esercitazione illustra come compilare un'applicazione web ASP.NET MVC 5 che consente agli utenti di accedere tramite OAuth 2.0 con le credenziali di un autenti esterni...
 ms.author: riande
@@ -45,7 +45,7 @@ Fare clic su **nuovo progetto** dalle **avviare** pagina oppure è possibile usa
 <a id="1st"></a>
 ## <a name="creating-your-first-application"></a>Creazione della prima applicazione
 
-Fare clic su **nuovo progetto**, quindi selezionare **Visual c#** a sinistra, quindi **Web** e quindi selezionare **applicazione Web ASP.NET**. Denominare il progetto "MvcAuth" e quindi fare clic su **OK**.
+Fare clic su **nuovo progetto**, quindi selezionare **Visual C#** a sinistra, quindi **Web** e quindi selezionare **applicazione Web ASP.NET**. Denominare il progetto "MvcAuth" e quindi fare clic su **OK**.
 
 ![](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/_static/image2.png)
 

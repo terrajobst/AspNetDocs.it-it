@@ -65,7 +65,7 @@ SignalR utilizza i due modelli di comunicazione: Hub e PersistentConnections. La
 
 [!code-javascript[Main](troubleshooting/samples/sample2.js)]
 
-**Codice c# server che esegue il mapping di una route a una PersistentConnection**
+**Codice C# server che esegue il mapping di una route a una PersistentConnection**
 
 [!code-csharp[Main](troubleshooting/samples/sample3.cs)]
 
@@ -111,7 +111,7 @@ SignalR non utilizzeranno automaticamente JSON per il metodo serialize alcuna ne
 
 Questo comportamento è previsto dalla progettazione. Quando `OnDisconnected` viene chiamato, l'hub ha già acceduto il `Disconnected` lo stato, che non consente inoltre di chiamare i metodi dell'hub.
 
-**Codice c# server che esegue correttamente il codice nell'evento OnDisconnected**
+**Codice C# server che esegue correttamente il codice nell'evento OnDisconnected**
 
 [!code-csharp[Main](troubleshooting/samples/sample8.cs)]
 
@@ -127,7 +127,7 @@ Se una connessione cross-domain (una connessione per il quale l'URL di SignalR n
 
 Una connessione bism in un'applicazione client .NET che utilizza la sicurezza del dominio potrebbe non riuscire se la connessione non è configurata correttamente. Per usare SignalR in un ambiente di dominio, impostare la proprietà di connessione necessarie come indicato di seguito:
 
-**Codice c# client che implementa le credenziali di connessione**
+**Codice C# client che implementa le credenziali di connessione**
 
 [!code-csharp[Main](troubleshooting/samples/sample9.cs)]
 

@@ -54,7 +54,7 @@ La prima riga dichiara il modello sia un `DateTime` tipo. Anche se non è necess
 
 La seconda riga viene semplicemente letterale markup HTML che consente di visualizzare &quot;modello di data usando&quot; prima di un campo Data. Si userà questa riga temporaneamente per verificare che questo modello di data è in uso.
 
-La riga successiva è un' [Html.TextBox](https://msdn.microsoft.com/library/system.web.mvc.html.inputextensions.textbox.aspx) helper che esegue il rendering di un `input` campo che rappresenta una casella di testo. Il terzo parametro per l'helper utilizza un tipo anonimo per impostare la classe per la casella di testo `datefield` e il tipo su `date`. (Poiché `class` è una proprietà riservata in c#, è necessario usare il `@` carattere di escape di `class` attributo nel parser c#.)
+La riga successiva è un' [Html.TextBox](https://msdn.microsoft.com/library/system.web.mvc.html.inputextensions.textbox.aspx) helper che esegue il rendering di un `input` campo che rappresenta una casella di testo. Il terzo parametro per l'helper utilizza un tipo anonimo per impostare la classe per la casella di testo `datefield` e il tipo su `date`. (Poiché `class` è una proprietà riservata in C#, è necessario usare il `@` carattere di escape di `class` attributo nel parser C#.)
 
 Il `date` tipo è un tipo di input HTML5 che consente ai browser compatibili con HTML5 per il rendering di un controllo di calendario HTML5. In seguito si aggiungerà codice JavaScript per associare il controllo datepicker jQuery per la `Html.TextBox` elemento usando il `datefield` classe.
 

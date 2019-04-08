@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/models-data/performing-simple-validation-cs
-title: Esegue una convalida semplice (c#) | Microsoft Docs
+title: Esegue una convalida semplice (C#) | Microsoft Docs
 author: StephenWalther
 description: Informazioni su come eseguire la convalida in un'applicazione ASP.NET MVC. In questa esercitazione, Stephen Walther introduce per lo stato del modello e l'helper di convalida HTML...
 ms.author: riande

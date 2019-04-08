@@ -71,7 +71,7 @@ Nota: Il metodo PUT sostituisce l'entità product intero. Vale a dire, il client
 
 Iniziare eseguendo Visual Studio e selezionare **nuovo progetto** dalle **avviare** pagina. E viceversa, il **File** dal menu **New** e quindi **progetto**.
 
-Nel **modelli** riquadro, selezionare **modelli installati** ed espandere le **Visual c#** nodo. Sotto **Visual c#**, selezionare **Web**. Nell'elenco dei modelli di progetto, selezionare **applicazione Web ASP.NET MVC 4**. Denominare il progetto &quot;ProductStore&quot; e fare clic su **OK**.
+Nel **modelli** riquadro, selezionare **modelli installati** ed espandere le **Visual C#** nodo. Sotto **Visual C#**, selezionare **Web**. Nell'elenco dei modelli di progetto, selezionare **applicazione Web ASP.NET MVC 4**. Denominare il progetto &quot;ProductStore&quot; e fare clic su **OK**.
 
 ![](creating-a-web-api-that-supports-crud-operations/_static/image1.png)
 
@@ -101,7 +101,7 @@ In Esplora soluzioni fare doppio clic il **modelli** cartella. Selezionare **Add
 
 ![](creating-a-web-api-that-supports-crud-operations/_static/image4.png)
 
-Nel **modelli** riquadro, selezionare **modelli installati** ed espandere il nodo c#. In c#, selezionare **codice**. Nell'elenco dei modelli di codice, selezionare **interfaccia**. Denominare l'interfaccia &quot;IProductRepository&quot;.
+Nel **modelli** riquadro, selezionare **modelli installati** ed espandere il nodo C#. In C#, selezionare **codice**. Nell'elenco dei modelli di codice, selezionare **interfaccia**. Denominare l'interfaccia &quot;IProductRepository&quot;.
 
 ![](creating-a-web-api-that-supports-crud-operations/_static/image5.png)
 

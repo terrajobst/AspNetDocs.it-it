@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/paging-and-sorting/sorting-custom-paged-data-cs
-title: Ordinamento con paging personalizzato dei dati (c#) | Microsoft Docs
+title: Ordinamento con paging personalizzato dei dati (C#) | Microsoft Docs
 author: rick-anderson
 description: Nell'esercitazione precedente abbiamo appreso come implementare il paging personalizzato quando la presentazione dei dati in una pagina web. In questa esercitazione viene illustrato come estendere il precedente...
 ms.author: riande

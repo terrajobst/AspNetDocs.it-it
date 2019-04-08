@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/contact-manager/iteration-4-make-the-application-loosely-coupled-cs
-title: "Iterazione #4-rendere l'applicazione regime di controllo (c#) | Microsoft Docs"
+title: "Iterazione #4-rendere l'applicazione regime di controllo (C#) | Microsoft Docs"
 author: microsoft
 description: In questo quarta iterazione, possiamo usufruire dei diversi modelli di progettazione di software per renderne più semplice da gestire e modificare l'applicazione Contact Manager. Per...
 ms.author: riande
@@ -15,7 +15,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 03/26/2019
 ms.locfileid: "58440352"
 ---
-<a name="iteration-4--make-the-application-loosely-coupled-c"></a>Iterazione #4-rendere l'applicazione regime di controllo (c#)
+<a name="iteration-4--make-the-application-loosely-coupled-c"></a>Iterazione #4-rendere l'applicazione regime di controllo (C#)
 ====================
 by [Microsoft](https://github.com/microsoft)
 
@@ -24,7 +24,7 @@ by [Microsoft](https://github.com/microsoft)
 > In questo quarta iterazione, possiamo usufruire dei diversi modelli di progettazione di software per renderne più semplice da gestire e modificare l'applicazione Contact Manager. Ad esempio, è eseguire il refactoring l'applicazione per usare il modello di Repository e il modello di inserimento delle dipendenze.
 
 
-## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>Creazione di un'applicazione MVC ASP.NET di gestione dei contatti (c#)
+## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>Creazione di un'applicazione MVC ASP.NET di gestione dei contatti (C#)
 
 In questa serie di esercitazioni, creiamo un'intera applicazione di gestione dei contatti dall'inizio alla fine. L'applicazione Contact Manager consente di archiviare le informazioni di contatto - nomi, i numeri di telefono e indirizzi di posta elettronica - per un elenco di persone.
 

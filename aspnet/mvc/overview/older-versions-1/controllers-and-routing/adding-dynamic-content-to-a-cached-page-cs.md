@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/controllers-and-routing/adding-dynamic-content-to-a-cached-page-cs
-title: Aggiunta di contenuto dinamico a una pagina memorizzata nella cache (c#) | Microsoft Docs
+title: Aggiunta di contenuto dinamico a una pagina memorizzata nella cache (C#) | Microsoft Docs
 author: microsoft
 description: Informazioni su come combinare il contenuto dinamico e memorizzati nella cache nella stessa pagina. Sostituzione post-cache consente di visualizzare il contenuto dinamico, ad esempio banner gli annunci o...
 ms.author: riande

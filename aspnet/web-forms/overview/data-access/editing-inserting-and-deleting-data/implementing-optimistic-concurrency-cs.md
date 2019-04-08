@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/editing-inserting-and-deleting-data/implementing-optimistic-concurrency-cs
-title: Implementazione della concorrenza ottimistica (c#) | Microsoft Docs
+title: Implementazione della concorrenza ottimistica (C#) | Microsoft Docs
 author: rick-anderson
 description: Per un'applicazione web che consente più agli utenti di modificare i dati, sussiste il rischio che due utenti potrebbero essere modificando gli stessi dati nello stesso momento. In questo tutori...
 ms.author: riande

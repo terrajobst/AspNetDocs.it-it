@@ -70,7 +70,7 @@ Il codice seguente illustra come è possibile aggiornare il metodo di azione Ind
 
 Il metodo di azione Index () precedente ha un parametro denominato "page". Il parametro viene dichiarato come un numero intero che ammette valori null (ovvero quali int? indica). Ciò significa che il */Dinners? pagina = 2* URL causerà un valore "2" deve essere passato come valore del parametro. Il */Dinners* URL (senza un valore querystring) causerà un valore null da passare.
 
-Si sta moltiplicando il valore di pagina per le dimensioni della pagina (in questo caso 10 righe) per determinare quanti dinners ignorare. Usiamo il [c# "operatore null-coalescing" (?) ](https://weblogs.asp.net/scottgu/archive/2007/09/20/the-new-c-null-coalescing-operator-and-using-it-with-linq.aspx) che è utile quando si lavora con tipi nullable. Il codice precedente assegna pagina il valore 0 se il parametro di pagina è null.
+Si sta moltiplicando il valore di pagina per le dimensioni della pagina (in questo caso 10 righe) per determinare quanti dinners ignorare. Usiamo il [C# "operatore null-coalescing" (?) ](https://weblogs.asp.net/scottgu/archive/2007/09/20/the-new-c-null-coalescing-operator-and-using-it-with-linq.aspx) che è utile quando si lavora con tipi nullable. Il codice precedente assegna pagina il valore 0 se il parametro di pagina è null.
 
 #### <a name="using-embedded-url-values"></a>Usando i valori di URL incorporati
 

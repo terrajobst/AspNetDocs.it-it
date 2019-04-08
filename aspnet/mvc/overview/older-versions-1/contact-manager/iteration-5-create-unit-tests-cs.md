@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/contact-manager/iteration-5-create-unit-tests-cs
-title: 'Iterazione #5-creare gli unit test (c#) | Microsoft Docs'
+title: 'Iterazione #5-creare gli unit test (C#) | Microsoft Docs'
 author: microsoft
 description: Nell'iterazione del quinto, si semplifica l'applicazione di manutenzione e la modifica mediante l'aggiunta di unit test. È simulare le classi di modello di dati e generare unit test per o...
 ms.author: riande
@@ -15,7 +15,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 03/25/2019
 ms.locfileid: "58422168"
 ---
-<a name="iteration-5--create-unit-tests-c"></a>Iterazione #5-creare gli unit test (c#)
+<a name="iteration-5--create-unit-tests-c"></a>Iterazione #5-creare gli unit test (C#)
 ====================
 by [Microsoft](https://github.com/microsoft)
 
@@ -24,7 +24,7 @@ by [Microsoft](https://github.com/microsoft)
 > Nell'iterazione del quinto, si semplifica l'applicazione di manutenzione e la modifica mediante l'aggiunta di unit test. È simulare le classi di modello di dati e generare unit test per i controller e logica di convalida.
 
 
-## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>Creazione di un'applicazione MVC ASP.NET di gestione dei contatti (c#)
+## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>Creazione di un'applicazione MVC ASP.NET di gestione dei contatti (C#)
 
 In questa serie di esercitazioni, creiamo un'intera applicazione di gestione dei contatti dall'inizio alla fine. L'applicazione Contact Manager consente di archiviare le informazioni di contatto - nomi, i numeri di telefono e indirizzi di posta elettronica - per un elenco di persone.
 

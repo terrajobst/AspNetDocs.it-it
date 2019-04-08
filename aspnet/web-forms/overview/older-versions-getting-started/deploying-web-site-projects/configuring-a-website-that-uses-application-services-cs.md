@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/configuring-a-website-that-uses-application-services-cs
-title: Configurazione di un sito Web che utilizza i servizi dell'applicazione (c#) | Microsoft Docs
+title: Configurazione di un sito Web che utilizza i servizi dell'applicazione (C#) | Microsoft Docs
 author: rick-anderson
 description: Verze Technologie ASP.NET 2.0 introdotto una serie di servizi delle applicazioni, che fanno parte di .NET Framework e vengono usati come una suite di blocchi predefiniti di servizi che yo...
 ms.author: riande
@@ -177,7 +177,7 @@ La buona notizia è che tutte le funzionalità esposte fornito dal WSAT è dispo
 **Figura 5**: Gli amministratori possono creare nuovi account utente ([fare clic per visualizzare l'immagine con dimensioni normali](configuring-a-website-that-uses-application-services-cs/_static/image15.jpg))
 
 
-Se necessaria la funzionalità completa l'estrazione WSAT [ *Rolling Your proprio strumento Amministrazione sito Web*](http://aspnet.4guysfromrolla.com/articles/052307-1.aspx), in cui l'autore Dan Clem descrive il processo di compilazione di uno strumento simile a WSAT personalizzato. Dan condivide il suo codice sorgente s dell'applicazione (in c#) e vengono fornite istruzioni dettagliate per aggiungerla al sito Web ospitato.
+Se necessaria la funzionalità completa l'estrazione WSAT [ *Rolling Your proprio strumento Amministrazione sito Web*](http://aspnet.4guysfromrolla.com/articles/052307-1.aspx), in cui l'autore Dan Clem descrive il processo di compilazione di uno strumento simile a WSAT personalizzato. Dan condivide il suo codice sorgente s dell'applicazione (in C#) e vengono fornite istruzioni dettagliate per aggiungerla al sito Web ospitato.
 
 ## <a name="summary"></a>Riepilogo
 

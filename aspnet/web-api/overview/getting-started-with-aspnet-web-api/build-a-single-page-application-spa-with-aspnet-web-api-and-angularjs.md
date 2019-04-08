@@ -105,7 +105,7 @@ In questa attività si avvierà la creazione di un nuovo progetto MVC ASP.NET co
     ![Crea un nuovo progetto](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image1.png "creando un nuovo progetto")
 
     *Crea un nuovo progetto*
-2. Nel **nuovo progetto** finestra di dialogo **applicazione Web ASP.NET** sotto il **Visual c# | Web** scheda. Assicurarsi che **.NET Framework 4.5** è selezionata, denominarla *GeekQuiz*, scegliere un **posizione** e fare clic su **OK**.
+2. Nel **nuovo progetto** finestra di dialogo **applicazione Web ASP.NET** sotto il **Visual C# | Web** scheda. Assicurarsi che **.NET Framework 4.5** è selezionata, denominarla *GeekQuiz*, scegliere un **posizione** e fare clic su **OK**.
 
     ![Crea un nuovo progetto di applicazione Web ASP.NET](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image2.png "creando un nuovo progetto di applicazione Web ASP.NET")
 

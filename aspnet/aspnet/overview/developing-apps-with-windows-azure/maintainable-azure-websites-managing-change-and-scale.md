@@ -772,7 +772,7 @@ A questo punto **scalabilità automatica** è stato configurato, si creerà un *
     ![Crea un nuovo progetto](maintainable-azure-websites-managing-change-and-scale/_static/image79.png "creando un nuovo progetto")
 
     *Crea un nuovo progetto*
-2. Nel **nuovo progetto** finestra di dialogo **progetto di Test di carico e prestazioni Web** sotto il **Visual c# | Test** scheda. Assicurarsi che **.NET Framework 4.5** è selezionata, denominare il progetto *WebAndLoadTestProject*, scegliere un **posizione** e fare clic su **OK**.
+2. Nel **nuovo progetto** finestra di dialogo **progetto di Test di carico e prestazioni Web** sotto il **Visual C# | Test** scheda. Assicurarsi che **.NET Framework 4.5** è selezionata, denominare il progetto *WebAndLoadTestProject*, scegliere un **posizione** e fare clic su **OK**.
 
     ![Crea un nuovo progetto Web e Test di carico](maintainable-azure-websites-managing-change-and-scale/_static/image80.png "creando un nuovo progetto di Test di carico e Web")
 

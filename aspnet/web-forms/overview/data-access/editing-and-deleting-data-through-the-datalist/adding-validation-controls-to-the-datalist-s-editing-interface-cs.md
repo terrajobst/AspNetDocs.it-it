@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/adding-validation-controls-to-the-datalist-s-editing-interface-cs
-title: Aggiunta di controlli di convalida per il controllo DataList di modifica dell'interfaccia (c#) | Microsoft Docs
+title: Aggiunta di controlli di convalida per il controllo DataList di modifica dell'interfaccia (C#) | Microsoft Docs
 author: rick-anderson
 description: In questa esercitazione verrà illustrato come è facile aggiungere i controlli di convalida al EditItemTemplate di DataList per fornire un int. utente di modifica più infallibile...
 ms.author: riande

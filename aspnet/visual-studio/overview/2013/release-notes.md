@@ -377,7 +377,7 @@ I frammenti di codice seguente viene illustrato come implementare le connessioni
 
 [!code-csharp[Main](release-notes/samples/sample9.cs)]
 
-**Implementazione di richieste tra domini in SignalR 2.0 (da un file di codice c#)**
+**Implementazione di richieste tra domini in SignalR 2.0 (da un file di codice C#)**
 
 Il codice seguente illustra come abilitare JSONP o CORS in un progetto SignalR 2.0. Questo esempio di codice viene utilizzato `Map` e `RunSignalR` invece di `MapSignalR`, in modo che il middleware CORS viene eseguita solo per le richieste di SignalR che richiedono il supporto CORS (invece che per tutto il traffico nel percorso specificato `MapSignalR`.) `Map` utilizzabili per qualsiasi altro middleware che deve essere eseguita per un prefisso URL specifico, anziché per l'intera applicazione.
 

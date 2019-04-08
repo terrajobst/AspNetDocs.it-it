@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/editing-inserting-and-deleting-data/an-overview-of-inserting-updating-and-deleting-data-cs
-title: Una panoramica di inserimento, aggiornamento ed eliminazione dei dati (c#) | Microsoft Docs
+title: Una panoramica di inserimento, aggiornamento ed eliminazione dei dati (C#) | Microsoft Docs
 author: rick-anderson
 description: In questa esercitazione verrà illustrato come eseguire il mapping Insert () di un ObjectDataSource, Update (), e le classi, metodi Delete () per i metodi di livello BLL, nonché come configu...
 ms.author: riande
@@ -15,7 +15,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 03/25/2019
 ms.locfileid: "58424572"
 ---
-<a name="an-overview-of-inserting-updating-and-deleting-data-c"></a>Una panoramica di inserimento, aggiornamento ed eliminazione dei dati (c#)
+<a name="an-overview-of-inserting-updating-and-deleting-data-c"></a>Una panoramica di inserimento, aggiornamento ed eliminazione dei dati (C#)
 ====================
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 

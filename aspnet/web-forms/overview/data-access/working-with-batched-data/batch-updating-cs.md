@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/working-with-batched-data/batch-updating-cs
-title: Batch di aggiornamento (c#) | Microsoft Docs
+title: Batch di aggiornamento (C#) | Microsoft Docs
 author: rick-anderson
 description: Informazioni su come aggiornare più record di database in un'unica operazione. Nel Layer dell'interfaccia utente si compila un controllo GridView in cui ogni riga è modificabile. Nei dati...
 ms.author: riande

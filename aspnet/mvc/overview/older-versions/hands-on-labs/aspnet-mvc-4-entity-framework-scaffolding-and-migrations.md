@@ -90,7 +90,7 @@ In questo esercizio, si apprenderà come usare lo scaffolding di ASP.NET MVC 4 c
 #### <a name="task-1--creating-a-new-aspnet-mvc-4-project-using-scaffolding"></a>Attività 1-Creazione in corso un nuovo ASP.NET MVC 4 progetto usando lo Scaffolding
 
 1. Se non è già aperta, avviare **Visual Studio 2012**.
-2. Selezionare **File | Nuovo progetto**. Nella nuova finestra di dialogo progetto, sotto il **Visual c# | Web** sezione, selezionare **applicazione Web ASP.NET MVC 4**. Denominare il progetto di **MVC4andEFMigrations** e impostare il percorso al **Source\Ex1 UsingMVC4ScaffoldingEFMigrations** cartella della presente esercitazione. Impostare il **Nome soluzione** a **Begin** e verificare che **Crea directory per soluzione** sia selezionata. Fare clic su **OK**.
+2. Selezionare **File | Nuovo progetto**. Nella nuova finestra di dialogo progetto, sotto il **Visual C# | Web** sezione, selezionare **applicazione Web ASP.NET MVC 4**. Denominare il progetto di **MVC4andEFMigrations** e impostare il percorso al **Source\Ex1 UsingMVC4ScaffoldingEFMigrations** cartella della presente esercitazione. Impostare il **Nome soluzione** a **Begin** e verificare che **Crea directory per soluzione** sia selezionata. Fare clic su **OK**.
 
     ![Finestra di dialogo Nuovo progetto ASP.NET MVC 4](aspnet-mvc-4-entity-framework-scaffolding-and-migrations/_static/image1.png "finestra di dialogo Nuovo progetto ASP.NET MVC 4")
 
@@ -316,7 +316,7 @@ Con i frammenti di codice, hai tutto il codice che necessario a tua disposizione
 
 *Uso di frammenti di codice di Visual Studio per inserire codice nel progetto*
 
-***Per aggiungere un frammento di codice utilizzando la tastiera (solo c#)***
+***Per aggiungere un frammento di codice utilizzando la tastiera (solo C#)***
 
 1. Posizionare il cursore in cui si vuole inserire il codice.
 2. Iniziare a digitare il nome del frammento di codice (senza spazi o trattini).
@@ -336,7 +336,7 @@ Con i frammenti di codice, hai tutto il codice che necessario a tua disposizione
 
 *Il frammento di codice e premere nuovamente Tab espanderà*
 
-***Per aggiungere un frammento di codice usando il mouse (c#, Visual Basic e XML)*** 1. Pulsante destro del mouse in cui si desidera inserire il frammento di codice.
+***Per aggiungere un frammento di codice usando il mouse (C#, Visual Basic e XML)*** 1. Pulsante destro del mouse in cui si desidera inserire il frammento di codice.
 
 1. Selezionare **Inserisci frammento** aggiungendo **frammenti di codice**.
 2. Selezionare il frammento di codice rilevante dall'elenco, facendo clic su di esso.

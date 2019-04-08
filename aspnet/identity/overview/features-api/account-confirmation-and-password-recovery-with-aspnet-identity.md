@@ -1,6 +1,6 @@
 ---
 uid: identity/overview/features-api/account-confirmation-and-password-recovery-with-aspnet-identity
-title: Conferma dell'account e recupero della Password con ASP.NET Identity (c#) | Microsoft Docs
+title: Conferma dell'account e recupero della Password con ASP.NET Identity (C#) | Microsoft Docs
 author: HaoK
 description: Prima di eseguire questa esercitazione che è consigliabile completare prima creare un'app web ASP.NET MVC 5 sicura con accesso, messaggio di posta elettronica conferma e reimpostazione della password. Questa esercitazione...
 ms.author: riande

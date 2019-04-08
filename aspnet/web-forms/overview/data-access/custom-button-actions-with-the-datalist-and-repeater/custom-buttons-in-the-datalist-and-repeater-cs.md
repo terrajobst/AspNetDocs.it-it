@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/custom-button-actions-with-the-datalist-and-repeater/custom-buttons-in-the-datalist-and-repeater-cs
-title: Pulsanti personalizzati con DataList e Repeater (c#) | Microsoft Docs
+title: Pulsanti personalizzati con DataList e Repeater (C#) | Microsoft Docs
 author: rick-anderson
 description: In questa esercitazione verrà creata un'interfaccia che utilizza un controllo Repeater per visualizzare l'elenco di categorie nel sistema, con ogni categoria che fornisce un pulsante per visualizzare il associ...
 ms.author: riande

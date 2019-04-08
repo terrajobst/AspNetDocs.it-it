@@ -55,7 +55,7 @@ Page Inspector è abbinato a Microsoft Web Developer Tools. La versione più rec
 
 ## <a name="create-a-web-application"></a>Creare un'applicazione Web
 
-Innanzitutto, creare un'applicazione web che verrà utilizzato il controllo di pagina con. In Visual Studio, scegliere **File** &gt; **nuovo progetto**. A sinistra, espandere **Visual c#**, selezionare **Web**, quindi selezionare **applicazione Web di ASP.NET MVC4**.
+Innanzitutto, creare un'applicazione web che verrà utilizzato il controllo di pagina con. In Visual Studio, scegliere **File** &gt; **nuovo progetto**. A sinistra, espandere **Visual C#**, selezionare **Web**, quindi selezionare **applicazione Web di ASP.NET MVC4**.
 
 ![Nuova applicazione MVC ASP.NET](using-page-inspector-in-aspnet-mvc/_static/image2.png)
 
@@ -240,7 +240,7 @@ Con la versione 1.3, controllo pagina può ora eseguire il mapping di elementi c
 > Il modello di applicazione a singola pagina richiede la [ASP.NET and Web Tools 2012.2](https://go.microsoft.com/fwlink/?LinkId=282650) aggiornare.
 
 
-In Visual Studio, scegliere **File** &gt; **nuovo progetto**. A sinistra, espandere **Visual c#**, selezionare **Web**, quindi selezionare **applicazione Web di ASP.NET MVC4**. Fare clic su **OK**.
+In Visual Studio, scegliere **File** &gt; **nuovo progetto**. A sinistra, espandere **Visual C#**, selezionare **Web**, quindi selezionare **applicazione Web di ASP.NET MVC4**. Fare clic su **OK**.
 
 Nel **nuovo progetto ASP.NET MVC 4** finestra di dialogo, seleziona **applicazione a pagina singola**.
 

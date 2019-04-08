@@ -97,7 +97,7 @@ In questo esercizio si esploreranno i miglioramenti nei modelli di progetto ASP.
 #### <a name="task-1---exploring-the-internet-application-template"></a>Attività 1: esplorare il modello di applicazione Internet
 
 1. Aprire **Visual Studio**.
-2. Selezionare il **File | New | Progetto** comando di menu. Nel **nuovo progetto** finestra di dialogo, seleziona il **Visual c# | Web** modello nel riquadro sinistro della struttura ad albero e scegliere **applicazione Web ASP.NET MVC 4.** Denominare il progetto **PhotoGallery**, selezionare una località (o lasciare il valore predefinito) e fare clic su **OK**.
+2. Selezionare il **File | New | Progetto** comando di menu. Nel **nuovo progetto** finestra di dialogo, seleziona il **Visual C# | Web** modello nel riquadro sinistro della struttura ad albero e scegliere **applicazione Web ASP.NET MVC 4.** Denominare il progetto **PhotoGallery**, selezionare una località (o lasciare il valore predefinito) e fare clic su **OK**.
 
     > [!NOTE]
     > Successivamente si personalizzerà la soluzione PhotoGallery ASP.NET MVC 4 a questo punto, si sta creando.
@@ -112,7 +112,7 @@ In questo esercizio si esploreranno i miglioramenti nei modelli di progetto ASP.
     *Crea una nuova applicazione Internet ASP.NET MVC 4*
 
     > [!NOTE]
-    > Sintassi Razor è stato introdotto in ASP.NET MVC 3. L'obiettivo consiste nel ridurre al minimo il numero di caratteri e sequenze di tasti richieste in un file, abilitando un veloce e fluido codifica del flusso di lavoro. Razor Usa esistente c# / VB (o altro) competenze linguistiche e offre una sintassi di markup di modello che consente un'incredibile HTML costruzione del flusso di lavoro.
+    > Sintassi Razor è stato introdotto in ASP.NET MVC 3. L'obiettivo consiste nel ridurre al minimo il numero di caratteri e sequenze di tasti richieste in un file, abilitando un veloce e fluido codifica del flusso di lavoro. Razor Usa esistente C# / VB (o altro) competenze linguistiche e offre una sintassi di markup di modello che consente un'incredibile HTML costruzione del flusso di lavoro.
 4. Premere **F5** per eseguire la soluzione e visualizzare i modelli rinnovati. È possibile estrarre le funzionalità seguenti:
 
     **Modelli di stile moderno**
@@ -192,7 +192,7 @@ In questo esercizio si esploreranno i miglioramenti nei modelli di progetto ASP.
 
 ASP.NET MVC 4 facilita lo sviluppo di siti Web per dispositivi mobili e browser tablet. Questo modello ha la stessa struttura dell'applicazione come il modello di applicazione Internet (si noti che il codice del controller è praticamente identico), ma è stato modificato lo stile per il rendering correttamente in dispositivi mobili basati su touch.
 
-1. Selezionare il **File | New | Progetto** comando di menu. Nel **nuovo progetto** finestra di dialogo, seleziona il **Visual c# | Web** modello nel riquadro sinistro della struttura ad albero e scegliere il **applicazione Web ASP.NET MVC 4.** Denominare il progetto **PhotoGallery.Mobile**, selezionare una località (o lasciare l'impostazione predefinita), selezionare &quot;aggiungere alla soluzione&quot; e fare clic su **OK**.
+1. Selezionare il **File | New | Progetto** comando di menu. Nel **nuovo progetto** finestra di dialogo, seleziona il **Visual C# | Web** modello nel riquadro sinistro della struttura ad albero e scegliere il **applicazione Web ASP.NET MVC 4.** Denominare il progetto **PhotoGallery.Mobile**, selezionare una località (o lasciare l'impostazione predefinita), selezionare &quot;aggiungere alla soluzione&quot; e fare clic su **OK**.
 2. Nel **nuovo progetto ASP.NET MVC 4** finestra di dialogo, seleziona la **dell'applicazione per dispositivi mobili** modello di progetto e fare clic su **OK**. Verificare che è stato selezionato Razor come motore di visualizzazione.
 
     ![Crea una nuova applicazione per dispositivi mobili ASP.NET MVC 4](whats-new-in-aspnet-mvc-4/_static/image11.png "crea una nuova applicazione per dispositivi mobili ASP.NET MVC 4")
@@ -304,7 +304,7 @@ Nel seguente esercizio, si aggiornerà questa soluzione per migliorare il modo i
 In questa attività si creerà una simulazione del servizio per recuperare il contenuto che verrà visualizzato nella raccolta di foto. A tale scopo, si aggiungerà un nuovo controller che restituirà semplicemente un file JSON con i dati di ciascuna foto.
 
 1. Aprire **Visual Studio** se non è già aperto.
-2. Selezionare il **File | New | Progetto** comando di menu. Nel **nuovo progetto** finestra di dialogo, seleziona il **Visual c# | Web** modello nel riquadro sinistro della struttura ad albero e scegliere **applicazione Web ASP.NET MVC 4.** Denominare il progetto **PhotoGallery**, selezionare una località (o lasciare il valore predefinito) e fare clic su **OK**. In alternativa, è possibile continuare a lavorare da esistente ASP.NET MVC 4 **applicazione Internet** soluzione dal **esercizio 1** e ignorare il passaggio successivo.
+2. Selezionare il **File | New | Progetto** comando di menu. Nel **nuovo progetto** finestra di dialogo, seleziona il **Visual C# | Web** modello nel riquadro sinistro della struttura ad albero e scegliere **applicazione Web ASP.NET MVC 4.** Denominare il progetto **PhotoGallery**, selezionare una località (o lasciare il valore predefinito) e fare clic su **OK**. In alternativa, è possibile continuare a lavorare da esistente ASP.NET MVC 4 **applicazione Internet** soluzione dal **esercizio 1** e ignorare il passaggio successivo.
 3. Nel **nuovo progetto ASP.NET MVC 4** finestra di dialogo, seleziona la **applicazione Internet** modello di progetto e fare clic su **OK**. Assicurarsi che sia selezionato come il motore di visualizzazione Razor.
 4. Nel **Esplora soluzioni**, fare doppio clic il **App\_dati** cartella del progetto e selezionare **Add | Elemento esistente**. Individuare il **Source\Assets\App\_dati** cartella di questa esercitazione e aggiungere il **Photos.json** file.
 5. Creare un nuovo controller con il nome **PhotoController**. A tale scopo, fare clic sul **controller** cartella, passa alla **Add** e selezionare **Controller.** Completare il nome del controller, lasciare il **controller MVC vuoto** modello, quindi scegliere **Add**.
@@ -604,7 +604,7 @@ Ora si dispone di 3 layout nell'applicazione ASP.NET MVC 4:
 <a id="Exercise_4_Using_Asynchronous_Controllers"></a>
 ### <a name="exercise-4-using-asynchronous-controllers"></a>Esercizio 4: Utilizzo di controller asincroni
 
-Microsoft .NET Framework 4.5 introduce nuove funzionalità del linguaggio in c# e Visual Basic per fornire una nuova base per la modalità asincrona nella programmazione .NET. Questa nuova base rende la programmazione asincrona simile a - e circa semplice come - programmazione sincrona. Questo punto si è in grado di scrivere metodi di azione asincroni in ASP.NET MVC 4 usando il **AsyncController** classe. È possibile usare metodi di azione asincroni per a esecuzione prolungata, le richieste associate alla CPU non. Questo evita il server Web di esecuzione del lavoro mentre viene elaborata la richiesta di blocco. La classe AsyncController è in genere usata per le chiamate al servizio Web con esecuzione prolungata.
+Microsoft .NET Framework 4.5 introduce nuove funzionalità del linguaggio in C# e Visual Basic per fornire una nuova base per la modalità asincrona nella programmazione .NET. Questa nuova base rende la programmazione asincrona simile a - e circa semplice come - programmazione sincrona. Questo punto si è in grado di scrivere metodi di azione asincroni in ASP.NET MVC 4 usando il **AsyncController** classe. È possibile usare metodi di azione asincroni per a esecuzione prolungata, le richieste associate alla CPU non. Questo evita il server Web di esecuzione del lavoro mentre viene elaborata la richiesta di blocco. La classe AsyncController è in genere usata per le chiamate al servizio Web con esecuzione prolungata.
 
 Questo esercizio illustra i concetti di base dell'operazione asincrona in ASP.NET MVC 4. Se si desiderano ulteriori approfondimenti, è possibile consultare l'articolo seguente: [[https://msdn.microsoft.com/library/ee728598%28v=vs.100%29.aspx](https://msdn.microsoft.com/library/ee728598%28v=vs.100%29.aspx)](https://msdn.microsoft.com/library/ee728598%28v=vs.100%29.aspx)
 
@@ -650,7 +650,7 @@ Questo esercizio illustra i concetti di base dell'operazione asincrona in ASP.NE
 8. Eseguire l'applicazione. Non si noterà alcuna modifica significativa, ma il codice non bloccherà un thread dal pool di thread, rendendo un migliore utilizzo delle risorse del server e migliorando le prestazioni.
 
     > [!NOTE]
-    > Altre informazioni sulle nuove funzionalità di programmazione asincrona nel laboratorio &quot; **programmazione asincrona in .NET 4.5 con c# e Visual Basic** &quot; incluse nel Training Kit di Visual Studio.
+    > Altre informazioni sulle nuove funzionalità di programmazione asincrona nel laboratorio &quot; **programmazione asincrona in .NET 4.5 con C# e Visual Basic** &quot; incluse nel Training Kit di Visual Studio.
 
 <a id="Task_2_-_Handling_Time-Outs_with_Cancellation_Tokens"></a>
 #### <a name="task-2---handling-time-outs-with-cancellation-tokens"></a>Attività 2: la gestione dei timeout con i token di annullamento
@@ -723,7 +723,7 @@ Con i frammenti di codice, hai tutto il codice che necessario a tua disposizione
 
 *Uso di frammenti di codice di Visual Studio per inserire codice nel progetto*
 
-***Per aggiungere un frammento di codice utilizzando la tastiera (solo c#)***
+***Per aggiungere un frammento di codice utilizzando la tastiera (solo C#)***
 
 1. Posizionare il cursore in cui si vuole inserire il codice.
 2. Iniziare a digitare il nome del frammento di codice (senza spazi o trattini).
@@ -743,7 +743,7 @@ Con i frammenti di codice, hai tutto il codice che necessario a tua disposizione
 
 *Il frammento di codice e premere nuovamente Tab espanderà*
 
-***Per aggiungere un frammento di codice usando il mouse (c#, Visual Basic e XML)***
+***Per aggiungere un frammento di codice usando il mouse (C#, Visual Basic e XML)***
 
 1. Pulsante destro del mouse in cui si desidera inserire il frammento di codice.
 2. Selezionare **Inserisci frammento** aggiungendo **frammenti di codice**.

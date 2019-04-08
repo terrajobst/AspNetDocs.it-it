@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/paging-and-sorting-with-the-datalist-and-repeater/paging-report-data-in-a-datalist-or-repeater-control-cs
-title: Paging di dati del Report in un controllo DataList o Repeater (c#) | Microsoft Docs
+title: Paging di dati del Report in un controllo DataList o Repeater (C#) | Microsoft Docs
 author: rick-anderson
 description: Durante il DataList e Repeater il paging automatico offerta o il supporto dell'ordinamento, questa esercitazione illustra come aggiungere il supporto di paging per il controllo DataList o Repeater,...
 ms.author: riande

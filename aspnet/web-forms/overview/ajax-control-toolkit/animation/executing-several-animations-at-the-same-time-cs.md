@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/animation/executing-several-animations-at-the-same-time-cs
-title: Esecuzione di diverse animazioni contemporaneamente (c#) | Microsoft Docs
+title: Esecuzione di diverse animazioni contemporaneamente (C#) | Microsoft Docs
 author: wenz
 description: Il controllo di animazione in ASP.NET AJAX Control Toolkit non è semplicemente un controllo, ma un intero framework aggiungere animazioni a un controllo. Consente di eseguire severa...
 ms.author: riande
@@ -15,7 +15,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 03/25/2019
 ms.locfileid: "58422948"
 ---
-<a name="executing-several-animations-at-the-same-time-c"></a>Esecuzione di diverse animazioni contemporaneamente (c#)
+<a name="executing-several-animations-at-the-same-time-c"></a>Esecuzione di diverse animazioni contemporaneamente (C#)
 ====================
 da [Christian Wenz](https://github.com/wenz)
 

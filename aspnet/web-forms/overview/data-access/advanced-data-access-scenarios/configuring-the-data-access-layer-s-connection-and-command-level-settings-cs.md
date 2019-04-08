@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/advanced-data-access-scenarios/configuring-the-data-access-layer-s-connection-and-command-level-settings-cs
-title: Configurazione delle impostazioni a livello di connessione e di comando del livello di accesso ai dati (c#) | Microsoft Docs
+title: Configurazione delle impostazioni a livello di connessione e di comando del livello di accesso ai dati (C#) | Microsoft Docs
 author: rick-anderson
 description: Gli oggetti TableAdapter in un DataSet tipizzato eseguono automaticamente la connessione al database, invio di comandi e popolamento di un oggetto DataTable con i risultati...
 ms.author: riande

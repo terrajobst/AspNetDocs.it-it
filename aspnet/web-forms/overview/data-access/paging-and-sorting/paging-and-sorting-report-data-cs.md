@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/paging-and-sorting/paging-and-sorting-report-data-cs
-title: Paging e ordinamento del Report dei dati (c#) | Microsoft Docs
+title: Paging e ordinamento del Report dei dati (C#) | Microsoft Docs
 author: rick-anderson
 description: Paging e ordinamento sono due funzionalità molto comune quando si visualizzano i dati in un'applicazione online. In questa esercitazione prenderemo in una prima occhiata di aggiunta di ordinamento e...
 ms.author: riande

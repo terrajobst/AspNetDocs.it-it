@@ -46,7 +46,7 @@ Per questo elenco, viene aggiunto un controllo extender CascadingDropDown. Invia
 - `Category`: Informazioni sulle categorie in cui viene inviati al metodo web quando viene chiamato
 - `PromptText`: Testo visualizzato quando si caricano in modo asincrono i dati dell'elenco dal server
 
-Ecco il markup per il `CascadingDropDown` elemento. L'unica differenza tra c# e Visual Basic è il nome del servizio web associato:
+Ecco il markup per il `CascadingDropDown` elemento. L'unica differenza tra C# e Visual Basic è il nome del servizio web associato:
 
 [!code-aspx[Main](filling-a-list-using-cascadingdropdown-vb/samples/sample3.aspx)]
 

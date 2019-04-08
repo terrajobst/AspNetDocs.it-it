@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/strategies-for-database-development-and-deployment-cs
-title: Strategie per lo sviluppo di Database e la distribuzione (c#) | Microsoft Docs
+title: Strategie per lo sviluppo di Database e la distribuzione (C#) | Microsoft Docs
 author: rick-anderson
 description: Quando si distribuisce un'applicazione basata su dati per la prima volta che è possibile copiare il database alla cieca nell'ambiente di sviluppo all'ambiente di produzione. B...
 ms.author: riande

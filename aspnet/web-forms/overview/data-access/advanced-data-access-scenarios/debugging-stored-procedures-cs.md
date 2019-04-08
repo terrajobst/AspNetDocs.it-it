@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/advanced-data-access-scenarios/debugging-stored-procedures-cs
-title: Debug di Stored procedure (c#) | Microsoft Docs
+title: Debug di Stored procedure (C#) | Microsoft Docs
 author: rick-anderson
 description: Versioni di Visual Studio Professional e Team System Edition consentono di impostare punti di interruzione e passaggio alle stored procedure all'interno di SQL Server, effettua il debug archiviate...
 ms.author: riande
@@ -36,7 +36,7 @@ In questa esercitazione si esaminerà l'esecuzione di istruzioni nella stored pr
 
 ## <a name="sql-server-debugging-concepts"></a>Concetti di debug di SQL Server
 
-Microsoft SQL Server 2005 è stato progettato per fornire l'integrazione con il [Common Language Runtime (CLR)](https://msdn.microsoft.com/netframework/aa497266.aspx), ovvero il runtime usato da tutti gli assembly .NET. Di conseguenza, SQL Server 2005 supporta gli oggetti di database gestito. Vale a dire, è possibile creare oggetti di database, ad esempio stored procedure e funzioni definite dall'utente (UDF) come metodi in una classe c#. In questo modo le stored procedure e funzioni definite dall'utente per usare la funzionalità in .NET Framework e da proprie classi personalizzate. Naturalmente, SQL Server 2005 fornisce inoltre supporto per gli oggetti di database T-SQL.
+Microsoft SQL Server 2005 è stato progettato per fornire l'integrazione con il [Common Language Runtime (CLR)](https://msdn.microsoft.com/netframework/aa497266.aspx), ovvero il runtime usato da tutti gli assembly .NET. Di conseguenza, SQL Server 2005 supporta gli oggetti di database gestito. Vale a dire, è possibile creare oggetti di database, ad esempio stored procedure e funzioni definite dall'utente (UDF) come metodi in una classe C#. In questo modo le stored procedure e funzioni definite dall'utente per usare la funzionalità in .NET Framework e da proprie classi personalizzate. Naturalmente, SQL Server 2005 fornisce inoltre supporto per gli oggetti di database T-SQL.
 
 SQL Server 2005 offre supporto per il debug di T-SQL sia gli oggetti di database gestito. Tuttavia, questi oggetti possono solo eseguire il debug nelle diverse edizioni di Visual Studio 2005 Professional e Team di sistemi. In questa esercitazione verranno esaminate debug gli oggetti di database T-SQL. L'esercitazione successiva illustra il debug di oggetti di database gestiti.
 

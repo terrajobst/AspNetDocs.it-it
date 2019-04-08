@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/paging-and-sorting-with-the-datalist-and-repeater/sorting-data-in-a-datalist-or-repeater-control-cs
-title: Ordinamento dei dati in un controllo DataList o Repeater (c#) | Microsoft Docs
+title: Ordinamento dei dati in un controllo DataList o Repeater (C#) | Microsoft Docs
 author: rick-anderson
 description: In questa esercitazione verrà esaminato come includere l'ordinamento di supporto con DataList e Repeater, nonché come costruire un controllo DataList o Repeater i cui dati possono...
 ms.author: riande

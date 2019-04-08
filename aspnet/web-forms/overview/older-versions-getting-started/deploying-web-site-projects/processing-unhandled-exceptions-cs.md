@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/processing-unhandled-exceptions-cs
-title: L'elaborazione di eccezioni non gestite (c#) | Microsoft Docs
+title: L'elaborazione di eccezioni non gestite (C#) | Microsoft Docs
 author: rick-anderson
 description: Quando si verifica un errore di runtime in un'applicazione web nell'ambiente di produzione è importante per notificare a uno sviluppatore e di registrare l'errore, in modo che potrebbe essere diagnosticato in un oggetto la...
 ms.author: riande

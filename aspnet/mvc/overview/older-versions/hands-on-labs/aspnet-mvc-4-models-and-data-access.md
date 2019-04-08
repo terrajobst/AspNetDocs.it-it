@@ -204,7 +204,7 @@ In questa attività, si verificherà che, anche se la generazione del modello è
     ![Le compilazioni ha avuto esito positivo](aspnet-mvc-4-models-and-data-access/_static/image14.png "compilazioni ha avuto esito positivo")
 
     *Le compilazioni sono riuscite*
-3. Mentre la finestra di progettazione consente di visualizzare le entità sotto forma di diagramma, sono in effetti le classi di c#. Espandere la **StoreDB.edmx** nodo in Esplora soluzioni e quindi **StoreDB.tt**, si noterà la nuova entità generate.
+3. Mentre la finestra di progettazione consente di visualizzare le entità sotto forma di diagramma, sono in effetti le classi di C#. Espandere la **StoreDB.edmx** nodo in Esplora soluzioni e quindi **StoreDB.tt**, si noterà la nuova entità generate.
 
     ![I file generati](aspnet-mvc-4-models-and-data-access/_static/image15.png "i file generati")
 
@@ -716,7 +716,7 @@ Con i frammenti di codice, hai tutto il codice che necessario a tua disposizione
 
 *Uso di frammenti di codice di Visual Studio per inserire codice nel progetto*
 
-***Per aggiungere un frammento di codice utilizzando la tastiera (solo c#)***
+***Per aggiungere un frammento di codice utilizzando la tastiera (solo C#)***
 
 1. Posizionare il cursore in cui si vuole inserire il codice.
 2. Iniziare a digitare il nome del frammento di codice (senza spazi o trattini).
@@ -736,7 +736,7 @@ Con i frammenti di codice, hai tutto il codice che necessario a tua disposizione
 
 *Il frammento di codice e premere nuovamente Tab espanderà*
 
-***Per aggiungere un frammento di codice usando il mouse (c#, Visual Basic e XML)*** 1. Pulsante destro del mouse in cui si desidera inserire il frammento di codice.
+***Per aggiungere un frammento di codice usando il mouse (C#, Visual Basic e XML)*** 1. Pulsante destro del mouse in cui si desidera inserire il frammento di codice.
 
 1. Selezionare **Inserisci frammento** aggiungendo **frammenti di codice**.
 2. Selezionare il frammento di codice rilevante dall'elenco, facendo clic su di esso.

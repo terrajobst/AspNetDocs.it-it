@@ -177,7 +177,7 @@ In questa attività verrà aggiungere SignalR alla soluzione e inviare gli aggio
     ![Aggiungi nuovo elemento](real-time-web-applications-with-signalr/_static/image11.png "Aggiungi nuovo elemento")
 
     *Aggiungi nuovo elemento*
-6. Nel **Aggiungi nuovo elemento** finestra di dialogo, seleziona il **Visual c# | Web | SignalR** nodo nel riquadro sinistro, seleziona **classe tramite SignalR Hub (v2)** nel riquadro centrale, denominare il file **StatisticsHub.cs** e fare clic su **Aggiungi**.
+6. Nel **Aggiungi nuovo elemento** finestra di dialogo, seleziona il **Visual C# | Web | SignalR** nodo nel riquadro sinistro, seleziona **classe tramite SignalR Hub (v2)** nel riquadro centrale, denominare il file **StatisticsHub.cs** e fare clic su **Aggiungi**.
 
     ![Finestra di dialogo Aggiungi nuovo elemento](real-time-web-applications-with-signalr/_static/image12.png "finestra di dialogo Aggiungi nuovo elemento")
 

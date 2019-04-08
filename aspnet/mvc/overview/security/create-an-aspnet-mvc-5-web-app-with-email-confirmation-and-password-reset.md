@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/security/create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset
-title: Creare un'app web ASP.NET MVC 5 sicura con accesso, inviare tramite posta elettronica di conferma e reimpostazione della password (c#) | Microsoft Docs
+title: Creare un'app web ASP.NET MVC 5 sicura con accesso, inviare tramite posta elettronica di conferma e reimpostazione della password (C#) | Microsoft Docs
 author: Rick-Anderson
 description: Questa esercitazione illustra come compilare un'app web ASP.NET MVC 5 con conferma tramite posta elettronica e reimpostazione della password usando il sistema di appartenenze ASP.NET Identity. È ca...
 ms.author: riande

@@ -1279,7 +1279,7 @@ La finestra di progettazione di Visual Web Developer in Visual Studio 2010 è st
 
 ### <a name="html-and-javascript-snippets"></a>Frammenti di codice JavaScript e HTML
 
-Nell'editor HTML, IntelliSense e completa automaticamente i nomi di tag. La funzionalità frammenti di codice IntelliSense e completa automaticamente intero tag e così via. In Visual Studio 2010, sono supportati frammenti di codice IntelliSense per JavaScript, insieme a c# e Visual Basic, che sono supportati nelle versioni precedenti di Visual Studio.
+Nell'editor HTML, IntelliSense e completa automaticamente i nomi di tag. La funzionalità frammenti di codice IntelliSense e completa automaticamente intero tag e così via. In Visual Studio 2010, sono supportati frammenti di codice IntelliSense per JavaScript, insieme a C# e Visual Basic, che sono supportati nelle versioni precedenti di Visual Studio.
 
 Visual Studio 2010 include frammenti di oltre 200 che consentono di completare automaticamente i tag HTML e ASP.NET comuni, inclusi gli attributi obbligatori (ad esempio runat = "server") e gli attributi comuni specifici di un tag (ad esempio *ID*,  *Elemento DataSourceID*, *ControlToValidate*, e *testo*).
 

@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/filtering-scenarios-with-the-datalist-and-repeater/master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs
-title: Master/dettaglio con un elenco puntato di record Master e un controllo DataList di dettagli (c#) | Microsoft Docs
+title: Master/dettaglio con un elenco puntato di record Master e un controllo DataList di dettagli (C#) | Microsoft Docs
 author: rick-anderson
 description: In questa esercitazione verranno compressi i report di due pagine master-details dell'esercitazione precedente in una singola pagina, che mostra un elenco puntato di nomi di categoria in t...
 ms.author: riande

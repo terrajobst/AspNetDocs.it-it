@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/caching-data/caching-data-at-application-startup-cs
-title: La memorizzazione nella cache i dati all'avvio dell'applicazione (c#) | Microsoft Docs
+title: La memorizzazione nella cache i dati all'avvio dell'applicazione (C#) | Microsoft Docs
 author: rick-anderson
 description: In qualsiasi applicazione Web alcuni dati verranno frequentemente utilizzati e alcuni dati verranno utilizzati raramente. Migliorare le prestazioni dei nostri ASP.NET applicazione b...
 ms.author: riande

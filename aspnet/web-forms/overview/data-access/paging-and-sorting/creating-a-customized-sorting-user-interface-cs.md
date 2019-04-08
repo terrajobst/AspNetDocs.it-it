@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/paging-and-sorting/creating-a-customized-sorting-user-interface-cs
-title: Creazione di un'interfaccia utente l'ordinamento personalizzato (c#) | Microsoft Docs
+title: Creazione di un'interfaccia utente l'ordinamento personalizzato (C#) | Microsoft Docs
 author: rick-anderson
 description: Quando la visualizzazione di un lungo elenco di dati ordinati, può essere molto utile per raggruppare i dati correlati con l'introduzione di righe di separazione. In questa esercitazione verrà illustrato come cre...
 ms.author: riande

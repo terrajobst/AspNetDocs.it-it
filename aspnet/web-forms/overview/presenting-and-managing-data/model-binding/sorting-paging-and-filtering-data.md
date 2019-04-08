@@ -25,7 +25,7 @@ da [Tom FitzMacken](https://github.com/tfitzmac)
 > 
 > Questa esercitazione si basa sul progetto creato nel primo [parte](retrieving-data.md) della serie.
 > 
-> È possibile [scaricare](https://go.microsoft.com/fwlink/?LinkId=286116) il progetto completo in c# o VB. Il codice scaricabile funziona con Visual Studio 2012 o Visual Studio 2013. Usa il modello di Visual Studio 2012, che è leggermente diverso rispetto al modello di Visual Studio 2013 illustrato in questa esercitazione.
+> È possibile [scaricare](https://go.microsoft.com/fwlink/?LinkId=286116) il progetto completo in C# o VB. Il codice scaricabile funziona con Visual Studio 2012 o Visual Studio 2013. Usa il modello di Visual Studio 2012, che è leggermente diverso rispetto al modello di Visual Studio 2013 illustrato in questa esercitazione.
 
 
 ## <a name="what-youll-build"></a>Scopo dell'esercitazione

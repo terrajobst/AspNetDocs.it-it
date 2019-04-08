@@ -276,7 +276,7 @@ Per informazioni su altri argomenti correlati a MVC, ad esempio l'autenticazione
 
 ## <a name="vb"></a>VB
 
-Quando è stato originariamente creata nell'esercitazione, abbiamo fornito le versioni di c# e VB del progetto di download completato. Con questo aggiornamento forniamo un progetto scaricabile c# per ciascun capitolo per renderne più semplice iniziare a usare un punto qualsiasi della serie, ma a causa di limitazioni di tempo e altre priorità non ciò che abbiamo fatto per VB. Se si compila un progetto di Visual Basic usando queste esercitazioni e sono disposti a condividere con altri utenti, è possibile comunicarlo.
+Quando è stato originariamente creata nell'esercitazione, abbiamo fornito le versioni di C# e VB del progetto di download completato. Con questo aggiornamento forniamo un progetto scaricabile C# per ciascun capitolo per renderne più semplice iniziare a usare un punto qualsiasi della serie, ma a causa di limitazioni di tempo e altre priorità non ciò che abbiamo fatto per VB. Se si compila un progetto di Visual Basic usando queste esercitazioni e sono disposti a condividere con altri utenti, è possibile comunicarlo.
 
 <a id="errors"></a>
 

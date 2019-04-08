@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/performing-batch-updates-cs
-title: Esecuzione di aggiornamenti Batch (c#) | Microsoft Docs
+title: Esecuzione di aggiornamenti Batch (C#) | Microsoft Docs
 author: rick-anderson
 description: Informazioni su come creare un completamente modificabile DataList in cui tutti i relativi elementi sono in modalità di modifica e i cui valori possono essere salvati facendo clic su un pulsante "Aggiorna tutto" il...
 ms.author: riande

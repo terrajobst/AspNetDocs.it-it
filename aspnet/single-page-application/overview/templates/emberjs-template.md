@@ -40,7 +40,7 @@ Sul lato server, il modello EmberJS è quasi identico per le [modello Knockout. 
 
 Scaricare e installare il modello facendo clic sul pulsante Download precedente. Si potrebbe essere necessario riavviare Visual Studio.
 
-Nel **modelli** riquadro, selezionare **modelli installati** ed espandere le **Visual c#** nodo. Sotto **Visual c#**, selezionare **Web**. Nell'elenco dei modelli di progetto, selezionare **applicazione Web ASP.NET MVC 4**. Denominare il progetto e fare clic su **OK**.
+Nel **modelli** riquadro, selezionare **modelli installati** ed espandere le **Visual C#** nodo. Sotto **Visual C#**, selezionare **Web**. Nell'elenco dei modelli di progetto, selezionare **applicazione Web ASP.NET MVC 4**. Denominare il progetto e fare clic su **OK**.
 
 ![](emberjs-template/_static/image2.png)
 

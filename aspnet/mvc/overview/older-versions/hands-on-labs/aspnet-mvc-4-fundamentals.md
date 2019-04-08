@@ -125,7 +125,7 @@ In questo esercizio, si apprenderà come creare un'applicazione ASP.NET MVC in V
 
 1. In questa attività si creerà un progetto di applicazione MVC ASP.NET vuoto usando il modello MVC Visual Studio. Avviare **Visual Studio Express per Web**.
 2. Scegliere **Nuovo progetto** dal menu **File**.
-3. Nel **nuovo progetto** finestra di dialogo per selezionare il **applicazione Web ASP.NET MVC 4** tipo, che si trova nel progetto **Visual c#** **Web** modello elenco.
+3. Nel **nuovo progetto** finestra di dialogo per selezionare il **applicazione Web ASP.NET MVC 4** tipo, che si trova nel progetto **Visual C#** **Web** modello elenco.
 4. Modifica il **Name** al *MvcMusicStore*.
 5. Impostare il percorso della soluzione all'interno di una nuova **Begin** nella cartella di origine di questo esercizio, ad esempio **\Source\Ex01-CreatingMusicStoreProject\Begin [YOUR-PASQUA-PATH]**. Fare clic su **OK**.
 
@@ -563,7 +563,7 @@ In questa attività si aggiornerà il **StoreController** da utilizzare il **Sto
     [!code-csharp[Main](aspnet-mvc-4-fundamentals/samples/sample13.cs)]
 
 > [!NOTE]
-> Se non si ha familiarità con c#, si può presupporre che l'utilizzo **var** significa che le **viewModel** variabile è l'associazione tardiva. Non è corretto, il compilatore c# Usa basato su ciò che si assegna alla variabile di inferenza del tipo per determinare che **viewModel** JE typu **StoreIndexViewModel**. Inoltre, per la compilazione locale **viewModel** variabile come una **StoreIndexViewModel** tipo di controllo della fase di compilazione di get e il supporto di editor di codice di Visual Studio.
+> Se non si ha familiarità con C#, si può presupporre che l'utilizzo **var** significa che le **viewModel** variabile è l'associazione tardiva. Non è corretto, il compilatore C# Usa basato su ciò che si assegna alla variabile di inferenza del tipo per determinare che **viewModel** JE typu **StoreIndexViewModel**. Inoltre, per la compilazione locale **viewModel** variabile come una **StoreIndexViewModel** tipo di controllo della fase di compilazione di get e il supporto di editor di codice di Visual Studio.
 
 <a id="Ex5Task4"></a>
 
@@ -588,7 +588,7 @@ In questa attività si creerà un modello di visualizzazione che verrà utilizza
 
     *Visualizza finestra di dialogo Aggiungi*
 
-    Il **\Views\Store\Index.cshtml** viene creato e aperto il file di modello di visualizzazione. Basato sulle informazioni fornite per il **Aggiungi visualizzazione** finestra di dialogo nell'ultimo passaggio, la visualizzazione modello si aspetta di ricevere un **StoreIndexViewModel** istanza come i dati da utilizzare per generare una risposta HTML. Si noterà che il modello eredita un `ViewPage<musicstore.viewmodels.storeindexviewmodel>` nel linguaggio c#.
+    Il **\Views\Store\Index.cshtml** viene creato e aperto il file di modello di visualizzazione. Basato sulle informazioni fornite per il **Aggiungi visualizzazione** finestra di dialogo nell'ultimo passaggio, la visualizzazione modello si aspetta di ricevere un **StoreIndexViewModel** istanza come i dati da utilizzare per generare una risposta HTML. Si noterà che il modello eredita un `ViewPage<musicstore.viewmodels.storeindexviewmodel>` nel linguaggio C#.
 
 <a id="Ex5Task5"></a>
 
@@ -691,7 +691,7 @@ Oggetto **StoreBrowseViewModel** verrà usato in questa attività per mostrare g
 > [!NOTE]
 > What ' s **elenco&lt;Album&gt;**  ?: Questa definizione Usa il **elenco&lt;T&gt;**  tipo, dove **T** vincola il tipo da cui ottenere elementi di questo **elenco** appartiene, in questo caso **Album** (o uno qualsiasi dei relativi discendenti).
 > 
-> La possibilità di progettare classi e metodi che rinviano la specifica di uno o più tipi finché non la classe o il metodo viene dichiarato e creare un'istanza dal codice client è una funzionalità del linguaggio c# denominato **Generics**.
+> La possibilità di progettare classi e metodi che rinviano la specifica di uno o più tipi finché non la classe o il metodo viene dichiarato e creare un'istanza dal codice client è una funzionalità del linguaggio C# denominato **Generics**.
 > 
 > **Elenco&lt;T&gt;**  equivale a generico di **ArrayList** digitare ed è disponibile nel **System.Collections.Generic** dello spazio dei nomi. Uno dei vantaggi dell'utilizzo **generics** è che poiché il tipo è specificato, non occorre occuparsi di operazioni, ad esempio il cast degli elementi nel controllo del tipo **Album** come si farebbe con un' **ArrayList**.
 
@@ -872,7 +872,7 @@ In questo esercizio si esploreranno i miglioramenti nei modelli di progetto ASP.
 #### <a name="task-1-exploring-the-aspnet-mvc-4-internet-application-template"></a>Attività 1: Esplorare il modello di applicazione Internet ASP.NET MVC 4
 
 1. Se non è già aperta, avviare **Visual Studio Express per Web**
-2. Selezionare il **File | New | Progetto** comando di menu. Nel **nuovo progetto** finestra di dialogo, seleziona il **Visual c# | Web** modello nel riquadro sinistro della struttura ad albero e scegliere il **applicazione Web ASP.NET MVC 4**. **Nome** il progetto *MusicStore* e aggiornare il **Nome soluzione** alla *Begin*, quindi selezionare una località (o lasciare il valore predefinito) e fare clic su **OK** .
+2. Selezionare il **File | New | Progetto** comando di menu. Nel **nuovo progetto** finestra di dialogo, seleziona il **Visual C# | Web** modello nel riquadro sinistro della struttura ad albero e scegliere il **applicazione Web ASP.NET MVC 4**. **Nome** il progetto *MusicStore* e aggiornare il **Nome soluzione** alla *Begin*, quindi selezionare una località (o lasciare il valore predefinito) e fare clic su **OK** .
 
     ![Creazione di un nuovo progetto ASP.NET MVC 4](aspnet-mvc-4-fundamentals/_static/image36.png "creando un nuovo progetto ASP.NET MVC 4")
 
@@ -1157,7 +1157,7 @@ Con i frammenti di codice, hai tutto il codice che necessario a tua disposizione
 
 *Uso di frammenti di codice di Visual Studio per inserire codice nel progetto*
 
-***Per aggiungere un frammento di codice utilizzando la tastiera (solo c#)***
+***Per aggiungere un frammento di codice utilizzando la tastiera (solo C#)***
 
 1. Posizionare il cursore in cui si vuole inserire il codice.
 2. Iniziare a digitare il nome del frammento di codice (senza spazi o trattini).
@@ -1177,7 +1177,7 @@ Con i frammenti di codice, hai tutto il codice che necessario a tua disposizione
 
 *Il frammento di codice e premere nuovamente Tab espanderà*
 
-***Per aggiungere un frammento di codice usando il mouse (c#, Visual Basic e XML)*** 1. Pulsante destro del mouse in cui si desidera inserire il frammento di codice.
+***Per aggiungere un frammento di codice usando il mouse (C#, Visual Basic e XML)*** 1. Pulsante destro del mouse in cui si desidera inserire il frammento di codice.
 
 1. Selezionare **Inserisci frammento** aggiungendo **frammenti di codice**.
 2. Selezionare il frammento di codice rilevante dall'elenco, facendo clic su di esso.
