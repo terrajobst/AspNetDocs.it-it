@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/getting-started/database-first-development/creating-the-web-application
-title: "Esercitazione: Creare il l'applicazione Web e i modelli di dati per Entity Framework Database First con ASP.NET MVC"
+title: "Esercitazione: Creare l'applicazione Web e i modelli di dati per il Database di Entity Framework prima di tutto con ASP.NET MVC"
 description: Questa esercitazione è incentrata sulla creazione dell'applicazione web e la generazione di modelli di dati basati su tabelle di database.
 author: Rick-Anderson
 ms.author: riande
@@ -9,14 +9,14 @@ ms.topic: tutorial
 ms.assetid: bc8f2bd5-ff57-4dcd-8418-a5bd517d8953
 msc.legacyurl: /mvc/overview/getting-started/database-first-development/creating-the-web-application
 msc.type: authoredcontent
-ms.openlocfilehash: 481a0ee9b19e5d35d736b2cc937a124900bce446
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 30fd42be5677df6fa6ee0630914098c30d21385b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58426133"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59404520"
 ---
-# <a name="tutorial-create-the-the-web-application-and-data-models-for-ef-database-first-with-aspnet-mvc"></a>Esercitazione: Creare il l'applicazione Web e i modelli di dati per Entity Framework Database First con ASP.NET MVC
+# <a name="tutorial-create-the-web-application-and-data-models-for-ef-database-first-with-aspnet-mvc"></a>Esercitazione: Creare l'applicazione Web e i modelli di dati per il Database di Entity Framework prima di tutto con ASP.NET MVC
 
  Usa MVC, Entity Framework e lo Scaffolding di ASP.NET, è possibile creare un'applicazione web che fornisce un'interfaccia a un database esistente. Questa serie di esercitazioni illustra come generare il codice che consente agli utenti di visualizzare, modificare, creare automaticamente ed eliminare dati che si trovano in una tabella di database. Il codice generato corrispondente alle colonne nella tabella di database.
 
@@ -104,4 +104,4 @@ Le attività di questa esercitazione sono le seguenti:
 
 Passare all'esercitazione successiva per imparare a creare generano codice basato sui modelli di dati.
 > [!div class="nextstepaction"]
-> [La generazione di visualizzazioni](generating-views.md)
+> [Generazione di visualizzazioni](generating-views.md)

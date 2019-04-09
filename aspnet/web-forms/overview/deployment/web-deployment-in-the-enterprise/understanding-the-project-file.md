@@ -8,18 +8,18 @@ ms.date: 05/04/2012
 ms.assetid: 07978d9d-341c-4524-bcba-62976f390f77
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/understanding-the-project-file
 msc.type: authoredcontent
-ms.openlocfilehash: 114dd21002ef41627f3a101c0197a85fd5208887
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d774a8e13e108d1be4c39e1e909d3d9683968a0d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57053968"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59404923"
 ---
-<a name="understanding-the-project-file"></a>Informazioni sul file di progetto
-====================
+# <a name="understanding-the-project-file"></a>Informazioni sul file di progetto
+
 da [Jason Lee](https://github.com/jrjlee)
 
-[Scaricare PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Scarica il PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > I file di progetto di Microsoft Build Engine (MSBuild) si trovano il fulcro del processo di compilazione e distribuzione. Questo argomento inizia con una panoramica concettuale di MSBuild e il file di progetto. Vengono descritti i componenti chiave, che è possibile riscontrare quando si lavora con i file di progetto e può essere utilizzato con un esempio di come è possibile utilizzare i file di progetto per distribuire le applicazioni reali.
 > 
@@ -90,7 +90,7 @@ In genere un file di progetto deve fornire un numero elevato di tipi diversi di 
 [!code-xml[Main](understanding-the-project-file/samples/sample2.xml)]
 
 
-Per recuperare un valore della proprietà, si utilizza il formato <strong>$(</strong><em>PropertyName</em><strong>)</strong><em>.</em> Ad esempio, per recuperare il valore della <strong>ServerName</strong> proprietà, digitare:
+Per recuperare un valore della proprietà, si utilizza il formato **$(***NomeProprietà***) * * *.* Ad esempio, per recuperare il valore della **ServerName** proprietà, digitare:
 
 
 [!code-powershell[Main](understanding-the-project-file/samples/sample3.ps1)]
@@ -192,8 +192,8 @@ Attività e destinazioni può includere **condizione** attributi. Di conseguenza
 
 In generale, quando si creano utili attività e destinazioni, è necessario fare riferimento alle proprietà e gli elementi che sono stati definiti in un' posizione nel file di progetto:
 
-- Per utilizzare un valore della proprietà, digitare <strong>$(</strong><em>PropertyName</em><strong>)</strong>, dove <em>PropertyName</em> è il nome del <strong>proprietà</strong> elemento o il nome del parametro.
-- Per usare un elemento, digitare <strong>@(</strong><em>ItemName</em><strong>)</strong>, dove <em>ItemName</em> è il nome del <strong>elemento</strong> elemento.
+- Per utilizzare un valore della proprietà, digitare **$(***PropertyName***)**, dove *PropertyName* è il nome del **proprietà** elemento o il nome del parametro.
+- Per usare un elemento, digitare **@(***ItemName***)**, dove *ItemName* è il nome del **elemento** elemento.
 
 > [!NOTE]
 > Tenere presente che se si creano più elementi con lo stesso nome, si sta creando un elenco. Al contrario, se si creano più proprietà con lo stesso nome, l'ultimo valore della proprietà è fornire sovrascrive qualsiasi proprietà precedente con lo stesso nome&#x2014;una proprietà può contenere solo un singolo valore.

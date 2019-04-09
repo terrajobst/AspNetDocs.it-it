@@ -8,15 +8,15 @@ ms.date: 05/13/2009
 ms.assetid: c688f8c3-0d0d-4ff2-a32b-f93e05fc826b
 msc.legacyurl: /web-forms/videos/ajax-control-toolkit/editor-control-custom
 msc.type: video
-ms.openlocfilehash: 1dee7fb549ed12408821df51beb7525ff89f6d1c
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 74ab096bf422057d397f1bff36ce99e7bffb27dd
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57051988"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59404701"
 ---
-<a name="editor-control-custom"></a>Controllo Editor personalizzato
-====================
+# <a name="editor-control-custom"></a>Controllo Editor personalizzato
+
 da [Joe Stagner](https://github.com/JoeStagner)
 
 In questo video Luca viene illustrato come creare una nuova classe, derivata dal controllo dell'AJAX Control Toolkit Editor e implementazione di un utente "semplice".

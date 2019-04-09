@@ -8,15 +8,15 @@ ms.date: 10/05/2011
 ms.assetid: cf54a6fb-a362-4481-b967-c158b98092f7
 msc.legacyurl: /web-forms/overview/data-access
 msc.type: chapter
-ms.openlocfilehash: 0060650de35a8693a9c1432876df1d4902bb1ade
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d2f9d48618a102df7ea24a6d2a80b5c3026c7752
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57023078"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59405404"
 ---
-<a name="older-versions---data-access"></a>Versioni precedenti - Accesso ai dati
-====================
+# <a name="older-versions---data-access"></a>Versioni precedenti - Accesso ai dati
+
 > Come eseguire un'ampia gamma di attività correlate a dati mediante i controlli dati ASP.NET Web Form.
 
 
@@ -24,10 +24,10 @@ ms.locfileid: "57023078"
 
     - [Creazione di un livello di accesso ai dati (C#)](introduction/creating-a-data-access-layer-cs.md)
     - [Creazione di un livello per la logica di business (C#)](introduction/creating-a-business-logic-layer-cs.md)
-    - [Pagine master e spostamento all'interno del sito (C#)](introduction/master-pages-and-site-navigation-cs.md)
+    - [Pagine master ed esplorazione del sito (C#)](introduction/master-pages-and-site-navigation-cs.md)
     - [Creazione di un livello di accesso ai dati (VB)](introduction/creating-a-data-access-layer-vb.md)
     - [Creazione di un livello per la logica di business (VB)](introduction/creating-a-business-logic-layer-vb.md)
-    - [Pagine master e spostamento all'interno del sito (VB)](introduction/master-pages-and-site-navigation-vb.md)
+    - [Pagine master ed esplorazione del sito (VB)](introduction/master-pages-and-site-navigation-vb.md)
 - [Report di base](basic-reporting/index.md)
 
     - [Visualizzazione dei dati con ObjectDataSource (C#)](basic-reporting/displaying-data-with-the-objectdatasource-cs.md)
@@ -36,7 +36,7 @@ ms.locfileid: "57023078"
     - [Visualizzazione dei dati con ObjectDataSource (VB)](basic-reporting/displaying-data-with-the-objectdatasource-vb.md)
     - [Parametri dichiarativi (VB)](basic-reporting/declarative-parameters-vb.md)
     - [Impostazione a livello di programmazione dei valori dei parametri di ObjectDataSource (VB)](basic-reporting/programmatically-setting-the-objectdatasource-s-parameter-values-vb.md)
-- [Master/dettagli](masterdetail/index.md)
+- [Report master o di dettaglio](masterdetail/index.md)
 
     - [Applicazione di filtri al report master o di dettaglio usando un controllo DropDownList (C#)](masterdetail/master-detail-filtering-with-a-dropdownlist-cs.md)
     - [Applicazione di filtri al report master o di dettaglio usando due controlli DropDownList (C#)](masterdetail/master-detail-filtering-with-two-dropdownlists-cs.md)
@@ -76,15 +76,15 @@ ms.locfileid: "57023078"
     - [Implementazione della concorrenza ottimistica (VB)](editing-inserting-and-deleting-data/implementing-optimistic-concurrency-vb.md)
     - [Aggiunta di una conferma lato client durante l'eliminazione (VB)](editing-inserting-and-deleting-data/adding-client-side-confirmation-when-deleting-vb.md)
     - [Limitazione della funzionalità di modifica dei dati in base all'utente (VB)](editing-inserting-and-deleting-data/limiting-data-modification-functionality-based-on-the-user-vb.md)
-- [Paging e ordinamento](paging-and-sorting/index.md)
+- [Suddivisione in pagine e ordinamento](paging-and-sorting/index.md)
 
-    - [Paging e ordinamento dei dati dei report (C#)](paging-and-sorting/paging-and-sorting-report-data-cs.md)
-    - [Paging efficiente in grandi quantità di dati (C#)](paging-and-sorting/efficiently-paging-through-large-amounts-of-data-cs.md)
-    - [Ordinamento dei dati con paging personalizzato (C#)](paging-and-sorting/sorting-custom-paged-data-cs.md)
+    - [Suddivisione in pagine e ordinamento dei dati dei report (C#)](paging-and-sorting/paging-and-sorting-report-data-cs.md)
+    - [Suddivisione in pagine efficiente di grandi quantità di dati (C#)](paging-and-sorting/efficiently-paging-through-large-amounts-of-data-cs.md)
+    - [Ordinamento dei dati con suddivisione in pagine personalizzata (C#)](paging-and-sorting/sorting-custom-paged-data-cs.md)
     - [Creazione di un'interfaccia utente per l'ordinamento personalizzato (C#)](paging-and-sorting/creating-a-customized-sorting-user-interface-cs.md)
-    - [Paging e ordinamento dei dati dei report (VB)](paging-and-sorting/paging-and-sorting-report-data-vb.md)
-    - [Paging efficiente in grandi quantità di dati (VB)](paging-and-sorting/efficiently-paging-through-large-amounts-of-data-vb.md)
-    - [Ordinamento dei dati con paging personalizzato (VB)](paging-and-sorting/sorting-custom-paged-data-vb.md)
+    - [Suddivisione in pagine e ordinamento dei dati dei report (VB)](paging-and-sorting/paging-and-sorting-report-data-vb.md)
+    - [Suddivisione in pagine efficiente di grandi quantità di dati (VB)](paging-and-sorting/efficiently-paging-through-large-amounts-of-data-vb.md)
+    - [Ordinamento dei dati con suddivisione in pagine personalizzata (VB)](paging-and-sorting/sorting-custom-paged-data-vb.md)
     - [Creazione di un'interfaccia utente per l'ordinamento personalizzato (VB)](paging-and-sorting/creating-a-customized-sorting-user-interface-vb.md)
 - [Azioni dei pulsanti personalizzati](custom-button-actions/index.md)
 
@@ -124,7 +124,7 @@ ms.locfileid: "57023078"
 
     - [Paging dei dati dei report in un controllo DataList o Repeater (C#)](paging-and-sorting-with-the-datalist-and-repeater/paging-report-data-in-a-datalist-or-repeater-control-cs.md)
     - [Ordinamento dei dati in un controllo DataList o Repeater (C#)](paging-and-sorting-with-the-datalist-and-repeater/sorting-data-in-a-datalist-or-repeater-control-cs.md)
-    - [Paging dei dati dei report in un controllo DataList o Repeater (VB)](paging-and-sorting-with-the-datalist-and-repeater/paging-report-data-in-a-datalist-or-repeater-control-vb.md)
+    - [Suddivisione in pagine dei dati dei report in un controllo DataList o Repeater (VB)](paging-and-sorting-with-the-datalist-and-repeater/paging-report-data-in-a-datalist-or-repeater-control-vb.md)
     - [Ordinamento dei dati in un controllo DataList o Repeater (VB)](paging-and-sorting-with-the-datalist-and-repeater/sorting-data-in-a-datalist-or-repeater-control-vb.md)
 - [Azioni dei pulsanti personalizzati con DataList e Repeater](custom-button-actions-with-the-datalist-and-repeater/index.md)
 

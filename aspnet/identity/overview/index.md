@@ -1,6 +1,6 @@
 ---
 uid: identity/overview/index
-title: Panoramica di ASP.NET Identity | Microsoft Docs
+title: Panoramica dell'identità ASP.NET - ASP.NET 4.x
 author: rick-anderson
 description: ''
 ms.author: riande
@@ -8,28 +8,28 @@ ms.date: 10/02/2013
 ms.assetid: d3972a0e-9ff6-4de1-bf4d-c94943cab048
 msc.legacyurl: /identity/overview
 msc.type: book
-ms.openlocfilehash: 1b3d3e5eb153c4c311dfa426b1d5bed3c1d6c590
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: ef4eb7428770453596090af111576ab23a27206b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57023288"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59406171"
 ---
-<a name="aspnet-identity-overview"></a>Panoramica dell'identità ASP.NET
-====================
+# <a name="aspnet-identity-overview"></a>Panoramica dell'identità ASP.NET
+
 - [Guida introduttiva ad ASP.NET Identity](getting-started/index.md)
 
     - [Introduzione ad ASP.NET Identity](getting-started/introduction-to-aspnet-identity.md)
     - [Risorse consigliate su ASP.NET Identity](getting-started/aspnet-identity-recommended-resources.md)
-    - [Aggiunta di ASP.NET Identity a un progetto Web Form vuoto o esistente](getting-started/adding-aspnet-identity-to-an-empty-or-existing-web-forms-project.md)
+    - [Aggiunta di ASP.NET Identity a un progetto Web Forms vuoto o esistente](getting-started/adding-aspnet-identity-to-an-empty-or-existing-web-forms-project.md)
     - [Sviluppo di app ASP.NET con Azure Active Directory](getting-started/developing-aspnet-apps-with-windows-azure-active-directory.md)
-    - [ASP.NET Identity: Uso dell'archiviazione MySQL con un Provider MySQL EntityFramework (C#)](getting-started/aspnet-identity-using-mysql-storage-with-an-entityframework-mysql-provider.md)
+    - [ASP.NET Identity: uso dell'archiviazione MySQL con un provider MySQL EntityFramework (C#)](getting-started/aspnet-identity-using-mysql-storage-with-an-entityframework-mysql-provider.md)
 - [Funzionalità e API](features-api/index.md)
 
-    - [Procedure consigliate per la distribuzione delle password e di altri dati sensibili in ASP.NET e nel servizio app di Azure](features-api/best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure.md)
+    - [Procedure consigliate per la distribuzione delle password e di altri dati sensibili in ASP.NET e in Servizio app di Azure](features-api/best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure.md)
     - [Conferma dell'account e recupero della password con ASP.NET Identity (C#)](features-api/account-confirmation-and-password-recovery-with-aspnet-identity.md)
     - [Autenticazione a due fattori tramite SMS e posta elettronica con ASP.NET Identity](features-api/two-factor-authentication-using-sms-and-email-with-aspnet-identity.md)
-- [Extensibility](extensibility/index.md)
+- [Estendibilità](extensibility/index.md)
 
     - [Panoramica dei provider di archiviazione personalizzati per ASP.NET Identity](extensibility/overview-of-custom-storage-providers-for-aspnet-identity.md)
     - [Implementazione di un provider di archiviazione MySQL personalizzato di ASP.NET Identity](extensibility/implementing-a-custom-mysql-aspnet-identity-storage-provider.md)

@@ -8,15 +8,15 @@ ms.date: 07/23/2014
 ms.assetid: cf0c0d88-33b1-465c-a7f7-7928cacac9fa
 msc.legacyurl: /ajax/cdn/jquery-mobile/cdnjquerymobile142
 msc.type: content
-ms.openlocfilehash: 6d8ecf0ad24ece42eda8359ce39ceae0677f9008
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 23b5aa7755e4bd5b1d771eb6c178994f354cd842
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57030698"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59405001"
 ---
-<a name="jquery-mobile-142-on-the-microsoft-ajax-cdn"></a>jQuery Mobile 1.4.2 sulla rete CDN Microsoft Ajax
-====================
+# <a name="jquery-mobile-142-on-the-microsoft-ajax-cdn"></a>jQuery Mobile 1.4.2 sulla rete CDN Microsoft Ajax
+
 La libreria di jQuery Mobile 1.4.2 include i file seguenti:
 
 - https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.4.2/jquery.mobile.structure-1.4.2.css
