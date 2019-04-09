@@ -8,15 +8,15 @@ ms.date: 10/23/2008
 ms.assetid: e5b0f6da-635c-461d-8f34-ab815715888a
 msc.legacyurl: /web-forms/videos/aspnet-dynamic-data/begin-editing-the-templates-in-aspnet-dynamic-data-applications
 msc.type: video
-ms.openlocfilehash: 2f1bc029e2a9555c3526747e228141ac81cde3c6
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 97e38513ced9584d767a441fcfa98f59a3d202a4
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57058598"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59386671"
 ---
-<a name="begin-editing-the-templates-in-aspnet-dynamic-data-applications"></a>Iniziare a modificare i modelli nelle applicazioni di ASP.NET Dynamic Data
-====================
+# <a name="begin-editing-the-templates-in-aspnet-dynamic-data-applications"></a>Iniziare a modificare i modelli nelle applicazioni di ASP.NET Dynamic Data
+
 da [Joe Stagner](https://github.com/JoeStagner)
 
 In questo video verrà esplorare la struttura dell'applicazione del generato applicazione ASP.NET Dynamic Data e iniziare a usare in modalità di modifica modelli forniti.
