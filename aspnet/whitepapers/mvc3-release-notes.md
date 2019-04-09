@@ -8,15 +8,15 @@ ms.date: 10/06/2010
 ms.assetid: f44c166e-7e91-48a0-a6f8-d9285f3594e5
 msc.legacyurl: /whitepapers/mvc3-release-notes
 msc.type: content
-ms.openlocfilehash: 7342b5f4a7e2327f3f3850941510a6e46ec30842
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 36bc314c6709c34863d86158419257be99f4084f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57063868"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59407107"
 ---
-<a name="aspnet-mvc-3"></a>ASP.NET MVC 3
-====================
+# <a name="aspnet-mvc-3"></a>ASP.NET MVC 3
+
 - [Panoramica](#overview)
 - [Note sull'installazione](#installation-notes)
 - [Requisiti software](#software-requirements)
@@ -39,7 +39,7 @@ ms.locfileid: "57063868"
     - [Problema risolto: Incollare parte di un'espressione di Razor che contiene i risultati di uno spazio vuoto in essa viene invertito](#RTM-3)
     - [Problema risolto: Ridenominazione di un file Razor che viene aperto nell'editor disabilita la colorazione della sintassi e IntelliSense](#RTM-4)
     - [Problemi noti](#RTM-KI)
-    - [Modifiche di rilievo](#RTM-BC)
+    - [Modifiche di interruzione](#RTM-BC)
 - [ASP.NET MVC 3 Release Candidate 2 (10 dicembre 2010)](#_Toc2)
 
     - [Modelli di progetto modificato includere 1.4.4 jQuery, jQuery 1.7 convalida e jQuery UI 1.8.6y UI 1.8.6](#_Toc2_1)
@@ -55,7 +55,7 @@ ms.locfileid: "57063868"
     - [Proprietà "FileExtensions" aggiunta di motori di visualizzazione per supportare i nomi di File specifico del motore](#_Toc2_10)
     - [Helper di fissa "LabelFor" per generare il valore corretto per l'attributo "For"](#_Toc2_11)
     - [Metodo fisso "RenderAction" per fornire valori espliciti precedenza durante l'associazione del modello](#_Toc2_12)
-    - [Modifiche di rilievo](#_Toc2_BC)
+    - [Modifiche di interruzione](#_Toc2_BC)
     - [Problemi noti](#_Toc2_KI)
 - [ASP.NET MVC 3 Release Candidate (9 novembre 2010)](#TOC_ASP_NET_3_RC)
 
@@ -68,12 +68,12 @@ ms.locfileid: "57063868"
     - [Azione figlio la memorizzazione nella cache di Output](#_Toc276711791)
     - [Miglioramenti alle caselle di dialogo "Add View"](#_Toc276711792)
     - [Convalida delle richieste granulari](#_Toc276711793)
-    - [Modifiche di rilievo](#_Toc276711794)
+    - [Modifiche di interruzione](#_Toc276711794)
     - [Problemi noti](#_Toc276711795)
 - [ASP. Note sulla versione Beta MVC 3 (6 ottobre 2010)](#TOC_ASP_NET_3_Beta)
 
     - [Nuove funzionalità in versione Beta di ASP.NET MVC 3](#0.1__Toc274034215)
-    - [NuPack Package Manager](#0.1__Toc274034216)
+    - [Gestione pacchetti NuPack](#0.1__Toc274034216)
     - [Finestra di dialogo Nuovo progetto migliorata](#0.1__Toc274034217)
     - [Metodo semplificato per specificare fortemente tipizzate modelli nelle visualizzazioni Razor](#0.1__Toc274034218)
     - [Supporto per nuovi metodi di supporto di pagine Web ASP.NET](#0.1__Toc274034219)
@@ -86,7 +86,7 @@ ms.locfileid: "57063868"
     - [Controllo più granulare ValidateInputAttribute](#0.1__Toc274034226)
     - [Gli helper di convertire i caratteri di sottolineatura in trattini per i nomi degli attributi HTML specificati utilizzando oggetti anonimi](#0.1__Toc274034227)
     - [Correzioni di bug](#0.1__Toc274034228)
-    - [Modifiche di rilievo](#0.1__Toc274034229)
+    - [Modifiche di interruzione](#0.1__Toc274034229)
     - [Problemi noti](#0.1__Toc274034230)
 - [Dichiarazione di non responsabilità](#0.1__Toc274034231)
 
@@ -435,7 +435,7 @@ Quando la *Html.ValidationMessage* metodo visualizza un messaggio di convalida, 
 <a id="_Toc2_10"></a>
 ### <a name="fixed-model-declaration-to-not-add-whitespace-to-the-document"></a>Fisso @model dichiarazione di non aggiungere spazi vuoti nel documento
 
-Nelle versioni precedenti, il <em>@model</em> dichiarazione nella parte superiore di una visualizzazione aggiunta una riga vuota per l'output HTML sottoposto a rendering. Questo problema è stato risolto in modo che la dichiarazione di non introdurre spazi vuoti.
+Nelle versioni precedenti, il *@model* dichiarazione nella parte superiore di una visualizzazione aggiunta una riga vuota per l'output HTML sottoposto a rendering. Questo problema è stato risolto in modo che la dichiarazione di non introdurre spazi vuoti.
 
 <a id="_Toc2_11"></a>
 ### <a name="added-fileextensions-property-to-view-engines-to-support-engine-specific-file-names"></a>Proprietà "FileExtensions" aggiunta di motori di visualizzazione per supportare i nomi di File specifico del motore
@@ -462,7 +462,7 @@ Nelle versioni precedenti, valori espliciti che sono stati passati per il *Rende
 - Nelle versioni precedenti di ASP.NET MVC, i filtri azione sono stati creati per ogni richiesta, ad eccezione in alcuni casi. Questo comportamento è stato mai un comportamento garantito, ma si limita un dettaglio di implementazione e il contratto per i filtri era considerino senza stato. In ASP.NET MVC 3, i filtri vengono memorizzati nella cache in modo più aggressivo. Pertanto, qualsiasi filtro azione personalizzata in cui sono archiviate in modo corretto lo stato dell'istanza potrebbe essere interrotto.
 - L'ordine di esecuzione per i filtri eccezioni è stato modificato per i filtri eccezioni con lo stesso *ordine* valore. In ASP.NET MVC 2 e versioni precedenti, i filtri eccezioni il controller che ha lo stesso *ordine* valore come quelli di un metodo di azione venivano eseguiti prima i filtri eccezioni del metodo di azione. Questo sarebbe in genere il caso quando i filtri eccezioni sono stati applicati senza un oggetto specificato *ordine* valore. In ASP.NET MVC 3 questo ordine è stato invertito in modo che venga eseguito per primo il gestore di eccezioni più specifico. Come nelle versioni precedenti, se il *ordine* è specificata in modo esplicito la proprietà, i filtri vengono eseguiti nell'ordine specificato.
 - Una nuova proprietà denominata *FileExtensions* è stato aggiunto per il *VirtualPathProviderViewEngine* classe di base. Quando ASP.NET cerca una visualizzazione dal percorso (non per nome), vengono considerate solo le viste con un'estensione di file contenuti nell'elenco specificato da questa nuova proprietà. Questa è una modifica di rilievo nelle applicazioni in cui è registrato un provider di compilazione personalizzato per abilitare un'estensione di file personalizzato per le visualizzazioni Web Form e il provider fa riferimento a tali viste usando un percorso completo, anziché un nome. La soluzione alternativa consiste nel modificare il valore della *FileExtensions* proprietà da includere l'estensione di file personalizzato.
-- Implementazione della factory del controller personalizzato che implementano direttamente la <em>IControllerFactory</em> interfaccia deve fornire un'implementazione della nuova <em>GetControllerSessionBehavior</em>  <em>metodo che è stato aggiunto all'interfaccia in questa versione</em>. In generale, è consigliabile non implementare direttamente questa interfaccia e invece derivare la classe da <em>DefaultControllerFactory</em>.
+- Implementazione della factory del controller personalizzato che implementano direttamente la *IControllerFactory* interfaccia deve fornire un'implementazione della nuova *GetControllerSessionBehavior* metodo aggiunta all'interfaccia in questa versione. In generale, è consigliabile non implementare direttamente questa interfaccia e invece derivare la classe da *DefaultControllerFactory*.
 
 <a id="_Toc2_KI"></a>
 ## <a name="known-issues"></a>Problemi noti

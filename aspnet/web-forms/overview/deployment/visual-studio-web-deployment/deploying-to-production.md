@@ -8,15 +8,15 @@ ms.date: 02/15/2013
 ms.assetid: 416438a1-3b2f-4d27-bf53-6b76223c33bf
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/deploying-to-production
 msc.type: authoredcontent
-ms.openlocfilehash: f71d8311cbb1131d9c30c0bd9071a1c6c90f9976
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 19cda45ce1b425462ec491bcc86b7a0b76dec162
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57045848"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59409798"
 ---
-<a name="aspnet-web-deployment-using-visual-studio-deploying-to-production"></a>Distribuzione Web ASP.NET tramite Visual Studio: Distribuzione in produzione
-====================
+# <a name="aspnet-web-deployment-using-visual-studio-deploying-to-production"></a>Distribuzione Web ASP.NET tramite Visual Studio: Distribuzione in produzione
+
 da [Tom Dykstra](https://github.com/tdykstra)
 
 [Download progetto iniziale](http://go.microsoft.com/fwlink/p/?LinkId=282627)
@@ -276,7 +276,7 @@ Oggetto *pubxml* che contiene le impostazioni che si riferiscono a un profilo di
 
     ![Anteprima del file da pubblicare nell'ambiente di produzione](deploying-to-production/_static/image14.png)
 
-    Esaminare l'elenco dei file che verranno copiati. Si noterà che tutti i *cs* i file, inclusi *. aspx.cs*, *. aspx.designer.cs*, *Master.cs*, e  *Master.Designer.cs* i file sono stati omessi. Tutto il codice compilato nel *contosouniversity. dll* e *ContosUniversity.pdb* i file che è possibile trovare nel *bin* cartella. Poiché solo il *. dll* è necessaria per eseguire l'applicazione ed è stato specificato in precedenza che devono essere distribuiti solo i file necessari per eseguire l'applicazione, no *cs* file sono stati copiati nella destinazione ambiente. Il *obj* cartella e il *Contosouniversity* e *. csproj* file sono stati omessi per lo stesso motivo.
+    Esaminare l'elenco dei file che verranno copiati. Si noterà che tutti i *cs* i file, inclusi *. aspx.cs*, *. aspx.designer.cs*, *Master.cs*, e  *Master.Designer.cs* i file sono stati omessi. Tutto il codice compilato nel *contosouniversity. dll* e *ContosoUniversity.pdb* i file che è possibile trovare nel *bin* cartella. Poiché solo il *. dll* è necessaria per eseguire l'applicazione ed è stato specificato in precedenza che devono essere distribuiti solo i file necessari per eseguire l'applicazione, no *cs* file sono stati copiati nella destinazione ambiente. Il *obj* cartella e il *Contosouniversity* e *. csproj* file sono stati omessi per lo stesso motivo.
 
     Fare clic su **pubblica** distribuire nell'ambiente di produzione.
 2. Test nell'ambiente di produzione, seguire la stessa procedura usata per la gestione temporanea.

@@ -8,15 +8,15 @@ ms.date: 04/01/2008
 ms.assetid: 5346aab1-9974-489f-a065-ae3883b8a350
 msc.legacyurl: /web-forms/overview/older-versions-security/admin/unlocking-and-approving-user-accounts-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 1a8373f62833c3a76d2e7f96193e5ecbe2d9c593
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d4e8591f3090de8f931ffd8eb1dd0a1138674842
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57038488"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59410045"
 ---
-<a name="unlocking-and-approving-user-accounts-c"></a>Sblocco e approvazione degli account utente (C#)
-====================
+# <a name="unlocking-and-approving-user-accounts-c"></a>Sblocco e approvazione degli account utente (C#)
+
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Scaricare il codice](http://download.microsoft.com/download/6/0/e/60e1bd94-e5f9-4d5a-a079-f23c98f4f67d/CS.14.zip) o [Scarica il PDF](http://download.microsoft.com/download/6/0/e/60e1bd94-e5f9-4d5a-a079-f23c98f4f67d/aspnet_tutorial14_UnlockAndApprove_cs.pdf)
@@ -49,7 +49,7 @@ Aprire il `ManageUsers.aspx` pagina e aggiungere un HyperLinkField al `UserAccou
 Dopo aver aggiunto il HyperLinkField GridView, si consiglia di visualizzare il `ManageUsers.aspx` pagina tramite un browser. Come illustrato nella figura 1, ogni riga GridView ora include un collegamento "Gestisci". Il collegamento "Manage" per Bruce rimanda `UserInformation.aspx?user=Bruce`, mentre il collegamento "Manage" per Dave punta a `UserInformation.aspx?user=Dave`.
 
 
-[![Aggiunge il HyperLinkField un](unlocking-and-approving-user-accounts-cs/_static/image2.png)](unlocking-and-approving-user-accounts-cs/_static/image1.png)
+[![The HyperLinkField aggiunge un](unlocking-and-approving-user-accounts-cs/_static/image2.png)](unlocking-and-approving-user-accounts-cs/_static/image1.png)
 
 **Figura 1**: Il HyperLinkField aggiunge un collegamento "Manage" per ogni Account utente ([fare clic per visualizzare l'immagine con dimensioni normali](unlocking-and-approving-user-accounts-cs/_static/image3.png))
 
@@ -72,7 +72,7 @@ A questo punto siamo pronti implementare l'interfaccia utente in `UserInformatio
 Dopo l'aggiunta di questi controlli, la visualizzazione di progettazione in Visual Studio dovrebbe essere simile allo screenshot nella figura 2.
 
 
-[![Creare l'interfaccia utente per UserInformation.aspx](unlocking-and-approving-user-accounts-cs/_static/image5.png)](unlocking-and-approving-user-accounts-cs/_static/image4.png)
+[![CCrea l'interfaccia utente per UserInformation.aspx](unlocking-and-approving-user-accounts-cs/_static/image5.png)](unlocking-and-approving-user-accounts-cs/_static/image4.png)
 
 **Figura 2**: Creare l'interfaccia utente per `UserInformation.aspx` ([fare clic per visualizzare l'immagine con dimensioni normali](unlocking-and-approving-user-accounts-cs/_static/image6.png))
 
@@ -106,7 +106,7 @@ In questi gestori eventi posto, visitare di nuovo la pagina e non approvato un u
 Successivamente, disconnessione e provare a eseguire l'accesso come utente con un account è stato semplicemente non approvati. Poiché l'utente non viene approvata, essi non è possibile eseguire l'accesso. Per impostazione predefinita, il controllo Login consente di visualizzare lo stesso messaggio se l'utente non è possibile eseguire l'accesso, indipendentemente dal motivo. Ma nel <a id="Tutorial6"> </a> [ *convalida utente credenziali contro l'appartenenza utente Store* ](../membership/validating-user-credentials-against-the-membership-user-store-cs.md) esercitazione è stata esaminata migliorando il controllo di accesso per visualizzare un messaggio più appropriato. Come illustrato nella figura 4, Chris viene visualizzata un messaggio che spiega che egli non può eseguire l'accesso perché il suo account non è ancora approvati.
 
 
-[![Chris non è possibile perché His Account di accesso è non approvato](unlocking-and-approving-user-accounts-cs/_static/image11.png)](unlocking-and-approving-user-accounts-cs/_static/image10.png)
+[![Cnon è possibile eseguire l'accesso hris perché il suo Account è Unapproved](unlocking-and-approving-user-accounts-cs/_static/image11.png)](unlocking-and-approving-user-accounts-cs/_static/image10.png)
 
 **Figura 4**: Chris non è possibile perché His Account di accesso è non approvati ([fare clic per visualizzare l'immagine con dimensioni normali](unlocking-and-approving-user-accounts-cs/_static/image12.png))
 
@@ -116,7 +116,7 @@ Per testare la funzionalità di bloccata, provare a eseguire l'accesso come uten
 Tornare al `ManageUsers.aspx` pagina e fare clic sul collegamento Manage per l'utente bloccato. Come illustrato nella figura 5, si dovrebbe essere un valore nel `LastLockedOutDateLabel` pulsante Sblocca utente deve essere abilitato. Fare clic sul pulsante Sblocca utente per sbloccare l'account utente. Dopo aver sbloccato l'utente, saranno in grado di accedere di nuovo.
 
 
-[![Dave è stato bloccato dal sistema](unlocking-and-approving-user-accounts-cs/_static/image14.png)](unlocking-and-approving-user-accounts-cs/_static/image13.png)
+[![DAVE è stato bloccato per il sistema](unlocking-and-approving-user-accounts-cs/_static/image14.png)](unlocking-and-approving-user-accounts-cs/_static/image13.png)
 
 **Figura 5**: Dave è stata bloccata Out del sistema ([fare clic per visualizzare l'immagine con dimensioni normali](unlocking-and-approving-user-accounts-cs/_static/image15.png))
 
@@ -166,7 +166,7 @@ Il `SendingMail` evento viene generato dopo il `CreatedUser` evento, vale a dire
 Il risultato finale è che i nuovi utenti siano non approvati, vale a dire che essi non possono accedere al sito. Inoltre, essi vengono inviati automaticamente un messaggio di posta elettronica con un collegamento all'URL di verifica (vedere la figura 6).
 
 
-[![Il nuovo utente riceve un messaggio di posta elettronica con un collegamento all'URL di verifica](unlocking-and-approving-user-accounts-cs/_static/image17.png)](unlocking-and-approving-user-accounts-cs/_static/image16.png)
+[![TNuovo utente riceverà un messaggio di posta elettronica con un collegamento all'URL di verifica](unlocking-and-approving-user-accounts-cs/_static/image17.png)](unlocking-and-approving-user-accounts-cs/_static/image16.png)
 
 **Figura 6**: Il nuovo utente riceve un messaggio di posta elettronica con un collegamento all'URL di verifica ([fare clic per visualizzare l'immagine con dimensioni normali](unlocking-and-approving-user-accounts-cs/_static/image18.png))
 
@@ -188,7 +188,7 @@ La maggior parte del codice precedente verifica che il `UserId` fornito tramite 
 Figura 7 mostra il `Verification.aspx` pagina quando visitati tramite un browser.
 
 
-[![Il Account utente nuovo viene ora approvata](unlocking-and-approving-user-accounts-cs/_static/image20.png)](unlocking-and-approving-user-accounts-cs/_static/image19.png)
+[![The Account utente nuovi è approvato ora](unlocking-and-approving-user-accounts-cs/_static/image20.png)](unlocking-and-approving-user-accounts-cs/_static/image19.png)
 
 **Figura 7**: Il Account utente nuovo viene ora approvate ([fare clic per visualizzare l'immagine con dimensioni normali](unlocking-and-approving-user-accounts-cs/_static/image21.png))
 

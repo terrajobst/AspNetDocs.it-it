@@ -8,15 +8,15 @@ ms.date: 03/31/2010
 ms.assetid: 5aee8202-a4e3-4aa9-8a95-cd5d156cea4c
 msc.legacyurl: /web-forms/overview/data-access/introduction/master-pages-and-site-navigation-cs
 msc.type: authoredcontent
-ms.openlocfilehash: d9ae2fb5a79817053a260e7d0f85992a011f471b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 2001378588db72103292be963af6c26277147c44
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57038588"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59409642"
 ---
-<a name="master-pages-and-site-navigation-c"></a>Pagine master ed esplorazione del sito (C#)
-====================
+# <a name="master-pages-and-site-navigation-c"></a>Pagine master ed esplorazione del sito (C#)
+
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Scaricare l'App di esempio](http://download.microsoft.com/download/4/6/3/463cf87c-4724-4cbc-b7b5-3f866f43ba50/ASPNET_Data_Tutorial_3_CS.exe) o [Scarica il PDF](master-pages-and-site-navigation-cs/_static/datatutorial03cs1.pdf)
@@ -33,7 +33,7 @@ Il [sistema di spostamento del sito](http://aspnet.4guysfromrolla.com/articles/1
 Per illustrare questi concetti e rendere più facilmente utilizzabili sito Web di esercitazioni, è possibile impiegare in questa lezione definizione di un layout di pagine nell'intero sito, l'implementazione di una mappa del sito e aggiunge la navigazione dell'interfaccia utente. Al termine di questa esercitazione avremo una progettazione elegante del sito Web per la compilazione alle pagine web tutorial.
 
 
-[![Il risultato finale di questa esercitazione](master-pages-and-site-navigation-cs/_static/image2.png)](master-pages-and-site-navigation-cs/_static/image1.png)
+[![Tegli risultato finale di questa esercitazione](master-pages-and-site-navigation-cs/_static/image2.png)](master-pages-and-site-navigation-cs/_static/image1.png)
 
 **Figura 1**: Il risultato di questa esercitazione End ([fare clic per visualizzare l'immagine con dimensioni normali](master-pages-and-site-navigation-cs/_static/image3.png))
 
@@ -51,7 +51,7 @@ Il primo passaggio consiste nel creare la pagina master per il sito. Attualmente
 Per creare una pagina master, fare doppio clic sul nome del progetto in Esplora soluzioni e scegliere Aggiungi nuovo elemento. Quindi selezionare il tipo di pagina Master dall'elenco dei modelli e denominarlo `Site.master`.
 
 
-[![Aggiungere una nuova pagina Master al sito Web](master-pages-and-site-navigation-cs/_static/image6.png)](master-pages-and-site-navigation-cs/_static/image5.png)
+[![Agg una nuova pagina Master al sito Web](master-pages-and-site-navigation-cs/_static/image6.png)](master-pages-and-site-navigation-cs/_static/image5.png)
 
 **Figura 3**: Aggiungere una nuova pagina Master al sito Web ([fare clic per visualizzare l'immagine con dimensioni normali](master-pages-and-site-navigation-cs/_static/image7.png))
 
@@ -68,7 +68,7 @@ Una pagina master definisce sia il layout delle pagine statico sia le aree che p
 Con i tag inseriti precedentemente, passando alla visualizzazione progettazione, viene illustrato il layout della pagina master. Tutte le pagine ASP.NET che utilizzano tale pagina master avrà questo layout uniforme, con la possibilità di specificare i tag per il `MainContent` area.
 
 
-[![Nella pagina Master visualizzata mediante la visualizzazione di progettazione](master-pages-and-site-navigation-cs/_static/image9.png)](master-pages-and-site-navigation-cs/_static/image8.png)
+[![Tegli pagina Master quando visualizzati tramite la visualizzazione Progettazione](master-pages-and-site-navigation-cs/_static/image9.png)](master-pages-and-site-navigation-cs/_static/image8.png)
 
 **Figura 4**: Nella pagina Master quando visualizzati tramite la visualizzazione di progettazione ([fare clic per visualizzare l'immagine con dimensioni normali](master-pages-and-site-navigation-cs/_static/image10.png))
 
@@ -78,7 +78,7 @@ Con i tag inseriti precedentemente, passando alla visualizzazione progettazione,
 Con la pagina master definita, siamo pronti per aggiungere le pagine ASP.NET per il sito Web. Iniziamo aggiungendo `Default.aspx`, home page del nostro sito Web. Fare doppio clic sul nome del progetto in Esplora soluzioni e scegliere Aggiungi nuovo elemento. Scegli l'opzione Web Form dall'elenco dei modelli e nome file `Default.aspx`. Inoltre, controllare la casella di controllo "Seleziona pagina master".
 
 
-[![Aggiungere un nuovo Web Form, selezionando la casella di controllo della Seleziona pagina master](master-pages-and-site-navigation-cs/_static/image12.png)](master-pages-and-site-navigation-cs/_static/image11.png)
+[![Aun nuovo Web Form, selezionando la casella di controllo di una pagina master seleziona gg](master-pages-and-site-navigation-cs/_static/image12.png)](master-pages-and-site-navigation-cs/_static/image11.png)
 
 **Figura 5**: Aggiungere un nuovo Web Form, selezionando la casella di controllo della Seleziona pagina master ([fare clic per visualizzare l'immagine con dimensioni normali](master-pages-and-site-navigation-cs/_static/image13.png))
 
@@ -86,7 +86,7 @@ Con la pagina master definita, siamo pronti per aggiungere le pagine ASP.NET per
 Dopo aver fatto clic sul pulsante OK, viene richiesto di scegliere quale pagina master deve usare questa nuova pagina ASP.NET. Mentre nel progetto, è possibile avere più pagine master, abbiamo solo uno.
 
 
-[![Scegliere la pagina Master che deve usare questa pagina ASP.NET](master-pages-and-site-navigation-cs/_static/image15.png)](master-pages-and-site-navigation-cs/_static/image14.png)
+[![Cimpostare come questa dovrebbe usare ASP.NET pagina Master Page](master-pages-and-site-navigation-cs/_static/image15.png)](master-pages-and-site-navigation-cs/_static/image14.png)
 
 **Figura 6**: Scegliere questa ASP.NET pagina deve usare la pagina Master ([fare clic per visualizzare l'immagine con dimensioni normali](master-pages-and-site-navigation-cs/_static/image16.png))
 
@@ -110,7 +110,7 @@ Il `Title` attributo la `@Page` direttiva consente di impostare il titolo della 
 Passando alla visualizzazione progettazione che è possibile vedere come apparirà la pagina in un browser. Si noti che la progettazione consente di visualizzare per la pagina ASP.NET che solo le aree con contenuto modificabile sono modificabili di non dal tipo ContentPlaceHolder nella pagina master sono disabilitato.
 
 
-[![La visualizzazione di progettazione per la pagina ASP.NET Mostra entrambe le aree modificabili e Non modificabili](master-pages-and-site-navigation-cs/_static/image18.png)](master-pages-and-site-navigation-cs/_static/image17.png)
+[![Tegli visualizzazione di progettazione di ASP.NET pagina mostra sia la Editable e aree di Non-Editable](master-pages-and-site-navigation-cs/_static/image18.png)](master-pages-and-site-navigation-cs/_static/image17.png)
 
 **Figura 7**: La visualizzazione di progettazione per il ASP.NET pagina mostra sia la modificabile e Non-Editable aree ([fare clic per visualizzare l'immagine con dimensioni normali](master-pages-and-site-navigation-cs/_static/image19.png))
 
@@ -142,7 +142,7 @@ Il sistema di spostamento sito ASP.NET 2.0 fornisce un mezzo per uno sviluppator
 Per questa esercitazione, tuttavia, è possibile usare il provider della mappa del sito predefinito fornito con ASP.NET 2.0. Per creare la mappa del sito, è sufficiente fare doppio clic sul nome del progetto in Esplora soluzioni, scegliere Aggiungi nuovo elemento e scegliere l'opzione mappa del sito. Lasciare il nome come `Web.sitemap` e fare clic sul pulsante Aggiungi.
 
 
-[![Aggiungere una mappa del sito al progetto](master-pages-and-site-navigation-cs/_static/image22.png)](master-pages-and-site-navigation-cs/_static/image21.png)
+[![Agg una mappa del sito per il progetto](master-pages-and-site-navigation-cs/_static/image22.png)](master-pages-and-site-navigation-cs/_static/image21.png)
 
 **Figura 9**: Aggiungere una mappa del sito del progetto ([fare clic per visualizzare l'immagine con dimensioni normali](master-pages-and-site-navigation-cs/_static/image23.png))
 
@@ -159,7 +159,7 @@ Web.sitemap
 Mappa del sito definisce la struttura del sito Web, ovvero una gerarchia che descrive le diverse sezioni del sito. Ciascuna `<siteMapNode>` elemento `Web.sitemap` rappresenta una sezione nella struttura di spostamento del sito.
 
 
-[![Mappa del sito rappresenta una struttura per la navigazione gerarchica](master-pages-and-site-navigation-cs/_static/image25.png)](master-pages-and-site-navigation-cs/_static/image24.png)
+[![Tegli mappa del sito rappresenta una struttura per la navigazione gerarchica](master-pages-and-site-navigation-cs/_static/image25.png)](master-pages-and-site-navigation-cs/_static/image24.png)
 
 **Figura 10**: Mappa del sito rappresenta una struttura di spostamento gerarchica ([fare clic per visualizzare l'immagine con dimensioni normali](master-pages-and-site-navigation-cs/_static/image26.png))
 
@@ -252,7 +252,7 @@ Le esercitazioni nel sito sono suddivisi in categorie diverse Basic Reporting, F
 È possibile visualizzare un elenco non ordinato usando un controllo Repeater, ma questa volta che verrà visualizzato il titolo e descrizione delle esercitazioni. Dal momento che il markup e codice per ottenere questo risultato devono essere ripetuti per ogni `Default.aspx` pagina, è possibile incapsulare questa logica dell'interfaccia utente in un [controllo utente](https://msdn.microsoft.com/library/y6wb1a0e.aspx). Creare una cartella nel sito Web denominata `UserControls` e aggiungervi un nuovo elemento di tipo controllo utente Web denominato `SectionLevelTutorialListing.ascx`e aggiungere il markup seguente:
 
 
-[![Aggiungere un nuovo controllo utente Web alla cartella UserControls](master-pages-and-site-navigation-cs/_static/image30.png)](master-pages-and-site-navigation-cs/_static/image29.png)
+[![Aun nuovo controllo utente Web alla cartella UserControls gg](master-pages-and-site-navigation-cs/_static/image30.png)](master-pages-and-site-navigation-cs/_static/image29.png)
 
 **Figura 13**: Aggiungere un nuovo controllo utente Web per il `UserControls` cartella ([fare clic per visualizzare l'immagine con dimensioni normali](master-pages-and-site-navigation-cs/_static/image31.png))
 
@@ -272,12 +272,12 @@ Nell'esempio precedente Repeater sono stati associati i `SiteMap` dati al contro
 Dopo aver creato il controllo Repeater, aprire il `Default.aspx` pagine in ognuna delle cartelle, passare alla visualizzazione progettazione e trascinare semplicemente il controllo utente da Esplora soluzioni nell'area di progettazione in cui si desidera venga visualizzato l'elenco delle esercitazioni.
 
 
-[![Il controllo utente è stato aggiunto a default. aspx](master-pages-and-site-navigation-cs/_static/image33.png)](master-pages-and-site-navigation-cs/_static/image32.png)
+[![Til controllo utente è stato aggiunto a default. aspx](master-pages-and-site-navigation-cs/_static/image33.png)](master-pages-and-site-navigation-cs/_static/image32.png)
 
 **Figura 14**: Il controllo utente è stato aggiunto alla `Default.aspx` ([fare clic per visualizzare l'immagine con dimensioni normali](master-pages-and-site-navigation-cs/_static/image34.png))
 
 
-[![Sono elencate le esercitazioni Basic Reporting](master-pages-and-site-navigation-cs/_static/image36.png)](master-pages-and-site-navigation-cs/_static/image35.png)
+[![Tvengono elencate he esercitazioni Basic Reporting](master-pages-and-site-navigation-cs/_static/image36.png)](master-pages-and-site-navigation-cs/_static/image35.png)
 
 **Figura 15**: Sono elencate le esercitazioni Basic Reporting ([fare clic per visualizzare l'immagine con dimensioni normali](master-pages-and-site-navigation-cs/_static/image37.png))
 

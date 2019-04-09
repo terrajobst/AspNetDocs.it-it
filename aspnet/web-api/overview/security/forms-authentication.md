@@ -8,15 +8,15 @@ ms.date: 12/12/2012
 ms.assetid: 9f06c1f2-ffaa-4831-94a0-2e4a3befdf07
 msc.legacyurl: /web-api/overview/security/forms-authentication
 msc.type: authoredcontent
-ms.openlocfilehash: 35d62a83382553085ed8a728dcdcdae0e93090b8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 147bfab76e48497f35a72b28cd935f40ec4193bf
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57065328"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59410078"
 ---
-<a name="forms-authentication-in-aspnet-web-api"></a>Autenticazione basata su form nell'API Web ASP.NET
-====================
+# <a name="forms-authentication-in-aspnet-web-api"></a>Autenticazione basata su form nell'API Web ASP.NET
+
 da [Mike Wasson](https://github.com/MikeWasson)
 
 Autenticazione basata su form Usa un modulo HTML per inviare le credenziali dell'utente al server. Non è uno standard Internet. Autenticazione basata su form è appropriata solo per API web che vengono chiamate da un'applicazione web, in modo che l'utente può interagire con il form HTML.

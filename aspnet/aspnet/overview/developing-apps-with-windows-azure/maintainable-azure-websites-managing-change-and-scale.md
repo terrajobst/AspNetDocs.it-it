@@ -8,15 +8,15 @@ ms.date: 07/16/2014
 ms.assetid: ecfd0eb4-c4ad-44e6-9db9-a2a66611ff6a
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/maintainable-azure-websites-managing-change-and-scale
 msc.type: authoredcontent
-ms.openlocfilehash: 315e89c81782edf0875c65afd27153102d733050
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: ec0058472f8bc1d8d58e7c78deeb8b6097532510
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58424248"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59409733"
 ---
-<a name="hands-on-lab-maintainable-azure-websites-managing-change-and-scale"></a>Lab pratico: Siti Web di Azure di facile manutenzione: gestione di modifiche e scalabilità
-====================
+# <a name="hands-on-lab-maintainable-azure-websites-managing-change-and-scale"></a>Lab pratico: Siti Web di Azure di facile manutenzione: gestione di modifiche e scalabilità
+
 da [Camp Web Team](https://twitter.com/webcamps)
 
 [Download Web Camp Kit di formazione](https://aka.ms/webcamps-training-kit)
@@ -89,7 +89,7 @@ In tutto il documento di laboratorio, verrà invitati a inserire blocchi di codi
 > Ogni esercizio è accompagnata da una soluzione inizia che si trova nel **iniziare** cartella dell'esercizio che consente di seguire ogni esercizio indipendentemente dagli altri. Tenere presente che i frammenti di codice aggiunti durante un esercizio non sono presenti queste soluzioni di avvio e potrebbero non funzionare fino a quando non si have completato l'esercizio. All'interno del codice sorgente per un esercizio, si noterà anche un **End** cartella che contiene una soluzione di Visual Studio con il codice che scaturisce da completare i passaggi nell'esercizio corrispondente. È possibile usare queste soluzioni come prassi consigliata se ti serve assistenza aggiuntiva durante l'esecuzione in questo laboratorio pratico.
 
 
-* * *
+---
 
 <a id="Exercises"></a>
 ## <a name="exercises"></a>Esercizi
@@ -131,7 +131,7 @@ In questa attività verrà illustrata la procedura di abilitazione **migrazioni 
 
     ![Abilitare migrazioni](maintainable-azure-websites-managing-change-and-scale/_static/image1.png "consentendo migrazioni")
 
-    *Abilitare migrazioni*
+    *Abilitare le migrazioni*
 
     > [!NOTE]
     > Questo comando aggiunge un **migrazioni** cartella al progetto fanatico Quiz contenente un file chiamato **Configuration.cs**. Il **configurazione** classe consente di configurare il comportamento di migrazioni per il contesto.
@@ -625,7 +625,7 @@ In questa attività, si utilizzerà la finestra di Esplora Server da Visual Stud
 
     ![Connettersi a Windows Azure](maintainable-azure-websites-managing-change-and-scale/_static/image62.png)
 
-    *Connettersi ad Azure*
+    *Connect to Azure*
 4. Espandere la **Azure** nodo, fare doppio clic su **archiviazione** e selezionare **associa archiviazione esterna...** .
 5. Nel **Aggiungi nuovo Account di archiviazione** finestra di dialogo immettere il **nome Account** e **chiave dell'Account** ottenuta nell'attività precedente e scegliere **OK**.
 
@@ -772,7 +772,7 @@ A questo punto **scalabilità automatica** è stato configurato, si creerà un *
     ![Crea un nuovo progetto](maintainable-azure-websites-managing-change-and-scale/_static/image79.png "creando un nuovo progetto")
 
     *Crea un nuovo progetto*
-2. Nel **nuovo progetto** finestra di dialogo **progetto di Test di carico e prestazioni Web** sotto il **Visual C# | Test** scheda. Assicurarsi che **.NET Framework 4.5** è selezionata, denominare il progetto *WebAndLoadTestProject*, scegliere un **posizione** e fare clic su **OK**.
+2. Nel **nuovo progetto** finestra di dialogo **progetto di Test di carico e prestazioni Web** sotto il **Visual c# | Test** scheda. Assicurarsi che **.NET Framework 4.5** è selezionata, denominare il progetto *WebAndLoadTestProject*, scegliere un **posizione** e fare clic su **OK**.
 
     ![Crea un nuovo progetto Web e Test di carico](maintainable-azure-websites-managing-change-and-scale/_static/image80.png "creando un nuovo progetto di Test di carico e Web")
 
@@ -909,7 +909,7 @@ Verrà ora eseguire il test di carico che è stato creato nell'attività precede
     > - I valori minimo e massimi di ridurre la **CPU destinazione** intervallo nella configurazione di scalabilità automatica dell'app web
     > - Eseguire il test di carico nel cloud con **piani di Test Azure**. Altre informazioni [qui](/azure/devops/test/load-test/index?view=vsts)
 
-* * *
+---
 
 <a id="Summary"></a>
 ## <a name="summary"></a>Riepilogo

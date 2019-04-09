@@ -8,15 +8,15 @@ ms.date: 07/23/2014
 ms.assetid: 486108f8-0719-492e-85ed-46f3b7bc18d2
 msc.legacyurl: /ajax/cdn/jquery-cycle/cdnjquerycycle294
 msc.type: content
-ms.openlocfilehash: ae3577daddfc659ef206d56b35f876104ab48aa4
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7b0498cdb14d9e4f8aad4000704dc0a293f21219
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57049848"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59406951"
 ---
-<a name="jquery-cycle-294"></a>jQuery Cycle 2.94
-====================
+# <a name="jquery-cycle-294"></a>jQuery Cycle 2.94
+
 In questa rete CDN sono ospitati i file di ciclo di jQuery seguenti:
 
 - [https://ajax.aspnetcdn.com/ajax/jquery.cycle/2.94/jquery.cycle.all.js](https://ajax.aspnetcdn.com/ajax/jquery.cycle/2.94/jquery.cycle.all.js) &mdash; La versione completa del plug-in del ciclo di jQuery. Include sempre di più rispetto a effetti speciali due decine e tutte le opzioni.

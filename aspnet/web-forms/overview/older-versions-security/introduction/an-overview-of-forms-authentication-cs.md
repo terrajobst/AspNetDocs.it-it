@@ -8,22 +8,22 @@ ms.date: 01/14/2008
 ms.assetid: de2d65b9-aadc-42ba-abe1-4e87e66521a0
 msc.legacyurl: /web-forms/overview/older-versions-security/introduction/an-overview-of-forms-authentication-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 64c8ccbc82a5c80a6f1e3199bfceb62add6cde51
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5bb3cf45e50e480d81a441280842c1eec58f4877
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57063888"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59406873"
 ---
-<a name="an-overview-of-forms-authentication-c"></a>Una panoramica dell'autenticazione basata su form (c#)
-====================
+# <a name="an-overview-of-forms-authentication-c"></a>Una panoramica dell'autenticazione basata su form (c#)
+
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Scaricare il codice](http://download.microsoft.com/download/2/F/7/2F705A34-F9DE-4112-BBDE-60098089645E/ASPNET_Security_Tutorial_02_CS.zip) o [Scarica il PDF](http://download.microsoft.com/download/2/F/7/2F705A34-F9DE-4112-BBDE-60098089645E/aspnet_tutorial02_FormsAuth_cs.pdf)
 
 > In questa esercitazione verrà convertito dalla discussione semplice all'implementazione; in particolare, si esaminerà l'implementazione di autenticazione basata su form. L'applicazione web che viene avviata la costruzione di questa esercitazione continueranno a essere basati su nelle esercitazioni successive, parliamo di autenticazione basata su form semplice ai ruoli e appartenenza.
 > 
-> Vedere questo video per altre informazioni su questo argomento: [Usando l'autenticazione form di base in ASP.NET](# "using-basic-forms-authentication-in-aspnet").
+> Vedere questo video per altre informazioni su questo argomento: [Utilizza Basic autenticazione basata su form in ASP.NET](../../../videos/authentication/using-basic-forms-authentication-in-aspnet.md).
 
 
 ## <a name="introduction"></a>Introduzione
@@ -85,7 +85,7 @@ Prima di poter configurare autenticazione basata su form, è innanzitutto necess
 > Visual Studio supporta due modalità di gestione del progetto: Progetti di siti Web e progetti di applicazione Web. Progetti di siti Web non dispongono di un file di progetto, mentre i progetti applicazione Web imitare l'architettura di progetto in Visual Studio .NET 2002/2003: includono un file di progetto e compilare codice sorgente del progetto in un singolo assembly, il quale viene inserito nella cartella /bin. Visual Studio 2005 inizialmente solo supportati progetti di sito Web, anche se è stato reintrodotto il modello di progetto di applicazione Web con Service Pack 1. Visual Studio 2008 offre entrambi i modelli di progetto. Visual Web Developer 2005 e 2008 edizioni, tuttavia, supportano solo progetti di siti Web. Userà il modello di progetto di sito Web. Se si utilizza un'edizione non Express e si vuole usare il [modello di progetto di applicazione Web](https://msdn.microsoft.com/library/aa730880%28vs.80%29.aspx) invece, è possibile eseguire questa operazione, ma tenere presente che potrebbero esserci alcune discrepanze tra ciò che viene visualizzato nella schermata e la procedura è necessario eseguire e il schermate visualizzate e le istruzioni fornite in queste esercitazioni.
 
 
-[![Creare un nuovo sito di Web File basate sul sistema](an-overview-of-forms-authentication-cs/_static/image3.png)](an-overview-of-forms-authentication-cs/_static/image2.png)
+[![CCrea un sito Web New File System-Based](an-overview-of-forms-authentication-cs/_static/image3.png)](an-overview-of-forms-authentication-cs/_static/image2.png)
 
 **Figura 2**: Creare un sito Web New File System-Based ([fare clic per visualizzare l'immagine con dimensioni normali](an-overview-of-forms-authentication-cs/_static/image4.png))
 
@@ -95,7 +95,7 @@ Prima di poter configurare autenticazione basata su form, è innanzitutto necess
 Successivamente, aggiungere una nuova pagina Master al sito nella directory radice denominato Site. master. [Pagine master](https://msdn.microsoft.com/library/wtxbf3hh.aspx) consentono allo sviluppatore di pagina definire un modello a livello di sito che può essere applicato alle pagine ASP.NET. Il vantaggio principale delle pagine master è che l'aspetto generale del sito può essere definito in un'unica posizione, rendendo in tal modo più semplice aggiornare o modificare il layout del sito.
 
 
-[![Aggiungere una pagina Master denominato Site. master al sito Web](an-overview-of-forms-authentication-cs/_static/image6.png)](an-overview-of-forms-authentication-cs/_static/image5.png)
+[![Agg Site un Master pagina denominata per il sito Web](an-overview-of-forms-authentication-cs/_static/image6.png)](an-overview-of-forms-authentication-cs/_static/image5.png)
 
 **Figura 3**: Aggiungere un site. Master pagina denominato master al sito Web ([fare clic per visualizzare l'immagine con dimensioni normali](an-overview-of-forms-authentication-cs/_static/image7.png))
 
@@ -109,7 +109,7 @@ Una pagina master definisce sia il layout delle pagine statico sia le aree che p
 Con i tag inseriti precedentemente, passando alla visualizzazione progettazione, viene illustrato il layout della pagina master. Tutte le pagine ASP.NET che utilizzano tale pagina master avrà questo layout uniforme, con la possibilità di specificare i tag per il `MainContent` area.
 
 
-[![Nella pagina Master visualizzata mediante la visualizzazione di progettazione](an-overview-of-forms-authentication-cs/_static/image9.png)](an-overview-of-forms-authentication-cs/_static/image8.png)
+[![Tegli pagina Master quando visualizzati tramite la visualizzazione Progettazione](an-overview-of-forms-authentication-cs/_static/image9.png)](an-overview-of-forms-authentication-cs/_static/image8.png)
 
 **Figura 4**: Nella pagina Master quando visualizzati tramite la visualizzazione di progettazione ([fare clic per visualizzare l'immagine con dimensioni normali](an-overview-of-forms-authentication-cs/_static/image10.png))
 
@@ -121,7 +121,7 @@ A questo punto si dispone di una pagina default. aspx nel nostro sito Web, ma no
 Successivamente, fare doppio clic sul nome del progetto in Esplora soluzioni e scegliere di aggiungere un nuovo modulo Web denominato default. aspx. Questa volta, selezionare la casella di controllo "Seleziona pagina master" e scegliere la pagina master Site. master dall'elenco.
 
 
-[![Aggiungere una nuova pagina default. aspx scelta selezionare una pagina Master](an-overview-of-forms-authentication-cs/_static/image12.png)](an-overview-of-forms-authentication-cs/_static/image11.png)
+[![Aun nuovo default. aspx pagina scelta per selezionare una pagina Master gg](an-overview-of-forms-authentication-cs/_static/image12.png)](an-overview-of-forms-authentication-cs/_static/image11.png)
 
 **Figura 5**: Aggiungere un nuovo default. aspx pagina scelta per selezionare una pagina Master ([fare clic per visualizzare l'immagine con dimensioni normali](an-overview-of-forms-authentication-cs/_static/image13.png))
 
@@ -158,7 +158,7 @@ Per impostazione predefinita, le applicazioni ASP.NET usano l'autenticazione di 
 Se il progetto non contiene ancora un file Web. config, aggiungere uno ora facendo clic sul nome del progetto in Esplora soluzioni, scegliendo Aggiungi nuovo elemento e quindi aggiungere un file di configurazione Web.
 
 
-[![Se il progetto non contiene ancora file Web. config, aggiungerlo ora](an-overview-of-forms-authentication-cs/_static/image16.png)](an-overview-of-forms-authentication-cs/_static/image15.png)
+[![If il progetto non ancora includere file Web. config, aggiungerlo ora](an-overview-of-forms-authentication-cs/_static/image16.png)](an-overview-of-forms-authentication-cs/_static/image15.png)
 
 **Figura 7**: Se il progetto viene non ancora includere file Web. config, aggiungere subito ([fare clic per visualizzare l'immagine con dimensioni normali](an-overview-of-forms-authentication-cs/_static/image17.png))
 
@@ -190,7 +190,7 @@ La pagina di accesso ha tre responsabilità:
 Attività iniziali con la prima attività. Aggiungere una nuova pagina ASP.NET alla directory radice del sito denominata Login. aspx e associarla alla pagina master Site. master.
 
 
-[![Aggiungere una nuova pagina ASP.NET denominata Login.](an-overview-of-forms-authentication-cs/_static/image19.png)](an-overview-of-forms-authentication-cs/_static/image18.png)
+[![Aun nuovo ASP.NET pagina denominata Login. aspx gg](an-overview-of-forms-authentication-cs/_static/image19.png)](an-overview-of-forms-authentication-cs/_static/image18.png)
 
 **Figura 8**: Aggiungere un nuovo ASP.NET pagina denominata Login. aspx ([fare clic per visualizzare l'immagine con dimensioni normali](an-overview-of-forms-authentication-cs/_static/image20.png))
 
@@ -204,7 +204,7 @@ A questo punto la schermata dovrebbe essere simile allo screenshot nella figura 
 [!code-aspx[Main](an-overview-of-forms-authentication-cs/samples/sample4.aspx)]
 
 
-[![La pagina di accesso contiene due caselle di testo, una casella di controllo, un pulsante e un'etichetta](an-overview-of-forms-authentication-cs/_static/image22.png)](an-overview-of-forms-authentication-cs/_static/image21.png)
+[![Tgli account di accesso di pagina contiene due caselle di testo, una casella di controllo, un pulsante e un'etichetta](an-overview-of-forms-authentication-cs/_static/image22.png)](an-overview-of-forms-authentication-cs/_static/image21.png)
 
 **Figura 9**: L'account di accesso di pagina contiene due caselle di testo, una casella di controllo, un pulsante e un'etichetta ([fare clic per visualizzare l'immagine con dimensioni normali](an-overview-of-forms-authentication-cs/_static/image23.png))
 
@@ -250,7 +250,7 @@ Durante la creazione di ticket di autenticazione form di usiamo il ticket di aut
 Per testare la pagina di accesso, vederla in un browser. Per iniziare, immettere le credenziali non valide, ad esempio un nome utente di "" e la password "corretto". Facendo clic sul pulsante di accesso verrà eseguito un postback e verrà visualizzata l'etichetta InvalidCredentialsMessage.
 
 
-[![L'etichetta InvalidCredentialsMessage è visualizzato quando immettendo credenziali non valide](an-overview-of-forms-authentication-cs/_static/image25.png)](an-overview-of-forms-authentication-cs/_static/image24.png)
+[![Tegli InvalidCredentialsMessage etichetta viene visualizzata quando immettendo credenziali non valide](an-overview-of-forms-authentication-cs/_static/image25.png)](an-overview-of-forms-authentication-cs/_static/image24.png)
 
 **Figura 10**: L'etichetta InvalidCredentialsMessage è visualizzato quando immettendo credenziali non valide ([fare clic per visualizzare l'immagine con dimensioni normali](an-overview-of-forms-authentication-cs/_static/image26.png))
 
@@ -379,7 +379,7 @@ Grazie a questa aggiunta alla pagina master Site. master, ogni pagina nel nostro
 Perché abbiamo aggiunto il LoginView alla pagina master, ma può essere visualizzato in ogni pagina nel sito. Tuttavia, potrebbero esserci pagine web in cui non si desidera visualizzare più questo messaggio. Una tale pagina è la pagina di accesso, perché sembra che un collegamento alla pagina di accesso esiste sul posto. Poiché il controllo LoginView è inserito in un controllo ContentPlaceHolder nella pagina master, è possibile ignorare questo tag predefinito nella nostra pagina contenuta. Aprire Login. aspx e passare alla finestra di progettazione. Poiché non è stato definito in modo esplicito un controllo contenuto in Login. aspx per LoginContent ContentPlaceHolder nella pagina master, la pagina di accesso mostrerà il master markup della pagina predefinita per questo controllo ContentPlaceHolder. È possibile verificarlo tramite la finestra di progettazione: LoginContent ContentPlaceHolder viene illustrato il markup predefinito (il controllo LoginView).
 
 
-[![La pagina di accesso Mostra il valore predefinito del contenuto per LoginContent ContentPlaceHolder della pagina Master](an-overview-of-forms-authentication-cs/_static/image33.png)](an-overview-of-forms-authentication-cs/_static/image32.png)
+[![TPagina di accesso Mostra il contenuto predefinito per the Master Page's LoginContent ContentPlaceHolder](an-overview-of-forms-authentication-cs/_static/image33.png)](an-overview-of-forms-authentication-cs/_static/image32.png)
 
 **Figura 16**: La pagina di accesso Mostra il contenuto predefinito per the Master Page's LoginContent ContentPlaceHolder ([fare clic per visualizzare l'immagine con dimensioni normali](an-overview-of-forms-authentication-cs/_static/image34.png))
 
@@ -393,7 +393,7 @@ Per sostituire il markup predefinito per il LoginContent ContentPlaceHolder, sem
 Figura 17 mostra la pagina aspx quando visitati dal browser dopo aver apportato questa modifica. Si noti che non vi sia alcun "Hello, stranger" o ", Bentornato *username*" messaggio nel riquadro di spostamento a sinistra &lt;div&gt; di quanto accade quando si visita default. aspx.
 
 
-[![La pagina di accesso consente di nascondere il Markup di LoginContent ContentPlaceHolder predefinito](an-overview-of-forms-authentication-cs/_static/image36.png)](an-overview-of-forms-authentication-cs/_static/image35.png)
+[![TPagina di accesso ha nasconde del tipo ContentPlaceHolder predefinito LoginContent](an-overview-of-forms-authentication-cs/_static/image36.png)](an-overview-of-forms-authentication-cs/_static/image35.png)
 
 **Figura 17**: La pagina di accesso consente di nascondere del tipo ContentPlaceHolder predefinito LoginContent ([fare clic per visualizzare l'immagine con dimensioni normali](an-overview-of-forms-authentication-cs/_static/image37.png))
 
@@ -424,12 +424,12 @@ Poiché LoginStatus è all'esterno del controllo LoginView, esso verrà visualiz
 Figura 18 Mostra default. aspx quando l'utente visita Jisun. Si noti che la colonna a sinistra consente di visualizzare il messaggio "Bentornato, Jisun" e un collegamento per effettuare la disconnessione. Scegliere il LinkButton per la disconnessione causa un postback Jisun alla disconnessione del sistema e relativa viene quindi reindirizzata alla Logout. Come illustrato nella figura 19, entro l'ora di che jisun raggiunge Logout Anna è già stata effettuata la disconnessione ed è pertanto anonimo. Di conseguenza, la colonna a sinistra mostra il testo "Dare il benvenuto stranger" e un collegamento alla pagina di accesso.
 
 
-[![Mostra default. aspx](an-overview-of-forms-authentication-cs/_static/image39.png)](an-overview-of-forms-authentication-cs/_static/image38.png)
+[![DMostra efault. aspx](an-overview-of-forms-authentication-cs/_static/image39.png)](an-overview-of-forms-authentication-cs/_static/image38.png)
 
 **Figura 18**: Default. aspx Mostra "Bentornato, Jisun" insieme a un controllo LinkButton "Logout" ([fare clic per visualizzare l'immagine con dimensioni normali](an-overview-of-forms-authentication-cs/_static/image40.png))
 
 
-[![Mostra Logout](an-overview-of-forms-authentication-cs/_static/image42.png)](an-overview-of-forms-authentication-cs/_static/image41.png)
+[![LMostra ogout.aspx](an-overview-of-forms-authentication-cs/_static/image42.png)](an-overview-of-forms-authentication-cs/_static/image41.png)
 
 **Figura 19**: Logout Mostra "dare il benvenuto stranger" insieme a un controllo LinkButton "Login" ([fare clic per visualizzare l'immagine con dimensioni normali](an-overview-of-forms-authentication-cs/_static/image43.png))
 
@@ -455,7 +455,7 @@ Per altre informazioni sugli argomenti trattati in questa esercitazione, vedere 
 - [Modifiche tra IIS6 e sicurezza di IIS7](https://www.iis.net/articles/view.aspx/IIS7/Managing-IIS7/Configuring-Security/Changes-between-IIS6-and-IIS7-Security)
 - [Controlli ASP.NET di account di accesso](https://msdn.microsoft.com/library/d51ttbhx.aspx)
 - [Professionisti ASP.NET 2.0 Security, l'appartenenza e la gestione dei ruoli](http://www.wrox.com/WileyCDA/WroxTitle/productCd-0764596985.html) (ISBN: 978-0-7645-9698-8)
-- [Il `<authentication>` elemento](https://msdn.microsoft.com/library/532aee0e.aspx)
+- [Elemento `<authentication>`](https://msdn.microsoft.com/library/532aee0e.aspx)
 - [Il `<forms>` (elemento) per `<authentication>`](https://msdn.microsoft.com/library/1d3t3c61.aspx)
 
 ### <a name="video-training-on-topics-contained-in-this-tutorial"></a>Formazione in video su argomenti contenuti in questa esercitazione

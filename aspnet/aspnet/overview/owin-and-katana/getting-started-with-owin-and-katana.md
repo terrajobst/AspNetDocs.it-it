@@ -8,15 +8,15 @@ ms.date: 09/27/2013
 ms.assetid: 6dae249f-5ac6-4f6e-bc49-13bcd5a54a70
 msc.legacyurl: /aspnet/overview/owin-and-katana/getting-started-with-owin-and-katana
 msc.type: authoredcontent
-ms.openlocfilehash: 9920861da0e67d9304a944cacfb8ff8685267cd6
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5b5ecfcc7561e3e7bc13e1c8819a548e73ae1ab3
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57052008"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59408095"
 ---
-<a name="getting-started-with-owin-and-katana"></a>Introduzione a OWIN e Katana
-====================
+# <a name="getting-started-with-owin-and-katana"></a>Introduzione a OWIN e Katana
+
 da [Mike Wasson](https://github.com/MikeWasson)
 
 [Open Web Interface for .NET (OWIN)](http://owin.org/) definisce un'astrazione tra i server web .NET e applicazioni web. Separando il server web dell'applicazione, OWIN rende più semplice creare middleware per lo sviluppo web .NET. Inoltre, OWIN rende più semplice per trasportare le applicazioni web in altri host&#8212;, ad esempio, self-hosting in un servizio di Windows o un altro processo.

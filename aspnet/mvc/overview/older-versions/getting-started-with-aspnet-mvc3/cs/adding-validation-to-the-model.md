@@ -8,15 +8,15 @@ ms.date: 01/12/2011
 ms.assetid: 9af927e2-1c3b-43d9-917d-1df75be3c482
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/adding-validation-to-the-model
 msc.type: authoredcontent
-ms.openlocfilehash: dd126ca070b81285f902e164f9e5f82397974096
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 67c8a943e4d972f0956185a54d533d8082c786cc
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57038078"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59410162"
 ---
-<a name="adding-validation-to-the-model-c"></a>Aggiunta della convalida al modello (C#)
-====================
+# <a name="adding-validation-to-the-model-c"></a>Aggiunta della convalida al modello (C#)
+
 da [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > > [!NOTE]

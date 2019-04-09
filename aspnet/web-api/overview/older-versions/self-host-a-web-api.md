@@ -1,25 +1,26 @@
 ---
 uid: web-api/overview/older-versions/self-host-a-web-api
-title: Self-hosting di API Web ASP.NET 1 (c#) | Microsoft Docs
+title: Self-hosting di API Web ASP.NET 1 (C#)-ASP.NET 4.x
 author: MikeWasson
-description: API Web ASP.NET non sia necessario IIS. È possibile self-ospitare un'API web nel proprio processo host. Questa esercitazione illustra come ospitare un'API web all'interno di una console UT...
+description: Esercitazione con il codice viene illustrato come ospitare un'API web all'interno di un'applicazione console.
 ms.author: riande
 ms.date: 01/26/2012
+ms.custom: seoapril2019
 ms.assetid: be5ab1e2-4140-4275-ac59-ca82a1bac0c1
 msc.legacyurl: /web-api/overview/older-versions/self-host-a-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: 63d192a6fa2aafef3770d5b0b97ec32e001b69db
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7c73bf4734f8ed8a1bf93595c0847f611ad9cc15
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57040758"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59409603"
 ---
-<a name="self-host-aspnet-web-api-1-c"></a>Self-hosting di API Web ASP.NET 1 (c#)
-====================
+# <a name="self-host-aspnet-web-api-1-c"></a>Self-hosting di API Web ASP.NET 1 (c#)
+
 da [Mike Wasson](https://github.com/MikeWasson)
 
-> API Web ASP.NET non sia necessario IIS. È possibile self-ospitare un'API web nel proprio processo host. Questa esercitazione illustra come ospitare un'API web all'interno di un'applicazione console.
+> Questa esercitazione illustra come ospitare un'API web all'interno di un'applicazione console. API Web ASP.NET non sia necessario IIS. È possibile self-ospitare un'API web nel proprio processo host. 
 > 
 > **Le nuove applicazioni devono usare OWIN per l'hosting indipendente di API Web.** Visualizzare [usare OWIN per l'hosting indipendente di API Web ASP.NET 2](../hosting-aspnet-web-api/use-owin-to-self-host-web-api.md).
 > 

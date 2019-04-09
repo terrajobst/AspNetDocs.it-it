@@ -8,15 +8,15 @@ ms.date: 05/27/2008
 ms.assetid: 24ee3167-c5ae-45e1-9636-299231e5eae0
 msc.legacyurl: /mvc/videos/mvc-1/aspnet-mvc-storefront/aspnet-mvc-storefront-part-10-shopping-cart-refactor-and-authorization
 msc.type: video
-ms.openlocfilehash: d25eae0a78eee4f38a5a63d70a96521b6f375ebb
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 57cac8d4fc2ee70689e625ed7c22cea0cb3bc4d9
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57064338"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59408082"
 ---
-<a name="aspnet-mvc-storefront-part-10-shopping-cart-refactor-and-authorization"></a>ASP.NET MVC Storefront - Parte 10: Refactoring e autorizzazione del carrello
-====================
+# <a name="aspnet-mvc-storefront-part-10-shopping-cart-refactor-and-authorization"></a>ASP.NET MVC Storefront - Parte 10: Refactoring e autorizzazione del carrello
+
 da [Rob Conery](https://github.com/robconery)
 
 Rob effettua il refactoring iniziale andare al carrello della spesa e implementa il nucleo di un sistema di appartenenze tramite l'appartenenza di ASP.NET.
