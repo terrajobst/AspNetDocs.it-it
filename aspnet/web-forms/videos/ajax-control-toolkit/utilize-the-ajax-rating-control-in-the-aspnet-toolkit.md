@@ -8,15 +8,15 @@ ms.date: 07/10/2008
 ms.assetid: da366876-06d8-4a5d-9bce-1f52530f04b0
 msc.legacyurl: /web-forms/videos/ajax-control-toolkit/utilize-the-ajax-rating-control-in-the-aspnet-toolkit
 msc.type: video
-ms.openlocfilehash: f68655a082b4fe595f74a24ff4379bfb4a5148d9
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 4e4ae06ab6a6208c20d5206e171e5c906ac55708
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57059438"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59388790"
 ---
-<a name="utilize-the-ajax-rating-control-in-the-aspnet-toolkit"></a>Usare il controllo Rating AJAX in ASP.NET Toolkit
-====================
+# <a name="utilize-the-ajax-rating-control-in-the-aspnet-toolkit"></a>Usare il controllo Rating AJAX in ASP.NET Toolkit
+
 da [Joe Stagner](https://github.com/JoeStagner)
 
 Joe Stagner viene illustrato come utilizzare lo strumento di valutazione che viene fornito con ASP.NET AJAX Toolkit.
