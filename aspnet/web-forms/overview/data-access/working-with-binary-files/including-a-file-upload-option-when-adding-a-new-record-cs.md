@@ -8,15 +8,15 @@ ms.date: 03/27/2007
 ms.assetid: 362ade25-3965-4fb2-88d2-835c4786244f
 msc.legacyurl: /web-forms/overview/data-access/working-with-binary-files/including-a-file-upload-option-when-adding-a-new-record-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 8b7f839f16150b93645a9fe868642fa5f36248a9
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 9ec09bfcadaa56401a08a389028766ee04f1daad
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58424976"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59379880"
 ---
-<a name="including-a-file-upload-option-when-adding-a-new-record-c"></a>Inclusione di un'opzione per il caricamento di file durante l'aggiunta di un nuovo record (C#)
-====================
+# <a name="including-a-file-upload-option-when-adding-a-new-record-c"></a>Inclusione di un'opzione per il caricamento di file durante l'aggiunta di un nuovo record (C#)
+
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Scaricare l'App di esempio](http://download.microsoft.com/download/4/a/7/4a7a3b18-d80e-4014-8e53-a6a2427f0d93/ASPNET_Data_Tutorial_56_CS.exe) o [Scarica il PDF](including-a-file-upload-option-when-adding-a-new-record-cs/_static/datatutorial56cs1.pdf)
@@ -47,7 +47,7 @@ Per evitare questo rischio problema dover, anziché le istruzioni SQL generate a
 Aprire il DataSet tipizzato e, dalla finestra di progettazione, fare clic su di `CategoriesTableAdapter` intestazione s e scegliere Aggiungi Query dal menu di scelta rapida. Verrà avviata la configurazione guidata Query TableAdapter che inizia con richiede la modalità della query TableAdapter di accesso del database. Scegliere Usa istruzioni SQL e fare clic su Avanti. Il passaggio successivo richiede il tipo di query da generare. Poiché abbiamo nuovamente la creazione di una query per aggiungere un nuovo record per il `Categories` tabella scegliere INSERT e fare clic su Avanti.
 
 
-[![Selezionare l'opzione di inserimento](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image1.gif)](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image1.png)
+[![SScegliere l'opzione Inserisci](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image1.gif)](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image1.png)
 
 **Figura 1**: Selezionare l'opzione di inserimento ([fare clic per visualizzare l'immagine con dimensioni normali](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image2.png))
 
@@ -60,7 +60,7 @@ Aprire il DataSet tipizzato e, dalla finestra di progettazione, fare clic su di 
 Schermata finale della procedura guidata viene chiesto di specificare un nome al nuovo metodo di TableAdapter. Immettere `InsertWithPicture` e fare clic su Fine.
 
 
-[![Denominare il nuovo InsertWithPicture TableAdapter (metodo)](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image2.gif)](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image3.png)
+[![Nil nuovo InsertWithPicture metodo TableAdapter ome](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image2.gif)](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image3.png)
 
 **Figura 2**: Denominare il nuovo metodo TableAdapter `InsertWithPicture` ([fare clic per visualizzare l'immagine con dimensioni normali](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image4.png))
 
@@ -83,7 +83,7 @@ In questa esercitazione si creerà una pagina che consente agli utenti finali di
 Iniziare aprendo il `DisplayOrDownload.aspx` dalla pagina di `BinaryData` cartella. Passare alla visualizzazione origine e copiare i GridView e ObjectDataSource s sintassi dichiarativa, averla poi incollata all'interno di `<asp:Content>` elemento `UploadInDetailsView.aspx`. Dimenticare di copiare anche tenere sempre il `GenerateBrochureLink` metodo della classe code-behind di `DisplayOrDownload.aspx` a `UploadInDetailsView.aspx`.
 
 
-[![Copiare e incollare la sintassi dichiarativa dalla DisplayOrDownload.aspx a UploadInDetailsView.aspx](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image3.gif)](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image5.png)
+[![Ccopia e incollare la sintassi dichiarativa dalla DisplayOrDownload.aspx a UploadInDetailsView.aspx](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image3.gif)](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image5.png)
 
 **Figura 3**: Copiare e incollare la sintassi dichiarativa dalla `DisplayOrDownload.aspx` al `UploadInDetailsView.aspx` ([fare clic per visualizzare l'immagine con dimensioni normali](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image6.png))
 
@@ -91,7 +91,7 @@ Iniziare aprendo il `DisplayOrDownload.aspx` dalla pagina di `BinaryData` cartel
 Dopo aver copiato la sintassi dichiarativa e `GenerateBrochureLink` metodo tramite la `UploadInDetailsView.aspx` pagina, visualizzare la pagina tramite un browser per assicurarsi che tutto ciò che è stato copiato correttamente. Verrà visualizzato un controllo GridView di otto categorie di elenco che include un collegamento per scaricare il brochure, nonché l'immagine di categoria s.
 
 
-[![Si noterà ora ogni categoria insieme ai relativi dati binari](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image4.gif)](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image7.png)
+[![Yunità organizzativa dovrebbe essere possibile visualizzare ogni categoria insieme ai relativi dati binari](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image4.gif)](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image7.png)
 
 **Figura 4**: Si noterà ora ogni categoria insieme ai relativi dati binari ([fare clic per visualizzare l'immagine con dimensioni normali](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image8.png))
 
@@ -103,7 +103,7 @@ Il `CategoriesDataSource` ObjectDataSource usato dal `Categories` GridView attua
 Avviare facendo clic sul collegamento Configura origine dati nello smart tag s ObjectDataSource. La prima schermata mostra l'oggetto origine dati è configurato per funzionare con, `CategoriesBLL`. Lasciare questa impostazione come- e fare clic su Avanti per passare alla schermata di definire i metodi di dati. Passare alla scheda Inserisci e scegli la `InsertWithPicture` metodo dall'elenco a discesa. Fare clic su Fine per completare la procedura guidata.
 
 
-[![Configurare ObjectDataSource per usare il metodo InsertWithPicture](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image5.gif)](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image9.png)
+[![Cconfigurare ObjectDataSource per utilizzare il metodo InsertWithPicture](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image5.gif)](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image9.png)
 
 **Figura 5**: Configurare ObjectDataSource per usare la `InsertWithPicture` metodo ([fare clic per visualizzare l'immagine con dimensioni normali](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image10.png))
 
@@ -124,7 +124,7 @@ Come primo trattati nel [una panoramica di inserimento, aggiornamento ed elimina
 Avvio mediante il trascinamento di un controllo DetailsView dalla casella degli strumenti nella finestra di progettazione sopra il controllo GridView, l'impostazione relativa `ID` proprietà `NewCategory` e cancellare il `Height` e `Width` i valori delle proprietà. DetailsView s nello smart tag, eseguirne l'associazione esistente `CategoriesDataSource` e quindi selezionare la casella di controllo Attiva paging.
 
 
-[![Associare il CategoriesDataSource DetailsView e Abilita inserimento](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image6.gif)](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image11.png)
+[![Bind DetailsView CategoriesDataSource le Abilita inserimento](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image6.gif)](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image11.png)
 
 **Figura 6**: Associare il controllo DetailsView per la `CategoriesDataSource` e Abilita inserimento ([fare clic per visualizzare l'immagine con dimensioni normali](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image12.png))
 
@@ -153,7 +153,7 @@ Attualmente, il `BrochurePath` s TemplateField `InsertItemTemplate` contiene una
 DetailsView s smart tag, scegliere l'opzione di modifica modelli e quindi selezionare il `BrochurePath` TemplateField s `InsertItemTemplate` nell'elenco a discesa. Rimuovere la casella di testo e quindi trascinare un controllo FileUpload dalla casella degli strumenti nel modello. Impostare il controllo FileUpload 1!s `ID` a `BrochureUpload`. Analogamente, aggiungere un controllo FileUpload per il `Picture` TemplateField s `InsertItemTemplate`. Impostare questo controllo FileUpload 1!s `ID` a `PictureUpload`.
 
 
-[![Aggiungere un controllo FileUpload al InsertItemTemplate](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image8.gif)](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image13.png)
+[![Aun controllo FileUpload il InsertItemTemplate gg](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image8.gif)](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image13.png)
 
 **Figura 8**: Aggiungere un controllo FileUpload per il `InsertItemTemplate` ([fare clic per visualizzare l'immagine con dimensioni normali](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image14.png))
 
@@ -226,7 +226,7 @@ Per motivi di completezza, ecco il `ItemInserting` gestore eventi nella loro int
 Let s si consiglia di testare l'interfaccia di inserimento e `ItemInserting` gestore eventi che è stato creato negli ultimi passaggi successivi. Visita il `UploadInDetailsView.aspx` pagina tramite un browser e si tenta di aggiungere una categoria, ma omettere l'immagine o specificare un'immagine non JPG o una brochure non PDF. In uno di questi casi, verrà visualizzato un messaggio di errore e il flusso di lavoro di inserimento annullata.
 
 
-[![Un messaggio di avviso viene visualizzato se viene caricato un tipo di File non valido](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image9.gif)](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image15.png)
+[![A Messaggio di avviso viene visualizzato se viene caricato un tipo di File non valido](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image9.gif)](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image15.png)
 
 **Figura 9**: Un messaggio di avviso viene visualizzato se viene caricato un tipo di File non valido ([fare clic per visualizzare l'immagine con dimensioni normali](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image16.png))
 
@@ -234,7 +234,7 @@ Let s si consiglia di testare l'interfaccia di inserimento e `ItemInserting` ges
 Dopo avere verificato che la pagina richiede un'immagine da caricare e non accetta i file non PDF o non JPG, aggiungere una nuova categoria con un'immagine JPG valida, se si lascia vuoto il campo Brochure. Dopo aver fatto clic sul pulsante Inserisci, verrà postback della pagina e verrà aggiunto un nuovo record per il `Categories` tabella con il contenuto binario di immagine caricata s archiviati direttamente nel database. Il controllo GridView viene aggiornato e Mostra una riga per la categoria appena aggiunta, ma, come illustrato nella figura 10, la nuova immagine s categoria non viene visualizzata correttamente.
 
 
-[![La nuova categoria s che immagine non viene visualizzata](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image10.gif)](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image17.png)
+[![Tegli nuova categoria s immagine non viene visualizzato](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image10.gif)](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image17.png)
 
 **Figura 10**: La nuova categoria di s immagine non viene visualizzata ([fare clic per visualizzare l'immagine con dimensioni normali](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image18.png))
 
@@ -249,7 +249,7 @@ Poiché sono ora disponibili entrambe le bitmap con intestazioni OLE e jpg nel `
 Con questa modifica, l'immagine JPG viene ora eseguito il rendering correttamente in GridView.
 
 
-[![Le immagini JPG di nuove categorie sono correttamente eseguito il rendering](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image11.gif)](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image19.png)
+[![Tle immagini JPG di he di nuove categorie sono correttamente eseguito il rendering](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image11.gif)](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image19.png)
 
 **Figura 11**: Le immagini JPG di nuove categorie sono correttamente eseguito il rendering ([fare clic per visualizzare l'immagine con dimensioni normali](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image20.png))
 

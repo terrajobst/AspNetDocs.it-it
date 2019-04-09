@@ -1,23 +1,24 @@
 ---
 uid: mvc/overview/deployment/index
-title: Distribuzione | Microsoft Docs
+title: Distribuzione di ASP.NET MVC 5.0 - ASP.NET 4.x
 author: rick-anderson
-description: Come distribuire i progetti ASP.NET MVC in un server.
+description: Come distribuire i progetti ASP.NET MVC 5.0 in un server.
 ms.author: riande
 ms.date: 08/18/2011
+ms.custom: seoapril2019
 ms.assetid: 31922c31-59df-4399-99d2-e935a476f16a
 msc.legacyurl: /mvc/overview/deployment
 msc.type: chapter
-ms.openlocfilehash: caf5801dcec8c586626e830dafc1ab01c9c0e6d9
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: f4fb7ccaf9e6fbecf414d1bdfe7b4cae3218de4b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57022948"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59389921"
 ---
 # <a name="aspnet-mvc-deployment"></a>Distribuzione di ASP.NET MVC
 
-> Come distribuire i progetti ASP.NET MVC in un server.
+> Come distribuire i progetti ASP.NET MVC 5.0 in un server.
 
 - [Panoramica della distribuzione Web per Visual Studio e ASP.NET](https://msdn.microsoft.com/library/dd394698)
 - [Migrazione di applicazioni ASP.NET MVC ai contenitori di Windows](docker-aspnetmvc.md)

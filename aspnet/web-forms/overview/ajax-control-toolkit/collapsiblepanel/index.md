@@ -8,15 +8,15 @@ ms.date: 11/14/2011
 ms.assetid: 3bdbb6ea-917e-4fff-a1cc-f194606a7869
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/collapsiblepanel
 msc.type: chapter
-ms.openlocfilehash: 019896c58258254f7906ebd965ae521ab05e122c
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 42179cdecabed2954fcfe22cb2b968d566a386f5
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57020108"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59388348"
 ---
-<a name="collapsiblepanel"></a>CollapsiblePanel
-====================
+# <a name="collapsiblepanel"></a>CollapsiblePanel
+
 > Questa esercitazione illustra come usare il controllo CollapsiblePanel per consentire agli utenti di espandere e comprimere aree della pagina.
 
 

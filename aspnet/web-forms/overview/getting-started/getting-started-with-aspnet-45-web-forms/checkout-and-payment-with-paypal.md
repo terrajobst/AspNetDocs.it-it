@@ -8,15 +8,15 @@ ms.date: 09/08/2014
 ms.assetid: 664ec95e-b0c9-4f43-a39f-798d0f2a7e08
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/checkout-and-payment-with-paypal
 msc.type: authoredcontent
-ms.openlocfilehash: b59a395e255823a732aef1b899612063e09b2424
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a0895c2246bc08f50645a865ce2dfffecfbb56a6
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57034628"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59391156"
 ---
-<a name="checkout-and-payment-with-paypal"></a>Completamento della transazione e pagamento con PayPal
-====================
+# <a name="checkout-and-payment-with-paypal"></a>Completamento della transazione e pagamento con PayPal
+
 da [Erik Reitan](https://github.com/Erikre)
 
 [Scaricare progetto di esempio Wingtip Toys (c#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) o [Scarica l'E-book (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
@@ -124,7 +124,7 @@ Il *Web. config* file specifica che tutti gli utenti sconosciuti dell'applicazio
 2. Change **SSL abilitato** a `true`.
 3. Copia il **URL SSL** quindi è possibile usare in un secondo momento.   
  L'URL SSL sarà `https://localhost:44300/` a meno che non è stato creato in precedenza siti Web SSL (come illustrato di seguito).   
-    ![Proprietà di progetti](checkout-and-payment-with-paypal/_static/image4.png)
+    ![Proprietà progetto](checkout-and-payment-with-paypal/_static/image4.png)
 4. Nella **Esplora soluzioni**, fare clic il **WingtipToys** progetto e quindi scegliere **proprietà**.
 5. Nella scheda di sinistra, fare clic su **Web**.
 6. Modifica il **Url del progetto** da utilizzare il **URL SSL** salvato in precedenza.   
@@ -250,7 +250,7 @@ Se si segue questa esercitazione usando il **precompilati** applicazione di esem
 
 PayPal è una piattaforma di fatturazione basata sul web che accetta i pagamenti da rivenditori online. Successivamente, questa esercitazione illustra come integrare la funzionalità Express Checkout di PayPal all'interno dell'applicazione. Estrazione Express consente ai clienti di usare di PayPal per pagare gli elementi che hanno aggiunto al carrello acquisti.
 
-### <a name="create-paylpal-test-accounts"></a>Creare gli account di prova PaylPal
+### <a name="create-paypal-test-accounts"></a>Creare gli account di prova di PayPal
 
 Per usare l'ambiente di test di PayPal, è necessario creare e verificare un account di test per sviluppatori. Si userà l'account di test per sviluppatori per creare un acquirente di account di prova e un account di prova del venditore. Le credenziali dell'account di test per sviluppatori consentirà anche l'applicazione di esempio Wingtip Toys accedere all'ambiente di testing di PayPal.
 
@@ -277,7 +277,7 @@ Per usare l'ambiente di test di PayPal, è necessario creare e verificare un acc
 7. Creare l'account di test dell'acquirente facendo il **creare un Account** pulsante.  
  Il **gli account di prova di Sandbox** viene visualizzata la pagina. 
 
-    ![Completamento della transazione e pagamento con PayPal - PaylPal account](checkout-and-payment-with-paypal/_static/image17.png)
+    ![Completamento della transazione e pagamento con PayPal - account PayPal](checkout-and-payment-with-paypal/_static/image17.png)
 8. Nel **gli account di prova di Sandbox** pagina, fare clic sui **facilitatore** account di posta elettronica.  
     **Profilo** e **notifica** vengono visualizzate le opzioni.
 9. Selezionare il **profilo** opzione e quindi fare clic su **credenziali API** per visualizzare le credenziali di API per l'account di test commerciale.
@@ -309,9 +309,9 @@ Si inserirà la maggior parte del codice di PayPal in un'unica classe. Questa cl
 
 La classe NVPAPICaller contiene la maggior parte delle funzionalità PayPal. Il codice nella classe fornisce i metodi necessari per effettuare una prova di acquisto dall'ambiente di testing di PayPal. Le funzioni di PayPal tre seguenti vengono utilizzate per effettuare acquisti:
 
-- `SetExpressCheckout` (Funzione)
-- `GetExpressCheckoutDetails` (Funzione)
-- `DoExpressCheckoutPayment` (Funzione)
+- `SetExpressCheckout` funzione
+- `GetExpressCheckoutDetails` funzione
+- `DoExpressCheckoutPayment` funzione
 
 Il `ShortcutExpressCheckout` metodo raccoglie i dettagli di prodotto e informazioni di acquisto test dal carrello della spesa e chiama il `SetExpressCheckout` PayPal (funzione). Il `GetCheckoutDetails` metodo conferma i dettagli dell'acquisto e chiama il `GetExpressCheckoutDetails` PayPal funzione prima di effettuare l'acquisto di test. Il `DoCheckoutPayment` metodo viene completato l'acquisto di test dall'ambiente di testing chiamando il `DoExpressCheckoutPayment` PayPal (funzione). Il codice rimanente supporta i metodi di PayPal e processo, ad esempio codifica delle stringhe, la decodifica delle stringhe, matrici di elaborazione e determinare le credenziali.
 

@@ -8,15 +8,15 @@ ms.date: 03/27/2007
 ms.assetid: b381b1da-feb3-4776-bc1b-75db53eb90ab
 msc.legacyurl: /web-forms/overview/data-access/working-with-binary-files/uploading-files-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 8849f8f279dde883a71fb3ba1678a589f2e321eb
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 02fbd3ca162309aefbefdba9a453af6e55b3900b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57038848"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59382745"
 ---
-<a name="uploading-files-c"></a>Caricamento di file (C#)
-====================
+# <a name="uploading-files-c"></a>Caricamento di file (C#)
+
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Scaricare l'App di esempio](http://download.microsoft.com/download/4/a/7/4a7a3b18-d80e-4014-8e53-a6a2427f0d93/ASPNET_Data_Tutorial_54_CS.exe) o [Scarica il PDF](uploading-files-cs/_static/datatutorial54cs1.pdf)
@@ -53,7 +53,7 @@ Prima di iniziare a esplorare le sfide associate all'aggiunta del supporto per i
 In altre cartelle, analogo a `Default.aspx` nella `BinaryData` cartella elencherà le esercitazioni nella relativa sezione. Si tenga presente che il `SectionLevelTutorialListing.ascx` controllo utente fornisce questa funzionalità. Pertanto, aggiungere questo controllo utente da `Default.aspx` trascinandolo da Esplora soluzioni nella pagina di visualizzazione della struttura s.
 
 
-[![Aggiungere il controllo utente sectionleveltutoriallisting. ascx a default. aspx](uploading-files-cs/_static/image2.gif)](uploading-files-cs/_static/image1.png)
+[![Ail controllo utente sectionleveltutoriallisting. ascx a default. aspx gg](uploading-files-cs/_static/image2.gif)](uploading-files-cs/_static/image1.png)
 
 **Figura 2**: Aggiungere il `SectionLevelTutorialListing.ascx` controllo utente da `Default.aspx` ([fare clic per visualizzare l'immagine con dimensioni normali](uploading-files-cs/_static/image2.png))
 
@@ -76,7 +76,7 @@ Dopo aver aggiornato `Web.sitemap`, si consiglia di visualizzare il sito Web di 
 Dati binari che viene associati al modello di dati di s dell'applicazione possono essere archiviati in una delle due posizioni: nel file system s server web con un riferimento al file archiviato nel database. o direttamente all'interno del database stesso (vedere la figura 4). Ogni approccio ha un proprio set di vantaggi e svantaggi e merita una discussione più dettagliata.
 
 
-[![Dati binari possono essere archiviati nel File System o direttamente nel Database](uploading-files-cs/_static/image4.gif)](uploading-files-cs/_static/image3.png)
+[![Binario che dati possono essere archiviati nel File System o direttamente nel Database](uploading-files-cs/_static/image4.gif)](uploading-files-cs/_static/image3.png)
 
 **Figura 4**: Dati binari possono essere archiviati nel File System o direttamente nel Database ([fare clic per visualizzare l'immagine con dimensioni normali](uploading-files-cs/_static/image4.png))
 
@@ -110,7 +110,7 @@ Attualmente la tabella Categories ha solo quattro colonne: `CategoryID`, `Catego
 Aggiungere un nuovo `varchar(200)` colonna per il `Categories` tabella denominata `BrochurePath` e consente `NULL` s e fare clic sull'icona di salvataggio (o premere Ctrl + S).
 
 
-[![Aggiungere una colonna BrochurePath con la tabella Categories](uploading-files-cs/_static/image5.gif)](uploading-files-cs/_static/image5.png)
+[![Auna colonna BrochurePath con la tabella Categories gg](uploading-files-cs/_static/image5.gif)](uploading-files-cs/_static/image5.png)
 
 **Figura 5**: Aggiungere un `BrochurePath` colonna per il `Categories` tabella ([fare clic per visualizzare l'immagine con dimensioni normali](uploading-files-cs/_static/image6.png))
 
@@ -132,7 +132,7 @@ Si noti che nessuna di queste query restituiscono il `Categories` tabella s `Pic
 Iniziare aggiungendo queste due colonne per il `CategoriesDataTable`. Fare clic su di `CategoriesDataTable` intestazione s, scegliere Aggiungi dal menu di scelta rapida e quindi scegliere l'opzione di colonna. Verrà creata una nuova `DataColumn` DataTable denominato `Column1`. Rinominare la colonna `Picture`. Dalla finestra delle proprietà, impostare il `DataColumn` s `DataType` proprietà `System.Byte[]` (questo non è un'opzione nell'elenco a discesa, è necessario digitarlo in).
 
 
-[![Creare un'immagine denominata DataColumn il cui tipo di dati è System. byte](uploading-files-cs/_static/image6.gif)](uploading-files-cs/_static/image7.png)
+[![CCrea un'immagine denominata DataColumn il cui tipo di dati è System. Byte []](uploading-files-cs/_static/image6.gif)](uploading-files-cs/_static/image7.png)
 
 **Figura 6**: Creare un `DataColumn` Named `Picture` cui `DataType` viene `System.Byte[]` ([fare clic per visualizzare l'immagine con dimensioni normali](uploading-files-cs/_static/image8.png))
 
@@ -146,7 +146,7 @@ Con queste due `DataColumn` aggiunte per il `CategoriesDataTable`, sono pronti p
 Per aggiornare la query TableAdapter principale, fare clic su di `CategoriesTableAdapter` intestazione s e scegliere l'opzione di configurazione dal menu di scelta rapida. Verrà visualizzata la configurazione guidata adattatore tabella cui è stato visualizzato in una serie di esercitazioni precedenti. Aggiornare la query per riportare online il `BrochurePath` e fare clic su Fine.
 
 
-[![Aggiornare l'elenco colonne nell'istruzione SELECT per restituire anche BrochurePath](uploading-files-cs/_static/image7.gif)](uploading-files-cs/_static/image9.png)
+[![UElenco di colonne nell'istruzione SELECT per restituire anche BrochurePath elezionate](uploading-files-cs/_static/image7.gif)](uploading-files-cs/_static/image9.png)
 
 **Figura 7**: Aggiornare l'elenco di colonne nel `SELECT` istruzione per restituire `BrochurePath` ([fare clic per visualizzare l'immagine con dimensioni normali](uploading-files-cs/_static/image10.png))
 
@@ -159,12 +159,12 @@ Quando si usano istruzioni SQL ad hoc per i TableAdapter, l'aggiornamento dell'e
 Successivamente, creare un nuovo metodo TableAdapter che restituisce una determinata categoria s `Picture` valore della colonna. Fare clic su di `CategoriesTableAdapter` intestazione s e scegliere l'opzione di Query aggiunta per avviare la configurazione guidata Query TableAdapter. Il primo passaggio della procedura guidata viene chiesto di specificare che se si desidera eseguire query sui dati usando un'istruzione SQL ad hoc, una nuova stored procedure o una esistente. Selezionare Usa istruzioni SQL e fare clic su Avanti. Poiché si restituisce una riga, scegliere il SELECT che restituisce l'opzione righe del secondo passaggio.
 
 
-[![Le istruzioni Use SQL opzione SELECT](uploading-files-cs/_static/image8.gif)](uploading-files-cs/_static/image11.png)
+[![SScegliere l'Usa istruzioni SQL opzione](uploading-files-cs/_static/image8.gif)](uploading-files-cs/_static/image11.png)
 
 **Figura 8**: Selezionare l'Usa istruzioni SQL opzione ([fare clic per visualizzare l'immagine con dimensioni normali](uploading-files-cs/_static/image12.png))
 
 
-[![Poiché la Query restituirà un Record dalla tabella Categories, scegli SELECT che restituisce righe](uploading-files-cs/_static/image9.gif)](uploading-files-cs/_static/image13.png)
+[![Soiché la Query restituisce un Record dalla tabella Categories, scegliere Seleziona che restituisce righe](uploading-files-cs/_static/image9.gif)](uploading-files-cs/_static/image13.png)
 
 **Figura 9**: Poiché la Query restituirà un Record dalla tabella Categories, scegliere di selezionare quale vengono restituite righe ([fare clic per visualizzare l'immagine con dimensioni normali](uploading-files-cs/_static/image14.png))
 
@@ -177,7 +177,7 @@ Nel terzo passaggio, immettere la query SQL seguente e fare clic su Avanti:
 L'ultimo passaggio consiste nello scegliere il nome per il nuovo metodo. Uso `FillCategoryWithBinaryDataByCategoryID` e `GetCategoryWithBinaryDataByCategoryID` per il riempimento un DataTable e restituire un oggetto DataTable modelli, rispettivamente. Fare clic su Fine per completare la procedura guidata.
 
 
-[![Scegliere i nomi per i metodi di s TableAdapter](uploading-files-cs/_static/image10.gif)](uploading-files-cs/_static/image15.png)
+[![Cimpostare come i nomi per i TableAdapter metodi](uploading-files-cs/_static/image10.gif)](uploading-files-cs/_static/image15.png)
 
 **Figura 10**: Scegliere i nomi per i metodi di TableAdapter ([fare clic per visualizzare l'immagine con dimensioni normali](uploading-files-cs/_static/image16.png))
 
@@ -212,7 +212,7 @@ ASP.NET 2.0 s nuove [controllo Web FileUpload](https://msdn.microsoft.com/librar
 Per illustrare il caricamento di file, aprire il `FileUpload.aspx` nella pagina la `BinaryData` cartella, trascinare un controllo FileUpload dalla casella degli strumenti nella finestra di progettazione e impostare il controllo s `ID` proprietà `UploadTest`. Successivamente, aggiungere un controllo pulsante Web l'impostazione relativa `ID` e `Text` delle proprietà per `UploadButton` e caricare i File selezionati, rispettivamente. Infine, inserire un controllo etichetta Web sotto il pulsante, cancellare il contenuto relativo `Text` proprietà e set relativo `ID` proprietà `UploadDetails`.
 
 
-[![Aggiungere un controllo FileUpload nella pagina ASP.NET](uploading-files-cs/_static/image12.gif)](uploading-files-cs/_static/image17.png)
+[![Agg un controllo FileUpload nella pagina ASP.NET](uploading-files-cs/_static/image12.gif)](uploading-files-cs/_static/image17.png)
 
 **Figura 12**: Aggiungere un controllo FileUpload nella pagina ASP.NET ([fare clic per visualizzare l'immagine con dimensioni normali](uploading-files-cs/_static/image18.png))
 
@@ -220,7 +220,7 @@ Per illustrare il caricamento di file, aprire il `FileUpload.aspx` nella pagina 
 Figura 13 Mostra questa pagina quando viene visualizzato tramite un browser. Si noti che facendo clic sul pulsante Sfoglia consente di visualizzare una finestra di dialogo Selezione file, consentendo all'utente di selezionare un file dal proprio computer. Dopo aver selezionato un file, fare clic sul pulsante Carica File selezionato determina un postback che invia il contenuto binario s file selezionato al server web.
 
 
-[![L'utente può selezionare un File da caricare dal proprio Computer al Server](uploading-files-cs/_static/image13.gif)](uploading-files-cs/_static/image19.png)
+[![Tgli utenti possono selezionare un File da caricare dal proprio Computer al Server](uploading-files-cs/_static/image13.gif)](uploading-files-cs/_static/image19.png)
 
 **Figura 13**: L'utente può selezionare un File da caricare dal proprio Computer al Server ([fare clic per visualizzare l'immagine con dimensioni normali](uploading-files-cs/_static/image20.png))
 
@@ -241,7 +241,7 @@ Le s FileUpload `SaveAs(filePath)` consente di salvare il file caricato specific
 Dopo aver completato la `Click` gestore eventi, si consiglia di testare la pagina in un browser. Fare clic sul pulsante Sfoglia e selezionare un file dal disco rigido e quindi fare clic sul pulsante Carica File selezionato. Il contenuto del file selezionato invierà il postback al server web, che verranno quindi visualizzate informazioni sul file prima di salvarla, per il `~/Brochures` cartella. Dopo aver caricato il file, tornare a Visual Studio e fare clic sul pulsante Aggiorna in Esplora soluzioni. Verrà visualizzato il file che appena caricato nella cartella ~/Brochures!
 
 
-[![È stato caricato il File EvolutionValley.jpg al Server Web](uploading-files-cs/_static/image14.gif)](uploading-files-cs/_static/image21.png)
+[![Tegli File EvolutionValley.jpg è stato caricato nel server Web](uploading-files-cs/_static/image14.gif)](uploading-files-cs/_static/image21.png)
 
 **Figura 14**: Il File `EvolutionValley.jpg` è stato caricato nel server Web ([fare clic per visualizzare l'immagine con dimensioni normali](uploading-files-cs/_static/image22.png))
 
@@ -277,7 +277,7 @@ Buona programmazione!
 
 Per altre informazioni sugli argomenti trattati in questa esercitazione, vedere le risorse seguenti:
 
-- [Utilizzo di tipi di dati di valori di grandi dimensioni](https://msdn.microsoft.com/library/ms178158.aspx)
+- [Utilizzo di tipi di dati per valori di grandi dimensioni](https://msdn.microsoft.com/library/ms178158.aspx)
 - [Guide introduttive controllo fileUpload](https://quickstarts.asp.net/QuickStartv20/aspnet/doc/ctrlref/standard/fileupload.aspx)
 - [Controllo Server ASP.NET 2.0 FileUpload](http://www.wrox.com/WileyCDA/Section/id-292158.html)
 - [Il lato scuro di caricamenti di File](http://www.aspnetresources.com/articles/dark_side_of_file_uploads.aspx)
@@ -291,4 +291,4 @@ Per altre informazioni sugli argomenti trattati in questa esercitazione, vedere 
 Questa serie di esercitazioni è stata esaminata da diversi validi revisori. I revisori per questa esercitazione sono state Teresa Murphy e Bernadette Leigh. Se si è interessati prossimi articoli MSDN dello? In questo caso, Inviami una riga in corrispondenza [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
-> [avanti](displaying-binary-data-in-the-data-web-controls-cs.md)
+> [Successivo](displaying-binary-data-in-the-data-web-controls-cs.md)

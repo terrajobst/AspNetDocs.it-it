@@ -8,15 +8,15 @@ ms.date: 09/13/2006
 ms.assetid: 83e3d759-82b8-41e6-8d62-f0f4b3edec41
 msc.legacyurl: /web-forms/overview/data-access/displaying-data-with-the-datalist-and-repeater/formatting-the-datalist-and-repeater-based-upon-data-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 4c3a6b085dbd9faec8dab45e64b10678aa9a73b3
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7ea11f436d8f0455621d22c4d5a5b4d6b6ece68f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57044158"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59386424"
 ---
-<a name="formatting-the-datalist-and-repeater-based-upon-data-c"></a>Formattazione di DataList e Repeater in base ai dati (C#)
-====================
+# <a name="formatting-the-datalist-and-repeater-based-upon-data-c"></a>Formattazione di DataList e Repeater in base ai dati (C#)
+
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Scaricare l'App di esempio](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_30_CS.exe) o [Scarica il PDF](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/datatutorial30cs1.pdf)
@@ -74,7 +74,7 @@ Prima ci preoccupiamo la formattazione, s ti permettono di creare una pagina che
 Una volta che si siano state replicate le funzionalità di DataList e ObjectDataSource dalla `Basics.aspx` nelle `Formatting.aspx`, si consiglia di modifica di DataList s `ID` proprietà dal `DataList1` a un nome più descrittivo `ItemDataBoundFormattingExample`. Successivamente, visualizzare il controllo DataList in un browser. Come illustrato nella figura 1, l'unica differenza formattazione tra ogni prodotto è che alterna il colore di sfondo.
 
 
-[![I prodotti sono elencati nel controllo DataList](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image2.png)](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image1.png)
+[![The prodotti sono elencati nel controllo DataList](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image2.png)](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image1.png)
 
 **Figura 1**: I prodotti sono elencati nel controllo DataList ([fare clic per visualizzare l'immagine con dimensioni normali](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image3.png))
 
@@ -117,7 +117,7 @@ Per applicare la formattazione, è sufficiente impostare i due controlli Web Lab
 Con il `ItemDataBound` completata dal gestore di eventi, visitare di nuovo il `Formatting.aspx` pagina in un browser. Come illustrato nella figura 2, i prodotti con prezzo in 20,00 dollari hanno sia il nome e il prezzo evidenziato.
 
 
-[![Tali prodotti minore 20,00 dollari vengono evidenziati](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image5.png)](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image4.png)
+[![Ttubo prodotti meno di quanto vengono evidenziati 20,00 dollari](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image5.png)](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image4.png)
 
 **Figura 2**: Tali prodotti minore 20,00 dollari vengono evidenziati ([fare clic per visualizzare l'immagine con dimensioni normali](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image6.png))
 
@@ -129,7 +129,7 @@ Con il `ItemDataBound` completata dal gestore di eventi, visitare di nuovo il `F
 Il `RepeaterItem` che costituiscono il controllo Repeater, tuttavia, don t offrono tali proprietà a livello di stile. Pertanto, applicando la formattazione personalizzata per il controllo Repeater richiede che l'applicazione di proprietà di stile ai controlli Web all'interno dei modelli di Repeater s, come abbiamo fatto nella figura 2.
 
 
-[![Viene evidenziato l'intero elemento prodotto per i prodotti in 20,00 dollari](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image8.png)](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image7.png)
+[![Tegli intero elemento prodotto viene evidenziato per i prodotti in 20,00 dollari](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image8.png)](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image7.png)
 
 **Figura 3**: Viene evidenziato l'intero elemento prodotto per i prodotti in 20,00 dollari ([fare clic per visualizzare l'immagine con dimensioni normali](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image9.png))
 
@@ -141,7 +141,7 @@ Nel *uso di TemplateFields nel controllo GridView* esercitazione è stato illust
 Per illustrare le funzioni di formattazione, ti permettono di s sono le informazioni sul prodotto includere il testo [DISCONTINUED] accanto al nome del prodotto s se si s non più disponibile. Inoltre, ti permettono di s hanno if giallo evidenziato prezzo s minore 20,00 dollari (avuti `ItemDataBound` esempio di gestore eventi); se il prezzo è 20,00 dollari o versione successiva, "Let" s non visualizzano il prezzo effettivo, ma chiamare invece il testo, Please per un'offerta di prezzo. Figura 4 mostra una schermata dei prodotti listato con queste regole di formattazione applicate.
 
 
-[![Per i prodotti costosa, il prezzo viene sostituito con il testo,. chiamare per un preventivo](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image11.png)](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image10.png)
+[![Fo Expensive Products, il prezzo viene sostituito con il testo,. chiamare per un preventivo](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image11.png)](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image10.png)
 
 **Figura 4**: Per i prodotti costosa, il prezzo viene sostituito con il testo,. chiamare per un preventivo ([fare clic per visualizzare l'immagine con dimensioni normali](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image12.png))
 
@@ -182,7 +182,7 @@ Per visualizzare il prezzo, è possibile impostare semplicemente la `UnitPriceLa
 Con le chiamate alle funzioni di formattazione posto, si consiglia di visualizzare lo stato di avanzamento in un browser. La schermata dovrebbe essere simile alla figura 5, con i prodotti non più supportati, incluso il testo [DISCONTINUED] e i prodotti più 20,00 dollari con rispettivo prezzo di determinazione costi sostituito con il testo, chiamata di un'offerta di prezzo.
 
 
-[![Per i prodotti costosa, il prezzo viene sostituito con il testo,. chiamare per un preventivo](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image14.png)](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image13.png)
+[![Fo Expensive Products, il prezzo viene sostituito con il testo,. chiamare per un preventivo](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image14.png)](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image13.png)
 
 **Figura 5**: Per i prodotti costosa, il prezzo viene sostituito con il testo,. chiamare per un preventivo ([fare clic per visualizzare l'immagine con dimensioni normali](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image15.png))
 

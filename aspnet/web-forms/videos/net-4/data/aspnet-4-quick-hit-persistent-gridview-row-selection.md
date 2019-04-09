@@ -8,15 +8,15 @@ ms.date: 11/16/2009
 ms.assetid: 42591ed6-fb4a-462d-ad7d-3e95dc628af9
 msc.legacyurl: /web-forms/videos/net-4/data/aspnet-4-quick-hit-persistent-gridview-row-selection
 msc.type: video
-ms.openlocfilehash: 9260c599c25e7022e2f18ffa4c1d1ca753fdb8a6
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: bd2b5370b5da4bc89a4f7db6b86e27a3bab15db1
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57036258"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59381003"
 ---
-<a name="aspnet-4-quick-hit--persistent-gridview-row-selection"></a>ASP.NET 4 "Riscontro rapida": selezione di righe persistente per GridView
-====================
+# <a name="aspnet-4-quick-hit--persistent-gridview-row-selection"></a>ASP.NET 4 "Riscontro rapida": selezione di righe persistente per GridView
+
 da [Joe Stagner](https://github.com/JoeStagner)
 
 In questo video verranno fornite informazioni sulla selezione di righe persistente per il controllo GridView. 

@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: e6c2cb98-f745-4bc8-973a-813879c8a891
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/textboxwatermark/using-textboxwatermark-with-validation-controls-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 636a9d00b4f699536d2851d3bac5f657c272c80a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d83fb53ddb40a31013bc724909fa149ce2e4c713
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57057738"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59387378"
 ---
-<a name="using-textboxwatermark-with-validation-controls-vb"></a>Uso di TextBoxWatermark con i controlli di convalida (VB)
-====================
+# <a name="using-textboxwatermark-with-validation-controls-vb"></a>Uso di TextBoxWatermark con i controlli di convalida (VB)
+
 da [Christian Wenz](https://github.com/wenz)
 
 [Scaricare il codice](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/TextBoxWatermark2.vb.zip) o [Scarica il PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/textboxwatermark2VB.pdf)
@@ -49,7 +49,7 @@ Infine, aggiungere codice lato server per il testo nel campo di output se nessun
 [!code-aspx[Main](using-textboxwatermark-with-validation-controls-vb/samples/sample4.aspx)]
 
 
-[![Visualizza un errore di convalida che non vi sia alcun testo nel campo](using-textboxwatermark-with-validation-controls-vb/_static/image2.png)](using-textboxwatermark-with-validation-controls-vb/_static/image1.png)
+[![Tvalidator he Visualizza un errore che non è presente testo nel campo](using-textboxwatermark-with-validation-controls-vb/_static/image2.png)](using-textboxwatermark-with-validation-controls-vb/_static/image1.png)
 
 Visualizza un errore di convalida che non vi sia alcun testo nel campo ([fare clic per visualizzare l'immagine con dimensioni normali](using-textboxwatermark-with-validation-controls-vb/_static/image3.png))
 

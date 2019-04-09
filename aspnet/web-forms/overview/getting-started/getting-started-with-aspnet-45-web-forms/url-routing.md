@@ -8,15 +8,15 @@ ms.date: 09/08/2014
 ms.assetid: 4f4bf092-c400-471f-a876-78fda0417890
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/url-routing
 msc.type: authoredcontent
-ms.openlocfilehash: d9f0779d560d6ec7796a16dc2996b959dd171c80
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 992cea256302231ee7031a21c798117b73eaa01c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57062358"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59384323"
 ---
-<a name="url-routing"></a>Routing degli URL
-====================
+# <a name="url-routing"></a>Routing degli URL
+
 da [Erik Reitan](https://github.com/Erikre)
 
 [Scaricare progetto di esempio Wingtip Toys (c#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) o [Scarica l'E-book (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
@@ -79,7 +79,7 @@ Il secondo parametro di route include un valore dinamico specificato da parentes
 
 > [!NOTE] 
 > 
-> **Optional**
+> **Facoltativo**
 > 
 > Può risultare più semplice gestire il codice spostando il `RegisterCustomRoutes` metodo in una classe separata. Nel *per la logica* cartella, creare un oggetto separato `RouteActions` classe. Spostare il codice precedente `RegisterCustomRoutes` metodo di *Global.asax.cs* file nel nuovo `RoutesActions` classe. Usare la `RoleActions` classe e il `createAdmin` un esempio di come chiamare il metodo la `RegisterCustomRoutes` metodo dal *Global.asax.cs* file.
 

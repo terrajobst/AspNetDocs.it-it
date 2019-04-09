@@ -8,15 +8,15 @@ ms.date: 02/20/2014
 ms.assetid: 332fb3da-e2a5-460d-bb90-dd911e1e2c95
 msc.legacyurl: /web-pages/overview/ui-layouts-and-themes/10-working-with-video
 msc.type: authoredcontent
-ms.openlocfilehash: 8f4b7186ae5c7b7b384ebcb23f7c9ad65caeb0bd
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 204611513860e268001596b9c7ac9e9c023caa12
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57034148"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59399853"
 ---
-<a name="displaying-video-in-an-aspnet-web-pages-razor-site"></a>Visualizzazione Video in un sito di ASP.NET Web Pages (Razor)
-====================
+# <a name="displaying-video-in-an-aspnet-web-pages-razor-site"></a>Visualizzazione Video in un sito di ASP.NET Web Pages (Razor)
+
 da [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Questo articolo illustra come usare un lettore video (supporti) in un sito Web ASP.NET Web Pages (Razor) per consentire agli utenti di visualizzare video in cui vengono archiviati nel sito. ASP.NET Web Pages con sintassi Razor consente di riprodurre Flash (*SWF*), Media Player (*WMV*) e Silverlight (*XAP*) video.
@@ -185,4 +185,4 @@ Questa procedura viene illustrato come riprodurre video contenuto in un Silverli
 
 [Flash oggetto e INCORPORAMENTO degli attributi del tag](http://kb2.adobe.com/cps/127/tn_12701.html)
 
-[I tag PARAM SDK di Windows Media Player 11](https://msdn.microsoft.com/library/aa392321(VS.85).aspx)
+[Windows Media Player 11 SDK PARAM Tags](https://msdn.microsoft.com/library/aa392321(VS.85).aspx)

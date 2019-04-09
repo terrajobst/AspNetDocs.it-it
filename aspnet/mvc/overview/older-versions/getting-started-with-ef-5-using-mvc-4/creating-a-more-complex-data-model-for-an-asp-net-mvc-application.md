@@ -8,15 +8,15 @@ ms.date: 07/30/2013
 ms.assetid: f81f3d80-3674-4d8e-a9b1-87feed1a93c9
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/creating-a-more-complex-data-model-for-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: cfb01742c3921c24c71fd3fa4a14a9f71fac1ac1
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 15bdaa588792c3cf4a8e6eee651e0675f959f942
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57063678"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59382234"
 ---
-<a name="creating-a-more-complex-data-model-for-an-aspnet-mvc-application-4-of-10"></a>Creazione di un modello di dati più complesso per un'applicazione ASP.NET MVC (4 di 10)
-====================
+# <a name="creating-a-more-complex-data-model-for-an-aspnet-mvc-application-4-of-10"></a>Creazione di un modello di dati più complesso per un'applicazione ASP.NET MVC (4 di 10)
+
 da [Tom Dykstra](https://github.com/tdykstra)
 
 [Download progetto completato](http://code.msdn.microsoft.com/Getting-Started-with-dd0e2ed8)
@@ -48,7 +48,7 @@ In *Models\Student.cs*, aggiungere un `using` istruzione per il `System.Componen
 
 Il [DataType](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatypeattribute.aspx) attributo viene usato per specificare un tipo di dati che è più specifico del tipo intrinseco del database. In questo caso si vuole tenere traccia solo della data e non di data e ora. Il [enumerazione DataType](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatype.aspx) fornisce per molti tipi di dati, ad esempio *Date, Time, PhoneNumber, Currency, EmailAddress* e altro ancora. L'attributo `DataType` può anche consentire all'applicazione di fornire automaticamente le funzionalità specifiche del tipo. Ad esempio, un `mailto:` possibile creare un collegamento per [DataType.EmailAddress](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatype.aspx), e un selettore data può essere fornito per [DataType](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatype.aspx) nei browser che supportano [HTML5](http://html5.org/). Il [DataType](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatypeattribute.aspx) attributi emette HTML 5 [data -](http://ejohn.org/blog/html-5-data-attributes/) (si pronuncia *dash di dati*) gli attributi HTML browser HTML5. Il [DataType](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatypeattribute.aspx) attributi non forniscono alcuna convalida.
 
-`DataType.Date` non specifica il formato della data visualizzata. Per impostazione predefinita, viene visualizzato il campo dati in base ai formati predefiniti del server [CultureInfo](https://msdn.microsoft.com/library/vstudio/system.globalization.cultureinfo(v=vs.110).aspx).
+`DataType.Date` Specifica il formato della data visualizzata. Per impostazione predefinita, viene visualizzato il campo dati in base ai formati predefiniti del server [CultureInfo](https://msdn.microsoft.com/library/vstudio/system.globalization.cultureinfo(v=vs.110).aspx).
 
 L'attributo `DisplayFormat` viene usato per specificare in modo esplicito il formato della data:
 
@@ -152,7 +152,7 @@ Il [attributo StringLength](https://msdn.microsoft.com/library/system.componentm
 
 ### <a name="the-fullname-calculated-property"></a>La proprietà calcolata FullName
 
-`FullName` è una proprietà calcolata che restituisce un valore creato concatenando altre due proprietà. Di conseguenza ha solo un `get` funzione di accesso e nessun `FullName` colonna verrà generata nel database.
+`FullName` è una proprietà calcolata che restituisce un valore che viene creato concatenando altre due proprietà. Di conseguenza ha solo un `get` funzione di accesso e nessun `FullName` colonna verrà generata nel database.
 
 [!code-csharp[Main](creating-a-more-complex-data-model-for-an-asp-net-mvc-application/samples/sample11.cs)]
 
@@ -358,7 +358,7 @@ Dalla console di gestione pacchetti, immettere il `add-migration` comando:
 
 Se si prova ad aggiornare il database a questo punto, si otterrà l'errore seguente:
 
-*L'istruzione ALTER TABLE è in conflitto con il vincolo FOREIGN KEY "FK\_dbo. Corso\_dbo. Reparto\_DepartmentID ". Il conflitto si è verificato nel database "ContosoUniversity", la tabella "dbo. Reparto", colonna 'DepartmentID'.*
+*L'istruzione ALTER TABLE è in conflitto con il vincolo FOREIGN KEY "FK\_dbo. Corso\_dbo. Reparto\_DepartmentID ". The conflict occurred in database "ContosoUniversity", table "dbo.Department", column 'DepartmentID' (L'istruzione ALTER TABLE è in conflitto con il vincolo FOREIGN KEY "FK_dbo.Course_dbo.Department_DepartmentID". Il conflitto si è verificato nella colonna 'DepartmentID' della tabella "dbo.Department"del database "ContosoUniversity").*
 
 Modificare il &lt; *timestamp&gt;\_Chap4.cs* file e apportare le modifiche al codice seguente (è possibile aggiungere un'istruzione SQL e modificare un `AddColumn` istruzione):
 
@@ -377,7 +377,7 @@ Dopo aver completato la modifica di &lt; *timestamp&gt;\_Chap4.cs* file, immette
 > 
 > [!code-xml[Main](creating-a-more-complex-data-model-for-an-asp-net-mvc-application/samples/sample35.xml?highlight=1-2)]
 > 
->  Con un nuovo database, non sono presenti dati per eseguire la migrazione e il `update-database` comando è molto probabile che venga completato senza errori. Per istruzioni su come eliminare il database, vedere [come eliminare un Database da Visual Studio 2012](http://romiller.com/2013/05/17/how-to-drop-a-database-from-visual-studio-2012/).
+> Con un nuovo database, non sono presenti dati per eseguire la migrazione e il `update-database` comando è molto probabile che venga completato senza errori. Per istruzioni su come eliminare il database, vedere [come eliminare un Database da Visual Studio 2012](http://romiller.com/2013/05/17/how-to-drop-a-database-from-visual-studio-2012/).
 
 
 Aprire il database in **Esplora Server** eseguita in precedenza, quindi espandere il **tabelle** nodo per verificare che tutte le tabelle sono state create. (Se continuano a verificarsi **Esplora Server** aperto dall'operazione precedente, fare clic il **aggiornare** pulsante.)

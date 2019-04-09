@@ -1,22 +1,23 @@
 ---
 uid: web-api/overview/hosting-aspnet-web-api/use-owin-to-self-host-web-api
-title: Usare OWIN per l'hosting indipendente di API Web ASP.NET | Microsoft Docs
+title: "Usare OWIN per l'hosting indipendente di ASP.NET Web API: ASP.NET 4.x"
 author: rick-anderson
-description: Questa esercitazione illustra come eseguire l'hosting di API Web ASP.NET in un'applicazione console, Usa OWIN per l'hosting indipendente il framework API Web. Open Web Interface for .NET (OWIN) d...
+description: Esercitazione con il codice che illustra come eseguire l'hosting di API Web ASP.NET in un'applicazione console.
 ms.author: riande
 ms.date: 07/09/2013
+ms.custom: seoapril2019
 ms.assetid: a90a04ce-9d07-43ad-8250-8a92fb2bd3d5
 msc.legacyurl: /web-api/overview/hosting-aspnet-web-api/use-owin-to-self-host-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: a83d1350c2e984acd3c115afd27adfe2b05adb2f
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: a67db0bd061846af2db3599e0843ed7c6a22db1e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58424552"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59386515"
 ---
-<a name="use-owin-to-self-host-aspnet-web-api"></a>Usare OWIN per l'hosting indipendente di API Web ASP.NET 
-====================
+# <a name="use-owin-to-self-host-aspnet-web-api"></a>Usare OWIN per l'hosting indipendente di API Web ASP.NET 
+
 
 > Questa esercitazione illustra come eseguire l'hosting di API Web ASP.NET in un'applicazione console, Usa OWIN per l'hosting indipendente il framework API Web.
 >

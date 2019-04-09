@@ -8,15 +8,15 @@ ms.date: 01/27/2009
 ms.assetid: 61644169-e8b1-45dd-bf96-9c2301b69879
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/creating-model-classes-with-the-entity-framework-cs
 msc.type: authoredcontent
-ms.openlocfilehash: d1cf97a7f1dc9bae2774518cdfc13da48fc7ada2
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 29f7dded2f6fc2e8ce588dab2949b59ddb6f1fc4
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57043078"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59388907"
 ---
-<a name="creating-model-classes-with-the-entity-framework-c"></a>Creazione di classi di modelli con Entity Framework (C#)
-====================
+# <a name="creating-model-classes-with-the-entity-framework-c"></a>Creazione di classi di modelli con Entity Framework (C#)
+
 by [Microsoft](https://github.com/microsoft)
 
 > In questa esercitazione descrive come usare ASP.NET MVC con Entity Framework Microsoft. Descrive come usare la procedura guidata Entity per creare un modello ADO.NET Entity Data Model. Nel corso di questa esercitazione, creiamo un'applicazione web che illustra come selezionare, inserire, aggiornare ed eliminare i dati del database tramite Entity Framework.
@@ -219,4 +219,4 @@ Lo scopo di questa esercitazione è dimostrare come creare applicazioni web basa
 Innanzitutto, abbiamo parlato di come è possibile usare la procedura guidata Entity Data Model per generare un Entity Data Model dall'interno di Visual Studio. Successivamente, descrive come usare LINQ to Entities per recuperare un set di record di database da una tabella di database. Infine, abbiamo utilizzato Entity Framework per inserire, aggiornare ed eliminare i record del database.
 
 > [!div class="step-by-step"]
-> [avanti](creating-model-classes-with-linq-to-sql-cs.md)
+> [Successivo](creating-model-classes-with-linq-to-sql-cs.md)

@@ -8,15 +8,15 @@ ms.date: 06/10/2013
 ms.assetid: 9afe7454-f1bd-4e81-8ecf-12fe54d080c1
 msc.legacyurl: /mvc/overview/getting-started/introduction
 msc.type: chapter
-ms.openlocfilehash: 894de721a0f9e80352417753f07ada38cf966e79
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 055142be60257f0917eb22bc08471c0bec54ca2e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423507"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59387178"
 ---
-<a name="getting-started-with-aspnet-mvc-5"></a>Introduzione ad ASP.NET MVC 5
-====================
+# <a name="getting-started-with-aspnet-mvc-5"></a>Introduzione ad ASP.NET MVC 5
+
 > Introduzione ad ASP.NET MVC 5
 
 [!INCLUDE [consider RP](../../../../includes/razor.md)]

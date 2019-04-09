@@ -8,15 +8,15 @@ ms.date: 04/01/2009
 ms.assetid: cde4ee53-a5d0-4937-a54b-67877e8266c3
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/deploying-your-site-using-visual-studio-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 94f4f3e0d81f3cfae141c8306731cc8eef6f0efb
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 9512685672e42091e7be11c5710a2434ca8b0488
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57033508"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59392417"
 ---
-<a name="deploying-your-site-using-visual-studio-c"></a>Distribuzione del sito tramite Visual Studio (C#)
-====================
+# <a name="deploying-your-site-using-visual-studio-c"></a>Distribuzione del sito tramite Visual Studio (C#)
+
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Scaricare il codice](http://download.microsoft.com/download/4/5/F/45F815EC-8B0E-46D3-9FB8-2DC015CCA306/ASPNET_Hosting_Tutorial_04_CS.zip) o [Scarica il PDF](http://download.microsoft.com/download/E/8/9/E8920AE6-D441-41A7-8A77-9EF8FF970D8B/aspnet_tutorial04_DeployingViaVS_cs.pdf)
@@ -45,7 +45,7 @@ Diamo un'occhiata a utilizzando lo strumento Copia sito Web per pubblicare l'app
 Avviare il progetto dello strumento Copia sito Web facendo clic sull'icona Copia sito Web in Esplora soluzioni (questa icona viene visualizzato un cerchio nella figura 1). In alternativa, è possibile selezionare l'opzione di Copia sito Web dal menu sito Web. Entrambi gli approcci avvia l'interfaccia utente di Copia sito Web mostrato nella figura 1; solo il riquadro a sinistra nella figura 1 viene popolato perché abbiamo ancora a connettersi a un server remoto.
 
 
-[![L'interfaccia utente dello strumento Copia sito Web è suddivisa in due riquadri](deploying-your-site-using-visual-studio-cs/_static/image2.png)](deploying-your-site-using-visual-studio-cs/_static/image1.png)
+[![TInterfaccia utente dello strumento di he Copia sito Web è suddivisa in due riquadri](deploying-your-site-using-visual-studio-cs/_static/image2.png)](deploying-your-site-using-visual-studio-cs/_static/image1.png)
 
 **Figura 1**: L'interfaccia utente dello strumento Copia sito Web è suddivisa in due riquadri ([fare clic per visualizzare l'immagine con dimensioni normali](deploying-your-site-using-visual-studio-cs/_static/image3.png))
 
@@ -62,7 +62,7 @@ Per distribuire il sito è necessario innanzitutto connettersi al provider di ho
 La maggior parte dei provider di host web supporto FTP, ma meno offre il supporto di estensione del Server di FrontPage. Per questo motivo, ho selezionato l'opzione sito FTP e quindi immettere le informazioni di connessione come illustrato nella figura 2.
 
 
-[![Specificare il sito Web destinazione](deploying-your-site-using-visual-studio-cs/_static/image5.png)](deploying-your-site-using-visual-studio-cs/_static/image4.png)
+[![Sspecificare il sito Web destinazione](deploying-your-site-using-visual-studio-cs/_static/image5.png)](deploying-your-site-using-visual-studio-cs/_static/image4.png)
 
 **Figura 2**: Specificare il sito Web di destinazione ([fare clic per visualizzare l'immagine con dimensioni normali](deploying-your-site-using-visual-studio-cs/_static/image6.png))
 
@@ -72,7 +72,7 @@ Dopo la connessione, lo strumento Copia sito Web carica i file nel sito remoto n
 È possibile aggiungere una nuova pagina al progetto BookReviewsWSP e distribuirlo in modo che possiamo vedere lo strumento Copia sito Web in azione. Creare una nuova pagina ASP.NET in Visual Studio nella directory radice denominata `Privacy.aspx`. Hanno la pagina utilizzare la pagina master `Site.master` e aggiungere informativa sulla privacy del sito in questa pagina. Figura 3 mostra Visual Studio dopo aver creata questa pagina.
 
 
-[![Aggiungere una nuova pagina denominata &lt;codice&gt;Privacy.aspx&lt;/code&gt; alla cartella radice del sito Web](deploying-your-site-using-visual-studio-cs/_static/image8.png)](deploying-your-site-using-visual-studio-cs/_static/image7.png)
+[![Auna nuova pagina denominata gg &lt;codice&gt;Privacy.aspx&lt;/code&gt; alla cartella radice del sito Web](deploying-your-site-using-visual-studio-cs/_static/image8.png)](deploying-your-site-using-visual-studio-cs/_static/image7.png)
 
 **Figura 3**: Aggiungere una nuova pagina denominata `Privacy.aspx` alla cartella radice del sito Web ([fare clic per visualizzare l'immagine con dimensioni normali](deploying-your-site-using-visual-studio-cs/_static/image9.png))
 
@@ -80,7 +80,7 @@ Dopo la connessione, lo strumento Copia sito Web carica i file nel sito remoto n
 Successivamente, tornare all'interfaccia utente Copia sito Web. Come illustrato nella figura 4, il riquadro sinistro include ora i nuovi file - `Policy.aspx` e `Policy.aspx.cs`. Inoltre, questi file sono contrassegnati con un'icona di freccia e un stato di nuovo, che indica che essi esistano nel sito locale, ma non sul sito remoto.
 
 
-[![Lo strumento Copia sito Web include il nuovo &lt;codice&gt;Privacy.aspx&lt;/code&gt; pagina nel relativo riquadro a sinistra](deploying-your-site-using-visual-studio-cs/_static/image11.png)](deploying-your-site-using-visual-studio-cs/_static/image10.png)
+[![TStrumento Copia sito Web che include il nuovo &lt;codice&gt;Privacy.aspx&lt;/code&gt; pagina nel relativo riquadro di sinistra](deploying-your-site-using-visual-studio-cs/_static/image11.png)](deploying-your-site-using-visual-studio-cs/_static/image10.png)
 
 **Figura 4**: Lo strumento Copia sito Web include il nuovo `Privacy.aspx` pagina nel relativo riquadro di sinistra ([fare clic per visualizzare l'immagine con dimensioni normali](deploying-your-site-using-visual-studio-cs/_static/image12.png))
 
@@ -90,7 +90,7 @@ Per distribuire il nuovo file, selezionarli e quindi fare clic sull'icona di fre
 Insieme a elencano i nuovi file, lo strumento Copia sito Web evidenzia tutti i file che differiscono tra i siti locali e remoti. Per visualizzare questa azione, tornare al `Privacy.aspx` pagina e aggiungere alcune altre parole l'informativa sulla privacy. Salvare la pagina e quindi tornare allo strumento Copia sito Web. Come illustrato nella figura 5, il `Privacy.aspx` pagina nel riquadro di sinistra lo stato di modifica che indica che è sincronizzato con il sito remoto.
 
 
-[![Lo strumento Copia sito Web indica che il &lt;codice&gt;Privacy.aspx&lt;/code&gt; pagina è stata modificata](deploying-your-site-using-visual-studio-cs/_static/image14.png)](deploying-your-site-using-visual-studio-cs/_static/image13.png)
+[![TStrumento Copia sito Web che indica che il &lt;codice&gt;Privacy.aspx&lt;/code&gt; pagina è stata modificata.](deploying-your-site-using-visual-studio-cs/_static/image14.png)](deploying-your-site-using-visual-studio-cs/_static/image13.png)
 
 **Figura 5**: Lo strumento Copia sito Web indica che il `Privacy.aspx` pagina è stata modificata ([fare clic per visualizzare l'immagine con dimensioni normali](deploying-your-site-using-visual-studio-cs/_static/image15.png))
 
@@ -117,7 +117,7 @@ Diamo un'occhiata distribuzione dell'applicazione le recensioni dei libri usando
 È inoltre disponibile un'opzione per caricare il contenuto del `App_Data` cartella.
 
 
-[![Specificare il sito Web destinazione](deploying-your-site-using-visual-studio-cs/_static/image17.png)](deploying-your-site-using-visual-studio-cs/_static/image16.png)
+[![Sspecificare il sito Web destinazione](deploying-your-site-using-visual-studio-cs/_static/image17.png)](deploying-your-site-using-visual-studio-cs/_static/image16.png)
 
 **Figura 6**: Specificare il sito Web di destinazione ([fare clic per visualizzare l'immagine con dimensioni normali](deploying-your-site-using-visual-studio-cs/_static/image18.png))
 
@@ -127,7 +127,7 @@ Per l'applicazione di recensione sito remoto contiene i file vengano distribuiti
 Figura 7 mostra i file sul sito FTP dopo l'operazione di pubblicazione è stata completata. Si noti che solo le pagine di codice e i file di supporto necessari sever-client-side e sono stati caricati.
 
 
-[![Solo i file necessari sono stati pubblicati nell'ambiente di produzione](deploying-your-site-using-visual-studio-cs/_static/image20.png)](deploying-your-site-using-visual-studio-cs/_static/image19.png)
+[![Oi file necessari sono stati pubblicati nell'ambiente di produzione sola](deploying-your-site-using-visual-studio-cs/_static/image20.png)](deploying-your-site-using-visual-studio-cs/_static/image19.png)
 
 **Figura 7**: Solo i necessari file sono stati pubblicati nell'ambiente di produzione ([fare clic per visualizzare l'immagine con dimensioni normali](deploying-your-site-using-visual-studio-cs/_static/image21.png))
 

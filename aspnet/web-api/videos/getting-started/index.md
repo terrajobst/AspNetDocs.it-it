@@ -8,22 +8,22 @@ ms.date: 02/16/2012
 ms.assetid: 1c7cc326-04f5-4578-bf62-a7d381f380f7
 msc.legacyurl: /web-api/videos/getting-started
 msc.type: chapter
-ms.openlocfilehash: cfcbe3732a3e3cbd6a210839a318a17ed636d636
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5cec547993722e587fc0f54486f7f2ca388db64d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57020988"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59404104"
 ---
-<a name="aspnet-web-api-overview-and-getting-started-videos"></a>Panoramica dell'API Web ASP.NET come guida introduttiva video
-====================
+# <a name="aspnet-web-api-overview-and-getting-started-videos"></a>Panoramica dell'API Web ASP.NET come guida introduttiva video
+
 > Si tratta di una serie di video per iniziare a usare API Web ASP.NET.
 
 
-- [ASP.NET Web API](aspnet-web-api.md)
+- [API Web ASP.NET](aspnet-web-api.md)
 - [API Web ASP.NET, parte 1: La prima API Web](your-first-web-api.md)
 - [API Web ASP.NET, parte 2: Recupero dei dati](getting-data.md)
-- [API Web ASP.NET, parte 3: Delete e Update](delete-and-update.md)
-- [API Web ASP.NET, parte 4: Paging e l'esecuzione di query](paging-and-querying.md)
+- [API Web ASP.NET, parte 3: Eliminare e aggiornare](delete-and-update.md)
+- [API Web ASP.NET, parte 4: Suddivisione in pagine ed esecuzione di query](paging-and-querying.md)
 - [API Web ASP.NET, parte 5: Convalida personalizzata](custom-validation.md)
 - [API Web ASP.NET, parte 6: Autorizzazione](authorization.md)

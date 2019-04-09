@@ -8,15 +8,15 @@ ms.date: 02/20/2005
 ms.assetid: 2bb109d2-e299-46ea-9054-fa0263b59165
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/caching
 msc.type: authoredcontent
-ms.openlocfilehash: 5c97464ee50291338a80120a86b1b86b07bc672d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5e16415df5bd4203995bec943ffa682f7da82357
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57032928"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59400204"
 ---
-<a name="caching"></a>Memorizzazione nella cache
-====================
+# <a name="caching"></a>Memorizzazione nella cache
+
 by [Microsoft](https://github.com/microsoft)
 
 > La comprensione della memorizzazione nella cache è importante per un'applicazione ASP.NET con buone prestazioni. ASP.NET 1.x disponibili tre diverse opzioni per la memorizzazione nella cache; la memorizzazione nella cache di output, la memorizzazione nella cache di frammento e l'API della cache.
@@ -56,7 +56,7 @@ Per invalidare l'elemento che è stato inserito in precedenza, è sufficiente ri
 
 Si noti che la chiave dell'elemento che funge da chiave di cache deve essere lo stesso come il valore aggiunto nella matrice delle chiavi della cache.
 
-## <a name="polling-based-sql-cache-dependenciesemalso-called-table-based-dependenciesem"></a>Dipendenze della Cache di SQL basati su polling<em>(detto anche le dipendenze basate su tabella)</em>
+## <a name="polling-based-sql-cache-dependenciesalso-called-table-based-dependencies"></a>Basati su polling Dependencies(Also called Table-Based Dependencies) Cache SQL
 
 SQL Server 7 e 2000 usano il modello basati su polling per le dipendenze della cache SQL. Il modello basato su polling Usa un trigger in una tabella di database che viene attivata quando cambiano i dati nella tabella. Che attivano gli aggiornamenti una **changeId** campo nella tabella di notifica che ASP.NET controlla periodicamente. Se il **changeId** campo è stato aggiornato, ASP.NET non saprà che i dati sono stati modificati e non invalida i dati memorizzati nella cache.
 

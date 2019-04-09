@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: 25ebaf1f-5a9f-423d-98c7-1d694e93664f
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/triggering-an-animation-in-another-control-vb
 msc.type: authoredcontent
-ms.openlocfilehash: b390ebfaec695a1c2565a91acaa38dbcc10a8959
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: c74e829c85ae3b57d54a62aeb79388f1131e7184
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425795"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59398202"
 ---
-<a name="triggering-an-animation-in-another-control-vb"></a>Attivazione di un'animazione in un altro controllo (VB)
-====================
+# <a name="triggering-an-animation-in-another-control-vb"></a>Attivazione di un'animazione in un altro controllo (VB)
+
 da [Christian Wenz](https://github.com/wenz)
 
 [Scaricare il codice](http://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation8.vb.zip) o [Scarica il PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation8VB.pdf)
@@ -57,7 +57,7 @@ All'interno di `<Animations>` nodo, le animazioni sul posto come di consueto. Pe
 Si noti l'ordine speciale in cui vengono visualizzate le singole animazioni. Prima di tutto, il pulsante disattivato una volta che viene eseguita l'animazione. Poiché è presente alcun `AnimationTarget` attributo la `<EnableAction>` elemento, questa animazione viene applicata al controllo origine: il pulsante. I passaggi successivi due animazione devono essere eseguiti in parallelo (`<Parallel>` elemento). Entrambi hanno loro `AnimationTarget` attributi impostati `"Panel1"`, l'animazione in questo modo il pannello, non il pulsante.
 
 
-[![Un clic del mouse sul pulsante Avvia l'animazione di pannello](triggering-an-animation-in-another-control-vb/_static/image2.png)](triggering-an-animation-in-another-control-vb/_static/image1.png)
+[![A clic del mouse sul pulsante Avvia l'animazione di pannello](triggering-an-animation-in-another-control-vb/_static/image2.png)](triggering-an-animation-in-another-control-vb/_static/image1.png)
 
 Un clic del mouse sul pulsante Avvia l'animazione di pannello ([fare clic per visualizzare l'immagine con dimensioni normali](triggering-an-animation-in-another-control-vb/_static/image3.png))
 

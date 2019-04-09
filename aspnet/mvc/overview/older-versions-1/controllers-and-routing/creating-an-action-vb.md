@@ -8,15 +8,15 @@ ms.date: 03/02/2009
 ms.assetid: c8d93e11-ef78-4a30-afbc-f30419000a60
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/creating-an-action-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 070dd4c9d68327eec52fe385000b9ca3907eaa9f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5f8eeeaa9bd77c0259f680198e57ade8d49cd06b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57051938"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59382621"
 ---
-<a name="creating-an-action-vb"></a>Creazione di un'azione (VB)
-====================
+# <a name="creating-an-action-vb"></a>Creazione di un'azione (VB)
+
 by [Microsoft](https://github.com/microsoft)
 
 > Informazioni su come aggiungere una nuova azione a un controller MVC ASP.NET. Informazioni sui requisiti per un metodo su cui eseguire un'azione.
@@ -57,7 +57,7 @@ Se è necessario creare un metodo pubblico in una classe controller e non si vuo
 Se si prova a richiamare l'azione del controller CompanySecrets() digitando /Work/CompanySecrets nella barra degli indirizzi del browser si riceverà il messaggio di errore nella figura 1.
 
 
-[![Richiama un metodo NonAction](creating-an-action-vb/_static/image1.jpg)](creating-an-action-vb/_static/image1.png)
+[![Iun metodo NonAction nvoking](creating-an-action-vb/_static/image1.jpg)](creating-an-action-vb/_static/image1.png)
 
 **Figura 01**: Richiama un metodo NonAction ([fare clic per visualizzare l'immagine con dimensioni normali](creating-an-action-vb/_static/image2.png))
 

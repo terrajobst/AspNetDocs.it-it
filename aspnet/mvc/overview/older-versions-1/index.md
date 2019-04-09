@@ -8,15 +8,15 @@ ms.date: 10/10/2014
 ms.assetid: 1506f70f-6919-45bd-8c75-a17aff77510c
 msc.legacyurl: /mvc/overview/older-versions-1
 msc.type: chapter
-ms.openlocfilehash: 8f06d9d08c381e8c6d704149b29d46196baceae9
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5827542a951a4b65d1c9b02b0ad15ed988bf1456
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57021168"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59399632"
 ---
-<a name="older-versions---mvc-1-and-2"></a>Versioni precedenti - MVC 1 e 2
-====================
+# <a name="older-versions---mvc-1-and-2"></a>Versioni precedenti - MVC 1 e 2
+
 > Risorse per imparare a programmare MVC 1 e 2.
 
 
@@ -104,20 +104,20 @@ ms.locfileid: "57021168"
     - [Creazione di unit test per le applicazioni ASP.NET MVC (VB)](unit-testing/creating-unit-tests-for-asp-net-mvc-applications-vb.md)
 - [Contact Manager](contact-manager/index.md)
 
-    - [Iterazione 1 - Creare l'applicazione (C#)](contact-manager/iteration-1-create-the-application-cs.md)
-    - [Iterazione 2 - Migliorare l'aspetto dell'applicazione (C#)](contact-manager/iteration-2-make-the-application-look-nice-cs.md)
-    - [Iterazione 3 - Aggiungere la convalida dei form (C#)](contact-manager/iteration-3-add-form-validation-cs.md)
-    - [Iterazione 4 - Rendere l'applicazione a regime di controllo libero (C#)](contact-manager/iteration-4-make-the-application-loosely-coupled-cs.md)
-    - [Iterazione 5 - Creare gli unit test (C#)](contact-manager/iteration-5-create-unit-tests-cs.md)
-    - [Iterazione 6 - Usare lo sviluppo basato su test (C#)](contact-manager/iteration-6-use-test-driven-development-cs.md)
-    - [Iterazione 7 - Aggiungere funzionalità Ajax (C#)](contact-manager/iteration-7-add-ajax-functionality-cs.md)
-    - [Iterazione 1 - Creare l'applicazione (VB)](contact-manager/iteration-1-create-the-application-vb.md)
-    - [Iterazione 2 - Migliorare l'aspetto dell'applicazione (VB)](contact-manager/iteration-2-make-the-application-look-nice-vb.md)
-    - [Iterazione 3 - Aggiungere la convalida dei form (VB)](contact-manager/iteration-3-add-form-validation-vb.md)
-    - [Iterazione 4 - Rendere l'applicazione a regime di controllo libero (VB)](contact-manager/iteration-4-make-the-application-loosely-coupled-vb.md)
-    - [Iterazione 5 - Creare gli unit test (VB)](contact-manager/iteration-5-create-unit-tests-vb.md)
-    - [Iterazione 6 - Usare lo sviluppo basato su test (VB)](contact-manager/iteration-6-use-test-driven-development-vb.md)
-    - [Iterazione 7 - Aggiungere funzionalità Ajax (VB)](contact-manager/iteration-7-add-ajax-functionality-vb.md)
+    - [Iterazione #1-creare l'applicazione (c#)](contact-manager/iteration-1-create-the-application-cs.md)
+    - [Iterazione #2-migliorare l'applicazione aspetto interessante (c#)](contact-manager/iteration-2-make-the-application-look-nice-cs.md)
+    - [Iterazione #3-aggiungere la convalida dei form (c#)](contact-manager/iteration-3-add-form-validation-cs.md)
+    - [Iterazione #4-rendere l'applicazione regime di controllo (c#)](contact-manager/iteration-4-make-the-application-loosely-coupled-cs.md)
+    - [Iterazione #5-creare gli unit test (c#)](contact-manager/iteration-5-create-unit-tests-cs.md)
+    - [Iterazione #6-usare lo sviluppo basato su test (c#)](contact-manager/iteration-6-use-test-driven-development-cs.md)
+    - [Iterazione #7-aggiungere funzionalità Ajax (c#)](contact-manager/iteration-7-add-ajax-functionality-cs.md)
+    - [Iterazione #1-creare l'applicazione (VB)](contact-manager/iteration-1-create-the-application-vb.md)
+    - [Iterazione #2-migliorare l'applicazione aspetto interessante (VB)](contact-manager/iteration-2-make-the-application-look-nice-vb.md)
+    - [Iterazione #3-aggiungere la convalida dei form (VB)](contact-manager/iteration-3-add-form-validation-vb.md)
+    - [Iterazione #4-rendere l'applicazione regime di controllo (VB)](contact-manager/iteration-4-make-the-application-loosely-coupled-vb.md)
+    - [Iterazione #5-creare gli unit test (VB)](contact-manager/iteration-5-create-unit-tests-vb.md)
+    - [Iterazione #6-usare lo sviluppo basato su test (VB)](contact-manager/iteration-6-use-test-driven-development-vb.md)
+    - [Iterazione #7-aggiungere funzionalità Ajax (VB)](contact-manager/iteration-7-add-ajax-functionality-vb.md)
 - [NerdDinner](nerddinner/index.md)
 
     - [Introduzione all'esercitazione NerdDinner](nerddinner/introducing-the-nerddinner-tutorial.md)
@@ -125,10 +125,10 @@ ms.locfileid: "57021168"
     - [Creare un database](nerddinner/create-a-database.md)
     - [Creare un modello con convalide delle regole business](nerddinner/build-a-model-with-business-rule-validations.md)
     - [Usare controller e visualizzazioni per implementare un'interfaccia utente elenco/dettagli](nerddinner/use-controllers-and-views-to-implement-a-listingdetails-ui.md)
-    - [Fornire il supporto per operazioni di creazione, lettura, aggiornamento ed eliminazione sulle voci di dati dei moduli](nerddinner/provide-crud-create-read-update-delete-data-form-entry-support.md)
+    - [Fornire il supporto per operazioni di creazione, lettura, aggiornamento ed eliminazione sulle voci di moduli di dati](nerddinner/provide-crud-create-read-update-delete-data-form-entry-support.md)
     - [Usare ViewData e implementare classi ViewModel](nerddinner/use-viewdata-and-implement-viewmodel-classes.md)
     - [Riutilizzare l'interfaccia utente tramite pagine master e visualizzazioni parziali](nerddinner/re-use-ui-using-master-pages-and-partials.md)
-    - [Implementare un paging dei dati efficiente](nerddinner/implement-efficient-data-paging.md)
+    - [Implementare una suddivisione in pagine efficiente dei dati](nerddinner/implement-efficient-data-paging.md)
     - [Proteggere le applicazioni tramite l'autenticazione e l'autorizzazione](nerddinner/secure-applications-using-authentication-and-authorization.md)
     - [Usare AJAX per distribuire aggiornamenti dinamici](nerddinner/use-ajax-to-deliver-dynamic-updates.md)
     - [Usare AJAX per implementare scenari di mapping](nerddinner/use-ajax-to-implement-mapping-scenarios.md)

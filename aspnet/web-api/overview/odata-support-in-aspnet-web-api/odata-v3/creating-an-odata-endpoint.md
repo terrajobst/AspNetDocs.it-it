@@ -8,15 +8,15 @@ ms.date: 02/25/2014
 ms.assetid: 262843d6-43a2-4f1c-82d9-0b90ae6df0cf
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-v3/creating-an-odata-endpoint
 msc.type: authoredcontent
-ms.openlocfilehash: 2e0d3b45fd51192d227d852dc2f05b45ca42944c
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: fa0573738fee8f1decc13c9797f644002931e09d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57031198"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59381497"
 ---
-<a name="creating-an-odata-v3-endpoint-with-web-api-2"></a>Creazione di un Endpoint OData v3 con API Web 2
-====================
+# <a name="creating-an-odata-v3-endpoint-with-web-api-2"></a>Creazione di un Endpoint OData v3 con API Web 2
+
 da [Mike Wasson](https://github.com/MikeWasson)
 
 [Download progetto completato](http://code.msdn.microsoft.com/ASPNET-Web-API-OData-cecdb524)

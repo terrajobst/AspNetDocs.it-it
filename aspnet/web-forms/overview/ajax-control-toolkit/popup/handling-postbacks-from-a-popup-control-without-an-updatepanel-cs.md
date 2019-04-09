@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: 25444121-5a72-4dac-8e50-ad2b7ac667af
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/popup/handling-postbacks-from-a-popup-control-without-an-updatepanel-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 3ad041b3df270e65c1dd39cf0cb6adb28b57880e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 06713aaf84ecfa5a793c32e3762cb4790235bf8c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57036848"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59385995"
 ---
-<a name="handling-postbacks-from-a-popup-control-without-an-updatepanel-c"></a>Gestione dei postback da un controllo Popup senza UpdatePanel (C#)
-====================
+# <a name="handling-postbacks-from-a-popup-control-without-an-updatepanel-c"></a>Gestione dei postback da un controllo Popup senza UpdatePanel (C#)
+
 da [Christian Wenz](https://github.com/wenz)
 
 [Scaricare il codice](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/PopupControl3.cs.zip) o [Scarica il PDF](http://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/popupcontrol3CS.pdf)
@@ -49,12 +49,12 @@ Nel codice lato server, è necessario leggere il valore del campo nascosto. Poic
 [!code-aspx[Main](handling-postbacks-from-a-popup-control-without-an-updatepanel-cs/samples/sample4.aspx)]
 
 
-[![Quando l'utente fa clic nella casella di testo viene visualizzato il calendario](handling-postbacks-from-a-popup-control-without-an-updatepanel-cs/_static/image2.png)](handling-postbacks-from-a-popup-control-without-an-updatepanel-cs/_static/image1.png)
+[![Tegli calendario viene visualizzato quando l'utente fa clic nella casella di testo](handling-postbacks-from-a-popup-control-without-an-updatepanel-cs/_static/image2.png)](handling-postbacks-from-a-popup-control-without-an-updatepanel-cs/_static/image1.png)
 
 Il calendario viene visualizzato quando l'utente fa clic nella casella di testo ([fare clic per visualizzare l'immagine con dimensioni normali](handling-postbacks-from-a-popup-control-without-an-updatepanel-cs/_static/image3.png))
 
 
-[![Facendo clic su una data lo inserisce nella casella di testo](handling-postbacks-from-a-popup-control-without-an-updatepanel-cs/_static/image5.png)](handling-postbacks-from-a-popup-control-without-an-updatepanel-cs/_static/image4.png)
+[![Cin una data licking lo inserisce nella casella di testo](handling-postbacks-from-a-popup-control-without-an-updatepanel-cs/_static/image5.png)](handling-postbacks-from-a-popup-control-without-an-updatepanel-cs/_static/image4.png)
 
 Facendo clic su una data lo inserisce nella casella di testo ([fare clic per visualizzare l'immagine con dimensioni normali](handling-postbacks-from-a-popup-control-without-an-updatepanel-cs/_static/image6.png))
 

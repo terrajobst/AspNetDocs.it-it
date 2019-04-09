@@ -8,18 +8,18 @@ ms.date: 03/28/2008
 ms.assetid: 3332d6e7-e2e1-4144-b805-e71d51e7e415
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/aspnet-ajax/understanding-asp-net-ajax-web-services
 msc.type: authoredcontent
-ms.openlocfilehash: 5e59077373b68b907391eff5349e1925222792a3
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: e576e11d63f940f1683ed26d217ff255a31b007c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57028108"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59388413"
 ---
-<a name="understanding-aspnet-ajax-web-services"></a>Informazioni sui servizi Web di ASP.NET AJAX
-====================
+# <a name="understanding-aspnet-ajax-web-services"></a>Informazioni sui servizi Web di ASP.NET AJAX
+
 da [Scott Cate](https://github.com/scottcate)
 
-[Scaricare PDF](http://download.microsoft.com/download/C/1/9/C19A3451-1D14-477C-B703-54EF22E197EE/AJAX_tutorial05_Web_Services_with_MS_Ajax_cs.pdf)
+[Scarica il PDF](http://download.microsoft.com/download/C/1/9/C19A3451-1D14-477C-B703-54EF22E197EE/AJAX_tutorial05_Web_Services_with_MS_Ajax_cs.pdf)
 
 > Servizi Web sono parte integrante di .NET framework che offrono una soluzione cross-platform per lo scambio di dati tra sistemi distribuiti. Anche se i servizi Web vengono in genere usati per consentire a diversi sistemi operativi, modelli a oggetti e linguaggi di programmazione per inviare e ricevere dati, possono anche essere utilizzati per inserire dati in una pagina ASP.NET AJAX o inviare dati da una pagina a un sistema back-end in modo dinamico. Tutto questo può avvenire senza alcun intervento per operazioni di postback.
 
@@ -48,7 +48,8 @@ Questa sostituzione HttpHandler viene eseguita per permettere le chiamate JavaSc
 
 [!code-json[Main](understanding-asp-net-ajax-web-services/samples/sample2.json)]
 
-> *> [!NOTE] il nome dell'operazione è definito come parte dell'URL per il servizio web. Inoltre, i messaggi di richiesta non vengono sempre inviati tramite JSON. Servizi Web possono utilizzare l'attributo ScriptMethod con il parametro UseHttpGet impostato su true, che fa sì che i parametri da passare tramite un i parametri della stringa di query.*
+> *> [!NOTE]
+> il nome dell'operazione è definito come parte dell'URL per il servizio web. Inoltre, i messaggi di richiesta non vengono sempre inviati tramite JSON. Servizi Web possono utilizzare l'attributo ScriptMethod con il parametro UseHttpGet impostato su true, che fa sì che i parametri da passare tramite un i parametri della stringa di query.*
 
 
 **Listato 3. Messaggio di risposta del servizio Web serializzato in JSON**
@@ -157,7 +158,8 @@ Aggiunge un riferimento al CustomersService.asmx tramite il controllo ScriptMana
 
 [!code-html[Main](understanding-asp-net-ajax-web-services/samples/sample14.html)]
 
-> *> [!NOTE] Se si desidera visualizzare il codice proxy JavaScript effettivo che viene generato è possibile digitare l'URL per il servizio Web .NET desiderato nella casella Indirizzo Internet Explorer e aggiungere /js alla fine di esso.*
+> *> [!NOTE]
+> Se si desidera visualizzare il codice proxy JavaScript effettivo che viene generato è possibile digitare l'URL per il servizio Web .NET desiderato nella casella Indirizzo Internet Explorer e aggiungere /js alla fine di esso.*
 
 
 Se è abilitato il debug nel file Web. config che una versione di debug del proxy JavaScript verrà incorporata nella pagina come indicato di seguito:
@@ -181,7 +183,7 @@ Viene illustrato un esempio dell'uso di un proxy di JavaScript per chiamare un m
 Lo spazio dei nomi InterfaceTraining fa riferimento a questa chiamata, CustomersService classe e metodo Web GetCustomersByCountry definito nel servizio. Passa un valore del paese ottenuto da una casella di testo, nonché una funzione di callback denominato OnWSRequestComplete che deve essere richiamato al termine della chiamata servizio Web asincrona. OnWSRequestComplete gestisce la matrice di oggetti Customer restituita dal servizio e li converte in una tabella che viene visualizzata nella pagina. L'output generato dalla chiamata è illustrato nella figura 1.
 
 
-[![Associazione di dati ottenuti eseguendo una chiamata AJAX asincrona a un servizio Web.](understanding-asp-net-ajax-web-services/_static/image2.png)](understanding-asp-net-ajax-web-services/_static/image1.png)
+[![Bdata di c ottenuta effettuando una chiamata AJAX asincrona a un servizio Web.](understanding-asp-net-ajax-web-services/_static/image2.png)](understanding-asp-net-ajax-web-services/_static/image1.png)
 
 **Figura 1**: Associazione di dati ottenuti eseguendo una chiamata AJAX asincrona a un servizio Web.  ([Fare clic per visualizzare l'immagine con dimensioni normali](understanding-asp-net-ajax-web-services/_static/image3.png))
 
@@ -199,7 +201,7 @@ Chiamate asincrone ai servizi Web possono verificarsi diversi tipi di errori, ad
 Eventuali errori che si verificano quando viene chiamato il servizio Web verranno attivata la funzione di callback OnWSRequestFailed() da chiamare, che accetta un oggetto che rappresenta l'errore come parametro. L'oggetto errore espone diverse funzioni differenti per determinare la causa dell'errore, nonché se il timeout della chiamata. Listato 14 mostra un esempio di utilizzo delle funzioni di errore diversi e la figura 2 mostra un esempio di output generati dalle funzioni.
 
 
-[![Output generato dalla chiamata di funzioni di errore ASP.NET AJAX.](understanding-asp-net-ajax-web-services/_static/image5.png)](understanding-asp-net-ajax-web-services/_static/image4.png)
+[![Output generato chiamando funzioni di errore ASP.NET AJAX.](understanding-asp-net-ajax-web-services/_static/image5.png)](understanding-asp-net-ajax-web-services/_static/image4.png)
 
 **Figura 2**: Output generato dalla chiamata di funzioni di errore ASP.NET AJAX.  ([Fare clic per visualizzare l'immagine con dimensioni normali](understanding-asp-net-ajax-web-services/_static/image6.png))
 
@@ -225,7 +227,7 @@ I tipi complessi accettato o restituiti da un servizio Web vengono esposti autom
 Per rispondere a questa domanda, si supponga che una pagina ASP.NET AJAX consente di visualizzare i dati dei clienti e consente agli utenti di aggiornare l'indirizzo del cliente. Se il servizio Web specifica che il tipo di indirizzo (un tipo complesso definito all'interno di una classe CustomerDetails) può essere inviato al client il processo di aggiornamento può essere suddivisi in funzioni separate per una migliore riutilizzo del codice.
 
 
-[![Output di creazione dalla chiamata a un servizio Web che restituisce i dati RSS.](understanding-asp-net-ajax-web-services/_static/image8.png)](understanding-asp-net-ajax-web-services/_static/image7.png)
+[![Output creazione dalla chiamata a un servizio Web che restituisce i dati RSS.](understanding-asp-net-ajax-web-services/_static/image8.png)](understanding-asp-net-ajax-web-services/_static/image7.png)
 
 **Figura 3**: Output di creazione dalla chiamata a un servizio Web che restituisce i dati RSS.  ([Fare clic per visualizzare l'immagine con dimensioni normali](understanding-asp-net-ajax-web-services/_static/image9.png))
 
@@ -273,7 +275,7 @@ Nei casi in cui è sufficiente utilizzare il controllo in una pagina specifica �
 [!code-aspx[Main](understanding-asp-net-ajax-web-services/samples/sample25.aspx)]
 
 
-[![Utilizzo del controllo AutoCompleteExtender.](understanding-asp-net-ajax-web-services/_static/image11.png)](understanding-asp-net-ajax-web-services/_static/image10.png)
+[![Uaccedere al controllo AutoCompleteExtender].(understanding-asp-net-ajax-web-services/_static/image11.png)](understanding-asp-net-ajax-web-services/_static/image10.png)
 
 **Figura 4**: Utilizzo del controllo AutoCompleteExtender.  ([Fare clic per visualizzare l'immagine con dimensioni normali](understanding-asp-net-ajax-web-services/_static/image12.png))
 

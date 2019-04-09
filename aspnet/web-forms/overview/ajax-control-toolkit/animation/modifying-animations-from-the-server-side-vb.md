@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: addcf4aa-340a-460b-9c64-506424a1f725
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/modifying-animations-from-the-server-side-vb
 msc.type: authoredcontent
-ms.openlocfilehash: ef32c8f4846b18f11d816a64a3e4292b67b232e9
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: fb7e992246b9c630d99a1493f344c4089540d67e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57061318"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59398085"
 ---
-<a name="modifying-animations-from-the-server-side-vb"></a>Modifica delle animazioni dal lato Server (VB)
-====================
+# <a name="modifying-animations-from-the-server-side-vb"></a>Modifica delle animazioni dal lato Server (VB)
+
 da [Christian Wenz](https://github.com/wenz)
 
 [Scaricare il codice](http://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation9.vb.zip) o [Scarica il PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation9VB.pdf)
@@ -55,7 +55,7 @@ Infine, aggiungere il `AnimationExtender` controllo alla pagina corrente, all'in
 [!code-vb[Main](modifying-animations-from-the-server-side-vb/samples/sample6.vb)]
 
 
-[![L'animazione viene creata usando codice c# /VB C sul lato server](modifying-animations-from-the-server-side-vb/_static/image2.png)](modifying-animations-from-the-server-side-vb/_static/image1.png)
+[![Tanimazione he viene creato usando server-side C#codice /VB](modifying-animations-from-the-server-side-vb/_static/image2.png)](modifying-animations-from-the-server-side-vb/_static/image1.png)
 
 L'animazione viene creata usando codice c# /VB C sul lato server ([fare clic per visualizzare l'immagine con dimensioni normali](modifying-animations-from-the-server-side-vb/_static/image3.png))
 

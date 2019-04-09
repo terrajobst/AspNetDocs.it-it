@@ -8,15 +8,15 @@ ms.date: 02/20/2009
 ms.assetid: f65cb436-e493-46fd-9608-384b27385aa1
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-2-make-the-application-look-nice-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 9cda4153c4e4883586a83ac7f89b2f369f8157e5
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 21f7974fe066543d6db1d17d462398a998d0171e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422267"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59382576"
 ---
-<a name="iteration-2--make-the-application-look-nice-vb"></a>Iterazione #2-migliorare l'applicazione aspetto interessante (VB)
-====================
+# <a name="iteration-2--make-the-application-look-nice-vb"></a>Iterazione #2-migliorare l'applicazione aspetto interessante (VB)
+
 by [Microsoft](https://github.com/microsoft)
 
 [Scaricare il codice](iteration-2-make-the-application-look-nice-vb/_static/contactmanager_2_vb1.zip)
@@ -50,7 +50,7 @@ Si compilerà l'applicazione a varie iterazioni. A ogni iterazione, abbiamo migl
 L'obiettivo di questa iterazione è migliorare l'aspetto dell'applicazione Contact Manager. Attualmente, Contact Manager usa la pagina master visualizzazione MVC ASP.NET predefinita e il foglio di stile CSS (vedere la figura 1). Questi don t sembrare scadenti, ma saprei want t Contact Manager per individuare esattamente come ogni altro sito Web ASP.NET MVC. Si desidera sostituire questi file con i file personalizzati.
 
 
-[![La finestra di dialogo Nuovo progetto](iteration-2-make-the-application-look-nice-vb/_static/image1.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image1.png)
+[![Tfinestra di dialogo Nuovo progetto di he](iteration-2-make-the-application-look-nice-vb/_static/image1.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image1.png)
 
 **Figura 01**: L'aspetto predefinito di un'applicazione ASP.NET MVC ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-2-make-the-application-look-nice-vb/_static/image2.png))
 
@@ -68,7 +68,7 @@ La raccolta di schemi di MVC ASP.NET è una risorsa gratuita fornita da Microsof
 La raccolta di schemi di MVC ASP.NET ospita una raccolta di progetti di sito Web gratuito che sono stati creati specificamente per l'uso in un progetto ASP.NET MVC. Le progettazioni vengono caricate dai membri della community. I visitatori alla raccolta possono votare per le progettazioni preferite (vedere la figura 2).
 
 
-[![La finestra di dialogo Nuovo progetto](iteration-2-make-the-application-look-nice-vb/_static/image2.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image3.png)
+[![Tfinestra di dialogo Nuovo progetto di he](iteration-2-make-the-application-look-nice-vb/_static/image2.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image3.png)
 
 **Figura 02**: La raccolta di schemi di MVC ASP.NET ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-2-make-the-application-look-nice-vb/_static/image4.png))
 
@@ -83,17 +83,17 @@ Mentre Scrivo questa esercitazione, la progettazione più diffusa in gallery è 
 6. Selezionare l'opzione di menu di Visual Studio **Edit, Trova e sostituisci, Sostituzione veloce** e sostituire *[NomeProgettoPersonale]* con *ContactManager* (vedere la figura 5).
 
 
-[![La finestra di dialogo Nuovo progetto](iteration-2-make-the-application-look-nice-vb/_static/image3.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image5.png)
+[![Tfinestra di dialogo Nuovo progetto di he](iteration-2-make-the-application-look-nice-vb/_static/image3.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image5.png)
 
 **Figura 03**: Lo sblocco di un file scaricato dal web ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-2-make-the-application-look-nice-vb/_static/image6.png))
 
 
-[![La finestra di dialogo Nuovo progetto](iteration-2-make-the-application-look-nice-vb/_static/image4.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image7.png)
+[![Tfinestra di dialogo Nuovo progetto di he](iteration-2-make-the-application-look-nice-vb/_static/image4.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image7.png)
 
 **Figura 04**: Sovrascrivendo i file in Esplora soluzioni ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-2-make-the-application-look-nice-vb/_static/image8.png))
 
 
-[![La finestra di dialogo Nuovo progetto](iteration-2-make-the-application-look-nice-vb/_static/image5.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image9.png)
+[![Tfinestra di dialogo Nuovo progetto di he](iteration-2-make-the-application-look-nice-vb/_static/image5.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image9.png)
 
 **Figura 05**: La sostituzione [NomeProgetto] con ContactManager ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-2-make-the-application-look-nice-vb/_static/image10.png))
 
@@ -101,7 +101,7 @@ Mentre Scrivo questa esercitazione, la progettazione più diffusa in gallery è 
 Dopo aver completato questi passaggi, l'applicazione web userà la nuova progettazione. La pagina nella figura 6 viene illustrato l'aspetto dell'applicazione Contact Manager con la progettazione di ottobre.
 
 
-[![La finestra di dialogo Nuovo progetto](iteration-2-make-the-application-look-nice-vb/_static/image6.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image11.png)
+[![Tfinestra di dialogo Nuovo progetto di he](iteration-2-make-the-application-look-nice-vb/_static/image6.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image11.png)
 
 **Figura 06**: ContactManager con il modello di ottobre ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-2-make-the-application-look-nice-vb/_static/image12.png))
 
@@ -115,7 +115,7 @@ Tuttavia, si potrebbe essere necessario creare una struttura completamente univo
 Compresso di Contact Manager dall'iterazione 1 e inviato il progetto per la società di progettazione. Non si dispone di Visual Studio (peccato su di essi), ma che non presentano un problema. È stato possibile scaricare gratuitamente Microsoft Visual Web Developer dal [ https://www.asp.net ](https://www.asp.net) sito Web e aprire l'applicazione Contact Manager in Visual Web Developer. In un paio di giorni, si ha prodotto la progettazione nella figura 7.
 
 
-[![La finestra di dialogo Nuovo progetto](iteration-2-make-the-application-look-nice-vb/_static/image7.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image13.png)
+[![Tfinestra di dialogo Nuovo progetto di he](iteration-2-make-the-application-look-nice-vb/_static/image7.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image13.png)
 
 **Figura 07**: La progettazione di ASP.NET MVC Contact Manager ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-2-make-the-application-look-nice-vb/_static/image14.png))
 
@@ -139,7 +139,7 @@ Il metodo Html.ActionLink() esegue il rendering di un intero collegamento iperte
 Si noti, inoltre, che la nuova progettazione include sia selezionate e schede. Ad esempio, nella figura 8, il **Crea nuovo contatto** è selezionata della scheda e il **contatti personali** scheda non è selezionata.
 
 
-[![La finestra di dialogo Nuovo progetto](iteration-2-make-the-application-look-nice-vb/_static/image8.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image15.png)
+[![Tfinestra di dialogo Nuovo progetto di he](iteration-2-make-the-application-look-nice-vb/_static/image8.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image15.png)
 
 **Figura 08**: Selezionati e deselezionati schede ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-2-make-the-application-look-nice-vb/_static/image16.png))
 

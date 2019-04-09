@@ -8,15 +8,15 @@ ms.date: 11/28/2005
 ms.assetid: 22ddc59d-cd84-4def-a58b-ec3ca57f0d85
 msc.legacyurl: /web-forms/videos/building-20-applications/lesson-4-understanding-web-application-state
 msc.type: video
-ms.openlocfilehash: ff8d5a1dbe5a9c4f2db134793b6dd83dfebe5f3f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 4508d77b7288a08ba1d9e72a683a0c102503ebcc
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57064248"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59393886"
 ---
-<a name="lesson-4-understanding-web-application-state"></a>[Lezione 4:] Informazioni sullo stato dell'applicazione Web
-====================
+# <a name="lesson-4-understanding-web-application-state"></a>[Lezione 4:] Informazioni sullo stato dell'applicazione Web
+
 by [Microsoft](https://github.com/microsoft)
 
 In questa lezione, si vedrà come gestire lo stato in ASP.NET, tra cui i vari oggetti, che è possibile usare per archiviare le informazioni per le applicazioni ASP.NET 2.0.

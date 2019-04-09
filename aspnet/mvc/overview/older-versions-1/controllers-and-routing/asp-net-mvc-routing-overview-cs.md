@@ -8,15 +8,15 @@ ms.date: 08/19/2008
 ms.assetid: 5b39d2d5-4bf9-4d04-94c7-81b84dfeeb31
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/asp-net-mvc-routing-overview-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 188490c5ca075710dcbdcd1c325808f7c1d383bc
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: e2f2246e2126bd6e648f861bcb296fab62a748bb
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57050978"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59380106"
 ---
-<a name="aspnet-mvc-routing-overview-c"></a>Panoramica del routing di ASP.NET MVC (C#)
-====================
+# <a name="aspnet-mvc-routing-overview-c"></a>Panoramica del routing di ASP.NET MVC (C#)
+
 da [Stephen Walther](https://github.com/StephenWalther)
 
 > In questa esercitazione, Stephen Walther spiega come il framework ASP.NET MVC esegue il mapping alle richieste del browser per le azioni del controller.
@@ -95,7 +95,7 @@ Infine, richiamare il metodo Index () nel listato 5 con l'URL avremo genera un'e
 [!code-csharp[Main](asp-net-mvc-routing-overview-cs/samples/sample5.cs)]
 
 
-[![Richiamo di un'azione del controller che prevede un valore di parametro](asp-net-mvc-routing-overview-cs/_static/image1.jpg)](asp-net-mvc-routing-overview-cs/_static/image1.png)
+[![Iun'azione del controller che prevede un valore di parametro nvoking](asp-net-mvc-routing-overview-cs/_static/image1.jpg)](asp-net-mvc-routing-overview-cs/_static/image1.png)
 
 **Figura 01**: Richiamo di un'azione del controller che prevede un valore di parametro ([fare clic per visualizzare l'immagine con dimensioni normali](asp-net-mvc-routing-overview-cs/_static/image2.png))
 
@@ -107,4 +107,4 @@ L'URL avremo/indice/3, d'altra parte, funziona perfettamente con l'azione Index 
 L'obiettivo di questa esercitazione è stata per fornire una breve introduzione al Routing di ASP.NET. Abbiamo esaminato la tabella di route predefinito che si ottiene con una nuova applicazione MVC ASP.NET. Si è appreso come la route predefinita esegue il mapping degli URL alle azioni del controller.
 
 > [!div class="step-by-step"]
-> [avanti](understanding-action-filters-cs.md)
+> [Successivo](understanding-action-filters-cs.md)

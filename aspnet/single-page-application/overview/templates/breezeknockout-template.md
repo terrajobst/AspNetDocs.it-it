@@ -8,15 +8,15 @@ ms.date: 01/30/2013
 ms.assetid: 3bd94827-3c59-448f-abc3-36e6df4858db
 msc.legacyurl: /single-page-application/overview/templates/breezeknockout-template
 msc.type: authoredcontent
-ms.openlocfilehash: 478ee9f851a395c68701347c04534bfe72d94512
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 482119a97f30e24472231897e8db31685c451a0f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58424859"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59400789"
 ---
-<a name="breezeknockout-template"></a>Modello Breeze/Knockout
-====================
+# <a name="breezeknockout-template"></a>Modello Breeze/Knockout
+
 by [Mads Kristensen](https://github.com/madskristensen)
 
 > Modello Breeze/Knockout MVC è stato scritto da Ward Bell
@@ -54,7 +54,7 @@ Ma veniamo al dunque.
 
 Scaricare e installare il modello facendo clic sul pulsante Download precedente. Il modello viene fornito come un file di Visual Studio Extension (VSIX). Si potrebbe essere necessario riavviare Visual Studio.
 
-Nel **modelli** riquadro, selezionare **modelli installati** ed espandere le **Visual C#** nodo. Sotto **Visual C#**, selezionare **Web**. Nell'elenco dei modelli di progetto, selezionare **applicazione Web ASP.NET MVC 4**. Denominare il progetto e fare clic su **OK**.
+Nel **modelli** riquadro, selezionare **modelli installati** ed espandere le **Visual c#** nodo. Sotto **Visual c#**, selezionare **Web**. Nell'elenco dei modelli di progetto, selezionare **applicazione Web ASP.NET MVC 4**. Denominare il progetto e fare clic su **OK**.
 
 Nel **nuovo progetto** procedura guidata, selezionare **Breeze Knockout SPA**.
 

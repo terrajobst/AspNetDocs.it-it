@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/animation/triggering-an-animation-in-another-control-cs
-title: Attivazione di un'animazione in un altro controllo (C#) | Microsoft Docs
+title: Attivazione di un'animazione in un altro controllo (c#) | Microsoft Docs
 author: wenz
 description: Il controllo di animazione in ASP.NET AJAX Control Toolkit non è semplicemente un controllo, ma un intero framework aggiungere animazioni a un controllo. In generale, l'avvio di un...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: e5d99c2b-d8ee-413c-80d5-c120cffb0a4c
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/triggering-an-animation-in-another-control-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 6216f24e497936245280f337477b287ff2afb080
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: ca383b7a82b754c7556dcea3bcdb8e28e5c7a45d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58421388"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59384851"
 ---
-<a name="triggering-an-animation-in-another-control-c"></a>Attivazione di un'animazione in un altro controllo (C#)
-====================
+# <a name="triggering-an-animation-in-another-control-c"></a>Attivazione di un'animazione in un altro controllo (C#)
+
 da [Christian Wenz](https://github.com/wenz)
 
 [Scaricare il codice](http://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation8.cs.zip) o [Scarica il PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation8CS.pdf)
@@ -57,7 +57,7 @@ All'interno di `<Animations>` nodo, le animazioni sul posto come di consueto. Pe
 Si noti l'ordine speciale in cui vengono visualizzate le singole animazioni. Prima di tutto, il pulsante disattivato una volta che viene eseguita l'animazione. Poiché è presente alcun `AnimationTarget` attributo la `<EnableAction>` elemento, questa animazione viene applicata al controllo origine: il pulsante. I passaggi successivi due animazione devono essere eseguiti in parallelo (`<Parallel>` elemento). Entrambi hanno loro `AnimationTarget` attributi impostati `"Panel1"`, l'animazione in questo modo il pannello, non il pulsante.
 
 
-[![Un clic del mouse sul pulsante Avvia l'animazione di pannello](triggering-an-animation-in-another-control-cs/_static/image2.png)](triggering-an-animation-in-another-control-cs/_static/image1.png)
+[![A clic del mouse sul pulsante Avvia l'animazione di pannello](triggering-an-animation-in-another-control-cs/_static/image2.png)](triggering-an-animation-in-another-control-cs/_static/image1.png)
 
 Un clic del mouse sul pulsante Avvia l'animazione di pannello ([fare clic per visualizzare l'immagine con dimensioni normali](triggering-an-animation-in-another-control-cs/_static/image3.png))
 

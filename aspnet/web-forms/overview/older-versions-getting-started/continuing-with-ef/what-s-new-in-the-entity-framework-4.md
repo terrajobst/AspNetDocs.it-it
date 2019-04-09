@@ -8,15 +8,15 @@ ms.date: 01/26/2011
 ms.assetid: 393df4a8-b1db-44c4-9db7-2b533ca887d0
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/continuing-with-ef/what-s-new-in-the-entity-framework-4
 msc.type: authoredcontent
-ms.openlocfilehash: 402e7ace1abad899d32ed179d6b68de4e5a129f5
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 0bc24a59e09728a5ecb6e18378c4cde0c8e046f2
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57045718"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59387451"
 ---
-<a name="whats-new-in-the-entity-framework-40"></a>Novità di Entity Framework 4.0
-====================
+# <a name="whats-new-in-the-entity-framework-40"></a>Novità di Entity Framework 4.0
+
 da [Tom Dykstra](https://github.com/tdykstra)
 
 > Questa serie di esercitazioni si basa sull'applicazione web Contoso University specificano che viene creato per il [Introduzione a Entity Framework](../getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-1.md) serie di esercitazioni. Se si non è stato completato le esercitazioni precedenti, come punto di partenza per questa esercitazione è possibile [scaricare l'applicazione](https://code.msdn.microsoft.com/ASPNET-Web-Forms-97f8ee9a) verrebbe creato. È anche possibile [scaricare l'applicazione](https://code.msdn.microsoft.com/ASPNET-Web-Forms-6c7197aa) creato dalla serie di esercitazioni complete. Se si hanno domande sulle esercitazioni, è possibile pubblicarli per i [forum di ASP.NET Entity Framework](https://forums.asp.net/1227.aspx).
@@ -135,7 +135,7 @@ Nel **Seleziona connessione dati** passaggio, fare clic su **nuova connessione**
 
 [![Image14](what-s-new-in-the-entity-framework-4/_static/image26.png)](what-s-new-in-the-entity-framework-4/_static/image25.png)
 
-Nel **proprietà connessione** finestra di dialogo casella, selezionare l'istanza locale di SQL Server Express e il nome del database `AlumniAsssociation`.
+Nel **proprietà connessione** finestra di dialogo casella, selezionare l'istanza locale di SQL Server Express e il nome del database `AlumniAssociation`.
 
 [![Image15](what-s-new-in-the-entity-framework-4/_static/image28.png)](what-s-new-in-the-entity-framework-4/_static/image27.png)
 

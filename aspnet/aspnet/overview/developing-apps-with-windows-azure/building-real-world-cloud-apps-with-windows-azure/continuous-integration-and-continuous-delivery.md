@@ -8,15 +8,15 @@ ms.date: 06/12/2014
 ms.assetid: eaece9f5-f80c-428b-b771-5db66d275b7d
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/continuous-integration-and-continuous-delivery
 msc.type: authoredcontent
-ms.openlocfilehash: b384fe08ebd6a106b9469debfb13014e87534b8f
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 0fb0a331a2a6e2af5c5097db8b57942525d24ffc
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425925"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59384305"
 ---
-<a name="continuous-integration-and-continuous-delivery-building-real-world-cloud-apps-with-azure"></a>Integrazione continua e recapito continuo (creazione di App Cloud funzionanti con Azure)
-====================
+# <a name="continuous-integration-and-continuous-delivery-building-real-world-cloud-apps-with-azure"></a>Integrazione continua e recapito continuo (creazione di App Cloud funzionanti con Azure)
+
 dal [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
 
 [Download risolverlo Project](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [Scarica l'E-book](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
@@ -34,7 +34,7 @@ In genere è consigliabile eseguire la distribuzione continua per lo sviluppo e 
 
 Nel seguente diagramma da [un Microsoft Patterns and Practices e-book sul recapito continuo](https://aka.ms/ReleasePipeline) illustra un tipico flusso di lavoro. Fare clic sull'immagine per visualizzarla dimensione completa nel contesto originale.
 
-[![Flusso di lavoro di recapito continuo](continuous-integration-and-continuous-delivery/_static/image1.png)](https://msdn.microsoft.com/library/dn449955.aspx)
+[![Cflusso di lavoro di recapito ontinuous](continuous-integration-and-continuous-delivery/_static/image1.png)](https://msdn.microsoft.com/library/dn449955.aspx)
 
 ## <a name="how-the-cloud-enables-cost-effective-ci-and-cd"></a>Come il cloud consente conveniente integrazione continua e recapito Continuo
 

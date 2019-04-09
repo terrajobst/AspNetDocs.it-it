@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/advanced-data-access-scenarios/configuring-the-data-access-layer-s-connection-and-command-level-settings-cs
-title: Configurazione delle impostazioni a livello di connessione e di comando del livello di accesso ai dati (C#) | Microsoft Docs
+title: Configurazione delle impostazioni a livello di connessione e di comando del livello di accesso ai dati (c#) | Microsoft Docs
 author: rick-anderson
 description: Gli oggetti TableAdapter in un DataSet tipizzato eseguono automaticamente la connessione al database, invio di comandi e popolamento di un oggetto DataTable con i risultati...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 08/03/2007
 ms.assetid: cd330dd9-6254-4305-9351-dd727384c83b
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/configuring-the-data-access-layer-s-connection-and-command-level-settings-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 91a1c967fbe74dbda8f8ac9635fdccbe05b0b6cc
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: d6a787206862b88f915859d4a8fc4dd3c3166293
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423897"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59389596"
 ---
-<a name="configuring-the-data-access-layers-connection--and-command-level-settings-c"></a>Configurazione delle impostazioni del livello di accesso ai dati a livello di connessione e di comando (C#)
-====================
+# <a name="configuring-the-data-access-layers-connection--and-command-level-settings-c"></a>Configurazione delle impostazioni del livello di accesso ai dati a livello di connessione e di comando (C#)
+
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Scaricare il codice](http://download.microsoft.com/download/3/9/f/39f92b37-e92e-4ab3-909e-b4ef23d01aa3/ASPNET_Data_Tutorial_72_CS.zip) o [Scarica il PDF](configuring-the-data-access-layer-s-connection-and-command-level-settings-cs/_static/datatutorial72cs1.pdf)
@@ -51,7 +51,7 @@ Fatta eccezione per il [di wrapping delle modifiche al Database in una transazio
 Ogni classe TableAdapter include un `Connection` proprietà che specifica le informazioni di connessione di database. Questo tipo di dati di proprietà s e `ConnectionString` valore dipendono dalle selezioni effettuate nella configurazione guidata TableAdapter. È importante ricordare che quando si aggiunta prima di tutto un oggetto TableAdapter a un DataSet tipizzato questa procedura guidata chiede us per il database di origine (vedere la figura 1). L'elenco a discesa in questo primo passaggio include i database specificati nel file di configurazione, nonché ad altri database in Esplora Server s connessioni dati. Se non esiste nell'elenco a discesa scegliere il database da utilizzare, è possibile specificare una nuova connessione al database facendo clic sul pulsante nuova connessione e fornendo le informazioni di connessione necessarie.
 
 
-[![Il primo passaggio della configurazione guidata TableAdapter](configuring-the-data-access-layer-s-connection-and-command-level-settings-cs/_static/image2.png)](configuring-the-data-access-layer-s-connection-and-command-level-settings-cs/_static/image1.png)
+[![Tegli primo passaggio della configurazione guidata TableAdapter](configuring-the-data-access-layer-s-connection-and-command-level-settings-cs/_static/image2.png)](configuring-the-data-access-layer-s-connection-and-command-level-settings-cs/_static/image1.png)
 
 **Figura 1**: Il primo passaggio della configurazione guidata TableAdapter ([fare clic per visualizzare l'immagine con dimensioni normali](configuring-the-data-access-layer-s-connection-and-command-level-settings-cs/_static/image3.png))
 
@@ -109,7 +109,7 @@ Questa classe parziale espone solo una delle proprietà dell'oggetto connessione
 Aprire il `Northwind` set di dati, fare clic su di `ProductsTableAdapter` nella finestra di progettazione e passare alla finestra Proprietà. Si vedrà il `ConnectionModifier` impostata sul valore predefinito, `Assembly`. Per rendere il `Connection` proprietà disponibile di fuori dell'assembly s DataSet tipizzato, modificare il `ConnectionModifier` proprietà `Public`.
 
 
-[![Il livello di accessibilità s di proprietà di connessione può essere configurato tramite la proprietà ConnectionModifier](configuring-the-data-access-layer-s-connection-and-command-level-settings-cs/_static/image7.png)](configuring-the-data-access-layer-s-connection-and-command-level-settings-cs/_static/image6.png)
+[![Tegli s di proprietà di connessione a livello di accessibilità possono essere configurato tramite la proprietà ConnectionModifier](configuring-the-data-access-layer-s-connection-and-command-level-settings-cs/_static/image7.png)](configuring-the-data-access-layer-s-connection-and-command-level-settings-cs/_static/image6.png)
 
 **Figura 4**: Il `Connection` proprietà s accessibilità livello può essere configurato tramite il `ConnectionModifier` proprietà ([fare clic per visualizzare l'immagine con dimensioni normali](configuring-the-data-access-layer-s-connection-and-command-level-settings-cs/_static/image8.png))
 

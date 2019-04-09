@@ -8,15 +8,15 @@ ms.date: 02/15/2013
 ms.assetid: 82b8dea0-f062-4ee4-8784-3ffa30fbb1ca
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/command-line-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: cd31ae26f0b0b0ad8d333ae93aea9bae8f6a9fc1
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: c9aadec642837953dde4cf3e89ec9a7d484b380e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58426016"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59401335"
 ---
-<a name="aspnet-web-deployment-using-visual-studio-command-line-deployment"></a>Distribuzione Web ASP.NET tramite Visual Studio: Distribuzione dalla riga di comando
-====================
+# <a name="aspnet-web-deployment-using-visual-studio-command-line-deployment"></a>Distribuzione Web ASP.NET tramite Visual Studio: Distribuzione dalla riga di comando
+
 da [Tom Dykstra](https://github.com/tdykstra)
 
 [Download progetto iniziale](http://go.microsoft.com/fwlink/p/?LinkId=282627)

@@ -8,15 +8,15 @@ ms.date: 02/24/2014
 ms.assetid: 7a77c2c0-deea-4290-a9c3-97958891758e
 msc.legacyurl: /web-pages/overview/security/16-adding-security-and-membership
 msc.type: authoredcontent
-ms.openlocfilehash: 1c36adf23f3b53e4fbf3dbdce7ca85664b32c975
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1291417755e3fa4fb030bc6ba3089c38c4719c71
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57026938"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59389664"
 ---
-<a name="adding-security-and-membership-to-an-aspnet-web-pages-razor-site"></a>L'aggiunta della protezione e l'appartenenza a un sito di ASP.NET Web Pages (Razor)
-====================
+# <a name="adding-security-and-membership-to-an-aspnet-web-pages-razor-site"></a>L'aggiunta della protezione e l'appartenenza a un sito di ASP.NET Web Pages (Razor)
+
 da [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Questo articolo illustra come proteggere un sito Web di ASP.NET Web Pages (Razor) in modo che alcune delle pagine sono disponibili solo a utenti che accedono. (Verrà anche illustrato come creare pagine che chiunque può accedere.)

@@ -8,15 +8,15 @@ ms.date: 03/31/2010
 ms.assetid: 871a4574-f89c-4214-b786-79253ed3653b
 msc.legacyurl: /web-forms/overview/data-access/custom-formatting/custom-formatting-based-upon-data-cs
 msc.type: authoredcontent
-ms.openlocfilehash: ee9cdf19769ea63388fd9dd18a82bb2b4dcdef87
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: bd5433b724dcafe8e816254523cb4b38c3be1104
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57027348"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59403168"
 ---
-<a name="custom-formatting-based-upon-data-c"></a>Formattazione personalizzata in base ai dati (C#)
-====================
+# <a name="custom-formatting-based-upon-data-c"></a>Formattazione personalizzata in base ai dati (C#)
+
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Scaricare l'App di esempio](http://download.microsoft.com/download/9/6/9/969e5c94-dfb6-4e47-9570-d6d9e704c3c1/ASPNET_Data_Tutorial_11_CS.exe) o [Scarica il PDF](custom-formatting-based-upon-data-cs/_static/datatutorial11cs1.pdf)
@@ -49,7 +49,7 @@ Aprire il `CustomColors.aspx` nella pagina la `CustomFormatting` cartella, trasc
 Dopo che è stato associato a ObjectDataSource a DetailsView, si consiglia di modificare l'elenco dei campi. Ho scelto di rimuovere il `ProductID`, `SupplierID`, `CategoryID`, `UnitsInStock`, `UnitsOnOrder`, `ReorderLevel`, e `Discontinued` BoundField e rinominato e riformattato restanti BoundField. Inoltre eliminate le `Width` e `Height` impostazioni. Poiché il controllo DetailsView visualizza solo un singolo record, è necessario attivare il paging per consentire all'utente finale visualizzare tutti i prodotti. Eseguire questa operazione selezionando la casella di controllo Attiva Paging nello smart tag di DetailsView.
 
 
-[![Selezionare la casella di controllo Attiva Paging nello Smart Tag di DetailsView](custom-formatting-based-upon-data-cs/_static/image2.png)](custom-formatting-based-upon-data-cs/_static/image1.png)
+[![CControlla il Paging di casella di controllo attiva nello Smart Tag di DetailsView](custom-formatting-based-upon-data-cs/_static/image2.png)](custom-formatting-based-upon-data-cs/_static/image1.png)
 
 **Figura 1**: La casella Attiva Paging nello Smart Tag di DetailsView ([fare clic per visualizzare l'immagine con dimensioni normali](custom-formatting-based-upon-data-cs/_static/image3.png))
 
@@ -62,7 +62,7 @@ Dopo tali modifiche, il tag di DetailsView sarà:
 Si consiglia di testare questa pagina nel browser.
 
 
-[![Il controllo DetailsView visualizza un solo prodotto alla volta](custom-formatting-based-upon-data-cs/_static/image5.png)](custom-formatting-based-upon-data-cs/_static/image4.png)
+[![Tegli DetailsView controllo consente di visualizzare un prodotto alla volta](custom-formatting-based-upon-data-cs/_static/image5.png)](custom-formatting-based-upon-data-cs/_static/image4.png)
 
 **Figura 2**: Il controllo di DetailsView visualizza prodotto uno alla volta ([fare clic per visualizzare l'immagine con dimensioni normali](custom-formatting-based-upon-data-cs/_static/image6.png))
 
@@ -120,12 +120,12 @@ Quindi, nella `DataBound` gestore dell'evento, impostare la cella `CssClass` pro
 Quando si visualizzano Chai compare, che ha un costo inferiore a $75,00, viene visualizzato il prezzo di un tipo di carattere normale (vedere la figura 4). Tuttavia, quando si visualizzano Mishi Kobe Niku, che ha un prezzo di $97.00, il prezzo viene visualizzato in un tipo di carattere grassetto, corsivo (vedere la figura 5).
 
 
-[![Prezzi di meno di $75,00 vengono visualizzati in un tipo di carattere normale](custom-formatting-based-upon-data-cs/_static/image9.png)](custom-formatting-based-upon-data-cs/_static/image8.png)
+[![PMeno di $75,00 vengono visualizzati in un tipo di carattere normale rezzi](custom-formatting-based-upon-data-cs/_static/image9.png)](custom-formatting-based-upon-data-cs/_static/image8.png)
 
 **Figura 4**: Prezzi di meno di $75,00 vengono visualizzati in un tipo di carattere normale ([fare clic per visualizzare l'immagine con dimensioni normali](custom-formatting-based-upon-data-cs/_static/image10.png))
 
 
-[![I prezzi Expensive Products vengono visualizzati in un grassetto, del carattere corsivo](custom-formatting-based-upon-data-cs/_static/image12.png)](custom-formatting-based-upon-data-cs/_static/image11.png)
+[![Ei prezzi xpensive prodotti vengono visualizzati in un grassetto, corsivo Font](custom-formatting-based-upon-data-cs/_static/image12.png)](custom-formatting-based-upon-data-cs/_static/image11.png)
 
 **Figura 5**: I prezzi Expensive Products vengono visualizzati in un grassetto, corsivo Font ([fare clic per visualizzare l'immagine con dimensioni normali](custom-formatting-based-upon-data-cs/_static/image13.png))
 
@@ -192,12 +192,12 @@ Dopo aver ottenuto un riferimento a livello di codice per il controllo Web, è p
 Figure 7 mostra FormView durante la visualizzazione di un prodotto il cui `UnitsInStock` valore è maggiore di 10, mentre il prodotto nella figura 8 è il valore minore di 10.
 
 
-[![Per i prodotti con un sufficientemente grande Units In Stock, viene applicata nessuna formattazione personalizzata](custom-formatting-based-upon-data-cs/_static/image16.png)](custom-formatting-based-upon-data-cs/_static/image15.png)
+[![Fo i prodotti con un sufficientemente grande Units In Stock, nessuna formattazione personalizzata viene applicata](custom-formatting-based-upon-data-cs/_static/image16.png)](custom-formatting-based-upon-data-cs/_static/image15.png)
 
 **Figura 7**: Per i prodotti con un sufficientemente grande Units In Stock, viene applicata nessuna formattazione personalizzata ([fare clic per visualizzare l'immagine con dimensioni normali](custom-formatting-based-upon-data-cs/_static/image17.png))
 
 
-[![Le unità in magazzino numero viene visualizzato in rosso per quelli prodotti con i valori di o minore di 10](custom-formatting-based-upon-data-cs/_static/image19.png)](custom-formatting-based-upon-data-cs/_static/image18.png)
+[![Tegli unità in magazzino numero viene visualizzato in rosso per quelli prodotti con i valori di o minore di 10](custom-formatting-based-upon-data-cs/_static/image19.png)](custom-formatting-based-upon-data-cs/_static/image18.png)
 
 **Figura 8**: Le unità in magazzino numero viene visualizzato in rosso per quelli prodotti con i valori 10 o minore di ([fare clic per visualizzare l'immagine con dimensioni normali](custom-formatting-based-upon-data-cs/_static/image20.png))
 
@@ -243,7 +243,7 @@ Aggiungere un controllo GridView sotto il controllo FormView nell'esempio preced
 Figura 9 mostra lo stato di avanzamento fino a questo punto, quando viene visualizzato tramite un browser.
 
 
-[![Il controllo GridView sono elencati il nome, categoria e prezzo per ogni prodotto](custom-formatting-based-upon-data-cs/_static/image22.png)](custom-formatting-based-upon-data-cs/_static/image21.png)
+[![TGridView sono elencati il nome, categoria e prezzo per ogni prodotto](custom-formatting-based-upon-data-cs/_static/image22.png)](custom-formatting-based-upon-data-cs/_static/image21.png)
 
 **Figura 9**: Il controllo GridView sono elencati il nome, categoria e prezzo per ogni prodotto ([fare clic per visualizzare l'immagine con dimensioni normali](custom-formatting-based-upon-data-cs/_static/image23.png))
 
@@ -260,7 +260,7 @@ Questo gestore eventi può essere creato con la stessa serie di passaggi come Fo
 **Figura 10**: Creare un gestore eventi per il controllo GridView `RowDataBound` evento
 
 
-Creare il gestore dell'evento in questo modo provocherà il codice seguente per essere aggiunto automaticamente alla porzione di codice della pagina ASP.NET:
+Creazione del gestore eventi in questo modo provocherà il codice seguente per essere aggiunto automaticamente alla porzione di codice della pagina ASP.NET:
 
 
 [!code-csharp[Main](custom-formatting-based-upon-data-cs/samples/sample14.cs)]
@@ -299,7 +299,7 @@ Anziché impostare il `GridViewRow`del `BackColor` proprietà direttamente, è p
 [!code-csharp[Main](custom-formatting-based-upon-data-cs/samples/sample18.cs)]
 
 
-[![I prodotti più conveniente sono evidenziati giallo](custom-formatting-based-upon-data-cs/_static/image26.png)](custom-formatting-based-upon-data-cs/_static/image25.png)
+[![The più conveniente prodotti sono evidenziati giallo](custom-formatting-based-upon-data-cs/_static/image26.png)](custom-formatting-based-upon-data-cs/_static/image25.png)
 
 **Figura 11**: I prodotti più conveniente sono evidenziati giallo ([fare clic per visualizzare l'immagine con dimensioni normali](custom-formatting-based-upon-data-cs/_static/image27.png))
 
@@ -323,4 +323,4 @@ Buona programmazione!
 Questa serie di esercitazioni è stata esaminata da diversi validi revisori. I revisori per questa esercitazione sono state E.R. Morelli, Dennis Patterson e Dan Jagers. Se si è interessati prossimi articoli MSDN dello? In questo caso, Inviami una riga in corrispondenza [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
-> [avanti](using-templatefields-in-the-gridview-control-cs.md)
+> [Successivo](using-templatefields-in-the-gridview-control-cs.md)

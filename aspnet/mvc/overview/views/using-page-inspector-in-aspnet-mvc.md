@@ -8,15 +8,15 @@ ms.date: 08/15/2012
 ms.assetid: c7e4e1ab-4932-4614-9f53-aaf7c706d498
 msc.legacyurl: /mvc/overview/views/using-page-inspector-in-aspnet-mvc
 msc.type: authoredcontent
-ms.openlocfilehash: abb1ef355bd7614daaab8c205d9d53065856cd23
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: ef0ae42e1c6114849a311164eac242db6dab2b1d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58424365"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59385800"
 ---
-<a name="using-page-inspector-in-aspnet-mvc"></a>Utilizzo di Controllo pagina in ASP.NET MVC
-====================
+# <a name="using-page-inspector-in-aspnet-mvc"></a>Utilizzo di Controllo pagina in ASP.NET MVC
+
 da Tim Ammann
 
 > Controllo pagina in Visual Studio 2012 è uno strumento di sviluppo web con un browser integrato. Selezionare un elemento nel browser integrato e controllo pagina evidenzia immediatamente l'origine e CSS dell'elemento. È possibile esplorare tutte le visualizzazioni MVC, rapidamente trovare le origini di markup sottoposto a rendering e usare gli strumenti del browser direttamente all'interno dell'ambiente di Visual Studio.
@@ -55,7 +55,7 @@ Page Inspector è abbinato a Microsoft Web Developer Tools. La versione più rec
 
 ## <a name="create-a-web-application"></a>Creare un'applicazione Web
 
-Innanzitutto, creare un'applicazione web che verrà utilizzato il controllo di pagina con. In Visual Studio, scegliere **File** &gt; **nuovo progetto**. A sinistra, espandere **Visual C#**, selezionare **Web**, quindi selezionare **applicazione Web di ASP.NET MVC4**.
+Innanzitutto, creare un'applicazione web che verrà utilizzato il controllo di pagina con. In Visual Studio, scegliere **File** &gt; **nuovo progetto**. A sinistra, espandere **Visual c#**, selezionare **Web**, quindi selezionare **applicazione Web di ASP.NET MVC4**.
 
 ![Nuova applicazione MVC ASP.NET](using-page-inspector-in-aspnet-mvc/_static/image2.png)
 
@@ -240,7 +240,7 @@ Con la versione 1.3, controllo pagina può ora eseguire il mapping di elementi c
 > Il modello di applicazione a singola pagina richiede la [ASP.NET and Web Tools 2012.2](https://go.microsoft.com/fwlink/?LinkId=282650) aggiornare.
 
 
-In Visual Studio, scegliere **File** &gt; **nuovo progetto**. A sinistra, espandere **Visual C#**, selezionare **Web**, quindi selezionare **applicazione Web di ASP.NET MVC4**. Fare clic su **OK**.
+In Visual Studio, scegliere **File** &gt; **nuovo progetto**. A sinistra, espandere **Visual c#**, selezionare **Web**, quindi selezionare **applicazione Web di ASP.NET MVC4**. Fare clic su **OK**.
 
 Nel **nuovo progetto ASP.NET MVC 4** finestra di dialogo, seleziona **applicazione a pagina singola**.
 

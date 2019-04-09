@@ -8,15 +8,15 @@ ms.date: 09/08/2014
 ms.assetid: 2ce36f78-8ecb-4ab1-b748-6d0ab633ea3f
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/create-the-project
 msc.type: authoredcontent
-ms.openlocfilehash: 754f085e3e43f7efa155f410d02a0d29d3349612
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 9e2cd1beca03b81140b9d58c5e43dbf7c6b8808b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57055978"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59393054"
 ---
-<a name="create-the-project"></a>Creare il progetto
-====================
+# <a name="create-the-project"></a>Creare il progetto
+
 da [Erik Reitan](https://github.com/Erikre)
 
 [Scaricare progetto di esempio Wingtip Toys (c#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) o [Scarica l'E-book (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
@@ -74,7 +74,7 @@ Il progetto richiederà un po' di tempo per creare. Quando è pronto, aprire il 
 >  Il framework di Web Form è destinato agli sviluppatori che preferiscono programmazione dichiarativa e basata sul controllo, ad esempio Microsoft Windows Forms (WinForms) e XAML/WPF o Silverlight. Che offre un modello di sviluppo basato su finestra di progettazione WYSIWYG, quindi viene usato di frequente con gli sviluppatori che desiderano per un ambiente di sviluppo (RAD) rapido di applicazioni per lo sviluppo web. Se si ha familiarità con la programmazione web e si ha familiarità con gli strumenti di sviluppo di client RAD Microsoft tradizionali (ad esempio, per Visual Basic e Visual c#), è possibile compilare rapidamente un'applicazione web senza la necessità di esperienza in HTML e JavaScript.
 > - [ASP.NET MVC](../../../../mvc/index.md)  
 >  ASP.NET MVC è destinato agli sviluppatori che desiderano principi, come lo sviluppo basato su test, la separazione dei compiti, inversione del controllo (IoC) e l'inserimento delle dipendenze (dipendenze) e modelli. Questo framework incoraggia che separa il livello di logica di business di un'applicazione web dal relativo livello di presentazione.
-> - [ASP.NET Web Pages](../../../../web-pages/index.md)  
+> - [Pagine Web ASP.NET](../../../../web-pages/index.md)  
 >  ASP.NET Web Pages è destinato agli sviluppatori che desiderano una storia di sviluppo web semplice, nelle righe di PHP. Nel modello di Web Pages, si creano pagine HTML e quindi aggiungerla codice basato su server per la pagina per controllare in modo dinamico la modalità con cui viene eseguito il rendering di markup. Pagine Web è appositamente progettato per essere un framework leggero ed è il punto di ingresso più semplice in ASP.NET per le persone che conoscono HTML ma non abbia ampia esperienza di programmazione, ad esempio, gli studenti o appassionati. È anche un ottimo modo per gli sviluppatori web che conoscono PHP o Framework simile per iniziare a utilizzare ASP.NET.
 > - [Applicazione a pagina singola ASP.NET](../../../../single-page-application/index.md)  
 >  Applicazione a pagina singola ASP.NET (SPA) consente di compilare applicazioni che includono significative interazioni lato client usando HTML5, CSS 3 e JavaScript. ASP.NET e Web Tools 2012.2 Update viene fornito un nuovo modello per la compilazione di applicazioni a pagina singola usando Knockout. js e ASP.NET Web API. Oltre il nuovo modello di applicazione a singola pagina, nuovi modelli di applicazione a singola pagina creati dalla community sono anche disponibili per il download.
@@ -134,7 +134,7 @@ Quando un server Web riceve una richiesta per una pagina, individua la pagina, l
 > 
 > Per impostazione predefinita, il modello crea un database di appartenenza usando un nome predefinito del database in un'istanza di SQL Server Express LocalDB, il server di database di sviluppo fornita con Visual Studio Express 2013 per Web.
 > 
-> **SQL Server Express LocalDB**
+> **LocalDB di SQL Server Express**
 > 
 > [SQL Server Express LocalDB](https://technet.microsoft.com/library/hh510202.aspx) è una versione leggera di SQL Server che dispone di numerose funzionalità di programmabilità di un database di SQL Server. SQL Server Express LocalDB viene eseguito in modalità utente e ha un'installazione veloce senza operazioni di configurazione con un breve elenco di prerequisiti di installazione. In Microsoft SQL Server, qualsiasi database o codice Transact-SQL può essere spostato da SQL Server Express LocalDB a SQL Server e SQL Azure senza alcun passaggio di aggiornamento. Pertanto, SQL Server Express LocalDB è utilizzabile come un ambiente di sviluppo per applicazioni destinate a tutte le edizioni di SQL Server. SQL Server Express LocalDB Abilita le funzionalità, ad esempio stored procedure, funzioni definite dall'utente e funzioni di aggregazione, integrazione con .NET Framework, i tipi spaziali e ad altri utenti che non sono disponibili in SQL Server Compact.
 > 
@@ -190,8 +190,8 @@ In questa esercitazione si hanno creato, esaminato ed eseguire l'applicazione We
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-[Scelta del modello di programmazione](../../../videos/how-do-i/choosing-the-right-programming-model.md)   
-[Progetti applicazione Web e progetti di siti Web](https://msdn.microsoft.com/library/dd547590.aspx)   
+[Scelta del modello di programmazione più adatto](../../../videos/how-do-i/choosing-the-right-programming-model.md)   
+[Confronto tra progetti di applicazione Web e progetti di sito Web](https://msdn.microsoft.com/library/dd547590.aspx)   
 [Web Form ASP.NET le pagine Panoramica](https://msdn.microsoft.com/library/428509ah.aspx)
 
 > [!div class="step-by-step"]

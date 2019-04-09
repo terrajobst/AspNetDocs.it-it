@@ -8,15 +8,15 @@ ms.date: 11/11/2011
 ms.assetid: 90b3a37e-2694-41c4-8b10-d6893b53a9d4
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation
 msc.type: chapter
-ms.openlocfilehash: b835d4e24b938a8ed192f21709cbde771af9c896
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 728d56583fb4192d87d01febf512668068256150
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57023388"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59398046"
 ---
-<a name="animation"></a>Animazione
-====================
+# <a name="animation"></a>Animazione
+
 > Questa esercitazione illustra come creare le animazioni utilizzando il controllo di animazione e framework di animazione.
 
 

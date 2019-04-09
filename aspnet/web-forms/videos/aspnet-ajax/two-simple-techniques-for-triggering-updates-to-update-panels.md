@@ -8,15 +8,15 @@ ms.date: 03/13/2008
 ms.assetid: c844da8a-10e6-45c9-a9e2-331a3b8d3e03
 msc.legacyurl: /web-forms/videos/aspnet-ajax/two-simple-techniques-for-triggering-updates-to-update-panels
 msc.type: video
-ms.openlocfilehash: 8f6b4a2120f9b1a68f3ebdef929d78c480172302
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 2374b70d1359c3a070d2b07c84e37c0a504e118c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57029248"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59400022"
 ---
-<a name="two-simple-techniques-for-triggering-updates-to-update-panels"></a>Due semplici tecniche per l'attivazione degli aggiornamenti dei pannelli di aggiornamento
-====================
+# <a name="two-simple-techniques-for-triggering-updates-to-update-panels"></a>Due semplici tecniche per l'attivazione degli aggiornamenti dei pannelli di aggiornamento
+
 da [Joe Stagner](https://github.com/JoeStagner)
 
 In questo video illustrerò due tecniche di aggiornamento semplice. In primo luogo, usando l'indice selezionato evento modificato dal controllo elenco a discesa come un trigger di evento per l'aggiornamento dei pannelli di aggiornamento. E due, in modo dinamico la modifica la classe del foglio di stile associato con i controlli contenuti all'interno del Pannello di aggiornamento AJAX.

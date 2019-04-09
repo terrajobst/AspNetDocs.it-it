@@ -8,15 +8,15 @@ ms.date: 05/30/2007
 ms.assetid: 5e189dd7-f4f9-4f28-9b3a-6cb7d392e9c7
 msc.legacyurl: /web-forms/overview/data-access/caching-data/caching-data-in-the-architecture-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 45a717f9b68a1465d3446b06358a062f6b640c9e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 9c5ac1aeff427c78030f789fcb67736020ce3367
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57060228"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59391805"
 ---
-<a name="caching-data-in-the-architecture-vb"></a>Memorizzazione di dati nella cache nell'architettura (VB)
-====================
+# <a name="caching-data-in-the-architecture-vb"></a>Memorizzazione di dati nella cache nell'architettura (VB)
+
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Scaricare l'App di esempio](http://download.microsoft.com/download/4/a/7/4a7a3b18-d80e-4014-8e53-a6a2427f0d93/ASPNET_Data_Tutorial_59_VB.exe) o [Scarica il PDF](caching-data-in-the-architecture-vb/_static/datatutorial59vb1.pdf)
@@ -159,7 +159,7 @@ Grazie a questa modifica a `AddCacheItem(key, value)`, invaliding è semplice qu
 Metodi e le classi di memorizzazione nella cache di livello s utilizzabile per lavorare con i dati usando le tecniche si va esaminato in queste esercitazioni. Per illustrare l'utilizzo dei dati memorizzati nella cache, salvare le modifiche per il `ProductsCL` classe e quindi aprire la `FromTheArchitecture.aspx` nella pagina il `Caching` cartella e aggiungere un controllo GridView. GridView s nello smart tag, creare un nuovo oggetto ObjectDataSource. Nel primo passaggio s guidata dovrebbe essere il `ProductsCL` classe come una delle opzioni nell'elenco a discesa.
 
 
-[![La classe ProductsCL è incluso nell'elenco a discesa di oggetti Business](caching-data-in-the-architecture-vb/_static/image5.png)](caching-data-in-the-architecture-vb/_static/image4.png)
+[![Tegli che productscl classe è inclusa nell'elenco a discesa di oggetti Business](caching-data-in-the-architecture-vb/_static/image5.png)](caching-data-in-the-architecture-vb/_static/image4.png)
 
 **Figura 4**: Il `ProductsCL` classe è inclusa nell'elenco a discesa di oggetti Business ([fare clic per visualizzare l'immagine con dimensioni normali](caching-data-in-the-architecture-vb/_static/image6.png))
 
@@ -167,7 +167,7 @@ Metodi e le classi di memorizzazione nella cache di livello s utilizzabile per l
 Dopo aver selezionato `ProductsCL`, fare clic su Avanti. L'elenco di riepilogo a discesa della scheda selezionare dispone di due elementi - `GetProducts()` e `GetProductsByCategoryID(categoryID)` e la scheda aggiornamento ha unico `UpdateProduct` rapporto di overload. Scegliere il `GetProducts()` metodo nella scheda Seleziona e `UpdateProducts` metodo la scheda aggiornamento e fare clic su Fine.
 
 
-[![Nell'elenco a discesa Elenca sono elencati i metodi della classe ProductsCL s](caching-data-in-the-architecture-vb/_static/image8.png)](caching-data-in-the-architecture-vb/_static/image7.png)
+[![Tegli che productscl classe s metodi sono elencati nell'elenco a discesa Elenca](caching-data-in-the-architecture-vb/_static/image8.png)](caching-data-in-the-architecture-vb/_static/image7.png)
 
 **Figura 5**: Il `ProductsCL` sono racchiusi l'elenco a discesa sono elencati i metodi della classe s ([fare clic per visualizzare l'immagine con dimensioni normali](caching-data-in-the-architecture-vb/_static/image9.png))
 

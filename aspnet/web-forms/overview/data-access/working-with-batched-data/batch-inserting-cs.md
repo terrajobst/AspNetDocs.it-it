@@ -8,15 +8,15 @@ ms.date: 06/26/2007
 ms.assetid: cf025e08-48fc-4385-b176-8610aa7b5565
 msc.legacyurl: /web-forms/overview/data-access/working-with-batched-data/batch-inserting-cs
 msc.type: authoredcontent
-ms.openlocfilehash: afcfc92b4e0db8092f83b67c6c227af91bdc0cbb
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 49bdb8e6429449417f2a5ecb2a00101928e3c82e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58426049"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59401023"
 ---
-<a name="batch-inserting-c"></a>Inserimento batch (C#)
-====================
+# <a name="batch-inserting-c"></a>Inserimento batch (C#)
+
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Scaricare il codice](http://download.microsoft.com/download/3/9/f/39f92b37-e92e-4ab3-909e-b4ef23d01aa3/ASPNET_Data_Tutorial_66_CS.zip) o [Scarica il PDF](batch-inserting-cs/_static/datatutorial66cs1.pdf)
@@ -33,7 +33,7 @@ Questo concetto può essere applicato anche quando si aggiungono i record. Si su
 Con qualche operazione è possibile creare un batch di inserimento dell'interfaccia che consente all'utente di scegliere il fornitore e la categoria una sola volta, immettere una serie di nomi di prodotto e prezzo unitario minore e quindi fare clic su un pulsante per aggiungere i nuovi prodotti per il database (vedere la figura 1). Poiché viene aggiunto ciascun prodotto, relativi `ProductName` e `UnitPrice` i campi dati vengono assegnati i valori immessi nelle caselle di testo, mentre relativo `CategoryID` e `SupplierID` valori vengono assegnati i valori dai controlli DropDownList nel fo superiore il form. Il `Discontinued` e `UnitsOnOrder` valori vengono impostati sui valori impostati come hardcoded di `false` e 0, rispettivamente.
 
 
-[![L'interfaccia di inserimento Batch](batch-inserting-cs/_static/image2.png)](batch-inserting-cs/_static/image1.png)
+[![Tegli interfaccia inserimento Batch](batch-inserting-cs/_static/image2.png)](batch-inserting-cs/_static/image1.png)
 
 **Figura 1**: L'interfaccia di inserimento Batch ([fare clic per visualizzare l'immagine con dimensioni normali](batch-inserting-cs/_static/image3.png))
 
@@ -49,7 +49,7 @@ Durante la creazione di una pagina che ha due interfacce, solo uno dei quali è 
 Iniziare aprendo il `BatchInsert.aspx` nella pagina di `BatchData` cartelle e trascinare un pannello dalla casella degli strumenti nella finestra di progettazione (vedere la figura 2). Impostare il pannello s `ID` proprietà `DisplayInterface`. Quando si aggiunge il pannello per la finestra di progettazione, relativi `Height` e `Width` proprietà vengono impostate su 50 px e 125px, rispettivamente. Cancellare le valori delle proprietà dalla finestra Proprietà.
 
 
-[![Trascinare un pannello dalla casella degli strumenti nella finestra di progettazione](batch-inserting-cs/_static/image5.png)](batch-inserting-cs/_static/image4.png)
+[![DRag un pannello dalla casella degli strumenti nella finestra di progettazione](batch-inserting-cs/_static/image5.png)](batch-inserting-cs/_static/image4.png)
 
 **Figura 2**: Trascinare un pannello dalla casella degli strumenti nella finestra di progettazione ([fare clic per visualizzare l'immagine con dimensioni normali](batch-inserting-cs/_static/image6.png))
 
@@ -57,12 +57,12 @@ Iniziare aprendo il `BatchInsert.aspx` nella pagina di `BatchData` cartelle e tr
 Successivamente, trascinare un controllo pulsante e GridView nella casella di gruppo. Impostare il pulsante s `ID` proprietà `ProcessShipment` e il relativo `Text` proprietà processo di spedizione del prodotto. Impostare la s GridView `ID` proprietà `ProductsGrid` e, dal suo smart tag, associarlo a un nuovo oggetto ObjectDataSource denominato `ProductsDataSource`. Configurare ObjectDataSource per estrarre i dati dal `ProductsBLL` classe s `GetProducts` (metodo). Poiché questo controllo GridView è utilizzato solo per visualizzare i dati, impostare gli elenchi a discesa nell'aggiornamento, inserimento ed eliminare schede su (nessuno). Fare clic su Fine per completare la procedura guidata Configura origine dati.
 
 
-[![Visualizzare i dati restituiti dal metodo GetProducts ProductsBLL classe s](batch-inserting-cs/_static/image8.png)](batch-inserting-cs/_static/image7.png)
+[![Dvisualizzare i dati restituiti dalla classe ProductsBLL s metodo GetProducts](batch-inserting-cs/_static/image8.png)](batch-inserting-cs/_static/image7.png)
 
 **Figura 3**: Visualizzare i dati restituiti dai `ProductsBLL` classe s `GetProducts` metodo ([fare clic per visualizzare l'immagine con dimensioni normali](batch-inserting-cs/_static/image9.png))
 
 
-[![Impostare gli elenchi a discesa nell'aggiornamento, inserimento ed eliminare schede su (nessuno)](batch-inserting-cs/_static/image11.png)](batch-inserting-cs/_static/image10.png)
+[![Set gli elenchi di riepilogo a discesa nell'aggiornamento, inserimento e schede di eliminazione per (nessuno)](batch-inserting-cs/_static/image11.png)](batch-inserting-cs/_static/image10.png)
 
 **Figura 4**: Impostare l'elenco a discesa sono elencati nell'aggiornamento, inserimento ed eliminare schede su (nessuno) ([fare clic per visualizzare l'immagine con dimensioni normali](batch-inserting-cs/_static/image12.png))
 
@@ -79,7 +79,7 @@ Si noti che il markup per il pulsante e GridView visualizzate all'interno di ape
 Si consiglia di visualizzare lo stato di avanzamento tramite un browser. Come illustrato nella figura 5, verrà visualizzato un pulsante di spedizione del prodotto processo sopra un controllo GridView in cui sono elencati i prodotti dieci alla volta.
 
 
-[![Il controllo GridView sono elencati i prodotti e offre l'ordinamento e Paging funzionalità](batch-inserting-cs/_static/image14.png)](batch-inserting-cs/_static/image13.png)
+[![TGridView sono elencati i prodotti e offre l'ordinamento e Paging funzionalità](batch-inserting-cs/_static/image14.png)](batch-inserting-cs/_static/image13.png)
 
 **Figura 5**: Il controllo GridView sono elencati i prodotti e offre l'ordinamento e Paging funzionalità ([fare clic per visualizzare l'immagine con dimensioni normali](batch-inserting-cs/_static/image15.png))
 
@@ -109,7 +109,7 @@ Ciò `<table>` markup non include tutti i controlli Web ancora, aggiungiamo, qui
 Con questo tag inseriti, tornare alla visualizzazione progettazione. Ciò `<table>` dovrà essere visualizzato in una tabella di quattro colonne, righe e sette nella finestra di progettazione, come illustrato nella figura 6.
 
 
-[![L'interfaccia di inserimento è costituito da quattro-di una colonna nella tabella sette righe](batch-inserting-cs/_static/image17.png)](batch-inserting-cs/_static/image16.png)
+[![Tegli è costituito da inserimento di interfaccia di una quattro colonne, righe e sette tabelle](batch-inserting-cs/_static/image17.png)](batch-inserting-cs/_static/image16.png)
 
 **Figura 6**: L'interfaccia di inserimento è costituito da quattro-di una colonna nella tabella sette righe ([fare clic per visualizzare l'immagine con dimensioni normali](batch-inserting-cs/_static/image18.png))
 
@@ -119,7 +119,7 @@ Con questo tag inseriti, tornare alla visualizzazione progettazione. Ciò `<tabl
 Impostare il fornitore s DropDownList `ID` proprietà `Suppliers` e associarlo a un nuovo oggetto ObjectDataSource denominato `SuppliersDataSource`. Configurare il nuovo oggetto ObjectDataSource per recuperare i dati dal `SuppliersBLL` classe s `GetSuppliers` (metodo) e impostare l'aggiornamento scheda elenco a discesa s su (nessuno). Fare clic su Fine per completare la procedura guidata.
 
 
-[![Configurare ObjectDataSource per usare il metodo GetSuppliers SuppliersBLL classe s](batch-inserting-cs/_static/image20.png)](batch-inserting-cs/_static/image19.png)
+[![Cconfigurare ObjectDataSource per utilizzare la classe SuppliersBLL s metodo GetSuppliers](batch-inserting-cs/_static/image20.png)](batch-inserting-cs/_static/image19.png)
 
 **Figura 7**: Configurare ObjectDataSource per usare la `SuppliersBLL` classe s `GetSuppliers` metodo ([fare clic per visualizzare l'immagine con dimensioni normali](batch-inserting-cs/_static/image21.png))
 
@@ -127,7 +127,7 @@ Impostare il fornitore s DropDownList `ID` proprietà `Suppliers` e associarlo a
 Dispone il `Suppliers` DropDownList visualizzato il `CompanyName` campo dati e utilizzare il `SupplierID` datové pole come relativo `ListItem` valori s.
 
 
-[![Visualizzare il campo dati CompanyName e utilizzare SupplierID come valore](batch-inserting-cs/_static/image23.png)](batch-inserting-cs/_static/image22.png)
+[![Dvisualizzare il campo dati CompanyName e SupplierID Usa come valore](batch-inserting-cs/_static/image23.png)](batch-inserting-cs/_static/image22.png)
 
 **Figura 8**: Visualizzazione di `CompanyName` campo dati e utilizzare `SupplierID` come valore ([fare clic per visualizzare l'immagine con dimensioni normali](batch-inserting-cs/_static/image24.png))
 
@@ -137,7 +137,7 @@ Denominare il secondo controllo DropDownList `Categories` e associarlo a un nuov
 Dopo questi due controlli DropDownList sono stati aggiunti e associato a ObjectDataSource configurato in modo appropriato, la schermata dovrebbe essere simile alla figura 9.
 
 
-[![La riga di intestazione contiene ora i fornitori e i controlli DropDownList categorie](batch-inserting-cs/_static/image26.png)](batch-inserting-cs/_static/image25.png)
+[![Tegli riga di intestazione contiene ora i fornitori e i controlli DropDownList categorie](batch-inserting-cs/_static/image26.png)](batch-inserting-cs/_static/image25.png)
 
 **Figura 9**: L'intestazione di riga contiene ora il `Suppliers` e `Categories` controlli DropDownList ([fare clic per visualizzare l'immagine con dimensioni normali](batch-inserting-cs/_static/image27.png))
 
@@ -157,7 +157,7 @@ Infine, aggiungere un controllo di controllo ValidationSummary all'interno la `I
 A questo punto, la schermata dovrebbe essere simile alla figura 10.
 
 
-[![L'interfaccia inserimento ora include caselle di testo per i prodotti i nomi e i prezzi](batch-inserting-cs/_static/image29.png)](batch-inserting-cs/_static/image28.png)
+[![Tegli inserimento interfaccia ora include caselle di testo per i nomi di prodotti e dei prezzi](batch-inserting-cs/_static/image29.png)](batch-inserting-cs/_static/image28.png)
 
 **Figura 10**: Inserimento di interfaccia ora include caselle di testo per i nomi di prodotti e i prezzi ([fare clic per visualizzare l'immagine con dimensioni normali](batch-inserting-cs/_static/image30.png))
 
@@ -171,7 +171,7 @@ Trascinare un controllo etichetta Web dalla casella degli strumenti nella parte 
 Figura 11 mostra la progettazione di Visual Studio dopo l'etichetta è stato aggiunto e configurato.
 
 
-[![Posizionare il controllo StatusLabel sopra i due controlli Panel](batch-inserting-cs/_static/image32.png)](batch-inserting-cs/_static/image31.png)
+[![PLace StatusLabel controllo di sopra di due controlli del pannello](batch-inserting-cs/_static/image32.png)](batch-inserting-cs/_static/image31.png)
 
 **Figura 11**: Sul posto di `StatusLabel` controllo di sopra di due controlli di pannello ([fare clic per visualizzare l'immagine con dimensioni normali](batch-inserting-cs/_static/image33.png))
 
@@ -208,7 +208,7 @@ Si consiglia di testare questa pagina in un browser. Durante la prima visita la 
 > Mentre si visualizza l'interfaccia di inserimento, si consiglia di testare il CompareValidators sul prezzo unitario caselle di testo. Verrà visualizzato un avviso quando si fa clic i prodotti aggiungere dal pulsante di spedizione con valori di valuta non è valido o i prezzi con un valore minore di zero oggetto messagebox lato client.
 
 
-[![L'interfaccia di inserimento viene visualizzato dopo aver fatto clic sul pulsante di spedizione del prodotto processo](batch-inserting-cs/_static/image35.png)](batch-inserting-cs/_static/image34.png)
+[![Tegli inserimento interfaccia viene visualizzato dopo aver fatto clic sul pulsante di spedizione del prodotto processo](batch-inserting-cs/_static/image35.png)](batch-inserting-cs/_static/image34.png)
 
 **Figura 12**: L'interfaccia di inserimento viene visualizzato dopo aver fatto clic sul pulsante di spedizione del prodotto processo ([fare clic per visualizzare l'immagine con dimensioni normali](batch-inserting-cs/_static/image36.png))
 
@@ -237,17 +237,17 @@ Se prodotti non sono state immesse, l'interfaccia di inserimento è visualizzato
 S figura 13, 14 e 15 mostrano l'inserimento e visualizzare le interfacce in azione. Nella figura 13, l'utente ha immesso un valore del prezzo unitario senza un nome di prodotto corrispondente. Figura 14 viene illustrata l'interfaccia di visualizzazione dopo tre nuovi prodotti sono stati aggiunti correttamente, sebbene nella figura 15 vengono illustrati due dei prodotti appena aggiunti in GridView (il terzo è nella pagina precedente).
 
 
-[![Un nome di prodotto è obbligatorio quando immettendo un prezzo unitario](batch-inserting-cs/_static/image38.png)](batch-inserting-cs/_static/image37.png)
+[![A Nome del prodotto è obbligatorio quando immettendo un prezzo unitario](batch-inserting-cs/_static/image38.png)](batch-inserting-cs/_static/image37.png)
 
 **Figura 13**: Un nome di prodotto è obbligatorio quando immettendo un prezzo unitario ([fare clic per visualizzare l'immagine con dimensioni normali](batch-inserting-cs/_static/image39.png))
 
 
-[![Sono state aggiunte tre nuove Veggies per il fornitore Mayumi s](batch-inserting-cs/_static/image41.png)](batch-inserting-cs/_static/image40.png)
+[![Ttre nuovi sono state aggiunte Veggies per s Mayumi Supplier](batch-inserting-cs/_static/image41.png)](batch-inserting-cs/_static/image40.png)
 
 **Figura 14**: Tre nuovi Veggies sono state aggiunte per s Mayumi Supplier ([fare clic per visualizzare l'immagine con dimensioni normali](batch-inserting-cs/_static/image42.png))
 
 
-[![I nuovi prodotti sono reperibili nell'ultima pagina di GridView](batch-inserting-cs/_static/image44.png)](batch-inserting-cs/_static/image43.png)
+[![Tegli nuovi prodotti sono disponibili nell'ultima pagina di GridView](batch-inserting-cs/_static/image44.png)](batch-inserting-cs/_static/image43.png)
 
 **Figura 15**: I nuovi prodotti sono disponibili nell'ultima pagina di GridView ([fare clic per visualizzare l'immagine con dimensioni normali](batch-inserting-cs/_static/image45.png))
 

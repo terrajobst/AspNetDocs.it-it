@@ -1,27 +1,28 @@
 ---
 uid: web-api/overview/older-versions/creating-a-web-api-that-supports-crud-operations
-title: Abilitare le operazioni CRUD nell'API Web ASP.NET 1 | Microsoft Docs
+title: Abilitare le operazioni CRUD nell'API Web ASP.NET 1 - ASP.NET 4.x
 author: MikeWasson
-description: Questa esercitazione illustra come supportare le operazioni CRUD in un servizio HTTP tramite l'API Web ASP.NET. Versioni del software utilizzate nell'esercitazione Visual Studio 2012 Web punto di accesso...
+description: Esercitazione illustra come supportare le operazioni CRUD in un servizio HTTP tramite l'API Web ASP.NET per ASP.NET 4.x.
 ms.author: riande
 ms.date: 01/28/2012
+ms.custom: seoapril2019
 ms.assetid: c125ca47-606a-4d6f-a1fc-1fc62928af93
 msc.legacyurl: /web-api/overview/older-versions/creating-a-web-api-that-supports-crud-operations
 msc.type: authoredcontent
-ms.openlocfilehash: f3cb0004075ef7687ca1096bd407c342b4d0b7be
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 855c3fa35d82173c87d13adb51e10fd13698ade5
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423749"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59381354"
 ---
-<a name="enabling-crud-operations-in-aspnet-web-api-1"></a>Abilitare le operazioni CRUD nell'API Web ASP.NET 1
-====================
+# <a name="enabling-crud-operations-in-aspnet-web-api-1"></a>Abilitare le operazioni CRUD nell'API Web ASP.NET 1
+
 da [Mike Wasson](https://github.com/MikeWasson)
 
 [Download progetto completato](http://code.msdn.microsoft.com/ASP-NET-Web-API-Tutorial-c4761894)
 
-> Questa esercitazione illustra come supportare le operazioni CRUD in un servizio HTTP tramite l'API Web ASP.NET.
+> Questa esercitazione illustra come supportare le operazioni CRUD in un servizio HTTP tramite l'API Web ASP.NET per ASP.NET 4.x.
 > 
 > ## <a name="software-versions-used-in-the-tutorial"></a>Versioni del software utilizzate nell'esercitazione
 > 
@@ -71,7 +72,7 @@ Nota: Il metodo PUT sostituisce l'entità product intero. Vale a dire, il client
 
 Iniziare eseguendo Visual Studio e selezionare **nuovo progetto** dalle **avviare** pagina. E viceversa, il **File** dal menu **New** e quindi **progetto**.
 
-Nel **modelli** riquadro, selezionare **modelli installati** ed espandere le **Visual C#** nodo. Sotto **Visual C#**, selezionare **Web**. Nell'elenco dei modelli di progetto, selezionare **applicazione Web ASP.NET MVC 4**. Denominare il progetto &quot;ProductStore&quot; e fare clic su **OK**.
+Nel **modelli** riquadro, selezionare **modelli installati** ed espandere le **Visual c#** nodo. Sotto **Visual c#**, selezionare **Web**. Nell'elenco dei modelli di progetto, selezionare **applicazione Web ASP.NET MVC 4**. Denominare il progetto &quot;ProductStore&quot; e fare clic su **OK**.
 
 ![](creating-a-web-api-that-supports-crud-operations/_static/image1.png)
 
@@ -85,7 +86,7 @@ Un *modello* è un oggetto che rappresenta i dati nell'applicazione. Nell'API We
 
 Per l'API ProductStore, i dati costituita da prodotti, verrà quindi creata una nuova classe denominata `Product`.
 
-Se Esplora soluzioni non è già visibile, scegliere il **View** menu e selezionare **Esplora soluzioni**. In Esplora soluzioni fare doppio clic il **modelli** cartella. Meny il contesto, selezionare **Add**, quindi selezionare **classe**. Denominare la classe &quot;prodotto&quot;.
+Se Esplora soluzioni non è già visibile, scegliere il **View** menu e selezionare **Esplora soluzioni**. In Esplora soluzioni fare doppio clic il **modelli** cartella. Dal menu di scelta rapida, selezionare **Add**, quindi selezionare **classe**. Denominare la classe &quot;prodotto&quot;.
 
 ![](creating-a-web-api-that-supports-crud-operations/_static/image3.png)
 
@@ -101,7 +102,7 @@ In Esplora soluzioni fare doppio clic il **modelli** cartella. Selezionare **Add
 
 ![](creating-a-web-api-that-supports-crud-operations/_static/image4.png)
 
-Nel **modelli** riquadro, selezionare **modelli installati** ed espandere il nodo C#. In C#, selezionare **codice**. Nell'elenco dei modelli di codice, selezionare **interfaccia**. Denominare l'interfaccia &quot;IProductRepository&quot;.
+Nel **modelli** riquadro, selezionare **modelli installati** ed espandere il nodo c#. In c#, selezionare **codice**. Nell'elenco dei modelli di codice, selezionare **interfaccia**. Denominare l'interfaccia &quot;IProductRepository&quot;.
 
 ![](creating-a-web-api-that-supports-crud-operations/_static/image5.png)
 

@@ -8,15 +8,15 @@ ms.date: 12/03/2010
 ms.assetid: 994a5496-c648-4830-b03c-55bb43f325d2
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-6
 msc.type: authoredcontent
-ms.openlocfilehash: 57ba4a47dcc33a1fcc449bc32e9ce186e76cfb5b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1e974d7ff259952d7dba0e968d43180f32a83d23
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57058148"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59387984"
 ---
-<a name="getting-started-with-entity-framework-40-database-first-and-aspnet-4-web-forms---part-6"></a>Introduzione a Entity Framework 4.0 Database First e ASP.NET 4 Web Form - parte 6
-====================
+# <a name="getting-started-with-entity-framework-40-database-first-and-aspnet-4-web-forms---part-6"></a>Introduzione a Entity Framework 4.0 Database First e ASP.NET 4 Web Form - parte 6
+
 da [Tom Dykstra](https://github.com/tdykstra)
 
 > L'applicazione web di esempio Contoso University illustra come creare applicazioni Web Form ASP.NET usando il Entity Framework 4.0 e Visual Studio 2010. Per informazioni sulla serie di esercitazioni, vedere [la prima esercitazione della serie](the-entity-framework-and-aspnet-getting-started-part-1.md)
@@ -34,7 +34,7 @@ In questa parte dell'esercitazione, è non creare nuove pagine web. Al contrario
 
 Un database può archiviare informazioni sugli oggetti correlati in una tabella o in più tabelle. Ad esempio, nelle `School` database, il `Person` tabella include informazioni relative a studenti e docenti in un'unica tabella. Alcune colonne si applicano solo a instructors (insegnanti) (`HireDate`), altre solo gli studenti (`EnrollmentDate`) e alcuni a entrambi (`LastName`, `FirstName`).
 
-[![Image11](the-entity-framework-and-aspnet-getting-started-part-6/_static/image2.png)](the-entity-framework-and-aspnet-getting-started-part-6/_static/image1.png)
+[![image11](the-entity-framework-and-aspnet-getting-started-part-6/_static/image2.png)](the-entity-framework-and-aspnet-getting-started-part-6/_static/image1.png)
 
 È possibile configurare Entity Framework per creare `Instructor` e `Student` entità che ereditano dal `Person` entità. Il modello di generazione di una struttura di ereditarietà di entità da una singola tabella di database è definito *tabella per gerarchia* ereditarietà.
 
@@ -141,7 +141,7 @@ Aggiornare le pagine seguenti creato nelle esercitazioni precedenti in modo che 
 
     [!code-aspx[Main](the-entity-framework-and-aspnet-getting-started-part-6/samples/sample4.aspx)]
 
-    [![Image17](the-entity-framework-and-aspnet-getting-started-part-6/_static/image32.png)](the-entity-framework-and-aspnet-getting-started-part-6/_static/image31.png)
+    [![image17](the-entity-framework-and-aspnet-getting-started-part-6/_static/image32.png)](the-entity-framework-and-aspnet-getting-started-part-6/_static/image31.png)
 - Nelle *Instructors.aspx* e *InstructorsCourses.aspx*, aggiungere `EntityTypeFilter="Instructor"` per i `InstructorsEntityDataSource` controllare e rimuovere `Where="it.HireDate is not null"`. Il markup *Instructors.aspx* ora simile al seguente: 
 
     [!code-aspx[Main](the-entity-framework-and-aspnet-getting-started-part-6/samples/sample5.aspx)]
@@ -152,7 +152,7 @@ Aggiornare le pagine seguenti creato nelle esercitazioni precedenti in modo che 
 
     [!code-aspx[Main](the-entity-framework-and-aspnet-getting-started-part-6/samples/sample6.aspx)]
 
-    [![Image19](the-entity-framework-and-aspnet-getting-started-part-6/_static/image36.png)](the-entity-framework-and-aspnet-getting-started-part-6/_static/image35.png)
+    [![image19](the-entity-framework-and-aspnet-getting-started-part-6/_static/image36.png)](the-entity-framework-and-aspnet-getting-started-part-6/_static/image35.png)
 
 In seguito a queste modifiche, è stata migliorata la manutenibilità dell'applicazione Contoso University in diversi modi. Si è spostati logica di selezione e convalida dal livello dell'interfaccia utente (*aspx* markup) e ha reso parte integrante del livello di accesso ai dati. Ciò aiuta a isolare il codice dell'applicazione di modifiche che è possibile apportare in futuro per lo schema del database o il modello di dati. Ad esempio, è possibile decidere che gli studenti potrebbero assumere come ausilio degli insegnanti e pertanto otterrebbe una data di assunzione. È quindi possibile aggiungere una nuova proprietà per differenziare gli studenti da istruttori e aggiornare il modello di dati. Nessun codice nell'applicazione web dovrà essere modificato, ad eccezione di dove si desidera mostrare una data di assunzione per gli studenti. Un altro vantaggio dell'aggiunta `Instructor` e `Student` entità è che il codice sia più facilmente comprensibile rispetto a quando definito `Person` gli oggetti che erano in realtà studenti o instructors (insegnanti).
 

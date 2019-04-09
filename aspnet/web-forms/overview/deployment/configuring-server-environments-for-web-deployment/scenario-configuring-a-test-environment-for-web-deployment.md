@@ -8,18 +8,18 @@ ms.date: 05/04/2012
 ms.assetid: 44a22ac7-1fc7-4174-b946-c6129fb6a19b
 msc.legacyurl: /web-forms/overview/deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-test-environment-for-web-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: 3c6c8850e77f4a3cbb71db4353487c8a5e9c097d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7ea8c74a6621200e3a0d52a7c37fed6b5eeff4e5
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57058348"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59391624"
 ---
-<a name="scenario-configuring-a-test-environment-for-web-deployment"></a>Scenario: Configurazione di un ambiente di test per la distribuzione Web
-====================
+# <a name="scenario-configuring-a-test-environment-for-web-deployment"></a>Scenario: Configurazione di un ambiente di test per la distribuzione Web
+
 da [Jason Lee](https://github.com/jrjlee)
 
-[Scaricare PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Scarica il PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > In questo argomento viene descritto uno scenario di distribuzione web tipica per sviluppatori o ambienti di test e illustra le attività da completare per poter configurare un ambiente simile.
 

@@ -8,15 +8,15 @@ ms.date: 06/09/2009
 ms.assetid: 14873c5d-81a9-455b-bd71-30fb555583e7
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/displaying-a-custom-error-page-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 54aa5e31888262b80461e77d5abddcbe4fbe01eb
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: dc3ff989b6861fe62cce0199a62adef6107206d5
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57040158"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59384188"
 ---
-<a name="displaying-a-custom-error-page-vb"></a>Visualizzazione di una pagina di errore personalizzata (VB)
-====================
+# <a name="displaying-a-custom-error-page-vb"></a>Visualizzazione di una pagina di errore personalizzata (VB)
+
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Scaricare il codice](http://download.microsoft.com/download/1/0/C/10CC829F-A808-4302-97D3-59989B8F9C01/ASPNET_Hosting_Tutorial_11_VB.zip) o [Scarica il PDF](http://download.microsoft.com/download/5/C/5/5C57DB8C-5DEA-4B3A-92CA-4405544D313B/aspnet_tutorial11_CustomErrors_vb.pdf)

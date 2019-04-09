@@ -1,22 +1,23 @@
 ---
 uid: web-api/overview/advanced/http-message-handlers
-title: Gestori di messaggi HTTP nell'API Web ASP.NET | Microsoft Docs
+title: "Gestori di messaggi HTTP nell'API Web ASP.NET: ASP.NET 4.x"
 author: MikeWasson
-description: ''
+description: Una panoramica dei gestori di messaggi HTTP nell'API Web ASP.NET per ASP.NET 4.x
 ms.author: riande
 ms.date: 02/13/2012
+ms.custom: seoapril2019
 ms.assetid: 9002018b-3aa3-4358-bb1c-fbb5bc751d01
 msc.legacyurl: /web-api/overview/advanced/http-message-handlers
 msc.type: authoredcontent
-ms.openlocfilehash: 0b0d7b4c543dc4e597c6c472083898f3a8095a83
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 308d2e3dd21917e7656f7ffe889dc965d9275d74
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57043208"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59392106"
 ---
-<a name="http-message-handlers-in-aspnet-web-api"></a>Gestori di messaggi HTTP nell'API Web ASP.NET
-====================
+# <a name="http-message-handlers-in-aspnet-web-api"></a>Gestori di messaggi HTTP nell'API Web ASP.NET
+
 da [Mike Wasson](https://github.com/MikeWasson)
 
 Oggetto *gestore di messaggi* è una classe che riceve una richiesta HTTP e restituisce una risposta HTTP. Gestori di messaggi derivano dalla classe astratta **HttpMessageHandler** classe.

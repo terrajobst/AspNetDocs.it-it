@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: 848e6bcf-4c3f-4d14-974d-e45b9444ab79
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/reorderlist/drag-and-drop-via-reorderlist-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 12c5aa60aa6bb71c99e267a1a71b40ed718df8cf
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1b955c43a0fc95bda87843fc4a5c9e56aef3dfc6
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57041328"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59400997"
 ---
-<a name="drag-and-drop-via-reorderlist-vb"></a>Trascinamento della selezione tramite ReorderList (VB)
-====================
+# <a name="drag-and-drop-via-reorderlist-vb"></a>Trascinamento della selezione tramite ReorderList (VB)
+
 da [Christian Wenz](https://github.com/wenz)
 
 [Scaricare il codice](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/ReorderList5.vb.zip) o [Scarica il PDF](http://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/reorderlist5VB.pdf)
@@ -44,7 +44,7 @@ In questo database, creare una nuova tabella denominata `AJAX` con le quattro co
 - `position` (int, valore NULL)
 
 
-[![Il layout della tabella di AJAX](drag-and-drop-via-reorderlist-vb/_static/image2.png)](drag-and-drop-via-reorderlist-vb/_static/image1.png)
+[![Tlayout he della tabella AJAX](drag-and-drop-via-reorderlist-vb/_static/image2.png)](drag-and-drop-via-reorderlist-vb/_static/image1.png)
 
 Il layout della tabella AJAX ([fare clic per visualizzare l'immagine con dimensioni normali](drag-and-drop-via-reorderlist-vb/_static/image3.png))
 
@@ -52,7 +52,7 @@ Il layout della tabella AJAX ([fare clic per visualizzare l'immagine con dimensi
 Successivamente, compilare la tabella con un paio di valori. Si noti che il `position` colonna contiene l'ordinamento degli elementi.
 
 
-[![I dati iniziali della tabella di AJAX](drag-and-drop-via-reorderlist-vb/_static/image5.png)](drag-and-drop-via-reorderlist-vb/_static/image4.png)
+[![Tdata iniziale he della tabella di AJAX](drag-and-drop-via-reorderlist-vb/_static/image5.png)](drag-and-drop-via-reorderlist-vb/_static/image4.png)
 
 I dati iniziali della tabella di AJAX ([fare clic per visualizzare l'immagine con dimensioni normali](drag-and-drop-via-reorderlist-vb/_static/image6.png))
 
@@ -83,7 +83,7 @@ Infine, un `ScriptManager` controllo Inizializza ASP.NET AJAX per la pagina:
 Eseguire questo esempio nel browser e ridisporre un po' gli elementi dell'elenco. Quindi, ricaricare la pagina e/o esaminare il database. Le posizioni modificate sono state mantenute e si riflettono anche in base ai valori di `position` colonna nel database e che tutto senza alcun codice, con un semplice utilizzo dei markup.
 
 
-[![I dati delle modifiche del database in base al nuovo ordine di elemento di elenco](drag-and-drop-via-reorderlist-vb/_static/image8.png)](drag-and-drop-via-reorderlist-vb/_static/image7.png)
+[![Tha dati in modifiche del database secondo l'ordine dell'elemento elenco nuovo](drag-and-drop-via-reorderlist-vb/_static/image8.png)](drag-and-drop-via-reorderlist-vb/_static/image7.png)
 
 I dati delle modifiche del database in base al nuovo elenco di elementi ordine ([fare clic per visualizzare l'immagine con dimensioni normali](drag-and-drop-via-reorderlist-vb/_static/image9.png))
 

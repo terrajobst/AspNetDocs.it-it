@@ -8,15 +8,15 @@ ms.date: 07/09/2015
 ms.assetid: 7e986ab5-6615-4638-add7-4614ce7b51db
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/monitoring-and-telemetry
 msc.type: authoredcontent
-ms.openlocfilehash: f4dae827627103e5cfb9981b6c3b9342cdc34c13
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 48a66eea839f7f48899040ad20bbfee95b9a1902
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57043218"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59403909"
 ---
-<a name="monitoring-and-telemetry-building-real-world-cloud-apps-with-azure"></a>Monitoraggio e telemetria (creazione di App Cloud funzionanti con Azure)
-====================
+# <a name="monitoring-and-telemetry-building-real-world-cloud-apps-with-azure"></a>Monitoraggio e telemetria (creazione di App Cloud funzionanti con Azure)
+
 dal [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
 
 [Download risolverlo Project](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [Scarica l'E-book](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
@@ -72,7 +72,7 @@ Distribuire l'app in Azure e iniziare a usarlo. Creare alcune Fix It attività p
 
 Quindi tornare al **New Relic** pagina il **componenti aggiuntivi** scheda del portale e fare clic su **Gestisci**. Il portale invia all'utente per il portale di gestione di New Relic, con accesso single sign-on per l'autenticazione in modo da non dover immettere nuovamente le credenziali. La pagina Panoramica offre un'ampia gamma di statistiche sulle prestazioni. (Fare clic sull'immagine per visualizzare le dimensioni della pagina overview completi).
 
-[![Nuova scheda Monitoraggio Relic](monitoring-and-telemetry/_static/image9.png)](monitoring-and-telemetry/_static/image8.png)
+[![Nscheda Monitoraggio Relic uova](monitoring-and-telemetry/_static/image9.png)](monitoring-and-telemetry/_static/image8.png)
 
 Di seguito sono elencate alcune delle statistiche è possibile visualizzare:
 

@@ -8,15 +8,15 @@ ms.date: 10/16/2008
 ms.assetid: afc038e6-555e-4dfa-ae45-f4d3d50e8f96
 msc.legacyurl: /mvc/videos/mvc-1/aspnet-mvc-storefront/aspnet-mvc-storefront-part-16-membership-redo-with-openid
 msc.type: video
-ms.openlocfilehash: 524ddc4dacfd1e0f65ef7b8533421c8e70d79505
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 3c9a6be576af4342c520b755d51da68b1d73a95b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57064378"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59383005"
 ---
-<a name="aspnet-mvc-storefront-part-16-membership-redo-with-openid"></a>ASP.NET MVC Storefront - Parte 16: Modifica dell'appartenenza con OpenID
-====================
+# <a name="aspnet-mvc-storefront-part-16-membership-redo-with-openid"></a>ASP.NET MVC Storefront - Parte 16: Modifica dell'appartenenza con OpenID
+
 da [Rob Conery](https://github.com/robconery)
 
 Rob cambia il sistema di appartenenze e lo divide in tre parti/servizi separate. Rob si trova quindi con Jon Galloway parlare OpenID e come implementare.

@@ -8,40 +8,40 @@ ms.date: 08/08/2011
 ms.assetid: b3fb4480-0f41-495b-add6-163ca92dc8a3
 msc.legacyurl: /web-forms/overview
 msc.type: book
-ms.openlocfilehash: 0c29a844bd227a79e6df5231e0903129e306742e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 4b38d6b54f53508f7b568207fe7f1a624a7af5f3
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57023668"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59402271"
 ---
-<a name="aspnet-web-forms-guidance"></a>Web Form ASP.NET materiale sussidiario
-====================
+# <a name="aspnet-web-forms-guidance"></a>Web Form ASP.NET materiale sussidiario
+
 - [Introduzione](getting-started/index.md)
 
-    - [Introduzione a Web Form ASP.NET 4.5 e Visual Studio 2013](getting-started/getting-started-with-aspnet-45-web-forms/index.md)
+    - [Introduzione a Web Forms ASP.NET 4.5 e Visual Studio 2013](getting-started/getting-started-with-aspnet-45-web-forms/index.md)
 
-        - [Introduzione a Web Form e Visual Studio](getting-started/getting-started-with-aspnet-45-web-forms/introduction-and-overview.md)
+        - [Introduzione a Web Forms e Visual Studio](getting-started/getting-started-with-aspnet-45-web-forms/introduction-and-overview.md)
         - [Creare il progetto](getting-started/getting-started-with-aspnet-45-web-forms/create-the-project.md)
         - [Creare il livello di accesso ai dati](getting-started/getting-started-with-aspnet-45-web-forms/create_the_data_access_layer.md)
         - [Interfaccia utente ed esplorazione](getting-started/getting-started-with-aspnet-45-web-forms/ui_and_navigation.md)
-        - [Visualizzazione di elementi di dati e dettagli](getting-started/getting-started-with-aspnet-45-web-forms/display_data_items_and_details.md)
-        - [Carrello della spesa](getting-started/getting-started-with-aspnet-45-web-forms/shopping-cart.md)
+        - [Visualizzare elementi di dati e dettagli](getting-started/getting-started-with-aspnet-45-web-forms/display_data_items_and_details.md)
+        - [Carrello acquisti](getting-started/getting-started-with-aspnet-45-web-forms/shopping-cart.md)
         - [Completamento della transazione e pagamento con PayPal](getting-started/getting-started-with-aspnet-45-web-forms/checkout-and-payment-with-paypal.md)
         - [Appartenenza e amministrazione](getting-started/getting-started-with-aspnet-45-web-forms/membership-and-administration.md)
         - [Routing degli URL](getting-started/getting-started-with-aspnet-45-web-forms/url-routing.md)
         - [Gestione degli errori di ASP.NET](getting-started/getting-started-with-aspnet-45-web-forms/aspnet-error-handling.md)
-    - [Creazione di una pagina Web Form di base in Visual Studio 2013](getting-started/creating-a-basic-web-forms-page.md)
-    - [Modifica del codice di Web Form ASP.NET in Visual Studio 2013](getting-started/code-editing-in-web-forms-pages.md)
-    - [Uso di Controllo pagina per Visual Studio 2012 in Web Form ASP.NET](getting-started/using-page-inspector-in-a-visual-studio-11-beta-web-forms-project.md)
+    - [Creazione di una pagina Web Forms di base in Visual Studio 2013](getting-started/creating-a-basic-web-forms-page.md)
+    - [Modifica del codice di Web Forms ASP.NET in Visual Studio 2013](getting-started/code-editing-in-web-forms-pages.md)
+    - [Uso di Controllo pagina per Visual Studio 2012 in Web Forms ASP.NET](getting-started/using-page-inspector-in-a-visual-studio-11-beta-web-forms-project.md)
     - [Laboratori pratici su Visual Studio 2012](getting-started/hands-on-labs/index.md)
 
         - [Novità di ASP.NET e dello sviluppo Web in Visual Studio 2012](getting-started/hands-on-labs/whats-new-in-aspnet-and-web-development-in-visual-studio-2012.md)
-        - [Novità di Web Form in ASP.NET 4.5](getting-started/hands-on-labs/whats-new-in-web-forms-in-aspnet-45.md)
+        - [Novità di Web Forms in ASP.NET 4.5](getting-started/hands-on-labs/whats-new-in-web-forms-in-aspnet-45.md)
         - [Uso di Controllo pagina in Visual Studio 2012](getting-started/hands-on-labs/using-page-inspector-in-visual-studio-2012.md)
-- [Uso di dati](presenting-and-managing-data/index.md)
+- [Uso dei dati](presenting-and-managing-data/index.md)
 
-    - [Associazione di modelli e Web Form in Visual Studio 2013](presenting-and-managing-data/model-binding/index.md)
+    - [Associazione di modelli e Web Forms in Visual Studio 2013](presenting-and-managing-data/model-binding/index.md)
 
         - [Recupero e visualizzazione dei dati](presenting-and-managing-data/model-binding/retrieving-data.md)
         - [Aggiornamento, eliminazione e creazione di dati](presenting-and-managing-data/model-binding/updating-deleting-and-creating-data.md)
@@ -51,8 +51,8 @@ ms.locfileid: "57023668"
         - [Aggiunta di un livello per la logica di business](presenting-and-managing-data/model-binding/adding-business-logic-layer.md)
 - [Sicurezza, autenticazione e autorizzazione](security/index.md)
 
-    - [Creare un'app Web Form ASP.NET sicura con registrazione utente, messaggi di posta elettronica di conferma e reimpostazione della password (C#)](security/create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset.md)
-    - [Creare un'app Web Form ASP.NET con l'autenticazione a due fattori SMS (C#)](security/create-an-aspnet-web-forms-app-with-sms-two-factor-authentication.md)
+    - [Creare un'app Web Forms ASP.NET sicura con registrazione utente, messaggi di posta elettronica di conferma e reimpostazione della password (C#)](security/create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset.md)
+    - [Creare un'app Web Forms ASP.NET con l'autenticazione a due fattori SMS (C#)](security/create-an-aspnet-web-forms-app-with-sms-two-factor-authentication.md)
 - [Prestazioni](performance-and-caching/index.md)
 
     - [Uso di metodi asincroni in ASP.NET 4.5](performance-and-caching/using-asynchronous-methods-in-aspnet-45.md)
@@ -63,7 +63,7 @@ ms.locfileid: "57023668"
         - [Introduzione](deployment/visual-studio-web-deployment/introduction.md)
         - [Preparazione per la distribuzione del database](deployment/visual-studio-web-deployment/preparing-databases.md)
         - [Trasformazioni del file Web.config](deployment/visual-studio-web-deployment/web-config-transformations.md)
-        - [Proprietà di progetti](deployment/visual-studio-web-deployment/project-properties.md)
+        - [Proprietà progetto](deployment/visual-studio-web-deployment/project-properties.md)
         - [Distribuzione per il test](deployment/visual-studio-web-deployment/deploying-to-iis.md)
         - [Impostazione delle autorizzazioni delle cartelle](deployment/visual-studio-web-deployment/setting-folder-permissions.md)
         - [Distribuzione in produzione](deployment/visual-studio-web-deployment/deploying-to-production.md)
@@ -76,7 +76,7 @@ ms.locfileid: "57023668"
 
         - [Distribuzione di applicazioni Web in scenari aziendali tramite Visual Studio 2010](deployment/deploying-web-applications-in-enterprise-scenarios/deploying-web-applications-in-enterprise-scenarios.md)
         - [Distribuzione Web aziendale: Panoramica dello scenario](deployment/deploying-web-applications-in-enterprise-scenarios/enterprise-web-deployment-scenario-overview.md)
-        - [Gestione del ciclo di vita delle applicazioni: Dallo sviluppo alla produzione](deployment/deploying-web-applications-in-enterprise-scenarios/application-lifecycle-management-from-development-to-production.md)
+        - [Gestione del ciclo di vita delle applicazioni: dallo sviluppo alla produzione](deployment/deploying-web-applications-in-enterprise-scenarios/application-lifecycle-management-from-development-to-production.md)
     - [ASP.NET 4 - Serie sulla distribuzione aziendale 1](deployment/web-deployment-in-the-enterprise/index.md)
 
         - [Distribuzione Web nell'organizzazione](deployment/web-deployment-in-the-enterprise/web-deployment-in-the-enterprise.md)
@@ -94,7 +94,7 @@ ms.locfileid: "57023668"
 
         - [Configurazione degli ambienti server per la distribuzione Web](deployment/configuring-server-environments-for-web-deployment/configuring-server-environments-for-web-deployment.md)
         - [Scelta dell'approccio corretto per la distribuzione Web](deployment/configuring-server-environments-for-web-deployment/choosing-the-right-approach-to-web-deployment.md)
-        - [Scenario: Configurazione di un ambiente di Test per la distribuzione Web](deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-test-environment-for-web-deployment.md)
+        - [Scenario: Configurazione di un ambiente di test per la distribuzione Web](deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-test-environment-for-web-deployment.md)
         - [Scenario: Configurazione di un ambiente di gestione temporanea per la distribuzione Web](deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-staging-environment-for-web-deployment.md)
         - [Scenario: Configurazione di un ambiente di produzione per la distribuzione Web](deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-production-environment-for-web-deployment.md)
         - [Configurazione di un server Web per la pubblicazione con Distribuzione Web (agente remoto)](deployment/configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-remote-agent.md)
@@ -111,7 +111,7 @@ ms.locfileid: "57023668"
         - [Configurazione di un server di compilazione TFS per la distribuzione Web](deployment/configuring-team-foundation-server-for-web-deployment/configuring-a-tfs-build-server-for-web-deployment.md)
         - [Creazione di una definizione di compilazione che supporta la distribuzione](deployment/configuring-team-foundation-server-for-web-deployment/creating-a-build-definition-that-supports-deployment.md)
         - [Distribuzione di una compilazione specifica](deployment/configuring-team-foundation-server-for-web-deployment/deploying-a-specific-build.md)
-        - [Configurazione delle autorizzazioni per la compilazione di Team Build](deployment/configuring-team-foundation-server-for-web-deployment/configuring-permissions-for-team-build-deployment.md)
+        - [Configurazione delle autorizzazioni per la distribuzione di Team Build](deployment/configuring-team-foundation-server-for-web-deployment/configuring-permissions-for-team-build-deployment.md)
     - [ASP.NET 4 - Serie sulla distribuzione aziendale 4 - Argomenti avanzati](deployment/advanced-enterprise-web-deployment/index.md)
 
         - [Distribuzione Web aziendale avanzata](deployment/advanced-enterprise-web-deployment/advanced-enterprise-web-deployment.md)
@@ -125,20 +125,20 @@ ms.locfileid: "57023668"
         - [Risoluzione dei problemi del processo di creazione di pacchetti](deployment/advanced-enterprise-web-deployment/troubleshooting-the-packaging-process.md)
 - [Avanzate](advanced/index.md)
 
-    - [Resilienza della connessione e intercettazione dei comandi di Web Form ASP.NET](advanced/aspnet-web-forms-connection-resiliency-and-command-interception.md)
+    - [Resilienza della connessione e intercettazione dei comandi di Web Forms ASP.NET](advanced/aspnet-web-forms-connection-resiliency-and-command-interception.md)
 - [Versioni precedenti - Introduzione](older-versions-getting-started/index.md)
 
     - [ASP.NET 4 - Tailspin Spyworks](older-versions-getting-started/tailspin-spyworks/index.md)
 
         - [Parte 1. File -> Nuovo progetto](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-1.md)
         - [Parte 2. Livello di accesso ai dati](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-2.md)
-        - [Parte 3: Layout e Menu per la categoria](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-3.md)
+        - [Parte 3: Layout e menu per la categoria](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-3.md)
         - [Parte 4: Elenco di prodotti](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-4.md)
-        - [Parte 5: Logica di Business](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-5.md)
+        - [Parte 5: Logica di business](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-5.md)
         - [Parte 6: Appartenenza ASP.NET](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-6.md)
         - [Parte 7: Aggiunta di funzionalità](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-7.md)
         - [Parte 8: Pagine finali, gestione delle eccezioni e conclusione](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-8.md)
-    - [ASP.NET 4 - Introduzione a Entity Framework 4 e Web Form](older-versions-getting-started/getting-started-with-ef/index.md)
+    - [ASP.NET 4 - Introduzione a Entity Framework 4 e Web Forms](older-versions-getting-started/getting-started-with-ef/index.md)
 
         - [Introduzione a Database First di Entity Framework 4.0](older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-1.md)
         - [Introduzione a Database First di Entity Framework 4.0 - Parte 2](older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-2.md)
@@ -148,13 +148,13 @@ ms.locfileid: "57023668"
         - [Introduzione a Database First di Entity Framework 4.0 - Parte 6](older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-6.md)
         - [Introduzione a Database First di Entity Framework 4.0 - Parte 7](older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-7.md)
         - [Introduzione a Database First di Entity Framework 4.0 - Parte 8](older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-8.md)
-    - [ASP.NET 4 - Continuazione con Entity Framework 4 e Web Form](older-versions-getting-started/continuing-with-ef/index.md)
+    - [ASP.NET 4 - Continuazione con Entity Framework 4 e Web Forms](older-versions-getting-started/continuing-with-ef/index.md)
 
-        - [Entity Framework 4.0 e controllo ObjectDataSource, parte 1: Guida introduttiva](older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started.md)
-        - [Entity Framework 4.0 e controllo ObjectDataSource, parte 2: Aggiunta di un livello di logica di Business e Unit test](older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-2-adding-a-business-logic-layer-and-unit-tests.md)
+        - [Entity Framework 4.0 e controllo ObjectDataSource, parte 1: Introduzione](older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started.md)
+        - [Entity Framework 4.0 e controllo ObjectDataSource, parte 2: Aggiunta di un livello di logica di business e unit test](older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-2-adding-a-business-logic-layer-and-unit-tests.md)
         - [Entity Framework 4.0 e controllo ObjectDataSource, parte 3: Ordinamento e filtro](older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-3-sorting-and-filtering.md)
         - [Gestione della concorrenza con Entity Framework 4.0 in ASP.NET 4](older-versions-getting-started/continuing-with-ef/handling-concurrency-with-the-entity-framework-in-an-asp-net-web-application.md)
-        - [Massimizzazione delle prestazioni con Entity Framework 4.0 in ASP.NET 4](older-versions-getting-started/continuing-with-ef/maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application.md)
+        - [Ottimizzazione delle prestazioni con Entity Framework 4.0 in ASP.NET 4](older-versions-getting-started/continuing-with-ef/maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application.md)
         - [Novità di Entity Framework 4.0](older-versions-getting-started/continuing-with-ef/what-s-new-in-the-entity-framework-4.md)
     - [ASP.NET 4 - Distribuzione Web con SQL Server Compact tramite Visual Studio](older-versions-getting-started/deployment-to-a-hosting-provider/index.md)
 
@@ -178,27 +178,27 @@ ms.locfileid: "57023668"
         - [Informazioni sulla localizzazione in ASP.NET AJAX](older-versions-getting-started/aspnet-ajax/understanding-asp-net-ajax-localization.md)
         - [Informazioni sui servizi Web di ASP.NET AJAX](older-versions-getting-started/aspnet-ajax/understanding-asp-net-ajax-web-services.md)
         - [Informazioni sulle funzionalità di debug di ASP.NET AJAX](older-versions-getting-started/aspnet-ajax/understanding-asp-net-ajax-debugging-capabilities.md)
-    - [ASP.NET 3.5 - Pagine master Web Form](older-versions-getting-started/master-pages/index.md)
+    - [ASP.NET 3.5 - Pagine master Web Forms](older-versions-getting-started/master-pages/index.md)
 
         - [Creazione di un layout a livello di sito tramite le pagine master (C#)](older-versions-getting-started/master-pages/creating-a-site-wide-layout-using-master-pages-cs.md)
         - [Più elementi ContentPlaceHolder e contenuto predefinito (C#)](older-versions-getting-started/master-pages/multiple-contentplaceholders-and-default-content-cs.md)
-        - [Specificazione di titolo, metatag e altre intestazioni HTML nella pagina master (C#)](older-versions-getting-started/master-pages/specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs.md)
+        - [Impostazione di titolo, metatag e altre intestazioni HTML nella pagina master (C#)](older-versions-getting-started/master-pages/specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs.md)
         - [URL nelle pagine master (C#)](older-versions-getting-started/master-pages/urls-in-master-pages-cs.md)
         - [Denominazione degli ID di controllo nelle pagine di contenuto (C#)](older-versions-getting-started/master-pages/control-id-naming-in-content-pages-cs.md)
         - [Interazione con la pagina master dalla pagina di contenuto (C#)](older-versions-getting-started/master-pages/interacting-with-the-master-page-from-the-content-page-cs.md)
         - [Interazione con la pagina di contenuto dalla pagina master (C#)](older-versions-getting-started/master-pages/interacting-with-the-content-page-from-the-master-page-cs.md)
         - [Pagine master e ASP.NET AJAX (C#)](older-versions-getting-started/master-pages/master-pages-and-asp-net-ajax-cs.md)
-        - [Specificazione della pagina master a livello di codice (C#)](older-versions-getting-started/master-pages/specifying-the-master-page-programmatically-cs.md)
+        - [Impostazione della pagina master a livello di codice (C#)](older-versions-getting-started/master-pages/specifying-the-master-page-programmatically-cs.md)
         - [Pagine master annidate (C#)](older-versions-getting-started/master-pages/nested-master-pages-cs.md)
         - [Creazione di un layout a livello di sito tramite le pagine master (VB)](older-versions-getting-started/master-pages/creating-a-site-wide-layout-using-master-pages-vb.md)
         - [Più elementi ContentPlaceHolder e contenuto predefinito (VB)](older-versions-getting-started/master-pages/multiple-contentplaceholders-and-default-content-vb.md)
-        - [Specificazione di titolo, metatag e altre intestazioni HTML nella pagina master (VB)](older-versions-getting-started/master-pages/specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb.md)
+        - [Impostazione di titolo, metatag e altre intestazioni HTML nella pagina master (VB)](older-versions-getting-started/master-pages/specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb.md)
         - [URL nelle pagine master (VB)](older-versions-getting-started/master-pages/urls-in-master-pages-vb.md)
         - [Denominazione degli ID di controllo nelle pagine di contenuto (VB)](older-versions-getting-started/master-pages/control-id-naming-in-content-pages-vb.md)
         - [Interazione con la pagina master dalla pagina di contenuto (VB)](older-versions-getting-started/master-pages/interacting-with-the-master-page-from-the-content-page-vb.md)
         - [Interazione con la pagina di contenuto dalla pagina master (VB)](older-versions-getting-started/master-pages/interacting-with-the-content-page-from-the-master-page-vb.md)
         - [Pagine master e ASP.NET AJAX (VB)](older-versions-getting-started/master-pages/master-pages-and-asp-net-ajax-vb.md)
-        - [Specificazione della pagina master a livello di codice (VB)](older-versions-getting-started/master-pages/specifying-the-master-page-programmatically-vb.md)
+        - [Impostazione della pagina master a livello di codice (VB)](older-versions-getting-started/master-pages/specifying-the-master-page-programmatically-vb.md)
         - [Pagine master annidate (VB)](older-versions-getting-started/master-pages/nested-master-pages-vb.md)
     - [Distribuzione di progetti di siti Web in Visual Studio 2008 e versioni precedenti](older-versions-getting-started/deploying-web-site-projects/index.md)
 
@@ -364,7 +364,7 @@ ms.locfileid: "57023668"
         - [Uso di più controlli Popup (VB)](ajax-control-toolkit/popup/using-multiple-popup-controls-vb.md)
         - [Gestione dei postback da un controllo Popup con UpdatePanel (VB)](ajax-control-toolkit/popup/handling-postbacks-from-a-popup-control-with-an-updatepanel-vb.md)
         - [Gestione dei postback da un controllo Popup senza UpdatePanel (VB)](ajax-control-toolkit/popup/handling-postbacks-from-a-popup-control-without-an-updatepanel-vb.md)
-    - [Rating](ajax-control-toolkit/rating/index.md)
+    - [Classificazione](ajax-control-toolkit/rating/index.md)
 
         - [Creazione di un controllo Rating (C#)](ajax-control-toolkit/rating/creating-a-rating-control-cs.md)
         - [Creazione di un controllo Rating (VB)](ajax-control-toolkit/rating/creating-a-rating-control-vb.md)
@@ -374,7 +374,7 @@ ms.locfileid: "57023668"
         - [Trascinamento della selezione tramite ReorderList (C#)](ajax-control-toolkit/reorderlist/drag-and-drop-via-reorderlist-cs.md)
         - [Uso di postback con ReorderList (VB)](ajax-control-toolkit/reorderlist/using-postbacks-with-reorderlist-vb.md)
         - [Trascinamento della selezione tramite ReorderList (VB)](ajax-control-toolkit/reorderlist/drag-and-drop-via-reorderlist-vb.md)
-    - [Dispositivo di scorrimento](ajax-control-toolkit/slider/index.md)
+    - [Slider](ajax-control-toolkit/slider/index.md)
 
         - [Controllo Slider con postback automatico (C#)](ajax-control-toolkit/slider/using-the-slider-control-with-auto-postback-cs.md)
         - [Data binding del controllo Slider (C#)](ajax-control-toolkit/slider/databinding-the-slider-control-cs.md)
@@ -392,10 +392,10 @@ ms.locfileid: "57023668"
 
         - [Creazione di un livello di accesso ai dati (C#)](data-access/introduction/creating-a-data-access-layer-cs.md)
         - [Creazione di un livello per la logica di business (C#)](data-access/introduction/creating-a-business-logic-layer-cs.md)
-        - [Pagine master e spostamento all'interno del sito (C#)](data-access/introduction/master-pages-and-site-navigation-cs.md)
+        - [Pagine master ed esplorazione del sito (C#)](data-access/introduction/master-pages-and-site-navigation-cs.md)
         - [Creazione di un livello di accesso ai dati (VB)](data-access/introduction/creating-a-data-access-layer-vb.md)
         - [Creazione di un livello per la logica di business (VB)](data-access/introduction/creating-a-business-logic-layer-vb.md)
-        - [Pagine master e spostamento all'interno del sito (VB)](data-access/introduction/master-pages-and-site-navigation-vb.md)
+        - [Pagine master ed esplorazione del sito (VB)](data-access/introduction/master-pages-and-site-navigation-vb.md)
     - [Report di base](data-access/basic-reporting/index.md)
 
         - [Visualizzazione dei dati con ObjectDataSource (C#)](data-access/basic-reporting/displaying-data-with-the-objectdatasource-cs.md)
@@ -404,7 +404,7 @@ ms.locfileid: "57023668"
         - [Visualizzazione dei dati con ObjectDataSource (VB)](data-access/basic-reporting/displaying-data-with-the-objectdatasource-vb.md)
         - [Parametri dichiarativi (VB)](data-access/basic-reporting/declarative-parameters-vb.md)
         - [Impostazione a livello di programmazione dei valori dei parametri di ObjectDataSource (VB)](data-access/basic-reporting/programmatically-setting-the-objectdatasource-s-parameter-values-vb.md)
-    - [Master/dettagli](data-access/masterdetail/index.md)
+    - [Report master o di dettaglio](data-access/masterdetail/index.md)
 
         - [Applicazione di filtri al report master o di dettaglio usando un controllo DropDownList (C#)](data-access/masterdetail/master-detail-filtering-with-a-dropdownlist-cs.md)
         - [Applicazione di filtri al report master o di dettaglio usando due controlli DropDownList (C#)](data-access/masterdetail/master-detail-filtering-with-two-dropdownlists-cs.md)
@@ -444,15 +444,15 @@ ms.locfileid: "57023668"
         - [Implementazione della concorrenza ottimistica (VB)](data-access/editing-inserting-and-deleting-data/implementing-optimistic-concurrency-vb.md)
         - [Aggiunta di una conferma lato client durante l'eliminazione (VB)](data-access/editing-inserting-and-deleting-data/adding-client-side-confirmation-when-deleting-vb.md)
         - [Limitazione della funzionalità di modifica dei dati in base all'utente (VB)](data-access/editing-inserting-and-deleting-data/limiting-data-modification-functionality-based-on-the-user-vb.md)
-    - [Paging e ordinamento](data-access/paging-and-sorting/index.md)
+    - [Suddivisione in pagine e ordinamento](data-access/paging-and-sorting/index.md)
 
-        - [Paging e ordinamento dei dati dei report (C#)](data-access/paging-and-sorting/paging-and-sorting-report-data-cs.md)
-        - [Paging efficiente in grandi quantità di dati (C#)](data-access/paging-and-sorting/efficiently-paging-through-large-amounts-of-data-cs.md)
-        - [Ordinamento dei dati con paging personalizzato (C#)](data-access/paging-and-sorting/sorting-custom-paged-data-cs.md)
+        - [Suddivisione in pagine e ordinamento dei dati dei report (C#)](data-access/paging-and-sorting/paging-and-sorting-report-data-cs.md)
+        - [Suddivisione in pagine efficiente di grandi quantità di dati (C#)](data-access/paging-and-sorting/efficiently-paging-through-large-amounts-of-data-cs.md)
+        - [Ordinamento dei dati con suddivisione in pagine personalizzata (C#)](data-access/paging-and-sorting/sorting-custom-paged-data-cs.md)
         - [Creazione di un'interfaccia utente per l'ordinamento personalizzato (C#)](data-access/paging-and-sorting/creating-a-customized-sorting-user-interface-cs.md)
-        - [Paging e ordinamento dei dati dei report (VB)](data-access/paging-and-sorting/paging-and-sorting-report-data-vb.md)
-        - [Paging efficiente in grandi quantità di dati (VB)](data-access/paging-and-sorting/efficiently-paging-through-large-amounts-of-data-vb.md)
-        - [Ordinamento dei dati con paging personalizzato (VB)](data-access/paging-and-sorting/sorting-custom-paged-data-vb.md)
+        - [Suddivisione in pagine e ordinamento dei dati dei report (VB)](data-access/paging-and-sorting/paging-and-sorting-report-data-vb.md)
+        - [Suddivisione in pagine efficiente di grandi quantità di dati (VB)](data-access/paging-and-sorting/efficiently-paging-through-large-amounts-of-data-vb.md)
+        - [Ordinamento dei dati con suddivisione in pagine personalizzata (VB)](data-access/paging-and-sorting/sorting-custom-paged-data-vb.md)
         - [Creazione di un'interfaccia utente per l'ordinamento personalizzato (VB)](data-access/paging-and-sorting/creating-a-customized-sorting-user-interface-vb.md)
     - [Azioni dei pulsanti personalizzati](data-access/custom-button-actions/index.md)
 
@@ -492,7 +492,7 @@ ms.locfileid: "57023668"
 
         - [Paging dei dati dei report in un controllo DataList o Repeater (C#)](data-access/paging-and-sorting-with-the-datalist-and-repeater/paging-report-data-in-a-datalist-or-repeater-control-cs.md)
         - [Ordinamento dei dati in un controllo DataList o Repeater (C#)](data-access/paging-and-sorting-with-the-datalist-and-repeater/sorting-data-in-a-datalist-or-repeater-control-cs.md)
-        - [Paging dei dati dei report in un controllo DataList o Repeater (VB)](data-access/paging-and-sorting-with-the-datalist-and-repeater/paging-report-data-in-a-datalist-or-repeater-control-vb.md)
+        - [Suddivisione in pagine dei dati dei report in un controllo DataList o Repeater (VB)](data-access/paging-and-sorting-with-the-datalist-and-repeater/paging-report-data-in-a-datalist-or-repeater-control-vb.md)
         - [Ordinamento dei dati in un controllo DataList o Repeater (VB)](data-access/paging-and-sorting-with-the-datalist-and-repeater/sorting-data-in-a-datalist-or-repeater-control-vb.md)
     - [Azioni dei pulsanti personalizzati con DataList e Repeater](data-access/custom-button-actions-with-the-datalist-and-repeater/index.md)
 

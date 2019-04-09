@@ -8,18 +8,18 @@ ms.date: 10/16/2008
 ms.assetid: 37a1ebae-8773-408f-8645-d21da7ff9ae1
 msc.legacyurl: /mvc/overview/older-versions-1/views/passing-data-to-view-master-pages-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 9b840e0a5cc325a043ae88c10f52cca418589119
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7de5a1545ee59e671058f09789ce69d5062d3655
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57055798"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59380977"
 ---
-<a name="passing-data-to-view-master-pages-vb"></a>Passaggio di dati a pagine master di visualizzazione (VB)
-====================
+# <a name="passing-data-to-view-master-pages-vb"></a>Passaggio di dati a pagine master di visualizzazione (VB)
+
 by [Microsoft](https://github.com/microsoft)
 
-[Scaricare PDF](http://download.microsoft.com/download/e/f/3/ef3f2ff6-7424-48f7-bdaa-180ef64c3490/ASPNET_MVC_Tutorial_13_VB.pdf)
+[Scarica il PDF](http://download.microsoft.com/download/e/f/3/ef3f2ff6-7424-48f7-bdaa-180ef64c3490/ASPNET_MVC_Tutorial_13_VB.pdf)
 
 > L'obiettivo di questa esercitazione è illustrare come è possibile passare dati da un controller a una pagina master visualizzazione. Si esamineranno due strategie per passare dati a una pagina master di visualizzazione. In primo luogo, illustreremo una pratica soluzione risultante in un'applicazione che è difficile da gestire. Successivamente, esamineremo una soluzione migliore che richiede un po' più di lavoro iniziale ma i risultati in un'applicazione molto più facile da gestire.
 
@@ -33,7 +33,7 @@ L'obiettivo di questa esercitazione è illustrare come è possibile passare dati
 Si supponga che si compila un'applicazione di database di film e si desidera visualizzare l'elenco delle categorie di film in ogni pagina dell'applicazione (vedere la figura 1). Si supponga inoltre che l'elenco delle categorie di film viene archiviato in una tabella di database. In tal caso, avrebbe senso per recuperare le categorie dal database e il rendering dell'elenco di categorie di film all'interno di una pagina master di visualizzazione.
 
 
-[![Visualizzare le categorie di film in una pagina master di visualizzazione](passing-data-to-view-master-pages-vb/_static/image2.png)](passing-data-to-view-master-pages-vb/_static/image1.png)
+[![Dcategorie di film IsPlaying in una pagina master visualizzazione](passing-data-to-view-master-pages-vb/_static/image2.png)](passing-data-to-view-master-pages-vb/_static/image1.png)
 
 **Figura 01**: Visualizzare le categorie di film in una pagina master di visualizzazione ([fare clic per visualizzare l'immagine con dimensioni normali](passing-data-to-view-master-pages-vb/_static/image3.png))
 
@@ -59,7 +59,7 @@ Si noti che sia la `Index()` e il `Details()` azioni aggiungere due elementi per
 Il `Details()` azione aggiunge anche due chiavi denominate le categorie e filmati. La chiave di categorie, ancora una volta, rappresenta l'elenco delle categorie di film visualizzati dalla pagina master visualizzazione. La chiave di film rappresenta l'elenco di film in una determinata categoria visualizzata nella pagina di visualizzazione dei dettagli (vedere la figura 2).
 
 
-[![La visualizzazione dei dettagli](passing-data-to-view-master-pages-vb/_static/image5.png)](passing-data-to-view-master-pages-vb/_static/image4.png)
+[![Tvisualizzazione dettagli he](passing-data-to-view-master-pages-vb/_static/image5.png)](passing-data-to-view-master-pages-vb/_static/image4.png)
 
 **Figura 02**: La visualizzazione dei dettagli ([fare clic per visualizzare l'immagine con dimensioni normali](passing-data-to-view-master-pages-vb/_static/image6.png))
 

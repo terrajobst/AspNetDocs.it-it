@@ -8,15 +8,15 @@ ms.date: 11/28/2005
 ms.assetid: 59f0bccd-b604-47fa-a42b-71d8ab187bd2
 msc.legacyurl: /web-forms/videos/building-20-applications/lesson-3-understanding-more-about-events-and-postback
 msc.type: video
-ms.openlocfilehash: c478423afbf0bcae3065b1f249881c8e3fa3f9bb
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: cefba04d5175ff3fb80f69074cdd0cc3f6c57fa6
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57056968"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59400256"
 ---
-<a name="lesson-3--understanding-more-about-events-and-postback"></a>[Lezione 3:] Ulteriori nozioni su eventi e postback
-====================
+# <a name="lesson-3--understanding-more-about-events-and-postback"></a>[Lezione 3:] Ulteriori nozioni su eventi e postback
+
 by [Microsoft](https://github.com/microsoft)
 
 In questa lezione si apprenderà come gli eventi possono essere usati nel codice e come reagire quando si verificano tali eventi.

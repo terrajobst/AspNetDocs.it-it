@@ -1,22 +1,23 @@
 ---
 uid: identity/overview/features-api/two-factor-authentication-using-sms-and-email-with-aspnet-identity
-title: Autenticazione a due fattori tramite SMS e posta elettronica con ASP.NET Identity | Microsoft Docs
+title: Autenticazione a due fattori tramite SMS e posta elettronica con ASP.NET Identity - ASP.NET 4.x
 author: HaoK
 description: Questa esercitazione illustrerà come configurare l'autenticazione a due fattori (2FA) tramite SMS e posta elettronica. Questo articolo è stato scritto da Rick Anderson ( @RickAndMSFT ), PR....
 ms.author: riande
 ms.date: 09/15/2015
 ms.assetid: 053e23c4-13c9-40fa-87cb-3e9b0823b31e
+ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/features-api/two-factor-authentication-using-sms-and-email-with-aspnet-identity
 msc.type: authoredcontent
-ms.openlocfilehash: 4b253923696e35e59c196578a232f53c11671d16
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c41fc06ad98665f7d48efde030c1341b06e49dd0
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57043168"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59395291"
 ---
-<a name="two-factorauthentication-using-sms-and-email-with-aspnet-identity"></a>Autenticazione a due fattori tramite SMS e posta elettronica con ASP.NET Identity
-====================
+# <a name="two-factorauthentication-using-sms-and-email-with-aspnet-identity"></a>Autenticazione a due fattori tramite SMS e posta elettronica con ASP.NET Identity
+
 dal [Hao Kung](https://github.com/HaoK), [Pranav Rastogi](https://github.com/rustd), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Suhas Joshi](https://github.com/suhasj)
 
 > Questa esercitazione illustrerà come configurare l'autenticazione a due fattori (2FA) tramite SMS e posta elettronica.
@@ -52,8 +53,8 @@ In questa sezione si userà NuGet per scaricare un esempio che collaboreremo con
    In questa esercitazione, useremo [SendGrid](http://sendgrid.com/) per inviare posta elettronica e [Twilio](https://www.twilio.com/) oppure [ASPSMS](https://www.aspsms.com/asp.net/identity/testcredits/) per sms inviato. Il `Identity.Samples` pacchetto viene installato il codice si userà.
 3. Impostare il [progetto per l'uso di SSL](../../../mvc/overview/security/create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on.md).
 4. *Facoltativa*: Seguire le istruzioni nella mio [esercitazione di conferma tramite posta elettronica](account-confirmation-and-password-recovery-with-aspnet-identity.md) collegare SendGrid e quindi eseguire l'app e registrare un account di posta elettronica.
-5. * Facoltativo: * rimuovere il codice di conferma collegamento tramite posta elettronica demo tratto dall'esempio (il `ViewBag.Link` codice nel controller account. Vedere le `DisplayEmail` e `ForgotPasswordConfirmation` metodi di azione e visualizzazioni razor).
-6. <em>Facoltativo: * rimuovere il `ViewBag.Status` codice verso i controller di gestione e l'Account e dal *Views\Account\VerifyCode.cshtml</em> e <em>Views\Manage\VerifyPhoneNumber.cshtml</em> visualizzazioni razor. In alternativa, è possibile mantenere il `ViewBag.Status` display per testare il funzionamento di questa app in locale senza dover associare e inviare messaggi SMS e posta elettronica.
+5. *Facoltativo:* Rimuovere il codice di conferma collegamento tramite posta elettronica demo tratto dall'esempio (il `ViewBag.Link` codice nel controller account. Vedere le `DisplayEmail` e `ForgotPasswordConfirmation` metodi di azione e visualizzazioni razor).
+6. *Facoltativo:* Rimuovere il `ViewBag.Status` codice verso i controller di gestione e l'Account e dal *Views\Account\VerifyCode.cshtml* e *Views\Manage\VerifyPhoneNumber.cshtml* visualizzazioni razor. In alternativa, è possibile mantenere il `ViewBag.Status` display per testare il funzionamento di questa app in locale senza dover associare e inviare messaggi SMS e posta elettronica.
 
 > [!NOTE]
 > Avviso: Se si modifica una qualsiasi delle impostazioni di sicurezza in questo esempio, le app di produzione dovrà essere sottoposto a un controllo di sicurezza che effettua chiamate in modo esplicito le modifiche apportate.

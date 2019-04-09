@@ -8,15 +8,15 @@ ms.date: 06/10/2008
 ms.assetid: 43d1e83c-0092-4dcf-977c-e709c4dce7c3
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/urls-in-master-pages-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 881debeeaa98a7f2be7ccadb501c019e698b22f2
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 35fcf02c20e3d20f9cb75f6a25aeb1ddac016b4e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57035558"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59393769"
 ---
-<a name="urls-in-master-pages-vb"></a>URL nelle pagine master (VB)
-====================
+# <a name="urls-in-master-pages-vb"></a>URL nelle pagine master (VB)
+
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Scaricare il codice](http://download.microsoft.com/download/e/e/f/eef369f5-743a-4a52-908f-b6532c4ce0a4/ASPNET_MasterPages_Tutorial_04_VB.zip) o [Scarica il PDF](http://download.microsoft.com/download/8/f/6/8f6349e4-6554-405a-bcd7-9b094ba5089a/ASPNET_MasterPages_Tutorial_04_VB.pdf)
@@ -75,7 +75,7 @@ Il `~/Admin/Default.aspx` pagina di contenuto viene inviato il codice HTML stess
 Poiché il `<img>` dell'elemento `src` attributo è un URL relativo, il Visualizzatore prova a cercare un `Images` cartella al percorso di cartella della pagina web. In altre parole, il browser sta cercando il file di immagine `Admin/Images/PoweredByASPNET.gif`.
 
 
-[![Impossibile trovare il File di immagine PoweredByASPNET.gif](urls-in-master-pages-vb/_static/image3.png)](urls-in-master-pages-vb/_static/image2.png)
+[![Tegli PoweredByASPNET.gif immagine Impossibile trovare il File](urls-in-master-pages-vb/_static/image3.png)](urls-in-master-pages-vb/_static/image2.png)
 
 **Figura 02**: Il `PoweredByASPNET.gif` immagine del File non trovato ([fare clic per visualizzare l'immagine con dimensioni normali](urls-in-master-pages-vb/_static/image4.png))
 
@@ -92,7 +92,7 @@ Per risolvere l'immagine interrotta illustrato nella figura 2, è necessario agg
 Si consiglia di aggiornare il `<img>` dell'elemento `src` dell'attributo a un URL assoluto usando uno dei formati illustrati in precedenza e quindi visitare la `~/Admin/Default.aspx` pagina tramite un browser. Questa volta il browser trovare e visualizzare correttamente il `PoweredByASPNET.gif` file di immagine (vedere la figura 3).
 
 
-[![L'immagine PoweredByASPNET.gif viene ora visualizzata](urls-in-master-pages-vb/_static/image6.png)](urls-in-master-pages-vb/_static/image5.png)
+[![TImmagine PoweredByASPNET.gif è ora visualizzate](urls-in-master-pages-vb/_static/image6.png)](urls-in-master-pages-vb/_static/image5.png)
 
 **Figura 03**: Il `PoweredByASPNET.gif` immagine è ora visualizzata ([fare clic per visualizzare l'immagine con dimensioni normali](urls-in-master-pages-vb/_static/image7.png))
 

@@ -8,18 +8,18 @@ ms.date: 04/01/2009
 ms.assetid: 89a1d2bc-fdfd-4c5c-a3b0-49a08baaf63a
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/asp-net-hosting-options-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 3adad579c5893fb4f40e7043b9ece78740080f65
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 90285eac8e45d542c4ccca3e3db00493546aac57
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57061388"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59398449"
 ---
-<a name="aspnet-hosting-options-c"></a>Opzioni di hosting ASP.NET (C#)
-====================
+# <a name="aspnet-hosting-options-c"></a>Opzioni di hosting ASP.NET (C#)
+
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Scaricare PDF](http://download.microsoft.com/download/E/8/9/E8920AE6-D441-41A7-8A77-9EF8FF970D8B/aspnet_tutorial01_Basics_cs.pdf)
+[Scarica il PDF](http://download.microsoft.com/download/E/8/9/E8920AE6-D441-41A7-8A77-9EF8FF970D8B/aspnet_tutorial01_Basics_cs.pdf)
 
 > Le applicazioni web ASP.NET sono in genere progettate, create e testate in un ambiente di sviluppo locale e debbano essere distribuite in un ambiente di produzione dopo che è pronta per il rilascio. Questa esercitazione offre una panoramica generale del processo di distribuzione e costituisce un'introduzione a questa serie di esercitazioni.
 
@@ -93,4 +93,4 @@ Buona programmazione!
 Questa serie di esercitazioni è stata esaminata da diversi validi revisori. Il revisore capo di questa esercitazione è stata Teresa Murphy. Se si è interessati prossimi articoli MSDN dello? In questo caso, Inviami una riga in corrispondenza [ mitchell@4GuysFromRolla.com ](mailto:mitchell@4GuysFromRolla.com).
 
 > [!div class="step-by-step"]
-> [avanti](determining-what-files-need-to-be-deployed-cs.md)
+> [Successivo](determining-what-files-need-to-be-deployed-cs.md)

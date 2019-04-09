@@ -8,15 +8,15 @@ ms.date: 01/18/2008
 ms.assetid: 3c815a9e-2296-4b9b-b945-776d54989daa
 msc.legacyurl: /web-forms/overview/older-versions-security/membership/user-based-authorization-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 18aad3bde961747af64de2b76ff83feb767597d9
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: f596a4a9ae92e567a5ac98db26584d4575931a60
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57033248"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59382102"
 ---
-<a name="user-based-authorization-c"></a>Autorizzazione basata sull'utente (C#)
-====================
+# <a name="user-based-authorization-c"></a>Autorizzazione basata sull'utente (C#)
+
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Scaricare il codice](http://download.microsoft.com/download/3/f/5/3f5a8605-c526-4b34-b3fd-a34167117633/ASPNET_Security_Tutorial_07_CS.zip) o [Scarica il PDF](http://download.microsoft.com/download/3/f/5/3f5a8605-c526-4b34-b3fd-a34167117633/aspnet_tutorial07_UserAuth_cs.pdf)
@@ -45,7 +45,7 @@ Esamina la sintassi per le regole di autorizzazione URL nel passaggio 1, ma prim
 La figura 1 illustra il flusso di lavoro della pipeline ASP.NET, il `FormsAuthenticationModule`e il `UrlAuthorizationModule` quando arriva una richiesta non autorizzata. In particolare, la figura 1 mostra una richiesta da un visitatore anonimo per `ProtectedPage.aspx`, ovvero una pagina che nega l'accesso agli utenti anonimi. Poiché è anonimo, il visitatore di `UrlAuthorizationModule` interrompe la richiesta e restituisce uno stato HTTP 401 non autorizzato. Il `FormsAuthenticationModule` quindi converte di stato 401 in 302 reindirizzamento alla pagina di accesso. Dopo che l'utente viene autenticato tramite la pagina di accesso, si viene reindirizzati al `ProtectedPage.aspx`. Questa volta il `FormsAuthenticationModule` identifica l'utente in base a esso il ticket di autenticazione. Ora che il visitatore dell'autenticazione, il `UrlAuthorizationModule` consente l'accesso alla pagina.
 
 
-[![L'autenticazione basata su form e il flusso di lavoro di autorizzazione URL](user-based-authorization-cs/_static/image2.png)](user-based-authorization-cs/_static/image1.png)
+[![Tegli autenticazione basata su form e flusso di lavoro di autorizzazione URL](user-based-authorization-cs/_static/image2.png)](user-based-authorization-cs/_static/image1.png)
 
 **Figura 1**: L'autenticazione basata su form e il flusso di lavoro di autorizzazione URL ([fare clic per visualizzare l'immagine con dimensioni normali](user-based-authorization-cs/_static/image3.png))
 
@@ -59,7 +59,7 @@ Si supponga che il sito Web Microsoft aveva le regole di autorizzazione URL conf
 La figura 2 illustra questo flusso di lavoro poco chiaro.
 
 
-[![Il flusso di lavoro predefinita può causare un ciclo di confuso](user-based-authorization-cs/_static/image5.png)](user-based-authorization-cs/_static/image4.png)
+[![Tegli predefinita del flusso di lavoro può causare un ciclo di confondere](user-based-authorization-cs/_static/image5.png)](user-based-authorization-cs/_static/image4.png)
 
 **Figura 2**: Il predefinita del flusso di lavoro può causare un ciclo di confusione ([fare clic per visualizzare l'immagine con dimensioni normali](user-based-authorization-cs/_static/image6.png))
 
@@ -116,7 +116,7 @@ ASP.NET semplifica definire le regole di autorizzazione diverse per diversi file
 Aggiorniamo il nostro sito Web in modo che solo gli utenti autenticati possono visitare le pagine ASP.NET il `Membership` cartella. A tale scopo è necessario aggiungere un `Web.config` file per il `Membership` cartella e impostare le impostazioni di autorizzazione per negare agli utenti anonimi. Fare doppio clic il `Membership` cartella in Esplora soluzioni, scegliere il menu Aggiungi nuovo elemento dal menu di scelta rapida e aggiungere un nuovo File di configurazione Web denominato `Web.config`.
 
 
-[![Aggiungere un File Web. config nella cartella di appartenenza](user-based-authorization-cs/_static/image8.png)](user-based-authorization-cs/_static/image7.png)
+[![Aun File Web. config nella cartella di appartenenza gg](user-based-authorization-cs/_static/image8.png)](user-based-authorization-cs/_static/image7.png)
 
 **Figura 3**: Aggiungere un `Web.config` File per il `Membership` cartella ([fare clic per visualizzare l'immagine con dimensioni normali](user-based-authorization-cs/_static/image9.png))
 
@@ -124,7 +124,7 @@ Aggiorniamo il nostro sito Web in modo che solo gli utenti autenticati possono v
 A questo punto il progetto deve contenere due `Web.config` file: uno nella directory radice e uno nel `Membership` cartella.
 
 
-[![L'applicazione dovrebbe ora contenere due file Web. config](user-based-authorization-cs/_static/image11.png)](user-based-authorization-cs/_static/image10.png)
+[![Yl'applicazione dovrebbe ora contenere due file Web. config](user-based-authorization-cs/_static/image11.png)](user-based-authorization-cs/_static/image10.png)
 
 **Figura 4**: L'applicazione dovrebbe ora contenere due `Web.config` i file ([fare clic per visualizzare l'immagine con dimensioni normali](user-based-authorization-cs/_static/image12.png))
 
@@ -140,7 +140,7 @@ Per testare questa modifica, visitare la home page in un browser e assicurarsi c
 Fare clic sul collegamento di creazione degli account utente rilevato nella colonna a sinistra. Verrà visualizzata per il `~/Membership/CreatingUserAccounts.aspx`. Poiché il `Web.config` del file nei `Membership` cartella vengono definite le regole di autorizzazione da non consentire l'accesso anonimo, di `UrlAuthorizationModule` interrompe la richiesta e restituisce uno stato HTTP 401 non autorizzato. Il `FormsAuthenticationModule` questa modifica a uno stato di reindirizzamento 302, inviare alla pagina di accesso. Si noti che la pagina si stava tentando di accedere (`CreatingUserAccounts.aspx`) viene passato alla pagina di accesso tramite il `ReturnUrl` parametro querystring.
 
 
-[![Poiché l'URL di autorizzazione regole proibire l'accesso anonimo, si verrà reindirizzati alla pagina di accesso](user-based-authorization-cs/_static/image14.png)](user-based-authorization-cs/_static/image13.png)
+[![Soiché l'URL di autorizzazione regole proibire l'accesso anonimo, si verrà reindirizzati alla pagina di accesso](user-based-authorization-cs/_static/image14.png)](user-based-authorization-cs/_static/image13.png)
 
 **Figura 5**: Poiché l'URL di autorizzazione regole proibire l'accesso anonimo, si verrà reindirizzati alla pagina di accesso ([fare clic per visualizzare l'immagine con dimensioni normali](user-based-authorization-cs/_static/image15.png))
 
@@ -196,7 +196,7 @@ Il codice sopra riportato reindirizza gli utenti autenticati, non autorizzati pe
 A questo punto siamo anonimi, pertanto `Request.IsAuthenticated` restituisce `false` e non si verrà reindirizzati alla `UnauthorizedAccess.aspx`. Al contrario, verrà visualizzata la pagina di accesso. Accedere come utente diverso Tito, ad esempio Bruce. Dopo aver immesso le credenziali appropriate, l'account di accesso pagina us Reindirizza al `~/Membership/CreatingUserAccounts.aspx`. Comunque, poiché questa pagina è accessibile solo ai Tito, non sono autorizzati a visualizzarlo e vengono restituiti immediatamente alla pagina di accesso. Questa volta, tuttavia, `Request.IsAuthenticated` restituisce `true` (e il `ReturnUrl` parametro querystring esistente), quindi si verrà reindirizzati al `UnauthorizedAccess.aspx` pagina.
 
 
-[![L'autenticazione, gli utenti non autorizzati vengono reindirizzati a UnauthorizedAccess.aspx](user-based-authorization-cs/_static/image17.png)](user-based-authorization-cs/_static/image16.png)
+[![Autenticati, gli utenti non autorizzati vengono reindirizzate a UnauthorizedAccess.aspx](user-based-authorization-cs/_static/image17.png)](user-based-authorization-cs/_static/image16.png)
 
 **Figura 6**: L'autenticazione, gli utenti non autorizzati vengono reindirizzati al `UnauthorizedAccess.aspx` ([fare clic per visualizzare l'immagine con dimensioni normali](user-based-authorization-cs/_static/image18.png))
 
@@ -236,7 +236,7 @@ Il codice precedente Usa la [ `DirectoryInfo` classe](https://msdn.microsoft.com
 Si consiglia di visitare questa pagina tramite un browser. Visualizzerà l'elenco di file che si trovano nella directory radice dell'applicazione. Facendo clic su uno della visualizzazione o eliminare i controlli LinkButton causerà un postback, ma si verificherà alcuna azione perché dobbiamo ancora creare gestori di eventi necessari.
 
 
-[![Il controllo GridView sono elencati i file nella Directory radice dell'applicazione Web](user-based-authorization-cs/_static/image20.png)](user-based-authorization-cs/_static/image19.png)
+[![TGridView sono elencati i file nella Directory radice dell'applicazione Web](user-based-authorization-cs/_static/image20.png)](user-based-authorization-cs/_static/image19.png)
 
 **Figura 7**: Il controllo GridView sono elencati i file nella Directory radice dell'applicazione Web ([fare clic per visualizzare l'immagine con dimensioni normali](user-based-authorization-cs/_static/image21.png))
 
@@ -252,7 +252,7 @@ Successivamente, creare un gestore eventi per il controllo GridView [ `SelectedI
 Questo codice Usa il controllo GridView `SelectedValue` proprietà per determinare il nome file completo del file selezionato. Internamente, il `DataKeys` raccolta viene fatto riferimento per ottenere il `SelectedValue`, quindi è necessario impostare il controllo GridView `DataKeyNames` proprietà per nome, come descritto in precedenza in questo passaggio. Il [ `File` classe](https://msdn.microsoft.com/library/system.io.file.aspx) viene utilizzato per leggere il contenuto del file selezionato in una stringa, che viene quindi assegnato al `FileContents` della casella di testo `Text` proprietà, in tal modo la visualizzazione del contenuto del file selezionato nella pagina.
 
 
-[![Contenuto del File selezionato viene visualizzato nella casella di testo](user-based-authorization-cs/_static/image23.png)](user-based-authorization-cs/_static/image22.png)
+[![Tegli contenuto del File Seleziona viene visualizzato nella casella di testo](user-based-authorization-cs/_static/image23.png)](user-based-authorization-cs/_static/image22.png)
 
 **Figura 8**: Contenuto del File selezionato viene visualizzato nella casella di testo ([fare clic per visualizzare l'immagine con dimensioni normali](user-based-authorization-cs/_static/image24.png))
 
@@ -268,7 +268,7 @@ Infine, aggiungere un gestore eventi con il codice seguente per il controllo Gri
 Il codice visualizza semplicemente il nome completo del file da eliminare nella `FileContents` casella di testo *senza* effettivamente l'eliminazione del file.
 
 
-[![Fare clic sul pulsante di eliminazione non elimina effettivamente il File](user-based-authorization-cs/_static/image26.png)](user-based-authorization-cs/_static/image25.png)
+[![Clicking l'eliminazione pulsante non elimina effettivamente il File](user-based-authorization-cs/_static/image26.png)](user-based-authorization-cs/_static/image25.png)
 
 **Figura 9**: Scegliendo di eliminare pulsante non elimina effettivamente il File ([fare clic per visualizzare l'immagine con dimensioni normali](user-based-authorization-cs/_static/image27.png))
 
@@ -298,7 +298,7 @@ Tuttavia, questo codice non è più valido. Spostando la `FileContents` casella 
 Dopo aver spostato la casella di testo di LoginView `LoggedInTemplate` e l'aggiornamento del codice della pagina di riferimento usando la casella di testo di `FindControl("controlId")` pattern, visitare la pagina come utente anonimo. Come illustrato nella figura 10, il `FileContents` non viene visualizzato nella casella di testo. Tuttavia, è ancora visualizzato il LinkButton di visualizzazione.
 
 
-[![Il controllo LoginView rendering solo la casella di testo FileContents per gli utenti autenticati](user-based-authorization-cs/_static/image29.png)](user-based-authorization-cs/_static/image28.png)
+[![Tegli controllo LoginView esegue il rendering solo FileContents TextBox per gli utenti autenticati](user-based-authorization-cs/_static/image29.png)](user-based-authorization-cs/_static/image28.png)
 
 **Figura 10**: Il LoginView controllo solo esegue il rendering di `FileContents` casella di testo per gli utenti autenticati ([fare clic per visualizzare l'immagine con dimensioni normali](user-based-authorization-cs/_static/image30.png))
 
@@ -318,7 +318,7 @@ A questo punto, possiamo aggiungere un LoginView per il TemplateField. Il markup
 Come illustrato nella figura 11, il risultato finale non è che piuttosto come visualizzazione colonna viene ancora visualizzata anche se il LinkButton visualizzazione all'interno della colonna sono nascoste. Si esaminerà come nascondere l'intera colonna GridView (e non solo il LinkButton) nella sezione successiva.
 
 
-[![Il controllo LoginView consente di nascondere il LinkButton di visualizzazione per i visitatori anonimi](user-based-authorization-cs/_static/image32.png)](user-based-authorization-cs/_static/image31.png)
+[![Tegli controllo LoginView consente di nascondere il LinkButton di visualizzazione per i visitatori anonimi](user-based-authorization-cs/_static/image32.png)](user-based-authorization-cs/_static/image31.png)
 
 **Figura 11**: Il controllo LoginView consente di nascondere il LinkButton di visualizzazione per i visitatori anonimi ([fare clic per visualizzare l'immagine con dimensioni normali](user-based-authorization-cs/_static/image33.png))
 
@@ -341,12 +341,12 @@ Aggiungere il codice seguente per il `Page_Load` gestore dell'evento prima dell'
 Come accennato nel [ *una panoramica dell'autenticazione basata su form* ](../introduction/an-overview-of-forms-authentication-cs.md) esercitazione `User.Identity.Name` restituisce il nome dell'identità. Corrisponde al nome utente immesso nel controllo di accesso. Se è Tito visitando la pagina, seconda colonna del controllo GridView `Visible` è impostata su `true`; in caso contrario, impostarlo su `false`. Il risultato è che quando un utente diverso da Tito visita la pagina, un altro utente autenticato o un utente anonimo, la colonna di eliminazione non viene visualizzata (vedere Figura 12). Tuttavia, quando Tito visita la pagina, è presente la colonna di eliminazione (vedere la figura 13).
 
 
-[![Elimina colonna non è viene eseguito il rendering quando visitati da un utente diverso da Tito (ad esempio, Bruce)](user-based-authorization-cs/_static/image35.png)](user-based-authorization-cs/_static/image34.png)
+[![TElimina colonna non è viene eseguito il rendering quando visitati da un utente diverso da Tito (ad esempio, Bruce)](user-based-authorization-cs/_static/image35.png)](user-based-authorization-cs/_static/image34.png)
 
 **Figura 12**: Elimina colonna non è viene eseguito il rendering quando visitati da un utente diverso da Tito (ad esempio, Bruce) ([fare clic per visualizzare l'immagine con dimensioni normali](user-based-authorization-cs/_static/image36.png))
 
 
-[![Elimina colonna di cui viene eseguito il rendering per Tito](user-based-authorization-cs/_static/image38.png)](user-based-authorization-cs/_static/image37.png)
+[![Tegli Elimina colonna viene eseguito il rendering per Tito](user-based-authorization-cs/_static/image38.png)](user-based-authorization-cs/_static/image37.png)
 
 **Figura 13**: Elimina colonna di cui viene eseguito il rendering per Tito ([fare clic per visualizzare l'immagine con dimensioni normali](user-based-authorization-cs/_static/image39.png))
 
@@ -366,7 +366,7 @@ L'attributo per il `SelectedIndexChanged` stabilisce gestore eventi che solo gli
 Se, in qualche modo, un utente diverso dal Tito tenta di eseguire la `RowDeleting` gestore dell'evento o un utente non autenticato prova a eseguire il `SelectedIndexChanged` gestore eventi, il runtime di .NET verrà generato un `SecurityException`.
 
 
-[![Se il contesto di sicurezza non è autorizzato a eseguire il metodo, viene generata un'eccezione SecurityException](user-based-authorization-cs/_static/image41.png)](user-based-authorization-cs/_static/image40.png)
+[![ISe che il contesto di sicurezza non è autorizzato a eseguire il metodo, viene generata una SecurityException](user-based-authorization-cs/_static/image41.png)](user-based-authorization-cs/_static/image40.png)
 
 **Figura 14**: Se il contesto di sicurezza non è autorizzato a eseguire il metodo, una `SecurityException` viene generata un'eccezione ([fare clic per visualizzare l'immagine con dimensioni normali](user-based-authorization-cs/_static/image42.png))
 

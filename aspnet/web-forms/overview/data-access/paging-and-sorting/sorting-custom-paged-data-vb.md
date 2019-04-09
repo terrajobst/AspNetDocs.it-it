@@ -8,15 +8,15 @@ ms.date: 08/15/2006
 ms.assetid: 4823a186-caaf-4116-a318-c7ff4d955ddc
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting/sorting-custom-paged-data-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 3f40c2632e98dd8c64c985e44478a9739df473ca
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: ca1bf281130bf2c726b6147f90733c8a83754563
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423133"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59399587"
 ---
-<a name="sorting-custom-paged-data-vb"></a>Ordinamento dei dati con suddivisione in pagine personalizzata (VB)
-====================
+# <a name="sorting-custom-paged-data-vb"></a>Ordinamento dei dati con suddivisione in pagine personalizzata (VB)
+
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Scaricare l'App di esempio](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_26_VB.exe) o [Scarica il PDF](sorting-custom-paged-data-vb/_static/datatutorial26vb1.pdf)
@@ -71,7 +71,7 @@ Si consiglia di testare questa stored procedure con valori diversi per il `@sort
 **Figura 1**: Provare diversi valori per le Stored Procedure s tre parametri di Input
 
 
-[![La Stored Procedure s i risultati vengono visualizzati nella finestra di Output](sorting-custom-paged-data-vb/_static/image3.png)](sorting-custom-paged-data-vb/_static/image2.png)
+[![Ts Stored Procedure he i risultati vengono visualizzati nella finestra di Output](sorting-custom-paged-data-vb/_static/image3.png)](sorting-custom-paged-data-vb/_static/image2.png)
 
 **Figura 2**: La Stored Procedure s i risultati vengono visualizzati nella finestra di Output ([fare clic per visualizzare l'immagine con dimensioni normali](sorting-custom-paged-data-vb/_static/image4.png))
 
@@ -145,7 +145,7 @@ Per abilitare l'ordinamento in GridView, è sufficiente selezionare la casella d
 Figura 7 mostra la prima pagina dei risultati quando vengono ordinati i `UnitPrice` in ordine crescente.
 
 
-[![I risultati sono ordinati per l'elemento UnitPrice](sorting-custom-paged-data-vb/_static/image10.png)](sorting-custom-paged-data-vb/_static/image9.png)
+[![The risultati vengono ordinati per l'elemento UnitPrice](sorting-custom-paged-data-vb/_static/image10.png)](sorting-custom-paged-data-vb/_static/image9.png)
 
 **Figura 7**: I risultati sono ordinati per il prezzo unitario ([fare clic per visualizzare l'immagine con dimensioni normali](sorting-custom-paged-data-vb/_static/image11.png))
 
@@ -166,7 +166,7 @@ Questa eccezione si verifica perché il `SortExpression` di istanze della classe
 **Figura 9**: Modifica SortExpression s SupplierName BoundField su CompanyName
 
 
-[![Ora i risultati possono essere ordinati dal fornitore](sorting-custom-paged-data-vb/_static/image15.png)](sorting-custom-paged-data-vb/_static/image14.png)
+[![Tè ora è possibile ordinare i risultati dal fornitore](sorting-custom-paged-data-vb/_static/image15.png)](sorting-custom-paged-data-vb/_static/image14.png)
 
 **Figura 10**: I risultati ora possono essere ordinate dal fornitore ([fare clic per visualizzare l'immagine con dimensioni normali](sorting-custom-paged-data-vb/_static/image16.png))
 

@@ -8,18 +8,18 @@ ms.date: 06/09/2009
 ms.assetid: dbc54313-5d05-4285-98b3-726edea6d0c9
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/users-and-roles-on-the-production-website-cs
 msc.type: authoredcontent
-ms.openlocfilehash: f08afe5f4ab379d1532f50267299892829c95dcc
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 691de0a29ce4798d2f18a58141b833db9cddb2d5
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57048848"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59396603"
 ---
-<a name="users-and-roles-on-the-production-website-c"></a>Utenti e ruoli nel sito Web di produzione (c#)
-====================
+# <a name="users-and-roles-on-the-production-website-c"></a>Utenti e ruoli nel sito Web di produzione (c#)
+
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Scaricare PDF](http://download.microsoft.com/download/5/C/5/5C57DB8C-5DEA-4B3A-92CA-4405544D313B/aspnet_tutorial16_CustomAWAT_cs.pdf)
+[Scarica il PDF](http://download.microsoft.com/download/5/C/5/5C57DB8C-5DEA-4B3A-92CA-4405544D313B/aspnet_tutorial16_CustomAWAT_cs.pdf)
 
 > Il sito Web Administration Tool (WSAT) di ASP.NET fornisce un'interfaccia utente basata sul web per la configurazione delle impostazioni di appartenenza e ruoli e per la creazione, modifica ed eliminazione di utenti e ruoli. Sfortunatamente, il WSAT funziona solo quando visitati da localhost, il che significa che non è possibile raggiungere lo strumento di amministrazione del sito Web di produzione tramite il browser. La buona notizia è che non esistono soluzioni alternative che consentono di gestire utenti e ruoli in produzione. Questa esercitazione illustra queste soluzioni alternative e ad altri utenti.
 

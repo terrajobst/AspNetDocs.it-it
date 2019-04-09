@@ -8,15 +8,15 @@ ms.date: 04/21/2011
 ms.assetid: d65c5c2b-a039-463f-ad29-25cf9fb7a1ba
 msc.legacyurl: /mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-9
 msc.type: authoredcontent
-ms.openlocfilehash: b3babf1d935774b0ef93d6ab02c8b295998f8afc
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c7151351b087439f17457b254cd9e373af21cae3
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57060488"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59380899"
 ---
-<a name="part-9-registration-and-checkout"></a>Parte 9: Registrazione e completamento della transazione
-====================
+# <a name="part-9-registration-and-checkout"></a>Parte 9: Registrazione e completamento della transazione
+
 by [Jon Galloway](https://github.com/jongalloway)
 
 > Music Store MVC è un'applicazione di esercitazione che introduce e spiega passo passo come usare ASP.NET MVC e Visual Studio per lo sviluppo Web.  

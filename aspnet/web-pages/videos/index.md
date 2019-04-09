@@ -8,15 +8,15 @@ ms.date: 05/18/2012
 ms.assetid: febf2824-4e3d-4dc6-84c5-f99777ec6144
 msc.legacyurl: /web-pages/videos
 msc.type: book
-ms.openlocfilehash: 8ad0a510ea62848b7a429c0bd4fa781b50c2ce53
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 86b90a21f59ee0ad52a3e6f7db19d4714282105c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57022608"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59401140"
 ---
-<a name="videos"></a>Video
-====================
+# <a name="videos"></a>Video
+
 
 > [!NOTE] 
 > WebMatrix non è più consigliata come ambiente di sviluppo integrato per ASP.NET Web Pages. Uso [Visual Studio](xref:aspnet/web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio) oppure [Visual Studio Code](https://code.visualstudio.com/).
@@ -47,7 +47,7 @@ ms.locfileid: "57022608"
     - [Visualizzazione dei dati in un grafico (parte 1)](aspnet-razor-pages/displaying-data-in-a-chart-part-1.md)
     - [Visualizzazione dei dati in un grafico (parte 2)](aspnet-razor-pages/displaying-data-in-a-chart-part-2.md)
     - [Uso dei file](aspnet-razor-pages/working-with-files.md)
-    - [Uso delle immagini](aspnet-razor-pages/working-with-images.md)
+    - [Working with Images (Uso delle immagini)](aspnet-razor-pages/working-with-images.md)
     - [Uso dei video](aspnet-razor-pages/working-with-video.md)
     - [Aggiunta di posta elettronica al sito Web](aspnet-razor-pages/adding-email-to-your-web-site.md)
     - [Aggiunta di funzionalità di ricerca al sito Web](aspnet-razor-pages/adding-search-to-your-web-site.md)

@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: e6ee90bf-32a5-4987-a384-15cc7dd30c8a
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/textboxwatermark/using-textboxwatermark-in-a-formview-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 272befe4182a459c0e1f3b6668d252d9ba4715d0
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 10c877e072d5caf23e78f49ebc71387fde20393d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57038318"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59393613"
 ---
-<a name="using-textboxwatermark-in-a-formview-c"></a>Uso di TextBoxWatermark in un controllo FormView (C#)
-====================
+# <a name="using-textboxwatermark-in-a-formview-c"></a>Uso di TextBoxWatermark in un controllo FormView (C#)
+
 da [Christian Wenz](https://github.com/wenz)
 
 [Scaricare il codice](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/TextBoxWatermark1.cs.zip) o [Scarica il PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/textboxwatermark1CS.pdf)
@@ -49,9 +49,9 @@ Ricordare il nome (`ID`) dell'origine dati, poiché verrà usato nel `DataSource
 A questo punto quando l'utente modifica la modalità di inserimento del `FormView` controllare, il campo di testo per il nuovo fornitore è precompilato grazie alla `TextBoxWatermarkExtender` controllo. Un clic nella casella di testo consente il testo di riempimento non vengono più visualizzati.
 
 
-[![Il limite nel campo proviene il dispositivo extender](using-textboxwatermark-in-a-formview-cs/_static/image2.png)](using-textboxwatermark-in-a-formview-cs/_static/image1.png)
+[![Tfiligrana he nel campo proviene dal dispositivo extender](using-textboxwatermark-in-a-formview-cs/_static/image2.png)](using-textboxwatermark-in-a-formview-cs/_static/image1.png)
 
 Il limite nel campo proviene il dispositivo extender ([fare clic per visualizzare l'immagine con dimensioni normali](using-textboxwatermark-in-a-formview-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [avanti](using-textboxwatermark-with-validation-controls-cs.md)
+> [Successivo](using-textboxwatermark-with-validation-controls-cs.md)

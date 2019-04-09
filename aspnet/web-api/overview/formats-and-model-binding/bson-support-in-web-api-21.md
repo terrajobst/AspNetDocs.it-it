@@ -1,25 +1,26 @@
 ---
 uid: web-api/overview/formats-and-model-binding/bson-support-in-web-api-21
-title: Supporto di BSON nell'API Web ASP.NET 2.1 | Microsoft Docs
+title: Supporto di BSON nell'API Web ASP.NET 2.1 - ASP.NET 4.x
 author: MikeWasson
-description: ''
+description: viene illustrato come utilizzare BSON in un controller Web API (lato server) e in un'app client .NET per ASP.NET 4.x.
 ms.author: riande
 ms.date: 01/20/2014
+ms.custom: seoapril2019
 ms.assetid: ce11b017-0ca6-4376-aa9d-a7f3288101de
 msc.legacyurl: /web-api/overview/formats-and-model-binding/bson-support-in-web-api-21
 msc.type: authoredcontent
-ms.openlocfilehash: 709fb0266c0725176358a1bd0d08b3e07fa6e2a6
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 911e2abcfd277075b3cba71e624ec6390b99a15e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57061758"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59382231"
 ---
-<a name="bson-support-in-aspnet-web-api-21"></a>Supporto di BSON nell'API Web ASP.NET 2.1
-====================
+# <a name="bson-support-in-aspnet-web-api-21"></a>Supporto di BSON nell'API Web ASP.NET 2.1
+
 da [Mike Wasson](https://github.com/MikeWasson)
 
-API Web 2.1 introduce il supporto di BSON. In questo argomento viene illustrato come utilizzare BSON nel controller dell'API Web (lato server) e in un'app client .NET.
+In questo argomento viene illustrato come utilizzare BSON nel controller dell'API Web (lato server) e in un'app client .NET. API Web 2.1 introduce il supporto di BSON. 
 
 ## <a name="what-is-bson"></a>Che cos'è BSON?
 

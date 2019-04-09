@@ -8,18 +8,18 @@ ms.date: 07/27/2010
 ms.assetid: 18700815-8e6c-4489-91af-7ea9dab6529e
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/use-ajax-to-deliver-dynamic-updates
 msc.type: authoredcontent
-ms.openlocfilehash: 71e566523d658eb8198453f354a12e63a4c38495
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 56ebc40aa500b62811bac0a5041fa9aa4f91f4ae
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58421037"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59391052"
 ---
-<a name="use-ajax-to-deliver-dynamic-updates"></a>Usare AJAX per distribuire aggiornamenti dinamici
-====================
+# <a name="use-ajax-to-deliver-dynamic-updates"></a>Usare AJAX per distribuire aggiornamenti dinamici
+
 by [Microsoft](https://github.com/microsoft)
 
-[Scaricare PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
+[Scarica il PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
 
 > Si tratta di passaggio 10 di una liberazione [esercitazione sull'applicazione "NerdDinner"](introducing-the-nerddinner-tutorial.md) che si interromperanno-dettaglio come compilare una piccola, ma completa, applicazione web con ASP.NET MVC 1.
 > 
@@ -114,7 +114,7 @@ Per l'uso di jQuery prima di tutto si aggiungerà un riferimento a script ad ess
 
 *Suggerimento: assicurarsi che sia installato l'hotfix di JavaScript intellisense per Visual Studio 2008 SP1 che consente il supporto di intellisense più completo per i file JavaScript (inclusi jQuery). È possibile scaricarlo da: http://tinyurl.com/vs2008javascripthotfix*
 
-Codice scritto con JQuery spesso utilizza una globale "$ ()" metodo di JavaScript che recupera uno o più elementi HTML mediante un selettore CSS. Ad esempio, <em>$("#rsvpmsg")</em> consente di selezionare qualsiasi elemento HTML con l'id di rsvpmsg, mentre <em>$(".something")</em> selezionerebbe tutti gli elementi con la "cosa" CSS nome della classe. È anche possibile scrivere query più avanzate, ad esempio "restituire tutti i pulsanti di opzione selezionato" usando una query di selezione, ad esempio: <em>$("input [@type= radio] [@checked]")</em>.
+Codice scritto con JQuery spesso utilizza una globale "$ ()" metodo di JavaScript che recupera uno o più elementi HTML mediante un selettore CSS. Ad esempio, *$("#rsvpmsg")* consente di selezionare qualsiasi elemento HTML con l'id di rsvpmsg, mentre *$(".something")* selezionerebbe tutti gli elementi con la "cosa" CSS nome della classe. È anche possibile scrivere query più avanzate, ad esempio "restituire tutti i pulsanti di opzione selezionato" usando una query di selezione, ad esempio: *$("input [@type= radio] [@checked]")*.
 
 Dopo aver selezionato gli elementi, è possibile chiamare metodi su di essi per agire, ad esempio nasconderli: *$("#rsvpmsg").hide();*
 

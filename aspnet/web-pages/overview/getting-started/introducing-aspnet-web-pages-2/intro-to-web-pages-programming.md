@@ -8,15 +8,15 @@ ms.date: 06/17/2015
 ms.assetid: 7526ed45-a97d-4e8a-8301-01324ef0eff9
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/intro-to-web-pages-programming
 msc.type: authoredcontent
-ms.openlocfilehash: ec1c055d1b3f6ca5c6374a18840c2595bb368e0e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 81c2c6f0070a409c289128ccf5d39f9fff788b48
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57034558"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59387347"
 ---
-<a name="introducing-aspnet-web-pages---programming-basics"></a>Introduzione a pagine Web ASP.NET - nozioni fondamentali di programmazione
-====================
+# <a name="introducing-aspnet-web-pages---programming-basics"></a>Introduzione a pagine Web ASP.NET - nozioni fondamentali di programmazione
+
 da [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Questa esercitazione offre una panoramica su come programmare in ASP.NET Web Pages con sintassi Razor.
@@ -162,7 +162,7 @@ Ecco alcuni esempi delle condizioni è possibile testare in un'istruzione:
 
 [!code-csharp[Main](intro-to-web-pages-programming/samples/sample7.cs)]
 
-È possibile testare le variabili in base ai valori o contro espressioni usando un <em>operatore logico</em> oppure <em>operatore di confronto</em>: uguale a (= =), maggiore di (&gt;), minore di (&lt;), maggiore o uguale a (&gt;=) e minore o uguale a (&lt;=). La! = operatore significa che non è uguale a, ad esempio, se (un! = 0) significa <em>se</em> <em>un</em><em>non è uguale a 0</em>.
+È possibile testare le variabili in base ai valori o contro espressioni usando un *operatore logico* oppure *operatore di confronto*: uguale a (= =), maggiore di (&gt;), minore di (&lt;), maggiore o uguale a (&gt;=) e minore o uguale a (&lt;=). La! = operatore significa che non è uguale a, ad esempio, se (un! = 0) significa *se un non è uguale a 0*.
 
 > [!NOTE]
 > Assicurarsi che si notare che l'operatore di confronto per l'uguaglianza a (= =) non è uguale a quella =. I = operatore viene usato solo per assegnare valori (var un = 2). Se si combinano questi operatori di, si ottiene un errore o si verificherà alcuni risultati imprevisti.
@@ -354,7 +354,7 @@ L'esercitazione successiva viene presentato con un database. In tale esercitazio
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-- [Introduzione alla programmazione Web ASP.NET usando la sintassi Razor](https://go.microsoft.com/fwlink/?LinkID=202890)
+- [Introduzione alla programmazione Web ASP.NET utilizzando la sintassi Razor](https://go.microsoft.com/fwlink/?LinkID=202890)
 - [Helper di Twitter](../../ui-layouts-and-themes/twitter-helper.md)
 
 > [!div class="step-by-step"]

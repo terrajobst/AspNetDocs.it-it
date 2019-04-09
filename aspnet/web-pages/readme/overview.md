@@ -8,15 +8,15 @@ ms.date: 01/06/2011
 ms.assetid: 36c5beeb-45a7-48a0-9c30-f82cdf5c5f5f
 msc.legacyurl: /web-pages/readme
 msc.type: content
-ms.openlocfilehash: aa852e7bbd93622154d59e0d0a13ffa680812df2
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7374b1afafa9ca63309f3c0369c5efd808f7f28a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57050718"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59401985"
 ---
-<a name="webmatrix-readme"></a>File Leggimi di WebMatrix
-====================
+# <a name="webmatrix-readme"></a>File Leggimi di WebMatrix
+
 13 gennaio 2011
 
 ## <a name="contents"></a>Sommario
@@ -31,7 +31,7 @@ ms.locfileid: "57050718"
 - [Le modifiche e problemi](#ChangesAndIssues)
 
     - [Installazione di WebMatrix 1.0](#Known_Issues_Installation)
-    - [ASP.NET Web Pages](#Known_Issues_ASPNET)
+    - [Pagine Web ASP.NET](#Known_Issues_ASPNET)
     - [WebMatrix](#Known_Issues_WebMatrix)
     - [IIS Express](#Known_Issues_IISExpress)
     - [SQL Server Compact](#Known_Issues_SQLServerCompact)
@@ -255,9 +255,9 @@ In questa sezione del documento vengono descritte le nuove funzionalità, le mod
 > 1. Copiare gli assembly del motore di database per il *Bin* cartella (e sottocartelle) dell'applicazione nel computer di destinazione:  
 > 
 >    - Copia *C:\Program Files\Microsoft SQL Server Edition\v4.0\Desktop\System.Data.SqlServerCe.dll*   
->        **to** *\Bin*
->    - Copia <em>C:\Program Files\Microsoft SQL Server Compact Edition\v4.0\Private\x86\\</em><strong><em>alla</em></strong>\Bin\x86*
->    - Copia <em>C:\Program Files\Microsoft SQL Server Compact Edition\v4.0\Private\amd64\\</em>* <strong>alla</strong><em>\Bin\amd64</em>
+>      **to** *\Bin*
+>    - Copia *C:\Program Files\Microsoft SQL Server Compact Edition\v4.0\Private\x86\\*  **al** *\Bin\x86*
+>    - Copia *C:\Program Files\Microsoft SQL Server Compact Edition\v4.0\Private\amd64\\** **alla** *\Bin\amd64*
 > 
 > 2. Nella cartella radice del sito Web, creare o aprire una *Web. config* file. (In WebMatrix 1.0, questo tipo di file è disponibile se si fa clic **tutte** nel **scegliere un tipo di File** nella finestra di dialogo.)
 > 3. Aggiungere l'elemento seguente come elemento figlio di `<configuration>` elemento (non all'interno di `<system.web>` elemento):
@@ -558,7 +558,7 @@ Per informazioni sui problemi che interessano l'installazione di SQL Server Comp
 Per ulteriori informazioni su WebMatrix 1.0, vedere i siti Web seguenti:
 
 - [IIS.net](http://iis.net/)
-- [ASP.NET 2.0](https://asp.net/webmatrix)
+- [ASP.NET](https://asp.net/webmatrix)
 - [Microsoft.com/web](https://www.microsoft.com/web)
 
 © 2011 Microsoft Corporation. Tutti i diritti riservati. [Le condizioni d'uso](https://msdn.microsoft.cos/cc300389.aspx).

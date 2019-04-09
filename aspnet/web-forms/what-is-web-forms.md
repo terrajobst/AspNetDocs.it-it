@@ -8,15 +8,15 @@ ms.date: 02/21/2014
 ms.assetid: 5fa1daf9-1161-4cfa-bd4c-658f48b2c229
 msc.legacyurl: /web-forms/what-is-web-forms
 msc.type: content
-ms.openlocfilehash: e135cfa2945b9e7e5269eb436ff0c1dff20aacdf
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: cb7a4ff9dbf746c0729129445042e53e506df5d2
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57039068"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59385735"
 ---
-<a name="what-is-web-forms"></a>What ' s Web Forms
-====================
+# <a name="what-is-web-forms"></a>What ' s Web Forms
+
 Web Form ASP.NET è una parte del framework dell'applicazione web ASP.NET ed è incluso con [Visual Studio](https://www.asp.net/downloads). È uno dei quattro modelli di programmazione che è possibile usare per creare applicazioni web ASP.NET, gli altri sono applicazioni a pagina singola ASP.NET, ASP.NET Web Pages e ASP.NET MVC.
 
 Web Form sono le pagine che gli utenti richiedono utilizzando il proprio browser. Queste pagine possono essere scritte utilizzando una combinazione di HTML, script client, i controlli server e il codice lato server. Quando gli utenti richiedono una pagina, viene compilata ed eseguita nel server dal framework, e quindi il framework genera il markup HTML che può eseguire il rendering nel browser. Una pagina Web Form ASP.NET presenta le informazioni dell'utente in qualsiasi browser o un dispositivo client.

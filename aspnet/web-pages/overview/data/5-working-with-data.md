@@ -8,15 +8,15 @@ ms.date: 02/18/2014
 ms.assetid: 673d502f-2c16-4a6f-bb63-dbfd9a77ef47
 msc.legacyurl: /web-pages/overview/data/5-working-with-data
 msc.type: authoredcontent
-ms.openlocfilehash: a688761c87376aa93463c13eaa07858d3acb9dc2
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 0fc828e39cfcce22d4cc226954cf7d1731b04e42
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57064588"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59379781"
 ---
-<a name="introduction-to-working-with-a-database-in-aspnet-web-pages-razor-sites"></a>Introduzione all'uso di un Database in ASP.NET Web Pages (Razor) siti
-====================
+# <a name="introduction-to-working-with-a-database-in-aspnet-web-pages-razor-sites"></a>Introduzione all'uso di un Database in ASP.NET Web Pages (Razor) siti
+
 da [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Questo articolo descrive come usare gli strumenti di Microsoft WebMatrix per creare un database in un sito Web ASP.NET Web Pages (Razor) e come creare pagine che consentono di visualizzare, aggiungere, modificare ed eliminare dati.
@@ -51,7 +51,7 @@ Si immagini una rubrica tipico. Per ogni voce della Rubrica (vale a dire, per og
 
 Un modo comune per i dati immagine simile alla seguente è come una tabella con righe e colonne. In termini di database, ogni riga è noto anche come un record. Ogni colonna (talvolta detto campi) contiene un valore per ogni tipo di dati: nome del primo, ultimo nome e così via.
 
-| **ID** | **FirstName** | **LastName** | **Address** | **Posta elettronica** | **Telefono** |
+| **Id** | **FirstName** | **LastName** | **Indirizzo** | **Email** | **Phone** |
 | --- | --- | --- | --- | --- | --- |
 | 1 | Jim | Abrus | 210 100th St SE Orcas WA 98031 | jim@contoso.com | 555 0100 |
 | 2 | Terry | Adams | 1234 Main St. Seattle WA 99011 | terry@cohowinery.com | 555 0101 |
@@ -107,7 +107,7 @@ A questo punto è possibile aggiungere alcuni dati di esempio per il database ch
 2. Fare doppio clic nella tabella Product e quindi fare clic su **dati**.
 3. Nel riquadro di modifica, immettere i record seguenti:
 
-    | **Name** | **Descrizione** | **Prezzo** |
+    | **Nome** | **Descrizione** | **Prezzo** |
     | --- | --- | --- |
     | Pane | Virtuali create con bake aggiornato ogni giorno. | 2.99 |
     | Shortcake strawberry | Eseguita con strawberries organica dal nostro giardino. | 9.99 |

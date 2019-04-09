@@ -8,21 +8,21 @@ ms.date: 02/20/2005
 ms.assetid: 92df4051-77c6-492c-bd34-23d24189cea4
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/profiles-themes-and-web-parts
 msc.type: authoredcontent
-ms.openlocfilehash: 010adaba61b15ca4421c2d3a4a7590becb53897b
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 0f3b376cee8d391eb087664a51cc25e3b58d16b9
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422849"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59390038"
 ---
-<a name="profiles-themes-and-web-parts"></a>Profili, temi e Web part
-====================
+# <a name="profiles-themes-and-web-parts"></a>Profili, temi e Web part
+
 by [Microsoft](https://github.com/microsoft)
 
 > Esistono importanti modifiche alla configurazione e la strumentazione in ASP.NET 2.0. La nuova API di configurazione di ASP.NET consente modifiche di configurazione da apportare a livello di codice. Inoltre, esistono molte nuove impostazioni di configurazione consentono le nuove configurazioni e la strumentazione.
 
 
-ASP.NET 2.0 rappresenta un miglioramento significativo nell'area dei siti Web personalizzati. Oltre le funzionalità appartenenza weve già illustrati, profili ASP.NET, temi e Web part in modo significativo la capacità di personalizzazione in siti Web.
+ASP.NET 2.0 rappresenta un miglioramento significativo nell'area dei siti Web personalizzati. Oltre alle funzionalità di appartenenza che è già stato discusso, profili ASP.NET, temi e Web part in modo significativo la capacità di personalizzazione in siti Web.
 
 ## <a name="aspnet-profiles"></a>Profili ASP.NET
 
@@ -93,13 +93,13 @@ Le tabelle seguenti descrivono le proprietà e metodi che è necessario implemen
 
 ### <a name="providerbase-members"></a>ProviderBase membri
 
-| **Membro** | **Descrizione** |
+| **Member** | **Descrizione** |
 | --- | --- |
 | Initialize (metodo) | Accetta come input il nome dell'istanza del provider e NameValueCollection delle impostazioni di configurazione. Utilizzato per impostare le opzioni e i valori di proprietà per l'istanza del provider, inclusi i valori specifici dell'implementazione e le opzioni specificate nel file Web. config o configurazione della macchina. |
 
 ### <a name="settingsprovider-members"></a>Membri SettingsProvider
 
-| **Membro** | **Descrizione** |
+| **Member** | **Descrizione** |
 | --- | --- |
 | Proprietà ApplicationName | Il nome dell'applicazione che viene archiviato con ogni profilo. Il provider del profilo Usa il nome dell'applicazione per archiviare informazioni sul profilo separatamente per ogni applicazione. Ciò consente a più applicazioni ASP.NET usare la stessa origine dati senza conflitti, se lo stesso nome utente viene creato in applicazioni diverse. In alternativa, più applicazioni ASP.NET possono condividere un'origine dati di profilo specificando il nome dell'applicazione stessa. |
 | Metodo GetPropertyValues | Accetta come input un SettingsContext e un oggetto SettingsPropertyCollection. Il **SettingsContext** vengono fornite informazioni sull'utente. È possibile usare le informazioni come una chiave primaria per recuperare informazioni sulle proprietà di profilo per l'utente. Usare la **SettingsContext** oggetto per cui ottenere il nome utente e se l'utente è autenticato o anonimo. Il **SettingsPropertyCollection** contiene una raccolta di oggetti SettingsProperty. Ciascuna **SettingsProperty** oggetto fornisce il nome e il tipo di proprietà, nonché informazioni aggiuntive, ad esempio il valore predefinito per la proprietà e indica se la proprietà è di sola lettura. Il **GetPropertyValues** metodo popola un SettingsPropertyValueCollection con oggetti SettingsPropertyValue sulla base di **SettingsProperty** gli oggetti forniti come input. I valori dall'origine dati per l'utente specificato vengono assegnati alle proprietà PropertyValue per ognuno **SettingsPropertyValue** viene restituito l'oggetto e l'intera raccolta. Chiamare il metodo aggiorna anche il valore LastActivityDate per il profilo utente specificato per la data e ora correnti. |
@@ -107,7 +107,7 @@ Le tabelle seguenti descrivono le proprietà e metodi che è necessario implemen
 
 ### <a name="profileprovider-members"></a>Membri ProfileProvider
 
-| **Membro** | **Descrizione** |
+| **Member** | **Descrizione** |
 | --- | --- |
 | Metodo DeleteProfiles | Accetta come input una matrice di stringhe dell'utente nomi ed Elimina dall'origine dati per i nomi di tutti i valori informazioni e proprietà del profilo in cui il nome dell'applicazione corrisponde la **ApplicationName** valore della proprietà. Se l'origine dati supporta le transazioni, si consiglia di includere tutte le operazioni delete in una transazione e che il rollback della transazione e genera un'eccezione se qualsiasi operazione di eliminazione ha esito negativo. |
 | Metodo DeleteProfiles | Accetta come input una raccolta di ProfileInfo oggetti ed Elimina dall'origine dati per ogni profilo di tutti i valori proprietà e le informazioni del profilo in cui il nome dell'applicazione corrisponde la **ApplicationName** valore della proprietà. Se l'origine dati supporta le transazioni, è consigliabile includere tutte le operazioni delete in una transazione e il rollback della transazione e genera un'eccezione se qualsiasi operazione di eliminazione ha esito negativo. |
@@ -305,7 +305,7 @@ I controlli di interfaccia utente Web part, ognuno dei quali derivano dal **part
 
 Il set di controlli Web part è vasto, ma alcuni controlli sono essenziali, poiché sono necessari per le Web part lavorare o perché sono i controlli usati più frequentemente nelle pagine Web part. Come iniziare a utilizzare le Web part e crea le pagine Web part, è consigliabile acquisire familiarità con i controlli Web part essenziali descritti nella tabella seguente.
 
-| **Controllo Web part** | **Descrizione** |
+| **controllo Web part** | **Descrizione** |
 | --- | --- |
 | WebPartManager | Gestisce tutti i controlli Web part in una pagina. (Uno solo) **WebPartManager** controllo è obbligatorio per ogni pagina Web part. |
 | CatalogZone | Contiene controlli CatalogPart. Utilizzare quest'area per creare un catalogo di controlli Web part da cui gli utenti possono selezionare i controlli da aggiungere a una pagina. |

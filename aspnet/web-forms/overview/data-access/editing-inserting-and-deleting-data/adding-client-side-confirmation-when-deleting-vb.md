@@ -8,15 +8,15 @@ ms.date: 07/17/2006
 ms.assetid: 6331e02e-c465-4cdf-bd3f-f07680c289d6
 msc.legacyurl: /web-forms/overview/data-access/editing-inserting-and-deleting-data/adding-client-side-confirmation-when-deleting-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 2b0d7aeab357a0009c44a29ff66f22ce8a744a90
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: fc5c99ce6c5da7d004b95462a3338aefbed31b36
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422149"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59388712"
 ---
-<a name="adding-client-side-confirmation-when-deleting-vb"></a>Aggiunta di una conferma lato client durante l'eliminazione (VB)
-====================
+# <a name="adding-client-side-confirmation-when-deleting-vb"></a>Aggiunta di una conferma lato client durante l'eliminazione (VB)
+
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Scaricare l'App di esempio](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_22_VB.exe) o [Scarica il PDF](adding-client-side-confirmation-when-deleting-vb/_static/datatutorial22vb1.pdf)
@@ -65,7 +65,7 @@ Poiché è stato associato a un controllo ObjectDataSource che supporta solo l'e
 Con queste modifiche, è disponibile una pagina web completamente funzionale che consente agli utenti di passare tra i prodotti uno alla volta, con la possibilità di eliminare un prodotto facendo semplicemente clic sul pulsante Elimina. Figura 2 mostra una cattura di schermata dello stato di avanzamento fino ad ora, quando viene visualizzato tramite un browser.
 
 
-[![FormView mostra le informazioni su un solo prodotto](adding-client-side-confirmation-when-deleting-vb/_static/image3.png)](adding-client-side-confirmation-when-deleting-vb/_static/image2.png)
+[![Tegli FormView mostra informazioni su un singolo prodotto](adding-client-side-confirmation-when-deleting-vb/_static/image3.png)](adding-client-side-confirmation-when-deleting-vb/_static/image2.png)
 
 **Figura 2**: FormView mostra informazioni su un singolo prodotto ([fare clic per visualizzare l'immagine con dimensioni normali](adding-client-side-confirmation-when-deleting-vb/_static/image4.png))
 
@@ -85,7 +85,7 @@ Che s ne è a esso. Figura 3 mostra una schermata di questa conferma in azione. 
 > La stringa passata nel `confirm(string)` funzione JavaScript è delimitato da apostrofi (anziché le virgolette). In JavaScript, le stringhe possono essere delimitati da un carattere. Usiamo apostrofi qui in modo che i delimitatori per la stringa passati `confirm(string)` non introducono ambiguità con i delimitatori utilizzati per il `OnClientClick` valore della proprietà.
 
 
-[![Un messaggio di conferma viene ora visualizzata quando facendo clic sul pulsante Elimina](adding-client-side-confirmation-when-deleting-vb/_static/image6.png)](adding-client-side-confirmation-when-deleting-vb/_static/image5.png)
+[![A Conferma viene ora visualizzata quando si fa clic su Delete](adding-client-side-confirmation-when-deleting-vb/_static/image6.png)](adding-client-side-confirmation-when-deleting-vb/_static/image5.png)
 
 **Figura 3**: Un messaggio di conferma viene ora visualizzata quando si fa clic su Delete ([fare clic per visualizzare l'immagine con dimensioni normali](adding-client-side-confirmation-when-deleting-vb/_static/image7.png))
 
@@ -127,7 +127,7 @@ Con queste modifiche completate, facendo clic sul pulsante Elimina in GridView V
 > Questa tecnica può essere utilizzata anche per accedere a livello di codice al pulsante di eliminazione in CommandField in un controllo DetailsView. Per DetailsView, tuttavia, è il d creare un gestore eventi per il `DataBound` evento, poiché non esiste un DetailsView un `RowDataBound` evento.
 
 
-[![Facendo clic sul pulsante Elimina s GridView Visualizza una finestra di dialogo di conferma personalizzata](adding-client-side-confirmation-when-deleting-vb/_static/image9.png)](adding-client-side-confirmation-when-deleting-vb/_static/image8.png)
+[![Clicking GridView s eliminare pulsante Visualizza una finestra di dialogo di conferma personalizzata](adding-client-side-confirmation-when-deleting-vb/_static/image9.png)](adding-client-side-confirmation-when-deleting-vb/_static/image8.png)
 
 **Figura 4**: Facendo clic sul pulsante Elimina s GridView Visualizza una finestra di dialogo di conferma personalizzata ([fare clic per visualizzare l'immagine con dimensioni normali](adding-client-side-confirmation-when-deleting-vb/_static/image10.png))
 

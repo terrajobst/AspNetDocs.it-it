@@ -8,15 +8,15 @@ ms.date: 03/02/2009
 ms.assetid: 344bb38e-4965-4c47-bda1-f6d29ae5b83a
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/validating-with-a-service-layer-vb
 msc.type: authoredcontent
-ms.openlocfilehash: ecce8e4f0a901ce8c185d2b085f4d706bd57fa1f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: fc819494ef58824d485144396e3a995d906c8b42
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57029138"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59398709"
 ---
-<a name="validating-with-a-service-layer-vb"></a>Convalida con un livello di servizio (VB)
-====================
+# <a name="validating-with-a-service-layer-vb"></a>Convalida con un livello di servizio (VB)
+
 da [Stephen Walther](https://github.com/StephenWalther)
 
 > Informazioni su come spostare la logica di convalida all'esterno di azioni del controller e a un livello di servizio separato. In questa esercitazione, Stephen Walther spiega come è possibile gestire una separazione delle problematiche sharp isolando il livello di servizio dal livello del controller.
@@ -74,7 +74,7 @@ Nel listato 5, il livello di servizio è stato aggiornato in modo che non usi pi
 
 L'interfaccia IValidationDictionary viene definita nel listato 6. Questa interfaccia semplice include un solo metodo e una singola proprietà.
 
-**Listato 6 - Models\IValidationDictionary.cs**
+**Listing 6 - Models\IValidationDictionary.cs**
 
 [!code-vb[Main](validating-with-a-service-layer-vb/samples/sample6.vb)]
 

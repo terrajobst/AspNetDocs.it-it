@@ -1,27 +1,28 @@
 ---
 uid: web-api/overview/getting-started-with-aspnet-web-api/creating-api-help-pages
-title: Creazione di pagine della Guida per l'API Web ASP.NET | Microsoft Docs
+title: 'Creazione di pagine della Guida per API Web ASP.NET: ASP.NET 4.x'
 author: MikeWasson
-description: ''
+description: Questa esercitazione con il codice viene illustrato come creare le pagine della Guida per l'API Web ASP.NET in ASP.NET 4.x.
 ms.author: riande
 ms.date: 04/01/2013
+ms.custom: seoapril2019
 ms.assetid: 0150e67b-c50d-4613-83ea-7b4ef8cacc5a
 msc.legacyurl: /web-api/overview/getting-started-with-aspnet-web-api/creating-api-help-pages
 msc.type: authoredcontent
-ms.openlocfilehash: fba368e4017fea65ff96e2540d486662cc6b45f8
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: e3f6a9b8a6835b034a075d580cd9a33136969990
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423728"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59395017"
 ---
-<a name="creating-help-pages-for-aspnet-web-api"></a>Creazione di pagine della Guida per l'API Web ASP.NET
-====================
+# <a name="creating-help-pages-for-aspnet-web-api"></a>Creazione di pagine della Guida per l'API Web ASP.NET
+
 da [Mike Wasson](https://github.com/MikeWasson)
 
-Quando si crea un'API web, è spesso utile creare una pagina della Guida, in modo che altri sviluppatori saranno in grado di chiamare l'API. È possibile creare tutta la documentazione manualmente, ma è preferibile per la generazione automatica quanto più possibile.
+Questa esercitazione con il codice viene illustrato come creare le pagine della Guida per l'API Web ASP.NET in ASP.NET 4.x.
 
-Per semplificare questa attività, API Web ASP.NET fornisce una libreria per la generazione automatica di pagine della Guida in fase di esecuzione.
+Quando si crea un'API web, è spesso utile creare una pagina della Guida, in modo che altri sviluppatori saranno in grado di chiamare l'API. È possibile creare tutta la documentazione manualmente, ma è preferibile per la generazione automatica quanto più possibile. Per semplificare questa attività, API Web ASP.NET fornisce una libreria per la generazione automatica di pagine della Guida in fase di esecuzione.
 
 ![](creating-api-help-pages/_static/image1.png)
 

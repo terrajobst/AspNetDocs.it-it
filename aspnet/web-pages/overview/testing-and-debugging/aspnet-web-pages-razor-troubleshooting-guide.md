@@ -8,15 +8,15 @@ ms.date: 02/10/2014
 ms.assetid: 2a2c1833-0bfe-4e2e-9cc0-341b52c7b121
 msc.legacyurl: /web-pages/overview/testing-and-debugging/aspnet-web-pages-razor-troubleshooting-guide
 msc.type: authoredcontent
-ms.openlocfilehash: ec8cdda5c5b298736a650f82cd6b52d73b6dfe3d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: adbaa5cbda4a60a8b222ba49bb148b28b2e214cc
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57061298"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59389206"
 ---
-<a name="aspnet-web-pages-razor-troubleshooting-guide"></a>Guida alla risoluzione dei problemi delle pagine Web ASP.NET (Razor)
-====================
+# <a name="aspnet-web-pages-razor-troubleshooting-guide"></a>Guida alla risoluzione dei problemi delle pagine Web ASP.NET (Razor)
+
 da [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Questo articolo vengono descritti i problemi che possono verificarsi quando si lavora con ASP.NET Web Pages (Razor) e alcune soluzioni suggerite.
@@ -141,7 +141,7 @@ Sostituire i valori appropriati per `your-SMTP-server-name`e così via. Di segui
     *Un tentativo di connessione non è riuscito perché la parte connessa non ha risposto correttamente dopo un periodo di tempo o stabilire una connessione non è riuscita perché l'host connesso non ha risposto*
 
     Questo errore indica generalmente che l'applicazione non è riuscito a connettersi al server SMTP. Controllare il nome del server e il numero di porta.
-- <em>Cassetta postale non disponibile. È stata la risposta del server: 5.1.0 &lt; someuser@invaliddomain &gt; mittente rifiutata: dominio mittente non valido</em>
+- *Cassetta postale non disponibile. È stata la risposta del server: 5.1.0 &lt; someuser@invaliddomain &gt; mittente rifiutata: dominio mittente non valido*
 
     Questo messaggio può indicare che il `From` indirizzo non è corretto o mancante.
 - *La stringa specificata non è nel formato richiesto per un indirizzo di posta elettronica.*

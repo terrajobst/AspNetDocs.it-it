@@ -8,15 +8,15 @@ ms.date: 04/01/2009
 ms.assetid: a3599cf7-8474-4006-954a-3bc693736b66
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/deploying-your-site-using-an-ftp-client-cs
 msc.type: authoredcontent
-ms.openlocfilehash: cdecc85c056fc5153763d938c665b473117df9ba
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1ef796dc61cc65b6ca5205a5f8baf4dcc4ba05ae
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57031648"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59389167"
 ---
-<a name="deploying-your-site-using-an-ftp-client-c"></a>Distribuzione del sito tramite un client FTP (C#)
-====================
+# <a name="deploying-your-site-using-an-ftp-client-c"></a>Distribuzione del sito tramite un client FTP (C#)
+
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Scaricare il codice](http://download.microsoft.com/download/4/5/F/45F815EC-8B0E-46D3-9FB8-2DC015CCA306/ASPNET_Hosting_Tutorial_03_CS.zip) o [Scarica il PDF](http://download.microsoft.com/download/E/8/9/E8920AE6-D441-41A7-8A77-9EF8FF970D8B/aspnet_tutorial03_DeployingViaFTP_cs.pdf)
@@ -69,7 +69,7 @@ Figura 1 mostra FileZilla dopo che sono stati copiati i file necessari. FileZill
 > È possibile che i file del codice sorgente nel server di produzione, come vengono ignorati. Per impostazione predefinita, in ASP.NET non consente le richieste HTTP a file di codice sorgente in modo che anche se i file del codice sorgente sono presenti nel server di produzione siano inaccessibile ai visitatori del sito Web. (Ovvero, se un utente prova a visitare `http://www.yoursite.com/Default.aspx.cs` otterranno una pagina di errore che spiega che questi tipi di file - `.cs` file - non è consentita.)
 
 
-[![Usare un Client FTP per copiare i file necessari dal Desktop al Server del Web il Provider di hosting Web](deploying-your-site-using-an-ftp-client-cs/_static/image2.png)](deploying-your-site-using-an-ftp-client-cs/_static/image1.png)
+[![USe un FTP Client per copiare i file necessari da Your Desktop al Server del Web il Provider di hosting Web](deploying-your-site-using-an-ftp-client-cs/_static/image2.png)](deploying-your-site-using-an-ftp-client-cs/_static/image1.png)
 
 **Figura 1**: Usare un FTP Client per copiare i file necessari da Your Desktop al Server del Web il Provider di hosting Web ([fare clic per visualizzare l'immagine con dimensioni normali](deploying-your-site-using-an-ftp-client-cs/_static/image3.png))
 
@@ -82,7 +82,7 @@ Figura 2 mostra il sito distribuito le recensioni dei libri. Si noti che lo sto 
 > Se si verifica un errore quando si visualizzano l'applicazione si consiglia di verificare che è stato distribuito il set corretto di file. Successivamente, controllare il messaggio di errore per vedere se rivela eventuali indizi in merito al problema. In seguito, è possibile impostare in modo da supporto tecnico dell'azienda di host web o inviare una domanda nel forum appropriati nel [forum ASP.NET](https://forums.asp.net/).
 
 
-[![Il sito di revisioni del libro è ora accessibile a chiunque disponga di una connessione Internet](deploying-your-site-using-an-ftp-client-cs/_static/image5.png)](deploying-your-site-using-an-ftp-client-cs/_static/image4.png)
+[![TSito di revisioni del libro è ora accessibile a chiunque disponga di una connessione Internet](deploying-your-site-using-an-ftp-client-cs/_static/image5.png)](deploying-your-site-using-an-ftp-client-cs/_static/image4.png)
 
 **Figura 2**: Il sito di revisioni del libro è ora accessibile a chiunque disponga di una connessione Internet ([fare clic per visualizzare l'immagine con dimensioni normali](deploying-your-site-using-an-ftp-client-cs/_static/image6.png))
 
@@ -124,7 +124,7 @@ Dopo avere compilato correttamente il progetto, usare il client FTP per copiare 
 Figura 3 mostra FileZilla dopo aver copiato i file necessari. Come può notare, ASP.NET file del codice sorgente, ad esempio `About.aspx.cs`, sono presenti nel computer locale (l'ambiente di sviluppo) sia il provider di hosting web (l'ambiente di produzione) perché i file di codice devono essere distribuiti quando si usa automatico compilazione.
 
 
-[![Usare un Client FTP per copiare i file necessari dal Desktop al Server del Web il Provider di hosting Web](deploying-your-site-using-an-ftp-client-cs/_static/image8.png)](deploying-your-site-using-an-ftp-client-cs/_static/image7.png)
+[![USe un FTP Client per copiare i file necessari da Your Desktop al Server del Web il Provider di hosting Web](deploying-your-site-using-an-ftp-client-cs/_static/image8.png)](deploying-your-site-using-an-ftp-client-cs/_static/image7.png)
 
 **Figura 3**: Usare un FTP Client per copiare i file necessari da Your Desktop al Server del Web il Provider di hosting Web ([fare clic per visualizzare l'immagine con dimensioni normali](deploying-your-site-using-an-ftp-client-cs/_static/image9.png))
 

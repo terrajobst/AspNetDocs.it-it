@@ -8,18 +8,18 @@ ms.date: 01/13/2008
 ms.assetid: 07e15538-2f29-40c6-b2e7-e6115075ac83
 msc.legacyurl: /web-forms/overview/older-versions-security/introduction/security-basics-and-asp-net-support-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 817a823ab5b09ea8bf2620a142779e79f53d957d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 8f6fb4348e6ff703d329331b908e41763f24bb1f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57026508"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59402947"
 ---
-<a name="security-basics-and-aspnet-support-c"></a>Nozioni di base sulla sicurezza e supporto di ASP.NET (C#)
-====================
+# <a name="security-basics-and-aspnet-support-c"></a>Nozioni di base sulla sicurezza e supporto di ASP.NET (C#)
+
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Scaricare PDF](http://download.microsoft.com/download/2/F/7/2F705A34-F9DE-4112-BBDE-60098089645E/aspnet_tutorial01_Basics_cs.pdf)
+[Scarica il PDF](http://download.microsoft.com/download/2/F/7/2F705A34-F9DE-4112-BBDE-60098089645E/aspnet_tutorial01_Basics_cs.pdf)
 
 > Questa è la prima esercitazione di una serie di esercitazioni che verranno illustrate le tecniche per l'autenticazione ai visitatori tramite un web form, autorizzare l'accesso a determinate pagine e le funzionalità e la gestione degli account utente in un'applicazione ASP.NET.
 
@@ -140,7 +140,7 @@ Microsoft offre due classi di provider di appartenenza in .NET Framework:
 Questa serie di esercitazioni illustra esclusivamente il provider SqlMembershipProvider.
 
 
-[![Il modello consente a diverse implementazioni del Provider per essere facilmente collegato nel Framework di&lt;/ strong&gt;](security-basics-and-asp-net-support-cs/_static/image4.png)](security-basics-and-asp-net-support-cs/_static/image3.png)
+[![TModello consente a diverse implementazioni del Provider per essere facilmente collegato nel Framework di he&lt;/strong&gt&gt;](security-basics-and-asp-net-support-cs/_static/image4.png)](security-basics-and-asp-net-support-cs/_static/image3.png)
 
 **Figura 03**: Il modello consente a diverse implementazioni del Provider per essere facilmente collegato nel Framework di ([fare clic per visualizzare l'immagine con dimensioni normali](security-basics-and-asp-net-support-cs/_static/image5.png))
 
@@ -192,4 +192,4 @@ Per altre informazioni sugli argomenti trattati in questa esercitazione, vedere 
 Questa serie di esercitazioni è stata esaminata da diversi validi revisori. Il revisore capo di questa esercitazione è stato in questa esercitazione, serie è stata esaminata da diversi validi revisori. I revisori per questa esercitazione includono Alicja Maziarz, John Suru e Teresa Murphy. Se si è interessati prossimi articoli MSDN dello? In questo caso, Inviami una riga in corrispondenza [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
-> [avanti](an-overview-of-forms-authentication-cs.md)
+> [Successivo](an-overview-of-forms-authentication-cs.md)

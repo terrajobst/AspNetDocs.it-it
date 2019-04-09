@@ -8,15 +8,15 @@ ms.date: 05/28/2015
 ms.assetid: 7e85c70e-1a88-4408-8b3d-29611c7713ed
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/publishing
 msc.type: authoredcontent
-ms.openlocfilehash: bd6611a03ee4940f5d4176ce23464f313b9ec884
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: ece436d44908497d6cf10017ba1ee285bfb4a5b2
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57029758"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59382101"
 ---
-<a name="introducing-aspnet-web-pages---publishing-a-site-by-using-webmatrix"></a>Introduzione a pagine Web ASP.NET - pubblicazione di un sito tramite WebMatrix
-====================
+# <a name="introducing-aspnet-web-pages---publishing-a-site-by-using-webmatrix"></a>Introduzione a pagine Web ASP.NET - pubblicazione di un sito tramite WebMatrix
+
 da [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Questa esercitazione è l'ultima puntata della saga la serie di esercitazioni che introduce Microsoft WebMatrix e pagine Web ASP.NET. Descrive come pubblicare il sito in Internet, in modo che altri utenti possano utilizzarlo. Si presuppone di aver completato la serie attraverso [creazione di un aspetto coerente per i siti di ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=251585).

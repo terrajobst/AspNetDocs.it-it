@@ -8,15 +8,15 @@ ms.date: 04/17/2013
 ms.assetid: 03e4b9f5-0fea-4d94-959f-014b2762a301
 msc.legacyurl: /signalr/overview/older-versions/signalr-1x-hubs-api-guide-server
 msc.type: authoredcontent
-ms.openlocfilehash: 8d544e81f87998581afb2a1228233b4d374ad70a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7d75c832f704ea88d365f6a8b83c1c3a024b30ca
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57039728"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59382251"
 ---
-<a name="aspnet-signalr-hubs-api-guide---server-signalr-1x"></a>Guida all'API di ASP.NET SignalR Hubs - Server (SignalR 1.x)
-====================
+# <a name="aspnet-signalr-hubs-api-guide---server-signalr-1x"></a>Guida all'API di ASP.NET SignalR Hubs - Server (SignalR 1.x)
+
 dal [Patrick Fletcher](https://github.com/pfletcher), [Tom Dykstra](https://github.com/tdykstra)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]

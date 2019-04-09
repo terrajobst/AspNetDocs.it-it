@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/security/create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on
-title: MVC 5 di creare App con Facebook, Twitter, LinkedIn e Google OAuth2 Sign-on (C#) | Microsoft Docs
+title: MVC 5 di creare App con Facebook, Twitter, LinkedIn e Google OAuth2 Sign-on (c#) | Microsoft Docs
 author: Rick-Anderson
 description: Questa esercitazione illustra come compilare un'applicazione web ASP.NET MVC 5 che consente agli utenti di accedere tramite OAuth 2.0 con le credenziali di un autenti esterni...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 04/03/2015
 ms.assetid: 81ee500f-fc37-40d6-8722-f1b64720fbb6
 msc.legacyurl: /mvc/overview/security/create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on
 msc.type: authoredcontent
-ms.openlocfilehash: 132560c0280a2e4096ea4e9a715c32bc880a8b82
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: f78100178d5cdc25a10603907e77fe81386877a6
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58421427"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59386463"
 ---
-<a name="create-an-aspnet-mvc-5-app-with-facebook-twitter-linkedin-and-google-oauth2-sign-on-c"></a>Creare un'app ASP.NET MVC 5 con l'accesso OAuth2 di Facebook, Twitter, LinkedIn e Google (C#)
-====================
+# <a name="create-an-aspnet-mvc-5-app-with-facebook-twitter-linkedin-and-google-oauth2-sign-on-c"></a>Creare un'app ASP.NET MVC 5 con l'accesso OAuth2 di Facebook, Twitter, LinkedIn e Google (C#)
+
 da [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > Questa esercitazione illustra come compilare un'applicazione web ASP.NET MVC 5 che consente agli utenti di accedere tramite [OAuth 2.0](http://oauth.net/2/) con le credenziali di un provider di autenticazione esterni, ad esempio Facebook, Twitter, LinkedIn, Microsoft o Google. Per semplicità, questa esercitazione è incentrata sull'uso di credenziali da Facebook e Google.
@@ -45,7 +45,7 @@ Fare clic su **nuovo progetto** dalle **avviare** pagina oppure è possibile usa
 <a id="1st"></a>
 ## <a name="creating-your-first-application"></a>Creazione della prima applicazione
 
-Fare clic su **nuovo progetto**, quindi selezionare **Visual C#** a sinistra, quindi **Web** e quindi selezionare **applicazione Web ASP.NET**. Denominare il progetto "MvcAuth" e quindi fare clic su **OK**.
+Fare clic su **nuovo progetto**, quindi selezionare **Visual c#** a sinistra, quindi **Web** e quindi selezionare **applicazione Web ASP.NET**. Denominare il progetto "MvcAuth" e quindi fare clic su **OK**.
 
 ![](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/_static/image2.png)
 

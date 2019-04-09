@@ -8,15 +8,15 @@ ms.date: 11/17/2011
 ms.assetid: b83ab819-2b05-4776-b7b4-79ef78d457a5
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12
 msc.type: authoredcontent
-ms.openlocfilehash: ca7aa9070da98b8790ed8791dd009580fc6a4191
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: ce49baeca3fd5fe13476ea538e88f3e19dbb6c7b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57041008"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59382564"
 ---
-<a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-deploying-to-the-production-environment---7-of-12"></a>Distribuzione di un'applicazione Web ASP.NET con SQL Server Compact tramite Visual Studio o Visual Web Developer: Distribuzione nell'ambiente di produzione - 7 dei 12
-====================
+# <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-deploying-to-the-production-environment---7-of-12"></a>Distribuzione di un'applicazione Web ASP.NET con SQL Server Compact tramite Visual Studio o Visual Web Developer: Distribuzione nell'ambiente di produzione - 7 dei 12
+
 da [Tom Dykstra](https://github.com/tdykstra)
 
 [Download progetto iniziale](http://code.msdn.microsoft.com/Deploying-an-ASPNET-Web-4e31366b)
@@ -177,7 +177,7 @@ Nel Pannello di controllo Cytanium, è possibile impostare le autorizzazioni del
 
 [![Cytanium_Control_Panel_with_File_Manager_selected](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image35.png)](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image34.png)
 
-Nel **gestione File** , quindi selezionare **contosouniversity.com** e quindi **wwwrooot** per visualizzare una cartella radice dell'applicazione. Fare clic sull'icona del lucchetto accanto a **Elmah**.
+Nel **gestione File** , quindi selezionare **contosouniversity.com** e quindi **wwwroot** per visualizzare una cartella radice dell'applicazione. Fare clic sull'icona del lucchetto accanto a **Elmah**.
 
 [![Cytanium_Control_Panel_File_Manager_at_root_folder](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image37.png)](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image36.png)
 

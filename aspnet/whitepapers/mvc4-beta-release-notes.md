@@ -8,15 +8,15 @@ ms.date: 09/09/2011
 ms.assetid: 666407bb-81de-4319-89ba-0302c382a208
 msc.legacyurl: /whitepapers/mvc4-beta-release-notes
 msc.type: content
-ms.openlocfilehash: f1d949ec716ea8cb677c54fe5b07431161c58fbc
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b7722d5c282f07b35dd18d08911fa562dae6afc2
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57065108"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59387932"
 ---
-<a name="aspnet-mvc-4"></a>ASP.NET MVC 4
-====================
+# <a name="aspnet-mvc-4"></a>ASP.NET MVC 4
+
 > Questo documento descrive la versione di ASP.NET MVC 4 Beta per Visual Studio 2010.
 > 
 > > [!NOTE]
@@ -30,7 +30,7 @@ ms.locfileid: "57065108"
 - [L'aggiornamento di un progetto ASP.NET MVC 3 ad ASP.NET MVC 4](#_Toc303253806)
 - [Nuove funzionalità in ASP.NET MVC 4 Beta](#_Toc303253807)
 
-    - [ASP.NET Web API](#_Toc317096197)
+    - [API Web ASP.NET](#_Toc317096197)
     - [Applicazione a pagina singola ASP.NET](#_Toc317096198)
     - [Miglioramenti ai modelli di progetto predefinito](#_Toc303253808)
     - [Modello di progetto per dispositivi mobili](#_Toc303253809)

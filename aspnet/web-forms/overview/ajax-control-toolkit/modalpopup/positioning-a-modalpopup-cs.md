@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: 1caac9d0-e21e-49d6-a8ff-e563a736d6ca
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/modalpopup/positioning-a-modalpopup-cs
 msc.type: authoredcontent
-ms.openlocfilehash: e767785f801b5110f0e9e915cd35c8a4425a9487
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: db69c0cf4fc3e5d39d88d8a6478a529309020d3d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57064548"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59398033"
 ---
-<a name="positioning-a-modalpopup-c"></a>Posizionamento di un controllo ModalPopup (C#)
-====================
+# <a name="positioning-a-modalpopup-c"></a>Posizionamento di un controllo ModalPopup (C#)
+
 da [Christian Wenz](https://github.com/wenz)
 
 [Scaricare il codice](http://download.microsoft.com/download/2/4/0/24052038-f942-4336-905b-b60ae56f0dd5/ModalPopup4.cs.zip) o [Scarica il PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/modalpopup4CS.pdf)
@@ -55,7 +55,7 @@ E il `stopMoving()` funzione entra in gioco quando il controllo popup viene chiu
 [!code-aspx[Main](positioning-a-modalpopup-cs/samples/sample6.aspx)]
 
 
-[![Verrà visualizzata la finestra popup modale in corrispondenza della posizione designata](positioning-a-modalpopup-cs/_static/image2.png)](positioning-a-modalpopup-cs/_static/image1.png)
+[![Tpopup modale he viene visualizzata in corrispondenza della posizione designata](positioning-a-modalpopup-cs/_static/image2.png)](positioning-a-modalpopup-cs/_static/image1.png)
 
 Verrà visualizzata la finestra popup modale in corrispondenza della posizione designata ([fare clic per visualizzare l'immagine con dimensioni normali](positioning-a-modalpopup-cs/_static/image3.png))
 

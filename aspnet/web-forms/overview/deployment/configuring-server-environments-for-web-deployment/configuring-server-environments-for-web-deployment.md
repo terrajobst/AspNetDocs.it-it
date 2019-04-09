@@ -8,18 +8,18 @@ ms.date: 05/04/2012
 ms.assetid: 0bf0959b-4ca8-45de-bd13-b15347543b5a
 msc.legacyurl: /web-forms/overview/deployment/configuring-server-environments-for-web-deployment/configuring-server-environments-for-web-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: 4f6433f0b8a9ad3b3634c9bcd8d95015eebaa865
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 86ea4a2e17ec44a3716e1570e51a224144f1369c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57043528"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59386970"
 ---
-<a name="configuring-server-environments-for-web-deployment"></a>Configurazione degli ambienti server per la distribuzione Web
-====================
+# <a name="configuring-server-environments-for-web-deployment"></a>Configurazione degli ambienti server per la distribuzione Web
+
 da [Jason Lee](https://github.com/jrjlee)
 
-[Scaricare PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Scarica il PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Questa esercitazione illustrerà come configurare gli ambienti server a supporta un solo clic, o automatizzato, distribuzione nel sito Web e pubblicazione nei vari scenari diversi. L'esercitazione include gli argomenti che consentono di completare varie attività, come la configurazione di un server web per approcci specifici per la distribuzione e configurazione di una farm di server Web Farm Framework (WFF), insieme a panoramiche basati su scenari che forniscono supporto istruzioni di end-to-end di livello superiore.
 > 
@@ -31,7 +31,7 @@ da [Jason Lee](https://github.com/jrjlee)
 Questa esercitazione include questi argomenti:
 
 - [Scelta dell'approccio corretto per la distribuzione Web](choosing-the-right-approach-to-web-deployment.md)
-- [Scenario: Configurazione di un ambiente di Test per la distribuzione Web](scenario-configuring-a-test-environment-for-web-deployment.md)
+- [Scenario: Configurazione di un ambiente di test per la distribuzione Web](scenario-configuring-a-test-environment-for-web-deployment.md)
 - [Scenario: Configurazione di un ambiente di gestione temporanea per la distribuzione Web](scenario-configuring-a-staging-environment-for-web-deployment.md)
 - [Scenario: Configurazione di un ambiente di produzione per la distribuzione Web](scenario-configuring-a-production-environment-for-web-deployment.md)
 - [Configurazione di un server Web per la pubblicazione con Distribuzione Web (agente remoto)](configuring-a-web-server-for-web-deploy-publishing-remote-agent.md)
@@ -66,4 +66,4 @@ Ciò fa parte di una serie di cinque esercitazioni su distribuzione web su larga
 - [Distribuzione Web aziendale avanzata](../advanced-enterprise-web-deployment/advanced-enterprise-web-deployment.md). Questa esercitazione descrive come eseguire varie attività di distribuzione più avanzate, come la personalizzazione delle distribuzioni di database per più ambienti, esclusione di file e cartelle dalla distribuzione e portare offline l'applicazioni web durante il processo di distribuzione .
 
 > [!div class="step-by-step"]
-> [avanti](choosing-the-right-approach-to-web-deployment.md)
+> [Successivo](choosing-the-right-approach-to-web-deployment.md)

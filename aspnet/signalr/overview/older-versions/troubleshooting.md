@@ -8,15 +8,15 @@ ms.date: 06/05/2013
 ms.assetid: 347210ba-c452-4feb-886f-b51d89f58971
 msc.legacyurl: /signalr/overview/older-versions/troubleshooting
 msc.type: authoredcontent
-ms.openlocfilehash: 798c41ee36372d12f03d07bbd7af3a26c161d33f
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 5f7ebf7cc6d6a65216021911fe77036357369980
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423325"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59389271"
 ---
-<a name="signalr-troubleshooting-signalr-1x"></a>Risoluzione dei problemi di SignalR (SignalR 1.x)
-====================
+# <a name="signalr-troubleshooting-signalr-1x"></a>Risoluzione dei problemi di SignalR (SignalR 1.x)
+
 da [Patrick Fletcher](https://github.com/pfletcher)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
@@ -65,7 +65,7 @@ SignalR utilizza i due modelli di comunicazione: Hub e PersistentConnections. La
 
 [!code-javascript[Main](troubleshooting/samples/sample2.js)]
 
-**Codice C# server che esegue il mapping di una route a una PersistentConnection**
+**Codice c# server che esegue il mapping di una route a una PersistentConnection**
 
 [!code-csharp[Main](troubleshooting/samples/sample3.cs)]
 
@@ -111,7 +111,7 @@ SignalR non utilizzeranno automaticamente JSON per il metodo serialize alcuna ne
 
 Questo comportamento è previsto dalla progettazione. Quando `OnDisconnected` viene chiamato, l'hub ha già acceduto il `Disconnected` lo stato, che non consente inoltre di chiamare i metodi dell'hub.
 
-**Codice C# server che esegue correttamente il codice nell'evento OnDisconnected**
+**Codice c# server che esegue correttamente il codice nell'evento OnDisconnected**
 
 [!code-csharp[Main](troubleshooting/samples/sample8.cs)]
 
@@ -127,7 +127,7 @@ Se una connessione cross-domain (una connessione per il quale l'URL di SignalR n
 
 Una connessione bism in un'applicazione client .NET che utilizza la sicurezza del dominio potrebbe non riuscire se la connessione non è configurata correttamente. Per usare SignalR in un ambiente di dominio, impostare la proprietà di connessione necessarie come indicato di seguito:
 
-**Codice C# client che implementa le credenziali di connessione**
+**Codice c# client che implementa le credenziali di connessione**
 
 [!code-csharp[Main](troubleshooting/samples/sample9.cs)]
 

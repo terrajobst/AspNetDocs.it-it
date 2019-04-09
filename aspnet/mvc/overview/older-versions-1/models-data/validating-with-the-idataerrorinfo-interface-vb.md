@@ -8,15 +8,15 @@ ms.date: 03/02/2009
 ms.assetid: 3a8a9d9f-82dd-4959-b7c6-960e9ce95df1
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/validating-with-the-idataerrorinfo-interface-vb
 msc.type: authoredcontent
-ms.openlocfilehash: e9b989d0110c3947583fd70bd38b29dcb2bb5c31
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c64e1ea1562c3a0cfe4fb33f1c3033bb9c31bd2c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57033698"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59402739"
 ---
-<a name="validating-with-the-idataerrorinfo-interface-vb"></a>Convalida con l'interfaccia IDataErrorInfo (VB)
-====================
+# <a name="validating-with-the-idataerrorinfo-interface-vb"></a>Convalida con l'interfaccia IDataErrorInfo (VB)
+
 da [Stephen Walther](https://github.com/StephenWalther)
 
 > Stephen Walther illustra come visualizzare i messaggi di errore di convalida personalizzata implementando l'interfaccia IDataErrorInfo in una classe di modello.
@@ -31,7 +31,7 @@ In questa esercitazione si utilizzerà il database MoviesDB e la tabella di data
 <a id="0.6_table01"></a>
 
 
-| **Nome della colonna** | **Tipo di dati** | **Consenti valori null** |
+| **Nome colonna** | **Tipo di dati** | **Ammetti Null** |
 | --- | --- | --- |
 | Id | Int | False |
 | Titolo | Nvarchar(100) | False |
@@ -42,7 +42,7 @@ In questa esercitazione si utilizzerà il database MoviesDB e la tabella di data
 In questa esercitazione, usare Microsoft Entity Framework per generare classi modello del mio database. La classe di film generata da Entity Framework viene visualizzata nella figura 1.
 
 
-[![L'entità film](validating-with-the-idataerrorinfo-interface-vb/_static/image1.jpg)](validating-with-the-idataerrorinfo-interface-vb/_static/image1.png)
+[![Tegli entità film](validating-with-the-idataerrorinfo-interface-vb/_static/image1.jpg)](validating-with-the-idataerrorinfo-interface-vb/_static/image1.png)
 
 **Figura 01**: L'entità film ([fare clic per visualizzare l'immagine con dimensioni normali](validating-with-the-idataerrorinfo-interface-vb/_static/image2.png))
 
@@ -73,7 +73,7 @@ La proprietà IsValid restituisce false quando si verifica un errore di convalid
 La classe di film viene generata da Entity Framework. È possibile visualizzare il codice per la classe Movie se si espande il file MoviesDBModel.edmx nella finestra Esplora soluzioni e aprire il file MoviesDBModel.Designer.vb nell'Editor del codice (vedere la figura 2).
 
 
-[![Il codice per l'entità film](validating-with-the-idataerrorinfo-interface-vb/_static/image2.jpg)](validating-with-the-idataerrorinfo-interface-vb/_static/image3.png)
+[![Til codice per l'entità film](validating-with-the-idataerrorinfo-interface-vb/_static/image2.jpg)](validating-with-the-idataerrorinfo-interface-vb/_static/image3.png)
 
 **Figura 02**: Il codice per l'entità film ([fare clic per visualizzare l'immagine con dimensioni normali](validating-with-the-idataerrorinfo-interface-vb/_static/image4.png))
 
@@ -147,7 +147,7 @@ Nel listato 4, controlla la proprietà dell'indicizzatore di \_raccolta errori p
 Non devi modificare il controller Home in alcun modo per usare la classe film modificata. La pagina visualizzata nella figura 3 illustra cosa accade quando viene immesso alcun valore per i campi modulo titolo o Director.
 
 
-[![La creazione automatica di metodi di azione](validating-with-the-idataerrorinfo-interface-vb/_static/image3.jpg)](validating-with-the-idataerrorinfo-interface-vb/_static/image5.png)
+[![Ci metodi di azione reating automaticamente](validating-with-the-idataerrorinfo-interface-vb/_static/image3.jpg)](validating-with-the-idataerrorinfo-interface-vb/_static/image5.png)
 
 **Figura 03**: Un modulo con i valori mancanti ([fare clic per visualizzare l'immagine con dimensioni normali](validating-with-the-idataerrorinfo-interface-vb/_static/image6.png))
 

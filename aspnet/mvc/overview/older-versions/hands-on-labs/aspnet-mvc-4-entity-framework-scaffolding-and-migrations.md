@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 093c1362-f10b-407c-a708-be370f4b62b0
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-entity-framework-scaffolding-and-migrations
 msc.type: authoredcontent
-ms.openlocfilehash: 649f83d54bfdb3367d9cea056a53a614f982adec
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: ca47f6fe6d55153354d38fcf1ba5e844215279b2
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422961"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59389037"
 ---
 # <a name="aspnet-mvc-4-entity-framework-scaffolding-and-migrations"></a>Scaffolding e migrazioni di ASP.NET MVC 4 Entity Framework
 
@@ -58,7 +58,7 @@ Per praticità, gran parte del codice che vengono gestiti insieme questo lab è 
 
 Se non ha familiarità con i frammenti di codice di Visual Studio e si vuole imparare a usarle, è possibile fare riferimento all'appendice di questo documento &quot; [appendice b: Uso dei frammenti di codice](#AppendixB)&quot;.
 
-* * *
+---
 
 <a id="Exercises"></a>
 
@@ -90,7 +90,7 @@ In questo esercizio, si apprenderà come usare lo scaffolding di ASP.NET MVC 4 c
 #### <a name="task-1--creating-a-new-aspnet-mvc-4-project-using-scaffolding"></a>Attività 1-Creazione in corso un nuovo ASP.NET MVC 4 progetto usando lo Scaffolding
 
 1. Se non è già aperta, avviare **Visual Studio 2012**.
-2. Selezionare **File | Nuovo progetto**. Nella nuova finestra di dialogo progetto, sotto il **Visual C# | Web** sezione, selezionare **applicazione Web ASP.NET MVC 4**. Denominare il progetto di **MVC4andEFMigrations** e impostare il percorso al **Source\Ex1 UsingMVC4ScaffoldingEFMigrations** cartella della presente esercitazione. Impostare il **Nome soluzione** a **Begin** e verificare che **Crea directory per soluzione** sia selezionata. Fare clic su **OK**.
+2. Selezionare **File | Nuovo progetto**. Nella nuova finestra di dialogo progetto, sotto il **Visual c# | Web** sezione, selezionare **applicazione Web ASP.NET MVC 4**. Denominare il progetto di **MVC4andEFMigrations** e impostare il percorso al **Source\Ex1 UsingMVC4ScaffoldingEFMigrations** cartella della presente esercitazione. Impostare il **Nome soluzione** a **Begin** e verificare che **Crea directory per soluzione** sia selezionata. Fare clic su **OK**.
 
     ![Finestra di dialogo Nuovo progetto ASP.NET MVC 4](aspnet-mvc-4-entity-framework-scaffolding-and-migrations/_static/image1.png "finestra di dialogo Nuovo progetto ASP.NET MVC 4")
 
@@ -231,7 +231,7 @@ In questa attività si aggiornerà il database tramite migrazioni di Entity Fram
 
     ![L'aggiornamento del Database](aspnet-mvc-4-entity-framework-scaffolding-and-migrations/_static/image17.png "l'aggiornamento del Database")
 
-    *L'aggiornamento del Database*
+    *Aggiornamento del database*
 
     Verrà aggiunta la **MiddleName** colonna il **persone** tabella corrisponde alla definizione corrente del **persona** classe.
 9. Dopo aver aggiornato il database, fare doppio clic nella cartella Controller e selezionare **Add | Controller** per aggiungere nuovamente il controller persona (completa con gli stessi valori). Verranno aggiornate le visualizzazioni aggiunta del nuovo attributo e i metodi esistenti.
@@ -260,7 +260,7 @@ In questa attività si aggiornerà il database tramite migrazioni di Entity Fram
 
     ![Secondo nome edizione](aspnet-mvc-4-entity-framework-scaffolding-and-migrations/_static/image21.png "secondo nome edizione")
 
-* * *
+---
 
 <a id="Summary"></a>
 
@@ -316,7 +316,7 @@ Con i frammenti di codice, hai tutto il codice che necessario a tua disposizione
 
 *Uso di frammenti di codice di Visual Studio per inserire codice nel progetto*
 
-***Per aggiungere un frammento di codice utilizzando la tastiera (solo C#)***
+***Per aggiungere un frammento di codice utilizzando la tastiera (solo c#)***
 
 1. Posizionare il cursore in cui si vuole inserire il codice.
 2. Iniziare a digitare il nome del frammento di codice (senza spazi o trattini).
@@ -336,7 +336,7 @@ Con i frammenti di codice, hai tutto il codice che necessario a tua disposizione
 
 *Il frammento di codice e premere nuovamente Tab espanderà*
 
-***Per aggiungere un frammento di codice usando il mouse (C#, Visual Basic e XML)*** 1. Pulsante destro del mouse in cui si desidera inserire il frammento di codice.
+***Per aggiungere un frammento di codice usando il mouse (c#, Visual Basic e XML)*** 1. Pulsante destro del mouse in cui si desidera inserire il frammento di codice.
 
 1. Selezionare **Inserisci frammento** aggiungendo **frammenti di codice**.
 2. Selezionare il frammento di codice rilevante dall'elenco, facendo clic su di esso.

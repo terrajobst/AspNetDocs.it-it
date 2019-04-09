@@ -8,15 +8,15 @@ ms.date: 03/03/2014
 ms.assetid: 5344b74e-b888-479a-92bc-601a33bd61a2
 msc.legacyurl: /web-forms/overview/getting-started/code-editing-in-web-forms-pages
 msc.type: authoredcontent
-ms.openlocfilehash: 670f81ca1ef9923575cb2fee1747f06f426963d8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 328dc6fb61ac562131b11b36b40f574ca5a53866
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57029708"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59397370"
 ---
-<a name="code-editing-aspnet-web-forms-in-visual-studio-2013"></a>Modifica del codice di Web Forms ASP.NET in Visual Studio 2013
-====================
+# <a name="code-editing-aspnet-web-forms-in-visual-studio-2013"></a>Modifica del codice di Web Forms ASP.NET in Visual Studio 2013
+
 da [Erik Reitan](https://github.com/Erikre)
 
 In numero di pagine Web Form ASP.NET, si scrive codice in Visual Basic, c# o un'altra lingua. L'editor di codice in Visual Studio consentono di scrivere rapidamente codice senza commettere errori. Inoltre, l'editor fornisce informazioni su come creare codice riutilizzabile per contribuire a ridurre la quantità di lavoro da eseguire.
@@ -77,7 +77,7 @@ Quando si crea una nuova applicazione Web Form usando la **applicazione Web ASP.
 1. Nella **Esplora soluzioni**, fare clic sul nome dell'applicazione Web (in questa esercitazione è il nome dell'applicazione **BasicWebSite**), quindi fare clic su **Add**  - &gt; **Nuovo elemento**.   
 Verrà visualizzata la finestra di dialogo **Aggiungi nuovo elemento**.
 2. Selezionare il **Visual c#**  - &gt; **Web** gruppo di modelli a sinistra. Quindi, selezionare **Web Form** dalla parte centrale elencare e denominarlo *FirstWebPage*.   
-    ![Aggiungi finestra di dialogo Nuovo elemento](code-editing-in-web-forms-pages/_static/image4.png)
+    ![Finestra di dialogo Aggiungi nuovo elemento](code-editing-in-web-forms-pages/_static/image4.png)
 3. Fare clic su **Add** per aggiungere la pagina Web Form al progetto.  
  Visual Studio crea la nuova pagina e lo apre.
 4. Successivamente, impostare la nuova pagina come pagina di avvio predefinito. Nelle **Esplora soluzioni**, fare doppio clic su nuova pagina denominata *FirstWebPage* e selezionare **imposta come pagina iniziale**. Alla successiva esecuzione di questa applicazione per testare lo stato di avanzamento, verrà visualizzato automaticamente la nuova pagina nel browser.

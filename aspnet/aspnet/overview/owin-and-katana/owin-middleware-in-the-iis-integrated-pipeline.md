@@ -8,15 +8,15 @@ ms.date: 11/07/2013
 ms.assetid: d031c021-33c2-45a5-bf9f-98f8fa78c2ab
 msc.legacyurl: /aspnet/overview/owin-and-katana/owin-middleware-in-the-iis-integrated-pipeline
 msc.type: authoredcontent
-ms.openlocfilehash: 6124bcdaeeb0d4342cbde0d3ca52d55f76a953ab
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 484c01f19014639cc30244ed4f4d014794594aa2
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57041448"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59391702"
 ---
-<a name="owin-middleware-in-the-iis-integrated-pipeline"></a>Middleware OWIN nella pipeline integrata di IIS
-====================
+# <a name="owin-middleware-in-the-iis-integrated-pipeline"></a>Middleware OWIN nella pipeline integrata di IIS
+
 dal [Praburaj Thiagarajan](https://github.com/Praburaj), [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > Questo articolo illustra come eseguire i componenti middleware OWIN (OMCs) nella pipeline integrata di IIS e come impostare un OMC l'evento della pipeline viene eseguita in. È necessario rivedere [una panoramica del progetto Katana](an-overview-of-project-katana.md) e [rilevamento della classe di avvio OWIN](owin-startup-class-detection.md) prima di leggere questa esercitazione. Questa esercitazione è stato scritto da Rick Anderson ( [ @RickAndMSFT ](https://twitter.com/#!/RickAndMSFT) ), Chris Ross Praburaj Thiagarajan e Howard Dierking ( [ @howard \_dierking](https://twitter.com/howard_dierking) ).

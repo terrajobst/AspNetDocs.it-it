@@ -8,15 +8,15 @@ ms.date: 09/13/2006
 ms.assetid: 0591cacc-b34b-4cf6-885e-2c9953bb0946
 msc.legacyurl: /web-forms/overview/data-access/displaying-data-with-the-datalist-and-repeater/displaying-data-with-the-datalist-and-repeater-controls-cs
 msc.type: authoredcontent
-ms.openlocfilehash: a58a9501a546a437b44e078c628d7db010700b5c
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: bf9930a3704d4ae6f0cb012a1512e23b29435f76
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57062098"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59400191"
 ---
-<a name="displaying-data-with-the-datalist-and-repeater-controls-c"></a>Visualizzazione di dati con i controlli DataList e Repeater (C#)
-====================
+# <a name="displaying-data-with-the-datalist-and-repeater-controls-c"></a>Visualizzazione di dati con i controlli DataList e Repeater (C#)
+
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Scaricare l'App di esempio](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_29_CS.exe) o [Scarica il PDF](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/datatutorial29cs1.pdf)
@@ -51,7 +51,7 @@ Prima di iniziare questa esercitazione, lasciare s prima di tutto si consiglia d
 Aprire il `Default.aspx` pagina e trascinare il `SectionLevelTutorialListing.ascx` controllo utente dal `UserControls` cartella nell'area di progettazione. Questo controllo utente, che è stato creato nel [pagine Master e spostamento nel sito](../introduction/master-pages-and-site-navigation-cs.md) esercitazione enumera la mappa del sito e consente di visualizzare le esercitazioni nella sezione corrente in un elenco puntato.
 
 
-[![Aggiungere il controllo utente sectionleveltutoriallisting. ascx a default. aspx](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image3.png)](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image2.png)
+[![Ail controllo utente sectionleveltutoriallisting. ascx a default. aspx gg](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image3.png)](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image2.png)
 
 **Figura 2**: Aggiungere il `SectionLevelTutorialListing.ascx` controllo utente da `Default.aspx` ([fare clic per visualizzare l'immagine con dimensioni normali](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image4.png))
 
@@ -72,7 +72,7 @@ Per visualizzare l'elenco puntato le esercitazioni di DataList e Repeater che ve
 Analogamente a FormView, il controllo DataList s output sottoposto a rendering dipende dalla fase modelli anziché BoundField CheckBoxFields e così via. A differenza di FormView, DataList è progettato per visualizzare un set di record invece di uno solitari. Let s iniziare questa esercitazione con uno sguardo alle informazioni sul prodotto di associazione a un controllo DataList. Iniziare aprendo il `Basics.aspx` nella pagina di `DataListRepeaterBasics` cartella. Successivamente, trascinare un controllo DataList dalla casella degli strumenti nella finestra di progettazione. Come illustrato nella figura 4, prima di specificare i modelli di DataList s, la finestra di progettazione vengono visualizzati come un riquadro grigio.
 
 
-[![Trascinare il controllo DataList dalla casella degli strumenti nella finestra di progettazione](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image7.png)](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image6.png)
+[![DRag il DataList da di casella degli strumenti in the Designer](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image7.png)](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image6.png)
 
 **Figura 4**: Trascinare il DataList da di casella degli strumenti in the Designer ([fare clic per visualizzare l'immagine con dimensioni normali](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image8.png))
 
@@ -80,17 +80,17 @@ Analogamente a FormView, il controllo DataList s output sottoposto a rendering d
 Da s DataList degli smart tag, aggiungere un nuovo oggetto ObjectDataSource e configurarlo in modo da usare la `ProductsBLL` classe s `GetProducts` (metodo). Poiché nuovamente la creazione di un controllo DataList di sola lettura in questa esercitazione impostiamo l'elenco a discesa su (nessuno) in Creazione guidata s inserimento, aggiornamento ed eliminazione di schede.
 
 
-[![Scegliere di creare un nuovo oggetto ObjectDataSource](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image10.png)](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image9.png)
+[![Opt per creare un nuovo oggetto ObjectDataSource](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image10.png)](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image9.png)
 
 **Figura 5**: Consenso esplicito per creare un nuovo oggetto ObjectDataSource ([fare clic per visualizzare l'immagine con dimensioni normali](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image11.png))
 
 
-[![Configurare ObjectDataSource per usare la classe ProductsBLL](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image13.png)](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image12.png)
+[![Cconfigurare ObjectDataSource per usare la classe ProductsBLL](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image13.png)](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image12.png)
 
 **Figura 6**: Configurare ObjectDataSource per usare la `ProductsBLL` classe ([fare clic per visualizzare l'immagine con dimensioni normali](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image14.png))
 
 
-[![Recuperare informazioni su tutti i prodotti usando il metodo GetProducts](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image16.png)](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image15.png)
+[![RInformazioni su tutti i prodotti usando il metodo GetProducts etrieve](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image16.png)](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image15.png)
 
 **Figura 7**: Recuperare informazioni su tutti i di prodotti utilizzando il `GetProducts` metodo ([fare clic per visualizzare l'immagine con dimensioni normali](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image17.png))
 
@@ -120,7 +120,7 @@ Lasciando nei controlli Web di etichetta, tuttavia, offrono due vantaggi. In pri
 Pertanto, quando si lavora con DataList, che offre la possibilità di modificare i modelli tramite la finestra di progettazione, è preferibile usare i controlli Web di etichetta in modo che il contenuto è accessibile tramite l'interfaccia di modifica modelli. Come vedremo tra breve, il controllo Repeater richiede che il contenuto del modello s essere modificato dalla vista origine. Di conseguenza, durante la creazione di modelli di s Repeater spesso si ometterà Web etichetta dei controlli a meno che non è possibile sapere che avrò bisogno di formattare l'aspetto dei dati associato testo in base a livello di codice per la logica.
 
 
-[![Ogni prodotto s Output viene eseguito il rendering tramite DataList s ItemTemplate](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image19.png)](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image18.png)
+[![EACH s Output prodotto viene eseguito il rendering tramite DataList s ItemTemplate](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image19.png)](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image18.png)
 
 **Figura 8**: Output di ogni prodotto s viene eseguito il rendering tramite DataList s `ItemTemplate` ([fare clic per visualizzare l'immagine con dimensioni normali](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image20.png))
 
@@ -134,7 +134,7 @@ Come descritto nel [visualizzazione di dati con ObjectDataSource](../basic-repor
 Per aggiungere un file di interfaccia, fare clic su di `App_Themes/DataWebControls` cartella, fare clic su Aggiungi un nuovo elemento e selezionare l'opzione soubor Skinu dall'elenco. Denominare il file `DataList.skin`.
 
 
-[![Creare un nuovo File di interfaccia denominato DataList.skin](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image22.png)](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image21.png)
+[![CCrea un File denominato DataList.skin interfaccia nuova](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image22.png)](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image21.png)
 
 **Figura 9**: Creare un nuovo File di interfaccia denominato `DataList.skin` ([fare clic per visualizzare l'immagine con dimensioni normali](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image23.png))
 
@@ -149,7 +149,7 @@ Queste impostazioni assegnano le stesse classi CSS per le proprietà DataList ap
 Con l'aggiunta di questo file di interfaccia, l'aspetto DataList viene aggiornato nella finestra di progettazione (potrebbe essere necessario aggiornare la visualizzazione della finestra di progettazione per visualizzare gli effetti del nuovo file di interfaccia; dal menu Visualizza, scegliere Aggiorna). Come illustrato nella figura 10, ogni prodotto alternativo ha un colore di sfondo di colore rosa chiaro.
 
 
-[![Creare un nuovo File di interfaccia denominato DataList.skin](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image25.png)](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image24.png)
+[![CCrea un File denominato DataList.skin interfaccia nuova](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image25.png)](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image24.png)
 
 **Figura 10**: Creare un nuovo File di interfaccia denominato `DataList.skin` ([fare clic per visualizzare l'immagine con dimensioni normali](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image26.png))
 
@@ -174,7 +174,7 @@ Quando si specifica la `HeaderTemplate` o `FooterTemplate`, DataList aggiunge un
 Per questo esempio, ti permettono di s hanno il titolo del prodotto informazioni visualizzate nella parte superiore dei risultati in s DataList un `<h3>` intestazione. A tale scopo, aggiungere un `HeaderTemplate` con il markup appropriato. Dalla finestra di progettazione, è possibile fare clic sul collegamento di modifica modelli nello smart tag DataList s, la scelta del modello di intestazione nell'elenco a discesa e digitando nel testo dopo aver selezionato l'opzione di titolo 3 dallo stile elenco a discesa elenco (vedere la figura 11).
 
 
-[![Aggiungere un modello HeaderTemplate con le informazioni sul prodotto di testo](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image28.png)](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image27.png)
+[![Agg un modello HeaderTemplate con le informazioni sul prodotto di testo](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image28.png)](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image27.png)
 
 **Figura 11**: Aggiungere un `HeaderTemplate` con le informazioni sul prodotto di testo ([fare clic per visualizzare l'immagine con dimensioni normali](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image29.png))
 
@@ -196,7 +196,7 @@ Per aggiungere un po' di spazio tra ogni elenco dei prodotti, consentire s aggiu
 Dopo aver apportato questa aggiunta, la visualizzazione della pagina tramite un browser dovrebbe essere simile alla figura 12. Si noti la riga di intestazione e la riga tra ogni presentazione del prodotto.
 
 
-[![DataList include una riga di intestazione e una regola orizzontale tra ogni presentazione del prodotto](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image31.png)](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image30.png)
+[![Tegli DataList include una riga di intestazione e un orizzontale regola tra ogni Product Listing](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image31.png)](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image30.png)
 
 **Figura 12**: DataList include una riga di intestazione e un orizzontale regola tra ogni Product Listing ([fare clic per visualizzare l'immagine con dimensioni normali](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image32.png))
 
@@ -227,7 +227,7 @@ Il controllo Repeater funge da un blocco catch tutti i dati di controllo Web. Se
 A tale scopo, avviare, trascinare un controllo Repeater dalla casella degli strumenti nella finestra di progettazione, sopra il controllo DataList informazioni di prodotto. Come con DataList e Repeater vengono inizialmente visualizzate come un riquadro grigio fino a quando non sono stati definiti i modelli.
 
 
-[![Aggiungere un controllo Repeater per la finestra di progettazione](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image34.png)](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image33.png)
+[![Aun controllo Repeater per la finestra di progettazione gg](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image34.png)](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image33.png)
 
 **Figura 13**: Aggiungere un controllo Repeater per la finestra di progettazione ([fare clic per visualizzare l'immagine con dimensioni normali](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image35.png))
 
@@ -235,17 +235,17 @@ A tale scopo, avviare, trascinare un controllo Repeater dalla casella degli stru
 Esiste una sola opzione di s nel Repeater s smart tag: Vyberte Zdroj dat. Scegliere di creare un nuovo oggetto ObjectDataSource e configurarlo per usare la `CategoriesBLL` classe s `GetCategories` (metodo).
 
 
-[![Creare un nuovo oggetto ObjectDataSource](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image37.png)](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image36.png)
+[![CCrea un nuovo oggetto ObjectDataSource](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image37.png)](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image36.png)
 
 **Figura 14**: Creare un nuovo oggetto ObjectDataSource ([fare clic per visualizzare l'immagine con dimensioni normali](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image38.png))
 
 
-[![Configurare ObjectDataSource per usare la classe CategoriesBLL](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image40.png)](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image39.png)
+[![Cconfigurare ObjectDataSource per usare la classe CategoriesBLL](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image40.png)](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image39.png)
 
 **Figura 15**: Configurare ObjectDataSource per usare la `CategoriesBLL` classe ([fare clic per visualizzare l'immagine con dimensioni normali](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image41.png))
 
 
-[![Recuperare informazioni su tutte le categorie usando il metodo GetCategories](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image43.png)](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image42.png)
+[![RInformazioni su tutte le categorie usando il metodo GetCategories etrieve](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image43.png)](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image42.png)
 
 **Figura 16**: Recuperare informazioni su tutte le di categorie utilizzando il `GetCategories` metodo ([fare clic per visualizzare l'immagine con dimensioni normali](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image44.png))
 
@@ -265,7 +265,7 @@ Poiché il `<td>Category X</td>` testo è quella che si ripete, queste informazi
 Il controllo Repeater genera il markup come specificato dal relativi modelli, nient'altro, nulla meno preciso. Figura 17 mostra l'output di s Repeater quando viene visualizzato tramite un browser.
 
 
-[![Una singola riga HTML &lt;tabella&gt; Elenca ogni categoria in una colonna separata](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image46.png)](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image45.png)
+[![A Codice HTML a riga singola &lt;tabella&gt; Elenca ogni categoria in una colonna separata](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image46.png)](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image45.png)
 
 **Figura 17**: Una singola riga HTML `<table>` Elenca ogni categoria in una colonna separata ([fare clic per visualizzare l'immagine con dimensioni normali](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image47.png))
 
@@ -292,7 +292,7 @@ Quanto segue `HeaderTemplate` e `FooterTemplate` comportare il markup desiderato
 Figura 18 Mostra Repeater dopo aver apportate queste modifiche.
 
 
-[![Le colonne di categoria alternativo nel colore di sfondo e include una riga di intestazione](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image49.png)](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image48.png)
+[![Tegli categoria colonne alternativo nel colore di sfondo e include una riga di intestazione](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image49.png)](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image48.png)
 
 **Figura 18**: La categoria colonne alternativo nel colore di sfondo e include una riga di intestazione ([fare clic per visualizzare l'immagine con dimensioni normali](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image50.png))
 
@@ -316,4 +316,4 @@ Buona programmazione!
 Questa serie di esercitazioni è stata esaminata da diversi validi revisori. I revisori per questa esercitazione sono state Yaakov Ellis, Liz Shulok, Randy Schmidt e Stacy Park. Se si è interessati prossimi articoli MSDN dello? In questo caso, Inviami una riga in corrispondenza [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
-> [avanti](formatting-the-datalist-and-repeater-based-upon-data-cs.md)
+> [Successivo](formatting-the-datalist-and-repeater-based-upon-data-cs.md)

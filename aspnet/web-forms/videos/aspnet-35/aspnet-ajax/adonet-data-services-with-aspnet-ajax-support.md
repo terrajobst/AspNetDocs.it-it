@@ -8,15 +8,15 @@ ms.date: 12/20/2007
 ms.assetid: c7aa9192-8859-403f-a9a8-c372081f75bd
 msc.legacyurl: /web-forms/videos/aspnet-35/aspnet-ajax/adonet-data-services-with-aspnet-ajax-support
 msc.type: video
-ms.openlocfilehash: ad02ade67949ac7d2ffabae10232cec8e7db588e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5a81668c2c01fa12f7dbec506f914a388e09a9ff
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57043718"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59397461"
 ---
-<a name="adonet-data-services-with-aspnet-ajax-support"></a>ADO.NET Data Services con supporto di ASP.NET AJAX
-====================
+# <a name="adonet-data-services-with-aspnet-ajax-support"></a>ADO.NET Data Services con supporto di ASP.NET AJAX
+
 da [Levi Broderick](https://github.com/GrabYourPitchforks)
 
 Scopri come ADO.NET Data Services può essere integrato con il supporto di ASP.NET AJAX. **Tecnologia di Data Services ADP.NET è disponibile nel [ASP.NET 3.5 estensioni Preview](https://www.asp.net/downloads/35-sp1#find) (dicembre 2007).**

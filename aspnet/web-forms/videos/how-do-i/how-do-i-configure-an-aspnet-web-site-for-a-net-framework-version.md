@@ -8,15 +8,15 @@ ms.date: 05/20/2008
 ms.assetid: 7b814965-aae2-4436-941c-710804557b67
 msc.legacyurl: /web-forms/videos/how-do-i/how-do-i-configure-an-aspnet-web-site-for-a-net-framework-version
 msc.type: video
-ms.openlocfilehash: 709f4e3993abed79d9f934668db6fee515089402
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 37f7f75dbe1d88190032538b0b1b3dec74cab4c0
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57062848"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59386255"
 ---
-<a name="how-do-i-configure-an-aspnet-web-site-for-a-net-framework-version"></a>[Procedura:] Configurare un sito Web ASP.NET per una versione di .NET Framework
-====================
+# <a name="how-do-i-configure-an-aspnet-web-site-for-a-net-framework-version"></a>[Procedura:] Configurare un sito Web ASP.NET per una versione di .NET Framework
+
 da [Chris Pels](https://twitter.com/chrispels)
 
 In questo video Chris Pels verrà illustrato come configurare un sito web ASP.NET per usare una versione specifica di Framework ASP.NET/.NET. Vedere innanzitutto di identificare quale versione di .NET Framework è associato un sito web visualizzando i mapping di script in Internet Information Server (IIS). Ecco come un mapping di script associato con la radice in IIS e quindi con singoli siti web. Scopri quindi lo strumento di registrazione di ASP.NET in IIS (aspnet\_regiis.exe) usato per configurare IIS o un sito web ASP.NET per usare una versione specifica di .NET Framework. Usando questa informazioni, vedere come un singolo sito web è configurato per utilizzare una versione diversa di .NET Framework che è il valore predefinito in IIS. Infine, vedere due diversi siti web in IIS stesso in cui uno è in esecuzione in .NET Framework 2.0 e l'altro in 1.1.

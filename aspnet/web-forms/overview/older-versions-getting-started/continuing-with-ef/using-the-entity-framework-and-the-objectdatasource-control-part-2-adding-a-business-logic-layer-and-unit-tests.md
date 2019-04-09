@@ -8,15 +8,15 @@ ms.date: 01/26/2011
 ms.assetid: efb0e677-10b8-48dc-93d3-9ba3902dd807
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-2-adding-a-business-logic-layer-and-unit-tests
 msc.type: authoredcontent
-ms.openlocfilehash: 6517f037a03bb520ee4f3b3185a255b0eaa9de9a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 4d436b0e5d605027cfcf5243f615f9ac167c5888
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57029908"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59388049"
 ---
-<a name="using-the-entity-framework-40-and-the-objectdatasource-control-part-2-adding-a-business-logic-layer-and-unit-tests"></a>Utilizzo di Entity Framework 4.0 e il controllo ObjectDataSource, parte 2: Aggiunta di un livello di logica di business e unit test
-====================
+# <a name="using-the-entity-framework-40-and-the-objectdatasource-control-part-2-adding-a-business-logic-layer-and-unit-tests"></a>Utilizzo di Entity Framework 4.0 e il controllo ObjectDataSource, parte 2: Aggiunta di un livello di logica di business e unit test
+
 da [Tom Dykstra](https://github.com/tdykstra)
 
 > Questa serie di esercitazioni si basa sull'applicazione web Contoso University specificano che viene creato per il [Introduzione a Entity Framework 4.0](https://asp.net/entity-framework/tutorials#Getting%20Started) serie di esercitazioni. Se si non è stato completato le esercitazioni precedenti, come punto di partenza per questa esercitazione è possibile [scaricare l'applicazione](https://code.msdn.microsoft.com/ASPNET-Web-Forms-97f8ee9a) verrebbe creato. È anche possibile [scaricare l'applicazione](https://code.msdn.microsoft.com/ASPNET-Web-Forms-6c7197aa) creato dalla serie di esercitazioni complete. Se si hanno domande sulle esercitazioni, è possibile pubblicarli per i [forum di ASP.NET Entity Framework](https://forums.asp.net/1227.aspx).

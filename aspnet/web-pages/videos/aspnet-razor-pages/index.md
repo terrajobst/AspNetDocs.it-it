@@ -8,15 +8,15 @@ ms.date: 05/18/2012
 ms.assetid: ffad842d-548c-40c6-84c5-10858133e972
 msc.legacyurl: /web-pages/videos/aspnet-razor-pages
 msc.type: chapter
-ms.openlocfilehash: e0c0c719ef628a4e5050e908d45421d5bfd6d983
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 3224039c29bfda085e74095f7089dcbfc68ce1cc
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57023028"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59401101"
 ---
-<a name="aspnet-web-pages"></a>Pagine Web ASP.NET
-=================
+# <a name="aspnet-web-pages"></a>Pagine Web ASP.NET
+
 > Video di cui è possibile visualizzare per il drill-down in Web Pages e WebMatrix.
 
 
@@ -32,7 +32,7 @@ ms.locfileid: "57023028"
 - [Visualizzazione dei dati in un grafico (parte 1)](displaying-data-in-a-chart-part-1.md)
 - [Visualizzazione dei dati in un grafico (parte 2)](displaying-data-in-a-chart-part-2.md)
 - [Uso dei file](working-with-files.md)
-- [Uso delle immagini](working-with-images.md)
+- [Working with Images (Uso delle immagini)](working-with-images.md)
 - [Uso dei video](working-with-video.md)
 - [Aggiunta di posta elettronica al sito Web](adding-email-to-your-web-site.md)
 - [Aggiunta di funzionalità di ricerca al sito Web](adding-search-to-your-web-site.md)

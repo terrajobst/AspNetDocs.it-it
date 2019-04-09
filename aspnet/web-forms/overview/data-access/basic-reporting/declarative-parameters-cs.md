@@ -8,15 +8,15 @@ ms.date: 03/31/2010
 ms.assetid: 603c9bd3-b895-4ec6-853b-0c81ff36d580
 msc.legacyurl: /web-forms/overview/data-access/basic-reporting/declarative-parameters-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 0e4091e873aab8bed4e0f4a5b2a30784fd52723e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b3bdb44a0e3dc274c056bcadae3dcf90ab3c5507
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57042398"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59401439"
 ---
-<a name="declarative-parameters-c"></a>Parametri dichiarativi (C#)
-====================
+# <a name="declarative-parameters-c"></a>Parametri dichiarativi (C#)
+
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Scaricare l'App di esempio](http://download.microsoft.com/download/4/6/3/463cf87c-4724-4cbc-b7b5-3f866f43ba50/ASPNET_Data_Tutorial_5_CS.exe) o [Scarica il PDF](declarative-parameters-cs/_static/datatutorial05cs1.pdf)
@@ -37,7 +37,7 @@ Per questa esercitazione Iniziamo che illustra come usare un parametro impostato
 Nel primo esempio, iniziare aggiungendo un controllo DetailsView per la `DeclarativeParams.aspx` nella pagina di `BasicReporting` cartella. Dallo smart tag di DetailsView, selezionare &lt;nuova origine dati&gt; dall'elenco a discesa elenco e scegliere di aggiungere un ObjectDataSource.
 
 
-[![Aggiungere un ObjectDataSource alla pagina](declarative-parameters-cs/_static/image2.png)](declarative-parameters-cs/_static/image1.png)
+[![Agg ObjectDataSource alla pagina](declarative-parameters-cs/_static/image2.png)](declarative-parameters-cs/_static/image1.png)
 
 **Figura 1**: Aggiungere un ObjectDataSource alla pagina ([fare clic per visualizzare l'immagine con dimensioni normali](declarative-parameters-cs/_static/image3.png))
 
@@ -45,7 +45,7 @@ Nel primo esempio, iniziare aggiungendo un controllo DetailsView per la `Declara
 Verrà automaticamente avviata Creazione guidata Scegli origine dati del controllo ObjectDataSource. Selezionare il `ProductsBLL` classe dalla schermata prima della procedura guidata.
 
 
-[![Selezionare la classe ProductsBLL](declarative-parameters-cs/_static/image5.png)](declarative-parameters-cs/_static/image4.png)
+[![SScegliere la classe ProductsBLL](declarative-parameters-cs/_static/image5.png)](declarative-parameters-cs/_static/image4.png)
 
 **Figura 2**: Selezionare il `ProductsBLL` classe ([fare clic per visualizzare l'immagine con dimensioni normali](declarative-parameters-cs/_static/image6.png))
 
@@ -53,7 +53,7 @@ Verrà automaticamente avviata Creazione guidata Scegli origine dati del control
 Poiché si vogliono visualizzare le informazioni relative a un prodotto specifico da utilizzare il `GetProductByProductID(productID)` (metodo).
 
 
-[![Scegliere il metodo GetProductByProductID(productID)](declarative-parameters-cs/_static/image8.png)](declarative-parameters-cs/_static/image7.png)
+[![CScegliere il metodo GetProductByProductID(productID)](declarative-parameters-cs/_static/image8.png)](declarative-parameters-cs/_static/image7.png)
 
 **Figura 3**: Scegliere il `GetProductByProductID(productID)` metodo ([fare clic per visualizzare l'immagine con dimensioni normali](declarative-parameters-cs/_static/image9.png))
 
@@ -61,7 +61,7 @@ Poiché si vogliono visualizzare le informazioni relative a un prodotto specific
 Poiché il metodo che è stato selezionato include un parametro, è una schermata di altre per la procedura guidata, in cui viene richiesto di definire il valore da utilizzare per il parametro. L'elenco a sinistra mostra tutti i parametri per il metodo selezionato. Per la `GetProductByProductID(productID)` è presente un solo `productID`. Nella parte destra è possibile specificare il valore del parametro selezionato. L'elenco di riepilogo a discesa Origine parametro enumera le possibili origini diverse per il valore del parametro. Poiché si vuole specificare un valore hardcoded pari a 5 per il `productID` parametro, lasciare l'origine del parametro None e immettere 5 nella casella di testo DefaultValue.
 
 
-[![Un Hard-Coded parametro valore di 5 verrà utilizzato per il parametro productID](declarative-parameters-cs/_static/image11.png)](declarative-parameters-cs/_static/image10.png)
+[![A Hard-Coded parametro valore di 5 verrà utilizzato per il parametro productID](declarative-parameters-cs/_static/image11.png)](declarative-parameters-cs/_static/image10.png)
 
 **Figura 4**: Un Hard-Coded parametro valore di 5 verrà utilizzato per il `productID` parametro ([fare clic per visualizzare l'immagine con dimensioni normali](declarative-parameters-cs/_static/image12.png))
 
@@ -77,7 +77,7 @@ Dopo aver completato la procedura guidata Configura origine dati, markup dichiar
 Quando si visita questa pagina, i dati di controllo Web richiamerà di ObjectDataSource `Select` metodo, che chiamerà il `ProductsBLL` della classe `GetProductByProductID(productID)` metodo utilizzando il valore hardcoded pari a 5 per il `productID` parametro di input. Il metodo restituirà l'oggetto fortemente tipizzato `ProductDataTable` oggetto che contiene una singola riga con informazioni su Chef Anton's Gumbo Mix (il prodotto con `ProductID` 5).
 
 
-[![Vengono visualizzate informazioni su Chef Anton's Gumbo Mix](declarative-parameters-cs/_static/image14.png)](declarative-parameters-cs/_static/image13.png)
+[![Ivengono visualizzate ulteriori informazioni su Chef Anton's Gumbo Mix](declarative-parameters-cs/_static/image14.png)](declarative-parameters-cs/_static/image13.png)
 
 **Figura 5**: Vengono visualizzate informazioni su Chef Anton's Gumbo Mix ([fare clic per visualizzare l'immagine con dimensioni normali](declarative-parameters-cs/_static/image15.png))
 
@@ -87,7 +87,7 @@ Quando si visita questa pagina, i dati di controllo Web richiamerà di ObjectDat
 Parametri di ObjectDataSource possono essere impostati anche i valori in base al valore di un controllo Web nella pagina. Per illustrare questo concetto, è possibile disporre di un controllo GridView che elenca tutti i fornitori che si trovano in un paese specificato dall'utente. Per completare questa Guida di avvio tramite l'aggiunta di una casella di testo per la pagina in cui l'utente può immettere un nome di paese. Impostare questa casella di testo del controllo `ID` proprietà `CountryName`. Aggiungere anche un controllo pulsante Web.
 
 
-[![Aggiungere una casella di testo alla pagina con ID CountryName](declarative-parameters-cs/_static/image17.png)](declarative-parameters-cs/_static/image16.png)
+[![Auna casella di testo della pagina con ID CountryName gg](declarative-parameters-cs/_static/image17.png)](declarative-parameters-cs/_static/image16.png)
 
 **Figura 6**: Aggiungere una casella di testo alla pagina contenente `ID` `CountryName` ([fare clic per visualizzare l'immagine con dimensioni normali](declarative-parameters-cs/_static/image18.png))
 
@@ -95,7 +95,7 @@ Parametri di ObjectDataSource possono essere impostati anche i valori in base al
 Successivamente, aggiungere un controllo GridView alla pagina e, dallo smart tag, scegliere di aggiungere un nuovo oggetto ObjectDataSource. Poiché si vogliono visualizzare supplier informazioni selezionare il `SuppliersBLL` classe dalla schermata prima della procedura guidata. Nella seconda schermata scegliere il `GetSuppliersByCountry(country)` (metodo).
 
 
-[![Scegliere il metodo GetSuppliersByCountry(country)](declarative-parameters-cs/_static/image20.png)](declarative-parameters-cs/_static/image19.png)
+[![CScegliere il metodo GetSuppliersByCountry(country)](declarative-parameters-cs/_static/image20.png)](declarative-parameters-cs/_static/image19.png)
 
 **Figura 7**: Scegliere il `GetSuppliersByCountry(country)` metodo ([fare clic per visualizzare l'immagine con dimensioni normali](declarative-parameters-cs/_static/image21.png))
 
@@ -103,7 +103,7 @@ Successivamente, aggiungere un controllo GridView alla pagina e, dallo smart tag
 Poiché il `GetSuppliersByCountry(country)` metodo ha un parametro di input, la procedura guidata include ancora una volta una schermata finale per la scelta del valore del parametro. Questa volta, impostare l'origine del parametro al controllo. Questo verrà popolato l'elenco di riepilogo a discesa ControlID con i nomi dei controlli della pagina. Selezionare il `CountryName` controllo dall'elenco. Quando la pagina viene prima visitata la `CountryName` casella sarà vuota, quindi viene restituito alcun risultato e viene visualizzato nulla. Se si desidera visualizzare alcuni risultati per impostazione predefinita, impostare di conseguenza la casella di testo DefaultValue.
 
 
-[![Impostare il valore del parametro per il valore del controllo CountryName](declarative-parameters-cs/_static/image23.png)](declarative-parameters-cs/_static/image22.png)
+[![SImposta il valore del parametro per il valore del controllo CountryName](declarative-parameters-cs/_static/image23.png)](declarative-parameters-cs/_static/image22.png)
 
 **Figura 8**: Impostare il valore del parametro il `CountryName` valore di controllo ([fare clic per visualizzare l'immagine con dimensioni normali](declarative-parameters-cs/_static/image24.png))
 
@@ -117,7 +117,7 @@ Quando si visita la pagina per la prima volta il `CountryName` nella casella di 
 Dopo che il visitatore entra in un paese, tuttavia e fa clic sul pulsante Mostra fornitori per causare un postback, ObjectDataSource `Select` metodo viene rieseguito, passando il controllo TextBox `Text` come valore di `country` parametro.
 
 
-[![Vengono visualizzati i fornitori del Canada](declarative-parameters-cs/_static/image26.png)](declarative-parameters-cs/_static/image25.png)
+[![Tviene visualizzati i fornitori del Canada tubo](declarative-parameters-cs/_static/image26.png)](declarative-parameters-cs/_static/image25.png)
 
 **Figura 9**: Vengono visualizzati i fornitori del Canada ([fare clic per visualizzare l'immagine con dimensioni normali](declarative-parameters-cs/_static/image27.png))
 
@@ -139,7 +139,7 @@ Modifica il `GetSuppliersByCountry(country)` nel metodo il `SuppliersBLL` classe
 Con questa modifica il `DeclarativeParams.aspx` pagina Mostra tutti i fornitori quando visitati prima di tutto (o ogni volta che il `CountryName` nella casella di testo è vuota).
 
 
-[![Tutti i suoi fornitori sono ora visualizzate per impostazione predefinita](declarative-parameters-cs/_static/image29.png)](declarative-parameters-cs/_static/image28.png)
+[![All fornitori sono ora visualizzate per impostazione predefinita](declarative-parameters-cs/_static/image29.png)](declarative-parameters-cs/_static/image28.png)
 
 **Figura 10**: Tutti i suoi fornitori sono ora visualizzate per impostazione predefinita ([fare clic per visualizzare l'immagine con dimensioni normali](declarative-parameters-cs/_static/image30.png))
 

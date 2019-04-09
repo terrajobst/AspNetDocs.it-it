@@ -8,15 +8,15 @@ ms.date: 07/18/2007
 ms.assetid: ad0f1014-1eff-465f-bdc6-93058de00e44
 msc.legacyurl: /web-forms/overview/data-access/filtering-scenarios-with-the-datalist-and-repeater/master-detail-filtering-with-a-dropdownlist-datalist-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 13d67b3f4f2613c820baa3ec52d49ad6ea556f9d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1218cf3463c78e4b3bd3c7ca1c65d21590358f8a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57045608"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59395550"
 ---
-<a name="masterdetail-filtering-with-a-dropdownlist-vb"></a>Applicazione di filtri al report master o di dettaglio usando un controllo DropDownList (VB)
-====================
+# <a name="masterdetail-filtering-with-a-dropdownlist-vb"></a>Applicazione di filtri al report master o di dettaglio usando un controllo DropDownList (VB)
+
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Scaricare l'App di esempio](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_33_VB.exe) o [Scarica il PDF](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/datatutorial33vb1.pdf)
@@ -49,7 +49,7 @@ Prima di iniziare questa esercitazione, prima di tutto è opportuno aggiungere l
 Successivamente, aprire il `Default.aspx` pagina e trascinare il `SectionLevelTutorialListing.ascx` controllo utente dal `UserControls` cartella nell'area di progettazione. Questo controllo utente, che è stato creato nel [pagine Master e spostamento nel sito](../introduction/master-pages-and-site-navigation-vb.md) esercitazione enumera la mappa del sito e consente di visualizzare le esercitazioni nella sezione corrente in un elenco puntato.
 
 
-[![Aggiungere il controllo utente sectionleveltutoriallisting. ascx a default. aspx](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image3.png)](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image2.png)
+[![Ail controllo utente sectionleveltutoriallisting. ascx a default. aspx gg](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image3.png)](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image2.png)
 
 **Figura 2**: Aggiungere il `SectionLevelTutorialListing.ascx` controllo utente da `Default.aspx` ([fare clic per visualizzare l'immagine con dimensioni normali](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image4.png))
 
@@ -69,7 +69,7 @@ Per la visualizzazione elenco puntato le esercitazioni di master-details che ver
 Report master o di dettaglio elencherà le categorie presenti in un elenco a discesa con i prodotti dell'elemento elenco selezionato visualizzati più in basso nella pagina in un controllo DataList. La prima attività prima di Stati Uniti, è quindi disporre le categorie visualizzate in un controllo DropDownList. Iniziare aprendo il `FilterByDropDownList.aspx` nella pagina di `DataListRepeaterFiltering` cartelle e trascinare un controllo DropDownList dalla casella degli strumenti nella finestra di progettazione della pagina. Successivamente, impostare il controllo DropDownList `ID` proprietà `Categories`. Fare clic sul collegamento dallo smart tag del controllo DropDownList Scegli origine dati e creare un nuovo oggetto ObjectDataSource denominato `CategoriesDataSource`.
 
 
-[![Aggiungere un nuovo oggetto ObjectDataSource denominato CategoriesDataSource](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image7.png)](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image6.png)
+[![Aun nuovo CategoriesDataSource denominato di ObjectDataSource gg](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image7.png)](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image6.png)
 
 **Figura 4**: Aggiungere un nuovo oggetto ObjectDataSource denominato `CategoriesDataSource` ([fare clic per visualizzare l'immagine con dimensioni normali](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image8.png))
 
@@ -77,7 +77,7 @@ Report master o di dettaglio elencherà le categorie presenti in un elenco a dis
 Configurare il nuovo oggetto ObjectDataSource in modo che richiama il `CategoriesBLL` della classe `GetCategories()` (metodo). Dopo la configurazione di ObjectDataSource è ancora necessario specificare quale campo dell'origine dati deve essere visualizzato in DropDownList e che uno deve essere associato come valore per ogni elemento dell'elenco. Dispone il `CategoryName` campo, come la visualizzazione e `CategoryID` come valore per ogni elemento dell'elenco.
 
 
-[![Hanno la visualizzazione del controllo DropDownList il campo Nome categoria e CategoryID Usa come valore](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image10.png)](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image9.png)
+[![Hla visualizzazione del controllo DropDownList CategoryName Field AVE e CategoryID Usa come valore](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image10.png)](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image9.png)
 
 **Figura 5**: La visualizzazione DropDownList il `CategoryName` campo e l'utilizzo `CategoryID` come valore ([fare clic per visualizzare l'immagine con dimensioni normali](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image11.png))
 
@@ -85,7 +85,7 @@ Configurare il nuovo oggetto ObjectDataSource in modo che richiama il `Categorie
 A questo punto si dispone di un controllo DropDownList popolata con i record dal `Categories` tabella (tutto eseguita in circa sei secondi). Figura 6 mostra lo stato di avanzamento fino ad ora, quando viene visualizzato tramite un browser.
 
 
-[![Un elenco a discesa Elenca le categorie correnti](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image13.png)](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image12.png)
+[![A Elenco a discesa Elenca le categorie corrente](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image13.png)](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image12.png)
 
 **Figura 6**: Un elenco a discesa Elenca le categorie correnti ([fare clic per visualizzare l'immagine con dimensioni normali](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image14.png))
 
@@ -95,7 +95,7 @@ A questo punto si dispone di un controllo DropDownList popolata con i record dal
 L'ultimo elemento nel report master o di dettaglio è elencare i prodotti associati alla categoria selezionata. A tale scopo, aggiungere un controllo DataList alla pagina e creare un nuovo oggetto ObjectDataSource denominato `ProductsByCategoryDataSource`. Disporre le `ProductsByCategoryDataSource` controllo recuperare i dati dal `ProductsBLL` della classe `GetProductsByCategoryID(categoryID)` (metodo). Poiché questo report master o di dettaglio è di sola lettura, scegliere il che opzione (nessuno) nelle schede INSERT, UPDATE e DELETE.
 
 
-[![Selezionare il metodo GetProductsByCategoryID(categoryID)](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image16.png)](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image15.png)
+[![SScegliere il metodo GetProductsByCategoryID(categoryID)](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image16.png)](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image15.png)
 
 **Figura 7**: Selezionare il `GetProductsByCategoryID(categoryID)` metodo ([fare clic per visualizzare l'immagine con dimensioni normali](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image17.png))
 
@@ -103,7 +103,7 @@ L'ultimo elemento nel report master o di dettaglio è elencare i prodotti associ
 Dopo aver fatto clic su Avanti, la procedura guidata ObjectDataSource richiede per l'origine del valore per il `GetProductsByCategoryID(categoryID)` del metodo *`categoryID`* parametro. Per utilizzare il valore dell'oggetto selezionato `categories` DropDownList elemento impostato l'origine del parametro al controllo e il ControlID a `Categories`.
 
 
-[![Impostare il parametro categoryID al valore di DropDownList categorie](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image19.png)](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image18.png)
+[![Sil parametro sul valore di DropDownList categorie categoryID et](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image19.png)](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image18.png)
 
 **Figura 8**: Impostare il *`categoryID`* parametro per il valore del `Categories` DropDownList ([fare clic per visualizzare l'immagine con dimensioni normali](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image20.png))
 
@@ -119,12 +119,12 @@ Si consiglia di estrarre lo stato di avanzamento in un browser. Durante la prima
 Le figure da 9 e 10 illustrano il rapporto master/dettaglio in azione.
 
 
-[![Durante la prima visita la pagina, vengono visualizzati i prodotti di bevande](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image22.png)](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image21.png)
+[![Wuando prima visita la pagina, i prodotti di bevande sono visualizzate](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image22.png)](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image21.png)
 
 **Figura 9**: Durante la prima visita la pagina, vengono visualizzati i prodotti di bevande ([fare clic per visualizzare l'immagine con dimensioni normali](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image23.png))
 
 
-[![Se si seleziona automaticamente un nuovo prodotto (produzione), un PostBack, l'aggiornamento di DataList](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image25.png)](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image24.png)
+[![Sdesignare un nuovo prodotto (producono) genera automaticamente un PostBack, l'aggiornamento di DataList](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image25.png)](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image24.png)
 
 **Figura 10**: Se si seleziona automaticamente un nuovo prodotto (produzione), un PostBack, l'aggiornamento di DataList ([fare clic per visualizzare l'immagine con dimensioni normali](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image26.png))
 
@@ -156,7 +156,7 @@ Inoltre, è necessario impostare il controllo DropDownList `AppendDataBoundItems
 Il motivo è stato scelto il valore `0` per l'elenco ", scegliere una categoria," elemento è perché sono presenti categorie nel sistema con valore `0`, di conseguenza non verrà restituito alcun record di prodotto quando è selezionata la voce di elenco ", scegliere una categoria,". Per risolvere il problema, si consiglia di visitare la pagina tramite un browser. Come illustrato nella figura 13, quando la visualizzazione della pagina viene selezionata la voce di elenco ", scegliere una categoria:" inizialmente e prodotti non vengono visualizzata.
 
 
-[![Quando il](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image30.png)](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image29.png)
+[![Wuando il](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image30.png)](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image29.png)
 
 **Figura 13**: Quando è selezionata la voce di elenco ", scegliere una categoria,", vengono visualizzati i prodotti No ([fare clic per visualizzare l'immagine con dimensioni normali](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image31.png))
 

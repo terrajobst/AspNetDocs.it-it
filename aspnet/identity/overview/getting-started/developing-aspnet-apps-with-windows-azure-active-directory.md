@@ -1,22 +1,23 @@
 ---
 uid: identity/overview/getting-started/developing-aspnet-apps-with-windows-azure-active-directory
-title: Sviluppo di App ASP.NET con Azure Active Directory | Microsoft Docs
+title: Sviluppo di App ASP.NET con Azure Active Directory - ASP.NET 4.x
 author: Rick-Anderson
 description: Gli strumenti Microsoft ASP.NET per Azure Active Directory rende più semplice per abilitare l'autenticazione per applicazioni web ospitate in Azure. È possibile usare Azure autenti...
 ms.author: riande
 ms.date: 08/14/2014
 ms.assetid: 457d7eaf-ee76-4ceb-9082-c7c1721435ad
+ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/getting-started/developing-aspnet-apps-with-windows-azure-active-directory
 msc.type: authoredcontent
-ms.openlocfilehash: 7f0e569458c9a294cc281b86e731c2fda48768be
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 6f8b926c78097b68e6a159f2fdd30e7b8a6477a0
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57027848"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59395173"
 ---
-<a name="developing-aspnet-apps-with-azure-active-directory"></a>Sviluppo di app ASP.NET con Azure Active Directory
-====================
+# <a name="developing-aspnet-apps-with-azure-active-directory"></a>Sviluppo di app ASP.NET con Azure Active Directory
+
 da [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 Gli strumenti Microsoft ASP.NET per Azure Active Directory semplifica l'abilitazione dell'autenticazione per App web ospitate in [Azure](https://www.windowsazure.com/home/features/web-sites/). È possibile usare l'autenticazione di Azure per autenticare gli utenti di Office 365 dell'organizzazione, gli account aziendali sincronizzati dall'ambiente locale di Active Directory o utenti creati in un dominio di Azure Active Directory personalizzato. Abilitazione dell'autenticazione di Windows Azure consente di configurare l'applicazione per autenticare gli utenti che usano un unico [Azure Active Directory](https://docs.microsoft.com/azure/active-directory/) tenant.

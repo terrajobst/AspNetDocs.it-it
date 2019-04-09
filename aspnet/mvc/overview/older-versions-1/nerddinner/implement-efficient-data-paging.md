@@ -8,18 +8,18 @@ ms.date: 07/27/2010
 ms.assetid: adea836d-dbc2-4005-94ea-53aef09e9e34
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/implement-efficient-data-paging
 msc.type: authoredcontent
-ms.openlocfilehash: 9a0b3357ef4ac9c884877474454089cc71692b7d
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: ff12bc43ad68fdc4bbcd478624f47ea0d2774c2d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58426094"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59399307"
 ---
-<a name="implement-efficient-data-paging"></a>Implementare una suddivisione in pagine efficiente dei dati
-====================
+# <a name="implement-efficient-data-paging"></a>Implementare una suddivisione in pagine efficiente dei dati
+
 by [Microsoft](https://github.com/microsoft)
 
-[Scaricare PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
+[Scarica il PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
 
 > Si tratta di passaggio 8 di una liberazione [esercitazione sull'applicazione "NerdDinner"](introducing-the-nerddinner-tutorial.md) che si interromperanno-dettaglio come compilare una piccola, ma completa, applicazione web con ASP.NET MVC 1.
 > 
@@ -70,7 +70,7 @@ Il codice seguente illustra come è possibile aggiornare il metodo di azione Ind
 
 Il metodo di azione Index () precedente ha un parametro denominato "page". Il parametro viene dichiarato come un numero intero che ammette valori null (ovvero quali int? indica). Ciò significa che il */Dinners? pagina = 2* URL causerà un valore "2" deve essere passato come valore del parametro. Il */Dinners* URL (senza un valore querystring) causerà un valore null da passare.
 
-Si sta moltiplicando il valore di pagina per le dimensioni della pagina (in questo caso 10 righe) per determinare quanti dinners ignorare. Usiamo il [C# "operatore null-coalescing" (?) ](https://weblogs.asp.net/scottgu/archive/2007/09/20/the-new-c-null-coalescing-operator-and-using-it-with-linq.aspx) che è utile quando si lavora con tipi nullable. Il codice precedente assegna pagina il valore 0 se il parametro di pagina è null.
+Si sta moltiplicando il valore di pagina per le dimensioni della pagina (in questo caso 10 righe) per determinare quanti dinners ignorare. Usiamo il [c# "operatore null-coalescing" (?) ](https://weblogs.asp.net/scottgu/archive/2007/09/20/the-new-c-null-coalescing-operator-and-using-it-with-linq.aspx) che è utile quando si lavora con tipi nullable. Il codice precedente assegna pagina il valore 0 se il parametro di pagina è null.
 
 #### <a name="using-embedded-url-values"></a>Usando i valori di URL incorporati
 

@@ -8,18 +8,18 @@ ms.date: 07/27/2010
 ms.assetid: 0bc191b2-4311-479a-a83a-7f1b1c32e6fe
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/build-a-model-with-business-rule-validations
 msc.type: authoredcontent
-ms.openlocfilehash: f5829aab8cb266a65674d052ab77ab8e10c60670
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 078614c6e7ba18ac09bbd5e23b90b08c97aee658
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422853"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59387308"
 ---
-<a name="build-a-model-with-business-rule-validations"></a>Creare un modello con convalide delle regole business
-====================
+# <a name="build-a-model-with-business-rule-validations"></a>Creare un modello con convalide delle regole business
+
 by [Microsoft](https://github.com/microsoft)
 
-[Scaricare PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
+[Scarica il PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
 
 > Questo è il passaggio 3 di una liberazione [esercitazione sull'applicazione "NerdDinner"](introducing-the-nerddinner-tutorial.md) che si interromperanno-dettaglio come compilare una piccola, ma completa, applicazione web con ASP.NET MVC 1.
 > 
@@ -44,7 +44,7 @@ LINQ to SQL fornisce un modo semplice per eseguire il mapping di tabelle di data
 
 LINQ to SQL consente di evitare di dover creare manualmente le istruzioni SQL per recuperare e aggiornare la cena e RSVP oggetti con i dati del database. Le classi di Dinner e RSVP, invece, si definirà come vengono mappati al/dal database e le relazioni tra di essi. LINQ to SQL verrà quindi richiede attenzione di generare la logica di esecuzione SQL appropriata da utilizzare in fase di esecuzione quando si interagisce e usarli.
 
-È possibile usare il supporto del linguaggio LINQ in Visual Basic e C# per scrivere le query espressive che recuperano Dinner e RSVP oggetti dal database. Ciò riduce al minimo la quantità di codice ai dati è necessario scrivere, e consente di compilare applicazioni effettivamente pulite.
+È possibile usare il supporto del linguaggio LINQ in Visual Basic e c# per scrivere le query espressive che recuperano Dinner e RSVP oggetti dal database. Ciò riduce al minimo la quantità di codice ai dati è necessario scrivere, e consente di compilare applicazioni effettivamente pulite.
 
 ### <a name="adding-linq-to-sql-classes-to-our-project"></a>Aggiungere classi LINQ to SQL al progetto
 
@@ -92,7 +92,7 @@ Se non sono quelli come la finestra di progettazione ha modellato o denominata d
 
 Visual Studio creerà automaticamente le classi .NET che rappresentano i modelli e relazioni di database definite tramite LINQ to SQL designer. Una classe LINQ to SQL DataContext viene inoltre generato per ogni file LINQ to SQL progettazione aggiunto alla soluzione. Poiché è denominato nostro LINQ all'elemento di classe SQL "NerdDinner", la classe DataContext creata verrà chiamata "NerdDinnerDataContext". Questa classe NerdDinnerDataContext è il modo principale che si interagirà con il database.
 
-La classe NerdDinnerDataContext espone due proprietà: "Dinners" e "RSVPs -" che rappresentano le due tabelle che viene modellati all'interno del database. È possibile usare C# per scrivere query LINQ rispetto a quelle proprietà per query e recuperare oggetti Dinner e RSVP dal database.
+La classe NerdDinnerDataContext espone due proprietà: "Dinners" e "RSVPs -" che rappresentano le due tabelle che viene modellati all'interno del database. È possibile usare c# per scrivere query LINQ rispetto a quelle proprietà per query e recuperare oggetti Dinner e RSVP dal database.
 
 Il codice seguente viene illustrato come creare un'istanza di un oggetto NerdDinnerDataContext ed eseguire una query LINQ su di essa per ottenere una sequenza di Dinners che si verificano in futuro. Visual Studio offre funzionalità complete di intellisense durante la scrittura di query LINQ e gli oggetti restituiti da quest'ultimo sono fortemente tipizzati e supportano anche intellisense:
 
@@ -197,7 +197,7 @@ Questo approccio fornisce un framework semplice che è possibile integrare la co
 
 [!code-csharp[Main](build-a-model-with-business-rule-validations/samples/sample11.cs)]
 
-Utilizziamo la funzionalità del linguaggio C# "yield return" per restituire una sequenza di qualsiasi RuleViolations. I controlli prima di sei regola precedente impongono semplicemente che le proprietà della stringa sul nostro Dinner non possono essere null o vuoto. L'ultima regola è un po' più interessante e chiama un metodo helper PhoneValidator.IsValidNumber() che è possibile aggiungere al progetto per verificare che il ContactPhone numero paese del formato corrispondenze la cena.
+Utilizziamo la funzionalità del linguaggio c# "yield return" per restituire una sequenza di qualsiasi RuleViolations. I controlli prima di sei regola precedente impongono semplicemente che le proprietà della stringa sul nostro Dinner non possono essere null o vuoto. L'ultima regola è un po' più interessante e chiama un metodo helper PhoneValidator.IsValidNumber() che è possibile aggiungere al progetto per verificare che il ContactPhone numero paese del formato corrispondenze la cena.
 
 È possibile usare. Supporto delle espressioni regolari di NET per implementare questo supporto della convalida phone. Di seguito è una semplice implementazione PhoneValidator che possiamo aggiungere al progetto che permette di aggiungere i controlli modello di espressione regolare specifiche del paese:
 

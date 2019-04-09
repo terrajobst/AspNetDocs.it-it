@@ -8,15 +8,15 @@ ms.date: 10/05/2011
 ms.assetid: bac10aee-6731-4a0f-84d7-9eef5e560ae5
 msc.legacyurl: /web-forms/videos/net-4
 msc.type: chapter
-ms.openlocfilehash: e8565bc2914570eef982bbcc63a8497c2d38386a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: ea11b464329a755d5625797327f5a0a3ccb0f426
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57019808"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59400587"
 ---
-<a name="net-4"></a>.NET 4
-====================
+# <a name="net-4"></a>.NET 4
+
 > Le nuove funzionalità ASP.NET e le funzionalità disponibili in .NET Framework 4.
 
 
@@ -26,7 +26,7 @@ ms.locfileid: "57019808"
     - [ScriptLoader](ajax/aspnet-4-quick-hit-the-scriptloader.md)
     - [Sintassi di JQuery per Microsoft Ajax](ajax/aspnet-4-quick-hit-jquery-syntax-for-microsoft-ajax.md)
     - [Modelli di dati AJAX](ajax/aspnet-4-quick-hit-ajax-data-templates.md)
-- [Chart](chart/index.md)
+- [Grafico](chart/index.md)
 
     - [Chart Control](chart/aspnet-4-quick-hit-chart-control.md)
     - [Introduzione al nuovo controllo Chart in Visual Studio 2010](chart/aspnet-4-how-do-i-introducing-the-new-chart-control-in-visual-studio-2010.md)
@@ -54,10 +54,10 @@ ms.locfileid: "57019808"
 - [Routing](routing/index.md)
 
     - [Reindirizzamento permanente](routing/aspnet-4-quick-hit-permanent-redirect.md)
-    - [Routing imperativo di Web Form](routing/aspnet-4-quick-hit-imperative-webforms-routing.md)
-    - [Routing dichiarativo di Web Form](routing/aspnet-4-quick-hit-declarative-webforms-routing.md)
-    - [Routing in uscita di Web Form](routing/aspnet-4-quick-hit-outbound-webforms-routing.md)
-    - [Usare il routing con Web Form ASP.NET](routing/how-do-i-use-routing-with-aspnet-web-forms.md)
+    - [Routing imperativo di Web Forms](routing/aspnet-4-quick-hit-imperative-webforms-routing.md)
+    - [Routing dichiarativo di Web Forms](routing/aspnet-4-quick-hit-declarative-webforms-routing.md)
+    - [Routing in uscita di Web Forms](routing/aspnet-4-quick-hit-outbound-webforms-routing.md)
+    - [Usare il routing con Web Forms ASP.NET](routing/how-do-i-use-routing-with-aspnet-web-forms.md)
     - [Usare gli URL nel routing di ASP.NET](routing/how-do-i-work-with-urls-in-aspnet-routing.md)
 - [SEO](seo/index.md)
 

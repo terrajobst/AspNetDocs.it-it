@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: 2469f7ea-1489-42fb-a8e1-414c90141ce9
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/executing-several-animations-at-the-same-time-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 92191e87ed78d8e549d14412ff4a5a9d8eb4afbb
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: f8bb91de9642814a79d0fddd642928c25c58ebfd
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422460"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59402843"
 ---
-<a name="executing-several-animations-at-the-same-time-vb"></a>Esecuzione di diverse animazioni contemporaneamente (VB)
-====================
+# <a name="executing-several-animations-at-the-same-time-vb"></a>Esecuzione di diverse animazioni contemporaneamente (VB)
+
 da [Christian Wenz](https://github.com/wenz)
 
 [Scaricare il codice](http://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation2.vb.zip) o [Scarica il PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation2VB.pdf)
@@ -55,7 +55,7 @@ Di seguito è riportato l'un markup possibili per il `AnimationExtender` control
 E infatti: quando si esegue questo script, il pannello viene visualizzato, quindi deve essere ridimensionato (più di triplicare la larghezza e dimezzamento dell'altezza) e dissolve nello stesso momento.
 
 
-[![Il pannello è dissolvenza in uscita e il ridimensionamento (incluso il relativo contenuto, grazie al motore di rendering del browser)](executing-several-animations-at-the-same-time-vb/_static/image2.png)](executing-several-animations-at-the-same-time-vb/_static/image1.png)
+[![TPannello he è dissolvenza in uscita e il ridimensionamento (incluso il relativo contenuto, grazie al motore di rendering del browser)](executing-several-animations-at-the-same-time-vb/_static/image2.png)](executing-several-animations-at-the-same-time-vb/_static/image1.png)
 
 Il pannello è dissolvenza in uscita e il ridimensionamento (incluso il relativo contenuto, grazie al motore di rendering del browser) ([fare clic per visualizzare l'immagine con dimensioni normali](executing-several-animations-at-the-same-time-vb/_static/image3.png))
 

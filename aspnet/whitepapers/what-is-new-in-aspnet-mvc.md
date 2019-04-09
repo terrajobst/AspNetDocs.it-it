@@ -8,15 +8,15 @@ ms.date: 04/20/2010
 ms.assetid: 69a8d6f8-4b10-4602-8822-2d6c05fc432b
 msc.legacyurl: /whitepapers/what-is-new-in-aspnet-mvc
 msc.type: content
-ms.openlocfilehash: 82a3fd4fe74202ed9a23298390322458cfc029f8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7f846e807309f3123db52b3053b9aa8d6aca81e6
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57030998"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59394835"
 ---
-<a name="whats-new-in-aspnet-mvc-2"></a>Novità di ASP.NET MVC 2
-====================
+# <a name="whats-new-in-aspnet-mvc-2"></a>Novità di ASP.NET MVC 2
+
 > Questo documento descrive le nuove funzionalità e i miglioramenti introdotti con ASP.NET MVC 2. Questo documento è disponibile anche per [scaricare](https://download.microsoft.com/download/F/1/6/F16F9AF9-8EF4-4845-BC97-639791D5699C/WhatIsNewInMVC_2.pdf)
 
 
@@ -38,7 +38,7 @@ ms.locfileid: "57030998"
 [Nuova classe HiddenInputAttribute per helper basati su modelli](#_TOC3_13)   
 [Metodo Html.ValidationSummary Helper può visualizzare gli errori a livello di modello](#_TOC3_14)   
 [Modelli T4 in Visual Studio genera codice che è specifico per la versione di destinazione di .NET Framework](#_TOC3_15)[i miglioramenti delle API](#_TOC4)  
-[Modifiche di rilievo](#_TOC5)  
+[Modifiche di interruzione](#_TOC5)  
 [Dichiarazione di non responsabilità](#_TOC6)  
 
 ## <a id="_TOC1"></a>  Introduzione

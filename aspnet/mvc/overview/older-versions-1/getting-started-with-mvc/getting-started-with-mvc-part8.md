@@ -8,15 +8,15 @@ ms.date: 08/14/2010
 ms.assetid: 7ae696b9-348f-4993-8ebb-a838acbe0c28
 msc.legacyurl: /mvc/overview/older-versions-1/getting-started-with-mvc/getting-started-with-mvc-part8
 msc.type: authoredcontent
-ms.openlocfilehash: a014690078f113e5090f4867c2f384751f16b9f6
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 029234cf9a28a80c487504e4e0980c214e45f53a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425353"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59381965"
 ---
-<a name="adding-a-column-to-the-model"></a>Aggiunta di una colonna al modello
-====================
+# <a name="adding-a-column-to-the-model"></a>Aggiunta di una colonna al modello
+
 da [Scott Hanselman](https://github.com/shanselman)
 
 > Si tratta di un'esercitazione per principianti che introduce i concetti di base di ASP.NET MVC. Si creerà una semplice applicazione web che legge e scrive da un database. Visitare il [centro di formazione di ASP.NET MVC](../../../index.md) per trovare altri ASP.NET MVC, esercitazioni ed esempi.
@@ -28,7 +28,7 @@ Aggiungere una colonna "Rating" alla tabella dei film. Tornare all'IDE e fare cl
 
 Aggiungere una colonna di "Rating" come indicato di seguito. Poiché ora non c'è alcun classificazioni, è possibile la colonna ammette valori null. Fare clic su Salva.
 
-[![Modifica tabella film](getting-started-with-mvc-part8/_static/image2.png)](getting-started-with-mvc-part8/_static/image1.png)
+[![Edifica tabella film](getting-started-with-mvc-part8/_static/image2.png)](getting-started-with-mvc-part8/_static/image1.png)
 
 Successivamente, tornare a Esplora soluzioni e aprire il file Movies.edmx (che si trova nella cartella \Models). Fare clic con il pulsante destro sull'area di progettazione (area bianca) e selezionare il modello di aggiornamento dal Database.
 
@@ -40,7 +40,7 @@ Verrà avviata la "procedura guidata Aggiorna". Scegliere la scheda aggiornament
 
 Dopo aver fatto clic su Fine, è possibile visualizzare che la nuova colonna Rating è stata aggiunta all'entità film nel modello.
 
-[![Entità film](getting-started-with-mvc-part8/_static/image7.png)](getting-started-with-mvc-part8/_static/image6.png)
+[![Movie entità](getting-started-with-mvc-part8/_static/image7.png)](getting-started-with-mvc-part8/_static/image6.png)
 
 È stata aggiunta una colonna nel modello di database, ma le visualizzazioni non sa su di esso.
 
@@ -66,7 +66,7 @@ Il modello di tornarci finale sarà simile al seguente e modificare titolo e rep
 
 Eseguire l'app e a questo punto si ha un nuovo campo nel database che è stato aggiunto alla pagina Create. Aggiungere un nuovo film - questa volta con una classificazione uguale a - e fare clic su Crea.
 
-[![Creare un filmato - Windows Internet Explorer](getting-started-with-mvc-part8/_static/image9.png)](getting-started-with-mvc-part8/_static/image8.png)
+[![CCrea un film - Windows Internet Explorer](getting-started-with-mvc-part8/_static/image9.png)](getting-started-with-mvc-part8/_static/image8.png)
 
 Dopo che si fa clic su Crea, si viene reindirizzati alla pagina di indice dove si nuovo film sia elencato con la nuova colonna di classificazione nel database
 

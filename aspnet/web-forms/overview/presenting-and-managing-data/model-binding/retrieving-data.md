@@ -8,26 +8,26 @@ ms.date: 02/27/2014
 ms.assetid: 9f24fb82-c7ac-48da-b8e2-51b3da17e365
 msc.legacyurl: /web-forms/overview/presenting-and-managing-data/model-binding/retrieving-data
 msc.type: authoredcontent
-ms.openlocfilehash: c53c27f4852eab9813bd917315111e7cd3b04953
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 29baaf2917e47ac46a78a252721be725b4e9b58f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57056598"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59398475"
 ---
-<a name="retrieving-and-displaying-data-with-model-binding-and-web-forms"></a>Il recupero e visualizzazione dei dati con l'associazione di modelli e web form
-====================
+# <a name="retrieving-and-displaying-data-with-model-binding-and-web-forms"></a>Il recupero e visualizzazione dei dati con l'associazione di modelli e web form
+
 
 > Questa serie di esercitazioni illustra aspetti di base dell'uso di associazione di modelli con un progetto di Web Form ASP.NET. Associazione di modelli consente l'interazione dei dati più semplice rispetto a gestione dati di oggetti di origine (ad esempio ObjectDataSource o SqlDataSource). Questa serie inizia con materiale introduttivo e sposta i concetti più avanzati nelle esercitazioni successive.
 > 
->  Il modello di associazione del modello funziona con qualsiasi tecnologia di accesso ai dati. In questa esercitazione si userà Entity Framework, ma è possibile usare la tecnologia di accesso ai dati che è più nota all'utente. Da un controllo server associato a dati, ad esempio un controllo GridView, ListView, DetailsView e FormView, si specificano i nomi dei metodi da usare per la selezione, l'aggiornamento, eliminazione e creazione di dati. In questa esercitazione, si specificherà un valore per la proprietà SelectMethod. 
+> Il modello di associazione del modello funziona con qualsiasi tecnologia di accesso ai dati. In questa esercitazione si userà Entity Framework, ma è possibile usare la tecnologia di accesso ai dati che è più nota all'utente. Da un controllo server associato a dati, ad esempio un controllo GridView, ListView, DetailsView e FormView, si specificano i nomi dei metodi da usare per la selezione, l'aggiornamento, eliminazione e creazione di dati. In questa esercitazione, si specificherà un valore per la proprietà SelectMethod. 
 > 
 > All'interno di tale metodo, per fornire la logica per recuperare i dati. Nella prossima esercitazione, si imposteranno i valori per UpdateMethod e InsertMethod e DeleteMethod.
 >
 > È possibile [scaricare](https://go.microsoft.com/fwlink/?LinkId=286116) il progetto completo in C# o Visual Basic. Il codice scaricabile funziona con Visual Studio 2012 e versioni successive. Usa il modello di Visual Studio 2012, che è leggermente diverso rispetto al modello di Visual Studio 2017 illustrato in questa esercitazione.
 > 
 > In questa esercitazione si esegue l'applicazione in Visual Studio. È anche possibile distribuire l'applicazione in un provider di hosting e renderlo disponibile tramite internet. Microsoft offre l'hosting web gratuito per fino a 10 siti web in un  
->  [account Azure gratuito](https://azure.microsoft.com/free/?WT.mc_id=A443DD604). Per informazioni su come distribuire un progetto web Visual Studio per App Web di servizio App di Azure, vedere la [distribuzione Web ASP.NET tramite Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md) serie. Tale esercitazione illustra anche come usare le migrazioni di Entity Framework Code First per distribuire il database di SQL Server in Database SQL di Azure.
+> [account Azure gratuito](https://azure.microsoft.com/free/?WT.mc_id=A443DD604). Per informazioni su come distribuire un progetto web Visual Studio per App Web di servizio App di Azure, vedere la [distribuzione Web ASP.NET tramite Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md) serie. Tale esercitazione illustra anche come usare le migrazioni di Entity Framework Code First per distribuire il database di SQL Server in Database SQL di Azure.
 > 
 > ## <a name="software-versions-used-in-the-tutorial"></a>Versioni del software utilizzate nell'esercitazione
 > 
@@ -217,4 +217,4 @@ In questa esercitazione si create classi di modello di dati e generata un databa
 Entro i prossimi [esercitazione](updating-deleting-and-creating-data.md) in questa serie, verrà abilitata l'aggiornamento, eliminazione e creazione di dati.
 
 > [!div class="step-by-step"]
-> [avanti](updating-deleting-and-creating-data.md)
+> [Successivo](updating-deleting-and-creating-data.md)

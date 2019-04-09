@@ -8,18 +8,18 @@ ms.date: 05/04/2012
 ms.assetid: 7dcaba80-f2ec-4db3-ad98-daadc3afdb49
 msc.legacyurl: /web-forms/overview/deployment/advanced-enterprise-web-deployment/advanced-enterprise-web-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: 34f1bf3bc2c37afc66f458a60a29fe5ce8f6c018
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 2f27e9436f246e3da2fbb129bbcd2d80e39b5f28
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57026768"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59385319"
 ---
-<a name="advanced-enterprise-web-deployment"></a>Distribuzione Web aziendale avanzata
-====================
+# <a name="advanced-enterprise-web-deployment"></a>Distribuzione Web aziendale avanzata
+
 da [Jason Lee](https://github.com/jrjlee)
 
-[Scaricare PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Scarica il PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Questa esercitazione illustrerà come eseguire diverse attività che sono necessari o utili in molti scenari di distribuzione enterprise.
 > 
@@ -67,4 +67,4 @@ Ciò fa parte di una serie di cinque esercitazioni su distribuzione web su larga
 - [Configurazione di Team Foundation Server per la distribuzione Web](../configuring-team-foundation-server-for-web-deployment/configuring-team-foundation-server-for-web-deployment.md). Questa esercitazione descrive come configurare TFS per supportare diversi scenari di distribuzione, tra cui la distribuzione automatizzata come parte di un processo di integrazione continua e attivata manualmente le distribuzioni di compilazioni specifiche.
 
 > [!div class="step-by-step"]
-> [avanti](performing-a-what-if-deployment.md)
+> [Successivo](performing-a-what-if-deployment.md)

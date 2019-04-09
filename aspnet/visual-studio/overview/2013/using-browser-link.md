@@ -8,15 +8,15 @@ ms.date: 10/04/2013
 ms.assetid: 46cbfe20-b4dc-449b-9016-80657dd44fbe
 msc.legacyurl: /visual-studio/overview/2013/using-browser-link
 msc.type: authoredcontent
-ms.openlocfilehash: f470aa7e425d16aec3f67d2a0ebb664a3e7eac41
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 723a38de4569b0bb58817c70aabb84fef8e19591
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57055038"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59395095"
 ---
-<a name="using-browser-link-in-visual-studio-2013"></a>Uso di Browser Link in Visual Studio 2013
-====================
+# <a name="using-browser-link-in-visual-studio-2013"></a>Uso di Browser Link in Visual Studio 2013
+
 da [Mike Wasson](https://github.com/MikeWasson)
 
 Collegamento del browser è una nuova funzionalità di Visual Studio 2013 che consente di creare un canale di comunicazione tra l'ambiente di sviluppo e uno o più web browser. È possibile usare il collegamento del Browser per aggiornare l'applicazione web in diversi browser in una sola volta, è utile per i test tra browser.

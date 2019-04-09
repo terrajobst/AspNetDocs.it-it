@@ -2,26 +2,26 @@
 uid: web-forms/overview/older-versions-getting-started/master-pages/control-id-naming-in-content-pages-cs
 title: Controllare la denominazione degli ID nelle pagine di contenuto (c#) | Microsoft Docs
 author: rick-anderson
-description: Viene illustrato come controlli ContentPlaceHolder fungono da un contenitore di denominazione e pertanto rendono il lavoro a livello di codice con un controllo difficile (tramite FindConrol)...
+description: Viene illustrato come controlli ContentPlaceHolder fungono da un contenitore di denominazione e pertanto rendono il lavoro a livello di codice con un controllo difficile (tramite il metodo FindControl)...
 ms.author: riande
 ms.date: 06/10/2008
 ms.assetid: 1c7d0916-0988-4b4f-9a03-935e4b5af6af
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/control-id-naming-in-content-pages-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 0c8617bb14c7023cfd926022b66c69bb5762758b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a398494df0ed2bf749620b717350b21669a1ae5c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57055208"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59395654"
 ---
-<a name="control-id-naming-in-content-pages-c"></a>Denominazione degli ID di controllo nelle pagine di contenuto (C#)
-====================
+# <a name="control-id-naming-in-content-pages-c"></a>Denominazione degli ID di controllo nelle pagine di contenuto (C#)
+
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Scaricare il codice](http://download.microsoft.com/download/e/e/f/eef369f5-743a-4a52-908f-b6532c4ce0a4/ASPNET_MasterPages_Tutorial_05_CS.zip) o [Scarica il PDF](http://download.microsoft.com/download/8/f/6/8f6349e4-6554-405a-bcd7-9b094ba5089a/ASPNET_MasterPages_Tutorial_05_CS.pdf)
 
-> Viene illustrato come controlli ContentPlaceHolder fungono da un contenitore di denominazione e pertanto rendono il lavoro a livello di codice con un controllo difficile (tramite FindConrol). Esamina il problema e le soluzioni alternative. Spiega inoltre come accedere a livello di codice il valore ClientID risultante.
+> Viene illustrato come controlli ContentPlaceHolder fungono da un contenitore di denominazione e pertanto rendono il lavoro a livello di codice con un controllo difficile (tramite il metodo FindControl). Esamina il problema e le soluzioni alternative. Spiega inoltre come accedere a livello di codice il valore ClientID risultante.
 
 
 ## <a name="introduction"></a>Introduzione
@@ -83,7 +83,7 @@ Il contenuto del markup del controllo dichiarativa a questo punto dovrebbe esser
 Figura 3 mostra la pagina visualizzata mediante Progettazione di Visual Studio.
 
 
-[![La pagina include tre controlli Web: una casella di testo, pulsante ed etichetta](control-id-naming-in-content-pages-cs/_static/image4.png)](control-id-naming-in-content-pages-cs/_static/image3.png)
+[![TControlli pagina include tre Web he: una casella di testo, pulsante ed etichetta](control-id-naming-in-content-pages-cs/_static/image4.png)](control-id-naming-in-content-pages-cs/_static/image3.png)
 
 **Figura 03**: Il pagina include tre controlli Web: una casella di testo, pulsante ed etichetta ([fare clic per visualizzare l'immagine con dimensioni normali](control-id-naming-in-content-pages-cs/_static/image5.png))
 
@@ -133,7 +133,7 @@ Mentre la sintassi utilizzata per chiamare il `FindControl` metodo differisce le
 Dopo aver immesso il codice, visitare il `IDIssues.aspx` pagina tramite un browser, immettere la tua età e fare clic sul pulsante "Invia". Fare clic sul pulsante "Invia" su un `NullReferenceException` generata (vedere la figura 5).
 
 
-[![Viene generata un'eccezione NullReferenceException](control-id-naming-in-content-pages-cs/_static/image8.png)](control-id-naming-in-content-pages-cs/_static/image7.png)
+[![A Viene generato l'eccezione NullReferenceException](control-id-naming-in-content-pages-cs/_static/image8.png)](control-id-naming-in-content-pages-cs/_static/image7.png)
 
 **Figura 05**: Oggetto `NullReferenceException` viene generato ([fare clic per visualizzare l'immagine con dimensioni normali](control-id-naming-in-content-pages-cs/_static/image9.png))
 
@@ -173,7 +173,7 @@ Fortunatamente, un riferimento alla pagina master è accessibile tramite il `Pag
 In questo momento, visitando la pagina tramite un browser, immettendo la tua età e fare clic sul pulsante "Invia" Visualizza il messaggio nel `Results` assegnare un'etichetta, come previsto.
 
 
-[![L'età dell'utente viene visualizzato nell'etichetta](control-id-naming-in-content-pages-cs/_static/image11.png)](control-id-naming-in-content-pages-cs/_static/image10.png)
+[![TEtà he dell'utente viene visualizzato nell'etichetta](control-id-naming-in-content-pages-cs/_static/image11.png)](control-id-naming-in-content-pages-cs/_static/image10.png)
 
 **Figura 06**: L'età dell'utente viene visualizzato nell'etichetta ([fare clic per visualizzare l'immagine con dimensioni normali](control-id-naming-in-content-pages-cs/_static/image12.png))
 
@@ -200,7 +200,7 @@ Aggiungere il codice seguente per il `PageExtensionMethods.cs` file di classe pe
 Con questo codice, tornare al `IDIssues.aspx` classe code-behind della pagina e rimuovere i commenti corrente `FindControl` chiamate al metodo. Sostituirli con chiamate a `Page.FindControlRecursive("controlID")`. Che cos'è interessante sui metodi di estensione è che questi vengano visualizzati direttamente all'interno di elenchi a discesa di IntelliSense. Come illustrato nella figura 7, quando si digita pagina e quindi premere periodo, il `FindControlRecursive` metodo è incluso in IntelliSense elenco a discesa insieme all'altro `Control` metodi della classe.
 
 
-[![Sono inclusi i metodi di estensione in IntelliSense discesa](control-id-naming-in-content-pages-cs/_static/image14.png)](control-id-naming-in-content-pages-cs/_static/image13.png)
+[![Ei metodi di estensione sono inclusi in IntelliSense discesa](control-id-naming-in-content-pages-cs/_static/image14.png)](control-id-naming-in-content-pages-cs/_static/image13.png)
 
 **Figura 07**: Sono inclusi i metodi di estensione in IntelliSense discesa ([fare clic per visualizzare l'immagine con dimensioni normali](control-id-naming-in-content-pages-cs/_static/image15.png))
 

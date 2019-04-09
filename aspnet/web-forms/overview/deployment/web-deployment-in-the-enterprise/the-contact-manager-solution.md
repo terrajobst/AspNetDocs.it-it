@@ -8,18 +8,18 @@ ms.date: 05/04/2012
 ms.assetid: 4d8c8d19-055b-4b70-9ee1-f748f0db3a01
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/the-contact-manager-solution
 msc.type: authoredcontent
-ms.openlocfilehash: bc2fe88f4566d9fa144abcd2239f9008a1aefe83
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7998b5bb2983410479123514661a4ddb67afc8c6
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57060938"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59398371"
 ---
-<a name="the-contact-manager-solution"></a>Soluzione Contact Manager
-====================
+# <a name="the-contact-manager-solution"></a>Soluzione Contact Manager
+
 da [Jason Lee](https://github.com/jrjlee)
 
-[Scaricare PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Scarica il PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Ciò [serie di esercitazioni](web-deployment-in-the-enterprise.md) utilizza una soluzione di esempio&#x2014;della soluzione Contact Manager&#x2014;per rappresentare un'applicazione di livello aziendale con un livello di complessità realistico. In questo argomento viene introdotta la soluzione Contact Manager, vengono descritti i componenti chiave della soluzione e identifica le problematiche correlate alla distribuzione di questo tipo di applicazione a diverse piattaforme di destinazione in un ambiente aziendale.
 > 

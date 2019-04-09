@@ -8,15 +8,15 @@ ms.date: 06/26/2007
 ms.assetid: d191a204-d7ea-458d-b81c-0b9049ecb55f
 msc.legacyurl: /web-forms/overview/data-access/working-with-batched-data/batch-updating-vb
 msc.type: authoredcontent
-ms.openlocfilehash: dc40c056aa951b94ca0af2af339d9c7987ffd987
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: d1809c869253ecb454e427a5092015a69009da5c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58426029"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59386944"
 ---
-<a name="batch-updating-vb"></a>Aggiornamento batch (VB)
-====================
+# <a name="batch-updating-vb"></a>Aggiornamento batch (VB)
+
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Scaricare il codice](http://download.microsoft.com/download/3/9/f/39f92b37-e92e-4ab3-909e-b4ef23d01aa3/ASPNET_Data_Tutorial_64_VB.zip) o [Scarica il PDF](batch-updating-vb/_static/datatutorial64vb1.pdf)
@@ -31,7 +31,7 @@ Nel [esercitazione precedente](wrapping-database-modifications-within-a-transact
 In questa esercitazione creeremo un controllo GridView in cui ogni riga è modificabile (vedere la figura 1). Poiché ogni riga non viene eseguito il rendering dell'interfaccia di modifica, qui s è necessario per una colonna di modifica, aggiornare e annullare i pulsanti. Al contrario, sono presenti due pulsanti di aggiornare i prodotti nella pagina che, quando si fa clic, enumerare le righe di GridView e aggiornare il database.
 
 
-[![Ogni riga nel controllo GridView è modificabile](batch-updating-vb/_static/image1.gif)](batch-updating-vb/_static/image1.png)
+[![EACH righe in GridView è Editable](batch-updating-vb/_static/image1.gif)](batch-updating-vb/_static/image1.png)
 
 **Figura 1**: Ogni riga nel controllo GridView è modificabile ([fare clic per visualizzare l'immagine con dimensioni normali](batch-updating-vb/_static/image2.png))
 
@@ -57,12 +57,12 @@ Prossimi diversi passaggi si creerà un GridView completamente modificabile. Nel
 Prima ci preoccupiamo la creazione di un controllo GridView in cui vengono le righe è modificabili, consentire s per iniziare, è sufficiente visualizzare le informazioni sul prodotto. Aprire il `BatchUpdate.aspx` nella pagina di `BatchData` cartelle e trascinare un controllo GridView dalla casella degli strumenti nella finestra di progettazione. Impostare la s GridView `ID` al `ProductsGrid` e scegliere dal suo smart tag da associare a un nuovo oggetto ObjectDataSource denominato `ProductsDataSource`. Configurare ObjectDataSource per recuperare i dati dal `ProductsBLL` classe s `GetProducts` (metodo).
 
 
-[![Configurare ObjectDataSource per usare la classe ProductsBLL](batch-updating-vb/_static/image2.gif)](batch-updating-vb/_static/image3.png)
+[![Cconfigurare ObjectDataSource per usare la classe ProductsBLL](batch-updating-vb/_static/image2.gif)](batch-updating-vb/_static/image3.png)
 
 **Figura 2**: Configurare ObjectDataSource per usare la `ProductsBLL` classe ([fare clic per visualizzare l'immagine con dimensioni normali](batch-updating-vb/_static/image4.png))
 
 
-[![Recuperare i dati del prodotto utilizzando il metodo GetProducts](batch-updating-vb/_static/image3.gif)](batch-updating-vb/_static/image5.png)
+[![Ri dati del prodotto utilizzando il metodo GetProducts etrieve](batch-updating-vb/_static/image3.gif)](batch-updating-vb/_static/image5.png)
 
 **Figura 3**: Recuperare i dati di prodotto usando il `GetProducts` metodo ([fare clic per visualizzare l'immagine con dimensioni normali](batch-updating-vb/_static/image6.png))
 
@@ -70,7 +70,7 @@ Prima ci preoccupiamo la creazione di un controllo GridView in cui vengono le ri
 Come per GridView, le funzionalità di modifica s ObjectDataSource sono progettate per funzionare su una base di ogni riga. Per aggiornare un set di record, è necessario scrivere un po' di codice nella classe code-behind ASP.NET pagina s che invia in batch i dati e lo passa per il livello BLL. Pertanto, impostare gli elenchi a discesa in s ObjectDataSource schede UPDATE, INSERT e DELETE su (nessuno). Fare clic su Fine per completare la procedura guidata.
 
 
-[![Impostare gli elenchi a discesa nell'aggiornamento, inserimento ed eliminare schede su (nessuno)](batch-updating-vb/_static/image4.gif)](batch-updating-vb/_static/image7.png)
+[![Set gli elenchi di riepilogo a discesa nell'aggiornamento, inserimento e schede di eliminazione per (nessuno)](batch-updating-vb/_static/image4.gif)](batch-updating-vb/_static/image7.png)
 
 **Figura 4**: Impostare l'elenco a discesa sono elencati nell'aggiornamento, inserimento ed eliminare schede su (nessuno) ([fare clic per visualizzare l'immagine con dimensioni normali](batch-updating-vb/_static/image8.png))
 
@@ -107,7 +107,7 @@ Let s iniziano con la `ProductName` TemplateField. Fare clic sul collegamento di
 Successivamente, aggiungere un RequiredFieldValidator al `ItemTemplate` per assicurarsi che l'utente fornisce un valore per ogni nome di prodotto s. Impostare il `ControlToValidate` proprietà ProductName, il `ErrorMessage` proprietà per l'utente deve fornire il nome del prodotto. e il `Text` proprietà \*. Dopo aver apportato queste aggiunte per il `ItemTemplate`, la schermata dovrebbe essere simile alla figura 6.
 
 
-[![ProductName TemplateField ora include una casella di testo e un RequiredFieldValidator](batch-updating-vb/_static/image6.gif)](batch-updating-vb/_static/image9.png)
+[![Tegli ProductName TemplateField include ora un RequiredFieldValidator e una casella di testo](batch-updating-vb/_static/image6.gif)](batch-updating-vb/_static/image9.png)
 
 **Figura 6**: Il `ProductName` TemplateField ora include una casella di testo e un RequiredFieldValidator ([fare clic per visualizzare l'immagine con dimensioni normali](batch-updating-vb/_static/image10.png))
 
@@ -117,7 +117,7 @@ Per il `UnitPrice` interfaccia di modifica, iniziare copiando la casella di test
 Aggiungere anche un controllo CompareValidator per i `UnitPrice` s `ItemTemplate` per garantire che il valore immesso dall'utente è un valore di valuta validi maggiore o uguale a $0,00. Impostare s validator `ControlToValidate` UnitPrice, proprietà relativa `ErrorMessage` proprietà per l'utente deve immettere un valore di valuta validi. . Omettere qualsiasi valuta i simboli., relativo `Text` proprietà \*, la relativa `Type` proprietà `Currency`, la relativa `Operator` proprietà `GreaterThanEqual`e il relativo `ValueToCompare` proprietà su 0.
 
 
-[![Aggiungere un controllo CompareValidator per assicurarsi di immettere il prezzo è un valore di valuta Non negativo](batch-updating-vb/_static/image7.gif)](batch-updating-vb/_static/image11.png)
+[![Agg un controllo CompareValidator per assicurarsi di immettere il prezzo è un valore di valuta Non negativo](batch-updating-vb/_static/image7.gif)](batch-updating-vb/_static/image11.png)
 
 **Figura 7**: Aggiungere un controllo CompareValidator per assicurarsi di immettere il prezzo è un valore di valuta Non negativo ([fare clic per visualizzare l'immagine con dimensioni normali](batch-updating-vb/_static/image12.png))
 
@@ -135,12 +135,12 @@ L'interfaccia di modifica nel `CategoryName` s TemplateField `EditItemTemplate` 
 Trascinare un controllo DropDownList dalla casella degli strumenti di `CategoryName` s TemplateField `ItemTemplate`, l'impostazione relativa `ID` a `Categories`. A questo punto sarebbe in genere definiamo l'origine dati di s controlli DropDownList tramite suo smart tag, la creazione di un nuovo oggetto ObjectDataSource. Tuttavia, verrà aggiunto ObjectDataSource all'interno di `ItemTemplate`, verrà visualizzato un risultato in un'istanza di ObjectDataSource creata per ogni riga GridView. Lasciare invece che s creare ObjectDataSource di fuori di GridView s TemplateFields. Terminare la modifica dei modelli e trascinare un ObjectDataSource dalla casella degli strumenti nella finestra di progettazione sotto le `ProductsDataSource` ObjectDataSource. Denominare il nuovo oggetto ObjectDataSource `CategoriesDataSource` e configurarlo per usare il `CategoriesBLL` classe s `GetCategories` (metodo).
 
 
-[![Configurare ObjectDataSource per usare la classe CategoriesBLL](batch-updating-vb/_static/image8.gif)](batch-updating-vb/_static/image13.png)
+[![Cconfigurare ObjectDataSource per usare la classe CategoriesBLL](batch-updating-vb/_static/image8.gif)](batch-updating-vb/_static/image13.png)
 
 **Figura 8**: Configurare ObjectDataSource per usare la `CategoriesBLL` classe ([fare clic per visualizzare l'immagine con dimensioni normali](batch-updating-vb/_static/image14.png))
 
 
-[![Recuperare i dati della categoria utilizzando il metodo GetCategories](batch-updating-vb/_static/image9.gif)](batch-updating-vb/_static/image15.png)
+[![Ri dati della categoria utilizzando il metodo GetCategories etrieve](batch-updating-vb/_static/image9.gif)](batch-updating-vb/_static/image15.png)
 
 **Figura 9**: Recuperare i dati di categoria usando il `GetCategories` metodo ([fare clic per visualizzare l'immagine con dimensioni normali](batch-updating-vb/_static/image16.png))
 
@@ -148,7 +148,7 @@ Trascinare un controllo DropDownList dalla casella degli strumenti di `CategoryN
 Poiché questo ObjectDataSource viene usato semplicemente per recuperare i dati, impostare gli elenchi a discesa nelle schede UPDATE e DELETE su (nessuno). Fare clic su Fine per completare la procedura guidata.
 
 
-[![Set di elenchi a discesa in di aggiornamento e le schede di eliminazione per (nessuno)](batch-updating-vb/_static/image10.gif)](batch-updating-vb/_static/image17.png)
+[![Set gli elenchi di riepilogo a discesa in di aggiornamento e le schede di eliminazione per (nessuno)](batch-updating-vb/_static/image10.gif)](batch-updating-vb/_static/image17.png)
 
 **Figura 10**: Impostare l'elenco a discesa sono elencati nelle schede di eliminazione e aggiornamento su (nessuno) ([fare clic per visualizzare l'immagine con dimensioni normali](batch-updating-vb/_static/image18.png))
 
@@ -161,7 +161,7 @@ Dopo aver completato la procedura guidata, il `CategoriesDataSource` markup dich
 Con il `CategoriesDataSource` creato e configurato, tornare al `CategoryName` TemplateField s `ItemTemplate` e, DropDownList s nello smart tag, fare clic sul collegamento Scegli origine dati. Nella procedura guidata configurazione dell'origine dati, selezionare la `CategoriesDataSource` l'opzione dal primo elenco a discesa e scegliere di avere `CategoryName` utilizzato per la visualizzazione e `CategoryID` come valore.
 
 
-[![Associare il CategoriesDataSource DropDownList](batch-updating-vb/_static/image11.gif)](batch-updating-vb/_static/image19.png)
+[![Bind DropDownList per il CategoriesDataSource](batch-updating-vb/_static/image11.gif)](batch-updating-vb/_static/image19.png)
 
 **Figura 11**: Associare il controllo DropDownList per il `CategoriesDataSource` ([fare clic per visualizzare l'immagine con dimensioni normali](batch-updating-vb/_static/image20.png))
 
@@ -190,7 +190,7 @@ Si noti come il `<asp:ListItem Value="">` - selezionare uno, è relativo `Value`
 Abbiamo ve apportate alcune modifiche ai modelli s GridView senza la sospensione per visualizzare lo stato di avanzamento. Si consiglia di visualizzare lo stato di avanzamento tramite un browser. Come illustrato nella figura 13, ogni riga viene generato usando relativo `ItemTemplate`, che contiene la s cella interfaccia di modifica.
 
 
-[![Ogni riga GridView è modificabile](batch-updating-vb/_static/image13.gif)](batch-updating-vb/_static/image21.png)
+[![EACH riga GridView è Editable](batch-updating-vb/_static/image13.gif)](batch-updating-vb/_static/image21.png)
 
 **Figura 13**: Ogni riga GridView è modificabile ([fare clic per visualizzare l'immagine con dimensioni normali](batch-updating-vb/_static/image22.png))
 
@@ -223,7 +223,7 @@ Dopo che effettua quanto sopra accennato modifiche relative alla formattazione, 
 Figura 16 Mostra questa pagina quando viene visualizzato tramite un browser dopo che sono stati aggiunti i controlli pulsante Web e le modifiche apportate alla formattazione.
 
 
-[![Adesso la pagina include due pulsanti di prodotti di aggiornamento](batch-updating-vb/_static/image16.gif)](batch-updating-vb/_static/image23.png)
+[![Tè ora include due aggiornamenti prodotti pulsanti pagina](batch-updating-vb/_static/image16.gif)](batch-updating-vb/_static/image23.png)
 
 **Figura 16**: La pagina ora include due aggiornamenti prodotti pulsanti ([fare clic per visualizzare l'immagine con dimensioni normali](batch-updating-vb/_static/image24.png))
 

@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: 36ca81d7-906d-4db2-952b-add18a4ff421
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/modalpopup/launching-a-modal-popup-window-from-server-code-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 79c7281032d8b36d0e4f4b62dcbbad2ab5ebbb77
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 55ee67150d1567a0334988a06ff0fcca8a89bbd4
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57063158"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59404052"
 ---
-<a name="launching-a-modal-popup-window-from-server-code-vb"></a>Avvio di una finestra popup modale dal codice server (VB)
-====================
+# <a name="launching-a-modal-popup-window-from-server-code-vb"></a>Avvio di una finestra popup modale dal codice server (VB)
+
 da [Christian Wenz](https://github.com/wenz)
 
 [Scaricare il codice](http://download.microsoft.com/download/2/4/0/24052038-f942-4336-905b-b60ae56f0dd5/ModalPopup1.vb.zip) o [Scarica il PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/modalpopup1VB.pdf)
@@ -65,7 +65,7 @@ Il `pageLoad()` funzione JavaScript è una funzione speciale che viene eseguita 
 Il `$find()` funzione esegue la ricerca di un elemento denominato nella pagina e previsto l'ID lato server come un parametro. Pertanto `$find("mpe")` restituisce la rappresentazione di client del controllo ModalPopup; relativo `show()` metodo consente la finestra popup visualizzata.
 
 
-[![Viene visualizzata la finestra popup modale quando viene fatto clic su uno dei pulsanti](launching-a-modal-popup-window-from-server-code-vb/_static/image2.png)](launching-a-modal-popup-window-from-server-code-vb/_static/image1.png)
+[![Tpopup modale he viene visualizzato quando si fa clic su uno dei pulsanti](launching-a-modal-popup-window-from-server-code-vb/_static/image2.png)](launching-a-modal-popup-window-from-server-code-vb/_static/image1.png)
 
 Viene visualizzata la finestra popup modale quando viene fatto clic su uno dei pulsanti ([fare clic per visualizzare l'immagine con dimensioni normali](launching-a-modal-popup-window-from-server-code-vb/_static/image3.png))
 

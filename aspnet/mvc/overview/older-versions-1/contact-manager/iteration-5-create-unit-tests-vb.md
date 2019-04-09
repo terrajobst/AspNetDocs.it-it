@@ -8,15 +8,15 @@ ms.date: 02/20/2009
 ms.assetid: c6e5c036-2265-4fa7-a9eb-47f197bdc262
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-5-create-unit-tests-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 8b34a9f7690777cfcc79d87a5e19586646d5b0d9
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 476e5529e4fd53c6166c53766409268939a83c72
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425704"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59380665"
 ---
-<a name="iteration-5--create-unit-tests-vb"></a>Iterazione #5-creare gli unit test (VB)
-====================
+# <a name="iteration-5--create-unit-tests-vb"></a>Iterazione #5-creare gli unit test (VB)
+
 by [Microsoft](https://github.com/microsoft)
 
 [Scaricare il codice](iteration-5-create-unit-tests-vb/_static/contactmanager_5_vb1.zip)
@@ -116,12 +116,12 @@ Prima di poter usare Moq, è necessario completare i passaggi seguenti:
 4. Aggiungere un riferimento all'assembly Moq al progetto di Test selezionando l'opzione di menu **progetto, Aggiungi riferimento** per aprire il **Aggiungi riferimento** finestra di dialogo. Nella scheda esplorazione, passare alla cartella in cui è stato decompresso Moq e selezionare l'assembly Moq.dll. Scegliere il **OK** pulsante (vedere la figura 2).
 
 
-[![Moq sblocco](iteration-5-create-unit-tests-vb/_static/image1.jpg)](iteration-5-create-unit-tests-vb/_static/image1.png)
+[![Unblocking Moq](iteration-5-create-unit-tests-vb/_static/image1.jpg)](iteration-5-create-unit-tests-vb/_static/image1.png)
 
 **Figura 01**: Moq sblocco ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-5-create-unit-tests-vb/_static/image2.png))
 
 
-[![Riferimenti dopo l'aggiunta di Moq](iteration-5-create-unit-tests-vb/_static/image2.jpg)](iteration-5-create-unit-tests-vb/_static/image3.png)
+[![Rriferimenti dopo l'aggiunta di Moq](iteration-5-create-unit-tests-vb/_static/image2.jpg)](iteration-5-create-unit-tests-vb/_static/image3.png)
 
 **Figura 02**: Dopo aver aggiunto Moq i riferimenti ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-5-create-unit-tests-vb/_static/image4.png))
 
@@ -154,7 +154,7 @@ Il primo test verifica che un contatto valido non genera un errore di convalida.
 
 Il codice per questi test è contenuto nel listato 1.
 
-**Listato 1 - Models\ContactManagerServiceTest.vb**
+**Listing 1 - Models\ContactManagerServiceTest.vb**
 
 [!code-vb[Main](iteration-5-create-unit-tests-vb/samples/sample1.vb)]
 
@@ -184,7 +184,7 @@ I restanti test verificare che quando viene chiamato il metodo CreateContact() c
 È possibile eseguire gli unit test nel listato 1, selezionando l'opzione di menu **esecuzione dei Test, tutti i test nella soluzione (CTRL + R, A)**. I risultati dei test vengono visualizzati nella finestra Risultati Test (vedere la figura 4).
 
 
-[![Risultati dei test](iteration-5-create-unit-tests-vb/_static/image4.jpg)](iteration-5-create-unit-tests-vb/_static/image7.png)
+[![TRisultati est](iteration-5-create-unit-tests-vb/_static/image4.jpg)](iteration-5-create-unit-tests-vb/_static/image7.png)
 
 **Figura 04**: I risultati dei test ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-5-create-unit-tests-vb/_static/image8.png))
 

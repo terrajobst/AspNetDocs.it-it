@@ -8,15 +8,15 @@ ms.date: 12/03/2010
 ms.assetid: 5cb00916-8f46-491f-be25-4739a615d619
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-1
 msc.type: authoredcontent
-ms.openlocfilehash: f9f100ccaf5e9cfdaf0633f9bfebbad273212a0e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 51e3010f6e01434c495201af4af3bbdcde993da7
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57054238"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59398436"
 ---
-<a name="getting-started-with-entity-framework-40-database-first-and-aspnet-4-web-forms"></a>Introduzione a Entity Framework 4.0 Database First e ASP.NET 4 Web Form
-====================
+# <a name="getting-started-with-entity-framework-40-database-first-and-aspnet-4-web-forms"></a>Introduzione a Entity Framework 4.0 Database First e ASP.NET 4 Web Form
+
 da [Tom Dykstra](https://github.com/tdykstra)
 
 > L'applicazione web di esempio Contoso University illustra come creare applicazioni Web Form ASP.NET usando il Entity Framework 4.0 e Visual Studio 2010. L'applicazione di esempio è un sito Web per una fittizia Contoso University. Include funzionalità, come ad esempio l'ammissione di studenti, la creazione di corsi e le assegnazioni di insegnati.
@@ -212,4 +212,4 @@ Entity Framework utilizza XML per archiviare informazioni sul database, il model
 È stato creato un sito Web, un database e un modello di dati. Nella procedura dettagliata successiva verrà iniziare a utilizzare i dati usando il modello di data e ASP.NET `EntityDataSource` controllo.
 
 > [!div class="step-by-step"]
-> [avanti](the-entity-framework-and-aspnet-getting-started-part-2.md)
+> [Successivo](the-entity-framework-and-aspnet-getting-started-part-2.md)

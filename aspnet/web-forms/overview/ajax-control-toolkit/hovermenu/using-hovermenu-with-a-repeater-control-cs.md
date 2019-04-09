@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: e7700e7b-edc3-4183-a713-70e507cc7490
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/hovermenu/using-hovermenu-with-a-repeater-control-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 33f65a132ea9f0a939ab70ac249b397ea883ac8c
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7f64e90eb2f8f87e2f382cb7897793e7071d305d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57032378"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59384500"
 ---
-<a name="using-hovermenu-with-a-repeater-control-c"></a>Uso di HoverMenu con un controllo Repeater (C#)
-====================
+# <a name="using-hovermenu-with-a-repeater-control-c"></a>Uso di HoverMenu con un controllo Repeater (C#)
+
 da [Christian Wenz](https://github.com/wenz)
 
 [Scaricare il codice](http://download.microsoft.com/download/b/0/6/b06fe835-5b8f-4c00-aef8-062c19d75b95/HoverMenu1.cs.zip) o [Scarica il PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/hovermenu1CS.pdf)
@@ -53,9 +53,9 @@ A questo punto, il `HoverMenuExtender` entra in gioco. In modo che ogni elemento
 A questo punto ogni elemento nell'origine dati consente di visualizzare una finestra popup a destra (`PopupPosition` attributo) dopo un ritardo di 50 millisecondi (`PopDelay` attributo).
 
 
-[![Viene visualizzato il menu di passaggio del mouse accanto a ogni elemento nel repeater](using-hovermenu-with-a-repeater-control-cs/_static/image2.png)](using-hovermenu-with-a-repeater-control-cs/_static/image1.png)
+[![Tmenu di passaggio del mouse he viene visualizzato accanto a ogni elemento nel repeater](using-hovermenu-with-a-repeater-control-cs/_static/image2.png)](using-hovermenu-with-a-repeater-control-cs/_static/image1.png)
 
 Viene visualizzato il menu di passaggio del mouse accanto a ogni elemento nel repeater ([fare clic per visualizzare l'immagine con dimensioni normali](using-hovermenu-with-a-repeater-control-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [avanti](using-hovermenu-with-a-repeater-control-vb.md)
+> [Successivo](using-hovermenu-with-a-repeater-control-vb.md)

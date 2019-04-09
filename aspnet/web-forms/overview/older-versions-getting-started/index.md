@@ -8,29 +8,28 @@ ms.date: 10/18/2014
 ms.assetid: e03585c2-80bf-4083-99ba-9fcbc883ccd8
 msc.legacyurl: /web-forms/overview/older-versions-getting-started
 msc.type: chapter
-ms.openlocfilehash: 3ba0db2036def3f1cb1a08b3602f6c52eb1488d1
-ms.sourcegitcommit: 4b0e4dcecb00dd4f519aab5fcf7cc1673ad75060
+ms.openlocfilehash: 94c995ee1e636f1250efb3a90887d8d73badeca7
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57963863"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59393639"
 ---
-<a name="older-versions---web-forms-getting-started"></a>Versioni precedenti - Introduzione a Web Form
-====================
-> Esercitazione su ASP.NET Web Forms 4 e versioni precedenti.
+# <a name="older-versions---web-forms-getting-started"></a>Versioni precedenti - Introduzione a Web Form
 
+> Documentazione su ASP.NET Web Forms 4 e versioni precedenti.
 
 - [ASP.NET 4 - Tailspin Spyworks](tailspin-spyworks/index.md)
 
     - [Parte 1. File -> Nuovo progetto](tailspin-spyworks/tailspin-spyworks-part-1.md)
     - [Parte 2. Livello di accesso ai dati](tailspin-spyworks/tailspin-spyworks-part-2.md)
-    - [Parte 3: Layout e Menu per la categoria](tailspin-spyworks/tailspin-spyworks-part-3.md)
+    - [Parte 3: Layout e menu per la categoria](tailspin-spyworks/tailspin-spyworks-part-3.md)
     - [Parte 4: Elenco di prodotti](tailspin-spyworks/tailspin-spyworks-part-4.md)
-    - [Parte 5: Logica di Business](tailspin-spyworks/tailspin-spyworks-part-5.md)
+    - [Parte 5: Logica di business](tailspin-spyworks/tailspin-spyworks-part-5.md)
     - [Parte 6: Appartenenza ASP.NET](tailspin-spyworks/tailspin-spyworks-part-6.md)
     - [Parte 7: Aggiunta di funzionalità](tailspin-spyworks/tailspin-spyworks-part-7.md)
     - [Parte 8: Pagine finali, gestione delle eccezioni e conclusione](tailspin-spyworks/tailspin-spyworks-part-8.md)
-- [ASP.NET 4 - Introduzione a Entity Framework 4 e Web Form](getting-started-with-ef/index.md)
+- [ASP.NET 4 - Introduzione a Entity Framework 4 e Web Forms](getting-started-with-ef/index.md)
 
     - [Introduzione a Database First di Entity Framework 4.0](getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-1.md)
     - [Introduzione a Database First di Entity Framework 4.0 - Parte 2](getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-2.md)
@@ -40,13 +39,13 @@ ms.locfileid: "57963863"
     - [Introduzione a Database First di Entity Framework 4.0 - Parte 6](getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-6.md)
     - [Introduzione a Database First di Entity Framework 4.0 - Parte 7](getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-7.md)
     - [Introduzione a Database First di Entity Framework 4.0 - Parte 8](getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-8.md)
-- [ASP.NET 4 - Continuazione con Entity Framework 4 e Web Form](continuing-with-ef/index.md)
+- [ASP.NET 4 - Continuazione con Entity Framework 4 e Web Forms](continuing-with-ef/index.md)
 
-    - [Entity Framework 4.0 e controllo ObjectDataSource, parte 1: Guida introduttiva](continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started.md)
-    - [Entity Framework 4.0 e controllo ObjectDataSource, parte 2: Aggiunta di un livello di logica di Business e Unit test](continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-2-adding-a-business-logic-layer-and-unit-tests.md)
+    - [Entity Framework 4.0 e controllo ObjectDataSource, parte 1: Introduzione](continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started.md)
+    - [Entity Framework 4.0 e controllo ObjectDataSource, parte 2: Aggiunta di un livello di logica di business e unit test](continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-2-adding-a-business-logic-layer-and-unit-tests.md)
     - [Entity Framework 4.0 e controllo ObjectDataSource, parte 3: Ordinamento e filtro](continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-3-sorting-and-filtering.md)
     - [Gestione della concorrenza con Entity Framework 4.0 in ASP.NET 4](continuing-with-ef/handling-concurrency-with-the-entity-framework-in-an-asp-net-web-application.md)
-    - [Massimizzazione delle prestazioni con Entity Framework 4.0 in ASP.NET 4](continuing-with-ef/maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application.md)
+    - [Ottimizzazione delle prestazioni con Entity Framework 4.0 in ASP.NET 4](continuing-with-ef/maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application.md)
     - [Novità di Entity Framework 4.0](continuing-with-ef/what-s-new-in-the-entity-framework-4.md)
 - [ASP.NET 4 - Distribuzione Web con SQL Server Compact tramite Visual Studio](deployment-to-a-hosting-provider/index.md)
 
@@ -70,27 +69,27 @@ ms.locfileid: "57963863"
     - [Informazioni sulla localizzazione in ASP.NET AJAX](aspnet-ajax/understanding-asp-net-ajax-localization.md)
     - [Informazioni sui servizi Web di ASP.NET AJAX](aspnet-ajax/understanding-asp-net-ajax-web-services.md)
     - [Informazioni sulle funzionalità di debug di ASP.NET AJAX](aspnet-ajax/understanding-asp-net-ajax-debugging-capabilities.md)
-- [ASP.NET 3.5 - Pagine master Web Form](master-pages/index.md)
+- [ASP.NET 3.5 - Pagine master Web Forms](master-pages/index.md)
 
     - [Creazione di un layout a livello di sito tramite le pagine master (C#)](master-pages/creating-a-site-wide-layout-using-master-pages-cs.md)
     - [Più elementi ContentPlaceHolder e contenuto predefinito (C#)](master-pages/multiple-contentplaceholders-and-default-content-cs.md)
-    - [Specificazione di titolo, metatag e altre intestazioni HTML nella pagina master (C#)](master-pages/specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs.md)
+    - [Impostazione di titolo, metatag e altre intestazioni HTML nella pagina master (C#)](master-pages/specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs.md)
     - [URL nelle pagine master (C#)](master-pages/urls-in-master-pages-cs.md)
     - [Denominazione degli ID di controllo nelle pagine di contenuto (C#)](master-pages/control-id-naming-in-content-pages-cs.md)
     - [Interazione con la pagina master dalla pagina di contenuto (C#)](master-pages/interacting-with-the-master-page-from-the-content-page-cs.md)
     - [Interazione con la pagina di contenuto dalla pagina master (C#)](master-pages/interacting-with-the-content-page-from-the-master-page-cs.md)
     - [Pagine master e ASP.NET AJAX (C#)](master-pages/master-pages-and-asp-net-ajax-cs.md)
-    - [Specificazione della pagina master a livello di codice (C#)](master-pages/specifying-the-master-page-programmatically-cs.md)
+    - [Impostazione della pagina master a livello di codice (C#)](master-pages/specifying-the-master-page-programmatically-cs.md)
     - [Pagine master annidate (C#)](master-pages/nested-master-pages-cs.md)
     - [Creazione di un layout a livello di sito tramite le pagine master (VB)](master-pages/creating-a-site-wide-layout-using-master-pages-vb.md)
     - [Più elementi ContentPlaceHolder e contenuto predefinito (VB)](master-pages/multiple-contentplaceholders-and-default-content-vb.md)
-    - [Specificazione di titolo, metatag e altre intestazioni HTML nella pagina master (VB)](master-pages/specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb.md)
+    - [Impostazione di titolo, metatag e altre intestazioni HTML nella pagina master (VB)](master-pages/specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb.md)
     - [URL nelle pagine master (VB)](master-pages/urls-in-master-pages-vb.md)
     - [Denominazione degli ID di controllo nelle pagine di contenuto (VB)](master-pages/control-id-naming-in-content-pages-vb.md)
     - [Interazione con la pagina master dalla pagina di contenuto (VB)](master-pages/interacting-with-the-master-page-from-the-content-page-vb.md)
     - [Interazione con la pagina di contenuto dalla pagina master (VB)](master-pages/interacting-with-the-content-page-from-the-master-page-vb.md)
     - [Pagine master e ASP.NET AJAX (VB)](master-pages/master-pages-and-asp-net-ajax-vb.md)
-    - [Specificazione della pagina master a livello di codice (VB)](master-pages/specifying-the-master-page-programmatically-vb.md)
+    - [Impostazione della pagina master a livello di codice (VB)](master-pages/specifying-the-master-page-programmatically-vb.md)
     - [Pagine master annidate (VB)](master-pages/nested-master-pages-vb.md)
 - [Distribuzione di progetti di siti Web in Visual Studio 2008 e versioni precedenti](deploying-web-site-projects/index.md)
 

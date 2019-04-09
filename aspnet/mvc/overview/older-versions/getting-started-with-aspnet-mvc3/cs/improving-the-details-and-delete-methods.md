@@ -8,15 +8,15 @@ ms.date: 01/12/2011
 ms.assetid: 3f42edd9-c5b8-4712-9055-970f7d38e350
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/improving-the-details-and-delete-methods
 msc.type: authoredcontent
-ms.openlocfilehash: 255374eb21568d05569f8af6727ad4b558acfc2f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d4003dba8530d2e72c514c572ffc28ef942fd437
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57031918"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59379365"
 ---
-<a name="improving-the-details-and-delete-methods-c"></a>Miglioramento dei dettagli e dei metodi di eliminazione (C#)
-====================
+# <a name="improving-the-details-and-delete-methods-c"></a>Miglioramento dei dettagli e dei metodi di eliminazione (C#)
+
 da [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > > [!NOTE]
@@ -74,7 +74,7 @@ Questa esercitazione di base tutto quello che ti a rendere i controller, associa
 
 Se si desidera distribuire l'applicazione, è utile per primo test l'applicazione sul server IIS 7 locale. È possibile usare questo [instalace Webové Platformy](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=ASPNET;) collegamento per abilitare l'impostazione di IIS per le applicazioni ASP.NET. Vedere i collegamenti di distribuzione seguenti:
 
-- [Mappa del contenuto di distribuzione di ASP.NET](https://msdn.microsoft.com/library/dd394698.aspx)
+- [Mappa del contenuto per la distribuzione di ASP.NET](https://msdn.microsoft.com/library/dd394698.aspx)
 - [Enabling IIS 7.x](https://blogs.msdn.com/b/rickandy/archive/2011/03/14/enabling-iis-7-x-on-windows-7-vista-sp1-windows-2008-windows-2008-r2.aspx)
 - [Distribuzione di progetti applicazione Web](https://msdn.microsoft.com/library/dd394698.aspx)
 

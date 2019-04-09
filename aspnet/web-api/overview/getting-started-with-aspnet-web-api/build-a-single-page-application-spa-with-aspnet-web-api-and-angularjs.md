@@ -1,33 +1,37 @@
 ---
 uid: web-api/overview/getting-started-with-aspnet-web-api/build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs
-title: "Lab pratico: Compilare un'applicazione a pagina singola (SPA) con l'API Web ASP.NET e Angular. js | Microsoft Docs"
+title: "Lab pratico: Compilare un'applicazione a pagina singola (SPA) con l'API Web ASP.NET e Angular. js - ASP.NET 4.x"
 author: rick-anderson
-description: Nelle applicazioni web tradizionali, il client (browser) avvia la comunicazione con il server richiede una pagina. Il server elabora quindi la richiesta...
+description: "Procedura dettagliata del codice: Compilare un'applicazione a pagina singola (SPA) con l'API Web ASP.NET e Angular. js per ASP.NET 4.x."
 ms.author: riande
 ms.date: 09/30/2015
+ms.custom: seoapril2019
 ms.assetid: 719727b7-bef3-45ad-bfe9-ba5bcdb2305f
 msc.legacyurl: /web-api/overview/getting-started-with-aspnet-web-api/build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs
 msc.type: authoredcontent
-ms.openlocfilehash: 03409e2fda831a07bbc5321ad842633b23ec25e5
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 1f093e348216750cbadb6e52f524e5edd4d6c498
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422409"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59390272"
 ---
-<a name="hands-on-lab-build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs"></a>Lab pratico: Creare un'applicazione a pagina singola con l'API Web ASP.NET e Angular.js
-====================
+# <a name="hands-on-lab-build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs"></a>Lab pratico: Creare un'applicazione a pagina singola con l'API Web ASP.NET e Angular.js
+
 da [Camp Web Team](https://twitter.com/webcamps)
 
 [Download Web Camp Kit di formazione](https://aka.ms/webcamps-training-kit)
 
-> Nelle applicazioni web tradizionali, il client (browser) avvia la comunicazione con il server richiede una pagina. Quindi, il server elabora la richiesta e invia il codice HTML della pagina al client. Nelle successive interazioni con la pagina, ad esempio, l'utente passa a un collegamento o invia un modulo con i dati, viene inviata una richiesta di nuovo al server e il flusso viene riavviata: il server elabora la richiesta e invia una nuova pagina nel browser in risposta a nuova richiesta di azione ed dal client.
+Questo laboratorio pratico viene illustrato come compilare una singola pagina Application (SPA) con API Web ASP.NET e Angular. js per ASP.NET 4.x.
+
+In questo lab pratici, si sarà possibile avvalersi di queste tecnologie per implementare fanatico Quiz, un sito Web gli elementi semplici basato sul concetto di applicazione a singola pagina. Prima di tutto si implementerà il livello di servizio con l'API Web ASP.NET per esporre gli endpoint necessari per recuperare le domande di quiz e archiviare le risposte. Quindi, si compilerà un'interfaccia utente avanzata e reattiva usando AngularJS e CSS3 effetti di trasformazione.
+
+Nelle applicazioni web tradizionali, il client (browser) avvia la comunicazione con il server richiede una pagina. Quindi, il server elabora la richiesta e invia il codice HTML della pagina al client. Nelle successive interazioni con la pagina, ad esempio, l'utente passa a un collegamento o invia un modulo con i dati, viene inviata una richiesta di nuovo al server e il flusso viene riavviata: il server elabora la richiesta e invia una nuova pagina nel browser in risposta a nuova richiesta di azione ed dal client.
 > 
 > Nelle applicazioni a pagina singola (SPAs) l'intera pagina viene caricata nel browser dopo la richiesta iniziale, ma le interazioni successive hanno luogo tramite le richieste Ajax. Questo significa che il browser aggiornare solo la parte della pagina a cui è stato modificato; non è necessario ricaricare la pagina intera. L'approccio SPA consente di ridurre il tempo impiegato dall'applicazione per rispondere alle azioni dell'utente, un'esperienza più fluida.
 > 
 > L'architettura di un'applicazione a singola pagina comporta alcuni problemi che non sono presenti nelle applicazioni web tradizionali. Tuttavia, nuove tecnologie, ad esempio API Web ASP.NET, come i framework JavaScript AngularJS e nuove funzionalità di applicazione degli stili fornite da CSS3 rendono molto semplice progettare e compilare SPAs.
 > 
-> In questo lab pratici, si sarà possibile avvalersi di queste tecnologie per implementare fanatico Quiz, un sito Web gli elementi semplici basato sul concetto di applicazione a singola pagina. Prima di tutto si implementerà il livello di servizio con l'API Web ASP.NET per esporre gli endpoint necessari per recuperare le domande di quiz e archiviare le risposte. Quindi, si compilerà un'interfaccia utente avanzata e reattiva usando AngularJS e CSS3 effetti di trasformazione.
 > 
 > Tutto il codice di esempio e frammenti di codice sono inclusi nel Web Camp Kit di formazione, disponibile all'indirizzo [ https://aka.ms/webcamps-training-kit ](https://aka.ms/webcamps-training-kit).
 
@@ -72,7 +76,7 @@ In tutto il documento di laboratorio, verrà invitati a inserire blocchi di codi
 > Ogni esercizio è accompagnata da una soluzione inizia che si trova nel **iniziare** cartella dell'esercizio che consente di seguire ogni esercizio indipendentemente dagli altri. Tenere presente che i frammenti di codice aggiunti durante un esercizio non sono presenti queste soluzioni di avvio e potrebbero non funzionare fino a quando non si have completato l'esercizio. All'interno del codice sorgente per un esercizio, si noterà anche un **End** cartella che contiene una soluzione di Visual Studio con il codice che scaturisce da completare i passaggi nell'esercizio corrispondente. È possibile usare queste soluzioni come prassi consigliata se ti serve assistenza aggiuntiva durante l'esecuzione in questo laboratorio pratico.
 
 
-* * *
+---
 
 <a id="Exercises"></a>
 ## <a name="exercises"></a>Esercizi
@@ -104,8 +108,8 @@ In questa attività si avvierà la creazione di un nuovo progetto MVC ASP.NET co
 
     ![Crea un nuovo progetto](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image1.png "creando un nuovo progetto")
 
-    *Crea un nuovo progetto*
-2. Nel **nuovo progetto** finestra di dialogo **applicazione Web ASP.NET** sotto il **Visual C# | Web** scheda. Assicurarsi che **.NET Framework 4.5** è selezionata, denominarla *GeekQuiz*, scegliere un **posizione** e fare clic su **OK**.
+    *Creazione di un nuovo progetto*
+2. Nel **nuovo progetto** finestra di dialogo **applicazione Web ASP.NET** sotto il **Visual c# | Web** scheda. Assicurarsi che **.NET Framework 4.5** è selezionata, denominarla *GeekQuiz*, scegliere un **posizione** e fare clic su **OK**.
 
     ![Crea un nuovo progetto di applicazione Web ASP.NET](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image2.png "creando un nuovo progetto di applicazione Web ASP.NET")
 
@@ -433,7 +437,7 @@ In questa attività si userà le proprietà di CSS3 eseguire quali animazioni so
 
     *Il recupero alla domanda seguente con l'effetto di scorrimento*
 
-* * *
+---
 
 <a id="Summary"></a>
 ## <a name="summary"></a>Riepilogo

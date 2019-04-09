@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/displaying-data-with-the-datalist-and-repeater/showing-multiple-records-per-row-with-the-datalist-control-cs
-title: Visualizzazione di più record per ogni riga con il controllo DataList (C#) | Microsoft Docs
+title: Visualizzazione di più record per ogni riga con il controllo DataList (c#) | Microsoft Docs
 author: rick-anderson
 description: In questa breve esercitazione verrà illustrato come personalizzare il layout di DataList tramite le relative proprietà RepeatColumns e RepeatDirection.
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 09/13/2006
 ms.assetid: cf5acaf5-d4f6-4957-badc-b89956b285f3
 msc.legacyurl: /web-forms/overview/data-access/displaying-data-with-the-datalist-and-repeater/showing-multiple-records-per-row-with-the-datalist-control-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 8dd23b960df6511f65882820cb26d4af4ccf5c58
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 22203d44935e3b0ed0fed5aa2ba42c2897c38241
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58421531"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59391949"
 ---
-<a name="showing-multiple-records-per-row-with-the-datalist-control-c"></a>Visualizzazione di più record per riga con il controllo DataList (C#)
-====================
+# <a name="showing-multiple-records-per-row-with-the-datalist-control-c"></a>Visualizzazione di più record per riga con il controllo DataList (C#)
+
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Scaricare l'App di esempio](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_31_CS.exe) o [Scarica il PDF](showing-multiple-records-per-row-with-the-datalist-control-cs/_static/datatutorial31cs1.pdf)
@@ -31,7 +31,7 @@ Gli esempi di DataList è ve visto nelle ultime due esercitazioni hanno eseguito
 È possibile personalizzare il layout di DataList s tramite il `RepeatColumns` e `RepeatDirection` proprietà che, rispettivamente, indicare il numero di colonne viene sottoposti a rendering e se tali elementi vengono disposti orizzontalmente o verticalmente. Figura 1, ad esempio, Mostra un controllo DataList che visualizza le informazioni sul prodotto in una tabella con tre colonne.
 
 
-[![DataList visualizzi tre prodotti per ogni riga](showing-multiple-records-per-row-with-the-datalist-control-cs/_static/image2.png)](showing-multiple-records-per-row-with-the-datalist-control-cs/_static/image1.png)
+[![Tegli DataList mostra tre prodotti per ogni riga](showing-multiple-records-per-row-with-the-datalist-control-cs/_static/image2.png)](showing-multiple-records-per-row-with-the-datalist-control-cs/_static/image1.png)
 
 **Figura 1**: DataList mostra tre prodotti per ogni riga ([fare clic per visualizzare l'immagine con dimensioni normali](showing-multiple-records-per-row-with-the-datalist-control-cs/_static/image3.png))
 
@@ -57,7 +57,7 @@ Si noti che se ve incluso un identificatore di formato nel `Eval` sintassi di as
 Si consiglia di visitare la pagina in un browser. Come illustrato nella figura 2, DataList esegue il rendering come una tabella a colonna singola, con più righe di prodotti.
 
 
-[![Per impostazione predefinita, i renderer di DataList come una tabella a colonna singola, con più righe](showing-multiple-records-per-row-with-the-datalist-control-cs/_static/image5.png)](showing-multiple-records-per-row-with-the-datalist-control-cs/_static/image4.png)
+[![By predefinito, DataList esegue il rendering come una tabella a colonna singola, con più righe](showing-multiple-records-per-row-with-the-datalist-control-cs/_static/image5.png)](showing-multiple-records-per-row-with-the-datalist-control-cs/_static/image4.png)
 
 **Figura 2**: Per impostazione predefinita, il controllo DataList esegue il rendering come una colonna singola, tabella con più righe ([fare clic per visualizzare l'immagine con dimensioni normali](showing-multiple-records-per-row-with-the-datalist-control-cs/_static/image6.png))
 
@@ -69,7 +69,7 @@ Durante il comportamento predefinito per il controllo DataList consiste nel disp
 Modificando la `RepeatDirection` proprietà dal `Vertical` a `Horizontal`, DataList esegue il rendering dei relativi record in una singola riga, la creazione di una colonna per ogni elemento dell'origine dati. Per illustrare questo effetto, fare clic su DataList nella finestra di progettazione e quindi, dalla finestra delle proprietà, modificare il `RepeatDirection` proprietà dal `Vertical` a `Horizontal`. Immediatamente in questo modo, la finestra di progettazione consente di regolare il layout di DataList s, la creazione di un'interfaccia a riga singola, a più colonne (vedere la figura 3).
 
 
-[![Gli elementi RepeatDirection proprietà determina come la direzione s DataList sono layout orizzontale](showing-multiple-records-per-row-with-the-datalist-control-cs/_static/image8.png)](showing-multiple-records-per-row-with-the-datalist-control-cs/_static/image7.png)
+[![Tegli RepeatDirection proprietà determina come la direzione s DataList elementi si trovano Laid](showing-multiple-records-per-row-with-the-datalist-control-cs/_static/image8.png)](showing-multiple-records-per-row-with-the-datalist-control-cs/_static/image7.png)
 
 **Figura 3**: Il `RepeatDirection` proprietà determina la modalità di direzione s DataList sono elementi Laid Out ([fare clic per visualizzare l'immagine con dimensioni normali](showing-multiple-records-per-row-with-the-datalist-control-cs/_static/image9.png))
 
@@ -77,7 +77,7 @@ Modificando la `RepeatDirection` proprietà dal `Vertical` a `Horizontal`, DataL
 La visualizzazione di piccole quantità di dati, un'unica riga, a più colonne tabella potrebbe essere un modo ideale per ingrandire l'area dello schermo. Per più grandi volumi di dati, tuttavia, una singola riga richiederanno numerose colonne, che le invia gli elementi che t can rientri nello schermo a destra. Figura 4 mostra i prodotti quando viene eseguito il rendering in un controllo DataList di riga singola. Poiché esistono molti prodotti (oltre 80), l'utente deve scorrere fino all'estremità destra per visualizzare informazioni su ciascuno dei prodotti.
 
 
-[![Per le origini dati sufficientemente grandi, un controllo DataList di colonna singola richiederà uno scorrimento orizzontale](showing-multiple-records-per-row-with-the-datalist-control-cs/_static/image11.png)](showing-multiple-records-per-row-with-the-datalist-control-cs/_static/image10.png)
+[![Fo origini dati sufficientemente grandi, un controllo DataList di colonna singola richiederà uno scorrimento orizzontale](showing-multiple-records-per-row-with-the-datalist-control-cs/_static/image11.png)](showing-multiple-records-per-row-with-the-datalist-control-cs/_static/image10.png)
 
 **Figura 4**: Per sufficientemente grandi origini dati, una singola colonna DataList verrà richiedono lo scorrimento orizzontale ([fare clic per visualizzare l'immagine con dimensioni normali](showing-multiple-records-per-row-with-the-datalist-control-cs/_static/image12.png))
 
@@ -89,7 +89,7 @@ Per creare un controllo DataList a più colonne, con più righe, è necessario i
 In questo esempio consentono s visualizzare tre prodotti per ogni riga della tabella. Pertanto, impostare il `RepeatColumns` proprietà a 3. Dopo aver apportato questa modifica, si consiglia di visualizzare i risultati in un browser. Come illustrato nella figura 5, i prodotti sono ora elencati in una tabella con più righe con tre colonne.
 
 
-[![Per ogni riga vengono visualizzati tre prodotti](showing-multiple-records-per-row-with-the-datalist-control-cs/_static/image14.png)](showing-multiple-records-per-row-with-the-datalist-control-cs/_static/image13.png)
+[![Tper ogni riga vengono visualizzati i tre prodotti](showing-multiple-records-per-row-with-the-datalist-control-cs/_static/image14.png)](showing-multiple-records-per-row-with-the-datalist-control-cs/_static/image13.png)
 
 **Figura 5**: I tre prodotti vengono visualizzati per ogni riga ([fare clic per visualizzare l'immagine con dimensioni normali](showing-multiple-records-per-row-with-the-datalist-control-cs/_static/image15.png))
 
@@ -97,7 +97,7 @@ In questo esempio consentono s visualizzare tre prodotti per ogni riga della tab
 Il `RepeatDirection` proprietà influisce sulla modalità di disposizione gli elementi in DataList. Figura 5 mostra i risultati con il `RepeatDirection` impostata su `Horizontal`. Si noti che i primi tre prodotti Chai, registrazione di modifiche e sciroppo di prodotto vengono disposti da sinistra a destra, dall'alto verso il basso. I tre prodotti (inizia con s Chef Anton Seasoning Cajun) vengono visualizzati in una riga di sotto le prime tre. Modifica il `RepeatDirection` proprietà verso `Vertical`, tuttavia, questi prodotti dall'alto verso il basso viene disposto, da sinistra a destra, come illustrato nella figura 6.
 
 
-[![In questo caso, i prodotti sono layout orizzontale verticale](showing-multiple-records-per-row-with-the-datalist-control-cs/_static/image17.png)](showing-multiple-records-per-row-with-the-datalist-control-cs/_static/image16.png)
+[![Here, i prodotti sono layout orizzontale verticale](showing-multiple-records-per-row-with-the-datalist-control-cs/_static/image17.png)](showing-multiple-records-per-row-with-the-datalist-control-cs/_static/image16.png)
 
 **Figura 6**: In questo caso, i prodotti sono layout orizzontale verticale ([fare clic per visualizzare l'immagine con dimensioni normali](showing-multiple-records-per-row-with-the-datalist-control-cs/_static/image18.png))
 

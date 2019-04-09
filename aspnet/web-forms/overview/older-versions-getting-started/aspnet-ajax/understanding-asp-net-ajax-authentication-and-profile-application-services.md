@@ -8,18 +8,18 @@ ms.date: 03/14/2008
 ms.assetid: 6ab4efb6-aab6-45ac-ad2c-bdec5848ef9e
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/aspnet-ajax/understanding-asp-net-ajax-authentication-and-profile-application-services
 msc.type: authoredcontent
-ms.openlocfilehash: d722130e625a9f867923280fce0ef35f19bfeb9d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 18056c917b32680678c536229e8e26d5cc7db161
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57041258"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59395134"
 ---
-<a name="understanding-aspnet-ajax-authentication-and-profile-application-services"></a>Informazioni sui servizi di autenticazione e applicazione del profilo di ASP.NET AJAX
-====================
+# <a name="understanding-aspnet-ajax-authentication-and-profile-application-services"></a>Informazioni sui servizi di autenticazione e applicazione del profilo di ASP.NET AJAX
+
 da [Scott Cate](https://github.com/scottcate)
 
-[Scaricare PDF](http://download.microsoft.com/download/C/1/9/C19A3451-1D14-477C-B703-54EF22E197EE/AJAX_tutorial03_MSAjax_ASP.NET_Services_cs.pdf)
+[Scarica il PDF](http://download.microsoft.com/download/C/1/9/C19A3451-1D14-477C-B703-54EF22E197EE/AJAX_tutorial03_MSAjax_ASP.NET_Services_cs.pdf)
 
 > Il servizio di autenticazione consente agli utenti di fornire le credenziali per ricevere un cookie di autenticazione ed è il servizio gateway per consentire i profili utente personalizzati fornito da ASP.NET. Uso del servizio di autenticazione di ASP.NET AJAX è compatibile con autenticazione basata su form ASP.NET standard, in modo che le applicazioni attualmente in uso autenticazione basata su form (ad esempio con l'account di accesso di controllo) verranno non interrotte eseguendo l'aggiornamento al servizio di autenticazione AJAX.
 
@@ -32,7 +32,7 @@ Questo white paper vengono esaminati l'implementazione e l'utilizzo della profil
 
 Questo white paper si basa sulla versione Beta 2 di Visual Studio 2008 e .NET Framework 3.5. Questo white paper si presuppone inoltre che si userà Visual Studio 2008 Beta 2, non Visual Web Developer Express e forniscono procedure dettagliate in base all'interfaccia utente di Visual Studio. Alcuni esempi di codice possono usare i modelli di progetto non disponibili in Visual Web Developer Express.
 
-## <a name="profiles-and-authentication"></a>*Profili e l'autenticazione*
+## *<a name="profiles-and-authentication"></a>Profili e l'autenticazione*
 
 I profili di ASP.NET di Microsoft e i servizi di autenticazione forniti dal sistema di autenticazione basata su form ASP.NET e sono i componenti standard di ASP.NET. ASP.NET AJAX Extensions forniscono accesso tramite script per questi servizi tramite proxy lo script, tramite un modello semplice nello spazio dei nomi Sys della libreria client AJAX.
 
@@ -42,7 +42,7 @@ Il servizio profili consente l'integrazione automatica e l'archiviazione dei dat
 
 Incorporare l'autenticazione di ASP.NET e servizi di profilatura stessi in un'applicazione è all'esterno dell'ambito di questo white paper. Per altre informazioni sull'argomento, vedere MSDN Library, fare riferimento a articolo gestione di utenti tramite l'appartenenza al [ https://msdn.microsoft.com/library/tw292whz.aspx ](https://msdn.microsoft.com/library/tw292whz.aspx). ASP.NET include anche un'utilità di configurare automaticamente l'appartenenza a un Server SQL, ovvero provider di servizi di autenticazione predefinito per l'appartenenza di ASP.NET. Per altre informazioni, vedere l'articolo strumento di registrazione di SQL Server ASP.NET (Aspnet\_regsql.exe) in [ https://msdn.microsoft.com/library/ms229862(vs.80).aspx ](https://msdn.microsoft.com/library/ms229862(vs.80).aspx).
 
-## <a name="using-the-aspnet-ajax-authentication-service"></a>*Uso del servizio di autenticazione ASP.NET AJAX*
+## *<a name="using-the-aspnet-ajax-authentication-service"></a>Uso del servizio di autenticazione ASP.NET AJAX*
 
 Il servizio di autenticazione basata su AJAX ASP.NET deve essere abilitato nel file Web. config:
 
@@ -60,7 +60,7 @@ Il metodo Login () inizia una richiesta per autenticare le credenziali dell'uten
 
 *Parametri:*
 
-| **Nome del parametro** | **Significato** |
+| **Nome parametro** | **Significato** |
 | --- | --- |
 | userName | Obbligatorio. Il nome utente da autenticare. |
 | password | Facoltativo (valore predefinito è null). Password dell'utente. |
@@ -85,7 +85,7 @@ Il metodo logout() Rimuove il cookie di credenziali e disconnette l'utente corre
 
 *Parametri:*
 
-| **Nome del parametro** | **Significato** |
+| **Nome parametro** | **Significato** |
 | --- | --- |
 | redirectUrl | Facoltativo (valore predefinito è null). L'URL per reindirizzare il browser al termine dell'autenticazione. Se questo parametro è null o una stringa vuota, si verifica alcun reindirizzamento. |
 | logoutCompletedCallback | Facoltativo (valore predefinito è null). La funzione da chiamare quando la disconnessione è stata completata. Se specificato, questo parametro esegue l'override della proprietà defaultLogoutCompleted. |
@@ -110,9 +110,9 @@ Il riferimento alla funzione specificata da questa proprietà deve avere la firm
 
 *Parametri:*
 
-| **Nome del parametro** | **Significato** |
+| **Nome parametro** | **Significato** |
 | --- | --- |
-| errore | Specifica le informazioni sull'errore. |
+| error | Specifica le informazioni sull'errore. |
 | userContext | Specifica le informazioni sul contesto utente forniti quando è stata chiamata la funzione di accesso o disconnessione. |
 | methodName | Il nome del metodo chiamante. |
 
@@ -126,7 +126,7 @@ Il riferimento alla funzione specificata da questa proprietà deve avere la firm
 
 *Parametri:*
 
-| **Nome del parametro** | **Significato** |
+| **Nome parametro** | **Significato** |
 | --- | --- |
 | validCredentials | Specifica se l'utente ha specificato credenziali valide. `true` Se l'utente è connesso correttamente. in caso contrario `false`. |
 | userContext | Specifica le informazioni sul contesto utente forniti quando è stata chiamata la funzione di accesso. |
@@ -142,7 +142,7 @@ Il riferimento alla funzione specificata da questa proprietà deve avere la firm
 
 *Parametri:*
 
-| **Nome del parametro** | **Significato** |
+| **Nome parametro** | **Significato** |
 | --- | --- |
 | risultato | Questo parametro sarà sempre `null`; è riservato per utilizzi futuri. |
 | userContext | Specifica le informazioni sul contesto utente forniti quando è stata chiamata la funzione di accesso. |
@@ -206,7 +206,7 @@ Carica tutte le proprietà o un elenco selezionato dal server.
 
 *Parametri:*
 
-| **Nome del parametro** | **Significato** |
+| **Nome parametro** | **Significato** |
 | --- | --- |
 | propertyNames | Facoltativo (valore predefinito è null). Il caricamento delle proprietà dal server. |
 | loadCompletedCallback | Facoltativo (valore predefinito è null). Funzione da chiamare durante il caricamento è stata completata. |
@@ -223,7 +223,7 @@ Il metodo Save () consente di salvare l'elenco di proprietà specificato (o tutt
 
 *Parametri:*
 
-| **Nome del parametro** | **Significato** |
+| **Nome parametro** | **Significato** |
 | --- | --- |
 | propertyNames | Facoltativo (valore predefinito è null). Le proprietà da salvare nel server. |
 | saveCompletedCallback | Facoltativo (valore predefinito è null). Funzione da chiamare durante il salvataggio è stata completata. |
@@ -244,7 +244,7 @@ Il riferimento alla funzione specificata da questa proprietà deve avere la firm
 
 *Parametri:*
 
-| **Nome del parametro** | **Significato** |
+| **Nome parametro** | **Significato** |
 | --- | --- |
 | Error | Specifica le informazioni sull'errore. |
 | userContext | Specifica le informazioni sul contesto utente forniti quando il caricamento o salvataggio funzione è stata chiamata. |
@@ -260,7 +260,7 @@ Il riferimento alla funzione specificata da questa proprietà deve avere la firm
 
 *Parametri:*
 
-| **Nome del parametro** | **Significato** |
+| **Nome parametro** | **Significato** |
 | --- | --- |
 | numPropsSaved | Specifica il numero di proprietà che sono state salvate. |
 | userContext | Specifica le informazioni sul contesto utente forniti quando il caricamento o salvataggio funzione è stata chiamata. |
@@ -276,7 +276,7 @@ Il riferimento alla funzione specificata da questa proprietà deve avere la firm
 
 *Parametri:*
 
-| **Nome del parametro** | **Significato** |
+| **Nome parametro** | **Significato** |
 | --- | --- |
 | numPropsLoaded | Specifica il numero di proprietà caricate. |
 | userContext | Specifica le informazioni sul contesto utente forniti quando il caricamento o salvataggio funzione è stata chiamata. |
@@ -304,7 +304,7 @@ Il codice seguente controlla se un utente viene autenticato e in questo caso, ve
 
 [!code-javascript[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample12.js)]
 
-## <a name="using-a-custom-authentication-service-provider"></a>*Usando un Provider di servizi di autenticazione personalizzati*
+## *<a name="using-a-custom-authentication-service-provider"></a>Usando un Provider di servizi di autenticazione personalizzati*
 
 ASP.NET AJAX Extensions consentono di creare un provider di servizi di autenticazione di script personalizzata esponendo la funzionalità tramite un servizio web personalizzato. Per poter essere usato, il servizio web deve esporre due metodi, `Login` e `Logout`; e questi metodi devono essere specificati con le firme del metodo di stesso come il servizio web di autenticazione basata su AJAX ASP.NET predefinito.
 
@@ -338,7 +338,7 @@ Servizi ASP.NET - specificamente i servizi di profilatura, l'appartenenza e aute
 
 Inoltre, creando le implementazioni del servizio web semplificata con le firme dei metodi equivalenti, gli sviluppatori possono creare i provider di script personalizzata per questi servizi intrinseci di ASP.NET. Supporto per queste tecniche semplifica lo sviluppo di applicazioni rich client, offrendo agli sviluppatori un'ampia gamma di flessibilità per soddisfare esigenze specifiche.
 
-## <a name="bio"></a>*Bio*
+## *<a name="bio"></a>Bio*
 
 Scott Cate ha collaborato con tecnologie Web di Microsoft dal 1997 ed è il presidente di myKB.com ([www.myKB.com](http://www.myKB.com)) ed è specializzato nella scrittura di ASP.NET basato su applicazioni incentrate su soluzioni Software di Knowledge Base. È possibile contattare Scott tramite posta elettronica all'indirizzo [ scott.cate@myKB.com ](mailto:scott.cate@myKB.com) o il suo blog all'indirizzo [ScottCate.com](http://ScottCate.com)
 

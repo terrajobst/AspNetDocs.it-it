@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/contact-manager/iteration-4-make-the-application-loosely-coupled-cs
-title: "Iterazione #4-rendere l'applicazione regime di controllo (C#) | Microsoft Docs"
+title: "Iterazione #4-rendere l'applicazione regime di controllo (c#) | Microsoft Docs"
 author: microsoft
 description: In questo quarta iterazione, possiamo usufruire dei diversi modelli di progettazione di software per renderne più semplice da gestire e modificare l'applicazione Contact Manager. Per...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 02/20/2009
 ms.assetid: 829f589f-e201-4f6e-9ae6-08ae84322065
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-4-make-the-application-loosely-coupled-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 389627e610eebcdabee9b4db524e5915186db099
-ms.sourcegitcommit: 62db31596a7da029263cf06335aff12236fb3186
+ms.openlocfilehash: 8caa88d928517e1c71210cbe55e3961d4baf461a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58440352"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59381276"
 ---
-<a name="iteration-4--make-the-application-loosely-coupled-c"></a>Iterazione #4-rendere l'applicazione regime di controllo (C#)
-====================
+# <a name="iteration-4--make-the-application-loosely-coupled-c"></a>Iterazione #4-rendere l'applicazione regime di controllo (c#)
+
 by [Microsoft](https://github.com/microsoft)
 
 [Scaricare il codice](iteration-4-make-the-application-loosely-coupled-cs/_static/contactmanager_4_cs1.zip)
@@ -24,7 +24,7 @@ by [Microsoft](https://github.com/microsoft)
 > In questo quarta iterazione, possiamo usufruire dei diversi modelli di progettazione di software per renderne più semplice da gestire e modificare l'applicazione Contact Manager. Ad esempio, è eseguire il refactoring l'applicazione per usare il modello di Repository e il modello di inserimento delle dipendenze.
 
 
-## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>Creazione di un'applicazione MVC ASP.NET di gestione dei contatti (C#)
+## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>Creazione di un'applicazione MVC ASP.NET di gestione dei contatti (c#)
 
 In questa serie di esercitazioni, creiamo un'intera applicazione di gestione dei contatti dall'inizio alla fine. L'applicazione Contact Manager consente di archiviare le informazioni di contatto - nomi, i numeri di telefono e indirizzi di posta elettronica - per un elenco di persone.
 
@@ -169,11 +169,11 @@ Un controller Usa un ModelStateDictionary denominato ModelState per rappresentar
 
 Il pattern Decorator consente di eseguire il wrapping di una classe esistente in una nuova classe per implementare un'interfaccia. Il progetto Contact Manager include la classe ModelStateWrapper contenuta nel listato 7. La classe ModelStateWrapper implementa l'interfaccia nel listato 8.
 
-**Listato 7 - Models\Validation\ModelStateWrapper.cs**
+**Listing 7 - Models\Validation\ModelStateWrapper.cs**
 
 [!code-csharp[Main](iteration-4-make-the-application-loosely-coupled-cs/samples/sample7.cs)]
 
-**Listato 8 - Models\Validation\IValidationDictionary.cs**
+**Listing 8 - Models\Validation\IValidationDictionary.cs**
 
 [!code-csharp[Main](iteration-4-make-the-application-loosely-coupled-cs/samples/sample8.cs)]
 

@@ -8,15 +8,15 @@ ms.date: 03/14/2013
 ms.assetid: aadc5fa4-8215-4fc7-afd5-bcd2ef879728
 msc.legacyurl: /mvc/overview/security/xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages
 msc.type: authoredcontent
-ms.openlocfilehash: 5db661cccc58d1101f95091b069ab5cbfe78a378
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: de0e9cc168b9f18fd2bd83329106df45d7551b1a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57063948"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59386560"
 ---
-<a name="xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages"></a>Prevenzione di XSRF/CSRF in ASP.NET MVC e pagine Web
-====================
+# <a name="xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages"></a>Prevenzione di XSRF/CSRF in ASP.NET MVC e pagine Web
+
 da [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > Richiesta intersito falsa (nota anche come XSRF o CSRF) è un attacco contro applicazioni ospitate sul web in base al quale un sito web dannoso può influenzare l'interazione tra un browser client e un sito web considerato attendibile da tale browser. Questi attacchi sono possibili in quanto i web browser invia i token di autenticazione automaticamente con ogni richiesta a un sito web. L'esempio canonico è un cookie di autenticazione, ad esempio, ASP. Ticket di autenticazione basata su form di NET. Tuttavia, siti web che utilizzano qualsiasi meccanismo di autenticazione persistente (ad esempio l'autenticazione di Windows, Basic e così via) di destinazione per questi attacchi.
@@ -160,7 +160,7 @@ Il *GetTokens* metodo accetta come input un XSRF richiesta verifica sessione tok
 
 Lo sviluppatore può configurare il sistema di anti-XSRF dall'applicazione\_Start. La configurazione è a livello di codice. Le proprietà di statica *AntiForgeryConfig* tipo sono descritti di seguito. La maggior parte degli utenti che usano attestazioni saranno possibile impostare la proprietà UniqueClaimTypeIdentifier.
 
-| **Property** | **Descrizione** |
+| **Proprietà** | **Descrizione** |
 | --- | --- |
 | **AdditionalDataProvider** | Un' [IAntiForgeryAdditionalDataProvider](https://msdn.microsoft.com/library/system.web.helpers.iantiforgeryadditionaldataprovider(v=vs.111).aspx) che fornisce dati aggiuntivi durante la generazione di token e utilizza i dati aggiuntivi durante la convalida del token. Il valore predefinito è *null*. Per altre informazioni, vedere la [IAntiForgeryAdditionalDataProvider](https://msdn.microsoft.com/library/system.web.helpers.iantiforgeryadditionaldataprovider(v=vs.111).aspx) sezione. |
 | **CookieName** | Stringa che specifica il nome del cookie HTTP a cui viene usato per archiviare il token di sessione di anti-XSRF. Se questo valore non è impostato, verrà generato un nome da automaticamente in base al percorso virtuale distribuito dell'applicazione. Il valore predefinito è *null*. |

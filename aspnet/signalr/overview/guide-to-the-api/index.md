@@ -8,15 +8,15 @@ ms.date: 09/19/2014
 ms.assetid: af69e8d2-efdd-4d0b-9bbc-95353a65c0db
 msc.legacyurl: /signalr/overview/guide-to-the-api
 msc.type: chapter
-ms.openlocfilehash: b0c8879a66642f389378b5c6353fad2fd0ae9e47
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 442d8349e0b4d8f57923625533cebecac53c586a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57021328"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59394848"
 ---
-<a name="signalr-guide-to-the-api"></a>Guida di SignalR per le API
-====================
+# <a name="signalr-guide-to-the-api"></a>Guida di SignalR per le API
+
 > Documentazione su come usare l'API di hub SignalR. Per l'autorizzazione API, vedere la scheda sicurezza.
 
 

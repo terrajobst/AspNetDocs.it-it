@@ -8,15 +8,15 @@ ms.date: 04/21/2011
 ms.assetid: ab55ca81-ab9b-44a0-8700-dc6da2599335
 msc.legacyurl: /mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-4
 msc.type: authoredcontent
-ms.openlocfilehash: 6a07bf6c8a3fb926ae25fe1f6c9359e64cd7a290
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 40fec3a2ef4ee8d5e4abe4be4dfa144720a88a41
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57041218"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59391182"
 ---
-<a name="part-4-models-and-data-access"></a>Parte 4: Modelli e accesso ai dati
-====================
+# <a name="part-4-models-and-data-access"></a>Parte 4: Modelli e accesso ai dati
+
 by [Jon Galloway](https://github.com/jongalloway)
 
 > Music Store MVC è un'applicazione di esercitazione che introduce e spiega passo passo come usare ASP.NET MVC e Visual Studio per lo sviluppo Web.  

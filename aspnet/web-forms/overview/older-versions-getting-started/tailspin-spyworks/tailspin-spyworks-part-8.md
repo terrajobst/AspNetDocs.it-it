@@ -8,15 +8,15 @@ ms.date: 07/21/2010
 ms.assetid: 5aeadf8f-39f3-4f07-a78f-1c310c64fb23
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-8
 msc.type: authoredcontent
-ms.openlocfilehash: 3b49ee53e82933de9b50960779c28ca6ab7441e5
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: db8db4e3bff8047b48a7528b5146873ab6d84714
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57059838"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59398683"
 ---
-<a name="part-8-final-pages-exception-handling-and-conclusion"></a>Parte 8: Pagine finali, gestione delle eccezioni e conclusione
-====================
+# <a name="part-8-final-pages-exception-handling-and-conclusion"></a>Parte 8: Pagine finali, gestione delle eccezioni e conclusione
+
 da [Joe Stagner](https://github.com/JoeStagner)
 
 > Tailspin Spyworks viene illustrato come saliente è davvero semplice per creare applicazioni potenti e scalabili per la piattaforma .NET. Illustra come usare le nuove funzionalità in ASP.NET 4 per creare un negozio online, tra cui acquisti, estrazione e l'amministrazione.
@@ -28,7 +28,7 @@ da [Joe Stagner](https://github.com/JoeStagner)
 
 Creare una nuova pagina denominata ContactUs.aspx
 
-Usando la finestra di progettazione, creare il formato seguente, preso nota speciale per includere il ToolkitScriptManager e il controllo dell'Editor dal AjaxdControlToolkit. .
+Usando la finestra di progettazione, creare il formato seguente, preso nota speciale per includere il ToolkitScriptManager e il controllo dell'Editor dal AjaxControlToolkit. .
 
 ![](tailspin-spyworks-part-8/_static/image1.jpg)
 

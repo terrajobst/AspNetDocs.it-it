@@ -8,18 +8,18 @@ ms.date: 07/27/2010
 ms.assetid: a19ff2ce-3f7e-4358-9a51-a1403da9c63e
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/enable-automated-unit-testing
 msc.type: authoredcontent
-ms.openlocfilehash: 74abf391bb4aab3ff0d5079e0a24ba20287e18fb
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b0c9cd7ab36a8414e0d7d50a68b05bb09a5f24f1
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57049458"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59387906"
 ---
-<a name="enable-automated-unit-testing"></a>Abilitare unit test automatici
-====================
+# <a name="enable-automated-unit-testing"></a>Abilitare unit test automatici
+
 by [Microsoft](https://github.com/microsoft)
 
-[Scaricare PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
+[Scarica il PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
 
 > Si tratta di passaggio 12 di una liberazione [esercitazione sull'applicazione "NerdDinner"](introducing-the-nerddinner-tutorial.md) che si interromperanno-dettaglio come compilare una piccola, ma completa, applicazione web con ASP.NET MVC 1.
 > 
@@ -98,7 +98,7 @@ Visual Studio 2008 Professional (e versioni successive) includono un test runner
 
 *Nota: Nella finestra Risultati test di Visual Studio non visualizza la colonna del nome di classe per impostazione predefinita. È possibile aggiungere questo facendo clic all'interno della finestra risultati del Test e usando il comando di menu Aggiungi/Rimuovi colonne.*
 
-I due test richiedevano solo una frazione di secondo per eseguire – e come si può vedere entrambi passati. Ora possiamo passare e aumentare li creando altri test che verifica le convalide di regole specifici, nonché coprire i due metodi helper - IsUserHost() e IsUserRegisterd() – che abbiamo aggiunto alla classe Dinner. Con le verifiche in atto per la classe Dinner renderà molto più semplice e sicura per aggiungervi nuove regole business e le convalide in futuro. È possibile aggiungere la nuova logica della regola a cena e quindi verificare che non è stato interrotto qualsiasi della funzionalità per la logica precedente entro pochi secondi.
+I due test richiedevano solo una frazione di secondo per eseguire – e come si può vedere entrambi passati. Ora possiamo passare e aumentare li creando altri test che verifica le convalide di regole specifici, nonché coprire i due metodi helper - IsUserHost() e IsUserRegistered() – che abbiamo aggiunto alla classe Dinner. Con le verifiche in atto per la classe Dinner renderà molto più semplice e sicura per aggiungervi nuove regole business e le convalide in futuro. È possibile aggiungere la nuova logica della regola a cena e quindi verificare che non è stato interrotto qualsiasi della funzionalità per la logica precedente entro pochi secondi.
 
 Si noti come usando un nome descrittivo test rende facile da comprendere rapidamente ciò che si verifica ogni test. È consigliabile utilizzare il **strumenti -&gt;opzioni** comando di menu, aprire Strumenti di Test -&gt;schermata di configurazione di esecuzione di Test e verifica la "facendo doppio clic su un risultato del test non riusciti o senza risultati unit Visualizza casella di controllo al punto di errore nel test". In questo modo sarà possibile fare doppio clic su un errore nella finestra dei risultati dei test e passare immediatamente all'errore di asserzione.
 
@@ -211,7 +211,7 @@ Soprattutto, richiedere solo una frazione di secondo per l'esecuzione e non rich
 
 | **Sul lato dell'argomento: Framework di inserimento delle dipendenze** |
 | --- |
-| Esecuzione di inserimento delle dipendenze manuale (ad esempio, Microsoft è di sopra) funziona correttamente, ma diventa difficile da gestire come il numero di dipendenze e i componenti in un'applicazione aumenta. Sono disponibili diversi framework di inserimento delle dipendenze per .NET che consentono di offrire un'enorme flessibilità di gestione delle dipendenze. Questi Framework, detti anche contenitori "Inversion of Control" (IoC), forniscono meccanismi che consentono a un livello aggiuntivo di supporto della configurazione per specificare e passare le dipendenze per gli oggetti in fase di esecuzione (in genere tramite inserimento del costruttore ). Alcune dell'inserimento di dipendenze OSS più diffusi / infrastrutture IOC in .NET includono: AutoFac Ninject, Spring.NET, StructureMap e Windsor. ASP.NET MVC espone API che consentono agli sviluppatori di partecipare alla risoluzione e alla creazione di un'istanza dei controller e che consente l'inserimento di dipendenze di estendibilità / infrastrutture IoC correttamente l'applicazione da integrare all'interno di questo processo. Usando un framework di inserimento delle dipendenze/IOC sarebbe consentono inoltre di rimuovere il costruttore predefinito dal nostro DinnersController – cui verrebbe rimuovere completamente l'accoppiamento tra i dati e il DinnerRepositorys. Non verrà usato un inserimento di dipendenze / infrastruttura IOC con la nostra applicazione NerdDinner. Ma è un elemento che è stato possibile prendere in considerazione per il futuro se la codebase NerdDinner e funzionalità di aumento delle dimensioni. |
+| Esecuzione di inserimento delle dipendenze manuale (ad esempio, Microsoft è di sopra) funziona correttamente, ma diventa difficile da gestire come il numero di dipendenze e i componenti in un'applicazione aumenta. Sono disponibili diversi framework di inserimento delle dipendenze per .NET che consentono di offrire un'enorme flessibilità di gestione delle dipendenze. Questi Framework, detti anche contenitori "Inversion of Control" (IoC), forniscono meccanismi che consentono a un livello aggiuntivo di supporto della configurazione per specificare e passare le dipendenze per gli oggetti in fase di esecuzione (in genere tramite inserimento del costruttore ). Alcune dell'inserimento di dipendenze OSS più diffusi / infrastrutture IOC in .NET includono: AutoFac Ninject, Spring.NET, StructureMap e Windsor. ASP.NET MVC espone API che consentono agli sviluppatori di partecipare alla risoluzione e alla creazione di un'istanza dei controller e che consente l'inserimento di dipendenze di estendibilità / infrastrutture IoC correttamente l'applicazione da integrare all'interno di questo processo. Usando un framework di inserimento delle dipendenze/IOC sarebbe consentono inoltre di rimuovere il costruttore predefinito dal nostro DinnersController – cui verrebbe rimuovere completamente l'accoppiamento tra i dati e il DinnerRepository. Non verrà usato un inserimento di dipendenze / infrastruttura IOC con la nostra applicazione NerdDinner. Ma è un elemento che è stato possibile prendere in considerazione per il futuro se la codebase NerdDinner e funzionalità di aumento delle dimensioni. |
 
 ### <a name="creating-edit-action-unit-tests"></a>Creazione di Unit test di modifica azione
 

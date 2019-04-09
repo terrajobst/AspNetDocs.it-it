@@ -8,15 +8,15 @@ ms.date: 05/28/2015
 ms.assetid: 81ed82bf-b940-44f1-b94a-555d0cb7cc98
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/form-basics
 msc.type: authoredcontent
-ms.openlocfilehash: 28385ac2244ab0bfb38ee5fcbc64e6e11804612b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: f88f7a31551abda029bee0ec16aa35ce2ef5d2f0
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57028218"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59385956"
 ---
-<a name="introducing-aspnet-web-pages---html-form-basics"></a>Introduzione a pagine Web ASP.NET - nozioni fondamentali sui moduli HTML
-====================
+# <a name="introducing-aspnet-web-pages---html-form-basics"></a>Introduzione a pagine Web ASP.NET - nozioni fondamentali sui moduli HTML
+
 da [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Questa esercitazione illustra le nozioni di base di come creare un formato di input e come gestire l'input dell'utente quando si usa ASP.NET Web Pages (Razor). E ora che disponibile un database, si userà le tue competenze di form per consentire agli utenti di trovare il film specifici nel database. Si presuppone di aver completato la serie attraverso [Introduzione alla visualizzazione dati con ASP.NET Web Pages](/aspnet/web-pages/overview/getting-started/introducing-aspnet-web-pages-2/displaying-data).
@@ -88,7 +88,7 @@ La maggior parte degli elementi di input utente sono in formato HTML `<input>` e
 - Casella di testo: `<input type="text">`
 - Casella di controllo: `<input type="check">`
 - Pulsante di opzione: `<input type="radio">`
-- Pulsante: `<input type="button">`
+- Button: `<input type="button">`
 - Pulsante di invio: `<input type="submit">`
 
 È anche possibile usare la `<textarea>` elemento per creare una casella di testo su più righe e di `<select>` elemento per creare un elenco a discesa o un elenco scorrevole. (Per ulteriori informazioni su HTML costituiscono gli elementi, vedere [form HTML e Input](http://www.w3schools.com/html/html_forms.asp) sul sito W3Schools.)
@@ -215,7 +215,7 @@ Se è mettere in pratica tutti questi elementi, viene visualizzato il codice seg
 
 > [!NOTE] 
 > 
-> **Importante**: Utilizzo di segnaposti (come `@0`) per passare valori a un comando SQL viene *estremamente importante* per la sicurezza. Il modo in cui è visualizzato qui, con segnaposto per i dati delle variabili, è l'unico modo, è necessario costruire i comandi SQL.
+> **Importante!** Utilizzo di segnaposti (come `@0`) per passare valori a un comando SQL viene *estremamente importante* per la sicurezza. Il modo in cui è visualizzato qui, con segnaposto per i dati delle variabili, è l'unico modo, è necessario costruire i comandi SQL.
 > 
 > Mai comporre un'istruzione SQL tramite la realizzazione di testo letterale (concatenando) e i valori che ottenere dall'utente. Concatenazione di input dell'utente in un'istruzione SQL viene aperto il sito a un *attacco SQL injection* in cui un utente malintenzionato invia i valori a una pagina che hack del database. (Altre informazioni nell'articolo [attacchi SQL Injection](https://msdn.microsoft.com/library/ms161953.aspx) il sito Web MSDN.)
 
@@ -356,7 +356,7 @@ Nella prossima esercitazione, si creerà una pagina che utilizza una forma per c
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-- [Introduzione alla programmazione Web ASP.NET usando la sintassi Razor](https://go.microsoft.com/fwlink/?LinkID=202890)
+- [Introduzione alla programmazione Web ASP.NET utilizzando la sintassi Razor](https://go.microsoft.com/fwlink/?LinkID=202890)
 - [Clausola WHERE SQL](http://www.w3schools.com/sql/sql_where.asp) sul sito W3Schools
 - [Le definizioni di metodo](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html) articolo sul sito W3C
 

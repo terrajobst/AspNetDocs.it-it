@@ -8,21 +8,21 @@ ms.date: 10/05/2011
 ms.assetid: 1bcf9a1c-ed34-4ed0-ab91-253df08fc6ff
 msc.legacyurl: /web-forms/videos/vs-2005
 msc.type: chapter
-ms.openlocfilehash: 0085424743ad2592dd06c58adba801bd676f2c0f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 25d9cc02ef9b0e8f068c9e84469d9661b06f0b28
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57022058"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59381107"
 ---
-<a name="visual-studio-2005"></a>Visual Studio 2005
-====================
+# <a name="visual-studio-2005"></a>Visual Studio 2005
+
 > Come usare Visual Studio 2005 Team System e componenti aggiuntivi per eseguire il test, distribuzione e altre attività.
 
 
 - [Introduzione agli unit test con Team System](introduction-to-unit-testing-with-team-system.md)
-- [Introduzione al testing delle applicazioni Web con Team System](introduction-to-testing-web-applications-with-team-system.md)
-- [Introduzione al testing del carico delle applicazioni Web con Team System](introduction-to-load-testing-web-applications-with-team-system.md)
+- [Introduzione al test delle applicazioni Web con Team System](introduction-to-testing-web-applications-with-team-system.md)
+- [Introduzione al test di carico delle applicazioni Web con Team System](introduction-to-load-testing-web-applications-with-team-system.md)
 - [Introduzione ai test manuali con Team System](introduction-to-manual-testing-with-team-system.md)
 - [Introduzione alla gestione e all'esecuzione di test con Team System](introduction-to-managing-and-running-tests-with-team-system.md)
 - [Misurazione del valore di business di AJAX](measuring-the-business-value-of-ajax.md)

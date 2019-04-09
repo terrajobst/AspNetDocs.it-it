@@ -8,15 +8,15 @@ ms.date: 11/13/2006
 ms.assetid: bbd6b7f7-b98a-48b4-93f3-341d6a4f53c0
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting-with-the-datalist-and-repeater/paging-report-data-in-a-datalist-or-repeater-control-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 2d867c7ae073fafe1e9674deb7c03bf1cfd24dd7
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 69a6843783dad3d8fcd8a5b93c9d8a31f9bb8ec0
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425834"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59383239"
 ---
-<a name="paging-report-data-in-a-datalist-or-repeater-control-vb"></a>Suddivisione in pagine dei dati dei report in un controllo DataList o Repeater (VB)
-====================
+# <a name="paging-report-data-in-a-datalist-or-repeater-control-vb"></a>Suddivisione in pagine dei dati dei report in un controllo DataList o Repeater (VB)
+
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Scaricare l'App di esempio](http://download.microsoft.com/download/4/a/7/4a7a3b18-d80e-4014-8e53-a6a2427f0d93/ASPNET_Data_Tutorial_44_VB.exe) o [Scarica il PDF](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/datatutorial44vb1.pdf)
@@ -53,7 +53,7 @@ Prima di iniziare questa esercitazione, lasciare s prima di tutto si consiglia d
 Successivamente, aprire il `Default.aspx` pagina e trascinare il `SectionLevelTutorialListing.ascx` controllo utente dal `UserControls` cartella nell'area di progettazione. Questo controllo utente, che è stato creato nel [pagine Master e spostamento nel sito](../introduction/master-pages-and-site-navigation-vb.md) esercitazione enumera la mappa del sito e consente di visualizzare tali esercitazioni nella sezione corrente in un elenco puntato.
 
 
-[![Aggiungere il controllo utente sectionleveltutoriallisting. ascx a default. aspx](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image3.png)](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image2.png)
+[![Ail controllo utente sectionleveltutoriallisting. ascx a default. aspx gg](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image3.png)](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image2.png)
 
 **Figura 2**: Aggiungere il `SectionLevelTutorialListing.ascx` controllo utente da `Default.aspx` ([fare clic per visualizzare l'immagine con dimensioni normali](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image4.png))
 
@@ -110,7 +110,7 @@ Aggiungere un metodo per la `ProductsBLL` classe denominata `GetProductsAsPagedD
 Con il `GetProductsAsPagedDataSource` aggiunto al metodo il `ProductsBLL` (classe), possiamo creare un controllo DataList o Repeater che fornisce il paging predefinito. Iniziare aprendo il `Paging.aspx` nella pagina la `PagingSortingDataListRepeater` cartelle e trascinare un controllo DataList dalla casella degli strumenti nella finestra di progettazione, l'impostazione di DataList s `ID` proprietà `ProductsDefaultPaging`. Nello smart tag DataList s, creare un nuovo oggetto ObjectDataSource denominato `ProductsDefaultPagingDataSource` e configurarlo in modo che recupera i dati utilizzando il `GetProductsAsPagedDataSource` (metodo).
 
 
-[![Creare un oggetto ObjectDataSource e configurarlo per usare il metodo () GetProductsAsPagedDataSource](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image8.png)](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image7.png)
+[![CCrea un oggetto ObjectDataSource e configurarlo per usare il metodo () GetProductsAsPagedDataSource](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image8.png)](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image7.png)
 
 **Figura 5**: Creare un ObjectDataSource e configurarlo per usare la `GetProductsAsPagedDataSource` `()` metodo ([fare clic per visualizzare l'immagine con dimensioni normali](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image9.png))
 
@@ -118,7 +118,7 @@ Con il `GetProductsAsPagedDataSource` aggiunto al metodo il `ProductsBLL` (class
 Impostare gli elenchi a discesa nell'aggiornamento, inserimento ed eliminare schede su (nessuno).
 
 
-[![Impostare l'elenco a discesa sono elencati nell'aggiornamento, inserimento ed eliminare schede su (nessuno)](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image11.png)](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image10.png)
+[![SImposta l'elenco a discesa sono elencati nelle schede UPDATE, INSERT e DELETE su (nessuno)](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image11.png)](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image10.png)
 
 **Figura 6**: Impostare l'elenco a discesa sono elencati nell'aggiornamento, inserimento ed eliminare schede su (nessuno) ([fare clic per visualizzare l'immagine con dimensioni normali](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image12.png))
 
@@ -130,7 +130,7 @@ L'indice della pagina e i valori di dimensioni di pagina devono essere memorizza
 In particolare, usare il pageIndex campi querystring e pageSize per il `pageIndex` e `pageSize` parametri, rispettivamente (vedere la figura 7). Si consiglia di impostare i valori predefiniti per questi parametri, come i valori di stringa di query non può essere presenti quando un utente prima visita questa pagina. Per la `pageIndex`, impostare il valore predefinito 0 (che verrà visualizzata la prima pagina di dati) e `pageSize` valore predefinito di s a 4.
 
 
-[![Utilizzare il parametro QueryString come origine per i parametri pageIndex e pageSize](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image14.png)](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image13.png)
+[![USe la stringa di query come origine per i parametri pageIndex e pageSize](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image14.png)](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image13.png)
 
 **Figura 7**: Usare il parametro QueryString come origine per il `pageIndex` e `pageSize` parametri ([fare clic per visualizzare l'immagine con dimensioni normali](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image15.png))
 
@@ -149,7 +149,7 @@ Dopo aver apportato queste modifiche, il markup s DataList e ObjectDataSource do
 Inizialmente gli utenti in visita questa pagina tramite un browser, né il `pageIndex` né `pageSize` ai parametri querystring vengono forniti. Di conseguenza, vengono utilizzati i valori predefiniti pari a 0 e 4. Come illustrato nella figura 8, ciò comporta un controllo DataList che visualizza i primi quattro prodotti.
 
 
-[![Sono elencati i primi quattro prodotti](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image17.png)](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image16.png)
+[![The primi quattro prodotti sono elencati](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image17.png)](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image16.png)
 
 **Figura 8**: Sono elencati i primi quattro prodotti ([fare clic per visualizzare l'immagine con dimensioni normali](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image18.png))
 
@@ -157,7 +157,7 @@ Inizialmente gli utenti in visita questa pagina tramite un browser, né il `page
 Senza un'interfaccia di paging, qui s attualmente non semplice significa che un utente può passare alla seconda pagina di dati. Si creerà un'interfaccia di paging nel passaggio 4. Per il momento, tuttavia, il paging solo scopo, specificare direttamente i criteri di paging nella stringa di query. Ad esempio, per visualizzare la seconda pagina, modificare l'URL nella barra degli indirizzi del browser s dalla `Paging.aspx` a `Paging.aspx?pageIndex=2` e premere INVIO. In questo modo la seconda pagina di dati da visualizzare (vedere la figura 9).
 
 
-[![Viene visualizzato la seconda pagina di dati](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image20.png)](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image19.png)
+[![Tegli seconda pagina di dati viene visualizzato](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image20.png)](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image19.png)
 
 **Figura 9**: Viene visualizzato la seconda pagina di dati ([fare clic per visualizzare l'immagine con dimensioni normali](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image21.png))
 
@@ -238,12 +238,12 @@ Let s completare l'interfaccia di paging per informare gli utenti sul paging son
 Illustrato nella figura 10 `Paging.aspx` alla prima visita. Poiché la stringa di query è vuoto, DataList per impostazione predefinita che mostra i primi quattro prodotti; i pulsanti Indietro e First sono disabilitati. Selezione di Avanti vengono visualizzati i quattro record (vedere la figura 11); i primo i pulsanti sono ora abilitati.
 
 
-[![Viene visualizzato la prima pagina di dati](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image23.png)](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image22.png)
+[![Tegli dei dati nella prima pagina viene visualizzato](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image23.png)](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image22.png)
 
 **Figura 10**: Viene visualizzato la prima pagina di dati ([fare clic per visualizzare l'immagine con dimensioni normali](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image24.png))
 
 
-[![Viene visualizzato la seconda pagina di dati](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image26.png)](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image25.png)
+[![Tegli seconda pagina di dati viene visualizzato](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image26.png)](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image25.png)
 
 **Figura 11**: Viene visualizzato la seconda pagina di dati ([fare clic per visualizzare l'immagine con dimensioni normali](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image27.png))
 

@@ -8,15 +8,15 @@ ms.date: 11/01/2010
 ms.assetid: 658b149b-d770-46bf-8b4b-4e47cca242f3
 msc.legacyurl: /mvc/overview/older-versions/creating-a-mvc-3-application-with-razor-and-unobtrusive-javascript
 msc.type: authoredcontent
-ms.openlocfilehash: f60ca3e76fda8a18da1ad83e955e5e4759f5e3af
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 91c96cc413e63ad2fc160ffbb473c4f3e1ada3e4
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57053168"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59401062"
 ---
-<a name="creating-a-mvc-3-application-with-razor-and-unobtrusive-javascript"></a>Creazione di un'applicazione MVC 3 con Razor e JavaScript discreto
-====================
+# <a name="creating-a-mvc-3-application-with-razor-and-unobtrusive-javascript"></a>Creazione di un'applicazione MVC 3 con Razor e JavaScript discreto
+
 by [Microsoft](https://github.com/microsoft)
 
 > L'applicazione web di esempio elenco utenti viene illustrato quanto sia semplice creare applicazioni ASP.NET MVC 3 con il motore di visualizzazione Razor. L'applicazione di esempio viene illustrato come usare il nuovo motore di visualizzazione Razor con ASP.NET MVC versione 3 e Visual Studio 2010 per creare un sito Web di elenco di utenti fittizi che include funzionalità quali la creazione, visualizzazione, modifica e l'eliminazione degli utenti.
@@ -36,7 +36,7 @@ L'applicazione che sarà compilata è un sito Web di elenco semplice di utente. 
 
 Per avviare l'esercitazione, aprire Visual Studio 2010 e creare un nuovo progetto usando il *applicazione Web ASP.NET MVC 3* modello. Denominare l'applicazione &quot;Mvc3Razor&quot;.
 
-[![Nuovo progetto MVC 3](creating-a-mvc-3-application-with-razor-and-unobtrusive-javascript/_static/image3.png)](creating-a-mvc-3-application-with-razor-and-unobtrusive-javascript/_static/image2.png)
+[![Nprogetto MVC 3 uova](creating-a-mvc-3-application-with-razor-and-unobtrusive-javascript/_static/image3.png)](creating-a-mvc-3-application-with-razor-and-unobtrusive-javascript/_static/image2.png)
 
 Nel **nuovo progetto ASP.NET MVC 3** finestra di dialogo, seleziona **applicazione Internet**, selezionare il motore di visualizzazione Razor e quindi fare clic su **OK**.
 

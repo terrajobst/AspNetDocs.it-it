@@ -8,18 +8,18 @@ ms.date: 04/01/2009
 ms.assetid: 548e75f6-4d6c-4cb4-8da8-417915eb8393
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/common-configuration-differences-between-development-and-production-vb
 msc.type: authoredcontent
-ms.openlocfilehash: ec1d575fac4527db8f5bcab5f0d84e1f17eac46b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 48af71fc5ff4dad3371687726660a5d914236df5
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57048778"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59379378"
 ---
-<a name="common-configuration-differences-between-development-and-production-vb"></a>Differenze di configurazione più comuni tra sviluppo e produzione (VB)
-====================
+# <a name="common-configuration-differences-between-development-and-production-vb"></a>Differenze di configurazione più comuni tra sviluppo e produzione (VB)
+
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Scaricare PDF](http://download.microsoft.com/download/E/8/9/E8920AE6-D441-41A7-8A77-9EF8FF970D8B/aspnet_tutorial05_ConfigDifferences_vb.pdf)
+[Scarica il PDF](http://download.microsoft.com/download/E/8/9/E8920AE6-D441-41A7-8A77-9EF8FF970D8B/aspnet_tutorial05_ConfigDifferences_vb.pdf)
 
 > Nelle esercitazioni precedenti è stato distribuito il nostro sito Web tramite la copia di tutti i file pertinenti dall'ambiente di sviluppo all'ambiente di produzione. Non è, tuttavia, non comune per essere differenze di configurazione tra gli ambienti, che richiede che ogni ambiente dispone di un file Web. config univoco. Questa esercitazione esamina le differenze di configurazione tipici ed esamina le strategie per la gestione delle informazioni di configurazione separato.
 

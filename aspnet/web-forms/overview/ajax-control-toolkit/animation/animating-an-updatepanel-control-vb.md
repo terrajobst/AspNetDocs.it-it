@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: 4c306a2c-92b6-4904-b70b-365b847334fe
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/animating-an-updatepanel-control-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 797ee37eb440bed261403aa0e1b68f38d3cd8ef9
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a7c40ebe359e21602d9f1de8205e1a7c808acc85
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57054918"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59384253"
 ---
-<a name="animating-an-updatepanel-control-vb"></a>Animazione di un controllo UpdatePanel (VB)
-====================
+# <a name="animating-an-updatepanel-control-vb"></a>Animazione di un controllo UpdatePanel (VB)
+
 da [Christian Wenz](https://github.com/wenz)
 
 [Scaricare il codice](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/UpdatePanelAnimation1.vb.zip) o [Scarica il PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/updatepanelanimation1VB.pdf)
@@ -50,7 +50,7 @@ In questo scenario, il contenuto di nuovo il `UpdatePanel` (dopo il postback) de
 Ora ogni volta che si verifica un postback all'interno di UpdatePanel, il nuovo contenuto del Pannello di dissolvenza in entrata senza problemi.
 
 
-[![Il passaggio successivo della procedura guidata è la dissolvenza in entrata](animating-an-updatepanel-control-vb/_static/image2.png)](animating-an-updatepanel-control-vb/_static/image1.png)
+[![Tpassaggio di he successivo della procedura guidata è la dissolvenza in entrata](animating-an-updatepanel-control-vb/_static/image2.png)](animating-an-updatepanel-control-vb/_static/image1.png)
 
 Il passaggio successivo della procedura guidata è la dissolvenza in entrata ([fare clic per visualizzare l'immagine con dimensioni normali](animating-an-updatepanel-control-vb/_static/image3.png))
 

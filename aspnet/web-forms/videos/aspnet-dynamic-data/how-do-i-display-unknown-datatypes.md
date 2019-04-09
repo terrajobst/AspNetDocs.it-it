@@ -8,15 +8,15 @@ ms.date: 05/08/2008
 ms.assetid: ce7a9af6-d01b-46a7-8b47-e1024b693830
 msc.legacyurl: /web-forms/videos/aspnet-dynamic-data/how-do-i-display-unknown-datatypes
 msc.type: video
-ms.openlocfilehash: d100450999d34f36b38d4423baf2727428fca2a7
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a57464c575e5ababdcf52593fae0cc6d2dc055e3
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57056218"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59394133"
 ---
-<a name="how-do-i-display-unknown-datatypes"></a>Ricerca per categorie tipi di dati visualizzato sconosciuto
-====================
+# <a name="how-do-i-display-unknown-datatypes"></a>Ricerca per categorie tipi di dati visualizzato sconosciuto
+
 da [Scott Hanselman](https://github.com/shanselman)
 
 In questo video viene illustrato come configurare i dati dinamici per gestire un tipo di dati personalizzato completamente sconosciuto che viene archiviato nel database come un BLOB binario.

@@ -8,15 +8,15 @@ ms.date: 03/02/2009
 ms.assetid: cb33b28c-3025-4bd1-a1fa-eaa3af7bb56f
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/creating-an-action-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 243248ee30c6a2db7f102f7743d0393d4a6a9d24
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c66e066bd3e241e667924dacc114f57151df822a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57056128"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59389557"
 ---
-<a name="creating-an-action-c"></a>Creazione di un'azione (C#)
-====================
+# <a name="creating-an-action-c"></a>Creazione di un'azione (C#)
+
 by [Microsoft](https://github.com/microsoft)
 
 > Informazioni su come aggiungere una nuova azione a un controller MVC ASP.NET. Informazioni sui requisiti per un metodo su cui eseguire un'azione.
@@ -28,7 +28,7 @@ L'obiettivo di questa esercitazione è illustrare come è possibile creare una n
 
 Aggiungere una nuova azione a un controller aggiungendo un nuovo metodo al controller. Ad esempio, il controller nel listato 1 contiene un'azione denominata index () e un'azione denominata sayHello (). Entrambi i metodi vengono esposti come azioni.
 
-**Listato 1 - controllers\homecontroller.cs.**
+**Listing 1 - Controllers\HomeController.cs**
 
 [!code-csharp[Main](creating-an-action-cs/samples/sample1.cs)]
 
@@ -50,14 +50,14 @@ Quando si aggiunge un metodo che non violano tali requisiti per un controller, i
 
 Se è necessario creare un metodo pubblico in una classe controller e non si vuole esporre il metodo come un'azione del controller è possibile impedire il metodo da cui viene richiamato usando l'attributo [NonAction]. Ad esempio, il controller nel listato 2 contiene un metodo pubblico denominato CompanySecrets() decorata con l'attributo [NonAction].
 
-**Listato 2 - Controllers\WorkController.cs**
+**Listing 2 - Controllers\WorkController.cs**
 
 [!code-csharp[Main](creating-an-action-cs/samples/sample2.cs)]
 
 Se si prova a richiamare l'azione del controller CompanySecrets() digitando /Work/CompanySecrets nella barra degli indirizzi del browser si riceverà il messaggio di errore nella figura 1.
 
 
-[![Richiama un metodo NonAction](creating-an-action-cs/_static/image1.jpg)](creating-an-action-cs/_static/image1.png)
+[![Iun metodo NonAction nvoking](creating-an-action-cs/_static/image1.jpg)](creating-an-action-cs/_static/image1.png)
 
 **Figura 01**: Richiama un metodo NonAction ([fare clic per visualizzare l'immagine con dimensioni normali](creating-an-action-cs/_static/image2.png))
 

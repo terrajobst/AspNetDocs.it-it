@@ -8,15 +8,15 @@ ms.date: 02/18/2013
 ms.assetid: 0a1f88bd-97da-4ed1-86f1-605199dc75a4
 msc.legacyurl: /web-forms/overview/getting-started/hands-on-labs/whats-new-in-web-forms-in-aspnet-45
 msc.type: authoredcontent
-ms.openlocfilehash: 78cb6dec71e6b4974fdea4f205d1a36ebdfc3104
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 52f6ec17fb21019e93ebf2795e95d5b27e4edbe6
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58424444"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59401741"
 ---
-<a name="whats-new-in-web-forms-in-aspnet-45"></a>Novità di Web Forms in ASP.NET 4.5
-====================
+# <a name="whats-new-in-web-forms-in-aspnet-45"></a>Novità di Web Forms in ASP.NET 4.5
+
 da [Camp Web Team](https://twitter.com/webcamps)
 
 > La nuova versione di Web Form ASP.NET introduce una serie di miglioramenti finalizzate soprattutto a migliorare l'esperienza utente quando si lavora con i dati.
@@ -396,11 +396,11 @@ ASP.NET 4.5 introduce convalida le annotazioni dei dati per i Web Form. Anziché
     [!code-csharp[Main](whats-new-in-web-forms-in-aspnet-45/samples/sample23.cs)]
 
     > [!NOTE]
-    > .NET framework 4.5 ha esteso la raccolta di annotazioni dei dati esistenti. Queste sono alcune delle annotazioni dei dati è possibile utilizzare: [CreditCard], [Phone], [EmailAddress], [intervallo], [confrontare], [Url], [FileExtensions], [Required], [Key], [RegularExpression].
+    > .NET framework 4.5 ha esteso la raccolta di annotazioni dei dati esistenti. Queste sono alcune delle annotazioni dei dati è possibile utilizzare: [CreditCard], [Phone], [EmailAddress], [intervallo], [confrontare], [Url], [FileExtensions], [Required], [chiave], [RegularExpression].
     > 
     > Alcuni esempi d'uso:
     > 
-    > [Key]: Specifies that an attribute is the unique identifier
+    > [Chiave]: Specifies that an attribute is the unique identifier
     > 
     > [Range(0.4, 0.5, ErrorMessage=&quot;{Write an error message}&quot;]: Double range
     > 
@@ -612,7 +612,7 @@ Le operazioni che richiedono molto tempo nel proprio sito web sono ottimi candid
 > Inoltre, è possibile distribuire questa applicazione di Azure seguenti [appendice b: Pubblicazione di un'applicazione ASP.NET MVC 4 con distribuzione Web](#AppendixB).
 
 
-* * *
+---
 
 <a id="Summary"></a>
 ## <a name="summary"></a>Riepilogo
@@ -814,7 +814,7 @@ Con i frammenti di codice, hai tutto il codice che necessario a tua disposizione
 
 *Uso di frammenti di codice di Visual Studio per inserire codice nel progetto*
 
-***Per aggiungere un frammento di codice utilizzando la tastiera (solo C#)***
+***Per aggiungere un frammento di codice utilizzando la tastiera (solo c#)***
 
 1. Posizionare il cursore in cui si vuole inserire il codice.
 2. Iniziare a digitare il nome del frammento di codice (senza spazi o trattini).
@@ -834,7 +834,7 @@ Con i frammenti di codice, hai tutto il codice che necessario a tua disposizione
 
 *Il frammento di codice e premere nuovamente Tab espanderà*
 
-***Per aggiungere un frammento di codice usando il mouse (C#, Visual Basic e XML)*** 1. Pulsante destro del mouse in cui si desidera inserire il frammento di codice.
+***Per aggiungere un frammento di codice usando il mouse (c#, Visual Basic e XML)*** 1. Pulsante destro del mouse in cui si desidera inserire il frammento di codice.
 
 1. Selezionare **Inserisci frammento** aggiungendo **frammenti di codice**.
 2. Selezionare il frammento di codice rilevante dall'elenco, facendo clic su di esso.

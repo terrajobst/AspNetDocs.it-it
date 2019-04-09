@@ -8,15 +8,15 @@ ms.date: 07/04/2012
 ms.assetid: 9d9cb3b0-f4a7-434e-a508-9fc0ad0eb813
 msc.legacyurl: /web-api/overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-5
 msc.type: authoredcontent
-ms.openlocfilehash: d019941700992e173a5812b11b558b6726dfd809
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b06f738d821d78f74069c3bf0f6c0880796195d2
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57025168"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59393288"
 ---
-<a name="part-5-creating-a-dynamic-ui-with-knockoutjs"></a>Parte 5: Creazione di un'interfaccia utente dinamica con Knockout.js
-====================
+# <a name="part-5-creating-a-dynamic-ui-with-knockoutjs"></a>Parte 5: Creazione di un'interfaccia utente dinamica con Knockout.js
+
 da [Mike Wasson](https://github.com/MikeWasson)
 
 [Download progetto completato](http://code.msdn.microsoft.com/ASP-NET-Web-API-with-afa30545)

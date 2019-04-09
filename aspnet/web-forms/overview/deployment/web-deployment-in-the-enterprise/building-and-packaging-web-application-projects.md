@@ -8,18 +8,18 @@ ms.date: 05/04/2012
 ms.assetid: 94e92f80-a7e3-4d18-9375-ff8be5d666ac
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/building-and-packaging-web-application-projects
 msc.type: authoredcontent
-ms.openlocfilehash: 406b8e6daf47196eb98700efe41e34c02d5682d3
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 82134b8da7ab5ca49fef8e769128db9010fd231f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57028698"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59396330"
 ---
-<a name="building-and-packaging-web-application-projects"></a>Compilazione e creazione di pacchetti di progetti di applicazione Web
-====================
+# <a name="building-and-packaging-web-application-projects"></a>Compilazione e creazione di pacchetti di progetti di applicazione Web
+
 da [Jason Lee](https://github.com/jrjlee)
 
-[Scaricare PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Scarica il PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Quando si desidera distribuire un progetto di applicazione web in un ambiente server remoto, la prima attività consiste nel compilare il progetto e generare un pacchetto di distribuzione web. In questo argomento viene descritto il funzionamento del processo di compilazione per progetti di applicazione web. In particolare, la descrive:
 > 

@@ -8,18 +8,18 @@ ms.date: 05/04/2012
 ms.assetid: 55f1ae45-fcb5-43a9-8415-fa5b935fc9c9
 msc.legacyurl: /web-forms/overview/deployment/advanced-enterprise-web-deployment/running-windows-powershell-scripts-from-msbuild-project-files
 msc.type: authoredcontent
-ms.openlocfilehash: 018a962c3bac774a770b83b2fd1f44f72b6f5b09
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 198f8c907cf866bd0fd1ae67cf7169a63dda4bc9
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57047298"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59384700"
 ---
-<a name="running-windows-powershell-scripts-from-msbuild-project-files"></a>Esecuzione di script di Windows PowerShell dai file di progetto di MSBuild
-====================
+# <a name="running-windows-powershell-scripts-from-msbuild-project-files"></a>Esecuzione di script di Windows PowerShell dai file di progetto di MSBuild
+
 da [Jason Lee](https://github.com/jrjlee)
 
-[Scaricare PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Scarica il PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Questo argomento descrive come eseguire uno script di Windows PowerShell come parte di un processo di compilazione e distribuzione. È possibile eseguire uno script in locale (in altre parole, nel server di compilazione) o in modalità remota, ad esempio in un server di database o un server web di destinazione.
 > 

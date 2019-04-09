@@ -8,15 +8,15 @@ ms.date: 09/01/2007
 ms.assetid: 526b4ec1-4a80-4fae-bf0d-af5cb78f5d02
 msc.legacyurl: /web-forms/videos/aspnet-ajax/how-do-i-create-an-aspnet-ajax-extender-from-scratch
 msc.type: video
-ms.openlocfilehash: c9e2b3e29c7fd907679c97277c243bd12b4bdff9
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 3a67fb695caa0fcde12c85372085b6aff97f4068
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57034808"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59388754"
 ---
-<a name="how-do-i-create-an-aspnet-ajax-extender-from-scratch"></a>[Procedura:] Creare un Extender di ASP.NET AJAX da zero?
-====================
+# <a name="how-do-i-create-an-aspnet-ajax-extender-from-scratch"></a>[Procedura:] Creare un Extender di ASP.NET AJAX da zero?
+
 da [Chris Pels](https://twitter.com/chrispels)
 
 Informazioni su come creare un'estensione di ASP.NET AJAX per un controllo server ASP.NET standard. Si verrà illustrati come aggiungere le proprietà lato server e JavaScript sul lato client per estendere il comportamento del controllo casella di testo standard, anche se lo stesso approccio può essere applicato a qualsiasi altro controllo server. Per ulteriori informazioni sulla creazione di un extender di AJAX ASP.NET, vedere la [creazione di una nuova estensione](../../overview/ajax-control-toolkit/getting-started/creating-a-custom-ajax-control-toolkit-control-extender-cs.md) procedura dettagliata.

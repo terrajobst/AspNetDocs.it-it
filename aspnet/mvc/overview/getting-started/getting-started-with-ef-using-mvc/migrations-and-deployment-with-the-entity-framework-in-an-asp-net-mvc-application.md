@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.assetid: d4dfc435-bda6-4621-9762-9ba270f8de4e
 msc.legacyurl: /mvc/overview/getting-started/getting-started-with-ef-using-mvc/migrations-and-deployment-with-the-entity-framework-in-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: dd6bf5d8eb8a05dad1d230ef40c9b863e2af7094
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1f25a9afdf379d725496bd88f6ac192ab19930ca
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57036988"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59384513"
 ---
 # <a name="tutorial-use-ef-migrations-in-an-aspnet-mvc-app-and-deploy-to-azure"></a>Esercitazione: Usare migrazioni di Entity Framework in un'app ASP.NET MVC e distribuire in Azure
 
@@ -168,8 +168,8 @@ Distribuire il database al database SQL Azure. Database SQL è un servizio di da
 10. Modificare [regole di confronto](/sql/relational-databases/collations/collation-and-unicode-support) in base alle esigenze.
 11. Immettere un amministratore **nome utente amministratore SQL** e **Password amministratore SQL**.
 
-   - Se si seleziona **Nuovo Database di SQL server**, definire un nuovo nome e una password che verranno utilizzati in un secondo momento quando si accede al database.
-   - Se si seleziona un server che è stato creato in precedenza, immettere le credenziali per il server.
+    - Se si seleziona **Nuovo Database di SQL server**, definire un nuovo nome e una password che verranno utilizzati in un secondo momento quando si accede al database.
+    - Se si seleziona un server che è stato creato in precedenza, immettere le credenziali per il server.
 
 12. Raccolta di dati di telemetria può essere abilitata per il servizio App con Application Insights. Con alcune operazioni di configurazione applicazione approfondimenti raccoglie eventi importanti, eccezioni, dipendenza, richiesta e le informazioni di traccia. Per ulteriori informazioni dagli esperti dell'applicazione, vedere [Monitor Azure](https://azure.microsoft.com/services/monitor/).
 13. Fare clic su **crea** nella parte inferiore per indicare che è terminato.

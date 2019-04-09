@@ -8,20 +8,20 @@ ms.date: 08/15/2012
 ms.assetid: 2ece0bf4-aae5-4ff4-8f62-28e0819d4f86
 msc.legacyurl: /web-forms/overview/getting-started/using-page-inspector-in-a-visual-studio-11-beta-web-forms-project
 msc.type: authoredcontent
-ms.openlocfilehash: d2c377f8466f8f324b75ce60860aa00c11bc0ffe
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c39e1cf42fde382a9e74d7f865f0dac1aa62ddc8
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57058478"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59384240"
 ---
-<a name="using-page-inspector-for-visual-studio-2012-in-aspnet-web-forms"></a>Uso di Controllo pagina per Visual Studio 2012 in Web Forms ASP.NET
-====================
+# <a name="using-page-inspector-for-visual-studio-2012-in-aspnet-web-forms"></a>Uso di Controllo pagina per Visual Studio 2012 in Web Forms ASP.NET
+
 da Tim Ammann
 
 > Controllo pagina per Visual Studio 2012 è uno strumento di sviluppo web con un browser integrato. Selezionare un elemento nel browser integrato e controllo pagina evidenzia immediatamente l'origine e CSS dell'elemento. È possibile esplorare tutte le pagine nell'applicazione, rapidamente trovare le origini di markup sottoposto a rendering e usare gli strumenti del browser direttamente all'interno dell'ambiente di Visual Studio.
 > 
-> Questa esercitazione shwos come abilitare la modalità controllo rapidamente individuare e modificare le regole CSS e il testo all'interno del progetto web. L'esercitazione Usa un progetto di applicazione Web Form, ma è anche possibile utilizzare controllo pagina per progetti di siti Web e [MVC](https://go.microsoft.com/?linkid=9802002) applicazioni.
+> Questa esercitazione illustra come abilitare la modalità controllo rapidamente individuare e modificare le regole CSS e il testo all'interno del progetto web. L'esercitazione Usa un progetto di applicazione Web Form, ma è anche possibile utilizzare controllo pagina per progetti di siti Web e [MVC](https://go.microsoft.com/?linkid=9802002) applicazioni.
 > 
 > L'esercitazione include le sezioni seguenti:
 > 

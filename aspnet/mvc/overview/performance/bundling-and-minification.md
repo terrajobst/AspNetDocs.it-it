@@ -8,15 +8,15 @@ ms.date: 08/23/2012
 ms.assetid: 5894dc13-5d45-4dad-8096-136499120f1d
 msc.legacyurl: /mvc/overview/performance/bundling-and-minification
 msc.type: authoredcontent
-ms.openlocfilehash: 9b627a66007aec09a404147698e2bef06c7e7794
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 9e4a2a9fc56393ac816f25a1039b233aa8961608
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57053188"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59383837"
 ---
-<a name="bundling-and-minification"></a>Creazione di bundle e minimizzazione
-====================
+# <a name="bundling-and-minification"></a>Creazione di bundle e minimizzazione
+
 da [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > Creazione di bundle e minimizzazione sono due tecniche è possibile usare in ASP.NET 4.5 per migliorare il tempo di caricamento di richiesta. Creazione di bundle e minimizzazione aumenta il tempo di caricamento riducendo il numero di richieste al server e ridurre le dimensioni dell'asset richiesti (ad esempio CSS e JavaScript.)
@@ -52,7 +52,7 @@ Dopo la minimizzazione, la funzione viene ridotto al seguente:
 
 Oltre a rimuovere i commenti e spazi vuoti non necessari, i parametri seguenti e i nomi delle variabili sono state rinominate (abbreviato) come indicato di seguito:
 
-| **Original** | **Rinominato** |
+| **Originale** | **Ridenominazione** |
 | --- | --- |
 | imageTagAndImageID | n |
 | imageContext | u |
@@ -165,7 +165,7 @@ Si consideri un progetto con i seguenti file JavaScript:
 
 La tabella seguente illustra i file aggiunti a un bundle utilizzando il carattere jolly, come illustrato:
 
-| **Call** | **Eccezione generata o i file aggiunti** |
+| **Chiamata** | **Eccezione generata o i file aggiunti** |
 | --- | --- |
 | Include ("~/Scripts/Common/\*. js") | *AddAltToImg.js*, *ToggleDiv.js*, *ToggleImg.js* |
 | Include("~/Scripts/Common/T\*.js") | Eccezione di modello non valido. Il carattere jolly è consentito solo nel prefisso o suffisso. |

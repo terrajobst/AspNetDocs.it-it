@@ -8,15 +8,15 @@ ms.date: 08/15/2012
 ms.assetid: ed66530a-04d5-49eb-b76a-85be1f57c437
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc4/intro-to-aspnet-mvc-4
 msc.type: authoredcontent
-ms.openlocfilehash: ea3d1517192ded0e5372c49897bb1fec33324b6f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: ecc0733c2850bc157c7ee5b251787152393481fc
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57046778"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59385254"
 ---
-<a name="intro-to-aspnet-mvc-4"></a>Introduzione ad ASP.NET MVC 4
-====================
+# <a name="intro-to-aspnet-mvc-4"></a>Introduzione ad ASP.NET MVC 4
+
 da [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > Una versione aggiornata se è disponibile in questa esercitazione [Ecco](../../getting-started/introduction/getting-started.md) utilizzando [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013). La nuova esercitazione Usa ASP.NET MVC 5, che offre numerosi miglioramenti in questa esercitazione.
@@ -86,4 +86,4 @@ F5 fa in modo che Visual Studio avviare IIS Express ed eseguire l'applicazione w
 Impostazione predefinita questo modello predefinito offre pagine Home, contatto e sulle. Inoltre fornisce il supporto per registrare e accedere e collegamenti a Facebook e Twitter. Il passaggio successivo è modificare il funzionamento di questa applicazione e un po' informazioni su ASP.NET MVC. Chiudere il browser e modificare codice.
 
 > [!div class="step-by-step"]
-> [avanti](adding-a-controller.md)
+> [Successivo](adding-a-controller.md)

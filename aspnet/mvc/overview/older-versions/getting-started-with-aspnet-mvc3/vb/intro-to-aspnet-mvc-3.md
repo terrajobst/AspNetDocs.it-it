@@ -8,15 +8,15 @@ ms.date: 01/12/2011
 ms.assetid: a1b3d789-93b4-487f-b90d-80c9c9b4f8fa
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3/vb/intro-to-aspnet-mvc-3
 msc.type: authoredcontent
-ms.openlocfilehash: f596dbfb534a64169767fb77fb15ecc867466c74
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 47c9d69b9fee4a9e126ef2e889c91fe0bdd479f6
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57055858"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59385930"
 ---
-<a name="intro-to-aspnet-mvc-3-vb"></a>Introduzione ad ASP.NET MVC 3 (VB)
-====================
+# <a name="intro-to-aspnet-mvc-3-vb"></a>Introduzione ad ASP.NET MVC 3 (VB)
+
 da [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > Questa esercitazione insegnerà le nozioni di base della creazione di un'applicazione Web MVC ASP.NET utilizzando Microsoft Visual Web Developer 2010 Express Service Pack 1, che è una versione gratuita di Microsoft Visual Studio. Prima di iniziare, assicurarsi di che aver installato i prerequisiti elencati di seguito. È possibile installare tutti gli elementi facendo clic sul collegamento seguente: [Installazione guidata piattaforma Web](https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack). In alternativa, è possibile installare singolarmente i prerequisiti usando i collegamenti seguenti:
@@ -95,4 +95,4 @@ F5 fa in modo che Visual Web Developer avviare un server web di sviluppo ed eseg
 Impostazione predefinita questo modello predefinito include è due pagine alla visita e una pagina di accesso basic. È possibile modificare il comportamento dell'applicazione e scopri un po' su ASP.NET MVC nel processo. Chiudere il browser e modificare codice.
 
 > [!div class="step-by-step"]
-> [avanti](adding-a-controller.md)
+> [Successivo](adding-a-controller.md)

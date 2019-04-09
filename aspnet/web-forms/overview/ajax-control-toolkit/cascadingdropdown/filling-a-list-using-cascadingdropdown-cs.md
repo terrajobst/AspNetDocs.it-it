@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/cascadingdropdown/filling-a-list-using-cascadingdropdown-cs
-title: Compilazione di un elenco tramite CascadingDropDown (C#) | Microsoft Docs
+title: Compilazione di un elenco tramite CascadingDropDown (c#) | Microsoft Docs
 author: wenz
 description: Il controllo CascadingDropDown in AJAX Control Toolkit estende un controllo DropDownList in modo che le modifiche in un controllo DropDownList carichi associati i valori in anoth...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: f949aafa-fe57-43b0-b722-f0dd33a900be
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/cascadingdropdown/filling-a-list-using-cascadingdropdown-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 15368ea543702eeda1b6a63f53acdc6c336b49e7
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: a9a3bf12b721c8f5eec21f3090142e40e74b0b9c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58420790"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59395643"
 ---
-<a name="filling-a-list-using-cascadingdropdown-c"></a>Compilazione di un elenco tramite CascadingDropDown (C#)
-====================
+# <a name="filling-a-list-using-cascadingdropdown-c"></a>Compilazione di un elenco tramite CascadingDropDown (C#)
+
 da [Christian Wenz](https://github.com/wenz)
 
 [Scaricare il codice](http://download.microsoft.com/download/9/0/7/907760b1-2c60-4f81-aeb6-ca416a573b0d/cascadingdropdown0.cs.zip) o [Scarica il PDF](http://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/cascadingdropdown0CS.pdf)
@@ -46,7 +46,7 @@ Per questo elenco, viene aggiunto un controllo extender CascadingDropDown. Invia
 - `Category`: Informazioni sulle categorie in cui viene inviati al metodo web quando viene chiamato
 - `PromptText`: Testo visualizzato quando si caricano in modo asincrono i dati dell'elenco dal server
 
-Ecco il markup per il `CascadingDropDown` elemento. L'unica differenza tra C# e Visual Basic è il nome del servizio web associato:
+Ecco il markup per il `CascadingDropDown` elemento. L'unica differenza tra c# e Visual Basic è il nome del servizio web associato:
 
 [!code-aspx[Main](filling-a-list-using-cascadingdropdown-cs/samples/sample3.aspx)]
 
@@ -61,9 +61,9 @@ In modo che l'aspetto importante è che il metodo deve restituire una matrice di
 Il caricamento della pagina nel browser verrà attivata l'elenco deve essere compilato con tre fornitori.
 
 
-[![L'elenco viene compilato automaticamente](filling-a-list-using-cascadingdropdown-cs/_static/image2.png)](filling-a-list-using-cascadingdropdown-cs/_static/image1.png)
+[![Telenco he viene riempito automaticamente](filling-a-list-using-cascadingdropdown-cs/_static/image2.png)](filling-a-list-using-cascadingdropdown-cs/_static/image1.png)
 
 L'elenco viene compilato automaticamente ([fare clic per visualizzare l'immagine con dimensioni normali](filling-a-list-using-cascadingdropdown-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [avanti](using-cascadingdropdown-with-a-database-cs.md)
+> [Successivo](using-cascadingdropdown-with-a-database-cs.md)

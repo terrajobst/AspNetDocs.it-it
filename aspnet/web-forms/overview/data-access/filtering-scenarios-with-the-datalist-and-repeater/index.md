@@ -8,15 +8,15 @@ ms.date: 10/05/2011
 ms.assetid: 80b17464-8395-4b82-8f11-5d8ee1351d53
 msc.legacyurl: /web-forms/overview/data-access/filtering-scenarios-with-the-datalist-and-repeater
 msc.type: chapter
-ms.openlocfilehash: 12d8faeb9c1087cbb67812eba5b2cca7854205be
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 94c467aabb53298299584b80626f9b2234dbebfe
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57020648"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59404065"
 ---
-<a name="filtering-scenarios-with-the-datalist-and-repeater"></a>Scenari di filtro con DataList e Repeater
-====================
+# <a name="filtering-scenarios-with-the-datalist-and-repeater"></a>Scenari di filtro con DataList e Repeater
+
 > In queste esercitazioni è illustrato come visualizzare i report master o di dettaglio usando elenchi a discesa per i record master e un controllo DataList di dettagli.
 
 

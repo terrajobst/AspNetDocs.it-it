@@ -8,15 +8,15 @@ ms.date: 08/22/2008
 ms.assetid: 33087707-9876-4575-9042-42e0d0947fa5
 msc.legacyurl: /web-forms/videos/authentication/creating-user-accounts-programmatically
 msc.type: video
-ms.openlocfilehash: 0bdddac1e470e7b9eac79013aebd3f6d1e05c589
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c2a17ad54aebe1fff9b4ee5067afd41eedc5e05d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57049858"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59391117"
 ---
-<a name="creating-user-accounts-programmatically"></a>Creazione di account utente a livello di codice
-====================
+# <a name="creating-user-accounts-programmatically"></a>Creazione di account utente a livello di codice
+
 da [Joe Stagner](https://github.com/JoeStagner)
 
 In questo video, Joe Stagner viene illustrato come creare un oggetto personalizzato crea modulo web dell'utente a livello di codice mentre non si utilizza la procedura guidata Create User. Per altre informazioni relative a questo video, leggere l'esercitazione di sicurezza "Creazione di account utente" ([c#](../../overview/older-versions-security/membership/creating-user-accounts-cs.md), [VB](../../overview/older-versions-security/membership/creating-user-accounts-vb.md)).

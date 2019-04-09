@@ -8,15 +8,15 @@ ms.date: 02/17/2014
 ms.assetid: 46bff772-01e0-40f0-9ae6-9e18c5442ee6
 msc.legacyurl: /web-pages/overview/ui-layouts-and-themes/creating-and-using-a-helper-in-an-aspnet-web-pages-site
 msc.type: authoredcontent
-ms.openlocfilehash: 3b54ba8a35a354eb0562a47866cd8b5dcb66bc86
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 28cb3af081f68c20dd9cd9e0b2578f5656d2d652
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57039798"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59389440"
 ---
-<a name="creating-and-using-a-helper-in-an-aspnet-web-pages-razor-site"></a>Creazione e uso di un Helper in un sito ASP.NET Web Pages (Razor)
-====================
+# <a name="creating-and-using-a-helper-in-an-aspnet-web-pages-razor-site"></a>Creazione e uso di un Helper in un sito ASP.NET Web Pages (Razor)
+
 da [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Questo articolo descrive come creare un helper in un sito Web di ASP.NET Web Pages (Razor). Oggetto *helper* è un componente riutilizzabile che include il codice e markup per eseguire un'attività che potrebbe essere noioso o complessi.

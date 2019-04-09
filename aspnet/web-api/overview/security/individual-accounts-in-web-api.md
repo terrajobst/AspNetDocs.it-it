@@ -8,15 +8,15 @@ ms.date: 10/15/2014
 ms.assetid: 92c84846-f0ea-4b5e-94b6-5004874eb060
 msc.legacyurl: /web-api/overview/security/individual-accounts-in-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: 01d117260ef458453bee79285a37a8977221998c
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 29c3670ad7ab93acb0be878e5bd961d0ea446eee
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57024328"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59396232"
 ---
-<a name="secure-a-web-api-with-individual-accounts-and-local-login-in-aspnet-web-api-22"></a>Proteggere un'API Web con singoli account e un account di accesso locale in API Web ASP.NET 2.2
-====================
+# <a name="secure-a-web-api-with-individual-accounts-and-local-login-in-aspnet-web-api-22"></a>Proteggere un'API Web con singoli account e un account di accesso locale in API Web ASP.NET 2.2
+
 da [Mike Wasson](https://github.com/MikeWasson)
 
 [Scaricare l'App di esempio](https://github.com/MikeWasson/LocalAccountsApp)
@@ -35,7 +35,7 @@ In Visual Studio 2013, il modello di progetto API Web offre tre opzioni per l'au
 
 - **Account individuali.** L'app Usa un database di appartenenza.
 - **Account aziendali.** Gli utenti accedono con le Azure Active Directory, Office 365 o le credenziali di Active Directory locale.
-- **Autenticazione di Windows.** Questa opzione è per le applicazioni Intranet e Usa il modulo IIS di autenticazione di Windows.
+- **Autenticazione Windows.** Questa opzione è per le applicazioni Intranet e Usa il modulo IIS di autenticazione di Windows.
 
 Per altre informazioni su queste opzioni, vedere [creazione di progetti Web ASP.NET in Visual Studio 2013](../../../visual-studio/overview/2013/creating-web-projects-in-visual-studio.md#auth).
 
@@ -253,7 +253,7 @@ Quando il client richiede una risorsa protetta, ecco cosa accade nella pipeline 
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-- [ASP.NET Identity](../../../identity/index.md)
+- [Identità ASP.NET](../../../identity/index.md)
 - [Informazioni sulle funzionalità di sicurezza nel modello di applicazione a singola pagina per VS2013 RC](https://blogs.msdn.com/b/webdev/archive/2013/09/20/understanding-security-features-in-spa-template.aspx). Post di blog MSDN da Hongye Sun.
 - [Sezionando il Web API singoli account modello-parte 2: Gli account locali](http://leastprivilege.com/2013/11/26/dissecting-the-web-api-individual-accounts-templatepart-2-local-accounts/). Post di blog di Dominick Baier.
 - [Ospitare l'autenticazione e l'API Web con OWIN](http://brockallen.com/2013/10/27/host-authentication-and-web-api-with-owin-and-active-vs-passive-authentication-middleware/). Una spiegazione esauriente relativamente `SuppressDefaultHostAuthentication` e `HostAuthenticationFilter` da Brock Allen.

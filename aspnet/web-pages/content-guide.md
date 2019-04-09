@@ -8,15 +8,15 @@ ms.date: 01/13/2011
 ms.assetid: b558e481-775a-4aa0-bd3b-ad61e530c2d2
 msc.legacyurl: /web-pages/content-guide
 msc.type: content
-ms.openlocfilehash: e5c2edcceeda977919c1212719786630e7bb8a4f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5e410ac0c6d3430c00e171775d842ee30eeab021
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57028938"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59383164"
 ---
-<a name="webmatrix-content-guide"></a>Guida ai contenuti su WebMatrix
-====================
+# <a name="webmatrix-content-guide"></a>Guida ai contenuti su WebMatrix
+
 
 > [!NOTE] 
 > WebMatrix non è più consigliata come ambiente di sviluppo integrato per ASP.NET Web Pages. Uso [Visual Studio](xref:aspnet/web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio) oppure [Visual Studio Code](https://code.visualstudio.com/).
@@ -50,7 +50,7 @@ WebMatrix è un set di strumenti che fornisce un modo semplice per creare siti W
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-**Read**
+**Lettura**
 
 - [Kit di formazione di Microsoft Web Camp per WebMatrix](http://trainingkit.webcamps.ms/WebMatrix.htm)
 - [Invia un bug o suggerimenti](https://go.microsoft.com/fwlink/?LinkId=195940)
@@ -68,7 +68,7 @@ WebMatrix è un set di strumenti che fornisce un modo semplice per creare siti W
 - [Iniziare con le app Web](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/walkthrough2b.mp4)
 - [Pacchetto di piccole dimensioni, ma completa](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-compact.mp4)
 - [Possibilità di crescita](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-extend.mp4)
-- [Open Source](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-webapps-b.mp4)
+- [Open source](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-webapps-b.mp4)
 - [Database diventa semplice](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-databases.mp4)
 - [Interfaccia elegante, esperienza semplice](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-ux.mp4)
 - [Semplice al codice](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-aspnetpages.mp4)

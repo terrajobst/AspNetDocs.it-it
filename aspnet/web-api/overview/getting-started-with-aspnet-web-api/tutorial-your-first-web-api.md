@@ -1,28 +1,31 @@
 ---
 uid: web-api/overview/getting-started-with-aspnet-web-api/tutorial-your-first-web-api
-title: Introduzione a ASP.NET Web API 2 (c#)
+title: Introduzione a ASP.NET Web API 2 (C#)-ASP.NET 4.x
 author: MikeWasson
-description: HTTP non è disponibile solo per mettere a disposizione le pagine web. È anche una potente piattaforma per la compilazione di API che espongono servizi e i dati. HTTP è semplice, flessibile e ubiq...
+description: Esercitazione con il codice. Usare l'API Web ASP.NET per creare un'API web che restituisce un elenco di prodotti.
 ms.author: riande
 ms.date: 11/28/2017
+ms.custom: seoapril2019
 msc.legacyurl: /web-api/overview/getting-started-with-aspnet-web-api/tutorial-your-first-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: 7bec95af4532535f0d620bfe6862958907466874
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5e3c049ba4349301c3c2d173d4311b3d0883bf68
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57060188"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59401751"
 ---
-<a name="get-started-with-aspnet-web-api-2-c"></a>Introduzione a ASP.NET Web API 2 (c#)
-====================
+# <a name="get-started-with-aspnet-web-api-2-c"></a>Introduzione a ASP.NET Web API 2 (c#)
+
 da [Mike Wasson](https://github.com/MikeWasson)
 
 [Download progetto completato](https://code.msdn.microsoft.com/Sample-code-of-Getting-c56ccb28)
 
+In questa esercitazione si utilizzerà API Web ASP.NET per creare un'API web che restituisce un elenco di prodotti.
+
 HTTP non è disponibile solo per mettere a disposizione le pagine web. HTTP è anche una potente piattaforma per la compilazione di API che espongono servizi e i dati. HTTP è semplice, flessibile e universale. Quasi tutte le piattaforme che è possibile pensare dispone di una libreria HTTP, in modo che i servizi HTTP possono raggiungere una vasta gamma di client, inclusi i browser, dispositivi mobili e applicazioni desktop tradizionali.
 
-API Web ASP.NET è un framework per la compilazione di API web in .NET Framework. In questa esercitazione si utilizzerà API Web ASP.NET per creare un'API web che restituisce un elenco di prodotti.
+API Web ASP.NET è un framework per la compilazione di API web in .NET Framework. 
 
 ## <a name="software-versions-used-in-the-tutorial"></a>Versioni del software utilizzate nell'esercitazione
 

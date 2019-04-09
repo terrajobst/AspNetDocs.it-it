@@ -8,15 +8,15 @@ ms.date: 01/18/2008
 ms.assetid: 9ef3e893-bebe-4b13-9fe5-8b71720dd85e
 msc.legacyurl: /web-forms/overview/older-versions-security/membership/creating-user-accounts-vb
 msc.type: authoredcontent
-ms.openlocfilehash: c7f5f4ec6ce27c1a52569e6414b8f96892f68574
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 95231452831b5e328447709fad0329f63ae7a9f5
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57055338"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59395823"
 ---
-<a name="creating-user-accounts-vb"></a>Creazione di account utente (VB)
-====================
+# <a name="creating-user-accounts-vb"></a>Creazione di account utente (VB)
+
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Scaricare il codice](http://download.microsoft.com/download/3/f/5/3f5a8605-c526-4b34-b3fd-a34167117633/ASPNET_Security_Tutorial_05_VB.zip) o [Scarica il PDF](http://download.microsoft.com/download/3/f/5/3f5a8605-c526-4b34-b3fd-a34167117633/aspnet_tutorial05_CreatingUsers_vb.pdf)
@@ -57,7 +57,7 @@ Iniziare creando una nuova cartella nel progetto denominato `Membership`. Succes
 Esplora soluzioni del progetto a questo punto dovrebbe essere simile allo screenshot illustrato nella figura 1.
 
 
-[![Sono stati aggiunti cinque nuove pagine nella cartella di appartenenza](creating-user-accounts-vb/_static/image2.png)](creating-user-accounts-vb/_static/image1.png)
+[![Finque nuove pagine sono stati aggiunti alla cartella appartenenza](creating-user-accounts-vb/_static/image2.png)](creating-user-accounts-vb/_static/image1.png)
 
 **Figura 1**: Cinque nuove pagine sono stati aggiunti per il `Membership` cartella ([fare clic per visualizzare l'immagine con dimensioni normali](creating-user-accounts-vb/_static/image3.png))
 
@@ -81,7 +81,7 @@ Ad esempio i framework di appartenenza e ruoli, il framework di mappa del sito �
 Il provider di mappa del sito predefinito prevede che un file XML formattato correttamente denominato `Web.sitemap` l'esistenza della directory radice. Poiché si sta usando il provider predefinito, è necessario aggiungere tale file e definire la struttura della mappa del sito nel formato XML appropriato. Per aggiungere il file, fare doppio clic sul nome del progetto in Esplora soluzioni e scegliere Aggiungi nuovo elemento. Nella finestra di dialogo, scegliere di aggiungere un file del tipo di mappa del sito denominato `Web.sitemap`.
 
 
-[![Aggiungere un File denominato Web. sitemap alla Directory radice del progetto](creating-user-accounts-vb/_static/image5.png)](creating-user-accounts-vb/_static/image4.png)
+[![Aun File denominato Web. sitemap alla Directory radice del progetto gg](creating-user-accounts-vb/_static/image5.png)](creating-user-accounts-vb/_static/image4.png)
 
 **Figura 2**: Aggiungere un File denominato `Web.sitemap` alla Directory radice del progetto ([fare clic per visualizzare l'immagine con dimensioni normali](creating-user-accounts-vb/_static/image6.png))
 
@@ -95,7 +95,7 @@ Immettere il seguente codice XML nel `Web.sitemap` file:
 Il markup di mappa del sito precedente definisce la gerarchia illustrata nella figura 3.
 
 
-[![Mappa del sito rappresenta una struttura per la navigazione gerarchica](creating-user-accounts-vb/_static/image8.png)](creating-user-accounts-vb/_static/image7.png)
+[![Tegli mappa del sito rappresenta una struttura per la navigazione gerarchica](creating-user-accounts-vb/_static/image8.png)](creating-user-accounts-vb/_static/image7.png)
 
 **Figura 3**: Mappa del sito rappresenta una struttura di spostamento gerarchica ([fare clic per visualizzare l'immagine con dimensioni normali](creating-user-accounts-vb/_static/image9.png))
 
@@ -117,7 +117,7 @@ Il markup riportato sopra si associa un controllo Repeater denominato `menu` a u
 Figura 4 Mostra output di rendering del markup riportato sopra con struttura della mappa del sito che è stato creato nel passaggio 2. Il controllo Repeater esegue il rendering di markup di "vanilla" elenco non ordinato. le regole di foglio di stile CSS definita `Styles.css` sono responsabili per il layout esteticamente piacevole. Per una descrizione più dettagliata del funzionamento del markup riportato sopra, vedere la [pagine Master e spostamento nel sito](https://asp.net/learn/data-access/tutorial-03-vb.aspx) esercitazione.
 
 
-[![L'interfaccia utente per la navigazione è sottoposto a rendering utilizzando annidati non ordinati sono elencati](creating-user-accounts-vb/_static/image11.png)](creating-user-accounts-vb/_static/image10.png)
+[![TInterfaccia utente per la navigazione è sottoposto a rendering utilizzando annidati non ordinata elenchi](creating-user-accounts-vb/_static/image11.png)](creating-user-accounts-vb/_static/image10.png)
 
 **Figura 4**: L'interfaccia utente per la navigazione è sottoposto a rendering utilizzo annidato non ordinato di elenchi di ([fare clic per visualizzare l'immagine con dimensioni normali](creating-user-accounts-vb/_static/image12.png))
 
@@ -133,7 +133,7 @@ In particolare, aggiungere un `<span>` elemento all'intestazione della pagina ma
 Figura 5 mostra l'output del controllo SiteMapPath quando si visita `~/Membership/CreatingUserAccounts.aspx`.
 
 
-[![Il Breadcrumb Visualizza la pagina corrente e i predecessori del sito eseguire il mapping](creating-user-accounts-vb/_static/image14.png)](creating-user-accounts-vb/_static/image13.png)
+[![Tegli Breadcrumb Visualizza la pagina corrente e i relativi predecessori della mappa del sito](creating-user-accounts-vb/_static/image14.png)](creating-user-accounts-vb/_static/image13.png)
 
 **Figura 5**: Il Breadcrumb Visualizza la pagina corrente e i relativi predecessori della mappa del sito ([fare clic per visualizzare l'immagine con dimensioni normali](creating-user-accounts-vb/_static/image15.png))
 
@@ -178,7 +178,7 @@ Per illustrare l'utilizzo di `CreateUser` metodo, è possibile creare un'interfa
 A questo punto la schermata dovrebbe essere simile allo screenshot illustrato nella figura 6.
 
 
-[![Aggiungere i vari controlli Web alla pagina CreatingUserAccounts.aspx](creating-user-accounts-vb/_static/image17.png)](creating-user-accounts-vb/_static/image16.png)
+[![Ai vari controlli Web alla pagina CreatingUserAccounts.aspx gg](creating-user-accounts-vb/_static/image17.png)](creating-user-accounts-vb/_static/image16.png)
 
 **Figura 6**: Aggiungere i vari controlli Web per il `CreatingUserAccounts.aspx Page` ([fare clic per visualizzare l'immagine con dimensioni normali](creating-user-accounts-vb/_static/image18.png))
 
@@ -198,17 +198,17 @@ Il `Click` gestore dell'evento inizia con la definizione di una variabile denomi
 Dopo avere chiamato `CreateUser`, passando `createStatus`, un `Select Case` istruzione viene utilizzata per restituire un messaggio appropriato in base al valore assegnato a `createStatus`. Figure 7 mostra l'output quando è stato creato un nuovo utente. Figure 8 e 9 mostra l'output quando non viene creato l'account utente. Nella figura 8, il visitatore immesso una password, cinque lettere che non soddisfa i requisiti di complessità delle password venga specificati nelle impostazioni di configurazione del provider di appartenenze. Nella figura 9, il visitatore sta tentando di creare un account utente con un nome utente esistente (quello creato nella figura 7).
 
 
-[![Un nuovo Account utente è stato creato](creating-user-accounts-vb/_static/image20.png)](creating-user-accounts-vb/_static/image19.png)
+[![A Nuovo Account utente è stato creato](creating-user-accounts-vb/_static/image20.png)](creating-user-accounts-vb/_static/image19.png)
 
 **Figura 7**: Un nuovo Account utente è stato creato ([fare clic per visualizzare l'immagine con dimensioni normali](creating-user-accounts-vb/_static/image21.png))
 
 
-[![L'Account utente non viene creato perché la Password specificata è troppo debole](creating-user-accounts-vb/_static/image23.png)](creating-user-accounts-vb/_static/image22.png)
+[![Tgli Account utente non viene creato perché la Password specificata è troppo debole](creating-user-accounts-vb/_static/image23.png)](creating-user-accounts-vb/_static/image22.png)
 
 **Figura 8**: L'Account utente non viene creato perché la Password specificata è troppo debole ([fare clic per visualizzare l'immagine con dimensioni normali](creating-user-accounts-vb/_static/image24.png))
 
 
-[![L'Account utente non è che creata perché il nome utente è già in uso](creating-user-accounts-vb/_static/image26.png)](creating-user-accounts-vb/_static/image25.png)
+[![Tgli Account utente non viene creato perché il nome utente è già in uso](creating-user-accounts-vb/_static/image26.png)](creating-user-accounts-vb/_static/image25.png)
 
 **Figura 9**: L'Account utente non è creata perché il nome utente è già in uso ([fare clic per visualizzare l'immagine con dimensioni normali](creating-user-accounts-vb/_static/image27.png))
 
@@ -220,7 +220,7 @@ Dopo avere chiamato `CreateUser`, passando `createStatus`, un `Select Case` istr
 Dopo aver creato alcuni account utente, verificare che siano stati creati gli account dall'elenco del contenuto dei `aspnet_Users` e `aspnet_Membership` nelle tabelle di `SecurityTutorials.mdf` database. Come illustrato nella figura 10, è stato aggiunto due utenti tramite il `CreatingUserAccounts.aspx` pagina: Tito e Bruce.
 
 
-[![Esistono due utenti in Store di utente di appartenenza: Tito e Bruce](creating-user-accounts-vb/_static/image29.png)](creating-user-accounts-vb/_static/image28.png)
+[![TEcco due utenti in Store di utente di appartenenza: Tito e Bruce](creating-user-accounts-vb/_static/image29.png)](creating-user-accounts-vb/_static/image28.png)
 
 **Figura 10**: Esistono due utenti in Store di utente di appartenenza: Tito e Bruce ([fare clic per visualizzare l'immagine con dimensioni normali](creating-user-accounts-vb/_static/image30.png))
 
@@ -250,7 +250,7 @@ Iniziamo esaminando l'utilizzo del controllo CreateUserWizard interfaccia predef
 Tornare al `CreatingUserAccounts.aspx` nella pagina di `Membership` cartella, passare alla modalità di progettazione o Dividi e quindi aggiungere un controllo CreateUserWizard nella parte superiore della pagina. Il controllo CreateUserWizard si trova nella sezione relativa ai controlli di accesso della casella degli strumenti. Dopo aver aggiunto il controllo, impostare relativi `ID` proprietà `RegisterUser`. Come l'immagine riportata nella figura 11 Mostra, CreateUserWizard esegue il rendering di un'interfaccia con caselle di testo per il nuovo utente nome utente, password, indirizzo di posta elettronica e domanda di sicurezza e risposte.
 
 
-[![I renderer di controllo CreateUserWizard generica crea interfaccia utente](creating-user-accounts-vb/_static/image32.png)](creating-user-accounts-vb/_static/image31.png)
+[![Til controllo CreateUserWizard esegue il rendering di un'interfaccia utente creare generica](creating-user-accounts-vb/_static/image32.png)](creating-user-accounts-vb/_static/image31.png)
 
 **Figura 11**: Il controllo CreateUserWizard esegue il rendering di un'interfaccia utente generica creare ([fare clic per visualizzare l'immagine con dimensioni normali](creating-user-accounts-vb/_static/image33.png))
 
@@ -271,7 +271,7 @@ Aspetto e il comportamento di CreateUserWizard può essere modificati mediante l
 Vediamo il controllo CreateUserWizard in azione. Visita il `CreatingUserAccounts.aspx` pagina tramite un browser. Immettere alcuni valori non validi nell'interfaccia del CreateUserWizard prima. Provare a immettere una password che non sono conformi ai requisiti di complessità password o lasciare vuota la casella di testo Nome utente. CreateUserWizard verrà visualizzato un messaggio di errore appropriato. Figura 12 mostra l'output quando si prova a creare un utente con una password non sufficientemente complessa.
 
 
-[![CreateUserWizard inserisce automaticamente i controlli di convalida](creating-user-accounts-vb/_static/image35.png)](creating-user-accounts-vb/_static/image34.png)
+[![Tegli CreateUserWizard automaticamente inserisce i controlli di convalida](creating-user-accounts-vb/_static/image35.png)](creating-user-accounts-vb/_static/image34.png)
 
 **Figura 12**: CreateUserWizard automaticamente inserisce controlli di convalida ([fare clic per visualizzare l'immagine con dimensioni normali](creating-user-accounts-vb/_static/image36.png))
 
@@ -279,7 +279,7 @@ Vediamo il controllo CreateUserWizard in azione. Visita il `CreatingUserAccounts
 Successivamente, immettere i valori appropriati in CreateUserWizard e fare clic sul pulsante Create User. Supponendo che i campi obbligatori sono stati immessi e complessità della password è sufficiente, CreateUserWizard crea un nuovo account utente tramite il framework di appartenenza e quindi visualizzano il `CompleteWizardStep`dell'interfaccia (vedere la figura 13). Dietro le quinte, CreateUserWizard chiama il `Membership.CreateUser` metodo, come abbiamo fatto nel passaggio 5.
 
 
-[![Un nuovo Account utente è stato creato correttamente](creating-user-accounts-vb/_static/image38.png)](creating-user-accounts-vb/_static/image37.png)
+[![A Nuovo Account utente è stato creato correttamente](creating-user-accounts-vb/_static/image38.png)](creating-user-accounts-vb/_static/image37.png)
 
 **Figura 13**: Un nuovo Account utente è stato creato correttamente ([fare clic per visualizzare l'immagine con dimensioni normali](creating-user-accounts-vb/_static/image39.png))
 
@@ -303,7 +303,7 @@ Oltre alle proprietà correlate all'aspetto, sono disponibili numerose propriet�
 Aggiorniamo il `RegisterUser` controllo CreateUserWizard per visualizzare un pulsante Annulla e inviare il visitatore per `Default.aspx` quando vengono selezionati i pulsanti Annulla o continua. A tale scopo, impostare il `DisplayCancelButton` proprietà su True e sia il `CancelDestinationPageUrl` e `ContinueDestinationPageUrl` proprietà da ~ / default. aspx. Figura 14 mostra CreateUserWizard aggiornati quando viene visualizzato tramite un browser.
 
 
-[![Il CreateUserWizardStep include un pulsante Annulla](creating-user-accounts-vb/_static/image41.png)](creating-user-accounts-vb/_static/image40.png)
+[![Tegli CreateUserWizardStep include un pulsante Annulla](creating-user-accounts-vb/_static/image41.png)](creating-user-accounts-vb/_static/image40.png)
 
 **Figura 14**: Il `CreateUserWizardStep` include un pulsante Annulla ([fare clic per visualizzare l'immagine con dimensioni normali](creating-user-accounts-vb/_static/image42.png))
 
@@ -341,7 +341,7 @@ Si noti che sono disponibili tramite il nome utente e la password immessi nel co
 Figura 15 viene mostrata una schermata di `CreatingUserAccounts.aspx` quando l'utente immette un nome utente con gli spazi iniziali.
 
 
-[![Non sono consentiti nomi utente con leader o spazi finali](creating-user-accounts-vb/_static/image44.png)](creating-user-accounts-vb/_static/image43.png)
+[![Unon sono consentite sernames con spazi finali o leader](creating-user-accounts-vb/_static/image44.png)](creating-user-accounts-vb/_static/image43.png)
 
 **Figura 15**: Non sono consentiti nomi utente con leader o spazi finali ([fare clic per visualizzare l'immagine con dimensioni normali](creating-user-accounts-vb/_static/image45.png))
 

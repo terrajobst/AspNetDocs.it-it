@@ -8,15 +8,15 @@ ms.date: 09/15/2011
 ms.assetid: 9bc6c53a-3e54-4f9d-8bef-0f3359aecf7b
 msc.legacyurl: /mvc/videos/mvc-2/how-do-i
 msc.type: chapter
-ms.openlocfilehash: 09b8b31059ed6a238414714847d191426e28db28
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 84c626764573108969fec51a2cba028e463b1962
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57023898"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59380886"
 ---
-<a name="how-do-i"></a>Procedure
-====================
+# <a name="how-do-i"></a>Procedure
+
 > Video in questa sezione riguardano ASP.NET MVC, incluse le procedure compilare un'applicazione di e-commerce intero dall'inizio alla fine di "The Storefront -".
 
 
@@ -34,7 +34,7 @@ ms.locfileid: "57023898"
 - [Visualizzazione di una tabella di dati del database](displaying-a-table-of-database-data.md)
 - [Che cos'è ASP.NET MVC - Video tecnico di 80 minuti per gli sviluppatori sulla creazione di NerdDinner](what-is-aspnet-mvc-80-minute-technical-video-for-developers-building-nerddinner.md)
 - [Perché ASP.NET MVC - Video introduttivo di 3 minuti per i responsabili decisionali](why-aspnet-mvc-3-minute-overview-video-for-decision-makers.md)
-- [ASP.NET MVC: Come 10 minuti video tecnici per gli sviluppatori](aspnet-mvc-how-10-minute-technical-video-for-developers.md)
+- [ASP.NET MVC: Video tecnico di 10 minuti per gli sviluppatori](aspnet-mvc-how-10-minute-technical-video-for-developers.md)
 - [Restituire dati formattati JSON per una chiamata AJAX in un'applicazione Web ASP.NET MVC](how-do-i-return-json-formatted-data-for-an-ajax-call-in-an-aspnet-mvc-web-application.md)
 - [Usare i dati nelle visualizzazioni parziali di ASP.NET MVC](how-do-i-work-with-data-in-aspnet-mvc-partial-views.md)
 - [Implementare i modelli di visualizzazione per gestire i dati per le visualizzazioni ASP.NET MVC](how-do-i-implement-view-models-to-manage-data-for-aspnet-mvc-views.md)

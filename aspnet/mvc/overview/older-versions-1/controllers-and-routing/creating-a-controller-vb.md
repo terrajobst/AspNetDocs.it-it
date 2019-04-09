@@ -8,15 +8,15 @@ ms.date: 03/02/2009
 ms.assetid: 204b7e86-f560-4611-8adb-785b33e777b9
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/creating-a-controller-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 9c14ceff17d15b1a8460bad41429b82cb9504a24
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 180b34e45ae97c64c82906c93aa647c4924d8539
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57035158"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59398111"
 ---
-<a name="creating-a-controller-vb"></a>Creazione di un controller (VB)
-====================
+# <a name="creating-a-controller-vb"></a>Creazione di un controller (VB)
+
 da [Stephen Walther](https://github.com/StephenWalther)
 
 > In questa esercitazione, Stephen Walther spiega come aggiungere un controller a un'applicazione ASP.NET MVC.
@@ -29,12 +29,12 @@ L'obiettivo di questa esercitazione è illustrare come è possibile creare nuovi
 Il modo più semplice per creare un nuovo controller consiste nella cartella Controllers nella finestra Esplora soluzioni di Visual Studio e scegliere il **Controller, Aggiungi** l'opzione di menu (vedere la figura 1). Selezionando questa opzione di menu si apre la **Aggiungi Controller** finestra di dialogo (vedere la figura 2).
 
 
-[![La finestra di dialogo Nuovo progetto](creating-a-controller-vb/_static/image1.jpg)](creating-a-controller-vb/_static/image1.png)
+[![Tfinestra di dialogo Nuovo progetto di he](creating-a-controller-vb/_static/image1.jpg)](creating-a-controller-vb/_static/image1.png)
 
 **Figura 01**: Aggiunge un nuovo controller ([fare clic per visualizzare l'immagine con dimensioni normali](creating-a-controller-vb/_static/image2.png))
 
 
-[![La finestra di dialogo Nuovo progetto](creating-a-controller-vb/_static/image2.jpg)](creating-a-controller-vb/_static/image3.png)
+[![Tfinestra di dialogo Nuovo progetto di he](creating-a-controller-vb/_static/image2.jpg)](creating-a-controller-vb/_static/image3.png)
 
 **Figura 02**: La finestra di dialogo Aggiungi Controller ([fare clic per visualizzare l'immagine con dimensioni normali](creating-a-controller-vb/_static/image4.png))
 
@@ -56,7 +56,7 @@ Se si crea un controller che non è presente il *Controller* suffisso, quindi sa
 Quando si crea un controller, è possibile generare automaticamente i metodi di azione Create, Update e dettagli (vedere la figura 3). Se si seleziona questa opzione viene generata la classe controller nel listato 2.
 
 
-[![La creazione automatica di metodi di azione](creating-a-controller-vb/_static/image3.jpg)](creating-a-controller-vb/_static/image5.png)
+[![Ci metodi di azione reating automaticamente](creating-a-controller-vb/_static/image3.jpg)](creating-a-controller-vb/_static/image5.png)
 
 **Figura 03**: La creazione automatica di metodi di azione ([fare clic per visualizzare l'immagine con dimensioni normali](creating-a-controller-vb/_static/image6.png))
 
@@ -76,7 +76,7 @@ Il controller ASP.NET MVC è semplicemente una classe. Se si preferisce, è poss
 3. Modificare il file di classe risultante in modo che la classe eredita dalla classe di MVC di base (vedere il listato 3).
 
 
-[![Creazione di una nuova classe](creating-a-controller-vb/_static/image4.jpg)](creating-a-controller-vb/_static/image7.png)
+[![Cuna nuova classe reating](creating-a-controller-vb/_static/image4.jpg)](creating-a-controller-vb/_static/image7.png)
 
 **Figura 04**: Creazione di una nuova classe ([fare clic per visualizzare l'immagine con dimensioni normali](creating-a-controller-vb/_static/image8.png))
 

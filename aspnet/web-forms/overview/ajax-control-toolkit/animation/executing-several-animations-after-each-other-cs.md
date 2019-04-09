@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: 7dc02b18-2b5d-4844-b7c5-cbd818477163
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/executing-several-animations-after-each-other-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 60fb7dacfe59eaafef71fcc9cde61b7840624343
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 644af2485c1a51f2de209e968ba1b3475350fa47
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57030968"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59394068"
 ---
-<a name="executing-several-animations-after-each-other-c"></a>Esecuzione di diverse animazioni una dopo l'altra (C#)
-====================
+# <a name="executing-several-animations-after-each-other-c"></a>Esecuzione di diverse animazioni una dopo l'altra (C#)
+
 da [Christian Wenz](https://github.com/wenz)
 
 [Scaricare il codice](http://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation3.cs.zip) o [Scarica il PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation3CS.pdf)
@@ -51,12 +51,12 @@ All'interno di `<Animations>` nodo, usare `<OnLoad>` per eseguire le animazioni 
 Quando si esegue questo script, il pannello prima ottiene più larghi e quindi più piccoli.
 
 
-[![Prima di tutto la larghezza viene aumentata](executing-several-animations-after-each-other-cs/_static/image2.png)](executing-several-animations-after-each-other-cs/_static/image1.png)
+[![Fla larghezza viene aumentata rima](executing-several-animations-after-each-other-cs/_static/image2.png)](executing-several-animations-after-each-other-cs/_static/image1.png)
 
 Prima di tutto la larghezza viene aumentata ([fare clic per visualizzare l'immagine con dimensioni normali](executing-several-animations-after-each-other-cs/_static/image3.png))
 
 
-[![Quindi viene diminuito l'altezza](executing-several-animations-after-each-other-cs/_static/image5.png)](executing-several-animations-after-each-other-cs/_static/image4.png)
+[![Tuando che viene diminuito l'altezza](executing-several-animations-after-each-other-cs/_static/image5.png)](executing-several-animations-after-each-other-cs/_static/image4.png)
 
 Quindi viene diminuito l'altezza ([fare clic per visualizzare l'immagine con dimensioni normali](executing-several-animations-after-each-other-cs/_static/image6.png))
 

@@ -8,15 +8,15 @@ ms.date: 09/08/2014
 ms.assetid: 5c76891d-e515-4885-b576-76bd2c494efe
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/ui_and_navigation
 msc.type: authoredcontent
-ms.openlocfilehash: 55c659cbaf48dbb02dc34e013242443d4fbd8845
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7834b5c418de9d05ee870641cfd7c7f9956ab210
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57060928"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59402999"
 ---
-<a name="ui-and-navigation"></a>Interfaccia utente ed esplorazione
-====================
+# <a name="ui-and-navigation"></a>Interfaccia utente ed esplorazione
+
 da [Erik Reitan](https://github.com/Erikre)
 
 [Scaricare progetto di esempio Wingtip Toys (c#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) o [Scarica l'E-book (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)

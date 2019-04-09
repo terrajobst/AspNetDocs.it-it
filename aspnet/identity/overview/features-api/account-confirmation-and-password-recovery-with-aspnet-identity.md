@@ -1,19 +1,20 @@
 ---
 uid: identity/overview/features-api/account-confirmation-and-password-recovery-with-aspnet-identity
-title: Conferma dell'account e recupero della Password con ASP.NET Identity (C#) | Microsoft Docs
+title: Conferma & Password Recovery - ASP.NET Identity dell'account (C#)-ASP.NET 4.x
 author: HaoK
 description: Prima di eseguire questa esercitazione che è consigliabile completare prima creare un'app web ASP.NET MVC 5 sicura con accesso, messaggio di posta elettronica conferma e reimpostazione della password. Questa esercitazione...
 ms.author: riande
 ms.date: 01/23/2019
 ms.assetid: 8d54180d-f826-4df7-b503-7debf5ed9fb3
+ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/features-api/account-confirmation-and-password-recovery-with-aspnet-identity
 msc.type: authoredcontent
-ms.openlocfilehash: 04e4bbc8b6405dc60b8335191d88920028eef599
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 2e4cd21d66e69590fb1642d7974e4b7f82cba0cb
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58424846"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59396421"
 ---
 # <a name="account-confirmation-and-password-recovery-with-aspnet-identity-c"></a>Account di ripristino di conferma e la password con ASP.NET Identity (C#)
 

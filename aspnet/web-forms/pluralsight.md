@@ -8,20 +8,20 @@ ms.date: 12/16/2011
 ms.assetid: c71bb9b2-7136-4ce6-a40a-cc4d9978cfb7
 msc.legacyurl: /web-forms/pluralsight
 msc.type: content
-ms.openlocfilehash: 5aca0d027b735e88689633b0d34b0009566c8913
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: ae41660d96260991defc23c75d2dda5b9183585e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57030778"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59400282"
 ---
-<a name="web-forms-video-training-from-pluralsight"></a>Formazione in video su Web Forms di Pluralsight
-====================
+# <a name="web-forms-video-training-from-pluralsight"></a>Formazione in video su Web Forms di Pluralsight
+
 ### <a name="videos"></a>Video
 
 - [Introduzione ad ASP.NET](https://pluralsight.com/training/Player?author=dan-wahlin&name=webforms-01&mode=live&clip=0&course=aspdotnet-webforms4-intro)
 - [Web Form ASP.NET le funzionalità](https://pluralsight.com/training/Player?author=dan-wahlin&name=webforms-02&mode=live&clip=0&course=aspdotnet-webforms4-intro)
-- [Uso di dati](https://pluralsight.com/training/Player?author=dan-wahlin&name=webforms-03&mode=live&clip=0&course=aspdotnet-webforms4-intro)
+- [Uso dei dati](https://pluralsight.com/training/Player?author=dan-wahlin&name=webforms-03&mode=live&clip=0&course=aspdotnet-webforms4-intro)
 - [Entity Framework](https://pluralsight.com/training/Player?author=dan-wahlin&name=webforms-04&mode=live&clip=0&course=aspdotnet-webforms4-intro)
 - [Pagine master](https://pluralsight.com/training/Player?author=dan-wahlin&name=webforms-05&mode=live&clip=0&course=aspdotnet-webforms4-intro)
 - [JavaScript e Ajax](https://pluralsight.com/training/Player?author=dan-wahlin&name=webforms-06&mode=live&clip=0&course=aspdotnet-webforms4-intro)

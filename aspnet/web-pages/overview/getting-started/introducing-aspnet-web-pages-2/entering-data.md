@@ -8,15 +8,15 @@ ms.date: 05/28/2015
 ms.assetid: d37c93fc-25fd-4e94-8671-0d437beef206
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/entering-data
 msc.type: authoredcontent
-ms.openlocfilehash: e40d2962ccac56eaaf4812819aa42168e69295bc
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d76f607f1d5e779d43ee15d8f2d697e7b0f147ae
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57029798"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59380119"
 ---
-<a name="introducing-aspnet-web-pages---entering-database-data-by-using-forms"></a>Introduzione a ASP.NET Web Pages: immissione di dati del Database tramite moduli
-====================
+# <a name="introducing-aspnet-web-pages---entering-database-data-by-using-forms"></a>Introduzione a ASP.NET Web Pages: immissione di dati del Database tramite moduli
+
 da [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Questa esercitazione illustra come creare un modulo di immissione e quindi immettere i dati che si ottengono dal form in una tabella di database quando si usa ASP.NET Web Pages (Razor). Si presuppone di aver completato la serie attraverso [nozioni di base di form HTML in ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=251581).
@@ -98,7 +98,7 @@ In altre parole, specificare la tabella da inserire nella, quindi elencare le co
 
 Le colonne che si sta inserendo in sono già elencate nel comando, ovvero `(Title, Genre, Year)`. La parte interessante modo è possibile ottenere i valori di caselle di testo nel `VALUES` fa parte del comando. Invece i valori effettivi, si vede `@0`, `@1`, e `@2`, che sono ovviamente segnaposto. Quando si esegue il comando (nel `db.Execute` riga), i valori ottenuti di caselle di testo vengono passati.
 
-**Importante**: Tenere presente che l'unico modo mai includere i dati immessi in linea da un utente in un'istruzione SQL deve usare i segnaposto, come illustrato di seguito (`VALUES(@0, @1, @2)`). Se si concatenare l'input dell'utente in un'istruzione SQL, ci si espone a un attacco SQL injection, come illustrato in [nozioni fondamentali sui moduli in ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=251581) (esercitazione precedente).
+**Importante!** Tenere presente che l'unico modo mai includere i dati immessi in linea da un utente in un'istruzione SQL deve usare i segnaposto, come illustrato di seguito (`VALUES(@0, @1, @2)`). Se si concatenare l'input dell'utente in un'istruzione SQL, ci si espone a un attacco SQL injection, come illustrato in [nozioni fondamentali sui moduli in ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=251581) (esercitazione precedente).
 
 Ancora all'interno di `if` blocco, aggiungere la riga seguente dopo il `db.Execute` riga:
 
@@ -253,7 +253,7 @@ Nella prossima esercitazione, verrà illustrato come consentire agli utenti di m
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-- [Introduzione alla programmazione Web ASP.NET usando la sintassi Razor](https://go.microsoft.com/fwlink/?LinkID=202890)
+- [Introduzione alla programmazione Web ASP.NET utilizzando la sintassi Razor](https://go.microsoft.com/fwlink/?LinkID=202890)
 - [Istruzione SQL INSERT INTO](http://www.w3schools.com/sql/sql_insert.asp) sul sito W3Schools
 - [Convalida dell'Input utente in ASP.NET Web in siti con pagine](https://go.microsoft.com/fwlink/?LinkId=253002). Altre informazioni sull'utilizzo di `Validation` helper.
 

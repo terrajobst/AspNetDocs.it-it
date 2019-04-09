@@ -1,25 +1,26 @@
 ---
 uid: web-api/overview/odata-support-in-aspnet-web-api/odata-security-guidance
-title: Guida alla sicurezza per ASP.NET Web API 2 OData | Microsoft Docs
+title: Guida alla sicurezza per ASP.NET Web API 2 OData - ASP.NET 4.x
 author: MikeWasson
-description: ''
+description: Vengono descritti i problemi di sicurezza da considerare quando si espone un set di dati tramite OData per ASP.NET Web API 2 su ASP.NET 4.x.
 ms.author: riande
 ms.date: 02/06/2013
+ms.custom: seoapril2019
 ms.assetid: b91e6424-1544-4747-bd0b-d1f8418c9653
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-security-guidance
 msc.type: authoredcontent
-ms.openlocfilehash: 0e43ec6b1cbe922b00f0f71d08aed4d0f4c08af8
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 8194a368cb0629c30e32ec05bf4bed150d442ad8
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425860"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59393509"
 ---
-<a name="security-guidance-for-aspnet-web-api-2-odata"></a>Guida alla sicurezza per ASP.NET Web API 2 OData
-====================
+# <a name="security-guidance-for-aspnet-web-api-2-odata"></a>Guida alla sicurezza per ASP.NET Web API 2 OData
+
 da [Mike Wasson](https://github.com/MikeWasson)
 
-In questo argomento vengono descritti alcuni dei problemi di sicurezza che è opportuno considerare quando si espone un set di dati tramite OData.
+In questo argomento vengono descritti alcuni dei problemi di sicurezza che è opportuno considerare quando si espone un set di dati tramite OData per ASP.NET Web API 2 su ASP.NET 4.x.
 
 ## <a name="edm-security"></a>Sicurezza EDM
 

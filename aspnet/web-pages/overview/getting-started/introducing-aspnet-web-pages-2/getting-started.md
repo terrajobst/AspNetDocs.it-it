@@ -8,15 +8,15 @@ ms.date: 05/28/2015
 ms.assetid: a36d3bdf-ef1b-47a4-b932-3a0cf4cad716
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/getting-started
 msc.type: authoredcontent
-ms.openlocfilehash: 79f76410e091b137e2792127b0a42524270761e8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 796e0c5e605d1103a4b9937b4e698c5c9412c013
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57062618"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59402297"
 ---
-<a name="getting-started"></a>Introduzione
-====================
+# <a name="getting-started"></a>Introduzione
+
 da [Tom FitzMacken](https://github.com/tfitzmac)
 
 [!INCLUDE[](~/includes/rp.md)]
@@ -289,4 +289,4 @@ Nella prossima esercitazione della serie, si Esplora un po' più di programmazio
 [Creare un sito Web ASP.NET da zero](https://www.microsoft.com/web/post/create-an-aspnet-website-from-scratch). Si tratta di un'esercitazione in cui è in particolare sull'utilizzo di WebMatrix (non ASP.NET Web Pages). Diventa un po' più in dettaglio alcune delle funzionalità aggiuntive di WebMatrix che non verranno illustrati in questa serie di esercitazioni.
 
 > [!div class="step-by-step"]
-> [avanti](intro-to-web-pages-programming.md)
+> [Successivo](intro-to-web-pages-programming.md)

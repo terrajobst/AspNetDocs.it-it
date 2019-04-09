@@ -8,15 +8,15 @@ ms.date: 03/31/2010
 ms.assetid: d3f062af-88cf-426d-af44-e41f32c41672
 msc.legacyurl: /web-forms/overview/data-access/custom-formatting/using-the-formview-s-templates-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 1a7cf17d8cbd0a5a17a387b9a70336a1b06efde7
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d275e3b154ca3397294d6cd0924cb6a50bbcef9a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57054998"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59395537"
 ---
-<a name="using-the-formviews-templates-c"></a>Usando i modelli del controllo FormView (c#)
-====================
+# <a name="using-the-formviews-templates-c"></a>Usando i modelli del controllo FormView (c#)
+
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Scaricare l'App di esempio](http://download.microsoft.com/download/9/6/9/969e5c94-dfb6-4e47-9570-d6d9e704c3c1/ASPNET_Data_Tutorial_14_CS.exe) o [Scarica il PDF](using-the-formview-s-templates-cs/_static/datatutorial14cs1.pdf)
@@ -40,7 +40,7 @@ A differenza di DetailsView, FormView non comprende i campi. È possibile aggiun
 In questa esercitazione che verrà esaminato tramite il controllo FormView per presentare una visualizzazione di prodotti meno rigida. Evitando che i campi per il nome, categoria, fornitore e del così via, FormView `ItemTemplate` mostrerà tali valori usando una combinazione di un elemento di intestazione e un `<table>` (vedere la figura 1).
 
 
-[![FormView suddivide la del Layout di tipo griglia visualizzato nel controllo DetailsView.](using-the-formview-s-templates-cs/_static/image2.png)](using-the-formview-s-templates-cs/_static/image1.png)
+[![The FormView suddivide la di Layout Grid-Like visto in DetailsView](using-the-formview-s-templates-cs/_static/image2.png)](using-the-formview-s-templates-cs/_static/image1.png)
 
 **Figura 1**: FormView esce il Layout Grid-Like visualizzato nel controllo DetailsView ([fare clic per visualizzare l'immagine con dimensioni normali](using-the-formview-s-templates-cs/_static/image3.png))
 
@@ -50,7 +50,7 @@ In questa esercitazione che verrà esaminato tramite il controllo FormView per p
 Aprire il `FormView.aspx` pagina e trascinare un controllo FormView dalla casella degli strumenti nella finestra di progettazione. Quando si aggiunge innanzitutto FormView viene visualizzato come una casella grigia, che indicano a noi che un `ItemTemplate` è necessaria.
 
 
-[![FormView non è possibile visualizzare nella finestra di progettazione fino a quando non viene fornito un ItemTemplate](using-the-formview-s-templates-cs/_static/image5.png)](using-the-formview-s-templates-cs/_static/image4.png)
+[![Tegli FormView non è possibile eseguire il rendering nella finestra di progettazione fino a quando non viene fornito un ItemTemplate](using-the-formview-s-templates-cs/_static/image5.png)](using-the-formview-s-templates-cs/_static/image4.png)
 
 **Figura 2**: Il controllo FormView non è possibile visualizzare la finestra di progettazione fino a quando non un' `ItemTemplate` viene fornito ([fare clic per visualizzare l'immagine con dimensioni normali](using-the-formview-s-templates-cs/_static/image6.png))
 
@@ -88,12 +88,12 @@ Poiché non esistono disponibili con FormView, nessun CheckBoxFields per mostrar
 Con la `ItemTemplate` completo, vengono visualizzate le informazioni di prodotto in modo molto più fluido. Confrontare l'output di DetailsView dall'ultima esercitazione (figura 3) con l'output generato dal FormView in questa esercitazione (figura 4).
 
 
-[![L'Output di DetailsView rigida](using-the-formview-s-templates-cs/_static/image8.png)](using-the-formview-s-templates-cs/_static/image7.png)
+[![Tegli rigida DetailsView Output](using-the-formview-s-templates-cs/_static/image8.png)](using-the-formview-s-templates-cs/_static/image7.png)
 
 **Figura 3**: L'Output di DetailsView rigida ([fare clic per visualizzare l'immagine con dimensioni normali](using-the-formview-s-templates-cs/_static/image9.png))
 
 
-[![L'Output di FormView fluide](using-the-formview-s-templates-cs/_static/image11.png)](using-the-formview-s-templates-cs/_static/image10.png)
+[![Tegli fluidodinamica FormView Output](using-the-formview-s-templates-cs/_static/image11.png)](using-the-formview-s-templates-cs/_static/image10.png)
 
 **Figura 4**: L'Output di FormView fluidodinamica ([fare clic per visualizzare l'immagine con dimensioni normali](using-the-formview-s-templates-cs/_static/image12.png))
 

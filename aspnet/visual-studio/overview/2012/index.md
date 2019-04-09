@@ -8,15 +8,15 @@ ms.date: 06/25/2013
 ms.assetid: 51900291-7787-4a6e-be4e-fa558486f5ff
 msc.legacyurl: /visual-studio/overview/2012
 msc.type: chapter
-ms.openlocfilehash: 7d49d7cf865bb6fad0bf4e90788bcf5c2613ab87
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 9b057f68e90a985c4e6950a94e49d84f8a6d5a07
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57019928"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59393366"
 ---
-<a name="aspnet-and-visual-studio-2012"></a>ASP.NET e Visual Studio 2012
-====================
+# <a name="aspnet-and-visual-studio-2012"></a>ASP.NET e Visual Studio 2012
+
 > Sviluppo di App web ASP.NET con Visual Studio 2012
 
 
@@ -26,7 +26,7 @@ ms.locfileid: "57019928"
 - [Controllo pagina di Visual Studio 2012](visual-studio-2012-page-inspector.md)
 - [Miglioramenti della pubblicazione Web di Visual Studio 2012](visual-studio-2012-web-publishing-improvements.md)
 - [Note sulla versione di ASP.NET and Web Tools 2013.1 per Visual Studio 2012](aspnet-and-web-tools-20131-for-visual-studio-2012.md)
-- [Smart task dell'editor HTML e generazione del gestore eventi](visual-studio-vnext-videos-html-editor-smart-tasks-and-event-handler-generation.md)
+- [Smart Task dell'editor HTML e generazione del gestore eventi](visual-studio-vnext-videos-html-editor-smart-tasks-and-event-handler-generation.md)
 - [Rientro gerarchico dell'editor CSS](visual-studio-vnext-videos-css-editor-hierarchical-indentation.md)
 - [Frammenti di codice dell'editor CSS](visual-studio-vnext-videos-css-editor-snippets.md)
 - [Selezione colori dell'editor CSS](visual-studio-vnext-videos-css-editor-color-picker.md)

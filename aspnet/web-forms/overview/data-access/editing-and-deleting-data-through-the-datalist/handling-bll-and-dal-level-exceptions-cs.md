@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/handling-bll-and-dal-level-exceptions-cs
-title: Gestione delle eccezioni a livello BLL e DAL (C#) | Microsoft Docs
+title: Gestione delle eccezioni a livello BLL e DAL (c#) | Microsoft Docs
 author: rick-anderson
 description: In questa esercitazione, vedremo come tactfully gestire le eccezioni generate durante l'aggiornamento flusso di lavoro di DataList un modificabile.
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 10/30/2006
 ms.assetid: f8fd58e2-f932-4f08-ab3d-fbf8ff3295d2
 msc.legacyurl: /web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/handling-bll-and-dal-level-exceptions-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 43a43c95e049acab734fa7d9fdcf2b96f12e78d9
-ms.sourcegitcommit: 62db31596a7da029263cf06335aff12236fb3186
+ms.openlocfilehash: 5714b118a5894731820d8e9775c8f5c8a375856c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58440274"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59390129"
 ---
-<a name="handling-bll--and-dal-level-exceptions-c"></a>Gestione delle eccezioni a livello BLL e DAL (C#)
-====================
+# <a name="handling-bll--and-dal-level-exceptions-c"></a>Gestione delle eccezioni a livello BLL e DAL (C#)
+
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Scaricare l'App di esempio](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_38_CS.exe) o [Scarica il PDF](handling-bll-and-dal-level-exceptions-cs/_static/datatutorial38cs1.pdf)
@@ -41,7 +41,7 @@ Le esercitazioni di DataList, tuttavia, non si usa ObjectDataSource per l'aggior
 Prima ci preoccupiamo la gestione delle eccezioni che si verificano durante l'aggiornamento del flusso di lavoro, consentire s prima di tutto creare un DataList modificabile. Aprire il `ErrorHandling.aspx` nella pagina la `EditDeleteDataList` cartella, aggiungere un controllo DataList alla finestra di progettazione, imposta relativo `ID` proprietà `Products`, e aggiungere un nuovo oggetto ObjectDataSource denominato `ProductsDataSource`. Configurare ObjectDataSource per usare la `ProductsBLL` classe s `GetProducts()` metodo per la selezione di registra; impostare gli elenchi a discesa nell'istruzione INSERT, UPDATE ed eliminare schede su (nessuno).
 
 
-[![Restituisce le informazioni sul prodotto utilizzando il metodo GetProducts()](handling-bll-and-dal-level-exceptions-cs/_static/image2.png)](handling-bll-and-dal-level-exceptions-cs/_static/image1.png)
+[![RRendi le informazioni sul prodotto utilizzando il metodo GetProducts()](handling-bll-and-dal-level-exceptions-cs/_static/image2.png)](handling-bll-and-dal-level-exceptions-cs/_static/image1.png)
 
 **Figura 1**: Restituisce le informazioni di prodotto usando il `GetProducts()` metodo ([fare clic per visualizzare l'immagine con dimensioni normali](handling-bll-and-dal-level-exceptions-cs/_static/image3.png))
 
@@ -60,7 +60,7 @@ Dopo tali modifiche, il markup dichiarativo s pagina dovrebbe essere simile al s
 Si consiglia di visualizzare lo stato di avanzamento tramite un browser (vedere la figura 2).
 
 
-[![Ogni prodotto include un pulsante Modifica](handling-bll-and-dal-level-exceptions-cs/_static/image5.png)](handling-bll-and-dal-level-exceptions-cs/_static/image4.png)
+[![EACH prodotto include un pulsante Modifica](handling-bll-and-dal-level-exceptions-cs/_static/image5.png)](handling-bll-and-dal-level-exceptions-cs/_static/image4.png)
 
 **Figura 2**: Ogni prodotto include un pulsante Modifica ([fare clic per visualizzare l'immagine con dimensioni normali](handling-bll-and-dal-level-exceptions-cs/_static/image6.png))
 
@@ -115,12 +115,12 @@ Per completare questa esercitazione, è sufficiente chiamare il `DisplayExceptio
 Con la `Try ... Catch` blocco posto, gli utenti visualizzano un messaggio di errore più informativo, come nelle figure 4 e 5 show. Si noti che in caso di un'eccezione di DataList rimangano in modalità di modifica. Infatti, quando si verifica l'eccezione, il flusso di controllo viene immediatamente reindirizzato alla pagina di `Catch` blocco, ignorando il codice che ripristina lo stato di pre-modifica di DataList.
 
 
-[![Viene visualizzato un messaggio di errore quando un utente la omette un campo obbligatorio](handling-bll-and-dal-level-exceptions-cs/_static/image9.png)](handling-bll-and-dal-level-exceptions-cs/_static/image8.png)
+[![An messaggio di errore viene visualizzato quando un utente la omette un campo obbligatorio](handling-bll-and-dal-level-exceptions-cs/_static/image9.png)](handling-bll-and-dal-level-exceptions-cs/_static/image8.png)
 
 **Figura 4**: Viene visualizzato un messaggio di errore quando un utente la omette un campo obbligatorio ([fare clic per visualizzare l'immagine con dimensioni normali](handling-bll-and-dal-level-exceptions-cs/_static/image10.png))
 
 
-[![Un messaggio di errore viene visualizzato quando immettendo un prezzo negativo](handling-bll-and-dal-level-exceptions-cs/_static/image12.png)](handling-bll-and-dal-level-exceptions-cs/_static/image11.png)
+[![An messaggio di errore viene visualizzato quando immettendo un prezzo negativo](handling-bll-and-dal-level-exceptions-cs/_static/image12.png)](handling-bll-and-dal-level-exceptions-cs/_static/image11.png)
 
 **Figura 5**: Un messaggio di errore viene visualizzato quando immettendo un prezzo negativo ([fare clic per visualizzare l'immagine con dimensioni normali](handling-bll-and-dal-level-exceptions-cs/_static/image13.png))
 

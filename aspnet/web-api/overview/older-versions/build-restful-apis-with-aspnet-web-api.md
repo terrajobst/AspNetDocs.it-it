@@ -1,25 +1,30 @@
 ---
 uid: web-api/overview/older-versions/build-restful-apis-with-aspnet-web-api
-title: Compilare le API RESTful con l'API Web ASP.NET | Microsoft Docs
+title: 'Compilare le API RESTful con ASP.NET Web API: ASP.NET 4.x'
 author: rick-anderson
-description: Negli ultimi anni, è diventato chiaro che HTTP non è sufficiente per mettere a disposizione le pagine HTML. È anche una potente piattaforma per la compilazione di API Web, utilizzando un numero limitato di o...
+description: "Laboratorio pratico: Utilizzare l'API Web in ASP.NET 4.x per compilare una semplice API REST per un'applicazione Gestione contatti."
 ms.author: riande
 ms.date: 02/18/2013
+ms.custom: seoapril2019
 ms.assetid: 87daa99f-3810-407e-b969-dd28a192959d
 msc.legacyurl: /web-api/overview/older-versions/build-restful-apis-with-aspnet-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: f1f5ebbf5170f205be331b6402951fb429196046
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 3ba7f2d186e6f0837a32f69f964cec19fe625953
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423715"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59391481"
 ---
-<a name="build-restful-apis-with-aspnet-web-api"></a>Compilare le API RESTful con l'API Web ASP.NET
-====================
+# <a name="build-restful-apis-with-aspnet-web-api"></a>Compilare le API RESTful con l'API Web ASP.NET
+
 da [Camp Web Team](https://twitter.com/webcamps)
 
-> Negli ultimi anni, è diventato chiaro che HTTP non è sufficiente per mettere a disposizione le pagine HTML. È anche una potente piattaforma per la compilazione di API Web, usando ad esempio un numero limitato di verbi (GET, POST e così via) e alcuni concetti semplici *URI* e *intestazioni*. API Web ASP.NET è un set di componenti che semplificano la programmazione HTTP. Poiché è basato sul runtime di ASP.NET MVC, API Web gestisce automaticamente i dettagli di basso livello trasporto di HTTP. Allo stesso tempo, API Web naturalmente espone il modello di programmazione HTTP. In uno degli obiettivi di API Web è infatti *non* sottraggono la realtà di HTTP. Di conseguenza, API Web è sia flessibile e facile da estendere. In questo laboratorio pratico, si utilizzerà API Web per compilare una semplice API REST per un'applicazione Gestione contatti. Si verrà inoltre compilato un client per usare l'API. Lo stile architetturale REST ha dimostrato di essere un metodo efficace per utilizzare HTTP - anche se non è sicuramente l'approccio valido solo per HTTP. Gestione contatti esporrà il RESTful per gli elenchi, aggiunta e rimozione dei contatti, tra gli altri. Questa esercitazione richiede una conoscenza di base HTTP, REST e si presuppone una conoscenza di base di codice HTML, JavaScript e jQuery.
+> Laboratorio pratico: Utilizzare l'API Web in ASP.NET 4.x per compilare una semplice API REST per un'applicazione Gestione contatti. Si verrà inoltre compilato un client per usare l'API.
+
+Negli ultimi anni, è diventato chiaro che HTTP non è sufficiente per mettere a disposizione le pagine HTML. È anche una potente piattaforma per la compilazione di API Web, usando ad esempio un numero limitato di verbi (GET, POST e così via) e alcuni concetti semplici *URI* e *intestazioni*. API Web ASP.NET è un set di componenti che semplificano la programmazione HTTP. Poiché è basato sul runtime di ASP.NET MVC, API Web gestisce automaticamente i dettagli di basso livello trasporto di HTTP. Allo stesso tempo, API Web naturalmente espone il modello di programmazione HTTP. In uno degli obiettivi di API Web è infatti *non* sottraggono la realtà di HTTP. Di conseguenza, API Web è sia flessibile e facile da estendere.  Lo stile architetturale REST ha dimostrato di essere un metodo efficace per utilizzare HTTP - anche se non è sicuramente l'approccio valido solo per HTTP. Gestione contatti esporrà il RESTful per gli elenchi, aggiunta e rimozione dei contatti, tra gli altri. 
+
+Questa esercitazione richiede una conoscenza di base HTTP, REST e si presuppone una conoscenza di base di codice HTML, JavaScript e jQuery.
 > 
 > > [!NOTE]
 > > Il sito Web ASP.NET è presente un'area dedicata per il framework API Web ASP.NET al [ https://asp.net/web-api ](https://asp.net/web-api). Questo sito continuerà a fornire le informazioni più aggiornate, esempi e le notizie relative all'API Web, quindi verificare spesso se si vuole approfondire la conoscenza l'arte della creazione di API Web personalizzate disponibili per qualsiasi framework di dispositivo o lo sviluppo.
@@ -417,7 +422,7 @@ In questa attività, si continuerà a modificare la visualizzazione dell'indice 
 > Inoltre, è possibile distribuire questa applicazione di Azure seguenti [appendice c: Pubblicazione di un'applicazione ASP.NET MVC 4 con distribuzione Web](#AppendixC).
 
 
-* * *
+---
 
 <a id="Summary"></a>
 ## <a name="summary"></a>Riepilogo

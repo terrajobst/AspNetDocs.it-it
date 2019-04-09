@@ -8,15 +8,15 @@ ms.date: 08/14/2010
 ms.assetid: 004703cd-e0e9-4ba7-9974-1b0475c71222
 msc.legacyurl: /mvc/overview/older-versions-1/getting-started-with-mvc/getting-started-with-mvc-part5
 msc.type: authoredcontent
-ms.openlocfilehash: 76dc324134dc93c9552741fea9f1136abdc9184a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: e0b540c030bf600def9b9efad4c73f055a343851
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57036658"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59402830"
 ---
-<a name="accessing-your-models-data-from-a-controller"></a>Accesso ai dati del modello da un controller
-====================
+# <a name="accessing-your-models-data-from-a-controller"></a>Accesso ai dati del modello da un controller
+
 da [Scott Hanselman](https://github.com/shanselman)
 
 > Si tratta di un'esercitazione per principianti che introduce i concetti di base di ASP.NET MVC. Si creerà una semplice applicazione web che legge e scrive da un database. Visitare il [centro di formazione di ASP.NET MVC](../../../index.md) per trovare altri ASP.NET MVC, esercitazioni ed esempi.
@@ -26,7 +26,7 @@ In questa sezione si intende creare una nuova classe MoviesController e scrivere
 
 Fare clic con il pulsante destro sulla cartella controller e creare un nuovo MoviesController.
 
-[![Aggiungi Controller](getting-started-with-mvc-part5/_static/image2.png)](getting-started-with-mvc-part5/_static/image1.png)
+[![Agg Controller](getting-started-with-mvc-part5/_static/image2.png)](getting-started-with-mvc-part5/_static/image1.png)
 
 Si creerà un nuovo file "MoviesController.cs" sotto la cartella \Controllers nostro progetto. È possibile aggiornare lo scaffolding di MovieController per recuperare l'elenco di filmati dal database appena popolato.
 

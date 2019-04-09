@@ -8,15 +8,15 @@ ms.date: 01/10/2011
 ms.assetid: ffa3d5c9-91e5-4da3-b409-560b0c7fbbf0
 msc.legacyurl: /web-pages/readme/beta3
 msc.type: content
-ms.openlocfilehash: 3d729d1b0615533dddceff484acb3d42247f6cab
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7f0c5ff599235157bd11f5f86a26b8882e0f29dc
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57060498"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59381809"
 ---
-<a name="web-matrix-and-aspnet-web-pages-razor-beta-3-release-readme"></a>File Leggimi di WebMatrix e pagine Web ASP.NET (Razor) Beta 3
-====================
+# <a name="web-matrix-and-aspnet-web-pages-razor-beta-3-release-readme"></a>File Leggimi di WebMatrix e pagine Web ASP.NET (Razor) Beta 3
+
 > File Leggimi di WebMatrix e pagine Web ASP.NET (Razor) Beta 3
 
 9 novembre 2010
@@ -28,7 +28,7 @@ ms.locfileid: "57060498"
 - [Nuove funzionalità, le modifiche e problemi noti nella versione Beta 3](#Known_Issues)
 
     - [Problemi di installazione di WebMatrix](#Known_Issues_Installation)
-    - [ASP.NET Web Pages](#Known_Issues_ASPNET)
+    - [Pagine Web ASP.NET](#Known_Issues_ASPNET)
     - [SQL Server Compact](#Known_Issues_SQL_Server_Compact)
     - [Installazione di applicazioni](#Known_Issues_Installing_Applications)
     - [Pubblicazione di applicazioni](#Known_Issues_Publishing_Applications)
@@ -161,7 +161,7 @@ In questa sezione del documento vengono descritte le nuove funzionalità, le mod
 
 #### <a name="change-webpagecontexthttpcontext-removed"></a>Modifica: "WebPageContext.HttpContext" removed
 
-> Il `WebPageContext.HttpContext` proprietà è stata rimossa. In alternativa, usare `HttpContext.Current`. (Il `WebPageContext.HttpContext` proprietà semplicemente eseguito il wrapping in questo.)
+> Il `WebPageContext.HttpContext` proprietà è stata rimossa. In alternativa, utilizzare `HttpContext.Current`. (Il `WebPageContext.HttpContext` proprietà semplicemente eseguito il wrapping in questo.)
 
 
 #### <a name="change-facebook-helper-moved-to-new-package"></a>Modifica: Helper "Facebook" spostato al nuovo pacchetto
@@ -454,7 +454,7 @@ In questa sezione del documento vengono descritte le nuove funzionalità, le mod
 
 > Passare a un'applicazione WCF genera un errore simile a quello seguente:
 > 
-> *Impossibile caricare il file o l'assembly ' Microsoft.Web.Administration, versione = 7.0.0.0, Culture = neutral, PublicKeyToken = 31bf3856ad364e35' o una delle relative dipendenze. Il sistema non riesce a trovare il file specificato.*
+> *Impossibile caricare il file o l'assembly ' Microsoft.Web.Administration, versione = 7.0.0.0, Culture = neutral, PublicKeyToken = 31bf3856ad364e35' o una delle relative dipendenze. Impossibile trovare il file specificato.*
 > 
 > Ciò si verifica perché WCF non supporta il versione Beta di IIS Express per impostazione predefinita.
 > 
@@ -545,9 +545,9 @@ In questa sezione del documento vengono descritte le nuove funzionalità, le mod
 Per ulteriori informazioni su WebMatrix Beta 3, vedere i siti Web seguenti:
 
 - [IIS.net](http://iis.net/)
-- [ASP.NET 2.0](https://asp.net/webmatrix)
+- [ASP.NET](https://asp.net/webmatrix)
 - [Microsoft.com/web](https://www.microsoft.com/web)
 
-* * *
+---
 
 © 2010 Microsoft Corporation. Tutti i diritti riservati. [Le condizioni d'uso](https://msdn.microsoft.cos/cc300389.aspx).

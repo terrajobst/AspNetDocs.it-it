@@ -8,15 +8,15 @@ ms.date: 12/10/2012
 ms.assetid: b0a214c7-2f38-4dbc-b47f-bd7bd9df97bd
 msc.legacyurl: /mvc/overview/advanced/custom-mvc-templates
 msc.type: authoredcontent
-ms.openlocfilehash: 3c14bc6feb144a52773bf7bd4c23df24966a9ebb
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 0603bc24e070e223551813f66a75889a2e46fd35
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57033868"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59379547"
 ---
-<a name="custom-mvc-template"></a>Modello MVC personalizzato
-====================
+# <a name="custom-mvc-template"></a>Modello MVC personalizzato
+
 da [Jacques Eloff](https://github.com/joeloff)
 
 La versione di MVC 3 Tools Update per Visual Studio 2010 ha introdotto una procedura guidata progetto separato per i progetti MVC. La modifica è stata determinata da due fattori. In primo luogo, l'introduzione di nuovi modelli in MVC 3 e il supporto per i motori di visualizzazione aggiuntive, ad esempio Razor causare sovraffollamento la finestra di dialogo Nuovo progetto in Visual Studio. In secondo luogo, i clienti erano stata porre per i punti di estendibilità ed è la creazione guidata nuovo progetto MVC sarebbe concedere noi la possibilità di rispondere a queste richieste.

@@ -8,15 +8,15 @@ ms.date: 02/20/2005
 ms.assetid: 78fd0e92-f9c6-4e96-a5e9-0375b307a828
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/data-source-controls
 msc.type: authoredcontent
-ms.openlocfilehash: ba00024e93beba6eab226dd0d381d8734061e095
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 3ba9fdaaf655f6510d3ebf6ce0930fbf4000add3
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57038878"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59388868"
 ---
-<a name="data-source-controls"></a>Controlli origine dati
-====================
+# <a name="data-source-controls"></a>Controlli origine dati
+
 by [Microsoft](https://github.com/microsoft)
 
 > Il controllo DataGrid in ASP.NET 1.x contrassegnato un notevole miglioramento nell'accesso ai dati nelle applicazioni Web. Tuttavia, non è stato semplice da utilizzare come avrebbe potuto. Comunque necessaria una notevole quantità di codice per ottenere molte funzionalità utili da quest'ultimo. Ad esempio è il modello in tutte le tue attività di accesso di dati nella versione 1.x.

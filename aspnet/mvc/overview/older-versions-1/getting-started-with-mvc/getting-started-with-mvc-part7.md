@@ -8,15 +8,15 @@ ms.date: 08/14/2010
 ms.assetid: aa7b3e8e-e23d-49f1-b160-f99a7f2982bd
 msc.legacyurl: /mvc/overview/older-versions-1/getting-started-with-mvc/getting-started-with-mvc-part7
 msc.type: authoredcontent
-ms.openlocfilehash: 4c7867587ba0610f0f1c23d9a0b9fbdc4040de7c
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 3db6947f36eb51b41d929f8c7d8835a95db8ea75
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57027628"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59392352"
 ---
-<a name="adding-validation-to-the-model"></a>Aggiunta della convalida al modello
-====================
+# <a name="adding-validation-to-the-model"></a>Aggiunta della convalida al modello
+
 da [Scott Hanselman](https://github.com/shanselman)
 
 > Si tratta di un'esercitazione per principianti che introduce i concetti di base di ASP.NET MVC. Si creerà una semplice applicazione web che legge e scrive da un database. Visitare il [centro di formazione di ASP.NET MVC](../../../index.md) per trovare altri ASP.NET MVC, esercitazioni ed esempi.
@@ -65,7 +65,7 @@ Ecco il codice illustrato all'interno dell'IDE.
 
 Eseguire l'applicazione e accedere di nuovo /Movies/Create e fare clic su Crea senza dover immettere tutti i dati. I messaggi di errore vengono visualizzati immediatamente senza la pagina flash che viene associato l'invio di dati fino al server. Si tratta poiché ASP.NET MVC è ora la convalida dell'input sia il client (tramite JavaScript) e nel server.
 
-[![Create - Windows Internet Explorer](getting-started-with-mvc-part7/_static/image6.png)](getting-started-with-mvc-part7/_static/image5.png)
+[![Crea - Windows Internet Explorer](getting-started-with-mvc-part7/_static/image6.png)](getting-started-with-mvc-part7/_static/image5.png)
 
 Ciò è bene Questo punto, aggiungere una colonna aggiuntiva al database.
 

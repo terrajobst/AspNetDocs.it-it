@@ -8,18 +8,18 @@ ms.date: 03/28/2008
 ms.assetid: 54d9df99-1161-4899-b4e8-2679c85915e7
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/aspnet-ajax/understanding-partial-page-updates-with-asp-net-ajax
 msc.type: authoredcontent
-ms.openlocfilehash: 4883046aa16d5e67b7f0c92e15c897ef1a933b67
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d2d7982a4e0175824ffede965dc8206219485df2
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57048988"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59396473"
 ---
-<a name="understanding-partial-page-updates-with-aspnet-ajax"></a>Informazioni sugli aggiornamenti parziali di pagine con ASP.NET AJAX
-====================
+# <a name="understanding-partial-page-updates-with-aspnet-ajax"></a>Informazioni sugli aggiornamenti parziali di pagine con ASP.NET AJAX
+
 da [Scott Cate](https://github.com/scottcate)
 
-[Scaricare PDF](http://download.microsoft.com/download/C/1/9/C19A3451-1D14-477C-B703-54EF22E197EE/AJAX_tutorial01_Partial_Page_Updates_cs.pdf)
+[Scarica il PDF](http://download.microsoft.com/download/C/1/9/C19A3451-1D14-477C-B703-54EF22E197EE/AJAX_tutorial01_Partial_Page_Updates_cs.pdf)
 
 > Probabilmente la caratteristica più visibile di ASP.NET AJAX Extensions è la possibilità di eseguire gli aggiornamenti di una pagina parziale o incrementale senza eseguire un postback completo al server, senza modifiche al codice e modifiche minime del markup. I vantaggi sono disponibili numerose: non viene modificato lo stato dei tuoi file multimediali (ad esempio Adobe Flash o supporti di Windows), vengono ridotti i costi della larghezza di banda e il client non prevede lo sfarfallio in genere associato a un postback.
 
@@ -111,7 +111,7 @@ Visual Studio 2008 non è dotata di un modello predefinito per un sito web ASP.N
 
 Proprietà del markup abilitati:
 
-| **Nome proprietà** | **Type** | **Descrizione** |
+| **Nome proprietà** | **Tipo** | **Descrizione** |
 | --- | --- | --- |
 | AllowCustomErrors-Redirect | Bool | Specifica se usare la sezione degli errori personalizzati del file Web. config per la gestione degli errori. |
 | AsyncPostBackError-Message | Stringa | Ottiene o imposta il messaggio di errore inviato al client se viene generato un errore. |
@@ -124,7 +124,7 @@ Proprietà del markup abilitati:
 
 Proprietà di solo codice:
 
-| **Nome proprietà** | **Type** | **Descrizione** |
+| **Nome proprietà** | **Tipo** | **Descrizione** |
 | --- | --- | --- |
 | AuthenticationService | AuthenticationService-Manager | Ottiene informazioni dettagliate su proxy del servizio di autenticazione ASP.NET che verrà inviato al client. |
 | IsDebuggingEnabled | Bool | Ottiene se creare script e il debug del codice è abilitata. |
@@ -136,7 +136,7 @@ Proprietà di solo codice:
 
 Metodi pubblici di codice:
 
-| **Nome del metodo** | **Type** | **Descrizione** |
+| **Nome metodo** | **Tipo** | **Descrizione** |
 | --- | --- | --- |
 | SetFocus(string) | Void | Imposta lo stato attivo del client a un particolare controllo quando la richiesta è stata completata. |
 
@@ -185,7 +185,7 @@ Il controllo ScriptManager offre ampio supporto per la localizzazione di stringh
 
 Proprietà del markup abilitati:
 
-| **Nome proprietà** | **Type** | **Descrizione** |
+| **Nome proprietà** | **Tipo** | **Descrizione** |
 | --- | --- | --- |
 | ChildrenAsTriggers | bool | Specifica se i controlli figlio richiamano automaticamente l'aggiornamento nel postback. |
 | RenderMode | enum (blocco, in linea) | Specifica che il modo il contenuto verrà visualizzato in modo visivo. |
@@ -193,7 +193,7 @@ Proprietà del markup abilitati:
 
 Proprietà di solo codice:
 
-| **Nome proprietà** | **Type** | **Descrizione** |
+| **Nome proprietà** | **Tipo** | **Descrizione** |
 | --- | --- | --- |
 | IsInPartialRendering | bool | Determina se UpdatePanel è il supporto per il rendering parziale per la richiesta corrente. |
 | ContentTemplate | ITemplate | Ottiene il modello di markup per la richiesta di aggiornamento. |
@@ -202,7 +202,7 @@ Proprietà di solo codice:
 
 Metodi pubblici di codice:
 
-| **Nome del metodo** | **Type** | **Descrizione** |
+| **Nome metodo** | **Tipo** | **Descrizione** |
 | --- | --- | --- |
 | Update() | Void | Aggiorna UpdatePanel specificato a livello di codice. Consente a una richiesta di server attivare un rendering parziale di un UpdatePanel in caso contrario,-senza trigger. |
 
@@ -280,7 +280,7 @@ Infine, se un'applicazione richiede che vengano utilizzati gli UpdatePanel, le l
 
 Proprietà del markup abilitati:
 
-| **Nome proprietà** | **Type** | **Descrizione** |
+| **Nome proprietà** | **Tipo** | **Descrizione** |
 | --- | --- | --- |
 | AssociatedUpdate-PanelID | Stringa | Specifica l'ID del controllo UpdatePanel che devono comunicare questa UpdateProgress in. |
 | DisplayAfter | Int | Specifica il timeout in millisecondi prima che questo controllo viene visualizzato dopo l'inizio della richiesta asincrona. |
@@ -315,4 +315,4 @@ Insieme, questi strumenti facilita la creazione di un'esperienza utente avanzata
 Scott Cate ha collaborato con tecnologie Web di Microsoft dal 1997 ed è il presidente di myKB.com ([www.myKB.com](http://www.myKB.com)) ed è specializzato nella scrittura di ASP.NET basato su applicazioni incentrate su soluzioni Software di Knowledge Base. È possibile contattare Scott tramite posta elettronica all'indirizzo [ scott.cate@myKB.com ](mailto:scott.cate@myKB.com) o il suo blog all'indirizzo [ScottCate.com](http://ScottCate.com)
 
 > [!div class="step-by-step"]
-> [avanti](understanding-asp-net-ajax-updatepanel-triggers.md)
+> [Successivo](understanding-asp-net-ajax-updatepanel-triggers.md)

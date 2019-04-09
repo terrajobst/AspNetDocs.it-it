@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 969ab824-1b98-4552-81fe-b60ef5fc6887
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-custom-action-filters
 msc.type: authoredcontent
-ms.openlocfilehash: 4c8628cc289610e287c0a3bc3c8a4c7a833c9fde
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 32587c7b0fd3075cd46678922b40bda2019f3a26
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423416"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59381133"
 ---
 # <a name="aspnet-mvc-4-custom-action-filters"></a>Filtri per azioni personalizzati di ASP.NET MVC 4
 
@@ -59,7 +59,7 @@ Per praticità, gran parte del codice che vengono gestiti insieme questo lab è 
 
 Se non ha familiarità con i frammenti di codice di Visual Studio e si vuole imparare a usarle, è possibile fare riferimento all'appendice di questo documento &quot; [appendice c: Uso dei frammenti di codice](#AppendixC)&quot;.
 
-* * *
+---
 
 <a id="Exercises"></a>
 
@@ -144,7 +144,7 @@ In questa attività si creerà una classe di attributo di filtro personalizzato 
       > Uno dei vantaggi dell'uso di NuGet è che non è necessario per la spedizione di tutte le librerie nel progetto, ridurre le dimensioni del progetto. Con gli strumenti avanzati di NuGet, specificando le versioni del pacchetto nel file Packages. config, sarà possibile scaricare tutte le librerie necessarie alla prima che esecuzione del progetto. Ecco perché è necessario eseguire questi passaggi dopo l'apertura di una soluzione esistente da questa esercitazione.
       > 
       > Per altre informazioni, vedere questo articolo: [ http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages ](http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages).
-2. Aggiungere una nuova classe C# nel **filtri** cartella e denominarlo *CustomActionFilter.cs*. Questa cartella archivierà tutti i filtri personalizzati.
+2. Aggiungere una nuova classe c# nel **filtri** cartella e denominarlo *CustomActionFilter.cs*. Questa cartella archivierà tutti i filtri personalizzati.
 3. Aprire **CustomActionFilter.cs** e aggiungere un riferimento a **System** e **MvcMusicStore.Models** gli spazi dei nomi:
 
     (Code - Snippet *filtri azione personalizzati di ASP.NET MVC 4 - Ex1 CustomActionFilterNamespaces*)
@@ -248,7 +248,7 @@ In questa attività si creerà un nuovo filtro azioni personalizzato per inserir
         > Uno dei vantaggi dell'uso di NuGet è che non è necessario per la spedizione di tutte le librerie nel progetto, ridurre le dimensioni del progetto. Con gli strumenti avanzati di NuGet, specificando le versioni del pacchetto nel file Packages. config, sarà possibile scaricare tutte le librerie necessarie alla prima che esecuzione del progetto. Ecco perché è necessario eseguire questi passaggi dopo l'apertura di una soluzione esistente da questa esercitazione.
         > 
         > Per altre informazioni, vedere questo articolo: [ http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages ](http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages).
-2. Aggiungere una nuova classe C# nel **filtri** cartella e denominarlo *MyNewCustomActionFilter.cs*
+2. Aggiungere una nuova classe c# nel **filtri** cartella e denominarlo *MyNewCustomActionFilter.cs*
 3. Aprire **MyNewCustomActionFilter.cs** e aggiungere un riferimento a **System** e il **MvcMusicStore.Models** dello spazio dei nomi:
 
     (Code - Snippet *filtri azione personalizzati di ASP.NET MVC 4 - Ex2 MyNewCustomActionFilterNamespaces*)
@@ -354,7 +354,7 @@ In questa attività si aggiornerà la soluzione per registrare il nuovo filtro (
 > Inoltre, è possibile distribuire questa applicazione per siti Web di Azure seguenti [appendice b: Pubblicazione di un'applicazione ASP.NET MVC 4 con distribuzione Web](#AppendixB).
 
 
-* * *
+---
 
 <a id="Summary"></a>
 
@@ -555,7 +555,7 @@ Con i frammenti di codice, hai tutto il codice che necessario a tua disposizione
 
 *Uso di frammenti di codice di Visual Studio per inserire codice nel progetto*
 
-***Per aggiungere un frammento di codice utilizzando la tastiera (solo C#)***
+***Per aggiungere un frammento di codice utilizzando la tastiera (solo c#)***
 
 1. Posizionare il cursore in cui si vuole inserire il codice.
 2. Iniziare a digitare il nome del frammento di codice (senza spazi o trattini).
@@ -575,7 +575,7 @@ Con i frammenti di codice, hai tutto il codice che necessario a tua disposizione
 
 *Il frammento di codice e premere nuovamente Tab espanderà*
 
-***Per aggiungere un frammento di codice usando il mouse (C#, Visual Basic e XML)*** 1. Pulsante destro del mouse in cui si desidera inserire il frammento di codice.
+***Per aggiungere un frammento di codice usando il mouse (c#, Visual Basic e XML)*** 1. Pulsante destro del mouse in cui si desidera inserire il frammento di codice.
 
 1. Selezionare **Inserisci frammento** aggiungendo **frammenti di codice**.
 2. Selezionare il frammento di codice rilevante dall'elenco, facendo clic su di esso.

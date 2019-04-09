@@ -1,19 +1,20 @@
 ---
 uid: identity/overview/migrations/migrating-an-existing-website-from-sql-membership-to-aspnet-identity
-title: La migrazione di un sito Web esistente dall'appartenenza SQL ad ASP.NET Identity | Microsoft Docs
+title: La migrazione di un sito Web esistente dall'appartenenza SQL ad ASP.NET Identity - ASP.NET 4.x
 author: Rick-Anderson
 description: Questa esercitazione illustra i passaggi per eseguire la migrazione di un'applicazione web esistente con l'utente e i dati del ruolo creati mediante l'appartenenza di SQL per la nuova identità di ASP.NET s...
 ms.author: riande
 ms.date: 12/19/2014
+ms.custom: seoapril2019
 ms.assetid: 220d3d75-16b2-4240-beae-a5b534f06419
 msc.legacyurl: /identity/overview/migrations/migrating-an-existing-website-from-sql-membership-to-aspnet-identity
 msc.type: authoredcontent
-ms.openlocfilehash: b80f2f5cc4702c3e406d8989905c56508711e788
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: f205dfd8692bc946ca2124655bf8bcefbdbd1779
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58426081"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59394529"
 ---
 # <a name="migrating-an-existing-website-from-sql-membership-to-aspnet-identity"></a>Migrazione di un sito Web esistente dall'appartenenza SQL ad ASP.NET Identity
 
@@ -82,15 +83,15 @@ Questo file di script è specifico per questo esempio. Se lo schema per le tabel
 
 Per le classi di ASP.NET Identity a funziona automaticamente con i dati degli utenti esistenti, è necessario eseguire la migrazione dello schema del database a quello richiesto dall'identità di ASP.NET. È possibile farlo mediante l'aggiunta di nuove tabelle e copia le informazioni esistenti in tali tabelle. Per impostazione predefinita ASP.NET Identity Usa EntityFramework per eseguire il mapping di classi del modello di identità nel database di archiviare/recuperare le informazioni. Queste classi modello implementano le interfacce di identità core la definizione di utente e gli oggetti role. Le tabelle e le colonne nel database si basano su queste classi di modello. Le classi modello EntityFramework 2.1.0 in identità e le relative proprietà sono definite come segue
 
-| **IdentityUser** | **Type** | **IdentityRole** | **IdentityUserRole** | **IdentityUserLogin** | **IdentityUserClaim** |
+| **IdentityUser** | **Tipo** | **IdentityRole** | **IdentityUserRole** | **IdentityUserLogin** | **IdentityUserClaim** |
 | --- | --- | --- | --- | --- | --- |
-| Id | string | Id | RoleId | ProviderKey | Id |
-| Nome utente | string | Nome | UserId | UserId | ClaimType |
-| PasswordHash | string |  |  | LoginProvider | ClaimValue |
-| SecurityStamp | string |  |  |  | Utente\_Id |
-| Email | string |  |  |  |  |
+| Id | stringa | Id | RoleId | ProviderKey | Id |
+| Nome utente | stringa | nome | UserId | UserId | ClaimType |
+| PasswordHash | stringa |  |  | LoginProvider | ClaimValue |
+| SecurityStamp | stringa |  |  |  | Utente\_Id |
+| Email | stringa |  |  |  |  |
 | EmailConfirmed | bool |  |  |  |  |
-| Numero di telefono | string |  |  |  |  |
+| Numero di telefono | stringa |  |  |  |  |
 | PhoneNumberConfirmed | bool |  |  |  |  |
 | LockoutEnabled | bool |  |  |  |  |
 | LockoutEndDate | DateTime |  |  |  |  |

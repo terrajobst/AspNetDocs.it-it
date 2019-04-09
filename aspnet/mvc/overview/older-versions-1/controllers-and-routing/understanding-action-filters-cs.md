@@ -8,18 +8,18 @@ ms.date: 10/16/2008
 ms.assetid: a94e4e81-40c1-47b7-8613-126a1a6cc93d
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/understanding-action-filters-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 6c7706d8252d5a0271f1b9243fa8eb282f722654
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 8264b48388ee4a6b51515aa2b897ece3b2f3972a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57059088"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59380873"
 ---
-<a name="understanding-action-filters-c"></a>Informazioni sui filtri per azioni (C#)
-====================
+# <a name="understanding-action-filters-c"></a>Informazioni sui filtri per azioni (C#)
+
 by [Microsoft](https://github.com/microsoft)
 
-[Scaricare PDF](http://download.microsoft.com/download/e/f/3/ef3f2ff6-7424-48f7-bdaa-180ef64c3490/ASPNET_MVC_Tutorial_14_CS.pdf)
+[Scarica il PDF](http://download.microsoft.com/download/e/f/3/ef3f2ff6-7424-48f7-bdaa-180ef64c3490/ASPNET_MVC_Tutorial_14_CS.pdf)
 
 > L'obiettivo di questa esercitazione è di spiegare i filtri azione. Un filtro azione è un attributo che è possibile applicare un'azione del controller, o un intero controller, che modifica il modo in cui viene eseguita l'azione.
 
@@ -49,7 +49,7 @@ Ad esempio, il trattamento dei dati nel listato 1 espone un'azione denominata `I
 Se viene richiamato più volte il `Index()` azione immettendo l'URL/Data/indice nella barra degli indirizzi del browser e l'aggiornamento di raggiungere il numero di volte, viene visualizzata la stessa ora per 10 secondi. L'output del `Index()` azione viene memorizzato nella cache per 10 secondi (vedere la figura 1).
 
 
-[![Ora memorizzati nella cache](understanding-action-filters-cs/_static/image2.png)](understanding-action-filters-cs/_static/image1.png)
+[![Ctempo inserito nella cache](understanding-action-filters-cs/_static/image2.png)](understanding-action-filters-cs/_static/image1.png)
 
 **Figura 01**: Memorizzato nella cache di tempo ([fare clic per visualizzare l'immagine con dimensioni normali](understanding-action-filters-cs/_static/image3.png))
 
@@ -107,7 +107,7 @@ Per illustrare come creare un filtro azioni personalizzato, si creerà un filtro
 Nel listato 2, il `OnActionExecuting()`, `OnActionExecuted()`, `OnResultExecuting()`, e `OnResultExecuted()` tutti i metodi chiamano il `Log()` (metodo). Il nome del metodo e i dati della route corrente viene passato per il `Log()` (metodo). Il `Log()` metodo scrive un messaggio nella finestra di Output di Visual Studio (vedere la figura 2).
 
 
-[![La scrittura nella finestra di Output di Visual Studio](understanding-action-filters-cs/_static/image5.png)](understanding-action-filters-cs/_static/image4.png)
+[![Writing alla finestra di Output di Visual Studio](understanding-action-filters-cs/_static/image5.png)](understanding-action-filters-cs/_static/image4.png)
 
 **Figura 02**: La scrittura nella finestra di Output di Visual Studio ([fare clic per visualizzare l'immagine con dimensioni normali](understanding-action-filters-cs/_static/image6.png))
 

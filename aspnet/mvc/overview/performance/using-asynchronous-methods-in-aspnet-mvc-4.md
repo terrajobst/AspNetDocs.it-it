@@ -8,20 +8,20 @@ ms.date: 06/06/2012
 ms.assetid: a56572ba-81c3-47af-826d-941e9c4775ec
 msc.legacyurl: /mvc/overview/performance/using-asynchronous-methods-in-aspnet-mvc-4
 msc.type: authoredcontent
-ms.openlocfilehash: 20f8d6f459cefc6c1a2e7d5f64c6df4199f8ad24
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 8292fd43ffa2bc66b4daa8f0fc09569226d90bff
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58424469"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59379560"
 ---
-<a name="using-asynchronous-methods-in-aspnet-mvc-4"></a>Utilizzo di metodi asincroni in ASP.NET MVC 4
-====================
+# <a name="using-asynchronous-methods-in-aspnet-mvc-4"></a>Utilizzo di metodi asincroni in ASP.NET MVC 4
+
 da [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > Questa esercitazione insegnerà le nozioni di base della creazione di un'applicazione Web MVC ASP.NET asincrone usando [Visual Studio Express 2012 per Web](https://www.microsoft.com/visualstudio/11), ovvero una versione gratuita di Microsoft Visual Studio. È anche possibile usare [Visual Studio 2012](https://www.microsoft.com/visualstudio/11).
 > 
-> Un esempio completo è disponibile per questa esercitazione su github  [https://github.com/RickAndMSFT/Async-ASP.NET/](https://github.com/RickAndMSFT/Async-ASP.NET/)
+> Un esempio completo è disponibile per questa esercitazione su github [https://github.com/RickAndMSFT/Async-ASP.NET/](https://github.com/RickAndMSFT/Async-ASP.NET/)
 
 
 ASP.NET MVC 4 [Controller](https://msdn.microsoft.com/library/system.web.mvc.controller(VS.108).aspx) classe in combinazione [.NET 4.5](https://msdn.microsoft.com/library/w0x726c2(VS.110).aspx) consente di scrivere metodi di azione asincroni che restituiscono un oggetto di tipo [attività&lt;ActionResult&gt; ](https://msdn.microsoft.com/library/dd321424(VS.110).aspx). .NET Framework 4 introdotto un concetto di programmazione asincrono detto una [Task](https://msdn.microsoft.com/library/system.threading.tasks.task.aspx) e ASP.NET MVC 4 supporta [attività](https://msdn.microsoft.com/library/system.threading.tasks.task.aspx). Le attività sono rappresentate dal **Task** tipo e i tipi correlati nel [Tasks](https://msdn.microsoft.com/library/system.threading.tasks.aspx) dello spazio dei nomi. .NET Framework 4.5 si basa su questo supporto asincrono con il [await](https://msdn.microsoft.com/library/hh156528(VS.110).aspx) e [async](https://msdn.microsoft.com/library/hh156513(VS.110).aspx) parole chiave che rendono l'utilizzo dei [attività](https://msdn.microsoft.com/library/system.threading.tasks.task.aspx) oggetti molto meno complessi precedente approccio asincrono. Il [await](https://msdn.microsoft.com/library/hh156528(VS.110).aspx) parola chiave è una sintassi abbreviata per indicare che un frammento di codice deve attendere in modo asincrono in altre parti di codice. Il [async](https://msdn.microsoft.com/library/hh156513(VS.110).aspx) parola chiave rappresenta un suggerimento che è possibile usare per contrassegnare i metodi come metodi asincroni basati su attività. La combinazione delle **await**, **async**e il **attività** oggetto rende molto più semplice per la scrittura di codice asincrono in .NET 4.5. Il nuovo modello per i metodi asincroni viene chiamato il *Task-based Asynchronous Pattern* (**toccare**). Questa esercitazione si presuppone una certa conoscenza di programmazione asincrono utilizzando [await](https://msdn.microsoft.com/library/hh156528(VS.110).aspx) e [async](https://msdn.microsoft.com/library/hh156513(VS.110).aspx) parole chiave e il [attività](https://msdn.microsoft.com/library/system.threading.tasks.task.aspx) dello spazio dei nomi.
@@ -166,7 +166,7 @@ Per sfruttare i vantaggi di un'applicazione web asincrona, si potrebbe essere ne
 
     - Aprire Gestione IIS e passare al riquadro pool di applicazioni.
     - Fare clic con il pulsante destro sul pool di applicazioni di destinazione e selezionare **impostazioni avanzate**.  
-        ![advanced](using-asynchronous-methods-in-aspnet-mvc-4/_static/image4.png)
+        ![avanzata](using-asynchronous-methods-in-aspnet-mvc-4/_static/image4.png)
     - Nel **impostazioni avanzate** della finestra di dialogo Modifica *lunghezza coda* da 1.000 a 5.000.  
         ![Lunghezza coda](using-asynchronous-methods-in-aspnet-mvc-4/_static/image5.png)  
   

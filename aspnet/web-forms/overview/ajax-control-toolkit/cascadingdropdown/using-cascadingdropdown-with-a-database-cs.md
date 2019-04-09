@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: 684f0c28-a490-4e5b-b5e5-5dfb77464b49
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/cascadingdropdown/using-cascadingdropdown-with-a-database-cs
 msc.type: authoredcontent
-ms.openlocfilehash: ed5057ee942ce57503b038cbd856fefaa3d287ce
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: ef40d71828237a3d086c7c1bb05de56e0770f588
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57042568"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59391273"
 ---
-<a name="using-cascadingdropdown-with-a-database-c"></a>Uso di CascadingDropDown con un database (C#)
-====================
+# <a name="using-cascadingdropdown-with-a-database-c"></a>Uso di CascadingDropDown con un database (C#)
+
 da [Christian Wenz](https://github.com/wenz)
 
 [Scaricare il codice](http://download.microsoft.com/download/9/0/7/907760b1-2c60-4f81-aeb6-ca416a573b0d/cascadingdropdown1.cs.zip) o [Scarica il PDF](http://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/cascadingdropdown1CS.pdf)
@@ -86,12 +86,12 @@ Il resto del metodo è piuttosto semplice, quindi. ID del fornitore viene utiliz
 Caricare la pagina ASP.NET e dopo un breve periodo di tempo viene inserito nell'elenco di fornitori con le voci di 25. Selezionare una voce e notare come il secondo elenco a discesa viene riempita con i dati.
 
 
-[![Nel primo elenco viene compilato automaticamente](using-cascadingdropdown-with-a-database-cs/_static/image2.png)](using-cascadingdropdown-with-a-database-cs/_static/image1.png)
+[![Tprimo elenco he viene riempito automaticamente](using-cascadingdropdown-with-a-database-cs/_static/image2.png)](using-cascadingdropdown-with-a-database-cs/_static/image1.png)
 
 Nel primo elenco viene compilato automaticamente ([fare clic per visualizzare l'immagine con dimensioni normali](using-cascadingdropdown-with-a-database-cs/_static/image3.png))
 
 
-[![Nel secondo elenco viene compilato in base della selezione nel primo elenco](using-cascadingdropdown-with-a-database-cs/_static/image5.png)](using-cascadingdropdown-with-a-database-cs/_static/image4.png)
+[![Tsecondo elenco he viene compilato in base della selezione nel primo elenco](using-cascadingdropdown-with-a-database-cs/_static/image5.png)](using-cascadingdropdown-with-a-database-cs/_static/image4.png)
 
 Nel secondo elenco viene compilato in base della selezione nel primo elenco ([fare clic per visualizzare l'immagine con dimensioni normali](using-cascadingdropdown-with-a-database-cs/_static/image6.png))
 

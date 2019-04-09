@@ -8,15 +8,15 @@ ms.date: 05/28/2015
 ms.assetid: c85ec591-f8d7-4882-b763-de6ab9f3df7a
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/layouts
 msc.type: authoredcontent
-ms.openlocfilehash: a6a007678d58547e9987ebda46bd08ae8aea66f7
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 58f3ec28914a604aa911cc3cb73733f0d58fd49f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57046178"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59390415"
 ---
-<a name="introducing-aspnet-web-pages---creating-a-consistent-layout"></a>Introduzione a pagine Web ASP.NET - creazione di un Layout coerente
-====================
+# <a name="introducing-aspnet-web-pages---creating-a-consistent-layout"></a>Introduzione a pagine Web ASP.NET - creazione di un Layout coerente
+
 da [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Questa esercitazione illustra come usare *layout* per creare un aspetto coerente per le pagine in un sito che usa ASP.NET Web Pages. Si presuppone di aver completato la serie attraverso [l'eliminazione dei dati di un Database in ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=251584).
@@ -146,7 +146,7 @@ Aprire il *Movies.cshtml* pagina nuovamente. Nel codice nella parte superiore, a
 
 Il `Page` l'oggetto è disponibile in tutti i *cshtml* pagine ed è per questo scopo, vale a dire per condividere informazioni tra una pagina e il relativo layout.
 
-Aprire il<em>\_layout. cshtml</em> pagina. Modifica il `<title>` elemento in modo che l'it è simile a questo markup:
+Aprire il  *\_layout. cshtml* pagina. Modifica il `<title>` elemento in modo che l'it è simile a questo markup:
 
 [!code-html[Main](layouts/samples/sample9.html)]
 

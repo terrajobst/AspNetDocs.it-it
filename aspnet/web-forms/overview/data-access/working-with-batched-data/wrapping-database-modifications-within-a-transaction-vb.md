@@ -8,15 +8,15 @@ ms.date: 06/26/2007
 ms.assetid: 7d821db5-6cbb-4b38-af14-198f9155fc82
 msc.legacyurl: /web-forms/overview/data-access/working-with-batched-data/wrapping-database-modifications-within-a-transaction-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 986baf521bf68b60e9c868f070f31a3aee21db8d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 2fc7ba3d62d41685c234756709707ff14f81b316
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57032538"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59380314"
 ---
-<a name="wrapping-database-modifications-within-a-transaction-vb"></a>Wrapping delle modifiche al database in una transazione (VB)
-====================
+# <a name="wrapping-database-modifications-within-a-transaction-vb"></a>Wrapping delle modifiche al database in una transazione (VB)
+
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Scaricare il codice](http://download.microsoft.com/download/3/9/f/39f92b37-e92e-4ab3-909e-b4ef23d01aa3/ASPNET_Data_Tutorial_63_VB.zip) o [Scarica il PDF](wrapping-database-modifications-within-a-transaction-vb/_static/datatutorial63vb1.pdf)
@@ -83,7 +83,7 @@ Prima di iniziare a esplorare come migliorare per supportare le transazioni di d
 Come con le altre cartelle `Default.aspx` userà la `SectionLevelTutorialListing.ascx` controllo utente per elencare le esercitazioni nella relativa sezione. Pertanto, aggiungere questo controllo utente da `Default.aspx` trascinandolo da Esplora soluzioni nella pagina di visualizzazione della struttura s.
 
 
-[![Aggiungere il controllo utente sectionleveltutoriallisting. ascx a default. aspx](wrapping-database-modifications-within-a-transaction-vb/_static/image2.gif)](wrapping-database-modifications-within-a-transaction-vb/_static/image1.png)
+[![Ail controllo utente sectionleveltutoriallisting. ascx a default. aspx gg](wrapping-database-modifications-within-a-transaction-vb/_static/image2.gif)](wrapping-database-modifications-within-a-transaction-vb/_static/image1.png)
 
 **Figura 2**: Aggiungere il `SectionLevelTutorialListing.ascx` controllo utente da `Default.aspx` ([fare clic per visualizzare l'immagine con dimensioni normali](wrapping-database-modifications-within-a-transaction-vb/_static/image2.png))
 
@@ -168,12 +168,12 @@ Per illustrare l'effetto della transazione durante l'aggiornamento di un batch d
 Iniziare aprendo il `Transactions.aspx` nella pagina di `BatchData` cartelle e trascinare un controllo GridView dalla casella degli strumenti nella finestra di progettazione. Impostare relativi `ID` al `Products` e, dal suo smart tag, associarlo a un nuovo oggetto ObjectDataSource denominato `ProductsDataSource`. Configurare ObjectDataSource per estrarre i dati dal `ProductsBLL` classe s `GetProducts` (metodo). Questo verrà un controllo GridView di sola lettura, quindi impostare gli elenchi a discesa nell'aggiornamento, inserimento ed eliminare schede su (nessuno) e fare clic su Fine.
 
 
-[![Configurare ObjectDataSource per usare il metodo di classe ProductsBLL s GetProducts](wrapping-database-modifications-within-a-transaction-vb/_static/image5.gif)](wrapping-database-modifications-within-a-transaction-vb/_static/image3.png)
+[![Cconfigurare ObjectDataSource per usare la classe ProductsBLL s GetProducts metodo](wrapping-database-modifications-within-a-transaction-vb/_static/image5.gif)](wrapping-database-modifications-within-a-transaction-vb/_static/image3.png)
 
 **Figura 5**: Configurare ObjectDataSource per usare la `ProductsBLL` classe s `GetProducts` metodo ([fare clic per visualizzare l'immagine con dimensioni normali](wrapping-database-modifications-within-a-transaction-vb/_static/image4.png))
 
 
-[![Impostare gli elenchi a discesa nell'aggiornamento, inserimento ed eliminare schede su (nessuno)](wrapping-database-modifications-within-a-transaction-vb/_static/image6.gif)](wrapping-database-modifications-within-a-transaction-vb/_static/image5.png)
+[![Set gli elenchi di riepilogo a discesa nell'aggiornamento, inserimento e schede di eliminazione per (nessuno)](wrapping-database-modifications-within-a-transaction-vb/_static/image6.gif)](wrapping-database-modifications-within-a-transaction-vb/_static/image5.png)
 
 **Figura 6**: Impostare l'elenco a discesa sono elencati nell'aggiornamento, inserimento ed eliminare schede su (nessuno) ([fare clic per visualizzare l'immagine con dimensioni normali](wrapping-database-modifications-within-a-transaction-vb/_static/image6.png))
 
@@ -191,7 +191,7 @@ Successivamente, aggiungere tre controlli Web pulsante sopra il controllo GridVi
 A questo punto la visualizzazione di progettazione in Visual Studio dovrebbe essere simile allo screenshot illustrato nella figura 7.
 
 
-[![La pagina contiene un controllo GridView e tre i controlli Web di pulsante](wrapping-database-modifications-within-a-transaction-vb/_static/image7.gif)](wrapping-database-modifications-within-a-transaction-vb/_static/image7.png)
+[![Tegli pagina contiene un GridView e tre pulsanti Web](wrapping-database-modifications-within-a-transaction-vb/_static/image7.gif)](wrapping-database-modifications-within-a-transaction-vb/_static/image7.png)
 
 **Figura 7**: La pagina contiene un GridView e tre i controlli Web pulsante ([fare clic per visualizzare l'immagine con dimensioni normali](wrapping-database-modifications-within-a-transaction-vb/_static/image8.png))
 
@@ -210,12 +210,12 @@ La terza `Click` gestore dell'evento aggiorna i prodotti `CategoryID` s allo ste
 Per illustrare questo comportamento, visitare questa pagina tramite un browser. Inizialmente si dovrebbe vedere la prima pagina di dati come illustrato nella figura 8. Successivamente, fare clic sul pulsante di modificare le categorie (con transazione). Verrà possono causare un postback e tentare di aggiornare tutti i prodotti `CategoryID` valori, ma comporta una violazione di vincolo di chiave esterna (vedere la figura 9).
 
 
-[![I prodotti vengono visualizzati in un controllo GridView paginabile](wrapping-database-modifications-within-a-transaction-vb/_static/image8.gif)](wrapping-database-modifications-within-a-transaction-vb/_static/image9.png)
+[![The prodotti vengono visualizzati in un controllo GridView paginabile](wrapping-database-modifications-within-a-transaction-vb/_static/image8.gif)](wrapping-database-modifications-within-a-transaction-vb/_static/image9.png)
 
 **Figura 8**: I prodotti vengono visualizzati in un controllo GridView paginabile ([fare clic per visualizzare l'immagine con dimensioni normali](wrapping-database-modifications-within-a-transaction-vb/_static/image10.png))
 
 
-[![Riassegnare i risultati di categorie una violazione di vincolo di chiave esterna](wrapping-database-modifications-within-a-transaction-vb/_static/image9.gif)](wrapping-database-modifications-within-a-transaction-vb/_static/image11.png)
+[![Ri risultati di categorie di una violazione di vincolo di chiave esterna eassigning](wrapping-database-modifications-within-a-transaction-vb/_static/image9.gif)](wrapping-database-modifications-within-a-transaction-vb/_static/image11.png)
 
 **Figura 9**: Riassegnare i risultati di categorie di una violazione di vincolo di chiave esterna ([fare clic per visualizzare l'immagine con dimensioni normali](wrapping-database-modifications-within-a-transaction-vb/_static/image12.png))
 
@@ -225,7 +225,7 @@ Ora premo il pulsante Indietro del browser s e quindi fare clic sul pulsante Agg
 Provare subito facendo clic sul pulsante Modifica categorie (senza transazione). Ciò comporterà lo stesso errore di violazione di vincolo di chiave esterna (vedere la figura 9), ma questa volta i prodotti il cui `CategoryID` valori sono stati modificati in un legale valore verrà non rollback. Premere il pulsante Indietro del browser s e quindi il pulsante Aggiorna la griglia. Come illustrato nella figura 10, il `CategoryID` s dei primi otto prodotti sono stati riassegnati. Nella figura 8, ad esempio, registrazione di modifiche ha un `CategoryID` pari a 1, ma nella figura 10 it s è stato riassegnato a 2.
 
 
-[![Alcuni prodotti CategoryID valori aggiornati mentre altri sono stati non erano](wrapping-database-modifications-within-a-transaction-vb/_static/image10.gif)](wrapping-database-modifications-within-a-transaction-vb/_static/image13.png)
+[![Sorte prodotti CategoryID valori aggiornati mentre altri sono stati non erano](wrapping-database-modifications-within-a-transaction-vb/_static/image10.gif)](wrapping-database-modifications-within-a-transaction-vb/_static/image13.png)
 
 **Figura 10**: Alcuni prodotti `CategoryID` valori aggiornati mentre altri sono stati non erano ([fare clic per visualizzare l'immagine con dimensioni normali](wrapping-database-modifications-within-a-transaction-vb/_static/image14.png))
 

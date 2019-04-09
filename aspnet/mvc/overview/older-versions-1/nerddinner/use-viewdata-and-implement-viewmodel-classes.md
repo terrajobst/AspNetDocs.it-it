@@ -8,18 +8,18 @@ ms.date: 07/27/2010
 ms.assetid: 5755ec4c-60f1-4057-9ec0-3a5de3a20e23
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/use-viewdata-and-implement-viewmodel-classes
 msc.type: authoredcontent
-ms.openlocfilehash: 8df1ca30f8c0415b68d29eeaa0f7d83a606989ff
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a27f895d80e92686c9f1d7339b51185694661f78
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57025318"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59389544"
 ---
-<a name="use-viewdata-and-implement-viewmodel-classes"></a>Usare ViewData e implementare classi ViewModel
-====================
+# <a name="use-viewdata-and-implement-viewmodel-classes"></a>Usare ViewData e implementare classi ViewModel
+
 by [Microsoft](https://github.com/microsoft)
 
-[Scaricare PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
+[Scarica il PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
 
 > Si tratta di passaggio 6 di una liberazione [esercitazione sull'applicazione "NerdDinner"](introducing-the-nerddinner-tutorial.md) che si interromperanno-dettaglio come compilare una piccola, ma completa, applicazione web con ASP.NET MVC 1.
 > 

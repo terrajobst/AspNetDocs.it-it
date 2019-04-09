@@ -8,15 +8,15 @@ ms.date: 02/18/2013
 ms.assetid: 73232292-a5fe-4720-82a1-8f6553effd1f
 msc.legacyurl: /web-forms/overview/getting-started/hands-on-labs/using-page-inspector-in-visual-studio-2012
 msc.type: authoredcontent
-ms.openlocfilehash: ce654eb5abd54613987f2375cc973febc9dc2ad5
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d85fab0aeec86013761fc07ada1789b7719b24d9
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57041958"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59396561"
 ---
-<a name="using-page-inspector-in-visual-studio-2012"></a>Uso di Controllo pagina in Visual Studio 2012
-====================
+# <a name="using-page-inspector-in-visual-studio-2012"></a>Uso di Controllo pagina in Visual Studio 2012
+
 da [Camp Web Team](https://twitter.com/webcamps)
 
 > In questo laboratorio pratico, si noterà un nuovo strumento per individuare e correggere problemi correlati alle pagine web in Visual Studio - controllo pagina.
@@ -59,7 +59,7 @@ Sono necessari gli elementi seguenti per completare questa esercitazione:
 - [Microsoft Visual Studio Express 2012 per Web](https://www.microsoft.com/visualstudio/eng/products/visual-studio-express-for-web) o superiore (leggere [appendice A](#AppendixA) per istruzioni su come installarlo).
 - Internet Explorer 9 o versione successiva
 
-* * *
+---
 
 <a id="Exercises"></a>
 
@@ -106,7 +106,7 @@ In questa attività si apprenderà come usare il controllo pagina nel contesto d
     *Selezione di un file per visualizzare in anteprima in controllo pagina*
 3. Nella finestra di controllo pagina verrà visualizzato il */Home/Index* URL è mappato per la visualizzazione selezionata di origine.
 
-    ![ThefirstcontactwithPageInspector](using-page-inspector-in-visual-studio-2012/_static/image2.png)
+    ![Il primo contatto con PageInspector](using-page-inspector-in-visual-studio-2012/_static/image2.png)
 
     *Il primo contatto con Page Inspector*
 
@@ -130,7 +130,7 @@ In questa attività si apprenderà come usare il controllo pagina nel contesto d
     *Pulsante modalità controllo Attiva/disattiva*
 6. Nel browser di controllo pagina, spostare il puntatore del mouse sugli elementi della pagina. Mentre si sposta il puntatore del mouse su un punto qualsiasi della pagina sottoposta a rendering, viene visualizzato il tipo di elemento e il corrispondente codice o markup di origine viene evidenziato nell'editor di Visual Studio.
 
-    ![Inspectionmodeinaction](using-page-inspector-in-visual-studio-2012/_static/image5.png)
+    ![Modalità di controllo in azione](using-page-inspector-in-visual-studio-2012/_static/image5.png)
 
     *Modalità di controllo in azione*
 
@@ -139,7 +139,7 @@ In questa attività si apprenderà come usare il controllo pagina nel contesto d
 
     Se si presta attenzione per il **index. cshtml** file, si noterà che la parte del codice sorgente che genera l'elemento selezionato viene evidenziata. Questa funzionalità semplifica la modifica dei file di origine lungo, offrendo un modo rapido e diretto per accedere al codice.
 
-    ![Inspectingelements](using-page-inspector-in-visual-studio-2012/_static/image6.png)
+    ![Esaminare gli elementi](using-page-inspector-in-visual-studio-2012/_static/image6.png)
 
     *Esaminare gli elementi*
 7. Scegliere il **attiva/disattiva modalità di controllo** pulsante (![selezionare la scheda HTML per visualizzare il codice HTML sottoposto a rendering nel browser di controllo pagina.](using-page-inspector-in-visual-studio-2012/_static/image7.png "Selezionare la scheda HTML per visualizzare il codice HTML sottoposto a rendering nel browser di controllo pagina.") ) per disabilitare il cursore.
@@ -156,7 +156,7 @@ In questa attività si apprenderà come usare il controllo pagina nel contesto d
     > [!NOTE]
     > Poiché l'intestazione è una parte del layout del sito, controllo pagina apre \_file di layout. cshtml ed evidenziare il segmento di codice interessato.
 
-    ![Discoveringstyles](using-page-inspector-in-visual-studio-2012/_static/image9.png)
+    ![L'individuazione degli stili](using-page-inspector-in-visual-studio-2012/_static/image9.png)
 
     *L'individuazione degli stili e i file di origine di un elemento selezionato*
 11. Con il puntatore di controllo Attiva/Disattiva abilitato, spostare il puntatore del mouse sotto la barra blu in primo piano e fare clic sul cerchio metà.
@@ -180,7 +180,7 @@ In questa attività si apprenderà come usare il controllo pagina nel contesto d
     *Modificare i valori CSS in controllo pagina*
 15. Scegliere il **stili traccia** scheda, che si trova nel riquadro di destra del controllo pagina. Questo è un modo alternativo per visualizzare tutti gli stili applicati alla selezione, ordinati in base al nome dell'attributo.
 
-    ![CSSstylestracing](using-page-inspector-in-visual-studio-2012/_static/image13.png)
+    ![Stili CSS tracing](using-page-inspector-in-visual-studio-2012/_static/image13.png)
 
     *Traccia di stili CSS dell'elemento selezionato*
 16. Un'altra funzionalità di controllo pagina è il riquadro di Layout. Usa la modalità di controllo, selezionare la barra di spostamento, quindi scegliere il **Layout** scheda nel riquadro destro. Si noterà la dimensione esatta dell'elemento selezionato, nonché le dimensioni di offset, dei margini, spaziatura interna e bordo. Si noti che è anche possibile modificare i valori da questa visualizzazione.
@@ -218,7 +218,7 @@ In questa attività verrà utilizzare controllo pagina e correggere alcuni probl
 2. Con modalità di controllo Attiva/Disattiva selezionato, fare clic su Chiudi per, ma non sul collegamento Registra per aprire il relativo codice.
 
     Si noti che il codice sorgente dei collegamenti è disponibile nel  **\_loginpartial. cshtml** del file, non index. cshtml né la \_layout. cshtml, quali sono le posizioni potrebbe apparire in primo luogo. Sono stati posizionati direttamente nel file di origine corretta.
-3. Nel **stili** scheda, individuare e fare clic il **<section> #login</section>** elemento, che è il contenitore HTML per i collegamenti seguenti.
+3. Nel **stili** scheda, individuare e fare clic il  **\<sezione > #login** elemento, che è il contenitore HTML per i collegamenti seguenti.
 
     Si noti che il **#login** stile di visualizzazione si trova automaticamente nella **CSS** dopo aver fatto clic. Inoltre, ora è evidenziato il codice.
 
@@ -261,12 +261,12 @@ In questa attività verrà utilizzare controllo pagina e correggere alcuni probl
 
     *Assegnazione di un nuovo titolo*
 
-    ![PhotoGallerypage](using-page-inspector-in-visual-studio-2012/_static/image23.png)
+    ![Pagina Raccolta foto](using-page-inspector-in-visual-studio-2012/_static/image23.png)
 
     *Pagina Raccolta foto aggiornato*
-11. Infine, selezionare la **PhotoGallery** progetti e premere **F5** per eseguire l'app. Scopri tutte le modifiche funzionino come previsto.
+11. Selezionare infine il **PhotoGallery** progetti e premere **F5** per eseguire l'app. Scopri tutte le modifiche funzionino come previsto.
 
-* * *
+---
 
 <a id="Exercise2"></a>
 
@@ -347,7 +347,7 @@ In questa attività si apprenderà come usare le funzionalità di controllo pagi
     > [!NOTE]
     > Poiché l'intestazione è una parte del layout del sito, controllo pagina verrà anche aprire il file Site. master ed evidenziare il segmento di codice interessata.
 
-    ![DiscoveringstylesWebForms](using-page-inspector-in-visual-studio-2012/_static/image32.png "l'individuazione degli stili e i file di origine di un elemento selezionato")
+    ![L'individuazione degli stili WebForms](using-page-inspector-in-visual-studio-2012/_static/image32.png "l'individuazione degli stili e i file di origine di un elemento selezionato")
 
     *L'individuazione degli stili e i file di origine di un elemento selezionato*
 11. Con il puntatore di controllo Attiva/Disattiva abilitato, spostare il puntatore del mouse sotto la barra dei menu e fare clic sul cerchio metà vuoto.
@@ -421,7 +421,7 @@ In questa attività si userà il controllo pagina per risolvere alcuni problemi 
     Page Inspector è compatibile con tutti i file che costituiscono la pagina corrente e può individuare se uno di questi file viene modificato. L'utente viene avvisato ogni volta che la pagina corrente nel browser non è sincronizzata con i file di origine.
 5. Nel browser di controllo pagina, fare clic sulla barra che si trova sotto la barra degli indirizzi per salvare le modifiche e ricaricare la pagina.
 
-    ![Reloadingthepage](using-page-inspector-in-visual-studio-2012/_static/image40.png)
+    ![Ricaricare la pagina](using-page-inspector-in-visual-studio-2012/_static/image40.png)
 
     *Ricaricare la pagina*
 
@@ -457,7 +457,7 @@ In questa attività si userà il controllo pagina per risolvere alcuni problemi 
     *Pagina Raccolta foto aggiornato*
 11. Infine, selezionare **F5** per eseguire l'app di check-out di tutte le modifiche funzionino come previsto.
 
-* * *
+---
 
 <a id="Summary"></a>
 

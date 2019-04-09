@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: 0b34f7f6-a0cc-4b9f-9761-643fb0bb3ece
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/cascadingdropdown/using-auto-postback-with-cascadingdropdown-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 31f24374714371f102a1e6bc7e8977713876b228
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 433756839532393b36935df8f237e93706b4f18c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57055358"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59383160"
 ---
-<a name="using-auto-postback-with-cascadingdropdown-vb"></a>Uso del postback automatico con CascadingDropDown (VB)
-====================
+# <a name="using-auto-postback-with-cascadingdropdown-vb"></a>Uso del postback automatico con CascadingDropDown (VB)
+
 da [Christian Wenz](https://github.com/wenz)
 
 [Scaricare il codice](http://download.microsoft.com/download/9/0/7/907760b1-2c60-4f81-aeb6-ca416a573b0d/cascadingdropdown3.vb.zip) o [Scarica il PDF](http://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/cascadingdropdown3VB.pdf)
@@ -57,7 +57,7 @@ Il caricamento della pagina nel browser riempirà l'elenco a discesa con i forni
 In questo modo, un postback viene eseguito solo quando vi sono effettivamente gli elementi nell'elenco e l'utente seleziona una voce.
 
 
-[![Se si seleziona un elemento di elenco, un postback](using-auto-postback-with-cascadingdropdown-vb/_static/image2.png)](using-auto-postback-with-cascadingdropdown-vb/_static/image1.png)
+[![Sdesignazione di un elemento di elenco determina un postback](using-auto-postback-with-cascadingdropdown-vb/_static/image2.png)](using-auto-postback-with-cascadingdropdown-vb/_static/image1.png)
 
 Se si seleziona un elemento di elenco, un postback ([fare clic per visualizzare l'immagine con dimensioni normali](using-auto-postback-with-cascadingdropdown-vb/_static/image3.png))
 

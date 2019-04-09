@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: 298789b4-2964-49f5-a0a8-d4dbeb9ff2c2
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/collapsiblepanel/collapsing-and-expanding-a-panel-from-javascript-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 1f80a6979966a887db0557b4f1b98570e10b1ab7
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b41423cb1e587df121828b1e57045cabfede7cb5
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57032808"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59390831"
 ---
-<a name="collapsing-and-expanding-a-panel-from-javascript-vb"></a>Compressione ed espansione di un pannello da JavaScript (VB)
-====================
+# <a name="collapsing-and-expanding-a-panel-from-javascript-vb"></a>Compressione ed espansione di un pannello da JavaScript (VB)
+
 da [Christian Wenz](https://github.com/wenz)
 
 [Scaricare il codice](http://download.microsoft.com/download/8/a/a/8aab3c3e-de6f-463f-805c-5fda567eef6e/CollapsiblePanel1.vb.zip) o [Scarica il PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/collapsiblepanel1VB.pdf)
@@ -65,7 +65,7 @@ Il terzo pulsante Attiva/disattiva lo stato del pannello: da compressa per espan
 [!code-javascript[Main](collapsing-and-expanding-a-panel-from-javascript-vb/samples/sample8.js)]
 
 
-[![Il terzo pulsante Modifica lo stato del pannello: da compresso espanso e indietro](collapsing-and-expanding-a-panel-from-javascript-vb/_static/image2.png)](collapsing-and-expanding-a-panel-from-javascript-vb/_static/image1.png)
+[![Til terzo pulsante he modifica lo stato del pannello: da compresso espanso e back](collapsing-and-expanding-a-panel-from-javascript-vb/_static/image2.png)](collapsing-and-expanding-a-panel-from-javascript-vb/_static/image1.png)
 
 Il terzo pulsante Modifica lo stato del pannello: da compresso espanso e back-([fare clic per visualizzare l'immagine con dimensioni normali](collapsing-and-expanding-a-panel-from-javascript-vb/_static/image3.png))
 

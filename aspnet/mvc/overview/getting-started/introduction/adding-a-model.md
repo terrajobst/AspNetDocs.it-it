@@ -8,15 +8,15 @@ ms.date: 05/28/2015
 ms.assetid: 276552b5-f349-4fcf-8f40-6d042f7aa88e
 msc.legacyurl: /mvc/overview/getting-started/introduction/adding-a-model
 msc.type: authoredcontent
-ms.openlocfilehash: 3b9d84ae757eac6cc2a1ae8f7857244adff50d7c
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 0221539f5e468faacf3e38374452c0cc2a7d31d3
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57062158"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59398748"
 ---
-<a name="adding-a-model"></a>Aggiunta di un modello
-====================
+# <a name="adding-a-model"></a>Aggiunta di un modello
+
 da [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 [!INCLUDE [Tutorial Note](sample/code-location.md)]
