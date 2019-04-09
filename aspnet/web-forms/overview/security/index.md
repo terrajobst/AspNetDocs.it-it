@@ -8,17 +8,17 @@ ms.date: 08/08/2011
 ms.assetid: 24eab207-f69c-4eab-bfae-06725050452d
 msc.legacyurl: /web-forms/overview/security
 msc.type: chapter
-ms.openlocfilehash: 236a89bebd6cebf1720d5be5804ba9194d397a0a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 6b911b1f32dcfba810312a19e1764ec51c3c2255
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57019708"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59389063"
 ---
-<a name="security-authentication-and-authorization-in-aspnet-web-forms"></a><span data-ttu-id="c4e13-103">Sicurezza, autenticazione e autorizzazione in Web Form ASP.NET</span><span class="sxs-lookup"><span data-stu-id="c4e13-103">Security, Authentication, and Authorization in ASP.NET Web Forms</span></span>
-====================
-> <span data-ttu-id="c4e13-104">Come consentire agli utenti per accedere al sito (e facoltativamente essere assegnati ai ruoli) con un modulo di accesso o l'autenticazione di Windows.</span><span class="sxs-lookup"><span data-stu-id="c4e13-104">How to let users to log in to your site (and optionally be assigned to roles) using either a login form or Windows authentication.</span></span>
+# <a name="security-authentication-and-authorization-in-aspnet-web-forms"></a><span data-ttu-id="a31b1-103">Sicurezza, autenticazione e autorizzazione in Web Form ASP.NET</span><span class="sxs-lookup"><span data-stu-id="a31b1-103">Security, Authentication, and Authorization in ASP.NET Web Forms</span></span>
+
+> <span data-ttu-id="a31b1-104">Come consentire agli utenti per accedere al sito (e facoltativamente essere assegnati ai ruoli) con un modulo di accesso o l'autenticazione di Windows.</span><span class="sxs-lookup"><span data-stu-id="a31b1-104">How to let users to log in to your site (and optionally be assigned to roles) using either a login form or Windows authentication.</span></span>
 
 
-- [<span data-ttu-id="c4e13-105">Creare un'app Web Form ASP.NET sicura con registrazione utente, messaggi di posta elettronica di conferma e reimpostazione della password (C#)</span><span class="sxs-lookup"><span data-stu-id="c4e13-105">Create a secure ASP.NET Web Forms app with user registration, email confirmation and password reset (C#)</span></span>](create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset.md)
-- [<span data-ttu-id="c4e13-106">Creare un'app Web Form ASP.NET con l'autenticazione a due fattori SMS (C#)</span><span class="sxs-lookup"><span data-stu-id="c4e13-106">Create an ASP.NET Web Forms app with SMS Two-Factor Authentication (C#)</span></span>](create-an-aspnet-web-forms-app-with-sms-two-factor-authentication.md)
+- [<span data-ttu-id="a31b1-105">Creare un'app Web Forms ASP.NET sicura con registrazione utente, messaggi di posta elettronica di conferma e reimpostazione della password (C#)</span><span class="sxs-lookup"><span data-stu-id="a31b1-105">Create a secure ASP.NET Web Forms app with user registration, email confirmation and password reset (C#)</span></span>](create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset.md)
+- [<span data-ttu-id="a31b1-106">Creare un'app Web Forms ASP.NET con l'autenticazione a due fattori SMS (C#)</span><span class="sxs-lookup"><span data-stu-id="a31b1-106">Create an ASP.NET Web Forms app with SMS Two-Factor Authentication (C#)</span></span>](create-an-aspnet-web-forms-app-with-sms-two-factor-authentication.md)

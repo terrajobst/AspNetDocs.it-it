@@ -8,16 +8,16 @@ ms.date: 07/23/2014
 ms.assetid: 5c890d81-a1a9-4b4f-9221-6947978ae336
 msc.legacyurl: /ajax/cdn/jquery-validate/cdnjqueryvalidate16
 msc.type: content
-ms.openlocfilehash: 90681936811637ba1cfee14118d1013111911bc5
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: e42a53f6d79a14800dab05c87e0943db470c2b7d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57053468"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59388088"
 ---
-<a name="jquery-validate-16"></a><span data-ttu-id="ee235-102">Convalida di jQuery 1.6</span><span class="sxs-lookup"><span data-stu-id="ee235-102">jQuery Validate 1.6</span></span>
-====================
-<span data-ttu-id="ee235-103">Sulla rete CDN sono ospitati i file seguenti:</span><span class="sxs-lookup"><span data-stu-id="ee235-103">The following files are hosted on the CDN:</span></span>
+# <a name="jquery-validate-16"></a><span data-ttu-id="9bbb8-102">Convalida di jQuery 1.6</span><span class="sxs-lookup"><span data-stu-id="9bbb8-102">jQuery Validate 1.6</span></span>
+
+<span data-ttu-id="9bbb8-103">Sulla rete CDN sono ospitati i file seguenti:</span><span class="sxs-lookup"><span data-stu-id="9bbb8-103">The following files are hosted on the CDN:</span></span>
 
 - https://ajax.aspnetcdn.com/ajax/jQuery.Validate/1.6/jQuery.Validate.js
 - https://ajax.aspnetcdn.com/ajax/jQuery.Validate/1.6/jQuery.Validate.min.js

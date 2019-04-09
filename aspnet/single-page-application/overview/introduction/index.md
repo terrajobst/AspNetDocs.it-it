@@ -8,17 +8,17 @@ ms.date: 11/14/2012
 ms.assetid: f0643c61-c310-4906-a238-dfc86f09b940
 msc.legacyurl: /single-page-application/overview/introduction
 msc.type: chapter
-ms.openlocfilehash: 8607e1d11aa087216a70e6aefb720308743d17c6
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 81a708b5badecbb5bd134078d079a0fe3a63bb5f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57020018"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59380678"
 ---
-<a name="introduction-to-aspnet-single-page-application"></a><span data-ttu-id="c3023-103">Introduzione a applicazione a pagina singola ASP.NET</span><span class="sxs-lookup"><span data-stu-id="c3023-103">Introduction to ASP.NET Single Page Application</span></span>
-====================
-> <span data-ttu-id="c3023-104">Contenuto utilizzando il nuovo modello di applicazione a singola pagina e Knockout. js.</span><span class="sxs-lookup"><span data-stu-id="c3023-104">Content for using the new SPA template and Knockoutjs.</span></span>
+# <a name="introduction-to-aspnet-single-page-application"></a><span data-ttu-id="83f6f-103">Introduzione a applicazione a pagina singola ASP.NET</span><span class="sxs-lookup"><span data-stu-id="83f6f-103">Introduction to ASP.NET Single Page Application</span></span>
+
+> <span data-ttu-id="83f6f-104">Contenuto utilizzando il nuovo modello di applicazione a singola pagina e Knockout. js.</span><span class="sxs-lookup"><span data-stu-id="83f6f-104">Content for using the new SPA template and Knockoutjs.</span></span>
 
 
-- [<span data-ttu-id="c3023-105">Applicazione a singola pagina: Modello KnockoutJS</span><span class="sxs-lookup"><span data-stu-id="c3023-105">Single Page Application: KnockoutJS template</span></span>](knockoutjs-template.md)
-- [<span data-ttu-id="c3023-106">Librerie diverse da Knockout</span><span class="sxs-lookup"><span data-stu-id="c3023-106">Know a library other than Knockout?</span></span>](other-libraries.md)
+- [<span data-ttu-id="83f6f-105">Applicazione a pagina singola: Modello KnockoutJS</span><span class="sxs-lookup"><span data-stu-id="83f6f-105">Single Page Application: KnockoutJS template</span></span>](knockoutjs-template.md)
+- [<span data-ttu-id="83f6f-106">Librerie diverse da Knockout</span><span class="sxs-lookup"><span data-stu-id="83f6f-106">Know a library other than Knockout?</span></span>](other-libraries.md)
