@@ -8,15 +8,15 @@ ms.date: 06/10/2014
 ms.assetid: 7e781fc1-1c1f-45a8-bc1d-338e96dbe9c9
 msc.legacyurl: /signalr/overview/performance/scaleout-in-signalr
 msc.type: authoredcontent
-ms.openlocfilehash: 60ae0353745284796eb7e0ddb6397ecb48eceaf0
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 0d17308d1e97279c0870ea02933a42400ef338c9
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57036368"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59411553"
 ---
-<a name="introduction-to-scaleout-in-signalr"></a>Introduzione a scale-out in SignalR
-====================
+# <a name="introduction-to-scaleout-in-signalr"></a>Introduzione a scale-out in SignalR
+
 dal [Mike Wasson](https://github.com/MikeWasson), [Patrick Fletcher](https://github.com/pfletcher)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
@@ -62,9 +62,9 @@ Se si distribuisce l'applicazione in Azure, è consigliabile usare il backplane 
 
 Gli argomenti seguenti contengono le esercitazioni dettagliate per ogni backplane:
 
-- [Scalabilità orizzontale di SignalR con il bus di servizio di Azure](scaleout-with-windows-azure-service-bus.md)
-- [Scalabilità orizzontale di SignalR con Redis](scaleout-with-redis.md)
-- [Scalabilità orizzontale di SignalR con SQL Server](scaleout-with-sql-server.md)
+- [Scale-out di SignalR con il bus di servizio di Azure](scaleout-with-windows-azure-service-bus.md)
+- [Scale-out di SignalR con Redis](scaleout-with-redis.md)
+- [Scale-out di SignalR con SQL Server](scaleout-with-sql-server.md)
 
 ## <a name="implementation"></a>Implementazione
 

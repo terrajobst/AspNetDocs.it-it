@@ -8,15 +8,15 @@ ms.date: 07/16/2007
 ms.assetid: e129b2c2-8587-4ff1-b455-7f14cb28bcf9
 msc.legacyurl: /web-forms/videos/vs-2005/how-do-i-use-generic-tests
 msc.type: video
-ms.openlocfilehash: fabeff4743a28015b55c98071e8df40015710dd1
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 32d970a5eba2eb7a5344c43e65e40c0ff6670632
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57035808"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59411683"
 ---
-<a name="how-do-i-use-generic-tests"></a>[Procedura:] Usare test generici?
-====================
+# <a name="how-do-i-use-generic-tests"></a>[Procedura:] Usare test generici?
+
 da [feed di Chris Menegay](https://twitter.com/CMenegay)
 
 Un test generico è un programma esistente che viene eseguito il wrapping e reso disponibile come un test in Visual Studio Team System. In questo video viene illustrato una dimostrazione del modo in cui un programma shell sottoposta a wrapping accetta un valore di input dall'ambiente di test e come valore di output del programma viene utilizzata per determinare se il test superato o non è riuscita.

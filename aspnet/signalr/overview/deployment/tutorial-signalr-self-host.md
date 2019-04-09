@@ -8,15 +8,15 @@ ms.date: 06/10/2014
 ms.assetid: 400db427-27af-4f2f-abf0-5486d5e024b5
 msc.legacyurl: /signalr/overview/deployment/tutorial-signalr-self-host
 msc.type: authoredcontent
-ms.openlocfilehash: 194f72ce40067e177a23b1eb70bd07ceb2225a04
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: c3fe4a08a30aa2ed116dfa36ce6206dc9cbd07f8
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425561"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59415076"
 ---
-<a name="tutorial-signalr-self-host"></a>Esercitazione: Self-hosting di SignalR
-====================
+# <a name="tutorial-signalr-self-host"></a>Esercitazione: Self-hosting di SignalR
+
 da [Patrick Fletcher](https://github.com/pfletcher)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
@@ -73,7 +73,7 @@ Questa esercitazione include le sezioni seguenti:
 
 In questa esercitazione si creerà un server in cui è ospitato in un'applicazione console, ma il server può essere ospitato in qualsiasi tipo di processo, ad esempio un servizio di Windows o un ruolo di lavoro di Azure. Per codice di esempio per l'hosting di un server di SignalR in un servizio di Windows, visitare [Self-Hosting SignalR in un servizio Windows](https://code.msdn.microsoft.com/SignalR-self-hosted-in-6ff7e6c3).
 
-1. Aprire Visual Studio 2013 con privilegi di amministratore. Selezionare **File**, **nuovo progetto**. Selezionare **Windows** sotto il **Visual C#** nodo il **modelli** riquadro e selezionare il **applicazione Console** modello. Denominare il nuovo progetto "SignalRSelfHost" e fare clic su **OK**.
+1. Aprire Visual Studio 2013 con privilegi di amministratore. Selezionare **File**, **nuovo progetto**. Selezionare **Windows** sotto il **Visual c#** nodo il **modelli** riquadro e selezionare il **applicazione Console** modello. Denominare il nuovo progetto "SignalRSelfHost" e fare clic su **OK**.
 
     ![](tutorial-signalr-self-host/_static/image1.png)
 2. Aprire la console di gestione pacchetti NuGet, selezionare **degli strumenti** > **Gestione pacchetti NuGet** > **Package Manager Console**.

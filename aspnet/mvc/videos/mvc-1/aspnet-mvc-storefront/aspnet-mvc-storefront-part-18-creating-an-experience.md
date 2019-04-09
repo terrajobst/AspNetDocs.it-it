@@ -8,15 +8,15 @@ ms.date: 10/16/2008
 ms.assetid: 1636464e-900e-4926-bd5a-88adb5315ff9
 msc.legacyurl: /mvc/videos/mvc-1/aspnet-mvc-storefront/aspnet-mvc-storefront-part-18-creating-an-experience
 msc.type: video
-ms.openlocfilehash: 464753512b592baea96098e25690b7fc0e947c5d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 00390fe4b618f09a0b3f8bfbff513827a504626c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57029038"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59411774"
 ---
-<a name="aspnet-mvc-storefront-part-18-creating-an-experience"></a>ASP.NET MVC Storefront - Parte 18: Creare un'esperienza
-====================
+# <a name="aspnet-mvc-storefront-part-18-creating-an-experience"></a>ASP.NET MVC Storefront - Parte 18: Creare un'esperienza
+
 da [Rob Conery](https://github.com/robconery)
 
 In questo episodio mi occupo del pull di tutti i componenti tecnici interagiscono per formare un coerente "esperienza" per l'acquirente.
