@@ -8,15 +8,15 @@ ms.date: 05/30/2007
 ms.assetid: bd347d93-4251-4532-801c-a36f2dfa7f96
 msc.legacyurl: /web-forms/overview/data-access/caching-data/using-sql-cache-dependencies-vb
 msc.type: authoredcontent
-ms.openlocfilehash: f47cc7c1fd4fd0d1e41bef31a2e68dd34393d52e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b1660c0d20b76d97ee00acf1080c3eca1f596be2
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57032608"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59412671"
 ---
-<a name="using-sql-cache-dependencies-vb"></a>Uso delle dipendenze della cache SQL (VB)
-====================
+# <a name="using-sql-cache-dependencies-vb"></a>Uso delle dipendenze della cache SQL (VB)
+
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Scaricare il codice](http://download.microsoft.com/download/3/9/f/39f92b37-e92e-4ab3-909e-b4ef23d01aa3/ASPNET_Data_Tutorial_61_VB.zip) o [Scarica il PDF](using-sql-cache-dependencies-vb/_static/datatutorial61vb1.pdf)
@@ -87,7 +87,7 @@ Per iniziare, chiudere Visual Studio. Successivamente, aprire SQL Server Managem
 Dopo la connessione al server Management Studio verranno Mostra i server e avere sottocartelle per il database, sicurezza e così via. Pulsante destro del mouse sulla cartella database e scegliere l'opzione di connessione. Verrà visualizzata la finestra di dialogo Collega database (vedere la figura 2). Fare clic sul pulsante Aggiungi e selezionare il `NORTHWND.MDF` cartella del database nella raccolta di s dell'applicazione web `App_Data` cartella.
 
 
-[![Collegare il NORTHWND. Database MDF dalla cartella App_Data](using-sql-cache-dependencies-vb/_static/image2.gif)](using-sql-cache-dependencies-vb/_static/image1.png)
+[![AAssocia il NORTHWND. Database MDF dalla cartella App_Data](using-sql-cache-dependencies-vb/_static/image2.gif)](using-sql-cache-dependencies-vb/_static/image1.png)
 
 **Figura 2**: Collegare il `NORTHWND.MDF` del Database del `App_Data` cartella ([fare clic per visualizzare l'immagine con dimensioni normali](using-sql-cache-dependencies-vb/_static/image2.png))
 
@@ -143,7 +143,7 @@ Il [dati la memorizzazione nella cache con ObjectDataSource](caching-data-with-t
 Per illustrare l'utilizzo delle dipendenze della cache SQL in modo dichiarativo, aprire il `SqlCacheDependencies.aspx` nella pagina di `Caching` cartelle e trascinare un controllo GridView dalla casella degli strumenti nella finestra di progettazione. Impostare la s GridView `ID` al `ProductsDeclarative` e scegliere dal suo smart tag da associare a un nuovo oggetto ObjectDataSource denominato `ProductsDataSourceDeclarative`.
 
 
-[![Creare un nuovo oggetto ObjectDataSource denominato ProductsDataSourceDeclarative](using-sql-cache-dependencies-vb/_static/image5.gif)](using-sql-cache-dependencies-vb/_static/image3.png)
+[![CCrea un nuovo ProductsDataSourceDeclarative denominato di ObjectDataSource](using-sql-cache-dependencies-vb/_static/image5.gif)](using-sql-cache-dependencies-vb/_static/image3.png)
 
 **Figura 5**: Creare un nuovo oggetto ObjectDataSource denominato `ProductsDataSourceDeclarative` ([fare clic per visualizzare l'immagine con dimensioni normali](using-sql-cache-dependencies-vb/_static/image4.png))
 
@@ -151,12 +151,12 @@ Per illustrare l'utilizzo delle dipendenze della cache SQL in modo dichiarativo,
 Configurare ObjectDataSource per usare la `ProductsBLL` classe e impostare l'elenco a discesa nella scheda Seleziona `GetProducts()`. Nella scheda aggiornamento, scegliere il `UpdateProduct` rapporto di overload con tre parametri di input - `productName`, `unitPrice`, e `productID`. Impostare gli elenchi di riepilogo a discesa su (nessuno) nelle schede INSERT e DELETE.
 
 
-[![Usare l'Overload UpdateProduct con tre parametri di Input](using-sql-cache-dependencies-vb/_static/image6.gif)](using-sql-cache-dependencies-vb/_static/image5.png)
+[![USe il rapporto di Overload UpdateProduct con tre parametri di Input](using-sql-cache-dependencies-vb/_static/image6.gif)](using-sql-cache-dependencies-vb/_static/image5.png)
 
 **Figura 6**: Usare l'Overload UpdateProduct con tre parametri di Input ([fare clic per visualizzare l'immagine con dimensioni normali](using-sql-cache-dependencies-vb/_static/image6.png))
 
 
-[![Impostazione dell'elenco di riepilogo a discesa su (nessuno) per le schede DELETE e INSERT](using-sql-cache-dependencies-vb/_static/image7.gif)](using-sql-cache-dependencies-vb/_static/image7.png)
+[![Sl'elenco a discesa su (nessuno) per le schede DELETE e INSERT et](using-sql-cache-dependencies-vb/_static/image7.gif)](using-sql-cache-dependencies-vb/_static/image7.png)
 
 **Figura 7**: Impostazione dell'elenco di riepilogo a discesa su (nessuno) per l'inserimento ed eliminare schede ([fare clic per visualizzare l'immagine con dimensioni normali](using-sql-cache-dependencies-vb/_static/image8.png))
 
@@ -178,7 +178,7 @@ Si tenga presente che gli oggetti ObjectDataSource `Selecting` evento viene gene
 A questo punto, visitare questa pagina tramite un browser. Poiché è fornire un supporto iniziale per implementare qualsiasi la memorizzazione nella cache, ogni volta che si pagina, ordinamento o modifica la pagina della griglia deve visualizzare il testo, se si seleziona evento generato, come illustrato nella figura 8.
 
 
-[![ObjectDataSource s quando si seleziona evento viene generato ogni volta che il controllo GridView viene eseguito il paging, modificato, o Sorted](using-sql-cache-dependencies-vb/_static/image8.gif)](using-sql-cache-dependencies-vb/_static/image9.png)
+[![Tegli ObjectDataSource s quando si seleziona evento viene generato ogni volta che il controllo GridView viene eseguito il paging, modificato, o Sorted](using-sql-cache-dependencies-vb/_static/image8.gif)](using-sql-cache-dependencies-vb/_static/image9.png)
 
 **Figura 8**: Gli oggetti ObjectDataSource `Selecting` evento viene attivato ogni ora viene eseguito il paging GridView, modificata o Sorted ([fare clic per visualizzare l'immagine con dimensioni normali](using-sql-cache-dependencies-vb/_static/image10.png))
 
@@ -197,7 +197,7 @@ In cui *databaseName* è il nome del database come specificato nella `name` attr
 Il controllo GridView in `SqlCacheDependencies.aspx` sono riportati i dati da due tabelle - `Products` e `Categories` (il prodotto s `CategoryName` campo viene recuperato tramite un `JOIN` su `Categories`). Pertanto, è necessario specificare due dipendenze della cache SQL: NorthwindDB:Products; NorthwindDB:Categories.
 
 
-[![Configurare ObjectDataSource per supportare la memorizzazione nella cache usando le dipendenze della Cache SQL sui prodotti e le categorie](using-sql-cache-dependencies-vb/_static/image9.gif)](using-sql-cache-dependencies-vb/_static/image11.png)
+[![Cconfigurare ObjectDataSource per il supporto di memorizzazione nella cache usando dipendenze della Cache SQL sui prodotti e le categorie](using-sql-cache-dependencies-vb/_static/image9.gif)](using-sql-cache-dependencies-vb/_static/image11.png)
 
 **Figura 9**: Configurare ObjectDataSource per il supporto di memorizzazione nella cache usando SQL delle dipendenze della Cache nel `Products` e `Categories` ([fare clic per visualizzare l'immagine con dimensioni normali](using-sql-cache-dependencies-vb/_static/image12.png))
 
@@ -207,7 +207,7 @@ Dopo aver configurato ObjectDataSource per supportare la memorizzazione nella ca
 Dopo aver attivato il paging attraverso la griglia e notare l'assenza dell'evento quando si seleziona il testo, aprire una nuova finestra del browser e passare all'Esercitazione nozioni di base di modifica, inserimento ed eliminazione di sezione (`~/EditInsertDelete/Basics.aspx`). Aggiornare il nome o il prezzo di un prodotto. Quindi, da visualizzare una pagina diversa dei dati per la prima finestra del browser, ordinare la griglia o fare clic su un pulsante di modifica di riga o le righe. Questa fase, di generazione dell'evento di selezione deve visualizzare nuovamente, come il database sottostante i dati sono stati modificati (vedere la figura 10). Se il testo non viene visualizzato, attendere alcuni istanti e ripetere l'operazione. Tenere presente che il servizio di polling è controllo delle modifiche per il `Products` tabella ogni `pollTime` millisecondi, in modo che si verifica un ritardo tra quando i dati sottostanti vengono aggiornati e quando i dati memorizzati nella cache vengano rimosso.
 
 
-[![Modifica della tabella Products rimuove i dati memorizzati nella cache del prodotto](using-sql-cache-dependencies-vb/_static/image10.gif)](using-sql-cache-dependencies-vb/_static/image13.png)
+[![Modifying la tabella Products rimuove i dati memorizzati nella cache del prodotto](using-sql-cache-dependencies-vb/_static/image10.gif)](using-sql-cache-dependencies-vb/_static/image13.png)
 
 **Figura 10**: Modifica della tabella Products rimuove i dati del prodotto memorizzati nella cache ([fare clic per visualizzare l'immagine con dimensioni normali](using-sql-cache-dependencies-vb/_static/image14.png))
 
@@ -241,17 +241,17 @@ Aggiornare il codice per utilizzare un `SqlCacheDependency` dell'oggetto anzich�
 Per testare questa funzionalità, aggiungere un controllo GridView alla pagina sotto esistente `ProductsDeclarative` GridView. Impostare questa nuova s GridView `ID` al `ProductsProgrammatic` e, tramite suo smart tag, associarlo a un nuovo oggetto ObjectDataSource denominato `ProductsDataSourceProgrammatic`. Configurare ObjectDataSource per usare la `ProductsCL` (classe), l'impostazione di elenchi a discesa selezione e le schede di aggiornamento per `GetProducts` e `UpdateProduct`, rispettivamente.
 
 
-[![Configurare ObjectDataSource per usare la classe ProductsCL](using-sql-cache-dependencies-vb/_static/image11.gif)](using-sql-cache-dependencies-vb/_static/image15.png)
+[![Cconfigurare ObjectDataSource per usare la classe ProductsCL](using-sql-cache-dependencies-vb/_static/image11.gif)](using-sql-cache-dependencies-vb/_static/image15.png)
 
 **Figura 11**: Configurare ObjectDataSource per usare la `ProductsCL` classe ([fare clic per visualizzare l'immagine con dimensioni normali](using-sql-cache-dependencies-vb/_static/image16.png))
 
 
-[![Selezionare il metodo GetProducts dall'elenco a discesa s scheda Seleziona](using-sql-cache-dependencies-vb/_static/image12.gif)](using-sql-cache-dependencies-vb/_static/image17.png)
+[![SScegliere il metodo GetProducts da s selezionare scheda Riepilogo](using-sql-cache-dependencies-vb/_static/image12.gif)](using-sql-cache-dependencies-vb/_static/image17.png)
 
 **Figura 12**: Selezionare il `GetProducts` metodo da s selezionare scheda Riepilogo ([fare clic per visualizzare l'immagine con dimensioni normali](using-sql-cache-dependencies-vb/_static/image18.png))
 
 
-[![Scegliere il metodo UpdateProduct dall'elenco a discesa s scheda UPDATE](using-sql-cache-dependencies-vb/_static/image13.gif)](using-sql-cache-dependencies-vb/_static/image19.png)
+[![Cimpostare come metodo UpdateProduct da s aggiornamento scheda Riepilogo](using-sql-cache-dependencies-vb/_static/image13.gif)](using-sql-cache-dependencies-vb/_static/image19.png)
 
 **Figura 13**: Scegliere il metodo UpdateProduct da s aggiornamento scheda Riepilogo ([fare clic per visualizzare l'immagine con dimensioni normali](using-sql-cache-dependencies-vb/_static/image20.png))
 
