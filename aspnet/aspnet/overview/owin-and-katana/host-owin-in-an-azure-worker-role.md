@@ -8,15 +8,15 @@ ms.date: 04/11/2014
 ms.assetid: 07aa855a-92ee-4d43-ba66-5bfd7de20ee6
 msc.legacyurl: /aspnet/overview/owin-and-katana/host-owin-in-an-azure-worker-role
 msc.type: authoredcontent
-ms.openlocfilehash: dbf0964695dd2592d063b05c0778923edffe8e2e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 129b6a8f411d482de75e7e5edc5cc919b4d2de52
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57058038"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59419522"
 ---
-<a name="host-owin-in-an-azure-worker-role"></a>Ospitare OWIN in un ruolo di lavoro di Azure
-====================
+# <a name="host-owin-in-an-azure-worker-role"></a>Ospitare OWIN in un ruolo di lavoro di Azure
+
 da [Mike Wasson](https://github.com/MikeWasson)
 
 > Questa esercitazione illustra come a Self-hosting OWIN in un ruolo di lavoro di Microsoft Azure.
@@ -116,7 +116,7 @@ L'emulatore di calcolo viene assegnato un indirizzo IP locale per l'endpoint. È
 
 [![](host-owin-in-an-azure-worker-role/_static/image10.png)](host-owin-in-an-azure-worker-role/_static/image9.png)
 
-Trovare l'indirizzo IP sotto le distribuzioni del servizio, la distribuzione [id], i dettagli del servizio. Aprire un web browser e passare a http://<em>indirizzi</em>, dove <em>indirizzo</em> è l'indirizzo IP assegnato dall'emulatore di calcolo; ad esempio, `http://127.0.0.1:80`. Si dovrebbe vedere la pagina di benvenuto OWIN:
+Trovare l'indirizzo IP sotto le distribuzioni del servizio, la distribuzione [id], i dettagli del servizio. Aprire un web browser e passare a http:\/\/*indirizzo*, dove *indirizzo* è l'indirizzo IP assegnato dall'emulatore di calcolo; ad esempio, `http://127.0.0.1:80`. Si dovrebbe vedere la pagina di benvenuto OWIN:
 
 ![](host-owin-in-an-azure-worker-role/_static/image11.png)
 

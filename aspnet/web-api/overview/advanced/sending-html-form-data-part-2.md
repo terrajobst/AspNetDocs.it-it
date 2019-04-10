@@ -1,22 +1,23 @@
 ---
 uid: web-api/overview/advanced/sending-html-form-data-part-2
-title: "L'invio di dati di Form HTML nell'API Web ASP.NET: Caricamento di file e MIME Multipart | Microsoft Docs"
+title: "L'invio di dati di Form HTML nell'API Web ASP.NET: Caricamento di file e MIME Multipart - ASP.NET 4.x"
 author: MikeWasson
-description: ''
+description: Questa esercitazione illustra come caricare i file a un'API web. Viene anche descritto come elaborare i dati MIME multipart.
 ms.author: riande
 ms.date: 06/21/2012
+ms.custom: seoapril2019
 ms.assetid: a7f3c1b5-69d9-4261-b082-19ffafa5f16a
 msc.legacyurl: /web-api/overview/advanced/sending-html-form-data-part-2
 msc.type: authoredcontent
-ms.openlocfilehash: 875f9ac62901dfbafc8224af2982c1daf3afc9c5
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 70e150a32f208cf75086f959d484d86e8501c6bd
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57028978"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59419925"
 ---
-<a name="sending-html-form-data-in-aspnet-web-api-file-upload-and-multipart-mime"></a>L'invio di dati di Form HTML nell'API Web ASP.NET: caricamento di file e MIME composto
-====================
+# <a name="sending-html-form-data-in-aspnet-web-api-file-upload-and-multipart-mime"></a>L'invio di dati di Form HTML nell'API Web ASP.NET: caricamento di file e MIME composto
+
 da [Mike Wasson](https://github.com/MikeWasson)
 
 ## <a name="part-2-file-upload-and-multipart-mime"></a>Parte 2. caricamento di file e MIME composto

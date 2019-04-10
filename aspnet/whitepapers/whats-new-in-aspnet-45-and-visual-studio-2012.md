@@ -8,15 +8,15 @@ ms.date: 02/29/2012
 ms.assetid: ba1fabb4-31a3-4ebf-8327-41a6bbba6eaf
 msc.legacyurl: /whitepapers/whats-new-in-aspnet-45-and-visual-studio-2012
 msc.type: content
-ms.openlocfilehash: 6bbfb4aa7f29e4c189da4dfdca6f2113c7550b68
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5f50721b6f263b9cb025f5fa57c923dadeddcd28
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57045048"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59410591"
 ---
-<a name="whats-new-in-aspnet-45-and-visual-studio-2012"></a>Novità di ASP.NET 4.5 e Visual Studio 2012
-====================
+# <a name="whats-new-in-aspnet-45-and-visual-studio-2012"></a>Novità di ASP.NET 4.5 e Visual Studio 2012
+
 > Questo documento descrive le nuove funzionalità e miglioramenti che sono stati introdotti in ASP.NET 4.5. Vengono inoltre descritti i miglioramenti apportati per lo sviluppo web in Visual Studio 2012. Questo documento è stato pubblicato originariamente 29 febbraio 2012.
 
 
@@ -54,7 +54,7 @@ ms.locfileid: "57045048"
     - [Convalida discreta](#_Toc318097392)
     - [Aggiornamenti HTML5](#_Toc318097393)
 - [ASP.NET MVC 4](#_Toc318097394)
-- [ASP.NET Web Pages 2](#_Toc318097395)
+- [Pagine Web ASP.NET 2](#_Toc318097395)
 - [Visual Studio 2012 Release Candidate](#_Toc318097396)
 
     - [Progetto di condivisione tra Visual Studio 2010 e Visual Studio 2012 Release Candidate (compatibilità progetto)](#project-compatibility)
@@ -71,16 +71,16 @@ ms.locfileid: "57045048"
         - [Generazione del gestore eventi](#_Toc318097404)
         - [Rientro automatico](#_Toc318097405)
         - [Completamento delle istruzioni con riduzione automatica](#_Toc318097406)
-    - [JavaScript Editor](#_Toc318097407)
+    - [JavaScript (editor)](#_Toc318097407)
 
         - [Struttura del codice](#_Toc318097408)
         - [Corrispondenza parentesi graffe](#_Toc318097409)
         - [Vai a definizione](#_Toc318097410)
         - [Supporto di ECMAScript5](#_Toc318097411)
-        - [IntelliSense DOM](#_Toc318097412)
+        - [DOM IntelliSense](#_Toc318097412)
         - [VSDOC firma overload](#_Toc318097413)
         - [Riferimenti impliciti](#_Toc318097414)
-    - [Editor CSS](#_Toc318097415)
+    - [CSS (editor)](#_Toc318097415)
 
         - [Completamento delle istruzioni con riduzione automatica](#_Toc318097416)
         - [Rientro gerarchico.](#_Toc318097417)
@@ -88,7 +88,7 @@ ms.locfileid: "57045048"
         - [Schemi specifici fornitore (- moz-, - webkit)](#_Toc318097419)
         - [Supporto di inserimento e rimozione di commenti](#_Toc318097420)
         - [Selezione colori](#_Toc318097421)
-        - [Frammenti](#_Toc318097422)
+        - [Frammenti di codice](#_Toc318097422)
         - [Aree personalizzate](#_Toc318097423)
     - [Controllo pagina](#_Toc318097424)
     - [Pubblicazione](#_Toc318097425)

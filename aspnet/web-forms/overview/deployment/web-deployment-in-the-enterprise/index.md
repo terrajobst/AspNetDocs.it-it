@@ -8,15 +8,15 @@ ms.date: 05/16/2012
 ms.assetid: 83e0a572-428f-4bea-9638-1a031c6901c0
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise
 msc.type: chapter
-ms.openlocfilehash: 92bc3d18c417e73e198d0f7663489fd931bf75b5
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 109a0dc1e1ebe0b644e9414561c798a7bb3d0531
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57020608"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59414829"
 ---
-<a name="aspnet-4---enterprise-deployment-series-1"></a>ASP.NET 4 - Serie sulla distribuzione aziendale 1
-====================
+# <a name="aspnet-4---enterprise-deployment-series-1"></a>ASP.NET 4 - Serie sulla distribuzione aziendale 1
+
 > Questa esercitazione descrive come soddisfare molte delle sfide che possono incontrare quando si gestisce la distribuzione di applicazioni web su larga scala per ambienti di sviluppo, test, staging e produzione. L'esercitazione include una soluzione di riferimento insieme a una combinazione di contenuto concettuale e orientati alle attività consentono di eseguire varie attività comuni e procedure.
 
 

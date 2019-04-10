@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/processing-unhandled-exceptions-cs
-title: L'elaborazione di eccezioni non gestite (C#) | Microsoft Docs
+title: L'elaborazione di eccezioni non gestite (c#) | Microsoft Docs
 author: rick-anderson
 description: Quando si verifica un errore di runtime in un'applicazione web nell'ambiente di produzione è importante per notificare a uno sviluppatore e di registrare l'errore, in modo che potrebbe essere diagnosticato in un oggetto la...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 06/09/2009
 ms.assetid: 5bc1afd5-2484-4528-b158-ab218ba150e8
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/processing-unhandled-exceptions-cs
 msc.type: authoredcontent
-ms.openlocfilehash: a8b029e7187881c14117fa813ce787b51a561382
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 2940c17e8466eae1e72d3f7cbc6ff7127c8588b7
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58424512"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59415856"
 ---
-<a name="processing-unhandled-exceptions-c"></a>Elaborazione delle eccezioni non gestite (C#)
-====================
+# <a name="processing-unhandled-exceptions-c"></a>Elaborazione delle eccezioni non gestite (C#)
+
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Visualizzare o scaricare il codice di esempio](https://github.com/aspnet/AspNetDocs/tree/master/aspnet/web-forms/overview/older-versions-getting-started/deploying-web-site-projects/processing-unhandled-exceptions-cs/samples) ([procedura per il download](/aspnet/core/tutorials/index#how-to-download-a-sample))

@@ -8,15 +8,15 @@ ms.date: 07/17/2006
 ms.assetid: 2646968c-2826-4418-b1d0-62610ed177e3
 msc.legacyurl: /web-forms/overview/data-access/editing-inserting-and-deleting-data/implementing-optimistic-concurrency-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 06ee6f8ea415ddde4e47acacaa74a29cbf9a0478
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: bab4dd5180f0064a4fa8b0c50045f97100ce7d10
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425587"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59422967"
 ---
-<a name="implementing-optimistic-concurrency-vb"></a>Implementazione della concorrenza ottimistica (VB)
-====================
+# <a name="implementing-optimistic-concurrency-vb"></a>Implementazione della concorrenza ottimistica (VB)
+
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Scaricare l'App di esempio](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_21_VB.exe) o [Scarica il PDF](implementing-optimistic-concurrency-vb/_static/datatutorial21vb1.pdf)
@@ -31,7 +31,7 @@ Per le applicazioni web che consentono solo agli utenti di visualizzare dati o p
 Ad esempio, si supponga che due utenti, Jisun e Sam, sono stati entrambi che visitano una pagina nell'applicazione che consente di aggiornare ed eliminare i prodotti tramite un controllo GridView. Entrambi fare clic sul pulsante Modifica in GridView intorno alla stessa ora. Jisun diventa il nome del prodotto "Chai tè" e fa clic sul pulsante di aggiornamento. Il risultato è un `UPDATE` istruzione che viene inviato al database, che imposta *tutto* dei campi aggiornabili del prodotto (anche se Jisun aggiornate solo a un campo, `ProductName`). In questo momento, il database contiene i valori "Chai tè", la categoria Beverages, il fornitore originali liquide, e così via per questo prodotto specifico. Tuttavia, il controllo GridView nella schermata di Sam Mostra comunque il nome del prodotto nella riga GridView modificabile come "Chai". Pochi secondi dopo che sono state salvate, le modifiche del Jisun Sam gli aggiornamenti della categoria Condiments e fa clic su Aggiorna. Il risultato è un' `UPDATE` istruzione inviata al database che consente di impostare il nome del prodotto "Chai," il `CategoryID` il corrispondente ID della categoria Beverages e così via. Le modifiche del Jisun al nome del prodotto sono stati sovrascritti. Figura 1 illustra graficamente questa serie di eventi.
 
 
-[![Quando due utenti aggiornano contemporaneamente un potenziale Record 3!s ci sovrascrivere l'altra modifiche di un utente specifico](implementing-optimistic-concurrency-vb/_static/image2.png)](implementing-optimistic-concurrency-vb/_static/image1.png)
+[![Wuando due utenti aggiornare contemporaneamente un Record sono s potenziale di un utente passa per sovrascrivere l'altro](implementing-optimistic-concurrency-vb/_static/image2.png)](implementing-optimistic-concurrency-vb/_static/image1.png)
 
 **Figura 1**: Quando due utenti simultaneamente aggiornare un Record sono s potenziale di un utente passa per sovrascrivere l'altro ([fare clic per visualizzare l'immagine con dimensioni normali](implementing-optimistic-concurrency-vb/_static/image3.png))
 
@@ -55,7 +55,7 @@ Tutte le esercitazioni finora hanno usato la strategia di risoluzione di concorr
 Controllo della concorrenza ottimistica funzionamento verificando che il record da aggiornare o eliminare dispone degli stessi valori si blocca durante l'aggiornamento o eliminazione di processo avviato. Ad esempio, quando si fa clic sul pulsante Modifica in un controllo GridView modificabile, del record dal database di lettura e visualizzazione dei valori nelle caselle di testo e altri controlli di Web. Questi valori originali vengono salvati per il controllo GridView. In un secondo momento, dopo che l'utente effettua le proprie modifiche e fa clic sul pulsante di aggiornamento, i valori originali e i nuovi valori vengono inviati al livello della logica di Business e quindi fino a livello di accesso ai dati. Il livello di accesso ai dati deve eseguire un'istruzione SQL che aggiornerà il record solo se i valori originali che l'utente ha iniziato la modifica sono identici a quelli ancora nel database. Figura 2 viene illustrata questa sequenza di eventi.
 
 
-[![Per Update o Delete abbia esito positivo, i valori originali devono essere uguali per i valori del Database corrente](implementing-optimistic-concurrency-vb/_static/image5.png)](implementing-optimistic-concurrency-vb/_static/image4.png)
+[![Fo di aggiornamento o eliminazione abbia esito positivo, i valori originali devono essere uguali per i valori del Database corrente](implementing-optimistic-concurrency-vb/_static/image5.png)](implementing-optimistic-concurrency-vb/_static/image4.png)
 
 **Figura 2**: Per Update o Delete su esito positivo, l'originale valori deve essere uguale per i valori del Database corrente ([fare clic per visualizzare l'immagine con dimensioni normali](implementing-optimistic-concurrency-vb/_static/image6.png))
 
@@ -78,7 +78,7 @@ Invece di estendere gli esistente TableAdapter DAL per usare la concorrenza otti
 Per creare un nuovo set di dati tipizzati, fare clic sui `DAL` cartella all'interno di `App_Code` cartella e aggiungere un nuovo set di dati denominato `NorthwindOptimisticConcurrency`. Come abbiamo visto nella prima esercitazione, tale operazione così aggiungerà un nuovo TableAdapter al set di dati tipizzati, che vengono avviate automaticamente la configurazione guidata TableAdapter. Nella prima schermata, abbiamo stiamo richiesto di specificare il database per connettersi a: connettersi al database Northwind stesso usando il `NORTHWNDConnectionString` impostazione da `Web.config`.
 
 
-[![Connettersi al Database Northwind stesso](implementing-optimistic-concurrency-vb/_static/image8.png)](implementing-optimistic-concurrency-vb/_static/image7.png)
+[![CConnetti al Northwind Database stesso](implementing-optimistic-concurrency-vb/_static/image8.png)](implementing-optimistic-concurrency-vb/_static/image7.png)
 
 **Figura 3**: Connettersi al Northwind Database stesso ([fare clic per visualizzare l'immagine con dimensioni normali](implementing-optimistic-concurrency-vb/_static/image9.png))
 
@@ -86,7 +86,7 @@ Per creare un nuovo set di dati tipizzati, fare clic sui `DAL` cartella all'inte
 Successivamente, si verrà chiesto di specificare come eseguire query sui dati: tramite un'istruzione SQL ad hoc, una nuova stored procedure o una stored procedure di un oggetto esistente. Dato che abbiamo utilizzato le query SQL ad hoc nel nostro DAL originale, usare questa opzione qui.
 
 
-[![Specificare i dati da recuperare tramite un'istruzione SQL Ad Hoc](implementing-optimistic-concurrency-vb/_static/image11.png)](implementing-optimistic-concurrency-vb/_static/image10.png)
+[![Sspecificare i dati da recuperare tramite un'istruzione SQL Ad-Hoc](implementing-optimistic-concurrency-vb/_static/image11.png)](implementing-optimistic-concurrency-vb/_static/image10.png)
 
 **Figura 4**: Specificare i dati da recuperare tramite un'istruzione SQL Ad Hoc ([fare clic per visualizzare l'immagine con dimensioni normali](implementing-optimistic-concurrency-vb/_static/image12.png))
 
@@ -97,7 +97,7 @@ Nella schermata seguente, immettere la query SQL da usare per recuperare le info
 [!code-sql[Main](implementing-optimistic-concurrency-vb/samples/sample2.sql)]
 
 
-[![Usare la stessa Query SQL dal TableAdapter prodotti in DAL originale](implementing-optimistic-concurrency-vb/_static/image14.png)](implementing-optimistic-concurrency-vb/_static/image13.png)
+[![USe la stessa Query SQL da TableAdapter prodotti in DAL originale](implementing-optimistic-concurrency-vb/_static/image14.png)](implementing-optimistic-concurrency-vb/_static/image13.png)
 
 **Figura 5**: Utilizzare la stessa Query SQL dal `Products` TableAdapter in DAL originale ([fare clic per visualizzare l'immagine con dimensioni normali](implementing-optimistic-concurrency-vb/_static/image15.png))
 
@@ -105,7 +105,7 @@ Nella schermata seguente, immettere la query SQL da usare per recuperare le info
 Prima di passare nella successiva schermata, fare clic sul pulsante Opzioni avanzate. Per questo controllo della concorrenza ottimistica utilizzano TableAdapter, è sufficiente selezionare la casella di controllo "Usa concorrenza ottimistica".
 
 
-[![Abilitare il controllo della concorrenza ottimistica per verifica la &quot;usare la concorrenza ottimistica&quot; casella di controllo](implementing-optimistic-concurrency-vb/_static/image17.png)](implementing-optimistic-concurrency-vb/_static/image16.png)
+[![EAbilita il controllo della concorrenza ottimistica dalla verifica della &quot;usare la concorrenza ottimistica&quot; CheckBox](implementing-optimistic-concurrency-vb/_static/image17.png)](implementing-optimistic-concurrency-vb/_static/image16.png)
 
 **Figura 6**: Abilitare il controllo della concorrenza ottimistica selezionando la casella di controllo "Usa concorrenza ottimistica" ([fare clic per visualizzare l'immagine con dimensioni normali](implementing-optimistic-concurrency-vb/_static/image18.png))
 
@@ -113,7 +113,7 @@ Prima di passare nella successiva schermata, fare clic sul pulsante Opzioni avan
 Infine, indicare che l'oggetto TableAdapter deve usare i modelli di accesso ai dati che Riempi un DataTable e restituiscono un DataTable; indicare anche che i metodi diretti DB devono essere creati. Modificare il nome del metodo per la restituzione di un modello di oggetto DataTable da GetData a GetProducts, in modo da rispecchiare le convenzioni di denominazione viene usata nel nostro DAL originale.
 
 
-[![Disporre del TableAdapter utilizzare tutti i modelli di accesso ai dati](implementing-optimistic-concurrency-vb/_static/image20.png)](implementing-optimistic-concurrency-vb/_static/image19.png)
+[![HAVE TableAdapter utilizzare tutti i dati agli schemi di accesso](implementing-optimistic-concurrency-vb/_static/image20.png)](implementing-optimistic-concurrency-vb/_static/image19.png)
 
 **Figura 7**: Dispone il TableAdapter utilizzare tutti i modelli accesso ai dati ([fare clic per visualizzare l'immagine con dimensioni normali](implementing-optimistic-concurrency-vb/_static/image21.png))
 
@@ -121,7 +121,7 @@ Infine, indicare che l'oggetto TableAdapter deve usare i modelli di accesso ai d
 Dopo aver completato la procedura guidata, la finestra di progettazione set di dati includerà oggetto fortemente tipizzato `Products` DataTable e TableAdapter. Si consiglia di rinominare l'elemento DataTable dal `Products` a `ProductsOptimisticConcurrency`, che è possibile effettuare facendo clic sulla barra del titolo della DataTable e scegliendo Rinomina dal menu di scelta rapida.
 
 
-[![Un oggetto DataTable e TableAdapter sono stati aggiunti al set di dati tipizzati](implementing-optimistic-concurrency-vb/_static/image23.png)](implementing-optimistic-concurrency-vb/_static/image22.png)
+[![A DataTable e TableAdapter sono stati aggiunti al set di dati tipizzato](implementing-optimistic-concurrency-vb/_static/image23.png)](implementing-optimistic-concurrency-vb/_static/image22.png)
 
 **Figura 8**: Un oggetto DataTable e TableAdapter sono stati aggiunti al set di dati tipizzato ([fare clic per visualizzare l'immagine con dimensioni normali](implementing-optimistic-concurrency-vb/_static/image24.png))
 
@@ -143,7 +143,7 @@ Che non verranno aggiunti qualsiasi DataTable aggiuntive per il set di dati abil
 A tale scopo, fare doppio clic sulla barra del titolo dell'oggetto TableAdapter (in alto a destra l'area di `Fill` e `GetProducts` i nomi dei metodi) e scegliere Aggiungi Query dal menu di scelta rapida. Verrà avviata la configurazione guidata Query TableAdapter. Come con la configurazione iniziale del nostro TableAdapter, scegliere di creare il `GetProductByProductID(productID)` metodo usando un'istruzione SQL ad hoc (vedere la figura 4). Poiché il `GetProductByProductID(productID)` metodo restituisce informazioni su un particolare prodotto, indicare che questa query è un `SELECT` tipo che restituisce righe di query.
 
 
-[![Contrassegnare il tipo di Query come un &quot;SELECT che restituisce righe&quot;](implementing-optimistic-concurrency-vb/_static/image26.png)](implementing-optimistic-concurrency-vb/_static/image25.png)
+[![MArk digitare la Query come un &quot;SELECT che restituisce righe&quot;](implementing-optimistic-concurrency-vb/_static/image26.png)](implementing-optimistic-concurrency-vb/_static/image25.png)
 
 **Figura 9**: Contrassegnare il tipo di Query come un "`SELECT` che restituisce righe" ([fare clic per visualizzare l'immagine con dimensioni normali](implementing-optimistic-concurrency-vb/_static/image27.png))
 
@@ -151,7 +151,7 @@ A tale scopo, fare doppio clic sulla barra del titolo dell'oggetto TableAdapter 
 Nella schermata successiva è stiamo richiesto per la query SQL da usare, con query predefinita dell'oggetto TableAdapter precaricate. Aumentare la query esistente per includere la clausola `WHERE ProductID = @ProductID`, come illustrato nella figura 10.
 
 
-[![Aggiungere una clausola WHERE clausola per la Query precaricata per restituire un Record di prodotto specifico](implementing-optimistic-concurrency-vb/_static/image29.png)](implementing-optimistic-concurrency-vb/_static/image28.png)
+[![Auna clausola WHERE alla Query per restituire un Record di prodotto specifico Pre-Loaded gg](implementing-optimistic-concurrency-vb/_static/image29.png)](implementing-optimistic-concurrency-vb/_static/image28.png)
 
 **Figura 10**: Aggiungere un `WHERE` clausola per la Query Pre-Loaded per restituire un Record di prodotto specifico ([fare clic per visualizzare l'immagine con dimensioni normali](implementing-optimistic-concurrency-vb/_static/image30.png))
 
@@ -159,7 +159,7 @@ Nella schermata successiva è stiamo richiesto per la query SQL da usare, con qu
 Infine, modificare i nomi di metodo generato da `FillByProductID` e `GetProductByProductID`.
 
 
-[![Rinominare i metodi FillByProductID e GetProductByProductID](implementing-optimistic-concurrency-vb/_static/image32.png)](implementing-optimistic-concurrency-vb/_static/image31.png)
+[![Ri metodi di FillByProductID e GetProductByProductID eName](implementing-optimistic-concurrency-vb/_static/image32.png)](implementing-optimistic-concurrency-vb/_static/image31.png)
 
 **Figura 11**: Rinominare i metodi `FillByProductID` e `GetProductByProductID` ([fare clic per visualizzare l'immagine con dimensioni normali](implementing-optimistic-concurrency-vb/_static/image33.png))
 
@@ -232,7 +232,7 @@ Con DAL e BLL completo, resta che creare una pagina ASP.NET che può utilizzare 
 Iniziare aprendo il `OptimisticConcurrency.aspx` nella pagina la `EditInsertDelete` cartella e l'aggiunta di un controllo GridView nella finestra di progettazione, l'impostazione relativa `ID` proprietà `ProductsGrid`. Dallo smart tag del controllo GridView, scegliere di creare un nuovo oggetto ObjectDataSource denominato `ProductsOptimisticConcurrencyDataSource`. Poiché si desidera che ObjectDataSource usare DAL che supporta la concorrenza ottimistica, configurarlo per usare il `ProductsOptimisticConcurrencyBLL` oggetto.
 
 
-[![È possibile utilizzare ObjectDataSource oggetto ProductsOptimisticConcurrencyBLL](implementing-optimistic-concurrency-vb/_static/image36.png)](implementing-optimistic-concurrency-vb/_static/image35.png)
+[![Hl'utilizzo di ObjectDataSource oggetto ProductsOptimisticConcurrencyBLL AVE](implementing-optimistic-concurrency-vb/_static/image36.png)](implementing-optimistic-concurrency-vb/_static/image35.png)
 
 **Figura 13**: È possibile utilizzare ObjectDataSource i `ProductsOptimisticConcurrencyBLL` oggetti ([fare clic per visualizzare l'immagine con dimensioni normali](implementing-optimistic-concurrency-vb/_static/image37.png))
 
@@ -294,7 +294,7 @@ In particolare, i valori originali di GridView vengono assegnati i valori nelle 
 Per visualizzare il motivo per cui questo aspetto è importante, si consiglia di visitare la pagina in un browser. Come previsto, il controllo GridView Elenca ogni prodotto con un pulsante di modifica e l'eliminazione della colonna all'estrema sinistra.
 
 
-[![I prodotti sono elencati in un oggetto GridView](implementing-optimistic-concurrency-vb/_static/image39.png)](implementing-optimistic-concurrency-vb/_static/image38.png)
+[![Tin un controllo GridView sono elencati i prodotti he](implementing-optimistic-concurrency-vb/_static/image39.png)](implementing-optimistic-concurrency-vb/_static/image38.png)
 
 **Figura 14**: I prodotti sono elencati in un controllo GridView ([fare clic per visualizzare l'immagine con dimensioni normali](implementing-optimistic-concurrency-vb/_static/image40.png))
 
@@ -302,7 +302,7 @@ Per visualizzare il motivo per cui questo aspetto è importante, si consiglia di
 Se si fa clic sul pulsante Elimina per qualsiasi prodotto, una `FormatException` viene generata un'eccezione.
 
 
-[![Tentativo di eliminare eventuali risultati per i prodotti in un'eccezione FormatException](implementing-optimistic-concurrency-vb/_static/image42.png)](implementing-optimistic-concurrency-vb/_static/image41.png)
+[![Attempting per eliminare qualsiasi prodotto i risultati in un'eccezione FormatException](implementing-optimistic-concurrency-vb/_static/image42.png)](implementing-optimistic-concurrency-vb/_static/image41.png)
 
 **Figura 15**: Tentativo di eliminare qualsiasi prodotto risultati in un `FormatException` ([fare clic per visualizzare l'immagine con dimensioni normali](implementing-optimistic-concurrency-vb/_static/image43.png))
 
@@ -323,7 +323,7 @@ Per il mio esempio ho deciso di passare con il secondo approccio, aggiunta di un
 Dopo aver risolto questo problema, provare a fare nuovamente clic sul pulsante Elimina per qualsiasi prodotto. Questa volta si otterrà un' `InvalidOperationException` ObjectDataSource quando tenta di richiamare il livello BLL `UpdateProduct` (metodo).
 
 
-[![ObjectDataSource non è stato trovato un metodo con i parametri di Input che desidera trasmissione](implementing-optimistic-concurrency-vb/_static/image45.png)](implementing-optimistic-concurrency-vb/_static/image44.png)
+[![Tegli ObjectDataSource non è possibile trovare un metodo con i parametri di Input che desidera trasmissione](implementing-optimistic-concurrency-vb/_static/image45.png)](implementing-optimistic-concurrency-vb/_static/image44.png)
 
 **Figura 16**: ObjectDataSource non è stato trovato un metodo con i parametri di Input che desidera trasmissione ([fare clic per visualizzare l'immagine con dimensioni normali](implementing-optimistic-concurrency-vb/_static/image46.png))
 
@@ -342,7 +342,7 @@ Per verificare che eventuali violazioni alla concorrenza sono in corso rilevato 
 A altra istanza finestra del browser, tuttavia, il nome del prodotto nella casella di testo viene ancora visualizzato "Chai". In questa seconda finestra del browser, aggiornare il `UnitPrice` a `25.00`. Senza il supporto della concorrenza ottimistica, fare clic su Aggiorna nella seconda istanza del browser modificherebbe il nome del prodotto al "Chai", in tal modo sovrascrivendo le modifiche apportate dalla prima istanza del browser. Con la concorrenza ottimistica usata, tuttavia, facendo clic sul pulsante Aggiorna nella seconda istanza del browser comporterà un [DBConcurrencyException](https://msdn.microsoft.com/library/system.data.dbconcurrencyexception.aspx).
 
 
-[![Quando viene rilevata una violazione della concorrenza, viene generato un DBConcurrencyException](implementing-optimistic-concurrency-vb/_static/image48.png)](implementing-optimistic-concurrency-vb/_static/image47.png)
+[![Wviene generata un'eccezione viene rilevata una violazione della concorrenza, uando un DBConcurrencyException](implementing-optimistic-concurrency-vb/_static/image48.png)](implementing-optimistic-concurrency-vb/_static/image47.png)
 
 **Figura 17**: Quando viene rilevata una violazione della concorrenza, un `DBConcurrencyException` viene generata un'eccezione ([fare clic per visualizzare l'immagine con dimensioni normali](implementing-optimistic-concurrency-vb/_static/image49.png))
 
@@ -369,7 +369,7 @@ Oltre all'impostazione loro `Visible`, `EnabledViewState`, e `Text` delle propri
 Dopo aver aggiunto queste etichette, la finestra di progettazione in Visual Studio dovrebbe essere simile alla figura 18.
 
 
-[![Sono stati aggiunti due controlli Label per la pagina](implementing-optimistic-concurrency-vb/_static/image51.png)](implementing-optimistic-concurrency-vb/_static/image50.png)
+[![Ti controlli Label WO sono stati aggiunti alla pagina](implementing-optimistic-concurrency-vb/_static/image51.png)](implementing-optimistic-concurrency-vb/_static/image50.png)
 
 **Figura 18**: Due etichette controlli sono stati aggiunti alla pagina ([fare clic per visualizzare l'immagine con dimensioni normali](implementing-optimistic-concurrency-vb/_static/image52.png))
 
@@ -388,7 +388,7 @@ Come abbiamo visto nel *BLL - la gestione e le eccezioni di livello in una pagin
 Nel caso di un `DBConcurrencyException` eccezione, questo gestore dell'evento Visualizza il `UpdateConflictMessage` controllo etichetta e indica che è stata gestita l'eccezione. Con questo codice, quando si verifica una violazione della concorrenza quando si aggiorna un record, le modifiche dell'utente vengono perse, dal momento che verrebbe hanno sovrascritto le modifiche a un altro utente nello stesso momento. In particolare, il controllo GridView è restituito al relativo stato di pre-modifica e associato ai dati del database corrente. La riga GridView verranno aggiornati con le altre modifiche dell'utente, che erano in precedenza non è visibile. Inoltre, il `UpdateConflictMessage` controllo etichetta verrà illustrato all'utente agli eventi. Questa sequenza di eventi è illustrata nella figura 19.
 
 
-[![Un utente s gli aggiornamenti vengono perse in caso di una violazione della concorrenza](implementing-optimistic-concurrency-vb/_static/image54.png)](implementing-optimistic-concurrency-vb/_static/image53.png)
+[![A Assegnare agli utenti gli aggiornamenti vengono perse in caso di una violazione di concorrenza](implementing-optimistic-concurrency-vb/_static/image54.png)](implementing-optimistic-concurrency-vb/_static/image53.png)
 
 **Figura 19**: Un utente s gli aggiornamenti vengono perse in caso di una violazione della concorrenza ([fare clic per visualizzare l'immagine con dimensioni normali](implementing-optimistic-concurrency-vb/_static/image55.png))
 
@@ -409,7 +409,7 @@ Il valore restituito per un metodo BLL può essere esaminato nei gestori di even
 In caso di una violazione della concorrenza, viene annullata la richiesta di eliminazione dell'utente. Il controllo GridView viene aggiornato, che mostra le modifiche che si sono verificati per tale record tra il momento in cui l'utente è caricata la pagina e quando ha fatto clic sul pulsante Elimina. Quando accade realmente una violazione di questo tipo, il `DeleteConflictMessage` viene visualizzata l'etichetta, che spiega agli eventi (vedere Figura 20).
 
 
-[![Un utente s Delete viene annullato in caso di una violazione della concorrenza](implementing-optimistic-concurrency-vb/_static/image57.png)](implementing-optimistic-concurrency-vb/_static/image56.png)
+[![A Utente s Delete viene annullato in caso di una violazione di concorrenza](implementing-optimistic-concurrency-vb/_static/image57.png)](implementing-optimistic-concurrency-vb/_static/image56.png)
 
 **Figura 20**: Un utente s Delete viene annullato in caso di una violazione della concorrenza ([fare clic per visualizzare l'immagine con dimensioni normali](implementing-optimistic-concurrency-vb/_static/image58.png))
 

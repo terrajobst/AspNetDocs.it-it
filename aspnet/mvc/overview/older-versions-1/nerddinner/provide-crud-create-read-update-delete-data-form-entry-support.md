@@ -8,18 +8,18 @@ ms.date: 07/27/2010
 ms.assetid: bbb976e5-6150-4283-a374-c22fbafe29f5
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/provide-crud-create-read-update-delete-data-form-entry-support
 msc.type: authoredcontent
-ms.openlocfilehash: 45d74249a34fc7e37e9776a398615d2f613a7582
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 242665b3ba2e2ad2157abbe2c44ae207f15e72ce
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57031738"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59410864"
 ---
-<a name="provide-crud-create-read-update-delete-data-form-entry-support"></a>Fornire il supporto per operazioni di creazione, lettura, aggiornamento ed eliminazione sulle voci di moduli di dati
-====================
+# <a name="provide-crud-create-read-update-delete-data-form-entry-support"></a>Fornire il supporto per operazioni di creazione, lettura, aggiornamento ed eliminazione sulle voci di moduli di dati
+
 by [Microsoft](https://github.com/microsoft)
 
-[Scaricare PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
+[Scarica il PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
 
 > Si tratta di passaggio 5 di una liberazione [esercitazione sull'applicazione "NerdDinner"](introducing-the-nerddinner-tutorial.md) che si interromperanno-dettaglio come compilare una piccola, ma completa, applicazione web con ASP.NET MVC 1.
 > 
@@ -36,22 +36,22 @@ Abbiamo introdotto i controller e visualizzazioni e ha descritto come utilizzarl
 
 Aggiunto in precedenza i metodi di azione di DinnersController che implementato il supporto per due URL: */Dinners* e */Dinners/dettagli / [id]*.
 
-| **URL** | **VERB** | **Scopo** |
+| **URL** | **VERBO** | **Scopo** |
 | --- | --- | --- |
 | */Dinners/* | GET | Visualizzare un elenco HTML di dinners imminente. |
 | */Dinners/Details/[id]* | GET | Visualizzare informazioni dettagliate su una specifica cena. |
 
-Ora si aggiungeranno i metodi di azione per implementare tre URL aggiuntivi: <em>/Dinners/modifica / [id], / Dinners/creazione,</em>e<em>/Dinners/Delete / [id]</em>. Questi URL abiliterà il supporto per la modifica Dinners esistente, creazione nuovo Dinners ed eliminazione Dinners.
+Ora si aggiungeranno i metodi di azione per implementare tre URL aggiuntivi: */Dinners/modifica / [id]*, *Dinners/Create*, e */Dinners/Delete / [id]*. Questi URL abiliterà il supporto per la modifica Dinners esistente, creazione nuovo Dinners ed eliminazione Dinners.
 
 Il supporto delle interazioni di verbo HTTP GET e HTTP POST con questi nuovi URL. Richieste GET HTTP a questi URL visualizzerà la visualizzazione HTML iniziale dei dati (un modulo compilato con i dati di Dinner nel caso di "Modifica", un modulo vuoto in caso di "creazione" e una schermata di conferma delete nel caso di eliminazione""). Le richieste HTTP POST agli URL seguenti verranno save/update/delete dati Dinner nel nostro DinnerRepository (e da lì nel database).
 
-| **URL** | **VERB** | **Scopo** |
+| **URL** | **VERBO** | **Scopo** |
 | --- | --- | --- |
 | */Dinners/modifica / [id]* | GET | Visualizzare un form HTML modificabile popolato con dati cena. |
 | INSERISCI | Salvare le modifiche di form per un particolare Dinner al database. |
-| */Dinners/Create* | GET | Visualizzare un form HTML vuoto che consente agli utenti di definire nuove Dinners. |
+| */ Dinners/Create* | GET | Visualizzare un form HTML vuoto che consente agli utenti di definire nuove Dinners. |
 | INSERISCI | Creare un nuovo Dinner e salvarlo nel database. |
-| */Dinners/delete / [id]* | GET | Visualizzazione Elimina la schermata di conferma. |
+| */Dinners/Delete/[id]* | GET | Visualizzazione Elimina la schermata di conferma. |
 | INSERISCI | Elimina la cena specificata dal database. |
 
 ### <a name="edit-support"></a>Supporto di modifica
@@ -138,7 +138,7 @@ Inizieremo aggiungendo un metodo di azione "Modifica" overload al nostro Dinners
 
 [!code-csharp[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample9.cs)]
 
-Quando l'attributo [AcceptVerbs] viene applicato ai metodi di overload di azione, ASP.NET MVC gestisce automaticamente le richieste di invio al metodo di azione appropriato in base al verbo HTTP in ingresso. Le richieste HTTP POST a <em>/Dinners/modifica / [id]</em> URL verrà inviata al metodo di modifica precedente, mentre tutte le altre richieste di verbo HTTP per <em>/Dinners/modifica / [id]</em>passa gli URL per il primo metodo di modifica è (che è stata implementata non avere un attributo [AcceptVerbs]).
+Quando l'attributo [AcceptVerbs] viene applicato ai metodi di overload di azione, ASP.NET MVC gestisce automaticamente le richieste di invio al metodo di azione appropriato in base al verbo HTTP in ingresso. Le richieste HTTP POST a */Dinners/modifica / [id]* URL verrà inviata al metodo di modifica precedente, mentre tutte le altre richieste di verbo HTTP per */Dinners/modifica / [id]* passa gli URL per il primo metodo di modifica è (che è stata implementata non è un `[AcceptVerbs]` attributo).
 
 | **Sul lato dell'argomento: Il motivo per cui differenziare tramite verbi HTTP?** |
 | --- |
@@ -228,7 +228,7 @@ Il metodo helper Html.ValidationMessage() supporta anche un secondo parametro ch
 
 [!code-aspx[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample18.aspx)]
 
-Il codice precedente restituisce:  <em>&lt;span classe = "errore di convalida campo"&gt;\*&lt;/span&gt;</em>anziché il testo di errore predefinito quando un errore è presente per il L'elemento EventDate proprietà.
+Il codice precedente restituisce: *&lt;span classe = "errore di convalida campo"&gt;\*&lt;/span&gt;* anziché il testo di errore predefinito quando un errore è presente per il L'elemento EventDate proprietà.
 
 ##### <a name="htmlvalidationsummary-helper-method"></a>Metodo Helper Html.ValidationSummary()
 

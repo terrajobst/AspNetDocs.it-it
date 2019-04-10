@@ -8,15 +8,15 @@ ms.date: 02/12/2008
 ms.assetid: 7cf3f5ed-2a87-4208-a71d-2b39bc19832a
 msc.legacyurl: /web-forms/videos/how-do-i/how-do-i-multiple-file-uploads-in-aspnet-2
 msc.type: video
-ms.openlocfilehash: cd0e93e10dc7295febc783852c3713963c7c35d8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 0e7757e24fea52034d15728a8e4c37b0d1bd954e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57064768"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59421641"
 ---
-<a name="how-do-i--multiple-file-uploads-in-aspnet2"></a>[Procedura:]  Caricamenti di più File in ASP.NET 2
-====================
+# <a name="how-do-i--multiple-file-uploads-in-aspnet2"></a>[Procedura:]  Caricamenti di più File in ASP.NET 2
+
 da [Joe Stagner](https://github.com/JoeStagner)
 
 In questo video illustrerò il caricamento di un numero di file in modo dinamico determinato all'applicazione ASP.NET.

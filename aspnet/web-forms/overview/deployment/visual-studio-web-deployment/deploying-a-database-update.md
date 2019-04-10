@@ -8,15 +8,15 @@ ms.date: 02/15/2013
 ms.assetid: 9cad0833-486a-4474-a7f3-7715542ec4ce
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/deploying-a-database-update
 msc.type: authoredcontent
-ms.openlocfilehash: 5145f0a9bfe615fa98a7341841f72597594de1e4
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 86dcac0b95f07a310bdaaa4e69db0a83f8734744
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58424261"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59416636"
 ---
-<a name="aspnet-web-deployment-using-visual-studio-deploying-a-database-update"></a>Distribuzione Web ASP.NET tramite Visual Studio: Distribuzione di un aggiornamento del database
-====================
+# <a name="aspnet-web-deployment-using-visual-studio-deploying-a-database-update"></a>Distribuzione Web ASP.NET tramite Visual Studio: Distribuzione di un aggiornamento del database
+
 da [Tom Dykstra](https://github.com/tdykstra)
 
 [Download progetto iniziale](http://go.microsoft.com/fwlink/p/?LinkId=282627)

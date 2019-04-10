@@ -8,15 +8,15 @@ ms.date: 07/21/2010
 ms.assetid: 94ea1a70-a9bc-4241-8f36-08366d64bab9
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-3
 msc.type: authoredcontent
-ms.openlocfilehash: f55b29a271dbdb72d3e2249ed74517b77d78cf5e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: badae58d5b43fb2674f4918f54f999ff48d0b5b0
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57034848"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59418014"
 ---
-<a name="part-3-layout-and-category-menu"></a>Parte 3: Layout e menu per la categoria
-====================
+# <a name="part-3-layout-and-category-menu"></a>Parte 3: Layout e menu per la categoria
+
 da [Joe Stagner](https://github.com/JoeStagner)
 
 > Tailspin Spyworks viene illustrato come saliente è davvero semplice per creare applicazioni potenti e scalabili per la piattaforma .NET. Illustra come usare le nuove funzionalità in ASP.NET 4 per creare un negozio online, tra cui acquisti, estrazione e l'amministrazione.
@@ -66,7 +66,7 @@ Si noti l'istruzione "Eval": &lt;% # Eval("CategoryName") %&gt;
 
 La sintassi ASP.NET &lt;% # %&gt; è una convenzione a sintassi abbreviata che indica al runtime di eseguire qualsiasi elemento è contenuto all'interno e restituire i risultati "nella riga".
 
-L'istruzione Eval("CategoryName") indica che, per la voce corrente nella raccolta associata di elementi di dati, recuperare il valore dei nomi di elemento Entity Model "CatagoryName". Si tratta di una sintassi concisa per una funzionalità molto potente.
+L'istruzione Eval("CategoryName") indica che, per la voce corrente nella raccolta associata di elementi di dati, recuperare il valore dei nomi di elemento Entity Model "CategoryName". Si tratta di una sintassi concisa per una funzionalità molto potente.
 
 Consente di eseguire ora l'applicazione.
 

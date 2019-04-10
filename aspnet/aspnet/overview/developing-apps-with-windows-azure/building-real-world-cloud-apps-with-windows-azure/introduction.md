@@ -8,15 +8,15 @@ ms.date: 06/12/2014
 ms.assetid: accfa16a-ab15-4c26-9ad4-babdc2a77d2e
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/introduction
 msc.type: authoredcontent
-ms.openlocfilehash: c496e93d7517bc187514d5fa2dfa90d29c5f47f9
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: bf9cf1f5be22a5b97ec964277c11ae21066676f0
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57033118"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59412411"
 ---
-<a name="building-real-world-cloud-apps-with-azure"></a>Creazione di App per Cloud funzionanti con Azure
-====================
+# <a name="building-real-world-cloud-apps-with-azure"></a>Creazione di App per Cloud funzionanti con Azure
+
 dal [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
 
 [Download risolverlo Project](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [Scarica l'E-book](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
@@ -100,7 +100,7 @@ Questo e-book spiega che tredici consigliato modelli per lo sviluppo cloud. "Mod
     - Abilitare la disponibilità elevata e per migliorare la scalabilità di accoppiamento regime di controllo libero tra i livelli web e ruolo di lavoro.
     - Demo: Code di archiviazione di Azure nell'app Fix It.
 - [I modelli dell'app e informazioni aggiuntive più cloud](more-patterns-and-guidance.md).
-- [Appendice: La correzione applicazione di esempio](the-fix-it-sample-application.md)
+- [Appendice: Applicazione di esempio Fix It](the-fix-it-sample-application.md)
 
     - Problemi noti
     - Suggerimenti
@@ -175,4 +175,4 @@ Video
 - [Elementi interni di siti Web di Azure con Nir Mashkowski](https://channel9.msdn.com/Shows/Web+Camps+TV/Windows-Azure-Web-Sites-Internals-with-Nir-Mashkowski).
 
 > [!div class="step-by-step"]
-> [avanti](automate-everything.md)
+> [Successivo](automate-everything.md)

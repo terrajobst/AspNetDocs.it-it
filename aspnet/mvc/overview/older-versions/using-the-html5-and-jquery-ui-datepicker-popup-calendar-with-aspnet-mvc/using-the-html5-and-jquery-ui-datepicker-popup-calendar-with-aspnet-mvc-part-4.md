@@ -8,15 +8,15 @@ ms.date: 08/29/2011
 ms.assetid: 57666c69-2b0f-423a-a61d-be49547fa585
 msc.legacyurl: /mvc/overview/older-versions/using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc/using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-4
 msc.type: authoredcontent
-ms.openlocfilehash: e933ca0398d99a41089b4d1e18d21dd657db4b6b
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 0f6d58b8bf72c6b9d6909a8a05efe4f61ebd551a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423351"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59416740"
 ---
-<a name="using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc---part-4"></a>Uso di HTML5 e jQuery UI Datepicker Popup Calendar con ASP.NET MVC - parte 4
-====================
+# <a name="using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc---part-4"></a>Uso di HTML5 e jQuery UI Datepicker Popup Calendar con ASP.NET MVC - parte 4
+
 da [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > Questa esercitazione insegnerà le nozioni di base di come usare i modelli nell'editor di modelli di visualizzazione e il calendario di jQuery UI datepicker popup in un'applicazione Web ASP.NET MVC.
@@ -54,7 +54,7 @@ La prima riga dichiara il modello sia un `DateTime` tipo. Anche se non è necess
 
 La seconda riga viene semplicemente letterale markup HTML che consente di visualizzare &quot;modello di data usando&quot; prima di un campo Data. Si userà questa riga temporaneamente per verificare che questo modello di data è in uso.
 
-La riga successiva è un' [Html.TextBox](https://msdn.microsoft.com/library/system.web.mvc.html.inputextensions.textbox.aspx) helper che esegue il rendering di un `input` campo che rappresenta una casella di testo. Il terzo parametro per l'helper utilizza un tipo anonimo per impostare la classe per la casella di testo `datefield` e il tipo su `date`. (Poiché `class` è una proprietà riservata in C#, è necessario usare il `@` carattere di escape di `class` attributo nel parser C#.)
+La riga successiva è un' [Html.TextBox](https://msdn.microsoft.com/library/system.web.mvc.html.inputextensions.textbox.aspx) helper che esegue il rendering di un `input` campo che rappresenta una casella di testo. Il terzo parametro per l'helper utilizza un tipo anonimo per impostare la classe per la casella di testo `datefield` e il tipo su `date`. (Poiché `class` è una proprietà riservata in c#, è necessario usare il `@` carattere di escape di `class` attributo nel parser c#.)
 
 Il `date` tipo è un tipo di input HTML5 che consente ai browser compatibili con HTML5 per il rendering di un controllo di calendario HTML5. In seguito si aggiungerà codice JavaScript per associare il controllo datepicker jQuery per la `Html.TextBox` elemento usando il `datefield` classe.
 

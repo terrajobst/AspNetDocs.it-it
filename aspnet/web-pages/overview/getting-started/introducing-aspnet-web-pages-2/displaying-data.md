@@ -8,15 +8,15 @@ ms.date: 05/28/2015
 ms.assetid: b3a006a0-3ea2-4d45-b833-e20e3a3c0a1a
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/displaying-data
 msc.type: authoredcontent
-ms.openlocfilehash: 9158a1f53268daec6e6fbdf003dd73e1d62cc667
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5415913626eb063a4cb1013ba03857c130487f42
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57031248"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59412177"
 ---
-<a name="introducing-aspnet-web-pages---displaying-data"></a>Introduzione a pagine Web ASP.NET - visualizzazione di dati
-====================
+# <a name="introducing-aspnet-web-pages---displaying-data"></a>Introduzione a pagine Web ASP.NET - visualizzazione di dati
+
 da [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Questa esercitazione illustra come creare un database in WebMatrix e come visualizzare i dati del database in una pagina quando si usa ASP.NET Web Pages (Razor). Si presuppone di aver completato la serie attraverso [Introduzione alla programmazione di ASP.NET Web Pages](../introducing-razor-syntax-c.md).
@@ -333,7 +333,7 @@ Nella prossima esercitazione, si apprenderà come usare codice Razor e c# per ot
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-- [Introduzione alla programmazione Web ASP.NET usando la sintassi Razor](https://go.microsoft.com/fwlink/?LinkID=202890)
+- [Introduzione alla programmazione Web ASP.NET utilizzando la sintassi Razor](https://go.microsoft.com/fwlink/?LinkID=202890)
 
 > [!div class="step-by-step"]
 > [Precedente](intro-to-web-pages-programming.md)

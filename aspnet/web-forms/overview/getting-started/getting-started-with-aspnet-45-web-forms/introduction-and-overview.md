@@ -8,17 +8,17 @@ ms.date: 01/09/2019
 ms.assetid: 9b96eaa1-8ef0-4338-a2e8-e0f970bfaf68
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/introduction-and-overview
 msc.type: authoredcontent
-ms.openlocfilehash: b51ffda9aa10dd8b1fe98c4b56f70994eb016cec
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 3a39e8d1979a743101d728eb3430e9aa0efb1252
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425717"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59415635"
 ---
-<a name="getting-started-with-aspnet-45-web-forms-and-visual-studio-2017"></a>Introduzione a Web Form ASP.NET 4.5 e Visual Studio 2017
-====================
+# <a name="getting-started-with-aspnet-45-web-forms-and-visual-studio-2017"></a>Introduzione a Web Form ASP.NET 4.5 e Visual Studio 2017
 
-[Scaricare progetto di esempio Wingtip Toys (C#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) o [Scarica l'E-book (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
+
+[Scaricare progetto di esempio Wingtip Toys (c#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) o [Scarica l'E-book (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
 
 Questa serie di esercitazioni illustra come compilare un'applicazione Web Form ASP.NET con ASP.NET 4.5 e Microsoft Visual Studio 2017. 
 
@@ -39,7 +39,7 @@ Gli sviluppatori al Web Form ASP.NET sono i destinatari di questa serie di eserc
 
 Per esaminare queste aree, è consigliabile esaminare il contenuto seguente:
 
-- [Introduzione a Visual C#](https://msdn.microsoft.com/library/a72418yk.aspx)
+- [Guida introduttiva a Visual C#](https://msdn.microsoft.com/library/a72418yk.aspx)
 - [Web Development](https://msdn.microsoft.com/beginner/bb308760.aspx), [HTML, CSS, JavaScript, SQL, PHP, JQuery](http://w3schools.com/)
 - [Database relazionale](http://en.wikipedia.org/wiki/Relational_database)
 - [Architettura a più livelli](http://en.wikipedia.org/wiki/Multitier_architecture)
@@ -160,7 +160,7 @@ Dopo aver installato i prerequisiti, si è pronti per iniziare a creare il proge
 
  È possibile scaricare l'applicazione di esempio completo in qualsiasi momento dal sito di esempi MSDN:
 
-[Introduzione a Web Form ASP.NET 4.5 e Visual Studio 2013 - Wingtip Toys](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) (C#) 
+[Introduzione a Web Form ASP.NET 4.5 e Visual Studio 2013 - Wingtip Toys](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) (c#) 
 
  Questo download include gli elementi seguenti:
 
@@ -171,10 +171,10 @@ Il download è un *zip* file. Per visualizzare il progetto completato creato que
 
 <strong>C:\Users&#92;</strong><strong><em>&lt;username&gt;</em></strong><strong>\source\repos</strong>
 
-Rinominare il ***C#*** cartella in cui ***WingtipToys***.
+Rinominare il ***c#*** cartella in cui ***WingtipToys***.
 
 > [!NOTE]
-> Se si dispone già di una cartella denominata *WingtipToys* nella cartella dei progetti, rinominare temporaneamente la cartella esistente prima di rinominare il *C#* cartella in cui *WingtipToys*.
+> Se si dispone già di una cartella denominata *WingtipToys* nella cartella dei progetti, rinominare temporaneamente la cartella esistente prima di rinominare il *c#* cartella in cui *WingtipToys*.
 
 Per eseguire il progetto completato, aprire il *WingtipToys* cartella e fare doppio clic il *WingtipToys.sln* file. Visual Studio 2017 apre il progetto. Successivamente, fare doppio clic il *default. aspx* del file in **Esplora soluzioni** e selezionare **Visualizza nel Browser**.
 
@@ -182,7 +182,7 @@ Per eseguire il progetto completato, aprire il *WingtipToys* cartella e fare dop
 
 Dopo aver completato la serie di esercitazioni, questionario per testare le proprie conoscenze e rafforzano i concetti chiave. Ogni domanda fornisce una spiegazione e collegamenti a indicazioni aggiuntive.
 
- * [Web Form ASP.NET Quiz](https://blogs.msdn.microsoft.com/erikreitan/2016/01/08/asp-net-web-forms-quiz/) 
+* [Web Form ASP.NET Quiz](https://blogs.msdn.microsoft.com/erikreitan/2016/01/08/asp-net-web-forms-quiz/) 
 
 ## <a name="tutorial-support-and-comments"></a>I commenti e supporto dell'esercitazione
 
@@ -193,4 +193,4 @@ Sono Benvenuti i commenti su questa serie di esercitazioni. Quando questa serie 
 Se si verifica un errore, messaggi di errore corrispondente potrebbero generare confusione, con nessuna spiegazioni su come risolverlo. Per altre informazioni, è possibile controllare la [forum ASP.NET](https://forums.asp.net/). Un'altra valida fonte è la sezione di domande e risposte nel [Introduzione a Web Form ASP.NET 4.5 e Visual Studio 2013 - Wingtip Toys](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) (C#) pagina di esempio. 
 
 > [!div class="step-by-step"]
-> [avanti](create-the-project.md)
+> [Successivo](create-the-project.md)

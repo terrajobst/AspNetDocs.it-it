@@ -8,15 +8,15 @@ ms.date: 05/22/2012
 ms.assetid: f889fd46-4dac-4ecb-83d8-60e64c22036e
 msc.legacyurl: /web-pages/overview/data/7-displaying-data-in-a-chart
 msc.type: authoredcontent
-ms.openlocfilehash: 00529355476e88c47ab790121ae77202aa5e7b76
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: f97f214abeaeb88634dd10aaebacc0d58e91ab84
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57061098"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59422460"
 ---
-<a name="displaying-data-in-a-chart-with-aspnet-web-pages-razor"></a>Visualizzazione dei dati in un grafico con ASP.NET Web Pages (Razor)
-====================
+# <a name="displaying-data-in-a-chart-with-aspnet-web-pages-razor"></a>Visualizzazione dei dati in un grafico con ASP.NET Web Pages (Razor)
+
 by [Microsoft](https://github.com/microsoft)
 
 > Questo articolo illustra come usare un grafico per visualizzare i dati in un sito Web ASP.NET Web Pages (Razor) utilizzando il `Chart` helper.
@@ -40,9 +40,9 @@ by [Microsoft](https://github.com/microsoft)
 
 Quando si desidera visualizzare i dati sotto forma di grafico, è possibile usare `Chart` helper. Il `Chart` helper può eseguire il rendering di un'immagine che visualizza i dati in un'ampia gamma di tipi di grafico. Supporta numerose opzioni per la formattazione e l'assegnazione di etichette. Il `Chart` helper può eseguire il rendering di più di 30 tipi di grafici, inclusi tutti i tipi di grafici che è possibile avere familiarità con da Microsoft Excel o altri strumenti di &#8212; grafici ad area, i grafici a barre, istogrammi, grafici a linee e grafici a torta, insieme a informazioni grafici speciali, ad esempio i grafici azionari.
 
-| **Grafico ad aree** ![descrizione: Immagine del tipo di grafico ad Area](7-displaying-data-in-a-chart/_static/image1.jpg) | **Grafico a barre** ![descrizione: Immagine del tipo di grafico a barre](7-displaying-data-in-a-chart/_static/image2.jpg) |
+| **Grafico ad aree** ![descrizione: Immagine del tipo di grafico ad area](7-displaying-data-in-a-chart/_static/image1.jpg) | **Grafico a barre** ![descrizione: Immagine del tipo di grafico a barre](7-displaying-data-in-a-chart/_static/image2.jpg) |
 | --- | --- |
-| **Istogramma** ![descrizione: Immagine del tipo di grafico](7-displaying-data-in-a-chart/_static/image3.jpg) | **Grafico a linee** ![descrizione: Immagine del tipo di grafico a linee](7-displaying-data-in-a-chart/_static/image4.jpg) |
+| **Istogramma** ![descrizione: Immagine del tipo di istogramma](7-displaying-data-in-a-chart/_static/image3.jpg) | **Grafico a linee** ![descrizione: Immagine del tipo di grafico a linee](7-displaying-data-in-a-chart/_static/image4.jpg) |
 | **Grafico a torta** ![descrizione: Immagine del tipo di grafico a torta](7-displaying-data-in-a-chart/_static/image5.jpg) | **Grafico azionario** ![descrizione: Immagine del tipo di grafico azionario](7-displaying-data-in-a-chart/_static/image6.jpg) |
 
 ### <a name="chart-elements"></a>Elementi del grafico

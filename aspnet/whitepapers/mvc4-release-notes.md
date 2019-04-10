@@ -8,15 +8,15 @@ ms.date: 09/09/2011
 ms.assetid: f014524f-25c0-4094-b8e1-886d99536f00
 msc.legacyurl: /whitepapers/mvc4-release-notes
 msc.type: content
-ms.openlocfilehash: a4f78061850ef5ad8c3381daafdb5ea6bca4cb2f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 0f9b4e2ba0514df4c017a192f3c2136a7eec60c7
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57054288"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59413256"
 ---
-<a name="aspnet-mvc-4"></a>ASP.NET MVC 4
-====================
+# <a name="aspnet-mvc-4"></a>ASP.NET MVC 4
+
 > Questo documento descrive la versione di ASP.NET MVC 4.
 
 
@@ -26,7 +26,7 @@ ms.locfileid: "57054288"
 - [Requisiti software](#_Toc303253805)
 - [Nuove funzionalità in ASP.NET MVC 4](#_Toc303253807)
 
-    - [ASP.NET Web API](#_Toc317096197)
+    - [API Web ASP.NET](#_Toc317096197)
     - [Miglioramenti ai modelli di progetto predefinito](#_Toc303253808)
     - [Modello di progetto per dispositivi mobili](#_Toc303253809)
     - [Modalità di visualizzazione](#_Toc303253810)

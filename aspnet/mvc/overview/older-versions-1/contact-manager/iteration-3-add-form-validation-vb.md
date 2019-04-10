@@ -8,15 +8,15 @@ ms.date: 02/20/2009
 ms.assetid: 4805e75a-7911-46e3-b11b-229a6eed245e
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-3-add-form-validation-vb
 msc.type: authoredcontent
-ms.openlocfilehash: b44aaab45f04f736e4171a43a8b24b71aaedca2f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: e031417f2ee22533e7b5a606fc40526d7d911efc
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57039658"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59413334"
 ---
-<a name="iteration-3--add-form-validation-vb"></a>Iterazione #3-aggiungere la convalida dei form (VB)
-====================
+# <a name="iteration-3--add-form-validation-vb"></a>Iterazione #3-aggiungere la convalida dei form (VB)
+
 by [Microsoft](https://github.com/microsoft)
 
 [Scaricare il codice](iteration-3-add-form-validation-vb/_static/contactmanager_3_vb1.zip)
@@ -51,7 +51,7 @@ Si compilerà l'applicazione a varie iterazioni. A ogni iterazione, abbiamo migl
 In questa seconda iterazione dell'applicazione Contact Manager, viene aggiunto la convalida dei form di base. Si evita che gli utenti dall'invio di un contatto senza dover immettere i valori per i campi modulo necessari. È inoltre possibile convalidare i numeri di telefono e indirizzi di posta elettronica (vedere la figura 1).
 
 
-[![La finestra di dialogo Nuovo progetto](iteration-3-add-form-validation-vb/_static/image1.jpg)](iteration-3-add-form-validation-vb/_static/image1.png)
+[![Tfinestra di dialogo Nuovo progetto di he](iteration-3-add-form-validation-vb/_static/image1.jpg)](iteration-3-add-form-validation-vb/_static/image1.png)
 
 **Figura 01**: Un modulo con la convalida ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-3-add-form-validation-vb/_static/image2.png))
 

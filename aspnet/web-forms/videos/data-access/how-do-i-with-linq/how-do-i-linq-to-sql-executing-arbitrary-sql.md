@@ -8,15 +8,15 @@ ms.date: 03/13/2008
 ms.assetid: 9251bc80-33d9-4b86-9d96-a2e6f5c52a03
 msc.legacyurl: /web-forms/videos/data-access/how-do-i-with-linq/how-do-i-linq-to-sql-executing-arbitrary-sql
 msc.type: video
-ms.openlocfilehash: c29ffa355e1b095002db425be58d7c34e44e6467
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 3162db9b0b3e8c057201d96e08133a086c384fe6
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57039558"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59416987"
 ---
-<a name="how-do-i-linq-to-sql-executing-arbitrary-sql"></a>Procedura: LINQ to SQL: Esecuzione di codice SQL arbitrario
-====================
+# <a name="how-do-i-linq-to-sql-executing-arbitrary-sql"></a>Procedura: LINQ to SQL: Esecuzione di codice SQL arbitrario
+
 da [Scott Stanfield](https://github.com/scottstanfield)
 
 In questo video viene illustrato come eseguire qualsiasi codice SQL arbitrario tramite la sintassi ExecuteCommand e che incapsula il codice tramite la classe DataContext parziale.

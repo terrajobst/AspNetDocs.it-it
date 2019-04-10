@@ -8,15 +8,15 @@ ms.date: 06/25/2013
 ms.assetid: 646edfc7-dc62-4fa0-84c2-926996c92aeb
 msc.legacyurl: /visual-studio/overview/2013
 msc.type: chapter
-ms.openlocfilehash: 74793becba663d163a31cb1b02654b7b6cb021af
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c7c0de7ade31e43e3b43495cb6755608872d506d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57022328"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59412749"
 ---
-<a name="aspnet-and-visual-studio-2013"></a>ASP.NET e Visual Studio 2013
-====================
+# <a name="aspnet-and-visual-studio-2013"></a>ASP.NET e Visual Studio 2013
+
 > Sviluppo di App web ASP.NET con Visual Studio 2013
 
 
@@ -32,5 +32,5 @@ ms.locfileid: "57022328"
 - [Browser Link](using-browser-link.md)
 - [Note sulla versione di ASP.NET and Web Tools per Visual Studio 2013](release-notes.md)
 - [ASP.NET and Web Tools 2013.2 per Visual Studio 2013 Release Notes](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes.md)
-- [Laboratorio pratico: Strumenti Web di Visual Studio 2013](visual-studio-2013-web-tools.md)
-- [Laboratorio pratico: One ASP.NET: L'integrazione di Web Form ASP.NET, MVC e API Web](one-aspnet-integrating-aspnet-web-forms-mvc-and-web-api.md)
+- [Lab pratico: Strumenti Web di Visual Studio 2013](visual-studio-2013-web-tools.md)
+- [Lab pratico: One ASP.NET: integrazione di Web Forms ASP.NET, MVC e API Web](one-aspnet-integrating-aspnet-web-forms-mvc-and-web-api.md)

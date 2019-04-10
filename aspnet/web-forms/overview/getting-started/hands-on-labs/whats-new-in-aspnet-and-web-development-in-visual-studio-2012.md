@@ -8,15 +8,15 @@ ms.date: 02/18/2013
 ms.assetid: 6d40d276-1642-4a77-b6c9-02ac914f6805
 msc.legacyurl: /web-forms/overview/getting-started/hands-on-labs/whats-new-in-aspnet-and-web-development-in-visual-studio-2012
 msc.type: authoredcontent
-ms.openlocfilehash: 6d5af6563bdf3872110497f4b142dd7353c8d64c
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 3833e3f3c6c49ff2b317ad04aff33c9119cb1f41
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58426120"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59420211"
 ---
-<a name="whats-new-in-aspnet-and-web-development-in-visual-studio-2012"></a>Novità di ASP.NET e dello sviluppo Web in Visual Studio 2012
-====================
+# <a name="whats-new-in-aspnet-and-web-development-in-visual-studio-2012"></a>Novità di ASP.NET e dello sviluppo Web in Visual Studio 2012
+
 da [Camp Web Team](https://twitter.com/webcamps)
 
 > La nuova versione di Visual Studio introduce una serie di miglioramenti finalizzate soprattutto a migliorare l'esperienza e le prestazioni quando si lavora con tecnologie Web. Editor di Visual Studio per CSS, JavaScript e HTML sono stata completamente rinnovato per includere molti dei riquadri di codice più ricercate, ad esempio IntelliSense e il rientro automatico. Relativamente alle prestazioni, creazione di bundle e minimizzazione adesso sono integrate, come il tempo di caricamento di funzionalità incorporate per ridurre facilmente la pagina.
@@ -720,7 +720,7 @@ Completando questa pratica, si è appresa come usare le nuove funzionalità e mi
 
     *Visual Studio Express per il riquadro Web*
 
-* * *
+---
 
 <a id="AppendixB"></a>
 

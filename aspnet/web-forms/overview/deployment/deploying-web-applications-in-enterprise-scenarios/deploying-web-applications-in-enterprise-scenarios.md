@@ -8,18 +8,18 @@ ms.date: 05/03/2012
 ms.assetid: 48cfe378-d62a-48c6-a4db-6be3cead6898
 msc.legacyurl: /web-forms/overview/deployment/deploying-web-applications-in-enterprise-scenarios/deploying-web-applications-in-enterprise-scenarios
 msc.type: authoredcontent
-ms.openlocfilehash: fa06538dcd9e087df52a76588e084a527867bf84
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: f8d55cb98e6943ef2a7c7eb05f7f771b5f5e63ef
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57062728"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59420406"
 ---
-<a name="deploying-web-applications-in-enterprise-scenarios-using-visual-studio-2010"></a>Distribuzione di applicazioni Web in scenari aziendali tramite Visual Studio 2010
-====================
+# <a name="deploying-web-applications-in-enterprise-scenarios-using-visual-studio-2010"></a>Distribuzione di applicazioni Web in scenari aziendali tramite Visual Studio 2010
+
 da [Jason Lee](https://github.com/jrjlee)
 
-[Scaricare PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Scarica il PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Questa serie di esercitazioni descrive strumenti e tecniche che è possibile utilizzare per distribuire le applicazioni web in diversi scenari aziendali. Viene spiegato come usare meglio le tecnologie come Visual Studio 2010, Microsoft Build Engine (MSBuild), Internet Information Services (IIS) 7.5, lo strumento di distribuzione Web IIS (distribuzione Web), la Web Farm Framework (WFF) e utilità come VSDBCMD.exe a semplifica e gestire il processo di distribuzione. Include una panoramica concettuale e materiale sussidiario e orientati alle attività che consente di:
 > 
@@ -78,4 +78,4 @@ La serie include quattro set di esercitazioni. Ognuno è incentrato su diversi a
 Questa serie di esercitazioni pratiche Usa una soluzione di esempio con un livello di complessità, insieme a uno scenario di distribuzione azienda fittizia, realistico per fornire un'implementazione di riferimento e per assegnare le attività e procedure dettagliate di contesto comune. L'argomento successivo, [distribuzione Web aziendale: Panoramica dello scenario](enterprise-web-deployment-scenario-overview.md), illustra lo scenario e la soluzione di esempio. Da qui è possibile consultare le esercitazioni e gli argomenti che meglio soddisfano le proprie esigenze.
 
 > [!div class="step-by-step"]
-> [avanti](enterprise-web-deployment-scenario-overview.md)
+> [Successivo](enterprise-web-deployment-scenario-overview.md)

@@ -8,15 +8,15 @@ ms.date: 01/26/2007
 ms.assetid: a43d175e-7526-4dd9-b8ed-9348c3c3dd39
 msc.legacyurl: /web-forms/videos/ajax-control-toolkit/how-do-i-use-the-aspnet-ajax-textboxwatermark-control-extender
 msc.type: video
-ms.openlocfilehash: 03b9da9c61784b864b1cb452569cb09742bbcf39
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1fa0e43b54d872fab6666311668f2684062062f6
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57032398"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59419821"
 ---
-<a name="how-do-i-use-the-aspnet-ajax-textboxwatermark-control-extender"></a>[Procedura:] Usare il controllo Extender TextBoxWatermark controllo ASP.NET AJAX?
-====================
+# <a name="how-do-i-use-the-aspnet-ajax-textboxwatermark-control-extender"></a>[Procedura:] Usare il controllo Extender TextBoxWatermark controllo ASP.NET AJAX?
+
 da [Joe Stagner](https://github.com/JoeStagner)
 
 In questo video si apprenderà come usare il controllo extender TextBoxWatermark di ASP.NET AJAX Control Toolkit, che consente di aggiungere nuove proprietà filigrana a tutti i controlli casella di testo standard in una pagina ASP.NET.

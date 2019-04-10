@@ -8,15 +8,15 @@ ms.date: 10/17/2013
 ms.assetid: 08815768-2702-42ae-ae85-0a59934a11d1
 msc.legacyurl: /visual-studio/overview/2013/release-notes
 msc.type: authoredcontent
-ms.openlocfilehash: cd6197a9cbed822ba874a19823521a3711be9201
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 8234bd1b7eb74d9b03e507f00d9ad937314288be
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422714"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59411280"
 ---
-<a name="aspnet-and-web-tools-for-visual-studio-2013-release-notes"></a>Note sulla versione di ASP.NET and Web Tools per Visual Studio 2013
-====================
+# <a name="aspnet-and-web-tools-for-visual-studio-2013-release-notes"></a>Note sulla versione di ASP.NET and Web Tools per Visual Studio 2013
+
 by [Microsoft](https://github.com/microsoft)
 
 > Questo documento descrive la versione di ASP.NET and Web Tools per Visual Studio 2013.
@@ -40,9 +40,9 @@ by [Microsoft](https://github.com/microsoft)
 - [NuGet 2.7](#nuget)
 - [Web Form ASP.NET](#TOC9)
 - [ASP.NET MVC 5](#TOC10)
-- [API Web ASP.NET 2](#TOC11)
+- [ASP.NET Web API 2](#TOC11)
 - [ASP.NET SignalR](#TOC13)
-- [ASP.NET Identity](#TOC8)
+- [Identità ASP.NET](#TOC8)
 - [Componenti Microsoft OWIN](#TOC7)
 - [Entity Framework 6](#ef6)
 - [ASP.NET Razor 3](#TOC14)
@@ -135,7 +135,7 @@ In Visual Studio 2013 con Azure SDK per .NET 2.2, è possibile usare **Esplora S
 Per altre informazioni, vedere le seguenti risorse:
 
 - [Creare un'app web ASP.NET in servizio App di Azure](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-get-started/)
-- [Risoluzione dei problemi di un'app Web nel servizio app di Azure tramite Visual Studio](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-troubleshoot-visual-studio/)
+- [Risolvere i problemi di un'app web nel servizio App di Azure con Visual Studio](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-troubleshoot-visual-studio/)
 
 <a id="publish"></a>
 ## <a name="web-publish-enhancements"></a>Miglioramenti di pubblicazione sul Web
@@ -377,7 +377,7 @@ I frammenti di codice seguente viene illustrato come implementare le connessioni
 
 [!code-csharp[Main](release-notes/samples/sample9.cs)]
 
-**Implementazione di richieste tra domini in SignalR 2.0 (da un file di codice C#)**
+**Implementazione di richieste tra domini in SignalR 2.0 (da un file di codice c#)**
 
 Il codice seguente illustra come abilitare JSONP o CORS in un progetto SignalR 2.0. Questo esempio di codice viene utilizzato `Map` e `RunSignalR` invece di `MapSignalR`, in modo che il middleware CORS viene eseguita solo per le richieste di SignalR che richiedono il supporto CORS (invece che per tutto il traffico nel percorso specificato `MapSignalR`.) `Map` utilizzabili per qualsiasi altro middleware che deve essere eseguita per un prefisso URL specifico, anziché per l'intera applicazione.
 

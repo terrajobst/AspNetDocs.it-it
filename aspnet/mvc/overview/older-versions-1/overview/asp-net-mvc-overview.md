@@ -8,15 +8,15 @@ ms.date: 01/27/2009
 ms.assetid: 2dcb44a4-5cbf-4d62-b363-718104082d86
 msc.legacyurl: /mvc/overview/older-versions-1/overview/asp-net-mvc-overview
 msc.type: authoredcontent
-ms.openlocfilehash: 61a7841ee238ec365b7d1909221bbe3d834faf84
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 149312e2ddf0a5023a4a12f5b05852f7da6b18f8
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57025538"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59418170"
 ---
-<a name="aspnet-mvc-overview"></a>Panoramica di ASP.NET MVC
-====================
+# <a name="aspnet-mvc-overview"></a>Panoramica di ASP.NET MVC
+
 by [Microsoft](https://github.com/microsoft)
 
 > Informazioni sulle differenze tra l'applicazione MVC ASP.NET e applicazioni Web Form ASP.NET. Informazioni su come stabilire quando compila un'applicazione ASP.NET MVC.
@@ -29,7 +29,7 @@ MVC è uno schema progettuale standard che hanno familiari con molti sviluppator
 Il framework di MVC include i componenti seguenti:
 
 
-[![Richiamo di un'azione del controller che prevede un valore di parametro](asp-net-mvc-overview/_static/image1.jpg)](asp-net-mvc-overview/_static/image1.png)
+[![Iun'azione del controller che prevede un valore di parametro nvoking](asp-net-mvc-overview/_static/image1.jpg)](asp-net-mvc-overview/_static/image1.png)
 
 **Figura 01**: Richiamo di un'azione del controller che prevede un valore di parametro ([fare clic per visualizzare l'immagine con dimensioni normali](asp-net-mvc-overview/_static/image2.png))
 

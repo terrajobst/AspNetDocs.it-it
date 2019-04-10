@@ -1,25 +1,26 @@
 ---
 uid: web-api/overview/error-handling/web-api-global-error-handling
-title: In ASP.NET Web API 2 gestione globale degli errori | Microsoft Docs
+title: Globale gestione degli errori in ASP.NET Web API 2 - ASP.NET 4.x
 author: davidmatson
-description: ''
+description: Una panoramica globale di gestione degli errori in ASP.NET Web API 2 per ASP.NET 4.x.
 ms.author: riande
 ms.date: 02/03/2014
+ms.custom: seoapril2019
 ms.assetid: bffd7863-f63b-4b23-a13c-372b5492e9fb
 msc.legacyurl: /web-api/overview/error-handling/web-api-global-error-handling
 msc.type: authoredcontent
-ms.openlocfilehash: 3e371760d2b34eb2be492e6ebbb33a5f9f7eff10
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7d9f4fb9909671d7c4c8ee2aa9285b0186c4b125
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57058978"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59414374"
 ---
-<a name="global-error-handling-in-aspnet-web-api-2"></a>Globale gestione degli errori in ASP.NET Web API 2
-====================
+# <a name="global-error-handling-in-aspnet-web-api-2"></a>Globale gestione degli errori in ASP.NET Web API 2
+
 dal [David Matson](https://github.com/davidmatson), [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
-Oggi non vi è alcun approccio facile nell'API Web per accedere o gestire gli errori a livello globale. Alcune eccezioni non gestite possono essere elaborati tramite [filtri eccezioni](exception-handling.md), ma esistono una serie di case che non è possibile gestire i filtri eccezioni. Ad esempio:
+In questo argomento viene fornita una panoramica globale di gestione degli errori in ASP.NET Web API 2 per ASP.NET 4.x. Oggi non vi è alcun approccio facile nell'API Web per accedere o gestire gli errori a livello globale. Alcune eccezioni non gestite possono essere elaborati tramite [filtri eccezioni](exception-handling.md), ma esistono una serie di case che non è possibile gestire i filtri eccezioni. Ad esempio:
 
 1. Eccezioni generate dai costruttori dei controller.
 2. Eccezioni generate dai gestori di messaggi.

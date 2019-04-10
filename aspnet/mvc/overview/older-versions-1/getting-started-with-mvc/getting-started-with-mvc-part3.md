@@ -8,15 +8,15 @@ ms.date: 08/14/2010
 ms.assetid: e8f1515c-c277-47ff-a23e-224118f13f02
 msc.legacyurl: /mvc/overview/older-versions-1/getting-started-with-mvc/getting-started-with-mvc-part3
 msc.type: authoredcontent
-ms.openlocfilehash: f55e558dd056e86bdd2310894959aef02a9d8de2
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 3eff3aceea302c51e6970bb13fbee3a8bf98a71d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57046878"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59411982"
 ---
-<a name="adding-a-view"></a>Aggiunta di una visualizzazione
-====================
+# <a name="adding-a-view"></a>Aggiunta di una visualizzazione
+
 da [Scott Hanselman](https://github.com/shanselman)
 
 > Si tratta di un'esercitazione per principianti che introduce i concetti di base di ASP.NET MVC. Si creerà una semplice applicazione web che legge e scrive da un database. Visitare il [centro di formazione di ASP.NET MVC](../../../index.md) per trovare altri ASP.NET MVC, esercitazioni ed esempi.
@@ -38,7 +38,7 @@ Questo punto, aggiungere un modello di visualizzazione per il progetto che è po
 
 Verrà visualizzata la finestra di dialogo "Aggiungi visualizzazione" ci fornisce alcune opzioni per il modo in cui si vuole creare un modello di visualizzazione che può essere utilizzato dal metodo di indice. Per il momento, non apportare alcuna modifica e fare clic sul pulsante Aggiungi.
 
-[![Visualizza finestra di dialogo Aggiungi](getting-started-with-mvc-part3/_static/image3.png)](getting-started-with-mvc-part3/_static/image2.png)
+[![Afinestra di dialogo visualizzazione gg](getting-started-with-mvc-part3/_static/image3.png)](getting-started-with-mvc-part3/_static/image2.png)
 
 Dopo che si fa clic su Aggiungi, una nuova cartella e un nuovo file verranno visualizzati nella cartella della soluzione, come illustrato di seguito. Ora è disponibile una cartella HelloWorld in viste e un file index. aspx all'interno della cartella.
 
@@ -109,11 +109,11 @@ Aggiungere questo codice sotto la &lt;h2&gt; in Welcome.aspx di nuovo. Illustrer
 
 Inoltre, si noti che mentre si digita che poiché l'avevamo detto visualizzazione relativi il WelcomeViewModel (sono sposate, ricordare?) che viene visualizzato Intellisense utile ogni volta che si fa riferimento l'oggetto modello come illustra lo screenshot seguente:
 
-[![Codice sorgente NumTime](getting-started-with-mvc-part3/_static/image12.png)](getting-started-with-mvc-part3/_static/image11.png)
+[![NCodice sorgente umTime](getting-started-with-mvc-part3/_static/image12.png)](getting-started-with-mvc-part3/_static/image11.png)
 
 Eseguire l'applicazione e visitare `http://localhost:xx/HelloWorld/Welcome?name=Scott&numtimes=4` nuovamente. A questo punto è in corso il reindirizzamento dei dati dall'URL, viene passato automaticamente nel Controller, il Controller in pacchetti i dati in un elemento ViewModel e passa tale oggetto nella visualizzazione. La vista che consente di visualizzare i dati in formato HTML all'utente.
 
-[![Attività iniziali - Windows Internet Explorer](getting-started-with-mvc-part3/_static/image14.png)](getting-started-with-mvc-part3/_static/image13.png)
+[![Wchermata - Windows Internet Explorer](getting-started-with-mvc-part3/_static/image14.png)](getting-started-with-mvc-part3/_static/image13.png)
 
 Tutto ciò rappresenta una sorta di "M" per il modello, ma non il tipo di database. Diamo ciò che abbiamo appreso e creare un database di film.
 

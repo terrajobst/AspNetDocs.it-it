@@ -8,15 +8,15 @@ ms.date: 03/06/2014
 ms.assetid: 7ef5f73c-ca60-43c1-bdb2-702800347e7e
 msc.legacyurl: /visual-studio/overview/2013/aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes
 msc.type: authoredcontent
-ms.openlocfilehash: bbb38ddde49cdeea4255e0e05bd559ddd9e5f692
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 22d4d4afd6963f23d6cfef1745a859c20b69d599
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425990"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59422993"
 ---
-<a name="aspnet-and-web-tools-20132--for-visual-studio-2013-release-notes"></a>Note sulla versione di ASP.NET and Web Tools 2013.2 per Visual Studio 2013
-====================
+# <a name="aspnet-and-web-tools-20132--for-visual-studio-2013-release-notes"></a>Note sulla versione di ASP.NET and Web Tools 2013.2 per Visual Studio 2013
+
 by [Microsoft](https://github.com/microsoft)
 
 ## <a name="installation-notes"></a>Note sull'installazione
@@ -185,7 +185,7 @@ NuGet 2.8.1 che RTM verrà rilasciata ad aprile 2014. Ecco i punti principali da
     `<config> <add key="dependencyversion" value="Highest" /> </config>`
 - **Visualizzare in anteprima le operazioni di NuGet con - WhatIf**: Alcuni pacchetti NuGet possono avere grafici di dipendenza completa e di conseguenza, possono risultare utili durante un'installazione, disinstallare o aggiornare innanzitutto vedere cosa succede dell'operazione. NuGet 2.8 aggiunge il comando di PowerShell standard: cosa accade se passare ai comandi per abilitare visualizzazione l'intera closure di pacchetti a cui verrà applicato il comando update-package, disinstallare-package e install-package.
 - **Effettuare il downgrade del pacchetto**: Non è insolito per installare una versione preliminare di un pacchetto e per studiare le nuove funzionalità e quindi decidere se eseguire il rollback all'ultima versione stabile. Prima di NuGet 2.8, questo era un processo in più passaggi di disinstallazione il pacchetto versione non definitivo e le relative dipendenze e quindi installare la versione precedente. Con NuGet 2.8, tuttavia, il pacchetto di aggiornamento verrà ora eseguito il rollback alla chiusura dell'intero pacchetto (ad esempio, l'albero delle dipendenze del pacchetto) alla versione precedente.
-- **Le dipendenze dello sviluppo**: Molti tipi diversi di funzionalità possono essere distribuiti come pacchetti NuGet - tra cui strumenti utilizzati per ottimizzare il processo di sviluppo. Questi componenti, anche se possono essere strumentale nello sviluppo di un nuovo pacchetto, non devono essere considerati una dipendenza del pacchetto di nuovo quando più recente pubblicata. NuGet 2.8 consente a un pacchetto per identificarsi nel file con estensione nuspec come un developmentDependency. Durante l'installazione, questa verranno anche aggiunti i metadati del file Packages. config del progetto in cui è stato installato il pacchetto. Quando tale file Packages. config viene analizzato in un secondo momento le dipendenze NuGet durante nuget.exe pack, vengono escluse le dipendenze contrassegnati come dipendenze di sviluppo.
+- **Le dipendenze dello sviluppo**: Molti tipi diversi di funzionalità possono essere distribuiti come pacchetti NuGet - tra cui strumenti utilizzati per ottimizzare il processo di sviluppo. Questi componenti, anche se possono essere strumentale nello sviluppo di un nuovo pacchetto, non devono essere considerati una dipendenza del pacchetto di nuovo quando più recente pubblicata. NuGet 2.8 consente a un pacchetto per identificarsi nel file con estensione nuspec come un developmentDependency. Durante l'installazione, questa verranno anche aggiunti i metadati del file Packages. config del progetto in cui è stato installato il pacchetto. Quando tale file Packages. config viene analizzato in un secondo momento le dipendenze NuGet durante nuget.exe pack, vengono escluse tali dipendenze contrassegnati come dipendenze di sviluppo.
 - **File Packages. config singoli per diverse piattaforme**: Quando si sviluppano applicazioni per più piattaforme di destinazione, è comune disporre di file di progetto diversi per ognuno degli ambienti di compilazione corrispondente. È anche comune per utilizzare diversi pacchetti NuGet nei file di progetto diverso, come i pacchetti hanno vari livelli di supporto per piattaforme diverse. NuGet 2.8 offre un supporto migliorato per questo scenario, creando file Packages. config diverso per i file di progetto specifico della piattaforma differente.
 - **Fallback alla Cache locale**: Anche se i pacchetti NuGet vengono in genere utilizzati da una raccolta remota, ad esempio la [raccolta NuGet](http://www.nuget.org) Usa una connessione di rete, sono disponibili molti scenari in cui il client non è connesso. Senza una connessione di rete, il client di NuGet non è in grado di installare correttamente i pacchetti, anche quando tali pacchetti erano già presenti nel computer del client nella cache NuGet locale. NuGet 2.8 aggiunge fallback automatico nella cache alla console di gestione pacchetti.
 

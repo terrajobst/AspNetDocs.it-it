@@ -8,15 +8,15 @@ ms.date: 11/14/2011
 ms.assetid: a923735c-2d34-456c-8327-40aa62a4c1d6
 msc.legacyurl: /web-forms/videos/data-access
 msc.type: chapter
-ms.openlocfilehash: f93a3b496b2a3bf7957687c7e1ba97db994b4712
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b41843143dfbd957ef242c67e67101af79d9efba
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57022108"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59419405"
 ---
-<a name="data-access"></a>Accesso ai dati
-====================
+# <a name="data-access"></a>Accesso ai dati
+
 > Come creare una Data Access Layer (DAL).
 
 
@@ -27,20 +27,20 @@ ms.locfileid: "57022108"
     - [Usare set di dati e filtri di un'applicazione ASP](adonet-data-services/how-to-work-with-datasets-and-filters-from-an-asp-application.md)
 - [Procedure relative a LINQ](how-do-i-with-linq/index.md)
 
-    - [LINQ to SQL: panoramica](how-do-i-with-linq/how-do-i-linq-to-sql-overview.md)
-    - [LINQ to SQL: Modello di dati](how-do-i-with-linq/how-do-i-linq-to-sql-data-model.md)
-    - [LINQ to SQL: Una query sul Database](how-do-i-with-linq/how-do-i-linq-to-sql-querying-the-database.md)
-    - [LINQ to SQL: L'aggiornamento del Database](how-do-i-with-linq/how-do-i-linq-to-sql-updating-the-database.md)
+    - [LINQ to SQL: Panoramica](how-do-i-with-linq/how-do-i-linq-to-sql-overview.md)
+    - [LINQ to SQL: Modello dati](how-do-i-with-linq/how-do-i-linq-to-sql-data-model.md)
+    - [LINQ to SQL: Esecuzione di query sul database](how-do-i-with-linq/how-do-i-linq-to-sql-querying-the-database.md)
+    - [LINQ to SQL: Aggiornamento del database](how-do-i-with-linq/how-do-i-linq-to-sql-updating-the-database.md)
     - [LINQ to SQL: LinqDataSource](how-do-i-with-linq/how-do-i-linq-to-sql-linqdatasource.md)
-    - [LINQ to SQL: Custom LinqDataSource](how-do-i-with-linq/how-do-i-linq-to-sql-custom-linqdatasource.md)
-    - [LINQ to SQL: Utilizzo delle Stored procedure](how-do-i-with-linq/how-do-i-linq-to-sql-using-stored-procedures.md)
-    - [LINQ to SQL: L'aggiornamento con le Stored procedure](how-do-i-with-linq/how-do-i-linq-to-sql-updating-with-stored-procedures.md)
-    - [LINQ to SQL: L'esecuzione di codice SQL arbitrario](how-do-i-with-linq/how-do-i-linq-to-sql-executing-arbitrary-sql.md)
+    - [LINQ to SQL: LinqDataSource personalizzato](how-do-i-with-linq/how-do-i-linq-to-sql-custom-linqdatasource.md)
+    - [LINQ to SQL: Utilizzo delle stored procedure](how-do-i-with-linq/how-do-i-linq-to-sql-using-stored-procedures.md)
+    - [LINQ to SQL: Aggiornamento con stored procedure](how-do-i-with-linq/how-do-i-linq-to-sql-updating-with-stored-procedures.md)
+    - [LINQ to SQL: Esecuzione di codice SQL arbitrario](how-do-i-with-linq/how-do-i-linq-to-sql-executing-arbitrary-sql.md)
 - [Video su LINQ dal team di Visual Basic](linq-videos-from-the-vb-team/index.md)
 
     - [Introduzione a LINQ](linq-videos-from-the-vb-team/how-do-i-get-started-with-linq.md)
     - [Esecuzione di query di raggruppamento e aggregazione](linq-videos-from-the-vb-team/how-do-i-perform-group-and-aggregate-queries.md)
-    - [Aggiornamento di progetti Visual Basic per abilitare LINQ](linq-videos-from-the-vb-team/how-do-i-upgrade-visual-basic-projects-to-enable-linq.md)
+    - [Aggiornare progetti Visual Basic per abilitare LINQ](linq-videos-from-the-vb-team/how-do-i-upgrade-visual-basic-projects-to-enable-linq.md)
     - [Introduzione a LINQ to XML](linq-videos-from-the-vb-team/how-do-i-get-started-with-linq-to-xml.md)
     - [Abilitare XML IntelliSense e usare lo spazio dei nomi XML](linq-videos-from-the-vb-team/how-do-i-enable-xml-intellisense-and-use-xml-namespaces.md)
     - [Creare documenti XML basati su dati SQL](linq-videos-from-the-vb-team/how-do-i-create-xml-documents-from-sql-data.md)

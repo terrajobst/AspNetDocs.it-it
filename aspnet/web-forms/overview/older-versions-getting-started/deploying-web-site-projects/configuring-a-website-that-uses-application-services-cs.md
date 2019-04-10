@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/configuring-a-website-that-uses-application-services-cs
-title: Configurazione di un sito Web che utilizza i servizi dell'applicazione (C#) | Microsoft Docs
+title: Configurazione di un sito Web che utilizza i servizi dell'applicazione (c#) | Microsoft Docs
 author: rick-anderson
 description: Verze Technologie ASP.NET 2.0 introdotto una serie di servizi delle applicazioni, che fanno parte di .NET Framework e vengono usati come una suite di blocchi predefiniti di servizi che yo...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 04/23/2009
 ms.assetid: 1e33d1c6-3f9f-4c26-81e2-2a8f8907bb05
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/configuring-a-website-that-uses-application-services-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 2cfe18b99af7b04d18a52e64b77e1b9a6b204f75
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: fe6097c32e4584fd4c577fb8d2afee9b3483c22f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423438"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59418417"
 ---
-<a name="configuring-a-website-that-uses-application-services-c"></a>Configurazione di un sito Web che usa i servizi per le applicazioni (C#)
-====================
+# <a name="configuring-a-website-that-uses-application-services-c"></a>Configurazione di un sito Web che usa i servizi per le applicazioni (C#)
+
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Scaricare il codice](http://download.microsoft.com/download/E/6/F/E6FE3A1F-EE3A-4119-989A-33D1A9F6F6DD/ASPNET_Hosting_Tutorial_09_CS.zip) o [Scarica il PDF](http://download.microsoft.com/download/C/3/9/C391A649-B357-4A7B-BAA4-48C96871FEA6/aspnet_tutorial09_AppServicesConfig_cs.pdf)
@@ -106,7 +106,7 @@ Let s esaminare come aggiungere gli oggetti di database al database di produzion
 Lo strumento si avvia visualizzando una schermata iniziale che spiega lo scopo. Fare clic su Avanti per passare alla schermata di "Selezionare un'opzione di installazione", come illustrata nella figura 1. Da qui è possibile scegliere di aggiungere i servizi delle applicazioni di oggetti di database o rimuoverli da un database. Poiché si vuole aggiungere questi oggetti nel database di produzione, selezionare l'opzione "Configura SQL Server per i servizi dell'applicazione" e fare clic su Avanti.
 
 
-[![Scegliere di configurare SQL Server per i servizi dell'applicazione](configuring-a-website-that-uses-application-services-cs/_static/image2.jpg)](configuring-a-website-that-uses-application-services-cs/_static/image1.jpg)
+[![Cimpostare come configurare SQL Server per i servizi applicazione](configuring-a-website-that-uses-application-services-cs/_static/image2.jpg)](configuring-a-website-that-uses-application-services-cs/_static/image1.jpg)
 
 **Figura 1**: Scegliere di configurare SQL Server per i servizi dell'applicazione ([fare clic per visualizzare l'immagine con dimensioni normali](configuring-a-website-that-uses-application-services-cs/_static/image3.jpg))
 
@@ -117,7 +117,7 @@ Nella finestra "Selezionare il Server e Database" schermata richiede per le info
 > Dopo aver immesso il server di database e credenziali è potrebbe verificarsi un errore quando si espande l'elenco di riepilogo a discesa di database. Il `aspnet_regsql.exe` dello strumento di query di `sysdatabases` tabella di sistema per recuperare un elenco di database nel server, ma alcuni web hosting bloccare le aziende i server di database in modo che queste informazioni non sono disponibili pubblicamente. Se si verifica questo errore è possibile digitare il nome del database direttamente nell'elenco a discesa.
 
 
-[![Fornire allo strumento con le informazioni di connessione Database s](configuring-a-website-that-uses-application-services-cs/_static/image5.jpg)](configuring-a-website-that-uses-application-services-cs/_static/image4.jpg)
+[![Sgli oggetti degli strumenti con il Database le informazioni di connessione dotto](configuring-a-website-that-uses-application-services-cs/_static/image5.jpg)](configuring-a-website-that-uses-application-services-cs/_static/image4.jpg)
 
 **Figura 2**: Specificare gli oggetti degli strumenti con il Database le informazioni di connessione ([fare clic per visualizzare l'immagine con dimensioni normali](configuring-a-website-that-uses-application-services-cs/_static/image6.jpg))
 
@@ -125,7 +125,7 @@ Nella finestra "Selezionare il Server e Database" schermata richiede per le info
 La schermata successiva sono riepilogate le azioni che verranno eseguite, vale a dire che gli oggetti di database dell'applicazione Servizi stanno per essere aggiunto al database specificato. Fare clic su Avanti per completare questa azione. Dopo alcuni istanti, viene visualizzata la schermata finale, notare che sono stati aggiunti gli oggetti di database (vedere la figura 3).
 
 
-[![Vero successo! Gli oggetti di Database di servizi di applicazione sono stati aggiunti al Database di produzione](configuring-a-website-that-uses-application-services-cs/_static/image8.jpg)](configuring-a-website-that-uses-application-services-cs/_static/image7.jpg)
+[![Srrore! Gli oggetti di Database di servizi di applicazione sono stati aggiunti al Database di produzione](configuring-a-website-that-uses-application-services-cs/_static/image8.jpg)](configuring-a-website-that-uses-application-services-cs/_static/image7.jpg)
 
 **Figura 3**: Operazione completata L'applicazione Servizi di Database sono oggetti aggiunti al Database di produzione ([fare clic per visualizzare l'immagine con dimensioni normali](configuring-a-website-that-uses-application-services-cs/_static/image9.jpg))
 
@@ -133,7 +133,7 @@ La schermata successiva sono riepilogate le azioni che verranno eseguite, vale a
 Per verificare che gli oggetti di database di servizi di applicazione sono stati aggiunti al database di produzione, aprire SQL Server Management Studio e connettersi al database di produzione. Come illustrato nella figura 4, si noterà ora le tabelle di database di servizi di applicazione nel database `aspnet_Applications`, `aspnet_Membership`, `aspnet_Users`e così via.
 
 
-[![Verificare che gli oggetti di Database sono stati aggiunti al Database di produzione](configuring-a-website-that-uses-application-services-cs/_static/image11.jpg)](configuring-a-website-that-uses-application-services-cs/_static/image10.jpg)
+[![Cconferma che nel Database di produzione sono stati aggiunti gli oggetti di Database](configuring-a-website-that-uses-application-services-cs/_static/image11.jpg)](configuring-a-website-that-uses-application-services-cs/_static/image10.jpg)
 
 **Figura 4**: Verificare che gli oggetti di Database sono stati aggiunti al Database di produzione ([fare clic per visualizzare l'immagine con dimensioni normali](configuring-a-website-that-uses-application-services-cs/_static/image12.jpg))
 
@@ -172,12 +172,12 @@ La buona notizia è che tutte le funzionalità esposte fornito dal WSAT è dispo
 > Per altre informazioni sull'uso di appartenenza e ruoli API con i controlli correlati all'accesso Web di ASP.NET, assicurarsi di leggere mio [ *sito Web di sicurezza esercitazioni*](../../older-versions-security/introduction/security-basics-and-asp-net-support-cs.md). Per altre informazioni sulla personalizzazione del controllo CreateUserWizard, vedere la [ *creazione degli account utente* ](../../older-versions-security/membership/creating-user-accounts-cs.md) e [ *archiviare informazioni utente aggiuntive* ](../../older-versions-security/membership/storing-additional-user-information-cs.md) esercitazioni o guarda [ *Erich Peterson* ](http://www.erichpeterson.com/) articolo s [ *personalizzare il controllo CreateUserWizard* ](http://aspnet.4guysfromrolla.com/articles/070506-1.aspx).
 
 
-[![Gli amministratori possono creare nuovi account utente](configuring-a-website-that-uses-application-services-cs/_static/image14.jpg)](configuring-a-website-that-uses-application-services-cs/_static/image13.jpg)
+[![Administrators possono creare nuovi account utente](configuring-a-website-that-uses-application-services-cs/_static/image14.jpg)](configuring-a-website-that-uses-application-services-cs/_static/image13.jpg)
 
 **Figura 5**: Gli amministratori possono creare nuovi account utente ([fare clic per visualizzare l'immagine con dimensioni normali](configuring-a-website-that-uses-application-services-cs/_static/image15.jpg))
 
 
-Se necessaria la funzionalità completa l'estrazione WSAT [ *Rolling Your proprio strumento Amministrazione sito Web*](http://aspnet.4guysfromrolla.com/articles/052307-1.aspx), in cui l'autore Dan Clem descrive il processo di compilazione di uno strumento simile a WSAT personalizzato. Dan condivide il suo codice sorgente s dell'applicazione (in C#) e vengono fornite istruzioni dettagliate per aggiungerla al sito Web ospitato.
+Se necessaria la funzionalità completa l'estrazione WSAT [ *Rolling Your proprio strumento Amministrazione sito Web*](http://aspnet.4guysfromrolla.com/articles/052307-1.aspx), in cui l'autore Dan Clem descrive il processo di compilazione di uno strumento simile a WSAT personalizzato. Dan condivide il suo codice sorgente s dell'applicazione (in c#) e vengono fornite istruzioni dettagliate per aggiungerla al sito Web ospitato.
 
 ## <a name="summary"></a>Riepilogo
 

@@ -8,15 +8,15 @@ ms.date: 03/29/2006
 ms.assetid: f8ce88a0-bddb-4f29-8d87-b3af40fc5b61
 msc.legacyurl: /web-forms/videos/sql-2005/designing-relational-database-tables
 msc.type: video
-ms.openlocfilehash: d6a9c54909ef90eefd160a506df3b0b2d42f4528
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 59c015ebd2fafb24f41f8435c62ec1ccfbc67a57
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57052258"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59421381"
 ---
-<a name="designing-relational-database-tables"></a>Progettazione di tabelle di database relazionali
-====================
+# <a name="designing-relational-database-tables"></a>Progettazione di tabelle di database relazionali
+
 by [Microsoft](https://github.com/microsoft)
 
 Il motivo per cui i database relazionali sono quelli più diffusi? Principianti di SQL Server verranno illustrato come distinguere tra le chiavi primarie ed esterne, progettare le tabelle di database relazionale e informazioni sulle regole di normalizzazione e la normalizzazione.

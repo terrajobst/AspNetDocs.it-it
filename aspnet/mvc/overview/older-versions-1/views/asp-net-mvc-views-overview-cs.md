@@ -8,15 +8,15 @@ ms.date: 02/16/2008
 ms.assetid: 152ab1e5-aec2-4ea7-b8cc-27a24dd9acb8
 msc.legacyurl: /mvc/overview/older-versions-1/views/asp-net-mvc-views-overview-cs
 msc.type: authoredcontent
-ms.openlocfilehash: a8e64a99549584f150d64d909ac97210257b1147
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b4c35761f9cd44c866242cfe6f4f2d924e81d754
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57042968"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59421329"
 ---
-<a name="aspnet-mvc-views-overview-c"></a>Panoramica delle visualizzazioni ASP.NET MVC (C#)
-====================
+# <a name="aspnet-mvc-views-overview-c"></a>Panoramica delle visualizzazioni ASP.NET MVC (C#)
+
 da [Stephen Walther](https://github.com/StephenWalther)
 
 > Che cos'è una visualizzazione MVC ASP.NET e in che cosa differisce da una pagina HTML? In questa esercitazione, Stephen Walther presenta le viste e viene illustrato come è possibile sfruttare i vantaggi di visualizzare i dati e gli helper HTML all'interno di una vista.
@@ -104,7 +104,7 @@ Ad esempio, la visualizzazione nel listato 4 sfrutta le tre gli helper HTML, gli
 [!code-aspx[Main](asp-net-mvc-views-overview-cs/samples/sample4.aspx)]
 
 
-[![La finestra di dialogo Nuovo progetto](asp-net-mvc-views-overview-cs/_static/image1.jpg)](asp-net-mvc-views-overview-cs/_static/image1.png)
+[![Tfinestra di dialogo Nuovo progetto di he](asp-net-mvc-views-overview-cs/_static/image1.jpg)](asp-net-mvc-views-overview-cs/_static/image1.png)
 
 **Figura 01**: Un modulo di accesso standard ([fare clic per visualizzare l'immagine con dimensioni normali](asp-net-mvc-views-overview-cs/_static/image2.png))
 
@@ -133,7 +133,7 @@ Il controller di proprietà ViewData rappresenta una raccolta di coppie nome / v
 
 La visualizzazione nel listato 7 recupera il messaggio da visualizzare i dati ed esegue il rendering il messaggio al browser.
 
-**Listing 7 -- \Views\Product\Index.aspx**
+**Listato 7 - \Views\Product\Index.aspx**
 
 [!code-aspx[Main](asp-net-mvc-views-overview-cs/samples/sample7.aspx)]
 
@@ -150,4 +150,4 @@ Nel listato 7, abbiamo sfruttato visualizzare i dati di passare un messaggio str
 Questa esercitazione è fornita una breve introduzione a visualizzazioni ASP.NET MVC, visualizzare i dati e gli helper HTML. Nella prima sezione, è stato descritto come aggiungere nuove visualizzazioni per il progetto. Si è appreso che è necessario aggiungere una visualizzazione nella cartella corretta per chiamarla da un controller specifico. Successivamente, abbiamo discusso l'argomento di helper HTML. Si è appreso come helper HTML consentono di generare in modo semplice il contenuto HTML standard. Infine, si è appreso come sfruttare i vantaggi di visualizzare i dati per passare i dati da un controller a una visualizzazione.
 
 > [!div class="step-by-step"]
-> [avanti](creating-custom-html-helpers-cs.md)
+> [Successivo](creating-custom-html-helpers-cs.md)

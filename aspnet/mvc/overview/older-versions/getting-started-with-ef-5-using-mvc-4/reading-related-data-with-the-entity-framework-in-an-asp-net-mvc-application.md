@@ -8,15 +8,15 @@ ms.date: 07/30/2013
 ms.assetid: 0d6fb83b-71f7-425d-8dec-981197d7ec42
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/reading-related-data-with-the-entity-framework-in-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: 4767b015db0bad09942802827ce54162687fcabc
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: f86212c1cb559c164342997fb0e4208339b5e3cc
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57033788"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59421121"
 ---
-<a name="reading-related-data-with-the-entity-framework-in-an-aspnet-mvc-application-5-of-10"></a>La lettura di dati correlati con Entity Framework in un'applicazione ASP.NET MVC (5 di 10)
-====================
+# <a name="reading-related-data-with-the-entity-framework-in-an-aspnet-mvc-application-5-of-10"></a>La lettura di dati correlati con Entity Framework in un'applicazione ASP.NET MVC (5 di 10)
+
 da [Tom Dykstra](https://github.com/tdykstra)
 
 [Download progetto completato](http://code.msdn.microsoft.com/Getting-Started-with-dd0e2ed8)
@@ -152,11 +152,13 @@ Il metodo accetta i dati di route facoltativi (`id`) e un parametro di stringa d
 > 
 > I dati di route sono che il gestore di associazione di modelli disponibili in un segmento di URL specificato nella tabella di routing. Ad esempio, la route predefinita specifica `controller`, `action`, e `id` segmenti:
 > 
+> ```csharp
 > routes.MapRoute(  
->  Nome: "Default",  
->  URL: "{controller} / {action} / {id}",  
->  le impostazioni predefinite: new {controller = "Home" action = "Index", id = UrlParameter.Optional}  
+>  name: "Default",  
+>  url: "{controller}/{action}/{id}",  
+>  defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }  
 > );
+> ```
 > 
 > L'URL seguente, la route predefinita mappa `Instructor` come il `controller`, `Index` come il `action` e 1 come il `id`; questi sono i valori dei dati di route.
 > 

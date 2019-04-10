@@ -8,15 +8,15 @@ ms.date: 10/05/2007
 ms.assetid: c812231d-e811-4048-9922-b34df1d0f300
 msc.legacyurl: /web-forms/videos/how-do-i/how-do-i-use-cascading-style-sheets-for-web-page-layout
 msc.type: video
-ms.openlocfilehash: 4ec1f66065d27fcf1b10ffca0b3c899a417ecc53
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 8ac51219a3734d3d2c8657bcfac159e28faa7d7c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57041988"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59417286"
 ---
-<a name="how-do-i-use-cascading-style-sheets-for-web-page-layout"></a>[Procedura:] Usare i fogli di stile per il Layout di pagina Web?
-====================
+# <a name="how-do-i-use-cascading-style-sheets-for-web-page-layout"></a>[Procedura:] Usare i fogli di stile per il Layout di pagina Web?
+
 da [Chris Pels](https://twitter.com/chrispels)
 
 In questo video abbiamo informazioni su come usare `<div>` elementi in combinazione con fogli di stile (CSS) per creare pagine web prestazioni affidabili e versioni successive. Il `<div>`approccio basato su verrà confrontato con il `<table>` basato approccio di layout utilizzato dalla maggior parte dei siti web degli ultimi anni. Quindi, diversi approcci basati su CSS verranno visualizzati, compreso il posizionamento assoluto a virgola mobile di elementi. È anche informazioni sui vantaggi della separazione HTML strutturale dalla progettazione con l'uso di CSS.

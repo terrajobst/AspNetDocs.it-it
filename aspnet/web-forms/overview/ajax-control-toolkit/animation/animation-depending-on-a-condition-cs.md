@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: b7a28c0d-efb9-443a-80a4-1a5ee54671cd
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/animation-depending-on-a-condition-cs
 msc.type: authoredcontent
-ms.openlocfilehash: e4705b6c590f153043082759f1269c8f2d927abe
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c05f0976a135615f7a272b8057eb4c56677e5117
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57030938"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59412424"
 ---
-<a name="animation-depending-on-a-condition-c"></a>Animazione in base a una condizione (C#)
-====================
+# <a name="animation-depending-on-a-condition-c"></a>Animazione in base a una condizione (C#)
+
 da [Christian Wenz](https://github.com/wenz)
 
 [Scaricare il codice](http://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation4.cs.zip) o [Scarica il PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation4CS.pdf)
@@ -53,7 +53,7 @@ All'interno di `<Animations>` nodo, usare `<OnLoad>` per eseguire le animazioni 
 Si noti che il segno di minore (`<`) nel `ConditionScript` attributo deve essere sottoposto a escape (). Quando si esegue questo script, nessuna animazione viene eseguito, o uno dei due viene, o eseguire entrambe.
 
 
-[![Il pannello è dissolvenza in uscita senza alcun ridimensionamento, in modo che non ha esecuzioni animazione secondo, il primo elemento](animation-depending-on-a-condition-cs/_static/image2.png)](animation-depending-on-a-condition-cs/_static/image1.png)
+[![TPannello he è dissolvenza in uscita senza alcun ridimensionamento, in modo che il secondo viene eseguito animazione, il primo elemento non è stata](animation-depending-on-a-condition-cs/_static/image2.png)](animation-depending-on-a-condition-cs/_static/image1.png)
 
 Il pannello è dissolvenza in uscita senza alcun ridimensionamento, in modo che non ha esecuzioni animazione secondo, il primo elemento ([fare clic per visualizzare l'immagine con dimensioni normali](animation-depending-on-a-condition-cs/_static/image3.png))
 

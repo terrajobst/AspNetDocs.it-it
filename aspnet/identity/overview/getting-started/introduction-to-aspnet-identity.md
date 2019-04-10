@@ -1,22 +1,23 @@
 ---
 uid: identity/overview/getting-started/introduction-to-aspnet-identity
-title: Introduzione ad ASP.NET Identity | Microsoft Docs
+title: Introduzione ad ASP.NET Identity - ASP.NET 4.x
 author: jongalloway
 description: Il sistema di appartenenze ASP.NET è stata introdotta con ASP.NET 2.0 il 2005 e, poiché quindi le richiede in genere le applicazioni web modi sono state apportate numerose modifiche...
 ms.author: riande
 ms.date: 01/22/2019
 ms.assetid: 38717fc1-5989-43cf-952d-4007cc1dd923
+ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/getting-started/introduction-to-aspnet-identity
 msc.type: authoredcontent
-ms.openlocfilehash: 4a545e52d2d9ea04a10c37c116fd326c60de9f8f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 34a0d62d7afcaffa8fbac0bc774d9266efb6b165
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57061378"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59413048"
 ---
-<a name="introduction-to-aspnet-identity"></a>Introduzione ad ASP.NET Identity
-====================
+# <a name="introduction-to-aspnet-identity"></a>Introduzione ad ASP.NET Identity
+
 
 > Il sistema di appartenenze ASP.NET è stata introdotta con ASP.NET 2.0 il 2005 e, poiché quindi sono state apportate molte modifiche nei modi in cui le applicazioni web gestiscono in genere l'autenticazione e autorizzazione. ASP.NET Identity è un nuovo approccio alla cosa deve essere il sistema di appartenenze quando crei applicazioni moderne per il web, telefono o tablet.
 

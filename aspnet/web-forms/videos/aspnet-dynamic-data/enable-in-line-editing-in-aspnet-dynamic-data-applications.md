@@ -8,15 +8,15 @@ ms.date: 10/23/2008
 ms.assetid: a22201df-c031-4505-b3bf-9a0a9667d62b
 msc.legacyurl: /web-forms/videos/aspnet-dynamic-data/enable-in-line-editing-in-aspnet-dynamic-data-applications
 msc.type: video
-ms.openlocfilehash: 28a90a3c5726743a2a8412d508b5d8a4cf1886e5
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 6bf91d546341eefc401149d47d6fa70b2c8522d4
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57040188"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59421524"
 ---
-<a name="enable-in-line-editing-in-aspnet-dynamic-data-applications"></a>Abilitare la modifica inline nelle applicazioni ASP.NET Dynamic Data
-====================
+# <a name="enable-in-line-editing-in-aspnet-dynamic-data-applications"></a>Abilitare la modifica inline nelle applicazioni ASP.NET Dynamic Data
+
 da [Joe Stagner](https://github.com/JoeStagner)
 
 In questo video verrà descritto l'utilizzo di Routing degli URL per abilitare la modifica inline nell'applicazione ASP.NET Dynamic Data.

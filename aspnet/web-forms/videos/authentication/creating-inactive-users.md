@@ -8,15 +8,15 @@ ms.date: 09/16/2010
 ms.assetid: dc572644-1f4f-40a2-8173-e17caa3c8582
 msc.legacyurl: /web-forms/videos/authentication/creating-inactive-users
 msc.type: video
-ms.openlocfilehash: 45ab6cec449886d08396509fca4a3b12c4f16e05
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d0d9bb0f6471acd996530eab76a97cda2667dabd
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57039858"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59413386"
 ---
-<a name="creating-inactive-users"></a>Creazione di utenti inattivi
-====================
+# <a name="creating-inactive-users"></a>Creazione di utenti inattivi
+
 da [Joe Stagner](https://github.com/JoeStagner)
 
 In questo video Joe Stagner illustra la creazione di utenti inattivi nel sistema di appartenenze ASP.NET e quindi utilizzando un'interfaccia amministrativa per attivare gli utenti uno alla volta.

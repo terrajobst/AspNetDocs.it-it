@@ -8,15 +8,15 @@ ms.date: 06/26/2014
 ms.assetid: 72657550-ec09-4779-9bfc-2fb15ecd51c7
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-v4/entity-relations-in-odata-v4
 msc.type: authoredcontent
-ms.openlocfilehash: d07ddab83462ee1bc84ba8ab15fe906937f506e6
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: fbafb2b2346689271905db5790cdddeeb809b070
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57054618"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59418807"
 ---
-<a name="entity-relations-in-odata-v4-using-aspnet-web-api-22"></a>Relazioni tra entità in OData v4 tramite ASP.NET Web API 2.2
-====================
+# <a name="entity-relations-in-odata-v4-using-aspnet-web-api-22"></a>Relazioni tra entità in OData v4 tramite ASP.NET Web API 2.2
+
 da [Mike Wasson](https://github.com/MikeWasson)
 
 > La maggior parte dei set di dati definiscono le relazioni tra entità: Sono presenti ordini; un libro può avere gli autori di; i prodotti hanno fornitori. Utilizzando OData, i client possono passare tramite relazioni tra entità. Dato un prodotto, è possibile trovare il fornitore. È anche possibile creare o rimuovere le relazioni. Ad esempio, è possibile impostare il fornitore per un prodotto.

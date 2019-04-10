@@ -8,15 +8,15 @@ ms.date: 09/08/2014
 ms.assetid: 732a2316-e49f-4f72-becd-0cd72f14457e
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/membership-and-administration
 msc.type: authoredcontent
-ms.openlocfilehash: 23d08d5a05a8321fbc794e2c9b54cc39c9b5baf6
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7263a7d7ee791be8a1369934aac4d091736a658b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57031058"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59417481"
 ---
-<a name="membership-and-administration"></a>Appartenenza e amministrazione
-====================
+# <a name="membership-and-administration"></a>Appartenenza e amministrazione
+
 da [Erik Reitan](https://github.com/Erikre)
 
 [Scaricare progetto di esempio Wingtip Toys (c#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) o [Scarica l'E-book (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
@@ -66,12 +66,12 @@ Uso di ASP.NET Identity, è possibile aggiungere un ruolo personalizzato e asseg
    La lettera "A" all'inizio del metodo evidenziato verrà sottolineata.
 7. La lettera "A" del mouse e scegliere l'interfaccia utente che consente di generare uno stub di metodo per la `AddUserAndRole` (metodo). 
 
-    ![L'appartenenza e Advministration - genera Stub metodo](membership-and-administration/_static/image1.png)
+    ![Appartenenza e amministrazione - genera Stub metodo](membership-and-administration/_static/image1.png)
 8. Fare clic sull'opzione intitolato:  
     `Generate method stub for "AddUserAndRole" in "WingtipToys.Logic.RoleActions"`
 9. Aprire il *RoleActions.cs* del file dalle *per la logica* cartella.  
    Il `AddUserAndRole` metodo è stato aggiunto al file della classe.
-10. Modificare il *RoleActions.cs* file rimuovendo il `NotImplementedeException` e aggiungendo il codice evidenziato in giallo, in modo che venga visualizzato come segue:  
+10. Modificare il *RoleActions.cs* file rimuovendo il `NotImplementedException` e aggiungendo il codice evidenziato in giallo, in modo che venga visualizzato come segue:  
 
     [!code-csharp[Main](membership-and-administration/samples/sample3.cs?highlight=5-7,15-51)]
 
@@ -274,7 +274,7 @@ In questa esercitazione aggiunto un ruolo personalizzato e un utente appartenent
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
 [Web. config - elemento authorization](https://msdn.microsoft.com/library/8d82143t(v=vs.100).aspx)  
-[ASP.NET Identity](../../../../identity/overview/getting-started/introduction-to-aspnet-identity.md)  
+[Identità ASP.NET](../../../../identity/overview/getting-started/introduction-to-aspnet-identity.md)  
 [Distribuire un'App di moduli Web ASP.NET sicura con appartenenza, OAuth e Database SQL in un sito Web Azure](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-deploy-aspnet-webforms-app-membership-oauth-sql-database/)  
 [Microsoft Azure - versione di valutazione gratuita](https://azure.microsoft.com/pricing/free-trial/)
 

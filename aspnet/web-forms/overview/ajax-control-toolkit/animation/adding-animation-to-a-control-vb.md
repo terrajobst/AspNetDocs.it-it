@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: c120187e-963e-4439-bb85-32771bc7f1f4
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/adding-animation-to-a-control-vb
 msc.type: authoredcontent
-ms.openlocfilehash: c76e488f36690acd1a6c48b87335a8e6f892f2a8
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: c55bbeb383b15f4dc9cb95d25905cade1e8c5c29
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58421155"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59418898"
 ---
-<a name="adding-animation-to-a-control-vb"></a>Aggiunta di animazione a un controllo (VB)
-====================
+# <a name="adding-animation-to-a-control-vb"></a>Aggiunta di animazione a un controllo (VB)
+
 da [Christian Wenz](https://github.com/wenz)
 
 [Scaricare il codice](http://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation1.vb.zip) o [Scarica il PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation1VB.pdf)
@@ -72,7 +72,7 @@ In questo esempio, il pannello verrà dissolvenza. L'animazione adottano 1,5 sec
 Quando si esegue questo script, il pannello viene visualizzato e dissolve in 1,5 secondi.
 
 
-[![Il pannello è dissolvenza in uscita](adding-animation-to-a-control-vb/_static/image2.png)](adding-animation-to-a-control-vb/_static/image1.png)
+[![TPannello he è dissolvenza in uscita](adding-animation-to-a-control-vb/_static/image2.png)](adding-animation-to-a-control-vb/_static/image1.png)
 
 Il pannello è dissolvenza in uscita ([fare clic per visualizzare l'immagine con dimensioni normali](adding-animation-to-a-control-vb/_static/image3.png))
 

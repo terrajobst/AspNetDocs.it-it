@@ -8,15 +8,15 @@ ms.date: 03/08/2013
 ms.assetid: db31e909-563a-4516-aadd-62aa210ac7e4
 msc.legacyurl: /single-page-application/overview/templates/breezeangular-template
 msc.type: authoredcontent
-ms.openlocfilehash: a3021f166262ee953b0cbe9ea88762a385925b88
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 1e7103df41e4c355ca6f1291ef0a10269c5c403a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423102"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59415557"
 ---
-<a name="breezeangular-template"></a>Modello Breeze/Angular
-====================
+# <a name="breezeangular-template"></a>Modello Breeze/Angular
+
 by [Mads Kristensen](https://github.com/madskristensen)
 
 > Il modello MVC Breeze/Angular è stato scritto da Ward Bell
@@ -59,7 +59,7 @@ Ma veniamo al dunque.
 
 Scaricare e installare il modello facendo clic sul pulsante Download precedente. Il modello viene fornito come un file di Visual Studio Extension (VSIX). Si potrebbe essere necessario riavviare Visual Studio.
 
-Nel **modelli** riquadro, selezionare **modelli installati** ed espandere le **Visual C#** nodo. Sotto **Visual C#**, selezionare **Web**. Nell'elenco dei modelli di progetto, selezionare **applicazione Web ASP.NET MVC 4**. Denominare il progetto e fare clic su **OK**.
+Nel **modelli** riquadro, selezionare **modelli installati** ed espandere le **Visual c#** nodo. Sotto **Visual c#**, selezionare **Web**. Nell'elenco dei modelli di progetto, selezionare **applicazione Web ASP.NET MVC 4**. Denominare il progetto e fare clic su **OK**.
 
 Nel **nuovo progetto** procedura guidata, selezionare **Breeze Angular SPA**.
 

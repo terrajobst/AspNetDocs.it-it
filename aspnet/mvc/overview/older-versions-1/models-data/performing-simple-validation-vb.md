@@ -8,15 +8,15 @@ ms.date: 03/02/2009
 ms.assetid: df6cf4b7-0bb3-4c4e-b17a-bd78a759a6bc
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/performing-simple-validation-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 31faf2e89e6acb25854455902c1a6fdffebd293c
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: c7a1b9e82defaae71f0a911e5e4321f6e15ad8bf
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423182"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59422616"
 ---
-<a name="performing-simple-validation-vb"></a>Esecuzione di una convalida semplice (VB)
-====================
+# <a name="performing-simple-validation-vb"></a>Esecuzione di una convalida semplice (VB)
+
 da [Stephen Walther](https://github.com/StephenWalther)
 
 > Informazioni su come eseguire la convalida in un'applicazione ASP.NET MVC. In questa esercitazione, Stephen Walther introduce per lo stato del modello e gli helper di convalida HTML.
@@ -56,12 +56,12 @@ Gli helper Html.ValidationMessage() e Html.ValidationSummary() vengono usati nel
 Assicurarsi che si compila l'applicazione prima di aggiungere una visualizzazione. In caso contrario, non sarà più visualizzato l'elenco delle classi nel **visualizzare i dati classe** nell'elenco a discesa.
 
 
-[![La finestra di dialogo Nuovo progetto](performing-simple-validation-vb/_static/image1.jpg)](performing-simple-validation-vb/_static/image1.png)
+[![Tfinestra di dialogo Nuovo progetto di he](performing-simple-validation-vb/_static/image1.jpg)](performing-simple-validation-vb/_static/image1.png)
 
 **Figura 01**: Aggiunta di una vista ([fare clic per visualizzare l'immagine con dimensioni normali](performing-simple-validation-vb/_static/image2.png))
 
 
-[![La finestra di dialogo Nuovo progetto](performing-simple-validation-vb/_static/image2.jpg)](performing-simple-validation-vb/_static/image3.png)
+[![Tfinestra di dialogo Nuovo progetto di he](performing-simple-validation-vb/_static/image2.jpg)](performing-simple-validation-vb/_static/image3.png)
 
 **Figura 02**: Creazione di una visualizzazione fortemente tipizzata ([fare clic per visualizzare l'immagine con dimensioni normali](performing-simple-validation-vb/_static/image4.png))
 
@@ -79,7 +79,7 @@ Viene chiamato l'helper Html.ValidationMessage() accanto a ogni campo di form HT
 La pagina nella figura 3 illustra i messaggi di errore viene eseguito il rendering per gli helper di convalida quando il form viene inviato con i campi mancanti e valori non validi.
 
 
-[![La finestra di dialogo Nuovo progetto](performing-simple-validation-vb/_static/image3.jpg)](performing-simple-validation-vb/_static/image5.png)
+[![Tfinestra di dialogo Nuovo progetto di he](performing-simple-validation-vb/_static/image3.jpg)](performing-simple-validation-vb/_static/image5.png)
 
 **Figura 03**: Visualizzazione di creazione inviata con problemi ([fare clic per visualizzare l'immagine con dimensioni normali](performing-simple-validation-vb/_static/image6.png))
 
@@ -104,7 +104,7 @@ Esistono tre le classi foglio di stile utilizzate per controllare l'aspetto degl
 Se si invia il form HTML per la creazione di un prodotto e immettere un valore non valido per il campo price e nessun valore per il campo UnitsInStock, ricevere i messaggi di convalida visualizzati nella figura 4. Questi messaggi di errore di convalida da dove provengono?
 
 
-[![La finestra di dialogo Nuovo progetto](performing-simple-validation-vb/_static/image4.jpg)](performing-simple-validation-vb/_static/image7.png)
+[![Tfinestra di dialogo Nuovo progetto di he](performing-simple-validation-vb/_static/image4.jpg)](performing-simple-validation-vb/_static/image7.png)
 
 **Figura 04**: Prebinding gli errori di convalida ([fare clic per visualizzare l'immagine con dimensioni normali](performing-simple-validation-vb/_static/image8.png))
 

@@ -8,15 +8,15 @@ ms.date: 01/27/2009
 ms.assetid: 4341f5b1-6fe5-44c5-8b8a-18fa84f80177
 msc.legacyurl: /mvc/overview/older-versions-1/security/authenticating-users-with-forms-authentication-vb
 msc.type: authoredcontent
-ms.openlocfilehash: af91ae24cae505125dc237adfaa11b0ea4d60922
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 0a4e8dc3ce5764c6b2ec59c7e3f507064f8a8cb5
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57051848"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59422161"
 ---
-<a name="authenticating-users-with-forms-authentication-vb"></a>Autenticazione degli utenti con l'autenticazione basata su form (VB)
-====================
+# <a name="authenticating-users-with-forms-authentication-vb"></a>Autenticazione degli utenti con l'autenticazione basata su form (VB)
+
 by [Microsoft](https://github.com/microsoft)
 
 > Informazioni su come usare l'attributo [Authorize] per proteggere una password specifiche pagine nell'applicazione MVC. Descrive come usare lo strumento Amministrazione sito Web per creare e gestire utenti e ruoli. Anche informazioni su come configurare l'archiviazione delle informazioni sui ruoli e account di utente.

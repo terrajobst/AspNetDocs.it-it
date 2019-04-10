@@ -8,15 +8,15 @@ ms.date: 01/27/2009
 ms.assetid: 239fd3ca-5630-4b8d-bc4b-2f906b1d3504
 msc.legacyurl: /mvc/overview/older-versions-1/security/authenticating-users-with-forms-authentication-cs
 msc.type: authoredcontent
-ms.openlocfilehash: d69ae977b3e6a323d1dff1443f09ac40e8f9a449
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b52abab12503918603419c9ccfabefcffdfd7e06
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57054798"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59418274"
 ---
-<a name="authenticating-users-with-forms-authentication-c"></a>Autenticazione degli utenti con l'autenticazione basata su form (C#)
-====================
+# <a name="authenticating-users-with-forms-authentication-c"></a>Autenticazione degli utenti con l'autenticazione basata su form (C#)
+
 by [Microsoft](https://github.com/microsoft)
 
 > Informazioni su come usare l'attributo [Authorize] per proteggere una password specifiche pagine nell'applicazione MVC. Descrive come usare lo strumento Amministrazione sito Web per creare e gestire utenti e ruoli. Anche informazioni su come configurare l'archiviazione delle informazioni sui ruoli e account di utente.
@@ -150,4 +150,4 @@ Dopo aver creato l'account di accesso necessarie, è necessario eseguire il mapp
 In questa esercitazione è stato descritto come usare l'autenticazione form durante la creazione di un'applicazione ASP.NET MVC. In primo luogo, è stato descritto come creare nuovi utenti e ruoli, sfruttando i vantaggi dello strumento Amministrazione sito Web. Successivamente, si è appreso come usare l'attributo [Authorize] per impedire agli utenti non autorizzati di richiamare le azioni del controller. Infine, si è appreso come configurare l'applicazione MVC per archiviare informazioni sui ruoli e utenti in un database di produzione.
 
 > [!div class="step-by-step"]
-> [avanti](authenticating-users-with-windows-authentication-cs.md)
+> [Successivo](authenticating-users-with-windows-authentication-cs.md)

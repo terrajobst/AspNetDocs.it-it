@@ -8,15 +8,15 @@ ms.date: 02/20/2005
 ms.assetid: 43f6ac47-76fc-4cf7-8e9f-c18ce673dfd8
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/server-controls
 msc.type: authoredcontent
-ms.openlocfilehash: ecf99fa894c1f662542aa8a613195b828bf2c67b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: bfbc151af40bf7ccceb5ac298ba812730d4e4ed9
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57061438"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59420757"
 ---
-<a name="server-controls"></a>Controlli server
-====================
+# <a name="server-controls"></a>Controlli server
+
 by [Microsoft](https://github.com/microsoft)
 
 > ASP.NET 2.0 consente di migliorare i controlli server in molti modi. In questo modulo, illustreremo alcune delle modifiche dell'architettura alla modalità di ASP.NET 2.0 e Visual Studio 2005 gestisce i controlli server.
@@ -99,7 +99,7 @@ In ASP.NET 2.0, la definizione di tipo di documento predefinita è come segue:
 
 [!code-html[Main](server-controls/samples/sample7.html)]
 
-Se si sceglie, è possibile modificare la conformità XHML predefinito tramite il nodo xhtmlConformance nel file di configurazione. Ad esempio, il nodo seguente nel file Web. config cambierà conformità XHTML per XHTML 1.0 Strict:
+Se si sceglie, è possibile modificare la conformità XHTML predefinito tramite il nodo xhtmlConformance nel file di configurazione. Ad esempio, il nodo seguente nel file Web. config cambierà conformità XHTML per XHTML 1.0 Strict:
 
 [!code-xml[Main](server-controls/samples/sample8.xml)]
 
@@ -193,7 +193,7 @@ In ASP.NET 2.0, l'attributo requestLengthDiskThreshold dell'elemento httpRuntime
 
 È abbastanza comune che si verifichino gli sviluppatori ASP.NET difficoltà durante il tentativo di raccogliere informazioni in una serie di "pagine" usando i pannelli o il trasferimento tra le pagine. Molto spesso, l'attività è frustrante e può richiedere molto tempo. Il nuovo controllo Wizard risolve i problemi, consentendo per i passaggi lineari e lineare in un'interfaccia di procedura guidata che hanno familiari con gli utenti. Controllo della procedura guidata offre moduli di input in una serie di passaggi. Ogni passaggio è di un determinato tipo specificato dalla proprietà StepType del controllo. I tipi di passaggi disponibili sono i seguenti:
 
-| **Tipo di passaggio** | **Spiegazione** |
+| **Tipo di passaggio** | **Descrizione** |
 | --- | --- |
 | Auto | La procedura guidata rileva automaticamente il tipo di passaggio in base al relativo posizione all'interno della gerarchia di passaggio. |
 | Inizia | Il primo passaggio, spesso usato per presentare un'istruzione introduttiva. |
@@ -218,7 +218,7 @@ In questo video è una procedura dettagliata su controllo della procedura guidat
 
 Il controllo Localize è simile a un controllo Literal. Tuttavia, il controllo Localize ha un **modalità** proprietà che controlla la modalità con cui viene eseguito il rendering di markup che viene aggiunto a esso. La proprietà modalità supporta i valori seguenti:
 
-| **Modalità** | **Spiegazione** |
+| **Modalità** | **Descrizione** |
 | --- | --- |
 | Transform | Markup viene trasformato secondo il protocollo del browser che effettua la richiesta. |
 | PassThrough | Viene eseguito il rendering di markup come-è. |

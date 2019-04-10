@@ -8,15 +8,15 @@ ms.date: 02/26/2007
 ms.assetid: 112e3efc-6865-4296-80a0-35910c4b3b12
 msc.legacyurl: /web-forms/videos/vs-2005/the-effects-of-viewstate
 msc.type: video
-ms.openlocfilehash: fcca0f533a77bf794644adb8879966f26a452ff8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7ec8719a25452efed9a0d46afa05b36f3cb07ce1
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57048898"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59414803"
 ---
-<a name="the-effects-of-viewstate"></a>Gli effetti di ViewState
-====================
+# <a name="the-effects-of-viewstate"></a>Gli effetti di ViewState
+
 da feed di Eric Lee
 
 Il framework ASP.NET fornisce il meccanismo di ViewState per mantenere automaticamente lo stato di applicazione che contiene i dati in avanti e indietro tra le richieste del browser. In questo video viene illustrato come ASP.NET alcuni controlli, ad esempio il controllo DropDownList e mantenere la casella di testo stato basata su valori di postback form anziché ViewState, consentendo allo sviluppatore intelligente disabilitare il ViewState non necessari. Usando Visual Studio Team System si noterà come questa notevolmente riduce le dimensioni dei dati della richiesta e risposta e migliora le prestazioni e scalabilità dell'applicazione.

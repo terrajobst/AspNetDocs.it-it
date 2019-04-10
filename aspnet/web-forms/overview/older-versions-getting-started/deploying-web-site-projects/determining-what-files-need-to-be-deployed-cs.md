@@ -8,15 +8,15 @@ ms.date: 04/01/2009
 ms.assetid: f8d78a88-cc91-40d8-bce3-3d7954f6033b
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/determining-what-files-need-to-be-deployed-cs
 msc.type: authoredcontent
-ms.openlocfilehash: ad759cefc372f6276ce1b16beea7282d9685ef82
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c17e3afaf4406489a14d0537a33fef384d6c5a19
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57029918"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59408966"
 ---
-<a name="determining-what-files-need-to-be-deployed-c"></a>Determinazione dei file da distribuire (C#)
-====================
+# <a name="determining-what-files-need-to-be-deployed-c"></a>Determinazione dei file da distribuire (C#)
+
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Scaricare il codice](http://download.microsoft.com/download/4/5/F/45F815EC-8B0E-46D3-9FB8-2DC015CCA306/ASPNET_Hosting_Tutorial_02_CS.zip) o [Scarica il PDF](http://download.microsoft.com/download/E/8/9/E8920AE6-D441-41A7-8A77-9EF8FF970D8B/aspnet_tutorial02_FilesToDeploy_cs.pdf)
@@ -93,7 +93,7 @@ Il download per questa esercitazione include un'applicazione ASP.NET denominata 
 Figura 1 mostra una cattura di schermata del sito Web le recensioni dei libri quando viene visualizzato tramite un browser. Di seguito viene visualizzata la pagina ~ /`Tech/TYASP35.aspx`, che esamina il libro *insegnare manualmente ASP.NET 3.5 in 24 ore*. Il percorso di navigazione che si estende nella parte superiore della pagina di menu nella colonna sinistra si basano nella struttura della mappa del sito definita `Web.sitemap`. L'immagine nell'angolo superiore sinistro è uno della copertura della Rubrica immagini che si trovano nel `Images` cartella. Aspetto del sito Web vengono definite tramite le regole di foglio di stile presentate dai file CSS nella cartella di stili, mentre il layout delle pagine globale viene definito nella pagina master, di propagazione `Site.master`.
 
 
-[![Il sito Web del libro esamina offre le revisioni su un'ampia gamma di titoli](determining-what-files-need-to-be-deployed-cs/_static/image2.png)](determining-what-files-need-to-be-deployed-cs/_static/image1.png)
+[![Toffre inoltre sito Web libro esamina le revisioni su un'ampia gamma di titoli](determining-what-files-need-to-be-deployed-cs/_static/image2.png)](determining-what-files-need-to-be-deployed-cs/_static/image1.png)
 
 **Figura 1:** Il sito Web del libro esamina offre le revisioni su un'ampia gamma di titoli ([fare clic per visualizzare l'immagine con dimensioni normali](determining-what-files-need-to-be-deployed-cs/_static/image3.png))
 
@@ -116,7 +116,7 @@ Il modello di progetto di applicazione Web Usa la compilazione esplicita: codice
 Figura 2 mostra i file che costituiscono il progetto di applicazione Web di revisioni del libro.
 
 
-[![Esplora soluzioni Elenca i file che costituiscono il progetto di applicazione Web](determining-what-files-need-to-be-deployed-cs/_static/image5.png)](determining-what-files-need-to-be-deployed-cs/_static/image4.png)
+[![TEsplora soluzioni sono elencati i file che costituiscono il progetto di applicazione Web](determining-what-files-need-to-be-deployed-cs/_static/image5.png)](determining-what-files-need-to-be-deployed-cs/_static/image4.png)
 
 **Figura 2**: Esplora soluzioni Elenca i file che costituiscono il progetto di applicazione Web
 
@@ -143,7 +143,7 @@ L'opzione di menu di compilazione in Visual Studio è presente in entrambi i pro
 Figura 3 mostra i file che costituiscono il progetto di sito Web di revisioni del libro.
 
 
- [![Esplora soluzioni Elenca i file che costituiscono il progetto di sito Web](determining-what-files-need-to-be-deployed-cs/_static/image7.png)](determining-what-files-need-to-be-deployed-cs/_static/image6.png) 
+ [![TEsplora soluzioni sono elencati i file che costituiscono il progetto di sito Web](determining-what-files-need-to-be-deployed-cs/_static/image7.png)](determining-what-files-need-to-be-deployed-cs/_static/image6.png) 
 
 **Figura 3**: Esplora soluzioni Elenca i file che costituiscono il progetto di sito Web
 

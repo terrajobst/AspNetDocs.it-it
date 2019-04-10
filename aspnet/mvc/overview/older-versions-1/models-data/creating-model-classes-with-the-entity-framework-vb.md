@@ -8,15 +8,15 @@ ms.date: 01/27/2009
 ms.assetid: ff8322c9-12f3-4e24-aba6-a38046b9bb0d
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/creating-model-classes-with-the-entity-framework-vb
 msc.type: authoredcontent
-ms.openlocfilehash: c1f64f57d4c23fe225a8268042104254e17dc456
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b3c6726c2d08e2e6ac37501f2ab455e427df82bb
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57044248"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59414054"
 ---
-<a name="creating-model-classes-with-the-entity-framework-vb"></a>Creazione di classi di modelli con Entity Framework (VB)
-====================
+# <a name="creating-model-classes-with-the-entity-framework-vb"></a>Creazione di classi di modelli con Entity Framework (VB)
+
 by [Microsoft](https://github.com/microsoft)
 
 > In questa esercitazione descrive come usare ASP.NET MVC con Entity Framework Microsoft. Descrive come usare la procedura guidata Entity per creare un modello ADO.NET Entity Data Model. Nel corso di questa esercitazione, creiamo un'applicazione web che illustra come selezionare, inserire, aggiornare ed eliminare i dati del database tramite Entity Framework.

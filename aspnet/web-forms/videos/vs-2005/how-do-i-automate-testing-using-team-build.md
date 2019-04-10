@@ -8,15 +8,15 @@ ms.date: 08/01/2007
 ms.assetid: 8e8fd5a9-0e98-415a-93f5-9ad7524ae9bb
 msc.legacyurl: /web-forms/videos/vs-2005/how-do-i-automate-testing-using-team-build
 msc.type: video
-ms.openlocfilehash: 95a02d8eaaeaa06b2323eaecc03fda58c2acb397
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 9692a2a981d8521fa2e4f9344d2bcdfbf2e97ffd
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57052278"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59416545"
 ---
-<a name="how-do-i-automate-testing-using-team-build"></a>[Procedura:] Automatizzare i test con Team Build?
-====================
+# <a name="how-do-i-automate-testing-using-team-build"></a>[Procedura:] Automatizzare i test con Team Build?
+
 da [feed di Chris Menegay](https://twitter.com/CMenegay)
 
 In questo video viene illustrato come usare Visual Studio Team System per definire i test automatizzati che verranno eseguito durante una compilazione team e come è possibile il drill-down ai risultati di tali test. Viene inoltre illustrato che il [attività di compilazione di strumenti di Test](https://msdn.microsoft.com/vstudio/aa718351.aspx#bttt) offre un modo alternativo di specificare i test da eseguire durante una compilazione team.

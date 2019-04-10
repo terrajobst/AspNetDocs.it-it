@@ -8,15 +8,15 @@ ms.date: 05/22/2015
 ms.assetid: 8513a57a-2d45-4d6b-881c-15a01c5cbb1c
 msc.legacyurl: /mvc/overview/getting-started/mvc-learning-sequence
 msc.type: authoredcontent
-ms.openlocfilehash: 720e3999fe2c1872a50c82bad0711bbcadd176cd
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: e78ad67187b2da96ca3766e6914e396508aa180e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57029268"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59417546"
 ---
-<a name="mvc-recommended-tutorials-and-articles"></a>Esercitazioni e articoli consigliati su MVC
-====================
+# <a name="mvc-recommended-tutorials-and-articles"></a>Esercitazioni e articoli consigliati su MVC
+
 da [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 <a id="pwd"></a>
@@ -39,7 +39,7 @@ da [Rick Anderson]((https://twitter.com/RickAndMSFT))
 - [Creare un'App ASP.NET MVC 5 con Facebook, Twitter, LinkedIn e Google OAuth2 Sign-on](../security/create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on.md) questa esercitazione illustra come compilare un'applicazione web ASP.NET MVC 5 che consente agli utenti di accedere tramite OAuth 2.0 con le credenziali di un'autenticazione esterna provider, ad esempio Facebook, Twitter, LinkedIn, Microsoft o Google.
 - [Creare un'app web ASP.NET MVC 5 sicura con accesso, messaggio di posta elettronica conferma e reimpostazione della password](../security/create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset.md) prima di tutto in una serie sull'identità, incluso il codice per [inviare di nuovo un collegamento di conferma](../security/create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset.md#rsend).
 - [App ASP.NET MVC 5 con SMS e posta elettronica l'autenticazione a due fattori](../security/aspnet-mvc-5-app-with-sms-and-email-two-factor-authentication.md) secondo della serie di identità.
-- [Procedure consigliate per la distribuzione delle password e di altri dati sensibili in ASP.NET e nel servizio app di Azure](../../../identity/overview/features-api/best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure.md)
+- [Procedure consigliate per la distribuzione delle password e di altri dati sensibili in ASP.NET e in Servizio app di Azure](../../../identity/overview/features-api/best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure.md)
 - [Autenticazione a due fattori tramite SMS e posta elettronica con ASP.NET Identity](../../../identity/overview/features-api/two-factor-authentication-using-sms-and-email-with-aspnet-identity.md) `isPersistent` e il cookie di sicurezza, codice in modo da richiedere all'utente di disporre di un account di posta elettronica convalidato prima di poter accedere, come le verifiche SignInManager per requisito 2FA e altro ancora.
 - [Conferma dell'account e recupero della Password con ASP.NET Identity](../../../identity/overview/features-api/account-confirmation-and-password-recovery-with-aspnet-identity.md) fornisce informazioni dettagliate sull'identità non trovata nel [creare un'app web ASP.NET MVC 5 sicura con accesso, messaggio di posta elettronica conferma e reimpostazione della password](../security/create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset.md) , ad esempio come consentire gli utenti di reimpostare la password dimenticata.
 

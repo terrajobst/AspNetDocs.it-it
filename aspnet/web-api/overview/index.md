@@ -1,36 +1,37 @@
 ---
 uid: web-api/overview/index
-title: Guida all'API Web | Microsoft Docs
+title: Web delle linee guida per API - ASP.NET 4.x
 author: rick-anderson
-description: ''
+description: Elenco di materiale sussidiario di ASP.NET Web API per ASP.NET 4.x
 ms.author: riande
 ms.date: 01/17/2012
+ms.custom: seoapril2019
 ms.assetid: daca6735-b5d3-4ef5-af33-ee682926238b
 msc.legacyurl: /web-api/overview
 msc.type: book
-ms.openlocfilehash: 3246bdc946ad862a0fa1c03f69d4a4f1d067e24c
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 304c0d71e5e18f9d3f0768464fe39d6e6946600d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57023398"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59422902"
 ---
-<a name="web-api-guidance"></a>Materiale sussidiario di API Web
-====================
+# <a name="web-api-guidance"></a>Materiale sussidiario di API Web
+
 - [Introduzione](getting-started-with-aspnet-web-api/index.md)
 
     - [Introduzione all'API Web 2 (C#)](getting-started-with-aspnet-web-api/tutorial-your-first-web-api.md)
     - [Risultati delle azioni nell'API Web 2](getting-started-with-aspnet-web-api/action-results.md)
-    - [Usare l'API Web con Web Form ASP.NET](getting-started-with-aspnet-web-api/using-web-api-with-aspnet-web-forms.md)
+    - [Usare l'API Web con Web Forms ASP.NET](getting-started-with-aspnet-web-api/using-web-api-with-aspnet-web-forms.md)
     - [Creazione di pagine della Guida dell'API Web](getting-started-with-aspnet-web-api/creating-api-help-pages.md)
-    - [Laboratorio pratico: Compilare un'applicazione a pagina singola (SPA) con l'API Web ASP.NET e Angular. js](getting-started-with-aspnet-web-api/build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs.md)
+    - [Lab pratico: Creare un'applicazione a pagina singola con l'API Web ASP.NET e Angular.js](getting-started-with-aspnet-web-api/build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs.md)
 - [Routing](web-api-routing-and-actions/index.md)
 
     - [Routing nell'API Web](web-api-routing-and-actions/routing-in-aspnet-web-api.md)
     - [Routing e selezione dell'azione nell'API Web](web-api-routing-and-actions/routing-and-action-selection.md)
     - [Routing degli attributi nell'API Web 2](web-api-routing-and-actions/attribute-routing-in-web-api-2.md)
     - [Creare un'API REST con il routing degli attributi nell'API Web 2](web-api-routing-and-actions/create-a-rest-api-with-attribute-routing.md)
-- [Uso di dati](data/index.md)
+- [Uso dei dati](data/index.md)
 
     - [Uso dell'API Web 2 con Entity Framework 6](data/using-web-api-with-entity-framework/index.md)
 
@@ -100,10 +101,10 @@ ms.locfileid: "57023398"
     - [Autenticazione basata su form nell'API Web](security/forms-authentication.md)
     - [Autenticazione integrata di Windows](security/integrated-windows-authentication.md)
     - [Uso di SSL](security/working-with-ssl-in-web-api.md)
-- [Distribuzione e Hosting](hosting-aspnet-web-api/index.md)
+- [Distribuzione e hosting](hosting-aspnet-web-api/index.md)
 
-    - [Usare OWIN per l'hosting indipendente dell'API Web 2](hosting-aspnet-web-api/use-owin-to-self-host-web-api.md)
-    - [Eseguire l'hosting dell'API Web 2 in un ruolo di lavoro di Azure](hosting-aspnet-web-api/host-aspnet-web-api-in-an-azure-worker-role.md)
+    - [Usare OWIN per il self-hosting dell'API Web 2](hosting-aspnet-web-api/use-owin-to-self-host-web-api.md)
+    - [Ospitare l'API Web 2 in un ruolo di lavoro di Azure](hosting-aspnet-web-api/host-aspnet-web-api-in-an-azure-worker-role.md)
 - [Argomenti avanzati](advanced/index.md)
 
     - [Configurazione dell'API Web 2](advanced/configuring-aspnet-web-api.md)
@@ -111,8 +112,8 @@ ms.locfileid: "57023398"
     - [Chiamata di un'API Web da un client .NET (C#)](advanced/calling-a-web-api-from-a-net-client.md)
     - [Gestori di messaggi HTTP nell'API Web](advanced/http-message-handlers.md)
     - [Gestori di messaggi HttpClient nell'API Web](advanced/httpclient-message-handlers.md)
-    - [L'invio dei dati di Form HTML nell'API Web: Dati form-urlencoded](advanced/sending-html-form-data-part-1.md)
-    - [L'invio dei dati di Form HTML nell'API Web: Caricamento di file e MIME Multipart](advanced/sending-html-form-data-part-2.md)
+    - [Invio dei dati dei moduli HTML nell'API Web: dati form-urlencoded](advanced/sending-html-form-data-part-1.md)
+    - [Invio dei dati dei moduli HTML nell'API Web: caricamento di file e MIME composto](advanced/sending-html-form-data-part-2.md)
     - [Cookie HTTP nell'API Web ASP.NET](advanced/http-cookies.md)
 - [Versioni](releases/index.md)
 
@@ -121,7 +122,7 @@ ms.locfileid: "57023398"
     - [Novità dell'API Web ASP.NET 2.1](releases/whats-new-in-aspnet-web-api-21.md)
 - [Versioni precedenti](older-versions/index.md)
 
-    - [Abilitare le operazioni CRUD nell'API Web 1](older-versions/creating-a-web-api-that-supports-crud-operations.md)
+    - [Abilitazione delle operazioni CRUD nell'API Web 1](older-versions/creating-a-web-api-that-supports-crud-operations.md)
     - [Uso dell'API Web ASP.NET 1 con Entity Framework 5](older-versions/using-web-api-1-with-entity-framework-5/index.md)
 
         - [Panoramica e creazione del progetto](older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-1.md)
@@ -131,5 +132,5 @@ ms.locfileid: "57023398"
         - [Creazione di un'interfaccia utente dinamica con Knockout.js](older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-5.md)
         - [Creazione di controller per prodotti e ordini](older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-6.md)
         - [Creazione della pagina principale](older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-7.md)
-    - [Hosting indipendente dell'API Web 1 (C#)](older-versions/self-host-a-web-api.md)
+    - [Self-hosting dell'API Web 1 (C#)](older-versions/self-host-a-web-api.md)
     - [Creazione di API RESTful con l'API Web ASP.NET](older-versions/build-restful-apis-with-aspnet-web-api.md)

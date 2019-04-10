@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/contact-manager/iteration-5-create-unit-tests-cs
-title: 'Iterazione #5-creare gli unit test (C#) | Microsoft Docs'
+title: 'Iterazione #5-creare gli unit test (c#) | Microsoft Docs'
 author: microsoft
 description: Nell'iterazione del quinto, si semplifica l'applicazione di manutenzione e la modifica mediante l'aggiunta di unit test. È simulare le classi di modello di dati e generare unit test per o...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 02/20/2009
 ms.assetid: 28ad8f80-b8a5-444e-b478-8b15a846060c
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-5-create-unit-tests-cs
 msc.type: authoredcontent
-ms.openlocfilehash: b2e96c996905bc73698d1c0b11df97d1dd366172
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 68080859e205283f56d8f543bfa06b76bb22a39d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422168"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59408862"
 ---
-<a name="iteration-5--create-unit-tests-c"></a>Iterazione #5-creare gli unit test (C#)
-====================
+# <a name="iteration-5--create-unit-tests-c"></a>Iterazione #5-creare gli unit test (c#)
+
 by [Microsoft](https://github.com/microsoft)
 
 [Scaricare il codice](iteration-5-create-unit-tests-cs/_static/contactmanager_5_cs1.zip)
@@ -24,7 +24,7 @@ by [Microsoft](https://github.com/microsoft)
 > Nell'iterazione del quinto, si semplifica l'applicazione di manutenzione e la modifica mediante l'aggiunta di unit test. È simulare le classi di modello di dati e generare unit test per i controller e logica di convalida.
 
 
-## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>Creazione di un'applicazione MVC ASP.NET di gestione dei contatti (C#)
+## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>Creazione di un'applicazione MVC ASP.NET di gestione dei contatti (c#)
 
 In questa serie di esercitazioni, creiamo un'intera applicazione di gestione dei contatti dall'inizio alla fine. L'applicazione Contact Manager consente di archiviare le informazioni di contatto - nomi, i numeri di telefono e indirizzi di posta elettronica - per un elenco di persone.
 
@@ -117,12 +117,12 @@ Prima di poter usare Moq, è necessario completare i passaggi seguenti:
 5. Dopo aver completato questi passaggi, la cartella Riferimenti dovrebbe essere simile nella figura 2.
 
 
-[![Moq sblocco](iteration-5-create-unit-tests-cs/_static/image1.jpg)](iteration-5-create-unit-tests-cs/_static/image1.png)
+[![Unblocking Moq](iteration-5-create-unit-tests-cs/_static/image1.jpg)](iteration-5-create-unit-tests-cs/_static/image1.png)
 
 **Figura 01**: Moq sblocco ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-5-create-unit-tests-cs/_static/image2.png))
 
 
-[![Riferimenti dopo l'aggiunta di Moq](iteration-5-create-unit-tests-cs/_static/image2.jpg)](iteration-5-create-unit-tests-cs/_static/image3.png)
+[![Rriferimenti dopo l'aggiunta di Moq](iteration-5-create-unit-tests-cs/_static/image2.jpg)](iteration-5-create-unit-tests-cs/_static/image3.png)
 
 **Figura 02**: Dopo aver aggiunto Moq i riferimenti ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-5-create-unit-tests-cs/_static/image4.png))
 
@@ -185,7 +185,7 @@ I restanti test verificare che quando viene chiamato il metodo CreateContact() c
 È possibile eseguire gli unit test nel listato 1, selezionando l'opzione di menu **esecuzione dei Test, tutti i test nella soluzione (CTRL + R, A)**. I risultati dei test vengono visualizzati nella finestra Risultati Test (vedere la figura 4).
 
 
-[![Risultati dei test](iteration-5-create-unit-tests-cs/_static/image4.jpg)](iteration-5-create-unit-tests-cs/_static/image7.png)
+[![TRisultati est](iteration-5-create-unit-tests-cs/_static/image4.jpg)](iteration-5-create-unit-tests-cs/_static/image7.png)
 
 **Figura 04**: I risultati dei test ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-5-create-unit-tests-cs/_static/image8.png))
 
@@ -224,7 +224,7 @@ restituire View("Create");
 Se non si è esplicita la restituzione di una visualizzazione della proprietà ViewResult.ViewName restituisce una stringa vuota.
 
 
-**Listato 2 - Controllers\ContactControllerTest.cs**
+**Listing 2 - Controllers\ContactControllerTest.cs**
 
 [!code-csharp[Main](iteration-5-create-unit-tests-cs/samples/sample6.cs)]
 

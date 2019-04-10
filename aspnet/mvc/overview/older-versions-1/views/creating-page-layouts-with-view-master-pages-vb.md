@@ -8,18 +8,18 @@ ms.date: 10/16/2008
 ms.assetid: d34f90a1-6de3-482a-a326-f87fdcbaaaff
 msc.legacyurl: /mvc/overview/older-versions-1/views/creating-page-layouts-with-view-master-pages-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 4ff74b1dc1d83b7ec1c8ecf6eca341a5cd14403f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 175e78d7ccc669c29c63dcb53af7aad1608c7d15
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57026828"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59422356"
 ---
-<a name="creating-page-layouts-with-view-master-pages-vb"></a>Creazione di layout di pagina con le pagine master di visualizzazione (VB)
-====================
+# <a name="creating-page-layouts-with-view-master-pages-vb"></a>Creazione di layout di pagina con le pagine master di visualizzazione (VB)
+
 by [Microsoft](https://github.com/microsoft)
 
-[Scaricare PDF](http://download.microsoft.com/download/e/f/3/ef3f2ff6-7424-48f7-bdaa-180ef64c3490/ASPNET_MVC_Tutorial_12_VB.pdf)
+[Scarica il PDF](http://download.microsoft.com/download/e/f/3/ef3f2ff6-7424-48f7-bdaa-180ef64c3490/ASPNET_MVC_Tutorial_12_VB.pdf)
 
 > In questa esercitazione descrive come creare un layout di pagina comuni per più pagine nell'applicazione, sfruttando i vantaggi della visualizzazione pagine master. È possibile utilizzare una pagina master di visualizzazione, ad esempio, per definire un layout di pagina a due colonne e usare il layout a due colonne per tutte le pagine nell'applicazione web.
 
@@ -37,7 +37,7 @@ In questa esercitazione descrive come creare una nuova pagina master di visualiz
 Iniziamo creando una pagina master di visualizzazione che definisce un layout a due colonne. È aggiungere una nuova pagina master di visualizzazione per un progetto MVC facendo cartella Views\Shared selezionando l'opzione di menu **Aggiungi, elemento nuovo**e selezionando il modello di pagina Master visualizzazione MVC (vedere la figura 1).
 
 
-[![Aggiunta di una pagina master di visualizzazione](creating-page-layouts-with-view-master-pages-vb/_static/image2.png)](creating-page-layouts-with-view-master-pages-vb/_static/image1.png)
+[![Auna pagina master visualizzazione dding](creating-page-layouts-with-view-master-pages-vb/_static/image2.png)](creating-page-layouts-with-view-master-pages-vb/_static/image1.png)
 
 **Figura 01**: Aggiunta di una pagina master visualizzazione ([fare clic per visualizzare l'immagine con dimensioni normali](creating-page-layouts-with-view-master-pages-vb/_static/image3.png))
 
@@ -55,7 +55,7 @@ La pagina master di visualizzazione nel listato 1, ad esempio, definisce un layo
 Il corpo della visualizzazione della pagina master nel listato 1 contiene due `<div>` tag che corrispondono alle due colonne. La classe di colonna del foglio di stile viene applicata a entrambe `<div>` tag. Questa classe è definita nel foglio di stile dichiarato nella parte superiore della pagina master. È possibile visualizzare in anteprima come pagina master visualizzazione verrà visualizzata passando alla visualizzazione progettazione. Fare clic sulla scheda Progettazione in basso a sinistra dell'editor del codice sorgente (vedere la figura 2).
 
 
-[![Visualizzazione in anteprima di una pagina master nella finestra di progettazione](creating-page-layouts-with-view-master-pages-vb/_static/image5.png)](creating-page-layouts-with-view-master-pages-vb/_static/image4.png)
+[![Pesaminare una pagina master nella finestra di progettazione](creating-page-layouts-with-view-master-pages-vb/_static/image5.png)](creating-page-layouts-with-view-master-pages-vb/_static/image4.png)
 
 **Figura 02**: Visualizzazione in anteprima di una pagina master nella finestra di progettazione ([fare clic per visualizzare l'immagine con dimensioni normali](creating-page-layouts-with-view-master-pages-vb/_static/image6.png))
 
@@ -65,7 +65,7 @@ Il corpo della visualizzazione della pagina master nel listato 1 contiene due `<
 Dopo aver creato una pagina master di visualizzazione, è possibile creare Visualizza uno o più pagine di contenuto basate sulla pagina master di visualizzazione. Ad esempio, è possibile creare una pagina contenuta visualizzazione di indice per il controller Home facendo clic su cartella Views\Home selezionando **Aggiungi, elemento nuove**, se si seleziona il **pagina contenuto visualizzazione MVC** modello, immettere il nome di index. aspx e facendo clic su Aggiungi pulsante (vedere la figura 3).
 
 
-[![Aggiunta di una pagina contenuto visualizzazione](creating-page-layouts-with-view-master-pages-vb/_static/image8.png)](creating-page-layouts-with-view-master-pages-vb/_static/image7.png)
+[![Auna pagina contenuto visualizzazione dding](creating-page-layouts-with-view-master-pages-vb/_static/image8.png)](creating-page-layouts-with-view-master-pages-vb/_static/image7.png)
 
 **Figura 03**: Aggiunta di una pagina contenuto visualizzazione ([fare clic per visualizzare l'immagine con dimensioni normali](creating-page-layouts-with-view-master-pages-vb/_static/image9.png))
 
@@ -73,7 +73,7 @@ Dopo aver creato una pagina master di visualizzazione, è possibile creare Visua
 Dopo che si fa clic sul pulsante Aggiungi, viene visualizzata una nuova finestra di dialogo che consente di selezionare una pagina master di visualizzazione da associare alla pagina contenuto visualizzazione (vedere la figura 4). È possibile passare alla pagina master di visualizzazione Site. master che abbiamo creato nella sezione precedente.
 
 
-[![Selezione di una pagina master](creating-page-layouts-with-view-master-pages-vb/_static/image11.png)](creating-page-layouts-with-view-master-pages-vb/_static/image10.png)
+[![Sdesignazione di una pagina master](creating-page-layouts-with-view-master-pages-vb/_static/image11.png)](creating-page-layouts-with-view-master-pages-vb/_static/image10.png)
 
 **Figura 04**: Selezione di una pagina master ([fare clic per visualizzare l'immagine con dimensioni normali](creating-page-layouts-with-view-master-pages-vb/_static/image12.png))
 
@@ -101,7 +101,7 @@ Ad esempio, la visualizzazione dell'indice modificata nel listato 3 contiene sol
 Quando viene richiesta la visualizzazione nel listato 3, rendering della pagina nella figura 5. Si noti che la visualizzazione esegue il rendering di una pagina con due colonne. Si noti inoltre che il contenuto della pagina di visualizzazione contenuto viene unito con il contenuto della pagina master di visualizzazione.
 
 
-[![La pagina contenuta visualizzazione Index](creating-page-layouts-with-view-master-pages-vb/_static/image14.png)](creating-page-layouts-with-view-master-pages-vb/_static/image13.png)
+[![Tpagina contenuto visualizzazione Index he](creating-page-layouts-with-view-master-pages-vb/_static/image14.png)](creating-page-layouts-with-view-master-pages-vb/_static/image13.png)
 
 **Figura 05**: La pagina contenuta visualizzazione Index ([fare clic per visualizzare l'immagine con dimensioni normali](creating-page-layouts-with-view-master-pages-vb/_static/image15.png))
 
@@ -117,7 +117,7 @@ Esistono due modi in cui è possibile modificare il titolo visualizzato da una p
 Quando la visualizzazione dell'indice viene eseguito il rendering nel browser, viene visualizzato il titolo desiderato nella barra del titolo del browser:
 
 
-[![Barra del titolo del browser](creating-page-layouts-with-view-master-pages-vb/_static/image17.png)](creating-page-layouts-with-view-master-pages-vb/_static/image16.png)
+[![Bsulla barra del titolo wser](creating-page-layouts-with-view-master-pages-vb/_static/image17.png)](creating-page-layouts-with-view-master-pages-vb/_static/image16.png)
 
 
 È un requisito importante che una pagina di visualizzazione master deve soddisfare affinché l'attributo title lavorare. La pagina master visualizzazione deve contenere una `<head runat="server">` tag anziché una normale `<head>` tag per l'intestazione specificata. Se il `<head>` tag non include il runat = "server" attributo, quindi non sarà più visualizzato il titolo. La visualizzazione predefinita include la pagina master `<head runat="server">` tag.

@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: 5236695e-5c70-4887-baee-0bfb0afb3448
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/cascadingdropdown/filling-a-list-using-cascadingdropdown-vb
 msc.type: authoredcontent
-ms.openlocfilehash: b4bbe5c120a6f17a7dca08e6fc855018a2e23797
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 663dfc76dc3d07dbe9ddca002dc07cb3f9acdb1c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58421960"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59419340"
 ---
-<a name="filling-a-list-using-cascadingdropdown-vb"></a>Compilazione di un elenco tramite CascadingDropDown (VB)
-====================
+# <a name="filling-a-list-using-cascadingdropdown-vb"></a>Compilazione di un elenco tramite CascadingDropDown (VB)
+
 da [Christian Wenz](https://github.com/wenz)
 
 [Scaricare il codice](http://download.microsoft.com/download/9/0/7/907760b1-2c60-4f81-aeb6-ca416a573b0d/cascadingdropdown0.vb.zip) o [Scarica il PDF](http://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/cascadingdropdown0VB.pdf)
@@ -46,7 +46,7 @@ Per questo elenco, viene aggiunto un controllo extender CascadingDropDown. Invia
 - `Category`: Informazioni sulle categorie in cui viene inviati al metodo web quando viene chiamato
 - `PromptText`: Testo visualizzato quando si caricano in modo asincrono i dati dell'elenco dal server
 
-Ecco il markup per il `CascadingDropDown` elemento. L'unica differenza tra C# e Visual Basic è il nome del servizio web associato:
+Ecco il markup per il `CascadingDropDown` elemento. L'unica differenza tra c# e Visual Basic è il nome del servizio web associato:
 
 [!code-aspx[Main](filling-a-list-using-cascadingdropdown-vb/samples/sample3.aspx)]
 
@@ -61,7 +61,7 @@ In modo che l'aspetto importante è che il metodo deve restituire una matrice di
 Il caricamento della pagina nel browser verrà attivata l'elenco deve essere compilato con tre fornitori.
 
 
-[![L'elenco viene compilato automaticamente](filling-a-list-using-cascadingdropdown-vb/_static/image2.png)](filling-a-list-using-cascadingdropdown-vb/_static/image1.png)
+[![Telenco he viene riempito automaticamente](filling-a-list-using-cascadingdropdown-vb/_static/image2.png)](filling-a-list-using-cascadingdropdown-vb/_static/image1.png)
 
 L'elenco viene compilato automaticamente ([fare clic per visualizzare l'immagine con dimensioni normali](filling-a-list-using-cascadingdropdown-vb/_static/image3.png))
 

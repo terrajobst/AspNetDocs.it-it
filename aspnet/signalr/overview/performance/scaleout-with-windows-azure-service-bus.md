@@ -8,15 +8,15 @@ ms.date: 06/10/2014
 ms.assetid: ce1305f9-30fd-49e3-bf38-d0a78dfb06c3
 msc.legacyurl: /signalr/overview/performance/scaleout-with-windows-azure-service-bus
 msc.type: authoredcontent
-ms.openlocfilehash: 9f6188ff5f716c20d759f73975d6a8ad522834d8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d0e7dcb0317c403c5cf7df1db7decbdda4ada8e9
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57051708"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59417377"
 ---
-<a name="signalr-scaleout-with-azure-service-bus"></a>Scale-out di SignalR con il bus di servizio di Azure
-====================
+# <a name="signalr-scaleout-with-azure-service-bus"></a>Scale-out di SignalR con il bus di servizio di Azure
+
 dal [Mike Wasson](https://github.com/MikeWasson), [Patrick Fletcher](https://github.com/pfletcher)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
@@ -33,7 +33,7 @@ Prerequisiti:
 
 È anche compatibile con il backplane del bus di servizio [Service Bus per Windows Server](https://msdn.microsoft.com/library/windowsazure/dn282144.aspx), versione 1.1. Tuttavia, non compatibile con la versione 1.0 di Service Bus per Windows Server.
 
-## <a name="pricing"></a>Prezzi
+## <a name="pricing"></a>Pricing
 
 Backplane del Bus di servizio Usa gli argomenti per inviare messaggi. Per informazioni più aggiornate sui prezzi, vedere [del Bus di servizio](https://azure.microsoft.com/pricing/details/service-bus/). Al momento della stesura di questo articolo, è possibile inviare 1.000.000 di messaggi al mese per meno di $1. Backplane invia un messaggio del bus di servizio per ogni chiamata di un metodo dell'hub SignalR. Esistono anche alcuni messaggi di controllo per le connessioni, disconnessioni, unita tramite join o uscire da gruppi e così via. Nella maggior parte delle applicazioni, la maggior parte del traffico di messaggi sarà chiamate del metodo dell'hub.
 

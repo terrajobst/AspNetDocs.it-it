@@ -8,15 +8,15 @@ ms.date: 11/15/2007
 ms.assetid: 199c6ca0-3a9e-4a88-96c5-70fce8d4d9bf
 msc.legacyurl: /web-forms/videos/data-access/how-do-i-with-linq/how-do-i-linq-to-sql-querying-the-database
 msc.type: video
-ms.openlocfilehash: 907efe9b69e6412627d0fc79f147a59abfa4ff78
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: e4dfbdedad2211d94610966e3f390b23681b658f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57054088"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59419288"
 ---
-<a name="how-do-i-linq-to-sql-querying-the-database"></a>[Procedura:] LINQ to SQL: Esecuzione di query sul database
-====================
+# <a name="how-do-i-linq-to-sql-querying-the-database"></a>[Procedura:] LINQ to SQL: Esecuzione di query sul database
+
 da [Scott Stanfield](https://github.com/scottstanfield)
 
 In questo video viene illustrato come eseguire query in un database con LINQ, il codice SQL sottostante con un visualizzatore di query, associazione dati ai controlli ASP.NET e paging record.

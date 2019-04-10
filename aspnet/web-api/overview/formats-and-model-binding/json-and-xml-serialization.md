@@ -1,22 +1,23 @@
 ---
 uid: web-api/overview/formats-and-model-binding/json-and-xml-serialization
-title: Serializzazione JSON e XML nell'API Web ASP.NET | Microsoft Docs
+title: 'Serializzazione JSON e XML in ASP.NET Web API: ASP.NET 4.x'
 author: MikeWasson
-description: ''
+description: Vengono descritti i formattatori XML e JSON nell'API Web ASP.NET per ASP.NET 4.x.
 ms.author: riande
 ms.date: 05/30/2012
+ms.custom: seoapril2019
 ms.assetid: 1cd7525d-de5e-4ab6-94f0-51480d3255d1
 msc.legacyurl: /web-api/overview/formats-and-model-binding/json-and-xml-serialization
 msc.type: authoredcontent
-ms.openlocfilehash: 47967e6e1dd0e84b6059c07d7544c0e755fdf510
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a9e7ed63a55c146976e0221214e722f3a2292fee
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57028928"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59408277"
 ---
-<a name="json-and-xml-serialization-in-aspnet-web-api"></a>Serializzazione JSON e XML nell'API Web ASP.NET
-====================
+# <a name="json-and-xml-serialization-in-aspnet-web-api"></a>Serializzazione JSON e XML nell'API Web ASP.NET
+
 da [Mike Wasson](https://github.com/MikeWasson)
 
 Questo articolo descrive i formattatori XML e JSON nell'API Web ASP.NET.
@@ -34,14 +35,14 @@ API Web fornisce formattatori di media type per JSON e XML. Per impostazione pre
 
     - [Proprietà di sola lettura](#json_readonly)
     - [Date](#json_dates)
-    - [Rientro](#json_indenting)
+    - [Rientri](#json_indenting)
     - [Convenzione camel](#json_camelcasing)
     - [Oggetti anonimi e con tipizzazione debole](#json_anon)
 - [Formattatore di Media Type XML](#xml_media_type_formatter)
 
     - [Proprietà di sola lettura](#xml_readonly)
     - [Date](#xml_dates)
-    - [Rientro](#xml_indenting)
+    - [Rientri](#xml_indenting)
     - [L'impostazione di serializzatori XML Per tipo](#xml_pertype)
 - [Rimozione di JSON o un formattatore XML](#removing_the_json_or_xml_formatter)
 - [La gestione di riferimenti circolari agli oggetti](#handling_circular_object_references)

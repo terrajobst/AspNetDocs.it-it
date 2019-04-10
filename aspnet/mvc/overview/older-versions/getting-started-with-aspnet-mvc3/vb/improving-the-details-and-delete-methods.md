@@ -8,15 +8,15 @@ ms.date: 01/12/2011
 ms.assetid: c5c14ef0-c128-4dc1-8c01-7f0fdb09e411
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3/vb/improving-the-details-and-delete-methods
 msc.type: authoredcontent
-ms.openlocfilehash: edc2d5e9a6ef5785dacb839a375dfcc660dd3dc9
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 63930ebe35e4c37e0cc7c0882582c48348cf201a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57046628"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59417663"
 ---
-<a name="improving-the-details-and-delete-methods-vb"></a>Miglioramento dei dettagli e dei metodi di eliminazione (VB)
-====================
+# <a name="improving-the-details-and-delete-methods-vb"></a>Miglioramento dei dettagli e dei metodi di eliminazione (VB)
+
 da [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > Questa esercitazione insegnerà le nozioni di base della creazione di un'applicazione Web MVC ASP.NET utilizzando Microsoft Visual Web Developer 2010 Express Service Pack 1, che è una versione gratuita di Microsoft Visual Studio. Prima di iniziare, assicurarsi di che aver installato i prerequisiti elencati di seguito. È possibile installare tutti gli elementi facendo clic sul collegamento seguente: [Installazione guidata piattaforma Web](https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack). In alternativa, è possibile installare singolarmente i prerequisiti usando i collegamenti seguenti:
@@ -70,7 +70,7 @@ Questa esercitazione di base tutto quello che ti a rendere i controller, associa
 
 Se si desidera distribuire l'applicazione, è utile per primo test l'applicazione sul server IIS 7 locale. È possibile usare questo [instalace Webové Platformy](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=ASPNET;) collegamento per abilitare l'impostazione di IIS per le applicazioni ASP.NET. Vedere i collegamenti di distribuzione seguenti:
 
-- [Mappa del contenuto di distribuzione di ASP.NET](https://msdn.microsoft.com/library/dd394698.aspx)
+- [Mappa del contenuto per la distribuzione di ASP.NET](https://msdn.microsoft.com/library/dd394698.aspx)
 - [Enabling IIS 7.x](https://blogs.msdn.com/b/rickandy/archive/2011/03/14/enabling-iis-7-x-on-windows-7-vista-sp1-windows-2008-windows-2008-r2.aspx)
 - [Distribuzione di progetti applicazione Web](https://msdn.microsoft.com/library/dd394698.aspx)
 

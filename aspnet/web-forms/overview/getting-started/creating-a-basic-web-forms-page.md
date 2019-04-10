@@ -8,16 +8,17 @@ ms.date: 03/03/2014
 ms.assetid: a2f1c635-0817-4a9a-8c13-d5b5d29727c0
 msc.legacyurl: /web-forms/overview/getting-started/creating-a-basic-web-forms-page
 msc.type: authoredcontent
-ms.openlocfilehash: eb1a4632caf00097012bd1757da44016a076630f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: bf3336c2467553ba3714bbd4fbb41a35a0490768
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57026228"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59410604"
 ---
 # <a name="using-visual-studio-2013-to-create-a-basic-aspnet-45-web-forms-page"></a>Uso di Visual Studio 2013 per creare una pagina Web Form di base ASP.NET 4.5
+# 
 
-=== da [Erik Reitan](https://github.com/Erikre)
+da [Erik Reitan](https://github.com/Erikre)
 
 [!INCLUDE[](~/includes/rp.md)]
 
@@ -108,7 +109,7 @@ Quando si crea una nuova applicazione Web Form usando la **applicazione Web ASP.
 2. Nella **Esplora soluzioni**, fare clic sul nome dell'applicazione Web (in questa esercitazione è il nome dell'applicazione **BasicWebSite**), quindi fare clic su **Add**  - &gt; **Nuovo elemento**.   
 Verrà visualizzata la finestra di dialogo **Aggiungi nuovo elemento**.
 3. Selezionare il **Visual c#**  - &gt; **Web** gruppo di modelli a sinistra. Quindi, selezionare **Web Form** dalla parte centrale elencare e denominarlo *FirstWebPage*.   
-    ![Aggiungi finestra di dialogo Nuovo elemento](creating-a-basic-web-forms-page/_static/image6.png)
+    ![Finestra di dialogo Aggiungi nuovo elemento](creating-a-basic-web-forms-page/_static/image6.png)
 4. Fare clic su **Add** per aggiungere la pagina web al progetto.  
 Visual Studio crea la nuova pagina e lo apre.
 
@@ -187,7 +188,7 @@ Visual Studio offre diversi modi per impostare le proprietà dei controlli nella
 ### <a name="to-set-control-properties"></a>Per impostare le proprietà del controllo
 
 
-1. In primo luogo, visualizzare il **delle proprietà** windows tramite la selezione dal **vista** menu -&gt; **Other Windows**  - &gt; **Proprietà della finestra**. In alternativa, è possibile selezionare **F4** per visualizzare i **proprietà** finestra.
+1. In primo luogo, visualizzare il **delle proprietà** windows tramite la selezione dal **vista** menu -&gt; **Other Windows**  - &gt; **Finestra proprietà**. In alternativa, è possibile selezionare **F4** per visualizzare i **proprietà** finestra.
 2. Selezionare il [pulsante](https://msdn.microsoft.com/library/system.web.ui.webcontrols.button.aspx) (controllo) e quindi il **proprietà** finestra, impostare il valore della **testo** a **nome visualizzato**. Il testo immesso verrà visualizzato sul pulsante nella finestra di progettazione, come illustrato nella figura seguente.
 
     ![Impostare il testo del pulsante](creating-a-basic-web-forms-page/_static/image10.png "testo pulsante Imposta")

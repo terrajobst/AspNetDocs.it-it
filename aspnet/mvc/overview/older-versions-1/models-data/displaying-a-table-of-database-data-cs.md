@@ -8,18 +8,18 @@ ms.date: 10/07/2008
 ms.assetid: d6e758b6-6571-484d-a132-34ee6c47747a
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/displaying-a-table-of-database-data-cs
 msc.type: authoredcontent
-ms.openlocfilehash: d0d3f6a574a4b923d5da73ccb2ab3bfbd6f305ef
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 99b18de33e266adb626f4ab53ff20b1f52102900
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57054828"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59417585"
 ---
-<a name="displaying-a-table-of-database-data-c"></a>Visualizzazione di una tabella di dati del database (C#)
-====================
+# <a name="displaying-a-table-of-database-data-c"></a>Visualizzazione di una tabella di dati del database (C#)
+
 by [Microsoft](https://github.com/microsoft)
 
-[Scaricare PDF](http://download.microsoft.com/download/1/1/f/11f721aa-d749-4ed7-bb89-a681b68894e6/ASPNET_MVC_Tutorial_11_CS.pdf)
+[Scarica il PDF](http://download.microsoft.com/download/1/1/f/11f721aa-d749-4ed7-bb89-a681b68894e6/ASPNET_MVC_Tutorial_11_CS.pdf)
 
 > In questa esercitazione, illustrano due metodi di visualizzazione di un set di record di database. Visualizzare due metodi di formattazione di un set di record di database in una tabella HTML. In primo luogo, illustrato come è possibile formattare i record del database direttamente all'interno di una vista. Successivamente, si dimostrerà come è possibile sfruttare i vantaggi di righe parzialmente eseguite durante la formattazione dei record di database.
 
@@ -33,7 +33,7 @@ Verrà visualizzato il set di record dalla tabella di database di film. La tabel
 <a id="0.3_table01"></a>
 
 
-| **Nome della colonna** | **Tipo di dati** | **Consenti valori null** |
+| **Nome colonna** | **Tipo di dati** | **Ammetti Null** |
 | --- | --- | --- |
 | Id | Int | False |
 | Titolo | Nvarchar(200) | False |
@@ -61,7 +61,7 @@ Dopo aver fatto clic sul pulsante Aggiungi, viene visualizzata la procedura guid
 3. Nel **Scegli oggetti di Database** passaggio, espandere il nodo tabelle, selezionare la tabella di film. Immettere lo spazio dei nomi *modelli* e fare clic sui **fine** pulsante.
 
 
-[![Creazione di LINQ alle classi di SQL](displaying-a-table-of-database-data-cs/_static/image1.jpg)](displaying-a-table-of-database-data-cs/_static/image1.png)
+[![Creating LINQ alle classi SQL](displaying-a-table-of-database-data-cs/_static/image1.jpg)](displaying-a-table-of-database-data-cs/_static/image1.png)
 
 **Figura 01**: Creazione di LINQ alle classi di SQL ([fare clic per visualizzare l'immagine con dimensioni normali](displaying-a-table-of-database-data-cs/_static/image2.png))
 
@@ -69,7 +69,7 @@ Dopo aver fatto clic sul pulsante Aggiungi, viene visualizzata la procedura guid
 Dopo aver completato la procedura guidata Entity Data Model, verrà visualizzata la finestra di Entity Data Model Designer. La finestra di progettazione deve visualizzare le entità film (vedere la figura 2).
 
 
-[![Entity Data Model Designer](displaying-a-table-of-database-data-cs/_static/image2.jpg)](displaying-a-table-of-database-data-cs/_static/image3.png)
+[![Tegli Entity Data Model Designer](displaying-a-table-of-database-data-cs/_static/image2.jpg)](displaying-a-table-of-database-data-cs/_static/image3.png)
 
 **Figura 02**: Entity Data Model Designer ([fare clic per visualizzare l'immagine con dimensioni normali](displaying-a-table-of-database-data-cs/_static/image4.png))
 
@@ -83,7 +83,7 @@ Fare doppio clic sul nome della classe nell'area di progettazione e modificare i
 Ora che abbiamo a disposizione un modo per rappresentare i record del database, è possibile creare un controller che restituisce la raccolta di film. All'interno della finestra Esplora soluzioni di Visual Studio, fare clic sulla cartella controller e selezionare l'opzione di menu **Controller, Aggiungi** (vedere la figura 3).
 
 
-[![Il Controller Menu Aggiungi](displaying-a-table-of-database-data-cs/_static/image3.jpg)](displaying-a-table-of-database-data-cs/_static/image5.png)
+[![Tegli Menu Aggiungi Controller](displaying-a-table-of-database-data-cs/_static/image3.jpg)](displaying-a-table-of-database-data-cs/_static/image5.png)
 
 **Figura 03**: Il Menu di aggiunta dei Controller ([fare clic per visualizzare l'immagine con dimensioni normali](displaying-a-table-of-database-data-cs/_static/image6.png))
 
@@ -91,7 +91,7 @@ Ora che abbiamo a disposizione un modo per rappresentare i record del database, 
 Quando la **Aggiungi Controller** finestra di dialogo viene visualizzata, immettere il nome del controller MovieController (vedere la figura 4). Scegliere il **Aggiungi** pulsante per aggiungere il nuovo controller.
 
 
-[![La finestra di dialogo Aggiungi Controller](displaying-a-table-of-database-data-cs/_static/image4.jpg)](displaying-a-table-of-database-data-cs/_static/image7.png)
+[![Tfinestra di dialogo Aggiungi Controller he](displaying-a-table-of-database-data-cs/_static/image4.jpg)](displaying-a-table-of-database-data-cs/_static/image7.png)
 
 **Figura 04**: La finestra di dialogo Aggiungi Controller ([fare clic per visualizzare l'immagine con dimensioni normali](displaying-a-table-of-database-data-cs/_static/image8.png))
 
@@ -117,7 +117,7 @@ Compilare l'applicazione selezionando l'opzione di menu **compilazione, Compila 
 L'azione Index () e scegliere l'opzione di menu **Aggiungi visualizzazione** (vedere la figura 5).
 
 
-[![Aggiunta di una vista](displaying-a-table-of-database-data-cs/_static/image5.jpg)](displaying-a-table-of-database-data-cs/_static/image9.png)
+[![Adding una vista](displaying-a-table-of-database-data-cs/_static/image5.jpg)](displaying-a-table-of-database-data-cs/_static/image9.png)
 
 **Figura 05**: Aggiunta di una vista ([fare clic per visualizzare l'immagine con dimensioni normali](displaying-a-table-of-database-data-cs/_static/image10.png))
 
@@ -125,7 +125,7 @@ L'azione Index () e scegliere l'opzione di menu **Aggiungi visualizzazione** (ve
 Nel **Aggiungi visualizzazione** finestra di dialogo, selezionare la casella di controllo etichettato **creare una visualizzazione fortemente tipizzata**. Selezionare la classe di film come le **visualizzare i dati classe**. Selezionare *elenco* come la **visualizzare contenuto** (vedere la figura 6). Selezionando queste opzioni genererà una visualizzazione fortemente tipizzato che consente di visualizzare un elenco di film.
 
 
-[![La finestra di dialogo Aggiungi visualizzazione](displaying-a-table-of-database-data-cs/_static/image6.jpg)](displaying-a-table-of-database-data-cs/_static/image11.png)
+[![Tfinestra di dialogo Aggiungi visualizzazione he](displaying-a-table-of-database-data-cs/_static/image6.jpg)](displaying-a-table-of-database-data-cs/_static/image11.png)
 
 **Figura 06**: La finestra di dialogo Aggiungi visualizzazione ([fare clic per visualizzare l'immagine con dimensioni normali](displaying-a-table-of-database-data-cs/_static/image12.png))
 
@@ -139,7 +139,7 @@ Dopo aver selezionato il **Add** pulsante, la visualizzazione nel listato 2 vien
 È possibile eseguire l'applicazione selezionando l'opzione di menu **eseguire il Debug, Avvia debug** (o premere F5). Esegue l'applicazione avvia Internet Explorer. Se si passa all'URL /Movie verrà visualizzata la pagina nella figura 7.
 
 
-[![Una tabella di film](displaying-a-table-of-database-data-cs/_static/image7.jpg)](displaying-a-table-of-database-data-cs/_static/image13.png)
+[![A tabella di film](displaying-a-table-of-database-data-cs/_static/image7.jpg)](displaying-a-table-of-database-data-cs/_static/image13.png)
 
 **Figura 07**: Una tabella di film ([fare clic per visualizzare l'immagine con dimensioni normali](displaying-a-table-of-database-data-cs/_static/image14.png))
 
@@ -170,7 +170,7 @@ Parziale nel listato 3 contiene un modello per una singola riga di record.
 
 La visualizzazione dell'indice modificata nel listato 4 utilizza il MovieTemplate parziale.
 
-**Listing 4 – Views\Movie\Index.aspx**
+**Listato 4 – Views\Movie\Index.aspx**
 
 [!code-aspx[Main](displaying-a-table-of-database-data-cs/samples/sample4.aspx)]
 

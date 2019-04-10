@@ -8,15 +8,15 @@ ms.date: 06/26/2007
 ms.assetid: ac6916d0-a5ab-4218-9760-7ba9e72d258c
 msc.legacyurl: /web-forms/overview/data-access/working-with-batched-data/batch-deleting-cs
 msc.type: authoredcontent
-ms.openlocfilehash: c5b4d3c21fad9000ae50ecb35a5d94d176a135ee
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: da913e08cd007a89b659f87ef30ea15160692c09
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57036498"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59416948"
 ---
-<a name="batch-deleting-c"></a>Eliminazione batch (C#)
-====================
+# <a name="batch-deleting-c"></a>Eliminazione batch (C#)
+
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Scaricare il codice](http://download.microsoft.com/download/3/9/f/39f92b37-e92e-4ab3-909e-b4ef23d01aa3/ASPNET_Data_Tutorial_65_CS.zip) o [Scarica il PDF](batch-deleting-cs/_static/datatutorial65cs1.pdf)
@@ -31,7 +31,7 @@ Il [esercitazione precedente](batch-updating-cs.md) esaminato come creare un bat
 Chiunque abbia usato un client di posta elettronica online ha già familiarità con uno dei batch di più comune l'eliminazione di interfacce: pulsante di una casella di controllo in ogni riga in una griglia con una corrispondente eliminare tutti gli elementi selezionati (vedere la figura 1). Questa esercitazione è piuttosto breve perché è stato già fatto tutto il lavoro difficile nelle esercitazioni precedenti nella creazione sia l'interfaccia basata sul web e un metodo per eliminare una serie di record di una singola operazione atomica. Nel [aggiunta di una colonna GridView di caselle di controllo](../enhancing-the-gridview/adding-a-gridview-column-of-checkboxes-cs.md) esercitazione viene creato un controllo GridView con una colonna di caselle di controllo e nel [wrapping delle modifiche al Database in una transazione](wrapping-database-modifications-within-a-transaction-cs.md) esercitazione è stato creato un metodo in il livello BLL che usa una transazione per eliminare un `List<T>` di `ProductID` valori. In questa esercitazione verranno si basano e nostre esperienze precedenti per creare un batch di lavoro l'eliminazione di esempio di tipo merge.
 
 
-[![Ogni riga include una casella di controllo](batch-deleting-cs/_static/image1.gif)](batch-deleting-cs/_static/image1.png)
+[![EACH riga include una casella di controllo](batch-deleting-cs/_static/image1.gif)](batch-deleting-cs/_static/image1.png)
 
 **Figura 1**: Ogni riga include una casella di controllo ([fare clic per visualizzare l'immagine con dimensioni normali](batch-deleting-cs/_static/image2.png))
 
@@ -41,7 +41,7 @@ Chiunque abbia usato un client di posta elettronica online ha già familiarità 
 Poiché è già stato creato l'eliminazione di interfaccia in batch le [aggiunta di una colonna GridView di caselle di controllo](../enhancing-the-gridview/adding-a-gridview-column-of-checkboxes-cs.md) esercitazione, è possibile semplicemente copiarlo `BatchDelete.aspx` anziché crearlo da zero. Iniziare aprendo il `BatchDelete.aspx` nella pagina la `BatchData` cartella e il `CheckBoxField.aspx` nella pagina di `EnhancedGridView` cartella. Dal `CheckBoxField.aspx` pagina, passare alla visualizzazione origine e copiare il codice tra il `<asp:Content>` tag come illustrato nella figura 2.
 
 
-[![Copiare il Markup dichiarativo di CheckBoxField.aspx negli Appunti](batch-deleting-cs/_static/image2.gif)](batch-deleting-cs/_static/image3.png)
+[![Copia il Markup dichiarativo di CheckBoxField.aspx negli Appunti](batch-deleting-cs/_static/image2.gif)](batch-deleting-cs/_static/image3.png)
 
 **Figura 2**: Copiare il Markup dichiarativo di `CheckBoxField.aspx` negli Appunti ([fare clic per visualizzare l'immagine con dimensioni normali](batch-deleting-cs/_static/image4.png))
 
@@ -54,7 +54,7 @@ Successivamente, passare alla visualizzazione origine nella `BatchDelete.aspx` e
 Dopo aver copiato il markup dichiarativo e codice sorgente, si consiglia di testare `BatchDelete.aspx` visualizzandolo tramite un browser. Verrà visualizzato un elenco dei primi dieci prodotti in un controllo GridView con ogni riga Elenca il nome del prodotto s, categoria e prezzo insieme a una casella di controllo di GridView. Dovrebbero essere presenti tre pulsanti: Selezionare tutte le, deselezionare tutto ed eliminare i prodotti selezionati. Facendo clic sul pulsante Seleziona tutto consente di selezionare tutte le caselle di controllo, mentre tutte deselezionare Cancella tutte le caselle di controllo. Facendo clic su Elimina prodotti selezionati viene visualizzato un messaggio in cui sono elencati i `ProductID` i valori dei prodotti selezionati, ma non elimina effettivamente i prodotti.
 
 
-[![L'interfaccia da CheckBoxField.aspx è stata spostata in BatchDeleting.aspx](batch-deleting-cs/_static/image3.gif)](batch-deleting-cs/_static/image5.png)
+[![Tegli interfaccia da CheckBoxField.aspx sono stato spostato in BatchDeleting.aspx](batch-deleting-cs/_static/image3.gif)](batch-deleting-cs/_static/image5.png)
 
 **Figura 3**: L'interfaccia da `CheckBoxField.aspx` è stata spostata `BatchDeleting.aspx` ([fare clic per visualizzare l'immagine con dimensioni normali](batch-deleting-cs/_static/image6.png))
 
@@ -82,12 +82,12 @@ Crea il codice aggiornato un `List<T>` typu `int` (`productIDsToDelete`) e la po
 Figura 4 illustra il controllo GridView dopo aver selezionato un numero di righe per l'eliminazione. Figura 5 mostra la schermata immediatamente dopo che è stato fatto clic sul pulsante Elimina i prodotti selezionati. Si noti che nella figura 5 il `ProductID` valori del record eliminati vengono visualizzati nell'etichetta sotto il controllo GridView e tali righe non sono più in GridView.
 
 
-[![Verranno eliminati i prodotti selezionati](batch-deleting-cs/_static/image4.gif)](batch-deleting-cs/_static/image7.png)
+[![Tegli prodotti selezionati verranno eliminato](batch-deleting-cs/_static/image4.gif)](batch-deleting-cs/_static/image7.png)
 
 **Figura 4**: Il selezionato prodotti verranno eliminate ([fare clic per visualizzare l'immagine con dimensioni normali](batch-deleting-cs/_static/image8.png))
 
 
-[![I valori di ProductID prodotti eliminati vengono elencate di sotto di GridView](batch-deleting-cs/_static/image5.gif)](batch-deleting-cs/_static/image9.png)
+[![Tha eliminato i valori prodotti ProductID sono elencate di sotto di GridView](batch-deleting-cs/_static/image5.gif)](batch-deleting-cs/_static/image9.png)
 
 **Figura 5**: I prodotti eliminati `ProductID` i valori sono elencati sotto GridView ([fare clic per visualizzare l'immagine con dimensioni normali](batch-deleting-cs/_static/image10.png))
 

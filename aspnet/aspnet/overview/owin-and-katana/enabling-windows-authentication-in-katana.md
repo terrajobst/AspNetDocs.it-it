@@ -8,15 +8,15 @@ ms.date: 07/30/2013
 ms.assetid: 82324ef0-3b75-4f63-a217-76ef4036ec93
 msc.legacyurl: /aspnet/overview/owin-and-katana/enabling-windows-authentication-in-katana
 msc.type: authoredcontent
-ms.openlocfilehash: 8afa2c9dfbe03a9874513f7d083adf7608f4218f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 6d90538ace07402b655b8cd1d9c6e4d5c6dff424
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57041108"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59411202"
 ---
-<a name="enabling-windows-authentication-in-katana"></a>Abilitazione dell'autenticazione di Windows in Katana
-====================
+# <a name="enabling-windows-authentication-in-katana"></a>Abilitazione dell'autenticazione di Windows in Katana
+
 da [Mike Wasson](https://github.com/MikeWasson)
 
 > Questo articolo illustra come abilitare l'autenticazione di Windows in Katana. Viene descritto come due scenari: Usa IIS per ospitare Katana e uso di HttpListener di self-hosting Katana in un processo personalizzato. Barry Dorrans, David Matson e Chris Ross grazie per aver letto questo articolo.
@@ -24,7 +24,7 @@ da [Mike Wasson](https://github.com/MikeWasson)
 
 Katana è l'implementazione Microsoft del [OWIN](http://owin.org/), Open Web Interface for .NET. È possibile leggere un'introduzione a OWIN e Katana [qui](an-overview-of-project-katana.md). L'architettura OWIN ha diversi livelli:
 
-- Host: Gestisce il processo in cui viene eseguita la pipeline OWIN.
+- Organizzatore: Gestisce il processo in cui viene eseguita la pipeline OWIN.
 - Server: Apre un socket di rete e ascolta le richieste.
 - Middleware: Elabora la richiesta e risposta HTTP.
 

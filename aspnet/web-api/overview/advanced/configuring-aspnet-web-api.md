@@ -1,22 +1,23 @@
 ---
 uid: web-api/overview/advanced/configuring-aspnet-web-api
-title: Configurazione di ASP.NET Web API 2 | Microsoft Docs
+title: Configurazione di ASP.NET Web API 2 - ASP.NET 4.x
 author: MikeWasson
-description: ''
+description: 'Configurare ASP.NET Web API 2 per ASP.NET 4.x: Configurare le impostazioni, hosting di ASP.NET 4.x, servizi globali, self-hosting OWIN e configurazione del controller non definitiva.'
 ms.author: riande
 ms.date: 03/31/2014
+ms.custom: seoapril2019
 ms.assetid: 9e10a700-8d91-4d2e-a31e-b8b569fe867c
 msc.legacyurl: /web-api/overview/advanced/configuring-aspnet-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: 270268b77f398084169843e20b0a2bf9f1c2a011
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 39629ba404e536b29318db00bce8c4443a782497
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423156"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59411943"
 ---
-<a name="configuring-aspnet-web-api-2"></a>Configurazione di ASP.NET Web API 2
-====================
+# <a name="configuring-aspnet-web-api-2"></a>Configurazione di ASP.NET Web API 2
+
 da [Mike Wasson](https://github.com/MikeWasson)
 
 Questo argomento descrive come configurare l'API Web ASP.NET.
@@ -38,7 +39,7 @@ Impostazioni di configurazione Web API sono definite nel [HttpConfiguration](htt
 | **Filtri** | Filtri dell'azione. |
 | **Formattatori** | [Formattatori di Media type](../formats-and-model-binding/media-formatters.md). |
 | **IncludeErrorDetailPolicy** | Specifica se il server deve includere dettagli dell'errore, ad esempio i messaggi di eccezione e le analisi dello stack, nei messaggi di risposta HTTP. Visualizzare [IncludeErrorDetailPolicy](https://msdn.microsoft.com/library/system.web.http.includeerrordetailpolicy(v=vs.108)). |
-| **Initializer** | Una funzione che esegue l'inizializzazione finale del **HttpConfiguration**. |
+| **Inizializzatore** | Una funzione che esegue l'inizializzazione finale del **HttpConfiguration**. |
 | **MessageHandlers** | [Gestori di messaggi HTTP](http-message-handlers.md). |
 | **ParameterBindingRules** | Una raccolta di regole per l'associazione di parametri in azioni del controller. |
 | **Proprietà** | Un contenitore delle proprietà generiche. |

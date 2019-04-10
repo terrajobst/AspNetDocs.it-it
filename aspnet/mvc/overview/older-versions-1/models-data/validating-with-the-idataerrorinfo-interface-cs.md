@@ -8,15 +8,15 @@ ms.date: 03/02/2009
 ms.assetid: 4733b9f1-9999-48fb-8b73-6038fbcc5ecb
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/validating-with-the-idataerrorinfo-interface-cs
 msc.type: authoredcontent
-ms.openlocfilehash: b80535db32c4567135407aeb99967bb40c279ddb
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 3e1399d17840a2f5301349cb91deb07b0cc34363
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57025338"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59421979"
 ---
-<a name="validating-with-the-idataerrorinfo-interface-c"></a>Convalida con l'interfaccia IDataErrorInfo (C#)
-====================
+# <a name="validating-with-the-idataerrorinfo-interface-c"></a>Convalida con l'interfaccia IDataErrorInfo (C#)
+
 da [Stephen Walther](https://github.com/StephenWalther)
 
 > Stephen Walther illustra come visualizzare i messaggi di errore di convalida personalizzata implementando l'interfaccia IDataErrorInfo in una classe di modello.
@@ -31,7 +31,7 @@ In questa esercitazione si utilizzerà il database MoviesDB e la tabella di data
 <a id="0.5_table01"></a>
 
 
-| **Nome della colonna** | **Tipo di dati** | **Consenti valori null** |
+| **Nome colonna** | **Tipo di dati** | **Ammetti Null** |
 | --- | --- | --- |
 | Id | Int | False |
 | Titolo | Nvarchar(100) | False |
@@ -42,7 +42,7 @@ In questa esercitazione si utilizzerà il database MoviesDB e la tabella di data
 In questa esercitazione, usare Microsoft Entity Framework per generare classi modello del mio database. La classe di film generata da Entity Framework viene visualizzata nella figura 1.
 
 
-[![L'entità film](validating-with-the-idataerrorinfo-interface-cs/_static/image1.jpg)](validating-with-the-idataerrorinfo-interface-cs/_static/image1.png)
+[![Tegli entità film](validating-with-the-idataerrorinfo-interface-cs/_static/image1.jpg)](validating-with-the-idataerrorinfo-interface-cs/_static/image1.png)
 
 **Figura 01**: L'entità film ([fare clic per visualizzare l'immagine con dimensioni normali](validating-with-the-idataerrorinfo-interface-cs/_static/image2.png))
 
@@ -56,7 +56,7 @@ In questa esercitazione, usare Microsoft Entity Framework per generare classi mo
 
 Si usano controller Home per filmati elenco e creare nuovi film. Il codice per questa classe è contenuto nel listato 1.
 
-**Listato 1 - controllers\homecontroller.cs.**
+**Listing 1 - Controllers\HomeController.cs**
 
 [!code-csharp[Main](validating-with-the-idataerrorinfo-interface-cs/samples/sample1.cs)]
 
@@ -73,7 +73,7 @@ La proprietà IsValid restituisce false quando si verifica un errore di convalid
 La classe di film viene generata da Entity Framework. È possibile visualizzare il codice per la classe Movie se si espande il file MoviesDBModel.edmx nella finestra Esplora soluzioni e aprire il file MoviesDBModel.Designer.cs nell'Editor del codice (vedere la figura 2).
 
 
-[![Il codice per l'entità film](validating-with-the-idataerrorinfo-interface-cs/_static/image2.jpg)](validating-with-the-idataerrorinfo-interface-cs/_static/image3.png)
+[![Til codice per l'entità film](validating-with-the-idataerrorinfo-interface-cs/_static/image2.jpg)](validating-with-the-idataerrorinfo-interface-cs/_static/image3.png)
 
 **Figura 02**: Il codice per l'entità film ([fare clic per visualizzare l'immagine con dimensioni normali](validating-with-the-idataerrorinfo-interface-cs/_static/image4.png))
 
@@ -147,7 +147,7 @@ Nel listato 4, controlla la proprietà dell'indicizzatore di \_raccolta errori p
 Non devi modificare il controller Home in alcun modo per usare la classe film modificata. La pagina visualizzata nella figura 3 illustra cosa accade quando viene immesso alcun valore per i campi modulo titolo o Director.
 
 
-[![La creazione automatica di metodi di azione](validating-with-the-idataerrorinfo-interface-cs/_static/image3.jpg)](validating-with-the-idataerrorinfo-interface-cs/_static/image5.png)
+[![Ci metodi di azione reating automaticamente](validating-with-the-idataerrorinfo-interface-cs/_static/image3.jpg)](validating-with-the-idataerrorinfo-interface-cs/_static/image5.png)
 
 **Figura 03**: Un modulo con i valori mancanti ([fare clic per visualizzare l'immagine con dimensioni normali](validating-with-the-idataerrorinfo-interface-cs/_static/image6.png))
 

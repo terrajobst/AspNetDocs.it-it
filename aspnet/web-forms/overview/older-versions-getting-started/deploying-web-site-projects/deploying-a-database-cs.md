@@ -8,15 +8,15 @@ ms.date: 04/23/2009
 ms.assetid: ff537a10-9f1f-43fe-9bcb-3dda161ba8f5
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/deploying-a-database-cs
 msc.type: authoredcontent
-ms.openlocfilehash: ca9ce2b41cfd10504304c30bc965e446a7188120
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: da63b39fcad58580dd1f9c86b811b1a2dcc1cf7e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57059098"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59416649"
 ---
-<a name="deploying-a-database-c"></a>Distribuzione di un database (C#)
-====================
+# <a name="deploying-a-database-c"></a>Distribuzione di un database (C#)
+
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Scaricare il codice](http://download.microsoft.com/download/E/6/F/E6FE3A1F-EE3A-4119-989A-33D1A9F6F6DD/ASPNET_Hosting_Tutorial_07_CS.zip) o [Scarica il PDF](http://download.microsoft.com/download/C/3/9/C391A649-B357-4A7B-BAA4-48C96871FEA6/aspnet_tutorial07_DeployDB_cs.pdf)
@@ -47,7 +47,7 @@ Il `Reviews.mdf` database contiene quattro tabelle:
 Figura 1 mostra un diagramma di Expressroute per queste quattro tabelle.
 
 
-[![L'applicazione Web di Book Reviews Database è comprensivo di quattro tabelle](deploying-a-database-cs/_static/image2.jpg)](deploying-a-database-cs/_static/image1.jpg) 
+[![TApplicazione Web di Book Reviews s Database è costituita da di quattro tabelle](deploying-a-database-cs/_static/image2.jpg)](deploying-a-database-cs/_static/image1.jpg) 
 
 **Figura 1**: L'applicazione Web di Book Reviews Database è comprensivo di quattro tabelle ([fare clic per visualizzare l'immagine con dimensioni normali](deploying-a-database-cs/_static/image3.jpg))
 
@@ -57,12 +57,12 @@ La versione precedente del sito Web le recensioni dei libri aveva una pagina ASP
 Figure 2 e 3 mostra le `Genre.aspx` e `Review.aspx` pagine in azione. Prendere nota dell'URL nella barra degli indirizzi per ogni pagina. Nella figura 2 it s Genre.aspx? ID = c 47-82a0-c8ec75de7e0e 85d164ba-1123-4. Poiché è 85d164ba-1123-4c47-82a0-c8ec75de7e0e il `GenreId` valore per il genere di tecnologia, le letture di intestazione di pagina s "Technology esamina" e nell'elenco puntato enumera le recensioni sul sito che rientrano in questo genere.
 
 
-[![La pagina delle tecnologie di genere](deploying-a-database-cs/_static/image5.jpg)](deploying-a-database-cs/_static/image4.jpg) 
+[![Tegli tecnologia Genre pagina](deploying-a-database-cs/_static/image5.jpg)](deploying-a-database-cs/_static/image4.jpg) 
 
 **Figura 2**: La pagina delle tecnologie di genere ([fare clic per visualizzare l'immagine con dimensioni normali](deploying-a-database-cs/_static/image6.jpg))
 
 
-[![La verifica per apprendere ASP.NET 3.5 in 24 ore](deploying-a-database-cs/_static/image8.jpg)](deploying-a-database-cs/_static/image7.jpg) 
+[![Tsi verifica per insegnare manualmente ASP.NET 3.5 in 24 ore](deploying-a-database-cs/_static/image8.jpg)](deploying-a-database-cs/_static/image7.jpg) 
 
 **Figura 3**: La revisione *insegnare manualmente ASP.NET 3.5 in 24 ore* ([fare clic per visualizzare l'immagine con dimensioni normali](deploying-a-database-cs/_static/image9.jpg))
 
@@ -96,7 +96,7 @@ Let s illustrato l'utilizzo di Database Publishing Wizard per distribuire il dat
 Aprire Visual Studio e passare al `Reviews.mdf` database. Se si utilizza Visual Web Developer, passare a Esplora risorse di Database. Se si usa Visual Studio, usare Esplora Server. La figura 4 illustra il `Reviews.mdf` database in Database Explorer in Visual Web Developer. Come illustrato nella figura 4, il `Reviews.mdf` database è costituito da quattro tabelle, tre stored procedure e una funzione definita dall'utente.
 
 
-[![Individuare il Database in cui il Database Explorer o Esplora Server](deploying-a-database-cs/_static/image11.jpg)](deploying-a-database-cs/_static/image10.jpg) 
+[![Ldividua il Database di Database Explorer o Esplora Server](deploying-a-database-cs/_static/image11.jpg)](deploying-a-database-cs/_static/image10.jpg) 
 
 **Figura 4**: Individuare il Database in cui il Database Explorer o Esplora Server ([fare clic per visualizzare l'immagine con dimensioni normali](deploying-a-database-cs/_static/image12.jpg))
 
@@ -104,7 +104,7 @@ Aprire Visual Studio e passare al `Reviews.mdf` database. Se si utilizza Visual 
 Fare doppio clic sul nome del database e scegliere l'opzione "Pubblica sul provider" dal menu di scelta rapida. Verrà avviata la pubblicazione guidata Database (vedere la figura 5). Fare clic su Avanti per passare superato la schermata iniziale.
 
 
-[![Database Publishing Wizard la schermata iniziale](deploying-a-database-cs/_static/image14.jpg)](deploying-a-database-cs/_static/image13.jpg) 
+[![Tegli schermata iniziale di creazione guidata pubblicazione Database](deploying-a-database-cs/_static/image14.jpg)](deploying-a-database-cs/_static/image13.jpg) 
 
 **Figura 5**: Schermata iniziale di creazione guidata pubblicazione Database ([fare clic per visualizzare l'immagine con dimensioni normali](deploying-a-database-cs/_static/image15.jpg))
 
@@ -115,7 +115,7 @@ La seconda schermata della procedura guidata elenca i database accessibili a Dat
 > Se viene visualizzato l'errore "non sono presenti oggetti nel database *databaseName* dei tipi gestibile tramite script da questa procedura guidata" quando facendo clic su Avanti nella schermata illustrata nella figura 6, assicurarsi che il percorso al file di database non sia troppo lungo. È stato individuato che questo errore può verificarsi se il percorso del file di database è troppo lungo.
 
 
-[![Database Publishing Wizard la schermata iniziale](deploying-a-database-cs/_static/image17.jpg)](deploying-a-database-cs/_static/image16.jpg) 
+[![Tegli schermata iniziale di creazione guidata pubblicazione Database](deploying-a-database-cs/_static/image17.jpg)](deploying-a-database-cs/_static/image16.jpg) 
 
 **Figura 6**: Schermata iniziale di creazione guidata pubblicazione Database ([fare clic per visualizzare l'immagine con dimensioni normali](deploying-a-database-cs/_static/image18.jpg))
 
@@ -123,7 +123,7 @@ La seconda schermata della procedura guidata elenca i database accessibili a Dat
 Nella schermata successiva è possibile generare un file di script o, se supporta l'host web, il database di pubblicazione direttamente al server di database web host provider s. Come illustrato nella figura 7, si è verificato lo script scritto nel file `C:\REVIEWS.MDF.sql`.
 
 
-[![Il Database in un File di script o pubblicazione direttamente in Your Provider di hosting Web](deploying-a-database-cs/_static/image20.jpg)](deploying-a-database-cs/_static/image19.jpg) 
+[![Script il Database in un File o pubblicarlo direttamente per il Provider di hosting Web](deploying-a-database-cs/_static/image20.jpg)](deploying-a-database-cs/_static/image19.jpg) 
 
 **Figura 7**: Il Database in un File di script o pubblicazione direttamente in Your Provider di hosting Web ([fare clic per visualizzare l'immagine con dimensioni normali](deploying-a-database-cs/_static/image21.jpg))
 
@@ -133,7 +133,7 @@ La schermata successiva viene richiesto per un'ampia gamma di opzioni di scripti
 Come illustrato nella figura 8, si è verificato la procedura guidata configurata per eliminare oggetti di database esistente, per generare script per un database di SQL Server 2008 e pubblicare lo schema e i dati.
 
 
-[![Specificare la pubblicazione di opzioni](deploying-a-database-cs/_static/image23.jpg)](deploying-a-database-cs/_static/image22.jpg) 
+[![Sspecificare le opzioni di pubblicazione](deploying-a-database-cs/_static/image23.jpg)](deploying-a-database-cs/_static/image22.jpg) 
 
 **Figura 8**: Specificare le opzioni di pubblicazione ([fare clic per visualizzare l'immagine con dimensioni normali](deploying-a-database-cs/_static/image24.jpg))
 
@@ -149,7 +149,7 @@ Un approccio migliore consiste nella connessione direttamente al server di datab
 Avviare SSMS e connettersi al server web host s database utilizzando le informazioni fornite dal provider host web.
 
 
-[![Connettersi al Server di Database Web Host Provider s](deploying-a-database-cs/_static/image26.jpg)](deploying-a-database-cs/_static/image25.jpg) 
+[![CConnetti a s Provider di hosting Web del Server di Database](deploying-a-database-cs/_static/image26.jpg)](deploying-a-database-cs/_static/image25.jpg) 
 
 **Figura 9**: Connettersi al Provider di hosting Web Your s Server di Database ([fare clic per visualizzare l'immagine con dimensioni normali](deploying-a-database-cs/_static/image27.jpg))
 
@@ -157,7 +157,7 @@ Avviare SSMS e connettersi al server web host s database utilizzando le informaz
 Espandere la scheda di database e individuare il database. Fare clic sul pulsante Nuova Query nell'angolo superiore sinistro della barra degli strumenti, incollare i comandi SQL dal file script creato dalla pubblicazione guidata Database e fare clic sul pulsante Esegui per eseguire questi comandi nel server di database di produzione. Se il file di script è particolarmente elevato potrebbe richiedere alcuni minuti per eseguire i comandi.
 
 
-[![Connettersi al Server di Database Web Host Provider s](deploying-a-database-cs/_static/image29.jpg)](deploying-a-database-cs/_static/image28.jpg) 
+[![CConnetti a s Provider di hosting Web del Server di Database](deploying-a-database-cs/_static/image29.jpg)](deploying-a-database-cs/_static/image28.jpg) 
 
 **Figura 10**: Connettersi al Provider di hosting Web Your s Server di Database ([fare clic per visualizzare l'immagine con dimensioni normali](deploying-a-database-cs/_static/image30.jpg))
 
@@ -165,12 +165,12 @@ Espandere la scheda di database e individuare il database. Fare clic sul pulsant
 Che s ne è a esso. A questo punto il database di sviluppo è stato duplicato nell'ambiente di produzione. Se si aggiorna il database in SQL Server Management Studio si dovrebbero vedere i nuovi oggetti di database. Figura 11 Mostra le tabelle di database s di produzione, stored procedure e funzioni definite dall'utente, che rispecchiano quelli nel database di sviluppo. E perché abbiamo indicato la pubblicazione guidata Database per pubblicare i dati, le tabelle di produzione del database s abbiano gli stessi dati come tabelle di sviluppo database s al momento che è stata eseguita la procedura guidata. Figura 12 mostra i dati nel `Books` tabella nel database di produzione.
 
 
-[![Gli oggetti di Database sono stati duplicati nel Database di produzione](deploying-a-database-cs/_static/image32.jpg)](deploying-a-database-cs/_static/image31.jpg) 
+[![Tegli Database gli oggetti sono stati duplicati nel Database di produzione](deploying-a-database-cs/_static/image32.jpg)](deploying-a-database-cs/_static/image31.jpg) 
 
 **Figura 11**: Il Database di oggetti sono stati duplicati nel Database di produzione ([fare clic per visualizzare l'immagine con dimensioni normali](deploying-a-database-cs/_static/image33.jpg))
 
 
-[![Il Database di produzione contiene gli stessi dati nel Database di sviluppo](deploying-a-database-cs/_static/image35.jpg)](deploying-a-database-cs/_static/image34.jpg) 
+[![Til Database di produzione contiene gli stessi dati come nel Database di sviluppo](deploying-a-database-cs/_static/image35.jpg)](deploying-a-database-cs/_static/image34.jpg) 
 
 **Figura 12**: Il Database di produzione contiene gli stessi dati come nel Database di sviluppo ([fare clic per visualizzare l'immagine con dimensioni normali](deploying-a-database-cs/_static/image36.jpg))
 

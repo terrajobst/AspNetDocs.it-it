@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/controllers-and-routing/adding-dynamic-content-to-a-cached-page-cs
-title: Aggiunta di contenuto dinamico a una pagina memorizzata nella cache (C#) | Microsoft Docs
+title: Aggiunta di contenuto dinamico a una pagina memorizzata nella cache (c#) | Microsoft Docs
 author: microsoft
 description: Informazioni su come combinare il contenuto dinamico e memorizzati nella cache nella stessa pagina. Sostituzione post-cache consente di visualizzare il contenuto dinamico, ad esempio banner gli annunci o...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 01/27/2009
 ms.assetid: 2ddd4407-d143-4a94-877c-21771bfb97a6
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/adding-dynamic-content-to-a-cached-page-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 26e40ff9659a4b8552b2a087c7c948c9f1f1554c
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: c126270304178d178f4b8f9739fa5c51e5dd0551
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58424170"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59415362"
 ---
-<a name="adding-dynamic-content-to-a-cached-page-c"></a>Aggiunta di contenuto dinamico a una pagina memorizzata nella cache (C#)
-====================
+# <a name="adding-dynamic-content-to-a-cached-page-c"></a>Aggiunta di contenuto dinamico a una pagina memorizzata nella cache (C#)
+
 by [Microsoft](https://github.com/microsoft)
 
 > Informazioni su come combinare il contenuto dinamico e memorizzati nella cache nella stessa pagina. Sostituzione post-cache consente di visualizzare il contenuto dinamico, ad esempio pubblicitari o notizie, all'interno di una pagina in cui è stata di output memorizzate nella cache.
@@ -93,10 +93,6 @@ Quando si richiede la pagina sottoposta a rendering da parte della vista nel lis
 In questa esercitazione viene illustrato come è possibile aggiornare dinamicamente il contenuto in una pagina memorizzata nella cache. Si è appreso come usare il metodo HttpResponse.WriteSubstitution() per attivare il contenuto dinamico venga inserito in una pagina memorizzata nella cache. Anche appreso come incapsulare la chiamata al metodo WriteSubstitution() all'interno di un metodo di helper HTML.
 
 Sfruttare i vantaggi della memorizzazione nella cache laddove possibile, può avere un impatto significativo sulle prestazioni delle applicazioni web. Come illustrato in questa esercitazione, è possibile sfruttare i vantaggi della memorizzazione nella cache anche quando è necessario visualizzare il contenuto dinamico all'interno delle pagine.
-
-## 
-
-## 
 
 > [!div class="step-by-step"]
 > [Precedente](improving-performance-with-output-caching-cs.md)

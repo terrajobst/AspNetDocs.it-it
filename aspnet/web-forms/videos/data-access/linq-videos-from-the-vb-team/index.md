@@ -8,21 +8,21 @@ ms.date: 02/24/2012
 ms.assetid: 257373bb-eab0-47bc-b5a2-37a9e91666d6
 msc.legacyurl: /web-forms/videos/data-access/linq-videos-from-the-vb-team
 msc.type: chapter
-ms.openlocfilehash: 67c6aaf358d4c7c2764493e8c17e1d5245096014
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 3db35464b448727ef3477a90149459a46e0f76d7
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57022808"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59412164"
 ---
-<a name="linq-videos-from-the-vb-team"></a>Video su LINQ dal team di Visual Basic
-====================
+# <a name="linq-videos-from-the-vb-team"></a>Video su LINQ dal team di Visual Basic
+
 > Questi video forniscono su un'ora e il metà del contenuto incentrato su nuove funzionalità del linguaggio LINQ di Visual Basic 9.0 incluso in Visual Studio 2008.
 
 
 - [Introduzione a LINQ](how-do-i-get-started-with-linq.md)
 - [Esecuzione di query di raggruppamento e aggregazione](how-do-i-perform-group-and-aggregate-queries.md)
-- [Aggiornamento di progetti Visual Basic per abilitare LINQ](how-do-i-upgrade-visual-basic-projects-to-enable-linq.md)
+- [Aggiornare progetti Visual Basic per abilitare LINQ](how-do-i-upgrade-visual-basic-projects-to-enable-linq.md)
 - [Introduzione a LINQ to XML](how-do-i-get-started-with-linq-to-xml.md)
 - [Abilitare XML IntelliSense e usare lo spazio dei nomi XML](how-do-i-enable-xml-intellisense-and-use-xml-namespaces.md)
 - [Creare documenti XML basati su dati SQL](how-do-i-create-xml-documents-from-sql-data.md)

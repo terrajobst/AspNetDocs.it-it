@@ -8,15 +8,15 @@ ms.date: 11/17/2011
 ms.assetid: a2d7f33b-8c4a-4b48-9fb1-9139cf9b9878
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-introduction-1-of-12
 msc.type: authoredcontent
-ms.openlocfilehash: 9dacafaacdab12b8005cb6073647ae526cefcfb4
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: ae53e23dda3ac63e26590edab692188bb44e9f65
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57029678"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59413204"
 ---
-<a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-introduction---1-of-12"></a>Distribuzione di un'applicazione Web ASP.NET con SQL Server Compact tramite Visual Studio: Introduzione - 1 di 12
-====================
+# <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-introduction---1-of-12"></a>Distribuzione di un'applicazione Web ASP.NET con SQL Server Compact tramite Visual Studio: Introduzione - 1 di 12
+
 da [Tom Dykstra](https://github.com/tdykstra)
 
 [Download progetto iniziale](http://code.msdn.microsoft.com/Deploying-an-ASPNET-Web-4e31366b)
@@ -107,7 +107,7 @@ Per preparare eseguire i passaggi dell'esercitazione, salvare ContosoUniversity 
 
 Avviare Visual Studio, aprire il progetto e premere CTRL+F5 per eseguirla.
 
-[![Home_Page](deployment-to-a-hosting-provider-introduction-1-of-12/_static/image2.png)](deployment-to-a-hosting-provider-introduction-1-of-12/_static/image1.png)
+[![Home_page](deployment-to-a-hosting-provider-introduction-1-of-12/_static/image2.png)](deployment-to-a-hosting-provider-introduction-1-of-12/_static/image1.png)
 
 Pagine del sito Web sono accessibili dalla barra dei menu e consentono di eseguire le attività seguenti:
 
@@ -140,4 +140,4 @@ Le seguenti funzionalità dell'applicazione influiscono sul modo in cui si distr
 In questa prima esercitazione della serie, è stato scaricato il progetto di Visual Studio di esempio ed esaminato le funzionalità del sito che influiscono sul modo in cui si distribuisce l'applicazione. Nelle esercitazioni seguenti, Prepara per la distribuzione impostando alcune di queste azioni devono essere gestiti automaticamente. Gli altri occuperà di manualmente.
 
 > [!div class="step-by-step"]
-> [avanti](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12.md)
+> [Successivo](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12.md)

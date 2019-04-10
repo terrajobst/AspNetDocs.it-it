@@ -8,15 +8,15 @@ ms.date: 09/19/2014
 ms.assetid: 2acff246-c74c-4277-b539-35bc42988c6f
 msc.legacyurl: /signalr/overview/getting-started
 msc.type: chapter
-ms.openlocfilehash: 4573a04f115ab5d2fdc363f9746a22bc3939174c
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 3e720dd895c609d5b35848dbc4d4a6989028ff7d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018868"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59418755"
 ---
-<a name="signalr-getting-started"></a>Introduzione a SignalR
-====================
+# <a name="signalr-getting-started"></a>Introduzione a SignalR
+
 > SignalR What ' s, piattaforme di che cui viene eseguita, e come iniziare a usare.
 
 
@@ -26,4 +26,4 @@ ms.locfileid: "57018868"
 - [Esercitazione: Introduzione a SignalR 2 e MVC 5](tutorial-getting-started-with-signalr-and-mvc.md)
 - [Esercitazione: Messaggistica ad alta frequenza con SignalR 2](tutorial-high-frequency-realtime-with-signalr.md)
 - [Esercitazione: Trasmissione server con SignalR 2](tutorial-server-broadcast-with-signalr.md)
-- [Laboratorio pratico: Applicazioni Web in tempo reale con SignalR](real-time-web-applications-with-signalr.md)
+- [Lab pratico: Applicazioni Web in tempo reale con SignalR](real-time-web-applications-with-signalr.md)

@@ -8,15 +8,15 @@ ms.date: 10/05/2011
 ms.assetid: 27591afa-3c14-47e6-8323-573f8f7aa862
 msc.legacyurl: /web-forms/videos/how-do-i
 msc.type: chapter
-ms.openlocfilehash: d53304d60888de55ad474f5be8c0cfe6f8b122bb
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7d300a1f29c7712408d17c6629da6cefb67b3cdb
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57020248"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59410318"
 ---
-<a name="how-do-i"></a>Procedure relative
-====================
+# <a name="how-do-i"></a>Procedure relative
+
 > Come eseguire un'ampia gamma di attività comuni.
 
 
@@ -29,7 +29,7 @@ ms.locfileid: "57020248"
 - [Proteggere il sito mediante l'appartenenza e i ruoli](how-do-i-secure-my-site-using-membership-and-roles.md)
 - [Creare una pagina "Contattaci"](how-do-i-create-a-contact-us-page.md)
 - [Creare un portale completo per l'accesso dei clienti](how-do-i-create-a-full-featured-customer-login-portal.md)
-- [Usare pagine master e spostamento all'interno del sito](how-do-i-use-master-pages-and-site-navigation.md)
+- [Usare pagine master ed esplorazione del sito](how-do-i-use-master-pages-and-site-navigation.md)
 - [Creazione di siti Web basati su dati](how-do-i-create-data-driven-web-sites.md)
 - [Implementare un HttpModule](how-do-i-implement-an-httpmodule.md)
 - [Configurare il provider di appartenenze SQL](how-do-i-set-up-the-sql-membership-provider.md)
@@ -38,16 +38,16 @@ ms.locfileid: "57020248"
 - [Gestire gli eventi dell'applicazione tramite un HttpModule](how-do-i-handle-application-events-using-an-httpmodule.md)
 - [Usare i fogli di stile CSS per il layout delle pagine Web](how-do-i-use-cascading-style-sheets-for-web-page-layout.md)
 - [Creare un provider di appartenenze personalizzato](how-do-i-create-a-custom-membership-provider.md)
-- [Creare di un provider di profili personalizzato](how-do-i-create-a-custom-profile-provider.md)
-- [Implementare lo spostamento all'interno dei siti del sito in ASP.NET](how-do-i-implement-site-navigation-in-aspnet.md)
+- [Creare un provider di profili personalizzato](how-do-i-create-a-custom-profile-provider.md)
+- [Implementare l'esplorazione del sito in ASP.NET](how-do-i-implement-site-navigation-in-aspnet.md)
 - [Usare i controlli di convalida in ASP.NET](how-do-i-use-validation-controls-in-aspnet.md)
 - [Creare un controllo utente personalizzato in ASP.NET](how-do-i-create-a-custom-user-control-in-aspnet.md)
 - [Implementare il monitoraggio dell'integrità di un'applicazione ASP.NET](how-do-i-implement-health-monitoring-for-an-aspnet-application.md)
 - [Implementare la traccia in un sito Web ASP.NET](how-do-i-implement-tracing-in-an-aspnet-web-site.md)
 - [Gestori eventi in pagine Web e controlli ASP.NET](how-do-i-event-handlers-in-aspnet-web-pages-and-controls.md)
 - [Implementare un evento di monitoraggio dell'integrità personalizzato](how-do-i-implement-a-custom-health-monitoring-event.md)
-- [Usare lo stato del controllo rendere persistenti le informazioni per un controllo server Web personalizzato](how-do-i-use-control-state-to-persist-information-for-a-custom-web-server-control.md)
-- [Lettura, scrittura ed eliminazione dei cookie in ASP.NET](read-write-and-delete-cookies-in-aspnet.md)
+- [Usare lo stato del controllo per rendere persistenti le informazioni per un controllo server Web personalizzato](how-do-i-use-control-state-to-persist-information-for-a-custom-web-server-control.md)
+- [Leggere, scrivere ed eliminare cookie in ASP.NET](read-write-and-delete-cookies-in-aspnet.md)
 - [Salvare e caricare le informazioni sullo stato di visualizzazione per un controllo server Web personalizzato](how-do-i-save-and-load-view-state-information-for-a-custom-web-server-control.md)
 - [Creare e usare gli eventi a livello di applicazione in ASP.NET](how-do-i-create-and-use-application-level-events-in-aspnet.md)
 - [Caricamenti di file semplici in ASP.NET](how-do-i-simple-file-uploads-in-aspnet.md)
@@ -87,7 +87,7 @@ ms.locfileid: "57020248"
 - [Configurare le notifiche tramite posta elettronica per il monitoraggio dell'integrità in un sito Web ASP.NET](how-do-i-configure-email-notification-for-health-monitoring-on-an-aspnet-web-site.md)
 - [Usare un progetto di distribuzione Web di Visual Studio 2008](how-do-i-use-a-visual-studio-2008-web-deployment-project.md)
 - [Inviare messaggi di posta elettronica basati su modelli per gli eventi di monitoraggio dell'integrità in ASP.NET](how-do-i-send-templated-emails-for-health-monitoring-events-in-aspnet.md)
-- [Invio di posta elettronica in modo asincrono con ASP.NET](how-do-i-send-email-asynchronously-with-aspnet.md)
+- [Inviare posta elettronica in modo asincrono con ASP.NET](how-do-i-send-email-asynchronously-with-aspnet.md)
 - [Incorporare un'immagine in un messaggio di posta elettronica con ASP.NET](how-do-i-embed-an-image-in-an-email-with-aspnet.md)
 - [Implementare la gestione degli errori durante l'invio di posta elettronica con ASP.NET](how-do-i-implement-error-handling-when-sending-email-with-aspnet.md)
 - [Creare un provider personalizzato per la registrazione degli eventi di monitoraggio dell'integrità](how-do-i-create-a-custom-provider-for-logging-health-monitoring-events.md)
@@ -110,8 +110,8 @@ ms.locfileid: "57020248"
 - [Creare un approccio efficiente e standardizzato per l'implementazione di stili CSS](how-do-i-create-an-efficient-and-standardized-approach-for-implementing-css-styles.md)
 - [Che cos'è ASP.NET](what-is-asp-net.md)
 - [Scelta del modello di programmazione più adatto](choosing-the-right-programming-model.md)
-- [Creare la prima applicazione ASP.NET con Web Form ASP.NET](build-your-first-asp-net-application-with-asp-net-web-forms.md)
+- [Creare la prima applicazione ASP.NET con Web Forms ASP.NET](build-your-first-asp-net-application-with-asp-net-web-forms.md)
 - [Creare la prima applicazione ASP.NET con ASP.NET MVC](build-your-first-asp-net-application-with-asp-net-mvc.md)
-- [Informazioni dettagliate su Web Form ASP.NET](how-to-best-learn-aspnet-web-forms.md)
-- [Introduzione di 5 minuti a Web Form ASP.NET](5-minute-introduction-to-aspnet-web-forms.md)
+- [Informazioni dettagliate su Web Forms ASP.NET](how-to-best-learn-aspnet-web-forms.md)
+- [Introduzione di 5 minuti a Web Forms ASP.NET](5-minute-introduction-to-aspnet-web-forms.md)
 - [Installare ASP.NET e gli strumenti](how-to-install-asp-net-and-tools.md)

@@ -8,15 +8,15 @@ ms.date: 02/14/2014
 ms.assetid: 961e525b-7700-469e-8a68-d7010b6fb68c
 msc.legacyurl: /web-pages/overview/performance-and-traffic/15-caching-to-improve-the-performance-of-your-website
 msc.type: authoredcontent
-ms.openlocfilehash: ede341e02869a9c81cbe2fa7ef97345dc87519a1
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 10b853966ba80b673e1a6786987893f919369e7a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57032688"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59412905"
 ---
-<a name="caching-data-in-an-aspnet-web-pages-razor-site-for-better-performance"></a>La memorizzazione nella cache i dati in un sito di ASP.NET Web Pages (Razor) per ottenere prestazioni migliori
-====================
+# <a name="caching-data-in-an-aspnet-web-pages-razor-site-for-better-performance"></a>La memorizzazione nella cache i dati in un sito di ASP.NET Web Pages (Razor) per ottenere prestazioni migliori
+
 da [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Questo articolo illustra come usare helper per le informazioni della cache per migliorare le prestazioni in un sito Web ASP.NET Web Pages (Razor). È possibile velocizzare il sito Web facendo sì che archivio &#8212; , memorizzare nella cache &#8212; i risultati di dati che in genere richiederebbe molto tempo per recuperare o l'elaborazione e che non cambia spesso.

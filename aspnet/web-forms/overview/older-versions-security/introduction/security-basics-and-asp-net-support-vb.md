@@ -8,18 +8,18 @@ ms.date: 01/13/2008
 ms.assetid: ab68a92b-fc81-40a4-a7dc-406625d2c5d4
 msc.legacyurl: /web-forms/overview/older-versions-security/introduction/security-basics-and-asp-net-support-vb
 msc.type: authoredcontent
-ms.openlocfilehash: c293f4946001d0940c7e12b67f4fbc63cf5ca18c
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1b6675a933f04b3eb7f5111b2ccd16c44baab7ba
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57043628"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59414348"
 ---
-<a name="security-basics-and-aspnet-support-vb"></a>Nozioni di base sulla sicurezza e supporto di ASP.NET (VB)
-====================
+# <a name="security-basics-and-aspnet-support-vb"></a>Nozioni di base sulla sicurezza e supporto di ASP.NET (VB)
+
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Scaricare PDF](http://download.microsoft.com/download/2/F/7/2F705A34-F9DE-4112-BBDE-60098089645E/aspnet_tutorial01_Basics_vb.pdf)
+[Scarica il PDF](http://download.microsoft.com/download/2/F/7/2F705A34-F9DE-4112-BBDE-60098089645E/aspnet_tutorial01_Basics_vb.pdf)
 
 > Questa è la prima esercitazione di una serie di esercitazioni che verranno illustrate le tecniche per l'autenticazione ai visitatori tramite un web form, autorizzare l'accesso a determinate pagine e le funzionalità e la gestione degli account utente in un'applicazione ASP.NET.
 
@@ -139,7 +139,7 @@ Microsoft offre due classi di provider di appartenenza in .NET Framework:
 Questa serie di esercitazioni illustra esclusivamente il provider SqlMembershipProvider.
 
 
-[![Il modello consente a diverse implementazioni del Provider per essere facilmente collegato nel Framework di](security-basics-and-asp-net-support-vb/_static/image4.png)](security-basics-and-asp-net-support-vb/_static/image3.png)
+[![Tegli modello consente a diverse implementazioni del Provider per essere facilmente collegato nel Framework di](security-basics-and-asp-net-support-vb/_static/image4.png)](security-basics-and-asp-net-support-vb/_static/image3.png)
 
 **Figura 03**: Il modello consente a diverse implementazioni del Provider per essere facilmente collegato nel Framework di ([fare clic per visualizzare l'immagine con dimensioni normali](security-basics-and-asp-net-support-vb/_static/image5.png))
 

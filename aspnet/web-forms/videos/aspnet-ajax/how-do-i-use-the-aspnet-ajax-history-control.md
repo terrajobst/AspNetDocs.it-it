@@ -8,15 +8,15 @@ ms.date: 06/21/2007
 ms.assetid: 557b0118-fde8-48c9-bf6d-829f9043706b
 msc.legacyurl: /web-forms/videos/aspnet-ajax/how-do-i-use-the-aspnet-ajax-history-control
 msc.type: video
-ms.openlocfilehash: 627d7d06020cc669edccb2a94bd366e96343f850
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 45933ab64c2bf8caa5615e6e9c10aa7fbd5d02bc
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57056828"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59410578"
 ---
-<a name="how-do-i-use-the-aspnet-ajax-history-control"></a>[Procedura:] Usare il controllo della cronologia ASP.NET AJAX?
-====================
+# <a name="how-do-i-use-the-aspnet-ajax-history-control"></a>[Procedura:] Usare il controllo della cronologia ASP.NET AJAX?
+
 da [Scott Golightly](https://github.com/scottgolightly)
 
 Un problema che colpisce un'applicazione AJAX tipica è che un aggiornamento parziale della pagina non viene aggiunto alla cronologia del browser Web. Ciò significa che non consente di spostare nuovamente un unico passaggio AJAX pulsante Indietro del browser, ma sposta nuovamente un intero documento, che è improbabile che siano previsti dall'utente. Il controllo della cronologia di ASP.NET AJAX consente allo sviluppatore di inserire punti della cronologia in modo che l'utente può fare clic il browser pulsanti Avanti e indietro per spostarsi tra i vari passaggi AJAX.

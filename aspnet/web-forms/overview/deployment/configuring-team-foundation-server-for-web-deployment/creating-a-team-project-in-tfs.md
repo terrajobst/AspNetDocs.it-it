@@ -8,18 +8,18 @@ ms.date: 05/04/2012
 ms.assetid: b28d3e2d-0bb4-4e29-a780-af810b964722
 msc.legacyurl: /web-forms/overview/deployment/configuring-team-foundation-server-for-web-deployment/creating-a-team-project-in-tfs
 msc.type: authoredcontent
-ms.openlocfilehash: 9218a22ff221dc7067662c58ccd3e758fca493b7
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1e727e8124e1f045f8ef25ab7a3d4efbafd4290a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57062518"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59411215"
 ---
-<a name="creating-a-team-project-in-tfs"></a>Creazione di un progetto team in TFS
-====================
+# <a name="creating-a-team-project-in-tfs"></a>Creazione di un progetto team in TFS
+
 da [Jason Lee](https://github.com/jrjlee)
 
-[Scaricare PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Scarica il PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Questo argomento descrive come creare un nuovo progetto team in Team Foundation Server (TFS) 2010.
 
@@ -106,7 +106,8 @@ Successivamente, è necessario concedere all'utente l'autorizzazione per creare 
 
    > [!NOTE]
    > È possibile ricevere un' <strong>HTTP 404 non trovato</strong> errore a causa di un bug di codifica HTTP doppie. In questo caso, sostituire l'URL con questo:   
-   > `[site_collection_URL]/_layouts/permsetup.aspx` Per esempio:  
+   > `[site_collection_URL]/_layouts/permsetup.aspx`
+   > Ad esempio:  
    > `http://tfs/sites/Fabrikam%20Web%20Projects/_layouts/permsetup.aspx` 
 8. Nel **Imposta gruppi per questo sito** pagina, aggiungere l'utente che crea i progetti team per il **proprietari** gruppo e quindi fare clic su **OK**.
 

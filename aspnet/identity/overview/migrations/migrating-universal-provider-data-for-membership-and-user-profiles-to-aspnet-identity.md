@@ -1,22 +1,23 @@
 ---
 uid: identity/overview/migrations/migrating-universal-provider-data-for-membership-and-user-profiles-to-aspnet-identity
-title: La migrazione di dati del Provider universali per appartenenza e i profili utente mobili ad ASP.NET Identity (c#) | Microsoft Docs
+title: La migrazione di dati del Provider universali per appartenenza e i profili utente mobili ad ASP.NET Identity (C#)-ASP.NET 4.x
 author: rustd
 description: Questa esercitazione vengono descritti i passaggi necessari eseguire la migrazione di utenti e i dati del ruolo e i dati di profilo utente creati con i provider universali di un'app esistente...
 ms.author: riande
 ms.date: 12/13/2013
+ms.custom: seoapril2019
 ms.assetid: 2e260430-d13c-4658-bd05-e256fc0d63b8
 msc.legacyurl: /identity/overview/migrations/migrating-universal-provider-data-for-membership-and-user-profiles-to-aspnet-identity
 msc.type: authoredcontent
-ms.openlocfilehash: a91bb6ac51819d7dbb8eb3c63bd36a9d830eecce
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1043dce4cdd62f94ae9d2344a9301c1b03426f3d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57058458"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59422265"
 ---
-<a name="migrating-universal-provider-data-for-membership-and-user-profiles-to-aspnet-identity-c"></a>Migrazione dei dati dei provider universali per l'appartenenza e i profili utente ad ASP.NET Identity (C#)
-====================
+# <a name="migrating-universal-provider-data-for-membership-and-user-profiles-to-aspnet-identity-c"></a>Migrazione dei dati dei provider universali per l'appartenenza e i profili utente ad ASP.NET Identity (C#)
+
 dal [Pranav Rastogi](https://github.com/rustd), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Robert McMurray](https://github.com/rmcmurray), [Suhas Joshi](https://github.com/suhasj)
 
 > Questa esercitazione vengono descritti i passaggi necessari eseguire la migrazione di utenti e i dati del ruolo e dati del profilo utente creati con i provider universali di un'applicazione esistente per il modello di identità di ASP.NET. L'approccio sopra indicate per eseguire la migrazione di dati del profilo utente possono essere utilizzate in un'applicazione con appartenenza SQL anche.

@@ -8,15 +8,15 @@ ms.date: 11/29/2011
 ms.assetid: 6798c7e4-f08e-4802-9fa5-443f67d5df62
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider
 msc.type: chapter
-ms.openlocfilehash: 4fd9e95fbb5c73f7bae1b9d47228eb56a6976125
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 87de6c92375594ab6ee726f1b66a94a0db793fd2
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57021428"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59417052"
 ---
-<a name="aspnet-4---web-deployment-with-sql-server-compact-using-visual-studio"></a>ASP.NET 4 - Distribuzione Web con SQL Server Compact tramite Visual Studio
-====================
+# <a name="aspnet-4---web-deployment-with-sql-server-compact-using-visual-studio"></a>ASP.NET 4 - Distribuzione Web con SQL Server Compact tramite Visual Studio
+
 > Questa serie di esercitazioni illustra come creare un'applicazione web ASP.NET che Usa SQL Server Compact disponibili su internet tramite distribuzione su un provider di hosting di terze parti. Richiede Visual Studio 2012 RC o Visual Studio 2010. Per ulteriori informazioni aggiornate sulle funzionalità di distribuzione o per informazioni su come distribuire le edizioni di SQL Server diverse da SQL Server Compact, vedere [distribuzione Web ASP.NET tramite Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
 
 

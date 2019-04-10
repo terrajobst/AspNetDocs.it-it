@@ -8,15 +8,15 @@ ms.date: 04/21/2011
 ms.assetid: bd356ca3-5bdb-4067-9dac-c9e9923a86e8
 msc.legacyurl: /mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-1
 msc.type: authoredcontent
-ms.openlocfilehash: 0f252fd5c0e5962353720e47ba888d2b6b325a1c
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 63d85ec5f1f2fbadd92fd0210e67332df30aab5a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58421908"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59419600"
 ---
-<a name="part-1-overview-and-file-new-project"></a>Parte 1. Panoramica e File -> Nuovo progetto
-====================
+# <a name="part-1-overview-and-file-new-project"></a>Parte 1. Panoramica e File -> Nuovo progetto
+
 by [Jon Galloway](https://github.com/jongalloway)
 
 > Music Store MVC è un'applicazione di esercitazione che introduce e spiega passo passo come usare ASP.NET MVC e Visual Studio per lo sviluppo Web.  
@@ -117,10 +117,10 @@ ASP.NET MVC Usa alcune convenzioni di denominazione di base per i nomi delle car
 | **/Controllers** | Controller rispondono a input dal browser, definire l'azione da eseguire su di essi e restituire la risposta all'utente. |
 | **/ Viste** | Le visualizzazioni contengono i modelli dell'interfaccia utente |
 | **O i modelli** | I modelli contengono e utilizzano i dati |
-| **/Content** | Questa cartella contiene le nostre immagini, CSS e qualsiasi altro contenuto statico |
+| **/ Content** | Questa cartella contiene le nostre immagini, CSS e qualsiasi altro contenuto statico |
 | **/Scripts** | Questa cartella contiene i file JavaScript |
 
 Queste cartelle sono inclusi anche in un'applicazione MVC ASP.NET vuoto perché il framework ASP.NET MVC per impostazione predefinita Usa un approccio "convention over configuration" e fa alcune supposizioni predefinito basati sulle convenzioni di denominazione delle cartelle. Ad esempio, i controller di cercano le visualizzazioni nella cartella Views per impostazione predefinita senza dover specificare in modo esplicito nel codice. Partendo con le convenzioni predefinite riduce la quantità di codice è necessario scrivere, e può anche rendere più semplice per gli altri sviluppatori comprendere il progetto. Spiegheremo queste convenzioni più poiché noi creiamo la nostra applicazione.
 
 > [!div class="step-by-step"]
-> [avanti](mvc-music-store-part-2.md)
+> [Successivo](mvc-music-store-part-2.md)

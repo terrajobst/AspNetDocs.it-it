@@ -8,18 +8,18 @@ ms.date: 10/07/2008
 ms.assetid: f96f4800-19ef-44c0-b457-55e777eb5de8
 msc.legacyurl: /mvc/overview/older-versions-1/views/creating-custom-html-helpers-vb
 msc.type: authoredcontent
-ms.openlocfilehash: e62e47bceddc516af7aa18fc66ed4ca4d704d277
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1f36bffeda49c1777e964dc5330cbb473b01c1a9
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57034948"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59421563"
 ---
-<a name="creating-custom-html-helpers-vb"></a>Creazione di helper HTML personalizzati (VB)
-====================
+# <a name="creating-custom-html-helpers-vb"></a>Creazione di helper HTML personalizzati (VB)
+
 by [Microsoft](https://github.com/microsoft)
 
-[Scaricare PDF](http://download.microsoft.com/download/1/1/f/11f721aa-d749-4ed7-bb89-a681b68894e6/ASPNET_MVC_Tutorial_9_VB.pdf)
+[Scarica il PDF](http://download.microsoft.com/download/1/1/f/11f721aa-d749-4ed7-bb89-a681b68894e6/ASPNET_MVC_Tutorial_9_VB.pdf)
 
 > L'obiettivo di questa esercitazione è illustrare come è possibile creare helper HTML personalizzati che è possibile usare all'interno delle visualizzazioni MVC. Grazie all'uso di helper HTML, è possibile ridurre la quantità di noioso digitazione dei tag HTML che è necessario eseguire per creare una pagina HTML standard.
 
@@ -49,7 +49,7 @@ Il framework ASP.NET MVC include il set seguente di helper HTML standard (non un
 Si consideri, ad esempio, il modulo nel listato 1. Questo modulo viene eseguito il rendering con l'aiuto di due degli helper HTML standard (vedere la figura 1). Questo modulo Usa la `Html.BeginForm()` e `Html.TextBox()` metodi Helper.
 
 
-[![Pagina sottoposta a rendering con gli helper HTML](creating-custom-html-helpers-vb/_static/image2.png)](creating-custom-html-helpers-vb/_static/image1.png)
+[![PAge sottoposto a rendering con gli helper HTML](creating-custom-html-helpers-vb/_static/image2.png)](creating-custom-html-helpers-vb/_static/image1.png)
 
 **Figura 01**: Pagina sottoposta a rendering con gli helper HTML ([fare clic per visualizzare l'immagine con dimensioni normali](creating-custom-html-helpers-vb/_static/image3.png))
 
@@ -104,7 +104,7 @@ In secondo luogo, si noti che il primo parametro del `Label()` metodo rappresent
 Dopo aver creato un metodo di estensione e compilare correttamente l'applicazione, il metodo di estensione viene visualizzata in Intellisense di Visual Studio, ad esempio tutti gli altri metodi di una classe (vedere la figura 2). L'unica differenza è che estensione vengono visualizzati i metodi con un simbolo speciale accanto agli (un'icona di freccia verso il basso).
 
 
-[![Usando il metodo di estensione Html.Label()](creating-custom-html-helpers-vb/_static/image5.png)](creating-custom-html-helpers-vb/_static/image4.png)
+[![Uaccesso il metodo di estensione Html.Label()](creating-custom-html-helpers-vb/_static/image5.png)](creating-custom-html-helpers-vb/_static/image4.png)
 
 **Figura 02**: Usando il metodo di estensione Html.Label() ([fare clic per visualizzare l'immagine con dimensioni normali](creating-custom-html-helpers-vb/_static/image6.png))
 

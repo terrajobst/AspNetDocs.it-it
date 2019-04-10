@@ -8,15 +8,15 @@ ms.date: 02/27/2014
 ms.assetid: b90978bd-795d-4871-9ade-1671caff5730
 msc.legacyurl: /web-forms/overview/presenting-and-managing-data/model-binding/using-query-string-values-to-retrieve-data
 msc.type: authoredcontent
-ms.openlocfilehash: 490279ec8457535031387e955e67550052764fff
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7ba95f24085c403c669bc5d6df4dee7c87fbd90a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57039108"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59414244"
 ---
-<a name="using-query-string-values-to-filter-data-with-model-binding-and-web-forms"></a>Utilizzo di valori di stringa di query per filtrare i dati con l'associazione di modelli e web form
-====================
+# <a name="using-query-string-values-to-filter-data-with-model-binding-and-web-forms"></a>Utilizzo di valori di stringa di query per filtrare i dati con l'associazione di modelli e web form
+
 da [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Questa serie di esercitazioni illustra aspetti di base dell'uso di associazione di modelli con un progetto di Web Form ASP.NET. Associazione di modelli consente l'interazione dei dati più semplice rispetto a gestione dati di oggetti di origine (ad esempio ObjectDataSource o SqlDataSource). Questa serie inizia con materiale introduttivo e sposta i concetti più avanzati nelle esercitazioni successive.

@@ -8,15 +8,15 @@ ms.date: 10/29/2018
 ms.assetid: 0675bdc7-282f-4f47-b7f3-7e02133940ca
 msc.legacyurl: /web-api/overview/web-api-routing-and-actions/routing-in-aspnet-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: a7bc998fc23c0453fc9cd6ac1e7b9af7bd516225
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 85862c094cc54365267b1f21e68d235a15519cda
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57061348"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59419236"
 ---
-<a name="routing-in-aspnet-web-api"></a>Routing in API Web ASP.NET
-====================
+# <a name="routing-in-aspnet-web-api"></a>Routing in API Web ASP.NET
+
 da [Mike Wasson](https://github.com/MikeWasson)
 
 Questo articolo descrive come API Web ASP.NET instrada le richieste HTTP al controller.
@@ -69,7 +69,7 @@ Ecco alcune possibili richieste HTTP, insieme all'azione che viene richiamato pe
 
 | Verbo HTTP | Percorso dell'URI | Operazione | Parametro |
 | --- | --- | --- | --- |
-| GET | API/prodotti | GetAllProducts | *(none)* |
+| GET | API/prodotti | GetAllProducts | *(nessuno)* |
 | GET | API/prodotti/4 | GetProductById | 4 |
 | DELETE | API/prodotti/4 | DeleteProduct | 4 |
 | INSERISCI | API/prodotti | *(nessuna corrispondenza trovata)* |  |

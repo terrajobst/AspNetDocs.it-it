@@ -8,15 +8,15 @@ ms.date: 07/28/2008
 ms.assetid: 7c4a3445-2440-4aee-b9fd-779c05e6abb2
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/specifying-the-master-page-programmatically-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 58ecd01a8a18cd7dcf9eba96313e40d881d90af5
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 0d56a600b1b97d9d044fa90b678c942f0dc6fc00
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57065668"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59413828"
 ---
-<a name="specifying-the-master-page-programmatically-c"></a>Impostazione della pagina master a livello di codice (C#)
-====================
+# <a name="specifying-the-master-page-programmatically-c"></a>Impostazione della pagina master a livello di codice (C#)
+
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Scaricare il codice](http://download.microsoft.com/download/d/6/6/d66ad554-afdd-409e-a5c3-201b774fbb31/ASPNET_MasterPages_Tutorial_09_CS.zip) o [Scarica il PDF](http://download.microsoft.com/download/d/6/6/d66ad554-afdd-409e-a5c3-201b774fbb31/ASPNET_MasterPages_Tutorial_09_CS.pdf)
@@ -42,7 +42,7 @@ Ogni volta che arriva una richiesta nel server web per una pagina ASP.NET che è
 Figura 1 illustra questa fusion. Passaggio 1 nella figura 1 mostra il contenuto iniziale e le gerarchie di controllo pagina master. Nella parte finale della fase PreInit il contenuto nella pagina vengono aggiunti di elementi ContentPlaceHolder corrispondente nella pagina master (passaggio 2). Dopo questo fusion, la pagina master viene utilizzato come la radice della gerarchia del controllo congiunta. Questa istruzione fused controllo gerarchia viene quindi aggiunto alla pagina per produrre la gerarchia dei controlli finalizzato (passaggio 3). Il risultato finale è che la gerarchia dei controlli della pagina include la gerarchia dei controlli congiunta.
 
 
-[![Della pagina Master e le gerarchie di controllo della pagina contenuto vengono combinati insieme durante la fase di PreInit](specifying-the-master-page-programmatically-cs/_static/image2.png)](specifying-the-master-page-programmatically-cs/_static/image1.png)
+[![Tegli pagina Master e le gerarchie di controllo della pagina contenuto vengono combinati insieme durante la fase di PreInit](specifying-the-master-page-programmatically-cs/_static/image2.png)](specifying-the-master-page-programmatically-cs/_static/image1.png)
 
 **Figura 01**: Della pagina Master e le gerarchie di controllo della pagina contenuto vengono combinati insieme durante la fase di PreInit ([fare clic per visualizzare l'immagine con dimensioni normali](specifying-the-master-page-programmatically-cs/_static/image3.png))
 
@@ -97,7 +97,7 @@ Verrà ora esaminato come caricare in modo dinamico una pagina master in fase di
 Creare una nuova pagina master nella cartella radice denominata `Alternate.master`. Aggiungere anche un nuovo foglio di stile per il sito Web denominato `AlternateStyles.css`.
 
 
-[![Aggiungere un altro File pagina Master e CSS al sito Web](specifying-the-master-page-programmatically-cs/_static/image8.png)](specifying-the-master-page-programmatically-cs/_static/image7.png)
+[![Agg un'altra pagina Master e File CSS per il sito Web](specifying-the-master-page-programmatically-cs/_static/image8.png)](specifying-the-master-page-programmatically-cs/_static/image7.png)
 
 **Figura 03**: Aggiungere un'altra pagina Master e File CSS per il sito Web ([fare clic per visualizzare l'immagine con dimensioni normali](specifying-the-master-page-programmatically-cs/_static/image9.png))
 
@@ -108,7 +108,7 @@ Ho ho progettato il `Alternate.master` pagina master per il titolo visualizzato 
 > ASP.NET include la possibilità di definire *temi*. Un tema è una raccolta di immagini, file CSS e correlate allo stile proprietà impostazioni di controlli Web che possono essere applicate a una pagina in fase di esecuzione. I temi sono il modo per vedere se i layout del sito differiscono solo nelle immagini visualizzate e le regole CSS. Se il layout si distinguono più significativo, ad esempio usando i controlli Web diversi o impostare un layout radicalmente diverso, è necessario usare pagine master separate. Alla fine di questa esercitazione per altre informazioni sui temi, consultare la sezione altre informazioni.
 
 
-[![Le pagine di contenuto possono ora usare un nuovo aspetto grafico](specifying-the-master-page-programmatically-cs/_static/image11.png)](specifying-the-master-page-programmatically-cs/_static/image10.png)
+[![OPagine di contenuto è ora possono usare un nuovo aspetto grafico](specifying-the-master-page-programmatically-cs/_static/image11.png)](specifying-the-master-page-programmatically-cs/_static/image10.png)
 
 **Figura 04**: Le pagine di contenuto possono ora usare un nuovo aspetto ([fare clic per visualizzare l'immagine con dimensioni normali](specifying-the-master-page-programmatically-cs/_static/image12.png))
 
@@ -206,7 +206,7 @@ Nostri `BasePage` classe imposta attualmente tutte le pagine di contenuto `Maste
 > In quanto `Site.master` e `Alternate.master` hanno lo stesso set di controlli ContentPlaceHolder non importa quale pagina master scelto durante la creazione della nuova pagina contenuta. Per coerenza, è preferibile usando `Site.master`.
 
 
-[![Aggiungere una nuova pagina contenuta per il sito Web](specifying-the-master-page-programmatically-cs/_static/image14.png)](specifying-the-master-page-programmatically-cs/_static/image13.png)
+[![Agg una nuova pagina contenuto per il sito Web](specifying-the-master-page-programmatically-cs/_static/image14.png)](specifying-the-master-page-programmatically-cs/_static/image13.png)
 
 **Figura 05**: Aggiungere una nuova pagina contenuto per il sito Web ([fare clic per visualizzare l'immagine con dimensioni normali](specifying-the-master-page-programmatically-cs/_static/image15.png))
 
@@ -251,12 +251,12 @@ Con il `ChooseMasterPage.aspx` pagina completa, l'attività finale consiste per 
 Con questo codice, visitare il `ChooseMasterPage.aspx` pagina. Inizialmente, il `Site.master` pagina master è selezionato (vedere la figura 6), ma l'utente può selezionare un'altra pagina master nell'elenco a discesa.
 
 
-[![Le pagine di contenuto vengono visualizzate utilizzando la pagina Master Site. master](specifying-the-master-page-programmatically-cs/_static/image17.png)](specifying-the-master-page-programmatically-cs/_static/image16.png)
+[![Contenuto pagine vengono visualizzate utilizzando la pagina Master Site. master](specifying-the-master-page-programmatically-cs/_static/image17.png)](specifying-the-master-page-programmatically-cs/_static/image16.png)
 
 **Figura 06**: Contenuto di pagine vengono visualizzate usando il `Site.master` pagina Master ([fare clic per visualizzare l'immagine con dimensioni normali](specifying-the-master-page-programmatically-cs/_static/image18.png))
 
 
-[![Le pagine di contenuto vengono ora visualizzate utilizzando la pagina Master Alternate.master](specifying-the-master-page-programmatically-cs/_static/image20.png)](specifying-the-master-page-programmatically-cs/_static/image19.png)
+[![Contenuto pagine vengono ora visualizzate utilizzando la pagina Master Alternate.master](specifying-the-master-page-programmatically-cs/_static/image20.png)](specifying-the-master-page-programmatically-cs/_static/image19.png)
 
 **Figura 07**: Contenuto di pagine sono ora visualizzati utilizzando il `Alternate.master` pagina Master ([fare clic per visualizzare l'immagine con dimensioni normali](specifying-the-master-page-programmatically-cs/_static/image21.png))
 

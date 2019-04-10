@@ -8,15 +8,15 @@ ms.date: 06/26/2014
 ms.assetid: 47202362-3808-4add-9a69-c9d1f91d5e4e
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-v4/create-an-odata-v4-client-app
 msc.type: authoredcontent
-ms.openlocfilehash: 4d62a64006e2a500e0379419dbebe7ddff16fba5
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 14d4b01a2ea8a4582294053416b626e7f1801b50
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57061198"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59411514"
 ---
-<a name="create-an-odata-v4-client-app-c"></a>Creare un'app client OData v4 (C#)
-====================
+# <a name="create-an-odata-v4-client-app-c"></a>Creare un'app client OData v4 (C#)
+
 da [Mike Wasson](https://github.com/MikeWasson)
 
 Nell'esercitazione precedente, creato un servizio OData di base che supporta operazioni CRUD. A questo punto è possibile creare un client per il servizio.

@@ -8,15 +8,15 @@ ms.date: 02/10/2014
 ms.assetid: 4001cb9b-3bfd-4ace-8a89-1561d8421e2c
 msc.legacyurl: /web-pages/overview/api-reference/asp-net-web-pages-api-reference
 msc.type: authoredcontent
-ms.openlocfilehash: 656987f8a725f81dbca7a72594d7d03bc542fabe
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 547b1932c4f8d3684c668561e3fe568a0f272925
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57063858"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59416506"
 ---
-<a name="aspnet-web-pages-razor-api-quick-reference"></a>ASP.NET Web Pages (Razor) riferimento rapido sulle API
-====================
+# <a name="aspnet-web-pages-razor-api-quick-reference"></a>ASP.NET Web Pages (Razor) riferimento rapido sulle API
+
 da [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Questa pagina contiene un elenco con brevi esempi di oggetti più comunemente usati, proprietà e metodi per la programmazione di ASP.NET Web Pages con sintassi Razor.
@@ -689,7 +689,7 @@ Invia un messaggio di posta elettronica.
 
 ### `WebMail.SmtpServer`
 
-Imposta il nome del server SMTP. In genere è impostare questa proprietà<em>\_AppStart</em> pagina.
+Imposta il nome del server SMTP. In genere è impostare questa proprietà  *\_AppStart* pagina.
 
 [!code-html[Main](asp-net-web-pages-api-reference/samples/sample105.html)]
 

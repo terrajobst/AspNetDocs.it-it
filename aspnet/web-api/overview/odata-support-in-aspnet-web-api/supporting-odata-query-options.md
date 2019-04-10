@@ -1,23 +1,26 @@
 ---
 uid: web-api/overview/odata-support-in-aspnet-web-api/supporting-odata-query-options
-title: Che supportano le opzioni di Query OData nell'API Web ASP.NET 2 | Microsoft Docs
+title: Che supportano le opzioni di Query OData nell'API Web ASP.NET 2 - ASP.NET 4.x
 author: MikeWasson
-description: ''
+description: Panoramica esempi di codice mostra le opzioni di Query OData supporto in ASP.NET Web API 2 per ASP.NET 4.x.
 ms.author: riande
 ms.date: 02/04/2013
+ms.custom: seoapril2019
 ms.assetid: 50e6e62b-e72e-4a29-8293-4b67377bd21f
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/supporting-odata-query-options
 msc.type: authoredcontent
-ms.openlocfilehash: 8745183125c9dd1dcc7cb0e146367a893bdb0170
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 428e4942e42436585049c1e84cd7b07a4a79c0d1
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57050878"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59411566"
 ---
-<a name="supporting-odata-query-options-in-aspnet-web-api-2"></a>Supportare opzioni di Query OData nell'API Web ASP.NET 2
-====================
+# <a name="supporting-odata-query-options-in-aspnet-web-api-2"></a>Supportare opzioni di Query OData nell'API Web ASP.NET 2
+
 da [Mike Wasson](https://github.com/MikeWasson)
+
+Questa panoramica esempi di codice viene illustrato il supporto opzioni di Query OData nell'API Web ASP.NET 2 per ASP.NET 4.x. 
 
 OData definisce parametri che possono essere usati per modificare una query OData. Il client invia questi parametri nella stringa di query dell'URI della richiesta. Per ordinare i risultati, ad esempio, un client usa il parametro $orderby:
 
@@ -66,7 +69,7 @@ Questa sezione illustra i tipi di query che sono possibili utilizzando le opzion
 
 Per informazioni su $espandere e $select, vedere [Usa $select, $expand, $value in ASP.NET Web API OData e](using-select-expand-and-value.md).
 
-**Client-Driven Paging**
+**Paging basato su client**
 
 Per i set di entità di grandi dimensioni, il client potrebbe voler limitare il numero di risultati. Ad esempio, un client potrebbe mostrare 10 voci alla volta, con collegamenti "Avanti" per accedere alla pagina successiva di risultati. A tale scopo, il client usa le opzioni $top e $skip.
 
@@ -74,7 +77,7 @@ Per i set di entità di grandi dimensioni, il client potrebbe voler limitare il 
 
 L'opzione $top fornisce il numero massimo di voci da restituire, mentre l'opzione $skip fornisce il numero di voci da ignorare. Nell'esempio precedente recupera le voci 21 e 30.
 
-**Applicazione di filtri**
+**Filtro**
 
 L'opzione $filter consente a un client di filtrare i risultati applicando un'espressione booleana. Le espressioni di filtro sono molto potenti; includono gli operatori logici e aritmetici, funzioni stringa e funzioni di Data.
 
@@ -85,7 +88,7 @@ L'opzione $filter consente a un client di filtrare i risultati applicando un'esp
 | Funzioni stringa: Restituire tutti i prodotti con "zz" nel nome. | `http://localhost/Products?$filter=substringof('zz',Name)` |
 | Funzioni di data: Restituisce tutti i prodotti con ReleaseDate dopo 2005. | `http://localhost/Products?$filter=year(ReleaseDate)` gt 2005 |
 
-**L'ordinamento**
+**Ordinamento**
 
 Per ordinare i risultati, utilizzare i filtro $orderby.
 

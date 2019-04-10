@@ -8,15 +8,15 @@ ms.date: 01/30/2013
 ms.assetid: f9c07af0-4b20-4b08-af8f-47fc3df169a2
 msc.legacyurl: /single-page-application/overview/introduction/knockoutjs-template
 msc.type: authoredcontent
-ms.openlocfilehash: 60bc8bf95cace722244ffc87ff4c00126a0ed2a0
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 20d2d4412345399acdde1535447cc18b6611b572
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57030398"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59412853"
 ---
-<a name="single-page-application-knockoutjs-template"></a>Applicazione a pagina singola: Modello KnockoutJS
-====================
+# <a name="single-page-application-knockoutjs-template"></a>Applicazione a pagina singola: Modello KnockoutJS
+
 da [Mike Wasson](https://github.com/MikeWasson)
 
 > Il modello MVC Knockout fa parte di ASP.NET and Web Tools 2012.2
@@ -89,7 +89,7 @@ Nel progetto di Visual Studio, la cartella Models contiene i modelli utilizzati 
 
 ![](knockoutjs-template/_static/image9.png)
 
-**TodoItem, TodoList**
+**Elemento TodoItem, TodoList**
 
 Questi sono i modelli di database per Code First di Entity Framework. Si noti che questi modelli dispongono di proprietà che puntano a vicenda. `ToDoList` contiene una raccolta di elementi ToDoItems e ogni `ToDoItem` dispone di un riferimento al relativo elemento padre ToDoList. Queste proprietà sono definite proprietà di navigazione e la relazione uno-a-molti che rappresentano un elenco attività e i relativi elementi di attività da eseguire.
 

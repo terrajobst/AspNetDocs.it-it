@@ -8,15 +8,15 @@ ms.date: 05/20/2008
 ms.assetid: ed460e6b-8f4e-4fcb-83c4-2495180c1f14
 msc.legacyurl: /web-forms/videos/how-do-i/how-do-i-extend-and-customize-an-aspnet-server-control-for-a-specific-purpose
 msc.type: video
-ms.openlocfilehash: d360bfdc2e491c7aa94ebd4da1a03063a93251ad
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 3562e9c4ec994f04b312476c1357d810f4b5e28a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57040648"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59420159"
 ---
-<a name="how-do-i-extend-and-customize-an-aspnet-server-control-for-a-specific-purpose"></a>[Procedura:] Estendere e personalizzare un controllo Server ASP.NET per uno scopo specifico
-====================
+# <a name="how-do-i-extend-and-customize-an-aspnet-server-control-for-a-specific-purpose"></a>[Procedura:] Estendere e personalizzare un controllo Server ASP.NET per uno scopo specifico
+
 da [Chris Pels](https://twitter.com/chrispels)
 
 In questo video Chris Pels verrà illustrato come estendere un controllo server ASP.NET standard e personalizzarlo per uno scopo specifico. Controlli specializzati forniscono un modo pratico per implementare gli elementi dell'interfaccia utente standardizzato per più siti web per singoli utenti o team di sviluppatori. In questo esempio, informazioni su come estendere il controllo DropDownList per creare un controllo di selezione anno per scopi specifici. Informazioni su come aggiungere le proprietà per gli attributi personalizzati che consentono di controllare il comportamento dell'intervallo di anni che possono essere visualizzati. Scoprirai quindi come è possono impostare gli attributi personalizzati nella sintassi dichiarativa, ad esempio gli attributi standard di un controllo. Vedere come varie proprietà aggiuntive possono quindi essere aggiunte per fornire funzionalità aggiuntive per controllare il comportamento di elenco. Infine, visualizzato come un controllo server ASP.NET esteso può essere spostato in un assembly separato in modo che può essere usata in più siti web.

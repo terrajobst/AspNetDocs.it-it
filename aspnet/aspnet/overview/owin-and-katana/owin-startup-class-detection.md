@@ -8,15 +8,15 @@ ms.date: 01/28/2019
 ms.assetid: 08257f55-36f4-4e39-9c88-2a5602838c79
 msc.legacyurl: /aspnet/overview/owin-and-katana/owin-startup-class-detection
 msc.type: authoredcontent
-ms.openlocfilehash: 0b34cca8b48383dbb028106651758dff889ed614
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: e4d9424d691f92aacf078faed09689daa40a44fd
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57039778"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59418339"
 ---
-<a name="owin-startup-class-detection"></a>Rilevamento della classe di avvio OWIN
-====================
+# <a name="owin-startup-class-detection"></a>Rilevamento della classe di avvio OWIN
+
 
 > Questa esercitazione illustra come configurare la classe di avvio OWIN viene caricata. Per altre informazioni su OWIN, vedere [una panoramica del progetto Katana](an-overview-of-project-katana.md). Questa esercitazione è stato scritto da Rick Anderson ( [ @RickAndMSFT ](https://twitter.com/#!/RickAndMSFT) ), Praburaj Thiagarajan così Howard Dierking ( [ @howard \_dierking](https://twitter.com/howard_dierking) ).
 >
@@ -79,7 +79,8 @@ ms.locfileid: "57039778"
      > [!NOTE]
      > Nel codice precedente è stata impostata come commento il `OwinStartup` attributo e si sta affidarsi alla convenzione in esecuzione la classe denominata `Startup` .-premere ***F5*** per eseguire l'applicazione. Fare clic su Aggiorna più volte.
 
-    ![](owin-startup-class-detection/_static/image4.png) Nota: Il numero illustrato nelle immagini in questa esercitazione non corrisponderanno il numero visualizzato. La stringa di millisecondo viene utilizzata per visualizzare una nuova risposta quando si aggiorna la pagina.
+    ![](owin-startup-class-detection/_static/image4.png)
+  Nota: Il numero illustrato nelle immagini in questa esercitazione non corrisponderanno il numero visualizzato. La stringa di millisecondo viene utilizzata per visualizzare una nuova risposta quando si aggiorna la pagina.
   È possibile visualizzare le informazioni della traccia le **Output** finestra.
 
     ![](owin-startup-class-detection/_static/image5.png)

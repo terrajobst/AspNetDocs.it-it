@@ -8,15 +8,15 @@ ms.date: 07/16/2014
 ms.assetid: 09e82351-816b-402d-acd1-0f9ac6901d16
 msc.legacyurl: /visual-studio/overview/2013/visual-studio-2013-web-tools
 msc.type: authoredcontent
-ms.openlocfilehash: 54d86de49bf61305b17fc80964723c518abd467b
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 874542305bd3f47066cfae595919285ed079aa53
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423247"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59421069"
 ---
-<a name="hands-on-lab-visual-studio-2013-web-tools"></a>Lab pratico: Strumenti Web di Visual Studio 2013
-====================
+# <a name="hands-on-lab-visual-studio-2013-web-tools"></a>Lab pratico: Strumenti Web di Visual Studio 2013
+
 da [Camp Web Team](https://twitter.com/webcamps)
 
 [Download Web Camp Kit di formazione](https://aka.ms/webcamps-training-kit)
@@ -74,7 +74,7 @@ In tutto il documento di laboratorio, verrà invitati a inserire blocchi di codi
 > Ogni esercizio è accompagnata da una soluzione inizia che si trova nel **iniziare** cartella dell'esercizio che consente di seguire ogni esercizio indipendentemente dagli altri. Tenere presente che i frammenti di codice aggiunti durante un esercizio non sono presenti queste soluzioni di avvio e potrebbero non funzionare fino a quando non si have completato l'esercizio. All'interno del codice sorgente per un esercizio, si noterà anche un **End** cartella che contiene una soluzione di Visual Studio con il codice che scaturisce da completare i passaggi nell'esercizio corrispondente. È possibile usare queste soluzioni come prassi consigliata se ti serve assistenza aggiuntiva durante l'esecuzione in questo laboratorio pratico.
 
 
-* * *
+---
 
 <a id="Exercises"></a>
 ## <a name="exercises"></a>Esercizi
@@ -324,7 +324,7 @@ In questa attività si userà il collegamento Browser **modalità di progettazio
 
     ![Finestra Elenco errori](visual-studio-2013-web-tools/_static/image32.png "finestra Elenco errori")
 
-    *Finestra Elenco errori*
+    *finestra Elenco errori*
 3. Nel **Web Essentials** della finestra di dialogo fare clic su **Yes** inserire una descrizione &lt;meta&gt; tag.
 
     ![Finestra di dialogo Web Essentials](visual-studio-2013-web-tools/_static/image33.png "nella finestra di dialogo Web Essentials")
@@ -511,7 +511,7 @@ Web Essentials 2013, i fogli di stile e pagine HTML producono un elenco di ID e 
 
     *Lettore audio incluso nella visualizzazione*
 
-* * *
+---
 
 <a id="Summary"></a>
 ## <a name="summary"></a>Riepilogo
