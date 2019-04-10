@@ -8,15 +8,15 @@ ms.date: 06/12/2014
 ms.assetid: 7e97cfc3-d830-4002-8ff7-5790d1ff49e6
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/more-patterns-and-guidance
 msc.type: authoredcontent
-ms.openlocfilehash: 87dbbc0b598a6592b511383a5487a04b302b0994
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 95943222a9869349784d4fd2686fb81725c65d44
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425665"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59409226"
 ---
-<a name="more-patterns-and-guidance-building-real-world-cloud-apps-with-azure"></a>Più modelli e le indicazioni (creazione di App Cloud funzionanti con Azure)
-====================
+# <a name="more-patterns-and-guidance-building-real-world-cloud-apps-with-azure"></a>Più modelli e le indicazioni (creazione di App Cloud funzionanti con Azure)
+
 dal [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
 
 [Download risolverlo Project](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [Scarica l'E-book](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
@@ -61,7 +61,7 @@ Video
 Esempio di codice
 
 - [Fix It applicazione che accompagna questo e-book](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4?cdn_id=2013-12-03-002).
-- [Sviluppo di servizi in Azure in C# per Visual Studio 2012 cloud](https://aka.ms/csf). Progetto scaricabile nel sito Microsoft Code Gallery include codice e documentazione sviluppati per il Microsoft Customer Advisory Team (CAT). Vengono illustrate molte delle procedure consigliate da tempo supportate la serie di video di operatore alternativo e big data di creazione e il white paper di operatore alternativo. La pagina Code Gallery contiene anche collegamenti a documentazione completa per gli autori del progetto, vedere in particolare la [raccolta di Cloud Service Fundamentals wiki](https://social.technet.microsoft.com/wiki/contents/articles/17987.cloud-service-fundamentals.aspx) collegamento nella casella blu nella parte superiore della descrizione del progetto. Questo progetto e la documentazione per tale ancora attivamente in fase di sviluppo, rendendo scelta migliore per informazioni sul numero di argomenti da white paper simili, ma meno recenti.
+- [Sviluppo di servizi in Azure in c# per Visual Studio 2012 cloud](https://aka.ms/csf). Progetto scaricabile nel sito Microsoft Code Gallery include codice e documentazione sviluppati per il Microsoft Customer Advisory Team (CAT). Vengono illustrate molte delle procedure consigliate da tempo supportate la serie di video di operatore alternativo e big data di creazione e il white paper di operatore alternativo. La pagina Code Gallery contiene anche collegamenti a documentazione completa per gli autori del progetto, vedere in particolare la [raccolta di Cloud Service Fundamentals wiki](https://social.technet.microsoft.com/wiki/contents/articles/17987.cloud-service-fundamentals.aspx) collegamento nella casella blu nella parte superiore della descrizione del progetto. Questo progetto e la documentazione per tale ancora attivamente in fase di sviluppo, rendendo scelta migliore per informazioni sul numero di argomenti da white paper simili, ma meno recenti.
 
 Documentazione stampata
 

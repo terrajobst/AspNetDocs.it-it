@@ -8,15 +8,15 @@ ms.date: 08/22/2007
 ms.assetid: a0437314-e310-425a-b67b-0dc06878dbe2
 msc.legacyurl: /web-forms/videos/vs-2005/how-do-i-enable-code-coverage-and-profiling-in-production-applications
 msc.type: video
-ms.openlocfilehash: d7937ecd85054621665077186a5c67287f260311
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: eb886aac6c0a5d9e65719a0dc359acbad3b85659
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57052268"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59408784"
 ---
-<a name="how-do-i-enable-code-coverage-and-profiling-in-production-applications"></a>[Procedura:] Abilitare il Code Coverage e la profilatura nelle applicazioni di produzione?
-====================
+# <a name="how-do-i-enable-code-coverage-and-profiling-in-production-applications"></a>[Procedura:] Abilitare il Code Coverage e la profilatura nelle applicazioni di produzione?
+
 da [feed di Chris Menegay](https://twitter.com/CMenegay)
 
 Informazioni su come impostare la strumentazione per code coverage e analisi in un'applicazione ASP.NET distribuita, anziché un'applicazione in esecuzione dall'interno di Visual Studio. In questo video viene seguita la procedura di cui il [profilatura ASP.NET in modalità di strumentazione dalla riga di comando](https://msdn.microsoft.com/teamsystem/aa718860.aspx) Nota tecnica nel sito Web Microsoft MSDN.

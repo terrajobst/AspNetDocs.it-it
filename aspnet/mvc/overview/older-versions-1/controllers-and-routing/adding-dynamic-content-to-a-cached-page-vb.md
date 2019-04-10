@@ -8,15 +8,15 @@ ms.date: 01/27/2009
 ms.assetid: 68acd884-fb57-4486-a1be-aaa93e380780
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/adding-dynamic-content-to-a-cached-page-vb
 msc.type: authoredcontent
-ms.openlocfilehash: b361470c769b61a7b407797158eb695fe5084eda
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 0dae280dfa3028df5fda95c4366132c99a0dc3b7
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423494"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59409200"
 ---
-<a name="adding-dynamic-content-to-a-cached-page-vb"></a>Aggiunta di contenuto dinamico a una pagina memorizzata nella cache (VB)
-====================
+# <a name="adding-dynamic-content-to-a-cached-page-vb"></a>Aggiunta di contenuto dinamico a una pagina memorizzata nella cache (VB)
+
 by [Microsoft](https://github.com/microsoft)
 
 > Informazioni su come combinare il contenuto dinamico e memorizzati nella cache nella stessa pagina. Sostituzione post-cache consente di visualizzare il contenuto dinamico, ad esempio pubblicitari o notizie, all'interno di una pagina in cui è stata di output memorizzate nella cache.
@@ -66,7 +66,7 @@ Anche se la visualizzazione dell'indice viene memorizzato nella cache, gli eleme
 
 Un modo più semplice per sfruttare i vantaggi di sostituzione post-cache è per incapsulare la chiamata al metodo WriteSubstitution() all'interno di un metodo helper personalizzati. Questo approccio è illustrato il metodo helper nel listato 4.
 
-**Listato 4 – Helpers\AdHelper.vb**
+**Listing 4 – Helpers\AdHelper.vb**
 
 [!code-vb[Main](adding-dynamic-content-to-a-cached-page-vb/samples/sample4.vb)]
 

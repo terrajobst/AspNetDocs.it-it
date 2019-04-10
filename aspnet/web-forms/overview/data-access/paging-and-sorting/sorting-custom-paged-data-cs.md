@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/paging-and-sorting/sorting-custom-paged-data-cs
-title: Ordinamento con paging personalizzato dei dati (C#) | Microsoft Docs
+title: Ordinamento con paging personalizzato dei dati (c#) | Microsoft Docs
 author: rick-anderson
 description: Nell'esercitazione precedente abbiamo appreso come implementare il paging personalizzato quando la presentazione dei dati in una pagina web. In questa esercitazione viene illustrato come estendere il precedente...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 08/15/2006
 ms.assetid: 778baa4e-4af8-4665-947e-7a01d1a4dff2
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting/sorting-custom-paged-data-cs
 msc.type: authoredcontent
-ms.openlocfilehash: ebc6be8c41251190a0124fe5f3d2c154f1ad4450
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: a65fe60dc44eb40591733ba9371e409f690fea52
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425648"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59409239"
 ---
-<a name="sorting-custom-paged-data-c"></a>Ordinamento dei dati con suddivisione in pagine personalizzata (C#)
-====================
+# <a name="sorting-custom-paged-data-c"></a>Ordinamento dei dati con suddivisione in pagine personalizzata (C#)
+
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Scaricare l'App di esempio](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_26_CS.exe) o [Scarica il PDF](sorting-custom-paged-data-cs/_static/datatutorial26cs1.pdf)
@@ -71,7 +71,7 @@ Si consiglia di testare questa stored procedure con valori diversi per il `@sort
 **Figura 1**: Provare diversi valori per le Stored Procedure s tre parametri di Input
 
 
-[![La Stored Procedure s i risultati vengono visualizzati nella finestra di Output](sorting-custom-paged-data-cs/_static/image3.png)](sorting-custom-paged-data-cs/_static/image2.png)
+[![Ts Stored Procedure he i risultati vengono visualizzati nella finestra di Output](sorting-custom-paged-data-cs/_static/image3.png)](sorting-custom-paged-data-cs/_static/image2.png)
 
 **Figura 2**: La Stored Procedure s i risultati vengono visualizzati nella finestra di Output ([fare clic per visualizzare l'immagine con dimensioni normali](sorting-custom-paged-data-cs/_static/image4.png))
 
@@ -145,7 +145,7 @@ Per abilitare l'ordinamento in GridView, è sufficiente selezionare la casella d
 Figura 7 mostra la prima pagina dei risultati quando vengono ordinati i `UnitPrice` in ordine crescente.
 
 
-[![I risultati sono ordinati per l'elemento UnitPrice](sorting-custom-paged-data-cs/_static/image10.png)](sorting-custom-paged-data-cs/_static/image9.png)
+[![The risultati vengono ordinati per l'elemento UnitPrice](sorting-custom-paged-data-cs/_static/image10.png)](sorting-custom-paged-data-cs/_static/image9.png)
 
 **Figura 7**: I risultati sono ordinati per il prezzo unitario ([fare clic per visualizzare l'immagine con dimensioni normali](sorting-custom-paged-data-cs/_static/image11.png))
 
@@ -166,7 +166,7 @@ Questa eccezione si verifica perché il `SortExpression` di istanze della classe
 **Figura 9**: Modifica SortExpression s SupplierName BoundField su CompanyName
 
 
-[![Ora i risultati possono essere ordinati dal fornitore](sorting-custom-paged-data-cs/_static/image15.png)](sorting-custom-paged-data-cs/_static/image14.png)
+[![Tè ora è possibile ordinare i risultati dal fornitore](sorting-custom-paged-data-cs/_static/image15.png)](sorting-custom-paged-data-cs/_static/image14.png)
 
 **Figura 10**: I risultati ora possono essere ordinate dal fornitore ([fare clic per visualizzare l'immagine con dimensioni normali](sorting-custom-paged-data-cs/_static/image16.png))
 

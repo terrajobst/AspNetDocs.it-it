@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/security/create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset
-title: Creare un'app web ASP.NET MVC 5 sicura con accesso, inviare tramite posta elettronica di conferma e reimpostazione della password (C#) | Microsoft Docs
+title: Creare un'app web ASP.NET MVC 5 sicura con accesso, inviare tramite posta elettronica di conferma e reimpostazione della password (c#) | Microsoft Docs
 author: Rick-Anderson
 description: Questa esercitazione illustra come compilare un'app web ASP.NET MVC 5 con conferma tramite posta elettronica e reimpostazione della password usando il sistema di appartenenze ASP.NET Identity. È ca...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 03/26/2015
 ms.assetid: d4911cb3-1afb-4805-b860-10818c4b1280
 msc.legacyurl: /mvc/overview/security/create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset
 msc.type: authoredcontent
-ms.openlocfilehash: 650063db25f38b02cc33955925d1e3c2f45db665
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 165343fd20b92becee1956c7a19870219323e073
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58420855"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59409395"
 ---
-<a name="create-a-secure-aspnet-mvc-5-web-app-with-log-in-email-confirmation-and-password-reset-c"></a>Creare un'app Web ASP.NET MVC 5 sicura con accesso, messaggi di posta elettronica di conferma e reimpostazione della password (C#)
-====================
+# <a name="create-a-secure-aspnet-mvc-5-web-app-with-log-in-email-confirmation-and-password-reset-c"></a>Creare un'app Web ASP.NET MVC 5 sicura con accesso, messaggi di posta elettronica di conferma e reimpostazione della password (C#)
+
 da [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > Questa esercitazione illustra come compilare un'app web ASP.NET MVC 5 con conferma tramite posta elettronica e reimpostazione della password usando il sistema di appartenenze ASP.NET Identity. È possibile scaricare l'applicazione completata [qui](https://code.msdn.microsoft.com/MVC-5-with-2FA-email-8f26d952). Il download contiene gli helper di debug che consentono di testare conferma tramite posta elettronica e SMS senza dover configurare un indirizzo di posta elettronica o il provider SMS.

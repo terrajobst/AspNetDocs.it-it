@@ -8,15 +8,15 @@ ms.date: 07/04/2012
 ms.assetid: eb32a17b-626c-4373-9a7d-3387992f3c04
 msc.legacyurl: /web-api/overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-7
 msc.type: authoredcontent
-ms.openlocfilehash: 91a6496e2640668c58ec0493d47d909e2de67367
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 028631f8855e4d94bebb0e965de75c4025e22859
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58421350"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59409265"
 ---
-<a name="part-7-creating-the-main-page"></a>Parte 7: Creazione della pagina principale
-====================
+# <a name="part-7-creating-the-main-page"></a>Parte 7: Creazione della pagina principale
+
 da [Mike Wasson](https://github.com/MikeWasson)
 
 [Download progetto completato](http://code.msdn.microsoft.com/ASP-NET-Web-API-with-afa30545)
@@ -91,7 +91,7 @@ Di seguito sono le associazioni per il carrello della spesa:
 
 Si scorre la matrice carrello della spesa e visualizza il nome, prezzo e quantità. Si noti che il collegamento "Remove" e il pulsante di "Creazione dell'ordine" sono associati alle funzioni di modello di visualizzazione.
 
-**Ordini**
+**Orders**
 
 Ecco i binding per l'elenco di ordini:
 
@@ -99,7 +99,7 @@ Ecco i binding per l'elenco di ordini:
 
 Si scorre gli ordini e l'ID dell'ordine. L'evento clic sul collegamento associato ai `getDetails` (funzione).
 
-**Dettagli dell'ordine**
+**Order Details**
 
 Di seguito sono le associazioni per i dettagli dell'ordine:
 

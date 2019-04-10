@@ -8,15 +8,15 @@ ms.date: 06/10/2014
 ms.assetid: 3751f5e7-59db-4be0-a290-50abc24e5c84
 msc.legacyurl: /signalr/overview/performance/signalr-performance
 msc.type: authoredcontent
-ms.openlocfilehash: 3326c2e600854fc7a4435d96c45b04a6188d3937
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b0da3032e22123f415bf9865e264832739c29f61
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57046738"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59409018"
 ---
-<a name="signalr-performance"></a>Prestazioni di SignalR
-====================
+# <a name="signalr-performance"></a>Prestazioni di SignalR
+
 da [Patrick Fletcher](https://github.com/pfletcher)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
@@ -203,7 +203,7 @@ Le metriche seguenti misurano gli errori generati dal traffico di messaggi Signa
 - **Errori: All/Sec**
 - **Errori: Totale di risoluzione dell'hub**
 - **Errori: Risoluzione dell'hub al secondo**
-- **Errori: Hub Invocation Total**
+- **Errori: Totale di chiamata dell'hub**
 - **Errori: Chiamata dell'hub al secondo**
 - **Errori: Totale trasporto**
 - **Errori: Messaggi trasporto/Sec**
@@ -248,7 +248,7 @@ Contatori delle prestazioni seguenti possono rivelarsi utili per monitorare le p
 
 - Memoria CLR .NET\\byte in tutti gli heap (per w3wp)
 
-**ASP.NET 2.0**
+**ASP.NET**
 
 - ASP.NET\Requests Current
 - ASP.NET\Queued

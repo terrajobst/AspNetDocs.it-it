@@ -8,15 +8,15 @@ ms.date: 01/20/2014
 ms.assetid: 979d6c9f-0129-4e5b-ae56-4507b281b86d
 msc.legacyurl: /web-api/overview/web-api-routing-and-actions/attribute-routing-in-web-api-2
 msc.type: authoredcontent
-ms.openlocfilehash: 22eb2fd748d52ec95e813ada8b1bf3b4826ad573
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 65e2268418501f89a77a0ba20f7960a618c2e9b7
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57034278"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59405456"
 ---
-<a name="attribute-routing-in-aspnet-web-api-2"></a>Routing mediante attributi n API Web ASP.NET 2
-====================
+# <a name="attribute-routing-in-aspnet-web-api-2"></a>Routing mediante attributi n API Web ASP.NET 2
+
 da [Mike Wasson](https://github.com/MikeWasson)
 
 *Routing* è come API Web corrisponde a un URI per un'azione. API Web 2 supporta un nuovo tipo di routing, chiamato *routing con attributi*. Come suggerisce il nome, il routing con attributi Usa gli attributi per definire le route. Routing con attributi offre maggiore controllo sugli URI nell'API web. Ad esempio, è possibile creare con facilità gli URI che descrivono le gerarchie di risorse.
@@ -228,8 +228,8 @@ In alternativa, è possibile specificare un valore predefinito all'interno del m
 
 Si tratta quasi lo stesso dell'esempio precedente, ma è presente una leggera differenza di comportamento quando viene applicato il valore predefinito.
 
-- Nel primo esempio ("{lcid?}"), il valore predefinito di 1033 viene assegnato direttamente al parametro del metodo, pertanto il parametro avrà questo valore esatto.
-- Nel secondo esempio ("{lcid = 1033}"), il valore predefinito di "1033" esegue il processo di associazione di modelli. Il raccoglitore di modelli predefinito convertirà "1033" al valore numerico 1033. Tuttavia, è possibile inserire in uno strumento di associazione di modelli personalizzato, che potrebbe eseguire un'operazione diversa.
+- Nel primo esempio ("{lcid:int?}"), il valore predefinito di 1033 viene assegnato direttamente al parametro del metodo, pertanto il parametro avrà questo valore esatto.
+- Nel secondo esempio ("{lcid:int = 1033}"), il valore predefinito di "1033" esegue il processo di associazione di modelli. Il raccoglitore di modelli predefinito convertirà "1033" al valore numerico 1033. Tuttavia, è possibile inserire in uno strumento di associazione di modelli personalizzato, che potrebbe eseguire un'operazione diversa.
 
 (Nella maggior parte dei casi, a meno che non si dispone di strumenti di associazione di modelli personalizzato nella pipeline, le due forme sarà equivalente.)
 

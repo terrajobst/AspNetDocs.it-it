@@ -8,15 +8,15 @@ ms.date: 03/23/2010
 ms.assetid: 93d5f225-1b13-4932-af79-120335d52447
 msc.legacyurl: /mvc/videos/mvc-2/how-do-i/mvc2-template-customization
 msc.type: video
-ms.openlocfilehash: afb04180f4fbdef95f3293acf243f49f658240c0
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b0459517fdabef1c5abd6d50fb76ad145dcdfd8c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57041658"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59409434"
 ---
-<a name="mvc2---template-customization"></a>MVC2 - Personalizzazione dei modelli
-====================
+# <a name="mvc2---template-customization"></a>MVC2 - Personalizzazione dei modelli
+
 by [Microsoft](https://github.com/microsoft)
 
 In questo video si apprenderà sulle funzionalità di personalizzazione di modelli in ASP.NET MVC 2. Si esamineranno Html.EditorForModel, Html.DisplayForModel, la personalizzazione del modello di modello e sulla personalizzazione di tipo di dati.

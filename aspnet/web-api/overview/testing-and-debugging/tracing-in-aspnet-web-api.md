@@ -8,15 +8,15 @@ ms.date: 02/25/2014
 ms.assetid: 66a837e9-600b-4b72-97a9-19804231c64a
 msc.legacyurl: /web-api/overview/testing-and-debugging/tracing-in-aspnet-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: 59bce8c511167e8ba8a8db6f1842e352c90f3039
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: a01acb649556d06ab9828ceab0fcbdf363bbc0d1
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58424898"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59405898"
 ---
-<a name="tracing-in-aspnet-web-api-2"></a>Traccia in ASP.NET Web API 2
-====================
+# <a name="tracing-in-aspnet-web-api-2"></a>Traccia in ASP.NET Web API 2
+
 da [Mike Wasson](https://github.com/MikeWasson)
 
 > Quando si tenta di eseguire il debug di un'applicazione basata su web, non vi è alcuna sostituzione di un set di log di traccia valido. Questa esercitazione illustra come abilitare la traccia nell'API Web ASP.NET. È possibile usare questa funzionalità per tracciare il framework API Web del funzionamento di prima e dopo aver richiamato il controller. È anche possibile usarlo per tracciare il proprio codice.
