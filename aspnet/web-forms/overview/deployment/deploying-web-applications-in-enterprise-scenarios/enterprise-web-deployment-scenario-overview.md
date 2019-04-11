@@ -42,7 +42,7 @@ Si tratta dell'infrastruttura di sviluppo e la distribuzione ad alto livello in 
 
 ![](enterprise-web-deployment-scenario-overview/_static/image1.png)
 
-La workstation di sviluppo, l'infrastruttura di controllo di origine, l'ambiente di test per sviluppatori e l'ambiente di staging che si trovano tutti nella rete intranet all'interno del dominio Fabrikam.net. In una rete perimetrale (detta anche DMZ DMZ e subnet schermata), che è isolata dalla rete intranet da un firewall si trova l'ambiente di produzione. Si tratta di uno scenario di distribuzione comune: è in genere isolare i server web con connessione Internet dell'infrastruttura server interni tramite l'uso di firewall o server gateway.
+La workstation di sviluppo, l'infrastruttura di controllo di origine, l'ambiente di test per sviluppatori e l'ambiente di staging che si trovano tutti nella rete intranet all'interno del dominio Fabrikam.net. In una rete perimetrale (detta anche subnet schermata), che è isolata dalla rete intranet da un firewall si trova l'ambiente di produzione. Si tratta di uno scenario di distribuzione comune: è in genere isolare i server web con connessione Internet dell'infrastruttura server interni tramite l'uso di firewall o server gateway.
 
 In questo esempio:
 
