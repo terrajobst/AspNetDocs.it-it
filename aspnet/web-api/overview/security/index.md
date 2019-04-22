@@ -12,21 +12,21 @@ ms.openlocfilehash: 8e4fa3f87f09d8872dd4ccc1797c05c229768224
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59388283"
 ---
-# <a name="security-authentication-and-authorization-in-aspnet-web-api"></a><span data-ttu-id="cec53-103">Sicurezza, autenticazione e autorizzazione nell'API Web ASP.NET</span><span class="sxs-lookup"><span data-stu-id="cec53-103">Security, Authentication, and Authorization in ASP.NET Web API</span></span>
+# <a name="security-authentication-and-authorization-in-aspnet-web-api"></a><span data-ttu-id="60a17-103">Sicurezza, autenticazione e autorizzazione nell'API Web ASP.NET</span><span class="sxs-lookup"><span data-stu-id="60a17-103">Security, Authentication, and Authorization in ASP.NET Web API</span></span>
 
-> <span data-ttu-id="cec53-104">Problemi di sicurezza per l'API Web.</span><span class="sxs-lookup"><span data-stu-id="cec53-104">Security issues for Web API.</span></span>
+> <span data-ttu-id="60a17-104">Problemi di sicurezza per l'API Web.</span><span class="sxs-lookup"><span data-stu-id="60a17-104">Security issues for Web API.</span></span>
 
 
-- [<span data-ttu-id="cec53-105">Autenticazione e autorizzazione nell'API Web</span><span class="sxs-lookup"><span data-stu-id="cec53-105">Authentication and Authorization in Web API</span></span>](authentication-and-authorization-in-aspnet-web-api.md)
-- [<span data-ttu-id="cec53-106">Proteggere un'API Web con singoli account nell'API Web 2.2</span><span class="sxs-lookup"><span data-stu-id="cec53-106">Secure a Web API with Individual Accounts in Web API 2.2</span></span>](individual-accounts-in-web-api.md)
-- [<span data-ttu-id="cec53-107">Servizi di autenticazione esterni con l'API Web (C#)</span><span class="sxs-lookup"><span data-stu-id="cec53-107">External Authentication Services with Web API (C#)</span></span>](external-authentication-services.md)
-- [<span data-ttu-id="cec53-108">Prevenzione degli attacchi tramite richieste intersito false (CSRF) nell'API Web</span><span class="sxs-lookup"><span data-stu-id="cec53-108">Preventing Cross-Site Request Forgery (CSRF) Attacks in Web API</span></span>](preventing-cross-site-request-forgery-csrf-attacks.md)
-- [<span data-ttu-id="cec53-109">Abilitazione di richieste multiorigine nell'API Web 2</span><span class="sxs-lookup"><span data-stu-id="cec53-109">Enabling Cross-Origin Requests in Web API 2</span></span>](enabling-cross-origin-requests-in-web-api.md)
-- [<span data-ttu-id="cec53-110">Filtri di autenticazione nell'API Web 2</span><span class="sxs-lookup"><span data-stu-id="cec53-110">Authentication Filters in Web API 2</span></span>](authentication-filters.md)
-- [<span data-ttu-id="cec53-111">Autenticazione di base nell'API Web</span><span class="sxs-lookup"><span data-stu-id="cec53-111">Basic Authentication in Web API</span></span>](basic-authentication.md)
-- [<span data-ttu-id="cec53-112">Autenticazione basata su form nell'API Web</span><span class="sxs-lookup"><span data-stu-id="cec53-112">Forms Authentication in Web API</span></span>](forms-authentication.md)
-- [<span data-ttu-id="cec53-113">Autenticazione integrata di Windows</span><span class="sxs-lookup"><span data-stu-id="cec53-113">Integrated Windows Authentication</span></span>](integrated-windows-authentication.md)
-- [<span data-ttu-id="cec53-114">Uso di SSL</span><span class="sxs-lookup"><span data-stu-id="cec53-114">Working with SSL</span></span>](working-with-ssl-in-web-api.md)
+- [<span data-ttu-id="60a17-105">Autenticazione e autorizzazione nell'API Web</span><span class="sxs-lookup"><span data-stu-id="60a17-105">Authentication and Authorization in Web API</span></span>](authentication-and-authorization-in-aspnet-web-api.md)
+- [<span data-ttu-id="60a17-106">Proteggere un'API Web con singoli account nell'API Web 2.2</span><span class="sxs-lookup"><span data-stu-id="60a17-106">Secure a Web API with Individual Accounts in Web API 2.2</span></span>](individual-accounts-in-web-api.md)
+- [<span data-ttu-id="60a17-107">Servizi di autenticazione esterni con l'API Web (C#)</span><span class="sxs-lookup"><span data-stu-id="60a17-107">External Authentication Services with Web API (C#)</span></span>](external-authentication-services.md)
+- [<span data-ttu-id="60a17-108">Prevenzione degli attacchi tramite richieste intersito false (CSRF) nell'API Web</span><span class="sxs-lookup"><span data-stu-id="60a17-108">Preventing Cross-Site Request Forgery (CSRF) Attacks in Web API</span></span>](preventing-cross-site-request-forgery-csrf-attacks.md)
+- [<span data-ttu-id="60a17-109">Abilitazione di richieste multiorigine nell'API Web 2</span><span class="sxs-lookup"><span data-stu-id="60a17-109">Enabling Cross-Origin Requests in Web API 2</span></span>](enabling-cross-origin-requests-in-web-api.md)
+- [<span data-ttu-id="60a17-110">Filtri di autenticazione nell'API Web 2</span><span class="sxs-lookup"><span data-stu-id="60a17-110">Authentication Filters in Web API 2</span></span>](authentication-filters.md)
+- [<span data-ttu-id="60a17-111">Autenticazione di base nell'API Web</span><span class="sxs-lookup"><span data-stu-id="60a17-111">Basic Authentication in Web API</span></span>](basic-authentication.md)
+- [<span data-ttu-id="60a17-112">Autenticazione basata su form nell'API Web</span><span class="sxs-lookup"><span data-stu-id="60a17-112">Forms Authentication in Web API</span></span>](forms-authentication.md)
+- [<span data-ttu-id="60a17-113">Autenticazione integrata di Windows</span><span class="sxs-lookup"><span data-stu-id="60a17-113">Integrated Windows Authentication</span></span>](integrated-windows-authentication.md)
+- [<span data-ttu-id="60a17-114">Uso di SSL</span><span class="sxs-lookup"><span data-stu-id="60a17-114">Working with SSL</span></span>](working-with-ssl-in-web-api.md)

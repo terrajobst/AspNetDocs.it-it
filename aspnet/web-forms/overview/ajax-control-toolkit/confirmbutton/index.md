@@ -12,13 +12,13 @@ ms.openlocfilehash: 527df94a1c578aa06471ade41e43d44c127bacfb
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381822"
 ---
-# <a name="confirmbutton"></a><span data-ttu-id="09443-103">ConfirmButton</span><span class="sxs-lookup"><span data-stu-id="09443-103">ConfirmButton</span></span>
+# <a name="confirmbutton"></a><span data-ttu-id="37bc2-103">ConfirmButton</span><span class="sxs-lookup"><span data-stu-id="37bc2-103">ConfirmButton</span></span>
 
-> <span data-ttu-id="09443-104">Questa esercitazione illustra come usare il controllo ConfirmButton, che viene visualizzato un Sì/Nessun popup quando l'utente fa clic su un pulsante.</span><span class="sxs-lookup"><span data-stu-id="09443-104">This tutorial shows how to use the ConfirmButton control, which displays a Yes/No popup when the user clicks a button.</span></span>
+> <span data-ttu-id="37bc2-104">Questa esercitazione illustra come usare il controllo ConfirmButton, che viene visualizzato un Sì/Nessun popup quando l'utente fa clic su un pulsante.</span><span class="sxs-lookup"><span data-stu-id="37bc2-104">This tutorial shows how to use the ConfirmButton control, which displays a Yes/No popup when the user clicks a button.</span></span>
 
 
-- [<span data-ttu-id="09443-105">Uso di ConfirmButton in un controllo Repeater (C#)</span><span class="sxs-lookup"><span data-stu-id="09443-105">Using a ConfirmButton In a Repeater (C#)</span></span>](using-a-confirmbutton-in-a-repeater-cs.md)
-- [<span data-ttu-id="09443-106">Uso di ConfirmButton in un controllo Repeater (VB)</span><span class="sxs-lookup"><span data-stu-id="09443-106">Using a ConfirmButton In a Repeater (VB)</span></span>](using-a-confirmbutton-in-a-repeater-vb.md)
+- [<span data-ttu-id="37bc2-105">Uso di ConfirmButton in un controllo Repeater (C#)</span><span class="sxs-lookup"><span data-stu-id="37bc2-105">Using a ConfirmButton In a Repeater (C#)</span></span>](using-a-confirmbutton-in-a-repeater-cs.md)
+- [<span data-ttu-id="37bc2-106">Uso di ConfirmButton in un controllo Repeater (VB)</span><span class="sxs-lookup"><span data-stu-id="37bc2-106">Using a ConfirmButton In a Repeater (VB)</span></span>](using-a-confirmbutton-in-a-repeater-vb.md)

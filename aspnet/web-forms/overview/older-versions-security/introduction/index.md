@@ -12,17 +12,17 @@ ms.openlocfilehash: cf64b3c939245d196be3c73309b9ed621581043e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59385670"
 ---
-# <a name="aspnet-35---introduction-to-security"></a><span data-ttu-id="af2d1-103">ASP.NET 3.5 - Introduzione alla sicurezza</span><span class="sxs-lookup"><span data-stu-id="af2d1-103">ASP.NET 3.5 - Introduction to Security</span></span>
+# <a name="aspnet-35---introduction-to-security"></a><span data-ttu-id="0ad8f-103">ASP.NET 3.5 - Introduzione alla sicurezza</span><span class="sxs-lookup"><span data-stu-id="0ad8f-103">ASP.NET 3.5 - Introduction to Security</span></span>
 
-> <span data-ttu-id="af2d1-104">Questa serie di esercitazioni illustra le tecniche per l'autenticazione degli utenti tramite un modulo di accesso (autenticazione basata su form) e nell'autorizzazione dell'accesso alle singole pagine in un'applicazione ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="af2d1-104">This series of tutorials explores techniques for authenticating users using a login form (forms authentication) and authorizing access to individual pages in an ASP.NET application.</span></span>
+> <span data-ttu-id="0ad8f-104">Questa serie di esercitazioni illustra le tecniche per l'autenticazione degli utenti tramite un modulo di accesso (autenticazione basata su form) e nell'autorizzazione dell'accesso alle singole pagine in un'applicazione ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="0ad8f-104">This series of tutorials explores techniques for authenticating users using a login form (forms authentication) and authorizing access to individual pages in an ASP.NET application.</span></span>
 
 
-- [<span data-ttu-id="af2d1-105">Nozioni di base sulla sicurezza e supporto di ASP.NET (C#)</span><span class="sxs-lookup"><span data-stu-id="af2d1-105">Security Basics and ASP.NET Support (C#)</span></span>](security-basics-and-asp-net-support-cs.md)
-- [<span data-ttu-id="af2d1-106">Panoramica dell'autenticazione basata su form (C#)</span><span class="sxs-lookup"><span data-stu-id="af2d1-106">Overview of Forms Authentication (C#)</span></span>](an-overview-of-forms-authentication-cs.md)
-- [<span data-ttu-id="af2d1-107">Configurazione dell'autenticazione basata su form e argomenti avanzati (C#)</span><span class="sxs-lookup"><span data-stu-id="af2d1-107">Forms Authentication Configuration and Advanced Topics (C#)</span></span>](forms-authentication-configuration-and-advanced-topics-cs.md)
-- [<span data-ttu-id="af2d1-108">Nozioni di base sulla sicurezza e supporto di ASP.NET (VB)</span><span class="sxs-lookup"><span data-stu-id="af2d1-108">Security Basics and ASP.NET Support (VB)</span></span>](security-basics-and-asp-net-support-vb.md)
-- [<span data-ttu-id="af2d1-109">Panoramica dell'autenticazione basata su form (VB)</span><span class="sxs-lookup"><span data-stu-id="af2d1-109">Overview of Forms Authentication (VB)</span></span>](an-overview-of-forms-authentication-vb.md)
-- [<span data-ttu-id="af2d1-110">Configurazione dell'autenticazione basata su form e argomenti avanzati (VB)</span><span class="sxs-lookup"><span data-stu-id="af2d1-110">Forms Authentication Configuration and Advanced Topics (VB)</span></span>](forms-authentication-configuration-and-advanced-topics-vb.md)
+- [<span data-ttu-id="0ad8f-105">Nozioni di base sulla sicurezza e supporto di ASP.NET (C#)</span><span class="sxs-lookup"><span data-stu-id="0ad8f-105">Security Basics and ASP.NET Support (C#)</span></span>](security-basics-and-asp-net-support-cs.md)
+- [<span data-ttu-id="0ad8f-106">Panoramica dell'autenticazione basata su form (C#)</span><span class="sxs-lookup"><span data-stu-id="0ad8f-106">Overview of Forms Authentication (C#)</span></span>](an-overview-of-forms-authentication-cs.md)
+- [<span data-ttu-id="0ad8f-107">Configurazione dell'autenticazione basata su form e argomenti avanzati (C#)</span><span class="sxs-lookup"><span data-stu-id="0ad8f-107">Forms Authentication Configuration and Advanced Topics (C#)</span></span>](forms-authentication-configuration-and-advanced-topics-cs.md)
+- [<span data-ttu-id="0ad8f-108">Nozioni di base sulla sicurezza e supporto di ASP.NET (VB)</span><span class="sxs-lookup"><span data-stu-id="0ad8f-108">Security Basics and ASP.NET Support (VB)</span></span>](security-basics-and-asp-net-support-vb.md)
+- [<span data-ttu-id="0ad8f-109">Panoramica dell'autenticazione basata su form (VB)</span><span class="sxs-lookup"><span data-stu-id="0ad8f-109">Overview of Forms Authentication (VB)</span></span>](an-overview-of-forms-authentication-vb.md)
+- [<span data-ttu-id="0ad8f-110">Configurazione dell'autenticazione basata su form e argomenti avanzati (VB)</span><span class="sxs-lookup"><span data-stu-id="0ad8f-110">Forms Authentication Configuration and Advanced Topics (VB)</span></span>](forms-authentication-configuration-and-advanced-topics-vb.md)

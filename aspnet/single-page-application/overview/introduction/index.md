@@ -12,13 +12,13 @@ ms.openlocfilehash: 81a708b5badecbb5bd134078d079a0fe3a63bb5f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59380678"
 ---
-# <a name="introduction-to-aspnet-single-page-application"></a><span data-ttu-id="83f6f-103">Introduzione a applicazione a pagina singola ASP.NET</span><span class="sxs-lookup"><span data-stu-id="83f6f-103">Introduction to ASP.NET Single Page Application</span></span>
+# <a name="introduction-to-aspnet-single-page-application"></a><span data-ttu-id="0a688-103">Introduzione a applicazione a pagina singola ASP.NET</span><span class="sxs-lookup"><span data-stu-id="0a688-103">Introduction to ASP.NET Single Page Application</span></span>
 
-> <span data-ttu-id="83f6f-104">Contenuto utilizzando il nuovo modello di applicazione a singola pagina e Knockout. js.</span><span class="sxs-lookup"><span data-stu-id="83f6f-104">Content for using the new SPA template and Knockoutjs.</span></span>
+> <span data-ttu-id="0a688-104">Contenuto utilizzando il nuovo modello di applicazione a singola pagina e Knockout. js.</span><span class="sxs-lookup"><span data-stu-id="0a688-104">Content for using the new SPA template and Knockoutjs.</span></span>
 
 
-- [<span data-ttu-id="83f6f-105">Applicazione a pagina singola: Modello KnockoutJS</span><span class="sxs-lookup"><span data-stu-id="83f6f-105">Single Page Application: KnockoutJS template</span></span>](knockoutjs-template.md)
-- [<span data-ttu-id="83f6f-106">Librerie diverse da Knockout</span><span class="sxs-lookup"><span data-stu-id="83f6f-106">Know a library other than Knockout?</span></span>](other-libraries.md)
+- [<span data-ttu-id="0a688-105">Applicazione a singola pagina: Modello KnockoutJS</span><span class="sxs-lookup"><span data-stu-id="0a688-105">Single Page Application: KnockoutJS template</span></span>](knockoutjs-template.md)
+- [<span data-ttu-id="0a688-106">Librerie diverse da Knockout</span><span class="sxs-lookup"><span data-stu-id="0a688-106">Know a library other than Knockout?</span></span>](other-libraries.md)
