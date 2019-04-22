@@ -12,7 +12,7 @@ ms.openlocfilehash: fedd1013c036ebdb85877a868aaaa172733e5b8a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59394705"
 ---
 # <a name="working-with-images-in-an-aspnet-web-pages-razor-site"></a>Utilizzo di immagini in un sito di ASP.NET Web Pages (Razor)

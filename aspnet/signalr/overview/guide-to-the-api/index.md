@@ -12,7 +12,7 @@ ms.openlocfilehash: 442d8349e0b4d8f57923625533cebecac53c586a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59394848"
 ---
 # <a name="signalr-guide-to-the-api"></a>Guida di SignalR per le API

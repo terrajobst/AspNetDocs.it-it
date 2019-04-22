@@ -12,7 +12,7 @@ ms.openlocfilehash: c38160ffa9965384cf4eae2ebda52bd62b766bba
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59396239"
 ---
 # <a name="animating-in-response-to-user-interaction-vb"></a>Animazione in risposta all'interazione dell'utente (VB)
@@ -59,7 +59,7 @@ In questo scenario, `<OnClick>` viene usato. Quando l'utente fa clic sul pannell
 [!code-aspx[Main](animating-in-response-to-user-interaction-vb/samples/sample5.aspx)]
 
 
-[![A clic del mouse viene avviata l'animazione](animating-in-response-to-user-interaction-vb/_static/image2.png)](animating-in-response-to-user-interaction-vb/_static/image1.png)
+[![Un clic del mouse viene avviata l'animazione](animating-in-response-to-user-interaction-vb/_static/image2.png)](animating-in-response-to-user-interaction-vb/_static/image1.png)
 
 Un clic del mouse viene avviata l'animazione ([fare clic per visualizzare l'immagine con dimensioni normali](animating-in-response-to-user-interaction-vb/_static/image3.png))
 

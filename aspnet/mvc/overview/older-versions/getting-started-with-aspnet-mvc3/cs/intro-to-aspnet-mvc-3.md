@@ -12,7 +12,7 @@ ms.openlocfilehash: 5cdef14ec55e2e66c31219c8ccc95c8e361547d5
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59396364"
 ---
 # <a name="intro-to-aspnet-mvc-3-c"></a>Introduzione ad ASP.NET MVC 3 (C#)
@@ -89,4 +89,4 @@ F5 fa in modo che Visual Web Developer avviare un server web di sviluppo ed eseg
 Impostazione predefinita questo modello predefinito offre due pagine di visitare e una pagina di accesso basic. Il passaggio successivo è modificare il comportamento dell'applicazione e imparare un po' su ASP.NET MVC nel processo. Chiudere il browser e modificare codice.
 
 > [!div class="step-by-step"]
-> [Successivo](adding-a-controller.md)
+> [avanti](adding-a-controller.md)

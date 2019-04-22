@@ -12,7 +12,7 @@ ms.openlocfilehash: a9eca21cba09da8a01d2ed1a8391b9ff367d7231
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59395446"
 ---
 # <a name="logging-error-details-with-elmah-vb"></a>Registrazione dei dettagli degli errori con ELMAH (VB)

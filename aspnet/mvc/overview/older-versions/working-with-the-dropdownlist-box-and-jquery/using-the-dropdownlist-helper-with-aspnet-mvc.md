@@ -12,7 +12,7 @@ ms.openlocfilehash: 2a4d991205351531129480bee221651021483967
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59396252"
 ---
 # <a name="using-the-dropdownlist-helper-with-aspnet-mvc"></a>Uso dell'helper DropDownList con ASP.NET MVC
@@ -190,7 +190,7 @@ Aprire il *Views\Home\MultiSelectCountry.cshtml* file e aggiungere un' `htmlAttr
 
 [!code-cshtml[Main](using-the-dropdownlist-helper-with-aspnet-mvc/samples/sample12.cshtml)]
 
-Nel codice precedente, che stiamo aggiungendo l'attributo HTML e il valore dell'attributo `class = "chzn-select"`. Il \@ carattere classe precedente ha nulla a che fare con il motore di visualizzazione Razor. `class` è un [ C# parola chiave](https://msdn.microsoft.com/library/x53a06bb.aspx). Parole chiave c# non possono essere utilizzate come identificatori a meno che non includano \@ come prefisso. Nell'esempio precedente, `@class` è un identificatore valido, ma **classe** non perché **classe** è una parola chiave.
+Nel codice precedente, che stiamo aggiungendo l'attributo HTML e il valore dell'attributo `class = "chzn-select"`. Il \@ carattere classe precedente ha nulla a che fare con il motore di visualizzazione Razor. `class` è un [parola chiave c#](https://msdn.microsoft.com/library/x53a06bb.aspx). Parole chiave c# non possono essere utilizzate come identificatori a meno che non includano \@ come prefisso. Nell'esempio precedente, `@class` è un identificatore valido, ma **classe** non perché **classe** è una parola chiave.
 
 Aggiungere i riferimenti per il *Chosen/chosen.jquery.js* e *Chosen/chosen.css* file. Il *Chosen/chosen.jquery.js* e implementa il livello funzionale del plug-nella scelta. Il *Chosen/chosen.css* file offre l'applicazione di stili. Aggiungere questi riferimenti a fondo le *Views\Home\MultiSelectCountry.cshtml* file. Il codice seguente mostra come fare riferimento il plug-in selezionato.
 
@@ -215,4 +215,4 @@ Eseguire l'applicazione e passare al `MultiSelectCountry` vista. Provare ad aggi
 Nella sezione successiva si vedrà come il meccanismo di scaffolding di ASP.NET MVC funziona con il **DropDownList** helper.
 
 > [!div class="step-by-step"]
-> [Successivo](examining-how-aspnet-mvc-scaffolds-the-dropdownlist-helper.md)
+> [avanti](examining-how-aspnet-mvc-scaffolds-the-dropdownlist-helper.md)

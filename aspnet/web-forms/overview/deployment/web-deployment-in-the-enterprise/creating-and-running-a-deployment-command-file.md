@@ -12,14 +12,14 @@ ms.openlocfilehash: cbad35c9ef83b41e9d3f9a48ff37672d22338e7e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59395225"
 ---
 # <a name="creating-and-running-a-deployment-command-file"></a>Creazione ed esecuzione di un file di comando per la distribuzione
 
 da [Jason Lee](https://github.com/jrjlee)
 
-[Scarica il PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Scaricare PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Questo argomento descrive come creare un file di comando che consentirà di eseguire una distribuzione con i file di progetto di Microsoft Build Engine (MSBuild) con un processo ripetibile, passo a passo.
 

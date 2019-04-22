@@ -12,7 +12,7 @@ ms.openlocfilehash: 917629c3ad457ade21dc832b248cb09102a5cf0c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59395160"
 ---
 # <a name="americas-next-top-model-view-controller-framework"></a>Framework Model View Controller per America's Next Top Model

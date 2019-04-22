@@ -12,7 +12,7 @@ ms.openlocfilehash: a9a3bf12b721c8f5eec21f3090142e40e74b0b9c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59395643"
 ---
 # <a name="filling-a-list-using-cascadingdropdown-c"></a>Compilazione di un elenco tramite CascadingDropDown (C#)
@@ -61,9 +61,9 @@ In modo che l'aspetto importante è che il metodo deve restituire una matrice di
 Il caricamento della pagina nel browser verrà attivata l'elenco deve essere compilato con tre fornitori.
 
 
-[![Telenco he viene riempito automaticamente](filling-a-list-using-cascadingdropdown-cs/_static/image2.png)](filling-a-list-using-cascadingdropdown-cs/_static/image1.png)
+[![L'elenco viene compilato automaticamente](filling-a-list-using-cascadingdropdown-cs/_static/image2.png)](filling-a-list-using-cascadingdropdown-cs/_static/image1.png)
 
 L'elenco viene compilato automaticamente ([fare clic per visualizzare l'immagine con dimensioni normali](filling-a-list-using-cascadingdropdown-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Successivo](using-cascadingdropdown-with-a-database-cs.md)
+> [avanti](using-cascadingdropdown-with-a-database-cs.md)

@@ -12,7 +12,7 @@ ms.openlocfilehash: 35fcf02c20e3d20f9cb75f6a25aeb1ddac016b4e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59393769"
 ---
 # <a name="urls-in-master-pages-vb"></a>URL nelle pagine master (VB)
@@ -75,7 +75,7 @@ Il `~/Admin/Default.aspx` pagina di contenuto viene inviato il codice HTML stess
 Poiché il `<img>` dell'elemento `src` attributo è un URL relativo, il Visualizzatore prova a cercare un `Images` cartella al percorso di cartella della pagina web. In altre parole, il browser sta cercando il file di immagine `Admin/Images/PoweredByASPNET.gif`.
 
 
-[![Tegli PoweredByASPNET.gif immagine Impossibile trovare il File](urls-in-master-pages-vb/_static/image3.png)](urls-in-master-pages-vb/_static/image2.png)
+[![Impossibile trovare il File di immagine PoweredByASPNET.gif](urls-in-master-pages-vb/_static/image3.png)](urls-in-master-pages-vb/_static/image2.png)
 
 **Figura 02**: Il `PoweredByASPNET.gif` immagine del File non trovato ([fare clic per visualizzare l'immagine con dimensioni normali](urls-in-master-pages-vb/_static/image4.png))
 
@@ -92,7 +92,7 @@ Per risolvere l'immagine interrotta illustrato nella figura 2, è necessario agg
 Si consiglia di aggiornare il `<img>` dell'elemento `src` dell'attributo a un URL assoluto usando uno dei formati illustrati in precedenza e quindi visitare la `~/Admin/Default.aspx` pagina tramite un browser. Questa volta il browser trovare e visualizzare correttamente il `PoweredByASPNET.gif` file di immagine (vedere la figura 3).
 
 
-[![TImmagine PoweredByASPNET.gif è ora visualizzate](urls-in-master-pages-vb/_static/image6.png)](urls-in-master-pages-vb/_static/image5.png)
+[![L'immagine PoweredByASPNET.gif viene ora visualizzata](urls-in-master-pages-vb/_static/image6.png)](urls-in-master-pages-vb/_static/image5.png)
 
 **Figura 03**: Il `PoweredByASPNET.gif` immagine è ora visualizzata ([fare clic per visualizzare l'immagine con dimensioni normali](urls-in-master-pages-vb/_static/image7.png))
 

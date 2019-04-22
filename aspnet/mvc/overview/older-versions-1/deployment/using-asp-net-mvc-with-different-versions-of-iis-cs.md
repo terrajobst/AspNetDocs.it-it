@@ -12,7 +12,7 @@ ms.openlocfilehash: 0ca34f670202a35c627a514d3394fa430f5d8f26
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59396343"
 ---
 # <a name="using-aspnet-mvc-with-different-versions-of-iis-c"></a>Uso di ASP.NET MVC con versioni diverse di IIS (C#)
@@ -53,7 +53,7 @@ La modalità di elaborazione della richiesta è determinata dal pool di applicaz
 
 Per impostazione predefinita, IIS è configurato per supportare due pool di applicazioni: **DefaultAppPool** e **Classic .NET AppPool**. Se DefaultAppPool è selezionata, quindi l'applicazione è in esecuzione in modalità di elaborazione della richiesta integrata. Se Classic .NET AppPool è selezionata, l'applicazione è in esecuzione in modalità di elaborazione della richiesta classico.
 
-[![Tfinestra di dialogo Nuovo progetto di he](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image1.jpg)](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image1.png)
+[![La finestra di dialogo Nuovo progetto](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image1.jpg)](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image1.png)
 
 **Figura 1**: Rilevamento della modalità di elaborazione della richiesta ([fare clic per visualizzare l'immagine con dimensioni normali](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image2.png))
 
@@ -92,7 +92,7 @@ La route predefinita configurata nel listato 1 consente di accedere agli URL di 
 
 Sfortunatamente, le versioni precedenti di IIS non passare tali richieste per il framework ASP.NET. Pertanto, queste richieste non vengono instradate a un controller. Ad esempio, se si esegue una richiesta del browser per l'URL avremo/indice si verrà visualizzata la pagina di errore nella figura 2.
 
-[![Tfinestra di dialogo Nuovo progetto di he](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image2.jpg)](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image3.png)
+[![La finestra di dialogo Nuovo progetto](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image2.jpg)](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image3.png)
 
 **Figura 2**: Ricezione di un errore 404 non trovato ([fare clic per visualizzare l'immagine con dimensioni normali](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image4.png))
 
@@ -162,7 +162,7 @@ Ecco la procedura per attivare un mapping di script con caratteri jolly per IIS 
 6. Immettere il nome MVC
 7. Scegliere il **OK** pulsante
 
-[![Tfinestra di dialogo Nuovo progetto di he](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image3.jpg)](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image5.png)
+[![La finestra di dialogo Nuovo progetto](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image3.jpg)](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image5.png)
 
 **Figura 3**: Creazione di un mapping di script con caratteri jolly con IIS 7.0 ([fare clic per visualizzare l'immagine con dimensioni normali](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image6.png))
 
@@ -177,13 +177,13 @@ Seguire questi passaggi per creare un mapping di script con caratteri jolly con 
 7. Deselezionare la casella di controllo **verifica esistenza del file**
 8. Scegliere il **OK** pulsante
 
-[![Tfinestra di dialogo Nuovo progetto di he](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image4.jpg)](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image7.png)
+[![La finestra di dialogo Nuovo progetto](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image4.jpg)](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image7.png)
 
 **Figura 4**: Creazione di un mapping di script con caratteri jolly con IIS 6.0 ([fare clic per visualizzare l'immagine con dimensioni normali](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image8.png))
 
 Dopo aver abilitato il mapping di script con caratteri jolly, è necessario modificare la tabella di route nel file Global. asax in modo che includa una route radice. In caso contrario, si otterrà la pagina di errore nella figura 5 quando si effettua una richiesta per la pagina principale dell'applicazione. È possibile usare il file Global. asax modificato nel listato 4.
 
-[![Tfinestra di dialogo Nuovo progetto di he](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image5.jpg)](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image9.png)
+[![La finestra di dialogo Nuovo progetto](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image5.jpg)](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image9.png)
 
 **Figura 5**: Errore di route radice mancante ([fare clic per visualizzare l'immagine con dimensioni normali](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image10.png))
 
@@ -210,4 +210,4 @@ La prima opzione richiede di modificare gli URL usati nell'applicazione ASP.NET 
 La seconda opzione consiste nel creare un mapping di script con caratteri jolly. Il vantaggio di questa seconda opzione è che non occorre modificare gli URL. Lo svantaggio di questa seconda opzione è che può ridurre le prestazioni dell'applicazione ASP.NET MVC.
 
 > [!div class="step-by-step"]
-> [Successivo](using-asp-net-mvc-with-different-versions-of-iis-vb.md)
+> [avanti](using-asp-net-mvc-with-different-versions-of-iis-vb.md)

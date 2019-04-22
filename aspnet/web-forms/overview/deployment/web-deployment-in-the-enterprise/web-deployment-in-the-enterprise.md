@@ -12,14 +12,14 @@ ms.openlocfilehash: 1f2dc0fea9eeca64b9389881470353c5cca473e0
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59396317"
 ---
 # <a name="web-deployment-in-the-enterprise"></a>Distribuzione Web nell'organizzazione
 
 da [Jason Lee](https://github.com/jrjlee)
 
-[Scarica il PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Scaricare PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Questa esercitazione descrive come soddisfare molte delle sfide che possono incontrare quando si gestisce la distribuzione di applicazioni web su larga scala per ambienti di sviluppo, test, staging e produzione. L'esercitazione include una soluzione di riferimento insieme a una combinazione di contenuto concettuale e orientati alle attività consentono di eseguire varie attività comuni e procedure.
 > 
@@ -102,4 +102,4 @@ Ciò fa parte di una serie di cinque esercitazioni su distribuzione web su larga
 - [Distribuzione Web aziendale avanzata](../advanced-enterprise-web-deployment/advanced-enterprise-web-deployment.md). Questa esercitazione descrive come eseguire varie attività di distribuzione più avanzate, come la personalizzazione delle distribuzioni di database per più ambienti, esclusione di file e cartelle dalla distribuzione e portare offline l'applicazioni web durante il processo di distribuzione .
 
 > [!div class="step-by-step"]
-> [Successivo](the-contact-manager-solution.md)
+> [avanti](the-contact-manager-solution.md)

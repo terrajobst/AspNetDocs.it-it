@@ -12,7 +12,7 @@ ms.openlocfilehash: dbf2a5966227466ba4ddd2e5a07383066054ce60
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59395303"
 ---
 # <a name="aspnet-mvc-storefront-part-11-hooking-up-the-shopping-cart-and-using-components"></a>ASP.NET MVC Storefront - Parte 11: Associazione del carrello e uso di componenti

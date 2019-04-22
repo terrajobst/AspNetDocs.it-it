@@ -12,7 +12,7 @@ ms.openlocfilehash: fea82090954fb7ace59b9978e9ce7ec857db60b2
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59394913"
 ---
 # <a name="updating-and-deleting-existing-binary-data-c"></a>Aggiornamento ed eliminazione di dati binari esistenti (C#)
@@ -37,7 +37,7 @@ DAL ha generato automaticamente `Insert`, `Update`, e `Delete` metodi, ma questi
 Aprire il DataSet tipizzato e, dalla finestra di progettazione, fare clic su di `CategoriesTableAdapter` intestazione s e scegliere Aggiungi Query dal menu di scelta rapida per avviare la configurazione guidata Query TableAdapter. Questa procedura guidata viene avviata da richiede la modalità della query TableAdapter di accesso del database. Scegliere Usa istruzioni SQL e fare clic su Avanti. Il passaggio successivo richiede il tipo di query da generare. Poiché abbiamo nuovamente la creazione di una query per aggiungere un nuovo record per il `Categories` di tabella, scegliere l'aggiornamento e fare clic su Avanti.
 
 
-[![SScegliere l'opzione di aggiornamento](updating-and-deleting-existing-binary-data-cs/_static/image1.gif)](updating-and-deleting-existing-binary-data-cs/_static/image1.png)
+[![Selezionare l'opzione di aggiornamento](updating-and-deleting-existing-binary-data-cs/_static/image1.gif)](updating-and-deleting-existing-binary-data-cs/_static/image1.png)
 
 **Figura 1**: Selezionare l'opzione di aggiornamento ([fare clic per visualizzare l'immagine con dimensioni normali](updating-and-deleting-existing-binary-data-cs/_static/image2.png))
 
@@ -50,7 +50,7 @@ Aprire il DataSet tipizzato e, dalla finestra di progettazione, fare clic su di 
 Schermata finale della procedura guidata viene chiesto di specificare un nome al nuovo metodo di TableAdapter. Immettere `UpdateWithPicture` e fare clic su Fine.
 
 
-[![Nil nuovo UpdateWithPicture metodo TableAdapter ome](updating-and-deleting-existing-binary-data-cs/_static/image2.gif)](updating-and-deleting-existing-binary-data-cs/_static/image3.png)
+[![Denominare il nuovo UpdateWithPicture TableAdapter (metodo)](updating-and-deleting-existing-binary-data-cs/_static/image2.gif)](updating-and-deleting-existing-binary-data-cs/_static/image3.png)
 
 **Figura 2**: Denominare il nuovo metodo TableAdapter `UpdateWithPicture` ([fare clic per visualizzare l'immagine con dimensioni normali](updating-and-deleting-existing-binary-data-cs/_static/image4.png))
 
@@ -78,7 +78,7 @@ Nel [esercitazione precedente](including-a-file-upload-option-when-adding-a-new-
 Iniziare aprendo il `UploadInDetailsView.aspx` pagina. Copiare tutta la sintassi dichiarativa all'interno di `<asp:Content>` elemento, come illustrato nella figura 3. Successivamente, aprire `UpdatingAndDeleting.aspx` e incollare questo markup all'interno di relativo `<asp:Content>` elemento. Analogamente, copiare il codice dal `UploadInDetailsView.aspx` pagina classe code-behind s a `UpdatingAndDeleting.aspx`.
 
 
-[![Copia Markup dichiarativo da UploadInDetailsView.aspx](updating-and-deleting-existing-binary-data-cs/_static/image3.gif)](updating-and-deleting-existing-binary-data-cs/_static/image5.png)
+[![Copiare il codice dichiarativo da UploadInDetailsView.aspx](updating-and-deleting-existing-binary-data-cs/_static/image3.gif)](updating-and-deleting-existing-binary-data-cs/_static/image5.png)
 
 **Figura 3**: Copiare il Markup dichiarativo dal `UploadInDetailsView.aspx` ([fare clic per visualizzare l'immagine con dimensioni normali](updating-and-deleting-existing-binary-data-cs/_static/image6.png))
 
@@ -94,7 +94,7 @@ Per risolvere questo problema, fare clic sull'opzione Configura origine dati nel
 Per ora, impostare l'elenco di riepilogo aggiornamento scheda s su (nessuno), ma lasciare l'elenco a discesa scheda s eliminazione impostato su `DeleteCategory`. È necessario tornare a questa procedura guidata nel passaggio 6 per aggiungere il supporto ad aggiornamento.
 
 
-[![Cconfigurare ObjectDataSource per utilizzare il metodo DeleteCategory](updating-and-deleting-existing-binary-data-cs/_static/image4.gif)](updating-and-deleting-existing-binary-data-cs/_static/image7.png)
+[![Configurare ObjectDataSource per usare il metodo DeleteCategory](updating-and-deleting-existing-binary-data-cs/_static/image4.gif)](updating-and-deleting-existing-binary-data-cs/_static/image7.png)
 
 **Figura 4**: Configurare ObjectDataSource per usare la `DeleteCategory` metodo ([fare clic per visualizzare l'immagine con dimensioni normali](updating-and-deleting-existing-binary-data-cs/_static/image8.png))
 
@@ -113,7 +113,7 @@ Dopo aver completato la procedura guidata e correggere il `OldValuesParameterFor
 Dopo la configurazione di ObjectDataSource, aggiungere funzionalità di eliminazione a GridView selezionando la casella di controllo Abilita eliminazione nello smart tag s GridView. Verrà aggiunto un CommandField a GridView cui `ShowDeleteButton` è impostata su `true`.
 
 
-[![EAbilita supporto per l'eliminazione in GridView](updating-and-deleting-existing-binary-data-cs/_static/image5.gif)](updating-and-deleting-existing-binary-data-cs/_static/image9.png)
+[![Abilitare il supporto per l'eliminazione in GridView](updating-and-deleting-existing-binary-data-cs/_static/image5.gif)](updating-and-deleting-existing-binary-data-cs/_static/image9.png)
 
 **Figura 5**: Abilitare il supporto per l'eliminazione in GridView ([fare clic per visualizzare l'immagine con dimensioni normali](updating-and-deleting-existing-binary-data-cs/_static/image10.png))
 
@@ -121,12 +121,12 @@ Dopo la configurazione di ObjectDataSource, aggiungere funzionalità di eliminaz
 Si consiglia di testare la funzionalità di eliminazione. È presente una chiave esterna tra le `Products` tabella s `CategoryID` e il `Categories` la tabella s `CategoryID`, pertanto si otterrà un'eccezione di violazione di vincolo di chiave esterna se si tenta di eliminare una delle prime otto categorie. Per testare questa funzionalità orizzontale, aggiungere una nuova categoria, fornendo brochure sia un'immagine. La categoria di test, illustrata nella figura 6, include un file brochure di test denominato `Test.pdf` e un'immagine di test. Figura 7 mostra il controllo GridView dopo aver aggiunto la categoria di test.
 
 
-[![Auna categoria di Test con un'immagine e Brochure gg](updating-and-deleting-existing-binary-data-cs/_static/image6.gif)](updating-and-deleting-existing-binary-data-cs/_static/image11.png)
+[![Aggiungere una categoria di Test con un'immagine e Brochure](updating-and-deleting-existing-binary-data-cs/_static/image6.gif)](updating-and-deleting-existing-binary-data-cs/_static/image11.png)
 
 **Figura 6**: Aggiungere una categoria di Test con un'immagine e Brochure ([fare clic per visualizzare l'immagine con dimensioni normali](updating-and-deleting-existing-binary-data-cs/_static/image12.png))
 
 
-[![AFine dopo l'inserimento della categoria di Test, viene visualizzato in GridView](updating-and-deleting-existing-binary-data-cs/_static/image7.gif)](updating-and-deleting-existing-binary-data-cs/_static/image13.png)
+[![Dopo aver inserito la categoria di Test, viene visualizzato nel controllo GridView.](updating-and-deleting-existing-binary-data-cs/_static/image7.gif)](updating-and-deleting-existing-binary-data-cs/_static/image13.png)
 
 **Figura 7**: Dopo aver inserito la categoria di Test, viene visualizzato in GridView ([fare clic per visualizzare l'immagine con dimensioni normali](updating-and-deleting-existing-binary-data-cs/_static/image14.png))
 
@@ -171,7 +171,7 @@ Come descritto nel [una panoramica di inserimento, aggiornamento ed eliminazione
 Fare clic sul collegamento Configura origine dati dalla procedura guidata ObjectDataSource s e procedere al secondo passaggio. Perché il `DataObjectMethodAttribute` usato in `CategoriesBLL`, l'elenco di riepilogo a discesa di aggiornamento deve essere popolato automaticamente con il `UpdateCategory` overload che accetta quattro parametri di input (per tutte le colonne ma `Picture`). Modificare questa impostazione in modo che utilizzi l'overload con cinque parametri.
 
 
-[![Cconfigurare ObjectDataSource per utilizzare il metodo UpdateCategory che includa un parametro per immagine](updating-and-deleting-existing-binary-data-cs/_static/image9.gif)](updating-and-deleting-existing-binary-data-cs/_static/image15.png)
+[![Configurare ObjectDataSource per usare il metodo UpdateCategory che includa un parametro per immagine](updating-and-deleting-existing-binary-data-cs/_static/image9.gif)](updating-and-deleting-existing-binary-data-cs/_static/image15.png)
 
 **Figura 9**: Configurare ObjectDataSource per usare la `UpdateCategory` che includa un parametro di metodo `Picture` ([fare clic per visualizzare l'immagine con dimensioni normali](updating-and-deleting-existing-binary-data-cs/_static/image16.png))
 
@@ -186,7 +186,7 @@ Dopo aver completato la procedura guidata e correggere il `OldValuesParameterFor
 Per abilitare le funzionalità di modifica predefinite di GridView s, selezionare l'opzione Abilita modifica dallo smart tag s GridView. Questa operazione verrà impostata la s CommandField `ShowEditButton` proprietà `true`, ottenendo l'aggiunta di un pulsante Modifica (e i pulsanti di aggiornamento e annullamento per la riga da modificare).
 
 
-[![CConfigura il controllo GridView alla modifica del supporto](updating-and-deleting-existing-binary-data-cs/_static/image10.gif)](updating-and-deleting-existing-binary-data-cs/_static/image17.png)
+[![Configurare il controllo GridView alla modifica del supporto](updating-and-deleting-existing-binary-data-cs/_static/image10.gif)](updating-and-deleting-existing-binary-data-cs/_static/image17.png)
 
 **Figura 10**: Configurare il controllo GridView alla modifica del supporto ([fare clic per visualizzare l'immagine con dimensioni normali](updating-and-deleting-existing-binary-data-cs/_static/image18.png))
 
@@ -194,7 +194,7 @@ Per abilitare le funzionalità di modifica predefinite di GridView s, selezionar
 Visita la pagina tramite un browser e fare clic su uno dei pulsanti di modifica s della riga. Il `CategoryName` e `Description` BoundField vengono visualizzati come caselle di testo. Il `BrochurePath` TemplateField manca un' `EditItemTemplate`, quindi continua a mostrare relativo `ItemTemplate` un collegamento a brochure. Il `Picture` ImageField esegue il rendering come una casella di testo la cui proprietà `Text` proprietà viene assegnato il valore di istanze della classe ImageField `DataImageUrlField` valore, in questo caso `CategoryID`.
 
 
-[![Tegli GridView non dispone di un'interfaccia di modifica per BrochurePath](updating-and-deleting-existing-binary-data-cs/_static/image11.gif)](updating-and-deleting-existing-binary-data-cs/_static/image19.png)
+[![Il controllo GridView non ha un'interfaccia di modifica per BrochurePath](updating-and-deleting-existing-binary-data-cs/_static/image11.gif)](updating-and-deleting-existing-binary-data-cs/_static/image19.png)
 
 **Figura 11**: Il controllo GridView non dispone di un'interfaccia di modifica `BrochurePath` ([fare clic per visualizzare l'immagine con dimensioni normali](updating-and-deleting-existing-binary-data-cs/_static/image20.png))
 
@@ -226,7 +226,7 @@ Imposta i primi `ListItem` s `Selected` proprietà `true`.
 Di sotto di RadioButtonList, aggiungere un controllo FileUpload denominato `BrochureUpload`. Impostare relativi `Visible` proprietà `false`.
 
 
-[![Agg un controllo RadioButtonList e controllo FileUpload EditItemTemplate](updating-and-deleting-existing-binary-data-cs/_static/image13.gif)](updating-and-deleting-existing-binary-data-cs/_static/image21.png)
+[![Aggiungere un RadioButtonList e controllo FileUpload EditItemTemplate](updating-and-deleting-existing-binary-data-cs/_static/image13.gif)](updating-and-deleting-existing-binary-data-cs/_static/image21.png)
 
 **Figura 13**: Aggiungere un RadioButtonList e FileUpload controllo per il `EditItemTemplate` ([fare clic per visualizzare l'immagine con dimensioni normali](updating-and-deleting-existing-binary-data-cs/_static/image22.png))
 
@@ -241,12 +241,12 @@ Poiché i controlli RadioButtonList e FileUpload sono all'interno di un modello,
 Con questo codice, si consiglia di testare l'interfaccia di modifica. Fare clic sul pulsante Modifica per una riga. Inizialmente, l'opzione brochure corrente Usa debba essere selezionato. Modifica l'indice selezionato determina un postback. Se la terza opzione è selezionata, viene visualizzato il controllo FileUpload, in caso contrario è nascosto. Figura 14 viene illustrata l'interfaccia di modifica quando il pulsante di modifica prima di tutto è selezionato; Figura 15 viene illustrata l'interfaccia dopo aver selezionata l'opzione brochure nuovo caricamento.
 
 
-[![Initially, l'uso corrente brochure che scelto](updating-and-deleting-existing-binary-data-cs/_static/image14.gif)](updating-and-deleting-existing-binary-data-cs/_static/image23.png)
+[![Inizialmente, uso corrente brochure che opzione è selezionata](updating-and-deleting-existing-binary-data-cs/_static/image14.gif)](updating-and-deleting-existing-binary-data-cs/_static/image23.png)
 
 **Figura 14**: Inizialmente, uso corrente brochure opzione è selezionata ([fare clic per visualizzare l'immagine con dimensioni normali](updating-and-deleting-existing-binary-data-cs/_static/image24.png))
 
 
-[![Choosing caricamento nuovo brochure opzione Visualizza il controllo FileUpload](updating-and-deleting-existing-binary-data-cs/_static/image15.gif)](updating-and-deleting-existing-binary-data-cs/_static/image25.png)
+[![Scelta di caricamento nuovo brochure opzione Visualizza il controllo FileUpload](updating-and-deleting-existing-binary-data-cs/_static/image15.gif)](updating-and-deleting-existing-binary-data-cs/_static/image25.png)
 
 **Figura 15**: Scelta di caricamento nuovo brochure opzione Visualizza il controllo FileUpload ([fare clic per visualizzare l'immagine con dimensioni normali](updating-and-deleting-existing-binary-data-cs/_static/image26.png))
 
@@ -302,7 +302,7 @@ La conversione di ImageField in un TemplateField in questo modo viene generato u
 È necessario aggiornare il `EditItemTemplate` usare un controllo FileUpload. Da GridView tag smart s fare clic su Modifica modelli collegarsi e quindi selezionare il `Picture` TemplateField s `EditItemTemplate` nell'elenco a discesa. Il modello dovrebbe essere una casella di testo rimuovere questo. Successivamente, trascinare un controllo FileUpload dalla casella degli strumenti nel modello, l'impostazione relativa `ID` a `PictureUpload`. Aggiungere anche il testo per modificare l'immagine di categoria s, specificare una nuova immagine. Per mantenere lo stesso dell'immagine di categoria s, lasciare vuoto il campo al modello, nonché.
 
 
-[![Aun controllo FileUpload EditItemTemplate gg](updating-and-deleting-existing-binary-data-cs/_static/image17.gif)](updating-and-deleting-existing-binary-data-cs/_static/image27.png)
+[![Aggiungere un controllo FileUpload a EditItemTemplate](updating-and-deleting-existing-binary-data-cs/_static/image17.gif)](updating-and-deleting-existing-binary-data-cs/_static/image27.png)
 
 **Figura 17**: Aggiungere un controllo FileUpload per il `EditItemTemplate` ([fare clic per visualizzare l'immagine con dimensioni normali](updating-and-deleting-existing-binary-data-cs/_static/image28.png))
 
@@ -310,7 +310,7 @@ La conversione di ImageField in un TemplateField in questo modo viene generato u
 Dopo la personalizzazione dell'interfaccia di modifica, visualizzare lo stato di avanzamento in un browser. Quando si visualizza una riga in modalità di sola lettura, viene visualizzata l'immagine di s categoria come prima, ma facendo clic sul pulsante Modifica viene eseguito il rendering della colonna immagine come testo con un controllo FileUpload.
 
 
-[![Tegli modifica interfaccia include un controllo FileUpload](updating-and-deleting-existing-binary-data-cs/_static/image18.gif)](updating-and-deleting-existing-binary-data-cs/_static/image29.png)
+[![L'interfaccia di modifica include un controllo FileUpload](updating-and-deleting-existing-binary-data-cs/_static/image18.gif)](updating-and-deleting-existing-binary-data-cs/_static/image29.png)
 
 **Figura 18**: L'interfaccia di modifica include un controllo FileUpload ([fare clic per visualizzare l'immagine con dimensioni normali](updating-and-deleting-existing-binary-data-cs/_static/image30.png))
 

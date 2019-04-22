@@ -12,7 +12,7 @@ ms.openlocfilehash: 8bdee58aa04e1c8217c2a727b96aa8b239fe1aca
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59395608"
 ---
 # <a name="changing-an-animation-using-client-side-code-c"></a>Modifica di un'animazione tramite codice lato client (C#)
@@ -71,7 +71,7 @@ Il codice JavaScript seguente assegna questa descripting JSON per il `OnClick` a
 [!code-html[Main](changing-an-animation-using-client-side-code-cs/samples/sample7.html)]
 
 
-[![The animazione viene eseguita immediatamente, senza un clic del mouse (e con markup minimo)](changing-an-animation-using-client-side-code-cs/_static/image2.png)](changing-an-animation-using-client-side-code-cs/_static/image1.png)
+[![L'animazione viene eseguita immediatamente, senza un clic del mouse (e con markup minimo)](changing-an-animation-using-client-side-code-cs/_static/image2.png)](changing-an-animation-using-client-side-code-cs/_static/image1.png)
 
 L'animazione viene eseguita immediatamente, senza un clic del mouse (e con markup minimo) ([fare clic per visualizzare l'immagine con dimensioni normali](changing-an-animation-using-client-side-code-cs/_static/image3.png))
 

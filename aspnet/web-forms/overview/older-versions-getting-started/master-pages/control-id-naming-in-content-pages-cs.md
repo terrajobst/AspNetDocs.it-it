@@ -12,7 +12,7 @@ ms.openlocfilehash: a398494df0ed2bf749620b717350b21669a1ae5c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59395654"
 ---
 # <a name="control-id-naming-in-content-pages-c"></a>Denominazione degli ID di controllo nelle pagine di contenuto (C#)
@@ -83,7 +83,7 @@ Il contenuto del markup del controllo dichiarativa a questo punto dovrebbe esser
 Figura 3 mostra la pagina visualizzata mediante Progettazione di Visual Studio.
 
 
-[![TControlli pagina include tre Web he: una casella di testo, pulsante ed etichetta](control-id-naming-in-content-pages-cs/_static/image4.png)](control-id-naming-in-content-pages-cs/_static/image3.png)
+[![La pagina include tre controlli Web: una casella di testo, pulsante ed etichetta](control-id-naming-in-content-pages-cs/_static/image4.png)](control-id-naming-in-content-pages-cs/_static/image3.png)
 
 **Figura 03**: Il pagina include tre controlli Web: una casella di testo, pulsante ed etichetta ([fare clic per visualizzare l'immagine con dimensioni normali](control-id-naming-in-content-pages-cs/_static/image5.png))
 
@@ -133,7 +133,7 @@ Mentre la sintassi utilizzata per chiamare il `FindControl` metodo differisce le
 Dopo aver immesso il codice, visitare il `IDIssues.aspx` pagina tramite un browser, immettere la tua età e fare clic sul pulsante "Invia". Fare clic sul pulsante "Invia" su un `NullReferenceException` generata (vedere la figura 5).
 
 
-[![A Viene generato l'eccezione NullReferenceException](control-id-naming-in-content-pages-cs/_static/image8.png)](control-id-naming-in-content-pages-cs/_static/image7.png)
+[![Viene generata un'eccezione NullReferenceException](control-id-naming-in-content-pages-cs/_static/image8.png)](control-id-naming-in-content-pages-cs/_static/image7.png)
 
 **Figura 05**: Oggetto `NullReferenceException` viene generato ([fare clic per visualizzare l'immagine con dimensioni normali](control-id-naming-in-content-pages-cs/_static/image9.png))
 
@@ -173,7 +173,7 @@ Fortunatamente, un riferimento alla pagina master è accessibile tramite il `Pag
 In questo momento, visitando la pagina tramite un browser, immettendo la tua età e fare clic sul pulsante "Invia" Visualizza il messaggio nel `Results` assegnare un'etichetta, come previsto.
 
 
-[![TEtà he dell'utente viene visualizzato nell'etichetta](control-id-naming-in-content-pages-cs/_static/image11.png)](control-id-naming-in-content-pages-cs/_static/image10.png)
+[![L'età dell'utente viene visualizzato nell'etichetta](control-id-naming-in-content-pages-cs/_static/image11.png)](control-id-naming-in-content-pages-cs/_static/image10.png)
 
 **Figura 06**: L'età dell'utente viene visualizzato nell'etichetta ([fare clic per visualizzare l'immagine con dimensioni normali](control-id-naming-in-content-pages-cs/_static/image12.png))
 
@@ -200,7 +200,7 @@ Aggiungere il codice seguente per il `PageExtensionMethods.cs` file di classe pe
 Con questo codice, tornare al `IDIssues.aspx` classe code-behind della pagina e rimuovere i commenti corrente `FindControl` chiamate al metodo. Sostituirli con chiamate a `Page.FindControlRecursive("controlID")`. Che cos'è interessante sui metodi di estensione è che questi vengano visualizzati direttamente all'interno di elenchi a discesa di IntelliSense. Come illustrato nella figura 7, quando si digita pagina e quindi premere periodo, il `FindControlRecursive` metodo è incluso in IntelliSense elenco a discesa insieme all'altro `Control` metodi della classe.
 
 
-[![Ei metodi di estensione sono inclusi in IntelliSense discesa](control-id-naming-in-content-pages-cs/_static/image14.png)](control-id-naming-in-content-pages-cs/_static/image13.png)
+[![Sono inclusi i metodi di estensione in IntelliSense discesa](control-id-naming-in-content-pages-cs/_static/image14.png)](control-id-naming-in-content-pages-cs/_static/image13.png)
 
 **Figura 07**: Sono inclusi i metodi di estensione in IntelliSense discesa ([fare clic per visualizzare l'immagine con dimensioni normali](control-id-naming-in-content-pages-cs/_static/image15.png))
 
