@@ -12,13 +12,13 @@ ms.openlocfilehash: f2d27c6d624ceafbdc3f880ffc2a91cae0fddddf
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59392898"
 ---
-# <a name="submit-and-postback"></a><span data-ttu-id="86bc0-103">Invio e postback</span><span class="sxs-lookup"><span data-stu-id="86bc0-103">Submit and Postback</span></span>
+# <a name="submit-and-postback"></a><span data-ttu-id="d72d1-103">Invio e postback</span><span class="sxs-lookup"><span data-stu-id="d72d1-103">Submit and Postback</span></span>
 
-<span data-ttu-id="86bc0-104">da [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="86bc0-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
+<span data-ttu-id="d72d1-104">da [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="d72d1-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
 
-<span data-ttu-id="86bc0-105">Questo video viene spiegato cosa verrà pubblicato &quot;dietro le quinte&quot; quando l'interazione dell'applicazione ASP.NET browser e server.</span><span class="sxs-lookup"><span data-stu-id="86bc0-105">This video explains what goes on &quot;under the covers&quot; when your ASP.NET application's browser and server interact.</span></span>
+<span data-ttu-id="d72d1-105">Questo video viene spiegato cosa verrà pubblicato &quot;dietro le quinte&quot; quando l'interazione dell'applicazione ASP.NET browser e server.</span><span class="sxs-lookup"><span data-stu-id="d72d1-105">This video explains what goes on &quot;under the covers&quot; when your ASP.NET application's browser and server interact.</span></span>
 
-[<span data-ttu-id="86bc0-106">&#9654;Guarda il video (19 minuti)</span><span class="sxs-lookup"><span data-stu-id="86bc0-106">&#9654; Watch video (19 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/submit-and-postback)
+[<span data-ttu-id="d72d1-106">&#9654;Guarda il video (19 minuti)</span><span class="sxs-lookup"><span data-stu-id="d72d1-106">&#9654; Watch video (19 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/submit-and-postback)

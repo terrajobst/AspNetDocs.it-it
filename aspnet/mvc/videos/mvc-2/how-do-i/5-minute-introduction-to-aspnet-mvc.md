@@ -12,18 +12,18 @@ ms.openlocfilehash: ef61c16265832f07cf9e74a531597cc962184a74
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59385696"
 ---
-# <a name="5-minute-introduction-to-aspnet-mvc"></a><span data-ttu-id="76912-103">Introduzione di 5 minuti ad ASP.NET MVC</span><span class="sxs-lookup"><span data-stu-id="76912-103">5 Minute Introduction to ASP.NET MVC</span></span>
+# <a name="5-minute-introduction-to-aspnet-mvc"></a><span data-ttu-id="632d8-103">Introduzione di 5 minuti ad ASP.NET MVC</span><span class="sxs-lookup"><span data-stu-id="632d8-103">5 Minute Introduction to ASP.NET MVC</span></span>
 
-<span data-ttu-id="76912-104">da [Scott Hanselman](https://github.com/shanselman)</span><span class="sxs-lookup"><span data-stu-id="76912-104">by [Scott Hanselman](https://github.com/shanselman)</span></span>
+<span data-ttu-id="632d8-104">da [Scott Hanselman](https://github.com/shanselman)</span><span class="sxs-lookup"><span data-stu-id="632d8-104">by [Scott Hanselman](https://github.com/shanselman)</span></span>
 
-<span data-ttu-id="76912-105">Scott Hanselman presenta un'introduzione di 5 minuti ad ASP.NET MVC.</span><span class="sxs-lookup"><span data-stu-id="76912-105">Scott Hanselman presents a 5 minute introduction to ASP.NET MVC.</span></span>
+<span data-ttu-id="632d8-105">Scott Hanselman presenta un'introduzione di 5 minuti ad ASP.NET MVC.</span><span class="sxs-lookup"><span data-stu-id="632d8-105">Scott Hanselman presents a 5 minute introduction to ASP.NET MVC.</span></span>
 
-[<span data-ttu-id="76912-106">&#9654;Guarda il video (8 minuti)</span><span class="sxs-lookup"><span data-stu-id="76912-106">&#9654; Watch video (8 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/5-minute-introduction-to-aspnet-mvc)
+[<span data-ttu-id="632d8-106">&#9654;Guarda il video (8 minuti)</span><span class="sxs-lookup"><span data-stu-id="632d8-106">&#9654; Watch video (8 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/5-minute-introduction-to-aspnet-mvc)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="76912-107">[Precedente](aspnet-mvc-2-render-action.md)
-> [Successivo](how-to-best-learn-asp-net-mvc.md)</span><span class="sxs-lookup"><span data-stu-id="76912-107">[Previous](aspnet-mvc-2-render-action.md)
+> <span data-ttu-id="632d8-107">[Precedente](aspnet-mvc-2-render-action.md)
+> [Successivo](how-to-best-learn-asp-net-mvc.md)</span><span class="sxs-lookup"><span data-stu-id="632d8-107">[Previous](aspnet-mvc-2-render-action.md)
 [Next](how-to-best-learn-asp-net-mvc.md)</span></span>

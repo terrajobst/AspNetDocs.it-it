@@ -12,18 +12,18 @@ ms.openlocfilehash: 6f0e1aa85b5715ce602e94d2d94a5e96b9f93008
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59391768"
 ---
-# <a name="mvc2---html-encoding"></a><span data-ttu-id="b73bd-103">MVC2 - Codifica HTML</span><span class="sxs-lookup"><span data-stu-id="b73bd-103">MVC2 - Html Encoding</span></span>
+# <a name="mvc2---html-encoding"></a><span data-ttu-id="3317e-103">MVC2 - Codifica HTML</span><span class="sxs-lookup"><span data-stu-id="3317e-103">MVC2 - Html Encoding</span></span>
 
-<span data-ttu-id="b73bd-104">by [Microsoft](https://github.com/microsoft)</span><span class="sxs-lookup"><span data-stu-id="b73bd-104">by [Microsoft](https://github.com/microsoft)</span></span>
+<span data-ttu-id="3317e-104">by [Microsoft](https://github.com/microsoft)</span><span class="sxs-lookup"><span data-stu-id="3317e-104">by [Microsoft](https://github.com/microsoft)</span></span>
 
-<span data-ttu-id="b73bd-105">In questo video si apprenderà come usare la nuova sintassi di scelta rapida di codifica HTML in ASP.NET per salvaguardarsi da attacchi script injection e usare il MvcHtmlString quando si desidera includere HTML nelle stringhe.</span><span class="sxs-lookup"><span data-stu-id="b73bd-105">In this video you will learn how to use the new HTML Encoding shortcut syntax in ASP.NET to guard against script injection, and to use the MvcHtmlString when you want to include HTML in your strings.</span></span>
+<span data-ttu-id="3317e-105">In questo video si apprenderà come usare la nuova sintassi di scelta rapida di codifica HTML in ASP.NET per salvaguardarsi da attacchi script injection e usare il MvcHtmlString quando si desidera includere HTML nelle stringhe.</span><span class="sxs-lookup"><span data-stu-id="3317e-105">In this video you will learn how to use the new HTML Encoding shortcut syntax in ASP.NET to guard against script injection, and to use the MvcHtmlString when you want to include HTML in your strings.</span></span>
 
-[<span data-ttu-id="b73bd-106">&#9654;Guarda il video (2 minuti)</span><span class="sxs-lookup"><span data-stu-id="b73bd-106">&#9654; Watch video (2 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/mvc2-html-encoding)
+[<span data-ttu-id="3317e-106">&#9654;Guarda il video (2 minuti)</span><span class="sxs-lookup"><span data-stu-id="3317e-106">&#9654; Watch video (2 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/mvc2-html-encoding)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="b73bd-107">[Precedente](how-do-i-use-httpverbs-attributes-in-an-mvc-application.md)
-> [Successivo](mvc2-stronglytyped-helpers.md)</span><span class="sxs-lookup"><span data-stu-id="b73bd-107">[Previous](how-do-i-use-httpverbs-attributes-in-an-mvc-application.md)
+> <span data-ttu-id="3317e-107">[Precedente](how-do-i-use-httpverbs-attributes-in-an-mvc-application.md)
+> [Successivo](mvc2-stronglytyped-helpers.md)</span><span class="sxs-lookup"><span data-stu-id="3317e-107">[Previous](how-do-i-use-httpverbs-attributes-in-an-mvc-application.md)
 [Next](mvc2-stronglytyped-helpers.md)</span></span>

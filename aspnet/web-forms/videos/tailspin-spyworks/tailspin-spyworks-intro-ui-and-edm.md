@@ -12,18 +12,18 @@ ms.openlocfilehash: cc0593453494d843a92a84d929eec75d9b386860
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59392742"
 ---
-# <a name="tailspin-spyworks---intro-ui-and-edm"></a><span data-ttu-id="fd615-103">Tailspin Spyworks - Introduzione all'interfaccia utente e a EDM</span><span class="sxs-lookup"><span data-stu-id="fd615-103">Tailspin Spyworks - Intro UI and EDM</span></span>
+# <a name="tailspin-spyworks---intro-ui-and-edm"></a><span data-ttu-id="ac2ed-103">Tailspin Spyworks - Introduzione all'interfaccia utente e a EDM</span><span class="sxs-lookup"><span data-stu-id="ac2ed-103">Tailspin Spyworks - Intro UI and EDM</span></span>
 
-<span data-ttu-id="fd615-104">da [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="fd615-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
+<span data-ttu-id="ac2ed-104">da [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="ac2ed-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
 
-<span data-ttu-id="fd615-105">Joe Stagner viene avviato l'applicazione Web Form di esempio Tailspin Spyworks implementando il modello predefinito.</span><span class="sxs-lookup"><span data-stu-id="fd615-105">Joe Stagner kicks off the Tailspin Spyworks sample Web Forms application by implementing the default template.</span></span>
+<span data-ttu-id="ac2ed-105">Joe Stagner viene avviato l'applicazione Web Form di esempio Tailspin Spyworks implementando il modello predefinito.</span><span class="sxs-lookup"><span data-stu-id="ac2ed-105">Joe Stagner kicks off the Tailspin Spyworks sample Web Forms application by implementing the default template.</span></span>
 
-[<span data-ttu-id="fd615-106">&#9654;Guarda il video (12 minuti)</span><span class="sxs-lookup"><span data-stu-id="fd615-106">&#9654; Watch video (12 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/tailspin-spyworks-intro-ui-and-edm)
+[<span data-ttu-id="ac2ed-106">&#9654;Guarda il video (12 minuti)</span><span class="sxs-lookup"><span data-stu-id="ac2ed-106">&#9654; Watch video (12 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/tailspin-spyworks-intro-ui-and-edm)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="fd615-107">[Precedente](tailspin-spyworks-implementing-and-using-the-also-purchased-control.md)
-> [Successivo](tailspin-spyworks-directory-organization.md)</span><span class="sxs-lookup"><span data-stu-id="fd615-107">[Previous](tailspin-spyworks-implementing-and-using-the-also-purchased-control.md)
+> <span data-ttu-id="ac2ed-107">[Precedente](tailspin-spyworks-implementing-and-using-the-also-purchased-control.md)
+> [Successivo](tailspin-spyworks-directory-organization.md)</span><span class="sxs-lookup"><span data-stu-id="ac2ed-107">[Previous](tailspin-spyworks-implementing-and-using-the-also-purchased-control.md)
 [Next](tailspin-spyworks-directory-organization.md)</span></span>

@@ -12,13 +12,13 @@ ms.openlocfilehash: 06a388991d23ced8c7cd6d22e63a6ce6288e0b3f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59382641"
 ---
-# <a name="build-your-first-aspnet-application-with-aspnet-web-forms"></a><span data-ttu-id="fa327-103">Creare la prima applicazione ASP.NET con Web Forms ASP.NET</span><span class="sxs-lookup"><span data-stu-id="fa327-103">Build Your First ASP.NET Application with ASP.NET Web Forms</span></span>
+# <a name="build-your-first-aspnet-application-with-aspnet-web-forms"></a><span data-ttu-id="671bb-103">Creare la prima applicazione ASP.NET con Web Forms ASP.NET</span><span class="sxs-lookup"><span data-stu-id="671bb-103">Build Your First ASP.NET Application with ASP.NET Web Forms</span></span>
 
-<span data-ttu-id="fa327-104">da [Laurence Moroney](https://github.com/lmoroney)</span><span class="sxs-lookup"><span data-stu-id="fa327-104">by [Laurence Moroney](https://github.com/lmoroney)</span></span>
+<span data-ttu-id="671bb-104">da [Laurence Moroney](https://github.com/lmoroney)</span><span class="sxs-lookup"><span data-stu-id="671bb-104">by [Laurence Moroney](https://github.com/lmoroney)</span></span>
 
-<span data-ttu-id="fa327-105">Laurence Moroney di Microsoft illustra come compilare la prima applicazione ASP.NET con Web Form ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="fa327-105">Microsoft's Laurence Moroney shows you how to build your first ASP.NET application with ASP.NET Web Forms.</span></span>
+<span data-ttu-id="671bb-105">Laurence Moroney di Microsoft illustra come compilare la prima applicazione ASP.NET con Web Form ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="671bb-105">Microsoft's Laurence Moroney shows you how to build your first ASP.NET application with ASP.NET Web Forms.</span></span>
 
-[<span data-ttu-id="fa327-106">&#9654;Guarda il video (11 minuti)</span><span class="sxs-lookup"><span data-stu-id="fa327-106">&#9654; Watch video (11 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/build-your-first-asp-net-application-with-asp-net-web-forms)
+[<span data-ttu-id="671bb-106">&#9654;Guarda il video (11 minuti)</span><span class="sxs-lookup"><span data-stu-id="671bb-106">&#9654; Watch video (11 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/build-your-first-asp-net-application-with-asp-net-web-forms)

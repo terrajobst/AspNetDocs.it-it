@@ -12,18 +12,18 @@ ms.openlocfilehash: 4efddfa898514f9f5f8caf1baca250d5b4ac85b5
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59392703"
 ---
-# <a name="how-do-i-use-the-aspnet-ajax-dropdown-control"></a><span data-ttu-id="2429d-104">[Procedura:] Usare il controllo DropDown ASP.NET AJAX?</span><span class="sxs-lookup"><span data-stu-id="2429d-104">[How Do I:] Use the ASP.NET AJAX DropDown Control?</span></span>
+# <a name="how-do-i-use-the-aspnet-ajax-dropdown-control"></a><span data-ttu-id="398da-104">[Procedura:] Usare il controllo DropDown ASP.NET AJAX?</span><span class="sxs-lookup"><span data-stu-id="398da-104">[How Do I:] Use the ASP.NET AJAX DropDown Control?</span></span>
 
-<span data-ttu-id="2429d-105">da [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="2429d-105">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
+<span data-ttu-id="398da-105">da [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="398da-105">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
 
-<span data-ttu-id="2429d-106">Con l'elenco a discesa controllo extender di ASP.NET AJAX Control Toolkit, è possibile presentare all'utente con un elenco di riepilogo a discesa di opzioni che attivano un aggiornamento parziale della pagina in un' posizione nella pagina Web.</span><span class="sxs-lookup"><span data-stu-id="2429d-106">With the DropDown control extender from the ASP.NET AJAX Control Toolkit, you can present the user with a drop-down list of options that trigger a partial-page update elsewhere on the Web page.</span></span> <span data-ttu-id="2429d-107">L'opzione selezionata dall'utente viene passato al server, consentendo al codice lato server elaborare la selezione prima di completare l'aggiornamento parziale della pagina.</span><span class="sxs-lookup"><span data-stu-id="2429d-107">The option selected by the user is passed to the server, allowing your server-side code to process the selection before completing the partial-page update.</span></span>
+<span data-ttu-id="398da-106">Con l'elenco a discesa controllo extender di ASP.NET AJAX Control Toolkit, è possibile presentare all'utente con un elenco di riepilogo a discesa di opzioni che attivano un aggiornamento parziale della pagina in un' posizione nella pagina Web.</span><span class="sxs-lookup"><span data-stu-id="398da-106">With the DropDown control extender from the ASP.NET AJAX Control Toolkit, you can present the user with a drop-down list of options that trigger a partial-page update elsewhere on the Web page.</span></span> <span data-ttu-id="398da-107">L'opzione selezionata dall'utente viene passato al server, consentendo al codice lato server elaborare la selezione prima di completare l'aggiornamento parziale della pagina.</span><span class="sxs-lookup"><span data-stu-id="398da-107">The option selected by the user is passed to the server, allowing your server-side code to process the selection before completing the partial-page update.</span></span>
 
-[<span data-ttu-id="2429d-108">&#9654;Guarda il video (11 minuti)</span><span class="sxs-lookup"><span data-stu-id="2429d-108">&#9654; Watch video (11 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-use-the-aspnet-ajax-dropdown-control)
+[<span data-ttu-id="398da-108">&#9654;Guarda il video (11 minuti)</span><span class="sxs-lookup"><span data-stu-id="398da-108">&#9654; Watch video (11 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-use-the-aspnet-ajax-dropdown-control)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="2429d-109">[Precedente](how-do-i-configure-the-aspnet-ajax-calendar-control.md)
-> [Successivo](how-do-i-use-the-aspnet-ajax-maskededit-controls.md)</span><span class="sxs-lookup"><span data-stu-id="2429d-109">[Previous](how-do-i-configure-the-aspnet-ajax-calendar-control.md)
+> <span data-ttu-id="398da-109">[Precedente](how-do-i-configure-the-aspnet-ajax-calendar-control.md)
+> [Successivo](how-do-i-use-the-aspnet-ajax-maskededit-controls.md)</span><span class="sxs-lookup"><span data-stu-id="398da-109">[Previous](how-do-i-configure-the-aspnet-ajax-calendar-control.md)
 [Next](how-do-i-use-the-aspnet-ajax-maskededit-controls.md)</span></span>

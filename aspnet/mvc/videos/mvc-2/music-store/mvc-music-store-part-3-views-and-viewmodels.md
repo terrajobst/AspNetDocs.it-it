@@ -12,16 +12,16 @@ ms.openlocfilehash: 6d278b226ac8388222f32e9dfb8311b05b26a5cd
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59390558"
 ---
-# <a name="mvc-music-store-part-3-views-and-viewmodels"></a><span data-ttu-id="863d1-103">Music Store MVC - Parte 3: Visualizzazioni e ViewModel</span><span class="sxs-lookup"><span data-stu-id="863d1-103">MVC Music Store Part 3: Views and ViewModels</span></span>
+# <a name="mvc-music-store-part-3-views-and-viewmodels"></a><span data-ttu-id="99664-103">Music Store MVC - Parte 3: Visualizzazioni e ViewModel</span><span class="sxs-lookup"><span data-stu-id="99664-103">MVC Music Store Part 3: Views and ViewModels</span></span>
 
-<span data-ttu-id="863d1-104">by [Jon Galloway](https://github.com/jongalloway)</span><span class="sxs-lookup"><span data-stu-id="863d1-104">by [Jon Galloway](https://github.com/jongalloway)</span></span>
+<span data-ttu-id="99664-104">by [Jon Galloway](https://github.com/jongalloway)</span><span class="sxs-lookup"><span data-stu-id="99664-104">by [Jon Galloway](https://github.com/jongalloway)</span></span>
 
-<span data-ttu-id="863d1-105">Jon continua l'esercitazione MVC Music Store include un'introduzione a visualizzazioni, elementi ViewModel e MasterPage.</span><span class="sxs-lookup"><span data-stu-id="863d1-105">Jon continues the MVC Music Store tutorial with an introduction to Views, ViewModels, and MasterPages.</span></span>
+<span data-ttu-id="99664-105">Jon continua l'esercitazione MVC Music Store include un'introduzione a visualizzazioni, elementi ViewModel e MasterPage.</span><span class="sxs-lookup"><span data-stu-id="99664-105">Jon continues the MVC Music Store tutorial with an introduction to Views, ViewModels, and MasterPages.</span></span>
 
-[<span data-ttu-id="863d1-106">&#9654;Guarda il video (13 minuti)</span><span class="sxs-lookup"><span data-stu-id="863d1-106">&#9654; Watch video (13 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/mvc-music-store-part-3-views-and-viewmodels)
+[<span data-ttu-id="99664-106">&#9654;Guarda il video (13 minuti)</span><span class="sxs-lookup"><span data-stu-id="99664-106">&#9654; Watch video (13 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/mvc-music-store-part-3-views-and-viewmodels)
 
 > [!div class="step-by-step"]
-> [<span data-ttu-id="863d1-107">Precedente</span><span class="sxs-lookup"><span data-stu-id="863d1-107">Previous</span></span>](mvc-music-store-part-2-controllers.md)
+> [<span data-ttu-id="99664-107">Precedente</span><span class="sxs-lookup"><span data-stu-id="99664-107">Previous</span></span>](mvc-music-store-part-2-controllers.md)

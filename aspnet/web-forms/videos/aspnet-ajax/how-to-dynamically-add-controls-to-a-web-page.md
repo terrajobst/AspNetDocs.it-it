@@ -12,18 +12,18 @@ ms.openlocfilehash: beffb10a649796c75c165ed28126bfcaf6bcdccf
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381757"
 ---
-# <a name="how-to-dynamically-add-controls-to-a-web-page"></a><span data-ttu-id="dd4df-103">Come aggiungere dinamicamente controlli a una pagina Web</span><span class="sxs-lookup"><span data-stu-id="dd4df-103">How To Dynamically Add Controls to a Web Page</span></span>
+# <a name="how-to-dynamically-add-controls-to-a-web-page"></a><span data-ttu-id="11170-103">Come aggiungere dinamicamente controlli a una pagina Web</span><span class="sxs-lookup"><span data-stu-id="11170-103">How To Dynamically Add Controls to a Web Page</span></span>
 
-<span data-ttu-id="dd4df-104">da [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="dd4df-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
+<span data-ttu-id="11170-104">da [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="11170-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
 
-<span data-ttu-id="dd4df-105">In questo video illustrerò una tecnica per aggiungere in modo dinamico un numero indeterminato di controlli a una pagina web.</span><span class="sxs-lookup"><span data-stu-id="dd4df-105">In this video I will demonstrate a technique to dynamically add an indeterminate number of controls to your web page.</span></span>
+<span data-ttu-id="11170-105">In questo video illustrerò una tecnica per aggiungere in modo dinamico un numero indeterminato di controlli a una pagina web.</span><span class="sxs-lookup"><span data-stu-id="11170-105">In this video I will demonstrate a technique to dynamically add an indeterminate number of controls to your web page.</span></span>
 
-[<span data-ttu-id="dd4df-106">&#9654;Guarda il video (minuti 31)</span><span class="sxs-lookup"><span data-stu-id="dd4df-106">&#9654; Watch video (31 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-to-dynamically-add-controls-to-a-web-page)
+[<span data-ttu-id="11170-106">&#9654;Guarda il video (minuti 31)</span><span class="sxs-lookup"><span data-stu-id="11170-106">&#9654; Watch video (31 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-to-dynamically-add-controls-to-a-web-page)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="dd4df-107">[Precedente](how-to-dynamically-change-css-using-the-aspnet-ajax-updatepanel.md)
-> [Successivo](set-up-your-development-environment-for-aspnet-35.md)</span><span class="sxs-lookup"><span data-stu-id="dd4df-107">[Previous](how-to-dynamically-change-css-using-the-aspnet-ajax-updatepanel.md)
+> <span data-ttu-id="11170-107">[Precedente](how-to-dynamically-change-css-using-the-aspnet-ajax-updatepanel.md)
+> [Successivo](set-up-your-development-environment-for-aspnet-35.md)</span><span class="sxs-lookup"><span data-stu-id="11170-107">[Previous](how-to-dynamically-change-css-using-the-aspnet-ajax-updatepanel.md)
 [Next](set-up-your-development-environment-for-aspnet-35.md)</span></span>

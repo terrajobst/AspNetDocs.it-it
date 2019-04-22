@@ -12,18 +12,18 @@ ms.openlocfilehash: 72605a131095570390d64fd458ce821ee0f99fbc
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59386632"
 ---
-# <a name="adding-email-to-your-web-site"></a><span data-ttu-id="2133c-103">Aggiunta di posta elettronica al sito Web</span><span class="sxs-lookup"><span data-stu-id="2133c-103">Adding Email to Your Web Site</span></span>
+# <a name="adding-email-to-your-web-site"></a><span data-ttu-id="05308-103">Aggiunta di posta elettronica al sito Web</span><span class="sxs-lookup"><span data-stu-id="05308-103">Adding Email to Your Web Site</span></span>
 
-<span data-ttu-id="2133c-104">da [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="2133c-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
+<span data-ttu-id="05308-104">da [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="05308-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
 
-<span data-ttu-id="2133c-105">Aggiunta di posta elettronica al sito Web (parte 1)</span><span class="sxs-lookup"><span data-stu-id="2133c-105">Adding Email to Your Web Site (Part 1)</span></span>
+<span data-ttu-id="05308-105">Aggiunta di posta elettronica al sito Web (parte 1)</span><span class="sxs-lookup"><span data-stu-id="05308-105">Adding Email to Your Web Site (Part 1)</span></span>
 
-[<span data-ttu-id="2133c-106">&#9654;Guarda il video (10 minuti)</span><span class="sxs-lookup"><span data-stu-id="2133c-106">&#9654; Watch video (10 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/adding-email-to-your-web-site)
+[<span data-ttu-id="05308-106">&#9654;Guarda il video (10 minuti)</span><span class="sxs-lookup"><span data-stu-id="05308-106">&#9654; Watch video (10 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/adding-email-to-your-web-site)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="2133c-107">[Precedente](working-with-video.md)
-> [Successivo](adding-search-to-your-web-site.md)</span><span class="sxs-lookup"><span data-stu-id="2133c-107">[Previous](working-with-video.md)
+> <span data-ttu-id="05308-107">[Precedente](working-with-video.md)
+> [Successivo](adding-search-to-your-web-site.md)</span><span class="sxs-lookup"><span data-stu-id="05308-107">[Previous](working-with-video.md)
 [Next](adding-search-to-your-web-site.md)</span></span>

@@ -12,19 +12,19 @@ ms.openlocfilehash: 46c56eb012f08900ba8f3d10ce92868d0d4d02e4
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59390259"
 ---
-# <a name="displaying-data-with-the-datalist-and-repeater"></a><span data-ttu-id="b326e-103">Visualizzazione di dati con DataList e Repeater</span><span class="sxs-lookup"><span data-stu-id="b326e-103">Displaying Data with the DataList and Repeater</span></span>
+# <a name="displaying-data-with-the-datalist-and-repeater"></a><span data-ttu-id="b8f48-103">Visualizzazione di dati con DataList e Repeater</span><span class="sxs-lookup"><span data-stu-id="b8f48-103">Displaying Data with the DataList and Repeater</span></span>
 
-> <span data-ttu-id="b326e-104">Queste esercitazioni mostrano modi alternativi per visualizzare i dati usando i controlli DataList e Repeater.</span><span class="sxs-lookup"><span data-stu-id="b326e-104">These tutorials show alternative ways to display data by using the DataList and Repeater controls.</span></span>
+> <span data-ttu-id="b8f48-104">Queste esercitazioni mostrano modi alternativi per visualizzare i dati usando i controlli DataList e Repeater.</span><span class="sxs-lookup"><span data-stu-id="b8f48-104">These tutorials show alternative ways to display data by using the DataList and Repeater controls.</span></span>
 
 
-- [<span data-ttu-id="b326e-105">Visualizzazione di dati con i controlli DataList e Repeater (C#)</span><span class="sxs-lookup"><span data-stu-id="b326e-105">Displaying Data with the DataList and Repeater Controls (C#)</span></span>](displaying-data-with-the-datalist-and-repeater-controls-cs.md)
-- [<span data-ttu-id="b326e-106">Formattazione di DataList e Repeater in base ai dati (C#)</span><span class="sxs-lookup"><span data-stu-id="b326e-106">Formatting the DataList and Repeater Based Upon Data (C#)</span></span>](formatting-the-datalist-and-repeater-based-upon-data-cs.md)
-- [<span data-ttu-id="b326e-107">Visualizzazione di più record per riga con il controllo DataList (C#)</span><span class="sxs-lookup"><span data-stu-id="b326e-107">Showing Multiple Records per Row with the DataList Control (C#)</span></span>](showing-multiple-records-per-row-with-the-datalist-control-cs.md)
-- [<span data-ttu-id="b326e-108">Controlli Web dei dati annidati (C#)</span><span class="sxs-lookup"><span data-stu-id="b326e-108">Nested Data Web Controls (C#)</span></span>](nested-data-web-controls-cs.md)
-- [<span data-ttu-id="b326e-109">Visualizzazione di dati con i controlli DataList e Repeater (VB)</span><span class="sxs-lookup"><span data-stu-id="b326e-109">Displaying Data with the DataList and Repeater Controls (VB)</span></span>](displaying-data-with-the-datalist-and-repeater-controls-vb.md)
-- [<span data-ttu-id="b326e-110">Formattazione di DataList e Repeater in base ai dati (VB)</span><span class="sxs-lookup"><span data-stu-id="b326e-110">Formatting the DataList and Repeater Based Upon Data (VB)</span></span>](formatting-the-datalist-and-repeater-based-upon-data-vb.md)
-- [<span data-ttu-id="b326e-111">Visualizzazione di più record per riga con il controllo DataList (VB)</span><span class="sxs-lookup"><span data-stu-id="b326e-111">Showing Multiple Records per Row with the DataList Control (VB)</span></span>](showing-multiple-records-per-row-with-the-datalist-control-vb.md)
-- [<span data-ttu-id="b326e-112">Controlli Web dei dati annidati (VB)</span><span class="sxs-lookup"><span data-stu-id="b326e-112">Nested Data Web Controls (VB)</span></span>](nested-data-web-controls-vb.md)
+- [<span data-ttu-id="b8f48-105">Visualizzazione di dati con i controlli DataList e Repeater (C#)</span><span class="sxs-lookup"><span data-stu-id="b8f48-105">Displaying Data with the DataList and Repeater Controls (C#)</span></span>](displaying-data-with-the-datalist-and-repeater-controls-cs.md)
+- [<span data-ttu-id="b8f48-106">Formattazione di DataList e Repeater in base ai dati (C#)</span><span class="sxs-lookup"><span data-stu-id="b8f48-106">Formatting the DataList and Repeater Based Upon Data (C#)</span></span>](formatting-the-datalist-and-repeater-based-upon-data-cs.md)
+- [<span data-ttu-id="b8f48-107">Visualizzazione di più record per riga con il controllo DataList (C#)</span><span class="sxs-lookup"><span data-stu-id="b8f48-107">Showing Multiple Records per Row with the DataList Control (C#)</span></span>](showing-multiple-records-per-row-with-the-datalist-control-cs.md)
+- [<span data-ttu-id="b8f48-108">Controlli Web dei dati annidati (C#)</span><span class="sxs-lookup"><span data-stu-id="b8f48-108">Nested Data Web Controls (C#)</span></span>](nested-data-web-controls-cs.md)
+- [<span data-ttu-id="b8f48-109">Visualizzazione di dati con i controlli DataList e Repeater (VB)</span><span class="sxs-lookup"><span data-stu-id="b8f48-109">Displaying Data with the DataList and Repeater Controls (VB)</span></span>](displaying-data-with-the-datalist-and-repeater-controls-vb.md)
+- [<span data-ttu-id="b8f48-110">Formattazione di DataList e Repeater in base ai dati (VB)</span><span class="sxs-lookup"><span data-stu-id="b8f48-110">Formatting the DataList and Repeater Based Upon Data (VB)</span></span>](formatting-the-datalist-and-repeater-based-upon-data-vb.md)
+- [<span data-ttu-id="b8f48-111">Visualizzazione di più record per riga con il controllo DataList (VB)</span><span class="sxs-lookup"><span data-stu-id="b8f48-111">Showing Multiple Records per Row with the DataList Control (VB)</span></span>](showing-multiple-records-per-row-with-the-datalist-control-vb.md)
+- [<span data-ttu-id="b8f48-112">Controlli Web dei dati annidati (VB)</span><span class="sxs-lookup"><span data-stu-id="b8f48-112">Nested Data Web Controls (VB)</span></span>](nested-data-web-controls-vb.md)
