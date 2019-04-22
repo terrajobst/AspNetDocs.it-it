@@ -12,7 +12,7 @@ ms.openlocfilehash: add305855d876b5033bbd7921ad24b5e840b9acc
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59386398"
 ---
 # <a name="handling-postbacks-from-a-modalpopup-vb"></a>Gestione dei postback da un controllo ModalPopup (VB)
@@ -55,7 +55,7 @@ Inoltre, i controlli casella di testo all'interno del popup modale devono essere
 [!code-vb[Main](handling-postbacks-from-a-modalpopup-vb/samples/sample6.vb)]
 
 
-[![Tpopup modale he causa un postback](handling-postbacks-from-a-modalpopup-vb/_static/image2.png)](handling-postbacks-from-a-modalpopup-vb/_static/image1.png)
+[![La finestra popup modale causa un postback](handling-postbacks-from-a-modalpopup-vb/_static/image2.png)](handling-postbacks-from-a-modalpopup-vb/_static/image1.png)
 
 La finestra popup modale causa un postback ([fare clic per visualizzare l'immagine con dimensioni normali](handling-postbacks-from-a-modalpopup-vb/_static/image3.png))
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: 029234cf9a28a80c487504e4e0980c214e45f53a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381965"
 ---
 # <a name="adding-a-column-to-the-model"></a>Aggiunta di una colonna al modello
@@ -28,7 +28,7 @@ Aggiungere una colonna "Rating" alla tabella dei film. Tornare all'IDE e fare cl
 
 Aggiungere una colonna di "Rating" come indicato di seguito. Poiché ora non c'è alcun classificazioni, è possibile la colonna ammette valori null. Fare clic su Salva.
 
-[![Edifica tabella film](getting-started-with-mvc-part8/_static/image2.png)](getting-started-with-mvc-part8/_static/image1.png)
+[![Modifica tabella film](getting-started-with-mvc-part8/_static/image2.png)](getting-started-with-mvc-part8/_static/image1.png)
 
 Successivamente, tornare a Esplora soluzioni e aprire il file Movies.edmx (che si trova nella cartella \Models). Fare clic con il pulsante destro sull'area di progettazione (area bianca) e selezionare il modello di aggiornamento dal Database.
 
@@ -40,7 +40,7 @@ Verrà avviata la "procedura guidata Aggiorna". Scegliere la scheda aggiornament
 
 Dopo aver fatto clic su Fine, è possibile visualizzare che la nuova colonna Rating è stata aggiunta all'entità film nel modello.
 
-[![Movie entità](getting-started-with-mvc-part8/_static/image7.png)](getting-started-with-mvc-part8/_static/image6.png)
+[![Entità film](getting-started-with-mvc-part8/_static/image7.png)](getting-started-with-mvc-part8/_static/image6.png)
 
 È stata aggiunta una colonna nel modello di database, ma le visualizzazioni non sa su di esso.
 
@@ -66,7 +66,7 @@ Il modello di tornarci finale sarà simile al seguente e modificare titolo e rep
 
 Eseguire l'app e a questo punto si ha un nuovo campo nel database che è stato aggiunto alla pagina Create. Aggiungere un nuovo film - questa volta con una classificazione uguale a - e fare clic su Crea.
 
-[![CCrea un film - Windows Internet Explorer](getting-started-with-mvc-part8/_static/image9.png)](getting-started-with-mvc-part8/_static/image8.png)
+[![Creare un filmato - Windows Internet Explorer](getting-started-with-mvc-part8/_static/image9.png)](getting-started-with-mvc-part8/_static/image8.png)
 
 Dopo che si fa clic su Crea, si viene reindirizzati alla pagina di indice dove si nuovo film sia elencato con la nuova colonna di classificazione nel database
 

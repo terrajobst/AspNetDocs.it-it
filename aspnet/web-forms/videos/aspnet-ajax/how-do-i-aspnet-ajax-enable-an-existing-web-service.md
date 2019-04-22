@@ -12,7 +12,7 @@ ms.openlocfilehash: 3d4a6008ca8668b18599ccbff625df33f9ce7504
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59379131"
 ---
 # <a name="how-do-i-aspnet-ajax-enable-an-existing-web-service"></a>[Procedura:] ASP.NET AJAX attiva un servizio Web esistente?

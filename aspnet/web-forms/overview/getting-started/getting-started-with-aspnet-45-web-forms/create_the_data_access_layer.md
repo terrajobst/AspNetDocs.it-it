@@ -12,7 +12,7 @@ ms.openlocfilehash: bc91eba17938de15f03ecc1e745aac57c7eac7a1
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59419496"
 ---
 # <a name="create-the-data-access-layer"></a>Creare il livello di accesso ai dati
@@ -178,7 +178,7 @@ Nella prossima esercitazione, si sarà aggiornare l'interfaccia utente, aggiunge
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-[Cenni preliminari su Entity Framework](https://msdn.microsoft.com/library/bb399567.aspx)   
+[Panoramica di Entity Framework](https://msdn.microsoft.com/library/bb399567.aspx)   
 [Guida per principianti a ADO.NET Entity Framework](https://msdn.microsoft.com/data/ee712907)   
 [Codice prima lo sviluppo con Entity Framework](http://www.msteched.com/2010/Europe/DEV212) (video)   
 [API Code First relazioni Fluent](https://msdn.microsoft.com/data/hh134698)   

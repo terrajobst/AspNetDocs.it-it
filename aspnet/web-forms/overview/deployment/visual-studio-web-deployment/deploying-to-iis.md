@@ -12,7 +12,7 @@ ms.openlocfilehash: 39502e03196d2ba51e826d248ff0ff1e84258131
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59420198"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-deploying-to-test"></a>Distribuzione Web ASP.NET tramite Visual Studio: Distribuzione per il test

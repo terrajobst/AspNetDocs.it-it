@@ -12,7 +12,7 @@ ms.openlocfilehash: 65f4c90ed0038c56479995153ea0ad787b7b7e11
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59417390"
 ---
 # <a name="aspnet-mvc-3-music-store"></a>ASP.NET MVC 3 Music Store
@@ -21,12 +21,12 @@ ms.locfileid: "59417390"
 
 
 - [Parte 1. Panoramica e File -> Nuovo progetto](mvc-music-store-part-1.md)
-- [Parte 2. Controllers](mvc-music-store-part-2.md)
+- [Parte 2. Controller](mvc-music-store-part-2.md)
 - [Parte 3: Visualizzazioni e ViewModel](mvc-music-store-part-3.md)
 - [Parte 4: Modelli e accesso ai dati](mvc-music-store-part-4.md)
 - [Parte 5: Modifica di moduli e modelli](mvc-music-store-part-5.md)
 - [Parte 6: Uso delle annotazioni dei dati per la convalida del modello](mvc-music-store-part-6.md)
 - [Parte 7: Appartenenza e autorizzazione](mvc-music-store-part-7.md)
 - [Parte 8: Carrello con aggiornamenti Ajax](mvc-music-store-part-8.md)
-- [Parte 9: Registrazione e completamento della transazione](mvc-music-store-part-9.md)
-- [Parte 10: Aggiornamenti finali all'esplorazione e alla struttura del sito, conclusioni](mvc-music-store-part-10.md)
+- [Parte 9: Registrazione e l'estrazione](mvc-music-store-part-9.md)
+- [Parte 10: Aggiornamenti finali allo spostamento e struttura del sito, conclusioni](mvc-music-store-part-10.md)

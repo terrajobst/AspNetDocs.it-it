@@ -12,7 +12,7 @@ ms.openlocfilehash: 6e66c03a4521f339f0ee9c7c0e7b8129f241113c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59379410"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-deploying-a-code-update"></a>Distribuzione Web ASP.NET tramite Visual Studio: Distribuzione di un aggiornamento del codice

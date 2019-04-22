@@ -12,7 +12,7 @@ ms.openlocfilehash: 6cea53021ce92e3936b06481008a86dd0590a117
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59387438"
 ---
 # <a name="microsoft-ajax-content-delivery-network"></a>Rete per la distribuzione di contenuti Microsoft Ajax

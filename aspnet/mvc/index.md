@@ -12,12 +12,12 @@ ms.openlocfilehash: 45dc7a1092646bb0b843ee12ad82616031b64dd0
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59394406"
 ---
 # <a name="aspnet-mvc"></a>ASP.NET MVC
 
-- [Materiale sussidiario](overview/index.md)
+- [Linee guida](overview/index.md)
 - [Video](videos/index.md)
 - [ASP.NET MVC 5](mvc5.md)
 - [ASP.NET MVC 4](mvc4.md)

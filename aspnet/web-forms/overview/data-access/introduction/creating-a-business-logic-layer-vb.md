@@ -12,7 +12,7 @@ ms.openlocfilehash: 63efa46410e821947c6b0ee4ecd0c790fbf793e3
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59380093"
 ---
 # <a name="creating-a-business-logic-layer-vb"></a>Creazione di un livello per la logica di business (VB)
@@ -129,7 +129,7 @@ Usare il livello BLL nuove classi, tutto questo deve essere modificata è la pri
 Le classi BLL inoltre sono accessibili in modo dichiarativo (come può il set di dati tipizzato) utilizzando ObjectDataSource. L'oggetto ObjectDataSource in maggiore dettaglio verranno descritte le esercitazioni seguenti.
 
 
-[![Tegli List of Products viene visualizzato in un controllo GridView](creating-a-business-logic-layer-vb/_static/image4.png)](creating-a-business-logic-layer-vb/_static/image3.png)
+[![Viene visualizzato l'elenco di prodotti in un oggetto GridView](creating-a-business-logic-layer-vb/_static/image4.png)](creating-a-business-logic-layer-vb/_static/image3.png)
 
 **Figura 3**: Viene visualizzato l'elenco di prodotti in un controllo GridView ([fare clic per visualizzare l'immagine con dimensioni normali](creating-a-business-logic-layer-vb/_static/image5.png))
 
@@ -148,7 +148,7 @@ Queste regole possono e devono essere espressi a livello di database. Il limite 
 Oltre all'implementazione di queste regole a livello di database sono inoltre devono essere applicati a livello di set di dati. In effetti, la lunghezza del campo e se un valore è obbligatorio o facoltativo già vengono acquisiti per set di ogni oggetto DataTable di DataColumn. Per visualizzare la convalida a livello di campo esistente viene fornita automaticamente, passare alla finestra di progettazione set di dati, selezionare un campo da uno degli oggetti DataTable e quindi passare alla finestra Proprietà. Come illustrato nella figura 4, il `QuantityPerUnit` DataColumn nel `ProductsDataTable` ha una lunghezza massima di 20 caratteri e consentire `NULL` valori. Se si tenta di impostare il `ProductsDataRow`del `QuantityPerUnit` proprietà su un valore di stringa più di 20 caratteri un `ArgumentException` verrà generata.
 
 
-[![Tegli DataColumn fornisce a livello di campo convalida di base](creating-a-business-logic-layer-vb/_static/image7.png)](creating-a-business-logic-layer-vb/_static/image6.png)
+[![La DataColumn fornisce la convalida di base a livello di campo](creating-a-business-logic-layer-vb/_static/image7.png)](creating-a-business-logic-layer-vb/_static/image6.png)
 
 **Figura 4**: Fornisce convalida a livello di campo base di DataColumn ([fare clic per visualizzare l'immagine con dimensioni normali](creating-a-business-logic-layer-vb/_static/image8.png))
 
@@ -156,7 +156,7 @@ Oltre all'implementazione di queste regole a livello di database sono inoltre de
 Sfortunatamente, non possiamo specifichiamo verifiche dei limiti, ad esempio il `UnitPrice` valore deve essere maggiore o uguale a zero, nella finestra delle proprietà. Per fornire questo tipo di convalida a livello di campo è necessario creare un gestore eventi per la classe DataTable [ColumnChanging](https://msdn.microsoft.com/library/system.data.datatable.columnchanging%28VS.80%29.aspx) evento. Come accennato nella [esercitazione precedente](creating-a-data-access-layer-vb.md), gli oggetti DataSet, DataTable e DataRow creati dal set di dati tipizzati possono essere estesi tramite l'uso di classi parziali. Utilizzando questa tecnica è possibile creare un `ColumnChanging` gestore dell'evento per il `ProductsDataTable` classe. Iniziare creando una classe nel `App_Code` cartella denominata `ProductsDataTable.ColumnChanging.vb`.
 
 
-[![Auna nuova classe alla cartella App_Code gg](creating-a-business-logic-layer-vb/_static/image10.png)](creating-a-business-logic-layer-vb/_static/image9.png)
+[![Aggiungere una nuova classe alla cartella App_Code](creating-a-business-logic-layer-vb/_static/image10.png)](creating-a-business-logic-layer-vb/_static/image9.png)
 
 **Figura 5**: Aggiungere una nuova classe per il `App_Code` cartella ([fare clic per visualizzare l'immagine con dimensioni normali](creating-a-business-logic-layer-vb/_static/image11.png))
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: 348e28778e0e7d96230534df1d61386ed39f8f11
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381146"
 ---
 # <a name="master-pages"></a>Pagine master

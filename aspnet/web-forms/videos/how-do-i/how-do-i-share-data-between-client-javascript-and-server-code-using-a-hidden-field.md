@@ -12,7 +12,7 @@ ms.openlocfilehash: f0dd8c55e01398de33d26635b5a85e5ad366c16f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59382810"
 ---
 # <a name="how-do-i-share-data-between-client-javascript-and-server-code-using-a-hidden-field"></a>[Procedura:] Condividere dati tra Client JavaScript e codice lato Server usando un campo nascosto

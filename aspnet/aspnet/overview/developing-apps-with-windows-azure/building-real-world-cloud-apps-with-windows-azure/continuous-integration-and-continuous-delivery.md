@@ -12,7 +12,7 @@ ms.openlocfilehash: 0fb0a331a2a6e2af5c5097db8b57942525d24ffc
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59384305"
 ---
 # <a name="continuous-integration-and-continuous-delivery-building-real-world-cloud-apps-with-azure"></a>Integrazione continua e recapito continuo (creazione di App Cloud funzionanti con Azure)
@@ -34,7 +34,7 @@ In genere è consigliabile eseguire la distribuzione continua per lo sviluppo e 
 
 Nel seguente diagramma da [un Microsoft Patterns and Practices e-book sul recapito continuo](https://aka.ms/ReleasePipeline) illustra un tipico flusso di lavoro. Fare clic sull'immagine per visualizzarla dimensione completa nel contesto originale.
 
-[![Cflusso di lavoro di recapito ontinuous](continuous-integration-and-continuous-delivery/_static/image1.png)](https://msdn.microsoft.com/library/dn449955.aspx)
+[![Flusso di lavoro di recapito continuo](continuous-integration-and-continuous-delivery/_static/image1.png)](https://msdn.microsoft.com/library/dn449955.aspx)
 
 ## <a name="how-the-cloud-enables-cost-effective-ci-and-cd"></a>Come il cloud consente conveniente integrazione continua e recapito Continuo
 

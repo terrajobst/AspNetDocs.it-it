@@ -12,7 +12,7 @@ ms.openlocfilehash: febba98be86f0151724af6d6c00fb14760ce1b91
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59378949"
 ---
 # <a name="creating-a-custom-route-constraint-vb"></a>Creazione di un vincolo di route personalizzato (VB)

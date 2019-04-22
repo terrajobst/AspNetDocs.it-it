@@ -12,14 +12,14 @@ ms.openlocfilehash: abff97e5cc2663465fdf61f41ff69d17104fe8b6
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59379469"
 ---
 # <a name="use-controllers-and-views-to-implement-a-listingdetails-ui"></a>Usare controller e visualizzazioni per implementare un'interfaccia utente elenco/dettagli
 
 by [Microsoft](https://github.com/microsoft)
 
-[Scarica il PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
+[Scaricare PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
 
 > Si tratta di passaggio 4 di una liberazione [esercitazione sull'applicazione "NerdDinner"](introducing-the-nerddinner-tutorial.md) che si interromperanno-dettaglio come compilare una piccola, ma completa, applicazione web con ASP.NET MVC 1.
 > 
@@ -95,8 +95,8 @@ Di seguito è una tabella che mostra in che modo un'ampia gamma di URL vengono m
 | --- | --- | --- | --- |
 | */Dinners/Details/2* | DinnersController | Details(ID) | id=2 |
 | */Dinners/Edit/5* | DinnersController | Edit(ID) | id=5 |
-| */ Dinners/Create* | DinnersController | Create) | N/D |
-| */ Dinners* | DinnersController | Index() | N/D |
+| */Dinners/Create* | DinnersController | Create) | N/D |
+| */Dinners* | DinnersController | Index() | N/D |
 | */Home* | HomeController | Index() | N/D |
 | */* | HomeController | Index() | N/D |
 

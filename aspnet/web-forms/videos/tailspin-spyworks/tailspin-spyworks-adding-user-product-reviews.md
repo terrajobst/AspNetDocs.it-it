@@ -12,7 +12,7 @@ ms.openlocfilehash: 79ab3ef3d8fa0ba7eac2ff18092fd360e7296f85
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381315"
 ---
 # <a name="tailspin-spyworks---adding-user-product-reviews"></a>Tailspin Spyworks - Aggiunta di recensioni dei prodotti degli utenti

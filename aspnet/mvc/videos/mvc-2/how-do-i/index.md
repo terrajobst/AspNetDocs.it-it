@@ -12,7 +12,7 @@ ms.openlocfilehash: 84c626764573108969fec51a2cba028e463b1962
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59380886"
 ---
 # <a name="how-do-i"></a>Procedure
@@ -34,7 +34,7 @@ ms.locfileid: "59380886"
 - [Visualizzazione di una tabella di dati del database](displaying-a-table-of-database-data.md)
 - [Che cos'è ASP.NET MVC - Video tecnico di 80 minuti per gli sviluppatori sulla creazione di NerdDinner](what-is-aspnet-mvc-80-minute-technical-video-for-developers-building-nerddinner.md)
 - [Perché ASP.NET MVC - Video introduttivo di 3 minuti per i responsabili decisionali](why-aspnet-mvc-3-minute-overview-video-for-decision-makers.md)
-- [ASP.NET MVC: Video tecnico di 10 minuti per gli sviluppatori](aspnet-mvc-how-10-minute-technical-video-for-developers.md)
+- [ASP.NET MVC: Come 10 minuti video tecnici per gli sviluppatori](aspnet-mvc-how-10-minute-technical-video-for-developers.md)
 - [Restituire dati formattati JSON per una chiamata AJAX in un'applicazione Web ASP.NET MVC](how-do-i-return-json-formatted-data-for-an-ajax-call-in-an-aspnet-mvc-web-application.md)
 - [Usare i dati nelle visualizzazioni parziali di ASP.NET MVC](how-do-i-work-with-data-in-aspnet-mvc-partial-views.md)
 - [Implementare i modelli di visualizzazione per gestire i dati per le visualizzazioni ASP.NET MVC](how-do-i-implement-view-models-to-manage-data-for-aspnet-mvc-views.md)

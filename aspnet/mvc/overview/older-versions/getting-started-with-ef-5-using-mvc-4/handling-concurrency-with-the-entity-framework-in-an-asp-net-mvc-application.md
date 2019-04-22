@@ -12,7 +12,7 @@ ms.openlocfilehash: a79cca143df9a10b4255796a6d034688713e4e52
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59379755"
 ---
 # <a name="handling-concurrency-with-the-entity-framework-in-an-aspnet-mvc-application-7-of-10"></a>Gestione della concorrenza con Entity Framework in un'applicazione ASP.NET MVC (7 di 10)

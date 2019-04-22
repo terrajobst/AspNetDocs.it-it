@@ -12,7 +12,7 @@ ms.openlocfilehash: 1ab1ea8b277b48b3b72edb9dd45aa4cc2937ffa8
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59418053"
 ---
 # <a name="adding-a-view"></a>Aggiunta di una visualizzazione
@@ -75,7 +75,7 @@ In primo luogo, si desidera modificare il &quot;qui il logo.&quot; titolo nella 
 
 ![_LayoutCshtml](adding-a-view/_static/image7.png)
 
-Modelli di layout consentono di specificare il layout del contenitore HTML del sito in un'unica posizione e quindi applicarlo in più pagine del sito. Trovare la riga `@RenderBody()`. `RenderBody` è un segnaposto dove tutte le pagine specifiche della vista è creare diapositive, &quot;incapsulati&quot; nella pagina di layout. Ad esempio, se si seleziona il collegamento About, il *Views\Home\About.cshtml* vista viene eseguita all'interno di `RenderBody` (metodo).
+Modelli di layout consentono di specificare il layout del contenitore HTML del sito in un'unica posizione e quindi applicarlo in più pagine del sito. Trovare la riga `@RenderBody()`. `RenderBody` è un segnaposto dove tutte le pagine specifiche della vista vengono presentate, &quot;incapsulate&quot; nella pagina di layout. Ad esempio, se si seleziona il collegamento About, il *Views\Home\About.cshtml* vista viene eseguita all'interno di `RenderBody` (metodo).
 
 Modificare l'intestazione del titolo del sito nel modello di layout da &quot;inserire qui il logo&quot; al &quot;MVC Movie&quot;.
 

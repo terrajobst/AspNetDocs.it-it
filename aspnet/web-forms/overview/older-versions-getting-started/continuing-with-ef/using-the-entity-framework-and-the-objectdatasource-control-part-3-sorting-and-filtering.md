@@ -12,7 +12,7 @@ ms.openlocfilehash: 19726a728fc6d94552c315b38315a29c269d97db
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59380418"
 ---
 # <a name="using-the-entity-framework-40-and-the-objectdatasource-control-part-3-sorting-and-filtering"></a>Utilizzo di Entity Framework 4.0 e il controllo ObjectDataSource, parte 3: Ordinamento e filtro

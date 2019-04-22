@@ -12,7 +12,7 @@ ms.openlocfilehash: af8a8e22df83f64de570dda966f9a831be957c0d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381446"
 ---
 # <a name="aspnet-4-quick-hit---disabled-control-styling"></a>ASP.NET 4 "Colpisci rapido" - disabilitato lo stile di controllo

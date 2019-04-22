@@ -12,7 +12,7 @@ ms.openlocfilehash: 455d62d97808862f70692c46ae223f47270266f9
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59387620"
 ---
 # <a name="allowing-only-certain-characters-in-a-text-box-vb"></a>Autorizzazione solo di caratteri specifici in una casella di testo (VB)
@@ -56,7 +56,7 @@ Ecco il markup per il `FilteredTextBoxExtender` controllo che consente solo cifr
 Eseguire la pagina e riprovare l'immissione di una lettera di JavaScript è abilitato, non funzionerà; Nella pagina vengono tuttavia visualizzate cifre. Si noti tuttavia che la protezione `FilteredTextBox` fornisce non valide: Se JavaScript è abilitata, tutti i dati possono essere immessi nella casella di testo, quindi è necessario usare una convalida aggiuntiva significa che, ad esempio ASP. Controlli di convalida della rete.
 
 
-[![Osola cifre possono essere immessi](allowing-only-certain-characters-in-a-text-box-vb/_static/image2.png)](allowing-only-certain-characters-in-a-text-box-vb/_static/image1.png)
+[![È possibile immettere solo cifre](allowing-only-certain-characters-in-a-text-box-vb/_static/image2.png)](allowing-only-certain-characters-in-a-text-box-vb/_static/image1.png)
 
 È possibile immettere solo cifre ([fare clic per visualizzare l'immagine con dimensioni normali](allowing-only-certain-characters-in-a-text-box-vb/_static/image3.png))
 

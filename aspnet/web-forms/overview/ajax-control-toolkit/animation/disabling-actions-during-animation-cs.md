@@ -12,7 +12,7 @@ ms.openlocfilehash: 1cce2b05f125902ab05d493bebe753b2060b4d95
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59384279"
 ---
 # <a name="disabling-actions-during-animation-c"></a>Disabilitazione delle azioni durante l'animazione (C#)
@@ -55,7 +55,7 @@ All'interno di `<Animations>` nodo, `<OnClick>` è l'elemento a destra per gesti
 Tuttavia in questo scenario specifico questo sarebbe inutile perché il pulsante dissolve e non è visibile alla fine dell'animazione.
 
 
-[![The pulsante è disabilitato, non appena viene eseguita l'animazione](disabling-actions-during-animation-cs/_static/image2.png)](disabling-actions-during-animation-cs/_static/image1.png)
+[![Il pulsante è disabilitato, non appena viene eseguita l'animazione](disabling-actions-during-animation-cs/_static/image2.png)](disabling-actions-during-animation-cs/_static/image1.png)
 
 Il pulsante è disabilitato, non appena viene eseguita l'animazione ([fare clic per visualizzare l'immagine con dimensioni normali](disabling-actions-during-animation-cs/_static/image3.png))
 

@@ -12,14 +12,14 @@ ms.openlocfilehash: 7e66c6cd8c7296b889dfe6cc1ebd1eb62cda10ea
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59384331"
 ---
 # <a name="scenario-configuring-a-staging-environment-for-web-deployment"></a>Scenario: Configurazione di un ambiente di gestione temporanea per la distribuzione Web
 
 da [Jason Lee](https://github.com/jrjlee)
 
-[Scarica il PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Scaricare PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > In questo argomento descrive uno scenario di distribuzione web tipico per un ambiente di staging e illustra le attività da completare per poter configurare un ambiente simile.
 

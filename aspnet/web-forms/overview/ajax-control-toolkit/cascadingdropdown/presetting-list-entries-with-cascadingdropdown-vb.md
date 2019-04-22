@@ -12,7 +12,7 @@ ms.openlocfilehash: 6e685d599e3dbc095631e3c28a603ac9c38f799c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59385891"
 ---
 # <a name="presetting-list-entries-with-cascadingdropdown-vb"></a>Preimpostazione delle voci dell'elenco con CascadingDropDown (VB)
@@ -53,7 +53,7 @@ Il metodo restituisce una matrice di tipo valore CascadingDropDown. Il costrutto
 Il caricamento della pagina nel browser riempirà l'elenco a discesa con i fornitori di tre, il secondo viene preselezionato.
 
 
-[![Telenco he viene riempita e preselezionata automaticamente](presetting-list-entries-with-cascadingdropdown-vb/_static/image2.png)](presetting-list-entries-with-cascadingdropdown-vb/_static/image1.png)
+[![L'elenco viene compilato e preselezionata automaticamente](presetting-list-entries-with-cascadingdropdown-vb/_static/image2.png)](presetting-list-entries-with-cascadingdropdown-vb/_static/image1.png)
 
 L'elenco viene compilato e preselezionata automaticamente ([fare clic per visualizzare l'immagine con dimensioni normali](presetting-list-entries-with-cascadingdropdown-vb/_static/image3.png))
 

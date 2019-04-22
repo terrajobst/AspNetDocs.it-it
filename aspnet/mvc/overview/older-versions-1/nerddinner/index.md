@@ -12,7 +12,7 @@ ms.openlocfilehash: 263ffc1ab815c1f7d6c1ee008f4fbe61316b7231
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59380743"
 ---
 # <a name="nerddinner"></a>NerdDinner
@@ -25,10 +25,10 @@ ms.locfileid: "59380743"
 - [Creare un database](create-a-database.md)
 - [Creare un modello con convalide delle regole business](build-a-model-with-business-rule-validations.md)
 - [Usare controller e visualizzazioni per implementare un'interfaccia utente elenco/dettagli](use-controllers-and-views-to-implement-a-listingdetails-ui.md)
-- [Fornire il supporto per operazioni di creazione, lettura, aggiornamento ed eliminazione sulle voci di moduli di dati](provide-crud-create-read-update-delete-data-form-entry-support.md)
+- [Fornire il supporto per operazioni di creazione, lettura, aggiornamento ed eliminazione sulle voci di dati dei moduli](provide-crud-create-read-update-delete-data-form-entry-support.md)
 - [Usare ViewData e implementare classi ViewModel](use-viewdata-and-implement-viewmodel-classes.md)
 - [Riutilizzare l'interfaccia utente tramite pagine master e visualizzazioni parziali](re-use-ui-using-master-pages-and-partials.md)
-- [Implementare una suddivisione in pagine efficiente dei dati](implement-efficient-data-paging.md)
+- [Implementare un paging dei dati efficiente](implement-efficient-data-paging.md)
 - [Proteggere le applicazioni tramite l'autenticazione e l'autorizzazione](secure-applications-using-authentication-and-authorization.md)
 - [Usare AJAX per distribuire aggiornamenti dinamici](use-ajax-to-deliver-dynamic-updates.md)
 - [Usare AJAX per implementare scenari di mapping](use-ajax-to-implement-mapping-scenarios.md)

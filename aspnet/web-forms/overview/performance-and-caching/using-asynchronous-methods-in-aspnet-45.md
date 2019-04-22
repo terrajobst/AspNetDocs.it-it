@@ -12,7 +12,7 @@ ms.openlocfilehash: a47d428830fa6c43bcb9ce797d65b73891b44618
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381887"
 ---
 # <a name="using-asynchronous-methods-in-aspnet-45"></a>Uso di metodi asincroni in ASP.NET 4.5
@@ -192,7 +192,7 @@ Per sfruttare i vantaggi di un'applicazione web asincrona, si potrebbe essere ne
 
     - Aprire Gestione IIS e passare al riquadro pool di applicazioni.
     - Fare clic con il pulsante destro sul pool di applicazioni di destinazione e selezionare **impostazioni avanzate**.  
-        ![avanzata](using-asynchronous-methods-in-aspnet-45/_static/image4.png)
+        ![advanced](using-asynchronous-methods-in-aspnet-45/_static/image4.png)
     - Nel **impostazioni avanzate** della finestra di dialogo Modifica *lunghezza coda* da 1.000 a 5.000.  
         ![Lunghezza coda](using-asynchronous-methods-in-aspnet-45/_static/image5.png)  
   
@@ -210,4 +210,4 @@ Per sfruttare i vantaggi di un'applicazione web asincrona, si potrebbe essere ne
 - [Levi Broderick](http://stackoverflow.com/users/59641/levi)
 - [Tom Dykstra](http://www.bing.com/search?q=site%3Aasp.net+%22Tom+Dykstra%22+-forums.asp.net&amp;qs=n&amp;form=QBRE&amp;pq=site%3Aasp.net+%22tom+dykstra%22+-forums.asp.net&amp;sc=8-42&amp;sp=-1&amp;sk=)
 - [Brad Wilson](http://bradwilson.typepad.com/)
-- [HongMei Ge](https://blogs.msdn.com/b/hongmeig/)
+- [Ge HongMei](https://blogs.msdn.com/b/hongmeig/)

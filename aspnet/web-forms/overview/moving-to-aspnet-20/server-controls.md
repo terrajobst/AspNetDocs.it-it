@@ -12,7 +12,7 @@ ms.openlocfilehash: bfbc151af40bf7ccceb5ac298ba812730d4e4ed9
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59420757"
 ---
 # <a name="server-controls"></a>Controlli server
@@ -193,7 +193,7 @@ In ASP.NET 2.0, l'attributo requestLengthDiskThreshold dell'elemento httpRuntime
 
 È abbastanza comune che si verifichino gli sviluppatori ASP.NET difficoltà durante il tentativo di raccogliere informazioni in una serie di "pagine" usando i pannelli o il trasferimento tra le pagine. Molto spesso, l'attività è frustrante e può richiedere molto tempo. Il nuovo controllo Wizard risolve i problemi, consentendo per i passaggi lineari e lineare in un'interfaccia di procedura guidata che hanno familiari con gli utenti. Controllo della procedura guidata offre moduli di input in una serie di passaggi. Ogni passaggio è di un determinato tipo specificato dalla proprietà StepType del controllo. I tipi di passaggi disponibili sono i seguenti:
 
-| **Tipo di passaggio** | **Descrizione** |
+| **Tipo di passaggio** | **Spiegazione** |
 | --- | --- |
 | Auto | La procedura guidata rileva automaticamente il tipo di passaggio in base al relativo posizione all'interno della gerarchia di passaggio. |
 | Inizia | Il primo passaggio, spesso usato per presentare un'istruzione introduttiva. |
@@ -218,7 +218,7 @@ In questo video è una procedura dettagliata su controllo della procedura guidat
 
 Il controllo Localize è simile a un controllo Literal. Tuttavia, il controllo Localize ha un **modalità** proprietà che controlla la modalità con cui viene eseguito il rendering di markup che viene aggiunto a esso. La proprietà modalità supporta i valori seguenti:
 
-| **Modalità** | **Descrizione** |
+| **Modalità** | **Spiegazione** |
 | --- | --- |
 | Transform | Markup viene trasformato secondo il protocollo del browser che effettua la richiesta. |
 | PassThrough | Viene eseguito il rendering di markup come-è. |

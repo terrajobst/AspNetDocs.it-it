@@ -12,7 +12,7 @@ ms.openlocfilehash: b048413b03c9f0b915dc5d64fcf85e2425a890fc
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59380964"
 ---
 # <a name="visual-studio-2010-quick-hit---snippets-intellisense"></a>Visual Studio 2010 "Quick Hit" - Snippets IntelliSense

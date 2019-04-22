@@ -12,7 +12,7 @@ ms.openlocfilehash: 62534e580aa7d5e383b8e86d2b904544356b0739
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59384994"
 ---
 # <a name="how-do-i-use-the-aspnet-ajax-slider-control"></a>[Procedura:] Usare il controllo dispositivo di scorrimento ASP.NET AJAX?

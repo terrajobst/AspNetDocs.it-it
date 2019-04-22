@@ -12,7 +12,7 @@ ms.openlocfilehash: 5e410ac0c6d3430c00e171775d842ee30eeab021
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59383164"
 ---
 # <a name="webmatrix-content-guide"></a>Guida ai contenuti su WebMatrix
@@ -50,7 +50,7 @@ WebMatrix è un set di strumenti che fornisce un modo semplice per creare siti W
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-**Lettura**
+**Read**
 
 - [Kit di formazione di Microsoft Web Camp per WebMatrix](http://trainingkit.webcamps.ms/WebMatrix.htm)
 - [Invia un bug o suggerimenti](https://go.microsoft.com/fwlink/?LinkId=195940)
@@ -68,7 +68,7 @@ WebMatrix è un set di strumenti che fornisce un modo semplice per creare siti W
 - [Iniziare con le app Web](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/walkthrough2b.mp4)
 - [Pacchetto di piccole dimensioni, ma completa](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-compact.mp4)
 - [Possibilità di crescita](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-extend.mp4)
-- [Open source](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-webapps-b.mp4)
+- [Open Source](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-webapps-b.mp4)
 - [Database diventa semplice](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-databases.mp4)
 - [Interfaccia elegante, esperienza semplice](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-ux.mp4)
 - [Semplice al codice](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-aspnetpages.mp4)

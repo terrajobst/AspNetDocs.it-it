@@ -12,7 +12,7 @@ ms.openlocfilehash: 67ca6b1dc68dc2dde4e24d4d6c6ddae04fc4bb6d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59383486"
 ---
 # <a name="signalr-older-versions"></a>Versioni precedenti di SignalR
@@ -22,7 +22,7 @@ ms.locfileid: "59383486"
 
 - [Esercitazione: Introduzione a SignalR 1.x](tutorial-getting-started-with-signalr.md)
 - [Esercitazione: Introduzione a SignalR 1.x e MVC 4](tutorial-getting-started-with-signalr-and-mvc-4.md)
-- [Messaggistica ad alta frequenza in tempo reale con SignalR 1.x](tutorial-high-frequency-realtime-with-signalr.md)
+- [Messaggistica ad alta frequenza con SignalR 1.x](tutorial-high-frequency-realtime-with-signalr.md)
 - [Esercitazione: Trasmissione server con ASP.NET SignalR 1.x](tutorial-server-broadcast-with-aspnet-signalr.md)
 - [Guida all'API Hubs - Server](signalr-1x-hubs-api-guide-server.md)
 - [Guida all'API SignalR 1.x Hubs - Client JavaScript](signalr-1x-hubs-api-guide-javascript-client.md)
@@ -34,9 +34,9 @@ ms.locfileid: "59383486"
 - [Autenticazione e autorizzazione per SignalR Hubs (SignalR 1.x)](hub-authorization.md)
 - [Autenticazione e autorizzazione per le connessioni persistenti di SignalR (SignalR 1.x)](persistent-connection-authorization.md)
 - [Prestazioni di SignalR (SignalR 1.x)](signalr-performance.md)
-- [Introduzione a scale-out in SignalR 1.x](scaleout-in-signalr.md)
-- [Scale-out di SignalR con il bus di servizio di Azure (SignalR 1.x)](scaleout-with-windows-azure-service-bus.md)
-- [Scale-out di SignalR con Redis (SignalR 1.x)](scaleout-with-redis.md)
-- [Scale-out di SignalR con SQL Server (SignalR 1.x)](scaleout-with-sql-server.md)
+- [Introduzione alla scalabilità orizzontale in SignalR 1.x](scaleout-in-signalr.md)
+- [Scalabilità orizzontale di SignalR con il bus di servizio di Azure (SignalR 1.x)](scaleout-with-windows-azure-service-bus.md)
+- [Scalabilità orizzontale di SignalR con Redis (SignalR 1.x)](scaleout-with-redis.md)
+- [Scalabilità orizzontale di SignalR con SQL Server (SignalR 1.x)](scaleout-with-sql-server.md)
 - [Risoluzione dei problemi di SignalR (SignalR 1.x)](troubleshooting.md)
 - [Inserimento delle dipendenze in SignalR 1.x](dependency-injection.md)

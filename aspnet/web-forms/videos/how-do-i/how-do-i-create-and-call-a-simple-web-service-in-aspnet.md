@@ -12,7 +12,7 @@ ms.openlocfilehash: 9835658ef62fb743eaf535126dcee657d274a540
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59378594"
 ---
 # <a name="how-do-i-create-and-call-a-simple-web-service-in-aspnet"></a>[Procedura:] Creare e chiamare un servizio Web semplice in ASP.NET

@@ -12,7 +12,7 @@ ms.openlocfilehash: 297496e590caf9c8ded83cb16b5fef1dfc542dc7
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381393"
 ---
 # <a name="updating-the-tableadapter-to-use-joins-c"></a>Aggiornamento del TableAdapter per l'uso dei join (C#)
@@ -64,7 +64,7 @@ Per esplorare questa lacuna, creare un DataSet tipizzato temporaneo nel `~/App_C
 [!code-sql[Main](updating-the-tableadapter-to-use-joins-cs/samples/sample3.sql)]
 
 
-[![EImmettere una funzione Main di Query contiene join](updating-the-tableadapter-to-use-joins-cs/_static/image2.png)](updating-the-tableadapter-to-use-joins-cs/_static/image1.png)
+[![Immettere una Query principale che contiene i join](updating-the-tableadapter-to-use-joins-cs/_static/image2.png)](updating-the-tableadapter-to-use-joins-cs/_static/image1.png)
 
 **Figura 1**: Immettere una Query principale contenente `JOIN` s ([fare clic per visualizzare l'immagine con dimensioni normali](updating-the-tableadapter-to-use-joins-cs/_static/image3.png))
 
@@ -88,7 +88,7 @@ Fare clic su Fine per completare la procedura guidata. A questo punto il set di 
 Mentre la classe DataTable ha le colonne appropriate, TableAdapter non include i valori per la relativa `InsertCommand`, `UpdateCommand`, e `DeleteCommand` proprietà. Per verificarlo, fare clic sull'oggetto TableAdapter nella finestra di progettazione e quindi passare alla finestra Proprietà. Si vedrà che il `InsertCommand`, `UpdateCommand`, e `DeleteCommand` proprietà vengono impostate su (nessuno).
 
 
-[![Tegli InsertCommand, UpdateCommand e DeleteCommand proprietà vengono impostate su (nessuno)](updating-the-tableadapter-to-use-joins-cs/_static/image7.png)](updating-the-tableadapter-to-use-joins-cs/_static/image6.png)
+[![La proprietà InsertCommand UpdateCommand e proprietà DeleteCommand sono impostate su (nessuno)](updating-the-tableadapter-to-use-joins-cs/_static/image7.png)](updating-the-tableadapter-to-use-joins-cs/_static/image6.png)
 
 **Figura 4**: Il `InsertCommand`, `UpdateCommand`, e `DeleteCommand` proprietà vengono impostate su (nessuno) ([fare clic per visualizzare l'immagine con dimensioni normali](updating-the-tableadapter-to-use-joins-cs/_static/image8.png))
 
@@ -108,7 +108,7 @@ Per questa esercitazione si aggiungerà un TableAdapter e fortemente tipizzata d
 Iniziare aprendo il `NorthwindWithSprocs` set di dati nel `~/App_Code/DAL` cartella. Pulsante destro del mouse nella finestra di progettazione, selezionare l'opzione Aggiungi dal menu di scelta rapida e scegliere la voce di menu TableAdapter. Verrà avviata la configurazione guidata TableAdapter. Come viene illustrata nella figura 5, hanno la procedura guidata Crea nuove stored procedure e fare clic su Avanti. Per rivedere la creazione di nuove stored procedure dalla procedura guidata s TableAdapter, consultare il [creazione di nuove Stored procedure per DataSet tipizzata s TableAdapter](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-cs.md) esercitazione.
 
 
-[![SScegliere Crea nuove stored procedure. opzione](updating-the-tableadapter-to-use-joins-cs/_static/image10.png)](updating-the-tableadapter-to-use-joins-cs/_static/image9.png)
+[![Selezionare Crea nuove stored procedure. opzione](updating-the-tableadapter-to-use-joins-cs/_static/image10.png)](updating-the-tableadapter-to-use-joins-cs/_static/image9.png)
 
 **Figura 5**: Selezionare Crea nuove stored procedure opzione ([fare clic per visualizzare l'immagine con dimensioni normali](updating-the-tableadapter-to-use-joins-cs/_static/image11.png))
 
@@ -123,7 +123,7 @@ Poiché questa query non includa alcun `JOIN` s, la configurazione guidata Table
 Il passaggio seguente consente di denominare le procedure di archiviati TableAdapter. Usare i nomi `Employees_Select`, `Employees_Insert`, `Employees_Update`, e `Employees_Delete`, come illustrato nella figura 6.
 
 
-[![NStored procedure ome i TableAdapter](updating-the-tableadapter-to-use-joins-cs/_static/image13.png)](updating-the-tableadapter-to-use-joins-cs/_static/image12.png)
+[![Denominare le procedure di archiviati TableAdapter](updating-the-tableadapter-to-use-joins-cs/_static/image13.png)](updating-the-tableadapter-to-use-joins-cs/_static/image12.png)
 
 **Figura 6**: Assegnare un nome Stored procedure del TableAdapter s ([fare clic per visualizzare l'immagine con dimensioni normali](updating-the-tableadapter-to-use-joins-cs/_static/image14.png))
 
@@ -131,7 +131,7 @@ Il passaggio seguente consente di denominare le procedure di archiviati TableAda
 Il passaggio finale viene richiesto di denominare i metodi di s TableAdapter. Uso `Fill` e `GetEmployees` come nomi di metodo. Inoltre assicurarsi di lasciare il Crea metodi per inviare aggiornamenti direttamente per la casella di controllo database (GenerateDBDirectMethods) selezionata.
 
 
-[![Nome i TableAdapter metodi è riempire e GetEmployees](updating-the-tableadapter-to-use-joins-cs/_static/image16.png)](updating-the-tableadapter-to-use-joins-cs/_static/image15.png)
+[![Nome del riempimento di metodi TableAdapter s e GetEmployees](updating-the-tableadapter-to-use-joins-cs/_static/image16.png)](updating-the-tableadapter-to-use-joins-cs/_static/image15.png)
 
 **Figura 7**: Assegnare un nome ai metodi di TableAdapter `Fill` e `GetEmployees` ([fare clic per visualizzare l'immagine con dimensioni normali](updating-the-tableadapter-to-use-joins-cs/_static/image17.png))
 
@@ -139,7 +139,7 @@ Il passaggio finale viene richiesto di denominare i metodi di s TableAdapter. Us
 Dopo aver completato la procedura guidata, si consiglia di esaminare le stored procedure nel database. Dovrebbe essere quattro nuovi file: `Employees_Select`, `Employees_Insert`, `Employees_Update`, e `Employees_Delete`. Successivamente, esaminare i `EmployeesDataTable` e `EmployeesTableAdapter` appena creato. L'oggetto DataTable contiene una colonna per ogni campo restituito dalla query principale. Fare clic sull'oggetto TableAdapter e quindi passare alla finestra Proprietà. Si vedrà che il `InsertCommand`, `UpdateCommand`, e `DeleteCommand` proprietà siano configurate correttamente per chiamare le stored procedure corrispondente.
 
 
-[![Tegli TableAdapter include Insert, Update e Delete funzionalità](updating-the-tableadapter-to-use-joins-cs/_static/image19.png)](updating-the-tableadapter-to-use-joins-cs/_static/image18.png)
+[![TableAdapter include Insert, Update e Delete funzionalità](updating-the-tableadapter-to-use-joins-cs/_static/image19.png)](updating-the-tableadapter-to-use-joins-cs/_static/image18.png)
 
 **Figura 8**: Il TableAdapter include Insert, Update e le funzionalità di eliminazione ([fare clic per visualizzare l'immagine con dimensioni normali](updating-the-tableadapter-to-use-joins-cs/_static/image20.png))
 
@@ -156,7 +156,7 @@ Inizio passando a Esplora Server, eseguire il drill-nella cartella Northwind dat
 Dopo aver aggiornato il `SELECT` istruzione, salvare le modifiche selezionando il menu File e scegliendo Salva `Employees_Select`. In alternativa, è possibile fare clic sull'icona Salva nella barra degli strumenti o premere Ctrl + S. Dopo aver salvato le modifiche, fare clic su di `Employees_Select` stored procedure in Esplora Server e scegliere Execute. Verrà eseguito la stored procedure e visualizzare i risultati nella finestra di Output (vedere la figura 9).
 
 
-[![The Stored procedure di risultati vengono visualizzate nella finestra di Output](updating-the-tableadapter-to-use-joins-cs/_static/image22.png)](updating-the-tableadapter-to-use-joins-cs/_static/image21.png)
+[![I risultati di procedure archiviate sono visualizzati nella finestra di Output](updating-the-tableadapter-to-use-joins-cs/_static/image22.png)](updating-the-tableadapter-to-use-joins-cs/_static/image21.png)
 
 **Figura 9**: I risultati di procedure archiviate sono visualizzati nella finestra di Output ([fare clic per visualizzare l'immagine con dimensioni normali](updating-the-tableadapter-to-use-joins-cs/_static/image23.png))
 
@@ -173,7 +173,7 @@ Sono stati esplorati aggiunta manuale di colonne DataTable nelle esercitazioni p
 Per iniziare, facendo clic su di `EmployeesTableAdapter` e selezione di Configura dal menu di scelta rapida. Verrà visualizzata la configurazione guidata TableAdapter, cui sono elencate le stored procedure utilizzate per la selezione, inserimento, aggiornamento ed eliminazione, insieme ai relativi valori restituiti e parametri (se presente). Figura 10 è illustrata la procedura guidata. Qui possiamo vedere che il `Employees_Select` stored procedure restituisce ora il `ManagerFirstName` e `ManagerLastName` campi.
 
 
-[![Tprocedura guidata spiega l'elenco delle colonne aggiornate per la Stored Procedure Employees_Select](updating-the-tableadapter-to-use-joins-cs/_static/image25.png)](updating-the-tableadapter-to-use-joins-cs/_static/image24.png)
+[![La procedura guidata Mostra elenco delle colonne aggiornate per il Employees_Select Stored Procedure](updating-the-tableadapter-to-use-joins-cs/_static/image25.png)](updating-the-tableadapter-to-use-joins-cs/_static/image24.png)
 
 **Figura 10**: La procedura guidata mostra l'elenco delle colonne aggiornate per il `Employees_Select` Stored Procedure ([fare clic per visualizzare l'immagine con dimensioni normali](updating-the-tableadapter-to-use-joins-cs/_static/image26.png))
 
@@ -181,7 +181,7 @@ Per iniziare, facendo clic su di `EmployeesTableAdapter` e selezione di Configur
 Completare la procedura guidata, fare clic su Fine. Quando si torna alla finestra di progettazione set di dati, il `EmployeesDataTable` include due colonne aggiuntive: `ManagerFirstName` e `ManagerLastName`.
 
 
-[![Tegli della scheda Seleziona contiene due nuove colonne](updating-the-tableadapter-to-use-joins-cs/_static/image28.png)](updating-the-tableadapter-to-use-joins-cs/_static/image27.png)
+[![Della scheda Seleziona contiene due nuove colonne](updating-the-tableadapter-to-use-joins-cs/_static/image28.png)](updating-the-tableadapter-to-use-joins-cs/_static/image27.png)
 
 **Figura 11**: Il `EmployeesDataTable` contiene due nuove colonne ([fare clic per visualizzare l'immagine con dimensioni normali](updating-the-tableadapter-to-use-joins-cs/_static/image29.png))
 
@@ -204,12 +204,12 @@ Con il `EmployeesBLLWithSprocs` classe completa, sono pronti per lavorare con i 
 Configurare ObjectDataSource per usare la `EmployeesBLLWithSprocs` classe e, tra le schede SELECT e DELETE, assicurarsi che il `GetEmployees` e `DeleteEmployee` metodi sono selezionati dagli elenchi a discesa. Fare clic su Fine per completare la configurazione di s ObjectDataSource.
 
 
-[![Cconfigurare ObjectDataSource per usare la classe EmployeesBLLWithSprocs](updating-the-tableadapter-to-use-joins-cs/_static/image31.png)](updating-the-tableadapter-to-use-joins-cs/_static/image30.png)
+[![Configurare ObjectDataSource per usare la classe EmployeesBLLWithSprocs](updating-the-tableadapter-to-use-joins-cs/_static/image31.png)](updating-the-tableadapter-to-use-joins-cs/_static/image30.png)
 
 **Figura 12**: Configurare ObjectDataSource per usare la `EmployeesBLLWithSprocs` classe ([fare clic per visualizzare l'immagine con dimensioni normali](updating-the-tableadapter-to-use-joins-cs/_static/image32.png))
 
 
-[![HAVE ObjectDataSource usare i metodi di DeleteEmployee e GetEmployees](updating-the-tableadapter-to-use-joins-cs/_static/image34.png)](updating-the-tableadapter-to-use-joins-cs/_static/image33.png)
+[![È possibile utilizzare ObjectDataSource i metodi di DeleteEmployee e GetEmployees](updating-the-tableadapter-to-use-joins-cs/_static/image34.png)](updating-the-tableadapter-to-use-joins-cs/_static/image33.png)
 
 **Figura 13**: È possibile utilizzare ObjectDataSource i `GetEmployees` e `DeleteEmployee` metodi ([fare clic per visualizzare l'immagine con dimensioni normali](updating-the-tableadapter-to-use-joins-cs/_static/image35.png))
 
@@ -224,7 +224,7 @@ Per consentire agli utenti di eliminare i dipendenti da questa pagina è necessa
 Testare la pagina visitando, tramite un browser. Come illustrato nella figura 14, la pagina consente di visualizzare ogni dipendente e il suo nome s manager (presupponendo che dispongono di uno).
 
 
-[![Tegli JOIN nella Employees_Select Stored Procedure restituisce il gestore s nome](updating-the-tableadapter-to-use-joins-cs/_static/image37.png)](updating-the-tableadapter-to-use-joins-cs/_static/image36.png)
+[![Il JOIN nel Employees_Select Stored Procedure restituisce il nome della gestione s](updating-the-tableadapter-to-use-joins-cs/_static/image37.png)](updating-the-tableadapter-to-use-joins-cs/_static/image36.png)
 
 **Figura 14**: Il `JOIN` nella `Employees_Select` Stored Procedure restituisce il nome di gestione ([fare clic per visualizzare l'immagine con dimensioni normali](updating-the-tableadapter-to-use-joins-cs/_static/image38.png))
 
@@ -232,7 +232,7 @@ Testare la pagina visitando, tramite un browser. Come illustrato nella figura 14
 Facendo clic sul pulsante Elimina viene avviato il flusso di lavoro l'eliminazione, che culmina nell'esecuzione del `Employees_Delete` stored procedure. Tuttavia, il tentativo `DELETE` istruzione nella stored procedure ha esito negativo a causa di una violazione di vincolo di chiave esterna (vedere Figura 15). In particolare, ciascun dipendente ha uno o più record `Orders` tabella, che causa l'eliminazione esito negativo.
 
 
-[![Dun dipendente con risultati gli ordini corrispondenti in una violazione di vincolo di chiave esterna eleting](updating-the-tableadapter-to-use-joins-cs/_static/image40.png)](updating-the-tableadapter-to-use-joins-cs/_static/image39.png)
+[![L'eliminazione di un dipendente con risultati gli ordini corrispondenti in una violazione di vincolo di chiave esterna](updating-the-tableadapter-to-use-joins-cs/_static/image40.png)](updating-the-tableadapter-to-use-joins-cs/_static/image39.png)
 
 **Figura 15**: L'eliminazione di un dipendente con risultati gli ordini corrispondenti in una violazione di vincolo di chiave esterna ([fare clic per visualizzare l'immagine con dimensioni normali](updating-the-tableadapter-to-use-joins-cs/_static/image41.png))
 

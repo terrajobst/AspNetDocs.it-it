@@ -12,7 +12,7 @@ ms.openlocfilehash: 8caa88d928517e1c71210cbe55e3961d4baf461a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381276"
 ---
 # <a name="iteration-4--make-the-application-loosely-coupled-c"></a>Iterazione #4-rendere l'applicazione regime di controllo (c#)
@@ -169,11 +169,11 @@ Un controller Usa un ModelStateDictionary denominato ModelState per rappresentar
 
 Il pattern Decorator consente di eseguire il wrapping di una classe esistente in una nuova classe per implementare un'interfaccia. Il progetto Contact Manager include la classe ModelStateWrapper contenuta nel listato 7. La classe ModelStateWrapper implementa l'interfaccia nel listato 8.
 
-**Listing 7 - Models\Validation\ModelStateWrapper.cs**
+**Listato 7 - Models\Validation\ModelStateWrapper.cs**
 
 [!code-csharp[Main](iteration-4-make-the-application-loosely-coupled-cs/samples/sample7.cs)]
 
-**Listing 8 - Models\Validation\IValidationDictionary.cs**
+**Listato 8 - Models\Validation\IValidationDictionary.cs**
 
 [!code-csharp[Main](iteration-4-make-the-application-loosely-coupled-cs/samples/sample8.cs)]
 

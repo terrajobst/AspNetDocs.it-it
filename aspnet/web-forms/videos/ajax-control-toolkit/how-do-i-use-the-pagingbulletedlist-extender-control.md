@@ -12,7 +12,7 @@ ms.openlocfilehash: 4b6326fcf3c62dda8519b2d86236f2be7caef825
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59386840"
 ---
 # <a name="how-do-i-use-the-pagingbulletedlist-extender-control"></a>[Procedura:] Usare il controllo Extender Pagingbulletedlist?

@@ -12,7 +12,7 @@ ms.openlocfilehash: 28b8cc18f3c0359e8d4b54846481c2c02770c766
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59419470"
 ---
 # <a name="measuring-the-business-value-of-ajax"></a>Misurazione del valore di business di AJAX

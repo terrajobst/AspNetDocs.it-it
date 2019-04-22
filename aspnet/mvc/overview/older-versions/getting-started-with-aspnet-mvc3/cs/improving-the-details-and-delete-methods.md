@@ -12,7 +12,7 @@ ms.openlocfilehash: d4003dba8530d2e72c514c572ffc28ef942fd437
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59379365"
 ---
 # <a name="improving-the-details-and-delete-methods-c"></a>Miglioramento dei dettagli e dei metodi di eliminazione (C#)
@@ -74,7 +74,7 @@ Questa esercitazione di base tutto quello che ti a rendere i controller, associa
 
 Se si desidera distribuire l'applicazione, è utile per primo test l'applicazione sul server IIS 7 locale. È possibile usare questo [instalace Webové Platformy](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=ASPNET;) collegamento per abilitare l'impostazione di IIS per le applicazioni ASP.NET. Vedere i collegamenti di distribuzione seguenti:
 
-- [Mappa del contenuto per la distribuzione di ASP.NET](https://msdn.microsoft.com/library/dd394698.aspx)
+- [Mappa del contenuto di distribuzione di ASP.NET](https://msdn.microsoft.com/library/dd394698.aspx)
 - [Enabling IIS 7.x](https://blogs.msdn.com/b/rickandy/archive/2011/03/14/enabling-iis-7-x-on-windows-7-vista-sp1-windows-2008-windows-2008-r2.aspx)
 - [Distribuzione di progetti applicazione Web](https://msdn.microsoft.com/library/dd394698.aspx)
 

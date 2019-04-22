@@ -12,7 +12,7 @@ ms.openlocfilehash: 38aea3b3480dde6ec6182a45c4f61f44eea8e05e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59380223"
 ---
 # <a name="aspnet-mvc-4-fundamentals"></a>Concetti fondamentali su ASP.NET MVC 4
@@ -894,7 +894,7 @@ In questo esercizio si esploreranno i miglioramenti nei modelli di progetto ASP.
         ![I modelli ASP.NET MVC 4 modificato nello stile](aspnet-mvc-4-fundamentals/_static/image38.png "modificato nello stile modelli ASP.NET MVC 4")
 
         *Modelli ASP.NET MVC 4 modificato nello stile*
-    2. **Rendering adattivo**
+    2. **Adaptive Rendering**
 
         Consulta il ridimensionamento della finestra del browser e notare come il layout di pagina si adatta dinamicamente per le nuove dimensioni della finestra. Questi modelli utilizzano la tecnica di rendering adattivo per eseguire il rendering correttamente in piattaforme mobili e desktop senza eseguire alcuna personalizzazione.
 

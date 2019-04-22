@@ -12,7 +12,7 @@ ms.openlocfilehash: 29bda1892fd223beadd3010f46d8f961c02d71ab
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59418157"
 ---
 # <a name="routing"></a>Routing
@@ -21,8 +21,8 @@ ms.locfileid: "59418157"
 
 
 - [Reindirizzamento permanente](aspnet-4-quick-hit-permanent-redirect.md)
-- [Routing imperativo di Web Forms](aspnet-4-quick-hit-imperative-webforms-routing.md)
-- [Routing dichiarativo di Web Forms](aspnet-4-quick-hit-declarative-webforms-routing.md)
-- [Routing in uscita di Web Forms](aspnet-4-quick-hit-outbound-webforms-routing.md)
-- [Usare il routing con Web Forms ASP.NET](how-do-i-use-routing-with-aspnet-web-forms.md)
+- [Routing imperativo di Web Form](aspnet-4-quick-hit-imperative-webforms-routing.md)
+- [Routing dichiarativo di Web Form](aspnet-4-quick-hit-declarative-webforms-routing.md)
+- [Routing in uscita di Web Form](aspnet-4-quick-hit-outbound-webforms-routing.md)
+- [Usare il routing con Web Form ASP.NET](how-do-i-use-routing-with-aspnet-web-forms.md)
 - [Usare gli URL nel routing di ASP.NET](how-do-i-work-with-urls-in-aspnet-routing.md)

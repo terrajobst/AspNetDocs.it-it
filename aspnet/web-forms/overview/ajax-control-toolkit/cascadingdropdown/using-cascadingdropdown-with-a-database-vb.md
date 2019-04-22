@@ -12,7 +12,7 @@ ms.openlocfilehash: d0b6f8651e327cf9ad2a3051edd323efba4f64fc
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59418729"
 ---
 # <a name="using-cascadingdropdown-with-a-database-vb"></a>Uso di CascadingDropDown con un database (VB)
@@ -86,12 +86,12 @@ Il resto del metodo è piuttosto semplice, quindi. ID del fornitore viene utiliz
 Caricare la pagina ASP.NET e dopo un breve periodo di tempo viene inserito nell'elenco di fornitori con le voci di 25. Selezionare una voce e notare come il secondo elenco a discesa viene riempita con i dati.
 
 
-[![Tprimo elenco he viene riempito automaticamente](using-cascadingdropdown-with-a-database-vb/_static/image2.png)](using-cascadingdropdown-with-a-database-vb/_static/image1.png)
+[![Nel primo elenco viene compilato automaticamente](using-cascadingdropdown-with-a-database-vb/_static/image2.png)](using-cascadingdropdown-with-a-database-vb/_static/image1.png)
 
 Nel primo elenco viene compilato automaticamente ([fare clic per visualizzare l'immagine con dimensioni normali](using-cascadingdropdown-with-a-database-vb/_static/image3.png))
 
 
-[![Tsecondo elenco he viene compilato in base della selezione nel primo elenco](using-cascadingdropdown-with-a-database-vb/_static/image5.png)](using-cascadingdropdown-with-a-database-vb/_static/image4.png)
+[![Nel secondo elenco viene compilato in base della selezione nel primo elenco](using-cascadingdropdown-with-a-database-vb/_static/image5.png)](using-cascadingdropdown-with-a-database-vb/_static/image4.png)
 
 Nel secondo elenco viene compilato in base della selezione nel primo elenco ([fare clic per visualizzare l'immagine con dimensioni normali](using-cascadingdropdown-with-a-database-vb/_static/image6.png))
 

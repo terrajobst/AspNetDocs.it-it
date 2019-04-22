@@ -12,7 +12,7 @@ ms.openlocfilehash: 8292fd43ffa2bc66b4daa8f0fc09569226d90bff
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59379560"
 ---
 # <a name="using-asynchronous-methods-in-aspnet-mvc-4"></a>Utilizzo di metodi asincroni in ASP.NET MVC 4
@@ -166,7 +166,7 @@ Per sfruttare i vantaggi di un'applicazione web asincrona, si potrebbe essere ne
 
     - Aprire Gestione IIS e passare al riquadro pool di applicazioni.
     - Fare clic con il pulsante destro sul pool di applicazioni di destinazione e selezionare **impostazioni avanzate**.  
-        ![avanzata](using-asynchronous-methods-in-aspnet-mvc-4/_static/image4.png)
+        ![advanced](using-asynchronous-methods-in-aspnet-mvc-4/_static/image4.png)
     - Nel **impostazioni avanzate** della finestra di dialogo Modifica *lunghezza coda* da 1.000 a 5.000.  
         ![Lunghezza coda](using-asynchronous-methods-in-aspnet-mvc-4/_static/image5.png)  
   

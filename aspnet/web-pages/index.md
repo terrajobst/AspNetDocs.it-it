@@ -12,7 +12,7 @@ ms.openlocfilehash: 832f89dfdecb71f2664431a4880978f7355246f4
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59420224"
 ---
 # <a name="aspnet-web-pages"></a>Pagine Web ASP.NET
@@ -21,7 +21,7 @@ ms.locfileid: "59420224"
 > [!NOTE] 
 > WebMatrix non è più consigliata come ambiente di sviluppo integrato per ASP.NET Web Pages. Uso [Visual Studio](xref:aspnet/web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio) oppure [Visual Studio Code](https://code.visualstudio.com/).
 
-- [Materiale sussidiario](overview/index.md)
+- [Linee guida](overview/index.md)
 
     - [Introduzione](overview/getting-started/index.md)
 
@@ -47,22 +47,22 @@ ms.locfileid: "59420224"
         - [Creazione di URL leggibili nei siti con pagine Web ASP.NET](overview/routing/creating-readable-urls-in-aspnet-web-pages-sites.md)
     - [Interfaccia utente, layout e temi](overview/ui-layouts-and-themes/index.md)
 
-        - [Uso dei moduli](overview/ui-layouts-and-themes/4-working-with-forms.md)
+        - [Utilizzo dei moduli](overview/ui-layouts-and-themes/4-working-with-forms.md)
         - [Convalida dell'input utente nelle pagine Web ASP.NET](overview/ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites.md)
         - [Creazione di un aspetto coerente](overview/ui-layouts-and-themes/3-creating-a-consistent-look.md)
         - [Personalizzazione del comportamento a livello di sito](overview/ui-layouts-and-themes/18-customizing-site-wide-behavior.md)
-        - [Working with Images (Uso delle immagini)](overview/ui-layouts-and-themes/9-working-with-images.md)
+        - [Uso delle immagini](overview/ui-layouts-and-themes/9-working-with-images.md)
         - [Uso dei video](overview/ui-layouts-and-themes/10-working-with-video.md)
         - [Creazione e uso di un helper in un sito con pagine Web ASP.NET](overview/ui-layouts-and-themes/creating-and-using-a-helper-in-an-aspnet-web-pages-site.md)
         - [Installazione di un helper](overview/ui-layouts-and-themes/installing-helpers.md)
         - [Helper di Twitter con pagine Web ASP.NET](overview/ui-layouts-and-themes/twitter-helper.md)
         - [Visualizzazione di mappe in un sito con pagine Web ASP.NET](overview/ui-layouts-and-themes/displaying-maps-in-an-aspnet-web-pages-site.md)
-    - [Cellulare](overview/mobile/index.md)
+    - [Dispositivi mobili](overview/mobile/index.md)
 
         - [Rendering dei siti con pagine Web ASP.NET per i dispositivi mobili](overview/mobile/rendering-aspnet-web-pages-sites-for-mobile-devices.md)
-    - [Uso dei dati](overview/data/index.md)
+    - [Uso di dati](overview/data/index.md)
 
-        - [Uso dei dati](overview/data/5-working-with-data.md)
+        - [Uso di dati](overview/data/5-working-with-data.md)
         - [Visualizzazione dei dati in un grafico](overview/data/7-displaying-data-in-a-chart.md)
         - [Uso dei file](overview/data/working-with-files.md)
     - [Test e debug](overview/testing-and-debugging/index.md)
@@ -78,7 +78,7 @@ ms.locfileid: "59420224"
 
         - [Memorizzazione nella cache per migliorare le prestazioni del sito Web](overview/performance-and-traffic/15-caching-to-improve-the-performance-of-your-website.md)
         - [Analisi del traffico](overview/performance-and-traffic/14-analyzing-traffic.md)
-        - [Creazione di bundle e minimizzazione degli asset nelle pagine Web ASP.NET (Razor)](overview/performance-and-traffic/bundling-and-minifying-assets-in-an-aspnet-web-pages-razor-site.md)
+        - [Creazione di bundle e minimizzazione di risorse nelle pagine Web ASP.NET (Razor)](overview/performance-and-traffic/bundling-and-minifying-assets-in-an-aspnet-web-pages-razor-site.md)
     - [Riferimento API](overview/api-reference/index.md)
 
         - [Riferimento rapido sulle API ASP.NET](overview/api-reference/asp-net-web-pages-api-reference.md)
@@ -117,7 +117,7 @@ ms.locfileid: "59420224"
         - [Visualizzazione dei dati in un grafico (parte 1)](videos/aspnet-razor-pages/displaying-data-in-a-chart-part-1.md)
         - [Visualizzazione dei dati in un grafico (parte 2)](videos/aspnet-razor-pages/displaying-data-in-a-chart-part-2.md)
         - [Uso dei file](videos/aspnet-razor-pages/working-with-files.md)
-        - [Working with Images (Uso delle immagini)](videos/aspnet-razor-pages/working-with-images.md)
+        - [Uso delle immagini](videos/aspnet-razor-pages/working-with-images.md)
         - [Uso dei video](videos/aspnet-razor-pages/working-with-video.md)
         - [Aggiunta di posta elettronica al sito Web](videos/aspnet-razor-pages/adding-email-to-your-web-site.md)
         - [Aggiunta di funzionalità di ricerca al sito Web](videos/aspnet-razor-pages/adding-search-to-your-web-site.md)

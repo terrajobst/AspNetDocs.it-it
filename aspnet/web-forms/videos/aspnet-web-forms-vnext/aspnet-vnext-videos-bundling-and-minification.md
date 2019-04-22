@@ -12,7 +12,7 @@ ms.openlocfilehash: d2f994e4ede9cbbf5d3a3f9cbb392bffde4e1f4e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59380340"
 ---
 # <a name="aspnet-vnext-videos-bundling-and-minification"></a>ASP.NET vNext video: Creazione di bundle e minimizzazione

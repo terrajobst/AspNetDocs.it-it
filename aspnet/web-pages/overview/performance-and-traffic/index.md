@@ -12,7 +12,7 @@ ms.openlocfilehash: 36cfc3435a832eaf8a6aeb24ff91fa03b99f2e39
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59385605"
 ---
 # <a name="performance"></a>Prestazioni
@@ -22,4 +22,4 @@ ms.locfileid: "59385605"
 
 - [Memorizzazione nella cache per migliorare le prestazioni del sito Web](15-caching-to-improve-the-performance-of-your-website.md)
 - [Analisi del traffico](14-analyzing-traffic.md)
-- [Creazione di bundle e minimizzazione degli asset nelle pagine Web ASP.NET (Razor)](bundling-and-minifying-assets-in-an-aspnet-web-pages-razor-site.md)
+- [Creazione di bundle e minimizzazione di risorse nelle pagine Web ASP.NET (Razor)](bundling-and-minifying-assets-in-an-aspnet-web-pages-razor-site.md)

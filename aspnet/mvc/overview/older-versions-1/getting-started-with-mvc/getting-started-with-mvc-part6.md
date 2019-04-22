@@ -12,7 +12,7 @@ ms.openlocfilehash: f648e0cb53dd410105adc22401f19a5a15f9e8c1
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59380808"
 ---
 # <a name="adding-a-create-method-and-create-view"></a>Aggiunta di un metodo di creazione e di una visualizzazione di creazione
@@ -38,7 +38,7 @@ Verrà ora implementata il modello Create View che verranno utilizzate per visua
 
 Sceglieremo ora che abbiamo si decide di passare il modello di vista di un film"" come la classe di visualizzazione dei dati e indicare che desideriamo "lo scaffolding di" un modello di "Crea".
 
-[![Agg Vista](getting-started-with-mvc-part6/_static/image2.png)](getting-started-with-mvc-part6/_static/image1.png)
+[![Aggiungi visualizzazione](getting-started-with-mvc-part6/_static/image2.png)](getting-started-with-mvc-part6/_static/image1.png)
 
 Dopo aver fatto clic sul pulsante Aggiungi modello di vista \Movies\Create.aspx verrà creato automaticamente. Poiché sono stati selezionati nell'elenco a discesa "visualizzare il contenuto" "Crea", la finestra di dialogo Aggiungi visualizzazione automaticamente "sottoposto a scaffolding" del contenuto predefinito per noi. Lo scaffolding creato un elemento HTML &lt;form&gt;, per passare una posizione per errore di convalida dei messaggi e poiché lo scaffolding SA sui film, creata etichetta e i campi per ogni proprietà della nostra classe.
 
@@ -48,7 +48,7 @@ Poiché il nostro database fornisce automaticamente un film un ID, è possibile 
 
 È possibile ora creare un nuovo film e aggiungerlo al database. Verrà effettuare questa operazione eseguendo nuovamente l'applicazione e visitare il "/ film" URL e fare clic sul collegamento "Crea" per aggiungere un nuovo film.
 
-[![Crea - Windows Internet Explorer](getting-started-with-mvc-part6/_static/image4.png)](getting-started-with-mvc-part6/_static/image3.png)
+[![Create - Windows Internet Explorer](getting-started-with-mvc-part6/_static/image4.png)](getting-started-with-mvc-part6/_static/image3.png)
 
 Quando si fa clic sul pulsante Crea, verranno resi disponibili (tramite HTTP POST) i dati in questo modulo per il metodo /Movies/Create appena creato. Proprio come quando automaticamente il sistema ha richiesto il parametro "numTimes" e "name" all'URL esterno e li mappati ai parametri in un metodo in precedenza, il sistema verrà automaticamente portare i campi del modulo da una richiesta POST ed eseguirne il mapping a un oggetto. In questo caso, i valori dei campi in formato HTML, ad esempio "ReleaseDate" e "Title" automaticamente essere inseriti nelle proprietà del corretta di una nuova istanza di un film.
 

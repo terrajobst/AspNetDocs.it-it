@@ -12,7 +12,7 @@ ms.openlocfilehash: 9e4a2a9fc56393ac816f25a1039b233aa8961608
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59383837"
 ---
 # <a name="bundling-and-minification"></a>Creazione di bundle e minimizzazione
@@ -52,7 +52,7 @@ Dopo la minimizzazione, la funzione viene ridotto al seguente:
 
 Oltre a rimuovere i commenti e spazi vuoti non necessari, i parametri seguenti e i nomi delle variabili sono state rinominate (abbreviato) come indicato di seguito:
 
-| **Originale** | **Ridenominazione** |
+| **Original** | **Rinominato** |
 | --- | --- |
 | imageTagAndImageID | n |
 | imageContext | u |
@@ -165,7 +165,7 @@ Si consideri un progetto con i seguenti file JavaScript:
 
 La tabella seguente illustra i file aggiunti a un bundle utilizzando il carattere jolly, come illustrato:
 
-| **Chiamata** | **Eccezione generata o i file aggiunti** |
+| **Call** | **Eccezione generata o i file aggiunti** |
 | --- | --- |
 | Include ("~/Scripts/Common/\*. js") | *AddAltToImg.js*, *ToggleDiv.js*, *ToggleImg.js* |
 | Include("~/Scripts/Common/T\*.js") | Eccezione di modello non valido. Il carattere jolly è consentito solo nel prefisso o suffisso. |

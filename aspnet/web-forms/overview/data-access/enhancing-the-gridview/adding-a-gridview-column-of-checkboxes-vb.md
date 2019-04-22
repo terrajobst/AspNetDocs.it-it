@@ -12,7 +12,7 @@ ms.openlocfilehash: 8defaeb2454a1aa4a3fdd115a7a3e449bf668659
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59383479"
 ---
 # <a name="adding-a-gridview-column-of-checkboxes-vb"></a>Aggiunta di una colonna GridView di caselle di controllo (VB)
@@ -31,7 +31,7 @@ Nell'esercitazione precedente abbiamo esaminato come aggiungere una colonna di p
 In questa esercitazione si vedrà come aggiungere una colonna di caselle di controllo e come determinare quali caselle di controllo sono state controllate durante il postback. In particolare, creeremo un esempio che riproduce fedelmente l'interfaccia utente client di posta elettronica basato sul web. Questo esempio include un controllo GridView paging Elenca i prodotti nel `Products` tabella di database con una casella di controllo in ogni riga (vedere la figura 1). Un pulsante Elimina prodotti selezionati, quando si fa clic, verrà eliminati i prodotti selezionati.
 
 
-[![EACH riga Product include una casella di controllo](adding-a-gridview-column-of-checkboxes-vb/_static/image1.gif)](adding-a-gridview-column-of-checkboxes-vb/_static/image1.png)
+[![Ogni riga di Product include una casella di controllo](adding-a-gridview-column-of-checkboxes-vb/_static/image1.gif)](adding-a-gridview-column-of-checkboxes-vb/_static/image1.png)
 
 **Figura 1**: Ogni riga di Product include una casella di controllo ([fare clic per visualizzare l'immagine con dimensioni normali](adding-a-gridview-column-of-checkboxes-vb/_static/image2.png))
 
@@ -41,17 +41,17 @@ In questa esercitazione si vedrà come aggiungere una colonna di caselle di cont
 Prima ci preoccupiamo aggiunta di una colonna di caselle di controllo, lasciare che lo stato attivo prima con s sull'elenco di prodotti in un controllo GridView che supporta il paging. Iniziare aprendo il `CheckBoxField.aspx` nella pagina la `EnhancedGridView` cartelle e trascinare un controllo GridView dalla casella degli strumenti nella finestra di progettazione, l'impostazione relativa `ID` a `Products`. Successivamente, scegliere di associare il controllo GridView per un nuovo oggetto ObjectDataSource denominato `ProductsDataSource`. Configurare ObjectDataSource per usare la `ProductsBLL` classe, chiamare il `GetProducts()` metodo per restituire i dati. Poiché questo controllo GridView sarà di sola lettura, impostare gli elenchi a discesa nell'aggiornamento, inserimento ed eliminare schede su (nessuno).
 
 
-[![CCrea un nuovo ProductsDataSource denominato di ObjectDataSource](adding-a-gridview-column-of-checkboxes-vb/_static/image2.gif)](adding-a-gridview-column-of-checkboxes-vb/_static/image3.png)
+[![Creare un nuovo oggetto ObjectDataSource denominato ProductsDataSource](adding-a-gridview-column-of-checkboxes-vb/_static/image2.gif)](adding-a-gridview-column-of-checkboxes-vb/_static/image3.png)
 
 **Figura 2**: Creare un nuovo oggetto ObjectDataSource denominato `ProductsDataSource` ([fare clic per visualizzare l'immagine con dimensioni normali](adding-a-gridview-column-of-checkboxes-vb/_static/image4.png))
 
 
-[![Cconfigurare ObjectDataSource per recuperare i dati usando il metodo GetProducts()](adding-a-gridview-column-of-checkboxes-vb/_static/image3.gif)](adding-a-gridview-column-of-checkboxes-vb/_static/image5.png)
+[![Configurare ObjectDataSource per recuperare i dati usando il metodo GetProducts()](adding-a-gridview-column-of-checkboxes-vb/_static/image3.gif)](adding-a-gridview-column-of-checkboxes-vb/_static/image5.png)
 
 **Figura 3**: Configurare ObjectDataSource per recuperare dati usando il `GetProducts()` metodo ([fare clic per visualizzare l'immagine con dimensioni normali](adding-a-gridview-column-of-checkboxes-vb/_static/image6.png))
 
 
-[![Set gli elenchi di riepilogo a discesa nell'aggiornamento, inserimento e schede di eliminazione per (nessuno)](adding-a-gridview-column-of-checkboxes-vb/_static/image4.gif)](adding-a-gridview-column-of-checkboxes-vb/_static/image7.png)
+[![Impostare gli elenchi a discesa nell'aggiornamento, inserimento ed eliminare schede su (nessuno)](adding-a-gridview-column-of-checkboxes-vb/_static/image4.gif)](adding-a-gridview-column-of-checkboxes-vb/_static/image7.png)
 
 **Figura 4**: Impostare l'elenco a discesa sono elencati nell'aggiornamento, inserimento ed eliminare schede su (nessuno) ([fare clic per visualizzare l'immagine con dimensioni normali](adding-a-gridview-column-of-checkboxes-vb/_static/image8.png))
 
@@ -68,7 +68,7 @@ Dopo aver apportato queste modifiche, GridView, ObjectDataSource, pulsante ed et
 Si consiglia di visualizzare la pagina in un browser (vedere la figura 5). A questo punto si dovrebbe vedere il nome, categoria e prezzo dei primi dieci prodotti.
 
 
-[![Tha nome, categoria e il prezzo dei primi 10 prodotti sono elencati](adding-a-gridview-column-of-checkboxes-vb/_static/image5.gif)](adding-a-gridview-column-of-checkboxes-vb/_static/image9.png)
+[![Il nome, categoria e prezzo dei primi 10 prodotti sono elencati](adding-a-gridview-column-of-checkboxes-vb/_static/image5.gif)](adding-a-gridview-column-of-checkboxes-vb/_static/image9.png)
 
 **Figura 5**: Sono elencati il nome, categoria e prezzo dei primi dieci prodotti ([fare clic per visualizzare l'immagine con dimensioni normali](adding-a-gridview-column-of-checkboxes-vb/_static/image10.png))
 
@@ -80,7 +80,7 @@ Poiché ASP.NET 2.0 include un CampoCasellaDiControllo, si potrebbe pensare che 
 In alternativa, è necessario aggiungere un TemplateField e aggiungere un controllo casella di controllo Web a relativo `ItemTemplate`. Aggiungere un TemplateField al `Products` GridView e renderlo il primo campo (a sinistra). GridView s nello smart tag, fare clic sul collegamento di modifica modelli e quindi trascinare un controllo casella di controllo Web dalla casella degli strumenti nel `ItemTemplate`. Impostare s questa casella di controllo `ID` proprietà `ProductSelector`.
 
 
-[![Auna casella di controllo Web controllo denominato ProductSelector al s TemplateField ItemTemplate gg](adding-a-gridview-column-of-checkboxes-vb/_static/image6.gif)](adding-a-gridview-column-of-checkboxes-vb/_static/image11.png)
+[![Aggiungere un controllo casella di controllo Web denominato ProductSelector all'ItemTemplate s TemplateField](adding-a-gridview-column-of-checkboxes-vb/_static/image6.gif)](adding-a-gridview-column-of-checkboxes-vb/_static/image11.png)
 
 **Figura 6**: Aggiungere un controllo casella di controllo di Web denominato `ProductSelector` ai dispositivi TemplateField `ItemTemplate` ([fare clic per visualizzare l'immagine con dimensioni normali](adding-a-gridview-column-of-checkboxes-vb/_static/image12.png))
 
@@ -88,7 +88,7 @@ In alternativa, è necessario aggiungere un TemplateField e aggiungere un contro
 Con il controllo casella di controllo Web e TemplateField aggiunto, ogni riga include ora una casella di controllo. Figura 7 Mostra questa pagina, quando viene visualizzato tramite un browser, dopo che sono stati aggiunti i TemplateField e una casella di controllo.
 
 
-[![EACH riga Product include ora una casella di controllo](adding-a-gridview-column-of-checkboxes-vb/_static/image7.gif)](adding-a-gridview-column-of-checkboxes-vb/_static/image13.png)
+[![Ogni riga del prodotto include ora una casella di controllo](adding-a-gridview-column-of-checkboxes-vb/_static/image7.gif)](adding-a-gridview-column-of-checkboxes-vb/_static/image13.png)
 
 **Figura 7**: Ogni riga del prodotto include ora una casella di controllo ([fare clic per visualizzare l'immagine con dimensioni normali](adding-a-gridview-column-of-checkboxes-vb/_static/image14.png))
 
@@ -109,7 +109,7 @@ Il `Rows` proprietà restituisce una raccolta di `GridViewRow` le istanze di tal
 Con l'aggiunta di questo gestore dell'evento, fare clic sul pulsante Elimina prodotti selezionati ora consente di visualizzare il `ProductID` s di prodotti selezionati.
 
 
-[![Wuando selezionato prodotti pulsante Elimina fa il ProductIDs di prodotti selezionata sono elencate](adding-a-gridview-column-of-checkboxes-vb/_static/image8.gif)](adding-a-gridview-column-of-checkboxes-vb/_static/image15.png)
+[![Quando si fa clic sul pulsante prodotti eliminare selezionata sono elencate ProductIDs i prodotti selezionati](adding-a-gridview-column-of-checkboxes-vb/_static/image8.gif)](adding-a-gridview-column-of-checkboxes-vb/_static/image15.png)
 
 **Figura 8**: Quando elimina selezionato prodotti fa clic sul pulsante i prodotti selezionati `ProductID` sono elencati ([fare clic per visualizzare l'immagine con dimensioni normali](adding-a-gridview-column-of-checkboxes-vb/_static/image16.png))
 
@@ -136,7 +136,7 @@ A questo punto, creare `Click` gestori eventi per il `CheckAll` e `UncheckAll` p
 Con questo codice, fare clic sul pulsante Seleziona tutto determina un postback e controlla tutte le caselle di controllo GridView. Analogamente, facendo clic su deselezionare tutti Deseleziona tutte le caselle di controllo. Figura 9 mostra la schermata dopo aver verificato il pulsante Seleziona tutto.
 
 
-[![Clicking di controllare tutti i pulsante Seleziona tutte le caselle di controllo](adding-a-gridview-column-of-checkboxes-vb/_static/image9.gif)](adding-a-gridview-column-of-checkboxes-vb/_static/image17.png)
+[![Scegliere il controllo di che tutte sul pulsante Seleziona tutte le caselle di controllo](adding-a-gridview-column-of-checkboxes-vb/_static/image9.gif)](adding-a-gridview-column-of-checkboxes-vb/_static/image17.png)
 
 **Figura 9**: Facendo clic su di controllare tutti i pulsante Seleziona tutte le caselle di controllo ([fare clic per visualizzare l'immagine con dimensioni normali](adding-a-gridview-column-of-checkboxes-vb/_static/image18.png))
 

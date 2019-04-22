@@ -12,7 +12,7 @@ ms.openlocfilehash: c135bacd7f9f87fac87a3c8cf41bad359bb3c0a2
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59379183"
 ---
 # <a name="aspnet-mvc-routing-overview-vb"></a>Panoramica del routing di ASP.NET MVC (VB)
@@ -95,7 +95,7 @@ Infine, richiamare il metodo Index () nel listato 5 con l'URL avremo genera un'e
 [!code-vb[Main](asp-net-mvc-routing-overview-vb/samples/sample5.vb)]
 
 
-[![Iun'azione del controller che prevede un valore di parametro nvoking](asp-net-mvc-routing-overview-vb/_static/image1.jpg)](asp-net-mvc-routing-overview-vb/_static/image1.png)
+[![Richiamo di un'azione del controller che prevede un valore di parametro](asp-net-mvc-routing-overview-vb/_static/image1.jpg)](asp-net-mvc-routing-overview-vb/_static/image1.png)
 
 **Figura 01**: Richiamo di un'azione del controller che prevede un valore di parametro ([fare clic per visualizzare l'immagine con dimensioni normali](asp-net-mvc-routing-overview-vb/_static/image2.png))
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: 9b2a7e00b3c50a946ad0f2518880892f103a5c1b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59387113"
 ---
 # <a name="validating-with-a-service-layer-c"></a>Convalida con un livello di servizio (C#)
@@ -30,13 +30,13 @@ Quando si compila un'applicazione ASP.NET MVC, è consigliabile non inserire la 
 
 Listato 1, ad esempio, contiene un repository semplice denominato il ProductRepository. Il repository di prodotto contiene tutto il codice di accesso di dati per l'applicazione. L'elenco include anche l'interfaccia IProductRepository che implementa il repository di prodotto.
 
-**Listing 1 -- Models\ProductRepository.cs**
+**Listato 1, Models\ProductRepository.cs**
 
 [!code-csharp[Main](validating-with-a-service-layer-cs/samples/sample1.cs)]
 
 Il controller nel listato 2 Usa il livello di repository le azioni di entrambe le proprietà Index () e create (). Si noti che questo controller non contiene alcuna logica di database. Creazione di un livello di repository consente di mantenere una netta separazione delle problematiche. I controller sono responsabili della logica di controllo di flusso dell'applicazione e il repository è responsabile della logica di accesso ai dati.
 
-**Listing 2 - Controllers\ProductController.cs**
+**Listato 2 - Controllers\ProductController.cs**
 
 [!code-csharp[Main](validating-with-a-service-layer-cs/samples/sample2.cs)]
 
@@ -48,13 +48,13 @@ Un livello di servizio è un ulteriore livello in un'applicazione ASP.NET MVC ch
 
 Ad esempio, il livello di servizio del prodotto nel listato 3 ha un metodo CreateProduct(). Il metodo CreateProduct() chiama il metodo ValidateProduct() per convalidare un nuovo prodotto prima di passare il prodotto nel repository di prodotto.
 
-**Listing 3 - Models\ProductService.cs**
+**Listato 3 - Models\ProductService.cs**
 
 [!code-csharp[Main](validating-with-a-service-layer-cs/samples/sample3.cs)]
 
 Il controller di prodotto è stato aggiornato nel listato 4 per utilizzare il livello di servizio anziché al livello del repository. Il livello di servizio comunica con il livello di controller. Il livello di servizio comunica con il livello di repository. Ogni livello avrà responsabilità separate.
 
-**Listing 4 - Controllers\ProductController.cs**
+**Listato 4 - Controllers\ProductController.cs**
 
 [!code-csharp[Main](validating-with-a-service-layer-cs/samples/sample4.cs)]
 
@@ -74,7 +74,7 @@ Nel listato 5, il livello di servizio è stato aggiornato in modo che non usi pi
 
 L'interfaccia IValidationDictionary viene definita nel listato 6. Questa interfaccia semplice include un solo metodo e una singola proprietà.
 
-**Listing 6 - Models\IValidationDictionary.cs**
+**Listato 6 - Models\IValidationDictionary.cs**
 
 [!code-csharp[Main](validating-with-a-service-layer-cs/samples/sample6.cs)]
 
@@ -86,7 +86,7 @@ La classe nel listato 7, denominare la classe ModelStateWrapper, implementa l'in
 
 Infine, il controller aggiornato nel listato 8 Usa il ModelStateWrapper quando si crea il livello di servizio nel relativo costruttore.
 
-**Listing 8 - Controllers\ProductController.cs**
+**Listato 8 - Controllers\ProductController.cs**
 
 [!code-csharp[Main](validating-with-a-service-layer-cs/samples/sample8.cs)]
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: cdd26f05aef75d1511482ae357f62258fbffce25
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59422317"
 ---
 # <a name="aspnet-4---tailspin-spyworks"></a>ASP.NET 4 - Tailspin Spyworks
@@ -22,9 +22,9 @@ ms.locfileid: "59422317"
 
 - [Parte 1. File -> Nuovo progetto](tailspin-spyworks-part-1.md)
 - [Parte 2. Livello di accesso ai dati](tailspin-spyworks-part-2.md)
-- [Parte 3: Layout e menu per la categoria](tailspin-spyworks-part-3.md)
+- [Parte 3: Layout e Menu per la categoria](tailspin-spyworks-part-3.md)
 - [Parte 4: Elenco di prodotti](tailspin-spyworks-part-4.md)
-- [Parte 5: Logica di business](tailspin-spyworks-part-5.md)
+- [Parte 5: Logica di Business](tailspin-spyworks-part-5.md)
 - [Parte 6: Appartenenza ASP.NET](tailspin-spyworks-part-6.md)
 - [Parte 7: Aggiunta di funzionalità](tailspin-spyworks-part-7.md)
 - [Parte 8: Pagine finali, gestione delle eccezioni e conclusione](tailspin-spyworks-part-8.md)

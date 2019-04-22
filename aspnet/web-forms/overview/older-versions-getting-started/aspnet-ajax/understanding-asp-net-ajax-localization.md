@@ -12,14 +12,14 @@ ms.openlocfilehash: 11e70493478d6810d63ba6b3ac813e32f03052eb
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381328"
 ---
 # <a name="understanding-aspnet-ajax-localization"></a>Informazioni sulla localizzazione in ASP.NET AJAX
 
 da [Scott Cate](https://github.com/scottcate)
 
-[Scarica il PDF](http://download.microsoft.com/download/C/1/9/C19A3451-1D14-477C-B703-54EF22E197EE/AJAX_tutorial04_Localization_cs.pdf)
+[Scaricare PDF](http://download.microsoft.com/download/C/1/9/C19A3451-1D14-477C-B703-54EF22E197EE/AJAX_tutorial04_Localization_cs.pdf)
 
 > La localizzazione è il processo di progettazione e l'integrazione di supporto per una lingua specifica e le impostazioni cultura in un'applicazione o un componente dell'applicazione. La piattaforma Microsoft ASP.NET offre ampio supporto per la localizzazione per le applicazioni ASP.NET standard grazie all'integrazione dal modello di localizzazione .NET standard. Il Framework AJAX di Microsoft utilizzano il modello integrato per supportare i diversi scenari in cui può essere eseguita la localizzazione.
 
@@ -32,13 +32,13 @@ Questo white paper vengono esaminate le funzionalità di localizzazione presenti
 
 Questo white paper si basa sulla versione di Microsoft Visual Studio 2008 Beta 2. Questo white paper si presuppone inoltre che si userà Visual Studio 2008, non Visual Web Developer Express e forniscono procedure dettagliate in base all'interfaccia utente di Visual Studio. Alcuni esempi di codice utilizzeranno i modelli di progetto che potrebbero non essere disponibili in Visual Web Developer Express.
 
-## *<a name="the-need-for-localization"></a>La necessità di localizzazione*
+## <a name="the-need-for-localization"></a>*La necessità di localizzazione*
 
 In particolare per gli sviluppatori di applicazioni aziendali e gli sviluppatori di componenti, la possibilità di creare strumenti che possono essere consapevoli delle differenze tra lingue e culture è diventata sempre più necessaria. Progettazione di componenti con la possibilità di adattare le impostazioni locali del client aumenta la produttività degli sviluppatori e riduce la quantità di lavoro richiesto per l'adattamento di un componente di funzionare a livello globale.
 
 La localizzazione è il processo di progettazione e l'integrazione di supporto per una lingua specifica e le impostazioni cultura in un'applicazione o un componente dell'applicazione. La piattaforma Microsoft ASP.NET offre ampio supporto per la localizzazione per le applicazioni ASP.NET standard grazie all'integrazione dal modello di localizzazione .NET standard. Il Framework AJAX di Microsoft utilizzano il modello integrato per supportare i diversi scenari in cui può essere eseguita la localizzazione. Con il Framework Microsoft AJAX, gli script possono essere localizzati da distribuire in assembly satellite, o utilizzando una struttura di sistema dei file statici.
 
-## *<a name="embedding-scripts-with-satellite-assemblies"></a>Incorporamento di script con assembly Satellite*
+## <a name="embedding-scripts-with-satellite-assemblies"></a>*Incorporamento di script con assembly Satellite*
 
 Coerente con la strategia di localizzazione di .NET Framework standard, le risorse possono essere inclusi in assembly satellite. Gli assembly satellite offrono diversi vantaggi sull'inclusione di risorse tradizionali in file binari - qualsiasi localizzazione specificato può essere aggiornati senza aggiornare l'immagine più grande, localizzazioni aggiuntivi possono essere distribuiti installando semplicemente gli assembly satellite in la cartella del progetto e gli assembly satellite possono essere distribuiti senza causare un ricaricamento dell'assembly principale del progetto. In particolare nei progetti ASP.NET, ciò è utile poiché può ridurre notevolmente la quantità di risorse di sistema utilizzate per gli aggiornamenti incrementali e minima dovuta a scopi di sito Web di produzione.
 
@@ -118,7 +118,7 @@ Per chi ha familiarità con la sintassi JavaScript Regex, testo all'interno di s
 
 Si noti che esistono diverse varianti per questa procedura dettagliata. Ad esempio, gli script è stato possibile registrare con il controllo ScriptManager a livello di codice durante il caricamento della pagina.
 
-## *<a name="including-a-static-script-file-structure"></a>Tra cui una struttura di File di Script statici*
+## <a name="including-a-static-script-file-structure"></a>*Tra cui una struttura di File di Script statici*
 
 Quando si usano file di script statici per la distribuzione, si perde alcuni dei vantaggi dell'uso lo schema di localizzazione .NET inerente. È principalmente visibile che si perdita gli automatica del tipo generata dall'inclusione di file di risorse di script; Nella procedura dettagliata precedente, ad esempio, le risorse sono state esposte da un tipo generato automaticamente e chiamato messaggio dal controllo ScriptManager.
 
@@ -128,7 +128,7 @@ Microsoft consiglia di evitare un problema di controllo della versione generando
 
 Perché non sono presenti risorse da includere in modo dichiarativo, script statici devono essere file di cui viene fatto riferimento tramite l'aggiunta `<asp:ScriptElement>` elementi come elemento figlio di `<Scripts>` tag del controllo ScriptManager, o a livello di codice aggiungere `ScriptReference` oggetti per il `Scripts` proprietà del `ScriptManager` controllo nella pagina in fase di esecuzione.
 
-## *<a name="the-scriptmanager-and-its-role-in-localization"></a>ScriptManager e il suo ruolo nell'ambito della localizzazione*
+## <a name="the-scriptmanager-and-its-role-in-localization"></a>*ScriptManager e il suo ruolo nell'ambito della localizzazione*
 
 ScriptManager consente diversi comportamenti automatici per le applicazioni localizzate:
 
@@ -146,7 +146,7 @@ Man mano che aumentano le applicazioni web per raggiungere un pubblico più ampi
 
 .NET Framework supporta intrinsecamente un framework di localizzazione completa, che usano gli assembly satellite e file XML (resx) per presentare un metodo uniforme per cercare immagini e stringhe di risorse. ASP.NET AJAX Extensions, tra cui il Framework AJAX di Microsoft e Script Microsoft AJAX Library, forniscono supporto per questo modello di programmazione nel codice del lato client, abilitare le ricerche di stringhe di risorse semplice. Gli assembly satellite supportano l'inserimento automatico delle risorse di script (file con estensione js effettivo) tramite ScriptResource. axd, purché i nomi di file seguono uno schema di denominazione specifico. Con questo supporto, ASP.NET AJAX Extensions semplifica la localizzazione degli script e la globalizzazione di applicazioni.
 
-## *<a name="bio"></a>Bio*
+## <a name="bio"></a>*Bio*
 
 Scott Cate ha collaborato con tecnologie Web di Microsoft dal 1997 ed è il presidente di myKB.com ([www.myKB.com](http://www.myKB.com)) ed è specializzato nella scrittura di ASP.NET basato su applicazioni incentrate su soluzioni Software di Knowledge Base. È possibile contattare Scott tramite posta elettronica all'indirizzo [ scott.cate@myKB.com ](mailto:scott.cate@myKB.com) o il suo blog all'indirizzo [ScottCate.com](http://ScottCate.com)
 

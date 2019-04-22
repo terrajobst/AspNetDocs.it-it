@@ -12,7 +12,7 @@ ms.openlocfilehash: b8ec246c2f35f3d7fa5bcf67aa6f157195028176
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59379521"
 ---
 # <a name="configuring-a-website-that-uses-application-services-vb"></a>Configurazione di un sito Web che usa i servizi per le applicazioni (VB)
@@ -106,7 +106,7 @@ Let s esaminare come aggiungere gli oggetti di database al database di produzion
 Lo strumento si avvia visualizzando una schermata iniziale che spiega lo scopo. Fare clic su Avanti per passare alla schermata di "Selezionare un'opzione di installazione", come illustrata nella figura 1. Da qui è possibile scegliere di aggiungere i servizi delle applicazioni di oggetti di database o rimuoverli da un database. Poiché si vuole aggiungere questi oggetti nel database di produzione, selezionare l'opzione "Configura SQL Server per i servizi dell'applicazione" e fare clic su Avanti.
 
 
-[![Cimpostare come configurare SQL Server per i servizi applicazione](configuring-a-website-that-uses-application-services-vb/_static/image2.jpg)](configuring-a-website-that-uses-application-services-vb/_static/image1.jpg)
+[![Scegliere di configurare SQL Server per i servizi dell'applicazione](configuring-a-website-that-uses-application-services-vb/_static/image2.jpg)](configuring-a-website-that-uses-application-services-vb/_static/image1.jpg)
 
 **Figura 1**: Scegliere di configurare SQL Server per i servizi dell'applicazione ([fare clic per visualizzare l'immagine con dimensioni normali](configuring-a-website-that-uses-application-services-vb/_static/image3.jpg))
 
@@ -117,7 +117,7 @@ Nella finestra "Selezionare il Server e Database" schermata richiede per le info
 > Dopo aver immesso il server di database e credenziali è potrebbe verificarsi un errore quando si espande l'elenco di riepilogo a discesa di database. Il `aspnet_regsql.exe` dello strumento di query di `sysdatabases` tabella di sistema per recuperare un elenco di database nel server, ma alcuni web hosting bloccare le aziende i server di database in modo che queste informazioni non sono disponibili pubblicamente. Se si verifica questo errore è possibile digitare il nome del database direttamente nell'elenco a discesa.
 
 
-[![Sgli oggetti degli strumenti con il Database le informazioni di connessione dotto](configuring-a-website-that-uses-application-services-vb/_static/image5.jpg)](configuring-a-website-that-uses-application-services-vb/_static/image4.jpg)
+[![Fornire allo strumento con le informazioni di connessione Database s](configuring-a-website-that-uses-application-services-vb/_static/image5.jpg)](configuring-a-website-that-uses-application-services-vb/_static/image4.jpg)
 
 **Figura 2**: Specificare gli oggetti degli strumenti con il Database le informazioni di connessione ([fare clic per visualizzare l'immagine con dimensioni normali](configuring-a-website-that-uses-application-services-vb/_static/image6.jpg))
 
@@ -125,7 +125,7 @@ Nella finestra "Selezionare il Server e Database" schermata richiede per le info
 La schermata successiva sono riepilogate le azioni che verranno eseguite, vale a dire che gli oggetti di database dell'applicazione Servizi stanno per essere aggiunto al database specificato. Fare clic su Avanti per completare questa azione. Dopo alcuni istanti, viene visualizzata la schermata finale, notare che sono stati aggiunti gli oggetti di database (vedere la figura 3).
 
 
-[![Srrore! Gli oggetti di Database di servizi di applicazione sono stati aggiunti al Database di produzione](configuring-a-website-that-uses-application-services-vb/_static/image8.jpg)](configuring-a-website-that-uses-application-services-vb/_static/image7.jpg)
+[![Vero successo! Gli oggetti di Database di servizi di applicazione sono stati aggiunti al Database di produzione](configuring-a-website-that-uses-application-services-vb/_static/image8.jpg)](configuring-a-website-that-uses-application-services-vb/_static/image7.jpg)
 
 **Figura 3**: Operazione completata L'applicazione Servizi di Database sono oggetti aggiunti al Database di produzione ([fare clic per visualizzare l'immagine con dimensioni normali](configuring-a-website-that-uses-application-services-vb/_static/image9.jpg))
 
@@ -133,7 +133,7 @@ La schermata successiva sono riepilogate le azioni che verranno eseguite, vale a
 Per verificare che gli oggetti di database di servizi di applicazione sono stati aggiunti al database di produzione, aprire SQL Server Management Studio e connettersi al database di produzione. Come illustrato nella figura 4, si noterà ora le tabelle di database di servizi di applicazione nel database `aspnet_Applications`, `aspnet_Membership`, `aspnet_Users`e così via.
 
 
-[![Cconferma che nel Database di produzione sono stati aggiunti gli oggetti di Database](configuring-a-website-that-uses-application-services-vb/_static/image11.jpg)](configuring-a-website-that-uses-application-services-vb/_static/image10.jpg)
+[![Verificare che gli oggetti di Database sono stati aggiunti al Database di produzione](configuring-a-website-that-uses-application-services-vb/_static/image11.jpg)](configuring-a-website-that-uses-application-services-vb/_static/image10.jpg)
 
 **Figura 4**: Verificare che gli oggetti di Database sono stati aggiunti al Database di produzione ([fare clic per visualizzare l'immagine con dimensioni normali](configuring-a-website-that-uses-application-services-vb/_static/image12.jpg))
 
@@ -172,7 +172,7 @@ La buona notizia è che tutte le funzionalità esposte fornito dal WSAT è dispo
 > Per altre informazioni sull'uso di appartenenza e ruoli API con i controlli correlati all'accesso Web di ASP.NET, assicurarsi di leggere mio [ *sito Web di sicurezza esercitazioni*](../../older-versions-security/introduction/security-basics-and-asp-net-support-cs.md). Per altre informazioni sulla personalizzazione del controllo CreateUserWizard, vedere la [ *creazione degli account utente* ](../../older-versions-security/membership/creating-user-accounts-vb.md) e [ *archiviare informazioni utente aggiuntive* ](../../older-versions-security/membership/storing-additional-user-information-vb.md) esercitazioni o guarda [ *Erich Peterson* ](http://www.erichpeterson.com/) articolo s [ *personalizzare il controllo CreateUserWizard* ](http://aspnet.4guysfromrolla.com/articles/070506-1.aspx).
 
 
-[![Administrators possono creare nuovi account utente](configuring-a-website-that-uses-application-services-vb/_static/image14.jpg)](configuring-a-website-that-uses-application-services-vb/_static/image13.jpg)
+[![Gli amministratori possono creare nuovi account utente](configuring-a-website-that-uses-application-services-vb/_static/image14.jpg)](configuring-a-website-that-uses-application-services-vb/_static/image13.jpg)
 
 **Figura 5**: Gli amministratori possono creare nuovi account utente ([fare clic per visualizzare l'immagine con dimensioni normali](configuring-a-website-that-uses-application-services-vb/_static/image15.jpg))
 

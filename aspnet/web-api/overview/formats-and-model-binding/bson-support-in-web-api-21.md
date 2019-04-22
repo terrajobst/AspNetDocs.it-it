@@ -13,7 +13,7 @@ ms.openlocfilehash: 911e2abcfd277075b3cba71e624ec6390b99a15e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59382231"
 ---
 # <a name="bson-support-in-aspnet-web-api-21"></a>Supporto di BSON nell'API Web ASP.NET 2.1

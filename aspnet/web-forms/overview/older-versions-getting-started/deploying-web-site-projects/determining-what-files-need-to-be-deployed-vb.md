@@ -12,7 +12,7 @@ ms.openlocfilehash: fe19910d693a784b8dc207462591c9f4d51cec14
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59382147"
 ---
 # <a name="determining-what-files-need-to-be-deployed-vb"></a>Determinazione dei file da distribuire (VB)
@@ -93,7 +93,7 @@ Il download per questa esercitazione include un'applicazione ASP.NET denominata 
 Figura 1 mostra una cattura di schermata del sito Web le recensioni dei libri quando viene visualizzato tramite un browser. Di seguito viene visualizzata la pagina ~ / Tech/TYASP35.aspx, che esamina il libro *insegnare manualmente ASP.NET 3.5 in 24 ore*. Il percorso di navigazione che si estende nella parte superiore della pagina di menu nella colonna sinistra si basano nella struttura della mappa del sito definita `Web.sitemap`. L'immagine nell'angolo superiore sinistro è uno della copertura della Rubrica immagini che si trovano nel `Images` cartella. Aspetto del sito Web vengono definite tramite le regole di foglio di stile venga specificate dai file CSS nella `Styles` cartella, mentre il layout delle pagine globale viene definito nella pagina master, `Site.master`.
 
 
-[![Toffre inoltre sito Web libro esamina le revisioni su un'ampia gamma di titoli](determining-what-files-need-to-be-deployed-vb/_static/image2.png)](determining-what-files-need-to-be-deployed-vb/_static/image1.png)
+[![Il sito Web del libro esamina offre le revisioni su un'ampia gamma di titoli](determining-what-files-need-to-be-deployed-vb/_static/image2.png)](determining-what-files-need-to-be-deployed-vb/_static/image1.png)
 
 **Figura 1**: Il sito Web del libro esamina offre le revisioni su un'ampia gamma di titoli ([fare clic per visualizzare l'immagine con dimensioni normali](determining-what-files-need-to-be-deployed-vb/_static/image3.png))
 
@@ -116,7 +116,7 @@ Il modello di progetto di applicazione Web Usa la compilazione esplicita: codice
 Figura 2 mostra i file che costituiscono il progetto di applicazione Web di revisioni del libro.
 
 
-[![TEsplora soluzioni sono elencati i file che costituiscono il progetto di applicazione Web.](determining-what-files-need-to-be-deployed-vb/_static/image5.png)](determining-what-files-need-to-be-deployed-vb/_static/image4.png)
+[![Esplora soluzioni Elenca i file che costituiscono il progetto di applicazione Web.](determining-what-files-need-to-be-deployed-vb/_static/image5.png)](determining-what-files-need-to-be-deployed-vb/_static/image4.png)
 
 **Figura 2**: Esplora soluzioni Elenca i file che costituiscono il progetto di applicazione Web
 
@@ -147,7 +147,7 @@ L'opzione di menu di compilazione in Visual Studio è presente in entrambi i pro
 Figura 3 mostra i file che costituiscono il progetto di sito Web di revisioni del libro.
 
 
-[![TEsplora soluzioni sono elencati i file che costituiscono il progetto di sito Web.](determining-what-files-need-to-be-deployed-vb/_static/image7.png)](determining-what-files-need-to-be-deployed-vb/_static/image6.png)
+[![Esplora soluzioni Elenca i file che costituiscono il progetto di sito Web.](determining-what-files-need-to-be-deployed-vb/_static/image7.png)](determining-what-files-need-to-be-deployed-vb/_static/image6.png)
 
 **Figura 3**: Esplora soluzioni Elenca i file che costituiscono il progetto di sito Web
 
