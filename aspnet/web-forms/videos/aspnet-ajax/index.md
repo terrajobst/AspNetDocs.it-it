@@ -12,7 +12,7 @@ ms.openlocfilehash: 5fc85b5ac4771d6784e9afa41e09d74474a605ba
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381302"
 ---
 # <a name="aspnet-ajax"></a>ASP.NET AJAX
@@ -46,7 +46,7 @@ ms.locfileid: "59381302"
 - [Determinare se si è verificato un postback asincrono](how-do-i-determine-whether-an-asynchronous-postback-has-occurred.md)
 - [Usare la modalità di aggiornamento condizionale del controllo UpdatePanel](how-do-i-use-the-conditional-updatemode-of-the-updatepanel.md)
 - [Implementare il modello di comunicazione persistente con il controllo UpdatePanel](how-do-i-implement-the-persistent-communications-pattern-with-the-updatepanel.md)
-- [Localizzare un'applicazione ASP.NET AJAX](how-do-i-localize-an-aspnet-ajax-application.md)
+- [Localizzazione di un'applicazione ASP.NET AJAX](how-do-i-localize-an-aspnet-ajax-application.md)
 - [Implementare il modello di comunicazione persistente tramite servizi Web](how-do-i-implement-the-persistent-communications-pattern-using-web-services.md)
 - [Attivare un aggiornamento di UpdatePanel da un controllo DropDownList](how-do-i-trigger-an-updatepanel-refresh-from-a-dropdownlist-control.md)
 - [Creare un controllo Extender di ASP.NET AJAX da zero](how-do-i-create-an-aspnet-ajax-extender-from-scratch.md)

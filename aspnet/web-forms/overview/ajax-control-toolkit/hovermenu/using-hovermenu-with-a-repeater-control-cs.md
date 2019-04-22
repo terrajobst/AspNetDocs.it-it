@@ -12,7 +12,7 @@ ms.openlocfilehash: 7f64e90eb2f8f87e2f382cb7897793e7071d305d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59384500"
 ---
 # <a name="using-hovermenu-with-a-repeater-control-c"></a>Uso di HoverMenu con un controllo Repeater (C#)
@@ -53,9 +53,9 @@ A questo punto, il `HoverMenuExtender` entra in gioco. In modo che ogni elemento
 A questo punto ogni elemento nell'origine dati consente di visualizzare una finestra popup a destra (`PopupPosition` attributo) dopo un ritardo di 50 millisecondi (`PopDelay` attributo).
 
 
-[![Tmenu di passaggio del mouse he viene visualizzato accanto a ogni elemento nel repeater](using-hovermenu-with-a-repeater-control-cs/_static/image2.png)](using-hovermenu-with-a-repeater-control-cs/_static/image1.png)
+[![Viene visualizzato il menu di passaggio del mouse accanto a ogni elemento nel repeater](using-hovermenu-with-a-repeater-control-cs/_static/image2.png)](using-hovermenu-with-a-repeater-control-cs/_static/image1.png)
 
 Viene visualizzato il menu di passaggio del mouse accanto a ogni elemento nel repeater ([fare clic per visualizzare l'immagine con dimensioni normali](using-hovermenu-with-a-repeater-control-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Successivo](using-hovermenu-with-a-repeater-control-vb.md)
+> [avanti](using-hovermenu-with-a-repeater-control-vb.md)

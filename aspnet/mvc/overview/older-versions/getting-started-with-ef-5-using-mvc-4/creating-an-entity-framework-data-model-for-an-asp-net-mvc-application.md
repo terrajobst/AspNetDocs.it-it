@@ -12,7 +12,7 @@ ms.openlocfilehash: eeed594e785b99146140dcd2833a95bf6e467823
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59390441"
 ---
 # <a name="creating-an-entity-framework-data-model-for-an-aspnet-mvc-application-1-of-10"></a>Creazione di un modello di dati di Entity Framework per un'applicazione ASP.NET MVC (1 di 10)
@@ -349,4 +349,4 @@ A questo punto è stata creata una semplice applicazione che usa Entity Framewor
 Sono disponibili collegamenti ad altre risorse di Entity Framework nel [ASP.NET Data Access Content Map](../../../../whitepapers/aspnet-data-access-content-map.md).
 
 > [!div class="step-by-step"]
-> [Successivo](implementing-basic-crud-functionality-with-the-entity-framework-in-asp-net-mvc-application.md)
+> [avanti](implementing-basic-crud-functionality-with-the-entity-framework-in-asp-net-mvc-application.md)

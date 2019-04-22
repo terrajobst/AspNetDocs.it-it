@@ -12,7 +12,7 @@ ms.openlocfilehash: 34a182278cfa57369643ab151492532bc92bd623
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59393496"
 ---
 # <a name="creating-a-customized-sorting-user-interface-c"></a>Creazione di un'interfaccia utente per l'ordinamento personalizzato (C#)
@@ -31,7 +31,7 @@ Quando la visualizzazione di un lungo elenco di dati ordinati in cui sono presen
 Per aiutare a evidenziare i limiti tra i gruppi ordinati, molti siti Web utilizzano un'interfaccia utente che aggiunge un separatore tra tali gruppi. I separatori, ad esempio quelli illustrati nella figura 1 consente a un utente a più rapidamente trovare un gruppo specifico e identificare i suoi limiti, nonché verificare quali gruppi distinti esistono nei dati.
 
 
-[![EACH gruppo categoria è chiaramente](creating-a-customized-sorting-user-interface-cs/_static/image2.png)](creating-a-customized-sorting-user-interface-cs/_static/image1.png)
+[![Ogni gruppo di categorie è chiaramente](creating-a-customized-sorting-user-interface-cs/_static/image2.png)](creating-a-customized-sorting-user-interface-cs/_static/image1.png)
 
 **Figura 1**: Ogni gruppo di categorie è chiaramente ([fare clic per visualizzare l'immagine con dimensioni normali](creating-a-customized-sorting-user-interface-cs/_static/image3.png))
 
@@ -50,7 +50,7 @@ Successivamente, configurare il controllo GridView in modo che contenga solo le 
 Si consiglia di visualizzare lo stato di avanzamento fino a quel momento in un browser. Figura 2 mostra il controllo GridView ordinabile quando i dati viene ordinati in base alla categoria in ordine alfabetico.
 
 
-[![Tegli s GridView ordinabile dei dati viene ordinato in base alla categoria](creating-a-customized-sorting-user-interface-cs/_static/image5.png)](creating-a-customized-sorting-user-interface-cs/_static/image4.png)
+[![Le s ordinabile GridView i dati sono ordinati per categoria](creating-a-customized-sorting-user-interface-cs/_static/image5.png)](creating-a-customized-sorting-user-interface-cs/_static/image4.png)
 
 **Figura 2**: Le s GridView ordinabile dati vengono ordinati in base alla categoria ([fare clic per visualizzare l'immagine con dimensioni normali](creating-a-customized-sorting-user-interface-cs/_static/image6.png))
 
@@ -100,7 +100,7 @@ Invece di messaggistica i dati prima di associarlo a GridView, possiamo aggiunge
 Per aggiungere righe separatore tra ciascun gruppo di ordinamento, è possibile gestire direttamente la gerarchia dei controlli dopo che è stato creato. Possiamo essere certi che sia stata creata la gerarchia dei controlli GridView s per l'ultima volta nel momento in cui che viene eseguito il rendering della pagina. Pertanto, esegue l'override di questo approccio il `Page` classe s `Render` metodo, a questo punto la gerarchia dei controlli finale s GridView viene aggiornata per includere le righe del separatore necessario. Figura 4 illustra questo processo.
 
 
-[![ATecnica alternativa n consente di modificare la gerarchia dei controlli GridView s](creating-a-customized-sorting-user-interface-cs/_static/image9.png)](creating-a-customized-sorting-user-interface-cs/_static/image8.png)
+[![Una tecnica alternativa consente di modificare la gerarchia dei controlli GridView s](creating-a-customized-sorting-user-interface-cs/_static/image9.png)](creating-a-customized-sorting-user-interface-cs/_static/image8.png)
 
 **Figura 4**: Una tecnica alternativa consente di modificare la gerarchia dei controlli di s GridView ([fare clic per visualizzare l'immagine con dimensioni normali](creating-a-customized-sorting-user-interface-cs/_static/image10.png))
 
@@ -156,12 +156,12 @@ La classe CSS utilizzata per formattare la riga di intestazione gruppo ordinamen
 Con il codice corrente, l'interfaccia ordinamento aggiunge intestazioni di gruppo ordinamento ordinare in base a qualsiasi BoundField (vedere la figura 5, che viene mostrata una schermata durante l'ordinamento dal fornitore). Tuttavia, quando l'ordinamento in base a qualsiasi altro tipo di campo (ad esempio un CampoCasellaDiControllo o TemplateField), le intestazioni di gruppo di ordinamento sono disponibile una destinazione da cercare (vedere la figura 6).
 
 
-[![Tegli ordinamento interfaccia include Ordina le intestazioni di gruppo quando si ordinano le BoundField](creating-a-customized-sorting-user-interface-cs/_static/image12.png)](creating-a-customized-sorting-user-interface-cs/_static/image11.png)
+[![L'interfaccia ordinamento include intestazioni di gruppo di ordinamento durante l'ordinamento in base BoundField](creating-a-customized-sorting-user-interface-cs/_static/image12.png)](creating-a-customized-sorting-user-interface-cs/_static/image11.png)
 
 **Figura 5**: L'ordinamento interfaccia include ordinamento gruppo intestazioni quando l'ordinamento in base BoundField ([fare clic per visualizzare l'immagine con dimensioni normali](creating-a-customized-sorting-user-interface-cs/_static/image13.png))
 
 
-[![TIntestazioni di gruppo Ordina he sono mancanti durante l'ordinamento un CampoCasellaDiControllo](creating-a-customized-sorting-user-interface-cs/_static/image15.png)](creating-a-customized-sorting-user-interface-cs/_static/image14.png)
+[![Le intestazioni di gruppo di ordinamento sono mancanti durante l'ordinamento un CampoCasellaDiControllo](creating-a-customized-sorting-user-interface-cs/_static/image15.png)](creating-a-customized-sorting-user-interface-cs/_static/image14.png)
 
 **Figura 6**: Le intestazioni di gruppo di ordinamento sono mancanti durante l'ordinamento un CampoCasellaDiControllo ([fare clic per visualizzare l'immagine con dimensioni normali](creating-a-customized-sorting-user-interface-cs/_static/image16.png))
 
@@ -178,7 +178,7 @@ Questo codice esamina la colonna ordinata `TableCell` per la riga corrente deter
 Con l'aggiunta di codice precedente, le intestazioni di gruppo Ordina ora sono presenti quando si ordinano le il CampoCasellaDiControllo non più disponibili (vedere la figura 7).
 
 
-[![TIntestazioni di gruppo Ordina he sono ora presenti durante l'ordinamento un CampoCasellaDiControllo](creating-a-customized-sorting-user-interface-cs/_static/image18.png)](creating-a-customized-sorting-user-interface-cs/_static/image17.png)
+[![Le intestazioni di gruppo di ordinamento sono ora presenti durante l'ordinamento un CampoCasellaDiControllo](creating-a-customized-sorting-user-interface-cs/_static/image18.png)](creating-a-customized-sorting-user-interface-cs/_static/image17.png)
 
 **Figura 7**: Le intestazioni di gruppo di ordinamento sono ora presenti durante l'ordinamento un CampoCasellaDiControllo ([fare clic per visualizzare l'immagine con dimensioni normali](creating-a-customized-sorting-user-interface-cs/_static/image19.png))
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: 3f966869c106416886dfa4e9e3c2cf67ee5fe337
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59385813"
 ---
 # <a name="databinding-the-slider-control-c"></a>Data binding del controllo Slider (C#)
@@ -45,7 +45,7 @@ Il passaggio successivo è già il passaggio finale. Il `SliderExtender` control
 Come può notare nel browser, il data binding funziona in entrambe le direzioni: digitando un nuovo valore nella casella di testo Aggiorna posizione del dispositivo di scorrimento. Se si apporta la seconda casella di testo di sola lettura, è possibile aggiungere un livello di protezione basso per il campo di testo in modo che sia più difficile per all'utente di aggiornare manualmente il valore in tale posizione.
 
 
-[![Scasella di testo e lider siano sincronizzati](databinding-the-slider-control-cs/_static/image2.png)](databinding-the-slider-control-cs/_static/image1.png)
+[![Dispositivo di scorrimento e casella di testo sono sincronizzate](databinding-the-slider-control-cs/_static/image2.png)](databinding-the-slider-control-cs/_static/image1.png)
 
 Dispositivo di scorrimento e casella di testo vengono sincronizzati ([fare clic per visualizzare l'immagine con dimensioni normali](databinding-the-slider-control-cs/_static/image3.png))
 

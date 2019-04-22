@@ -12,7 +12,7 @@ ms.openlocfilehash: 58f3ec28914a604aa911cc3cb73733f0d58fd49f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59390415"
 ---
 # <a name="introducing-aspnet-web-pages---creating-a-consistent-layout"></a>Introduzione a pagine Web ASP.NET - creazione di un Layout coerente

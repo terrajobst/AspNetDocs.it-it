@@ -12,7 +12,7 @@ ms.openlocfilehash: 45ea3c3dbcf7816f67081a61230c4b055a90fcf5
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59393626"
 ---
 # <a name="creating-mutually-exclusive-checkboxes-vb"></a>Creazione di caselle di controllo che si escludono a vicenda (VB)
@@ -47,7 +47,7 @@ Infine, includere ASP.NET AJAX `ScriptManager` necessaria per tutti gli elementi
 Salvare ed eseguire la pagina: È possibile selezionare e deselezionare caselle di controllo, tuttavia in nessuna circostanza entrambe le caselle di controllo controllare.
 
 
-[![Ouna casella di controllo sola può essere controllato in un momento](creating-mutually-exclusive-checkboxes-vb/_static/image2.png)](creating-mutually-exclusive-checkboxes-vb/_static/image1.png)
+[![Solo una casella di controllo può essere controllato in un momento](creating-mutually-exclusive-checkboxes-vb/_static/image2.png)](creating-mutually-exclusive-checkboxes-vb/_static/image1.png)
 
 Solo una casella di controllo può essere controllato in un momento ([fare clic per visualizzare l'immagine con dimensioni normali](creating-mutually-exclusive-checkboxes-vb/_static/image3.png))
 

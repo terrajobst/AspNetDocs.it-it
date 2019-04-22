@@ -12,7 +12,7 @@ ms.openlocfilehash: 53984f03cf01caab859f44fdc018b1598ed62def
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59383044"
 ---
 # <a name="executing-several-animations-after-each-other-vb"></a>Esecuzione di diverse animazioni una dopo l'altra (VB)
@@ -53,12 +53,12 @@ All'interno di `<Animations>` nodo, usare `<OnLoad>` per eseguire le animazioni 
 Quando si esegue questo script, il pannello prima ottiene più larghi e quindi più piccoli.
 
 
-[![Fla larghezza viene aumentata rima](executing-several-animations-after-each-other-vb/_static/image2.png)](executing-several-animations-after-each-other-vb/_static/image1.png)
+[![Prima di tutto la larghezza viene aumentata](executing-several-animations-after-each-other-vb/_static/image2.png)](executing-several-animations-after-each-other-vb/_static/image1.png)
 
 Prima di tutto la larghezza viene aumentata ([fare clic per visualizzare l'immagine con dimensioni normali](executing-several-animations-after-each-other-vb/_static/image3.png))
 
 
-[![Tuando che viene diminuito l'altezza](executing-several-animations-after-each-other-vb/_static/image5.png)](executing-several-animations-after-each-other-vb/_static/image4.png)
+[![Quindi viene diminuito l'altezza](executing-several-animations-after-each-other-vb/_static/image5.png)](executing-several-animations-after-each-other-vb/_static/image4.png)
 
 Quindi viene diminuito l'altezza ([fare clic per visualizzare l'immagine con dimensioni normali](executing-several-animations-after-each-other-vb/_static/image6.png))
 

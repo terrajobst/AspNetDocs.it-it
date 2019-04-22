@@ -12,14 +12,14 @@ ms.openlocfilehash: 0ab58aee6f1203beaf3990536b059f8209e66547
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59393483"
 ---
 # <a name="deploying-a-specific-build"></a>Distribuzione di una compilazione specifica
 
 da [Jason Lee](https://github.com/jrjlee)
 
-[Scarica il PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Scaricare PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Questo argomento descrive come distribuire i pacchetti web e script di database da una specifica build precedente a una nuova destinazione, ad esempio un ambiente di gestione temporanea o produzione.
 

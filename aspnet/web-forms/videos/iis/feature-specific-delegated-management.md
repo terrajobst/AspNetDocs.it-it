@@ -12,7 +12,7 @@ ms.openlocfilehash: a37a2153f5096d4d28569da234868ec70f6b4bbd
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59392781"
 ---
 # <a name="feature-specific-delegated-management"></a>Gestione con delega di funzionalità specifiche

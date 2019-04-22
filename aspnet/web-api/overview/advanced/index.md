@@ -13,7 +13,7 @@ ms.openlocfilehash: 2cec6138ffcd6019eae23c82abda2b96d7b0b625
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59383460"
 ---
 # <a name="advanced-topics-for-aspnet-web-api"></a>Argomenti avanzati per l'API Web ASP.NET
@@ -26,6 +26,6 @@ ms.locfileid: "59383460"
 - [Chiamata di un'API Web da un client .NET (C#)](calling-a-web-api-from-a-net-client.md)
 - [Gestori di messaggi HTTP nell'API Web](http-message-handlers.md)
 - [Gestori di messaggi HttpClient nell'API Web](httpclient-message-handlers.md)
-- [Invio dei dati dei moduli HTML nell'API Web: dati form-urlencoded](sending-html-form-data-part-1.md)
-- [Invio dei dati dei moduli HTML nell'API Web: caricamento di file e MIME composto](sending-html-form-data-part-2.md)
+- [L'invio dei dati di Form HTML nell'API Web: Dati form-urlencoded](sending-html-form-data-part-1.md)
+- [L'invio dei dati di Form HTML nell'API Web: Caricamento di file e MIME Multipart](sending-html-form-data-part-2.md)
 - [Cookie HTTP nell'API Web ASP.NET](http-cookies.md)

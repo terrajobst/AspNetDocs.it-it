@@ -12,7 +12,7 @@ ms.openlocfilehash: 256536150a585a4bb0304f23c3524b18d0f552f0
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59392378"
 ---
 # <a name="iteration-4--make-the-application-loosely-coupled-vb"></a>Iterazione #4-rendere l'applicazione regime di controllo (VB)

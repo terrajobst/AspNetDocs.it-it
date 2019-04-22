@@ -13,7 +13,7 @@ ms.openlocfilehash: 1f093e348216750cbadb6e52f524e5edd4d6c498
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59390272"
 ---
 # <a name="hands-on-lab-build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs"></a>Lab pratico: Creare un'applicazione a pagina singola con l'API Web ASP.NET e Angular.js
@@ -108,7 +108,7 @@ In questa attività si avvierà la creazione di un nuovo progetto MVC ASP.NET co
 
     ![Crea un nuovo progetto](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image1.png "creando un nuovo progetto")
 
-    *Creazione di un nuovo progetto*
+    *Crea un nuovo progetto*
 2. Nel **nuovo progetto** finestra di dialogo **applicazione Web ASP.NET** sotto il **Visual c# | Web** scheda. Assicurarsi che **.NET Framework 4.5** è selezionata, denominarla *GeekQuiz*, scegliere un **posizione** e fare clic su **OK**.
 
     ![Crea un nuovo progetto di applicazione Web ASP.NET](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image2.png "creando un nuovo progetto di applicazione Web ASP.NET")

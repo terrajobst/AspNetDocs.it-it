@@ -12,7 +12,7 @@ ms.openlocfilehash: e677707018375debd0f1542037a43e525498b247
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59389310"
 ---
 # <a name="your-first-scaffold-and-what-is-dynamic-data"></a>Il primo scaffolding e descrizione dei dati dinamici?
@@ -24,4 +24,4 @@ In questa breve introduzione, viene creato un Dynamic Data completa dell'applica
 [&#9654;Guarda il video (6 minuti)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/your-first-scaffold-and-what-is-dynamic-data)
 
 > [!div class="step-by-step"]
-> [Successivo](how-do-i-enable-inline-gridview-editing.md)
+> [avanti](how-do-i-enable-inline-gridview-editing.md)

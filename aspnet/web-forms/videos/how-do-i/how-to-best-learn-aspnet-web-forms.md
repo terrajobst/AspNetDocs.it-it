@@ -12,7 +12,7 @@ ms.openlocfilehash: 3f742bbe96848b8040d3248acd3e5fa5c8e818e4
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59383539"
 ---
 # <a name="how-to-best-learn-aspnet-web-forms"></a>Come conoscere meglio i Web Form ASP.NET

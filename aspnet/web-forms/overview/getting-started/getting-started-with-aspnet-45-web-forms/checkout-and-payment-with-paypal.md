@@ -12,7 +12,7 @@ ms.openlocfilehash: a0895c2246bc08f50645a865ce2dfffecfbb56a6
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59391156"
 ---
 # <a name="checkout-and-payment-with-paypal"></a>Completamento della transazione e pagamento con PayPal
@@ -124,7 +124,7 @@ Il *Web. config* file specifica che tutti gli utenti sconosciuti dell'applicazio
 2. Change **SSL abilitato** a `true`.
 3. Copia il **URL SSL** quindi è possibile usare in un secondo momento.   
  L'URL SSL sarà `https://localhost:44300/` a meno che non è stato creato in precedenza siti Web SSL (come illustrato di seguito).   
-    ![Proprietà progetto](checkout-and-payment-with-paypal/_static/image4.png)
+    ![Proprietà di progetti](checkout-and-payment-with-paypal/_static/image4.png)
 4. Nella **Esplora soluzioni**, fare clic il **WingtipToys** progetto e quindi scegliere **proprietà**.
 5. Nella scheda di sinistra, fare clic su **Web**.
 6. Modifica il **Url del progetto** da utilizzare il **URL SSL** salvato in precedenza.   
@@ -309,9 +309,9 @@ Si inserirà la maggior parte del codice di PayPal in un'unica classe. Questa cl
 
 La classe NVPAPICaller contiene la maggior parte delle funzionalità PayPal. Il codice nella classe fornisce i metodi necessari per effettuare una prova di acquisto dall'ambiente di testing di PayPal. Le funzioni di PayPal tre seguenti vengono utilizzate per effettuare acquisti:
 
-- `SetExpressCheckout` funzione
-- `GetExpressCheckoutDetails` funzione
-- `DoExpressCheckoutPayment` funzione
+- `SetExpressCheckout` (Funzione)
+- `GetExpressCheckoutDetails` (Funzione)
+- `DoExpressCheckoutPayment` (Funzione)
 
 Il `ShortcutExpressCheckout` metodo raccoglie i dettagli di prodotto e informazioni di acquisto test dal carrello della spesa e chiama il `SetExpressCheckout` PayPal (funzione). Il `GetCheckoutDetails` metodo conferma i dettagli dell'acquisto e chiama il `GetExpressCheckoutDetails` PayPal funzione prima di effettuare l'acquisto di test. Il `DoCheckoutPayment` metodo viene completato l'acquisto di test dall'ambiente di testing chiamando il `DoExpressCheckoutPayment` PayPal (funzione). Il codice rimanente supporta i metodi di PayPal e processo, ad esempio codifica delle stringhe, la decodifica delle stringhe, matrici di elaborazione e determinare le credenziali.
 

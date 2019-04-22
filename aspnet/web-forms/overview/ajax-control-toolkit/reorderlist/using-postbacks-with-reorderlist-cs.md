@@ -12,7 +12,7 @@ ms.openlocfilehash: 6f8f74b74080104980e1db866d695fe7c6d9d5fc
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59393353"
 ---
 # <a name="using-postbacks-with-reorderlist-c"></a>Uso di postback con ReorderList (C#)
@@ -62,9 +62,9 @@ Infine, in modo da attivare la funzionalità di ASP.NET AJAX e il Toolkit di con
 [!code-aspx[Main](using-postbacks-with-reorderlist-cs/samples/sample6.aspx)]
 
 
-[![Eriordinamento ACH attiva un postback](using-postbacks-with-reorderlist-cs/_static/image2.png)](using-postbacks-with-reorderlist-cs/_static/image1.png)
+[![Ogni riordinamento attiva un postback](using-postbacks-with-reorderlist-cs/_static/image2.png)](using-postbacks-with-reorderlist-cs/_static/image1.png)
 
 Ogni riordinamento attiva un postback ([fare clic per visualizzare l'immagine con dimensioni normali](using-postbacks-with-reorderlist-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Successivo](drag-and-drop-via-reorderlist-cs.md)
+> [avanti](drag-and-drop-via-reorderlist-cs.md)

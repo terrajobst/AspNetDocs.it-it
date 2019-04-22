@@ -12,7 +12,7 @@ ms.openlocfilehash: e14f0a247b86bb15a6ac304e9675ef5c7da8fd63
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59393445"
 ---
 # <a name="how-do-i-return-json-formatted-data-for-an-ajax-call-in-an-aspnet-mvc-web-application"></a>Procedura: Restituire dati formattati JSON per una chiamata AJAX in un'applicazione Web MVC ASP.NET?

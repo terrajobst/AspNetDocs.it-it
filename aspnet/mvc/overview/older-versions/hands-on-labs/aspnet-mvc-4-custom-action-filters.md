@@ -12,7 +12,7 @@ ms.openlocfilehash: 32587c7b0fd3075cd46678922b40bda2019f3a26
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381133"
 ---
 # <a name="aspnet-mvc-4-custom-action-filters"></a>Filtri per azioni personalizzati di ASP.NET MVC 4

@@ -12,7 +12,7 @@ ms.openlocfilehash: 0bc24a59e09728a5ecb6e18378c4cde0c8e046f2
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59387451"
 ---
 # <a name="whats-new-in-the-entity-framework-40"></a>Novità di Entity Framework 4.0

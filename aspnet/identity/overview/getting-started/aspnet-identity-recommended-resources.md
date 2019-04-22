@@ -13,7 +13,7 @@ ms.openlocfilehash: 8e476f8a4172ebbe55819cda1ceb5458426243bd
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381900"
 ---
 # <a name="aspnet-identity-recommended-resources"></a>Risorse consigliate su ASP.NET Identity
@@ -61,7 +61,7 @@ da [Rick Anderson]((https://twitter.com/RickAndMSFT))
 - [Conferma account e recupero della Password con ASP.NET Identity](../features-api/account-confirmation-and-password-recovery-with-aspnet-identity.md)
 - [Autenticazione a due fattori tramite SMS e posta elettronica con ASP.NET Identity](../features-api/two-factor-authentication-using-sms-and-email-with-aspnet-identity.md)
 - [Migrazione di un sito Web esistente dall'appartenenza SQL ad ASP.NET Identity](../migrations/migrating-an-existing-website-from-sql-membership-to-aspnet-identity.md)
-- [Aggiunta di ASP.NET Identity a un progetto Web Forms vuoto o esistente](adding-aspnet-identity-to-an-empty-or-existing-web-forms-project.md)
+- [Aggiunta di ASP.NET Identity a un progetto Web Form vuoto o esistente](adding-aspnet-identity-to-an-empty-or-existing-web-forms-project.md)
 - MSDN Magazine [autenticazione esterna con ASP.NET Identity](https://msdn.microsoft.com/magazine/dn745860.aspx) da Dino Esposito
 - MSDN Magazine[una prima occhiata ASP.NET Identity](https://msdn.microsoft.com/magazine/dn605872.aspx) da Dino Esposito
 - [ASP.NET Identity: blocco utente](http://tech.trailmax.info/2014/06/asp-net-identity-user-lockout/)

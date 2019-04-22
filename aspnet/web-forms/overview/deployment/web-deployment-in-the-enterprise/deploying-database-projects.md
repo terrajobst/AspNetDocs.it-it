@@ -12,14 +12,14 @@ ms.openlocfilehash: f5b7cecdd1a8dbd9be1bd781cec31c53c9096546
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59383226"
 ---
 # <a name="deploying-database-projects"></a>Distribuzione di progetti di database
 
 da [Jason Lee](https://github.com/jrjlee)
 
-[Scarica il PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Scaricare PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > [!NOTE]
 > In molti scenari di distribuzione aziendale, è necessario la possibilità di pubblicare aggiornamenti incrementali per un database distribuito. L'alternativa consiste nel ricreare il database in ogni distribuzione, il che significa che la perdita di dati del database esistente. Quando si lavora con Visual Studio 2010, utilizzando VSDBCMD è l'approccio consigliato per la pubblicazione incrementale di database. Tuttavia, la prossima versione di Visual Studio e la Pipeline di pubblicazione sul Web (WPP) include strumenti che supporta direttamente la pubblicazione incrementale.

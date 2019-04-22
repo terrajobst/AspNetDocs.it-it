@@ -12,7 +12,7 @@ ms.openlocfilehash: 0fc828e39cfcce22d4cc226954cf7d1731b04e42
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59379781"
 ---
 # <a name="introduction-to-working-with-a-database-in-aspnet-web-pages-razor-sites"></a>Introduzione all'uso di un Database in ASP.NET Web Pages (Razor) siti
@@ -51,7 +51,7 @@ Si immagini una rubrica tipico. Per ogni voce della Rubrica (vale a dire, per og
 
 Un modo comune per i dati immagine simile alla seguente è come una tabella con righe e colonne. In termini di database, ogni riga è noto anche come un record. Ogni colonna (talvolta detto campi) contiene un valore per ogni tipo di dati: nome del primo, ultimo nome e così via.
 
-| **Id** | **FirstName** | **LastName** | **Indirizzo** | **Email** | **Phone** |
+| **ID** | **FirstName** | **LastName** | **Address** | **Posta elettronica** | **Telefono** |
 | --- | --- | --- | --- | --- | --- |
 | 1 | Jim | Abrus | 210 100th St SE Orcas WA 98031 | jim@contoso.com | 555 0100 |
 | 2 | Terry | Adams | 1234 Main St. Seattle WA 99011 | terry@cohowinery.com | 555 0101 |
@@ -107,7 +107,7 @@ A questo punto è possibile aggiungere alcuni dati di esempio per il database ch
 2. Fare doppio clic nella tabella Product e quindi fare clic su **dati**.
 3. Nel riquadro di modifica, immettere i record seguenti:
 
-    | **Nome** | **Descrizione** | **Prezzo** |
+    | **Name** | **Descrizione** | **Prezzo** |
     | --- | --- | --- |
     | Pane | Virtuali create con bake aggiornato ogni giorno. | 2.99 |
     | Shortcake strawberry | Eseguita con strawberries organica dal nostro giardino. | 9.99 |

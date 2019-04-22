@@ -12,14 +12,14 @@ ms.openlocfilehash: c42fa327c324ac2b721268c56782a24755ec7225
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59391065"
 ---
 # <a name="deploying-web-packages"></a>Distribuzione di pacchetti Web
 
 da [Jason Lee](https://github.com/jrjlee)
 
-[Scarica il PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Scaricare PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Questo argomento viene descritto come pubblicare i pacchetti di distribuzione web a un server remoto utilizzando lo strumento di distribuzione di Internet Information Services (IIS) Web (distribuzione Web) 2.0.
 > 

@@ -12,7 +12,7 @@ ms.openlocfilehash: 29f7dded2f6fc2e8ce588dab2949b59ddb6f1fc4
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59388907"
 ---
 # <a name="creating-model-classes-with-the-entity-framework-c"></a>Creazione di classi di modelli con Entity Framework (C#)
@@ -219,4 +219,4 @@ Lo scopo di questa esercitazione è dimostrare come creare applicazioni web basa
 Innanzitutto, abbiamo parlato di come è possibile usare la procedura guidata Entity Data Model per generare un Entity Data Model dall'interno di Visual Studio. Successivamente, descrive come usare LINQ to Entities per recuperare un set di record di database da una tabella di database. Infine, abbiamo utilizzato Entity Framework per inserire, aggiornare ed eliminare i record del database.
 
 > [!div class="step-by-step"]
-> [Successivo](creating-model-classes-with-linq-to-sql-cs.md)
+> [avanti](creating-model-classes-with-linq-to-sql-cs.md)

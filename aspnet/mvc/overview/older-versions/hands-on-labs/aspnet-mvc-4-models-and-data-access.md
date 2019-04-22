@@ -12,7 +12,7 @@ ms.openlocfilehash: 53ca3bc4e550f488f3ae4c41f02a636e747107cb
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59384890"
 ---
 # <a name="aspnet-mvc-4-models-and-data-access"></a>Modelli e accesso ai dati di ASP.NET MVC 4
@@ -181,7 +181,7 @@ In questa attività si creerà un modello di dati per interagire con i database 
 
     ![Diagramma entità](aspnet-mvc-4-models-and-data-access/_static/image12.png "diagramma entità")
 
-    *Diagramma dell'entità*
+    *Diagramma entità*
 
     > [!NOTE]
     > I modelli T4 (con estensione TT) eseguire il codice per generare le classi di entità e sovrascriveranno le classi esistenti con lo stesso nome. In questo esempio, le classi &quot;Album&quot;, &quot;Genre&quot; e &quot;artista&quot; sono stati sovrascritti con il codice generato.

@@ -12,7 +12,7 @@ ms.openlocfilehash: 81c2c6f0070a409c289128ccf5d39f9fff788b48
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59387347"
 ---
 # <a name="introducing-aspnet-web-pages---programming-basics"></a>Introduzione a pagine Web ASP.NET - nozioni fondamentali di programmazione
@@ -354,7 +354,7 @@ L'esercitazione successiva viene presentato con un database. In tale esercitazio
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-- [Introduzione alla programmazione Web ASP.NET utilizzando la sintassi Razor](https://go.microsoft.com/fwlink/?LinkID=202890)
+- [Introduzione alla programmazione Web ASP.NET usando la sintassi Razor](https://go.microsoft.com/fwlink/?LinkID=202890)
 - [Helper di Twitter](../../ui-layouts-and-themes/twitter-helper.md)
 
 > [!div class="step-by-step"]

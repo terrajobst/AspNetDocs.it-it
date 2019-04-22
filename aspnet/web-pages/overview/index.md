@@ -12,7 +12,7 @@ ms.openlocfilehash: b4c9e9eb85f6ba9a1e2b2d0a1bbaf027ee25bc0d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381848"
 ---
 # <a name="web-pages-guidance"></a>Materiale sussidiario di pagine Web
@@ -41,22 +41,22 @@ ms.locfileid: "59381848"
     - [Creazione di URL leggibili nei siti con pagine Web ASP.NET](routing/creating-readable-urls-in-aspnet-web-pages-sites.md)
 - [Interfaccia utente, layout e temi](ui-layouts-and-themes/index.md)
 
-    - [Uso dei moduli](ui-layouts-and-themes/4-working-with-forms.md)
+    - [Utilizzo dei moduli](ui-layouts-and-themes/4-working-with-forms.md)
     - [Convalida dell'input utente nelle pagine Web ASP.NET](ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites.md)
     - [Creazione di un aspetto coerente](ui-layouts-and-themes/3-creating-a-consistent-look.md)
     - [Personalizzazione del comportamento a livello di sito](ui-layouts-and-themes/18-customizing-site-wide-behavior.md)
-    - [Working with Images (Uso delle immagini)](ui-layouts-and-themes/9-working-with-images.md)
+    - [Uso delle immagini](ui-layouts-and-themes/9-working-with-images.md)
     - [Uso dei video](ui-layouts-and-themes/10-working-with-video.md)
     - [Creazione e uso di un helper in un sito con pagine Web ASP.NET](ui-layouts-and-themes/creating-and-using-a-helper-in-an-aspnet-web-pages-site.md)
     - [Installazione di un helper](ui-layouts-and-themes/installing-helpers.md)
     - [Helper di Twitter con pagine Web ASP.NET](ui-layouts-and-themes/twitter-helper.md)
     - [Visualizzazione di mappe in un sito con pagine Web ASP.NET](ui-layouts-and-themes/displaying-maps-in-an-aspnet-web-pages-site.md)
-- [Cellulare](mobile/index.md)
+- [Dispositivi mobili](mobile/index.md)
 
     - [Rendering dei siti con pagine Web ASP.NET per i dispositivi mobili](mobile/rendering-aspnet-web-pages-sites-for-mobile-devices.md)
-- [Uso dei dati](data/index.md)
+- [Uso di dati](data/index.md)
 
-    - [Uso dei dati](data/5-working-with-data.md)
+    - [Uso di dati](data/5-working-with-data.md)
     - [Visualizzazione dei dati in un grafico](data/7-displaying-data-in-a-chart.md)
     - [Uso dei file](data/working-with-files.md)
 - [Test e debug](testing-and-debugging/index.md)
@@ -72,7 +72,7 @@ ms.locfileid: "59381848"
 
     - [Memorizzazione nella cache per migliorare le prestazioni del sito Web](performance-and-traffic/15-caching-to-improve-the-performance-of-your-website.md)
     - [Analisi del traffico](performance-and-traffic/14-analyzing-traffic.md)
-    - [Creazione di bundle e minimizzazione degli asset nelle pagine Web ASP.NET (Razor)](performance-and-traffic/bundling-and-minifying-assets-in-an-aspnet-web-pages-razor-site.md)
+    - [Creazione di bundle e minimizzazione di risorse nelle pagine Web ASP.NET (Razor)](performance-and-traffic/bundling-and-minifying-assets-in-an-aspnet-web-pages-razor-site.md)
 - [Riferimento API](api-reference/index.md)
 
     - [Riferimento rapido sulle API ASP.NET](api-reference/asp-net-web-pages-api-reference.md)

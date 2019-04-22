@@ -12,7 +12,7 @@ ms.openlocfilehash: a78f0cbc9d361d42d54cd73f952a37caae91b9f4
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59388179"
 ---
 # <a name="working-with-data"></a>Uso dei dati
@@ -20,6 +20,6 @@ ms.locfileid: "59388179"
 > Come usare i database e i file nelle pagine Web e come visualizzare e aggiornare i dati.
 
 
-- [Uso dei dati](5-working-with-data.md)
+- [Uso di dati](5-working-with-data.md)
 - [Visualizzazione dei dati in un grafico](7-displaying-data-in-a-chart.md)
 - [Uso dei file](working-with-files.md)

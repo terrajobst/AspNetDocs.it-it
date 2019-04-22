@@ -12,7 +12,7 @@ ms.openlocfilehash: ca383b7a82b754c7556dcea3bcdb8e28e5c7a45d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59384851"
 ---
 # <a name="triggering-an-animation-in-another-control-c"></a>Attivazione di un'animazione in un altro controllo (C#)
@@ -57,7 +57,7 @@ All'interno di `<Animations>` nodo, le animazioni sul posto come di consueto. Pe
 Si noti l'ordine speciale in cui vengono visualizzate le singole animazioni. Prima di tutto, il pulsante disattivato una volta che viene eseguita l'animazione. Poiché è presente alcun `AnimationTarget` attributo la `<EnableAction>` elemento, questa animazione viene applicata al controllo origine: il pulsante. I passaggi successivi due animazione devono essere eseguiti in parallelo (`<Parallel>` elemento). Entrambi hanno loro `AnimationTarget` attributi impostati `"Panel1"`, l'animazione in questo modo il pannello, non il pulsante.
 
 
-[![A clic del mouse sul pulsante Avvia l'animazione di pannello](triggering-an-animation-in-another-control-cs/_static/image2.png)](triggering-an-animation-in-another-control-cs/_static/image1.png)
+[![Un clic del mouse sul pulsante Avvia l'animazione di pannello](triggering-an-animation-in-another-control-cs/_static/image2.png)](triggering-an-animation-in-another-control-cs/_static/image1.png)
 
 Un clic del mouse sul pulsante Avvia l'animazione di pannello ([fare clic per visualizzare l'immagine con dimensioni normali](triggering-an-animation-in-another-control-cs/_static/image3.png))
 

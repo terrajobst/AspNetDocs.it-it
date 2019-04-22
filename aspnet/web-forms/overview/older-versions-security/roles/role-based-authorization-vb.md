@@ -12,7 +12,7 @@ ms.openlocfilehash: 05b014538891e6c058c4d4bd4125de434f59d9fe
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59389687"
 ---
 # <a name="role-based-authorization-vb"></a>Autorizzazione basata sui ruoli (VB)
@@ -47,7 +47,7 @@ Figura 1 illustra il flusso di lavoro pipeline ASP.NET quando si usa l'autentica
 Se un utente anonimo visita il sito, né il `FormsAuthenticationModule` né il `RoleManagerModule` crea un oggetto entità.
 
 
-[![Tegli eventi della Pipeline ASP.NET per un'autenticazione utente quando con autenticazione basata su form e Framework ruoli](role-based-authorization-vb/_static/image2.png)](role-based-authorization-vb/_static/image1.png)
+[![Gli eventi della Pipeline ASP.NET per un utente autenticato quando si usa l'autenticazione basata su form e il Framework di ruoli](role-based-authorization-vb/_static/image2.png)](role-based-authorization-vb/_static/image1.png)
 
 **Figura 1**: Gli eventi della Pipeline ASP.NET per un'autenticazione utente quando con autenticazione basata su form e il Framework di ruoli ([fare clic per visualizzare l'immagine con dimensioni normali](role-based-authorization-vb/_static/image3.png))
 
@@ -59,7 +59,7 @@ Il `RolePrincipal` dell'oggetto `IsInRole(roleName)` chiamate al metodo `Roles`.
 Se il framework di ruoli è configurato per memorizzare nella cache i ruoli dell'utente in un cookie, il `RoleManagerModule` consente di creare il cookie durante la pipeline di ASP.NET [ `EndRequest` evento](https://msdn.microsoft.com/library/system.web.httpapplication.endrequest.aspx). Questo cookie viene usato nelle richieste successive nella `PostAuthenticateRequest`, ovvero quando la `RolePrincipal` oggetto viene creato. Se il cookie è valido e non sia scaduto, i dati nel cookie vengano analizzati e utilizzati per popolare i ruoli dell'utente, evitando così il `RolePrincipal` dalla necessità di effettuare una chiamata al `Roles` classe per determinare i ruoli dell'utente. La figura 2 illustra questo flusso di lavoro.
 
 
-[![Tinformazioni sui ruoli he dell'utente possono essere archiviati in un Cookie per migliorare le prestazioni](role-based-authorization-vb/_static/image5.png)](role-based-authorization-vb/_static/image4.png)
+[![Informazioni sui ruoli dell'utente possono essere archiviati in un Cookie per migliorare le prestazioni](role-based-authorization-vb/_static/image5.png)](role-based-authorization-vb/_static/image4.png)
 
 **Figura 2**: Ruolo informazioni possono essere archiviati il suo in un Cookie per migliorare le prestazioni ([fare clic per visualizzare l'immagine con dimensioni normali](role-based-authorization-vb/_static/image6.png))
 
@@ -70,7 +70,7 @@ Per impostazione predefinita, il meccanismo dei cookie ruolo della cache è disa
 > Le impostazioni di configurazione elencate nella tabella 1 specificano le proprietà del cookie cache ruolo risultante. Per altre informazioni sui cookie, sul relativo funzionamento e le relative proprietà diverse, leggere [in questa esercitazione i cookie](http://www.quirksmode.org/js/cookies.html).
 
 
-| <strong>Proprietà</strong> |                                                                                                                                                                                                                                                                                                                                                         <strong>Descrizione</strong>                                                                                                                                                                                                                                                                                                                                                          |
+| <strong>Property</strong> |                                                                                                                                                                                                                                                                                                                                                         <strong>Descrizione</strong>                                                                                                                                                                                                                                                                                                                                                          |
 |---------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |   `cacheRolesInCookie`    |                                                                                                                                                                                                                                                                                                                              Valore booleano che indica se la memorizzazione nella cache di cookie viene utilizzato. Il valore predefinito è `false`.                                                                                                                                                                                                                                                                                                                              |
 |       `cookieName`        |                                                                                                                                                                                                                                                                                                                                     Il nome del cookie di cache di ruoli. Il valore predefinito è ". ASPXROLES".                                                                                                                                                                                                                                                                                                                                     |
@@ -115,7 +115,7 @@ Il `<allow>` elemento nel markup riportato sopra indica che sono consentiti i ru
 A tale scopo, iniziare aggiungendo un `Web.config` file per il `Roles` cartella.
 
 
-[![Aun File Web. config nella directory ruoli gg](role-based-authorization-vb/_static/image8.png)](role-based-authorization-vb/_static/image7.png)
+[![Aggiungere un File Web. config nella directory di ruoli](role-based-authorization-vb/_static/image8.png)](role-based-authorization-vb/_static/image7.png)
 
 **Figura 3**: Aggiungere un `Web.config` File per il `Roles` directory ([fare clic per visualizzare l'immagine con dimensioni normali](role-based-authorization-vb/_static/image9.png))
 
@@ -129,7 +129,7 @@ Il `<authorization>` elemento il `<system.web>` sezione indica che solo gli uten
 Dopo aver salvato le modifiche apportate alla `Web.config`, accedere come un utente che non si trova il ruolo di amministratore e quindi provare a visitare una delle pagine protette. Il `UrlAuthorizationModule` rileverà che si dispone dell'autorizzazione per visitare la risorsa richiesta; di conseguenza, il `FormsAuthenticationModule` si verrà reindirizzati alla pagina di accesso. La pagina di accesso quindi passerà al `UnauthorizedAccess.aspx` pagina (vedere la figura 4). Questo reindirizzamento finale dalla pagina di accesso al `UnauthorizedAccess.aspx` si verifica a causa di codice aggiunto alla pagina di accesso nel passaggio 2 della <a id="_msoanchor_7"> </a> [ *autorizzazione basata su utente* ](../membership/user-based-authorization-vb.md) esercitazione. In particolare, la pagina di accesso reindirizza automaticamente a qualunque utente autenticato `UnauthorizedAccess.aspx` se la stringa di query contiene un `ReturnUrl` parametro, come questo parametro indica che l'utente è arrivato alla pagina di accesso dopo il tentativo di visualizzare una pagina non è stato è autorizzato a visualizzare.
 
 
-[![Ogli utenti del ruolo amministratori di sola può visualizzare le pagine protette](role-based-authorization-vb/_static/image11.png)](role-based-authorization-vb/_static/image10.png)
+[![Solo gli utenti nel ruolo Administrators possono visualizzare le pagine protette](role-based-authorization-vb/_static/image11.png)](role-based-authorization-vb/_static/image10.png)
 
 **Figura 4**: Solo gli utenti nel ruolo gli amministratori possono visualizzare le pagine protette ([fare clic per visualizzare l'immagine con dimensioni normali](role-based-authorization-vb/_static/image12.png))
 
@@ -137,7 +137,7 @@ Dopo aver salvato le modifiche apportate alla `Web.config`, accedere come un ute
 Disconnettersi e quindi accedere come un utente che appartiene al ruolo Administrators. A questo punto sarà possibile visualizzare tre pagine protette.
 
 
-[![TIto possono visitare l'UsersAndRoles.aspx pagina perché è nel ruolo Administrators](role-based-authorization-vb/_static/image14.png)](role-based-authorization-vb/_static/image13.png)
+[![Tito possono visitare che l'UsersAndRoles.aspx pagina perché si trova nel ruolo di amministratore](role-based-authorization-vb/_static/image14.png)](role-based-authorization-vb/_static/image13.png)
 
 **Figura 5**: Tito possono visitare il `UsersAndRoles.aspx` pagina perché si trova in ruolo degli amministratori di ([fare clic per visualizzare l'immagine con dimensioni normali](role-based-authorization-vb/_static/image15.png))
 
@@ -167,7 +167,7 @@ La visualizzazione BoundField prima la `UserName` proprietà; set relativo `Head
 Impostare il `HeaderText` le proprietà delle due TemplateFields "Email" e "Comment".
 
 
-[![TCampi possono essere configurate tramite campi di finestra he di GridView di dialogo](role-based-authorization-vb/_static/image17.png)](role-based-authorization-vb/_static/image16.png)
+[![Campi del controllo GridView possono essere configurati tramite la finestra di dialogo campi](role-based-authorization-vb/_static/image17.png)](role-based-authorization-vb/_static/image16.png)
 
 **Figura 6**: Campi possono essere configurati tramite campi di finestra GridView di dialogo ([fare clic per visualizzare l'immagine con dimensioni normali](role-based-authorization-vb/_static/image18.png))
 
@@ -193,7 +193,7 @@ A questo punto è stata completata markup dichiarativo di questa pagina. L'attiv
 Con questo codice, visitare la pagina tramite un browser. Come illustrato nella figura 7, verrà visualizzato un controllo GridView Elenca informazioni su ogni account utente nel sistema.
 
 
-[![Tegli UserGrid GridView Elenca informazioni su ogni utente nel sistema](role-based-authorization-vb/_static/image20.png)](role-based-authorization-vb/_static/image19.png)
+[![Il controllo UserGrid GridView Elenca le informazioni relative a ciascun utente nel sistema](role-based-authorization-vb/_static/image20.png)](role-based-authorization-vb/_static/image19.png)
 
 **Figura 7**: Il `UserGrid` GridView Elenca informazioni su ogni utente nel sistema ([fare clic per visualizzare l'immagine con dimensioni normali](role-based-authorization-vb/_static/image21.png))
 
@@ -239,7 +239,7 @@ Oltre al `AnonymousTemplate` e `LoggedInTemplate`, può includere il controllo L
 Per gestire il RoleGroup, fare clic sul collegamento "Modifica RoleGroup" da Smart Tag del controllo per visualizzare Editor raccolta di RoleGroup. Aggiungere due nuove RoleGroup. Impostare il primo RoleGroup `Roles` proprietà su "Administrators" e il secondo per "Supervisori".
 
 
-[![Mdi estisci di LoginView specifiche del ruolo modelli tramite l'insieme RoleGroup](role-based-authorization-vb/_static/image23.png)](role-based-authorization-vb/_static/image22.png)
+[![Gestire i modelli specifici per il ruolo di LoginView tramite l'Editor della raccolta RoleGroup](role-based-authorization-vb/_static/image23.png)](role-based-authorization-vb/_static/image22.png)
 
 **Figura 8**: Gestione specifiche del ruolo modelli tramite l'insieme RoleGroup di LoginView ([fare clic per visualizzare l'immagine con dimensioni normali](role-based-authorization-vb/_static/image24.png))
 
@@ -260,7 +260,7 @@ Successivamente, accedere come utente membro del ruolo supervisori. Questa volta
 **Figura 9**: Bruce viene visualizzato il messaggio specifiche del ruolo supervisori ([fare clic per visualizzare l'immagine con dimensioni normali](role-based-authorization-vb/_static/image27.png))
 
 
-[![TIto viene visualizzato il messaggio specifiche del ruolo amministratori](role-based-authorization-vb/_static/image29.png)](role-based-authorization-vb/_static/image28.png)
+[![Tito viene visualizzato il messaggio specifiche del ruolo di amministratori](role-based-authorization-vb/_static/image29.png)](role-based-authorization-vb/_static/image28.png)
 
 **Figura 10**: Tito viene visualizzato il messaggio specifiche del ruolo amministratori di ([fare clic per visualizzare l'immagine con dimensioni normali](role-based-authorization-vb/_static/image30.png))
 
@@ -270,7 +270,7 @@ Come le schermate di figure 9 e 10 show, di LoginView solo esegue il rendering d
 Figura 11 viene illustrato il flusso di lavoro utilizzato dal controllo LoginView per determinare quale modello per eseguire il rendering. Si noti che se è presente più di uno RoleGroup specificato, il modello di LoginView esegue il rendering di *primo* RoleGroup corrispondente. In altre parole, se abbiamo avessimo posizionate RoleGroup i supervisori come il primo RoleGroup e gli amministratori come il secondo, quando Tito visita questa pagina egli verrebbe visualizzato il messaggio supervisori.
 
 
-[![Tflusso di lavoro del controllo LoginView he per determinare quali modello per il rendering](role-based-authorization-vb/_static/image32.png)](role-based-authorization-vb/_static/image31.png)
+[![Flusso di lavoro del controllo LoginView per determinare quale modello per il rendering](role-based-authorization-vb/_static/image32.png)](role-based-authorization-vb/_static/image31.png)
 
 **Figura 11**: Flusso di lavoro del controllo LoginView per determinare quali modello per il rendering ([fare clic per visualizzare l'immagine con dimensioni normali](role-based-authorization-vb/_static/image33.png))
 
@@ -282,7 +282,7 @@ Mentre il controllo LoginView consente di visualizzare istruzioni diverse in bas
 Il modo più semplice per fare riferimento a livello di programmazione di controlli in un CommandField consiste innanzitutto convertirlo in un modello. A tale scopo, fare clic sul collegamento "Modifica colonne" dallo Smart Tag del controllo GridView, selezionare il CommandField dall'elenco di campi correnti e fare clic sul collegamento "Converti il campo in un TemplateField". Il CommandField si trasforma in un TemplateField con un `ItemTemplate` e `EditItemTemplate`. Il `ItemTemplate` contiene la modifica ed Elimina LinkButton durante il `EditItemTemplate` ospita l'aggiornamento e annullamento LinkButton.
 
 
-[![Converti CommandField in un TemplateField](role-based-authorization-vb/_static/image35.png)](role-based-authorization-vb/_static/image34.png)
+[![Convertire il CommandField in un TemplateField](role-based-authorization-vb/_static/image35.png)](role-based-authorization-vb/_static/image34.png)
 
 **Figura 12**: Convertire il CommandField in un TemplateField ([fare clic per visualizzare l'immagine con dimensioni normali](role-based-authorization-vb/_static/image36.png))
 
@@ -313,7 +313,7 @@ Testare questa pagina tramite un browser. Se si visita la pagina come un visitat
 > È possibile nascondere la CommandField completamente quando un non-supervisore e senza privilegi di amministratore è sinonimo di visitare la pagina. Lasciare come esercizio per il lettore.
 
 
-[![Tegli Edit e Delete pulsanti sono nascosti per i Non amministratori e Non-supervisori](role-based-authorization-vb/_static/image38.png)](role-based-authorization-vb/_static/image37.png)
+[![La modifica ed elimina i pulsanti sono nascoste per Non-supervisori e i Non amministratori](role-based-authorization-vb/_static/image38.png)](role-based-authorization-vb/_static/image37.png)
 
 **Figura 13**: La modifica ed elimina i pulsanti sono nascosti per i Non amministratori e Non-supervisori ([fare clic per visualizzare l'immagine con dimensioni normali](role-based-authorization-vb/_static/image39.png))
 
@@ -321,7 +321,7 @@ Testare questa pagina tramite un browser. Se si visita la pagina come un visitat
 Se un utente appartenente al ruolo supervisori (ma non per il ruolo di amministratore) visita, vede solo il pulsante di modifica.
 
 
-[![Wurante il pulsante Modifica è disponibile per i supervisori, il pulsante Elimina viene nascosto](role-based-authorization-vb/_static/image41.png)](role-based-authorization-vb/_static/image40.png)
+[![Anche se il pulsante Modifica è disponibile per i supervisori, il pulsante Elimina è nascosta](role-based-authorization-vb/_static/image41.png)](role-based-authorization-vb/_static/image40.png)
 
 **Figura 14**: Anche se il pulsante Modifica è disponibile per i supervisori, il pulsante Elimina viene nascosta ([fare clic per visualizzare l'immagine con dimensioni normali](role-based-authorization-vb/_static/image42.png))
 
@@ -329,7 +329,7 @@ Se un utente appartenente al ruolo supervisori (ma non per il ruolo di amministr
 E se un amministratore di visita, susie ha accesso a entrambi i pulsanti di modifica ed eliminazione.
 
 
-[![Tegli modifica ed elimina i pulsanti sono disponibili solo per gli amministratori](role-based-authorization-vb/_static/image44.png)](role-based-authorization-vb/_static/image43.png)
+[![La modifica ed elimina i pulsanti sono disponibili solo per gli amministratori](role-based-authorization-vb/_static/image44.png)](role-based-authorization-vb/_static/image43.png)
 
 **Figura 15**: La modifica ed elimina i pulsanti sono disponibili solo per gli amministratori ([fare clic per visualizzare l'immagine con dimensioni normali](role-based-authorization-vb/_static/image45.png))
 
@@ -356,7 +356,7 @@ L'attributo per il `RowUpdating` gestore dell'evento indica che solo gli utenti 
 Se, in qualche modo, un utente non amministratore tenta di eseguire la `RowDeleting` gestore dell'evento o se un non-Supervisor o senza privilegi di amministratore tenta di eseguire il `RowUpdating` gestore eventi, il runtime di .NET verrà generato un `SecurityException`.
 
 
-[![ISe che il contesto di sicurezza non è autorizzato a eseguire il metodo, viene generata una SecurityException](role-based-authorization-vb/_static/image47.png)](role-based-authorization-vb/_static/image46.png)
+[![Se il contesto di sicurezza non è autorizzato a eseguire il metodo, viene generata un'eccezione SecurityException](role-based-authorization-vb/_static/image47.png)](role-based-authorization-vb/_static/image46.png)
 
 **Figura 16**: Se il contesto di sicurezza non è autorizzato a eseguire il metodo, una `SecurityException` viene generata un'eccezione ([fare clic per visualizzare l'immagine con dimensioni normali](role-based-authorization-vb/_static/image48.png))
 

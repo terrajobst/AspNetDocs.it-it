@@ -12,7 +12,7 @@ ms.openlocfilehash: fda6eaf86f3822bce0ca0dd834cd187897bce69d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59392846"
 ---
 # <a name="visual-studio-editor"></a>Editor di Visual Studio
@@ -21,7 +21,7 @@ ms.locfileid: "59392846"
 
 
 - [Supporto delle nuove funzionalità di progettazione in Visual Studio 2008](new-designer-support-in-visual-studio-2008.md)
-- [Supporto di JavaScript Intellisense in Visual Studio 2008](javascript-intellisense-support-in-visual-studio-2008.md)
+- [Supporto di JavaScript IntelliSense in Visual Studio 2008](javascript-intellisense-support-in-visual-studio-2008.md)
 - [Debug di JavaScript in Visual Studio 2008](javascript-debugging-in-visual-studio-2008.md)
 - [Supporto multitargeting in Visual Studio 2008](multi-targeting-support-in-visual-studio-2008.md)
 - [IntelliSense per Jscript e ASP.NET AJAX](intellisense-for-jscript-and-aspnet-ajax.md)

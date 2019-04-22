@@ -12,7 +12,7 @@ ms.openlocfilehash: 5f8eeeaa9bd77c0259f680198e57ade8d49cd06b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59382621"
 ---
 # <a name="creating-an-action-vb"></a>Creazione di un'azione (VB)
@@ -57,7 +57,7 @@ Se è necessario creare un metodo pubblico in una classe controller e non si vuo
 Se si prova a richiamare l'azione del controller CompanySecrets() digitando /Work/CompanySecrets nella barra degli indirizzi del browser si riceverà il messaggio di errore nella figura 1.
 
 
-[![Iun metodo NonAction nvoking](creating-an-action-vb/_static/image1.jpg)](creating-an-action-vb/_static/image1.png)
+[![Richiama un metodo NonAction](creating-an-action-vb/_static/image1.jpg)](creating-an-action-vb/_static/image1.png)
 
 **Figura 01**: Richiama un metodo NonAction ([fare clic per visualizzare l'immagine con dimensioni normali](creating-an-action-vb/_static/image2.png))
 

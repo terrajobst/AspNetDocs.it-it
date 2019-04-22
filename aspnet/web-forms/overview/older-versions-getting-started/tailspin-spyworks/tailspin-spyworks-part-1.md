@@ -12,7 +12,7 @@ ms.openlocfilehash: 70d2efb789d694a0aaecc046615c7b3622079dc1
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59385358"
 ---
 # <a name="part-1-file--new-project"></a>Parte 1. File -> Nuovo progetto
@@ -103,4 +103,4 @@ Eseguiremo, inoltre, per spostare la pagina Master per la directory di stili. An
 Dopo questa operazione che è necessario modificare la pagina master i riferimenti in tutti i file con estensione aspx generato per l'impostazione predefinita le pagine Web Form ASP.NET.
 
 > [!div class="step-by-step"]
-> [Successivo](tailspin-spyworks-part-2.md)
+> [avanti](tailspin-spyworks-part-2.md)

@@ -12,7 +12,7 @@ ms.openlocfilehash: b8160c6f5ac090e120e86f4273749b756857967e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59385709"
 ---
 # <a name="creating-a-numeric-updown-control-with-a-web-service-backend-c"></a>Creazione di un controllo su/giù numerico con un back-end del servizio Web (C#)
@@ -54,9 +54,9 @@ Ecco il markup completo per la pagina:
 Se si esegue la pagina, si noti come il valore nella casella di testo raddoppia sempre quando si fa clic sul pulsante superiore e viene dimezzato quando si fa clic sul pulsante inferiore.
 
 
-[![Ovengono visualizzati i numeri di sola una potenza di 2](creating-a-numeric-up-down-control-with-a-web-service-backend-cs/_static/image2.png)](creating-a-numeric-up-down-control-with-a-web-service-backend-cs/_static/image1.png)
+[![Vengono visualizzati solo i numeri che sono una potenza di 2](creating-a-numeric-up-down-control-with-a-web-service-backend-cs/_static/image2.png)](creating-a-numeric-up-down-control-with-a-web-service-backend-cs/_static/image1.png)
 
 Vengono visualizzati solo i numeri che sono una potenza di 2 ([fare clic per visualizzare l'immagine con dimensioni normali](creating-a-numeric-up-down-control-with-a-web-service-backend-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Successivo](creating-a-numeric-up-down-control-with-a-web-service-backend-vb.md)
+> [avanti](creating-a-numeric-up-down-control-with-a-web-service-backend-vb.md)

@@ -12,7 +12,7 @@ ms.openlocfilehash: 7f0c5ff599235157bd11f5f86a26b8882e0f29dc
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381809"
 ---
 # <a name="web-matrix-and-aspnet-web-pages-razor-beta-3-release-readme"></a>File Leggimi di WebMatrix e pagine Web ASP.NET (Razor) Beta 3
@@ -28,7 +28,7 @@ ms.locfileid: "59381809"
 - [Nuove funzionalità, le modifiche e problemi noti nella versione Beta 3](#Known_Issues)
 
     - [Problemi di installazione di WebMatrix](#Known_Issues_Installation)
-    - [Pagine Web ASP.NET](#Known_Issues_ASPNET)
+    - [ASP.NET Web Pages](#Known_Issues_ASPNET)
     - [SQL Server Compact](#Known_Issues_SQL_Server_Compact)
     - [Installazione di applicazioni](#Known_Issues_Installing_Applications)
     - [Pubblicazione di applicazioni](#Known_Issues_Publishing_Applications)
@@ -454,7 +454,7 @@ In questa sezione del documento vengono descritte le nuove funzionalità, le mod
 
 > Passare a un'applicazione WCF genera un errore simile a quello seguente:
 > 
-> *Impossibile caricare il file o l'assembly ' Microsoft.Web.Administration, versione = 7.0.0.0, Culture = neutral, PublicKeyToken = 31bf3856ad364e35' o una delle relative dipendenze. Impossibile trovare il file specificato.*
+> *Impossibile caricare il file o l'assembly ' Microsoft.Web.Administration, versione = 7.0.0.0, Culture = neutral, PublicKeyToken = 31bf3856ad364e35' o una delle relative dipendenze. Il sistema non riesce a trovare il file specificato.*
 > 
 > Ciò si verifica perché WCF non supporta il versione Beta di IIS Express per impostazione predefinita.
 > 
@@ -545,7 +545,7 @@ In questa sezione del documento vengono descritte le nuove funzionalità, le mod
 Per ulteriori informazioni su WebMatrix Beta 3, vedere i siti Web seguenti:
 
 - [IIS.net](http://iis.net/)
-- [ASP.NET](https://asp.net/webmatrix)
+- [ASP.NET 2.0](https://asp.net/webmatrix)
 - [Microsoft.com/web](https://www.microsoft.com/web)
 
 ---

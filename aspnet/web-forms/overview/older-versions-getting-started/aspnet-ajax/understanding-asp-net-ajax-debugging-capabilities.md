@@ -12,14 +12,14 @@ ms.openlocfilehash: 1203825a1fb6b2034d9180fcf416aba7d0012fb7
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59383219"
 ---
 # <a name="understanding-aspnet-ajax-debugging-capabilities"></a>Informazioni sulle funzionalità di debug di ASP.NET AJAX
 
 da [Scott Cate](https://github.com/scottcate)
 
-[Scarica il PDF](http://download.microsoft.com/download/C/1/9/C19A3451-1D14-477C-B703-54EF22E197EE/AJAX_tutorial06_Debugging_MS_Ajax_Applications_cs.pdf)
+[Scaricare PDF](http://download.microsoft.com/download/C/1/9/C19A3451-1D14-477C-B703-54EF22E197EE/AJAX_tutorial06_Debugging_MS_Ajax_Applications_cs.pdf)
 
 > La possibilità di eseguire il debug di codice è una competenza che ogni sviluppatore deve avere nella loro arsenale indipendentemente dalla tecnologia in uso. Sebbene molti sviluppatori sono abituati a usare Visual Studio .NET o Web Developer Express per eseguire il debug di applicazioni ASP.NET che utilizzano codice VB.NET o c#, alcune non sono consapevoli che è anche estremamente utile per il debug di codice lato client, ad esempio JavaScript. Lo stesso tipo di tecniche utilizzate per eseguire il debug di applicazioni .NET può essere applicato anche alle applicazioni basate su AJAX e in particolare le applicazioni ASP.NET AJAX.
 
@@ -48,7 +48,7 @@ Sebbene non obbligatorio, se si sta provando a eseguire il debug di un'applicazi
 Figura 1 mostra quali di Internet Explorer avanzata della finestra dovrebbe essere dopo che è stato configurato correttamente per il debug.
 
 
-[![Cconfigurazione dell'Internet Explorer per eseguire il debug.](understanding-asp-net-ajax-debugging-capabilities/_static/image2.png)](understanding-asp-net-ajax-debugging-capabilities/_static/image1.png)
+[![Configurazione di Internet Explorer per eseguire il debug.](understanding-asp-net-ajax-debugging-capabilities/_static/image2.png)](understanding-asp-net-ajax-debugging-capabilities/_static/image1.png)
 
 **Figura 1**: Configurazione di Internet Explorer per eseguire il debug.  ([Fare clic per visualizzare l'immagine con dimensioni normali](understanding-asp-net-ajax-debugging-capabilities/_static/image3.png))
 
@@ -91,7 +91,7 @@ Una volta raggiunto l'istruzione del debugger si verrà richiesto di eseguire il
 Una volta che viene avviata una sessione di debug e di iniziare l'esame del codice utilizzando il tasto F11 predefinito, è possibile riscontrare la finestra di dialogo di errore visualizzato nel vedere la figura 2, a meno che tutti i file di script utilizzati nella pagina sono aperti e disponibili per il debug.
 
 
-[![Edialogo di errore visualizzato quando non è disponibile per il debug di codice sorgente.](understanding-asp-net-ajax-debugging-capabilities/_static/image5.png)](understanding-asp-net-ajax-debugging-capabilities/_static/image4.png)
+[![Finestra di dialogo errore visualizzato quando codice sorgente non è disponibile per il debug.](understanding-asp-net-ajax-debugging-capabilities/_static/image5.png)](understanding-asp-net-ajax-debugging-capabilities/_static/image4.png)
 
 **Figura 2**: Finestra di dialogo errore visualizzato quando codice sorgente non è disponibile per il debug.  ([Fare clic per visualizzare l'immagine con dimensioni normali](understanding-asp-net-ajax-debugging-capabilities/_static/image6.png))
 
@@ -104,7 +104,7 @@ Questa finestra di dialogo viene visualizzato perché Visual Studio .NET non sa 
 Esplora Script è utilizzabile per visualizzare tutti gli script usati in una pagina e aprirli in editor del codice. Dopo aver aperto Esplora Script, fare doppio clic nella pagina aspx in fase di debug per aprirlo nella finestra dell'editor di codice. Eseguire la stessa azione per tutti gli altri script mostrato in Esplora Script. Dopo che tutti gli script sono aperti nella finestra del codice è possibile premere F11 (e Usa gli altri tasti di scelta di debug) per esaminare il codice. Figura 3 mostra un esempio di Esplora Script. Elencato il file corrente in fase di debug (Demo.aspx), nonché due script personalizzato e due script inserito in modo dinamico nella pagina da ScriptManager di ASP.NET AJAX.
 
 
-[![Tegli Esplora Script consente di accedere facilmente agli script usato in una pagina.](understanding-asp-net-ajax-debugging-capabilities/_static/image8.png)](understanding-asp-net-ajax-debugging-capabilities/_static/image7.png)
+[![Esplora Script consente di accedere facilmente agli script usato in una pagina.](understanding-asp-net-ajax-debugging-capabilities/_static/image8.png)](understanding-asp-net-ajax-debugging-capabilities/_static/image7.png)
 
 **Figura 3**. Esplora Script consente di accedere facilmente agli script usato in una pagina.  ([Fare clic per visualizzare l'immagine con dimensioni normali](understanding-asp-net-ajax-debugging-capabilities/_static/image9.png))
 
@@ -122,7 +122,7 @@ Anche se Visual Studio 2008 (e Visual Web Developer Express 2008) sono molto in 
 Helper di sviluppo Web può essere utilizzato direttamente all'interno di Internet Explorer che rende più semplice da utilizzare. Viene avviato selezionando Strumenti Web Development Helper dal menu di Internet Explorer. Lo strumento verrà aperta nella parte inferiore del browser che è interessante poiché non è necessario lasciare il browser per eseguire diverse attività, ad esempio la registrazione dei messaggi richiesta e risposta HTTP. Figura 4 mostra Web Development Helper aspetto in azione.
 
 
-[![WEB Development Helper](understanding-asp-net-ajax-debugging-capabilities/_static/image11.png)](understanding-asp-net-ajax-debugging-capabilities/_static/image10.png)
+[![Web Development Helper](understanding-asp-net-ajax-debugging-capabilities/_static/image11.png)](understanding-asp-net-ajax-debugging-capabilities/_static/image10.png)
 
 **Figura 4**: Web Development Helper ([fare clic per visualizzare l'immagine con dimensioni normali](understanding-asp-net-ajax-debugging-capabilities/_static/image12.png))
 
@@ -163,7 +163,7 @@ La chiamata alla funzione GetPerson() nella pagina o tramite la finestra control
 Oltre a consentire i dati di traccia e gli oggetti JSON da visualizzare, Web Development helper può anche facilitare il debug degli errori in una pagina. Se viene rilevato un errore, verrà richiesto di continuare alla riga successiva del codice o il debug dello script (vedere la figura 6). La finestra gli errori di Script di finestra di dialogo Mostra a stack di chiamate completata, nonché i numeri di riga in modo che sia possibile identificare facilmente in cui i problemi sono in uno script.
 
 
-[![Uaccesso la finestra di controllo di oggetto per visualizzare un oggetto JSON.](understanding-asp-net-ajax-debugging-capabilities/_static/image14.png)](understanding-asp-net-ajax-debugging-capabilities/_static/image13.png)
+[![Usando la finestra di controllo di oggetto per visualizzare un oggetto JSON.](understanding-asp-net-ajax-debugging-capabilities/_static/image14.png)](understanding-asp-net-ajax-debugging-capabilities/_static/image13.png)
 
 **Figura 5**: Usando la finestra di controllo di oggetto per visualizzare un oggetto JSON.  ([Fare clic per visualizzare l'immagine con dimensioni normali](understanding-asp-net-ajax-debugging-capabilities/_static/image15.png))
 
@@ -171,7 +171,7 @@ Oltre a consentire i dati di traccia e gli oggetti JSON da visualizzare, Web Dev
 Se si seleziona l'opzione di debug consente di eseguire istruzioni di script direttamente nella finestra controllo immediato dell'Helper di sviluppo Web per visualizzare il valore delle variabili, scrivere oggetti JSON, oltre a informazioni. Se viene eseguita nuovamente la stessa azione che ha generato l'errore ed è disponibile nel computer Visual Studio 2008, verrà richiesto di avviare una sessione di debug in modo che è possibile eseguire il codice riga per riga come descritto nella sezione precedente.
 
 
-[![WMessaggio di errore di Script dell'Helper di EB sviluppo](understanding-asp-net-ajax-debugging-capabilities/_static/image17.png)](understanding-asp-net-ajax-debugging-capabilities/_static/image16.png)
+[![Finestra di dialogo Errore dello Script del supporto di sviluppo Web](understanding-asp-net-ajax-debugging-capabilities/_static/image17.png)](understanding-asp-net-ajax-debugging-capabilities/_static/image16.png)
 
 **Figura 6**: Finestra di dialogo Errore di Script dell'Helper di sviluppo Web ([fare clic per visualizzare l'immagine con dimensioni normali](understanding-asp-net-ajax-debugging-capabilities/_static/image18.png))
 
@@ -185,7 +185,7 @@ Per visualizzare i messaggi di richiesta e risposta di ASP.NET AJAX, è necessar
 Visualizzazione del testo non elaborato, inviato in ogni messaggio di richiesta/risposta è certamente molto utile e un'opzione in Web Development Helper, risulta spesso più semplice visualizzare i dati del messaggio in un formato più grafico. Dopo che è stata abilitata la registrazione HTTP e i messaggi sono stati registrati, i dati di messaggio possono essere visualizzati facendo doppio clic sul messaggio in Visualizzatore di log HTTP. In questo modo è possibile visualizzare tutte le intestazioni associate a un messaggio, nonché il messaggio effettivo contenuto. Figura 7 illustra un esempio di un messaggio di richiesta e un messaggio di risposta visualizzata nella finestra del Visualizzatore di Log HTTP.
 
 
-[![Uaccesso il Visualizzatore di Log HTTP per visualizzare i dati di messaggio di richiesta e risposta].(understanding-asp-net-ajax-debugging-capabilities/_static/image20.png)](understanding-asp-net-ajax-debugging-capabilities/_static/image19.png)
+[![Utilizzo del Visualizzatore di Log HTTP per visualizzare i dati di messaggio di richiesta e risposta.](understanding-asp-net-ajax-debugging-capabilities/_static/image20.png)](understanding-asp-net-ajax-debugging-capabilities/_static/image19.png)
 
 **Figura 7**: Utilizzo del Visualizzatore di Log HTTP per visualizzare i dati di messaggio di richiesta e risposta.  ([Fare clic per visualizzare l'immagine con dimensioni normali](understanding-asp-net-ajax-debugging-capabilities/_static/image21.png))
 
@@ -193,7 +193,7 @@ Visualizzazione del testo non elaborato, inviato in ogni messaggio di richiesta/
 Il Visualizzatore di Log HTTP automaticamente analizza gli oggetti JSON e li visualizza mediante una visualizzazione albero fare in modo rapido e visualizzare i dati di proprietà dell'oggetto. Quando un UpdatePanel viene utilizzato in una pagina ASP.NET AJAX, il Visualizzatore suddivide ogni parte del messaggio in singole parti come illustrato nella figura 8. Si tratta di un'ottima funzionalità che rende molto più semplice visualizzare e comprendere quali sono le novità rispetto alla visualizzazione dei dati del messaggio non elaborato il messaggio.
 
 
-[![An UpdatePanel messaggio di risposta visualizzato nel Visualizzatore di Log HTTP.](understanding-asp-net-ajax-debugging-capabilities/_static/image23.png)](understanding-asp-net-ajax-debugging-capabilities/_static/image22.png)
+[![Un messaggio di risposta UpdatePanel visualizzato nel Visualizzatore di Log HTTP.](understanding-asp-net-ajax-debugging-capabilities/_static/image23.png)](understanding-asp-net-ajax-debugging-capabilities/_static/image22.png)
 
 **Figura 8**: Un messaggio di risposta UpdatePanel visualizzato nel Visualizzatore di Log HTTP.  ([Fare clic per visualizzare l'immagine con dimensioni normali](understanding-asp-net-ajax-debugging-capabilities/_static/image24.png))
 
@@ -211,7 +211,7 @@ Firebug è in esecuzione, è possibile impostare punti di interruzione su una qu
 Dopo aver impostato un punto di interruzione in Firebug è possibile eseguire l'azione necessaria per eseguire lo script che è necessario eseguire il debug, ad esempio facendo clic su un pulsante o l'aggiornamento del browser per attivare l'evento onLoad. L'esecuzione si arresterà automaticamente sulla riga contenente il punto di interruzione. Figura 9 mostra un esempio di un punto di interruzione è stata attivata nonché di apportare modifiche.
 
 
-[![Heccezioni dei punti di interruzione nonché di apportare modifiche.](understanding-asp-net-ajax-debugging-capabilities/_static/image26.png)](understanding-asp-net-ajax-debugging-capabilities/_static/image25.png)
+[![Gestione di punti di interruzione nonché di apportare modifiche.](understanding-asp-net-ajax-debugging-capabilities/_static/image26.png)](understanding-asp-net-ajax-debugging-capabilities/_static/image25.png)
 
 **Figura 9**: Gestione di punti di interruzione nonché di apportare modifiche.  ([Fare clic per visualizzare l'immagine con dimensioni normali](understanding-asp-net-ajax-debugging-capabilities/_static/image27.png))
 
@@ -223,7 +223,7 @@ Firebug include anche una finestra della console che può essere usata per testa
 Figura 10 è illustrato un esempio dell'uso della finestra di ispezione DOM per individuare un elemento textbox denominato txtCountry nella pagina. Il controllo Firebug è anche utilizzabile per visualizzare gli stili CSS utilizzati in una pagina, nonché gli eventi che si verificano, ad esempio rilevamento spostamenti del mouse, pulsanti, oltre a informazioni.
 
 
-[![Ufinestra di ispezione DOM del Firebug metodologie.](understanding-asp-net-ajax-debugging-capabilities/_static/image29.png)](understanding-asp-net-ajax-debugging-capabilities/_static/image28.png)
+[![Utilizzo di ispezione DOM del Firebug.](understanding-asp-net-ajax-debugging-capabilities/_static/image29.png)](understanding-asp-net-ajax-debugging-capabilities/_static/image28.png)
 
 **Figura 10**: Utilizzo di ispezione DOM del Firebug.  ([Fare clic per visualizzare l'immagine con dimensioni normali](understanding-asp-net-ajax-debugging-capabilities/_static/image30.png))
 
@@ -296,7 +296,7 @@ La funzione finale per coprire è Sys.Debug.fail. Quando si vuole forzare il cod
 [!code-css[Main](understanding-asp-net-ajax-debugging-capabilities/samples/sample10.css)]
 
 
-[![A Messaggio di errore Sys.Debug.assert.](understanding-asp-net-ajax-debugging-capabilities/_static/image35.png)](understanding-asp-net-ajax-debugging-capabilities/_static/image34.png)
+[![Un messaggio di errore Sys.Debug.assert.](understanding-asp-net-ajax-debugging-capabilities/_static/image35.png)](understanding-asp-net-ajax-debugging-capabilities/_static/image34.png)
 
 **Figura 12**: Un messaggio di errore Sys.Debug.assert.  ([Fare clic per visualizzare l'immagine con dimensioni normali](understanding-asp-net-ajax-debugging-capabilities/_static/image36.png))
 

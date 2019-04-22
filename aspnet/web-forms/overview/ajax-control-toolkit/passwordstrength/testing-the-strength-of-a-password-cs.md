@@ -12,7 +12,7 @@ ms.openlocfilehash: d8ac50874d0325ed9583a16e1b4e19b3becabb99
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59391520"
 ---
 # <a name="testing-the-strength-of-a-password-c"></a>Test della complessità di una password (C#)
@@ -44,9 +44,9 @@ Il `StrengthIndicatorType` vengono fornite le informazioni come presentare la co
 Eseguire la pagina e digitare da subito: Solo dopo aver immesso le lettere minuscole, lettere maiuscole, cifre e simboli, la password viene considerata come non interrompibile.
 
 
-[![NMostra la password è (abbastanza) efficace](testing-the-strength-of-a-password-cs/_static/image2.png)](testing-the-strength-of-a-password-cs/_static/image1.png)
+[![A questo punto la password non è valida (ancora)](testing-the-strength-of-a-password-cs/_static/image2.png)](testing-the-strength-of-a-password-cs/_static/image1.png)
 
 A questo punto la password non è valida (ancora) ([fare clic per visualizzare l'immagine con dimensioni normali](testing-the-strength-of-a-password-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Successivo](testing-the-strength-of-a-password-vb.md)
+> [avanti](testing-the-strength-of-a-password-vb.md)

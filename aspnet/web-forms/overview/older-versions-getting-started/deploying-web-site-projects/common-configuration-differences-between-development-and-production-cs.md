@@ -12,14 +12,14 @@ ms.openlocfilehash: b9d4ed08ea1e8429c1895d0631e1acac9c7eaba9
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59391455"
 ---
 # <a name="common-configuration-differences-between-development-and-production-c"></a>Differenze di configurazione più comuni tra sviluppo e produzione (C#)
 
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Scarica il PDF](http://download.microsoft.com/download/E/8/9/E8920AE6-D441-41A7-8A77-9EF8FF970D8B/aspnet_tutorial05_ConfigDifferences_cs.pdf)
+[Scaricare PDF](http://download.microsoft.com/download/E/8/9/E8920AE6-D441-41A7-8A77-9EF8FF970D8B/aspnet_tutorial05_ConfigDifferences_cs.pdf)
 
 > Nelle esercitazioni precedenti è stato distribuito il nostro sito Web tramite la copia di tutti i file pertinenti dall'ambiente di sviluppo all'ambiente di produzione. Non è, tuttavia, non comune per essere differenze di configurazione tra gli ambienti, che richiede che ogni ambiente dispone di un file Web. config univoco. Questa esercitazione esamina le differenze di configurazione tipici ed esamina le strategie per la gestione delle informazioni di configurazione separato.
 

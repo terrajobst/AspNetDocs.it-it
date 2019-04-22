@@ -12,14 +12,14 @@ ms.openlocfilehash: ebd49295ea165ba4ef1a25398cff7dddcfa54f11
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59392196"
 ---
 # <a name="introducing-the-nerddinner-tutorial"></a>Introduzione all'esercitazione NerdDinner
 
 da [Scott Hanselman](https://github.com/shanselman)
 
-[Scarica il PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
+[Scaricare PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
 
 > Il modo migliore per imparare un nuovo framework consiste nella compilazione di un elemento con esso. Questa esercitazione illustra come compilare una piccola, ma completa, applicazione che usa ASP.NET MVC 1 e introduce alcuni concetti di base sottostante.
 > 
@@ -86,4 +86,4 @@ Ora che abbiamo trattato NerdDinner What ' s, verrà ora nostro maniche e scrive
 Inizieremo con File -&gt;nuovo progetto in Visual Studio per creare l'applicazione di NerdDinner.
 
 > [!div class="step-by-step"]
-> [Successivo](create-a-new-aspnet-mvc-project.md)
+> [avanti](create-a-new-aspnet-mvc-project.md)

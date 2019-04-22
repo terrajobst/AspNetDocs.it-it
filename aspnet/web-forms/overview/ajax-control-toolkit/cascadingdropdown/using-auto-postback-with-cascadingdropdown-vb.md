@@ -12,7 +12,7 @@ ms.openlocfilehash: 433756839532393b36935df8f237e93706b4f18c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59383160"
 ---
 # <a name="using-auto-postback-with-cascadingdropdown-vb"></a>Uso del postback automatico con CascadingDropDown (VB)
@@ -57,7 +57,7 @@ Il caricamento della pagina nel browser riempirà l'elenco a discesa con i forni
 In questo modo, un postback viene eseguito solo quando vi sono effettivamente gli elementi nell'elenco e l'utente seleziona una voce.
 
 
-[![Sdesignazione di un elemento di elenco determina un postback](using-auto-postback-with-cascadingdropdown-vb/_static/image2.png)](using-auto-postback-with-cascadingdropdown-vb/_static/image1.png)
+[![Se si seleziona un elemento di elenco, un postback](using-auto-postback-with-cascadingdropdown-vb/_static/image2.png)](using-auto-postback-with-cascadingdropdown-vb/_static/image1.png)
 
 Se si seleziona un elemento di elenco, un postback ([fare clic per visualizzare l'immagine con dimensioni normali](using-auto-postback-with-cascadingdropdown-vb/_static/image3.png))
 

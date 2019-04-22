@@ -12,7 +12,7 @@ ms.openlocfilehash: 668815d58f2dc9a67cce441dfa267fa043a35091
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59387204"
 ---
 # <a name="dynamically-populating-a-control-using-javascript-code-vb"></a>Popolamento dinamico di un controllo tramite codice JavaScript (VB)
@@ -55,7 +55,7 @@ Per rendere un po' più flessibile il codice di esempio, l'utente può ora scegl
 Si noti che nel contesto di un pulsante di opzione, l'espressione JavaScript `this.value` fa riferimento al valore del pulsante corrente, che è esattamente le stesse informazioni il `getDate()` metodo utilizzabili.
 
 
-[![A Fare clic sul pulsante Recupera la data dal server, nel formato specificato](dynamically-populating-a-control-using-javascript-code-vb/_static/image2.png)](dynamically-populating-a-control-using-javascript-code-vb/_static/image1.png)
+[![Un clic sul pulsante Recupera la data dal server, nel formato specificato](dynamically-populating-a-control-using-javascript-code-vb/_static/image2.png)](dynamically-populating-a-control-using-javascript-code-vb/_static/image1.png)
 
 Un clic sul pulsante Recupera la data dal server, nel formato specificato ([fare clic per visualizzare l'immagine con dimensioni normali](dynamically-populating-a-control-using-javascript-code-vb/_static/image3.png))
 

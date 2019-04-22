@@ -12,14 +12,14 @@ ms.openlocfilehash: 188ab63dd84be5559d5a3646eb95caa77ab01bd1
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59392001"
 ---
 # <a name="configuring-team-foundation-server-for-web-deployment"></a>Configurazione di Team Foundation Server per la distribuzione Web
 
 da [Jason Lee](https://github.com/jrjlee)
 
-[Scarica il PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Scaricare PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Questa esercitazione illustrerà come configurare Team Foundation Server (TFS) 2010 per creare soluzioni e distribuire il contenuto web in diversi ambienti di destinazione. Questo include scenari di integrazione continua (CI), in cui si distribuisce il contenuto automaticamente ogni volta che uno sviluppatore apporta una modifica. È inoltre possibile utilizzare gli scenari di trigger manuale, in cui un amministratore può desidera attivare la distribuzione di una compilazione specifica per un ambiente di staging dopo la compilazione è stata verificata e convalidata nell'ambiente di test. Negli argomenti di questa esercitazione illustrerà l'intero processo di configurazione, tra cui:
 > 
@@ -75,4 +75,4 @@ Ciò fa parte di una serie di cinque esercitazioni su distribuzione web su larga
 - [Distribuzione Web aziendale avanzata](../advanced-enterprise-web-deployment/advanced-enterprise-web-deployment.md). Questa esercitazione descrive come eseguire varie attività di distribuzione più avanzate, come la personalizzazione delle distribuzioni di database per più ambienti, esclusione di file e cartelle dalla distribuzione e portare offline l'applicazioni web durante il processo di distribuzione .
 
 > [!div class="step-by-step"]
-> [Successivo](creating-a-team-project-in-tfs.md)
+> [avanti](creating-a-team-project-in-tfs.md)

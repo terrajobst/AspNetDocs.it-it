@@ -12,7 +12,7 @@ ms.openlocfilehash: ee66e166d24bb80008671c84f6512d5c54707fcf
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59389817"
 ---
 # <a name="using-multiple-popup-controls-vb"></a>Uso di più controlli Popup (VB)
@@ -49,7 +49,7 @@ A questo punto estendere ciascuna delle due caselle di testo con un `PopupContro
 Ora ogni volta che si fa clic all'interno di un campo di testo, viene visualizzato un calendario sotto il campo, è possibile selezionare una data. (Ricevendo la data selezionata nelle caselle di testo verrà trattato in un'esercitazione diversa.)
 
 
-[![Tegli calendario viene visualizzato quando l'utente fa clic nella casella di testo](using-multiple-popup-controls-vb/_static/image2.png)](using-multiple-popup-controls-vb/_static/image1.png)
+[![Quando l'utente fa clic nella casella di testo viene visualizzato il calendario](using-multiple-popup-controls-vb/_static/image2.png)](using-multiple-popup-controls-vb/_static/image1.png)
 
 Il calendario viene visualizzato quando l'utente fa clic nella casella di testo ([fare clic per visualizzare l'immagine con dimensioni normali](using-multiple-popup-controls-vb/_static/image3.png))
 

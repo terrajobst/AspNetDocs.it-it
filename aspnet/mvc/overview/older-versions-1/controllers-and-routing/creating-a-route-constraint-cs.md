@@ -12,7 +12,7 @@ ms.openlocfilehash: 42c0ce5e158e2fe9387ac218ac0762b6362094f9
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59389576"
 ---
 # <a name="creating-a-route-constraint-c"></a>Creazione di un vincolo di route (C#)
@@ -32,7 +32,7 @@ Si supponga, ad esempio, che è stata definita la route nel listato 1 nel file G
 
 L'elenco 1 contiene una route denominata Product. È possibile usare la route di prodotto per eseguire il mapping alle richieste del browser il ProductController contenuta nel listato 2.
 
-**Listing 2 - Controllers\ProductController.cs**
+**Listato 2 - Controllers\ProductController.cs**
 
 [!code-csharp[Main](creating-a-route-constraint-cs/samples/sample2.cs)]
 
@@ -51,7 +51,7 @@ Sfortunatamente, la route corrisponde anche agli URL seguenti:
 Poiché l'azione Details() prevede un parametro intero, una richiesta che contiene un valore diverso da un valore intero verrà generato un errore. Ad esempio, se si digita il /Product/apple URL nel browser quindi si otterrà la pagina di errore nella figura 1.
 
 
-[![Tfinestra di dialogo Nuovo progetto di he](creating-a-route-constraint-cs/_static/image1.jpg)](creating-a-route-constraint-cs/_static/image1.png)
+[![La finestra di dialogo Nuovo progetto](creating-a-route-constraint-cs/_static/image1.jpg)](creating-a-route-constraint-cs/_static/image1.png)
 
 **Figura 01**: Viene visualizzata una pagina explode ([fare clic per visualizzare l'immagine con dimensioni normali](creating-a-route-constraint-cs/_static/image2.png))
 

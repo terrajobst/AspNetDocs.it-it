@@ -13,7 +13,7 @@ ms.openlocfilehash: b78b13009d3106b857a22b1316dd062de8c68ac9
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59383885"
 ---
 # <a name="aspnet-web-api-deployment-and-hosting"></a>ASP.NET Web API: Distribuzione e hosting
@@ -21,5 +21,5 @@ ms.locfileid: "59383885"
 > Viene descritto come ospitare l'API web.
 
 
-- [Usare OWIN per il self-hosting dell'API Web 2](use-owin-to-self-host-web-api.md)
-- [Ospitare l'API Web 2 in un ruolo di lavoro di Azure](host-aspnet-web-api-in-an-azure-worker-role.md)
+- [Usare OWIN per l'hosting indipendente dell'API Web 2](use-owin-to-self-host-web-api.md)
+- [Eseguire l'hosting dell'API Web 2 in un ruolo di lavoro di Azure](host-aspnet-web-api-in-an-azure-worker-role.md)

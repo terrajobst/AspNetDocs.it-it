@@ -12,14 +12,14 @@ ms.openlocfilehash: fd0914ed62a280fea290b9f1b150fc25c8ed6d40
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59385332"
 ---
 # <a name="deploying-database-role-memberships-to-test-environments"></a>Distribuzione delle appartenenze ai ruoli del database negli ambienti di test
 
 da [Jason Lee](https://github.com/jrjlee)
 
-[Scarica il PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Scaricare PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > In questo argomento viene descritto come aggiungere gli account utente ai ruoli del database come parte di una distribuzione della soluzione in un ambiente di test.
 > 

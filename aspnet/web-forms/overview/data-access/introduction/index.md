@@ -12,7 +12,7 @@ ms.openlocfilehash: 7ab0f76e0892e5c4fbabc71b6fa1ec71e00fcaf9
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59387607"
 ---
 # <a name="introduction"></a>Introduzione
@@ -22,7 +22,7 @@ ms.locfileid: "59387607"
 
 - [Creazione di un livello di accesso ai dati (C#)](creating-a-data-access-layer-cs.md)
 - [Creazione di un livello per la logica di business (C#)](creating-a-business-logic-layer-cs.md)
-- [Pagine master ed esplorazione del sito (C#)](master-pages-and-site-navigation-cs.md)
+- [Pagine master e spostamento all'interno del sito (C#)](master-pages-and-site-navigation-cs.md)
 - [Creazione di un livello di accesso ai dati (VB)](creating-a-data-access-layer-vb.md)
 - [Creazione di un livello per la logica di business (VB)](creating-a-business-logic-layer-vb.md)
-- [Pagine master ed esplorazione del sito (VB)](master-pages-and-site-navigation-vb.md)
+- [Pagine master e spostamento all'interno del sito (VB)](master-pages-and-site-navigation-vb.md)

@@ -12,7 +12,7 @@ ms.openlocfilehash: f14a8207e9883cdee2e35ec98d7fd64c82470d46
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59387848"
 ---
 # <a name="aspnet-ajax-a-demonstration-of-aspnet-ajax"></a>ASP.NET AJAX: dimostrazione di ASP.NET AJAX

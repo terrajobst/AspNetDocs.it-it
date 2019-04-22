@@ -12,7 +12,7 @@ ms.openlocfilehash: 10ee617ff5653bcc478364b7bea75bac4f4770f6
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59388855"
 ---
 # <a name="microsoft-ajax-content-delivery-network"></a>Rete per la distribuzione di contenuti Microsoft Ajax
@@ -111,7 +111,7 @@ ms.locfileid: "59388855"
     - [jQuery DataTables 1.8.2](jquery-datatables/cdnjquerydatatables182.md)
     - [jQuery DataTables 1.10.4](jquery-datatables/cdnjquerydatatables104.md)
     - [jQuery DataTables 1.10.5](jquery-datatables/cdnjquerydatatables105.md)
-- [Web Forms ASP.NET e Ajax 4](cdnajax4.md)
+- [Web Form ASP.NET e Ajax 4](cdnajax4.md)
 - [ASP.NET Ajax 3.5](cdnajax35.md)
-- [Web Forms ASP.NET e Ajax 4.5.2](cdnajax452.md)
-- [Web Forms ASP.NET e Ajax 4.5.1](cdnajax451.md)
+- [Web Form ASP.NET e Ajax 4.5.2](cdnajax452.md)
+- [Web Form ASP.NET e Ajax 4.5.1](cdnajax451.md)

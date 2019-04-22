@@ -12,7 +12,7 @@ ms.openlocfilehash: c66e066bd3e241e667924dacc114f57151df822a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59389557"
 ---
 # <a name="creating-an-action-c"></a>Creazione di un'azione (C#)
@@ -28,7 +28,7 @@ L'obiettivo di questa esercitazione è illustrare come è possibile creare una n
 
 Aggiungere una nuova azione a un controller aggiungendo un nuovo metodo al controller. Ad esempio, il controller nel listato 1 contiene un'azione denominata index () e un'azione denominata sayHello (). Entrambi i metodi vengono esposti come azioni.
 
-**Listing 1 - Controllers\HomeController.cs**
+**Listato 1 - controllers\homecontroller.cs.**
 
 [!code-csharp[Main](creating-an-action-cs/samples/sample1.cs)]
 
@@ -50,14 +50,14 @@ Quando si aggiunge un metodo che non violano tali requisiti per un controller, i
 
 Se è necessario creare un metodo pubblico in una classe controller e non si vuole esporre il metodo come un'azione del controller è possibile impedire il metodo da cui viene richiamato usando l'attributo [NonAction]. Ad esempio, il controller nel listato 2 contiene un metodo pubblico denominato CompanySecrets() decorata con l'attributo [NonAction].
 
-**Listing 2 - Controllers\WorkController.cs**
+**Listato 2 - Controllers\WorkController.cs**
 
 [!code-csharp[Main](creating-an-action-cs/samples/sample2.cs)]
 
 Se si prova a richiamare l'azione del controller CompanySecrets() digitando /Work/CompanySecrets nella barra degli indirizzi del browser si riceverà il messaggio di errore nella figura 1.
 
 
-[![Iun metodo NonAction nvoking](creating-an-action-cs/_static/image1.jpg)](creating-an-action-cs/_static/image1.png)
+[![Richiama un metodo NonAction](creating-an-action-cs/_static/image1.jpg)](creating-an-action-cs/_static/image1.png)
 
 **Figura 01**: Richiama un metodo NonAction ([fare clic per visualizzare l'immagine con dimensioni normali](creating-an-action-cs/_static/image2.png))
 

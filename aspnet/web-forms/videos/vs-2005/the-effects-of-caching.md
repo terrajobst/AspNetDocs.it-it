@@ -12,7 +12,7 @@ ms.openlocfilehash: 5deccb253b2e8e6b853f615413da3b9b161239b9
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59380522"
 ---
 # <a name="the-effects-of-caching"></a>Gli effetti della memorizzazione nella cache

@@ -12,7 +12,7 @@ ms.openlocfilehash: 1c99ce1528b1a28a4ec470a05d62abef6d4bb888
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59391858"
 ---
 # <a name="customizing-the-datalists-editing-interface-vb"></a>Personalizzazione dell'interfaccia di modifica di DataList (VB)
@@ -37,7 +37,7 @@ Il `EditItemTemplate` possono essere ulteriormente ampliato per includere i cont
 In questa esercitazione si creerà un'interfaccia di modifica più completa per il controllo DataList, che include controlli DropDownList e una casella di controllo. In particolare, verrà creato un controllo DataList che elenca le informazioni sul prodotto e consente la s nome prodotto, fornitore, categoria e lo stato non più supportato da aggiornare (vedere la figura 1).
 
 
-[![Tegli modifica interfaccia include un controllo TextBox, due controlli DropDownList e una casella di controllo](customizing-the-datalist-s-editing-interface-vb/_static/image2.png)](customizing-the-datalist-s-editing-interface-vb/_static/image1.png)
+[![L'interfaccia di modifica include un controllo TextBox, due controlli DropDownList e una casella di controllo](customizing-the-datalist-s-editing-interface-vb/_static/image2.png)](customizing-the-datalist-s-editing-interface-vb/_static/image1.png)
 
 **Figura 1**: L'interfaccia di modifica include un controllo TextBox, due controlli DropDownList e una casella di controllo ([fare clic per visualizzare l'immagine con dimensioni normali](customizing-the-datalist-s-editing-interface-vb/_static/image3.png))
 
@@ -47,7 +47,7 @@ In questa esercitazione si creerà un'interfaccia di modifica più completa per 
 Prima di poter creare l'interfaccia modificabile s DataList, è innanzitutto necessario compilare l'interfaccia di sola lettura. Iniziare aprendo il `CustomizedUI.aspx` pagina dal `EditDeleteDataList` cartella e, dalla finestra di progettazione, aggiungere un controllo DataList alla pagina, l'impostazione relativa `ID` proprietà `Products`. DataList s nello smart tag, creare un nuovo oggetto ObjectDataSource. Denominare il nuovo oggetto ObjectDataSource `ProductsDataSource` e configurarlo per recuperare i dati di `ProductsBLL` classe s `GetProducts` (metodo). Come con le esercitazioni di DataList modificabile precedente, verrà aggiornato le informazioni di prodotto modificato s accedendo direttamente al livello della logica di Business. Di conseguenza, impostare gli elenchi a discesa nell'aggiornamento, inserimento ed eliminare schede su (nessuno).
 
 
-[![Set di elenchi a discesa di schede DELETE, INSERT e UPDATE su (nessuno)](customizing-the-datalist-s-editing-interface-vb/_static/image5.png)](customizing-the-datalist-s-editing-interface-vb/_static/image4.png)
+[![Impostare gli elenchi di riepilogo a discesa schede DELETE, INSERT e UPDATE su (nessuno)](customizing-the-datalist-s-editing-interface-vb/_static/image5.png)](customizing-the-datalist-s-editing-interface-vb/_static/image4.png)
 
 **Figura 2**: Impostare l'UPDATE, INSERT e DELETE schede elenco a discesa Elenca su (nessuno) ([fare clic per visualizzare l'immagine con dimensioni normali](customizing-the-datalist-s-editing-interface-vb/_static/image6.png))
 
@@ -60,7 +60,7 @@ Dopo la configurazione di ObjectDataSource, Visual Studio creerà predefinito `I
 Il markup riportato sopra viene disposto l'informazioni di prodotto usando un &lt;h4&gt; intestazione per il nome del prodotto s e una colonna di quattro `<table>` per i campi rimanenti. Il `ProductPropertyLabel` e `ProductPropertyValue` classi CSS, definite in `Styles.css`, sono stati trattati nelle esercitazioni precedenti. Figura 3 mostra lo stato di avanzamento quando viene visualizzato tramite un browser.
 
 
-[![Tviene visualizzata ha nome, fornitore, categoria, lo stato non più utilizzate e prezzo di ogni prodotto](customizing-the-datalist-s-editing-interface-vb/_static/image8.png)](customizing-the-datalist-s-editing-interface-vb/_static/image7.png)
+[![Viene visualizzato il nome, fornitore, categoria, lo stato non più utilizzate e prezzo di ogni prodotto](customizing-the-datalist-s-editing-interface-vb/_static/image8.png)](customizing-the-datalist-s-editing-interface-vb/_static/image7.png)
 
 **Figura 3**: Viene visualizzato il nome, fornitore, categoria, lo stato non più utilizzate e prezzo di ogni prodotto ([fare clic per visualizzare l'immagine con dimensioni normali](customizing-the-datalist-s-editing-interface-vb/_static/image9.png))
 
@@ -72,7 +72,7 @@ Il primo passaggio nella creazione di DataList personalizzato interfaccia per la
 Per personalizzare l'interfaccia di modifica, fare clic sul collegamento di modifica modelli dello smart tag DataList s e scegliere il `EditItemTemplate` opzione nell'elenco a discesa. Aggiungere un controllo DropDownList per il `EditItemTemplate` e impostare relativi `ID` a `Categories`.
 
 
-[![Aun controllo DropDownList per le categorie gg](customizing-the-datalist-s-editing-interface-vb/_static/image11.png)](customizing-the-datalist-s-editing-interface-vb/_static/image10.png)
+[![Aggiungere un controllo DropDownList per le categorie](customizing-the-datalist-s-editing-interface-vb/_static/image11.png)](customizing-the-datalist-s-editing-interface-vb/_static/image10.png)
 
 **Figura 4**: Aggiungere un controllo DropDownList per le categorie ([fare clic per visualizzare l'immagine con dimensioni normali](customizing-the-datalist-s-editing-interface-vb/_static/image12.png))
 
@@ -80,12 +80,12 @@ Per personalizzare l'interfaccia di modifica, fare clic sul collegamento di modi
 Successivamente, DropDownList s nello smart tag, selezionare l'opzione Scegli origine dati e creare un nuovo oggetto ObjectDataSource denominato `CategoriesDataSource`. Configurare ObjectDataSource per usare la `CategoriesBLL` classe s `GetCategories()` (metodo) (vedere la figura 5). Successivamente, la s DropDownList chiede di configurazione guidata origine dati per i campi di dati da usare per ognuno `ListItem` s `Text` e `Value` proprietà. La visualizzazione DropDownList il `CategoryName` campo dati e usare il `CategoryID` come valore, come illustrato nella figura 6.
 
 
-[![CCrea un nuovo CategoriesDataSource denominato di ObjectDataSource](customizing-the-datalist-s-editing-interface-vb/_static/image14.png)](customizing-the-datalist-s-editing-interface-vb/_static/image13.png)
+[![Creare un nuovo oggetto ObjectDataSource denominato CategoriesDataSource](customizing-the-datalist-s-editing-interface-vb/_static/image14.png)](customizing-the-datalist-s-editing-interface-vb/_static/image13.png)
 
 **Figura 5**: Creare un nuovo oggetto ObjectDataSource denominato `CategoriesDataSource` ([fare clic per visualizzare l'immagine con dimensioni normali](customizing-the-datalist-s-editing-interface-vb/_static/image15.png))
 
 
-[![Configurare s DropDownList Display e i campi dei valori](customizing-the-datalist-s-editing-interface-vb/_static/image17.png)](customizing-the-datalist-s-editing-interface-vb/_static/image16.png)
+[![Configurare la visualizzazione di s DropDownList e il valore di campi](customizing-the-datalist-s-editing-interface-vb/_static/image17.png)](customizing-the-datalist-s-editing-interface-vb/_static/image16.png)
 
 **Figura 6**: Configurare il controllo DropDownList s visualizzato e i campi dei valori ([fare clic per visualizzare l'immagine con dimensioni normali](customizing-the-datalist-s-editing-interface-vb/_static/image18.png))
 
@@ -102,7 +102,7 @@ Infine, aggiungere i pulsanti Annulla e Update. Tenere presente che per questi d
 [!code-aspx[Main](customizing-the-datalist-s-editing-interface-vb/samples/sample2.aspx)]
 
 
-[![TInterfaccia di modifica è layout orizzontale, ad esempio l'interfaccia di sola lettura](customizing-the-datalist-s-editing-interface-vb/_static/image20.png)](customizing-the-datalist-s-editing-interface-vb/_static/image19.png)
+[![L'interfaccia di modifica non è più Laid valido, ad esempio l'interfaccia di sola lettura](customizing-the-datalist-s-editing-interface-vb/_static/image20.png)](customizing-the-datalist-s-editing-interface-vb/_static/image19.png)
 
 **Figura 7**: L'interfaccia di modifica non è più Laid valido, ad esempio l'interfaccia di sola lettura ([fare clic per visualizzare l'immagine con dimensioni normali](customizing-the-datalist-s-editing-interface-vb/_static/image21.png))
 
@@ -119,7 +119,7 @@ Creare questi due gestori di eventi e richiedere loro di utilizzare il codice se
 Con questi due gestori di eventi sul posto, facendo clic sul pulsante Modifica consente di visualizzare l'interfaccia di modifica e facendo clic sul pulsante di annullamento restituisce l'elemento modificato per la modalità di sola lettura. Figura 8 Mostra DataList dopo che il pulsante Modifica è stato fatto clic per s Chef Anton's Gumbo Mix. Poiché abbiamo ve ancora per aggiungere una sintassi di associazione dati all'interfaccia di modifica, il `ProductName` nella casella di testo è vuota, il `Discontinued` selezionati dalla casella di controllo è deselezionata e i primi elementi il `Categories` e `Suppliers` controlli DropDownList.
 
 
-[![Clicking verrà visualizzato il pulsante di modifica dell'interfaccia di modifica](customizing-the-datalist-s-editing-interface-vb/_static/image23.png)](customizing-the-datalist-s-editing-interface-vb/_static/image22.png)
+[![Facendo clic su verrà visualizzato il pulsante Modifica l'interfaccia di modifica](customizing-the-datalist-s-editing-interface-vb/_static/image23.png)](customizing-the-datalist-s-editing-interface-vb/_static/image22.png)
 
 **Figura 8**: Facendo clic sul pulsante Modifica consente di visualizzare l'interfaccia di modifica ([fare clic per visualizzare l'immagine con dimensioni normali](customizing-the-datalist-s-editing-interface-vb/_static/image24.png))
 
@@ -131,7 +131,7 @@ Per visualizzare i valori correnti di s prodotto l'interfaccia di modifica, è n
 Assegnare il `ProductName` valore del campo dati il `ProductName` s nella casella di testo `Text` proprietà, il `CategoryID` e `SupplierID` datové pole i valori per i `Categories` e `Suppliers` controlli DropDownList `SelectedValue` proprietà e il `Discontinued` valore del campo dati il `Discontinued` casella di controllo s `Checked` proprietà. Dopo aver apportato queste modifiche, tramite la finestra di progettazione o direttamente tramite markup dichiarativo, visitare di nuovo la pagina tramite un browser e fare clic sul pulsante Modifica per s Chef Anton's Gumbo Mix. Come illustrato nella figura 9, la sintassi di data binding ha aggiunto i valori correnti di casella di testo e controlli DropDownList e casella di controllo.
 
 
-[![Clicking verrà visualizzato il pulsante di modifica dell'interfaccia di modifica](customizing-the-datalist-s-editing-interface-vb/_static/image26.png)](customizing-the-datalist-s-editing-interface-vb/_static/image25.png)
+[![Facendo clic su verrà visualizzato il pulsante Modifica l'interfaccia di modifica](customizing-the-datalist-s-editing-interface-vb/_static/image26.png)](customizing-the-datalist-s-editing-interface-vb/_static/image25.png)
 
 **Figura 9**: Facendo clic sul pulsante Modifica consente di visualizzare l'interfaccia di modifica ([fare clic per visualizzare l'immagine con dimensioni normali](customizing-the-datalist-s-editing-interface-vb/_static/image27.png))
 
@@ -167,7 +167,7 @@ Dopo aver apportato queste modifiche, il markup controlli DropDownList in DataLi
 Si consiglia di visualizzare lo stato di avanzamento tramite un browser. Quando si modifica un prodotto, si noti che il `Categories` e `Suppliers` dispone di due controlli DropDownList (nessuno) opzione all'inizio di DropDownList.
 
 
-[![Tle categorie he e controlli DropDownList Suppliers include (nessuna) opzione](customizing-the-datalist-s-editing-interface-vb/_static/image29.png)](customizing-the-datalist-s-editing-interface-vb/_static/image28.png)
+[![Le categorie e controlli DropDownList fornitori includono (nessuna) opzione](customizing-the-datalist-s-editing-interface-vb/_static/image29.png)](customizing-the-datalist-s-editing-interface-vb/_static/image28.png)
 
 **Figura 10**: Il `Categories` e `Suppliers` controlli DropDownList includono (nessuna) opzione ([fare clic per visualizzare l'immagine con dimensioni normali](customizing-the-datalist-s-editing-interface-vb/_static/image30.png))
 

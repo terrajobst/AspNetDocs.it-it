@@ -12,7 +12,7 @@ ms.openlocfilehash: 5a968bbbe5bdb6f8daad2c11c18c2b704c3bed8b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59385501"
 ---
 # <a name="master-pages-and-aspnet-ajax-vb"></a>Pagine master e ASP.NET AJAX (VB)
@@ -71,7 +71,7 @@ Aprire il `Site.master` pagina master e aggiungere un controllo ScriptManager pe
 Dopo l'aggiunta di ScriptManager alla pagina, modificare relativi `ID` dal `ScriptManager1` a `MyManager`.
 
 
-[![Agg ScriptManager della pagina Master](master-pages-and-asp-net-ajax-vb/_static/image2.png)](master-pages-and-asp-net-ajax-vb/_static/image1.png)
+[![Aggiungere ScriptManager nella pagina Master](master-pages-and-asp-net-ajax-vb/_static/image2.png)](master-pages-and-asp-net-ajax-vb/_static/image1.png)
 
 **Figura 01**: Aggiungere ScriptManager nella pagina Master ([fare clic per visualizzare l'immagine con dimensioni normali](master-pages-and-asp-net-ajax-vb/_static/image3.png))
 
@@ -83,7 +83,7 @@ Con il controllo ScriptManager aggiunto alla pagina master a questo punto possia
 Iniziare creando una nuova pagina nella directory radice denominata `ShowRandomProduct.aspx`. Non dimenticare di questa nuova pagina per associare il `Site.master` pagina master.
 
 
-[![Agg una nuova pagina ASP.NET nel sito Web](master-pages-and-asp-net-ajax-vb/_static/image5.png)](master-pages-and-asp-net-ajax-vb/_static/image4.png)
+[![Aggiungere una nuova pagina ASP.NET nel sito Web](master-pages-and-asp-net-ajax-vb/_static/image5.png)](master-pages-and-asp-net-ajax-vb/_static/image4.png)
 
 **Figura 02**: Aggiungere una nuova pagina ASP.NET nel sito Web ([fare clic per visualizzare l'immagine con dimensioni normali](master-pages-and-asp-net-ajax-vb/_static/image6.png))
 
@@ -104,7 +104,7 @@ Tornare al `ShowRandomProduct.aspx`. Dalla finestra di progettazione, trascinare
 La prima attività consiste nel visualizzare informazioni relative a un prodotto selezionato in modo casuale all'interno di UpdatePanel. Per iniziare, trascinare un controllo DetailsView in UpdatePanel. Impostare il controllo DetailsView `ID` proprietà `ProductInfo` e cancellare relativo `Height` e `Width` proprietà. Espandi tag di DetailsView intelligenti e, dall'elenco a discesa elenco scegliere l'origine dati, scegliere di associare un nuovo controllo SqlDataSource denominato DetailsView `RandomProductDataSource`.
 
 
-[![Bind DetailsView per un nuovo controllo SqlDataSource](master-pages-and-asp-net-ajax-vb/_static/image8.png)](master-pages-and-asp-net-ajax-vb/_static/image7.png)
+[![Associare il controllo DetailsView a un nuovo controllo SqlDataSource](master-pages-and-asp-net-ajax-vb/_static/image8.png)](master-pages-and-asp-net-ajax-vb/_static/image7.png)
 
 **Figura 03**: Associare il controllo DetailsView a un nuovo controllo SqlDataSource ([fare clic per visualizzare l'immagine con dimensioni normali](master-pages-and-asp-net-ajax-vb/_static/image9.png))
 
@@ -117,7 +117,7 @@ Configurare il controllo SqlDataSource per la connessione al database Northwind 
 Il `TOP 1` parola chiave nel `SELECT` la clausola restituisce solo il primo record restituito dalla query. Il `NEWID()` funzione genera un nuovo valore di identificatore univoco globale (GUID) e può essere usato in un `ORDER BY` clausola per restituire i record della tabella in ordine casuale.
 
 
-[![Configurare SqlDataSource per restituire un singolo, in modo casuale i Record selezionato](master-pages-and-asp-net-ajax-vb/_static/image11.png)](master-pages-and-asp-net-ajax-vb/_static/image10.png)
+[![Configurare SqlDataSource per restituire un singolo Record selezionato in modo casuale](master-pages-and-asp-net-ajax-vb/_static/image11.png)](master-pages-and-asp-net-ajax-vb/_static/image10.png)
 
 **Figura 04**: Configurare SqlDataSource per restituire un singolo, in modo casuale i Record selezionati ([fare clic per visualizzare l'immagine con dimensioni normali](master-pages-and-asp-net-ajax-vb/_static/image12.png))
 
@@ -130,7 +130,7 @@ Dopo aver completato la procedura guidata, Visual Studio crea un BoundField per 
 Figura 5 mostra il `ShowRandomProduct.aspx` pagina quando viene visualizzato tramite un browser. Fare clic sul pulsante Aggiorna del browser per ricaricare la pagina. dovrebbero vedere le `ProductName` e `UnitPrice` valori per un nuovo record selezionato in modo casuale.
 
 
-[![A Nome e il prezzo del prodotto casuale viene visualizzato](master-pages-and-asp-net-ajax-vb/_static/image14.png)](master-pages-and-asp-net-ajax-vb/_static/image13.png)
+[![Nome e il prezzo di un prodotto casuale viene visualizzato](master-pages-and-asp-net-ajax-vb/_static/image14.png)](master-pages-and-asp-net-ajax-vb/_static/image13.png)
 
 **Figura 05**: Nome e il prezzo di un prodotto casuale viene visualizzata ([fare clic per visualizzare l'immagine con dimensioni normali](master-pages-and-asp-net-ajax-vb/_static/image15.png))
 
@@ -159,12 +159,12 @@ Per visualizzare meglio ciò che avviene qui, aggiungiamo un controllo etichetta
 Con questa modifica completa, la pagina include il tempo che è stato caricato il prodotto attualmente visualizzato. Figura 6 mostra la pagina alla prima visita. Figura 7 mostra la pagina 15 secondi in un secondo momento, dopo che il controllo Timer ha "selezionata" e UpdatePanel è stato aggiornato per visualizzare informazioni su un nuovo prodotto.
 
 
-[![A In modo casuale prodotto selezionato viene visualizzato al caricamento della pagina](master-pages-and-asp-net-ajax-vb/_static/image17.png)](master-pages-and-asp-net-ajax-vb/_static/image16.png)
+[![Un prodotto in modo casuale selezionato viene visualizzato al caricamento della pagina](master-pages-and-asp-net-ajax-vb/_static/image17.png)](master-pages-and-asp-net-ajax-vb/_static/image16.png)
 
 **Figura 06**: Un prodotto in modo casuale selezionato viene visualizzato al caricamento della pagina ([fare clic per visualizzare l'immagine con dimensioni normali](master-pages-and-asp-net-ajax-vb/_static/image18.png))
 
 
-[![Emolto 15 secondi che viene visualizzato un nuovo in modo casuale selezionato prodotto](master-pages-and-asp-net-ajax-vb/_static/image20.png)](master-pages-and-asp-net-ajax-vb/_static/image19.png)
+[![Ogni 15 secondi viene visualizzato un nuovo in modo casuale selezionato prodotto](master-pages-and-asp-net-ajax-vb/_static/image20.png)](master-pages-and-asp-net-ajax-vb/_static/image19.png)
 
 **Figura 07**: Ogni 15 secondi viene visualizzato un nuovo in modo casuale selezionato prodotto ([fare clic per visualizzare l'immagine con dimensioni normali](master-pages-and-asp-net-ajax-vb/_static/image21.png))
 
@@ -190,12 +190,12 @@ Per visualizzare il controllo ScriptManagerProxy in azione, è possibile potenzi
 Iniziare creando una nuova cartella nel sito Web denominato `Scripts`. Successivamente, aggiungere un nuovo file nella cartella degli script denominata `TimerScript.js` di tipo JScript File.
 
 
-[![Aun nuovo JavaScript File alla cartella Scripts gg](master-pages-and-asp-net-ajax-vb/_static/image23.png)](master-pages-and-asp-net-ajax-vb/_static/image22.png)
+[![Aggiungere un nuovo File JavaScript nella cartella degli script](master-pages-and-asp-net-ajax-vb/_static/image23.png)](master-pages-and-asp-net-ajax-vb/_static/image22.png)
 
 **Figura 08**: Aggiungere un nuovo JavaScript File per la `Scripts` cartella ([fare clic per visualizzare l'immagine con dimensioni normali](master-pages-and-asp-net-ajax-vb/_static/image24.png))
 
 
-[![A Nuovo JavaScript File è stato aggiunto al sito Web](master-pages-and-asp-net-ajax-vb/_static/image26.png)](master-pages-and-asp-net-ajax-vb/_static/image25.png)
+[![Un nuovo JavaScript File è stato aggiunto al sito Web](master-pages-and-asp-net-ajax-vb/_static/image26.png)](master-pages-and-asp-net-ajax-vb/_static/image25.png)
 
 **Figura 09**: Un nuovo JavaScript File è stato aggiunto al sito Web ([fare clic per visualizzare l'immagine con dimensioni normali](master-pages-and-asp-net-ajax-vb/_static/image27.png))
 
@@ -208,7 +208,7 @@ Successivamente, aggiungere lo script seguente consente a di `TimerScript.js` fi
 È ora necessario registrare questo file JavaScript personalizzato in `ShowRandomProduct.aspx`. Tornare alla `ShowRandomProduct.aspx` e aggiungere un controllo ScriptManagerProxy alla pagina, impostare il `ID` a `MyManagerProxy`. Per registrare un JavaScript personalizzato file selezionare il controllo ScriptManagerProxy nella finestra di progettazione e quindi passare alla finestra Proprietà. Una delle proprietà è denominata script. Selezione di questa proprietà consente di visualizzare l'Editor della raccolta ScriptReference riportato nella figura 10. Fare clic sul pulsante Aggiungi per includere un nuovo riferimento a script e quindi immettere il percorso del file di script nella proprietà del percorso: `~/Scripts/TimerScript.js`.
 
 
-[![Aun riferimento a Script al controllo ScriptManagerProxy gg](master-pages-and-asp-net-ajax-vb/_static/image29.png)](master-pages-and-asp-net-ajax-vb/_static/image28.png)
+[![Aggiungere un riferimento a Script al controllo ScriptManagerProxy](master-pages-and-asp-net-ajax-vb/_static/image29.png)](master-pages-and-asp-net-ajax-vb/_static/image28.png)
 
 **Figura 10**: Aggiungere un riferimento a Script al controllo ScriptManagerProxy ([fare clic per visualizzare l'immagine con dimensioni normali](master-pages-and-asp-net-ajax-vb/_static/image30.png))
 
@@ -230,12 +230,12 @@ Ciò consente di visualizzare un pulsante con il testo "Sospensione". Ogni volta
 Figura 11 Mostra questa pagina alla prima visita tramite un browser. Il Timer è attualmente in esecuzione e aggiorna le informazioni di prodotto visualizzato ogni 15 secondi. Figura 12 mostra la schermata dopo che è stato fatto clic sul pulsante Sospendi. Facendo clic sul pulsante Sospendi, arresta il Timer e aggiorna il testo del pulsante per "Resume". Le informazioni sul prodotto aggiornare (e continuare ad aggiornare ogni 15 secondi) dopo che l'utente fa clic su Riprendi.
 
 
-[![CFare clic su pulsante Sospendi per arrestare il controllo Timer](master-pages-and-asp-net-ajax-vb/_static/image32.png)](master-pages-and-asp-net-ajax-vb/_static/image31.png)
+[![Fare clic sul pulsante Sospendi per arrestare il controllo Timer](master-pages-and-asp-net-ajax-vb/_static/image32.png)](master-pages-and-asp-net-ajax-vb/_static/image31.png)
 
 **Figura 11**: Fare clic sul pulsante Sospendi per arrestare il controllo Timer ([fare clic per visualizzare l'immagine con dimensioni normali](master-pages-and-asp-net-ajax-vb/_static/image33.png))
 
 
-[![CFare clic sul pulsante di ripresa per riavviare il Timer](master-pages-and-asp-net-ajax-vb/_static/image35.png)](master-pages-and-asp-net-ajax-vb/_static/image34.png)
+[![Fare clic sul pulsante di ripresa per riavviare il Timer](master-pages-and-asp-net-ajax-vb/_static/image35.png)](master-pages-and-asp-net-ajax-vb/_static/image34.png)
 
 **Figura 12**: Fare clic sul pulsante di ripresa per riavviare il Timer ([fare clic per visualizzare l'immagine con dimensioni normali](master-pages-and-asp-net-ajax-vb/_static/image36.png))
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: d5a72dbfe1530e457ec16df5c7d50b03b5f63502
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59384214"
 ---
 # <a name="part-1-overview-and-creating-the-project"></a>Parte 1. Panoramica e creazione del progetto
@@ -92,4 +92,4 @@ In Esplora soluzioni espandere la cartella del contenuto e aprire il file denomi
 [!code-css[Main](using-web-api-with-entity-framework-part-1/samples/sample1.css)]
 
 > [!div class="step-by-step"]
-> [Successivo](using-web-api-with-entity-framework-part-2.md)
+> [avanti](using-web-api-with-entity-framework-part-2.md)

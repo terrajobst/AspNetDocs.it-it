@@ -12,7 +12,7 @@ ms.openlocfilehash: ecc0733c2850bc157c7ee5b251787152393481fc
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59385254"
 ---
 # <a name="intro-to-aspnet-mvc-4"></a>Introduzione ad ASP.NET MVC 4
@@ -86,4 +86,4 @@ F5 fa in modo che Visual Studio avviare IIS Express ed eseguire l'applicazione w
 Impostazione predefinita questo modello predefinito offre pagine Home, contatto e sulle. Inoltre fornisce il supporto per registrare e accedere e collegamenti a Facebook e Twitter. Il passaggio successivo è modificare il funzionamento di questa applicazione e un po' informazioni su ASP.NET MVC. Chiudere il browser e modificare codice.
 
 > [!div class="step-by-step"]
-> [Successivo](adding-a-controller.md)
+> [avanti](adding-a-controller.md)

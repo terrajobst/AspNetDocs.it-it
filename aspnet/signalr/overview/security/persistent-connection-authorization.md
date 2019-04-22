@@ -12,7 +12,7 @@ ms.openlocfilehash: 9399addc76b7ba0844efe5b935d16edfdd9ec9f0
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59384987"
 ---
 # <a name="authentication-and-authorization-for-signalr-persistent-connections"></a>Autenticazione e autorizzazione per le connessioni persistenti di SignalR

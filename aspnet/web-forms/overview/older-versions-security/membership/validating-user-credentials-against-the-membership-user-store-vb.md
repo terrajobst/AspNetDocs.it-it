@@ -12,7 +12,7 @@ ms.openlocfilehash: 98869574adb8ac85a2b6dad8db2a583e013150fe
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59393177"
 ---
 # <a name="validating-user-credentials-against-the-membership-user-store-vb"></a>Convalida delle credenziali utente rispetto all'archivio utente di appartenenza (VB)
@@ -43,7 +43,7 @@ Il `SqlMembershipProvider` convalida le credenziali fornite per ottenere la pass
 È possibile aggiornare la pagina di accesso (~ /`Login.aspx`) in modo che convalida le credenziali specificate nell'archivio utente framework di appartenenza. Abbiamo creato questa pagina di accesso nel <a id="Tutorial02"> </a> [ *una panoramica dell'autenticazione basata su form* ](../introduction/an-overview-of-forms-authentication-vb.md) esercitazione, creare un'interfaccia con due caselle di testo per il nome utente e password, un Memorizza account casella di controllo e un pulsante di accesso (vedere la figura 1). Il codice di convalida delle credenziali immesse in un elenco hardcoded di coppie di nome utente e password (Scott/password Jisun/password e Sam/password). Nel <a id="Tutorial03"> </a> [ *configurazione dell'autenticazione form e argomenti avanzati* ](../introduction/forms-authentication-configuration-and-advanced-topics-vb.md) esercitazione abbiamo aggiornato il codice della pagina di accesso per memorizzare informazioni aggiuntive nei moduli ticket di autenticazione `UserData` proprietà.
 
 
-[![TInterfaccia include due caselle di testo della pagina di accesso he, un controllo CheckBoxList e un pulsante](validating-user-credentials-against-the-membership-user-store-vb/_static/image2.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image1.png)
+[![Interfaccia di pagina di accesso include due caselle di testo, un controllo CheckBoxList e un pulsante](validating-user-credentials-against-the-membership-user-store-vb/_static/image2.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image1.png)
 
 **Figura 1**: Interfaccia include due caselle di testo della pagina di accesso, un controllo CheckBoxList e un pulsante ([fare clic per visualizzare l'immagine con dimensioni normali](validating-user-credentials-against-the-membership-user-store-vb/_static/image3.png))
 
@@ -86,7 +86,7 @@ Il [controllo di accesso Web](https://msdn.microsoft.com/library/system.web.ui.w
 Aggiorniamo `Login.aspx`, sostituendo l'interfaccia creato manualmente e scrivere il codice con un controllo di accesso. Iniziare rimuovendo il markup esistente e scrivere il codice `Login.aspx`. Si può eliminarlo direttamente o semplicemente impostarlo come commento. Per impostare come commento markup dichiarativo, racchiuderlo tra il `<%--` e `--%>` delimitatori. È possibile immettere manualmente questi delimitatori o, come illustrato nella figura 2, è possibile selezionare il testo da impostare come commento e quindi il commento l'icona di righe selezionate nella barra degli strumenti. Analogamente, è possibile utilizzare il commento l'icona di righe selezionate come commento il codice selezionato nella classe code-behind.
 
 
-[![Comment Out the esistente Markup dichiarativo e codice sorgente in Login. aspx](validating-user-credentials-against-the-membership-user-store-vb/_static/image5.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image4.png)
+[![Commento di Markup dichiarativo esistente e il codice sorgente in Login. aspx](validating-user-credentials-against-the-membership-user-store-vb/_static/image5.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image4.png)
 
 **Figura 2**: Commento Out the esistente Markup dichiarativo e codice sorgente in Login. aspx ([fare clic per visualizzare l'immagine con dimensioni normali](validating-user-credentials-against-the-membership-user-store-vb/_static/image6.png))
 
@@ -98,7 +98,7 @@ Aggiorniamo `Login.aspx`, sostituendo l'interfaccia creato manualmente e scriver
 Successivamente, trascinare un controllo di accesso dalla casella degli strumenti sulla pagina e impostare relativi `ID` proprietà `myLogin`. A questo punto la schermata dovrebbe essere simile alla figura 3. Si noti che l'interfaccia predefinita del controllo di accesso include i controlli casella di testo per il nome utente e password, un memorizza dati per la volta successiva che la casella di controllo e un pulsante nel registro. Sono inoltre disponibili `RequiredFieldValidator` controlli per le due caselle di testo.
 
 
-[![Aun controllo di accesso alla pagina gg](validating-user-credentials-against-the-membership-user-store-vb/_static/image8.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image7.png)
+[![Aggiungere un controllo di accesso alla pagina](validating-user-credentials-against-the-membership-user-store-vb/_static/image8.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image7.png)
 
 **Figura 3**: Aggiungere un controllo di accesso alla pagina ([fare clic per visualizzare l'immagine con dimensioni normali](validating-user-credentials-against-the-membership-user-store-vb/_static/image9.png))
 
@@ -115,7 +115,7 @@ Per determinare la pagina appropriata per reindirizzare l'utente al momento di u
 Figura 4 illustra come il controllo di accesso utilizza questi quattro parametri per poi arrivare alla propria decisione pagina appropriata.
 
 
-[![Aun controllo di accesso alla pagina gg](validating-user-credentials-against-the-membership-user-store-vb/_static/image11.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image10.png)
+[![Aggiungere un controllo di accesso alla pagina](validating-user-credentials-against-the-membership-user-store-vb/_static/image11.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image10.png)
 
 **Figura 4**: Aggiungere un controllo di accesso alla pagina ([fare clic per visualizzare l'immagine con dimensioni normali](validating-user-credentials-against-the-membership-user-store-vb/_static/image12.png))
 
@@ -145,7 +145,7 @@ Riepilogo impostazioni delle proprietà del controllo di accesso, impostando il 
 Dopo aver apportato queste modifiche delle proprietà, l'account di accesso markup dichiarativo e l'aspetto dovrebbe essere simile a quella mostrata nella figura 5.
 
 
-[![TValori dettare un suo aspetto le proprietà del controllo di accesso he](validating-user-credentials-against-the-membership-user-store-vb/_static/image14.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image13.png)
+[![I valori delle proprietà del controllo di accesso determinano l'aspetto del controllo](validating-user-credentials-against-the-membership-user-store-vb/_static/image14.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image13.png)
 
 **Figura 5**: I valori determinano aspetto delle proprietà del controllo di accesso Its ([fare clic per visualizzare l'immagine con dimensioni normali](validating-user-credentials-against-the-membership-user-store-vb/_static/image15.png))
 
@@ -164,7 +164,7 @@ Per portare a termine la prima attività, è necessario convertire il controllo 
 Aggiorniamo il controllo di accesso in modo che richiede agli utenti il nome utente, password e l'indirizzo di posta elettronica e l'utente viene autenticato solo se l'indirizzo di posta elettronica fornito corrisponde al proprio indirizzo di posta elettronica sul file. È innanzitutto necessario convertire interfaccia del controllo account di accesso a un modello. Dallo Smart Tag del controllo di accesso, scegliere la funzione Convert per l'opzione del modello.
 
 
-[![Cil controllo di accesso a un modello onverti](validating-user-credentials-against-the-membership-user-store-vb/_static/image17.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image16.png)
+[![Convertire il controllo di accesso a un modello](validating-user-credentials-against-the-membership-user-store-vb/_static/image17.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image16.png)
 
 **Figura 6**: Convertire un modello di controllo di accesso ([fare clic per visualizzare l'immagine con dimensioni normali](validating-user-credentials-against-the-membership-user-store-vb/_static/image18.png))
 
@@ -176,7 +176,7 @@ Aggiorniamo il controllo di accesso in modo che richiede agli utenti il nome ute
 Conversione di controllo di accesso a un modello aggiunge un `LayoutTemplate` al markup dichiarativo del controllo con gli elementi HTML e controlli Web che definisce l'interfaccia utente. Come illustrato nella figura 7, convertendo il controllo a un modello rimuove un numero di proprietà dalla finestra delle proprietà, ad esempio `TitleText`, `CreateUserUrl`e così via, poiché i valori delle proprietà vengono ignorati quando si usa un modello.
 
 
-[![FProprietà ewer sono che disponibili quando il controllo di accesso viene convertito in un modello](validating-user-credentials-against-the-membership-user-store-vb/_static/image20.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image19.png)
+[![Meno proprietà sono che disponibili quando il controllo di accesso viene convertito in un modello](validating-user-credentials-against-the-membership-user-store-vb/_static/image20.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image19.png)
 
 **Figura 7**: Meno proprietà sono disponibili quando il controllo di accesso viene convertito in un modello ([fare clic per visualizzare l'immagine con dimensioni normali](validating-user-credentials-against-the-membership-user-store-vb/_static/image21.png))
 
@@ -190,7 +190,7 @@ Per raccogliere l'indirizzo di posta elettronica del visitatore, è necessario a
 Dopo aver aggiunto il `Email` nella casella di testo, visitare la pagina tramite un browser. Come illustrato nella figura 8, interfaccia utente del controllo di accesso include ora una terza casella di testo.
 
 
-[![TControllo degli accessi ha ora include una casella di testo per indirizzo di posta elettronica dell'utente](validating-user-credentials-against-the-membership-user-store-vb/_static/image23.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image22.png)
+[![Il controllo di accesso ora include una casella di testo per l'indirizzo di posta elettronica dell'utente](validating-user-credentials-against-the-membership-user-store-vb/_static/image23.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image22.png)
 
 **Figura 8**: Il controllo di accesso ora include una casella di testo per l'indirizzo di posta elettronica dell'utente ([fare clic per visualizzare l'immagine con dimensioni normali](validating-user-credentials-against-the-membership-user-store-vb/_static/image24.png))
 
@@ -208,7 +208,7 @@ Se le credenziali specificate sono valide, quindi viene creato il ticket di aute
 Figura 9 offre un diagramma di flusso del flusso di lavoro autenticazione.
 
 
-[![Tflusso di lavoro di autenticazione del controllo di accesso he](validating-user-credentials-against-the-membership-user-store-vb/_static/image26.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image25.png)
+[![Flusso di lavoro di autenticazione del controllo di accesso](validating-user-credentials-against-the-membership-user-store-vb/_static/image26.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image25.png)
 
 **Figura 9**: Flusso di lavoro di autenticazione del controllo di accesso ([fare clic per visualizzare l'immagine con dimensioni normali](validating-user-credentials-against-the-membership-user-store-vb/_static/image27.png))
 
@@ -247,7 +247,7 @@ Il codice seguente implementa questi due controlli. Se entrambi passa, quindi `e
 Con questo codice, tentare di accedere come un utente valido, immettere la correttezza del nome utente, password e l'indirizzo di posta elettronica. Provare di nuovo, ma questa volta intenzionalmente usare un indirizzo di posta elettronica non corretto (vedere la figura 10). Infine, è possibile provarlo una terza volta con un nome utente inesistente. Nel primo caso è necessario essere è riuscito ad accedere al sito, ma negli ultimi due casi verrà visualizzato il messaggio di credenziali non valide del controllo di accesso.
 
 
-[![TIto non potrà accedere quando si specifica un indirizzo di posta elettronica errato](validating-user-credentials-against-the-membership-user-store-vb/_static/image29.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image28.png)
+[![Non è possibile accedere tito quando si specifica un indirizzo di posta elettronica non corretto](validating-user-credentials-against-the-membership-user-store-vb/_static/image29.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image28.png)
 
 **Figura 10**: Tito Impossibile Log In quando fornisce un indirizzo di posta elettronica non corretto ([fare clic per visualizzare l'immagine con dimensioni normali](validating-user-credentials-against-the-membership-user-store-vb/_static/image30.png))
 
@@ -280,7 +280,7 @@ Il codice sopra riportato viene avviato impostando il controllo di accesso `Fail
 Per testare questo codice, intenzionalmente tenta di accedere come un utente esistente, ma usare una password errata. Eseguire l'operazione cinque volte in una riga all'interno di un intervallo di tempo di 10 minuti e l'account verrà bloccato. Come illustrato nella figura 11, accesso successivi tentativi verranno viene sempre esito negativo (anche con la password corretta), ma verranno ora visualizzati più descrittivo all'account è stato bloccato a causa di troppi tentativi di accesso non è valido. Contattare l'amministratore per richiedere il messaggio di sbloccare account.
 
 
-[![Tè stato bloccato e Ito eseguita troppo numerosi tentativi non validi accesso](validating-user-credentials-against-the-membership-user-store-vb/_static/image32.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image31.png)
+[![Tito eseguiti troppi tentativi di accesso non è valido ed è stato bloccato](validating-user-credentials-against-the-membership-user-store-vb/_static/image32.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image31.png)
 
 **Figura 11**: Tito eseguita troppo numerosi tentativi non validi account di accesso ed è stato bloccato ([fare clic per visualizzare l'immagine con dimensioni normali](validating-user-credentials-against-the-membership-user-store-vb/_static/image33.png))
 

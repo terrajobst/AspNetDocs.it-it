@@ -12,7 +12,7 @@ ms.openlocfilehash: f1875ae95d79ec2a6762a547aabfbd03e0930b2c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59386502"
 ---
 # <a name="using-modalpopup-with-a-repeater-control-vb"></a>Uso di ModalPopup con un controllo Repeater (VB)
@@ -49,7 +49,7 @@ Per rendere il popup di lavorare all'interno di repeater, il `ModalPopupExtender
 Quindi, ogni elemento nell'origine dati viene visualizzato con un pulsante accanto a esso che attiva la finestra popup modale.
 
 
-[![Tpopup modale Gianni può essere attivato per ogni voce di origine dati](using-modalpopup-with-a-repeater-control-vb/_static/image2.png)](using-modalpopup-with-a-repeater-control-vb/_static/image1.png)
+[![La finestra popup modale può essere attivato per ogni voce di origine dati](using-modalpopup-with-a-repeater-control-vb/_static/image2.png)](using-modalpopup-with-a-repeater-control-vb/_static/image1.png)
 
 La finestra popup modale può essere attivato per ogni voce di origine dati ([fare clic per visualizzare l'immagine con dimensioni normali](using-modalpopup-with-a-repeater-control-vb/_static/image3.png))
 

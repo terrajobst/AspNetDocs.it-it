@@ -12,7 +12,7 @@ ms.openlocfilehash: 9ac206edee58542ced24ce89adc3393d7a3c1c37
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59392170"
 ---
 # <a name="debugging-stored-procedures-c"></a>Debug di stored procedure (C#)
@@ -67,7 +67,7 @@ Poiché il `Products_SelectByCategoryID` stored procedure si aspetta un `@Catego
 Dopo aver fornito il valore per il `@CategoryID` parametro, la stored procedure viene eseguita. Tuttavia, anziché tramite l'esecuzione fino al completamento, il debugger interrompe l'esecuzione della prima istruzione. Si noti la freccia gialla nel margine, che indica la posizione corrente nella stored procedure. È possibile visualizzare e modificare i valori dei parametri tramite la finestra Espressioni di controllo o posizionando il puntatore sul nome del parametro nella stored procedure.
 
 
-[![Til Debugger ha bloccato la prima istruzione della Stored Procedure](debugging-stored-procedures-cs/_static/image3.png)](debugging-stored-procedures-cs/_static/image2.png)
+[![Il Debugger ha interrotto la prima istruzione della Stored Procedure](debugging-stored-procedures-cs/_static/image3.png)](debugging-stored-procedures-cs/_static/image2.png)
 
 **Figura 2**: Il Debugger ha interrotto la prima istruzione della Stored Procedure ([fare clic per visualizzare l'immagine con dimensioni normali](debugging-stored-procedures-cs/_static/image4.png))
 
@@ -85,7 +85,7 @@ Durante il debug di una stored procedure direttamente da Esplora Server è utile
 Prima di poter iniziare il debug di stored procedure chiamate dall'applicazione, è necessario indicare all'applicazione web ASP.NET per l'integrazione con il debugger di SQL Server. Avviare facendo clic sul nome del sito Web in Esplora soluzioni (`ASPNET_Data_Tutorial_74_CS`). Scegliere l'opzione di pagine delle proprietà dal menu di scelta rapida, selezionare l'elemento di opzioni di avvio a sinistra e selezionare la casella di controllo di SQL Server nella sezione debugger (vedere la figura 3).
 
 
-[![CControlla la casella di controllo di SQL Server nell'applicazione s pagine delle proprietà](debugging-stored-procedures-cs/_static/image6.png)](debugging-stored-procedures-cs/_static/image5.png)
+[![Casella di controllo di SQL Server nelle pagine delle proprietà dell'applicazione s](debugging-stored-procedures-cs/_static/image6.png)](debugging-stored-procedures-cs/_static/image5.png)
 
 **Figura 3**: Casella di controllo di SQL Server nell'applicazione s pagine delle proprietà ([fare clic per visualizzare l'immagine con dimensioni normali](debugging-stored-procedures-cs/_static/image7.png))
 
@@ -108,7 +108,7 @@ A questo punto l'applicazione ASP.NET è stata configurata per consentire a Visu
 Aprire il `Products_SelectByCategoryID` stored procedure e impostare un punto di interruzione all'inizio del `SELECT` istruzione, fare clic sul margine nella posizione appropriata o posizionando il cursore all'inizio del `SELECT` istruzione e premendo F9. Come illustrato nella figura 4, il punto di interruzione viene visualizzato come un cerchio rosso sul margine.
 
 
-[![Set Stored Procedure di un punto di interruzione nel Products_SelectByCategoryID](debugging-stored-procedures-cs/_static/image9.png)](debugging-stored-procedures-cs/_static/image8.png)
+[![Impostare un punto di interruzione il Products_SelectByCategoryID Stored Procedure](debugging-stored-procedures-cs/_static/image9.png)](debugging-stored-procedures-cs/_static/image8.png)
 
 **Figura 4**: Impostare un punto di interruzione il `Products_SelectByCategoryID` Stored Procedure ([fare clic per visualizzare l'immagine con dimensioni normali](debugging-stored-procedures-cs/_static/image10.png))
 
@@ -126,12 +126,12 @@ Con il set di punti di interruzione e l'opzione di debug dell'applicazione abili
 Il `Products_SelectByCategoryID` stored procedure è stata creata nel [utilizzando Stored procedure esistenti per DataSet tipizzata s TableAdapter](using-existing-stored-procedures-for-the-typed-dataset-s-tableadapters-cs.md) esercitazione. La pagina web corrispondente (`~/AdvancedDAL/ExistingSprocs.aspx`) contiene GridView che visualizza i risultati restituiti dalla stored procedure. Visitare questa pagina tramite il browser. Al raggiungimento di pagina, il punto di interruzione il `Products_SelectByCategoryID` verranno raggiunti stored procedure e il controllo restituito a Visual Studio. Proprio come nel passaggio 1, è possibile esaminare le istruzioni s stored procedure e la visualizzazione e modificare i valori dei parametri.
 
 
-[![Tegli ExistingSprocs.aspx pagina Visualizza inizialmente le bibite](debugging-stored-procedures-cs/_static/image13.png)](debugging-stored-procedures-cs/_static/image12.png)
+[![La pagina ExistingSprocs.aspx Visualizza inizialmente le bibite](debugging-stored-procedures-cs/_static/image13.png)](debugging-stored-procedures-cs/_static/image12.png)
 
 **Figura 6**: Il `ExistingSprocs.aspx` pagina Visualizza inizialmente le bibite ([fare clic per visualizzare l'immagine con dimensioni normali](debugging-stored-procedures-cs/_static/image14.png))
 
 
-[![Tegli Stored Procedure s punto di interruzione viene raggiunto](debugging-stored-procedures-cs/_static/image16.png)](debugging-stored-procedures-cs/_static/image15.png)
+[![La Stored Procedure s è stato raggiunto punto di interruzione](debugging-stored-procedures-cs/_static/image16.png)](debugging-stored-procedures-cs/_static/image15.png)
 
 **Figura 7**: Gli oggetti Stored Procedure viene raggiunto punto di interruzione ([fare clic per visualizzare l'immagine con dimensioni normali](debugging-stored-procedures-cs/_static/image17.png))
 
@@ -139,12 +139,12 @@ Il `Products_SelectByCategoryID` stored procedure è stata creata nel [utilizzan
 Come illustrato nella figura 7, il valore di finestra Espressioni di controllo di `@CategoryID` parametro è 1. Infatti, il `ExistingSprocs.aspx` pagina Visualizza inizialmente i prodotti della categoria beverages, che ha un `CategoryID` valore pari a 1. Scegliere una categoria diversa nell'elenco a discesa. Questa operazione causa un postback ed esegue nuovamente il `Products_SelectByCategoryID` stored procedure. Il punto di interruzione viene raggiunto, ma questa volta il `@CategoryID` valore del parametro s riflette l'elemento di elenco selezionato di elenco a discesa s `CategoryID`.
 
 
-[![CScegliere una categoria diversa dall'elenco a discesa scegliere](debugging-stored-procedures-cs/_static/image19.png)](debugging-stored-procedures-cs/_static/image18.png)
+[![Scegliere una categoria diversa nell'elenco a discesa](debugging-stored-procedures-cs/_static/image19.png)](debugging-stored-procedures-cs/_static/image18.png)
 
 **Figura 8**: Scegliere una categoria diversa dall'elenco a discesa elenco ([fare clic per visualizzare l'immagine con dimensioni normali](debugging-stored-procedures-cs/_static/image20.png))
 
 
-[![Tegli @CategoryID parametro riflette la categoria selezionata dalla pagina Web](debugging-stored-procedures-cs/_static/image22.png)](debugging-stored-procedures-cs/_static/image21.png)
+[![Il @CategoryID parametro riflette la categoria selezionata dalla pagina Web](debugging-stored-procedures-cs/_static/image22.png)](debugging-stored-procedures-cs/_static/image21.png)
 
 **Figura 9**: Il `@CategoryID` parametro riflette la categoria selezionata dalla pagina Web ([fare clic per visualizzare l'immagine con dimensioni normali](debugging-stored-procedures-cs/_static/image23.png))
 

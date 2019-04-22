@@ -12,14 +12,14 @@ ms.openlocfilehash: 97a60274d9306ea0ee332fcc1ab9e487355dbedb
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59384942"
 ---
 # <a name="creating-a-build-definition-that-supports-deployment"></a>Creazione di una definizione di compilazione che supporta la distribuzione
 
 da [Jason Lee](https://github.com/jrjlee)
 
-[Scarica il PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Scaricare PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Se si desidera eseguire qualsiasi tipo di compilazione in Team Foundation Server (TFS) 2010, è necessario creare una definizione di compilazione all'interno del progetto team. Questo argomento descrive come creare una nuova definizione di compilazione in TFS e come controllare la distribuzione web come parte del processo di compilazione in Team Build.
 

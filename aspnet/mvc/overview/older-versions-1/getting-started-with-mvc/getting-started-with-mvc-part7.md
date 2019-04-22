@@ -12,7 +12,7 @@ ms.openlocfilehash: 3db6947f36eb51b41d929f8c7d8835a95db8ea75
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59392352"
 ---
 # <a name="adding-validation-to-the-model"></a>Aggiunta della convalida al modello
@@ -65,7 +65,7 @@ Ecco il codice illustrato all'interno dell'IDE.
 
 Eseguire l'applicazione e accedere di nuovo /Movies/Create e fare clic su Crea senza dover immettere tutti i dati. I messaggi di errore vengono visualizzati immediatamente senza la pagina flash che viene associato l'invio di dati fino al server. Si tratta poiché ASP.NET MVC è ora la convalida dell'input sia il client (tramite JavaScript) e nel server.
 
-[![Crea - Windows Internet Explorer](getting-started-with-mvc-part7/_static/image6.png)](getting-started-with-mvc-part7/_static/image5.png)
+[![Create - Windows Internet Explorer](getting-started-with-mvc-part7/_static/image6.png)](getting-started-with-mvc-part7/_static/image5.png)
 
 Ciò è bene Questo punto, aggiungere una colonna aggiuntiva al database.
 

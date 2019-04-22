@@ -12,7 +12,7 @@ ms.openlocfilehash: ca47f6fe6d55153354d38fcf1ba5e844215279b2
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59389037"
 ---
 # <a name="aspnet-mvc-4-entity-framework-scaffolding-and-migrations"></a>Scaffolding e migrazioni di ASP.NET MVC 4 Entity Framework
@@ -231,7 +231,7 @@ In questa attività si aggiornerà il database tramite migrazioni di Entity Fram
 
     ![L'aggiornamento del Database](aspnet-mvc-4-entity-framework-scaffolding-and-migrations/_static/image17.png "l'aggiornamento del Database")
 
-    *Aggiornamento del database*
+    *L'aggiornamento del Database*
 
     Verrà aggiunta la **MiddleName** colonna il **persone** tabella corrisponde alla definizione corrente del **persona** classe.
 9. Dopo aver aggiornato il database, fare doppio clic nella cartella Controller e selezionare **Add | Controller** per aggiungere nuovamente il controller persona (completa con gli stessi valori). Verranno aggiornate le visualizzazioni aggiunta del nuovo attributo e i metodi esistenti.

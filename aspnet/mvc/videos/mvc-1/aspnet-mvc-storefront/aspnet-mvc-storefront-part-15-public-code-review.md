@@ -12,7 +12,7 @@ ms.openlocfilehash: c8aa86eac1823cf59b06bdb297ebe018d9af8a91
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59390805"
 ---
 # <a name="aspnet-mvc-storefront-part-15-public-code-review"></a>ASP.NET MVC Storefront - Parte 15: Revisione del codice pubblica

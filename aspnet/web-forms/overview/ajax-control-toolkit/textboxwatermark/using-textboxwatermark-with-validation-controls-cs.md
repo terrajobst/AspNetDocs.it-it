@@ -12,7 +12,7 @@ ms.openlocfilehash: f833868d9dbf51a9714b9bbe6730a24badc169d0
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59391013"
 ---
 # <a name="using-textboxwatermark-with-validation-controls-c"></a>Uso di TextBoxWatermark con i controlli di convalida (C#)
@@ -49,7 +49,7 @@ Infine, aggiungere codice lato server per il testo nel campo di output se nessun
 [!code-aspx[Main](using-textboxwatermark-with-validation-controls-cs/samples/sample4.aspx)]
 
 
-[![Tvalidator he Visualizza un errore che non è presente testo nel campo](using-textboxwatermark-with-validation-controls-cs/_static/image2.png)](using-textboxwatermark-with-validation-controls-cs/_static/image1.png)
+[![Visualizza un errore di convalida che non vi sia alcun testo nel campo](using-textboxwatermark-with-validation-controls-cs/_static/image2.png)](using-textboxwatermark-with-validation-controls-cs/_static/image1.png)
 
 Visualizza un errore di convalida che non vi sia alcun testo nel campo ([fare clic per visualizzare l'immagine con dimensioni normali](using-textboxwatermark-with-validation-controls-cs/_static/image3.png))
 

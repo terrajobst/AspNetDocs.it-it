@@ -12,7 +12,7 @@ ms.openlocfilehash: 6497eed7f70d76d9c4eb13b3d08ab7abe1f42b5d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59393405"
 ---
 # <a name="visual-studio-vnext-videos-css-editor-color-picker"></a>Visual Studio vNext video: Selezione colori dell'editor CSS

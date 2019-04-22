@@ -12,7 +12,7 @@ ms.openlocfilehash: a1218b1fb5a8ee28ea6ee3d3c5af979e86821ed7
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59391195"
 ---
 # <a name="advanced-entity-framework-scenarios-for-an-mvc-web-application-10-of-10"></a>Scenari avanzati Entity Framework per un'applicazione Web MVC (10 di 10)
@@ -316,8 +316,7 @@ Una delle cause di questo problema è errori di convalida quando il `Seed` esecu
 
 Messaggio di errore:
 
-*errore HTTP 500.19 - Errore del server interno  
-Non è possibile accedere alla pagina richiesta perché i dati di configurazione per la pagina non sono validi.*
+*Errore HTTP 500.19 - errore interno del Server alla pagina richiesta non è accessibile perché i dati di configurazione per la pagina non sono validi.*
 
 Soluzione:
 
@@ -327,7 +326,7 @@ Soluzione:
 
 Messaggio di errore:
 
-*Si è verificato un errore di rete o specifico dell'istanza mentre si cercava di stabilire una connessione con SQL Server. Il server non è stato trovato o non è accessibile. Verificare che il nome dell'istanza sia corretto e che SQL Server sia configurato in modo da consentire connessioni remote. (provider: Interfacce di rete SQL, errore: 26 - Errore nell'individuazione del server/dell'istanza specificati)*
+*Si è verificato un errore relativo alla rete o specifico dell'istanza mentre veniva stabilita una connessione a SQL Server. Il server non è stato trovato o non è accessibile. Verificare che il nome dell'istanza sia corretto e che SQL Server sia configurato per consentire le connessioni remote. (provider: Interfacce di rete SQL, errore: 26 - errore nell'individuazione del Server / dell'istanza specificati)*
 
 Soluzione:
 

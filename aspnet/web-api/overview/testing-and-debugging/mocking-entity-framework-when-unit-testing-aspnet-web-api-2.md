@@ -12,7 +12,7 @@ ms.openlocfilehash: 3dddc1fd38a5384e40f9fa109da9d8c1424ef01a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59387256"
 ---
 # <a name="mocking-entity-framework-when-unit-testing-aspnet-web-api-2"></a>Comportamento fittizio di Entity Framework quando gli Unit test ASP.NET Web API 2
@@ -45,7 +45,7 @@ Di seguito sono elencate le diverse sezioni di questo argomento:
 - [Installare i pacchetti NuGet nel progetto di test](#testpackages)
 - [Creare il contesto di test](#testcontext)
 - [Creare test](#tests)
-- [Esegui test](#runtests)
+- [Eseguire i test](#runtests)
 
 Se sono già state completate la procedura descritta in [Unit Testing with ASP.NET Web API 2](unit-testing-with-aspnet-web-api.md), è possibile passare alla sezione [aggiungere il controller](#controller).
 

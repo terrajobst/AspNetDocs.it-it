@@ -13,7 +13,7 @@ ms.openlocfilehash: 3ba7f2d186e6f0837a32f69f964cec19fe625953
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59391481"
 ---
 # <a name="build-restful-apis-with-aspnet-web-api"></a>Compilare le API RESTful con l'API Web ASP.NET

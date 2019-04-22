@@ -12,7 +12,7 @@ ms.openlocfilehash: fa05645db9d43a836cc75b399153dd2e2c288f7c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59388766"
 ---
 # <a name="configuring-the-production-web-application-to-use-the-production-database-c"></a>Configurazione dell'applicazione Web di produzione per l'uso del database di produzione (C#)
@@ -53,7 +53,7 @@ Le opzioni di stringa di connessione consentite variano a seconda del database a
 Aprire Visual Studio e quindi passare alla finestra di Esplora Server (in Visual Web Developer, questa finestra è denominata Database Explorer). Fare doppio clic sull'opzione connessioni dati e scegliere l'opzione Aggiungi connessione dal menu di scelta rapida. Verrà visualizzata la procedura guidata illustrata nella figura 1. Scegliere l'origine dati appropriata e fare clic su Continua.
 
 
-[![Cimpostare come aggiungere un nuovo Database in Esplora Server](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image2.jpg)](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image1.jpg) 
+[![Scegliere di aggiungere un nuovo Database in Esplora Server](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image2.jpg)](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image1.jpg) 
 
 **Figura 1**: Scegliere di aggiungere un nuovo Database in Esplora Server ([fare clic per visualizzare l'immagine con dimensioni normali](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image3.jpg))
 
@@ -61,7 +61,7 @@ Aprire Visual Studio e quindi passare alla finestra di Esplora Server (in Visual
 Successivamente, specificare i vari database le informazioni di connessione (vedere la figura 2). Quando si è effettuata l'iscrizione con la società di hosting web si devono fornite informazioni su come connettersi al database - il nome del server di database, il nome del database, il nome utente e password da usare per connettersi al database e così via. Dopo aver immesso queste informazioni fare clic su OK per completare questa procedura guidata e aggiungere il database in Esplora Server.
 
 
-[![Sspecificare le informazioni di connessione di Database](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image5.jpg)](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image4.jpg) 
+[![Specificare le informazioni di connessione di Database](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image5.jpg)](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image4.jpg) 
 
 **Figura 2**: Specificare le informazioni di connessione di Database ([fare clic per visualizzare l'immagine con dimensioni normali](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image6.jpg))
 
@@ -91,7 +91,7 @@ A meno che non si dispone di un flusso di lavoro di distribuzione più formale, 
 Dopo aver distribuito il sito alla produzione, visitare il sito di produzione tramite il browser. È consigliabile vedere e sfruttare la stessa esperienza utente durante l'esecuzione locale dell'applicazione basate sui dati. Naturalmente quando si visita il sito Web in produzione al sito si basa su server di database di produzione, mentre visitando il sito Web nell'ambiente di sviluppo viene utilizzato il database in fase di sviluppo. Figura 3 mostra le *insegnare manualmente ASP.NET 3.5 in 24 ore* esaminare pagina dal sito Web nell'ambiente di produzione (si noti l'URL nella barra degli indirizzi del browser s).
 
 
-[![TApplicazione guidata dai dati è ora disponibile in produzione!](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image8.jpg)](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image7.jpg) 
+[![Le applicazioni guidate dai dati è ora disponibile in produzione.](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image8.jpg)](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image7.jpg) 
 
 **Figura 3**: Le applicazioni guidate dai dati è ora disponibile in produzione. ([Fare clic per visualizzare l'immagine con dimensioni normali](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image9.jpg))
 

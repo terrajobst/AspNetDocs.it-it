@@ -12,14 +12,14 @@ ms.openlocfilehash: eea0761ac85693553808e581a8712c822d19c226
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59390480"
 ---
 # <a name="deploying-membership-databases-to-enterprise-environments"></a>Distribuzione dei database di appartenenza negli ambienti aziendali
 
 da [Jason Lee](https://github.com/jrjlee)
 
-[Scarica il PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Scaricare PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Questo argomento illustra le considerazioni principali e le sfide, occorre superare quando i database (più comunemente detto database di appartenenza) negli ambienti di test, gestione temporanea o produzione dei servizi è eseguire il provisioning dell'applicazione ASP.NET. Vengono inoltre descritti gli approcci che è possibile usare per soddisfare questi requisiti.
 
