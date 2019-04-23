@@ -12,7 +12,7 @@ ms.openlocfilehash: 70290141f08da51a76d578efcdf63d7d1375936a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59422707"
 ---
 # <a name="how-do-i-save-and-load-view-state-information-for-a-custom-web-server-control"></a>[Procedura:] Salva e informazioni sullo stato di visualizzazione di carico per un controllo Server Web personalizzato

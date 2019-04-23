@@ -12,7 +12,7 @@ ms.openlocfilehash: ea29823446cc1339003160bd3e945bde1af42473
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59421368"
 ---
 # <a name="how-do-i-send-email-asynchronously-with-aspnet"></a>[Procedura:] Invio di posta elettronica in modo asincrono con ASP.NET

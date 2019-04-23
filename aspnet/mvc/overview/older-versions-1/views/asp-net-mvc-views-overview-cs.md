@@ -12,7 +12,7 @@ ms.openlocfilehash: b4c35761f9cd44c866242cfe6f4f2d924e81d754
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59421329"
 ---
 # <a name="aspnet-mvc-views-overview-c"></a>Panoramica delle visualizzazioni ASP.NET MVC (C#)
@@ -104,7 +104,7 @@ Ad esempio, la visualizzazione nel listato 4 sfrutta le tre gli helper HTML, gli
 [!code-aspx[Main](asp-net-mvc-views-overview-cs/samples/sample4.aspx)]
 
 
-[![Tfinestra di dialogo Nuovo progetto di he](asp-net-mvc-views-overview-cs/_static/image1.jpg)](asp-net-mvc-views-overview-cs/_static/image1.png)
+[![La finestra di dialogo Nuovo progetto](asp-net-mvc-views-overview-cs/_static/image1.jpg)](asp-net-mvc-views-overview-cs/_static/image1.png)
 
 **Figura 01**: Un modulo di accesso standard ([fare clic per visualizzare l'immagine con dimensioni normali](asp-net-mvc-views-overview-cs/_static/image2.png))
 
@@ -133,7 +133,7 @@ Il controller di proprietà ViewData rappresenta una raccolta di coppie nome / v
 
 La visualizzazione nel listato 7 recupera il messaggio da visualizzare i dati ed esegue il rendering il messaggio al browser.
 
-**Listato 7 - \Views\Product\Index.aspx**
+**Listing 7 -- \Views\Product\Index.aspx**
 
 [!code-aspx[Main](asp-net-mvc-views-overview-cs/samples/sample7.aspx)]
 
@@ -150,4 +150,4 @@ Nel listato 7, abbiamo sfruttato visualizzare i dati di passare un messaggio str
 Questa esercitazione è fornita una breve introduzione a visualizzazioni ASP.NET MVC, visualizzare i dati e gli helper HTML. Nella prima sezione, è stato descritto come aggiungere nuove visualizzazioni per il progetto. Si è appreso che è necessario aggiungere una visualizzazione nella cartella corretta per chiamarla da un controller specifico. Successivamente, abbiamo discusso l'argomento di helper HTML. Si è appreso come helper HTML consentono di generare in modo semplice il contenuto HTML standard. Infine, si è appreso come sfruttare i vantaggi di visualizzare i dati per passare i dati da un controller a una visualizzazione.
 
 > [!div class="step-by-step"]
-> [Successivo](creating-custom-html-helpers-cs.md)
+> [avanti](creating-custom-html-helpers-cs.md)

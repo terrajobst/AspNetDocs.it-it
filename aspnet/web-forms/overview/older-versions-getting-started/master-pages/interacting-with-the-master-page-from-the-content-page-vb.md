@@ -12,7 +12,7 @@ ms.openlocfilehash: 1326d5453f205201af850a30c17f509645e15cb9
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59422200"
 ---
 # <a name="interacting-with-the-master-page-from-the-content-page-vb"></a>Interazione con la pagina master dalla pagina di contenuto (VB)
@@ -61,7 +61,7 @@ Passaggio 1 illustra la visualizzazione di cinque più di recente aggiunta prodo
 Aprire la pagina master Site. master e aggiungere un'etichetta e un controllo GridView per il `leftContent` `<div>`. Cancellare il contenuto dell'etichetta `Text` proprietà, impostata relativo `EnableViewState` proprietà `False`e la relativa `ID` proprietà `GridMessage`; impostare il controllo GridView `ID` proprietà `RecentProducts`. Dalla finestra di progettazione, quindi espandere la smart tag di GridView e scegliere di associarlo a una nuova origine dati. Verrà avviata la configurazione guidata origine dati. Perché il database di Northwind nel `App_Data` cartella è un database di Microsoft SQL Server, scegliere di creare un SqlDataSource selezionando (vedere la figura 1), assegnare un nome SqlDataSource `RecentProductsDataSource`.
 
 
-[![Bind GridView per un controllo SqlDataSource denominato RecentProductsDataSource](interacting-with-the-master-page-from-the-content-page-vb/_static/image2.png)](interacting-with-the-master-page-from-the-content-page-vb/_static/image1.png)
+[![Associare il controllo GridView a un controllo SqlDataSource denominato RecentProductsDataSource](interacting-with-the-master-page-from-the-content-page-vb/_static/image2.png)](interacting-with-the-master-page-from-the-content-page-vb/_static/image1.png)
 
 **Figura 01**: Associare un controllo SqlDataSource denominato GridView `RecentProductsDataSource` ([fare clic per visualizzare l'immagine con dimensioni normali](interacting-with-the-master-page-from-the-content-page-vb/_static/image3.png))
 
@@ -69,7 +69,7 @@ Aprire la pagina master Site. master e aggiungere un'etichetta e un controllo Gr
 Il passaggio successivo viene chiesto di specificare quali database a cui connettersi. Scegliere il `NORTHWIND.MDF` file dall'elenco a discesa scegliere nel database e fare clic su Avanti. Poiché questa è la prima volta che abbiamo usato in questo database, offrirà la procedura guidata archiviare la stringa di connessione in `Web.config`. È di archiviare la stringa di connessione usando il nome `NorthwindConnectionString`.
 
 
-[![CConnetti al Northwind Database](interacting-with-the-master-page-from-the-content-page-vb/_static/image5.png)](interacting-with-the-master-page-from-the-content-page-vb/_static/image4.png)
+[![Connettersi al Database Northwind](interacting-with-the-master-page-from-the-content-page-vb/_static/image5.png)](interacting-with-the-master-page-from-the-content-page-vb/_static/image4.png)
 
 **Figura 02**: Connettersi al Northwind Database ([fare clic per visualizzare l'immagine con dimensioni normali](interacting-with-the-master-page-from-the-content-page-vb/_static/image6.png))
 
@@ -87,7 +87,7 @@ Poiché si vuole restituire che solo le cinque aggiunto più di recente prodotti
 Il `TOP 5` (parola chiave) restituisce solo i primi cinque record della query. Il `Products` chiave primaria della tabella, `ProductID`, è un `IDENTITY` colonna, che potremo verificare che ogni nuovo prodotto aggiunto alla tabella avrà un valore superiore a quello della voce precedente. Pertanto, ordinare i risultati da `ProductID` restituisce i prodotti a partire da più di recente quelle create in ordine decrescente.
 
 
-[![RRendi i cinque più recentemente aggiunto prodotti](interacting-with-the-master-page-from-the-content-page-vb/_static/image8.png)](interacting-with-the-master-page-from-the-content-page-vb/_static/image7.png)
+[![Restituisce i cinque prodotti aggiunti più di recente](interacting-with-the-master-page-from-the-content-page-vb/_static/image8.png)](interacting-with-the-master-page-from-the-content-page-vb/_static/image7.png)
 
 **Figura 03**: Restituisce i cinque più recentemente aggiunto prodotti ([fare clic per visualizzare l'immagine con dimensioni normali](interacting-with-the-master-page-from-the-content-page-vb/_static/image9.png))
 
@@ -102,7 +102,7 @@ Come si può notare, contiene il markup: il controllo Web Label (`GridMessage`);
 Con questo GridView creato e il relativo controllo SqlDataSource è configurato, visitare il sito Web tramite un browser. Come illustrato nella figura 4, è possibile vedere una griglia in basso a sinistra che elenca i cinque più di recente aggiunta prodotti.
 
 
-[![Tegli GridView Visualizza i cinque più recentemente aggiunto prodotti](interacting-with-the-master-page-from-the-content-page-vb/_static/image11.png)](interacting-with-the-master-page-from-the-content-page-vb/_static/image10.png)
+[![GridView Visualizza i cinque prodotti aggiunti più di recente](interacting-with-the-master-page-from-the-content-page-vb/_static/image11.png)](interacting-with-the-master-page-from-the-content-page-vb/_static/image10.png)
 
 **Figura 04**: GridView Visualizza i cinque più recentemente aggiunto prodotti ([fare clic per visualizzare l'immagine con dimensioni normali](interacting-with-the-master-page-from-the-content-page-vb/_static/image12.png))
 
@@ -116,7 +116,7 @@ Con questo GridView creato e il relativo controllo SqlDataSource è configurato,
 L'attività successiva consiste nel creare una pagina di contenuto da cui un utente può aggiungere un nuovo prodotto per il `Products` tabella. Aggiungere una nuova pagina contenuta per il `Admin` cartella denominata `AddProduct.aspx`, assicurandosi di associarlo al `Site.master` pagina master. Figura 5 Mostra Esplora soluzioni dopo l'aggiunta di questa pagina per il sito Web.
 
 
-[![Agg una nuova pagina ASP.NET per la cartella Admin](interacting-with-the-master-page-from-the-content-page-vb/_static/image14.png)](interacting-with-the-master-page-from-the-content-page-vb/_static/image13.png)
+[![Aggiungere una nuova pagina di ASP.NET per la cartella Admin](interacting-with-the-master-page-from-the-content-page-vb/_static/image14.png)](interacting-with-the-master-page-from-the-content-page-vb/_static/image13.png)
 
 **Figura 05**: Aggiungere una nuova pagina ASP.NET per la `Admin` cartella ([fare clic per visualizzare l'immagine con dimensioni normali](interacting-with-the-master-page-from-the-content-page-vb/_static/image15.png))
 
@@ -145,7 +145,7 @@ Dopo aver completato la procedura guidata passa al tag di DetailsView intelligen
 Questo è tutto. È possibile testare questa pagina. Visitare `AddProduct.aspx` tramite un browser, immettere un nome e il prezzo (vedere la figura 6).
 
 
-[![Agg un nuovo prodotto di Database](interacting-with-the-master-page-from-the-content-page-vb/_static/image17.png)](interacting-with-the-master-page-from-the-content-page-vb/_static/image16.png)
+[![Aggiungere un nuovo prodotto al Database](interacting-with-the-master-page-from-the-content-page-vb/_static/image17.png)](interacting-with-the-master-page-from-the-content-page-vb/_static/image16.png)
 
 **Figura 06**: Aggiungere un nuovo prodotto al Database ([fare clic per visualizzare l'immagine con dimensioni normali](interacting-with-the-master-page-from-the-content-page-vb/_static/image18.png))
 
@@ -199,7 +199,7 @@ Il `Master` proprietà restituisce un oggetto di tipo [ `MasterPage` ](https://m
 Ora che abbiamo eseguito il cast di non fortemente tipizzate `Page.Master` proprietà per il tipo di sito è possibile fare riferimento a proprietà e metodi specifici al sito. Come illustrato nella figura 7, la proprietà pubblica `GridMessageText` viene visualizzato nell'elenco a discesa IntelliSense.
 
 
-[![IntelliSense Mostra la pagina di schema proprietà e metodi pubblici](interacting-with-the-master-page-from-the-content-page-vb/_static/image20.png)](interacting-with-the-master-page-from-the-content-page-vb/_static/image19.png)
+[![In IntelliSense vengono mostrate le proprietà pubbliche e i metodi di pagina Master](interacting-with-the-master-page-from-the-content-page-vb/_static/image20.png)](interacting-with-the-master-page-from-the-content-page-vb/_static/image19.png)
 
 **Figura 07**: In IntelliSense vengono mostrate le proprietà pubbliche e i metodi di pagina Master ([fare clic per visualizzare l'immagine con dimensioni normali](interacting-with-the-master-page-from-the-content-page-vb/_static/image21.png))
 
@@ -237,7 +237,7 @@ Il codice riportato sopra Usa entrambi i non fortemente tipizzate `Page.Master` 
 Figura 8 mostra la `AddProduct.aspx` pagina immediatamente dopo un nuovo prodotto - di Scott Soda - è stato aggiunto al database. Si noti che il nome del prodotto appena aggiunte è indicato nell'etichetta della pagina master e che il controllo GridView è stato aggiornato per includere il prodotto e il prezzo.
 
 
-[![TEtichetta della pagina Master he e GridView viene illustrato il prodotto Just-Added](interacting-with-the-master-page-from-the-content-page-vb/_static/image23.png)](interacting-with-the-master-page-from-the-content-page-vb/_static/image22.png)
+[![Etichetta della pagina Master e GridView mostrano il prodotto appena aggiunta](interacting-with-the-master-page-from-the-content-page-vb/_static/image23.png)](interacting-with-the-master-page-from-the-content-page-vb/_static/image22.png)
 
 **Figura 08**: Etichetta della pagina Master e GridView mostrano il prodotto Just-Added ([fare clic per visualizzare l'immagine con dimensioni normali](interacting-with-the-master-page-from-the-content-page-vb/_static/image24.png))
 

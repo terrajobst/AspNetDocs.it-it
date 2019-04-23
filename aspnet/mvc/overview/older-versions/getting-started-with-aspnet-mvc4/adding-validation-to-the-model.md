@@ -12,7 +12,7 @@ ms.openlocfilehash: 266d2e3fda54a9e584622ccd595e41229c96e6b0
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59420744"
 ---
 # <a name="adding-validation-to-the-model"></a>Aggiunta della convalida al modello
@@ -49,7 +49,7 @@ A questo punto aggiornare i `Movie` classe possa sfruttare i vantaggi di integra
 
 Eseguire l'applicazione e si otterrà anche in questo caso l'errore in fase di esecuzione seguenti:
 
-***Il modello supporta il contesto 'MovieDBContext' è stato modificato dal momento della creazione del database. È consigliabile usare migrazioni Code First per aggiornare il database ([https://go.microsoft.com/fwlink/?LinkId=238269](https://go.microsoft.com/fwlink/?LinkId=238269)).)).***
+***Il modello supporta il contesto 'MovieDBContext' è stato modificato dal momento della creazione del database. È consigliabile usare migrazioni Code First per aggiornare il database ([https://go.microsoft.com/fwlink/?LinkId=238269](https://go.microsoft.com/fwlink/?LinkId=238269)).***
 
 Si userà migrations per aggiornare lo schema. Compilare la soluzione e quindi aprire il **Console di gestione pacchetti** finestra e immettere i comandi seguenti:
 

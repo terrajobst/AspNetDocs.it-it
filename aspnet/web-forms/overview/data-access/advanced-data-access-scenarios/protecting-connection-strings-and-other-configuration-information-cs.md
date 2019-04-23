@@ -12,7 +12,7 @@ ms.openlocfilehash: eab1ad6cd4636ab3d35988ec8dc762c8a8f51ef4
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59421134"
 ---
 # <a name="protecting-connection-strings-and-other-configuration-information-c"></a>Protezione delle stringhe di connessione e di altre informazioni di configurazione (C#)
@@ -31,7 +31,7 @@ Le informazioni di configurazione per le applicazioni ASP.NET vengono in genere 
 Poiché `Web.config` potrebbe contenere dati riservati, ad esempio le stringhe di connessione, è importante che il contenuto di `Web.config` rimanere sicuri e nascosta dai visualizzatori autorizzati. Per impostazione predefinita, qualsiasi HTTP richiesta in un file con il `.config` estensione viene gestita dal motore di ASP.NET, che restituisce il *questo tipo di pagina non è servito* messaggio illustrato nella figura 1. Di conseguenza, i visitatori non è possibile visualizzare le `Web.config` s contenuto dei file immettendo semplicemente http://www.YourServer.com/Web.config nella barra degli indirizzi del browser s.
 
 
-[![Visiting Web. config tramite un Browser restituisce un questo tipo di pagina non è servito messaggio](protecting-connection-strings-and-other-configuration-information-cs/_static/image2.png)](protecting-connection-strings-and-other-configuration-information-cs/_static/image1.png)
+[![Visita di Web. config tramite un Browser restituisce un questo tipo di pagina non è servito messaggio](protecting-connection-strings-and-other-configuration-information-cs/_static/image2.png)](protecting-connection-strings-and-other-configuration-information-cs/_static/image1.png)
 
 **Figura 1**: Visita `Web.config` attraverso un Browser restituisce un questo tipo di pagina non è servita messaggio ([fare clic per visualizzare l'immagine con dimensioni normali](protecting-connection-strings-and-other-configuration-information-cs/_static/image3.png))
 
@@ -83,7 +83,7 @@ Sotto la casella di testo, aggiungere due controlli Button denominati `EncryptCo
 A questo punto la schermata dovrebbe essere simile alla figura 2.
 
 
-[![Agg una casella di testo e due controlli Web pulsante alla pagina](protecting-connection-strings-and-other-configuration-information-cs/_static/image5.png)](protecting-connection-strings-and-other-configuration-information-cs/_static/image4.png)
+[![Aggiungere una casella di testo e due controlli Web pulsante alla pagina](protecting-connection-strings-and-other-configuration-information-cs/_static/image5.png)](protecting-connection-strings-and-other-configuration-information-cs/_static/image4.png)
 
 **Figura 2**: Aggiungere una casella di testo e due controlli Web pulsante alla pagina ([fare clic per visualizzare l'immagine con dimensioni normali](protecting-connection-strings-and-other-configuration-information-cs/_static/image6.png))
 
@@ -111,7 +111,7 @@ Dopo la chiamata di `ProtectSection(provider)` o `UnprotectSection` metodo, è n
 Dopo aver immesso il codice sopra riportato, testarla visitando il `EncryptingConfigSections.aspx` pagina tramite un browser. Inizialmente viene visualizzata una pagina che elenca il contenuto della `Web.config` con il `<connectionStrings>` sezione visualizzati in testo normale (vedere la figura 3).
 
 
-[![Agg una casella di testo e due controlli Web pulsante alla pagina](protecting-connection-strings-and-other-configuration-information-cs/_static/image8.png)](protecting-connection-strings-and-other-configuration-information-cs/_static/image7.png)
+[![Aggiungere una casella di testo e due controlli Web pulsante alla pagina](protecting-connection-strings-and-other-configuration-information-cs/_static/image8.png)](protecting-connection-strings-and-other-configuration-information-cs/_static/image7.png)
 
 **Figura 3**: Aggiungere una casella di testo e due controlli Web pulsante alla pagina ([fare clic per visualizzare l'immagine con dimensioni normali](protecting-connection-strings-and-other-configuration-information-cs/_static/image9.png))
 
@@ -126,7 +126,7 @@ Per ulteriori informazioni sulla convalida della richiesta, il suo scopo, come d
 Dopo aver disabilitato la convalida delle richieste per la pagina, provare a fare nuovamente clic sul pulsante di crittografare le stringhe di connessione. Durante il postback, si accederà il file di configurazione e la relativa `<connectionStrings>` sezione crittografata con il provider DPAPI. La casella di testo viene quindi aggiornato per visualizzare il nuovo `Web.config` contenuto. Come illustrato nella figura 4, il `<connectionStrings>` informazioni sono ora crittografate.
 
 
-[![Clicking la Crittografa connessione stringhe pulsante Crittografa il &lt;connectionString&gt; sezione](protecting-connection-strings-and-other-configuration-information-cs/_static/image11.png)](protecting-connection-strings-and-other-configuration-information-cs/_static/image10.png)
+[![Facendo clic la Crittografa connessione stringhe pulsante Crittografa il &lt;connectionString&gt; sezione](protecting-connection-strings-and-other-configuration-information-cs/_static/image11.png)](protecting-connection-strings-and-other-configuration-information-cs/_static/image10.png)
 
 **Figura 4**: Facendo clic la Crittografa connessione stringhe pulsante Crittografa il `<connectionString>` sezione ([fare clic per visualizzare l'immagine con dimensioni normali](protecting-connection-strings-and-other-configuration-information-cs/_static/image12.png))
 
@@ -143,7 +143,7 @@ Crittografata `<connectionStrings>` segue sezione generati sul mio computer, seb
 Quando le informazioni sulla stringa di connessione si accede da `Web.config` - in base al codice che abbiamo scritto, da un controllo SqlDataSource, o il codice generato automaticamente dagli oggetti TableAdapter in set di dati tipizzato - verrà decrittografato automaticamente. In breve, non dobbiamo aggiungere alcun codice aggiuntivo o per la logica per decrittografare il crittografato `<connectionString>` sezione. Per dimostrare questo concetto, visitare una delle esercitazioni precedenti in questa fase, ad esempio l'esercitazione di visualizzazione semplice nella sezione Basic Reporting (`~/BasicReporting/SimpleDisplay.aspx`). Come illustrato nella figura 5, l'esercitazione funziona esattamente come si può immaginare, che indica che le informazioni sulla stringa di connessione crittografata viene automaticamente decrittografate dalla pagina ASP.NET.
 
 
-[![Til livello di accesso ai dati decrittografa automaticamente le informazioni sulla stringa di connessione](protecting-connection-strings-and-other-configuration-information-cs/_static/image14.png)](protecting-connection-strings-and-other-configuration-information-cs/_static/image13.png)
+[![Il livello di accesso ai dati decrittografa automaticamente le informazioni sulla stringa di connessione](protecting-connection-strings-and-other-configuration-information-cs/_static/image14.png)](protecting-connection-strings-and-other-configuration-information-cs/_static/image13.png)
 
 **Figura 5**: Il livello di accesso ai dati decrittografa automaticamente le informazioni sulla stringa di connessione ([fare clic per visualizzare l'immagine con dimensioni normali](protecting-connection-strings-and-other-configuration-information-cs/_static/image15.png))
 
@@ -221,7 +221,7 @@ Per altre informazioni sugli argomenti trattati in questa esercitazione, vedere 
 - [Procedura: Crittografare le sezioni di configurazione in ASP.NET 2.0 usando DPAPI](https://msdn.microsoft.com/library/ms998280.aspx)
 - [Procedura: Crittografare le sezioni di configurazione in ASP.NET 2.0 utilizzando RSA](https://msdn.microsoft.com/library/ms998283.aspx)
 - [L'API di configurazione in .NET 2.0](http://www.odetocode.com/Articles/418.aspx)
-- [Protezione dei dati di Windows](https://msdn.microsoft.com/library/ms995355.aspx)
+- [Windows Data Protection](https://msdn.microsoft.com/library/ms995355.aspx)
 
 ## <a name="about-the-author"></a>Informazioni sull'autore
 

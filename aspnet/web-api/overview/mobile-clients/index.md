@@ -13,7 +13,7 @@ ms.openlocfilehash: 2a8e56ff7f41916b0d499214cd38f2d60cf15c57
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59422941"
 ---
 # <a name="web-api-and-mobile-clients"></a>API Web e client per dispositivi mobili

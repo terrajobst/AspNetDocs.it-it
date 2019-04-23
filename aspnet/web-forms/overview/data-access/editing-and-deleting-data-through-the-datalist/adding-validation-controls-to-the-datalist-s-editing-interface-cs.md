@@ -12,7 +12,7 @@ ms.openlocfilehash: 5dc2421f6c3fa88a9373e7ac1b7ad51be6e65b82
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59422213"
 ---
 # <a name="adding-validation-controls-to-the-datalists-editing-interface-c"></a>Aggiunta di controlli di convalida all'interfaccia di modifica di DataList (C#)
@@ -45,7 +45,7 @@ Prima di poter esaminare in modo da integrare l'esempio precedente per includere
 3. Copiare il testo all'interno di `<asp:Content>` e `</asp:Content>` tag (righe tra 3 e 32), come illustrato nella figura 1.
 
 
-[![Copia il testo interno di &lt;asp: Content&gt; controllo](adding-validation-controls-to-the-datalist-s-editing-interface-cs/_static/image2.png)](adding-validation-controls-to-the-datalist-s-editing-interface-cs/_static/image1.png)
+[![Copiare il testo interno di &lt;asp: Content&gt; controllo](adding-validation-controls-to-the-datalist-s-editing-interface-cs/_static/image2.png)](adding-validation-controls-to-the-datalist-s-editing-interface-cs/_static/image1.png)
 
 **Figura 1**: Copiare il testo interno di `<asp:Content>` controllo ([fare clic per visualizzare l'immagine con dimensioni normali](adding-validation-controls-to-the-datalist-s-editing-interface-cs/_static/image3.png))
 
@@ -59,7 +59,7 @@ Per copiare il codice sorgente, aprire il `ErrorHandling.aspx.vb` pagina e copia
 Dopo lo spostamento sul contenuto e codice dal `ErrorHandling.aspx` a `UIValidation.aspx`, si consiglia di testare le pagine in un browser. Si dovrebbe vedere lo stesso output e provare la stessa funzionalità in ognuna di queste due pagine (vedere la figura 2).
 
 
-[![Tegli pagina UIValidation.aspx riproduce la funzionalità in ErrorHandling.aspx](adding-validation-controls-to-the-datalist-s-editing-interface-cs/_static/image5.png)](adding-validation-controls-to-the-datalist-s-editing-interface-cs/_static/image4.png)
+[![La pagina UIValidation.aspx riproduce la funzionalità in ErrorHandling.aspx](adding-validation-controls-to-the-datalist-s-editing-interface-cs/_static/image5.png)](adding-validation-controls-to-the-datalist-s-editing-interface-cs/_static/image4.png)
 
 **Figura 2**: Il `UIValidation.aspx` pagina riproduce la funzionalità nel `ErrorHandling.aspx` ([fare clic per visualizzare l'immagine con dimensioni normali](adding-validation-controls-to-the-datalist-s-editing-interface-cs/_static/image6.png))
 
@@ -85,7 +85,7 @@ Per questa esercitazione è necessario usare un RequiredFieldValidator per garan
 Let s iniziare aggiungendo i controlli di convalida necessari per il controllo DataList s `EditItemTemplate`. Questa attività può essere eseguita tramite la finestra di progettazione facendo clic sul collegamento di modifica modelli dello smart tag s DataList o tramite la sintassi dichiarativa. Consentire il passaggio s tramite il processo usando l'opzione di modifica modelli dalla visualizzazione progettazione. Dopo aver scelto di modifica di DataList 1!s `EditItemTemplate`, aggiungere un controllo RequiredFieldValidator trascinandolo dalla casella degli strumenti all'interfaccia di modifica del modello, posizionandolo dopo il `ProductName` nella casella di testo.
 
 
-[![Agg RequiredFieldValidator EditItemTemplate dopo il ProductName nella casella Testo](adding-validation-controls-to-the-datalist-s-editing-interface-cs/_static/image8.png)](adding-validation-controls-to-the-datalist-s-editing-interface-cs/_static/image7.png)
+[![Aggiungere un RequiredFieldValidator EditItemTemplate dopo la casella di testo ProductName](adding-validation-controls-to-the-datalist-s-editing-interface-cs/_static/image8.png)](adding-validation-controls-to-the-datalist-s-editing-interface-cs/_static/image7.png)
 
 **Figura 3**: Aggiungere un RequiredFieldValidator per il `EditItemTemplate After` il `ProductName` nella casella di testo ([fare clic per visualizzare l'immagine con dimensioni normali](adding-validation-controls-to-the-datalist-s-editing-interface-cs/_static/image9.png))
 
@@ -95,7 +95,7 @@ Tutti i controlli di convalida di lavoro per la convalida dell'input di un singo
 Dopo aver impostato queste tre proprietà di RequiredFieldValidator, la schermata dovrebbe essere simile alla figura 4.
 
 
-[![Set di ControlToValidate s RequiredFieldValidator, messaggio di errore e le proprietà di testo](adding-validation-controls-to-the-datalist-s-editing-interface-cs/_static/image11.png)](adding-validation-controls-to-the-datalist-s-editing-interface-cs/_static/image10.png)
+[![Impostare le proprietà di testo, un messaggio di errore e un RequiredFieldValidator s ControlToValidate](adding-validation-controls-to-the-datalist-s-editing-interface-cs/_static/image11.png)](adding-validation-controls-to-the-datalist-s-editing-interface-cs/_static/image10.png)
 
 **Figura 4**: Impostare la s RequiredFieldValidator `ControlToValidate`, `ErrorMessage`, e `Text` delle proprietà ([fare clic per visualizzare l'immagine con dimensioni normali](adding-validation-controls-to-the-datalist-s-editing-interface-cs/_static/image12.png))
 
@@ -112,7 +112,7 @@ Dopo aver aggiunto queste due controlli di convalida, DataList s `EditItemTempla
 Dopo aver apportato queste modifiche, aprire la pagina in un browser. Se si tenta di omettere il nome o immettere un valore del prezzo non valido durante la modifica di un prodotto, viene visualizzato un asterisco accanto alla casella di testo. Come illustrato nella figura 5, un valore di prezzo che include il simbolo di valuta, ad esempio 19,95 dollari con acquisto viene considerato non valido. Le s CompareValidator `Currency` `Type` consente di separatori di cifre (ad esempio virgole o punti, a seconda delle impostazioni cultura) e un segno iniziale più o meno, a differenza *non* consentono un simbolo di valuta. Questo comportamento potrebbe perplex agli utenti come l'interfaccia di modifica attualmente viene eseguito il rendering di `UnitPrice` utilizzando il formato di valuta.
 
 
-[![An viene visualizzato accanto alle caselle di testo con Input non valido asterisco](adding-validation-controls-to-the-datalist-s-editing-interface-cs/_static/image14.png)](adding-validation-controls-to-the-datalist-s-editing-interface-cs/_static/image13.png)
+[![Viene visualizzato un asterisco accanto alle caselle di testo con Input non valido](adding-validation-controls-to-the-datalist-s-editing-interface-cs/_static/image14.png)](adding-validation-controls-to-the-datalist-s-editing-interface-cs/_static/image13.png)
 
 **Figura 5**: Un asterisco viene visualizzata accanto alla caselle di testo con Input non valido ([fare clic per visualizzare l'immagine con dimensioni normali](adding-validation-controls-to-the-datalist-s-editing-interface-cs/_static/image15.png))
 
@@ -169,7 +169,7 @@ Oltre ai controlli di cinque convalida, ASP.NET include la [controllo di control
 A tale scopo, trascinare un controllo di controllo ValidationSummary dalla casella degli strumenti nella finestra di progettazione. Il percorso di t l di controllo ValidationSummary davvero è importante, poiché si ri prevede di configurare in modo da essere visualizzato solo il riepilogo come un oggetto messagebox. Dopo aver aggiunto il controllo, impostare relativi [ `ShowSummary` proprietà](https://msdn.microsoft.com/library/system.web.ui.webcontrols.validationsummary.showsummary(VS.80).aspx) al `False` e il relativo [ `ShowMessageBox` proprietà](https://msdn.microsoft.com/library/system.web.ui.webcontrols.validationsummary.showmessagebox(VS.80).aspx) a `True`. Grazie a questa aggiunta, eventuali errori di convalida sono riepilogati in messagebox lato client (vedere la figura 6).
 
 
-[![TErrori di convalida he sono riepilogati in Messagebox lato Client](adding-validation-controls-to-the-datalist-s-editing-interface-cs/_static/image17.png)](adding-validation-controls-to-the-datalist-s-editing-interface-cs/_static/image16.png)
+[![Gli errori di convalida sono riepilogati in Messagebox lato Client](adding-validation-controls-to-the-datalist-s-editing-interface-cs/_static/image17.png)](adding-validation-controls-to-the-datalist-s-editing-interface-cs/_static/image16.png)
 
 **Figura 6**: Gli errori di convalida sono riepilogati in Messagebox lato Client ([fare clic per visualizzare l'immagine con dimensioni normali](adding-validation-controls-to-the-datalist-s-editing-interface-cs/_static/image18.png))
 

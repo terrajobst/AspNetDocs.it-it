@@ -12,7 +12,7 @@ ms.openlocfilehash: b858dfc24a14e182319122320d8bb6af3b8fcb3c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59422694"
 ---
 # <a name="aspnet-35"></a>ASP.NET 3.5
@@ -30,15 +30,15 @@ ms.locfileid: "59422694"
     - [Funzionalità avanzate e gestione dei fogli di stile CSS](how-do-i/how-do-i-advance-cascading-style-sheet-features-and-management.md)
     - [Conversione di un'applicazione Windows Form .NET 2.0 a .NET 3.5](how-do-i/how-do-i-converting-a-net-20-windows-forms-application-to-net-35.md)
     - [Introduzione a Entity Framework](how-do-i/how-do-i-get-started-with-the-entity-framework.md)
-    - [Usare la nuova origine dati Entità](how-do-i/how-do-i-use-the-new-entity-data-source.md)
-    - [Serializzare un grafo con Entity Framework](how-do-i/how-do-i-serialize-a-graph-with-the-entity-framework.md)
+    - [Usare la nuova origine dati Entity](how-do-i/how-do-i-use-the-new-entity-data-source.md)
+    - [Serializzare un grafico con Entity Framework](how-do-i/how-do-i-serialize-a-graph-with-the-entity-framework.md)
     - [Usare MSBuild per automatizzare le utilità Compiler e Merge di ASP.NET](how-do-i/how-do-i-use-msbuild-to-automate-the-aspnet-compiler-and-merge-utilities.md)
 - [ASP.NET Ajax](aspnet-ajax/index.md)
 
     - [Supporto di ASP.NET AJAX in Visual Studio 2008](aspnet-ajax/aspnet-ajax-support-in-visual-studio-2008.md)
     - [Aggiunta di funzionalità AJAX a una pagina ASP.NET esistente](aspnet-ajax/adding-ajax-functionality-to-an-existing-aspnet-page.md)
     - [Creazione e uso di un servizio Web compatibile con AJAX in un sito Web](aspnet-ajax/creating-and-using-an-ajax-enabled-web-service-in-a-web-site.md)
-    - [ASP.NET AJAX: dimostrazione di ASP.NET AJAX](aspnet-ajax/aspnet-ajax-a-demonstration-of-aspnet-ajax.md)
+    - [ASP.NET AJAX: Una dimostrazione di ASP.NET AJAX](aspnet-ajax/aspnet-ajax-a-demonstration-of-aspnet-ajax.md)
     - [ADO.NET Data Services con supporto di ASP.NET AJAX](aspnet-ajax/adonet-data-services-with-aspnet-ajax-support.md)
     - [Introduzione alla cronologia di ASP.NET Ajax](aspnet-ajax/introduction-to-aspnet-ajax-history.md)
     - [Uso della combinazione di script per migliorare le prestazioni di AJAX](aspnet-ajax/using-script-combining-to-improve-ajax-performance.md)
@@ -46,13 +46,13 @@ ms.locfileid: "59422694"
 
     - [Controllo ListView](data-controls/the-listview-control.md)
     - [Controllo DataPager](data-controls/the-datapager-control.md)
-- [Finestra di progettazione di Visual Studio](visual-studio-designer/index.md)
+- [Visual Studio Designer](visual-studio-designer/index.md)
 
     - [Visual Studio 2008 e pagine master annidate](visual-studio-designer/visual-studio-2008-and-nested-masterpages.md)
 - [Editor di Visual Studio](visual-studio-editor/index.md)
 
     - [Supporto delle nuove funzionalità di progettazione in Visual Studio 2008](visual-studio-editor/new-designer-support-in-visual-studio-2008.md)
-    - [Supporto di JavaScript Intellisense in Visual Studio 2008](visual-studio-editor/javascript-intellisense-support-in-visual-studio-2008.md)
+    - [Supporto di JavaScript IntelliSense in Visual Studio 2008](visual-studio-editor/javascript-intellisense-support-in-visual-studio-2008.md)
     - [Debug di JavaScript in Visual Studio 2008](visual-studio-editor/javascript-debugging-in-visual-studio-2008.md)
     - [Supporto multitargeting in Visual Studio 2008](visual-studio-editor/multi-targeting-support-in-visual-studio-2008.md)
     - [IntelliSense per Jscript e ASP.NET AJAX](visual-studio-editor/intellisense-for-jscript-and-aspnet-ajax.md)

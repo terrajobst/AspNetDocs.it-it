@@ -12,7 +12,7 @@ ms.openlocfilehash: 874542305bd3f47066cfae595919285ed079aa53
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59421069"
 ---
 # <a name="hands-on-lab-visual-studio-2013-web-tools"></a>Lab pratico: Strumenti Web di Visual Studio 2013
@@ -324,7 +324,7 @@ In questa attività si userà il collegamento Browser **modalità di progettazio
 
     ![Finestra Elenco errori](visual-studio-2013-web-tools/_static/image32.png "finestra Elenco errori")
 
-    *finestra Elenco errori*
+    *Finestra Elenco errori*
 3. Nel **Web Essentials** della finestra di dialogo fare clic su **Yes** inserire una descrizione &lt;meta&gt; tag.
 
     ![Finestra di dialogo Web Essentials](visual-studio-2013-web-tools/_static/image33.png "nella finestra di dialogo Web Essentials")

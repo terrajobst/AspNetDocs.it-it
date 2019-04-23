@@ -6,15 +6,14 @@ description: Introduzione ad ASP.NET, un framework gratuito per la creazione di 
 ms.assetid: 3a309468-f1ca-4e51-b9c3-536af79d7a8b
 ms.author: riande
 ms.date: 03/12/2010
-ms.technology: aspnet
 msc.legacyurl: ''
 msc.type: content
-ms.openlocfilehash: 2dc48e1262b1807a77a9889f7e0e62c9b9ea463e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1ab51453913b387ffecf898536eb55b7418b0285
+ms.sourcegitcommit: 2d53ed9e4c8b19d3526cbc689bfa8394c9449cec
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57054638"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59905631"
 ---
 # <a name="aspnet-overview"></a>Panoramica di ASP.NET
 
