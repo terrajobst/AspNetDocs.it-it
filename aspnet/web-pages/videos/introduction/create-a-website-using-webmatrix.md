@@ -12,13 +12,13 @@ ms.openlocfilehash: 6b19196383b8bfa4d0f37f6d27bfd6009882bc14
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59406197"
 ---
-# <a name="create-a-website-using-webmatrix"></a><span data-ttu-id="14117-103">Creare un sito Web con WebMatrix</span><span class="sxs-lookup"><span data-stu-id="14117-103">Create a Website Using WebMatrix</span></span>
+# <a name="create-a-website-using-webmatrix"></a><span data-ttu-id="20960-103">Creare un sito Web con WebMatrix</span><span class="sxs-lookup"><span data-stu-id="20960-103">Create a Website Using WebMatrix</span></span>
 
-<span data-ttu-id="14117-104">by [Advaiya](https://twitter.com/Advaiyasolns)</span><span class="sxs-lookup"><span data-stu-id="14117-104">by [Advaiya](https://twitter.com/Advaiyasolns)</span></span>
+<span data-ttu-id="20960-104">by [Advaiya](https://twitter.com/Advaiyasolns)</span><span class="sxs-lookup"><span data-stu-id="20960-104">by [Advaiya](https://twitter.com/Advaiyasolns)</span></span>
 
-<span data-ttu-id="14117-105">Parte 2 illustra come creare la prima pagina Web con WebMatrix.</span><span class="sxs-lookup"><span data-stu-id="14117-105">Part 2 teaches you how to create your first Web Page using WebMatrix.</span></span>
+<span data-ttu-id="20960-105">Parte 2 illustra come creare la prima pagina Web con WebMatrix.</span><span class="sxs-lookup"><span data-stu-id="20960-105">Part 2 teaches you how to create your first Web Page using WebMatrix.</span></span>
 
-[<span data-ttu-id="14117-106">&#9654;Guarda il video (2 minuti)</span><span class="sxs-lookup"><span data-stu-id="14117-106">&#9654; Watch video (2 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/create-a-website-using-webmatrix)
+[<span data-ttu-id="20960-106">&#9654;Guarda il video (2 minuti)</span><span class="sxs-lookup"><span data-stu-id="20960-106">&#9654; Watch video (2 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/create-a-website-using-webmatrix)

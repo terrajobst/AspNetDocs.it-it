@@ -12,13 +12,13 @@ ms.openlocfilehash: cddf4c754ab2c8e8ad2671819cf61d0a7f336bf0
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59407484"
 ---
-# <a name="aspnet-mvc-4"></a><span data-ttu-id="1edfa-103">ASP.NET MVC 4</span><span class="sxs-lookup"><span data-stu-id="1edfa-103">ASP.NET MVC 4</span></span>
+# <a name="aspnet-mvc-4"></a><span data-ttu-id="9cfff-103">ASP.NET MVC 4</span><span class="sxs-lookup"><span data-stu-id="9cfff-103">ASP.NET MVC 4</span></span>
 
-> <span data-ttu-id="1edfa-104">ASP.NET MVC 4</span><span class="sxs-lookup"><span data-stu-id="1edfa-104">ASP.NET MVC 4</span></span>
+> <span data-ttu-id="9cfff-104">ASP.NET MVC 4</span><span class="sxs-lookup"><span data-stu-id="9cfff-104">ASP.NET MVC 4</span></span>
 
 
-- [<span data-ttu-id="1edfa-105">Utilizzo di Controllo pagina in ASP.NET MVC</span><span class="sxs-lookup"><span data-stu-id="1edfa-105">Using Page Inspector in ASP.NET MVC</span></span>](using-page-inspector-in-aspnet-mvc.md)
-- [<span data-ttu-id="1edfa-106">ASP.NET MVC 4</span><span class="sxs-lookup"><span data-stu-id="1edfa-106">ASP.NET MVC 4</span></span>](aspnet-mvc-4.md)
+- [<span data-ttu-id="9cfff-105">Uso di Controllo pagina in ASP.NET MVC</span><span class="sxs-lookup"><span data-stu-id="9cfff-105">Using Page Inspector in ASP.NET MVC</span></span>](using-page-inspector-in-aspnet-mvc.md)
+- [<span data-ttu-id="9cfff-106">ASP.NET MVC 4</span><span class="sxs-lookup"><span data-stu-id="9cfff-106">ASP.NET MVC 4</span></span>](aspnet-mvc-4.md)

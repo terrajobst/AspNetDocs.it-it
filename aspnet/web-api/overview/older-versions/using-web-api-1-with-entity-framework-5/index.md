@@ -12,18 +12,18 @@ ms.openlocfilehash: be7322bae8f3d343866aae6e1c91ccce73ea6fd7
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59405651"
 ---
-# <a name="using-aspnet-web-api-1-with-entity-framework-5"></a><span data-ttu-id="38685-103">Uso dell'API Web ASP.NET 1 con Entity Framework 5</span><span class="sxs-lookup"><span data-stu-id="38685-103">Using ASP.NET Web API 1 with Entity Framework 5</span></span>
+# <a name="using-aspnet-web-api-1-with-entity-framework-5"></a><span data-ttu-id="14468-103">Uso dell'API Web ASP.NET 1 con Entity Framework 5</span><span class="sxs-lookup"><span data-stu-id="14468-103">Using ASP.NET Web API 1 with Entity Framework 5</span></span>
 
-> <span data-ttu-id="38685-104">Come creare un'applicazione API Web 1 che usa Entity Framework per la persistenza del database.</span><span class="sxs-lookup"><span data-stu-id="38685-104">How to create a Web API 1 application that uses Entity Framework for database persistence.</span></span>
+> <span data-ttu-id="14468-104">Come creare un'applicazione API Web 1 che usa Entity Framework per la persistenza del database.</span><span class="sxs-lookup"><span data-stu-id="14468-104">How to create a Web API 1 application that uses Entity Framework for database persistence.</span></span>
 
 
-- [<span data-ttu-id="38685-105">Panoramica e creazione del progetto</span><span class="sxs-lookup"><span data-stu-id="38685-105">Overview and Creating the Project</span></span>](using-web-api-with-entity-framework-part-1.md)
-- [<span data-ttu-id="38685-106">Creazione dei modelli di dominio</span><span class="sxs-lookup"><span data-stu-id="38685-106">Creating the Domain Models</span></span>](using-web-api-with-entity-framework-part-2.md)
-- [<span data-ttu-id="38685-107">Creazione di un controller di amministrazione</span><span class="sxs-lookup"><span data-stu-id="38685-107">Creating an Admin Controller</span></span>](using-web-api-with-entity-framework-part-3.md)
-- [<span data-ttu-id="38685-108">Aggiunta di una visualizzazione di amministrazione</span><span class="sxs-lookup"><span data-stu-id="38685-108">Adding an Admin View</span></span>](using-web-api-with-entity-framework-part-4.md)
-- [<span data-ttu-id="38685-109">Creazione di un'interfaccia utente dinamica con Knockout.js</span><span class="sxs-lookup"><span data-stu-id="38685-109">Creating a Dynamic UI with Knockout.js</span></span>](using-web-api-with-entity-framework-part-5.md)
-- [<span data-ttu-id="38685-110">Creazione di controller per prodotti e ordini</span><span class="sxs-lookup"><span data-stu-id="38685-110">Creating Product and Order Controllers</span></span>](using-web-api-with-entity-framework-part-6.md)
-- [<span data-ttu-id="38685-111">Creazione della pagina principale</span><span class="sxs-lookup"><span data-stu-id="38685-111">Creating the Main Page</span></span>](using-web-api-with-entity-framework-part-7.md)
+- [<span data-ttu-id="14468-105">Panoramica e creazione del progetto</span><span class="sxs-lookup"><span data-stu-id="14468-105">Overview and Creating the Project</span></span>](using-web-api-with-entity-framework-part-1.md)
+- [<span data-ttu-id="14468-106">Creazione dei modelli di dominio</span><span class="sxs-lookup"><span data-stu-id="14468-106">Creating the Domain Models</span></span>](using-web-api-with-entity-framework-part-2.md)
+- [<span data-ttu-id="14468-107">Creazione di un controller di amministrazione</span><span class="sxs-lookup"><span data-stu-id="14468-107">Creating an Admin Controller</span></span>](using-web-api-with-entity-framework-part-3.md)
+- [<span data-ttu-id="14468-108">Aggiunta di una visualizzazione di amministrazione</span><span class="sxs-lookup"><span data-stu-id="14468-108">Adding an Admin View</span></span>](using-web-api-with-entity-framework-part-4.md)
+- [<span data-ttu-id="14468-109">Creazione di un'interfaccia utente dinamica con Knockout.js</span><span class="sxs-lookup"><span data-stu-id="14468-109">Creating a Dynamic UI with Knockout.js</span></span>](using-web-api-with-entity-framework-part-5.md)
+- [<span data-ttu-id="14468-110">Creazione di controller per prodotti e ordini</span><span class="sxs-lookup"><span data-stu-id="14468-110">Creating Product and Order Controllers</span></span>](using-web-api-with-entity-framework-part-6.md)
+- [<span data-ttu-id="14468-111">Creazione della pagina principale</span><span class="sxs-lookup"><span data-stu-id="14468-111">Creating the Main Page</span></span>](using-web-api-with-entity-framework-part-7.md)
