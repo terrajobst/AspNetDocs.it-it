@@ -12,7 +12,7 @@ ms.openlocfilehash: 36bc314c6709c34863d86158419257be99f4084f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59407107"
 ---
 # <a name="aspnet-mvc-3"></a>ASP.NET MVC 3
@@ -39,7 +39,7 @@ ms.locfileid: "59407107"
     - [Problema risolto: Incollare parte di un'espressione di Razor che contiene i risultati di uno spazio vuoto in essa viene invertito](#RTM-3)
     - [Problema risolto: Ridenominazione di un file Razor che viene aperto nell'editor disabilita la colorazione della sintassi e IntelliSense](#RTM-4)
     - [Problemi noti](#RTM-KI)
-    - [Modifiche di interruzione](#RTM-BC)
+    - [Modifiche di rilievo](#RTM-BC)
 - [ASP.NET MVC 3 Release Candidate 2 (10 dicembre 2010)](#_Toc2)
 
     - [Modelli di progetto modificato includere 1.4.4 jQuery, jQuery 1.7 convalida e jQuery UI 1.8.6y UI 1.8.6](#_Toc2_1)
@@ -55,7 +55,7 @@ ms.locfileid: "59407107"
     - [Proprietà "FileExtensions" aggiunta di motori di visualizzazione per supportare i nomi di File specifico del motore](#_Toc2_10)
     - [Helper di fissa "LabelFor" per generare il valore corretto per l'attributo "For"](#_Toc2_11)
     - [Metodo fisso "RenderAction" per fornire valori espliciti precedenza durante l'associazione del modello](#_Toc2_12)
-    - [Modifiche di interruzione](#_Toc2_BC)
+    - [Modifiche di rilievo](#_Toc2_BC)
     - [Problemi noti](#_Toc2_KI)
 - [ASP.NET MVC 3 Release Candidate (9 novembre 2010)](#TOC_ASP_NET_3_RC)
 
@@ -68,12 +68,12 @@ ms.locfileid: "59407107"
     - [Azione figlio la memorizzazione nella cache di Output](#_Toc276711791)
     - [Miglioramenti alle caselle di dialogo "Add View"](#_Toc276711792)
     - [Convalida delle richieste granulari](#_Toc276711793)
-    - [Modifiche di interruzione](#_Toc276711794)
+    - [Modifiche di rilievo](#_Toc276711794)
     - [Problemi noti](#_Toc276711795)
 - [ASP. Note sulla versione Beta MVC 3 (6 ottobre 2010)](#TOC_ASP_NET_3_Beta)
 
     - [Nuove funzionalità in versione Beta di ASP.NET MVC 3](#0.1__Toc274034215)
-    - [Gestione pacchetti NuPack](#0.1__Toc274034216)
+    - [NuPack Package Manager](#0.1__Toc274034216)
     - [Finestra di dialogo Nuovo progetto migliorata](#0.1__Toc274034217)
     - [Metodo semplificato per specificare fortemente tipizzate modelli nelle visualizzazioni Razor](#0.1__Toc274034218)
     - [Supporto per nuovi metodi di supporto di pagine Web ASP.NET](#0.1__Toc274034219)
@@ -86,7 +86,7 @@ ms.locfileid: "59407107"
     - [Controllo più granulare ValidateInputAttribute](#0.1__Toc274034226)
     - [Gli helper di convertire i caratteri di sottolineatura in trattini per i nomi degli attributi HTML specificati utilizzando oggetti anonimi](#0.1__Toc274034227)
     - [Correzioni di bug](#0.1__Toc274034228)
-    - [Modifiche di interruzione](#0.1__Toc274034229)
+    - [Modifiche di rilievo](#0.1__Toc274034229)
     - [Problemi noti](#0.1__Toc274034230)
 - [Dichiarazione di non responsabilità](#0.1__Toc274034231)
 

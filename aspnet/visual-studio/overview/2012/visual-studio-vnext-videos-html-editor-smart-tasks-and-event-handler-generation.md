@@ -12,7 +12,7 @@ ms.openlocfilehash: cb385a89efc90185635e285bc3317b554d456f6d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59406379"
 ---
 # <a name="visual-studio-vnext-videos-html-editor-smart-tasks-and-event-handler-generation"></a>Visual Studio vNext video: Smart Task dell'editor HTML e generazione del gestore eventi

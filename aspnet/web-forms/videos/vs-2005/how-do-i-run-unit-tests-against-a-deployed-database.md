@@ -12,7 +12,7 @@ ms.openlocfilehash: aa3bd215f358fc0c277f2e8ec4ee47eb9c62f5bd
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59406028"
 ---
 # <a name="how-do-i-run-unit-tests-against-a-deployed-database"></a>[Procedura:] Eseguire Unit test su un Database distribuito?

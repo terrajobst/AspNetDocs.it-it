@@ -12,7 +12,7 @@ ms.openlocfilehash: d9bb8452b18130fa70c7922a92559db0ae007758
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59407003"
 ---
 # <a name="how-do-i-implement-the-predictive-fetch-pattern-for-ajax"></a>[Procedura:] Implementare il modello di recupero predittivo per AJAX?

@@ -12,7 +12,7 @@ ms.openlocfilehash: 20fdfd00826d1b033c2d5dd9500915cb784896e5
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59406457"
 ---
 # <a name="getting-started-with-aspnet-mvc3"></a>Introduzione ad ASP.NET MVC 3
@@ -20,7 +20,7 @@ ms.locfileid: "59406457"
 > Le nozioni di base della creazione di un'applicazione Web MVC ASP.NET utilizzando Microsoft Visual Web Developer 2010 Express.
 
 
-- [Presentazione di ASP.NET MVC 3 (C#)](cs/index.md)
+- [Introduzione ad ASP.NET MVC 3 (C#)](cs/index.md)
 
     - [Introduzione ad ASP.NET MVC 3 (C#)](cs/intro-to-aspnet-mvc-3.md)
     - [Aggiunta di un controller (C#)](cs/adding-a-controller.md)

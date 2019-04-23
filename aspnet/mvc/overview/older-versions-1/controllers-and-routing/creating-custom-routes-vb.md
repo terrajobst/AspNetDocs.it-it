@@ -12,7 +12,7 @@ ms.openlocfilehash: a7b8b85ba1cf5c18e605eb8114a305272baf41a6
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59404871"
 ---
 # <a name="creating-custom-routes-vb"></a>Creazione di route personalizzate (VB)
@@ -61,7 +61,7 @@ Si noti che il metodo Entry() nel listato 2 accetta un parametro di tipo DateTim
 **Figura 1. errore di conversione del parametro**
 
 
-[![Tfinestra di dialogo Nuovo progetto di he](creating-custom-routes-vb/_static/image1.jpg)](creating-custom-routes-vb/_static/image1.png)
+[![La finestra di dialogo Nuovo progetto](creating-custom-routes-vb/_static/image1.jpg)](creating-custom-routes-vb/_static/image1.png)
 
 **Figura 01**: Errore di conversione del parametro ([fare clic per visualizzare l'immagine con dimensioni normali](creating-custom-routes-vb/_static/image2.png))
 

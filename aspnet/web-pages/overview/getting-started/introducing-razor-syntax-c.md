@@ -12,7 +12,7 @@ ms.openlocfilehash: 8237dc6b925ccefc5b411aebc8e7c399dcdc6746
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59407354"
 ---
 # <a name="introduction-to-aspnet-web-programming-using-the-razor-syntax-c"></a>Introduzione alla programmazione Web ASP.NET usando la sintassi Razor (c#)
@@ -443,7 +443,7 @@ Un operatore è una parola chiave o un carattere che indica ad ASP.NET che tipo 
 
 :::row:::
     :::column:::
-    <strong>Operatore</strong>
+    <strong>Operator</strong>
     :::column-end:::
     :::column:::
     <strong>Descrizione</strong>
@@ -850,6 +850,6 @@ Se il codice non gestisce l'eccezione, si vedrà una pagina di errore, ad esempi
 **Documentazione di riferimento**
 
 
-[ASP.NET](https://msdn.microsoft.com/library/ee532866.aspx)
+[ASP.NET 2.0](https://msdn.microsoft.com/library/ee532866.aspx)
 
-[Linguaggio C#](https://msdn.microsoft.com/library/kx37x362.aspx)
+[Linguaggio c#](https://msdn.microsoft.com/library/kx37x362.aspx)

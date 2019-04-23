@@ -12,7 +12,7 @@ ms.openlocfilehash: c1e0a596cf9928ebf8447dc1aaa1dbeac85c8605
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59404650"
 ---
 # <a name="aspnet-4-quick-hit---auto-start"></a>ASP.NET 4 "Rapido Colpisci" - avvio automatico
@@ -24,4 +24,4 @@ In questo video si apprenderà la nuova funzionalità di scalabilità di avvio a
 [&#9654;Guarda il video (11 minuti)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/aspnet-4-quick-hit-auto-start)
 
 > [!div class="step-by-step"]
-> [Successivo](aspnet-4-quick-hit-clean-webconfig-files.md)
+> [avanti](aspnet-4-quick-hit-clean-webconfig-files.md)

@@ -12,7 +12,7 @@ ms.openlocfilehash: 86781a1f46ce0c01a5d70b1f0cf8a81f3f96a032
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59405924"
 ---
 # <a name="aspnet-mvc-4-dependency-injection"></a>Inserimento di dipendenze di ASP.NET MVC 4

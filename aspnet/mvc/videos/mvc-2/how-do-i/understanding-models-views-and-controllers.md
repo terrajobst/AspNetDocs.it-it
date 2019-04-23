@@ -12,7 +12,7 @@ ms.openlocfilehash: dade2eebb9de9a3e878ea842a02f9f4eb98b32e5
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59407718"
 ---
 # <a name="understanding-models-views-and-controllers"></a>Informazioni su modelli, visualizzazioni e controller

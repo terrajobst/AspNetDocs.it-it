@@ -12,7 +12,7 @@ ms.openlocfilehash: be7322bae8f3d343866aae6e1c91ccce73ea6fd7
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59405651"
 ---
 # <a name="using-aspnet-web-api-1-with-entity-framework-5"></a>Uso dell'API Web ASP.NET 1 con Entity Framework 5

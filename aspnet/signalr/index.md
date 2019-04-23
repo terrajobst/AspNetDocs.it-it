@@ -12,12 +12,12 @@ ms.openlocfilehash: fa489c79e175753635d89913aaaa15a832aa16f7
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59407588"
 ---
 # <a name="signalr"></a>SignalR
 
-- [Materiale sussidiario](overview/index.md)
+- [Linee guida](overview/index.md)
 
     - [Introduzione](overview/getting-started/index.md)
 
@@ -27,7 +27,7 @@ ms.locfileid: "59407588"
         - [Esercitazione: Introduzione a SignalR 2 e MVC 5](overview/getting-started/tutorial-getting-started-with-signalr-and-mvc.md)
         - [Esercitazione: Messaggistica ad alta frequenza con SignalR 2](overview/getting-started/tutorial-high-frequency-realtime-with-signalr.md)
         - [Esercitazione: Trasmissione server con SignalR 2](overview/getting-started/tutorial-server-broadcast-with-signalr.md)
-        - [Lab pratico: Applicazioni Web in tempo reale con SignalR](overview/getting-started/real-time-web-applications-with-signalr.md)
+        - [Laboratorio pratico: Applicazioni Web in tempo reale con SignalR](overview/getting-started/real-time-web-applications-with-signalr.md)
     - [Guida all'API](overview/guide-to-the-api/index.md)
 
         - [Guida all'API Hubs - Server (C#)](overview/guide-to-the-api/hubs-api-guide-server.md)
@@ -49,16 +49,16 @@ ms.locfileid: "59407588"
     - [Prestazioni](overview/performance/index.md)
 
         - [Prestazioni di SignalR](overview/performance/signalr-performance.md)
-        - [Introduzione a scale-out in SignalR](overview/performance/scaleout-in-signalr.md)
-        - [Scale-out di SignalR con il bus di servizio di Azure](overview/performance/scaleout-with-windows-azure-service-bus.md)
-        - [Scale-out di SignalR con Redis](overview/performance/scaleout-with-redis.md)
-        - [Scale-out di SignalR con SQL Server](overview/performance/scaleout-with-sql-server.md)
+        - [Introduzione alla scalabilità orizzontale in SignalR](overview/performance/scaleout-in-signalr.md)
+        - [Scalabilità orizzontale di SignalR con il bus di servizio di Azure](overview/performance/scaleout-with-windows-azure-service-bus.md)
+        - [Scalabilità orizzontale di SignalR con Redis](overview/performance/scaleout-with-redis.md)
+        - [Scalabilità orizzontale di SignalR con SQL Server](overview/performance/scaleout-with-sql-server.md)
         - [Test della densità di connessione di SignalR con Crank](overview/performance/signalr-connection-density-testing-with-crank.md)
         - [Uso dei contatori delle prestazioni di SignalR in un ruolo Web di Azure](overview/performance/using-signalr-performance-counters-in-an-azure-web-role.md)
     - [Distribuzione e hosting](overview/deployment/index.md)
 
-        - [Esercitazione: Self-hosting di SignalR](overview/deployment/tutorial-signalr-self-host.md)
-        - [Uso di SignalR con app Web in Servizio app di Azure](overview/deployment/using-signalr-with-azure-web-sites.md)
+        - [Esercitazione: Hosting indipendente di SignalR](overview/deployment/tutorial-signalr-self-host.md)
+        - [Uso di SignalR con app Web nel servizio app di Azure](overview/deployment/using-signalr-with-azure-web-sites.md)
     - [Avanzate](overview/advanced/index.md)
 
         - [Inserimento delle dipendenze in SignalR](overview/advanced/dependency-injection.md)
@@ -69,7 +69,7 @@ ms.locfileid: "59407588"
 
         - [Esercitazione: Introduzione a SignalR 1.x](overview/older-versions/tutorial-getting-started-with-signalr.md)
         - [Esercitazione: Introduzione a SignalR 1.x e MVC 4](overview/older-versions/tutorial-getting-started-with-signalr-and-mvc-4.md)
-        - [Messaggistica ad alta frequenza in tempo reale con SignalR 1.x](overview/older-versions/tutorial-high-frequency-realtime-with-signalr.md)
+        - [Messaggistica ad alta frequenza con SignalR 1.x](overview/older-versions/tutorial-high-frequency-realtime-with-signalr.md)
         - [Esercitazione: Trasmissione server con ASP.NET SignalR 1.x](overview/older-versions/tutorial-server-broadcast-with-aspnet-signalr.md)
         - [Guida all'API Hubs - Server](overview/older-versions/signalr-1x-hubs-api-guide-server.md)
         - [Guida all'API SignalR 1.x Hubs - Client JavaScript](overview/older-versions/signalr-1x-hubs-api-guide-javascript-client.md)
@@ -81,10 +81,10 @@ ms.locfileid: "59407588"
         - [Autenticazione e autorizzazione per SignalR Hubs (SignalR 1.x)](overview/older-versions/hub-authorization.md)
         - [Autenticazione e autorizzazione per le connessioni persistenti di SignalR (SignalR 1.x)](overview/older-versions/persistent-connection-authorization.md)
         - [Prestazioni di SignalR (SignalR 1.x)](overview/older-versions/signalr-performance.md)
-        - [Introduzione a scale-out in SignalR 1.x](overview/older-versions/scaleout-in-signalr.md)
-        - [Scale-out di SignalR con il bus di servizio di Azure (SignalR 1.x)](overview/older-versions/scaleout-with-windows-azure-service-bus.md)
-        - [Scale-out di SignalR con Redis (SignalR 1.x)](overview/older-versions/scaleout-with-redis.md)
-        - [Scale-out di SignalR con SQL Server (SignalR 1.x)](overview/older-versions/scaleout-with-sql-server.md)
+        - [Introduzione alla scalabilità orizzontale in SignalR 1.x](overview/older-versions/scaleout-in-signalr.md)
+        - [Scalabilità orizzontale di SignalR con il bus di servizio di Azure (SignalR 1.x)](overview/older-versions/scaleout-with-windows-azure-service-bus.md)
+        - [Scalabilità orizzontale di SignalR con Redis (SignalR 1.x)](overview/older-versions/scaleout-with-redis.md)
+        - [Scalabilità orizzontale di SignalR con SQL Server (SignalR 1.x)](overview/older-versions/scaleout-with-sql-server.md)
         - [Risoluzione dei problemi di SignalR (SignalR 1.x)](overview/older-versions/troubleshooting.md)
         - [Inserimento delle dipendenze in SignalR 1.x](overview/older-versions/dependency-injection.md)
 - [Video](videos/index.md)

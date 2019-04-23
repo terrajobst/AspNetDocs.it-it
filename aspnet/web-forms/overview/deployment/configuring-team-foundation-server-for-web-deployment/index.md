@@ -12,7 +12,7 @@ ms.openlocfilehash: 3226039ad399fb43c82c98331be41450f6f679bd
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59405209"
 ---
 # <a name="aspnet-4---enterprise-deployment-series-3-configuring-tfs"></a>ASP.NET 4 - Serie sulla distribuzione aziendale 3 - Configurazione di TFS
@@ -26,4 +26,4 @@ ms.locfileid: "59405209"
 - [Configurazione di un server di compilazione TFS per la distribuzione Web](configuring-a-tfs-build-server-for-web-deployment.md)
 - [Creazione di una definizione di compilazione che supporta la distribuzione](creating-a-build-definition-that-supports-deployment.md)
 - [Distribuzione di una compilazione specifica](deploying-a-specific-build.md)
-- [Configurazione delle autorizzazioni per la distribuzione di Team Build](configuring-permissions-for-team-build-deployment.md)
+- [Configurazione delle autorizzazioni per la compilazione di Team Build](configuring-permissions-for-team-build-deployment.md)

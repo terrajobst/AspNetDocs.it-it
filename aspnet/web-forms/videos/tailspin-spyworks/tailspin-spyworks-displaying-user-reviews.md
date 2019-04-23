@@ -12,7 +12,7 @@ ms.openlocfilehash: c8c7864a6825db99db9c942102fc6afb41b0e655
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59405199"
 ---
 # <a name="tailspin-spyworks---displaying-user-reviews"></a>Tailspin Spyworks - Visualizzazione delle recensioni degli utenti

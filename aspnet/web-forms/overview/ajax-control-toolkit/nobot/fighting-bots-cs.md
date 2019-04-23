@@ -12,7 +12,7 @@ ms.openlocfilehash: 178d839f67d70670b3b5acf470acb7ae8cf1c33f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59405807"
 ---
 # <a name="fighting-bots-c"></a>Lotta contro i bot (C#)
@@ -65,9 +65,9 @@ Infine, è necessario un modulo per inviare e un elemento etichetta per il messa
 Quando si esegue questo script e disattivare JavaScript o inviare il modulo entro i primi due secondi o inviare il modulo di sette volte all'interno di trenta secondi, si otterrà un messaggio di errore. Tuttavia utilizzare questo controllo con cautela, poiché solo 90-95% degli utenti hanno attivato JavaScript, pertanto circa 5-10% degli utenti avrà esito negativo `NoBot`del test.
 
 
-[![Til suo messaggio di errore potrebbe essere stato causato da un robot](fighting-bots-cs/_static/image2.png)](fighting-bots-cs/_static/image1.png)
+[![Questo messaggio di errore potrebbe essere stato causato da un robot](fighting-bots-cs/_static/image2.png)](fighting-bots-cs/_static/image1.png)
 
 Questo messaggio di errore potrebbe essere stato causato da un bot ([fare clic per visualizzare l'immagine con dimensioni normali](fighting-bots-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Successivo](fighting-bots-vb.md)
+> [avanti](fighting-bots-vb.md)

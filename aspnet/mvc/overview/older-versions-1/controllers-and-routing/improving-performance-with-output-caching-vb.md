@@ -12,7 +12,7 @@ ms.openlocfilehash: 0f824bd5e080d42a9df3525ca47b87bcef407f7a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59405625"
 ---
 # <a name="improving-performance-with-output-caching-vb"></a>Miglioramento delle prestazioni con la cache di output (VB)
@@ -85,7 +85,7 @@ Per impostazione predefinita, la proprietà Location contiene il valore Any. Tut
 
 Ad esempio, il controller nel listato 3 espone un'azione denominata GetName() che restituisce il nome dell'utente corrente. Se Jack accede al sito Web e richiama l'azione GetName() quindi l'azione restituisce la stringa "Hi Jack". Se, successivamente, Jill accede al sito Web e richiama l'azione GetName() quindi Lei anche otterrà la stringa "Hi Jack". La stringa viene memorizzato nella cache sul server web per tutti gli utenti dopo Jack richiama inizialmente l'azione del controller.
 
-**Listing 3 – Controllers\BadUserController.vb**
+**Listato 3 – Controllers\BadUserController.vb**
 
 [!code-vb[Main](improving-performance-with-output-caching-vb/samples/sample3.vb)]
 
@@ -154,7 +154,7 @@ Ad esempio, il &lt;memorizzazione nella cache&gt; sezione di configurazione web 
 
 Il controller nel listato 7 viene illustrato come è possibile applicare il profilo Cache1Hour a un'azione del controller con la &lt;OutputCache&gt; attributo.
 
-**Listing 7 – Controllers\ProfileController.vb**
+**Listato 7 – Controllers\ProfileController.vb**
 
 [!code-vb[Main](improving-performance-with-output-caching-vb/samples/sample7.vb)]
 

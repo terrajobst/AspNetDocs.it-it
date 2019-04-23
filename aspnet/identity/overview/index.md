@@ -12,7 +12,7 @@ ms.openlocfilehash: ef4eb7428770453596090af111576ab23a27206b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59406171"
 ---
 # <a name="aspnet-identity-overview"></a>Panoramica dell'identità ASP.NET
@@ -21,15 +21,15 @@ ms.locfileid: "59406171"
 
     - [Introduzione ad ASP.NET Identity](getting-started/introduction-to-aspnet-identity.md)
     - [Risorse consigliate su ASP.NET Identity](getting-started/aspnet-identity-recommended-resources.md)
-    - [Aggiunta di ASP.NET Identity a un progetto Web Forms vuoto o esistente](getting-started/adding-aspnet-identity-to-an-empty-or-existing-web-forms-project.md)
+    - [Aggiunta di ASP.NET Identity a un progetto Web Form vuoto o esistente](getting-started/adding-aspnet-identity-to-an-empty-or-existing-web-forms-project.md)
     - [Sviluppo di app ASP.NET con Azure Active Directory](getting-started/developing-aspnet-apps-with-windows-azure-active-directory.md)
-    - [ASP.NET Identity: uso dell'archiviazione MySQL con un provider MySQL EntityFramework (C#)](getting-started/aspnet-identity-using-mysql-storage-with-an-entityframework-mysql-provider.md)
+    - [ASP.NET Identity: Uso dell'archiviazione MySQL con un Provider MySQL EntityFramework (C#)](getting-started/aspnet-identity-using-mysql-storage-with-an-entityframework-mysql-provider.md)
 - [Funzionalità e API](features-api/index.md)
 
-    - [Procedure consigliate per la distribuzione delle password e di altri dati sensibili in ASP.NET e in Servizio app di Azure](features-api/best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure.md)
+    - [Procedure consigliate per la distribuzione delle password e di altri dati sensibili in ASP.NET e nel servizio app di Azure](features-api/best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure.md)
     - [Conferma dell'account e recupero della password con ASP.NET Identity (C#)](features-api/account-confirmation-and-password-recovery-with-aspnet-identity.md)
     - [Autenticazione a due fattori tramite SMS e posta elettronica con ASP.NET Identity](features-api/two-factor-authentication-using-sms-and-email-with-aspnet-identity.md)
-- [Estendibilità](extensibility/index.md)
+- [Extensibility](extensibility/index.md)
 
     - [Panoramica dei provider di archiviazione personalizzati per ASP.NET Identity](extensibility/overview-of-custom-storage-providers-for-aspnet-identity.md)
     - [Implementazione di un provider di archiviazione MySQL personalizzato di ASP.NET Identity](extensibility/implementing-a-custom-mysql-aspnet-identity-storage-provider.md)

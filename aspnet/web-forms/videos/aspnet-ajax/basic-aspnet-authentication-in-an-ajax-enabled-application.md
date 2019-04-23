@@ -12,7 +12,7 @@ ms.openlocfilehash: 5b723e97a0faac1c2b1dffb634f530d9a3cfc59c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59404247"
 ---
 # <a name="basic-aspnet-authentication-in-an-ajax-enabled-application"></a>Autenticazione ASP.NET di base in un'applicazione compatibile con AJAX

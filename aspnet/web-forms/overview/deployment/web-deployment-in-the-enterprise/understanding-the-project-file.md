@@ -12,14 +12,14 @@ ms.openlocfilehash: d774a8e13e108d1be4c39e1e909d3d9683968a0d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59404923"
 ---
 # <a name="understanding-the-project-file"></a>Informazioni sul file di progetto
 
 da [Jason Lee](https://github.com/jrjlee)
 
-[Scarica il PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Scaricare PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > I file di progetto di Microsoft Build Engine (MSBuild) si trovano il fulcro del processo di compilazione e distribuzione. Questo argomento inizia con una panoramica concettuale di MSBuild e il file di progetto. Vengono descritti i componenti chiave, che è possibile riscontrare quando si lavora con i file di progetto e può essere utilizzato con un esempio di come è possibile utilizzare i file di progetto per distribuire le applicazioni reali.
 > 

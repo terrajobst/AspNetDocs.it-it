@@ -12,7 +12,7 @@ ms.openlocfilehash: b638565cdaf4b16d5f7a4649b7b1cccd880200d1
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59407380"
 ---
 # <a name="understanding-controllers-controller-actions-and-action-results"></a>Informazioni su controller, azioni del controller e risultati delle azioni

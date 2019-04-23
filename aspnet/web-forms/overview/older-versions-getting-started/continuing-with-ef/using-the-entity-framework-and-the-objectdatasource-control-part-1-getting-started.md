@@ -12,7 +12,7 @@ ms.openlocfilehash: c0f11019c7410b756d592066a7fe33b3e26fd383
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59407198"
 ---
 # <a name="using-the-entity-framework-40-and-the-objectdatasource-control-part-1-getting-started"></a>Utilizzo di Entity Framework 4.0 e il controllo ObjectDataSource, parte 1: Introduzione
@@ -322,4 +322,4 @@ Modificare un valore del campo o selezionare un altro amministratore e fare clic
 In questo argomento completa l'introduzione all'uso del `ObjectDataSource` controllo per CRUD di base (creare, leggere, aggiornare ed eliminare) le operazioni con Entity Framework. È stata creata una semplice applicazione a più livelli, ma il livello di logica di business è ancora strettamente associato a livello di accesso ai dati, che rende più difficile il testing unità automatizzato. Nell'esercitazione verrà illustrato come implementare il modello di repository per facilitare il testing unità.
 
 > [!div class="step-by-step"]
-> [Successivo](using-the-entity-framework-and-the-objectdatasource-control-part-2-adding-a-business-logic-layer-and-unit-tests.md)
+> [avanti](using-the-entity-framework-and-the-objectdatasource-control-part-2-adding-a-business-logic-layer-and-unit-tests.md)

@@ -13,7 +13,7 @@ ms.openlocfilehash: 30fd42be5677df6fa6ee0630914098c30d21385b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59404520"
 ---
 # <a name="tutorial-create-the-web-application-and-data-models-for-ef-database-first-with-aspnet-mvc"></a>Esercitazione: Creare l'applicazione Web e i modelli di dati per il Database di Entity Framework prima di tutto con ASP.NET MVC
@@ -104,4 +104,4 @@ Le attività di questa esercitazione sono le seguenti:
 
 Passare all'esercitazione successiva per imparare a creare generano codice basato sui modelli di dati.
 > [!div class="nextstepaction"]
-> [Generazione di visualizzazioni](generating-views.md)
+> [La generazione di visualizzazioni](generating-views.md)

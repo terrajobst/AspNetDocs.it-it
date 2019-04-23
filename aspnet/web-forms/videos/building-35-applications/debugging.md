@@ -12,7 +12,7 @@ ms.openlocfilehash: 09af09e3de768225a3de5465d8f82abcba8066d8
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59404351"
 ---
 # <a name="debugging"></a>Debug

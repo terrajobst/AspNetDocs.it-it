@@ -12,7 +12,7 @@ ms.openlocfilehash: 639a8e0e5fd9557221c95aee1bef0294df047ae8
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59406314"
 ---
 # <a name="aspnet-mvc-4-helpers-forms-and-validation"></a>Helper, moduli e convalida di ASP.NET MVC 4

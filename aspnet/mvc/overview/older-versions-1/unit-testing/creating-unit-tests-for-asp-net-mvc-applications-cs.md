@@ -12,14 +12,14 @@ ms.openlocfilehash: 1193d7dc6fc29dfdac5637c9391a82f9f3566073
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59407731"
 ---
 # <a name="creating-unit-tests-for-aspnet-mvc-applications-c"></a>Creazione di unit test per le applicazioni ASP.NET MVC (C#)
 
 da [Stephen Walther](https://github.com/StephenWalther)
 
-[Scarica il PDF](http://download.microsoft.com/download/8/4/8/84843d8d-1575-426c-bcb5-9d0c42e51416/ASPNET_MVC_Tutorial_07_CS.pdf)
+[Scaricare PDF](http://download.microsoft.com/download/8/4/8/84843d8d-1575-426c-bcb5-9d0c42e51416/ASPNET_MVC_Tutorial_07_CS.pdf)
 
 > Informazioni su come creare unit test per le azioni del controller. In questa esercitazione, Stephen Walther spiega come verificare se un'azione del controller restituisce una visualizzazione specifica, restituisce un set di dati specifico oppure un altro tipo di risultato dell'azione.
 
@@ -59,12 +59,12 @@ Questa azione del controller restituisce anche una visualizzazione denominata `D
 È possibile eseguire lo unit test nel listato 2 entrambi immettendo la combinazione di tasti **Ctrl-R, A** oppure fare clic il **eseguire tutti i test nella soluzione** pulsante (vedere la figura 1). Se il test ha esito positivo, si noterà nella finestra Risultati Test nella figura 2.
 
 
-[![Rannullare tutti i test nella soluzione](creating-unit-tests-for-asp-net-mvc-applications-cs/_static/image2.png)](creating-unit-tests-for-asp-net-mvc-applications-cs/_static/image1.png)
+[![Eseguire tutti i test nella soluzione](creating-unit-tests-for-asp-net-mvc-applications-cs/_static/image2.png)](creating-unit-tests-for-asp-net-mvc-applications-cs/_static/image1.png)
 
 **Figura 01**: Eseguire tutti i test nella soluzione ([fare clic per visualizzare l'immagine con dimensioni normali](creating-unit-tests-for-asp-net-mvc-applications-cs/_static/image3.png))
 
 
-[![Srrore!](creating-unit-tests-for-asp-net-mvc-applications-cs/_static/image5.png)](creating-unit-tests-for-asp-net-mvc-applications-cs/_static/image4.png)
+[![Vero successo!](creating-unit-tests-for-asp-net-mvc-applications-cs/_static/image5.png)](creating-unit-tests-for-asp-net-mvc-applications-cs/_static/image4.png)
 
 **Figura 02**: Operazione completata ([Fare clic per visualizzare l'immagine con dimensioni normali](creating-unit-tests-for-asp-net-mvc-applications-cs/_static/image6.png))
 
@@ -116,4 +116,4 @@ Successivamente, sono stati esaminati la procedura per verificare il contenuto d
 Infine, abbiamo parlato di come è possibile verificare se vengono restituiti tipi diversi di risultati dell'azione da un'azione del controller. Si è appreso come verificare se un controller restituisce un `ViewResult` o un `RedirectToRouteResult`.
 
 > [!div class="step-by-step"]
-> [Successivo](creating-unit-tests-for-asp-net-mvc-applications-vb.md)
+> [avanti](creating-unit-tests-for-asp-net-mvc-applications-vb.md)

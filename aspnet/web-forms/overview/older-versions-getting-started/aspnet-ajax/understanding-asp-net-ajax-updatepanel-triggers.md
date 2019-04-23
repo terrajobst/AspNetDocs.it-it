@@ -12,14 +12,14 @@ ms.openlocfilehash: e3821eee8c7bf2c2f9b45ea75ade2bd5b3b8ef19
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59406262"
 ---
 # <a name="understanding-aspnet-ajax-updatepanel-triggers"></a>Informazioni sui trigger UpdatePanel di ASP.NET AJAX
 
 da [Scott Cate](https://github.com/scottcate)
 
-[Scarica il PDF](http://download.microsoft.com/download/C/1/9/C19A3451-1D14-477C-B703-54EF22E197EE/AJAX_tutorial02_Triggers_cs.pdf)
+[Scaricare PDF](http://download.microsoft.com/download/C/1/9/C19A3451-1D14-477C-B703-54EF22E197EE/AJAX_tutorial02_Triggers_cs.pdf)
 
 > Quando si utilizza l'editor di markup in Visual Studio, è possibile notare (da IntelliSense) che sono presenti due elementi figlio di un controllo UpdatePanel. Uno dei quali è l'elemento di trigger, che specifica i controlli nella pagina (o il controllo utente, se si usa uno) che attiverà un rendering parziale del controllo UpdatePanel in cui si trova l'elemento.
 
@@ -32,7 +32,7 @@ Questo white paper vengono esaminate le funzionalità di trigger XML di ASP.NET 
 
 Questo white paper si basa sulla versione Beta 2 di .NET Framework 3.5 e Visual Studio 2008. ASP.NET AJAX Extensions, in precedenza un assembly di componenti aggiuntivi destinato a ASP.NET 2.0, adesso sono integrate nella libreria di classi .NET Framework Base. Questo white paper si presuppone inoltre che si userà Visual Studio 2008, non Visual Web Developer Express e forniscono procedure dettagliate in base all'interfaccia utente di Visual Studio (sebbene siano completamente compatibile indipendentemente listati di codice ambiente di sviluppo).
 
-## *<a name="triggers"></a>Trigger*
+## <a name="triggers"></a>*Trigger*
 
 I trigger per un determinato UpdatePanel, per impostazione predefinita, includono automaticamente tutti i controlli figlio che richiamano un postback, tra cui, ad esempio, i controlli casella di testo con loro `AutoPostBack` impostata su **true**. Tuttavia, i trigger possono essere inclusi in modo dichiarativo utilizzando markup. Questa operazione viene eseguita all'interno di `<triggers>` sezione della dichiarazione del controllo UpdatePanel. Anche se i trigger sono accessibili tramite il `Triggers` proprietà della raccolta, è consigliabile registrare qualsiasi trigger di rendering parziale in fase di esecuzione (ad esempio, se un controllo non è disponibile in fase di progettazione) usando il `RegisterAsyncPostBackControl(Control)` metodo per il ScriptManager dell'oggetto per la pagina, all'interno di `Page_Load` evento. Tenere presente che le pagine sono senza state e pertanto è necessario registrare di nuovo questi controlli ogni volta che vengono creati.
 
@@ -40,7 +40,7 @@ Inclusione di trigger automatici figlio può anche essere disabilitata (in modo 
 
 Si noti che quando vengono annidati i controlli UpdatePanel, quando il UpdateMode è impostata su **condizionale**, se l'elemento figlio UpdatePanel viene attivata, ma l'elemento padre, non è quindi solo l'elemento figlio UpdatePanel verrà aggiornato. Tuttavia, se l'elemento padre UpdatePanel viene aggiornato, quindi l'elemento figlio UpdatePanel anche verranno aggiornato.
 
-## *<a name="the-lttriggersgt-element"></a>Il &lt;trigger&gt; elemento*
+## <a name="the-lttriggersgt-element"></a>*Il &lt;trigger&gt; elemento*
 
 Quando si utilizza l'editor di markup in Visual Studio, è possibile notare (da IntelliSense) sono presenti due elementi figlio di un `UpdatePanel` controllo. L'elemento più frequenti è il `<ContentTemplate>` elemento, che essenzialmente incapsula il contenuto che verrà mantenuto dal Pannello di aggiornamento (il contenuto per i quali verrà abilitata per il rendering parziale). L'altro elemento è il `<Triggers>` elemento che specifica i controlli nella pagina (o il controllo utente, se si usa uno) che attiverà un rendering parziale del controllo UpdatePanel in cui la &lt;trigger&gt; contiene l'elemento.
 
@@ -50,7 +50,7 @@ Il `<asp:AsyncPostBackTrigger>` elemento è particolarmente utile in quanto poss
 
 Analogamente, il `<asp:PostBackTrigger>` elemento può essere usato per eseguire il rendering di una pagina parziale di trigger, ma che richiede un accesso completo al server. Questo elemento di trigger può essere utilizzato anche per forzare un rendering di pagina completo quando un controllo in genere in caso contrario, attiva un rendering parziale della pagina (ad esempio, quando un `Button` esiste nel controllo di `<ContentTemplate>` elemento di un controllo UpdatePanel). Anche in questo caso, l'elemento PostBackTrigger può specificare qualsiasi controllo figlio di qualsiasi controllo UpdatePanel nell'unità corrente di incapsulamento.
 
-## *<a name="lttriggersgt-element-reference"></a>&lt;I trigger&gt; riferimento all'elemento*
+## <a name="lttriggersgt-element-reference"></a>*&lt;I trigger&gt; riferimento all'elemento*
 
 *Discendenti di markup:*
 
@@ -59,7 +59,7 @@ Analogamente, il `<asp:PostBackTrigger>` elemento può essere usato per eseguire
 | &lt;asp:AsyncPostBackTrigger&gt; | Specifica un controllo e l'evento che causa un aggiornamento parziale della pagina per UpdatePanel che contiene il riferimento di trigger. |
 | &lt;asp:PostBackTrigger&gt; | Specifica un controllo e l'evento che causa un aggiornamento completo della pagina (un aggiornamento completo della pagina). Questo tag può essere utilizzato per forzare un aggiornamento completo quando un controllo attiva in caso contrario, il rendering parziale. |
 
-## *<a name="walkthrough-cross-updatepanel-triggers"></a>Procedura dettagliata: Trigger di cross-UpdatePanel*
+## <a name="walkthrough-cross-updatepanel-triggers"></a>*Procedura dettagliata: Trigger di cross-UpdatePanel*
 
 1. Creare una nuova pagina ASP.NET con un oggetto di ScriptManager impostato per attivare il rendering parziale. Aggiungere due UpdatePanel in questa pagina - nel primo, includere un controllo Label (Label1) e due controlli Button (Button1 e Button2). Button1 deve ad esempio fare clic per aggiornare entrambi e Button2 dovrebbe essere fare clic per aggiornare questo o qualcosa. In secondo UpdatePanel, includere solo un controllo Label (Label2), ma impostare la relativa proprietà ForeColor su un valore diverso da quello predefinito per distinguerli.
 2. Impostare la proprietà UpdateMode di entrambi i tag per UpdatePanel **condizionale**.
@@ -82,7 +82,7 @@ Analogamente, il `<asp:PostBackTrigger>` elemento può essere usato per eseguire
 ([Fare clic per visualizzare l'immagine con dimensioni normali](understanding-asp-net-ajax-updatepanel-triggers/_static/image3.png))
 
 
-## *<a name="under-the-hood"></a>Dietro le quinte*
+## <a name="under-the-hood"></a>*Dietro le quinte*
 
 Usando l'esempio che sono appena costruite, è possibile dare un'occhiata svolte da ASP.NET AJAX e come funzionano i trigger UpdatePanel di cross-pannello. A tale scopo, Microsoft collaborerà con l'origine genera la pagina HTML, nonché l'estensione di Mozilla Firefox chiamato FireBug - con esso, è possibile esaminare con facilità i postback AJAX. Si userà anche strumento .NET Reflector di Lutz Roeder. Entrambi questi strumenti sono disponibili gratuitamente online e possono essere trovati con una ricerca in internet.
 
