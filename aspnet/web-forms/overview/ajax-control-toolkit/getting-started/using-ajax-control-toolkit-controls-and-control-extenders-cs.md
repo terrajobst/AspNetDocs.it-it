@@ -12,7 +12,7 @@ ms.openlocfilehash: 82fae91e40ec2f1508fe5c82992eeef4abc4e19a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59419223"
 ---
 # <a name="using-ajax-control-toolkit-controls-and-control-extenders-c"></a>Uso di controlli e controlli Extender di AJAX Control Toolkit (C#)
@@ -44,17 +44,17 @@ Ad esempio, la scheda di AJAX Control Toolkit include un controllo denominato il
 5. Verrà visualizzata la pagina nella figura 3.
 
 
-[![Sdesignare il controllo dell'Editor HTML](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image1.jpg)](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image1.png)
+[![Selezionare il controllo dell'Editor HTML](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image1.jpg)](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image1.png)
 
 **Figura 01**: Selezione del controllo HTMLEditor ([fare clic per visualizzare l'immagine con dimensioni normali](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image2.png))
 
 
-[![Visual Studio Designer con il controllo ScriptManager e modifica](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image2.jpg)](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image3.png)
+[![Progettazione di Visual Studio con il controllo ScriptManager e modifica](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image2.jpg)](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image3.png)
 
 **Figura 02**: Progettazione di Visual Studio con il controllo ScriptManager e modifica ([fare clic per visualizzare l'immagine con dimensioni normali](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image4.png))
 
 
-[![Tpagina DisplayEditor.aspx he](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image3.jpg)](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image5.png)
+[![La pagina DisplayEditor.aspx](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image3.jpg)](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image5.png)
 
 **Figura 03**: La pagina DisplayEditor.aspx ([fare clic per visualizzare l'immagine con dimensioni normali](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image6.png))
 
@@ -76,17 +76,17 @@ Seguire questi passaggi per usare il controllo extender ConfirmButton:
 7. Eseguire la pagina selezionando l'opzione di menu **eseguire il Debug, Avvia debug** o premere il tasto F5.
 
 
-[![Tegli opzione dell'attività Aggiungi estensione](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image4.jpg)](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image7.png)
+[![L'opzione dell'attività Aggiungi estensione](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image4.jpg)](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image7.png)
 
 **Figura 04**: L'opzione dell'attività Aggiungi estensione ([fare clic per visualizzare l'immagine con dimensioni normali](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image8.png))
 
 
-[![Sdesignare il controllo extender ConfirmButton](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image5.jpg)](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image9.png)
+[![Selezionare il controllo extender ConfirmButton](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image5.jpg)](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image9.png)
 
 **Figura 05**: Selezionare il controllo extender ConfirmButton ([fare clic per visualizzare l'immagine con dimensioni normali](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image10.png))
 
 
-[![Suna proprietà di ConfirmButton gradazioni di grigio](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image6.jpg)](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image11.png)
+[![Impostazione di una proprietà di ConfirmButton](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image6.jpg)](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image11.png)
 
 **Figura 06**: Impostazione di una proprietà di ConfirmButton ([fare clic per visualizzare l'immagine con dimensioni normali](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image12.png))
 
@@ -94,7 +94,7 @@ Seguire questi passaggi per usare il controllo extender ConfirmButton:
 Quando si apre la pagina, dovrebbe essere un pulsante. Quando si fa clic sul pulsante, si ottiene la finestra di dialogo di conferma nella figura 7.
 
 
-[![Dla finestra di dialogo di conferma IsPlaying](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image7.jpg)](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image13.png)
+[![Visualizzare la finestra di dialogo di conferma](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image7.jpg)](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image13.png)
 
 **Figura 07**: Visualizzare la finestra di dialogo di conferma ([fare clic per visualizzare l'immagine con dimensioni normali](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image14.png))
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: e70a21e2752c7c8fc8be332a98e1cf7e40b01412
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59417689"
 ---
 # <a name="using-sql-cache-dependencies-c"></a>Uso delle dipendenze della cache SQL (C#)
@@ -87,7 +87,7 @@ Per iniziare, chiudere Visual Studio. Successivamente, aprire SQL Server Managem
 Dopo la connessione al server Management Studio verranno Mostra i server e avere sottocartelle per il database, sicurezza e così via. Pulsante destro del mouse sulla cartella database e scegliere l'opzione di connessione. Verrà visualizzata la finestra di dialogo Collega database (vedere la figura 2). Fare clic sul pulsante Aggiungi e selezionare il `NORTHWND.MDF` cartella del database nella raccolta di s dell'applicazione web `App_Data` cartella.
 
 
-[![AAssocia il NORTHWND. Database MDF dalla cartella App_Data](using-sql-cache-dependencies-cs/_static/image2.gif)](using-sql-cache-dependencies-cs/_static/image1.png)
+[![Collegare il NORTHWND. Database MDF dalla cartella App_Data](using-sql-cache-dependencies-cs/_static/image2.gif)](using-sql-cache-dependencies-cs/_static/image1.png)
 
 **Figura 2**: Collegare il `NORTHWND.MDF` del Database del `App_Data` cartella ([fare clic per visualizzare l'immagine con dimensioni normali](using-sql-cache-dependencies-cs/_static/image2.png))
 
@@ -143,7 +143,7 @@ Il [dati la memorizzazione nella cache con ObjectDataSource](caching-data-with-t
 Per illustrare l'utilizzo delle dipendenze della cache SQL in modo dichiarativo, aprire il `SqlCacheDependencies.aspx` nella pagina di `Caching` cartelle e trascinare un controllo GridView dalla casella degli strumenti nella finestra di progettazione. Impostare la s GridView `ID` al `ProductsDeclarative` e scegliere dal suo smart tag da associare a un nuovo oggetto ObjectDataSource denominato `ProductsDataSourceDeclarative`.
 
 
-[![CCrea un nuovo ProductsDataSourceDeclarative denominato di ObjectDataSource](using-sql-cache-dependencies-cs/_static/image5.gif)](using-sql-cache-dependencies-cs/_static/image3.png)
+[![Creare un nuovo oggetto ObjectDataSource denominato ProductsDataSourceDeclarative](using-sql-cache-dependencies-cs/_static/image5.gif)](using-sql-cache-dependencies-cs/_static/image3.png)
 
 **Figura 5**: Creare un nuovo oggetto ObjectDataSource denominato `ProductsDataSourceDeclarative` ([fare clic per visualizzare l'immagine con dimensioni normali](using-sql-cache-dependencies-cs/_static/image4.png))
 
@@ -151,12 +151,12 @@ Per illustrare l'utilizzo delle dipendenze della cache SQL in modo dichiarativo,
 Configurare ObjectDataSource per usare la `ProductsBLL` classe e impostare l'elenco a discesa nella scheda Seleziona `GetProducts()`. Nella scheda aggiornamento, scegliere il `UpdateProduct` rapporto di overload con tre parametri di input - `productName`, `unitPrice`, e `productID`. Impostare gli elenchi di riepilogo a discesa su (nessuno) nelle schede INSERT e DELETE.
 
 
-[![USe il rapporto di Overload UpdateProduct con tre parametri di Input](using-sql-cache-dependencies-cs/_static/image6.gif)](using-sql-cache-dependencies-cs/_static/image5.png)
+[![Usare l'Overload UpdateProduct con tre parametri di Input](using-sql-cache-dependencies-cs/_static/image6.gif)](using-sql-cache-dependencies-cs/_static/image5.png)
 
 **Figura 6**: Usare l'Overload UpdateProduct con tre parametri di Input ([fare clic per visualizzare l'immagine con dimensioni normali](using-sql-cache-dependencies-cs/_static/image6.png))
 
 
-[![Sl'elenco a discesa su (nessuno) per le schede DELETE e INSERT et](using-sql-cache-dependencies-cs/_static/image7.gif)](using-sql-cache-dependencies-cs/_static/image7.png)
+[![Impostazione dell'elenco di riepilogo a discesa su (nessuno) per le schede DELETE e INSERT](using-sql-cache-dependencies-cs/_static/image7.gif)](using-sql-cache-dependencies-cs/_static/image7.png)
 
 **Figura 7**: Impostazione dell'elenco di riepilogo a discesa su (nessuno) per l'inserimento ed eliminare schede ([fare clic per visualizzare l'immagine con dimensioni normali](using-sql-cache-dependencies-cs/_static/image8.png))
 
@@ -178,7 +178,7 @@ Si tenga presente che gli oggetti ObjectDataSource `Selecting` evento viene gene
 A questo punto, visitare questa pagina tramite un browser. Poiché è fornire un supporto iniziale per implementare qualsiasi la memorizzazione nella cache, ogni volta che si pagina, ordinamento o modifica la pagina della griglia deve visualizzare il testo, se si seleziona evento generato, come illustrato nella figura 8.
 
 
-[![Tegli ObjectDataSource s quando si seleziona evento viene generato ogni volta che il controllo GridView viene eseguito il paging, modificato, o Sorted](using-sql-cache-dependencies-cs/_static/image8.gif)](using-sql-cache-dependencies-cs/_static/image9.png)
+[![ObjectDataSource s quando si seleziona evento viene generato ogni volta che il controllo GridView viene eseguito il paging, modificato, o Sorted](using-sql-cache-dependencies-cs/_static/image8.gif)](using-sql-cache-dependencies-cs/_static/image9.png)
 
 **Figura 8**: Gli oggetti ObjectDataSource `Selecting` evento viene attivato ogni ora viene eseguito il paging GridView, modificata o Sorted ([fare clic per visualizzare l'immagine con dimensioni normali](using-sql-cache-dependencies-cs/_static/image10.png))
 
@@ -197,7 +197,7 @@ In cui *databaseName* è il nome del database come specificato nella `name` attr
 Il controllo GridView in `SqlCacheDependencies.aspx` sono riportati i dati da due tabelle - `Products` e `Categories` (il prodotto s `CategoryName` campo viene recuperato tramite un `JOIN` su `Categories`). Pertanto, è necessario specificare due dipendenze della cache SQL: NorthwindDB:Products; NorthwindDB:Categories.
 
 
-[![Cconfigurare ObjectDataSource per il supporto di memorizzazione nella cache usando dipendenze della Cache SQL sui prodotti e le categorie](using-sql-cache-dependencies-cs/_static/image9.gif)](using-sql-cache-dependencies-cs/_static/image11.png)
+[![Configurare ObjectDataSource per supportare la memorizzazione nella cache usando le dipendenze della Cache SQL sui prodotti e le categorie](using-sql-cache-dependencies-cs/_static/image9.gif)](using-sql-cache-dependencies-cs/_static/image11.png)
 
 **Figura 9**: Configurare ObjectDataSource per il supporto di memorizzazione nella cache usando SQL delle dipendenze della Cache nel `Products` e `Categories` ([fare clic per visualizzare l'immagine con dimensioni normali](using-sql-cache-dependencies-cs/_static/image12.png))
 
@@ -207,7 +207,7 @@ Dopo aver configurato ObjectDataSource per supportare la memorizzazione nella ca
 Dopo aver attivato il paging attraverso la griglia e notare l'assenza dell'evento quando si seleziona il testo, aprire una nuova finestra del browser e passare all'Esercitazione nozioni di base di modifica, inserimento ed eliminazione di sezione (`~/EditInsertDelete/Basics.aspx`). Aggiornare il nome o il prezzo di un prodotto. Quindi, da visualizzare una pagina diversa dei dati per la prima finestra del browser, ordinare la griglia o fare clic su un pulsante di modifica di riga o le righe. Questa fase, di generazione dell'evento di selezione deve visualizzare nuovamente, come il database sottostante i dati sono stati modificati (vedere la figura 10). Se il testo non viene visualizzato, attendere alcuni istanti e ripetere l'operazione. Tenere presente che il servizio di polling è controllo delle modifiche per il `Products` tabella ogni `pollTime` millisecondi, in modo che si verifica un ritardo tra quando i dati sottostanti vengono aggiornati e quando i dati memorizzati nella cache vengano rimosso.
 
 
-[![Modifying la tabella Products rimuove i dati memorizzati nella cache del prodotto](using-sql-cache-dependencies-cs/_static/image10.gif)](using-sql-cache-dependencies-cs/_static/image13.png)
+[![Modifica della tabella Products rimuove i dati memorizzati nella cache del prodotto](using-sql-cache-dependencies-cs/_static/image10.gif)](using-sql-cache-dependencies-cs/_static/image13.png)
 
 **Figura 10**: Modifica della tabella Products rimuove i dati del prodotto memorizzati nella cache ([fare clic per visualizzare l'immagine con dimensioni normali](using-sql-cache-dependencies-cs/_static/image14.png))
 
@@ -241,17 +241,17 @@ Aggiornare il codice per utilizzare un `SqlCacheDependency` dell'oggetto anzich�
 Per testare questa funzionalità, aggiungere un controllo GridView alla pagina sotto esistente `ProductsDeclarative` GridView. Impostare questa nuova s GridView `ID` al `ProductsProgrammatic` e, tramite suo smart tag, associarlo a un nuovo oggetto ObjectDataSource denominato `ProductsDataSourceProgrammatic`. Configurare ObjectDataSource per usare la `ProductsCL` (classe), l'impostazione di elenchi a discesa selezione e le schede di aggiornamento per `GetProducts` e `UpdateProduct`, rispettivamente.
 
 
-[![Cconfigurare ObjectDataSource per usare la classe ProductsCL](using-sql-cache-dependencies-cs/_static/image11.gif)](using-sql-cache-dependencies-cs/_static/image15.png)
+[![Configurare ObjectDataSource per usare la classe ProductsCL](using-sql-cache-dependencies-cs/_static/image11.gif)](using-sql-cache-dependencies-cs/_static/image15.png)
 
 **Figura 11**: Configurare ObjectDataSource per usare la `ProductsCL` classe ([fare clic per visualizzare l'immagine con dimensioni normali](using-sql-cache-dependencies-cs/_static/image16.png))
 
 
-[![SScegliere il metodo GetProducts da s selezionare scheda Riepilogo](using-sql-cache-dependencies-cs/_static/image12.gif)](using-sql-cache-dependencies-cs/_static/image17.png)
+[![Selezionare il metodo GetProducts dall'elenco a discesa s scheda Seleziona](using-sql-cache-dependencies-cs/_static/image12.gif)](using-sql-cache-dependencies-cs/_static/image17.png)
 
 **Figura 12**: Selezionare il `GetProducts` metodo da s selezionare scheda Riepilogo ([fare clic per visualizzare l'immagine con dimensioni normali](using-sql-cache-dependencies-cs/_static/image18.png))
 
 
-[![Cimpostare come metodo UpdateProduct da s aggiornamento scheda Riepilogo](using-sql-cache-dependencies-cs/_static/image13.gif)](using-sql-cache-dependencies-cs/_static/image19.png)
+[![Scegliere il metodo UpdateProduct dall'elenco a discesa s scheda UPDATE](using-sql-cache-dependencies-cs/_static/image13.gif)](using-sql-cache-dependencies-cs/_static/image19.png)
 
 **Figura 13**: Scegliere il metodo UpdateProduct da s aggiornamento scheda Riepilogo ([fare clic per visualizzare l'immagine con dimensioni normali](using-sql-cache-dependencies-cs/_static/image20.png))
 

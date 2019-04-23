@@ -12,7 +12,7 @@ ms.openlocfilehash: 20ea33efbd1db657a03b20a665a041ecf3a6d248
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59399554"
 ---
 # <a name="efficiently-paging-through-large-amounts-of-data-vb"></a>Suddivisione in pagine efficiente di grandi quantità di dati (VB)
@@ -191,7 +191,7 @@ Dopo aver creato la stored procedure, è opportuno testarlo. Fare clic su di `Ge
 Dopo aver scegliendo questi valori di parametri di input, la finestra di Output visualizzerà i risultati. Figura 8 mostra i risultati quando si passano 10, sia per il `@startRowIndex` e `@maximumRows` parametri.
 
 
-[![Ti record che apparirà nella seconda pagina di dati sono tornato](efficiently-paging-through-large-amounts-of-data-vb/_static/image9.png)](efficiently-paging-through-large-amounts-of-data-vb/_static/image8.png)
+[![Il record che apparirà nella seconda pagina di dati restituiti](efficiently-paging-through-large-amounts-of-data-vb/_static/image9.png)](efficiently-paging-through-large-amounts-of-data-vb/_static/image8.png)
 
 **Figura 8**: Il record che apparirà nella seconda pagina di dati vengono restituiti ([fare clic per visualizzare l'immagine con dimensioni normali](efficiently-paging-through-large-amounts-of-data-vb/_static/image10.png))
 
@@ -293,7 +293,7 @@ Si noti che il `EnablePaging` e `SelectCountMethod` sono state impostate le prop
 Dopo aver apportato queste modifiche, visita questa pagina tramite un browser. Dovrebbe essere 10 prodotti nell'elenco, ordinato in ordine alfabetico. Si consiglia di esaminare i dati una pagina alla volta. Anche se non vi è alcuna differenza visual dalla prospettiva degli utenti finali s tra il paging predefinito e il paging personalizzato, in modo più efficiente il paging personalizzato Sfoglia le pagine di grandi quantità di dati come recuperare solo i record che devono essere visualizzati per una determinata pagina.
 
 
-[![The i dati, ordinati in base al nome di prodotto, è di paging con Paging personalizzato](efficiently-paging-through-large-amounts-of-data-vb/_static/image20.png)](efficiently-paging-through-large-amounts-of-data-vb/_static/image19.png)
+[![I dati, ordinato in base al prodotto, nome, è di paging con Paging personalizzato](efficiently-paging-through-large-amounts-of-data-vb/_static/image20.png)](efficiently-paging-through-large-amounts-of-data-vb/_static/image19.png)
 
 **Figura 17**: I dati, ordinato in base al prodotto, nome, è di paging con Paging personalizzato ([fare clic per visualizzare l'immagine con dimensioni normali](efficiently-paging-through-large-amounts-of-data-vb/_static/image21.png))
 
@@ -309,7 +309,7 @@ Scegliendo il collegamento alla pagina ultima causa un postback e istruisce il c
 L'implementazione di paging personalizzato corrente richiede che l'ordine con cui i dati viene eseguito il paging attraverso sia specificato in modo statico durante la creazione di `GetProductsPaged` stored procedure. Tuttavia, si potrebbe sia preso nota prima che lo smart tag s di GridView contiene una casella di controllo Abilita ordinamento oltre l'opzione attiva Paging. Sfortunatamente, aggiungendo il supporto dell'ordinamento per il controllo GridView con l'implementazione di paging personalizzato corrente solo ordinare i record nella pagina visualizzata dei dati. Ad esempio, se si configura il controllo GridView per supportare anche il paging e quindi, quando si visualizzano la prima pagina di dati, ordinare in base al nome di prodotto in ordine decrescente, invertirà l'ordine dei prodotti nella pagina 1. Come illustrato nella figura 18, ad esempio Carnarvon Leoni Mostra come il primo prodotto durante l'ordinamento in ordine alfabetico inverso, che ignora i 71 altri prodotti che seguono il termine Leoni Carnarvon, in ordine alfabetico; il tipo di ordinamento vengono considerati solo i record nella prima pagina.
 
 
-[![Osola i dati visualizzati nella pagina corrente viene ordinato](efficiently-paging-through-large-amounts-of-data-vb/_static/image23.png)](efficiently-paging-through-large-amounts-of-data-vb/_static/image22.png)
+[![Solo i dati visualizzati nella pagina corrente è ordinato](efficiently-paging-through-large-amounts-of-data-vb/_static/image23.png)](efficiently-paging-through-large-amounts-of-data-vb/_static/image22.png)
 
 **Figura 18**: Solo i dati visualizzati nella pagina corrente è ordinato ([fare clic per visualizzare l'immagine con dimensioni normali](efficiently-paging-through-large-amounts-of-data-vb/_static/image24.png))
 

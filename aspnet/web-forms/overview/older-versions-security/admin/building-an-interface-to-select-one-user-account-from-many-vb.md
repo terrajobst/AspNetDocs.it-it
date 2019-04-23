@@ -12,7 +12,7 @@ ms.openlocfilehash: d7dd82ed4140b5ac6993483fb16af6a1b249be51
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59383890"
 ---
 # <a name="building-an-interface-to-select-one-user-account-from-many-vb"></a>Creazione di un'interfaccia per la selezione di un account utente tra diversi account (VB)
@@ -56,7 +56,7 @@ Pagine di ASP.NET il `Administration` cartella sono destinati esclusivamente agl
 Esplora soluzioni del progetto a questo punto dovrebbe essere simile allo screenshot illustrato nella figura 1.
 
 
-[![Fle nuove pagine e un File Web. config sono stati aggiunti al sito Web](building-an-interface-to-select-one-user-account-from-many-vb/_static/image2.png)](building-an-interface-to-select-one-user-account-from-many-vb/_static/image1.png)
+[![Sono stati aggiunti quattro nuove pagine e un File Web. config per il sito Web](building-an-interface-to-select-one-user-account-from-many-vb/_static/image2.png)](building-an-interface-to-select-one-user-account-from-many-vb/_static/image1.png)
 
 **Figura 1**: Quattro nuove pagine e una `Web.config` File sono stati aggiunti al sito Web ([fare clic per visualizzare l'immagine con dimensioni normali](building-an-interface-to-select-one-user-account-from-many-vb/_static/image3.png))
 
@@ -68,7 +68,7 @@ Infine, aggiornare la mappa del sito (`Web.sitemap`) per includere una voce per 
 Con la mappa del sito aggiornata, visitare il sito tramite un browser. Come illustrato nella figura 2, la navigazione a sinistra ora include elementi per le esercitazioni di amministrazione.
 
 
-[![TMappa del sito ha incluso un'amministrazione utente denominato nodo](building-an-interface-to-select-one-user-account-from-many-vb/_static/image5.png)](building-an-interface-to-select-one-user-account-from-many-vb/_static/image4.png)
+[![Mappa del sito include un nodo denominato Amministrazione utenti](building-an-interface-to-select-one-user-account-from-many-vb/_static/image5.png)](building-an-interface-to-select-one-user-account-from-many-vb/_static/image4.png)
 
 **Figura 2**: Mappa del sito include un nodo denominato utente amministrazione ([fare clic per visualizzare l'immagine con dimensioni normali](building-an-interface-to-select-one-user-account-from-many-vb/_static/image6.png))
 
@@ -82,7 +82,7 @@ Aprire il `ManageUsers.aspx` nella pagina la `Administration` cartella e aggiung
 Per visualizzare le informazioni dell'account utente desiderato in GridView, impostare il controllo GridView `AutoGenerateColumns` la proprietà su False e aggiungere i BoundField per il `UserName`, `Email`, e `Comment` le proprietà e CheckBoxFields per il `IsApproved`, `IsLockedOut`, e `IsOnline` proprietà. Questa configurazione può essere applicata tramite il tag del controllo dichiarativa o la finestra di dialogo campi. Figura 3 mostra una schermata dei campi nella finestra di dialogo dopo che è stata deselezionata la casella di controllo delle genera automaticamente i campi e i BoundField e CheckBoxFields sono stati aggiunti e configurati.
 
 
-[![Agg tre BoundField e tre CheckBoxFields a GridView](building-an-interface-to-select-one-user-account-from-many-vb/_static/image8.png)](building-an-interface-to-select-one-user-account-from-many-vb/_static/image7.png)
+[![Aggiungere tre BoundField e tre CheckBoxFields a GridView](building-an-interface-to-select-one-user-account-from-many-vb/_static/image8.png)](building-an-interface-to-select-one-user-account-from-many-vb/_static/image7.png)
 
 **Figura 3**: Aggiungere tre BoundField e CheckBoxFields tre per il controllo GridView ([fare clic per visualizzare l'immagine con dimensioni normali](building-an-interface-to-select-one-user-account-from-many-vb/_static/image9.png))
 
@@ -98,7 +98,7 @@ Successivamente, è necessario scrivere codice che associa gli account utente a 
 Si consiglia di testare la pagina tramite un browser. Come illustrato nella figura 4, il `UserAccounts` GridView sono elencati il nome utente, indirizzo di posta elettronica e altre informazioni sugli account pertinenti per tutti gli utenti nel sistema.
 
 
-[![Tgli account utente he sono elencati in GridView](building-an-interface-to-select-one-user-account-from-many-vb/_static/image11.png)](building-an-interface-to-select-one-user-account-from-many-vb/_static/image10.png)
+[![Vengono elencati gli account utente in GridView](building-an-interface-to-select-one-user-account-from-many-vb/_static/image11.png)](building-an-interface-to-select-one-user-account-from-many-vb/_static/image10.png)
 
 **Figura 4**: Vengono elencati gli account utente in GridView ([fare clic per visualizzare l'immagine con dimensioni normali](building-an-interface-to-select-one-user-account-from-many-vb/_static/image12.png))
 
@@ -122,7 +122,7 @@ Questo metodo consente di specificare le opzioni di filtro come elementi nel `St
 Figura 5 mostra il `ManageUsers.aspx` pagina quando viene visualizzato tramite un browser.
 
 
-[![Tegli Repeater elenca 27 filtro LinkButton](building-an-interface-to-select-one-user-account-from-many-vb/_static/image14.png)](building-an-interface-to-select-one-user-account-from-many-vb/_static/image13.png)
+[![Il controllo Repeater elenca 27 LinkButton filtro](building-an-interface-to-select-one-user-account-from-many-vb/_static/image14.png)](building-an-interface-to-select-one-user-account-from-many-vb/_static/image13.png)
 
 **Figura 5**: Il controllo Repeater elenca 27 filtro LinkButton ([fare clic per visualizzare l'immagine con dimensioni normali](building-an-interface-to-select-one-user-account-from-many-vb/_static/image15.png))
 
@@ -152,7 +152,7 @@ Creare un gestore eventi per il controllo Repeater `ItemCommand` evento. Questo 
 Con questo codice, testare la funzionalità di filtro. Quando la pagina viene prima visitata, vengono visualizzati tutti gli account utente (vedere la figura 5). Facendo clic il LinkButton A causa un postback e di filtrare i risultati, visualizzando solo gli account utente che iniziano per a.
 
 
-[![USe il LinkButton di filtro per visualizzare tali utenti il cui nome utente inizi con una lettera Certain](building-an-interface-to-select-one-user-account-from-many-vb/_static/image17.png)](building-an-interface-to-select-one-user-account-from-many-vb/_static/image16.png)
+[![Usare i controlli LinkButton i filtri per visualizzare tali utenti il cui nome utente inizi con una lettera](building-an-interface-to-select-one-user-account-from-many-vb/_static/image17.png)](building-an-interface-to-select-one-user-account-from-many-vb/_static/image16.png)
 
 **Figura 6**: Usare i controlli LinkButton i filtri per visualizzare tali utenti il cui nome utente inizi con una lettera Certain ([fare clic per visualizzare l'immagine con dimensioni normali](building-an-interface-to-select-one-user-account-from-many-vb/_static/image18.png))
 
@@ -197,7 +197,7 @@ Successivamente, creare un gestore eventi per ognuno del LinkButton `Click` gli 
 Figura 7 mostra il quattro LinkButton quando vengono visualizzate tramite la visualizzazione di progettazione di Visual Web Developer.
 
 
-[![Agg prima, precedente, successivo e l'ultimo LinkButton sotto il controllo GridView](building-an-interface-to-select-one-user-account-from-many-vb/_static/image20.png)](building-an-interface-to-select-one-user-account-from-many-vb/_static/image19.png)
+[![Aggiungere prima, precedente, in futuro, e l'ultimo LinkButton sotto il controllo GridView](building-an-interface-to-select-one-user-account-from-many-vb/_static/image20.png)](building-an-interface-to-select-one-user-account-from-many-vb/_static/image19.png)
 
 **Figura 7**: Aggiungere prima di tutto, indietro e Avanti ultimo LinkButton sotto il controllo GridView ([fare clic per visualizzare l'immagine con dimensioni normali](building-an-interface-to-select-one-user-account-from-many-vb/_static/image21.png))
 
@@ -227,12 +227,12 @@ L'ultimo passaggio consiste nello scrivere il codice per i quattro i controlli L
 Figure 8 e 9 di visualizzare l'interfaccia di paging personalizzato in azione. Figura 8 mostra la `ManageUsers.aspx` pagina quando si visualizzano la prima pagina di dati per tutti gli account utente. Si noti che vengono visualizzati solo 10 degli account di 13. Selezionando il collegamento successivo o ultima causa un postback, gli aggiornamenti di `PageIndex` su 1 e associa la seconda pagina dell'utente account alla griglia (vedere la figura 9).
 
 
-[![Tvengono visualizzati gli account utente 10 primo he](building-an-interface-to-select-one-user-account-from-many-vb/_static/image23.png)](building-an-interface-to-select-one-user-account-from-many-vb/_static/image22.png)
+[![Vengono visualizzati il primo account utente di 10](building-an-interface-to-select-one-user-account-from-many-vb/_static/image23.png)](building-an-interface-to-select-one-user-account-from-many-vb/_static/image22.png)
 
 **Figura 8**: Vengono visualizzati gli account utente di 10 prima ([fare clic per visualizzare l'immagine con dimensioni normali](building-an-interface-to-select-one-user-account-from-many-vb/_static/image24.png))
 
 
-[![Clicking verrà visualizzato il collegamento successivo la seconda pagina di account utente](building-an-interface-to-select-one-user-account-from-many-vb/_static/image26.png)](building-an-interface-to-select-one-user-account-from-many-vb/_static/image25.png)
+[![Selezione del collegamento viene visualizzata la pagina secondo degli account utente](building-an-interface-to-select-one-user-account-from-many-vb/_static/image26.png)](building-an-interface-to-select-one-user-account-from-many-vb/_static/image25.png)
 
 **Figura 9**: Selezione del collegamento viene visualizzato la seconda pagina di account utente ([fare clic per visualizzare l'immagine con dimensioni normali](building-an-interface-to-select-one-user-account-from-many-vb/_static/image27.png))
 
