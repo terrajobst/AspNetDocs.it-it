@@ -12,7 +12,7 @@ ms.openlocfilehash: 4fe34858aadb705ffb59e06ba805493d89aa4028
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59403207"
 ---
 # <a name="using-the-tagbuilder-class-to-build-html-helpers-vb"></a>Utilizzo della classe TagBuilder per creazione di helper HTML (VB)
@@ -65,7 +65,7 @@ Dopo aver creato l'helper di immagine, è possibile usare l'helper nelle visuali
 [!code-aspx[Main](using-the-tagbuilder-class-to-build-html-helpers-vb/samples/sample2.aspx)]
 
 
-[![Tfinestra di dialogo Nuovo progetto di he](using-the-tagbuilder-class-to-build-html-helpers-vb/_static/image1.jpg)](using-the-tagbuilder-class-to-build-html-helpers-vb/_static/image1.png)
+[![La finestra di dialogo Nuovo progetto](using-the-tagbuilder-class-to-build-html-helpers-vb/_static/image1.jpg)](using-the-tagbuilder-class-to-build-html-helpers-vb/_static/image1.png)
 
 **Figura 01**: Utilizzo dell'helper di immagine ([fare clic per visualizzare l'immagine con dimensioni normali](using-the-tagbuilder-class-to-build-html-helpers-vb/_static/image2.png))
 

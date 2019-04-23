@@ -12,7 +12,7 @@ ms.openlocfilehash: 48a66eea839f7f48899040ad20bbfee95b9a1902
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59403909"
 ---
 # <a name="monitoring-and-telemetry-building-real-world-cloud-apps-with-azure"></a>Monitoraggio e telemetria (creazione di App Cloud funzionanti con Azure)
@@ -72,7 +72,7 @@ Distribuire l'app in Azure e iniziare a usarlo. Creare alcune Fix It attività p
 
 Quindi tornare al **New Relic** pagina il **componenti aggiuntivi** scheda del portale e fare clic su **Gestisci**. Il portale invia all'utente per il portale di gestione di New Relic, con accesso single sign-on per l'autenticazione in modo da non dover immettere nuovamente le credenziali. La pagina Panoramica offre un'ampia gamma di statistiche sulle prestazioni. (Fare clic sull'immagine per visualizzare le dimensioni della pagina overview completi).
 
-[![Nscheda Monitoraggio Relic uova](monitoring-and-telemetry/_static/image9.png)](monitoring-and-telemetry/_static/image8.png)
+[![Nuova scheda Monitoraggio Relic](monitoring-and-telemetry/_static/image9.png)](monitoring-and-telemetry/_static/image8.png)
 
 Di seguito sono elencate alcune delle statistiche è possibile visualizzare:
 

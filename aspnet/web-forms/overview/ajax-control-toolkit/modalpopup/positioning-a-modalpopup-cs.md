@@ -12,7 +12,7 @@ ms.openlocfilehash: db69c0cf4fc3e5d39d88d8a6478a529309020d3d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59398033"
 ---
 # <a name="positioning-a-modalpopup-c"></a>Posizionamento di un controllo ModalPopup (C#)
@@ -55,7 +55,7 @@ E il `stopMoving()` funzione entra in gioco quando il controllo popup viene chiu
 [!code-aspx[Main](positioning-a-modalpopup-cs/samples/sample6.aspx)]
 
 
-[![Tpopup modale he viene visualizzata in corrispondenza della posizione designata](positioning-a-modalpopup-cs/_static/image2.png)](positioning-a-modalpopup-cs/_static/image1.png)
+[![Verrà visualizzata la finestra popup modale in corrispondenza della posizione designata](positioning-a-modalpopup-cs/_static/image2.png)](positioning-a-modalpopup-cs/_static/image1.png)
 
 Verrà visualizzata la finestra popup modale in corrispondenza della posizione designata ([fare clic per visualizzare l'immagine con dimensioni normali](positioning-a-modalpopup-cs/_static/image3.png))
 

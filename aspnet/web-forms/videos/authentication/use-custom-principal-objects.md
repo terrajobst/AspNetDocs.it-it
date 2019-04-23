@@ -12,7 +12,7 @@ ms.openlocfilehash: 3995ff1dd5a670b39c90c86cf68c85b19b6db0ce
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59397179"
 ---
 # <a name="use-custom-principal-objects"></a>Usare oggetti Principal personalizzati

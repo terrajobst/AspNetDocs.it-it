@@ -12,7 +12,7 @@ ms.openlocfilehash: 34fd3fb357c7a6c33b3a551b0cda7029e807da2c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59399060"
 ---
 # <a name="getting-started-with-entity-framework-6-code-first-using-mvc-5"></a>Introduzione a Entity Framework 6 Code First con MVC 5
@@ -22,7 +22,7 @@ ms.locfileid: "59399060"
 
 - [Creazione di un modello di dati di Entity Framework](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md)
 - [Implementazione della funzionalità CRUD di base](implementing-basic-crud-functionality-with-the-entity-framework-in-asp-net-mvc-application.md)
-- [Ordinamento, filtro e suddivisione in pagine](sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application.md)
+- [Ordinamento, filtro e paging](sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application.md)
 - [Resilienza della connessione e intercettazione dei comandi](connection-resiliency-and-command-interception-with-the-entity-framework-in-an-asp-net-mvc-application.md)
 - [Migrazioni Code First e distribuzione](migrations-and-deployment-with-the-entity-framework-in-an-asp-net-mvc-application.md)
 - [Creazione di un modello di dati più complesso](creating-a-more-complex-data-model-for-an-asp-net-mvc-application.md)

@@ -12,7 +12,7 @@ ms.openlocfilehash: 59c0a820e30f302ac56dd000837f40f7c13fe183
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59401127"
 ---
 # <a name="paging-and-sorting-with-the-datalist-and-repeater"></a>Paging e ordinamento con DataList e Repeater
@@ -22,5 +22,5 @@ ms.locfileid: "59401127"
 
 - [Paging dei dati dei report in un controllo DataList o Repeater (C#)](paging-report-data-in-a-datalist-or-repeater-control-cs.md)
 - [Ordinamento dei dati in un controllo DataList o Repeater (C#)](sorting-data-in-a-datalist-or-repeater-control-cs.md)
-- [Suddivisione in pagine dei dati dei report in un controllo DataList o Repeater (VB)](paging-report-data-in-a-datalist-or-repeater-control-vb.md)
+- [Paging dei dati dei report in un controllo DataList o Repeater (VB)](paging-report-data-in-a-datalist-or-repeater-control-vb.md)
 - [Ordinamento dei dati in un controllo DataList o Repeater (VB)](sorting-data-in-a-datalist-or-repeater-control-vb.md)

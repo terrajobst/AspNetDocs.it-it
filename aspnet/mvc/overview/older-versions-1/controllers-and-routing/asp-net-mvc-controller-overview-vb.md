@@ -12,7 +12,7 @@ ms.openlocfilehash: 33544825403db67fc3b8f0e9eae5d7671b8d2e67
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59402193"
 ---
 # <a name="aspnet-mvc-controller-overview-vb"></a>Panoramica del controller ASP.NET MVC (VB)
@@ -91,7 +91,7 @@ Si noti che l'azione Index () nel listato 2 non viene restituito un ViewResult()
 
 Pertanto, se si desidera restituire una visualizzazione nel browser, chiamare il metodo View(). Se si desidera reindirizzare l'utente dall'azione di un controller a un'altra, chiamare il metodo RedirectToAction(). Ad esempio, l'azione Details() nel listato 3 viene mostrata una visualizzazione o reindirizza l'utente per l'azione Index () a seconda che il parametro Id abbia un valore.
 
-**Listing 3 - CustomerController.vb**
+**Listato 3 - CustomerController.vb**
 
 [!code-vb[Main](asp-net-mvc-controller-overview-vb/samples/sample3.vb)]
 
@@ -111,7 +111,7 @@ Quando viene richiamata l'azione StatusController.Index(), una vista non viene r
 
 Se un'azione del controller restituisce un risultato che è non un risultato dell'azione, ad esempio, una data o un numero intero, quindi il risultato viene inserito in un ContentResult automaticamente. Ad esempio, quando viene richiamata l'azione Index () di WorkController nel listato 5, la data viene restituita come un ContentResult automaticamente.
 
-**Listing 5 - WorkController.vb**
+**Listato 5 - WorkController.vb**
 
 [!code-vb[Main](asp-net-mvc-controller-overview-vb/samples/sample5.vb)]
 

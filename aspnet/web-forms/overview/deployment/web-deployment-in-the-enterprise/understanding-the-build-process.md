@@ -12,14 +12,14 @@ ms.openlocfilehash: 6f526b9842e02031b54b0a7519486ef8aa69021b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59397396"
 ---
 # <a name="understanding-the-build-process"></a>Informazioni sul processo di compilazione
 
 da [Jason Lee](https://github.com/jrjlee)
 
-[Scarica il PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Scaricare PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > In questo argomento fornisce una procedura dettagliata di un processo di compilazione e distribuzione su larga scala. L'approccio descritto in questo argomento Usa i file di progetto personalizzati di Microsoft Build Engine (MSBuild) per fornire un controllo accurato ogni aspetto del processo. All'interno dei file di progetto, le destinazioni MSBuild personalizzate vengono utilizzate per eseguire l'utilità di distribuzione di database VSDBCMD.exe e utilità di distribuzione, ad esempio lo strumento di distribuzione di Internet Information Services (IIS) Web (MSDeploy.exe).
 > 

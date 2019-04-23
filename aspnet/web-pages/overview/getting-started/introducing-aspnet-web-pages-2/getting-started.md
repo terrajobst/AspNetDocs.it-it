@@ -12,7 +12,7 @@ ms.openlocfilehash: 796e0c5e605d1103a4b9937b4e698c5c9412c013
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59402297"
 ---
 # <a name="getting-started"></a>Introduzione
@@ -289,4 +289,4 @@ Nella prossima esercitazione della serie, si Esplora un po' più di programmazio
 [Creare un sito Web ASP.NET da zero](https://www.microsoft.com/web/post/create-an-aspnet-website-from-scratch). Si tratta di un'esercitazione in cui è in particolare sull'utilizzo di WebMatrix (non ASP.NET Web Pages). Diventa un po' più in dettaglio alcune delle funzionalità aggiuntive di WebMatrix che non verranno illustrati in questa serie di esercitazioni.
 
 > [!div class="step-by-step"]
-> [Successivo](intro-to-web-pages-programming.md)
+> [avanti](intro-to-web-pages-programming.md)

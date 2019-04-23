@@ -12,7 +12,7 @@ ms.openlocfilehash: b06f105b16087f97788e0ab360af41f538d2c1ac
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59400802"
 ---
 # <a name="configuration-and-instrumentation"></a>Configurazione e strumentazione
@@ -145,11 +145,11 @@ Il &lt;healthMonitoring&gt; sezione del file Web. config globale sono disponibil
 
 Il &lt;healthMonitoring&gt; sezione del file Web. config globale contiene gli elementi seguenti:
 
-| **provider** | Contiene i provider impostato per il Visualizzatore eventi, WMI e SQL Server. |
+| **providers** | Contiene i provider impostato per il Visualizzatore eventi, WMI e SQL Server. |
 | --- | --- |
 | **eventMappings** | Contiene i mapping per le varie classi WebBase. È possibile estendere questo elenco se si genera la propria classe di evento. Generare la propria classe di evento offre una maggiore granularità il provider per che è inviare informazioni. Ad esempio, è possibile configurare le eccezioni non gestite da inviare al Server SQL, durante l'invio di eventi personalizzati al messaggio di posta elettronica. |
-| **regole** | Collega eventMappings al provider. |
-| **inserimento nel buffer** | Utilizzato con i provider di posta elettronica e SQL Server per determinare la frequenza con cui gli eventi di scaricamento al provider. |
+| **rules** | Collega eventMappings al provider. |
+| **buffering** | Utilizzato con i provider di posta elettronica e SQL Server per determinare la frequenza con cui gli eventi di scaricamento al provider. |
 
 Di seguito è riportato un esempio di codice dal file Web. config globale.
 
@@ -241,7 +241,7 @@ Sono disponibili diversi strumenti da riga di comando per facilitare la configur
 
 Sono disponibili gli strumenti da riga di comando seguenti:
 
-| **Strumento** | **Usa** |
+| **Strumento** | **Usare** |
 | --- | --- |
 | **aspnet\_regiis.exe** | Consente la registrazione di ASP.NET con IIS. Sono disponibili due versioni di questo strumenti forniti con ASP.NET 2.0, uno per i sistemi a 32 bit (nella cartella Framework) e uno per i sistemi a 64 bit (nella cartella Framework64.) La versione a 64 bit non verrà installata in un sistema operativo a 32 bit. |
 | **aspnet\_regsql.exe** | Lo strumento di registrazione del Server SQL ASP.NET viene utilizzato per creare un database di Microsoft SQL Server per l'uso da parte dei provider di SQL Server in ASP.NET o per aggiungere o rimuovere le opzioni da un database esistente. Aspnet\_regsql.exe file si trova in [cartella drive:]\WINDOWS\Microsoft.NET\Framework\versionNumber sul server Web. |
@@ -298,7 +298,7 @@ Le opzioni seguenti sono disponibili quando si esegue aspnet\_regbrowser.exe:
 
 Lo strumento di compilazione ASP.NET può essere utilizzato in due modi generali: per la compilazione sul posto e la compilazione per la distribuzione, in cui viene specificata una directory di output di destinazione.
 
-### [<a name="compiling-an-application-in-place"></a>Compila un'applicazione posto](https://msdn.microsoft.com/library/ms229863.aspx)
+### <a name="compiling-an-application-in-placehttpsmsdnmicrosoftcomlibraryms229863aspx"></a>[Compila un'applicazione posto](https://msdn.microsoft.com/library/ms229863.aspx)
 
 Lo strumento di compilazione ASP.NET è possibile compilare un'applicazione posto, vale a dire riproduce il comportamento di effettuare più richieste per l'applicazione, con conseguente normale compilazione. Gli utenti di un sito di pre-compilato non possa sperimentare ritardi causato dalla compilazione la pagina alla prima richiesta.
 
@@ -314,7 +314,7 @@ Quando si precompila un sito sul posto, si applicano i seguenti elementi:
 > Compilazione di un'applicazione che contiene un'applicazione annidata non viene compilato l'applicazione annidato. L'applicazione annidato deve essere compilato separatamente.
 
 
-### [<a name="compiling-an-application-for-deployment"></a>La compilazione di un'applicazione per la distribuzione](https://msdn.microsoft.com/library/ms229863.aspx)
+### <a name="compiling-an-application-for-deploymenthttpsmsdnmicrosoftcomlibraryms229863aspx"></a>[La compilazione di un'applicazione per la distribuzione](https://msdn.microsoft.com/library/ms229863.aspx)
 
 Si compila un'applicazione per la distribuzione (compilazione di un percorso di destinazione), specificando il parametro targetDir. Che può rappresentare la posizione finale per l'applicazione Web o l'applicazione compilata può essere distribuito ulteriormente. Usando il **-u** opzione Compila l'applicazione in modo tale che è possibile apportare modifiche a determinati file nell'applicazione compilata senza ricompilazione. ASPNET\_compiler.exe opera una distinzione tra i tipi di file statici e dinamici e li gestisce in modo diverso quando si crea l'applicazione risultante.
 
@@ -351,11 +351,11 @@ La tabella seguente descrive come il compilazione ASP.NET lo strumento gestisce 
 | i file nell'App. skin\_sottodirectory di temi | I temi sono compilati in assembly e inseriti nella directory Bin. File stub vengono creati per i file. skin e inseriti nella directory di output corrispondente. I file statici (ad esempio CSS) vengono copiati nelle directory di output. |
 | gli assembly già presenti nella directory Bin di tipi di browser file statico Web. config | Questi file vengono copiati quando è nella directory di output. |
 
-### [<a name="fixed-assembly-names"></a>Nomi di Assembly fissa](https://msdn.microsoft.com/library/ms229863.aspx##)
+### <a name="fixed-assembly-nameshttpsmsdnmicrosoftcomlibraryms229863aspx"></a>[Nomi di Assembly fissa](https://msdn.microsoft.com/library/ms229863.aspx##)
 
 Alcuni scenari, quali la distribuzione di un'applicazione Web tramite il programma di installazione di Windows MSI, richiedono l'uso di nomi di file coerente e contenuto, nonché le strutture di directory coerente per identificare gli assembly o le impostazioni di configurazione per gli aggiornamenti. In questi casi, è possibile usare la **- fixednames** opzione per specificare che lo strumento di compilazione ASP.NET deve compilare un assembly per ogni file di origine invece di usare where più pagine vengono compilate in assembly. Questo può causare un numero elevato di assembly, se si è interessati alla scalabilità è necessario utilizzare questa opzione con cautela.
 
-### [<a name="strong-name-compilation"></a>Compilazione con nome sicuro](https://msdn.microsoft.com/library/ms229863.aspx##)
+### <a name="strong-name-compilationhttpsmsdnmicrosoftcomlibraryms229863aspx"></a>[Compilazione con nome sicuro](https://msdn.microsoft.com/library/ms229863.aspx##)
 
 Il **- aptca**, **- delaysign**, **- keycontainer** e **- keyfile** sono disponibili opzioni in modo che è possibile usare Aspnet\_ assembly con nomi sicuri Compiler.exe creare fortemente senza usare la [strumento nome sicuro (Sn.exe)](https://msdn.microsoft.com/library/k5b5tt23.aspx) separatamente. Queste opzioni corrispondono rispettivamente a **AllowPartiallyTrustedCallersAttribute**, **AssemblyDelaySignAttribute**, **AssemblyKeyNameAttribute**e  **AssemblyKeyFileAttribute**.
 

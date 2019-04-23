@@ -12,7 +12,7 @@ ms.openlocfilehash: c1bd52b47b42005ed22f107b9f8aaa65c0ed111a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59402024"
 ---
 # <a name="working-with-data-in-aspnet-web-forms"></a>Usare i dati nel Web Form ASP.NET
@@ -20,7 +20,7 @@ ms.locfileid: "59402024"
 > Come accedere ai dati usando i controlli e su come rendere persistenti le informazioni tra le richieste.
 
 
-- [Associazione di modelli e Web Forms in Visual Studio 2013](model-binding/index.md)
+- [Associazione di modelli e Web Form in Visual Studio 2013](model-binding/index.md)
 
     - [Recupero e visualizzazione dei dati](model-binding/retrieving-data.md)
     - [Aggiornamento, eliminazione e creazione di dati](model-binding/updating-deleting-and-creating-data.md)

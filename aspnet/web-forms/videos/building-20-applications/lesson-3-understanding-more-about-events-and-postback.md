@@ -12,7 +12,7 @@ ms.openlocfilehash: cefba04d5175ff3fb80f69074cdd0cc3f6c57fa6
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59400256"
 ---
 # <a name="lesson-3--understanding-more-about-events-and-postback"></a>[Lezione 3:] Ulteriori nozioni su eventi e postback

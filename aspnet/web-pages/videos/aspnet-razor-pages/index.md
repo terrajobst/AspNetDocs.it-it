@@ -12,7 +12,7 @@ ms.openlocfilehash: 3224039c29bfda085e74095f7089dcbfc68ce1cc
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59401101"
 ---
 # <a name="aspnet-web-pages"></a>Pagine Web ASP.NET
@@ -32,7 +32,7 @@ ms.locfileid: "59401101"
 - [Visualizzazione dei dati in un grafico (parte 1)](displaying-data-in-a-chart-part-1.md)
 - [Visualizzazione dei dati in un grafico (parte 2)](displaying-data-in-a-chart-part-2.md)
 - [Uso dei file](working-with-files.md)
-- [Working with Images (Uso delle immagini)](working-with-images.md)
+- [Uso delle immagini](working-with-images.md)
 - [Uso dei video](working-with-video.md)
 - [Aggiunta di posta elettronica al sito Web](adding-email-to-your-web-site.md)
 - [Aggiunta di funzionalità di ricerca al sito Web](adding-search-to-your-web-site.md)

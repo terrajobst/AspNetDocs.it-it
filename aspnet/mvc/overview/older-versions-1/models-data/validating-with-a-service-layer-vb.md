@@ -12,7 +12,7 @@ ms.openlocfilehash: fc819494ef58824d485144396e3a995d906c8b42
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59398709"
 ---
 # <a name="validating-with-a-service-layer-vb"></a>Convalida con un livello di servizio (VB)
@@ -74,7 +74,7 @@ Nel listato 5, il livello di servizio è stato aggiornato in modo che non usi pi
 
 L'interfaccia IValidationDictionary viene definita nel listato 6. Questa interfaccia semplice include un solo metodo e una singola proprietà.
 
-**Listing 6 - Models\IValidationDictionary.cs**
+**Listato 6 - Models\IValidationDictionary.cs**
 
 [!code-vb[Main](validating-with-a-service-layer-vb/samples/sample6.vb)]
 

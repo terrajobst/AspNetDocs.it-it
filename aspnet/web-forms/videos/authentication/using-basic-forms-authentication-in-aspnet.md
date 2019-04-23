@@ -12,7 +12,7 @@ ms.openlocfilehash: aae53f1b9ab5676e41a4b7cfac45144b60ae56a4
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59397123"
 ---
 # <a name="using-basic-forms-authentication-in-aspnet"></a>Uso dell'autenticazione basata su form di base in ASP.NET
@@ -24,4 +24,4 @@ L'autenticazione a livello di codice con ASP.NET basata su Joe Stagner viene des
 [&#9654;Guarda il video (23 minuti)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/using-basic-forms-authentication-in-aspnet)
 
 > [!div class="step-by-step"]
-> [Successivo](how-to-change-the-forms-authentication-properties.md)
+> [avanti](how-to-change-the-forms-authentication-properties.md)

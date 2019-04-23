@@ -12,7 +12,7 @@ ms.openlocfilehash: 5819dc3d62161fc4f31cf30c6c739654a64d86b3
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59400412"
 ---
 # <a name="custom-buttons-in-the-datalist-and-repeater-c"></a>Pulsanti personalizzati con DataList e Repeater (C#)
@@ -31,7 +31,7 @@ Durante le esercitazioni precedenti diciassette DataList e Repeater, abbiamo cre
 Per modificare ed eliminare i pulsanti, anche i controlli DataList e Repeater possono includere anche i pulsanti, i controlli LinkButton o ImageButtons che, quando si fa clic, eseguire una logica personalizzata lato server. In questa esercitazione creeremo un'interfaccia che utilizza un controllo Repeater per visualizzare l'elenco di categorie nel sistema. Per ogni categoria, il controllo Repeater includerà un pulsante per visualizzare la categoria di prodotti associati alla usando un controllo BulletedList (vedere la figura 1).
 
 
-[![Clicking Mostra prodotti collegamento Visualizza la categoria s prodotti in un elenco puntato](custom-buttons-in-the-datalist-and-repeater-cs/_static/image2.png)](custom-buttons-in-the-datalist-and-repeater-cs/_static/image1.png)
+[![Facendo clic su Mostra i prodotti collegamento Visualizza i prodotti s categoria in un elenco puntato](custom-buttons-in-the-datalist-and-repeater-cs/_static/image2.png)](custom-buttons-in-the-datalist-and-repeater-cs/_static/image1.png)
 
 **Figura 1**: Facendo clic su Visualizza collegamento Mostra prodotti la categoria s prodotti in un elenco puntato ([fare clic per visualizzare l'immagine con dimensioni normali](custom-buttons-in-the-datalist-and-repeater-cs/_static/image3.png))
 
@@ -52,7 +52,7 @@ Prima di esaminare come aggiungere un pulsante personalizzato, consentire s prim
 In altre cartelle, analogo a `Default.aspx` nella `CustomButtonsDataListRepeater` cartella elencherà le esercitazioni nella relativa sezione. Si tenga presente che il `SectionLevelTutorialListing.ascx` controllo utente fornisce questa funzionalità. Aggiungere questo controllo utente alla `Default.aspx` trascinandolo da Esplora soluzioni nella pagina di visualizzazione della struttura s.
 
 
-[![Ail controllo utente sectionleveltutoriallisting. ascx a default. aspx gg](custom-buttons-in-the-datalist-and-repeater-cs/_static/image6.png)](custom-buttons-in-the-datalist-and-repeater-cs/_static/image5.png)
+[![Aggiungere il controllo utente sectionleveltutoriallisting. ascx a default. aspx](custom-buttons-in-the-datalist-and-repeater-cs/_static/image6.png)](custom-buttons-in-the-datalist-and-repeater-cs/_static/image5.png)
 
 **Figura 3**: Aggiungere il `SectionLevelTutorialListing.ascx` controllo utente da `Default.aspx` ([fare clic per visualizzare l'immagine con dimensioni normali](custom-buttons-in-the-datalist-and-repeater-cs/_static/image7.png))
 
@@ -75,7 +75,7 @@ Dopo aver aggiornato `Web.sitemap`, si consiglia di visualizzare il sito Web di 
 Per questa esercitazione è necessario creare un controllo Repeater che elenca tutte le categorie e LinkButton prodotti mostra che, quando si fa clic, consente di visualizzare i prodotti di categoria associata s in un elenco puntato. Consentire s prima di tutto creare un semplice controllo Repeater che elenca le categorie nel sistema. Iniziare aprendo il `CustomButtons.aspx` nella pagina di `CustomButtonsDataListRepeater` cartella. Trascinare un controllo Repeater dalla casella degli strumenti nella finestra di progettazione e set relativo `ID` proprietà `Categories`. Successivamente, creare un nuovo controllo origine dati nello smart tag s Repeater. In particolare, creare un nuovo controllo ObjectDataSource denominato `CategoriesDataSource` che consente di selezionare i dati dal `CategoriesBLL` classe s `GetCategories()` (metodo).
 
 
-[![Cconfigurare ObjectDataSource per utilizzare la classe CategoriesBLL s metodo GetCategories()](custom-buttons-in-the-datalist-and-repeater-cs/_static/image10.png)](custom-buttons-in-the-datalist-and-repeater-cs/_static/image9.png)
+[![Configurare ObjectDataSource per usare il metodo di classe CategoriesBLL s GetCategories()](custom-buttons-in-the-datalist-and-repeater-cs/_static/image10.png)](custom-buttons-in-the-datalist-and-repeater-cs/_static/image9.png)
 
 **Figura 5**: Configurare ObjectDataSource per usare la `CategoriesBLL` classe s `GetCategories()` metodo ([fare clic per visualizzare l'immagine con dimensioni normali](custom-buttons-in-the-datalist-and-repeater-cs/_static/image11.png))
 
@@ -90,7 +90,7 @@ Fare clic sulla scheda origine nell'angolo inferiore sinistro e aggiungere un `I
 Figura 6 mostra la pagina quando viene visualizzato tramite un browser. Viene elencato ogni nome di categoria e una descrizione. Pulsante Mostra prodotti, quando si fa clic, causa un postback, ma non esegue ancora alcuna operazione.
 
 
-[![EACH categoria s nome e una descrizione viene visualizzato, insieme a mostrare LinkButton prodotti](custom-buttons-in-the-datalist-and-repeater-cs/_static/image13.png)](custom-buttons-in-the-datalist-and-repeater-cs/_static/image12.png)
+[![Ogni nome di categoria e la descrizione viene visualizzato, insieme a mostrare LinkButton prodotti](custom-buttons-in-the-datalist-and-repeater-cs/_static/image13.png)](custom-buttons-in-the-datalist-and-repeater-cs/_static/image12.png)
 
 **Figura 6**: Ogni nome di categoria e la descrizione viene visualizzato, insieme a mostrare LinkButton prodotti ([fare clic per visualizzare l'immagine con dimensioni normali](custom-buttons-in-the-datalist-and-repeater-cs/_static/image14.png))
 
@@ -146,7 +146,7 @@ Dopo aver completato la `ItemCommand` gestore eventi, si consiglia di testare qu
 > Se si desidera modificare il comportamento di questo report, in modo che i prodotti solo una categoria s sono elencati in un momento, è sufficiente impostare il controllo BulletedList 1!s `EnableViewState` proprietà `False`.
 
 
-[![A Consente di visualizzare i prodotti della categoria selezionata BulletedList](custom-buttons-in-the-datalist-and-repeater-cs/_static/image16.png)](custom-buttons-in-the-datalist-and-repeater-cs/_static/image15.png)
+[![Un BulletedList viene usato per visualizzare i prodotti della categoria selezionata](custom-buttons-in-the-datalist-and-repeater-cs/_static/image16.png)](custom-buttons-in-the-datalist-and-repeater-cs/_static/image15.png)
 
 **Figura 7**: Un BulletedList viene usato per visualizzare i prodotti della categoria selezionata ([fare clic per visualizzare l'immagine con dimensioni normali](custom-buttons-in-the-datalist-and-repeater-cs/_static/image17.png))
 
@@ -166,4 +166,4 @@ Buona programmazione!
 Questa serie di esercitazioni è stata esaminata da diversi validi revisori. Il revisore capo di questa esercitazione è stata Dennis Patterson. Se si è interessati prossimi articoli MSDN dello? In questo caso, Inviami una riga in corrispondenza [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
-> [Successivo](custom-buttons-in-the-datalist-and-repeater-vb.md)
+> [avanti](custom-buttons-in-the-datalist-and-repeater-vb.md)

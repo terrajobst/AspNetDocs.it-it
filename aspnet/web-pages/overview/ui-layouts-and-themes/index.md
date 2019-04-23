@@ -12,7 +12,7 @@ ms.openlocfilehash: d1b0a8bb4cd9758af4f77526584e3b1198c70e01
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59399047"
 ---
 # <a name="ui-layouts-and-themes"></a>Interfaccia utente, layout e temi
@@ -20,11 +20,11 @@ ms.locfileid: "59399047"
 > Come personalizzare l'interfaccia utente del sito in un'applicazione ASP.NET Web Pages.
 
 
-- [Uso dei moduli](4-working-with-forms.md)
+- [Utilizzo dei moduli](4-working-with-forms.md)
 - [Convalida dell'input utente nelle pagine Web ASP.NET](validating-user-input-in-aspnet-web-pages-sites.md)
 - [Creazione di un aspetto coerente](3-creating-a-consistent-look.md)
 - [Personalizzazione del comportamento a livello di sito](18-customizing-site-wide-behavior.md)
-- [Working with Images (Uso delle immagini)](9-working-with-images.md)
+- [Uso delle immagini](9-working-with-images.md)
 - [Uso dei video](10-working-with-video.md)
 - [Creazione e uso di un helper in un sito con pagine Web ASP.NET](creating-and-using-a-helper-in-an-aspnet-web-pages-site.md)
 - [Installazione di un helper](installing-helpers.md)

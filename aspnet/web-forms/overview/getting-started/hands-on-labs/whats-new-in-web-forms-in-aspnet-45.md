@@ -12,7 +12,7 @@ ms.openlocfilehash: 52f6ec17fb21019e93ebf2795e95d5b27e4edbe6
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59401741"
 ---
 # <a name="whats-new-in-web-forms-in-aspnet-45"></a>Novità di Web Forms in ASP.NET 4.5
@@ -396,11 +396,11 @@ ASP.NET 4.5 introduce convalida le annotazioni dei dati per i Web Form. Anziché
     [!code-csharp[Main](whats-new-in-web-forms-in-aspnet-45/samples/sample23.cs)]
 
     > [!NOTE]
-    > .NET framework 4.5 ha esteso la raccolta di annotazioni dei dati esistenti. Queste sono alcune delle annotazioni dei dati è possibile utilizzare: [CreditCard], [Phone], [EmailAddress], [intervallo], [confrontare], [Url], [FileExtensions], [Required], [chiave], [RegularExpression].
+    > .NET framework 4.5 ha esteso la raccolta di annotazioni dei dati esistenti. Queste sono alcune delle annotazioni dei dati è possibile utilizzare: [CreditCard], [Phone], [EmailAddress], [intervallo], [confrontare], [Url], [FileExtensions], [Required], [Key], [RegularExpression].
     > 
     > Alcuni esempi d'uso:
     > 
-    > [Chiave]: Specifies that an attribute is the unique identifier
+    > [Key]: Specifies that an attribute is the unique identifier
     > 
     > [Range(0.4, 0.5, ErrorMessage=&quot;{Write an error message}&quot;]: Double range
     > 

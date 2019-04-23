@@ -12,7 +12,7 @@ ms.openlocfilehash: 1dadbdb6fa1dc58b855402f1d6f18e8af861f756
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59399359"
 ---
 # <a name="enabling-signalr-tracing"></a>Abilitazione della traccia di SignalR

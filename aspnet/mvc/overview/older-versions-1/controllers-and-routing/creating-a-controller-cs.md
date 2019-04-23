@@ -12,7 +12,7 @@ ms.openlocfilehash: c92d7cdeb7b2d31d5eca810628e9f563840f7494
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59400612"
 ---
 # <a name="creating-a-controller-c"></a>Creazione di un controller (C#)
@@ -29,12 +29,12 @@ L'obiettivo di questa esercitazione è illustrare come è possibile creare nuovi
 Il modo più semplice per creare un nuovo controller consiste nella cartella Controllers nella finestra Esplora soluzioni di Visual Studio e scegliere il **Controller, Aggiungi** l'opzione di menu (vedere la figura 1). Selezionando questa opzione di menu si apre la **Aggiungi Controller** finestra di dialogo (vedere la figura 2).
 
 
-[![Tfinestra di dialogo Nuovo progetto di he](creating-a-controller-cs/_static/image1.jpg)](creating-a-controller-cs/_static/image1.png)
+[![La finestra di dialogo Nuovo progetto](creating-a-controller-cs/_static/image1.jpg)](creating-a-controller-cs/_static/image1.png)
 
 **Figura 01**: Aggiunge un nuovo controller ([fare clic per visualizzare l'immagine con dimensioni normali](creating-a-controller-cs/_static/image2.png))
 
 
-[![Tfinestra di dialogo Nuovo progetto di he](creating-a-controller-cs/_static/image2.jpg)](creating-a-controller-cs/_static/image3.png)
+[![La finestra di dialogo Nuovo progetto](creating-a-controller-cs/_static/image2.jpg)](creating-a-controller-cs/_static/image3.png)
 
 **Figura 02**: La finestra di dialogo Aggiungi Controller ([fare clic per visualizzare l'immagine con dimensioni normali](creating-a-controller-cs/_static/image4.png))
 
@@ -45,7 +45,7 @@ Si noti che la prima parte del nome del controller sia evidenziata nel **Aggiung
 Se si crea un controller che non è presente il *Controller* suffisso, quindi sarà possibile richiamare il controller. Non eseguire questa operazione, ho sprecato innumerevoli ore della vita dopo commettere questo errore.
 
 
-**Listing 1 - Controllers\ProductController.cs**
+**Listato 1 - Controllers\ProductController.cs**
 
 [!code-csharp[Main](creating-a-controller-cs/samples/sample1.cs)]
 
@@ -56,12 +56,12 @@ Se si crea un controller che non è presente il *Controller* suffisso, quindi sa
 Quando si crea un controller, è possibile generare automaticamente i metodi di azione Create, Update e dettagli (vedere la figura 3). Se si seleziona questa opzione viene generata la classe controller nel listato 2.
 
 
-[![Ci metodi di azione reating automaticamente](creating-a-controller-cs/_static/image3.jpg)](creating-a-controller-cs/_static/image5.png)
+[![La creazione automatica di metodi di azione](creating-a-controller-cs/_static/image3.jpg)](creating-a-controller-cs/_static/image5.png)
 
 **Figura 03**: La creazione automatica di metodi di azione ([fare clic per visualizzare l'immagine con dimensioni normali](creating-a-controller-cs/_static/image6.png))
 
 
-**Listing 2 - Controllers\CustomerController.cs**
+**Listato 2 - Controllers\CustomerController.cs**
 
 [!code-csharp[Main](creating-a-controller-cs/samples/sample2.cs)]
 
@@ -76,7 +76,7 @@ Il controller ASP.NET MVC è semplicemente una classe. Se si preferisce, è poss
 3. Modificare il file di classe risultante in modo che la classe eredita dalla classe di MVC di base (vedere il listato 3).
 
 
-[![Cuna nuova classe reating](creating-a-controller-cs/_static/image4.jpg)](creating-a-controller-cs/_static/image7.png)
+[![Creazione di una nuova classe](creating-a-controller-cs/_static/image4.jpg)](creating-a-controller-cs/_static/image7.png)
 
 **Figura 04**: Creazione di una nuova classe ([fare clic per visualizzare l'immagine con dimensioni normali](creating-a-controller-cs/_static/image8.png))
 

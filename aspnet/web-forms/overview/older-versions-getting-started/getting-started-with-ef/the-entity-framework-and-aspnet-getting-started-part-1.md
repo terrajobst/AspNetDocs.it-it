@@ -12,7 +12,7 @@ ms.openlocfilehash: 51e3010f6e01434c495201af4af3bbdcde993da7
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59398436"
 ---
 # <a name="getting-started-with-entity-framework-40-database-first-and-aspnet-4-web-forms"></a>Introduzione a Entity Framework 4.0 Database First e ASP.NET 4 Web Form
@@ -212,4 +212,4 @@ Entity Framework utilizza XML per archiviare informazioni sul database, il model
 È stato creato un sito Web, un database e un modello di dati. Nella procedura dettagliata successiva verrà iniziare a utilizzare i dati usando il modello di data e ASP.NET `EntityDataSource` controllo.
 
 > [!div class="step-by-step"]
-> [Successivo](the-entity-framework-and-aspnet-getting-started-part-2.md)
+> [avanti](the-entity-framework-and-aspnet-getting-started-part-2.md)

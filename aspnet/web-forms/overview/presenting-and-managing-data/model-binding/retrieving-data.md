@@ -12,7 +12,7 @@ ms.openlocfilehash: 29baaf2917e47ac46a78a252721be725b4e9b58f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59398475"
 ---
 # <a name="retrieving-and-displaying-data-with-model-binding-and-web-forms"></a>Il recupero e visualizzazione dei dati con l'associazione di modelli e web form
@@ -217,4 +217,4 @@ In questa esercitazione si create classi di modello di dati e generata un databa
 Entro i prossimi [esercitazione](updating-deleting-and-creating-data.md) in questa serie, verrà abilitata l'aggiornamento, eliminazione e creazione di dati.
 
 > [!div class="step-by-step"]
-> [Successivo](updating-deleting-and-creating-data.md)
+> [avanti](updating-deleting-and-creating-data.md)

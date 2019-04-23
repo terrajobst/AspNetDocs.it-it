@@ -12,7 +12,7 @@ ms.openlocfilehash: 50168b33019e32d42a14ad04c800e163513ec6ae
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59399879"
 ---
 # <a name="how-do-i-use-the-aspnet-ajax-cascadingdropdown-control-extender"></a>[Procedura:] Usare il dispositivo Extender controllo CascadingDropDown ASP.NET AJAX?

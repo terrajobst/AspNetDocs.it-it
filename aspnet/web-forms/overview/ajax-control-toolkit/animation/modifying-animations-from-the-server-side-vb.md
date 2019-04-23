@@ -12,7 +12,7 @@ ms.openlocfilehash: fb7e992246b9c630d99a1493f344c4089540d67e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59398085"
 ---
 # <a name="modifying-animations-from-the-server-side-vb"></a>Modifica delle animazioni dal lato Server (VB)
@@ -55,7 +55,7 @@ Infine, aggiungere il `AnimationExtender` controllo alla pagina corrente, all'in
 [!code-vb[Main](modifying-animations-from-the-server-side-vb/samples/sample6.vb)]
 
 
-[![Tanimazione he viene creato usando server-side C#codice /VB](modifying-animations-from-the-server-side-vb/_static/image2.png)](modifying-animations-from-the-server-side-vb/_static/image1.png)
+[![L'animazione viene creata usando codice c# /VB C sul lato server](modifying-animations-from-the-server-side-vb/_static/image2.png)](modifying-animations-from-the-server-side-vb/_static/image1.png)
 
 L'animazione viene creata usando codice c# /VB C sul lato server ([fare clic per visualizzare l'immagine con dimensioni normali](modifying-animations-from-the-server-side-vb/_static/image3.png))
 

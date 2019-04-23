@@ -13,7 +13,7 @@ ms.openlocfilehash: f5b7c080cdd6331e41751e8a4741f724153ec360
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59403012"
 ---
 # <a name="getting-started-with-aspnet-web-api"></a>Introduzione a ASP.NET Web API
@@ -23,6 +23,6 @@ ms.locfileid: "59403012"
 
 - [Introduzione all'API Web 2 (C#)](tutorial-your-first-web-api.md)
 - [Risultati delle azioni nell'API Web 2](action-results.md)
-- [Usare l'API Web con Web Forms ASP.NET](using-web-api-with-aspnet-web-forms.md)
+- [Usare l'API Web con Web Form ASP.NET](using-web-api-with-aspnet-web-forms.md)
 - [Creazione di pagine della Guida dell'API Web](creating-api-help-pages.md)
-- [Lab pratico: Creare un'applicazione a pagina singola con l'API Web ASP.NET e Angular.js](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs.md)
+- [Laboratorio pratico: Compilare un'applicazione a pagina singola (SPA) con l'API Web ASP.NET e Angular. js](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs.md)

@@ -12,7 +12,7 @@ ms.openlocfilehash: 86b90a21f59ee0ad52a3e6f7db19d4714282105c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59401140"
 ---
 # <a name="videos"></a>Video
@@ -47,7 +47,7 @@ ms.locfileid: "59401140"
     - [Visualizzazione dei dati in un grafico (parte 1)](aspnet-razor-pages/displaying-data-in-a-chart-part-1.md)
     - [Visualizzazione dei dati in un grafico (parte 2)](aspnet-razor-pages/displaying-data-in-a-chart-part-2.md)
     - [Uso dei file](aspnet-razor-pages/working-with-files.md)
-    - [Working with Images (Uso delle immagini)](aspnet-razor-pages/working-with-images.md)
+    - [Uso delle immagini](aspnet-razor-pages/working-with-images.md)
     - [Uso dei video](aspnet-razor-pages/working-with-video.md)
     - [Aggiunta di posta elettronica al sito Web](aspnet-razor-pages/adding-email-to-your-web-site.md)
     - [Aggiunta di funzionalità di ricerca al sito Web](aspnet-razor-pages/adding-search-to-your-web-site.md)

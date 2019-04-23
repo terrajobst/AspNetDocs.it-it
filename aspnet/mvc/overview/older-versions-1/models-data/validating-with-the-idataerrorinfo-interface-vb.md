@@ -12,7 +12,7 @@ ms.openlocfilehash: c64e1ea1562c3a0cfe4fb33f1c3033bb9c31bd2c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59402739"
 ---
 # <a name="validating-with-the-idataerrorinfo-interface-vb"></a>Convalida con l'interfaccia IDataErrorInfo (VB)
@@ -31,7 +31,7 @@ In questa esercitazione si utilizzerà il database MoviesDB e la tabella di data
 <a id="0.6_table01"></a>
 
 
-| **Nome colonna** | **Tipo di dati** | **Ammetti Null** |
+| **Nome della colonna** | **Tipo di dati** | **Consenti valori null** |
 | --- | --- | --- |
 | Id | Int | False |
 | Titolo | Nvarchar(100) | False |
@@ -42,7 +42,7 @@ In questa esercitazione si utilizzerà il database MoviesDB e la tabella di data
 In questa esercitazione, usare Microsoft Entity Framework per generare classi modello del mio database. La classe di film generata da Entity Framework viene visualizzata nella figura 1.
 
 
-[![Tegli entità film](validating-with-the-idataerrorinfo-interface-vb/_static/image1.jpg)](validating-with-the-idataerrorinfo-interface-vb/_static/image1.png)
+[![L'entità film](validating-with-the-idataerrorinfo-interface-vb/_static/image1.jpg)](validating-with-the-idataerrorinfo-interface-vb/_static/image1.png)
 
 **Figura 01**: L'entità film ([fare clic per visualizzare l'immagine con dimensioni normali](validating-with-the-idataerrorinfo-interface-vb/_static/image2.png))
 
@@ -73,7 +73,7 @@ La proprietà IsValid restituisce false quando si verifica un errore di convalid
 La classe di film viene generata da Entity Framework. È possibile visualizzare il codice per la classe Movie se si espande il file MoviesDBModel.edmx nella finestra Esplora soluzioni e aprire il file MoviesDBModel.Designer.vb nell'Editor del codice (vedere la figura 2).
 
 
-[![Til codice per l'entità film](validating-with-the-idataerrorinfo-interface-vb/_static/image2.jpg)](validating-with-the-idataerrorinfo-interface-vb/_static/image3.png)
+[![Il codice per l'entità film](validating-with-the-idataerrorinfo-interface-vb/_static/image2.jpg)](validating-with-the-idataerrorinfo-interface-vb/_static/image3.png)
 
 **Figura 02**: Il codice per l'entità film ([fare clic per visualizzare l'immagine con dimensioni normali](validating-with-the-idataerrorinfo-interface-vb/_static/image4.png))
 
@@ -147,7 +147,7 @@ Nel listato 4, controlla la proprietà dell'indicizzatore di \_raccolta errori p
 Non devi modificare il controller Home in alcun modo per usare la classe film modificata. La pagina visualizzata nella figura 3 illustra cosa accade quando viene immesso alcun valore per i campi modulo titolo o Director.
 
 
-[![Ci metodi di azione reating automaticamente](validating-with-the-idataerrorinfo-interface-vb/_static/image3.jpg)](validating-with-the-idataerrorinfo-interface-vb/_static/image5.png)
+[![La creazione automatica di metodi di azione](validating-with-the-idataerrorinfo-interface-vb/_static/image3.jpg)](validating-with-the-idataerrorinfo-interface-vb/_static/image5.png)
 
 **Figura 03**: Un modulo con i valori mancanti ([fare clic per visualizzare l'immagine con dimensioni normali](validating-with-the-idataerrorinfo-interface-vb/_static/image6.png))
 

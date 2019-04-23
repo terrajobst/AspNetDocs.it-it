@@ -12,7 +12,7 @@ ms.openlocfilehash: c422a142a06cf9255412384fa384304897f0ac0a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59400597"
 ---
 # <a name="paging-and-sorting"></a>Suddivisione in pagine e ordinamento
@@ -20,11 +20,11 @@ ms.locfileid: "59400597"
 > In queste esercitazioni è aggiungere alcune funzionalità di paging e di ordinamento iniziale per i report sui dati.
 
 
-- [Suddivisione in pagine e ordinamento dei dati dei report (C#)](paging-and-sorting-report-data-cs.md)
-- [Suddivisione in pagine efficiente di grandi quantità di dati (C#)](efficiently-paging-through-large-amounts-of-data-cs.md)
-- [Ordinamento dei dati con suddivisione in pagine personalizzata (C#)](sorting-custom-paged-data-cs.md)
+- [Paging e ordinamento dei dati dei report (C#)](paging-and-sorting-report-data-cs.md)
+- [Paging efficiente in grandi quantità di dati (C#)](efficiently-paging-through-large-amounts-of-data-cs.md)
+- [Ordinamento dei dati con paging personalizzato (C#)](sorting-custom-paged-data-cs.md)
 - [Creazione di un'interfaccia utente per l'ordinamento personalizzato (C#)](creating-a-customized-sorting-user-interface-cs.md)
-- [Suddivisione in pagine e ordinamento dei dati dei report (VB)](paging-and-sorting-report-data-vb.md)
-- [Suddivisione in pagine efficiente di grandi quantità di dati (VB)](efficiently-paging-through-large-amounts-of-data-vb.md)
-- [Ordinamento dei dati con suddivisione in pagine personalizzata (VB)](sorting-custom-paged-data-vb.md)
+- [Paging e ordinamento dei dati dei report (VB)](paging-and-sorting-report-data-vb.md)
+- [Paging efficiente in grandi quantità di dati (VB)](efficiently-paging-through-large-amounts-of-data-vb.md)
+- [Ordinamento dei dati con paging personalizzato (VB)](sorting-custom-paged-data-vb.md)
 - [Creazione di un'interfaccia utente per l'ordinamento personalizzato (VB)](creating-a-customized-sorting-user-interface-vb.md)

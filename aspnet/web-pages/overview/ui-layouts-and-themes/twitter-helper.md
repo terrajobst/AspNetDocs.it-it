@@ -12,7 +12,7 @@ ms.openlocfilehash: 5dda267b146f11355dd94181ef2926e4a304a3ad
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59399008"
 ---
 # <a name="twitter-helper-with-aspnet-web-pages"></a>Helper di Twitter con pagine Web ASP.NET
@@ -67,7 +67,7 @@ Il codice precedente produce i seguenti pulsanti e widget. Questi pulsanti e wid
 
 ### <a name="follow-button"></a>Seguire pulsante
 
-[Seguire @aspnet)](https://twitter.com/aspnet)`<script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + '://platform.twitter.com/widgets.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'twitter-wjs');</script>`
+[Follow @aspnet)](https://twitter.com/aspnet)`<script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + '://platform.twitter.com/widgets.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'twitter-wjs');</script>`
 
 ### <a name="tweet-button"></a>Pulsante del TWEET
 

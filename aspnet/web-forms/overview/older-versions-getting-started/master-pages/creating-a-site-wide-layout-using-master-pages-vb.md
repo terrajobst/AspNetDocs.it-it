@@ -12,7 +12,7 @@ ms.openlocfilehash: 17ec6128d2da94630bfc6014b9eb17922c544dbc
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59402817"
 ---
 # <a name="creating-a-site-wide-layout-using-master-pages-vb"></a>Creazione di un layout a livello di sito tramite le pagine master (VB)
@@ -29,7 +29,7 @@ da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 Un attributo di un sito Web ben progettato è il layout coerente a livello di sito. Si consideri ad esempio il sito Web www.asp.net. Al momento della stesura di questo articolo, ogni pagina ha lo stesso contenuto nella parte superiore e inferiore della pagina. Come illustrato nella figura 1, la parte superiore di ogni pagina Visualizza una barra grigia con un elenco di Communities Microsoft. Sotto il logo del sito, ovvero l'elenco di lingue in cui è stato tradotto il sito e le sezioni principali: Home page, iniziare a usare, altre, download e così via. Allo stesso modo, la parte inferiore della pagina include informazioni sulla pubblicità www.asp.net, una dichiarazione di copyright e un collegamento all'informativa sulla privacy.
 
 
-[![The www.asp.net sito Web Usa un aspetto coerente e sentirsi tra tutte le pagine](creating-a-site-wide-layout-using-master-pages-vb/_static/image2.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image1.png)
+[![Il sito Web www.asp.net impiega un aspetto uniforme e coerente in tutte le pagine](creating-a-site-wide-layout-using-master-pages-vb/_static/image2.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image1.png)
 
 <strong>Figura 01</strong>: Il sito Web www.asp.net impiega un aspetto coerente e sentirsi tra tutte le pagine ([fare clic per visualizzare l'immagine con dimensioni normali](creating-a-site-wide-layout-using-master-pages-vb/_static/image3.png))
 
@@ -76,7 +76,7 @@ Figura 2 mostra ciò che potrebbe essere simile alla pagina master www.asp.net. 
 Dopo aver definita una pagina master può essere associato a nuove pagine ASP.NET mediante i segni di graduazione di un controllo checkbox. Queste pagine ASP.NET, denominate pagine contenuto - includono un controllo contenuto per ognuno dei controlli ContentPlaceHolder della pagina master. Quando si visita la pagina di contenuto tramite un browser il motore ASP.NET crea gerarchia dei controlli della pagina master e inserisce la gerarchia dei controlli della pagina di contenuto in posizioni appropriate. Viene eseguito il rendering di questa gerarchia dei controlli combinato e viene restituito il codice HTML risultante al browser dell'utente finale. Di conseguenza, la pagina contenuto genera il markup comuni definiti nella relativa pagina master di fuori di controlli ContentPlaceHolder e il markup specifico della pagina definito all'interno di un proprio controlli contenuto. Figura 3 illustra questo concetto.
 
 
-[![The del Markup della pagina richiesto è Fused nella Master Page](creating-a-site-wide-layout-using-master-pages-vb/_static/image6.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image5.png)
+[![Il Markup della pagina richiesto è Fused nella Master Page](creating-a-site-wide-layout-using-master-pages-vb/_static/image6.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image5.png)
 
 **Figura 03**: Il Markup della pagina richiesto è Fused nella Master Page ([fare clic per visualizzare l'immagine con dimensioni normali](creating-a-site-wide-layout-using-master-pages-vb/_static/image7.png))
 
@@ -95,7 +95,7 @@ Prima che possiamo adesso esplorare la creazione e uso delle pagine master e di 
 > Visual Studio supporta due modalità di gestione del progetto: Progetti di siti Web e progetti di applicazione Web. Progetti di siti Web non dispongono di un file di progetto, mentre i progetti applicazione Web imitare l'architettura di progetto in Visual Studio .NET 2002/2003: includono un file di progetto e compilare codice sorgente del progetto in un singolo assembly, che viene inserito nella `/bin` cartella. Visual Studio 2005 inizialmente solo supportati progetti di sito Web, anche se è stato reintrodotto il modello di progetto di applicazione Web con Service Pack 1. Visual Studio 2008 offre entrambi i modelli di progetto. Visual Web Developer 2005 e 2008 edizioni, tuttavia, supportano solo progetti di siti Web. Usare il modello di progetto di sito Web per la demo in questa serie di esercitazioni. Se si utilizza un'edizione non Express e si vuole usare il [modello di progetto di applicazione Web](https://msdn.microsoft.com/library/aa730880(vs.80).aspx) invece, è possibile eseguire questa operazione, ma tenere presente che potrebbero esserci alcune discrepanze tra ciò che viene visualizzato nella schermata e la procedura è necessario eseguire e il schermate visualizzate e le istruzioni fornite in queste esercitazioni.
 
 
-[![CCrea un sito Web New File System-Based](creating-a-site-wide-layout-using-master-pages-vb/_static/image9.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image8.png)
+[![Creare un nuovo sito di Web File basate sul sistema](creating-a-site-wide-layout-using-master-pages-vb/_static/image9.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image8.png)
 
 **Figura 04**: Creare un sito Web New File System-Based ([fare clic per visualizzare l'immagine con dimensioni normali](creating-a-site-wide-layout-using-master-pages-vb/_static/image10.png))
 
@@ -103,7 +103,7 @@ Prima che possiamo adesso esplorare la creazione e uso delle pagine master e di 
 Successivamente, aggiungere una pagina master al sito nella directory radice facendo clic sul nome del progetto, scegliendo Aggiungi nuovo elemento e selezionando il modello di pagina Master. Si noti che le pagine master terminano con l'estensione `.master`. Denominare questa nuova pagina master `Site.master` e fare clic su Aggiungi.
 
 
-[![Agg Site un Master pagina denominata per il sito Web](creating-a-site-wide-layout-using-master-pages-vb/_static/image12.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image11.png)
+[![Aggiungere una pagina Master denominato Site. master al sito Web](creating-a-site-wide-layout-using-master-pages-vb/_static/image12.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image11.png)
 
 **Figura 05**: Aggiungere un nome di pagina Master `Site.master` al sito Web ([fare clic per visualizzare l'immagine con dimensioni normali](creating-a-site-wide-layout-using-master-pages-vb/_static/image13.png))
 
@@ -132,7 +132,7 @@ Questo markup dichiarativo di pagina master predefinita funge da punto di parten
 Espandiamo `Site.master`del markup dichiarativo predefinito per creare un layout del sito in cui condividono tutte le pagine: un'intestazione comune, una colonna a sinistra con navigazione, notizie e altro contenuto a livello di sito; e un piè di pagina che viene visualizzata l'icona "Con tecnologia per Microsoft ASP.NET". Figura 6 illustra il risultato finale della pagina master quando una delle relative pagine di contenuto viene visualizzata tramite un browser. L'area in un cerchio rosso nella figura 6 è specifico per la pagina visitata (`Default.aspx`); gli altri contenuti sono definito nella pagina master e di conseguenza coerente in tutte le pagine di contenuto.
 
 
-[![TPagina Master definisce il Markup per la parte superiore sinistra e parti inferiore](creating-a-site-wide-layout-using-master-pages-vb/_static/image15.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image14.png)
+[![La pagina Master definisce il Markup per la parte superiore sinistra e parti inferiore](creating-a-site-wide-layout-using-master-pages-vb/_static/image15.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image14.png)
 
 **Figura 06**: Il Master pagina definisce il Markup per la parte superiore sinistra e parti inferiore ([fare clic per visualizzare l'immagine con dimensioni normali](creating-a-site-wide-layout-using-master-pages-vb/_static/image16.png))
 
@@ -173,12 +173,12 @@ Con la pagina master creata, siamo pronti iniziare a creare pagine ASP.NET che s
 > Se è stato creato un sito Web ASP.NET usando il modello di progetto di applicazione Web anziché il modello di progetto di sito Web non si vedranno la casella di controllo "Seleziona pagina master" nella finestra di dialogo Aggiungi nuovo elemento illustrato nella figura 7. Per creare un contenuto pagina quando si utilizza il progetto di applicazione Web del modello è necessario scegliere il modello Web Form di contenuto anziché il modello Web Form. Dopo aver selezionato il modello di Form di contenuto Web e facendo clic su Aggiungi, lo stesso Seleziona pagina Master verrà visualizzata la finestra di dialogo illustrata nella figura 8.
 
 
-[![Auna nuova pagina contenuto gg](creating-a-site-wide-layout-using-master-pages-vb/_static/image18.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image17.png)
+[![Aggiungere una nuova pagina contenuta](creating-a-site-wide-layout-using-master-pages-vb/_static/image18.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image17.png)
 
 **Figura 07**: Aggiungere una nuova pagina contenuto ([fare clic per visualizzare l'immagine con dimensioni normali](creating-a-site-wide-layout-using-master-pages-vb/_static/image19.png))
 
 
-[![SScegliere la pagina Master Site. master](creating-a-site-wide-layout-using-master-pages-vb/_static/image21.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image20.png)
+[![Selezionare la pagina Master Site. master](creating-a-site-wide-layout-using-master-pages-vb/_static/image21.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image20.png)
 
 **Figura 08**: Selezionare il `Site.master` pagina Master ([fare clic per visualizzare l'immagine con dimensioni normali](creating-a-site-wide-layout-using-master-pages-vb/_static/image22.png))
 
@@ -198,7 +198,7 @@ Poiché la pagina master contiene due controlli ContentPlaceHolder - `head` e `M
 In cui le pagine master caratterizzano su tecniche del modello a livello di sito precedente consiste nell'usare il relativo supporto in fase di progettazione. Figura 9 mostra la `About.aspx` pagina contenuto quando viene visualizzato in visualizzazione di progettazione di Visual Web per gli sviluppatori. Si noti che mentre il contenuto della pagina master è visibile, è in grigio e non può essere modificato. I controlli contenuto corrispondenti a elementi ContentPlaceHolder della pagina master sono, tuttavia, modificabili. E proprio come con qualsiasi altra pagina ASP.NET, è possibile creare contenuto dell'interfaccia della pagina aggiungendo i controlli Web tramite le viste di origine o di progettazione.
 
 
-[![The del contenuto della pagina Progettazione Vista consente di visualizzare sia lo specifico della pagina e contenuto della pagina Master](creating-a-site-wide-layout-using-master-pages-vb/_static/image24.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image23.png)
+[![Visualizzazione di progettazione della pagina di contenuto vengono visualizzati sia il contenuto della pagina Master e specifico della pagina](creating-a-site-wide-layout-using-master-pages-vb/_static/image24.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image23.png)
 
 **Figura 09**: La pagina contenuto progettazione Vista consente di visualizzare sia le specifiche delle pagine e contenuto della pagina Master ([fare clic per visualizzare l'immagine con dimensioni normali](creating-a-site-wide-layout-using-master-pages-vb/_static/image25.png))
 
@@ -208,7 +208,7 @@ In cui le pagine master caratterizzano su tecniche del modello a livello di sito
 Si consiglia di creare contenuto per il `About.aspx` pagina. Come può vedere nella figura 10, che dopo avere immesso un titolo "Sull'autore" e un paio di paragrafi di testo, ma è possibile aggiungere controlli Web, troppo. Dopo aver creato questa interfaccia, visitare il `About.aspx` pagina tramite un browser.
 
 
-[![Vla pagina About tramite un Browser isit](creating-a-site-wide-layout-using-master-pages-vb/_static/image27.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image26.png)
+[![Visita la pagina About tramite un Browser](creating-a-site-wide-layout-using-master-pages-vb/_static/image27.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image26.png)
 
 **Figura 10**: Visitare il `About.aspx` attraverso un Browser a pagina ([fare clic per visualizzare l'immagine con dimensioni normali](creating-a-site-wide-layout-using-master-pages-vb/_static/image28.png))
 
@@ -248,7 +248,7 @@ Creare quindi un `Page_Load` gestore dell'evento per il servizio master di pagin
 Il codice precedente imposta l'etichetta `Text` proprietà per la data corrente e l'ora è formattata come il giorno della settimana, il nome del mese e giorno a due cifre (vedere la figura 11). Con questa modifica, visitare di nuovo una delle pagine di contenuto. Come illustrato nella figura 11, il codice risulta viene immediatamente aggiornato per includere la modifica della pagina master.
 
 
-[![Tle modifiche alla pagina Master vengono applicate quando la visualizzazione di una pagina di contenuto](creating-a-site-wide-layout-using-master-pages-vb/_static/image30.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image29.png)
+[![Le modifiche alla pagina Master vengono applicate quando la visualizzazione di una pagina di contenuto](creating-a-site-wide-layout-using-master-pages-vb/_static/image30.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image29.png)
 
 **Figura 11**: Le modifiche alla pagina Master vengono applicate quando la visualizzazione di una pagina contenuto ([fare clic per visualizzare l'immagine con dimensioni normali](creating-a-site-wide-layout-using-master-pages-vb/_static/image31.png))
 

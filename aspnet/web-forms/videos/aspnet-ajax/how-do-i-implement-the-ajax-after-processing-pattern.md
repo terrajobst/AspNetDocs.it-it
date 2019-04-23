@@ -12,7 +12,7 @@ ms.openlocfilehash: 3d4b4e0d12d8baa6810a90ff9225fcbf88fad58f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59398631"
 ---
 # <a name="how-do-i-implement-the-ajax-after-processing-pattern"></a>[Procedura:] Implementare il AJAX dopo l'elaborazione criterio?

@@ -9,7 +9,7 @@ ms.openlocfilehash: 42469611f94b374d6692a1c2017aced77a0a414c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59403857"
 ---
 # <a name="adding-a-view"></a>Aggiunta di una visualizzazione
@@ -68,7 +68,7 @@ In primo luogo, si desidera modificare il &quot;nome dell'applicazione&quot; col
 
 ![_LayoutCshtml](adding-a-view/_static/image7.png)
 
-Modelli di layout consentono di specificare il layout del contenitore HTML del sito in un'unica posizione e quindi applicarlo in più pagine del sito. Trovare la riga `@RenderBody()`. `RenderBody` è un segnaposto dove tutte le pagine specifiche della vista è creare diapositive, &quot;incapsulati&quot; nella pagina di layout. Ad esempio, se si seleziona il **sulle** collegamento, il *Views\Home\About.cshtml* vista viene eseguita all'interno il `RenderBody` (metodo).
+Modelli di layout consentono di specificare il layout del contenitore HTML del sito in un'unica posizione e quindi applicarlo in più pagine del sito. Trovare la riga `@RenderBody()`. `RenderBody` è un segnaposto dove tutte le pagine specifiche della vista vengono presentate, &quot;incapsulate&quot; nella pagina di layout. Ad esempio, se si seleziona il **sulle** collegamento, il *Views\Home\About.cshtml* vista viene eseguita all'interno il `RenderBody` (metodo).
 
 Modificare il contenuto dell'elemento titolo. Modifica il [ActionLink](https://msdn.microsoft.com/library/dd504972(v=vs.108).aspx) nel modello di layout da &quot;nome applicazione&quot; al &quot;MVC Movie&quot; e il controller da `Home` a `Movies`. Il file di layout completo è illustrato di seguito:
 

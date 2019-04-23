@@ -12,7 +12,7 @@ ms.openlocfilehash: 68c1acdaaf1e6674f4dc3bcca0557382407ca147
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59400113"
 ---
 # <a name="authentication"></a>Autenticazione

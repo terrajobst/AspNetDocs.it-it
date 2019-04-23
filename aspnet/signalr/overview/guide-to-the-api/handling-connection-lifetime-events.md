@@ -12,7 +12,7 @@ ms.openlocfilehash: 9e6b0b3b86839efa393659531d8b74770226f383
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59401465"
 ---
 # <a name="understanding-and-handling-connection-lifetime-events-in-signalr"></a>Comprensione e gestione degli eventi di durata della connessione in SignalR
@@ -254,7 +254,7 @@ SignalR versione 2 non è un server incorporato API per la disconnessione dei cl
 
 2.1 SignalR aggiunge un overload per il server `OnDisconnect` evento che indica se il client disconnesso deliberatamente piuttosto che verifichi il timeout. Il `StopCalled` parametro è true se il client ha chiuso in modo esplicito la connessione. In JavaScript, se un errore del server ha portato al client di disconnessione, le informazioni sull'errore verranno passati al client come `$.connection.hub.lastError`.
 
-**C#il codice lato server: `stopCalled` parametro**
+**Codice lato server c#: `stopCalled` parametro**
 
 [!code-csharp[Main](handling-connection-lifetime-events/samples/sample7.cs?highlight=1,3)]
 

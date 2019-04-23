@@ -12,7 +12,7 @@ ms.openlocfilehash: 328dc6fb61ac562131b11b36b40f574ca5a53866
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59397370"
 ---
 # <a name="code-editing-aspnet-web-forms-in-visual-studio-2013"></a>Modifica del codice di Web Forms ASP.NET in Visual Studio 2013
@@ -77,7 +77,7 @@ Quando si crea una nuova applicazione Web Form usando la **applicazione Web ASP.
 1. Nella **Esplora soluzioni**, fare clic sul nome dell'applicazione Web (in questa esercitazione è il nome dell'applicazione **BasicWebSite**), quindi fare clic su **Add**  - &gt; **Nuovo elemento**.   
 Verrà visualizzata la finestra di dialogo **Aggiungi nuovo elemento**.
 2. Selezionare il **Visual c#**  - &gt; **Web** gruppo di modelli a sinistra. Quindi, selezionare **Web Form** dalla parte centrale elencare e denominarlo *FirstWebPage*.   
-    ![Finestra di dialogo Aggiungi nuovo elemento](code-editing-in-web-forms-pages/_static/image4.png)
+    ![Aggiungi finestra di dialogo Nuovo elemento](code-editing-in-web-forms-pages/_static/image4.png)
 3. Fare clic su **Add** per aggiungere la pagina Web Form al progetto.  
  Visual Studio crea la nuova pagina e lo apre.
 4. Successivamente, impostare la nuova pagina come pagina di avvio predefinito. Nelle **Esplora soluzioni**, fare doppio clic su nuova pagina denominata *FirstWebPage* e selezionare **imposta come pagina iniziale**. Alla successiva esecuzione di questa applicazione per testare lo stato di avanzamento, verrà visualizzato automaticamente la nuova pagina nel browser.

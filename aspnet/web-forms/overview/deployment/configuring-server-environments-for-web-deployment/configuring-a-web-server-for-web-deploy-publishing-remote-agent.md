@@ -12,14 +12,14 @@ ms.openlocfilehash: d915cb5d7d40bb2cc355a5e45befe124a7b60dc4
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59398488"
 ---
 # <a name="configuring-a-web-server-for-web-deploy-publishing-remote-agent"></a>Configurazione di un server Web per la pubblicazione con Distribuzione Web (agente remoto)
 
 da [Jason Lee](https://github.com/jrjlee)
 
-[Scarica il PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Scaricare PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Questo argomento descrive come configurare un server web Internet Information Services (IIS) per supportare la pubblicazione sul web e la distribuzione usando il servizio agente remoto di strumento di distribuzione Web IIS (distribuzione Web).
 > 

@@ -12,7 +12,7 @@ ms.openlocfilehash: e0b540c030bf600def9b9efad4c73f055a343851
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59402830"
 ---
 # <a name="accessing-your-models-data-from-a-controller"></a>Accesso ai dati del modello da un controller
@@ -26,7 +26,7 @@ In questa sezione si intende creare una nuova classe MoviesController e scrivere
 
 Fare clic con il pulsante destro sulla cartella controller e creare un nuovo MoviesController.
 
-[![Agg Controller](getting-started-with-mvc-part5/_static/image2.png)](getting-started-with-mvc-part5/_static/image1.png)
+[![Aggiungi Controller](getting-started-with-mvc-part5/_static/image2.png)](getting-started-with-mvc-part5/_static/image1.png)
 
 Si creerà un nuovo file "MoviesController.cs" sotto la cartella \Controllers nostro progetto. È possibile aggiornare lo scaffolding di MovieController per recuperare l'elenco di filmati dal database appena popolato.
 

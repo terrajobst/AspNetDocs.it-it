@@ -12,7 +12,7 @@ ms.openlocfilehash: 29536c222045e298e067a6fecfbb6d75597e5429
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59404013"
 ---
 # <a name="supporting-odata-v4-in-aspnet-web-api"></a>Supporto di OData v4 nell'API Web ASP.NET

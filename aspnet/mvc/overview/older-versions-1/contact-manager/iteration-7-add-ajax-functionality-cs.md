@@ -12,7 +12,7 @@ ms.openlocfilehash: 34fce0bef5163ba0423ea00cf4b7507947c45c68
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59398072"
 ---
 # <a name="iteration-7--add-ajax-functionality-c"></a>Iterazione #7-aggiungere funzionalità Ajax (c#)
@@ -93,7 +93,7 @@ Aggiungere il codice JavaScript seguente include all'interno di &lt;head&gt; tag
 Let s iniziare modificando la visualizzazione dell'indice in modo che facendo clic su un gruppo di contatto vengono aggiornati solo l'area della vista che consente di visualizzare i contatti. Il riquadro rosso nella figura 1 contiene l'area in cui si desidera aggiornare.
 
 
-[![Uaggiornamento solo contatti](iteration-7-add-ajax-functionality-cs/_static/image1.jpg)](iteration-7-add-ajax-functionality-cs/_static/image1.png)
+[![L'aggiornamento solo i contatti](iteration-7-add-ajax-functionality-cs/_static/image1.jpg)](iteration-7-add-ajax-functionality-cs/_static/image1.png)
 
 **Figura 01**: L'aggiornamento solo i contatti ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-7-add-ajax-functionality-cs/_static/image2.png))
 
@@ -144,7 +144,7 @@ Esistono vari modi in cui è possibile indicare a un utente che le operazioni in
 
 Si userà la libreria jQuery incluso con il framework Microsoft ASP.NET MVC, per creare gli effetti di animazione. La visualizzazione dell'indice aggiornata è contenuta nel listato 4.
 
-**Listato 4 - Views\Contact\Index.aspx**
+**Listing 4 - Views\Contact\Index.aspx**
 
 [!code-aspx[Main](iteration-7-add-ajax-functionality-cs/samples/sample6.aspx)]
 
@@ -172,7 +172,7 @@ Cronologia del browser AJAX ASP.NET, è necessario eseguire tre operazioni:
 
 La visualizzazione dell'indice aggiornata è contenuta nel listato 5.
 
-**Listato 5 - Views\Contact\Index.aspx**
+**Listing 5 - Views\Contact\Index.aspx**
 
 [!code-aspx[Main](iteration-7-add-ajax-functionality-cs/samples/sample8.aspx)]
 
@@ -193,7 +193,7 @@ Quando un utente raggiunge l'indietro del browser o il pulsante Avanti, viene ge
 Attualmente, per eliminare un contatto, è necessario fare clic sul collegamento Elimina e quindi fare clic sul pulsante di eliminazione visualizzato nella pagina di conferma delete (vedere la figura 2). Ciò dovrebbe essere un numero elevato di richieste di pagina per eseguire un'operazione semplice, come l'eliminazione di un record di database.
 
 
-[![Tegli Elimina pagina di conferma](iteration-7-add-ajax-functionality-cs/_static/image2.jpg)](iteration-7-add-ajax-functionality-cs/_static/image3.png)
+[![La pagina di conferma delete](iteration-7-add-ajax-functionality-cs/_static/image2.jpg)](iteration-7-add-ajax-functionality-cs/_static/image3.png)
 
 **Figura 02**: La pagina di conferma delete ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-7-add-ajax-functionality-cs/_static/image4.png))
 

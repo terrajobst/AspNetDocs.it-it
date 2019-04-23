@@ -12,7 +12,7 @@ ms.openlocfilehash: e7915b2cf8378c8c4d797ecfd89454ce3f3a570b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59399840"
 ---
 # <a name="model-binding-and-web-forms-in-visual-studio-2013"></a>Associazione di modelli e Web Forms in Visual Studio 2013

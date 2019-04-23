@@ -12,7 +12,7 @@ ms.openlocfilehash: e3e70c0d43c2f2db13180342730156728fa03cc2
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59399970"
 ---
 # <a name="how-do-i-get-started-with-aspnet-ajax"></a>[Procedura:] Iniziare a utilizzare ASP.NET AJAX?
@@ -24,4 +24,4 @@ Si noti che ASP.NET AJAX è incluso come parte di .NET 3.5, in modo che la parte
 [&#9654;Guarda il video (7 minuti)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-get-started-with-aspnet-ajax)
 
 > [!div class="step-by-step"]
-> [Successivo](how-do-i-implement-dynamic-partial-page-updates-with-aspnet-ajax.md)
+> [avanti](how-do-i-implement-dynamic-partial-page-updates-with-aspnet-ajax.md)

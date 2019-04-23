@@ -12,7 +12,7 @@ ms.openlocfilehash: 8148974eacd1db05947ba54fe40776df69f92290
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59404117"
 ---
 # <a name="backbone-template"></a>Modello Backbone
@@ -110,7 +110,7 @@ Il plug-in confirm.ts sostituisce il browser confermare finestra di dialogo, anc
 
 Ora esaminiamo il lato server.
 
-**Controllers**
+**Controller**
 
 In un'applicazione a pagina singola, il server ha solo un ruolo piccolo nell'interfaccia utente. In genere, il server esegue il rendering della pagina iniziale e quindi invia e riceve i dati JSON.
 

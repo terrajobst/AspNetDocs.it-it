@@ -12,7 +12,7 @@ ms.openlocfilehash: d6fe8324ef580c2ad811e5db5cf62e514e170aa3
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59401946"
 ---
 # <a name="tailspin-spyworks---display-the-product-list"></a>Tailspin Spyworks - Visualizzare l'elenco dei prodotti

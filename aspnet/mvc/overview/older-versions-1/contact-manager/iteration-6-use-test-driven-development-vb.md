@@ -12,7 +12,7 @@ ms.openlocfilehash: 3fd252b94e55f02215a2733f218e68b26486691f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59397110"
 ---
 # <a name="iteration-6--use-test-driven-development-vb"></a>Iterazione #6-usare lo sviluppo basato su test (VB)
@@ -113,7 +113,7 @@ La nostra storia utente prima è che un utente deve essere in grado di visualizz
 Creare un nuovo unit test facendo clic su cartella controller nel progetto ContactManager.Tests selezionando **Aggiungi, nuovo Test**e selezionando le **Unit Test** modello (vedere la figura 1). Nome della nuova unità GroupControllerTest.vb di test, scegliere il **OK** pulsante.
 
 
-[![Alo unit test GroupControllerTest dding](iteration-6-use-test-driven-development-vb/_static/image1.jpg)](iteration-6-use-test-driven-development-vb/_static/image1.png)
+[![Aggiunta di GroupControllerTest unit test](iteration-6-use-test-driven-development-vb/_static/image1.jpg)](iteration-6-use-test-driven-development-vb/_static/image1.png)
 
 **Figura 01**: Aggiunta di unit test GroupControllerTest ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-6-use-test-driven-development-vb/_static/image2.png))
 
@@ -141,7 +141,7 @@ La classe controller del gruppo nel listato 2 contiene il livello minimo di codi
 Dopo che le classi GroupController e gruppo per il progetto, il primo unit test viene completato correttamente (vedere la figura 2). È stato eseguito il lavoro minimo richiesto per superare il test. È ora festeggiare.
 
 
-[![Srrore!](iteration-6-use-test-driven-development-vb/_static/image2.jpg)](iteration-6-use-test-driven-development-vb/_static/image3.png)
+[![Vero successo!](iteration-6-use-test-driven-development-vb/_static/image2.jpg)](iteration-6-use-test-driven-development-vb/_static/image3.png)
 
 **Figura 02**: Vero successo! ([Fare clic per visualizzare l'immagine con dimensioni normali](iteration-6-use-test-driven-development-vb/_static/image4.png))
 
@@ -208,11 +208,11 @@ Listato 11 contiene una nuova classe FakeContactManagerRepository che implementa
 
 [!code-vb[Main](iteration-6-use-test-driven-development-vb/samples/sample9.vb)]
 
-**Listing 10 - Controllers\ContactManagerService.vb**
+**Listato 10 - Controllers\ContactManagerService.vb**
 
 [!code-vb[Main](iteration-6-use-test-driven-development-vb/samples/sample10.vb)]
 
-**Listing 11 - Controllers\FakeContactManagerRepository.vb**
+**Listato 11 - Controllers\FakeContactManagerRepository.vb**
 
 [!code-vb[Main](iteration-6-use-test-driven-development-vb/samples/sample11.vb)]
 
@@ -244,7 +244,7 @@ Purtroppo, anche se è stata soddisfatta tutti i requisiti espressi l'unit test,
 <a id="0.12_table01"></a>
 
 
-| **Nome colonna** | **Tipo di dati** | **Ammetti Null** |
+| **Nome della colonna** | **Tipo di dati** | **Consenti valori null** |
 | --- | --- | --- |
 | Id | int | False |
 | Nome | nvarchar(50) | False |
@@ -268,12 +268,12 @@ Successivamente, è necessario definire una relazione tra la tabella di database
 9. Fare clic sul pulsante Salva per salvare le modifiche apportate alla tabella Contacts.
 
 
-[![Creating una relazione tra tabelle di database](iteration-6-use-test-driven-development-vb/_static/image3.jpg)](iteration-6-use-test-driven-development-vb/_static/image5.png)
+[![Creazione di una relazione tra tabelle di database](iteration-6-use-test-driven-development-vb/_static/image3.jpg)](iteration-6-use-test-driven-development-vb/_static/image5.png)
 
 **Figura 03**: Creazione di una relazione tra tabelle di database ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-6-use-test-driven-development-vb/_static/image6.png))
 
 
-[![Srelazioni tra tabelle pecifying](iteration-6-use-test-driven-development-vb/_static/image4.jpg)](iteration-6-use-test-driven-development-vb/_static/image7.png)
+[![Specifica di relazioni tra tabelle](iteration-6-use-test-driven-development-vb/_static/image4.jpg)](iteration-6-use-test-driven-development-vb/_static/image7.png)
 
 **Figura 04**: Specifica di relazioni tra tabelle ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-6-use-test-driven-development-vb/_static/image8.png))
 
@@ -289,7 +289,7 @@ Successivamente, è necessario aggiornare il modello di dati per rappresentare l
 5. Fare doppio clic su proprietà di navigazione i gruppi che viene visualizzato nella parte inferiore dell'entità Contact. Modificare il nome del *gruppi* proprietà di navigazione *gruppo* (singolare).
 
 
-[![Uaggiornamento dal database di un modello di Entity Framework](iteration-6-use-test-driven-development-vb/_static/image5.jpg)](iteration-6-use-test-driven-development-vb/_static/image9.png)
+[![Aggiornamento di un modello di Entity Framework dal database](iteration-6-use-test-driven-development-vb/_static/image5.jpg)](iteration-6-use-test-driven-development-vb/_static/image9.png)
 
 **Figura 05**: Aggiornamento di un modello di Entity Framework dal database ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-6-use-test-driven-development-vb/_static/image10.png))
 
@@ -297,7 +297,7 @@ Successivamente, è necessario aggiornare il modello di dati per rappresentare l
 Dopo aver completato questi passaggi, il modello di dati rappresenta sia i contatti e gruppi di tabelle. La finestra di progettazione entità deve visualizzare entrambe le entità (vedere la figura 6).
 
 
-[![Evisualizzazione di progettazione di un'entità aumentano con gruppo e contatto](iteration-6-use-test-driven-development-vb/_static/image6.jpg)](iteration-6-use-test-driven-development-vb/_static/image11.png)
+[![Finestra di progettazione entità visualizzando Group e Contact](iteration-6-use-test-driven-development-vb/_static/image6.jpg)](iteration-6-use-test-driven-development-vb/_static/image11.png)
 
 **Figura 06**: Finestra di progettazione entità visualizzando Group e Contact ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-6-use-test-driven-development-vb/_static/image12.png))
 
@@ -330,7 +330,7 @@ Applicazione MVC ASP.NET quando si usa il motore di visualizzazione ASP.NET pred
 - Views\Group\Delete.aspx - modulo di conferma viene visualizzato per l'eliminazione di un gruppo di contatti
 
 
-[![Tegli visualizzazione dell'indice di gruppo](iteration-6-use-test-driven-development-vb/_static/image7.jpg)](iteration-6-use-test-driven-development-vb/_static/image13.png)
+[![La visualizzazione dell'indice di gruppo](iteration-6-use-test-driven-development-vb/_static/image7.jpg)](iteration-6-use-test-driven-development-vb/_static/image13.png)
 
 **Figura 07**: La visualizzazione dell'indice di gruppo ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-6-use-test-driven-development-vb/_static/image14.png))
 
@@ -344,7 +344,7 @@ Applicazione MVC ASP.NET quando si usa il motore di visualizzazione ASP.NET pred
 È possibile visualizzare le visualizzazioni modificate esaminando l'applicazione di Visual Studio che accompagna questa esercitazione. Ad esempio, la figura 8 mostra la visualizzazione Index dei contatti.
 
 
-[![Tegli visualizzazione Index contatto](iteration-6-use-test-driven-development-vb/_static/image8.jpg)](iteration-6-use-test-driven-development-vb/_static/image15.png)
+[![La visualizzazione Index dei contatti](iteration-6-use-test-driven-development-vb/_static/image8.jpg)](iteration-6-use-test-driven-development-vb/_static/image15.png)
 
 **Figura 08**: La visualizzazione dell'indice di contatto ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-6-use-test-driven-development-vb/_static/image16.png))
 

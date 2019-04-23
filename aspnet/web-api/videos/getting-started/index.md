@@ -12,7 +12,7 @@ ms.openlocfilehash: 5cec547993722e587fc0f54486f7f2ca388db64d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59404104"
 ---
 # <a name="aspnet-web-api-overview-and-getting-started-videos"></a>Panoramica dell'API Web ASP.NET come guida introduttiva video
@@ -20,10 +20,10 @@ ms.locfileid: "59404104"
 > Si tratta di una serie di video per iniziare a usare API Web ASP.NET.
 
 
-- [API Web ASP.NET](aspnet-web-api.md)
+- [ASP.NET Web API](aspnet-web-api.md)
 - [API Web ASP.NET, parte 1: La prima API Web](your-first-web-api.md)
 - [API Web ASP.NET, parte 2: Recupero dei dati](getting-data.md)
-- [API Web ASP.NET, parte 3: Eliminare e aggiornare](delete-and-update.md)
-- [API Web ASP.NET, parte 4: Suddivisione in pagine ed esecuzione di query](paging-and-querying.md)
+- [API Web ASP.NET, parte 3: Delete e Update](delete-and-update.md)
+- [API Web ASP.NET, parte 4: Paging e l'esecuzione di query](paging-and-querying.md)
 - [API Web ASP.NET, parte 5: Convalida personalizzata](custom-validation.md)
 - [API Web ASP.NET, parte 6: Autorizzazione](authorization.md)

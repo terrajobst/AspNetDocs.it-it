@@ -12,7 +12,7 @@ ms.openlocfilehash: dd652bf604e5b0ca838b5e50714b8923a4fb25c5
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59398358"
 ---
 # <a name="how-do-i-use-the-aspnet-ajax-collapsable-panel-extender"></a>[Procedura:] Usare il dispositivo Extender Pannello comprimibile di ASP.NET AJAX?

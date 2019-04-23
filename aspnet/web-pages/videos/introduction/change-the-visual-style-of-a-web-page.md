@@ -12,7 +12,7 @@ ms.openlocfilehash: 5ff91ddabb637d663a4a14f26521d405bc78de71
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59398722"
 ---
 # <a name="change-the-visual-style-of-a-web-page"></a>Modificare lo stile di visualizzazione di una pagina Web

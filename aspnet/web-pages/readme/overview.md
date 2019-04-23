@@ -12,7 +12,7 @@ ms.openlocfilehash: 7374b1afafa9ca63309f3c0369c5efd808f7f28a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59401985"
 ---
 # <a name="webmatrix-readme"></a>File Leggimi di WebMatrix
@@ -31,7 +31,7 @@ ms.locfileid: "59401985"
 - [Le modifiche e problemi](#ChangesAndIssues)
 
     - [Installazione di WebMatrix 1.0](#Known_Issues_Installation)
-    - [Pagine Web ASP.NET](#Known_Issues_ASPNET)
+    - [ASP.NET Web Pages](#Known_Issues_ASPNET)
     - [WebMatrix](#Known_Issues_WebMatrix)
     - [IIS Express](#Known_Issues_IISExpress)
     - [SQL Server Compact](#Known_Issues_SQLServerCompact)
@@ -558,7 +558,7 @@ Per informazioni sui problemi che interessano l'installazione di SQL Server Comp
 Per ulteriori informazioni su WebMatrix 1.0, vedere i siti Web seguenti:
 
 - [IIS.net](http://iis.net/)
-- [ASP.NET](https://asp.net/webmatrix)
+- [ASP.NET 2.0](https://asp.net/webmatrix)
 - [Microsoft.com/web](https://www.microsoft.com/web)
 
 © 2011 Microsoft Corporation. Tutti i diritti riservati. [Le condizioni d'uso](https://msdn.microsoft.cos/cc300389.aspx).

@@ -12,7 +12,7 @@ ms.openlocfilehash: 0462d8357d83115e751a818d3c9feb4b4274e212
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59402544"
 ---
 # <a name="using-dynamicpopulate-with-a-user-control-and-javascript-c"></a>Uso di DynamicPopulate con un controllo utente e JavaScript (C#)
@@ -67,7 +67,7 @@ Infine, aggiungere il controllo utente alla pagina. È necessario impostare solo
 L'operazione è ora completata. La pagina si comporti come previsto: Un utente fa clic su uno dei pulsanti di opzione, il controllo nel Toolkit chiama il servizio web e Visualizza la data corrente nel formato desiderato.
 
 
-[![Tpulsanti di opzione he si trovano in un controllo utente](using-dynamicpopulate-with-a-user-control-and-javascript-cs/_static/image2.png)](using-dynamicpopulate-with-a-user-control-and-javascript-cs/_static/image1.png)
+[![I pulsanti di opzione si trovano in un controllo utente](using-dynamicpopulate-with-a-user-control-and-javascript-cs/_static/image2.png)](using-dynamicpopulate-with-a-user-control-and-javascript-cs/_static/image1.png)
 
 I pulsanti di opzione si trovano in un controllo utente ([fare clic per visualizzare l'immagine con dimensioni normali](using-dynamicpopulate-with-a-user-control-and-javascript-cs/_static/image3.png))
 

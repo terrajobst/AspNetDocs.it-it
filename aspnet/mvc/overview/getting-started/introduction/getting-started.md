@@ -11,7 +11,7 @@ ms.openlocfilehash: c2f7ca2e7fb8d7831f21e3ba2f4713211657e1b3
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59402232"
 ---
 # <a name="getting-started-with-aspnet-mvc-5"></a>Introduzione a ASP.NET MVC 5
@@ -75,4 +75,4 @@ Si desidera vedere il sito completo in esecuzione come un'app web in tempo reale
 - [Attivare i benefici della sottoscrizione Visual Studio](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers) -la sottoscrizione Visual Studio si accumulano crediti ogni mese in cui è possibile usare per i servizi di Azure a pagamento.
 
 > [!div class="step-by-step"]
-> [Successivo](adding-a-controller.md)
+> [avanti](adding-a-controller.md)

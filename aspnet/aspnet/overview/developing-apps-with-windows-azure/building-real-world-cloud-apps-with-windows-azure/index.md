@@ -12,7 +12,7 @@ ms.openlocfilehash: bb9ae940ba90620a6a4c2d373117635f80e14588
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59397448"
 ---
 # <a name="building-real-world-cloud-apps-with-azure"></a>Creazione di app cloud per il mondo reale con Azure
@@ -35,4 +35,4 @@ ms.locfileid: "59397448"
 - [Memorizzazione nella cache distribuita](distributed-caching.md)
 - [Modello di lavoro incentrato sulla coda](queue-centric-work-pattern.md)
 - [Altri modelli e indicazioni](more-patterns-and-guidance.md)
-- [Appendice: Applicazione di esempio Fix It](the-fix-it-sample-application.md)
+- [Appendice: La correzione applicazione di esempio](the-fix-it-sample-application.md)

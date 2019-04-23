@@ -12,7 +12,7 @@ ms.openlocfilehash: 27197a44601494b5dff83e119e13bfcce0fd49a2
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59398774"
 ---
 # <a name="adding-ajax-functionality-to-an-existing-aspnet-page"></a>Aggiunta di funzionalità AJAX a una pagina ASP.NET esistente

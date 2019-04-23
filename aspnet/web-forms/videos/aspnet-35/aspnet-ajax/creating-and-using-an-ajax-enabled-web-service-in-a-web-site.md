@@ -12,7 +12,7 @@ ms.openlocfilehash: 27b99df882305d35704419777064dd1149c94e16
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59398696"
 ---
 # <a name="creating-and-using-an-ajax-enabled-web-service-in-a-web-site"></a>Creazione e uso di un servizio Web compatibile con AJAX in un sito Web

@@ -12,14 +12,14 @@ ms.openlocfilehash: ba656ecc14204d833e9dc18b941a2c19ec5e06ef
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59397728"
 ---
 # <a name="single-page-application-overview"></a>Panoramica di applicazione singola pagina
 
 - [Introduzione](introduction/index.md)
 
-    - [Applicazione a pagina singola: Modello KnockoutJS](introduction/knockoutjs-template.md)
+    - [Applicazione a singola pagina: Modello KnockoutJS](introduction/knockoutjs-template.md)
     - [Librerie diverse da Knockout](introduction/other-libraries.md)
 - [Modelli](templates/index.md)
 

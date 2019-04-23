@@ -12,7 +12,7 @@ ms.openlocfilehash: 56dda72b8cadcef4449f3ff6e8e8e4e3315d0687
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59402882"
 ---
 # <a name="how-do-i-linq-to-sql-overview"></a>[Procedura:] LINQ to SQL: Panoramica
@@ -24,4 +24,4 @@ Nuove funzionalità del linguaggio per c# e Visual Basic supportano l'accesso ai
 [&#9654;Guarda il video (9 minuti)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-linq-to-sql-overview)
 
 > [!div class="step-by-step"]
-> [Successivo](how-do-i-linq-to-sql-data-model.md)
+> [avanti](how-do-i-linq-to-sql-data-model.md)

@@ -12,7 +12,7 @@ ms.openlocfilehash: d8a260152213a8374a9b7b7a31623bca13eccce5
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59399294"
 ---
 # <a name="troubleshooting-production-aspnet-apps"></a>Risoluzione dei problemi delle app ASP.NET di produzione

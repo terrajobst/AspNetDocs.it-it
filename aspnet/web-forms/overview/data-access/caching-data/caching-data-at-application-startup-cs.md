@@ -12,14 +12,14 @@ ms.openlocfilehash: 7e858fe4c1f8e93f6e6fa30b33f5682945d03c32
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59403077"
 ---
 # <a name="caching-data-at-application-startup-c"></a>Memorizzazione di dati nella cache all'avvio dell'applicazione (C#)
 
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Scarica il PDF](caching-data-at-application-startup-cs/_static/datatutorial60cs1.pdf)
+[Scaricare PDF](caching-data-at-application-startup-cs/_static/datatutorial60cs1.pdf)
 
 > In qualsiasi applicazione Web alcuni dati verranno frequentemente utilizzati e alcuni dati verranno utilizzati raramente. È possibile migliorare le prestazioni dell'applicazione ASP.NET mediante il caricamento in anticipo i dati usati di frequente, una tecnica nota come. Questa esercitazione viene illustrato un approccio proattivo delle operazioni di caricamento, che consiste nel caricare i dati nella cache all'avvio dell'applicazione.
 
@@ -119,7 +119,7 @@ Aggiungi il `Global.asax` file alla directory radice dell'applicazione web facen
 > Se hai già un `Global.asax` file nel progetto, la classe di applicazione globale, tipo di elemento non verrà elencato nella finestra di dialogo Aggiungi nuovo elemento.
 
 
-[![Ail File Global. asax alla Directory radice dell'applicazione Web Your gg](caching-data-at-application-startup-cs/_static/image4.png)](caching-data-at-application-startup-cs/_static/image3.png)
+[![Aggiungere il File Global. asax alla Directory radice dell'applicazione Web](caching-data-at-application-startup-cs/_static/image4.png)](caching-data-at-application-startup-cs/_static/image3.png)
 
 **Figura 3**: Aggiungere il `Global.asax` File alla Directory radice dell'applicazione Web Your ([fare clic per visualizzare l'immagine con dimensioni normali](caching-data-at-application-startup-cs/_static/image5.png))
 
@@ -142,7 +142,7 @@ Per queste esercitazioni è sufficiente aggiungere il codice per il `Application
 Questo è tutto. All'avvio dell'applicazione, il `LoadStaticCache()` acquisire informazioni sul fornitore da BLL, metodo e archiviarlo in una variabile membro statica (o qualsiasi cache di memorizzare si finisce utilizzando il `StaticCache` classe). Per verificare questo comportamento, impostare un punto di interruzione il `Application_Start` metodo ed eseguire l'applicazione. Si noti che il punto di interruzione viene raggiunto dopo l'avvio dell'applicazione. Le richieste successive, tuttavia, non causano la `Application_Start` metodo da eseguire.
 
 
-[![USe un punto di interruzione per verificare che il gestore dell'evento Application_Start sia in esecuzione](caching-data-at-application-startup-cs/_static/image7.png)](caching-data-at-application-startup-cs/_static/image6.png)
+[![Usare un punto di interruzione per verificare che il gestore dell'evento Application_Start sia in esecuzione](caching-data-at-application-startup-cs/_static/image7.png)](caching-data-at-application-startup-cs/_static/image6.png)
 
 **Figura 4**: Usare un punto di interruzione per verificare che il `Application_Start` gestore dell'evento è in esecuzione ([fare clic per visualizzare l'immagine con dimensioni normali](caching-data-at-application-startup-cs/_static/image8.png))
 
@@ -158,12 +158,12 @@ A questo punto il `StaticCache` classe dispone di una versione dei dati fornitor
 Iniziare aprendo il `AtApplicationStartup.aspx` nella pagina di `Caching` cartella. Trascinare un controllo GridView dalla casella degli strumenti nella finestra di progettazione, l'impostazione relativa `ID` proprietà `Suppliers`. Successivamente, smart tag del controllo GridView di scegliere di creare un nuovo oggetto ObjectDataSource denominato `SuppliersCachedDataSource`. Configurare ObjectDataSource per usare la `StaticCache` della classe `GetSuppliers()` (metodo).
 
 
-[![Cconfigurare ObjectDataSource per usare la classe StaticCache](caching-data-at-application-startup-cs/_static/image10.png)](caching-data-at-application-startup-cs/_static/image9.png)
+[![Configurare ObjectDataSource per usare la classe StaticCache](caching-data-at-application-startup-cs/_static/image10.png)](caching-data-at-application-startup-cs/_static/image9.png)
 
 **Figura 5**: Configurare ObjectDataSource per usare la `StaticCache` classe ([fare clic per visualizzare l'immagine con dimensioni normali](caching-data-at-application-startup-cs/_static/image11.png))
 
 
-[![USe il metodo GetSuppliers() per recuperare i dati fornitore nella cache](caching-data-at-application-startup-cs/_static/image13.png)](caching-data-at-application-startup-cs/_static/image12.png)
+[![Usare il metodo GetSuppliers() per recuperare i dati memorizzati nella cache del fornitore](caching-data-at-application-startup-cs/_static/image13.png)](caching-data-at-application-startup-cs/_static/image12.png)
 
 **Figura 6**: Usare la `GetSuppliers()` metodo per recuperare i dati memorizzati nella cache del fornitore ([fare clic per visualizzare l'immagine con dimensioni normali](caching-data-at-application-startup-cs/_static/image14.png))
 
@@ -176,7 +176,7 @@ Dopo aver completato la procedura guidata, Visual Studio aggiungerà automaticam
 Figura 7 mostra la pagina quando viene visualizzato tramite un browser. L'output è lo stesso se avessimo è effettuato il pull dei dati dalla classe BLL `SuppliersBLL` classe, ma l'uso di `StaticCache` classe restituisce i dati fornitore come memorizzati nella cache all'avvio dell'applicazione. È possibile impostare i punti di interruzione nella `StaticCache` della classe `GetSuppliers()` metodo per verificare questo comportamento.
 
 
-[![Tegli memorizzata nella cache dei dati fornitore viene visualizzato in un controllo GridView](caching-data-at-application-startup-cs/_static/image16.png)](caching-data-at-application-startup-cs/_static/image15.png)
+[![I dati fornitore memorizzato nella cache vengono visualizzati in un oggetto GridView](caching-data-at-application-startup-cs/_static/image16.png)](caching-data-at-application-startup-cs/_static/image15.png)
 
 **Figura 7**: I dati fornitore memorizzato nella cache vengono visualizzati in un controllo GridView ([fare clic per visualizzare l'immagine con dimensioni normali](caching-data-at-application-startup-cs/_static/image17.png))
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: 204611513860e268001596b9c7ac9e9c023caa12
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59399853"
 ---
 # <a name="displaying-video-in-an-aspnet-web-pages-razor-site"></a>Visualizzazione Video in un sito di ASP.NET Web Pages (Razor)
@@ -185,4 +185,4 @@ Questa procedura viene illustrato come riprodurre video contenuto in un Silverli
 
 [Flash oggetto e INCORPORAMENTO degli attributi del tag](http://kb2.adobe.com/cps/127/tn_12701.html)
 
-[Windows Media Player 11 SDK PARAM Tags](https://msdn.microsoft.com/library/aa392321(VS.85).aspx)
+[I tag PARAM SDK di Windows Media Player 11](https://msdn.microsoft.com/library/aa392321(VS.85).aspx)

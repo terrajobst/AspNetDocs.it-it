@@ -12,7 +12,7 @@ ms.openlocfilehash: 056e89b20ccab0e56b1fab422c817d842beff446
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59400841"
 ---
 # <a name="using-textboxwatermark-in-a-formview-vb"></a>Uso di TextBoxWatermark in un controllo FormView (VB)
@@ -49,7 +49,7 @@ Ricordare il nome (`ID`) dell'origine dati, poiché verrà usato nel `DataSource
 A questo punto quando l'utente modifica la modalità di inserimento del `FormView` controllare, il campo di testo per il nuovo fornitore è precompilato grazie alla `TextBoxWatermarkExtender` controllo. Un clic nella casella di testo consente il testo di riempimento non vengono più visualizzati.
 
 
-[![Tfiligrana he nel campo proviene dal dispositivo extender](using-textboxwatermark-in-a-formview-vb/_static/image2.png)](using-textboxwatermark-in-a-formview-vb/_static/image1.png)
+[![Il limite nel campo proviene il dispositivo extender](using-textboxwatermark-in-a-formview-vb/_static/image2.png)](using-textboxwatermark-in-a-formview-vb/_static/image1.png)
 
 Il limite nel campo proviene il dispositivo extender ([fare clic per visualizzare l'immagine con dimensioni normali](using-textboxwatermark-in-a-formview-vb/_static/image3.png))
 

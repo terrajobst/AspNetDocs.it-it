@@ -12,7 +12,7 @@ ms.openlocfilehash: 728d56583fb4192d87d01febf512668068256150
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59398046"
 ---
 # <a name="animation"></a>Animazione
