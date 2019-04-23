@@ -12,7 +12,7 @@ ms.openlocfilehash: b59cd34036c733579e678eab78097d3393f3e671
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59421082"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-troubleshooting"></a>Distribuzione Web ASP.NET tramite Visual Studio: Risoluzione dei problemi
@@ -28,7 +28,7 @@ Questa pagina descrive alcuni problemi comuni che possono verificarsi quando si 
 
 Gli scenari illustrati si applicano a Azure e i provider di hosting di terze parti. Per altre informazioni sulla risoluzione dei problemi delle App web in servizio App di Azure, vedere le risorse seguenti:
 
-- [Risolvere i problemi di un'app web nel servizio App di Azure con Visual Studio](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-troubleshoot-visual-studio/)
+- [Risoluzione dei problemi di un'app Web nel servizio app di Azure tramite Visual Studio](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-troubleshoot-visual-studio/)
 - [Monitorare le app Web nel servizio App di Azure](https://azure.microsoft.com/documentation/articles/web-sites-monitor//)
 - [Annuncio della versione di Windows Azure SDK 2.0 for .NET](http://https://weblogs.asp.net/scottgu/announcing-the-release-of-windows-azure-sdk-2-0-for-net) (blog di ScottGu, Mostra come ottenere i log di diagnostica in Visual Studio)
 
@@ -306,7 +306,7 @@ Pubblicazione ha esito negativo generando un errore che indica che non dispone d
 
 ### <a name="possible-cause-and-solution"></a>Possibile causa e soluzione
 
-Per impostazione predefinita, Visual Studio imposta autorizzazioni sulla cartella radice del sito di autorizzazioni lettura e scrittura per l'App\_cartella dati. Se si sa che le autorizzazioni predefinite per le cartelle sito siano corrette e non sono necessario impostare, è possibile disattivare questo comportamento aggiungendo ** &lt;destinazione IncludeSetACLProviderOn&gt;False&lt;/ IncludeSetACLProviderOnDestination&gt; ** per il file del profilo di pubblicazione (da assegnare un singolo profilo) o al file WPP (per influiscono su tutti i profili). Per informazioni su come modificare questi file, vedere [come: Modificare le impostazioni di distribuzione nel file di profilo (con estensione pubxml)](https://msdn.microsoft.com/library/ff398069.aspx).
+Per impostazione predefinita, Visual Studio imposta autorizzazioni sulla cartella radice del sito di autorizzazioni lettura e scrittura per l'App\_cartella dati. Se si sa che le autorizzazioni predefinite per le cartelle sito siano corrette e non sono necessario impostare, è possibile disattivare questo comportamento aggiungendo **&lt;destinazione IncludeSetACLProviderOn&gt;False&lt;/ IncludeSetACLProviderOnDestination&gt;** per il file del profilo di pubblicazione (da assegnare un singolo profilo) o al file WPP (per influiscono su tutti i profili). Per informazioni su come modificare questi file, vedere [come: Modificare le impostazioni di distribuzione nel file di profilo (con estensione pubxml)](https://msdn.microsoft.com/library/ff398069.aspx).
 
 ## <a name="access-denied-errors-when-the-application-tries-to-write-to-an-application-folder"></a>Errori di accesso negato quando l'applicazione tenta di scrivere in una cartella dell'applicazione
 
@@ -316,7 +316,7 @@ Gli errori dell'applicazione quando prova a creare o modificare un file in una d
 
 ### <a name="possible-cause-and-solution"></a>Possibile causa e soluzione
 
-Per impostazione predefinita, Visual Studio imposta autorizzazioni sulla cartella radice del sito di autorizzazioni lettura e scrittura per l'App\_cartella dati. Se l'applicazione necessita di accesso in scrittura a una sottocartella, è possibile impostare le autorizzazioni per la cartella come illustrato nell'impostazione delle autorizzazioni di cartella di distribuzione alle esercitazioni descritte in questa serie di ambiente di produzione. Se l'applicazione necessita di accesso in scrittura alla cartella radice del sito, è necessario impedirne l'impostazione di accesso in sola lettura nella cartella radice aggiungendo ** &lt;destinazione IncludeSetACLProviderOn&gt;False&lt;/ IncludeSetACLProviderOnDestination&gt; ** per il file del profilo di pubblicazione (da assegnare un singolo profilo) o al file WPP (per influiscono su tutti i profili). Per informazioni su come modificare questi file, vedere [come: Modificare le impostazioni di distribuzione nel file di profilo (con estensione pubxml)](https://msdn.microsoft.com/library/ff398069.aspx).
+Per impostazione predefinita, Visual Studio imposta autorizzazioni sulla cartella radice del sito di autorizzazioni lettura e scrittura per l'App\_cartella dati. Se l'applicazione necessita di accesso in scrittura a una sottocartella, è possibile impostare le autorizzazioni per la cartella come illustrato nell'impostazione delle autorizzazioni di cartella di distribuzione alle esercitazioni descritte in questa serie di ambiente di produzione. Se l'applicazione necessita di accesso in scrittura alla cartella radice del sito, è necessario impedirne l'impostazione di accesso in sola lettura nella cartella radice aggiungendo **&lt;destinazione IncludeSetACLProviderOn&gt;False&lt;/ IncludeSetACLProviderOnDestination&gt;** per il file del profilo di pubblicazione (da assegnare un singolo profilo) o al file WPP (per influiscono su tutti i profili). Per informazioni su come modificare questi file, vedere [come: Modificare le impostazioni di distribuzione nel file di profilo (con estensione pubxml)](https://msdn.microsoft.com/library/ff398069.aspx).
 
 <a id="aspnet45error"></a>
 
