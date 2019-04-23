@@ -12,16 +12,16 @@ ms.openlocfilehash: 042077cb2c0a284556a35e960177f9fd9ad508a6
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59413451"
 ---
-# <a name="how-do-i-get-started-with-linq"></a><span data-ttu-id="49352-104">[Procedura:] Introduzione a LINQ?</span><span class="sxs-lookup"><span data-stu-id="49352-104">[How Do I:] Get Started with LINQ?</span></span>
+# <a name="how-do-i-get-started-with-linq"></a><span data-ttu-id="09dd4-104">[Procedura:] Introduzione a LINQ?</span><span class="sxs-lookup"><span data-stu-id="09dd4-104">[How Do I:] Get Started with LINQ?</span></span>
 
-<span data-ttu-id="49352-105">da [Beth Massi](https://github.com/bethmassi)</span><span class="sxs-lookup"><span data-stu-id="49352-105">by [Beth Massi](https://github.com/bethmassi)</span></span>
+<span data-ttu-id="09dd4-105">da [Beth Massi](https://github.com/bethmassi)</span><span class="sxs-lookup"><span data-stu-id="09dd4-105">by [Beth Massi](https://github.com/bethmassi)</span></span>
 
-<span data-ttu-id="49352-106">I programmatori Visual Basic verranno illustrato come scrivere semplici query LINQ su oggetti dai file come lo spostamento nel file system.</span><span class="sxs-lookup"><span data-stu-id="49352-106">Visual Basic programmers will learn how to write simple LINQ queries over objects by navigating files on the file system.</span></span>
+<span data-ttu-id="09dd4-106">I programmatori Visual Basic verranno illustrato come scrivere semplici query LINQ su oggetti dai file come lo spostamento nel file system.</span><span class="sxs-lookup"><span data-stu-id="09dd4-106">Visual Basic programmers will learn how to write simple LINQ queries over objects by navigating files on the file system.</span></span>
 
-[<span data-ttu-id="49352-107">&#9654;Guarda il video (9 minuti)</span><span class="sxs-lookup"><span data-stu-id="49352-107">&#9654; Watch video (9 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-get-started-with-linq)
+[<span data-ttu-id="09dd4-107">&#9654;Guarda il video (9 minuti)</span><span class="sxs-lookup"><span data-stu-id="09dd4-107">&#9654; Watch video (9 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-get-started-with-linq)
 
 > [!div class="step-by-step"]
-> [<span data-ttu-id="49352-108">Successivo</span><span class="sxs-lookup"><span data-stu-id="49352-108">Next</span></span>](how-do-i-perform-group-and-aggregate-queries.md)
+> [<span data-ttu-id="09dd4-108">avanti</span><span class="sxs-lookup"><span data-stu-id="09dd4-108">Next</span></span>](how-do-i-perform-group-and-aggregate-queries.md)

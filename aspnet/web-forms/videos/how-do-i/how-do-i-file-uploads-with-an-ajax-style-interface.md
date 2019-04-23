@@ -12,13 +12,13 @@ ms.openlocfilehash: 4a8e9020f2e171e4549670915290df5aab78a3e0
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59414439"
 ---
-# <a name="how-do-i--file-uploads-with-an-ajax-style-interface"></a><span data-ttu-id="d7326-104">[Procedura:]  Caricamenti di file con un'interfaccia di tipo AJAX</span><span class="sxs-lookup"><span data-stu-id="d7326-104">[How Do I:]  File Uploads with an AJAX Style Interface</span></span>
+# <a name="how-do-i--file-uploads-with-an-ajax-style-interface"></a><span data-ttu-id="3de5e-104">[Procedura:]  Caricamenti di file con un'interfaccia di tipo AJAX</span><span class="sxs-lookup"><span data-stu-id="3de5e-104">[How Do I:]  File Uploads with an AJAX Style Interface</span></span>
 
-<span data-ttu-id="d7326-105">da [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="d7326-105">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
+<span data-ttu-id="3de5e-105">da [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="3de5e-105">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
 
-<span data-ttu-id="d7326-106">In questo video illustrerò, utilizzando ASP.NET, uno stile AJAX di caricamento dei file dal computer client al server.</span><span class="sxs-lookup"><span data-stu-id="d7326-106">In this video I will demonstrate, using ASP.NET, an AJAX style of uploading files from the client machine to your server.</span></span> <span data-ttu-id="d7326-107">Dico stile AJAX perché in realtà un problema di utilizzo di AJAX per caricare i file.</span><span class="sxs-lookup"><span data-stu-id="d7326-107">I say AJAX style because there is actually a problem using AJAX to upload files.</span></span> <span data-ttu-id="d7326-108">Il video viene mostrato cosa intendo.</span><span class="sxs-lookup"><span data-stu-id="d7326-108">The video will demonstrate what I mean.</span></span>
+<span data-ttu-id="3de5e-106">In questo video illustrerò, utilizzando ASP.NET, uno stile AJAX di caricamento dei file dal computer client al server.</span><span class="sxs-lookup"><span data-stu-id="3de5e-106">In this video I will demonstrate, using ASP.NET, an AJAX style of uploading files from the client machine to your server.</span></span> <span data-ttu-id="3de5e-107">Dico stile AJAX perché in realtà un problema di utilizzo di AJAX per caricare i file.</span><span class="sxs-lookup"><span data-stu-id="3de5e-107">I say AJAX style because there is actually a problem using AJAX to upload files.</span></span> <span data-ttu-id="3de5e-108">Il video viene mostrato cosa intendo.</span><span class="sxs-lookup"><span data-stu-id="3de5e-108">The video will demonstrate what I mean.</span></span>
 
-[<span data-ttu-id="d7326-109">&#9654;Guarda il video (27 minuti)</span><span class="sxs-lookup"><span data-stu-id="d7326-109">&#9654; Watch video (27 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-file-uploads-with-an-ajax-style-interface)
+[<span data-ttu-id="3de5e-109">&#9654;Guarda il video (27 minuti)</span><span class="sxs-lookup"><span data-stu-id="3de5e-109">&#9654; Watch video (27 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-file-uploads-with-an-ajax-style-interface)

@@ -12,21 +12,21 @@ ms.openlocfilehash: 7cb965a79cf9d367b74efa2fe1fd1493cce1c19e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59414608"
 ---
-# <a name="aspnet-35---membership"></a><span data-ttu-id="ee073-103">ASP.NET 3.5 - Appartenenza</span><span class="sxs-lookup"><span data-stu-id="ee073-103">ASP.NET 3.5 - Membership</span></span>
+# <a name="aspnet-35---membership"></a><span data-ttu-id="97313-103">ASP.NET 3.5 - Appartenenza</span><span class="sxs-lookup"><span data-stu-id="97313-103">ASP.NET 3.5 - Membership</span></span>
 
-> <span data-ttu-id="ee073-104">Questa serie di esercitazioni vengono esaminate le tecniche d'uso il sistema di appartenenze predefinito (sicurezza) per creare gli account utente e configurare le regole di autorizzazione.</span><span class="sxs-lookup"><span data-stu-id="ee073-104">This tutorial series examines techniques for using the built-in membership (security) system to create user accounts and configure authorization rules.</span></span>
+> <span data-ttu-id="97313-104">Questa serie di esercitazioni vengono esaminate le tecniche d'uso il sistema di appartenenze predefinito (sicurezza) per creare gli account utente e configurare le regole di autorizzazione.</span><span class="sxs-lookup"><span data-stu-id="97313-104">This tutorial series examines techniques for using the built-in membership (security) system to create user accounts and configure authorization rules.</span></span>
 
 
-- [<span data-ttu-id="ee073-105">Creazione dello schema di appartenenza in SQL Server (C#)</span><span class="sxs-lookup"><span data-stu-id="ee073-105">Creating the Membership Schema in SQL Server (C#)</span></span>](creating-the-membership-schema-in-sql-server-cs.md)
-- [<span data-ttu-id="ee073-106">Creazione di account utente (C#)</span><span class="sxs-lookup"><span data-stu-id="ee073-106">Creating User Accounts (C#)</span></span>](creating-user-accounts-cs.md)
-- [<span data-ttu-id="ee073-107">Convalida delle credenziali utente rispetto all'archivio utente di appartenenza (C#)</span><span class="sxs-lookup"><span data-stu-id="ee073-107">Validating User Credentials Against the Membership User Store (C#)</span></span>](validating-user-credentials-against-the-membership-user-store-cs.md)
-- [<span data-ttu-id="ee073-108">Autorizzazione basata sull'utente (C#)</span><span class="sxs-lookup"><span data-stu-id="ee073-108">User-Based Authorization (C#)</span></span>](user-based-authorization-cs.md)
-- [<span data-ttu-id="ee073-109">Archiviazione di informazioni utente aggiuntive (C#)</span><span class="sxs-lookup"><span data-stu-id="ee073-109">Storing Additional User Information (C#)</span></span>](storing-additional-user-information-cs.md)
-- [<span data-ttu-id="ee073-110">Creazione dello schema di appartenenza in SQL Server (VB)</span><span class="sxs-lookup"><span data-stu-id="ee073-110">Creating the Membership Schema in SQL Server (VB)</span></span>](creating-the-membership-schema-in-sql-server-vb.md)
-- [<span data-ttu-id="ee073-111">Creazione di account utente (VB)</span><span class="sxs-lookup"><span data-stu-id="ee073-111">Creating User Accounts (VB)</span></span>](creating-user-accounts-vb.md)
-- [<span data-ttu-id="ee073-112">Convalida delle credenziali utente rispetto all'archivio utente di appartenenza (VB)</span><span class="sxs-lookup"><span data-stu-id="ee073-112">Validating User Credentials Against the Membership User Store (VB)</span></span>](validating-user-credentials-against-the-membership-user-store-vb.md)
-- [<span data-ttu-id="ee073-113">Autorizzazione basata sull'utente (VB)</span><span class="sxs-lookup"><span data-stu-id="ee073-113">User-Based Authorization (VB)</span></span>](user-based-authorization-vb.md)
-- [<span data-ttu-id="ee073-114">Archiviazione di informazioni utente aggiuntive (VB)</span><span class="sxs-lookup"><span data-stu-id="ee073-114">Storing Additional User Information (VB)</span></span>](storing-additional-user-information-vb.md)
+- [<span data-ttu-id="97313-105">Creazione dello schema di appartenenza in SQL Server (C#)</span><span class="sxs-lookup"><span data-stu-id="97313-105">Creating the Membership Schema in SQL Server (C#)</span></span>](creating-the-membership-schema-in-sql-server-cs.md)
+- [<span data-ttu-id="97313-106">Creazione di account utente (C#)</span><span class="sxs-lookup"><span data-stu-id="97313-106">Creating User Accounts (C#)</span></span>](creating-user-accounts-cs.md)
+- [<span data-ttu-id="97313-107">Convalida delle credenziali utente rispetto all'archivio utente di appartenenza (C#)</span><span class="sxs-lookup"><span data-stu-id="97313-107">Validating User Credentials Against the Membership User Store (C#)</span></span>](validating-user-credentials-against-the-membership-user-store-cs.md)
+- [<span data-ttu-id="97313-108">Autorizzazione basata sull'utente (C#)</span><span class="sxs-lookup"><span data-stu-id="97313-108">User-Based Authorization (C#)</span></span>](user-based-authorization-cs.md)
+- [<span data-ttu-id="97313-109">Archiviazione di informazioni utente aggiuntive (C#)</span><span class="sxs-lookup"><span data-stu-id="97313-109">Storing Additional User Information (C#)</span></span>](storing-additional-user-information-cs.md)
+- [<span data-ttu-id="97313-110">Creazione dello schema di appartenenza in SQL Server (VB)</span><span class="sxs-lookup"><span data-stu-id="97313-110">Creating the Membership Schema in SQL Server (VB)</span></span>](creating-the-membership-schema-in-sql-server-vb.md)
+- [<span data-ttu-id="97313-111">Creazione di account utente (VB)</span><span class="sxs-lookup"><span data-stu-id="97313-111">Creating User Accounts (VB)</span></span>](creating-user-accounts-vb.md)
+- [<span data-ttu-id="97313-112">Convalida delle credenziali utente rispetto all'archivio utente di appartenenza (VB)</span><span class="sxs-lookup"><span data-stu-id="97313-112">Validating User Credentials Against the Membership User Store (VB)</span></span>](validating-user-credentials-against-the-membership-user-store-vb.md)
+- [<span data-ttu-id="97313-113">Autorizzazione basata sull'utente (VB)</span><span class="sxs-lookup"><span data-stu-id="97313-113">User-Based Authorization (VB)</span></span>](user-based-authorization-vb.md)
+- [<span data-ttu-id="97313-114">Archiviazione di informazioni utente aggiuntive (VB)</span><span class="sxs-lookup"><span data-stu-id="97313-114">Storing Additional User Information (VB)</span></span>](storing-additional-user-information-vb.md)

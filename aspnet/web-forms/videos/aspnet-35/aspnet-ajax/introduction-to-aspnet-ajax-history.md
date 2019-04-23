@@ -12,18 +12,18 @@ ms.openlocfilehash: 25e3d707d31d238d8a237d9bfefcfea5ea736c44
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59410565"
 ---
-# <a name="introduction-to-aspnet-ajax-history"></a><span data-ttu-id="c04b4-104">Introduzione alla cronologia di ASP.NET Ajax</span><span class="sxs-lookup"><span data-stu-id="c04b4-104">Introduction to ASP.NET Ajax History</span></span>
+# <a name="introduction-to-aspnet-ajax-history"></a><span data-ttu-id="c7662-104">Introduzione alla cronologia di ASP.NET Ajax</span><span class="sxs-lookup"><span data-stu-id="c7662-104">Introduction to ASP.NET Ajax History</span></span>
 
-<span data-ttu-id="c04b4-105">da [Bertrand Le Roy](https://github.com/bleroy)</span><span class="sxs-lookup"><span data-stu-id="c04b4-105">by [Bertrand Le Roy](https://github.com/bleroy)</span></span>
+<span data-ttu-id="c7662-105">da [Bertrand Le Roy](https://github.com/bleroy)</span><span class="sxs-lookup"><span data-stu-id="c7662-105">by [Bertrand Le Roy](https://github.com/bleroy)</span></span>
 
-<span data-ttu-id="c04b4-106">Informazioni su come l'anteprima di estensioni di ASP.NET consente di controllare il pulsante Indietro del Browser in Ajax.</span><span class="sxs-lookup"><span data-stu-id="c04b4-106">Learn how the ASP.NET Extensions Preview allows control over the Browser back button in Ajax.</span></span> **<span data-ttu-id="c04b4-107">Sono disponibili in ASP.NET AJAX Extensions il [ASP.NET 3.5 estensioni Preview](https://www.asp.net/downloads/35-sp1#find) (dicembre 2007).</span><span class="sxs-lookup"><span data-stu-id="c04b4-107">ASP.NET AJAX Extensions are available in the [ASP.NET 3.5 Extensions Preview](https://www.asp.net/downloads/35-sp1#find) (December 2007).</span></span>**
+<span data-ttu-id="c7662-106">Informazioni su come l'anteprima di estensioni di ASP.NET consente di controllare il pulsante Indietro del Browser in Ajax.</span><span class="sxs-lookup"><span data-stu-id="c7662-106">Learn how the ASP.NET Extensions Preview allows control over the Browser back button in Ajax.</span></span> <span data-ttu-id="c7662-107">**Sono disponibili in ASP.NET AJAX Extensions il [ASP.NET 3.5 estensioni Preview](https://www.asp.net/downloads/35-sp1#find) (dicembre 2007).**</span><span class="sxs-lookup"><span data-stu-id="c7662-107">**ASP.NET AJAX Extensions are available in the [ASP.NET 3.5 Extensions Preview](https://www.asp.net/downloads/35-sp1#find) (December 2007).**</span></span>
 
-[<span data-ttu-id="c04b4-108">&#9654;Guarda il video (14 minuti)</span><span class="sxs-lookup"><span data-stu-id="c04b4-108">&#9654; Watch video (14 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/introduction-to-aspnet-ajax-history)
+[<span data-ttu-id="c7662-108">&#9654;Guarda il video (14 minuti)</span><span class="sxs-lookup"><span data-stu-id="c7662-108">&#9654; Watch video (14 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/introduction-to-aspnet-ajax-history)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="c04b4-109">[Precedente](adonet-data-services-with-aspnet-ajax-support.md)
-> [Successivo](using-script-combining-to-improve-ajax-performance.md)</span><span class="sxs-lookup"><span data-stu-id="c04b4-109">[Previous](adonet-data-services-with-aspnet-ajax-support.md)
+> <span data-ttu-id="c7662-109">[Precedente](adonet-data-services-with-aspnet-ajax-support.md)
+> [Successivo](using-script-combining-to-improve-ajax-performance.md)</span><span class="sxs-lookup"><span data-stu-id="c7662-109">[Previous](adonet-data-services-with-aspnet-ajax-support.md)
 [Next](using-script-combining-to-improve-ajax-performance.md)</span></span>
