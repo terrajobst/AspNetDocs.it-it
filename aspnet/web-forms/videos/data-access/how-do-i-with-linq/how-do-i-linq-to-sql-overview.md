@@ -12,16 +12,16 @@ ms.openlocfilehash: 56dda72b8cadcef4449f3ff6e8e8e4e3315d0687
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59402882"
 ---
-# <a name="how-do-i-linq-to-sql-overview"></a><span data-ttu-id="2b151-104">[Procedura:] LINQ to SQL: Panoramica</span><span class="sxs-lookup"><span data-stu-id="2b151-104">[How Do I:] LINQ to SQL: Overview</span></span>
+# <a name="how-do-i-linq-to-sql-overview"></a><span data-ttu-id="c7be2-104">[Procedura:] LINQ to SQL: Panoramica</span><span class="sxs-lookup"><span data-stu-id="c7be2-104">[How Do I:] LINQ to SQL: Overview</span></span>
 
-<span data-ttu-id="2b151-105">da [Scott Stanfield](https://github.com/scottstanfield)</span><span class="sxs-lookup"><span data-stu-id="2b151-105">by [Scott Stanfield](https://github.com/scottstanfield)</span></span>
+<span data-ttu-id="c7be2-105">da [Scott Stanfield](https://github.com/scottstanfield)</span><span class="sxs-lookup"><span data-stu-id="c7be2-105">by [Scott Stanfield](https://github.com/scottstanfield)</span></span>
 
-<span data-ttu-id="2b151-106">Nuove funzionalità del linguaggio per c# e Visual Basic supportano l'accesso ai dati direttamente dal codice, senza scrivere codice SQL.</span><span class="sxs-lookup"><span data-stu-id="2b151-106">New language features for C# and VB support data access directly from code, without writing SQL.</span></span> <span data-ttu-id="2b151-107">In questo video vengono illustrati i passaggi minimi per usare LINQ (Language-Integrated Query) per eseguire una query, aggiornare, aggiungere ed eliminare righe dal database Northwind.</span><span class="sxs-lookup"><span data-stu-id="2b151-107">This video shows the minimum steps to use LINQ (Language Integrated Query) to query, update, add and delete rows from the Northwind database.</span></span>
+<span data-ttu-id="c7be2-106">Nuove funzionalità del linguaggio per c# e Visual Basic supportano l'accesso ai dati direttamente dal codice, senza scrivere codice SQL.</span><span class="sxs-lookup"><span data-stu-id="c7be2-106">New language features for C# and VB support data access directly from code, without writing SQL.</span></span> <span data-ttu-id="c7be2-107">In questo video vengono illustrati i passaggi minimi per usare LINQ (Language-Integrated Query) per eseguire una query, aggiornare, aggiungere ed eliminare righe dal database Northwind.</span><span class="sxs-lookup"><span data-stu-id="c7be2-107">This video shows the minimum steps to use LINQ (Language Integrated Query) to query, update, add and delete rows from the Northwind database.</span></span>
 
-[<span data-ttu-id="2b151-108">&#9654;Guarda il video (9 minuti)</span><span class="sxs-lookup"><span data-stu-id="2b151-108">&#9654; Watch video (9 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-linq-to-sql-overview)
+[<span data-ttu-id="c7be2-108">&#9654;Guarda il video (9 minuti)</span><span class="sxs-lookup"><span data-stu-id="c7be2-108">&#9654; Watch video (9 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-linq-to-sql-overview)
 
 > [!div class="step-by-step"]
-> [<span data-ttu-id="2b151-109">Successivo</span><span class="sxs-lookup"><span data-stu-id="2b151-109">Next</span></span>](how-do-i-linq-to-sql-data-model.md)
+> [<span data-ttu-id="c7be2-109">avanti</span><span class="sxs-lookup"><span data-stu-id="c7be2-109">Next</span></span>](how-do-i-linq-to-sql-data-model.md)

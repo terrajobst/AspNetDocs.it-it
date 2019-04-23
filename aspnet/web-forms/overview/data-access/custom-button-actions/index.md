@@ -12,13 +12,13 @@ ms.openlocfilehash: f1e03432d543d94fb03c579b39c09fa2da809e75
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59399177"
 ---
-# <a name="custom-button-actions"></a><span data-ttu-id="b82e7-103">Azioni dei pulsanti personalizzati</span><span class="sxs-lookup"><span data-stu-id="b82e7-103">Custom Button Actions</span></span>
+# <a name="custom-button-actions"></a><span data-ttu-id="33167-103">Azioni dei pulsanti personalizzati</span><span class="sxs-lookup"><span data-stu-id="33167-103">Custom Button Actions</span></span>
 
-> <span data-ttu-id="b82e7-104">Questo breve serie di esercitazioni illustra come aggiungere pulsanti al controllo DetailsView o GridView che può eseguire qualsiasi azione necessaria all'applicazione.</span><span class="sxs-lookup"><span data-stu-id="b82e7-104">This short set of tutorials shows how to add buttons to the GridView or DetailsView control that can perform any actions that your application needs.</span></span>
+> <span data-ttu-id="33167-104">Questo breve serie di esercitazioni illustra come aggiungere pulsanti al controllo DetailsView o GridView che può eseguire qualsiasi azione necessaria all'applicazione.</span><span class="sxs-lookup"><span data-stu-id="33167-104">This short set of tutorials shows how to add buttons to the GridView or DetailsView control that can perform any actions that your application needs.</span></span>
 
 
-- [<span data-ttu-id="b82e7-105">Aggiunta e risposta ai pulsanti in un controllo GridView (C#)</span><span class="sxs-lookup"><span data-stu-id="b82e7-105">Adding and Responding to Buttons to a GridView (C#)</span></span>](adding-and-responding-to-buttons-to-a-gridview-cs.md)
-- [<span data-ttu-id="b82e7-106">Aggiunta e risposta ai pulsanti in un controllo GridView (VB)</span><span class="sxs-lookup"><span data-stu-id="b82e7-106">Adding and Responding to Buttons to a GridView (VB)</span></span>](adding-and-responding-to-buttons-to-a-gridview-vb.md)
+- [<span data-ttu-id="33167-105">Aggiunta e risposta ai pulsanti in un controllo GridView (C#)</span><span class="sxs-lookup"><span data-stu-id="33167-105">Adding and Responding to Buttons to a GridView (C#)</span></span>](adding-and-responding-to-buttons-to-a-gridview-cs.md)
+- [<span data-ttu-id="33167-106">Aggiunta e risposta ai pulsanti in un controllo GridView (VB)</span><span class="sxs-lookup"><span data-stu-id="33167-106">Adding and Responding to Buttons to a GridView (VB)</span></span>](adding-and-responding-to-buttons-to-a-gridview-vb.md)

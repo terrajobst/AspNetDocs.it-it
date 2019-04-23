@@ -12,18 +12,18 @@ ms.openlocfilehash: 3d4b4e0d12d8baa6810a90ff9225fcbf88fad58f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59398631"
 ---
-# <a name="how-do-i-implement-the-ajax-after-processing-pattern"></a><span data-ttu-id="80e35-105">[Procedura:] Implementare il AJAX dopo l'elaborazione criterio?</span><span class="sxs-lookup"><span data-stu-id="80e35-105">[How Do I:] Implement the AJAX After Processing Pattern?</span></span>
+# <a name="how-do-i-implement-the-ajax-after-processing-pattern"></a><span data-ttu-id="f5ad5-105">[Procedura:] Implementare il AJAX dopo l'elaborazione criterio?</span><span class="sxs-lookup"><span data-stu-id="f5ad5-105">[How Do I:] Implement the AJAX After Processing Pattern?</span></span>
 
-<span data-ttu-id="80e35-106">da [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="80e35-106">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
+<span data-ttu-id="f5ad5-106">da [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="f5ad5-106">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
 
-<span data-ttu-id="80e35-107">Il framework ASP.NET AJAX consente al codice lato server per un hook in e rispondere ai vari eventi sul lato client.</span><span class="sxs-lookup"><span data-stu-id="80e35-107">The ASP.NET AJAX framework allows your server-side code to hook in and respond to various client-side events.</span></span> <span data-ttu-id="80e35-108">In questo video abbiamo informazioni su come implementare il dopo l'elaborazione di modello, che consente al codice lato server eseguire la logica conclusioni dopo che l'utente ha terminato con la pagina Web.</span><span class="sxs-lookup"><span data-stu-id="80e35-108">In this video we learn how to implement the After Processing Pattern, which allows server-side code to execute wrap-up logic once the user has finished with the Web page.</span></span>
+<span data-ttu-id="f5ad5-107">Il framework ASP.NET AJAX consente al codice lato server per un hook in e rispondere ai vari eventi sul lato client.</span><span class="sxs-lookup"><span data-stu-id="f5ad5-107">The ASP.NET AJAX framework allows your server-side code to hook in and respond to various client-side events.</span></span> <span data-ttu-id="f5ad5-108">In questo video abbiamo informazioni su come implementare il dopo l'elaborazione di modello, che consente al codice lato server eseguire la logica conclusioni dopo che l'utente ha terminato con la pagina Web.</span><span class="sxs-lookup"><span data-stu-id="f5ad5-108">In this video we learn how to implement the After Processing Pattern, which allows server-side code to execute wrap-up logic once the user has finished with the Web page.</span></span>
 
-[<span data-ttu-id="80e35-109">&#9654;Guarda il video (5 minuti)</span><span class="sxs-lookup"><span data-stu-id="80e35-109">&#9654; Watch video (5 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-implement-the-ajax-after-processing-pattern)
+[<span data-ttu-id="f5ad5-109">&#9654;Guarda il video (5 minuti)</span><span class="sxs-lookup"><span data-stu-id="f5ad5-109">&#9654; Watch video (5 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-implement-the-ajax-after-processing-pattern)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="80e35-110">[Precedente](how-do-i-use-the-aspnet-ajax-history-control.md)
-> [Successivo](how-do-i-update-multiple-regions-of-a-page-with-aspnet-ajax.md)</span><span class="sxs-lookup"><span data-stu-id="80e35-110">[Previous](how-do-i-use-the-aspnet-ajax-history-control.md)
+> <span data-ttu-id="f5ad5-110">[Precedente](how-do-i-use-the-aspnet-ajax-history-control.md)
+> [Successivo](how-do-i-update-multiple-regions-of-a-page-with-aspnet-ajax.md)</span><span class="sxs-lookup"><span data-stu-id="f5ad5-110">[Previous](how-do-i-use-the-aspnet-ajax-history-control.md)
 [Next](how-do-i-update-multiple-regions-of-a-page-with-aspnet-ajax.md)</span></span>

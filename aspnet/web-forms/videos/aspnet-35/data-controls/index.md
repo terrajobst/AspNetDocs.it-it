@@ -12,13 +12,13 @@ ms.openlocfilehash: 17ec29cb24d0cd6943a821190d5cbabee69a58d2
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59397383"
 ---
-# <a name="data-controls"></a><span data-ttu-id="1850e-103">Controlli dati</span><span class="sxs-lookup"><span data-stu-id="1850e-103">Data Controls</span></span>
+# <a name="data-controls"></a><span data-ttu-id="90dac-103">Controlli dati</span><span class="sxs-lookup"><span data-stu-id="90dac-103">Data Controls</span></span>
 
-> <span data-ttu-id="1850e-104">Questa serie di video illustra come usare nuove funzionalità di controllo dei dati con ASP.NET 3.5</span><span class="sxs-lookup"><span data-stu-id="1850e-104">This set of videos explores how to use new data control features with ASP.NET 3.5</span></span>
+> <span data-ttu-id="90dac-104">Questa serie di video illustra come usare nuove funzionalità di controllo dei dati con ASP.NET 3.5</span><span class="sxs-lookup"><span data-stu-id="90dac-104">This set of videos explores how to use new data control features with ASP.NET 3.5</span></span>
 
 
-- [<span data-ttu-id="1850e-105">Controllo ListView</span><span class="sxs-lookup"><span data-stu-id="1850e-105">ListView Control</span></span>](the-listview-control.md)
-- [<span data-ttu-id="1850e-106">Controllo DataPager</span><span class="sxs-lookup"><span data-stu-id="1850e-106">DataPager Control</span></span>](the-datapager-control.md)
+- [<span data-ttu-id="90dac-105">Controllo ListView</span><span class="sxs-lookup"><span data-stu-id="90dac-105">ListView Control</span></span>](the-listview-control.md)
+- [<span data-ttu-id="90dac-106">Controllo DataPager</span><span class="sxs-lookup"><span data-stu-id="90dac-106">DataPager Control</span></span>](the-datapager-control.md)

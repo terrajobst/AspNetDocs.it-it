@@ -12,18 +12,18 @@ ms.openlocfilehash: e34581130cebaef7a7bcd057e99642cb94936bfa
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59399248"
 ---
-# <a name="mvc-music-store-part-2-controllers"></a><span data-ttu-id="b4dd4-103">Music Store MVC - Parte 2: Controllers</span><span class="sxs-lookup"><span data-stu-id="b4dd4-103">MVC Music Store Part 2: Controllers</span></span>
+# <a name="mvc-music-store-part-2-controllers"></a><span data-ttu-id="70307-103">Music Store MVC - Parte 2: Controllers</span><span class="sxs-lookup"><span data-stu-id="70307-103">MVC Music Store Part 2: Controllers</span></span>
 
-<span data-ttu-id="b4dd4-104">by [Jon Galloway](https://github.com/jongalloway)</span><span class="sxs-lookup"><span data-stu-id="b4dd4-104">by [Jon Galloway](https://github.com/jongalloway)</span></span>
+<span data-ttu-id="70307-104">by [Jon Galloway](https://github.com/jongalloway)</span><span class="sxs-lookup"><span data-stu-id="70307-104">by [Jon Galloway](https://github.com/jongalloway)</span></span>
 
-<span data-ttu-id="b4dd4-105">Jon continua l'esercitazione su MVC Music Store mediante la creazione di alcune azioni del controller di base.</span><span class="sxs-lookup"><span data-stu-id="b4dd4-105">Jon continues the MVC Music Store tutorial by creating some basic controller actions.</span></span>
+<span data-ttu-id="70307-105">Jon continua l'esercitazione su MVC Music Store mediante la creazione di alcune azioni del controller di base.</span><span class="sxs-lookup"><span data-stu-id="70307-105">Jon continues the MVC Music Store tutorial by creating some basic controller actions.</span></span>
 
-[<span data-ttu-id="b4dd4-106">&#9654;Guarda il video (6 minuti)</span><span class="sxs-lookup"><span data-stu-id="b4dd4-106">&#9654; Watch video (6 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/mvc-music-store-part-2-controllers)
+[<span data-ttu-id="70307-106">&#9654;Guarda il video (6 minuti)</span><span class="sxs-lookup"><span data-stu-id="70307-106">&#9654; Watch video (6 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/mvc-music-store-part-2-controllers)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="b4dd4-107">[Precedente](mvc-music-store-part-1-intro-tools-and-project-structure.md)
-> [Successivo](mvc-music-store-part-3-views-and-viewmodels.md)</span><span class="sxs-lookup"><span data-stu-id="b4dd4-107">[Previous](mvc-music-store-part-1-intro-tools-and-project-structure.md)
+> <span data-ttu-id="70307-107">[Precedente](mvc-music-store-part-1-intro-tools-and-project-structure.md)
+> [Successivo](mvc-music-store-part-3-views-and-viewmodels.md)</span><span class="sxs-lookup"><span data-stu-id="70307-107">[Previous](mvc-music-store-part-1-intro-tools-and-project-structure.md)
 [Next](mvc-music-store-part-3-views-and-viewmodels.md)</span></span>

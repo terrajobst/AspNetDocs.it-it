@@ -12,15 +12,15 @@ ms.openlocfilehash: 8a0af5d06db9ef11448e866149e52774b420f5d0
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59400503"
 ---
-# <a name="reorderlist"></a><span data-ttu-id="9b3b8-103">ReorderList</span><span class="sxs-lookup"><span data-stu-id="9b3b8-103">ReorderList</span></span>
+# <a name="reorderlist"></a><span data-ttu-id="22ade-103">ReorderList</span><span class="sxs-lookup"><span data-stu-id="22ade-103">ReorderList</span></span>
 
-> <span data-ttu-id="9b3b8-104">Questa esercitazione illustra come usare il controllo ReorderList per visualizzare un elenco che gli utenti possono riordinare, trascinare gli elementi.</span><span class="sxs-lookup"><span data-stu-id="9b3b8-104">This tutorial shows how to use the ReorderList control to display a list that users can reorder by dragging items.</span></span>
+> <span data-ttu-id="22ade-104">Questa esercitazione illustra come usare il controllo ReorderList per visualizzare un elenco che gli utenti possono riordinare, trascinare gli elementi.</span><span class="sxs-lookup"><span data-stu-id="22ade-104">This tutorial shows how to use the ReorderList control to display a list that users can reorder by dragging items.</span></span>
 
 
-- [<span data-ttu-id="9b3b8-105">Uso di postback con ReorderList (C#)</span><span class="sxs-lookup"><span data-stu-id="9b3b8-105">Using Postbacks with ReorderList (C#)</span></span>](using-postbacks-with-reorderlist-cs.md)
-- [<span data-ttu-id="9b3b8-106">Trascinamento della selezione tramite ReorderList (C#)</span><span class="sxs-lookup"><span data-stu-id="9b3b8-106">Drag and Drop via ReorderList (C#)</span></span>](drag-and-drop-via-reorderlist-cs.md)
-- [<span data-ttu-id="9b3b8-107">Uso di postback con ReorderList (VB)</span><span class="sxs-lookup"><span data-stu-id="9b3b8-107">Using Postbacks with ReorderList (VB)</span></span>](using-postbacks-with-reorderlist-vb.md)
-- [<span data-ttu-id="9b3b8-108">Trascinamento della selezione tramite ReorderList (VB)</span><span class="sxs-lookup"><span data-stu-id="9b3b8-108">Drag and Drop via ReorderList (VB)</span></span>](drag-and-drop-via-reorderlist-vb.md)
+- [<span data-ttu-id="22ade-105">Uso di postback con ReorderList (C#)</span><span class="sxs-lookup"><span data-stu-id="22ade-105">Using Postbacks with ReorderList (C#)</span></span>](using-postbacks-with-reorderlist-cs.md)
+- [<span data-ttu-id="22ade-106">Trascinamento della selezione tramite ReorderList (C#)</span><span class="sxs-lookup"><span data-stu-id="22ade-106">Drag and Drop via ReorderList (C#)</span></span>](drag-and-drop-via-reorderlist-cs.md)
+- [<span data-ttu-id="22ade-107">Uso di postback con ReorderList (VB)</span><span class="sxs-lookup"><span data-stu-id="22ade-107">Using Postbacks with ReorderList (VB)</span></span>](using-postbacks-with-reorderlist-vb.md)
+- [<span data-ttu-id="22ade-108">Trascinamento della selezione tramite ReorderList (VB)</span><span class="sxs-lookup"><span data-stu-id="22ade-108">Drag and Drop via ReorderList (VB)</span></span>](drag-and-drop-via-reorderlist-vb.md)

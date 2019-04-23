@@ -12,12 +12,12 @@ ms.openlocfilehash: 6fe36fba7b6098665ae362aa68e725745760c171
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59398189"
 ---
-# <a name="seo"></a><span data-ttu-id="332ce-103">SEO</span><span class="sxs-lookup"><span data-stu-id="332ce-103">SEO</span></span>
+# <a name="seo"></a><span data-ttu-id="6808d-103">SEO</span><span class="sxs-lookup"><span data-stu-id="6808d-103">SEO</span></span>
 
-> <span data-ttu-id="332ce-104">In questo video vengono descritte le nuove funzionalità per Search Engine Optimization (SEO) in ASP.NET 4.</span><span class="sxs-lookup"><span data-stu-id="332ce-104">This video describes new features for Search Engine Optimization (SEO) in ASP.NET 4.</span></span>
+> <span data-ttu-id="6808d-104">In questo video vengono descritte le nuove funzionalità per Search Engine Optimization (SEO) in ASP.NET 4.</span><span class="sxs-lookup"><span data-stu-id="6808d-104">This video describes new features for Search Engine Optimization (SEO) in ASP.NET 4.</span></span>
 
 
-- [<span data-ttu-id="332ce-105">Metadati dinamici</span><span class="sxs-lookup"><span data-stu-id="332ce-105">Dynamic Metadata</span></span>](aspnet-4-quick-hit-dynamic-metadata.md)
+- [<span data-ttu-id="6808d-105">Metadati dinamici</span><span class="sxs-lookup"><span data-stu-id="6808d-105">Dynamic Metadata</span></span>](aspnet-4-quick-hit-dynamic-metadata.md)
