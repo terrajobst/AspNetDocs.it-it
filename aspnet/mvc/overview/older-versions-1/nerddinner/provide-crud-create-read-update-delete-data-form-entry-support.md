@@ -12,14 +12,14 @@ ms.openlocfilehash: 242665b3ba2e2ad2157abbe2c44ae207f15e72ce
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59410864"
 ---
 # <a name="provide-crud-create-read-update-delete-data-form-entry-support"></a>Fornire il supporto per operazioni di creazione, lettura, aggiornamento ed eliminazione sulle voci di moduli di dati
 
 by [Microsoft](https://github.com/microsoft)
 
-[Scarica il PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
+[Scaricare PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
 
 > Si tratta di passaggio 5 di una liberazione [esercitazione sull'applicazione "NerdDinner"](introducing-the-nerddinner-tutorial.md) che si interromperanno-dettaglio come compilare una piccola, ma completa, applicazione web con ASP.NET MVC 1.
 > 
@@ -36,7 +36,7 @@ Abbiamo introdotto i controller e visualizzazioni e ha descritto come utilizzarl
 
 Aggiunto in precedenza i metodi di azione di DinnersController che implementato il supporto per due URL: */Dinners* e */Dinners/dettagli / [id]*.
 
-| **URL** | **VERBO** | **Scopo** |
+| **URL** | **VERB** | **Scopo** |
 | --- | --- | --- |
 | */Dinners/* | GET | Visualizzare un elenco HTML di dinners imminente. |
 | */Dinners/Details/[id]* | GET | Visualizzare informazioni dettagliate su una specifica cena. |
@@ -45,13 +45,13 @@ Ora si aggiungeranno i metodi di azione per implementare tre URL aggiuntivi: */D
 
 Il supporto delle interazioni di verbo HTTP GET e HTTP POST con questi nuovi URL. Richieste GET HTTP a questi URL visualizzerà la visualizzazione HTML iniziale dei dati (un modulo compilato con i dati di Dinner nel caso di "Modifica", un modulo vuoto in caso di "creazione" e una schermata di conferma delete nel caso di eliminazione""). Le richieste HTTP POST agli URL seguenti verranno save/update/delete dati Dinner nel nostro DinnerRepository (e da lì nel database).
 
-| **URL** | **VERBO** | **Scopo** |
+| **URL** | **VERB** | **Scopo** |
 | --- | --- | --- |
 | */Dinners/modifica / [id]* | GET | Visualizzare un form HTML modificabile popolato con dati cena. |
 | INSERISCI | Salvare le modifiche di form per un particolare Dinner al database. |
-| */ Dinners/Create* | GET | Visualizzare un form HTML vuoto che consente agli utenti di definire nuove Dinners. |
+| */Dinners/Create* | GET | Visualizzare un form HTML vuoto che consente agli utenti di definire nuove Dinners. |
 | INSERISCI | Creare un nuovo Dinner e salvarlo nel database. |
-| */Dinners/Delete/[id]* | GET | Visualizzazione Elimina la schermata di conferma. |
+| */Dinners/delete / [id]* | GET | Visualizzazione Elimina la schermata di conferma. |
 | INSERISCI | Elimina la cena specificata dal database. |
 
 ### <a name="edit-support"></a>Supporto di modifica

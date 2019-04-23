@@ -12,7 +12,7 @@ ms.openlocfilehash: 042077cb2c0a284556a35e960177f9fd9ad508a6
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59413451"
 ---
 # <a name="how-do-i-get-started-with-linq"></a>[Procedura:] Introduzione a LINQ?
@@ -24,4 +24,4 @@ I programmatori Visual Basic verranno illustrato come scrivere semplici query LI
 [&#9654;Guarda il video (9 minuti)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-get-started-with-linq)
 
 > [!div class="step-by-step"]
-> [Successivo](how-do-i-perform-group-and-aggregate-queries.md)
+> [avanti](how-do-i-perform-group-and-aggregate-queries.md)

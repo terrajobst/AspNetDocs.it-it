@@ -12,7 +12,7 @@ ms.openlocfilehash: 10fcdb1a2eb4ae88c9a480787612ed7a9500d73d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59409980"
 ---
 # <a name="getting-started-with-reporting-services"></a>Introduzione a Reporting Services

@@ -12,7 +12,7 @@ ms.openlocfilehash: 5f7415d0a4275a3864dc9eefb9588f17698147cd
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59412697"
 ---
 # <a name="signalr-performance-signalr-1x"></a>Prestazioni di SignalR (SignalR 1.x)
@@ -183,7 +183,7 @@ Le metriche seguenti misurano gli errori generati dal traffico di messaggi Signa
 - **Errori: All/Sec**
 - **Errori: Totale di risoluzione dell'hub**
 - **Errori: Risoluzione dell'hub al secondo**
-- **Errori: Totale di chiamata dell'hub**
+- **Errori: Hub Invocation Total**
 - **Errori: Chiamata dell'hub al secondo**
 - **Errori: Totale trasporto**
 - **Errori: Messaggi trasporto/Sec**
@@ -212,7 +212,7 @@ Contatori delle prestazioni seguenti possono rivelarsi utili per monitorare le p
 
 - Memoria CLR .NET # byte in tutti gli heap (per w3wp)
 
-**ASP.NET**
+**ASP.NET 2.0**
 
 - ASP.NET\Requests Current
 - ASP.NET\Queued

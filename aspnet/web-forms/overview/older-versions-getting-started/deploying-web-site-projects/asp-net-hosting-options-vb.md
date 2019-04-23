@@ -12,14 +12,14 @@ ms.openlocfilehash: 8651ab58cb79a2c7b2ac67b0095542ab3a575534
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59418404"
 ---
 # <a name="aspnet-hosting-options-vb"></a>Opzioni di hosting ASP.NET (VB)
 
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Scarica il PDF](http://download.microsoft.com/download/E/8/9/E8920AE6-D441-41A7-8A77-9EF8FF970D8B/aspnet_tutorial01_Basics_vb.pdf)
+[Scaricare PDF](http://download.microsoft.com/download/E/8/9/E8920AE6-D441-41A7-8A77-9EF8FF970D8B/aspnet_tutorial01_Basics_vb.pdf)
 
 > Le applicazioni web ASP.NET sono in genere progettate, create e testate in un ambiente di sviluppo locale e debbano essere distribuite in un ambiente di produzione dopo che è pronta per il rilascio. Questa esercitazione offre una panoramica generale del processo di distribuzione e costituisce un'introduzione a questa serie di esercitazioni.
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: 7263a7d7ee791be8a1369934aac4d091736a658b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59417481"
 ---
 # <a name="membership-and-administration"></a>Appartenenza e amministrazione
@@ -274,7 +274,7 @@ In questa esercitazione aggiunto un ruolo personalizzato e un utente appartenent
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
 [Web. config - elemento authorization](https://msdn.microsoft.com/library/8d82143t(v=vs.100).aspx)  
-[Identità ASP.NET](../../../../identity/overview/getting-started/introduction-to-aspnet-identity.md)  
+[ASP.NET Identity](../../../../identity/overview/getting-started/introduction-to-aspnet-identity.md)  
 [Distribuire un'App di moduli Web ASP.NET sicura con appartenenza, OAuth e Database SQL in un sito Web Azure](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-deploy-aspnet-webforms-app-membership-oauth-sql-database/)  
 [Microsoft Azure - versione di valutazione gratuita](https://azure.microsoft.com/pricing/free-trial/)
 

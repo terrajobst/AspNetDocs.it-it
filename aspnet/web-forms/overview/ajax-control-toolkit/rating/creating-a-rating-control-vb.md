@@ -12,7 +12,7 @@ ms.openlocfilehash: 91523180501f1d1eb67586bf97649ad6226ec565
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59413230"
 ---
 # <a name="creating-a-rating-control-vb"></a>Creazione di un controllo Rating (VB)
@@ -66,7 +66,7 @@ Nel codice lato server, accedere al controllo Rating tramite relativi `ID` e qui
 Salvare la pagina e caricarla nel browser. Quando si posiziona gli elementi di classificazione (inizialmente vuota), si verifica un effetto di JavaScript: Le modifiche di classificazione. Quando si fa clic sul set di stelle, viene mantenuta la classificazione corrente. Infine, quando si invia il form, il codice lato server restituisce la classificazione selezionata.
 
 
-[![Cun sistema di valutazione con codice minimo reating](creating-a-rating-control-vb/_static/image2.png)](creating-a-rating-control-vb/_static/image1.png)
+[![Creazione di un sistema di valutazione con quantità minima di codice](creating-a-rating-control-vb/_static/image2.png)](creating-a-rating-control-vb/_static/image1.png)
 
 Creazione di un sistema di valutazione con quantità minima di codice ([fare clic per visualizzare l'immagine con dimensioni normali](creating-a-rating-control-vb/_static/image3.png))
 

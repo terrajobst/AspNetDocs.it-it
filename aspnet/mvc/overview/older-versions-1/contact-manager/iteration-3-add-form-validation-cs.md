@@ -12,7 +12,7 @@ ms.openlocfilehash: 973878ef0afd62035b3fc840371e6c6223c8951c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59413789"
 ---
 # <a name="iteration-3--add-form-validation-c"></a>Iterazione #3-aggiungere la convalida dei form (c#)
@@ -51,7 +51,7 @@ Si compilerà l'applicazione a varie iterazioni. A ogni iterazione, abbiamo migl
 In questa seconda iterazione dell'applicazione Contact Manager, viene aggiunto la convalida dei form di base. Si evita che gli utenti dall'invio di un contatto senza dover immettere i valori per i campi modulo necessari. È inoltre possibile convalidare i numeri di telefono e indirizzi di posta elettronica (vedere la figura 1).
 
 
-[![Tfinestra di dialogo Nuovo progetto di he](iteration-3-add-form-validation-cs/_static/image1.jpg)](iteration-3-add-form-validation-cs/_static/image1.png)
+[![La finestra di dialogo Nuovo progetto](iteration-3-add-form-validation-cs/_static/image1.jpg)](iteration-3-add-form-validation-cs/_static/image1.png)
 
 **Figura 01**: Un modulo con la convalida ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-3-add-form-validation-cs/_static/image2.png))
 

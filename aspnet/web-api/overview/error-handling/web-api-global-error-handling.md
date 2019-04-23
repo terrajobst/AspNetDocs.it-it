@@ -13,7 +13,7 @@ ms.openlocfilehash: 7d9f4fb9909671d7c4c8ee2aa9285b0186c4b125
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59414374"
 ---
 # <a name="global-error-handling-in-aspnet-web-api-2"></a>Globale gestione degli errori in ASP.NET Web API 2

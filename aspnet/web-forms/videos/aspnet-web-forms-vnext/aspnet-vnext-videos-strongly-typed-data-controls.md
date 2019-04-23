@@ -12,7 +12,7 @@ ms.openlocfilehash: 6abea51944c6babceda1ec22c96d72d6cefc492f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59412567"
 ---
 # <a name="aspnet-vnext-videos-strongly-typed-data-controls"></a>ASP.NET vNext video: Controlli dati fortemente tipizzati
@@ -24,4 +24,4 @@ In questo video, Damian Edwards vengono illustrati i controlli dati fortemente t
 [&#9654;Guarda il video (1 minuti)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/aspnet-vnext-videos-strongly-typed-data-controls)
 
 > [!div class="step-by-step"]
-> [Successivo](aspnet-vnext-videos-model-binding-part-1-selecting-data.md)
+> [avanti](aspnet-vnext-videos-model-binding-part-1-selecting-data.md)

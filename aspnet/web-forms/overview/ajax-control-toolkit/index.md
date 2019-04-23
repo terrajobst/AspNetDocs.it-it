@@ -12,7 +12,7 @@ ms.openlocfilehash: 795283c33d63272b29b91fd7037c3463bc71abad
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59410747"
 ---
 # <a name="older-versions---ajax-control-toolkit"></a>Versioni precedenti - Ajax Control Toolkit
@@ -151,7 +151,7 @@ ms.locfileid: "59410747"
     - [Uso di più controlli Popup (VB)](popup/using-multiple-popup-controls-vb.md)
     - [Gestione dei postback da un controllo Popup con UpdatePanel (VB)](popup/handling-postbacks-from-a-popup-control-with-an-updatepanel-vb.md)
     - [Gestione dei postback da un controllo Popup senza UpdatePanel (VB)](popup/handling-postbacks-from-a-popup-control-without-an-updatepanel-vb.md)
-- [Classificazione](rating/index.md)
+- [Rating](rating/index.md)
 
     - [Creazione di un controllo Rating (C#)](rating/creating-a-rating-control-cs.md)
     - [Creazione di un controllo Rating (VB)](rating/creating-a-rating-control-vb.md)
@@ -161,7 +161,7 @@ ms.locfileid: "59410747"
     - [Trascinamento della selezione tramite ReorderList (C#)](reorderlist/drag-and-drop-via-reorderlist-cs.md)
     - [Uso di postback con ReorderList (VB)](reorderlist/using-postbacks-with-reorderlist-vb.md)
     - [Trascinamento della selezione tramite ReorderList (VB)](reorderlist/drag-and-drop-via-reorderlist-vb.md)
-- [Slider](slider/index.md)
+- [Dispositivo di scorrimento](slider/index.md)
 
     - [Controllo Slider con postback automatico (C#)](slider/using-the-slider-control-with-auto-postback-cs.md)
     - [Data binding del controllo Slider (C#)](slider/databinding-the-slider-control-cs.md)

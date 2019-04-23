@@ -12,14 +12,14 @@ ms.openlocfilehash: d1895b03a2aa877bfd279995dc5647c5efefade6
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59414205"
 ---
 # <a name="creating-model-classes-with-linq-to-sql-c"></a>Creazione di classi di modelli con LINQ to SQL (C#)
 
 by [Microsoft](https://github.com/microsoft)
 
-[Scarica il PDF](http://download.microsoft.com/download/1/1/f/11f721aa-d749-4ed7-bb89-a681b68894e6/ASPNET_MVC_Tutorial_10_CS.pdf)
+[Scaricare PDF](http://download.microsoft.com/download/1/1/f/11f721aa-d749-4ed7-bb89-a681b68894e6/ASPNET_MVC_Tutorial_10_CS.pdf)
 
 > L'obiettivo di questa esercitazione è illustrare un metodo di creazione di classi di modello per un'applicazione ASP.NET MVC. In questa esercitazione descrive come compilare le classi di modello ed eseguire l'accesso al database sfruttando i vantaggi di Microsoft LINQ to SQL.
 
@@ -43,7 +43,7 @@ In questa esercitazione usare LINQ to SQL per eseguire query e aggiornare il dat
 In questa esercitazione, per illustrare come è possibile creare classi di modello, ovvero è compilare una semplice applicazione di database di film. Il primo passaggio consiste nel creare un nuovo database. Fare doppio clic su App\_cartella di dati nella finestra Esplora soluzioni e selezionare l'opzione di menu **Aggiungi, elemento nuovo**. Selezionare il **Database di SQL Server** modello, assegnare il nome MoviesDB.mdf e scegliere il **Add** pulsante (vedere la figura 1).
 
 
-[![Adding un nuovo Database di SQL Server](creating-model-classes-with-linq-to-sql-cs/_static/image2.png)](creating-model-classes-with-linq-to-sql-cs/_static/image1.png)
+[![Aggiunta di un nuovo Database di SQL Server](creating-model-classes-with-linq-to-sql-cs/_static/image2.png)](creating-model-classes-with-linq-to-sql-cs/_static/image1.png)
 
 **Figura 01**: Aggiunta di un nuovo Database di SQL Server ([fare clic per visualizzare l'immagine con dimensioni normali](creating-model-classes-with-linq-to-sql-cs/_static/image3.png))
 
@@ -53,7 +53,7 @@ Dopo aver creato il nuovo database, è possibile aprire il database facendovi do
 La finestra di Esplora Server è denominata la finestra Esplora Database quando si utilizza Visual Web Developer.
 
 
-[![Uaccesso finestra Esplora Server](creating-model-classes-with-linq-to-sql-cs/_static/image5.png)](creating-model-classes-with-linq-to-sql-cs/_static/image4.png)
+[![Uso della finestra di Esplora Server](creating-model-classes-with-linq-to-sql-cs/_static/image5.png)](creating-model-classes-with-linq-to-sql-cs/_static/image4.png)
 
 **Figura 02**: Uso della finestra di Esplora Server ([fare clic per visualizzare l'immagine con dimensioni normali](creating-model-classes-with-linq-to-sql-cs/_static/image6.png))
 
@@ -61,14 +61,14 @@ La finestra di Esplora Server è denominata la finestra Esplora Database quando 
 È necessario aggiungere una tabella al database che rappresenta i film. Fare doppio clic sulla cartella tabelle e selezionare l'opzione di menu **Aggiungi nuova tabella**. Selezionando questa opzione di menu consente di aprire la finestra di progettazione tabella (vedere la figura 3).
 
 
-[![Uaccesso finestra Esplora Server](creating-model-classes-with-linq-to-sql-cs/_static/image8.png)](creating-model-classes-with-linq-to-sql-cs/_static/image7.png)
+[![Uso della finestra di Esplora Server](creating-model-classes-with-linq-to-sql-cs/_static/image8.png)](creating-model-classes-with-linq-to-sql-cs/_static/image7.png)
 
 **Figura 03**: Progettazione tabelle ([fare clic per visualizzare l'immagine con dimensioni normali](creating-model-classes-with-linq-to-sql-cs/_static/image9.png))
 
 
 È necessario aggiungere le seguenti colonne alla tabella relativa al database:
 
-| **Nome colonna** | **Tipo di dati** | **Ammetti Null** |
+| **Nome della colonna** | **Tipo di dati** | **Consenti valori null** |
 | --- | --- | --- |
 | Id | Int | False |
 | Titolo | Nvarchar(200) | False |
@@ -83,7 +83,7 @@ Successivamente, è necessario contrassegnare la colonna Id come una colonna Ide
 Il nostro modello MVC conterrà LINQ alle classi di SQL che rappresentano la tabella di database tblMovie. Il modo più semplice per creare queste classi LINQ to SQL è fare clic sulla cartella modelli, selezionare **Aggiungi, elemento nuove**, selezionare il modello LINQ to SQL classi, denominare le classi Movie.dbml e fare clic su di **Add**sul pulsante (vedere la figura 4).
 
 
-[![Creating LINQ alle classi SQL](creating-model-classes-with-linq-to-sql-cs/_static/image11.png)](creating-model-classes-with-linq-to-sql-cs/_static/image10.png)
+[![Creazione di LINQ alle classi di SQL](creating-model-classes-with-linq-to-sql-cs/_static/image11.png)](creating-model-classes-with-linq-to-sql-cs/_static/image10.png)
 
 **Figura 04**: Creazione di LINQ alle classi di SQL ([fare clic per visualizzare l'immagine con dimensioni normali](creating-model-classes-with-linq-to-sql-cs/_static/image12.png))
 
@@ -91,7 +91,7 @@ Il nostro modello MVC conterrà LINQ alle classi di SQL che rappresentano la tab
 Immediatamente dopo aver creato il film classi LINQ to SQL, viene visualizzata la finestra di Progettazione relazionale oggetti. È possibile trascinare le tabelle del database dalla finestra Esplora Server in Object Relational Designer per creare classi LINQ to SQL che rappresentano le tabelle di database specifico. È necessario aggiungere la tabella di database tblMovie in Object Relational Designer (vedere la figura 5).
 
 
-[![Uaccesso Object Relational Designer](creating-model-classes-with-linq-to-sql-cs/_static/image14.png)](creating-model-classes-with-linq-to-sql-cs/_static/image13.png)
+[![Usando Object Relational Designer](creating-model-classes-with-linq-to-sql-cs/_static/image14.png)](creating-model-classes-with-linq-to-sql-cs/_static/image13.png)
 
 **Figura 05**: Usando Object Relational Designer ([fare clic per visualizzare l'immagine con dimensioni normali](creating-model-classes-with-linq-to-sql-cs/_static/image15.png))
 
@@ -131,7 +131,7 @@ Se si esegue l'applicazione dopo aver modificato il `HomeController` classe e l'
 Per aggiungere record per il `tblMovies` tabella di database, fare doppio clic sul `tblMovies` tabella nella finestra di Esplora Server (finestra di Esplora Database in Visual Web Developer) del database e selezionare l'opzione di menu Mostra dati tabella. È possibile inserire `movie` record tramite la griglia visualizzata (vedere la figura 6).
 
 
-[![Inserting film](creating-model-classes-with-linq-to-sql-cs/_static/image17.png)](creating-model-classes-with-linq-to-sql-cs/_static/image16.png)
+[![Inserimento di film](creating-model-classes-with-linq-to-sql-cs/_static/image17.png)](creating-model-classes-with-linq-to-sql-cs/_static/image16.png)
 
 **Figura 06**: Inserimento di film ([fare clic per visualizzare l'immagine con dimensioni normali](creating-model-classes-with-linq-to-sql-cs/_static/image18.png))
 
@@ -139,7 +139,7 @@ Per aggiungere record per il `tblMovies` tabella di database, fare doppio clic s
 Dopo aver aggiunto alcuni record di database per il `tblMovies` tabella e si esegue l'applicazione, verrà visualizzata la pagina nella figura 7. Tutti i record di database di film vengono visualizzati in un elenco puntato.
 
 
-[![Dvista di movies IsPlaying con l'indice](creating-model-classes-with-linq-to-sql-cs/_static/image20.png)](creating-model-classes-with-linq-to-sql-cs/_static/image19.png)
+[![Visualizzazione di film con la visualizzazione dell'indice](creating-model-classes-with-linq-to-sql-cs/_static/image20.png)](creating-model-classes-with-linq-to-sql-cs/_static/image19.png)
 
 **Figura 07**: Visualizzazione di film con la visualizzazione dell'indice ([fare clic per visualizzare l'immagine con dimensioni normali](creating-model-classes-with-linq-to-sql-cs/_static/image21.png))
 

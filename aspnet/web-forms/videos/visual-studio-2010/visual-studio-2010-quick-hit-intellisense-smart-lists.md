@@ -12,7 +12,7 @@ ms.openlocfilehash: 089716762848f3cd71a2cbf83eba349bb3e7b28b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59410175"
 ---
 # <a name="visual-studio-2010-quick-hit---intellisense-smart-lists"></a>Visual Studio 2010 "Riscontro rapido" - intelligenti di IntelliSense Elenca

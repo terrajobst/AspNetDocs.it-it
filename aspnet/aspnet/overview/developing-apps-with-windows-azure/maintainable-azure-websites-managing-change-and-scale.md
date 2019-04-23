@@ -12,7 +12,7 @@ ms.openlocfilehash: ec0058472f8bc1d8d58e7c78deeb8b6097532510
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59409733"
 ---
 # <a name="hands-on-lab-maintainable-azure-websites-managing-change-and-scale"></a>Lab pratico: Siti Web di Azure di facile manutenzione: gestione di modifiche e scalabilità
@@ -131,7 +131,7 @@ In questa attività verrà illustrata la procedura di abilitazione **migrazioni 
 
     ![Abilitare migrazioni](maintainable-azure-websites-managing-change-and-scale/_static/image1.png "consentendo migrazioni")
 
-    *Abilitare le migrazioni*
+    *Abilitare migrazioni*
 
     > [!NOTE]
     > Questo comando aggiunge un **migrazioni** cartella al progetto fanatico Quiz contenente un file chiamato **Configuration.cs**. Il **configurazione** classe consente di configurare il comportamento di migrazioni per il contesto.
@@ -625,7 +625,7 @@ In questa attività, si utilizzerà la finestra di Esplora Server da Visual Stud
 
     ![Connettersi a Windows Azure](maintainable-azure-websites-managing-change-and-scale/_static/image62.png)
 
-    *Connect to Azure*
+    *Connettersi ad Azure*
 4. Espandere la **Azure** nodo, fare doppio clic su **archiviazione** e selezionare **associa archiviazione esterna...** .
 5. Nel **Aggiungi nuovo Account di archiviazione** finestra di dialogo immettere il **nome Account** e **chiave dell'Account** ottenuta nell'attività precedente e scegliere **OK**.
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: 8a7251971410ef2539e3957039de33af6e74371c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59415453"
 ---
 # <a name="how-do-i"></a>Procedure
@@ -28,6 +28,6 @@ ms.locfileid: "59415453"
 - [Funzionalità avanzate e gestione dei fogli di stile CSS](how-do-i-advance-cascading-style-sheet-features-and-management.md)
 - [Conversione di un'applicazione Windows Form .NET 2.0 a .NET 3.5](how-do-i-converting-a-net-20-windows-forms-application-to-net-35.md)
 - [Introduzione a Entity Framework](how-do-i-get-started-with-the-entity-framework.md)
-- [Usare la nuova origine dati Entità](how-do-i-use-the-new-entity-data-source.md)
-- [Serializzare un grafo con Entity Framework](how-do-i-serialize-a-graph-with-the-entity-framework.md)
+- [Usare la nuova origine dati Entity](how-do-i-use-the-new-entity-data-source.md)
+- [Serializzare un grafico con Entity Framework](how-do-i-serialize-a-graph-with-the-entity-framework.md)
 - [Usare MSBuild per automatizzare le utilità Compiler e Merge di ASP.NET](how-do-i-use-msbuild-to-automate-the-aspnet-compiler-and-merge-utilities.md)

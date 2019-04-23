@@ -12,7 +12,7 @@ ms.openlocfilehash: 5415913626eb063a4cb1013ba03857c130487f42
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59412177"
 ---
 # <a name="introducing-aspnet-web-pages---displaying-data"></a>Introduzione a pagine Web ASP.NET - visualizzazione di dati
@@ -333,7 +333,7 @@ Nella prossima esercitazione, si apprenderà come usare codice Razor e c# per ot
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-- [Introduzione alla programmazione Web ASP.NET utilizzando la sintassi Razor](https://go.microsoft.com/fwlink/?LinkID=202890)
+- [Introduzione alla programmazione Web ASP.NET usando la sintassi Razor](https://go.microsoft.com/fwlink/?LinkID=202890)
 
 > [!div class="step-by-step"]
 > [Precedente](intro-to-web-pages-programming.md)

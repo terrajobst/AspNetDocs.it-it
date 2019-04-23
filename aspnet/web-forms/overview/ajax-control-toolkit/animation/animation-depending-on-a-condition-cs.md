@@ -12,7 +12,7 @@ ms.openlocfilehash: c05f0976a135615f7a272b8057eb4c56677e5117
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59412424"
 ---
 # <a name="animation-depending-on-a-condition-c"></a>Animazione in base a una condizione (C#)
@@ -53,7 +53,7 @@ All'interno di `<Animations>` nodo, usare `<OnLoad>` per eseguire le animazioni 
 Si noti che il segno di minore (`<`) nel `ConditionScript` attributo deve essere sottoposto a escape (). Quando si esegue questo script, nessuna animazione viene eseguito, o uno dei due viene, o eseguire entrambe.
 
 
-[![TPannello he è dissolvenza in uscita senza alcun ridimensionamento, in modo che il secondo viene eseguito animazione, il primo elemento non è stata](animation-depending-on-a-condition-cs/_static/image2.png)](animation-depending-on-a-condition-cs/_static/image1.png)
+[![Il pannello è dissolvenza in uscita senza alcun ridimensionamento, in modo che non ha esecuzioni animazione secondo, il primo elemento](animation-depending-on-a-condition-cs/_static/image2.png)](animation-depending-on-a-condition-cs/_static/image1.png)
 
 Il pannello è dissolvenza in uscita senza alcun ridimensionamento, in modo che non ha esecuzioni animazione secondo, il primo elemento ([fare clic per visualizzare l'immagine con dimensioni normali](animation-depending-on-a-condition-cs/_static/image3.png))
 

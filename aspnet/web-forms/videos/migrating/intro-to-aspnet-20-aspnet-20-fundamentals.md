@@ -12,7 +12,7 @@ ms.openlocfilehash: 4fa306d25868ace7d713f968efe083438655f8bf
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59416155"
 ---
 # <a name="intro-to-aspnet-20-aspnet-20-fundamentals"></a>[Introduzione ad ASP.NET 2.0:] Nozioni di base su ASP.NET 2.0
@@ -24,4 +24,4 @@ Gli sviluppatori che iniziano ad ASP.NET saranno possibile in questo webcast pro
 [&#9654;Guarda il video (70 minuti)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/intro-to-aspnet-20-aspnet-20-fundamentals)
 
 > [!div class="step-by-step"]
-> [Successivo](intro-to-aspnet-20-user-interface-elements.md)
+> [avanti](intro-to-aspnet-20-user-interface-elements.md)

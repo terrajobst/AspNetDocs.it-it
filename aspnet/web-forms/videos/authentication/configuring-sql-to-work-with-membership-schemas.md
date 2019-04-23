@@ -12,7 +12,7 @@ ms.openlocfilehash: 1144f6de63ebff3c92efc148ec619ec1d5cc0aa1
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59409928"
 ---
 # <a name="configuring-sql-to-work-with-membership-schemas"></a>Configurazione di SQL per l'uso degli schemi di appartenenza

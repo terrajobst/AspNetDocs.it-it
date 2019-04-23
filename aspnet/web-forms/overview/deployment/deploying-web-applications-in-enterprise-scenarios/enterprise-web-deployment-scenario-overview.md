@@ -12,14 +12,14 @@ ms.openlocfilehash: 326abfe4fe86d0741b0bf807d5454d6cf87a7c12
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59411969"
 ---
 # <a name="enterprise-web-deployment-scenario-overview"></a>Distribuzione Web aziendale: Panoramica dello scenario
 
 da [Jason Lee](https://github.com/jrjlee)
 
-[Scarica il PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Scaricare PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Questa serie di esercitazioni pratiche Usa una soluzione di esempio con un livello di complessità, insieme a uno scenario di distribuzione azienda fittizia, realistico per fornire un'implementazione di riferimento e per assegnare le attività e procedure dettagliate di contesto comune. In questo argomento viene descritto lo scenario dell'esercitazione e introduce la soluzione di esempio.
 
@@ -42,7 +42,7 @@ Si tratta dell'infrastruttura di sviluppo e la distribuzione ad alto livello in 
 
 ![](enterprise-web-deployment-scenario-overview/_static/image1.png)
 
-La workstation di sviluppo, l'infrastruttura di controllo di origine, l'ambiente di test per sviluppatori e l'ambiente di staging che si trovano tutti nella rete intranet all'interno del dominio Fabrikam.net. In una rete perimetrale (detta anche subnet schermata), che è isolata dalla rete intranet da un firewall si trova l'ambiente di produzione. Si tratta di uno scenario di distribuzione comune: è in genere isolare i server web con connessione Internet dell'infrastruttura server interni tramite l'uso di firewall o server gateway.
+La workstation di sviluppo, l'infrastruttura di controllo di origine, l'ambiente di test per sviluppatori e l'ambiente di staging che si trovano tutti nella rete intranet all'interno del dominio Fabrikam.net. In una rete perimetrale (detta anche DMZ DMZ e subnet schermata), che è isolata dalla rete intranet da un firewall si trova l'ambiente di produzione. Si tratta di uno scenario di distribuzione comune: è in genere isolare i server web con connessione Internet dell'infrastruttura server interni tramite l'uso di firewall o server gateway.
 
 In questo esempio:
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: e4d9424d691f92aacf078faed09689daa40a44fd
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59418339"
 ---
 # <a name="owin-startup-class-detection"></a>Rilevamento della classe di avvio OWIN
@@ -79,8 +79,7 @@ ms.locfileid: "59418339"
      > [!NOTE]
      > Nel codice precedente è stata impostata come commento il `OwinStartup` attributo e si sta affidarsi alla convenzione in esecuzione la classe denominata `Startup` .-premere ***F5*** per eseguire l'applicazione. Fare clic su Aggiorna più volte.
 
-    ![](owin-startup-class-detection/_static/image4.png)
-  Nota: Il numero illustrato nelle immagini in questa esercitazione non corrisponderanno il numero visualizzato. La stringa di millisecondo viene utilizzata per visualizzare una nuova risposta quando si aggiorna la pagina.
+    ![](owin-startup-class-detection/_static/image4.png) Nota: Il numero illustrato nelle immagini in questa esercitazione non corrisponderanno il numero visualizzato. La stringa di millisecondo viene utilizzata per visualizzare una nuova risposta quando si aggiorna la pagina.
   È possibile visualizzare le informazioni della traccia le **Output** finestra.
 
     ![](owin-startup-class-detection/_static/image5.png)

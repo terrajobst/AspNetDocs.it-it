@@ -12,7 +12,7 @@ ms.openlocfilehash: b41843143dfbd957ef242c67e67101af79d9efba
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59419405"
 ---
 # <a name="data-access"></a>Accesso ai dati
@@ -27,20 +27,20 @@ ms.locfileid: "59419405"
     - [Usare set di dati e filtri di un'applicazione ASP](adonet-data-services/how-to-work-with-datasets-and-filters-from-an-asp-application.md)
 - [Procedure relative a LINQ](how-do-i-with-linq/index.md)
 
-    - [LINQ to SQL: Panoramica](how-do-i-with-linq/how-do-i-linq-to-sql-overview.md)
-    - [LINQ to SQL: Modello dati](how-do-i-with-linq/how-do-i-linq-to-sql-data-model.md)
-    - [LINQ to SQL: Esecuzione di query sul database](how-do-i-with-linq/how-do-i-linq-to-sql-querying-the-database.md)
-    - [LINQ to SQL: Aggiornamento del database](how-do-i-with-linq/how-do-i-linq-to-sql-updating-the-database.md)
+    - [LINQ to SQL: panoramica](how-do-i-with-linq/how-do-i-linq-to-sql-overview.md)
+    - [LINQ to SQL: Modello di dati](how-do-i-with-linq/how-do-i-linq-to-sql-data-model.md)
+    - [LINQ to SQL: Una query sul Database](how-do-i-with-linq/how-do-i-linq-to-sql-querying-the-database.md)
+    - [LINQ to SQL: L'aggiornamento del Database](how-do-i-with-linq/how-do-i-linq-to-sql-updating-the-database.md)
     - [LINQ to SQL: LinqDataSource](how-do-i-with-linq/how-do-i-linq-to-sql-linqdatasource.md)
-    - [LINQ to SQL: LinqDataSource personalizzato](how-do-i-with-linq/how-do-i-linq-to-sql-custom-linqdatasource.md)
-    - [LINQ to SQL: Utilizzo delle stored procedure](how-do-i-with-linq/how-do-i-linq-to-sql-using-stored-procedures.md)
-    - [LINQ to SQL: Aggiornamento con stored procedure](how-do-i-with-linq/how-do-i-linq-to-sql-updating-with-stored-procedures.md)
-    - [LINQ to SQL: Esecuzione di codice SQL arbitrario](how-do-i-with-linq/how-do-i-linq-to-sql-executing-arbitrary-sql.md)
+    - [LINQ to SQL: Custom LinqDataSource](how-do-i-with-linq/how-do-i-linq-to-sql-custom-linqdatasource.md)
+    - [LINQ to SQL: Utilizzo delle Stored procedure](how-do-i-with-linq/how-do-i-linq-to-sql-using-stored-procedures.md)
+    - [LINQ to SQL: L'aggiornamento con le Stored procedure](how-do-i-with-linq/how-do-i-linq-to-sql-updating-with-stored-procedures.md)
+    - [LINQ to SQL: L'esecuzione di codice SQL arbitrario](how-do-i-with-linq/how-do-i-linq-to-sql-executing-arbitrary-sql.md)
 - [Video su LINQ dal team di Visual Basic](linq-videos-from-the-vb-team/index.md)
 
     - [Introduzione a LINQ](linq-videos-from-the-vb-team/how-do-i-get-started-with-linq.md)
     - [Esecuzione di query di raggruppamento e aggregazione](linq-videos-from-the-vb-team/how-do-i-perform-group-and-aggregate-queries.md)
-    - [Aggiornare progetti Visual Basic per abilitare LINQ](linq-videos-from-the-vb-team/how-do-i-upgrade-visual-basic-projects-to-enable-linq.md)
+    - [Aggiornamento di progetti Visual Basic per abilitare LINQ](linq-videos-from-the-vb-team/how-do-i-upgrade-visual-basic-projects-to-enable-linq.md)
     - [Introduzione a LINQ to XML](linq-videos-from-the-vb-team/how-do-i-get-started-with-linq-to-xml.md)
     - [Abilitare XML IntelliSense e usare lo spazio dei nomi XML](linq-videos-from-the-vb-team/how-do-i-enable-xml-intellisense-and-use-xml-namespaces.md)
     - [Creare documenti XML basati su dati SQL](linq-videos-from-the-vb-team/how-do-i-create-xml-documents-from-sql-data.md)

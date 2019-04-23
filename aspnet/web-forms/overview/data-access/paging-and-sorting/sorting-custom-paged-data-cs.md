@@ -12,7 +12,7 @@ ms.openlocfilehash: a65fe60dc44eb40591733ba9371e409f690fea52
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59409239"
 ---
 # <a name="sorting-custom-paged-data-c"></a>Ordinamento dei dati con suddivisione in pagine personalizzata (C#)
@@ -71,7 +71,7 @@ Si consiglia di testare questa stored procedure con valori diversi per il `@sort
 **Figura 1**: Provare diversi valori per le Stored Procedure s tre parametri di Input
 
 
-[![Ts Stored Procedure he i risultati vengono visualizzati nella finestra di Output](sorting-custom-paged-data-cs/_static/image3.png)](sorting-custom-paged-data-cs/_static/image2.png)
+[![La Stored Procedure s i risultati vengono visualizzati nella finestra di Output](sorting-custom-paged-data-cs/_static/image3.png)](sorting-custom-paged-data-cs/_static/image2.png)
 
 **Figura 2**: La Stored Procedure s i risultati vengono visualizzati nella finestra di Output ([fare clic per visualizzare l'immagine con dimensioni normali](sorting-custom-paged-data-cs/_static/image4.png))
 
@@ -145,7 +145,7 @@ Per abilitare l'ordinamento in GridView, è sufficiente selezionare la casella d
 Figura 7 mostra la prima pagina dei risultati quando vengono ordinati i `UnitPrice` in ordine crescente.
 
 
-[![The risultati vengono ordinati per l'elemento UnitPrice](sorting-custom-paged-data-cs/_static/image10.png)](sorting-custom-paged-data-cs/_static/image9.png)
+[![I risultati sono ordinati per l'elemento UnitPrice](sorting-custom-paged-data-cs/_static/image10.png)](sorting-custom-paged-data-cs/_static/image9.png)
 
 **Figura 7**: I risultati sono ordinati per il prezzo unitario ([fare clic per visualizzare l'immagine con dimensioni normali](sorting-custom-paged-data-cs/_static/image11.png))
 
@@ -166,7 +166,7 @@ Questa eccezione si verifica perché il `SortExpression` di istanze della classe
 **Figura 9**: Modifica SortExpression s SupplierName BoundField su CompanyName
 
 
-[![Tè ora è possibile ordinare i risultati dal fornitore](sorting-custom-paged-data-cs/_static/image15.png)](sorting-custom-paged-data-cs/_static/image14.png)
+[![Ora i risultati possono essere ordinati dal fornitore](sorting-custom-paged-data-cs/_static/image15.png)](sorting-custom-paged-data-cs/_static/image14.png)
 
 **Figura 10**: I risultati ora possono essere ordinate dal fornitore ([fare clic per visualizzare l'immagine con dimensioni normali](sorting-custom-paged-data-cs/_static/image16.png))
 

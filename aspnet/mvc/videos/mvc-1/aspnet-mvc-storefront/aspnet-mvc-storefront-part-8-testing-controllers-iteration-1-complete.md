@@ -12,7 +12,7 @@ ms.openlocfilehash: acaee3c167c387731611fc3b068695aa7f5596bd
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59408121"
 ---
 # <a name="aspnet-mvc-storefront-part-8-testing-controllers-iteration-1-complete"></a>ASP.NET MVC Storefront - Parte 8: Test dei controller, iterazione 1 completata

@@ -12,7 +12,7 @@ ms.openlocfilehash: ec59b63050a9d561c4f3da5a8eaaffbefef48454
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59410526"
 ---
 # <a name="core-differences-between-iis-and-the-aspnet-development-server-c"></a>Differenze principali tra IIS e il server di sviluppo ASP.NET (C#)
@@ -50,7 +50,7 @@ Per visualizzare questo tipo di errore nell'azione ho creato una pagina nel sito
 Successivamente, visitare il *insegnare manualmente ASP.NET 3.5 in 24 ore* pagina revisione del libro nell'ambiente di sviluppo utilizzando ASP.NET Development Server. Supponendo che si è connessi al computer con un account che disponga di autorizzazioni adeguate per creare e modificare un file di testo all'interno del web directory radice dell'applicazione recensione di un libro sembra identico al precedente, ma ogni volta che la pagina visitata la data e ora e dell'utente  Indirizzo IP viene archiviato nel `LastTYASP35Access.txt` file. Puntare il browser in questo file. si dovrebbe vedere un messaggio simile a quello illustrato nella figura 1.
 
 
-[![Til File di testo contiene la data e ora ultima recensione di un libro è stato visitato](core-differences-between-iis-and-the-asp-net-development-server-cs/_static/image2.png)](core-differences-between-iis-and-the-asp-net-development-server-cs/_static/image1.png)
+[![Il File di testo contiene la data e ora ultima recensione di un libro è stato visitato](core-differences-between-iis-and-the-asp-net-development-server-cs/_static/image2.png)](core-differences-between-iis-and-the-asp-net-development-server-cs/_static/image1.png)
 
 **Figura 1**: Il File di testo contiene la data e ora ultima recensione di un libro è stato visitato ([fare clic per visualizzare l'immagine con dimensioni normali](core-differences-between-iis-and-the-asp-net-development-server-cs/_static/image3.png))
 
@@ -58,7 +58,7 @@ Successivamente, visitare il *insegnare manualmente ASP.NET 3.5 in 24 ore* pagin
 Distribuire l'applicazione web nell'ambiente di produzione e quindi visitare di hosting *insegnare manualmente ASP.NET 3.5 in 24 ore* pagina revisione del libro. A questo punto si dovrebbe vedere sia la pagina di revisione del libro come normale o il messaggio di errore riportato nella figura 2. Alcuni provider host web concedere autorizzazioni di scrittura per l'account del computer ASP.NET anonimo, in cui i casi la pagina funzionerà senza errori. Se, tuttavia, il provider di hosting web non consente l'accesso in scrittura per l'account anonimo un' [ `UnauthorizedAccessException` eccezioni](https://msdn.microsoft.com/library/system.unauthorizedaccessexception.aspx) viene generato quando il `TYASP35.aspx` pagina tenta di scrivere la data e ora correnti per il `LastTYASP35Access.txt` file.
 
 
-[![Tegli predefinito macchina Account usato da IIS non dispone delle autorizzazioni in scrittura nel File System](core-differences-between-iis-and-the-asp-net-development-server-cs/_static/image5.png)](core-differences-between-iis-and-the-asp-net-development-server-cs/_static/image4.png)
+[![L'Account del computer predefinito usato da IIS non dispone delle autorizzazioni per scrivere nel File System](core-differences-between-iis-and-the-asp-net-development-server-cs/_static/image5.png)](core-differences-between-iis-and-the-asp-net-development-server-cs/_static/image4.png)
 
 **Figura 2**: Il predefinito macchina Account usato da IIS viene non dispone delle autorizzazioni in scrittura nel File System ([fare clic per visualizzare l'immagine con dimensioni normali](core-differences-between-iis-and-the-asp-net-development-server-cs/_static/image6.png))
 
@@ -96,7 +96,7 @@ Utilizzo del Server di sviluppo ASP.NET, visitare il sito e immettere l'URL dire
 Inserendo l'URL nella barra degli indirizzi determina il browser inviare una richiesta al Server di sviluppo ASP.NET per il file. Il Server di sviluppo ASP.NET inoltra la richiesta al runtime di ASP.NET per l'elaborazione. Poiché è stata non ancora eseguito l'accesso e il `Web.config` nella `PrivateDocs` cartella è configurata per negare l'accesso anonimo, il runtime ASP.NET us reindirizza automaticamente alla pagina di accesso, `Login.aspx` (vedere la figura 3). Quando si reindirizza l'utente alla pagina di accesso, ASP.NET include un `ReturnUrl` parametro querystring che indica che la pagina utente tentava di visualizzazione. Dopo aver completato l'accesso l'utente può essere restituito da questa pagina.
 
 
-[![Ugli utenti nauthorized vengono automaticamente reindirizzati alla pagina di accesso](core-differences-between-iis-and-the-asp-net-development-server-cs/_static/image8.png)](core-differences-between-iis-and-the-asp-net-development-server-cs/_static/image7.png)
+[![Gli utenti non autorizzati vengono automaticamente reindirizzati alla pagina di accesso](core-differences-between-iis-and-the-asp-net-development-server-cs/_static/image8.png)](core-differences-between-iis-and-the-asp-net-development-server-cs/_static/image7.png)
 
 **Figura 3**: Gli utenti non autorizzati vengono automaticamente reindirizzati alla pagina di accesso ([fare clic per visualizzare l'immagine con dimensioni normali](core-differences-between-iis-and-the-asp-net-development-server-cs/_static/image9.png))
 
@@ -104,7 +104,7 @@ Inserendo l'URL nella barra degli indirizzi determina il browser inviare una ric
 Ora vediamo come il comportamento è in produzione. Distribuire l'applicazione e immettere l'URL diretto tra i file PDF nel `PrivateDocs` cartella nell'ambiente di produzione. Verrà chiesto di specificare il browser per inviare una richiesta di IIS per il file. Poiché viene richiesto un file statico, IIS recupera e restituisce il file senza richiamare il runtime ASP.NET. Di conseguenza, si è verificato alcun controllo di autorizzazione URL eseguita. il contenuto del file PDF presumibilmente privati è accessibile a chiunque ne conosca l'URL diretto al file.
 
 
-[![Anonimi utenti possono scaricare il privata PDF i file da immettendo l'URL diretto al File](core-differences-between-iis-and-the-asp-net-development-server-cs/_static/image11.png)](core-differences-between-iis-and-the-asp-net-development-server-cs/_static/image10.png)
+[![Gli utenti anonimi possono scaricare i file di formato PDF privato immettendo l'URL diretto al File](core-differences-between-iis-and-the-asp-net-development-server-cs/_static/image11.png)](core-differences-between-iis-and-the-asp-net-development-server-cs/_static/image10.png)
 
 **Figura 4**: Anonimo gli utenti possono scaricare il privata PDF i file da immettendo l'URL diretto al File ([fare clic per visualizzare l'immagine con dimensioni normali](core-differences-between-iis-and-the-asp-net-development-server-cs/_static/image12.png))
 

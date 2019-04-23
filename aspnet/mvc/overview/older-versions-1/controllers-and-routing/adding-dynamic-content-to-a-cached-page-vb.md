@@ -12,7 +12,7 @@ ms.openlocfilehash: 0dae280dfa3028df5fda95c4366132c99a0dc3b7
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59409200"
 ---
 # <a name="adding-dynamic-content-to-a-cached-page-vb"></a>Aggiunta di contenuto dinamico a una pagina memorizzata nella cache (VB)
@@ -66,7 +66,7 @@ Anche se la visualizzazione dell'indice viene memorizzato nella cache, gli eleme
 
 Un modo più semplice per sfruttare i vantaggi di sostituzione post-cache è per incapsulare la chiamata al metodo WriteSubstitution() all'interno di un metodo helper personalizzati. Questo approccio è illustrato il metodo helper nel listato 4.
 
-**Listing 4 – Helpers\AdHelper.vb**
+**Listato 4 – Helpers\AdHelper.vb**
 
 [!code-vb[Main](adding-dynamic-content-to-a-cached-page-vb/samples/sample4.vb)]
 

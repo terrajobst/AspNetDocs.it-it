@@ -12,7 +12,7 @@ ms.openlocfilehash: 1ab979f220c06d22f51931c7c00fc4d273731f85
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59413945"
 ---
 # <a name="using-a-confirmbutton-in-a-repeater-c"></a>Uso di ConfirmButton in un controllo Repeater (C#)
@@ -47,9 +47,9 @@ Questa origine dati può quindi essere utilizzata all'interno di un controllo re
 [!code-aspx[Main](using-a-confirmbutton-in-a-repeater-cs/samples/sample3.aspx)]
 
 
-[![Tegli conferma viene visualizzato il pulsante accanto a ogni voce dell'origine dati](using-a-confirmbutton-in-a-repeater-cs/_static/image2.png)](using-a-confirmbutton-in-a-repeater-cs/_static/image1.png)
+[![Il pulsante di conferma viene visualizzato accanto a ogni voce dell'origine dati](using-a-confirmbutton-in-a-repeater-cs/_static/image2.png)](using-a-confirmbutton-in-a-repeater-cs/_static/image1.png)
 
 Il pulsante di conferma viene visualizzato accanto a ogni voce dell'origine dati ([fare clic per visualizzare l'immagine con dimensioni normali](using-a-confirmbutton-in-a-repeater-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Successivo](using-a-confirmbutton-in-a-repeater-vb.md)
+> [avanti](using-a-confirmbutton-in-a-repeater-vb.md)

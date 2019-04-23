@@ -12,7 +12,7 @@ ms.openlocfilehash: c2a5b3ae768012156b0f46eda8caeb43451af258
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59413750"
 ---
 # <a name="migrating"></a>Migrazione
@@ -23,8 +23,8 @@ ms.locfileid: "59413750"
 - [[Introduzione ad ASP.NET 2.0:] Nozioni di base su ASP.NET 2.0](intro-to-aspnet-20-aspnet-20-fundamentals.md)
 - [[Introduzione ad ASP.NET 2.0:] Elementi dell'interfaccia utente](intro-to-aspnet-20-user-interface-elements.md)
 - [[Migrazione da] ASP classico ad ASP.NET](migrating-from-classic-asp-to-aspnet.md)
-- [Introduzione ad ASP.NET per gli sviluppatori JSP: cenni preliminari su ASP.NET 2.0](intro-to-aspnet-for-jsp-developers-welcome-to-aspnet-20.md)
-- [Introduzione ad ASP.NET per gli sviluppatori JSP: creazione di applicazioni](intro-to-aspnet-for-jsp-developers-building-applications.md)
-- [Introduzione ad ASP.NET per gli sviluppatori ColdFusion: aggiunta di ASP.NET al repertorio](intro-to-aspnet-for-coldfusion-developers-adding-aspnet-to-your-repertoire.md)
-- [Introduzione ad ASP.NET per gli sviluppatori ColdFusion: creazione di un'applicazione ASP.NET](introduction-to-aspnet-for-coldfusion-developers-building-an-aspnet-application.md)
+- [Introduzione ad ASP.NET per gli sviluppatori JSP: Benvenuti in ASP.NET 2.0](intro-to-aspnet-for-jsp-developers-welcome-to-aspnet-20.md)
+- [Introduzione ad ASP.NET per gli sviluppatori JSP: Creazione di applicazioni](intro-to-aspnet-for-jsp-developers-building-applications.md)
+- [Introduzione ad ASP.NET per gli sviluppatori ColdFusion: Aggiunta di ASP.NET al repertorio](intro-to-aspnet-for-coldfusion-developers-adding-aspnet-to-your-repertoire.md)
+- [Introduzione ad ASP.NET per gli sviluppatori ColdFusion: Creazione di un'applicazione ASP.NET](introduction-to-aspnet-for-coldfusion-developers-building-an-aspnet-application.md)
 - [Interoperabilità tra PHP e la piattaforma Windows](interop-between-php-and-the-windows-platform.md)

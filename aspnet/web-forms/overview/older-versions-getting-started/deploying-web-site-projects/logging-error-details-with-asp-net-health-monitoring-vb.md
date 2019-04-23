@@ -12,7 +12,7 @@ ms.openlocfilehash: a9dd4268ef20b58b674f8ec8313132398fc5f19d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59413126"
 ---
 # <a name="logging-error-details-with-aspnet-health-monitoring-vb"></a>Registrazione dei dettagli degli errori con il monitoraggio dell'integrità di ASP.NET (VB)

@@ -12,7 +12,7 @@ ms.openlocfilehash: 0d17308d1e97279c0870ea02933a42400ef338c9
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59411553"
 ---
 # <a name="introduction-to-scaleout-in-signalr"></a>Introduzione a scale-out in SignalR
@@ -62,9 +62,9 @@ Se si distribuisce l'applicazione in Azure, è consigliabile usare il backplane 
 
 Gli argomenti seguenti contengono le esercitazioni dettagliate per ogni backplane:
 
-- [Scale-out di SignalR con il bus di servizio di Azure](scaleout-with-windows-azure-service-bus.md)
-- [Scale-out di SignalR con Redis](scaleout-with-redis.md)
-- [Scale-out di SignalR con SQL Server](scaleout-with-sql-server.md)
+- [Scalabilità orizzontale di SignalR con il bus di servizio di Azure](scaleout-with-windows-azure-service-bus.md)
+- [Scalabilità orizzontale di SignalR con Redis](scaleout-with-redis.md)
+- [Scalabilità orizzontale di SignalR con SQL Server](scaleout-with-sql-server.md)
 
 ## <a name="implementation"></a>Implementazione
 

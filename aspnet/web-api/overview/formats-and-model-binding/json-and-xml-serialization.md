@@ -13,7 +13,7 @@ ms.openlocfilehash: a9e7ed63a55c146976e0221214e722f3a2292fee
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59408277"
 ---
 # <a name="json-and-xml-serialization-in-aspnet-web-api"></a>Serializzazione JSON e XML nell'API Web ASP.NET
@@ -35,14 +35,14 @@ API Web fornisce formattatori di media type per JSON e XML. Per impostazione pre
 
     - [Proprietà di sola lettura](#json_readonly)
     - [Date](#json_dates)
-    - [Rientri](#json_indenting)
+    - [Rientro](#json_indenting)
     - [Convenzione camel](#json_camelcasing)
     - [Oggetti anonimi e con tipizzazione debole](#json_anon)
 - [Formattatore di Media Type XML](#xml_media_type_formatter)
 
     - [Proprietà di sola lettura](#xml_readonly)
     - [Date](#xml_dates)
-    - [Rientri](#xml_indenting)
+    - [Rientro](#xml_indenting)
     - [L'impostazione di serializzatori XML Per tipo](#xml_pertype)
 - [Rimozione di JSON o un formattatore XML](#removing_the_json_or_xml_formatter)
 - [La gestione di riferimenti circolari agli oggetti](#handling_circular_object_references)

@@ -12,14 +12,14 @@ ms.openlocfilehash: 017eceb8567859fdbe28bb87af844eee20dfa525
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59415479"
 ---
 # <a name="taking-web-applications-offline-with-web-deploy"></a>Impostazione delle applicazioni Web in modalità offline con Distribuzione Web
 
 da [Jason Lee](https://github.com/jrjlee)
 
-[Scarica il PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Scaricare PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > In questo argomento viene descritto come eseguire un'applicazione web in modalità offline per la durata di una distribuzione automatizzata tramite lo strumento di distribuzione di Internet Information Services (IIS) Web (distribuzione Web). Gli utenti che esplorano per l'applicazione web vengono reindirizzati a un *App\_offline.htm* fino al completamento della distribuzione di file.
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: 8536c771e5e343bd545b6824bec6f8b85489a7d4
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59416532"
 ---
 # <a name="deployment"></a>Distribuzione
@@ -25,7 +25,7 @@ ms.locfileid: "59416532"
     - [Introduzione](visual-studio-web-deployment/introduction.md)
     - [Preparazione per la distribuzione del database](visual-studio-web-deployment/preparing-databases.md)
     - [Trasformazioni del file Web.config](visual-studio-web-deployment/web-config-transformations.md)
-    - [Proprietà progetto](visual-studio-web-deployment/project-properties.md)
+    - [Proprietà di progetti](visual-studio-web-deployment/project-properties.md)
     - [Distribuzione per il test](visual-studio-web-deployment/deploying-to-iis.md)
     - [Impostazione delle autorizzazioni delle cartelle](visual-studio-web-deployment/setting-folder-permissions.md)
     - [Distribuzione in produzione](visual-studio-web-deployment/deploying-to-production.md)
@@ -38,7 +38,7 @@ ms.locfileid: "59416532"
 
     - [Distribuzione di applicazioni Web in scenari aziendali tramite Visual Studio 2010](deploying-web-applications-in-enterprise-scenarios/deploying-web-applications-in-enterprise-scenarios.md)
     - [Distribuzione Web aziendale: Panoramica dello scenario](deploying-web-applications-in-enterprise-scenarios/enterprise-web-deployment-scenario-overview.md)
-    - [Gestione del ciclo di vita delle applicazioni: dallo sviluppo alla produzione](deploying-web-applications-in-enterprise-scenarios/application-lifecycle-management-from-development-to-production.md)
+    - [Gestione del ciclo di vita delle applicazioni: Dallo sviluppo alla produzione](deploying-web-applications-in-enterprise-scenarios/application-lifecycle-management-from-development-to-production.md)
 - [ASP.NET 4 - Serie sulla distribuzione aziendale 1](web-deployment-in-the-enterprise/index.md)
 
     - [Distribuzione Web nell'organizzazione](web-deployment-in-the-enterprise/web-deployment-in-the-enterprise.md)
@@ -56,7 +56,7 @@ ms.locfileid: "59416532"
 
     - [Configurazione degli ambienti server per la distribuzione Web](configuring-server-environments-for-web-deployment/configuring-server-environments-for-web-deployment.md)
     - [Scelta dell'approccio corretto per la distribuzione Web](configuring-server-environments-for-web-deployment/choosing-the-right-approach-to-web-deployment.md)
-    - [Scenario: Configurazione di un ambiente di test per la distribuzione Web](configuring-server-environments-for-web-deployment/scenario-configuring-a-test-environment-for-web-deployment.md)
+    - [Scenario: Configurazione di un ambiente di Test per la distribuzione Web](configuring-server-environments-for-web-deployment/scenario-configuring-a-test-environment-for-web-deployment.md)
     - [Scenario: Configurazione di un ambiente di gestione temporanea per la distribuzione Web](configuring-server-environments-for-web-deployment/scenario-configuring-a-staging-environment-for-web-deployment.md)
     - [Scenario: Configurazione di un ambiente di produzione per la distribuzione Web](configuring-server-environments-for-web-deployment/scenario-configuring-a-production-environment-for-web-deployment.md)
     - [Configurazione di un server Web per la pubblicazione con Distribuzione Web (agente remoto)](configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-remote-agent.md)
@@ -73,7 +73,7 @@ ms.locfileid: "59416532"
     - [Configurazione di un server di compilazione TFS per la distribuzione Web](configuring-team-foundation-server-for-web-deployment/configuring-a-tfs-build-server-for-web-deployment.md)
     - [Creazione di una definizione di compilazione che supporta la distribuzione](configuring-team-foundation-server-for-web-deployment/creating-a-build-definition-that-supports-deployment.md)
     - [Distribuzione di una compilazione specifica](configuring-team-foundation-server-for-web-deployment/deploying-a-specific-build.md)
-    - [Configurazione delle autorizzazioni per la distribuzione di Team Build](configuring-team-foundation-server-for-web-deployment/configuring-permissions-for-team-build-deployment.md)
+    - [Configurazione delle autorizzazioni per la compilazione di Team Build](configuring-team-foundation-server-for-web-deployment/configuring-permissions-for-team-build-deployment.md)
 - [ASP.NET 4 - Serie sulla distribuzione aziendale 4 - Argomenti avanzati](advanced-enterprise-web-deployment/index.md)
 
     - [Distribuzione Web aziendale avanzata](advanced-enterprise-web-deployment/advanced-enterprise-web-deployment.md)

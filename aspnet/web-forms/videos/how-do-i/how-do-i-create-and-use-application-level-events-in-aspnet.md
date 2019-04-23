@@ -12,7 +12,7 @@ ms.openlocfilehash: fc797454a3df103f7c6c5d314e3033e60959f3b8
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59419483"
 ---
 # <a name="how-do-i--create-and-use-application-level-events-in-aspnet"></a>[Procedura:]  Creare e usare gli eventi a livello di applicazione in ASP.NET

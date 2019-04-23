@@ -12,14 +12,14 @@ ms.openlocfilehash: 3b7f154936222c85bd7897ea10cbb5ae9d1aa670
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59408940"
 ---
 # <a name="application-lifecycle-management-from-development-to-production"></a>Gestione del ciclo di vita delle applicazioni: dallo sviluppo alla produzione
 
 da [Jason Lee](https://github.com/jrjlee)
 
-[Scarica il PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Scaricare PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > In questo argomento viene illustrato come una società fittizia gestisce la distribuzione di un'applicazione web ASP.NET tramite gli ambienti di test, staging e produzione come parte di un processo di sviluppo continuo. In tutta l'argomento, vengono forniti collegamenti a informazioni aggiuntive e procedure dettagliate su come eseguire attività specifiche.
 > 

@@ -12,7 +12,7 @@ ms.openlocfilehash: e788ffe36d3a201be38f317ddd5f721cf6d9a6ff
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59420510"
 ---
 # <a name="how-do-i-event-handlers-in-aspnet-web-pages-and-controls"></a>[Procedura:] Gestori eventi nei controlli e le pagine Web ASP.NET

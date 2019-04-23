@@ -13,7 +13,7 @@ ms.openlocfilehash: 34a0d62d7afcaffa8fbac0bc774d9266efb6b165
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59413048"
 ---
 # <a name="introduction-to-aspnet-identity"></a>Introduzione ad ASP.NET Identity

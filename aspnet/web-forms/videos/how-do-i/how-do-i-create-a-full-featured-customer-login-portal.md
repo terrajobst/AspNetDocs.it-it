@@ -12,7 +12,7 @@ ms.openlocfilehash: 05922d973e6390088ff0ef270513a7b4f60e36c0
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59414816"
 ---
 # <a name="how-do-i-create-a-full-featured-customer-login-portal"></a>[Procedura:] Creare un portale di account di accesso dei clienti completa?

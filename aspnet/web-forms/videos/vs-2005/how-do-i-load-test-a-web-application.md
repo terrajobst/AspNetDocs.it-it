@@ -12,7 +12,7 @@ ms.openlocfilehash: 6b086fd9c8c92d5dafa8aba9f1a8928c6bcb0c07
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59413776"
 ---
 # <a name="how-do-i-load-test-a-web-application"></a>[Procedura:] Un'applicazione Web di Test di carico?

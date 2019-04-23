@@ -12,14 +12,14 @@ ms.openlocfilehash: 865e901618b48bc4bfdc6d7a3ca4e8868d4cb46b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59412983"
 ---
 # <a name="customizing-database-deployments-for-multiple-environments"></a>Personalizzazione delle distribuzioni di database per più ambienti
 
 da [Jason Lee](https://github.com/jrjlee)
 
-[Scarica il PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Scaricare PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > In questo argomento viene descritto come personalizzare le proprietà di un database negli ambienti di destinazione specifici come parte del processo di distribuzione.
 > 
@@ -68,7 +68,7 @@ Questa tabella mostra le impostazioni di distribuzione tipico per gli ambienti d
 
 |  | Sviluppo/Test | Integrazione di gestione temporanea / | Produzione |
 | --- | --- | --- | --- |
-| **Regole di confronto distribuzione** | Origine | destinazione | destinazione |
+| **Regole di confronto distribuzione** | Source | destinazione | destinazione |
 | **Distribuisci proprietà database** | True | Solo la prima volta | Solo la prima volta |
 | **Ricrea sempre database** | True | False | False |
 | **Blocca distribuzione incrementale in caso di perdita di dati** | False | Forse | True |

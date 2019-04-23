@@ -12,7 +12,7 @@ ms.openlocfilehash: 5fa19ef52c4538f0db427eaa9a79b074c85001ac
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59415869"
 ---
 # <a name="how-do-i-use-the-html-editor-control-vb"></a>Come si usa il controllo dell'Editor HTML? (VB)
@@ -25,7 +25,7 @@ by [Microsoft](https://github.com/microsoft)
 L'obiettivo di questa esercitazione è fornire una panoramica del controllo HTMLEditor incluso in AJAX Control Toolkit. L'Editor HTML include opzioni per la modifica delle dimensioni del carattere, la selezione di un tipo di carattere, modifica il colore di sfondo, la modifica il colore di primo piano, l'aggiunta di collegamenti, aggiunta di immagini, modificare l'allineamento del testo e si eseguono le operazioni Taglia, copia e Incolla le operazioni (vedi figura 1).
 
 
-[![Tegli Editor HTML](how-do-i-use-the-html-editor-control-vb/_static/image1.jpg)](how-do-i-use-the-html-editor-control-vb/_static/image1.png)
+[![L'Editor HTML](how-do-i-use-the-html-editor-control-vb/_static/image1.jpg)](how-do-i-use-the-html-editor-control-vb/_static/image1.png)
 
 **Figura 01**: L'Editor HTML ([fare clic per visualizzare l'immagine con dimensioni normali](how-do-i-use-the-html-editor-control-vb/_static/image2.png))
 
@@ -33,7 +33,7 @@ L'obiettivo di questa esercitazione è fornire una panoramica del controllo HTML
 L'editor HTML consente di immettere il contenuto con una modalità di progettazione oppure è possibile immettere direttamente HTML. Viene anche fornito con l'opzione per visualizzare in anteprima il contenuto HTML (vedere la figura 2).
 
 
-[![Detta, HTML e visualizzare in anteprima i pulsanti](how-do-i-use-the-html-editor-control-vb/_static/image2.jpg)](how-do-i-use-the-html-editor-control-vb/_static/image3.png)
+[![Progettazione, HTML e anteprima di pulsanti](how-do-i-use-the-html-editor-control-vb/_static/image2.jpg)](how-do-i-use-the-html-editor-control-vb/_static/image3.png)
 
 **Figura 02**: Progettazione, HTML e anteprima pulsanti ([fare clic per visualizzare l'immagine con dimensioni normali](how-do-i-use-the-html-editor-control-vb/_static/image4.png))
 
@@ -49,7 +49,7 @@ Prima di utilizzare l'Editor HTML in una pagina ASP.NET, è innanzitutto necessa
 Il controllo dell'Editor HTML si trova nella casella degli strumenti con il resto dei controlli AJAX Control Toolkit. Il file viene denominato il controllo dell'Editor (vedere la figura 3).
 
 
-[![Tegli controllo dell'Editor HTML](how-do-i-use-the-html-editor-control-vb/_static/image3.jpg)](how-do-i-use-the-html-editor-control-vb/_static/image5.png)
+[![Il controllo dell'Editor HTML](how-do-i-use-the-html-editor-control-vb/_static/image3.jpg)](how-do-i-use-the-html-editor-control-vb/_static/image5.png)
 
 **Figura 03**: Controllo HTMLEditor ([fare clic per visualizzare l'immagine con dimensioni normali](how-do-i-use-the-html-editor-control-vb/_static/image6.png))
 
@@ -63,7 +63,7 @@ Dopo avere trascinato l'Editor HTML in una pagina, è possibile impostare le rel
 La pagina nel listato 1 contiene un controllo Editor HTML, un controllo Button e un controllo Literal. Quando si fa clic sul pulsante, il contenuto dell'Editor HTML viene visualizzato nel controllo Literal (vedere la figura 4).
 
 
-[![Smoduli un form con un Editor HTML](how-do-i-use-the-html-editor-control-vb/_static/image4.jpg)](how-do-i-use-the-html-editor-control-vb/_static/image7.png)
+[![Invio di un modulo con un Editor HTML](how-do-i-use-the-html-editor-control-vb/_static/image4.jpg)](how-do-i-use-the-html-editor-control-vb/_static/image7.png)
 
 **Figura 04**: Invio di un modulo con un Editor HTML ([fare clic per visualizzare l'immagine con dimensioni normali](how-do-i-use-the-html-editor-control-vb/_static/image8.png))
 
@@ -75,7 +75,7 @@ La proprietà Content dell'Editor HTML viene utilizzata per recuperare il conten
 È possibile personalizzare esattamente quali pulsanti vengono visualizzati nell'editor. Ad esempio, è possibile rimuovere la scheda HTML per impedire agli utenti di attivare l'Editor HTML nella modalità HTML. In alternativa, è possibile rimuovere l'elenco a discesa delle dimensioni del tipo di carattere per impedire agli utenti di creare testo di grandi dimensioni eccessivamente in un forum dei messaggi post (vedere la figura 5).
 
 
-[![A personalizzata dell'Editor HTML](how-do-i-use-the-html-editor-control-vb/_static/image5.jpg)](how-do-i-use-the-html-editor-control-vb/_static/image9.png)
+[![Un Editor di codice HTML personalizzato](how-do-i-use-the-html-editor-control-vb/_static/image5.jpg)](how-do-i-use-the-html-editor-control-vb/_static/image9.png)
 
 **Figura 05**: Oggetto personalizzato dell'Editor HTML ([fare clic per visualizzare l'immagine con dimensioni normali](how-do-i-use-the-html-editor-control-vb/_static/image10.png))
 

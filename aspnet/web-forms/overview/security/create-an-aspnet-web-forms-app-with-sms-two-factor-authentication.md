@@ -12,7 +12,7 @@ ms.openlocfilehash: 2010de510cf44bba1b95d29dbdb573ab78f452f7
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59411358"
 ---
 # <a name="create-an-aspnet-web-forms-app-with-sms-two-factor-authentication-c"></a>Creare un'app Web Forms ASP.NET con l'autenticazione a due fattori SMS (C#)

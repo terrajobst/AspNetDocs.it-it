@@ -12,7 +12,7 @@ ms.openlocfilehash: 10b853966ba80b673e1a6786987893f919369e7a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59412905"
 ---
 # <a name="caching-data-in-an-aspnet-web-pages-razor-site-for-better-performance"></a>La memorizzazione nella cache i dati in un sito di ASP.NET Web Pages (Razor) per ottenere prestazioni migliori

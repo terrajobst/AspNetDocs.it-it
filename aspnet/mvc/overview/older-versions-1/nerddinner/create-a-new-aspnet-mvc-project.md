@@ -12,14 +12,14 @@ ms.openlocfilehash: c85db4289698988ead44afd452da17054bab9f07
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59417208"
 ---
 # <a name="create-a-new-aspnet-mvc-project"></a>Creare un nuovo progetto ASP.NET MVC
 
 by [Microsoft](https://github.com/microsoft)
 
-[Scarica il PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
+[Scaricare PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
 
 > Si tratta di passaggio 1 di una liberazione [esercitazione sull'applicazione "NerdDinner"](introducing-the-nerddinner-tutorial.md) che si interromperanno-dettaglio come compilare una piccola, ma completa, applicazione web con ASP.NET MVC 1.
 > 
@@ -66,7 +66,7 @@ I progetti ASP.NET MVC per impostazione predefinita sono sei directory di primo 
 | **O i modelli** | Si inseriranno le classi che rappresentano e modificano i dati |
 | **/ Viste** | In cui vengono salvati i file di modello di interfaccia utente che sono responsabili di output del rendering |
 | **/Scripts** | Si inseriranno i file di libreria JavaScript e script (con estensione js) |
-| **/ Content** | Si inseriranno CSS e file di immagine e altri contenuti non non dinamica/JavaScript |
+| **/Content** | Si inseriranno CSS e file di immagine e altri contenuti non non dinamica/JavaScript |
 | **/App\_Data** | In cui si archiviano file di dati che si desidera lettura/scrittura. |
 
 ASP.NET MVC non richiede questa struttura. In effetti, gli sviluppatori che lavorano su applicazioni di grandi dimensioni in genere suddividerà l'applicazione backup tra più progetti per renderla più gestibile (ad esempio: classi di modello di dati spesso passare in un progetto di libreria di classi separata dall'applicazione web). La struttura del progetto predefinita, tuttavia, fornisce una convenzione di directory predefinito interessante che è possibile usare per mantenere pulito i problemi dell'applicazione.

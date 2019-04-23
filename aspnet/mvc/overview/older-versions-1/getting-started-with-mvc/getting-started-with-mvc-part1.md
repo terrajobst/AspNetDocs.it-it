@@ -12,7 +12,7 @@ ms.openlocfilehash: dcc2e703829cfa0b77575870feff451fd0738f56
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59416493"
 ---
 # <a name="intro-to-aspnet-mvc"></a>Introduzione ad ASP.NET MVC
@@ -36,7 +36,7 @@ Ecco due schermate dell'applicazione che verrà compilata. Si avrà una semplice
 
 E sarà necessario un modulo creare in modo che possiamo aggiungere all'elenco di film.
 
-[![CCrea un film - Windows Internet Explorer (2)](getting-started-with-mvc-part1/_static/image4.png)](getting-started-with-mvc-part1/_static/image3.png)
+[![Creare un filmato - Windows Internet Explorer (2)](getting-started-with-mvc-part1/_static/image4.png)](getting-started-with-mvc-part1/_static/image3.png)
 
 ## <a name="skills-youll-learn"></a>Competenze
 
@@ -77,9 +77,9 @@ Selezionare il pulsante "play" alla barra degli strumenti.
 
 In questo modo Visual Web Developer avviare un server web di sviluppo ed eseguire l'applicazione web (non esistono alcuna configurazione o passaggi manuali necessari per abilitare questa opzione). Quindi verrà avviato un browser e configurarlo per Sfoglia home page dell'applicazione. Notare che la barra degli indirizzi del browser viene visualizzato "localhost" e non un valore come example.com sotto. Ciò avviene perché localhost fa sempre riferimento al proprio computer locale - che in questo caso è in esecuzione l'applicazione, che abbiamo appena creato.
 
-[![Horte pagina](getting-started-with-mvc-part1/_static/image13.png)](getting-started-with-mvc-part1/_static/image12.png)
+[![Home Page](getting-started-with-mvc-part1/_static/image13.png)](getting-started-with-mvc-part1/_static/image12.png)
 
 Impostazione predefinita questo modello predefinito include è due pagine alla visita e una pagina di accesso basic. È possibile modificare il comportamento dell'applicazione e scopri un po' su ASP.NET MVC nel processo. Chiudere il browser e consente di modificare il codice.
 
 > [!div class="step-by-step"]
-> [Successivo](getting-started-with-mvc-part2.md)
+> [avanti](getting-started-with-mvc-part2.md)

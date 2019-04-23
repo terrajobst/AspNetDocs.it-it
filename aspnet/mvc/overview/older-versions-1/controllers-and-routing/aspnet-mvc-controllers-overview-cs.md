@@ -12,7 +12,7 @@ ms.openlocfilehash: 21891a022885f7a4fae6d7fe3276587abf59986d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59414296"
 ---
 # <a name="aspnet-mvc-controller-overview-c"></a>Panoramica del controller ASP.NET MVC (C#)
@@ -72,7 +72,7 @@ Tutti questi risultati azione ereditano dalla classe ActionResult di base.
 
 Nella maggior parte dei casi, un'azione del controller restituisce l'elemento ViewResult. Ad esempio, l'azione Index del controller nel listato 2 restituisce l'elemento ViewResult.
 
-**Listing 2 - Controllers\BookController.cs**
+**Listato 2 - Controllers\BookController.cs**
 
 [!code-csharp[Main](aspnet-mvc-controllers-overview-cs/samples/sample2.cs)]
 
@@ -97,7 +97,7 @@ Pertanto, se si desidera restituire una visualizzazione nel browser, chiamare il
 
 Il risultato dell'azione ContentResult è speciale. È possibile usare il risultato dell'azione ContentResult per restituire un risultato dell'azione come testo normale. Ad esempio, il metodo Index () nel listato 4 restituisce un messaggio come testo normale e non come HTML.
 
-**Listing 4 - Controllers\StatusController.cs**
+**Listato 4 - Controllers\StatusController.cs**
 
 [!code-csharp[Main](aspnet-mvc-controllers-overview-cs/samples/sample4.cs)]
 

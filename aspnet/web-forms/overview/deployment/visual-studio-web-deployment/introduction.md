@@ -12,7 +12,7 @@ ms.openlocfilehash: 0edab77cd973af129e54c7867265f86b47c349a6
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59410136"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-introduction"></a>Distribuzione Web ASP.NET tramite Visual Studio: Introduzione
@@ -126,7 +126,7 @@ Se si usa Visual Studio 2013, installare [Azure SDK per Visual Studio 2013](http
 Se si usa Visual Studio 2010 SP1, installare il software seguente:
 
 - [Azure SDK per Visual Studio 2010](https://go.microsoft.com/fwlink/?LinkID=254269)
-- [LocalDB di SQL Server Express](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=SQLLocalDBOnly_11_0)
+- [SQL Server Express LocalDB](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=SQLLocalDBOnly_11_0)
 - [SQL Server Data Tools](https://msdn.microsoft.com/library/hh500335.aspx).
 
 A seconda del numero di dipendenze da SDK è già nel computer, installare Azure SDK può richiedere tempi lunghi, da alcuni minuti ad almeno mezz'ora. Anche se si prevede di pubblicare in un provider di hosting di terze parti anziché in Azure, le funzionalità di pubblicazione perché il SDK include gli aggiornamenti più recenti sul web di Visual Studio, è necessario Azure SDK.
@@ -200,4 +200,4 @@ Le seguenti funzionalità dell'applicazione influiscono sul modo in cui si distr
 In questa prima esercitazione della serie, è stato scaricato il progetto di Visual Studio di esempio ed esaminato le funzionalità del sito che influiscono sul modo in cui si distribuisce l'applicazione. Nelle esercitazioni seguenti, Prepara per la distribuzione impostando alcune di queste azioni devono essere gestiti automaticamente. Gli altri occuperà di manualmente.
 
 > [!div class="step-by-step"]
-> [Successivo](preparing-databases.md)
+> [avanti](preparing-databases.md)

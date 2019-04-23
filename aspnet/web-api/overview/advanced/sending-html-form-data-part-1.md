@@ -13,7 +13,7 @@ ms.openlocfilehash: fb0309af11910125943737ebb721b356b7bd08bc
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59418300"
 ---
 # <a name="sending-html-form-data-in-aspnet-web-api-form-urlencoded-data"></a>L'invio di dati di Form HTML nell'API Web ASP.NET: dati form-urlencoded
@@ -134,4 +134,4 @@ Ed ecco lo script per inviare il valore di modulo. L'unica differenza da script 
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-[Parte 2. caricamento di file e MIME composto](sending-html-form-data-part-2.md)
+[Parte 2. Caricamento di file e MIME Multipart](sending-html-form-data-part-2.md)

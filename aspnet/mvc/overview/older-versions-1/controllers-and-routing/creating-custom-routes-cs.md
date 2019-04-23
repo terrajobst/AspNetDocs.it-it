@@ -12,7 +12,7 @@ ms.openlocfilehash: 7b7324c9e0518697c0978b96b0123cb44133722b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59418937"
 ---
 # <a name="creating-custom-routes-c"></a>Creazione di route personalizzate (C#)
@@ -61,7 +61,7 @@ Si noti che il metodo Entry() nel listato 2 accetta un parametro di tipo DateTim
 **Figura 1. errore di conversione del parametro**
 
 
-[![Tfinestra di dialogo Nuovo progetto di he](creating-custom-routes-cs/_static/image1.jpg)](creating-custom-routes-cs/_static/image1.png)
+[![La finestra di dialogo Nuovo progetto](creating-custom-routes-cs/_static/image1.jpg)](creating-custom-routes-cs/_static/image1.png)
 
 **Figura 01**: Errore di conversione del parametro ([fare clic per visualizzare l'immagine con dimensioni normali](creating-custom-routes-cs/_static/image2.png))
 

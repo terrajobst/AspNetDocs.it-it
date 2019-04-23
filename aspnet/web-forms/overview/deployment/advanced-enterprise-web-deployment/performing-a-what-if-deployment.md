@@ -12,14 +12,14 @@ ms.openlocfilehash: a222aa6bf52ee72e6a0f4ac5503b4b4f78d294fb
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59414322"
 ---
 # <a name="performing-a-what-if-deployment"></a>Esecuzione di una distribuzione di simulazione
 
 da [Jason Lee](https://github.com/jrjlee)
 
-[Scarica il PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Scaricare PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > In questo argomento viene descritto come eseguire "what if" (o simulati) le distribuzioni usando lo strumento di distribuzione Web di Internet Information Services (IIS) (distribuzione Web) e VSDBCMD. Ciò consente di determinare gli effetti della logica di distribuzione in un ambiente di destinazione specifico prima di distribuire effettivamente l'applicazione.
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: 1023d9bef311e58fb5fb0bb24cde80e8320e6bac
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59419054"
 ---
 # <a name="hands-on-lab-one-aspnet-integrating-aspnet-web-forms-mvc-and-web-api"></a>Lab pratico: One ASP.NET: integrazione di Web Forms ASP.NET, MVC e API Web
@@ -103,7 +103,7 @@ In questa attività si avvierà la creazione di un nuovo sito Web in Visual Stud
 
     ![Creazione di un nuovo progetto](one-aspnet-integrating-aspnet-web-forms-mvc-and-web-api/_static/image1.png)
 
-    *Creazione di un nuovo progetto*
+    *Crea un nuovo progetto*
 2. Nel **nuovo progetto** finestra di dialogo **applicazione Web ASP.NET** sotto il **Visual c# | Web** scheda e assicurarsi che **.NET Framework 4.5** sia selezionata. Denominare il progetto *MyHybridSite*, scegliere una **posizione** e fare clic su **OK**.
 
     ![Nuovo progetto di applicazione Web ASP.NET](one-aspnet-integrating-aspnet-web-forms-mvc-and-web-api/_static/image2.png)
@@ -390,7 +390,7 @@ Quando si crea un'API Web, è utile creare una pagina della Guida in modo che al
 
     ![Scheda compilazione](one-aspnet-integrating-aspnet-web-forms-mvc-and-web-api/_static/image32.png "Build sezione")
 
-    *Scheda Compila*
+    *Scheda compilazione*
 5. Sotto **Output**, selezionare **file di documentazione XML**. Nella casella di modifica, digitare **App\_Data/XmlDocument.xml**.
 
     ![Nella scheda Build sezione output](one-aspnet-integrating-aspnet-web-forms-mvc-and-web-api/_static/image33.png "sezione scheda compilazione nella finestra di Output")

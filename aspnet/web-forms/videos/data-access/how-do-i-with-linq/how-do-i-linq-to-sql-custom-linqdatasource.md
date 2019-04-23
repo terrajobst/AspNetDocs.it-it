@@ -12,7 +12,7 @@ ms.openlocfilehash: ce7daaab2478d1c5a4b67e6cec33c033e53ceafb
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59410279"
 ---
 # <a name="how-do-i-linq-to-sql-custom-linqdatasource"></a>[Procedura:] LINQ to SQL: LinqDataSource personalizzato

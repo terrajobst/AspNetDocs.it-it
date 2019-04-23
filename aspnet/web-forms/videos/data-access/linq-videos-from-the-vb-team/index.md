@@ -12,7 +12,7 @@ ms.openlocfilehash: 3db35464b448727ef3477a90149459a46e0f76d7
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59412164"
 ---
 # <a name="linq-videos-from-the-vb-team"></a>Video su LINQ dal team di Visual Basic
@@ -22,7 +22,7 @@ ms.locfileid: "59412164"
 
 - [Introduzione a LINQ](how-do-i-get-started-with-linq.md)
 - [Esecuzione di query di raggruppamento e aggregazione](how-do-i-perform-group-and-aggregate-queries.md)
-- [Aggiornare progetti Visual Basic per abilitare LINQ](how-do-i-upgrade-visual-basic-projects-to-enable-linq.md)
+- [Aggiornamento di progetti Visual Basic per abilitare LINQ](how-do-i-upgrade-visual-basic-projects-to-enable-linq.md)
 - [Introduzione a LINQ to XML](how-do-i-get-started-with-linq-to-xml.md)
 - [Abilitare XML IntelliSense e usare lo spazio dei nomi XML](how-do-i-enable-xml-intellisense-and-use-xml-namespaces.md)
 - [Creare documenti XML basati su dati SQL](how-do-i-create-xml-documents-from-sql-data.md)

@@ -12,7 +12,7 @@ ms.openlocfilehash: b9da2522cfaed324a23f43265d4e234ebb4950bd
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59411124"
 ---
 # <a name="whats-new-in-aspnet-mvc-4"></a>Novità di ASP.NET MVC 4
@@ -127,7 +127,7 @@ In questo esercizio si esploreranno i miglioramenti nei modelli di progetto ASP.
 
     *Nuova pagina di contatto*
 
-    **Rendering adattivo**
+    **Adaptive Rendering**
 
     Consulta il ridimensionamento della finestra del browser e notare come il layout di pagina si adatta dinamicamente per le nuove dimensioni della finestra. Questi modelli utilizzano la tecnica di rendering adattivo per eseguire il rendering correttamente in piattaforme mobili e desktop senza eseguire alcuna personalizzazione.
 
@@ -141,7 +141,7 @@ In questo esercizio si esploreranno i miglioramenti nei modelli di progetto ASP.
 
     ![Convalida di jQuery](whats-new-in-aspnet-mvc-4/_static/image6.png)
 
-    *Convalida di jQuery*
+    *jQuery Validation*
 
     > [!NOTE]
     > Si noti che il registro due sezioni, nella prima sezione è possibile accedere usando un account registrato dal sito e nella seconda sezione è possibile in alternativa accedere con un altro servizio di autenticazione, ad esempio google (disabilitato per impostazione predefinita).
@@ -547,7 +547,7 @@ In questa attività si aggiornerà il layout desktop per includere il cambio di 
 
     ![Informazioni sulla pagina](whats-new-in-aspnet-mvc-4/_static/image33.png "sulla pagina")
 
-    *Pagina About (Informazioni)*
+    *Informazioni sulla pagina*
 8. Infine, aprire il sito in un browser desktop. Si noti che nessuno degli aggiornamenti precedenti ha modificato la visualizzazione desktop.
 
     ![Visualizzazione desktop PhotoGallery](whats-new-in-aspnet-mvc-4/_static/image34.png "visualizzazione desktop PhotoGallery")
@@ -876,7 +876,7 @@ Per eseguire il sito in un dispositivo simulato iPhone è possibile usare l'este
 4. Nel &quot;Aggiungi programma&quot; finestra di dialogo, usare i valori seguenti:
 
    - **Programma**: C:\Users\*{CurrentUser}*\AppData\Local\Microsoft\WebMatrix\Extensions\20\iPhoneSimulator\ElectricMobileSim\ElectricMobileSim.exe *(aggiornare di conseguenza il percorso)*
-   - **Gli argomenti**: &quot;1&quot;
+   - **Argomenti**: &quot;1&quot;
    - **Nome descrittivo**: simulatore iPhone
 
      ![Aggiungi programma](whats-new-in-aspnet-mvc-4/_static/image59.png "Aggiungi programma")

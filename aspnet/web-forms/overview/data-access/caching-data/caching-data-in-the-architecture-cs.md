@@ -12,7 +12,7 @@ ms.openlocfilehash: 7637e23678af80ae037292fd3f89ef74167c8242
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59419249"
 ---
 # <a name="caching-data-in-the-architecture-c"></a>Memorizzazione di dati nella cache nell'architettura (C#)
@@ -159,7 +159,7 @@ Grazie a questa modifica a `AddCacheItem(key, value)`, invaliding è semplice qu
 Metodi e le classi di memorizzazione nella cache di livello s utilizzabile per lavorare con i dati usando le tecniche si va esaminato in queste esercitazioni. Per illustrare l'utilizzo dei dati memorizzati nella cache, salvare le modifiche per il `ProductsCL` classe e quindi aprire la `FromTheArchitecture.aspx` nella pagina il `Caching` cartella e aggiungere un controllo GridView. GridView s nello smart tag, creare un nuovo oggetto ObjectDataSource. Nel primo passaggio s guidata dovrebbe essere il `ProductsCL` classe come una delle opzioni nell'elenco a discesa.
 
 
-[![Tegli che productscl classe è inclusa nell'elenco a discesa di oggetti Business](caching-data-in-the-architecture-cs/_static/image5.png)](caching-data-in-the-architecture-cs/_static/image4.png)
+[![La classe ProductsCL è incluso nell'elenco a discesa di oggetti Business](caching-data-in-the-architecture-cs/_static/image5.png)](caching-data-in-the-architecture-cs/_static/image4.png)
 
 **Figura 4**: Il `ProductsCL` classe è inclusa nell'elenco a discesa di oggetti Business ([fare clic per visualizzare l'immagine con dimensioni normali](caching-data-in-the-architecture-cs/_static/image6.png))
 
@@ -167,7 +167,7 @@ Metodi e le classi di memorizzazione nella cache di livello s utilizzabile per l
 Dopo aver selezionato `ProductsCL`, fare clic su Avanti. L'elenco di riepilogo a discesa della scheda selezionare dispone di due elementi - `GetProducts()` e `GetProductsByCategoryID(categoryID)` e la scheda aggiornamento ha unico `UpdateProduct` rapporto di overload. Scegliere il `GetProducts()` metodo nella scheda Seleziona e `UpdateProducts` metodo la scheda aggiornamento e fare clic su Fine.
 
 
-[![Tegli che productscl classe s metodi sono elencati nell'elenco a discesa Elenca](caching-data-in-the-architecture-cs/_static/image8.png)](caching-data-in-the-architecture-cs/_static/image7.png)
+[![Nell'elenco a discesa Elenca sono elencati i metodi della classe ProductsCL s](caching-data-in-the-architecture-cs/_static/image8.png)](caching-data-in-the-architecture-cs/_static/image7.png)
 
 **Figura 5**: Il `ProductsCL` sono racchiusi l'elenco a discesa sono elencati i metodi della classe s ([fare clic per visualizzare l'immagine con dimensioni normali](caching-data-in-the-architecture-cs/_static/image9.png))
 

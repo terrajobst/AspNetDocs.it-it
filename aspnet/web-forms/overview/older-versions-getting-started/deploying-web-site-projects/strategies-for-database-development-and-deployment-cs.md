@@ -12,14 +12,14 @@ ms.openlocfilehash: 3951ab4562e2c172f418c74136d511f0f9f50454
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59415843"
 ---
 # <a name="strategies-for-database-development-and-deployment-c"></a>Strategie per lo sviluppo e la distribuzione del database (C#)
 
 da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Scarica il PDF](http://download.microsoft.com/download/C/3/9/C391A649-B357-4A7B-BAA4-48C96871FEA6/aspnet_tutorial10_DBDevel_cs.pdf)
+[Scaricare PDF](http://download.microsoft.com/download/C/3/9/C391A649-B357-4A7B-BAA4-48C96871FEA6/aspnet_tutorial10_DBDevel_cs.pdf)
 
 > Quando si distribuisce un'applicazione basata su dati per la prima volta che è possibile copiare il database alla cieca nell'ambiente di sviluppo all'ambiente di produzione. Ma esegue una forzata copia nelle distribuzioni successive sovrascriverà tutti i dati immessi nel database di produzione. Al contrario, la distribuzione di un database comporta applicando le modifiche apportate al database di sviluppo dopo l'ultima distribuzione nel database di produzione. Questa esercitazione esamina questi problemi e offre diverse strategie per agevolare chronicling e applicare le modifiche apportate al database dopo l'ultima distribuzione.
 
@@ -55,7 +55,7 @@ Il modo più semplice per mantenere un registro delle modifiche al modello di da
 <a id="0.4_table01"></a>
 
 
-| **Data di modifica** | **Dettagli delle modifiche** |
+| **Data modifica** | **Dettagli delle modifiche** |
 | --- | --- |
 | 2009-02-03: | Colonna aggiunta `DepartmentID` (`int`, non NULL) per il `Employees` tabella. Aggiungere un vincolo foreign key dalla `Departments.DepartmentID` a `Employees.DepartmentID`. |
 | 2009-02-05: | Colonna rimossa `TotalWeight` dal `Orders` tabella. Associati a dati già acquisiti in `OrderDetails` record. |
@@ -99,7 +99,7 @@ Sono disponibili numerosi strumenti di confronto del database di terze parti off
 All'avvio di SQL Compare apre la finestra di dialogo confronto tra progetti, che mostra i progetti SQL Compare salvati. Creare un nuovo progetto. Verrà avviata la procedura guidata configurazione del progetto, che richiede informazioni sul database per il confronto (vedere la figura 1). Immettere le informazioni per i database ambiente di sviluppo e produzione.
 
 
-[![Compare lo sviluppo e i database di produzione](strategies-for-database-development-and-deployment-cs/_static/image2.jpg)](strategies-for-database-development-and-deployment-cs/_static/image1.jpg)
+[![Confrontare il database di sviluppo e produzione](strategies-for-database-development-and-deployment-cs/_static/image2.jpg)](strategies-for-database-development-and-deployment-cs/_static/image1.jpg)
 
 **Figura 1**: Confrontare il database di sviluppo e produzione ([fare clic per visualizzare l'immagine con dimensioni normali](strategies-for-database-development-and-deployment-cs/_static/image3.jpg))
 
@@ -116,7 +116,7 @@ Dopo aver selezionato i database da confrontare e verificare le opzioni di confr
 > Le modifiche al modello di dati apportate in questa esercitazione sono stati eseguiti per illustrare l'utilizzo di uno strumento di confronto del database. Queste modifiche nel database si troverà non in esercitazioni future.
 
 
-[![SConfronto QL sono elencate le differenze tra lo sviluppo e i database di produzione](strategies-for-database-development-and-deployment-cs/_static/image5.jpg)](strategies-for-database-development-and-deployment-cs/_static/image4.jpg)
+[![Confronto SQL sono elencate le differenze tra lo sviluppo e i database di produzione](strategies-for-database-development-and-deployment-cs/_static/image5.jpg)](strategies-for-database-development-and-deployment-cs/_static/image4.jpg)
 
 **Figura 2**: Confronto SQL sono elencate le differenze tra sviluppo e i database di produzione ([fare clic per visualizzare l'immagine con dimensioni normali](strategies-for-database-development-and-deployment-cs/_static/image6.jpg))
 
@@ -128,7 +128,7 @@ Selezione di un oggetto di database consente di visualizzare la finestra delle d
 Dopo aver esaminato le differenze e selezionare gli oggetti da sincronizzare, il successivo passaggio consiste nel generare i comandi SQL necessari per aggiornare lo schema del database s in modo che corrisponda il database di sviluppo. Questa operazione viene eseguita tramite la configurazione guidata sincronizzazione. La configurazione guidata sincronizzazione conferma di ciò che gli oggetti per la sincronizzazione e riepiloga l'azione di pianificazione (vedere la figura 3). È possibile sincronizzare i database immediatamente o generare uno script con i comandi SQL che può essere eseguito in base alle esigenze specifiche.
 
 
-[![USe la configurazione guidata sincronizzazione per sincronizzare Your gli schemi di database](strategies-for-database-development-and-deployment-cs/_static/image8.jpg)](strategies-for-database-development-and-deployment-cs/_static/image7.jpg)
+[![Usare la configurazione guidata sincronizzazione per sincronizzare gli schemi di database](strategies-for-database-development-and-deployment-cs/_static/image8.jpg)](strategies-for-database-development-and-deployment-cs/_static/image7.jpg)
 
 **Figura 3**: Utilizzare la procedura guidata di sincronizzazione per sincronizzare Your gli schemi di database ([fare clic per visualizzare l'immagine con dimensioni normali](strategies-for-database-development-and-deployment-cs/_static/image9.jpg))
 

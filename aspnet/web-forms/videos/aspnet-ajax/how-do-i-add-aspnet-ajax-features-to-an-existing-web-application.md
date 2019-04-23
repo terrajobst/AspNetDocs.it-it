@@ -12,7 +12,7 @@ ms.openlocfilehash: 2d47913d3e29cdc7a69b0ba5a038e20fe0420460
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59418079"
 ---
 # <a name="how-do-i-add-aspnet-ajax-features-to-an-existing-web-application"></a>[Procedura:] Aggiungere funzionalità ASP.NET AJAX a un'applicazione Web esistente?

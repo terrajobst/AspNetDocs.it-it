@@ -12,7 +12,7 @@ ms.openlocfilehash: b52abab12503918603419c9ccfabefcffdfd7e06
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59418274"
 ---
 # <a name="authenticating-users-with-forms-authentication-c"></a>Autenticazione degli utenti con l'autenticazione basata su form (C#)
@@ -150,4 +150,4 @@ Dopo aver creato l'account di accesso necessarie, è necessario eseguire il mapp
 In questa esercitazione è stato descritto come usare l'autenticazione form durante la creazione di un'applicazione ASP.NET MVC. In primo luogo, è stato descritto come creare nuovi utenti e ruoli, sfruttando i vantaggi dello strumento Amministrazione sito Web. Successivamente, si è appreso come usare l'attributo [Authorize] per impedire agli utenti non autorizzati di richiamare le azioni del controller. Infine, si è appreso come configurare l'applicazione MVC per archiviare informazioni sui ruoli e utenti in un database di produzione.
 
 > [!div class="step-by-step"]
-> [Successivo](authenticating-users-with-windows-authentication-cs.md)
+> [avanti](authenticating-users-with-windows-authentication-cs.md)

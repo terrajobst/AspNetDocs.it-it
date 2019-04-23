@@ -12,7 +12,7 @@ ms.openlocfilehash: 85862c094cc54365267b1f21e68d235a15519cda
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59419236"
 ---
 # <a name="routing-in-aspnet-web-api"></a>Routing in API Web ASP.NET
@@ -69,7 +69,7 @@ Ecco alcune possibili richieste HTTP, insieme all'azione che viene richiamato pe
 
 | Verbo HTTP | Percorso dell'URI | Operazione | Parametro |
 | --- | --- | --- | --- |
-| GET | API/prodotti | GetAllProducts | *(nessuno)* |
+| GET | API/prodotti | GetAllProducts | *(none)* |
 | GET | API/prodotti/4 | GetProductById | 4 |
 | DELETE | API/prodotti/4 | DeleteProduct | 4 |
 | INSERISCI | API/prodotti | *(nessuna corrispondenza trovata)* |  |

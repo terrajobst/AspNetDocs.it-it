@@ -12,7 +12,7 @@ ms.openlocfilehash: 223fad7013a53212c0c822a87bd3e2fcc0a5f17f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59408953"
 ---
 # <a name="dynamically-controlling-updatepanel-animations-vb"></a>Controllo dinamico delle animazioni UpdatePanel (VB)
@@ -58,7 +58,7 @@ Infine, il `UpdatePanelAnimationExtender` devono essere configurati: Impostare i
 Eseguire il file nel browser. Quando si fa clic sul pulsante, l'ora corrente viene visualizzata nel pannello dei sempre la dissolvenza in entrata per la durata di un secondo.
 
 
-[![Tè ora corrente è la dissolvenza in entrata](dynamically-controlling-updatepanel-animations-vb/_static/image2.png)](dynamically-controlling-updatepanel-animations-vb/_static/image1.png)
+[![L'ora corrente è la dissolvenza in entrata](dynamically-controlling-updatepanel-animations-vb/_static/image2.png)](dynamically-controlling-updatepanel-animations-vb/_static/image1.png)
 
 L'ora corrente è la dissolvenza in entrata ([fare clic per visualizzare l'immagine con dimensioni normali](dynamically-controlling-updatepanel-animations-vb/_static/image3.png))
 

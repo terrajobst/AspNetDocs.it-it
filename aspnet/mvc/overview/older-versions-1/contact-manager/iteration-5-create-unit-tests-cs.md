@@ -12,7 +12,7 @@ ms.openlocfilehash: 68080859e205283f56d8f543bfa06b76bb22a39d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59408862"
 ---
 # <a name="iteration-5--create-unit-tests-c"></a>Iterazione #5-creare gli unit test (c#)
@@ -117,12 +117,12 @@ Prima di poter usare Moq, è necessario completare i passaggi seguenti:
 5. Dopo aver completato questi passaggi, la cartella Riferimenti dovrebbe essere simile nella figura 2.
 
 
-[![Unblocking Moq](iteration-5-create-unit-tests-cs/_static/image1.jpg)](iteration-5-create-unit-tests-cs/_static/image1.png)
+[![Moq sblocco](iteration-5-create-unit-tests-cs/_static/image1.jpg)](iteration-5-create-unit-tests-cs/_static/image1.png)
 
 **Figura 01**: Moq sblocco ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-5-create-unit-tests-cs/_static/image2.png))
 
 
-[![Rriferimenti dopo l'aggiunta di Moq](iteration-5-create-unit-tests-cs/_static/image2.jpg)](iteration-5-create-unit-tests-cs/_static/image3.png)
+[![Riferimenti dopo l'aggiunta di Moq](iteration-5-create-unit-tests-cs/_static/image2.jpg)](iteration-5-create-unit-tests-cs/_static/image3.png)
 
 **Figura 02**: Dopo aver aggiunto Moq i riferimenti ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-5-create-unit-tests-cs/_static/image4.png))
 
@@ -185,7 +185,7 @@ I restanti test verificare che quando viene chiamato il metodo CreateContact() c
 È possibile eseguire gli unit test nel listato 1, selezionando l'opzione di menu **esecuzione dei Test, tutti i test nella soluzione (CTRL + R, A)**. I risultati dei test vengono visualizzati nella finestra Risultati Test (vedere la figura 4).
 
 
-[![TRisultati est](iteration-5-create-unit-tests-cs/_static/image4.jpg)](iteration-5-create-unit-tests-cs/_static/image7.png)
+[![Risultati dei test](iteration-5-create-unit-tests-cs/_static/image4.jpg)](iteration-5-create-unit-tests-cs/_static/image7.png)
 
 **Figura 04**: I risultati dei test ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-5-create-unit-tests-cs/_static/image8.png))
 
@@ -224,7 +224,7 @@ restituire View("Create");
 Se non si è esplicita la restituzione di una visualizzazione della proprietà ViewResult.ViewName restituisce una stringa vuota.
 
 
-**Listing 2 - Controllers\ContactControllerTest.cs**
+**Listato 2 - Controllers\ContactControllerTest.cs**
 
 [!code-csharp[Main](iteration-5-create-unit-tests-cs/samples/sample6.cs)]
 

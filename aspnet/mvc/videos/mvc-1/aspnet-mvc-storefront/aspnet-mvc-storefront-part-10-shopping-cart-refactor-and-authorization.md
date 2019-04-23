@@ -12,7 +12,7 @@ ms.openlocfilehash: 57cac8d4fc2ee70689e625ed7c22cea0cb3bc4d9
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59408082"
 ---
 # <a name="aspnet-mvc-storefront-part-10-shopping-cart-refactor-and-authorization"></a>ASP.NET MVC Storefront - Parte 10: Refactoring e autorizzazione del carrello

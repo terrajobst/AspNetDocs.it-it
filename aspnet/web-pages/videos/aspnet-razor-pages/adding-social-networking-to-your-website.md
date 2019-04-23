@@ -12,7 +12,7 @@ ms.openlocfilehash: 2b70b49e6af449222cb67e64ed9026091646e6a4
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59408875"
 ---
 # <a name="adding-social-networking-to-your-website"></a>Aggiunta di social networking al sito Web

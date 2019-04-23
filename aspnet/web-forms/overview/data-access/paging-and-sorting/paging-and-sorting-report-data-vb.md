@@ -12,7 +12,7 @@ ms.openlocfilehash: 5f2cd9c752968f11efe74cce1c620d0b7cf6a467
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59408589"
 ---
 # <a name="paging-and-sorting-report-data-vb"></a>Suddivisione in pagine e ordinamento dei dati dei report (VB)
@@ -91,7 +91,7 @@ Successivamente, consentire s personalizzare i campi di s GridView in modo che v
 Figura 6 mostra lo stato di avanzamento fino ad ora, quando viene visualizzato tramite un browser. Si noti che la pagina elenca tutti i prodotti in una schermata che mostra ogni nome di prodotto s, categoria, fornitore, prezzo e lo stato sospeso.
 
 
-[![EACH dei prodotti sono elencati](paging-and-sorting-report-data-vb/_static/image7.png)](paging-and-sorting-report-data-vb/_static/image6.png)
+[![Ognuno dei prodotti sono elencati](paging-and-sorting-report-data-vb/_static/image7.png)](paging-and-sorting-report-data-vb/_static/image6.png)
 
 **Figura 6**: Ognuno dei prodotti sono elencati ([fare clic per visualizzare l'immagine con dimensioni normali](paging-and-sorting-report-data-vb/_static/image8.png))
 
@@ -101,7 +101,7 @@ Figura 6 mostra lo stato di avanzamento fino ad ora, quando viene visualizzato t
 Listato *tutti* dei prodotti in un'unica schermata può causare il sovraccarico di informazioni per l'utente ad analizzare i dati. Per rendere più gestibili i risultati, è possibile suddividere i dati in pagine più piccole di dati e consentire all'utente di scorrere i dati una pagina alla volta. Per eseguire questo è sufficiente selezionare la casella di controllo Attiva Paging nello smart tag s GridView (viene impostata la s GridView [ `AllowPaging` proprietà](https://msdn.microsoft.com/library/system.web.ui.webcontrols.gridview.allowpaging.aspx) a `true`).
 
 
-[![CControlla l'Abilita Paging casella di controllo per aggiungere il supporto di Paging](paging-and-sorting-report-data-vb/_static/image10.png)](paging-and-sorting-report-data-vb/_static/image9.png)
+[![Controllo casella di controllo Abilita il Paging per aggiungere il supporto di Paging](paging-and-sorting-report-data-vb/_static/image10.png)](paging-and-sorting-report-data-vb/_static/image9.png)
 
 **Figura 7**: Abilita Paging la casella di controllo per aggiungere il supporto di Paging ([fare clic per visualizzare l'immagine con dimensioni normali](paging-and-sorting-report-data-vb/_static/image11.png))
 
@@ -137,7 +137,7 @@ Successivamente, aprire il `GridView.skin` del file nel `DataWebControls` cartel
 Figura 8 mostra la pagina web quando visitati tramite un browser dopo che è stata selezionata la casella di controllo s Abilita Paging del controllo GridView e il `PagerStyle` e `PagerSettings` configurazioni sono state apportate tramite la `GridView.skin` file. Si noti come solo dieci record vengono visualizzati e l'interfaccia di paging indica che si sta visualizzando la prima pagina di dati.
 
 
-[![Wi-esimo Paging abilitata, solo un Subset dei record vengono visualizzati in un momento](paging-and-sorting-report-data-vb/_static/image13.png)](paging-and-sorting-report-data-vb/_static/image12.png)
+[![Con Paging abilitata, solo un Subset dei record vengono visualizzati contemporaneamente](paging-and-sorting-report-data-vb/_static/image13.png)](paging-and-sorting-report-data-vb/_static/image12.png)
 
 **Figura 8**: Con Paging abilitata, vengono visualizzati solo un Subset dei record alla volta ([fare clic per visualizzare l'immagine con dimensioni normali](paging-and-sorting-report-data-vb/_static/image14.png))
 
@@ -145,7 +145,7 @@ Figura 8 mostra la pagina web quando visitati tramite un browser dopo che è sta
 Quando l'utente fa clic su uno dei numeri di pagina nell'interfaccia di paging, un postback previsioni e la pagina Ricarica con cui pagina s record richiesti. Figura 9 mostra i risultati dopo avere acconsentito esplicitamente per visualizzare la pagina finale dei dati. Si noti che la pagina finale ha solo un record; infatti, sono presenti 81 record in totale, risultante in otto pagine di 10 record per ogni pagina più di una pagina con un unico record.
 
 
-[![Clicking su un numero di pagine determina un Postback e Mostra i Subset dei record appropriati](paging-and-sorting-report-data-vb/_static/image16.png)](paging-and-sorting-report-data-vb/_static/image15.png)
+[![Facendo clic su un numero di pagine determina un Postback e Mostra il Subset appropriato di record](paging-and-sorting-report-data-vb/_static/image16.png)](paging-and-sorting-report-data-vb/_static/image15.png)
 
 **Figura 9**: Facendo clic su un numero di pagine determina un Postback e Mostra i Subset dei record appropriati ([fare clic per visualizzare l'immagine con dimensioni normali](paging-and-sorting-report-data-vb/_static/image17.png))
 
@@ -182,7 +182,7 @@ Assegna questo gestore dell'evento il `PagingInformation` etichetta s `Text` pro
 Grazie a questa aggiunta, all'utente viene ora visualizzato un messaggio che indica quale pagina che stanno visitando e è il numero di pagine complessivo dei dati non esiste.
 
 
-[![Tegli numero di pagina corrente e il numero totale di pagine vengono visualizzati](paging-and-sorting-report-data-vb/_static/image19.png)](paging-and-sorting-report-data-vb/_static/image18.png)
+[![Il numero di pagina corrente e il numero totale di pagine vengono visualizzati](paging-and-sorting-report-data-vb/_static/image19.png)](paging-and-sorting-report-data-vb/_static/image18.png)
 
 **Figura 10**: Vengono visualizzati il numero di pagina corrente e il numero totale di pagine ([fare clic per visualizzare l'immagine con dimensioni normali](paging-and-sorting-report-data-vb/_static/image20.png))
 
@@ -206,7 +206,7 @@ Infine, è necessario creare un gestore eventi per s DropDownList `SelectedIndex
 Come illustrato nella figura 11, semplicemente modificando la s GridView `PageIndex` proprietà fa in modo che i dati riassociare a GridView. In s GridView `DataBound` gestore eventi appropriato DropDownList `ListItem` sia selezionata.
 
 
-[![Tegli utente viene automaticamente visualizzata la sesta pagina quando selezionano l'elemento dell'elenco a discesa scegliere pagina 6](paging-and-sorting-report-data-vb/_static/image22.png)](paging-and-sorting-report-data-vb/_static/image21.png)
+[![L'utente viene automaticamente visualizzata la sesta pagina quando selezionano l'elemento dell'elenco a discesa scegliere pagina 6](paging-and-sorting-report-data-vb/_static/image22.png)](paging-and-sorting-report-data-vb/_static/image21.png)
 
 **Figura 11**: L'utente viene automaticamente visualizzata la sesta pagina quando selezionano l'elemento dell'elenco a discesa scegliere pagina 6 ([fare clic per visualizzare l'immagine con dimensioni normali](paging-and-sorting-report-data-vb/_static/image23.png))
 
@@ -231,7 +231,7 @@ Questa sintassi indica di usare testo bianco quando tali collegamenti ipertestua
 Dopo l'aggiunta di CSS, quando si visita la pagina tramite un browser la schermata dovrebbe essere simile alla figura 12. In particolare, nella figura 12 mostra i risultati dopo che è stato fatto clic sul collegamento di intestazione s campo Prezzo.
 
 
-[![Tegli siano stati ordinati i risultati per l'elemento UnitPrice in ordine crescente](paging-and-sorting-report-data-vb/_static/image25.png)](paging-and-sorting-report-data-vb/_static/image24.png)
+[![I risultati sono stati ordinati per l'elemento UnitPrice in ordine crescente](paging-and-sorting-report-data-vb/_static/image25.png)](paging-and-sorting-report-data-vb/_static/image24.png)
 
 **Figura 12**: I risultati sono ordinati in base all'elemento UnitPrice in ordine crescente ([fare clic per visualizzare l'immagine con dimensioni normali](paging-and-sorting-report-data-vb/_static/image26.png))
 
@@ -264,7 +264,7 @@ Un campo può essere configurato in modo che è non ordinabile cancellando s rel
 Una volta il `SortExpression` proprietà è stata rimossa la `UnitPrice` BoundField, l'intestazione viene eseguito il rendering come testo anziché come un collegamento, impedendo in tal modo agli utenti di ordinamento dei dati in base al prezzo.
 
 
-[![BRimuovere la proprietà SortExpression, gli utenti non possono più y ordinare i prodotti in base al prezzo](paging-and-sorting-report-data-vb/_static/image29.png)](paging-and-sorting-report-data-vb/_static/image28.png)
+[![Rimuovendo la proprietà SortExpression, gli utenti non sarà più possono ordinare i prodotti in base al prezzo](paging-and-sorting-report-data-vb/_static/image29.png)](paging-and-sorting-report-data-vb/_static/image28.png)
 
 **Figura 14**: Rimuovendo la proprietà SortExpression, gli utenti non è più possono ordinare il prezzo per i prodotti ([fare clic per visualizzare l'immagine con dimensioni normali](paging-and-sorting-report-data-vb/_static/image30.png))
 
@@ -283,7 +283,7 @@ Per eseguire questo aggiungere un controllo pulsante Web alla pagina, impostare 
 Facendo clic su questo pulsante l'utente torna alla prima pagina con i prodotti ordinati in base al prezzo, dal metodo più costoso meno costoso (vedere Figura 15).
 
 
-[![Clicking gli ordini pulsante prodotti da the più costose per il minor](paging-and-sorting-report-data-vb/_static/image32.png)](paging-and-sorting-report-data-vb/_static/image31.png)
+[![Fare clic sul pulsante Ordina i prodotti da del più costoso alla meno](paging-and-sorting-report-data-vb/_static/image32.png)](paging-and-sorting-report-data-vb/_static/image31.png)
 
 **Figura 15**: Fare clic sul pulsante Ordina i prodotti da the più dispendiose alla meno ([fare clic per visualizzare l'immagine con dimensioni normali](paging-and-sorting-report-data-vb/_static/image33.png))
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: 8c6512cebfb141dbf2f4c19e614aac99ccd41dac
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59413698"
 ---
 # <a name="how-do-i-configure-email-notification-for-health-monitoring-on-an-aspnet-web-site"></a>[Procedura:] Configurare la notifica di posta elettronica per l'integrità del monitoraggio in un sito Web ASP.NET

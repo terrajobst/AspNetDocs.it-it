@@ -12,7 +12,7 @@ ms.openlocfilehash: eb886aac6c0a5d9e65719a0dc359acbad3b85659
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59408784"
 ---
 # <a name="how-do-i-enable-code-coverage-and-profiling-in-production-applications"></a>[Procedura:] Abilitare il Code Coverage e la profilatura nelle applicazioni di produzione?

@@ -12,7 +12,7 @@ ms.openlocfilehash: 7426399a0f114d66355cfed5df87df7ba6c54df4
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59408069"
 ---
 # <a name="how-do-i-retrieve-values-from-server-side-ajax-controls"></a>[Procedura:] Recuperare i valori dai controlli AJAX lato Server

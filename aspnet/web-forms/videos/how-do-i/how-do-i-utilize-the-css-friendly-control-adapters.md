@@ -12,7 +12,7 @@ ms.openlocfilehash: bf9b990355dba83c68059a50ee378a85fcdd4089
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59417403"
 ---
 # <a name="how-do-i-utilize-the-css-friendly-control-adapters"></a>[Procedura:] Usare CSS Friendly Control Adapters?

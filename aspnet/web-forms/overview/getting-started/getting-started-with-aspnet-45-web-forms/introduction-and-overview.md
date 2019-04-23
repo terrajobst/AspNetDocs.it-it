@@ -12,7 +12,7 @@ ms.openlocfilehash: 3a39e8d1979a743101d728eb3430e9aa0efb1252
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59415635"
 ---
 # <a name="getting-started-with-aspnet-45-web-forms-and-visual-studio-2017"></a>Introduzione a Web Form ASP.NET 4.5 e Visual Studio 2017
@@ -39,7 +39,7 @@ Gli sviluppatori al Web Form ASP.NET sono i destinatari di questa serie di eserc
 
 Per esaminare queste aree, è consigliabile esaminare il contenuto seguente:
 
-- [Guida introduttiva a Visual C#](https://msdn.microsoft.com/library/a72418yk.aspx)
+- [Introduzione a Visual c#](https://msdn.microsoft.com/library/a72418yk.aspx)
 - [Web Development](https://msdn.microsoft.com/beginner/bb308760.aspx), [HTML, CSS, JavaScript, SQL, PHP, JQuery](http://w3schools.com/)
 - [Database relazionale](http://en.wikipedia.org/wiki/Relational_database)
 - [Architettura a più livelli](http://en.wikipedia.org/wiki/Multitier_architecture)
@@ -193,4 +193,4 @@ Sono Benvenuti i commenti su questa serie di esercitazioni. Quando questa serie 
 Se si verifica un errore, messaggi di errore corrispondente potrebbero generare confusione, con nessuna spiegazioni su come risolverlo. Per altre informazioni, è possibile controllare la [forum ASP.NET](https://forums.asp.net/). Un'altra valida fonte è la sezione di domande e risposte nel [Introduzione a Web Form ASP.NET 4.5 e Visual Studio 2013 - Wingtip Toys](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) (C#) pagina di esempio. 
 
 > [!div class="step-by-step"]
-> [Successivo](create-the-project.md)
+> [avanti](create-the-project.md)

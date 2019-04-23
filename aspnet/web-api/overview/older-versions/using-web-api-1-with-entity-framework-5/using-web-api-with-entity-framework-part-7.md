@@ -12,7 +12,7 @@ ms.openlocfilehash: 028631f8855e4d94bebb0e965de75c4025e22859
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59409265"
 ---
 # <a name="part-7-creating-the-main-page"></a>Parte 7: Creazione della pagina principale
@@ -91,7 +91,7 @@ Di seguito sono le associazioni per il carrello della spesa:
 
 Si scorre la matrice carrello della spesa e visualizza il nome, prezzo e quantità. Si noti che il collegamento "Remove" e il pulsante di "Creazione dell'ordine" sono associati alle funzioni di modello di visualizzazione.
 
-**Orders**
+**Ordini**
 
 Ecco i binding per l'elenco di ordini:
 
@@ -99,7 +99,7 @@ Ecco i binding per l'elenco di ordini:
 
 Si scorre gli ordini e l'ID dell'ordine. L'evento clic sul collegamento associato ai `getDetails` (funzione).
 
-**Order Details**
+**Dettagli dell'ordine**
 
 Di seguito sono le associazioni per i dettagli dell'ordine:
 

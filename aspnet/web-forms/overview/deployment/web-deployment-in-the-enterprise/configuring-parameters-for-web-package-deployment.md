@@ -12,14 +12,14 @@ ms.openlocfilehash: f738d1c0b3cd99bb6df5f8b24dca907fa0b31f4d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59413100"
 ---
 # <a name="configuring-parameters-for-web-package-deployment"></a>Configurazione dei parametri per la distribuzione di pacchetti Web
 
 da [Jason Lee](https://github.com/jrjlee)
 
-[Scarica il PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Scaricare PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > In questo argomento viene descritto come impostare i valori dei parametri, come i nomi delle applicazioni web Internet Information Services (IIS), le stringhe di connessione e gli endpoint di servizio, quando si distribuisce un pacchetto web a un server web IIS remoto.
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: 149312e2ddf0a5023a4a12f5b05852f7da6b18f8
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59418170"
 ---
 # <a name="aspnet-mvc-overview"></a>Panoramica di ASP.NET MVC
@@ -29,7 +29,7 @@ MVC è uno schema progettuale standard che hanno familiari con molti sviluppator
 Il framework di MVC include i componenti seguenti:
 
 
-[![Iun'azione del controller che prevede un valore di parametro nvoking](asp-net-mvc-overview/_static/image1.jpg)](asp-net-mvc-overview/_static/image1.png)
+[![Richiamo di un'azione del controller che prevede un valore di parametro](asp-net-mvc-overview/_static/image1.jpg)](asp-net-mvc-overview/_static/image1.png)
 
 **Figura 01**: Richiamo di un'azione del controller che prevede un valore di parametro ([fare clic per visualizzare l'immagine con dimensioni normali](asp-net-mvc-overview/_static/image2.png))
 

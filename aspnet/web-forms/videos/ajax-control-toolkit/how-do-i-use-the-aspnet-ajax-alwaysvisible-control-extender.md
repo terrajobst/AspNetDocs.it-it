@@ -12,7 +12,7 @@ ms.openlocfilehash: 147fe5b0e749ce8f0c8096ea3f4583daac0255c3
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59416662"
 ---
 # <a name="how-do-i-use-the-aspnet-ajax-alwaysvisible-control-extender"></a>[Procedura:] Usare il controllo Extender AlwaysVisible controllo ASP.NET AJAX?

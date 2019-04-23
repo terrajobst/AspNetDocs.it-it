@@ -12,7 +12,7 @@ ms.openlocfilehash: c7c0de7ade31e43e3b43495cb6755608872d506d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59412749"
 ---
 # <a name="aspnet-and-visual-studio-2013"></a>ASP.NET e Visual Studio 2013
@@ -32,5 +32,5 @@ ms.locfileid: "59412749"
 - [Browser Link](using-browser-link.md)
 - [Note sulla versione di ASP.NET and Web Tools per Visual Studio 2013](release-notes.md)
 - [ASP.NET and Web Tools 2013.2 per Visual Studio 2013 Release Notes](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes.md)
-- [Lab pratico: Strumenti Web di Visual Studio 2013](visual-studio-2013-web-tools.md)
-- [Lab pratico: One ASP.NET: integrazione di Web Forms ASP.NET, MVC e API Web](one-aspnet-integrating-aspnet-web-forms-mvc-and-web-api.md)
+- [Laboratorio pratico: Strumenti Web di Visual Studio 2013](visual-studio-2013-web-tools.md)
+- [Laboratorio pratico: One ASP.NET: L'integrazione di Web Form ASP.NET, MVC e API Web](one-aspnet-integrating-aspnet-web-forms-mvc-and-web-api.md)

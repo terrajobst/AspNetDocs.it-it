@@ -12,7 +12,7 @@ ms.openlocfilehash: b1ea56d8588023dd37bc42521c7cd339e6f631c8
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59416194"
 ---
 # <a name="how-do-i-adding-elements-to-a-css-file-and-create-new-css-on-the-fly"></a>[Procedura:] Aggiunta di elementi a un file CSS di File e Crea nuovo contenuto CSS in tempo reale

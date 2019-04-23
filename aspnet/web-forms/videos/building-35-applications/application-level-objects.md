@@ -12,7 +12,7 @@ ms.openlocfilehash: 2eee7f07e205a468516fe828a66bb57b44f9c57a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59407809"
 ---
 # <a name="application-level-objects"></a>Oggetti a livello di applicazione

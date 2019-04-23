@@ -12,14 +12,14 @@ ms.openlocfilehash: 79774c6a1a1d05d5a7bcd82a5d7aa888933cf089
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59420107"
 ---
 # <a name="troubleshooting-the-packaging-process"></a>Risoluzione dei problemi del processo di creazione di pacchetti
 
 da [Jason Lee](https://github.com/jrjlee)
 
-[Scarica il PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Scaricare PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Questo argomento viene descritto come è possibile raccogliere informazioni dettagliate sul processo di creazione di pacchetti tramite il **EnablePackageProcessLoggingAndAssert** proprietà di Microsoft Build Engine (MSBuild).
 > 

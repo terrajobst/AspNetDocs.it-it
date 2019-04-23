@@ -12,7 +12,7 @@ ms.openlocfilehash: 016dfa2a5a5fb9aaed0e1c60194e53ac9ccb8b36
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59419587"
 ---
 # <a name="data-bound-controls"></a>Controlli associati a dati
@@ -86,7 +86,7 @@ Per visualizzare annunci pubblicitari nel file XML precedente, aggiungere un con
 
 Se si sceglie di usare una tabella di database come origine dati per il controllo AdRotator, è necessario innanzitutto configurare un database usando lo schema seguente:
 
-| **Nome colonna** | **Tipo di dati** | **Descrizione** |
+| **Nome della colonna** | **Tipo di dati** | **Descrizione** |
 | --- | --- | --- |
 | Id | int | Chiave primaria. Questa colonna può avere qualsiasi nome. |
 | ImageUrl | nvarchar(*length*) | L'URL assoluto o relativo dell'immagine da visualizzare per Active Directory. |
@@ -195,7 +195,7 @@ Invece di visualizzare tutti i record nell'origine dati allo stesso tempo, il co
 
 È anche possibile visualizzare o nascondere parti diverse del controllo. Nella tabella seguente sono elencate le proprietà che controllano quali parti vengono visualizzate o nascoste.
 
-| **Proprietà** | **Descrizione** |
+| **Property** | **Descrizione** |
 | --- | --- |
 | ShowFooter | Mostra o nasconde la sezione di piè di pagina del controllo GridView. |
 | ShowHeader | Mostra o nasconde la sezione di intestazione del controllo GridView. |
@@ -204,7 +204,7 @@ Invece di visualizzare tutti i record nell'origine dati allo stesso tempo, il co
 
 Il controllo GridView fornisce diversi eventi che è possibile programmare. In questo modo è possibile eseguire una routine personalizzata ogni volta che si verifica un evento. La tabella seguente elenca gli eventi supportati dal controllo GridView.
 
-| **event** | **Descrizione** |
+| **Event** | **Descrizione** |
 | --- | --- |
 | PageIndexChanged | Si verifica quando viene fatto clic su uno dei pulsanti di spostamento, ma dopo che il controllo GridView gestisce l'operazione di spostamento. Questo evento viene comunemente utilizzato quando è necessario eseguire un'attività dopo che l'utente passa a un'altra pagina nel controllo. |
 | PageIndexChanging | Si verifica quando viene fatto clic su uno dei pulsanti di spostamento, ma prima che il controllo GridView controllo gestisca l'operazione di spostamento. Questo evento viene spesso utilizzato per annullare l'operazione di spostamento. |
@@ -262,7 +262,7 @@ Il controllo FormView fornisce numerose funzionalità incorporate che consentono
 
 Poiché il controllo FormView utilizza modelli, non fornisce un modo per generare automaticamente i pulsanti di comando per eseguire l'aggiornamento, eliminazione o operazioni di inserimento. Nel modello appropriato, è necessario includere manualmente questi pulsanti di comando. Il controllo FormView riconosce alcuni pulsanti con loro **CommandName** impostate sui valori specifici. Nella tabella seguente sono elencati i pulsanti di comando riconosciuto dal controllo FormView.
 
-| **Button** | **Valore di proprietà CommandName** | **Descrizione** |
+| **Pulsante** | **Valore di proprietà CommandName** | **Descrizione** |
 | --- | --- | --- |
 | Annulla | "Annulla" | Utilizzato in l'aggiornamento o inserimento di operazioni per annullare l'operazione e ignorare i valori immessi dall'utente. Il controllo FormView restituisce quindi la modalità specificata dalla proprietà DefaultMode. |
 | Eliminare | "Delete" | Utilizzato nelle operazioni di eliminazione per eliminare record visualizzato dall'origine dati. Genera gli eventi ItemDeleting e ItemDeleted. |
@@ -296,7 +296,7 @@ Il controllo FormView fornisce una funzionalità di paging, che consente all'ute
 
 Il controllo FormView fornisce diversi eventi che è possibile programmare. In questo modo è possibile eseguire una routine personalizzata ogni volta che si verifica un evento. La tabella seguente elenca gli eventi supportati dal controllo FormView.
 
-| **event** | **Descrizione** |
+| **Event** | **Descrizione** |
 | --- | --- |
 | ItemCommand | Si verifica quando viene selezionato un pulsante all'interno di un controllo FormView. Questo evento viene spesso utilizzato per eseguire un'attività quando viene selezionato un pulsante nel controllo. |
 | ItemCreated | Si verifica dopo che tutti gli oggetti FormViewRow vengono creati nel controllo FormView. Questo evento viene spesso utilizzato per modificare i valori di un record prima che venga visualizzato. |
@@ -388,7 +388,7 @@ Il controllo DetailsView fornisce una funzionalità di paging, che consente all'
 
 Il controllo DetailsView fornisce diversi eventi che è possibile programmare. In questo modo è possibile eseguire una routine personalizzata ogni volta che si verifica un evento. La tabella seguente elenca gli eventi supportati dal controllo DetailsView. Il controllo DetailsView eredita anche questi eventi dalle relative classi base: Data Binding, con associazione a dati, eliminata, Init, Load, PreRender e rendering.
 
-| **event** | **Descrizione** |
+| **Event** | **Descrizione** |
 | --- | --- |
 | ItemCommand | Si verifica quando viene selezionato un pulsante nel controllo DetailsView. |
 | ItemCreated | Si verifica dopo che tutti gli oggetti DetailsViewRow vengono creati nel controllo DetailsView. Questo evento viene spesso utilizzato per modificare i valori di un record prima che venga visualizzato. |
@@ -508,7 +508,7 @@ Il controllo TreeView include diverse proprietà che influiscono sul funzionamen
 
 Il **ShowCheckBoxes** proprietà influisce sulla se nei nodi viene visualizzata una casella di controllo quando sottoposto a rendering. I valori validi per questa proprietà sono **None**, **radice**, **padre**, **foglia**, e **tutti**. Queste influiscono sul controllo TreeView nel modo seguente:
 
-| **Valore proprietà** | **Effetto** |
+| **Valore della proprietà** | **Effect** |
 | --- | --- |
 | nessuno | Le caselle di controllo non vengono visualizzati in tutti i nodi. Questa è l'impostazione predefinita. |
 | Radice | Una casella di controllo viene visualizzato solo nel nodo radice. |
@@ -587,7 +587,7 @@ Un controllo SiteMapPath è costituito da oggetti SiteMapNodeItem. Esistono tre 
 
 Le proprietà che controllano il funzionamento del controllo SiteMapPath sono come segue:
 
-| **Proprietà** | **Descrizione della proprietà** |
+| **Property** | **Descrizione della proprietà** |
 | --- | --- |
 | ParentLevelsDisplayed | Controllare il numero di nodi padre è visualizzato. Il valore predefinito è -1 non pone limiti al numero di nodi padre visualizzati. |
 | PathDirection | Controlla la direzione del controllo SiteMapPath. I valori validi sono RootToCurrent (impostazione predefinita) e CurrentToRoot. |

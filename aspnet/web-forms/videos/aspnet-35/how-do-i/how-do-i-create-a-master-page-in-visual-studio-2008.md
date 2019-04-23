@@ -12,7 +12,7 @@ ms.openlocfilehash: b9eef4f60789e4e1f4e28e06b35e0dd76006998a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59412060"
 ---
 # <a name="how-do-i-create-a-master-page-in-visual-studio-2008"></a>[Procedura:] Creare una pagina Master in Visual Studio 2008
@@ -24,4 +24,4 @@ In questo video illustrerò come creare una semplice pagina Master utilizzando .
 [&#9654;Guarda il video (8 minuti)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-create-a-master-page-in-visual-studio-2008)
 
 > [!div class="step-by-step"]
-> [Successivo](how-do-i-create-nested-master-page-in-visual-studio-2008.md)
+> [avanti](how-do-i-create-nested-master-page-in-visual-studio-2008.md)

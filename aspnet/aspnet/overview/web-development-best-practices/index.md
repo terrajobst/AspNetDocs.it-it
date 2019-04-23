@@ -12,7 +12,7 @@ ms.openlocfilehash: 6b415480fc3f1d86f74e5845eedb35d284806284
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59412281"
 ---
 # <a name="web-development-best-practices"></a>Procedure consigliate per lo sviluppo Web
@@ -21,4 +21,4 @@ ms.locfileid: "59412281"
 - [Operazioni da eseguire e da evitare in ASP.NET](what-not-to-do-in-aspnet-and-what-to-do-instead.md)
 - [Async e Await](async-and-await.md)
 - [Creazione di app cloud per il mondo reale con Azure](../developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/index.md)
-- [Lab pratico: Siti Web di Azure di facile manutenzione: gestione di modifiche e scalabilità](../developing-apps-with-windows-azure/maintainable-azure-websites-managing-change-and-scale.md)
+- [Laboratorio pratico: Siti Web di Azure di facile manutenzione: Gestione del cambiamento e scalabilità](../developing-apps-with-windows-azure/maintainable-azure-websites-managing-change-and-scale.md)

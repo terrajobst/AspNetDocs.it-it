@@ -12,7 +12,7 @@ ms.openlocfilehash: a0aa547ee9c8fa29e9863c540046d2f8dbfdd45f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59417819"
 ---
 # <a name="older-versions---mvc-3-and-4"></a>Versioni precedenti - MVC 3 e 4
@@ -20,7 +20,7 @@ ms.locfileid: "59417819"
 > Collegamenti alle risorse per imparare a usare le versioni precedenti di ASP.NET MVC.
 
 
-- [Presentazione di ASP.NET MVC 4](getting-started-with-aspnet-mvc4/index.md)
+- [Introduzione ad ASP.NET MVC 4](getting-started-with-aspnet-mvc4/index.md)
 
     - [Introduzione ad ASP.NET MVC 4](getting-started-with-aspnet-mvc4/intro-to-aspnet-mvc-4.md)
     - [Aggiunta di un controller](getting-started-with-aspnet-mvc4/adding-a-controller.md)
@@ -35,7 +35,7 @@ ms.locfileid: "59417819"
 
     - [Creazione di un modello di dati di Entity Framework](getting-started-with-ef-5-using-mvc-4/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md)
     - [Implementazione della funzionalità CRUD di base](getting-started-with-ef-5-using-mvc-4/implementing-basic-crud-functionality-with-the-entity-framework-in-asp-net-mvc-application.md)
-    - [Ordinamento, filtro e suddivisione in pagine](getting-started-with-ef-5-using-mvc-4/sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application.md)
+    - [Ordinamento, filtro e paging](getting-started-with-ef-5-using-mvc-4/sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application.md)
     - [Creazione di un modello di dati più complesso](getting-started-with-ef-5-using-mvc-4/creating-a-more-complex-data-model-for-an-asp-net-mvc-application.md)
     - [Lettura di dati correlati](getting-started-with-ef-5-using-mvc-4/reading-related-data-with-the-entity-framework-in-an-asp-net-mvc-application.md)
     - [Aggiornamento di dati correlati](getting-started-with-ef-5-using-mvc-4/updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application.md)
@@ -57,7 +57,7 @@ ms.locfileid: "59417819"
 - [Uso di provider OAuth con MVC 4](using-oauth-providers-with-mvc.md)
 - [Introduzione ad ASP.NET MVC 3](getting-started-with-aspnet-mvc3/index.md)
 
-    - [Presentazione di ASP.NET MVC 3 (C#)](getting-started-with-aspnet-mvc3/cs/index.md)
+    - [Introduzione ad ASP.NET MVC 3 (C#)](getting-started-with-aspnet-mvc3/cs/index.md)
 
         - [Introduzione ad ASP.NET MVC 3 (C#)](getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3.md)
         - [Aggiunta di un controller (C#)](getting-started-with-aspnet-mvc3/cs/adding-a-controller.md)
@@ -83,15 +83,15 @@ ms.locfileid: "59417819"
 - [MVC 3 Music Store](mvc-music-store/index.md)
 
     - [Parte 1. Panoramica e File -> Nuovo progetto](mvc-music-store/mvc-music-store-part-1.md)
-    - [Parte 2. Controllers](mvc-music-store/mvc-music-store-part-2.md)
+    - [Parte 2. Controller](mvc-music-store/mvc-music-store-part-2.md)
     - [Parte 3: Visualizzazioni e ViewModel](mvc-music-store/mvc-music-store-part-3.md)
     - [Parte 4: Modelli e accesso ai dati](mvc-music-store/mvc-music-store-part-4.md)
     - [Parte 5: Modifica di moduli e modelli](mvc-music-store/mvc-music-store-part-5.md)
     - [Parte 6: Uso delle annotazioni dei dati per la convalida del modello](mvc-music-store/mvc-music-store-part-6.md)
     - [Parte 7: Appartenenza e autorizzazione](mvc-music-store/mvc-music-store-part-7.md)
     - [Parte 8: Carrello con aggiornamenti Ajax](mvc-music-store/mvc-music-store-part-8.md)
-    - [Parte 9: Registrazione e completamento della transazione](mvc-music-store/mvc-music-store-part-9.md)
-    - [Parte 10: Aggiornamenti finali all'esplorazione e alla struttura del sito, conclusioni](mvc-music-store/mvc-music-store-part-10.md)
+    - [Parte 9: Registrazione e l'estrazione](mvc-music-store/mvc-music-store-part-9.md)
+    - [Parte 10: Aggiornamenti finali allo spostamento e struttura del sito, conclusioni](mvc-music-store/mvc-music-store-part-10.md)
 - [MVC 3 - HTML5 e calendario popup per la selezione della data nell'interfaccia utente di jQuery](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc/index.md)
 
     - [HTML5 e calendario popup per la selezione della data nell'interfaccia utente di jQuery con ASP.NET MVC - Parte 1](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc/using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-1.md)

@@ -12,7 +12,7 @@ ms.openlocfilehash: 4eb6d08aeebcf963d2230fbc6c802ddc15477a3a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59417936"
 ---
 # <a name="aspnet-4-quick-hit--easy-state-compression"></a>ASP.NET 4 "Riscontro rapido" – compressione semplice dello stato

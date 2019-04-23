@@ -12,7 +12,7 @@ ms.openlocfilehash: 0991ce5c866aa9e31ef23812e953d9ee10dda3d1
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59409720"
 ---
 # <a name="aspnet-4-and-visual-studio-2010-web-development-overview"></a>Panoramica sullo sviluppo Web con ASP.NET 4 e Visual Studio 2010
@@ -24,7 +24,7 @@ ms.locfileid: "59409720"
 
 **Sommario**
 
-**[Core Services](#0.2__Toc253429238 "_Toc253429238")**  
+**[Servizi di base](#0.2__Toc253429238 "_Toc253429238")**  
 [File Web. config Refactoring](#0.2__Toc253429239 "_Toc253429239")  
 [La memorizzazione nella cache di Output estensibile](#0.2__Toc253429240 "_Toc253429240")  
 [Avvio automatico Web Applications](#0.2__Toc253429241 "_Toc253429241")  
@@ -444,8 +444,8 @@ Il *HttpBrowserCapabilities* oggetto è determinato da un set di file di definiz
 L'elenco seguente mostra il nuovo browser di file di definizione:
 
 - *blackberry.browser*
-- *Chrome.browser*
-- *Default*
+- *chrome.browser*
+- *Default.browser*
 - *firefox.browser*
 - *gateway.browser*
 - *generic.browser*
@@ -982,7 +982,7 @@ ASP.NET 2.0 e versioni successive, eseguire il rendering campi nascosti specific
 Per impostazione predefinita, i seguenti controlli server Web ASP.NET che supportano i modelli vengono eseguito il wrapping in una tabella esterna che viene usata per applicare stili in linea:
 
 - *FormView*
-- *Accesso*
+- *Account di accesso*
 - *PasswordRecovery*
 - *ChangePassword*
 - *Wizard*

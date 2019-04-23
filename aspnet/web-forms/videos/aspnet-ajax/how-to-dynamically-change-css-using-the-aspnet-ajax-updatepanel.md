@@ -12,7 +12,7 @@ ms.openlocfilehash: 8e8939ce74c75f632227d38b87b2f0710c44c52f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59416480"
 ---
 # <a name="how-to-dynamically-change-css-using-the-aspnet-ajax-updatepanel"></a>Come modificare dinamicamente CSS utilizzando UpdatePanel di ASP.NET AJAX

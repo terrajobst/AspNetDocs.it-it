@@ -12,20 +12,20 @@ ms.openlocfilehash: 9d0e57eb85242a0d6fa8ca9eef7f6c741862069d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59408797"
 ---
 # <a name="manually-installing-web-packages"></a>Installazione manuale dei pacchetti Web
 
 da [Jason Lee](https://github.com/jrjlee)
 
-[Scarica il PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Scaricare PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > In questo argomento viene descritto come importare manualmente un pacchetto di distribuzione web in Internet Information Services (IIS).
 > 
 > L'argomento [compilazione e creazione di pacchetti Web Application Projects](building-and-packaging-web-application-projects.md) descritto come IIS strumento di distribuzione Web (distribuzione Web), insieme a Microsoft Build Engine (MSBuild) e Web pubblicazione Pipeline (WPP), consente creare un pacchetto di progetti applicazione Web in un unico file zip. Questo file, comunemente noto come un pacchetto di distribuzione web (o semplicemente un pacchetto di distribuzione), contiene tutte le informazioni di configurazione e il contenuto che è necessario per creare nuovamente l'applicazione web in un server web IIS.
 > 
-> Dopo aver creato un pacchetto di distribuzione web, è possibile pubblicarlo in un server IIS in vari modi. In molti scenari, è opportuno sfruttare i vantaggi dei punti di integrazione tra MSBuild, WPP e distribuzione Web per creare e installare i pacchetti web in modalità remota come parte di un processo di compilazione e distribuzione automatizzato o passo a passo. Questo processo è descritto nella [distribuzione di pacchetti Web](deploying-web-packages.md). Tuttavia, questo non è sempre possibile. Si supponga che si vuole distribuire un'applicazione web in un ambiente di produzione con connessione Internet. Per motivi di sicurezza, un ambiente di produzione è in molto meno probabile trovarsi dietro un firewall in una subnet separata dal server di compilazione, in una rete perimetrale (detta anche subnet schermata). In molti casi, l'ambiente di produzione sarà in un dominio separato o in una rete isolata fisicamente.
+> Dopo aver creato un pacchetto di distribuzione web, è possibile pubblicarlo in un server IIS in vari modi. In molti scenari, è opportuno sfruttare i vantaggi dei punti di integrazione tra MSBuild, WPP e distribuzione Web per creare e installare i pacchetti web in modalità remota come parte di un processo di compilazione e distribuzione automatizzato o passo a passo. Questo processo è descritto nella [distribuzione di pacchetti Web](deploying-web-packages.md). Tuttavia, questo non è sempre possibile. Si supponga che si vuole distribuire un'applicazione web in un ambiente di produzione con connessione Internet. Per motivi di sicurezza, un ambiente di produzione è in molto meno probabile trovarsi dietro un firewall in una subnet separata dal server di compilazione, in una rete perimetrale (detta anche DMZ e subnet schermata). In molti casi, l'ambiente di produzione sarà in un dominio separato o in una rete isolata fisicamente.
 > 
 > In questi scenari, l'unica opzione possibile trasferire il pacchetto web nel server di destinazione e importarlo manualmente in IIS. Sebbene questo approccio impedisce la distribuzione automatica, è comunque una tecnica molto efficace per la pubblicazione di un'applicazione web&#x2014;sufficiente copiare un unico file zip nel server web e consentono di eseguire il processo di importazione usando una procedura guidata.
 

@@ -13,7 +13,7 @@ ms.openlocfilehash: 39629ba404e536b29318db00bce8c4443a782497
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59411943"
 ---
 # <a name="configuring-aspnet-web-api-2"></a>Configurazione di ASP.NET Web API 2
@@ -39,7 +39,7 @@ Impostazioni di configurazione Web API sono definite nel [HttpConfiguration](htt
 | **Filtri** | Filtri dell'azione. |
 | **Formattatori** | [Formattatori di Media type](../formats-and-model-binding/media-formatters.md). |
 | **IncludeErrorDetailPolicy** | Specifica se il server deve includere dettagli dell'errore, ad esempio i messaggi di eccezione e le analisi dello stack, nei messaggi di risposta HTTP. Visualizzare [IncludeErrorDetailPolicy](https://msdn.microsoft.com/library/system.web.http.includeerrordetailpolicy(v=vs.108)). |
-| **Inizializzatore** | Una funzione che esegue l'inizializzazione finale del **HttpConfiguration**. |
+| **Initializer** | Una funzione che esegue l'inizializzazione finale del **HttpConfiguration**. |
 | **MessageHandlers** | [Gestori di messaggi HTTP](http-message-handlers.md). |
 | **ParameterBindingRules** | Una raccolta di regole per l'associazione di parametri in azioni del controller. |
 | **Proprietà** | Un contenitore delle proprietà generiche. |

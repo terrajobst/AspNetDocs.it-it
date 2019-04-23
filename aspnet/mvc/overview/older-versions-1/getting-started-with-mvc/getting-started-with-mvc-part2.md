@@ -12,7 +12,7 @@ ms.openlocfilehash: 84f9c822f041808184b2c586ce933ba3b24615dc
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59419834"
 ---
 # <a name="adding-a-controller"></a>Aggiunta di un controller
@@ -40,7 +40,7 @@ Si verrà che coprono tutti questi concetti in questa esercitazione e mostrerò 
 
 Assegnare un nome al controller "HelloWorldController" e fare clic su Aggiungi.
 
-[![Afinestra di dialogo Controller gg](getting-started-with-mvc-part2/_static/image4.png)](getting-started-with-mvc-part2/_static/image3.png)
+[![Aggiungi finestra di dialogo Controller](getting-started-with-mvc-part2/_static/image4.png)](getting-started-with-mvc-part2/_static/image3.png)
 
 Si noti che in sul lato destro che è stato creato un nuovo file per è stato chiamato HelloWorldController.cs e tale file viene ora aperta Esplora soluzioni il **IDE**.
 
@@ -58,13 +58,13 @@ ASP.NET MVC richiama le classi Controller diverse (e diversi metodi di azione in
 
 La prima parte dell'URL determina la classe Controller da eseguire. Quindi, /HelloWorld esegue il mapping alla classe HelloWorldController. La seconda parte dell'URL determina il metodo di azione per la classe da eseguire. Quindi, /HelloWorld/Index provocherebbe il metodo Index () della classe HelloWorldController da eseguire. Si noti che è stato solo necessario visitare /HelloWorld precedente e il metodo che indice definita in modo implicito. Ciò avviene perché un metodo denominato "Index" è il metodo predefinito che verrà chiamato su un controller se non ne viene specificato in modo esplicito.
 
-[![Tdi seguito è riportato l'azione predefinita](getting-started-with-mvc-part2/_static/image8.png)](getting-started-with-mvc-part2/_static/image7.png)
+[![Questa è l'azione predefinita](getting-started-with-mvc-part2/_static/image8.png)](getting-started-with-mvc-part2/_static/image7.png)
 
 A questo punto, è possibile visitare `http://localhost:xx/HelloWorld/Welcome.` ora il metodo iniziale ha eseguito e ha restituito la stringa HTML.
 
 Anche in questo caso / [Controller] / [ActionName] / [parametri] Controller è HelloWorld e Benvenuti in questo caso sono il metodo. È stata ancora eseguita ancora parametri.
 
-[![Tdi seguito è riportato il metodo di azione iniziale](getting-started-with-mvc-part2/_static/image10.png)](getting-started-with-mvc-part2/_static/image9.png)
+[![Si tratta del metodo di azione iniziale](getting-started-with-mvc-part2/_static/image10.png)](getting-started-with-mvc-part2/_static/image9.png)
 
 È possibile modificare leggermente l'esempio in modo che che possiamo fornire alcune informazioni dall'URL al controller, ad esempio simile al seguente: / HelloWorld/Welcome? name = Scott&amp;numtimes = 4. Impostare il metodo iniziale per includere due parametri e aggiornamento simile al seguente. Si noti che è stato utilizzato la funzionalità di C#-parametro facoltativo per indicare che il parametro numTimes deve valore predefinito è 1 se non viene passato.
 

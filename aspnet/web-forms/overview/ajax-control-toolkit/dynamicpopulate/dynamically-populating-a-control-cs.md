@@ -12,7 +12,7 @@ ms.openlocfilehash: 42c1cd684196c026f1435cba289fc2535187087c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59417299"
 ---
 # <a name="dynamically-populating-a-control-c"></a>Popolamento dinamico di un controllo (C#)
@@ -66,9 +66,9 @@ Come si può notare, il controllo richiede alcune informazioni ma l'inserimento 
 Eseguire la pagina ASP.NET nel browser e fare clic sul pulsante. si riceverà la data corrente nel formato mese-giorno-anno.
 
 
-[![A Fare clic sul pulsante Recupera la data dal server](dynamically-populating-a-control-cs/_static/image2.png)](dynamically-populating-a-control-cs/_static/image1.png)
+[![Un clic sul pulsante Recupera la data dal server](dynamically-populating-a-control-cs/_static/image2.png)](dynamically-populating-a-control-cs/_static/image1.png)
 
 Un clic sul pulsante Recupera la data dal server ([fare clic per visualizzare l'immagine con dimensioni normali](dynamically-populating-a-control-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Successivo](dynamically-populating-a-control-using-javascript-code-cs.md)
+> [avanti](dynamically-populating-a-control-using-javascript-code-cs.md)
