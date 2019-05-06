@@ -1,6 +1,6 @@
 ---
 uid: web-api/overview/security/external-authentication-services
-title: Servizi di autenticazione esterno con l'API Web ASP.NET (c#) | Microsoft Docs
+title: Servizi di autenticazione esterno con l'API Web ASP.NET (C#) | Microsoft Docs
 author: rmcmurray
 description: Viene descritto l'utilizzo di servizi di autenticazione esterni nell'API Web ASP.NET.
 ms.author: riande
@@ -15,7 +15,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 03/01/2019
 ms.locfileid: "57064918"
 ---
-# <a name="external-authentication-services-with-aspnet-web-api-c"></a>Servizi di autenticazione esterno con l'API Web ASP.NET (c#)
+# <a name="external-authentication-services-with-aspnet-web-api-c"></a>Servizi di autenticazione esterno con l'API Web ASP.NET (C#)
 
 Visual Studio 2017 e ASP.NET 4.7.2 espandere le opzioni di sicurezza per [applicazioni a pagina singola](../../../single-page-application/index.md) (SPA) e [API Web](../../index.md) servizi per l'integrazione con servizi di autenticazione esterni, che includono numerosi OAuth/OpenID e servizi di autenticazione dei social media: Gli account Microsoft, Twitter, Facebook e Google.  
 
@@ -83,7 +83,7 @@ Avviare Visual Studio 2017 e selezionare **nuovo progetto** dalla pagina inizial
 
 <!-- [![](external-authentication-services/_static/image6.png "Click to Expand the Image")](external-authentication-services/_static/image5.png) -->
 
-Quando la **nuovo progetto** verrà visualizzata la finestra di dialogo, selezionare **installati** ed espandere **Visual C#** . Sotto **Visual c#**, selezionare **Web**. Nell'elenco dei modelli di progetto, selezionare **applicazione Web ASP.NET (.Net Framework)**. Immettere un nome per il progetto e fare clic su **OK**.
+Quando la **nuovo progetto** verrà visualizzata la finestra di dialogo, selezionare **installati** ed espandere **Visual C#** . Sotto **Visual C#**, selezionare **Web**. Nell'elenco dei modelli di progetto, selezionare **applicazione Web ASP.NET (.Net Framework)**. Immettere un nome per il progetto e fare clic su **OK**.
 
 [![](external-authentication-services/_static/image71.png "Fare clic per espandere l'immagine")](external-authentication-services/_static/image71.png)
 

@@ -37,7 +37,7 @@ Le attività di questa esercitazione sono le seguenti:
 
 Questa sezione illustra come usare SignalR 2 e Visual Studio 2017 per creare un'applicazione ASP.NET MVC 5 vuota, aggiungere la libreria di SignalR e creare l'applicazione di chat.
 
-1. In Visual Studio, creare un'applicazione c# ASP.NET destinata a .NET Framework 4.5, denominarlo SignalRChat e fare clic su OK.
+1. In Visual Studio, creare un'applicazione C# ASP.NET destinata a .NET Framework 4.5, denominarlo SignalRChat e fare clic su OK.
 
     ![Creazione di web](tutorial-getting-started-with-signalr-and-mvc/_static/image1.png)
 

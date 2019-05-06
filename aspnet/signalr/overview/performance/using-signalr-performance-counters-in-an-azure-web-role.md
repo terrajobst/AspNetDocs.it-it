@@ -36,7 +36,7 @@ I contatori delle prestazioni di SignalR vengono utilizzati per monitorare le pr
 
 2. In Visual Studio selezionare **File** > **Nuovo** > **Progetto**.
 
-3. Nel **nuovo progetto** finestra di dialogo, seleziona la **Visual c#** > **Cloud** categorie a sinistra e quindi selezionare il **servizioClouddiAzure** modello. Denominare l'app **SignalRPerfCounters** e selezionare **OK**.
+3. Nel **nuovo progetto** finestra di dialogo, seleziona la **Visual C#** > **Cloud** categorie a sinistra e quindi selezionare il **servizioClouddiAzure** modello. Denominare l'app **SignalRPerfCounters** e selezionare **OK**.
 
    ![Nuova applicazione Cloud](using-signalr-performance-counters-in-an-azure-web-role/_static/image1.png)
 
