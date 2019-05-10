@@ -8,12 +8,12 @@ ms.date: 04/01/2009
 ms.assetid: 548e75f6-4d6c-4cb4-8da8-417915eb8393
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/common-configuration-differences-between-development-and-production-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 48af71fc5ff4dad3371687726660a5d914236df5
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 5ff344bdff379a72a5fc3d26ab66afb095cd2e0d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59379378"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65125746"
 ---
 # <a name="common-configuration-differences-between-development-and-production-vb"></a>Differenze di configurazione più comuni tra sviluppo e produzione (VB)
 
@@ -23,9 +23,7 @@ da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 > Nelle esercitazioni precedenti è stato distribuito il nostro sito Web tramite la copia di tutti i file pertinenti dall'ambiente di sviluppo all'ambiente di produzione. Non è, tuttavia, non comune per essere differenze di configurazione tra gli ambienti, che richiede che ogni ambiente dispone di un file Web. config univoco. Questa esercitazione esamina le differenze di configurazione tipici ed esamina le strategie per la gestione delle informazioni di configurazione separato.
 
-
 ## <a name="introduction"></a>Introduzione
-
 
 Le ultime due esercitazioni esaminato la distribuzione di una semplice applicazione web. Il [ *distribuzione del sito tramite un FTP Client* ](deploying-your-site-using-an-ftp-client-vb.md) esercitazione ha illustrato come usare un client FTP autonoma per copiare i file necessari dall'ambiente di sviluppo fino a ambiente di produzione. L'esercitazione precedente [ *distribuzione del sito tramite Visual Studio*](deploying-your-site-using-visual-studio-vb.md), cercare in fase di distribuzione usando l'opzione di pubblicazione e lo strumento Copia sito Web di Visual Studio. In entrambe le esercitazioni ogni file nell'ambiente di produzione è una copia di un file nell'ambiente di sviluppo. Non è, tuttavia, non comune per i file di configurazione nell'ambiente di produzione in modo diverso rispetto a quelli nell'ambiente di sviluppo. Configurazione di un'applicazione web viene archiviata nel `Web.config` file e in genere sono incluse informazioni sulle risorse esterne, ad esempio database, web e server di posta elettronica. Inoltre illustra in dettaglio il comportamento dell'applicazione in determinate situazioni, ad esempio la linea di azione da intraprendere quando si verifica un'eccezione non gestita.
 
@@ -40,7 +38,6 @@ Stringhe di connessione del database sono un ottimo esempio delle informazioni d
 > [!NOTE]
 > Nelle esercitazioni successive esplorare la distribuzione di applicazioni guidate dai dati, a questo punto verranno esaminate le specifiche come stringhe di connessione di database vengono archiviati nel file di configurazione.
 
-
 Il comportamento previsto di ambienti di sviluppo e produzione differisce notevolmente. Un'applicazione web nell'ambiente di sviluppo viene creata, testati e sottoposto a debug da un piccolo gruppo di sviluppatori. Nell'ambiente di produzione stessa applicazione viene visitato da numerosi utenti simultanei. ASP.NET include numerose funzionalità che consentono agli sviluppatori di test e debug di un'applicazione, ma queste funzionalità devono essere disabilitate per motivi di prestazioni e sicurezza quando nell'ambiente di produzione. Esaminiamo alcuni tali impostazioni di configurazione.
 
 ### <a name="configuration-settings-that-impact-performance"></a>Impostazioni di configurazione che influiscono sulle prestazioni
@@ -51,7 +48,6 @@ L'attributo di debug è uno degli attributi più importanti nel `<compilation>` 
 
 > [!NOTE]
 > `WebResource.axd` è un gestore HTTP predefinito introdotto in ASP.NET 2.0 utilizzato dai controlli server per recuperare le risorse incorporate, ad esempio i file di script, immagini, file CSS e altro contenuto. Per altre informazioni su come `WebResource.axd` funziona e come è possibile usarlo per accedere alle risorse incorporate dai controlli server personalizzati, vedere [l'accesso a incorporate risorse tramite un URL usando `WebResource.axd` ](http://aspnet.4guysfromrolla.com/articles/080906-1.aspx).
-
 
 Il `<compilation>` dell'elemento `debug` attributo viene in genere impostato su "true" nell'ambiente di sviluppo. In effetti, questo attributo deve essere impostato su "true" per eseguire il debug di un'applicazione web. Se si prova a eseguire il debug di un'applicazione ASP.NET da Visual Studio e il `debug` attributo è impostato su "false", Visual Studio verrà visualizzato un messaggio che spiega che l'applicazione non è possibile eseguire il debug finché il `debug` attributo è impostato su "true" e verrà l'offerta per apportare questa modifica per l'utente.
 
@@ -71,7 +67,6 @@ Durante lo sviluppo e test di un'applicazione che è possibile per visualizzare 
 
 > [!NOTE]
 > Il valore predefinito `<customErrors>` impostazione sezione mostra i dettagli dell'eccezione dei messaggi solo quando la pagina viene visitata tramite localhost e viene illustrata la pagina di errore di runtime generico in caso contrario. Questo comportamento non è ideale, ma è in modo da assicurare per sapere che il comportamento predefinito non rivela i dettagli dell'eccezione per i visitatori non locali. Un'esercitazione futura esamina il `<customErrors>` sezione in modo più dettagliato e viene mostrato come configurare una pagina di errore personalizzati visualizzata quando si verifica un errore nell'ambiente di produzione.
-
 
 Un'altra funzionalità ASP.NET che risulta utile durante lo sviluppo è la traccia. Traccia, se abilitata, registra le informazioni relative a ogni richiesta in ingresso e fornisce una pagina web speciale, `Trace.axd`, per la visualizzazione dei dettagli delle richieste recenti. È possibile attivare e configurare la traccia tramite il [ `<trace>` elemento](https://msdn.microsoft.com/library/6915t83k.aspx) in `Web.config`.
 
@@ -111,7 +106,6 @@ Per altre informazioni sull'uso di progetto di distribuzione Web estrarre [quest
 
 > [!NOTE]
 > È possibile usare il progetto di distribuzione Web con Visual Web Developer perché il progetto di distribuzione Web viene implementato come un Visual Studio componente aggiuntivo e le edizioni Visual Studio Express (incluso in Visual Web Developer) non supportano l'Add-Ins.
-
 
 ## <a name="summary"></a>Riepilogo
 

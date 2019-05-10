@@ -8,12 +8,12 @@ ms.date: 08/15/2006
 ms.assetid: 778baa4e-4af8-4665-947e-7a01d1a4dff2
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting/sorting-custom-paged-data-cs
 msc.type: authoredcontent
-ms.openlocfilehash: a65fe60dc44eb40591733ba9371e409f690fea52
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: eaf11e48238353d098a1df8bbd13f71b5778ffb5
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59409239"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65128081"
 ---
 # <a name="sorting-custom-paged-data-c"></a>Ordinamento dei dati con suddivisione in pagine personalizzata (C#)
 
@@ -23,7 +23,6 @@ da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 > Nell'esercitazione precedente abbiamo appreso come implementare il paging personalizzato quando la presentazione dei dati in una pagina web. In questa esercitazione viene illustrato come estendere l'esempio precedente in modo da supportare il paging personalizzato dell'ordinamento.
 
-
 ## <a name="introduction"></a>Introduzione
 
 Rispetto al paging predefinito, il paging personalizzato può migliorare le prestazioni del paging dei dati da vari ordini di grandezza, rendendo la scelta di implementazione di paging standard de facto di paging quando il paging in grandi quantità di dati personalizzato. Implementare il paging personalizzato è più complessa rispetto all'implementazione di paging predefinito, tuttavia, in particolare quando si aggiunge l'ordinamento alla combinazione di. In questa esercitazione è possibile estendere l'esempio da quello precedente per includere il supporto per l'ordinamento *e* paging personalizzato.
@@ -31,16 +30,13 @@ Rispetto al paging predefinito, il paging personalizzato può migliorare le pres
 > [!NOTE]
 > Poiché questa esercitazione si basa su quella precedente, prima di inizio si consiglia di copiare la sintassi dichiarativa all'interno di `<asp:Content>` elemento dalla pagina web precedente esercitazione s (`EfficientPaging.aspx`) e incollarlo tra il `<asp:Content>` elemento il `SortParameter.aspx` pagina. Fare riferimento al passaggio 1 del [aggiunta di controlli di convalida per la modifica e inserimento di interfacce](../editing-inserting-and-deleting-data/adding-validation-controls-to-the-editing-and-inserting-interfaces-cs.md) esercitazione per una discussione più dettagliata sulle replicate le funzionalità di una pagina ASP.NET a un altro.
 
-
 ## <a name="step-1-reexamining-the-custom-paging-technique"></a>Passaggio 1: Riesaminare la tecnica di Paging personalizzato
 
 Per il paging personalizzato per il corretto funzionamento, è necessario implementare alcuni tecnica che è possibile recuperare in modo efficiente un subset di record specificato i parametri di indice di riga iniziale e massimo di righe specifico. Esistono alcune tecniche che possono essere utilizzate per raggiungere questo obiettivo. Nell'esercitazione precedente abbiamo esaminati questa operazione usando Microsoft SQL Server 2005 s nuovo `ROW_NUMBER()` funzione di rango. In breve, il `ROW_NUMBER()` funzione di rango viene assegnato un numero di riga per ogni riga restituita da una query che viene valutata da una sequenza di ordinamento specificata. Subset di record appropriato viene quindi ottenuto tramite la restituzione di una particolare sezione dei risultati numerati. La query seguente illustra come usare questa tecnica per tali prodotti numerati 11 a 20 rango i risultati ordinati in ordine alfabetico per restituire il `ProductName`:
 
-
 [!code-sql[Main](sorting-custom-paged-data-cs/samples/sample1.sql)]
 
 Questa tecnica funziona bene per il paging mediante un ordinamento specifico (`ProductName` ordinati in ordine alfabetico, in questo caso), ma la query deve essere modificata per mostrare i risultati ordinati in base a un'espressione di ordinamento diversi. In teoria, la query precedente può essere riscritto per utilizzare un parametro nel `OVER` clausola, come illustrato di seguito:
-
 
 [!code-sql[Main](sorting-custom-paged-data-cs/samples/sample2.sql)]
 
@@ -56,7 +52,6 @@ Anche se nessuno di questi approcci è perfetto, ritengo che la terza opzione è
 
 Per implementare questa funzionalità, creare una nuova stored procedure nel database Northwind denominato `GetProductsPagedAndSorted`. Questa stored procedure deve accettare tre parametri di input: `@sortExpression`, un parametro di input di tipo `nvarchar(100`) che specifica la modalità con cui i risultati devono essere ordinati e viene inserito direttamente dopo le `ORDER BY` testo nel `OVER` clausola; che `@startRowIndex` e `@maximumRows`, gli stessi parametri di input due integer dal `GetProductsPaged` stored procedure esaminate nell'esercitazione precedente. Creare il `GetProductsPagedAndSorted` stored procedure con lo script seguente:
 
-
 [!code-sql[Main](sorting-custom-paged-data-cs/samples/sample3.sql)]
 
 La stored procedure avvia, verificare che un valore per il `@sortExpression` parametro è stato specificato. Se è manca, i risultati sono classificati in base al `ProductID`. Successivamente, viene costruita la query SQL dinamica. Si noti che qui la query SQL dinamica differisce leggermente dal nostro query precedenti consente di recuperare tutte le righe dalla tabella Products. Negli esempi precedenti, abbiamo ottenuto ogni categoria di prodotto s associata a s e fornitore nomi s utilizzando una sottoquery. Questa decisione è stata presa nel [creazione di un livello di accesso ai dati](../introduction/creating-a-data-access-layer-cs.md) esercitazione e avveniva anziché `JOIN` s poiché TableAdapter non può creare automaticamente l'inserimento associato, aggiornare ed eliminare i metodi per questo tipo query. Il `GetProductsPagedAndSorted` stored procedure, tuttavia, devono utilizzare `JOIN` s per i risultati ordinati in base a nomi di categoria o fornitore.
@@ -65,57 +60,44 @@ Questa query dinamica viene creato concatenando le parti di query statica e il `
 
 Si consiglia di testare questa stored procedure con valori diversi per il `@sortExpression`, `@startRowIndex`, e `@maximumRows` parametri. Da Esplora Server, fare clic sul nome della stored procedure, quindi scegliere Esegui. Verrà visualizzata la finestra di dialogo Esegui Stored Procedure in cui è possibile immettere i parametri di input (vedere la figura 1). Per ordinare i risultati per il nome della categoria, CategoryName per usare il `@sortExpression` valore del parametro; per il nome della società supplier s per ordinare, usare CompanyName. Dopo aver specificato i valori dei parametri, fare clic su OK. I risultati vengono visualizzati nella finestra di Output. Figura 2 vengono mostrati i risultati prodotti restituzione classificate 11 a 20 ordinamento in base il `UnitPrice` in ordine decrescente.
 
-
 ![Provare diversi valori per le Stored Procedure s tre parametri di Input](sorting-custom-paged-data-cs/_static/image1.png)
 
 **Figura 1**: Provare diversi valori per le Stored Procedure s tre parametri di Input
-
 
 [![La Stored Procedure s i risultati vengono visualizzati nella finestra di Output](sorting-custom-paged-data-cs/_static/image3.png)](sorting-custom-paged-data-cs/_static/image2.png)
 
 **Figura 2**: La Stored Procedure s i risultati vengono visualizzati nella finestra di Output ([fare clic per visualizzare l'immagine con dimensioni normali](sorting-custom-paged-data-cs/_static/image4.png))
 
-
 > [!NOTE]
 > Quando i risultati di classificazione da specificato `ORDER BY` colonna il `OVER` clausola, SQL Server deve ordinare i risultati. Questa è un'operazione rapida se è presente un indice cluster tramite le colonne vengono ordinati i risultati da o se è presente una copertura di indice, ma può essere più costoso in caso contrario. Per migliorare le prestazioni delle query sufficientemente grande, considerare l'aggiunta di un indice non cluster per la colonna mediante il quale i risultati vengono ordinati in base. Fare riferimento a [funzioni di rango e le prestazioni di SQL Server 2005](http://www.sql-server-performance.com/ak_ranking_functions.asp) per altri dettagli.
-
 
 ## <a name="step-2-augmenting-the-data-access-and-business-logic-layers"></a>Passaggio 2: Aumentando l'accesso ai dati e i livelli di logica di Business
 
 Con la `GetProductsPagedAndSorted` stored procedure creata, il passaggio successivo consiste nel fornire un mezzo per eseguire la stored procedure tramite l'architettura dell'applicazione. Questo comporta l'aggiunta di un metodo appropriato a DAL e BLL. Let s iniziare aggiungendo un metodo per DAL. Aprire il `Northwind.xsd` DataSet tipizzato, pulsante destro del mouse su di `ProductsTableAdapter`e scegliere l'opzione di Query aggiunta dal menu di scelta rapida. Come è stato fatto nell'esercitazione precedente, si desidera configurare questo nuovo metodo per usare una stored procedure esistente - `GetProductsPagedAndSorted`, in questo caso. Per iniziare, che indica che il nuovo metodo TableAdapter utilizzare una stored procedure esistente.
 
-
 ![Scegliere di usare una Stored Procedure esistente](sorting-custom-paged-data-cs/_static/image5.png)
 
 **Figura 3**: Scegliere di usare una Stored Procedure esistente
 
-
 Per specificare la stored procedure da usare, selezionare il `GetProductsPagedAndSorted` stored procedure nell'elenco a discesa nella schermata successiva.
-
 
 ![Usare il GetProductsPagedAndSorted Stored Procedure](sorting-custom-paged-data-cs/_static/image6.png)
 
 **Figura 4**: Usare il GetProductsPagedAndSorted Stored Procedure
 
-
 Questa stored procedure restituisce un set di record, perché i relativi risultati, quindi, nella schermata successiva, indicano che vengono restituiti i dati tabulari.
-
 
 ![Indicare che la Stored Procedure restituisce dati tabulari](sorting-custom-paged-data-cs/_static/image7.png)
 
 **Figura 5**: Indicare che la Stored Procedure restituisce dati tabulari
 
-
 Infine, creare i metodi che usano entrambi il riempimento DAL DataTable e restituire modelli un DataTable, i metodi di denominazione `FillPagedAndSorted` e `GetProductsPagedAndSorted`, rispettivamente.
-
 
 ![Scegliere i nomi di metodi](sorting-custom-paged-data-cs/_static/image8.png)
 
 **Figura 6**: Scegliere i nomi di metodi
 
-
 Ora che è stato esteso DAL, sono pronti per attivare per il livello BLL. Aprire il `ProductsBLL` file di classe e aggiungere un nuovo metodo `GetProductsPagedAndSorted`. Questo metodo deve accettare tre parametri di input `sortExpression`, `startRowIndex`, e `maximumRows` e deve semplicemente chiamare verso il basso in oggetti DAL `GetProductsPagedAndSorted` (metodo), come illustrato di seguito:
-
 
 [!code-csharp[Main](sorting-custom-paged-data-cs/samples/sample4.cs)]
 
@@ -127,12 +109,10 @@ Iniziare modificando la s ObjectDataSource `SelectMethod` dal `GetProductsPaged`
 
 Dopo aver apportato queste due modifiche, la sintassi dichiarativa s ObjectDataSource dovrebbe essere simile al seguente:
 
-
 [!code-aspx[Main](sorting-custom-paged-data-cs/samples/sample5.aspx)]
 
 > [!NOTE]
 > Come con l'esercitazione precedente, assicurarsi che ObjectDataSource *non* includono i parametri di input sortExpression, startRowIndex o maximumRows nella propria raccolta SelectParameters.
-
 
 Per abilitare l'ordinamento in GridView, è sufficiente selezionare la casella di controllo Abilita ordinamento nel controllo GridView s smart tag, che imposta la s GridView `AllowSorting` proprietà `true` e che causano il testo dell'intestazione per ogni colonna deve essere eseguito come un controllo LinkButton. Quando l'utente finale fa clic su uno dell'intestazione LinkButton, previsioni un postback e attendere la procedura seguente:
 
@@ -144,32 +124,25 @@ Per abilitare l'ordinamento in GridView, è sufficiente selezionare la casella d
 
 Figura 7 mostra la prima pagina dei risultati quando vengono ordinati i `UnitPrice` in ordine crescente.
 
-
 [![I risultati sono ordinati per l'elemento UnitPrice](sorting-custom-paged-data-cs/_static/image10.png)](sorting-custom-paged-data-cs/_static/image9.png)
 
 **Figura 7**: I risultati sono ordinati per il prezzo unitario ([fare clic per visualizzare l'immagine con dimensioni normali](sorting-custom-paged-data-cs/_static/image11.png))
 
-
 Sebbene l'attuale implementazione può ordinare in modo corretto i risultati in base al nome del prodotto, nome della categoria, quantità per l'unità e il prezzo unitario, il tentativo di ordinare i risultati dal fornitore il nome viene importata in un'eccezione di runtime (vedere la figura 8).
-
 
 ![Tentativo di ordinare i risultati in base ai risultati di fornitori la seguente eccezione di Runtime](sorting-custom-paged-data-cs/_static/image12.png)
 
 **Figura 8**: Tentativo di ordinare i risultati in base ai risultati di fornitori la seguente eccezione di Runtime
 
-
 Questa eccezione si verifica perché il `SortExpression` di istanze della classe GridView `SupplierName` BoundField è impostato su `SupplierName`. Tuttavia, il fornitore s nome nel `Suppliers` tabella viene effettivamente chiamata `CompanyName` è stato utilizzato un alias questo nome di colonna come `SupplierName`. Tuttavia, il `OVER` clausola utilizzata dal `ROW_NUMBER()` funzione non è possibile usare l'alias e devono usare il nome di colonna effettivi. Pertanto, modificare il `SupplierName` BoundField s `SortExpression` da SupplierName su CompanyName (vedere la figura 9). Come illustrato nella figura 10, dopo questa modifica i risultati possono essere ordinati in base al fornitore.
-
 
 ![Modifica SortExpression s SupplierName BoundField su CompanyName](sorting-custom-paged-data-cs/_static/image13.png)
 
 **Figura 9**: Modifica SortExpression s SupplierName BoundField su CompanyName
 
-
 [![Ora i risultati possono essere ordinati dal fornitore](sorting-custom-paged-data-cs/_static/image15.png)](sorting-custom-paged-data-cs/_static/image14.png)
 
 **Figura 10**: I risultati ora possono essere ordinate dal fornitore ([fare clic per visualizzare l'immagine con dimensioni normali](sorting-custom-paged-data-cs/_static/image16.png))
-
 
 ## <a name="summary"></a>Riepilogo
 

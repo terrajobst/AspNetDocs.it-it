@@ -8,12 +8,12 @@ ms.date: 01/12/2011
 ms.assetid: 002ada5c-f114-47ab-a441-57dbdb728ea0
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/accessing-your-models-data-from-a-controller
 msc.type: authoredcontent
-ms.openlocfilehash: a2e2957ffe766282f127b6fb537af00673aa440f
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 48fe7af73a5e5d8a3cd4c4ec152c57726fb021ba
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59389843"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130215"
 ---
 # <a name="accessing-your-models-data-from-a-controller-c"></a>Accesso ai dati del modello da un controller (C#)
 
@@ -115,7 +115,6 @@ Fare doppio clic su *Movies.sdf* per aprire **Esplora Server**. Espandere quindi
 
 > [!NOTE]
 > Se si verifica un errore quando si fa doppio clic *Movies.sdf*, assicurarsi di aver installato [SQL Server Compact 4.0](https://www.microsoft.com/web/gallery/install.aspx?appid=SQLCE;SQLCEVSTools_4_0)(runtime e strumenti di supportano). (Per i collegamenti al software, vedere l'elenco dei prerequisiti nella parte 1 di questa serie di esercitazioni). Se si installa la versione a questo punto, è necessario chiudere e riaprire Visual Web Developer.
-
 
 [![DB_explorer](accessing-your-models-data-from-a-controller/_static/image14.png "DB_explorer")](accessing-your-models-data-from-a-controller/_static/image13.png)
 

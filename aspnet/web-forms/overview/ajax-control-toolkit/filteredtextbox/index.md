@@ -8,17 +8,16 @@ ms.date: 11/14/2011
 ms.assetid: c1a80d2c-4a13-499b-9c53-e3561845dd7f
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/filteredtextbox
 msc.type: chapter
-ms.openlocfilehash: f5e5893f9d3780e957f101e78e983f7baa114d27
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 3881426dc4e9f122a48ff922a50dee8770546070
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59388478"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65127058"
 ---
 # <a name="filteredtextbox"></a>FilteredTextBox
 
 > Questa esercitazione illustra come usare il controllo FilteredTextBox, che consente di specificare quali caratteri sono consentiti negli input dell'utente.
-
 
 - [Autorizzazione solo di caratteri specifici in una casella di testo (C#)](allowing-only-certain-characters-in-a-text-box-cs.md)
 - [Autorizzazione solo di caratteri specifici in una casella di testo (VB)](allowing-only-certain-characters-in-a-text-box-vb.md)

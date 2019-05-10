@@ -8,19 +8,18 @@ ms.date: 02/16/2008
 ms.assetid: b985c49a-3668-455c-a366-f85f6bc64b12
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/aspnet-mvc-controllers-overview-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 21891a022885f7a4fae6d7fe3276587abf59986d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 1a287b37742400a17c2ed53cfd00bfb053b4f3d2
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59414296"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123611"
 ---
 # <a name="aspnet-mvc-controller-overview-c"></a>Panoramica del controller ASP.NET MVC (C#)
 
 da [Stephen Walther](https://github.com/StephenWalther)
 
 > In questa esercitazione, Stephen Walther presenta controller ASP.NET MVC. Descrive come creare nuovi controller e restituire diversi tipi di risultati dell'azione.
-
 
 Questa esercitazione illustra l'argomento del controller ASP.NET MVC, le azioni del controller e i risultati dell'azione. Dopo aver completato questa esercitazione, è possibile comprendere come i controller vengono usati per controllare il modo in cui che un visitatore interagisce con un sito Web ASP.NET MVC.
 

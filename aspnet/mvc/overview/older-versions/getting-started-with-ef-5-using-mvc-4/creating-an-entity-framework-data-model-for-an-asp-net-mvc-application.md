@@ -8,12 +8,12 @@ ms.date: 07/30/2013
 ms.assetid: 4ba029b6-ee7c-4e45-a0e7-b703c37e5d9a
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: eeed594e785b99146140dcd2833a95bf6e467823
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: abb59f16759a7d32c6900baf96fe3a1299170922
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59390441"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129793"
 ---
 # <a name="creating-an-entity-framework-data-model-for-an-aspnet-mvc-application-1-of-10"></a>Creazione di un modello di dati di Entity Framework per un'applicazione ASP.NET MVC (1 di 10)
 
@@ -58,7 +58,6 @@ da [Tom Dykstra](https://github.com/tdykstra)
 > 
 > La versione originale dell'esercitazione è disponibile nel [4.1 EF / MVC 3 eBook](https://social.technet.microsoft.com/wiki/contents/articles/11608.e-book-gallery-for-microsoft-technologies.aspx#GettingStartedwiththeEntityFramework4.1usingASP.NETMVC).
 
-
 ## <a name="the-contoso-university-web-application"></a>L'applicazione Web di Contoso University
 
 L'applicazione che sarà compilata in queste esercitazioni è un semplice sito Web universitario.
@@ -89,7 +88,7 @@ Nel **nuovo progetto ASP.NET MVC 4** finestra di dialogo per selezionare la **ap
 
 Lasciare il **Razor** visualizzare motore selezionato e lasciare il **creare un progetto di unit test** casella di controllo deselezionata.
 
-Fare clic su **OK**.
+Scegliere **OK**.
 
 ![Project_template_options](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/_static/image4.png)
 
@@ -97,7 +96,7 @@ Fare clic su **OK**.
 
 Con alcune modifiche è possibile impostare il menu del sito, il layout e la home page.
 
-Aprire *Views\Shared\\layout. cshtml*e sostituire il contenuto del file con il codice seguente. Le modifiche vengono evidenziate.
+Aprire *Views\Shared\\layout. cshtml*e sostituire il contenuto del file con il codice seguente. Le modifiche sono evidenziate.
 
 [!code-cshtml[Main](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/samples/sample1.cshtml?highlight=5,15,25-28,43)]
 
@@ -130,7 +129,6 @@ Nelle sezioni seguenti viene creata una classe per ognuna di queste entità.
 
 > [!NOTE]
 > Se si prova a compilare il progetto prima di aver creato tutte queste classi di entità, si otterrà gli errori del compilatore.
-
 
 ### <a name="the-student-entity"></a>L'entità Student
 

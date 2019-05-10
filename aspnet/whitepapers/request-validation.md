@@ -8,19 +8,18 @@ ms.date: 02/10/2010
 ms.assetid: fa429113-5f8f-4ef4-97c5-5c04900a19fa
 msc.legacyurl: /whitepapers/request-validation
 msc.type: content
-ms.openlocfilehash: d721bb14b9907ae594d1d5207b6f802e84326c9c
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 807cccd6fe1acdd6359b014387abd3878840d4cd
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59414725"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130493"
 ---
 # <a name="request-validation---preventing-script-attacks"></a>Richiedere la convalida - Prevenzione degli attacchi tramite script
 
 > In questo documento descrive la funzionalità di ASP.NET in cui, per impostazione predefinita, l'applicazione viene impedita l'elaborazione del contenuto HTML non codificato inviato al server di convalida delle richieste. Questa funzionalità di convalida richiesta può essere disabilitata quando l'applicazione è stata progettata per elaborare in modo sicuro i dati HTML.
 > 
 > Si applica a ASP.NET 1.1 e ASP.NET 2.0.
-
 
 Convalida delle richieste, una funzionalità di ASP.NET sin dalla versione 1.1, impedisce al server di accettare contenuto HTML non codificato che lo contiene. Questa funzionalità è progettata per aiutare a evitare alcuni attacchi script injection in base al quale il codice di script client o HTML può essere inconsapevolmente inviato a un server, archiviati e quindi presentato ad altri utenti. È comunque consigliabile che convalida i dati di tutti gli input e codificarli con HTML, quando appropriato.
 

@@ -8,19 +8,18 @@ ms.date: 03/26/2015
 ms.assetid: c205805f-efdd-4fa7-9616-f26eab180611
 msc.legacyurl: /mvc/overview/performance/profile-and-debug-your-aspnet-mvc-app-with-glimpse
 msc.type: authoredcontent
-ms.openlocfilehash: 078382191595d1f65b5ebe9d0de8d41cd70e376d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 051253d1e7a09f6285ebe0a83f87155de8467536
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59419886"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129419"
 ---
 # <a name="profile-and-debug-your-aspnet-mvc-app-with-glimpse"></a>Eseguire la profilatura e il debug dell'app ASP.NET MVC con Glimpse
 
 da [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > Glimpse è che intraprendono e aumento delle dimensioni della famiglia di pacchetti NuGet open source che fornisce dettagliati sulle prestazioni, debug e informazioni di diagnostica per le app ASP.NET. È semplice da installare, leggero, eccezionalmente rapide e visualizza le metriche di prestazioni chiave nella parte inferiore di ogni pagina. Permette di drill-down per l'app quando è necessario scoprire cosa sta succedendo nel server. Rapida panoramica fornisce informazioni molto utili, che è consigliabile che usarla in tutto il ciclo di sviluppo, tra cui l'ambiente di test di Azure. Anche se [Fiddler](http://www.telerik.com/fiddler) e il [strumenti di sviluppo F-12](https://msdn.microsoft.com/library/ie/gg589512(v=vs.85).aspx) forniscono un lato client, Glimpse fornisce una visualizzazione dettagliata del server. Questa esercitazione è incentrata sull'uso di Glimpse ASP.NET MVC e i pacchetti EF, ma sono disponibili molti altri pacchetti. Dove possibile collegherà appropriata [documentazione di Glimpse](http://getglimpse.com/Docs/) che consentono di gestire. Glimpse è un progetto open source, è anche possibile contribuire al codice sorgente e i documenti.
-
 
 - [Installazione di Glimpse](#ig)
 - [Abilitare Glimpse per localhost](#eg)
@@ -116,7 +115,6 @@ Rimuovere i commenti dal *GlimpseSecurityPolicy.cs* file e modificare le [IsInRo
 
 > [!WARNING]
 > Security - i dati dettagliati forniti da Glimpse potrebbe esporre la protezione dell'app. Microsoft non ha eseguito un controllo di sicurezza di Glimpse per l'uso nelle app di produzione.
-
 
 Per informazioni sull'aggiunta di ruoli, vedere il [distribuire un'app web ASP.NET MVC 5 sicura con appartenenza, OAuth e Database SQL in Azure](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database/) esercitazione.
 

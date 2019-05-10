@@ -8,19 +8,18 @@ ms.date: 02/20/2005
 ms.assetid: 92df4051-77c6-492c-bd34-23d24189cea4
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/profiles-themes-and-web-parts
 msc.type: authoredcontent
-ms.openlocfilehash: 0f3b376cee8d391eb087664a51cc25e3b58d16b9
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: cf5c45781be6d003d28c6aa27efa08032579a6dd
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59390038"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132779"
 ---
 # <a name="profiles-themes-and-web-parts"></a>Profili, temi e Web part
 
 by [Microsoft](https://github.com/microsoft)
 
 > Esistono importanti modifiche alla configurazione e la strumentazione in ASP.NET 2.0. La nuova API di configurazione di ASP.NET consente modifiche di configurazione da apportare a livello di codice. Inoltre, esistono molte nuove impostazioni di configurazione consentono le nuove configurazioni e la strumentazione.
-
 
 ASP.NET 2.0 rappresenta un miglioramento significativo nell'area dei siti Web personalizzati. Oltre alle funzionalità di appartenenza che è già stato discusso, profili ASP.NET, temi e Web part in modo significativo la capacità di personalizzazione in siti Web.
 
@@ -155,16 +154,13 @@ Il file di interfaccia è un file XML che contiene le definizioni di proprietà 
 
 **Figura 1** seguente mostra una pagina ASP.NET small esplorato senza un tema applicato. **Figura 2** Mostra lo stesso file con un tema applicato. Il colore di sfondo e testo vengono configurate mediante un file CSS. L'aspetto del pulsante e casella di testo vengono configurati tramite il file di interfaccia elencato in precedenza.
 
-
 ![Nessuna tema](profiles-themes-and-web-parts/_static/image1.gif)
 
 **Figura 1**: Nessuna tema
 
-
 ![Tema applicato](profiles-themes-and-web-parts/_static/image2.gif)
 
 **Figura 2**: Tema applicato
-
 
 Il file di interfaccia elencato in precedenza definisce un'interfaccia predefinita per tutti i controlli TextBox e i controlli pulsante. Ciò significa che ogni controllo TextBox e Button inserito in una pagina avrà questo aspetto. È anche possibile definire un'interfaccia che può essere applicata a istanze specifiche di questi controlli usando il **SkinID** proprietà del controllo.
 
@@ -329,7 +325,6 @@ In questa parte della procedura dettagliata, si crea una pagina che usa i contro
 > [!NOTE]
 > Non è necessario eseguire alcuna operazione per abilitare la personalizzazione di Web part; si è abilitato per impostazione predefinita per il set di controlli Web part. Quando si esegue innanzitutto una pagina Web part in un sito, ASP.NET imposta un provider di personalizzazioni predefinito per archiviare le impostazioni di personalizzazione utente. Per altre informazioni sulla personalizzazione, vedere Panoramica sulla personalizzazione delle parti Web.
 
-
 ### <a name="to-create-a-page-for-containing-web-parts-controls"></a>Per creare una pagina destinata a contenere i controlli Web part
 
 1. Chiudere la pagina predefinita e aggiungere una nuova pagina per il sito denominato WebPartsDemo.
@@ -402,11 +397,9 @@ In fase di esecuzione, il set di controlli Web part esegue il wrapping di entram
 
 **Pagina di prova di parti Web con due zone**
 
-
 ![Schermata procedura dettagliata 1 di Web part Visual Studio](profiles-themes-and-web-parts/_static/image3.gif)
 
 **Figura 3**: Schermata procedura dettagliata 1 di Web part Visual Studio
-
 
 Nel titolo della barra di ogni controllo è una freccia verso il basso che fornisce l'accesso a un menu dei verbi di azioni disponibili, che è possibile eseguire su un controllo. Scegliere il menu dei verbi per uno dei controlli, quindi scegliere il **Riduci a icona** verbo e notare che il controllo è ridotto. Scegliere dal menu dei verbi **ripristinare**, e il controllo viene restituito per le dimensioni normali.
 
@@ -449,11 +442,9 @@ In questa parte della procedura dettagliata, si aggiungere la possibilità agli 
 
 ### <a name="web-parts-demo-page-with-my-links-control-moved"></a>Pagina di prova di parti Web con il controllo collegamenti personali spostato
 
-
 ![Schermata procedura dettagliata 2 di Web part Visual Studio](profiles-themes-and-web-parts/_static/image4.gif)
 
 **Figura 4**: Schermata procedura dettagliata 2 di Web part Visual Studio
-
 
 1. Fare clic sui **modalità di visualizzazione** dal menu a discesa e selezionare **Sfoglia**. La pagina viene aggiornata, non vengono più visualizzati i nomi delle aree e il **collegamenti personali** controllo rimane nella stessa posizione.
 2. Per illustrare il funzionamento della personalizzazione, chiudere il browser e quindi caricare di nuovo la pagina. Le modifiche apportate vengono salvate per le sessioni future del browser.
@@ -467,22 +458,18 @@ In questa parte della procedura dettagliata, si aggiungere la possibilità agli 
 
 ### <a name="web-parts-demo-page-in-edit-mode"></a>Pagina di prova di parti Web in modalità di modifica
 
-
 ![Schermata procedura dettagliata 3 parti VS per Web](profiles-themes-and-web-parts/_static/image5.gif)
 
 **Figura 5**: Schermata procedura dettagliata 3 parti VS per Web
-
 
 1. Scegliere il **modalità di visualizzazione** menu e selezionare **Sfoglia** per tornare alla modalità browse.
 2. Il controllo ha ora un titolo aggiornato e nessun bordo, come illustrato nella schermata riportata di seguito.
 
 ### <a name="edited-web-parts-demo-page"></a>Pagina Web part Demo modificata
 
-
 ![Schermata procedura dettagliata 4 parti VS per Web](profiles-themes-and-web-parts/_static/image6.gif)
 
 **Figura 4**: Schermata procedura dettagliata 4 parti VS per Web
-
 
 ### <a name="adding-web-parts-at-run-time"></a>Aggiunta di Web part in fase di esecuzione
 

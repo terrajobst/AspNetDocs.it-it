@@ -8,19 +8,18 @@ ms.date: 03/02/2009
 ms.assetid: 4eabc535-b8a1-43f5-bb99-cfeb86db0fca
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/validating-with-a-service-layer-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 9b2a7e00b3c50a946ad0f2518880892f103a5c1b
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: da1a1c9cc79a452eb0d7597810e86f7bcf6cd179
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59387113"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65122331"
 ---
 # <a name="validating-with-a-service-layer-c"></a>Convalida con un livello di servizio (C#)
 
 da [Stephen Walther](https://github.com/StephenWalther)
 
 > Informazioni su come spostare la logica di convalida all'esterno di azioni del controller e a un livello di servizio separato. In questa esercitazione, Stephen Walther spiega come è possibile gestire una separazione delle problematiche sharp isolando il livello di servizio dal livello del controller.
-
 
 L'obiettivo di questa esercitazione è descrivere un metodo di esecuzione della convalida in un'applicazione ASP.NET MVC. In questa esercitazione descrive come spostare la logica di convalida del controller e a un livello di servizio separato.
 

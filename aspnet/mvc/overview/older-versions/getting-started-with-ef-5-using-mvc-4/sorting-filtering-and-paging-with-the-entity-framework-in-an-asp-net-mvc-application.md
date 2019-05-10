@@ -8,12 +8,12 @@ ms.date: 07/30/2013
 ms.assetid: 8af630e0-fffa-4110-9eca-c96e201b2724
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: 4220327388703b773011921bb206976b04b07e34
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 9510eb8094a55346bec2e0dab2a15ee79d211c88
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59397903"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65126523"
 ---
 # <a name="sorting-filtering-and-paging-with-the-entity-framework-in-an-aspnet-mvc-application-3-of-10"></a>L'ordinamento, filtro e Paging con Entity Framework in un'applicazione ASP.NET MVC (3 di 10)
 
@@ -26,7 +26,6 @@ da [Tom Dykstra](https://github.com/tdykstra)
 > > [!NOTE] 
 > > 
 > > Se si verifica un problema è possibile risolvere, [Scarica il capitolo completato](building-the-ef5-mvc4-chapter-downloads.md) e provare a riprodurre il problema. Confrontando il codice per il codice completo è generalmente possibile trovare la soluzione al problema. Per alcuni errori comuni e come risolverli, vedere [errori e soluzioni alternative.](advanced-entity-framework-scenarios-for-an-mvc-web-application.md#errors)
-
 
 Nell'esercitazione precedente è stato implementato un set di pagine web per operazioni CRUD di base per `Student` entità. In questa esercitazione si aggiungerà l'ordinamento, filtro e la funzionalità di paging per il **studenti** pagina di indice. Verrà anche creata una pagina che esegue il raggruppamento semplice.
 
@@ -93,7 +92,6 @@ Nelle *Controllers\StudentController.cs*, sostituire il `Index` metodo con il co
 
 > [!NOTE]
 > In molti casi è possibile chiamare il metodo di stesso in un set di entità di Entity Framework o come metodo di estensione per una raccolta in memoria. I risultati sono in genere gli stessi ma in alcuni casi potrebbero essere diversi. Ad esempio, l'implementazione di .NET Framework del `Contains` metodo restituisce tutte le righe quando si passa una stringa vuota a esso, ma il provider di Entity Framework per SQL Server Compact 4.0 restituisce zero righe per le stringhe vuote. Di conseguenza il codice nell'esempio (inserire la `Where` istruzione all'interno di un `if` istruzione) garantisce che ottenere gli stessi risultati per tutte le versioni di SQL Server. Inoltre, l'implementazione di .NET Framework del `Contains` metodo esegue un confronto tra maiuscole e minuscole per impostazione predefinita, ma i provider di Entity Framework SQL Server eseguono confronti tra maiuscole e minuscole per impostazione predefinita. Pertanto, la chiamata di `ToUpper` metodo in modo che il test in modo esplicito tra maiuscole e minuscole assicura che non cambiano quando si modifica il codice in un secondo momento per usare un repository, che restituirà un `IEnumerable` raccolta anziché un `IQueryable` oggetto. Quando il metodo `Contains` viene chiamato su una raccolta `IEnumerable`, si ottiene l'implementazione di .NET Framework; quando viene chiamato su un oggetto `IQueryable`, si ottiene l'implementazione del provider di database.
-
 
 ### <a name="add-a-search-box-to-the-student-index-view"></a>Aggiungere una casella di ricerca alla visualizzazione Student Index (Indice degli studenti)
 
@@ -378,7 +376,6 @@ Il *DefaultConnection* stringa di connessione è per il database di appartenenza
 
 > [!NOTE]
 > L'app web non implementa la sicurezza, in modo che chiunque individui l'URL può modificare i dati. Per istruzioni su come proteggere il sito web, vedere [distribuire un'app ASP.NET MVC sicura con appartenenza, OAuth e Database SQL a un sito Web di Microsoft Azure](https://docs.microsoft.com/aspnet/core/security/authorization/secure-data). È possibile impedire che altri utenti tramite il sito usando il portale di gestione di Azure oppure **Esplora Server** in Visual Studio per arrestare il sito.
-
 
 ![](sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application/_static/image35.png)
 

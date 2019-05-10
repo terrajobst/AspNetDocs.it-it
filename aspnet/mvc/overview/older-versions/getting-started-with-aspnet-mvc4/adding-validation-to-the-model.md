@@ -8,12 +8,12 @@ ms.date: 08/28/2012
 ms.assetid: 5d9a2999-fcc4-4c45-a018-271fddf74a3b
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc4/adding-validation-to-the-model
 msc.type: authoredcontent
-ms.openlocfilehash: 266d2e3fda54a9e584622ccd595e41229c96e6b0
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 25037d2994354c92f9fe831c948393df32e120a1
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59420744"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129926"
 ---
 # <a name="adding-validation-to-the-model"></a>Aggiunta della convalida al modello
 
@@ -21,7 +21,6 @@ da [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > > [!NOTE]
 > > È disponibile una versione aggiornata di questa esercitazione [qui](../../getting-started/introduction/getting-started.md) che usa ASP.NET MVC 5 e Visual Studio 2013. È più sicuro, molto più semplice da seguire e vengono illustrate altre funzionalità.
-
 
 In questa sezione si aggiungerà la logica di convalida per il `Movie` modello e si farà in modo che le regole di convalida vengono applicate ogni volta che un utente prova a creare o modificare un film tramite l'applicazione.
 
@@ -79,7 +78,6 @@ Scegliere il **Crea nuovo** collegamento per aggiungere un nuovo film. Compilare
 
 > [!NOTE]
 > per supportare la convalida di jQuery per impostazioni locali di lingua diversa dall'inglese che usano la virgola (&quot;,&quot;) per un separatore decimale, è necessario includere *globalize.js* specifiche e *cultures/globalize.cultures.js* file (da [ https://github.com/jquery/globalize ](https://github.com/jquery/globalize) ) e JavaScript usare `Globalize.parseFloat`. Il codice seguente illustra le modifiche al file Views\Movies\Edit.cshtml per lavorare con i &quot;fr-FR&quot; delle impostazioni cultura:
-
 
 [!code-cshtml[Main](adding-validation-to-the-model/samples/sample6.cshtml)]
 

@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: e7700e7b-edc3-4183-a713-70e507cc7490
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/hovermenu/using-hovermenu-with-a-repeater-control-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 7f64e90eb2f8f87e2f382cb7897793e7071d305d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 01f8d71ef07bd48c16c2e9eb1bb12cd051f7a9e4
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59384500"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65127024"
 ---
 # <a name="using-hovermenu-with-a-repeater-control-c"></a>Uso di HoverMenu con un controllo Repeater (C#)
 
@@ -22,7 +22,6 @@ da [Christian Wenz](https://github.com/wenz)
 [Scaricare il codice](http://download.microsoft.com/download/b/0/6/b06fe835-5b8f-4c00-aef8-062c19d75b95/HoverMenu1.cs.zip) o [Scarica il PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/hovermenu1CS.pdf)
 
 > Il controllo di HoverMenu in AJAX Control Toolkit fornisce un effetto popup semplice: Quando il puntatore del mouse viene posizionato su un elemento, viene visualizzata un finestra popup in una posizione specificata. È anche possibile usare questo controllo all'interno di un controllo repeater.
-
 
 ## <a name="overview"></a>Panoramica
 
@@ -51,7 +50,6 @@ A questo punto, il `HoverMenuExtender` entra in gioco. In modo che ogni elemento
 [!code-aspx[Main](using-hovermenu-with-a-repeater-control-cs/samples/sample4.aspx)]
 
 A questo punto ogni elemento nell'origine dati consente di visualizzare una finestra popup a destra (`PopupPosition` attributo) dopo un ritardo di 50 millisecondi (`PopDelay` attributo).
-
 
 [![Viene visualizzato il menu di passaggio del mouse accanto a ogni elemento nel repeater](using-hovermenu-with-a-repeater-control-cs/_static/image2.png)](using-hovermenu-with-a-repeater-control-cs/_static/image1.png)
 

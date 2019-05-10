@@ -8,17 +8,16 @@ ms.date: 02/15/2013
 ms.assetid: e733027a-525f-47ae-b1c0-2e5ecf6677aa
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment
 msc.type: chapter
-ms.openlocfilehash: 3d8a6a102788cb6b5612e9bc537e1c13e7798c54
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 486042c428787ff03b964d04de4af59e540c62d6
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59378936"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65128581"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio"></a>Distribuzione Web ASP.NET tramite Visual Studio
 
 > Questa serie di esercitazioni illustra come creare un'applicazione web ASP.NET che utilizza SQL Server (non SQL Server Compact) disponibile su internet tramite distribuzione su un sito Web di Microsoft Azure o un provider di hosting di terze parti. Richiede Visual Studio 2012 e di ASP.NET and Web Tools 2012.2 Update o Visual Studio 2010. Per informazioni specifiche per SQL Server Compact, vedere [distribuzione Web ASP.NET con SQL Server Compact tramite Visual Studio](../../older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-introduction-1-of-12.md).
-
 
 - [Introduzione](introduction.md)
 - [Preparazione per la distribuzione del database](preparing-databases.md)

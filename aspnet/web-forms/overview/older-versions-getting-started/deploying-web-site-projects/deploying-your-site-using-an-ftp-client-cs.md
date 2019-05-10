@@ -8,12 +8,12 @@ ms.date: 04/01/2009
 ms.assetid: a3599cf7-8474-4006-954a-3bc693736b66
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/deploying-your-site-using-an-ftp-client-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 1ef796dc61cc65b6ca5205a5f8baf4dcc4ba05ae
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 1d6adbb245ce534c15ac1adac722b8621002ab15
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59389167"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65127060"
 ---
 # <a name="deploying-your-site-using-an-ftp-client-c"></a>Distribuzione del sito tramite un client FTP (C#)
 
@@ -23,17 +23,14 @@ da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 > Il modo più semplice per distribuire un'applicazione ASP.NET consiste nel copiare manualmente i file necessari dall'ambiente di sviluppo all'ambiente di produzione. Questa esercitazione illustra come usare un client FTP per ottenere i file sul desktop per il provider di hosting web.
 
-
 ## <a name="introduction"></a>Introduzione
 
 L'esercitazione precedente ha introdotto una semplice applicazione web ASP.NET di revisione manuale, è costituita da un numero limitato di pagine ASP.NET, una pagina master, una base personalizzata `Page` classe, un numero di immagini e fogli di stile tre CSS. A questo punto siamo pronti distribuire l'applicazione di un provider di hosting web, a quel punto l'applicazione sarà accessibile a tutti gli utenti con una connessione a Internet.
-
 
 Da nostre discussioni nel [ *determinare quali file devono essere distribuiti* ](determining-what-files-need-to-be-deployed-cs.md) dell'esercitazione, si sa quali file devono essere copiati i provider di hosting web. (È opportuno ricordare che vengono copiati i file che varia a seconda se la compilazione dell'applicazione in modo esplicito o automaticamente.) Ma come possiamo ricavare i file dall'ambiente di sviluppo (desktop) fino a ambiente di produzione (web server gestiti dal provider host web)? Il [ **F** ile **T** trasferire **P** rotocol (FTP)](http://en.wikipedia.org/wiki/File_Transfer_Protocol) è due protocolli comunemente usati per copiare i file da un computer a un altro tramite una rete. Un'altra opzione è Server delle estensioni di FrontPage. Questa esercitazione è incentrata sull'utilizzo del software client FTP autonomo per distribuire i file necessari dall'ambiente di sviluppo all'ambiente di produzione.
 
 > [!NOTE]
 > Visual Studio include strumenti per la pubblicazione di siti Web tramite FTP. Questi strumenti, nonché un'occhiata a strumenti che usano FPSE, è illustrata nell'esercitazione successiva.
-
 
 Per copiare i file tramite FTP è necessario un *client FTP* nell'ambiente di sviluppo. Un client FTP è un'applicazione progettata per copiare i file dal computer di cui è installato in un computer che esegue un' *server FTP*. (Se il provider di hosting web supporta i trasferimenti di file tramite FTP, come la maggior parte, quindi vi è un server FTP in esecuzione nei server web). Sono disponibili numerose applicazioni client FTP. Web browser può anche raddoppiare come un client FTP. Il client FTP preferito e quello si userà per questa esercitazione, viene [FileZilla](http://filezilla-project.org/), un client FTP gratuito e open source disponibile per Windows, Linux e Mac. Qualsiasi client FTP funzionerà, tuttavia, in tal caso è possibile usare qualsiasi client si ha maggiore familiarità con.
 
@@ -68,11 +65,9 @@ Figura 1 mostra FileZilla dopo che sono stati copiati i file necessari. FileZill
 > [!NOTE]
 > È possibile che i file del codice sorgente nel server di produzione, come vengono ignorati. Per impostazione predefinita, in ASP.NET non consente le richieste HTTP a file di codice sorgente in modo che anche se i file del codice sorgente sono presenti nel server di produzione siano inaccessibile ai visitatori del sito Web. (Ovvero, se un utente prova a visitare `http://www.yoursite.com/Default.aspx.cs` otterranno una pagina di errore che spiega che questi tipi di file - `.cs` file - non è consentita.)
 
-
 [![Usare un Client FTP per copiare i file necessari dal Desktop al Server del Web il Provider di hosting Web](deploying-your-site-using-an-ftp-client-cs/_static/image2.png)](deploying-your-site-using-an-ftp-client-cs/_static/image1.png)
 
 **Figura 1**: Usare un FTP Client per copiare i file necessari da Your Desktop al Server del Web il Provider di hosting Web ([fare clic per visualizzare l'immagine con dimensioni normali](deploying-your-site-using-an-ftp-client-cs/_static/image3.png))
-
 
 Dopo la distribuzione del sito si consiglia di testare il sito. Se è stato acquistato un nome di dominio e configurato le impostazioni DNS in modo corretto, è possibile visitare il sito, immettere il nome di dominio. In alternativa, il provider di hosting web deve avere ha fornito un URL del sito, che avrà un aspetto simile *NomeAccount*. *webhostprovider*. com oppure *webhostprovider*. com /*accountname*. Ad esempio, è l'URL per il mio account su ASP.NET Discount: `http://httpruntime.web703.discountasp.net`.
 
@@ -81,11 +76,9 @@ Figura 2 mostra il sito distribuito le recensioni dei libri. Si noti che lo sto 
 > [!NOTE]
 > Se si verifica un errore quando si visualizzano l'applicazione si consiglia di verificare che è stato distribuito il set corretto di file. Successivamente, controllare il messaggio di errore per vedere se rivela eventuali indizi in merito al problema. In seguito, è possibile impostare in modo da supporto tecnico dell'azienda di host web o inviare una domanda nel forum appropriati nel [forum ASP.NET](https://forums.asp.net/).
 
-
 [![Il sito di revisioni del libro è ora accessibile a chiunque disponga di una connessione Internet](deploying-your-site-using-an-ftp-client-cs/_static/image5.png)](deploying-your-site-using-an-ftp-client-cs/_static/image4.png)
 
 **Figura 2**: Il sito di revisioni del libro è ora accessibile a chiunque disponga di una connessione Internet ([fare clic per visualizzare l'immagine con dimensioni normali](deploying-your-site-using-an-ftp-client-cs/_static/image6.png))
-
 
 ## <a name="deploying-the-book-review-web-site-project"></a>La distribuzione del progetto di sito Web di revisione della Rubrica
 
@@ -97,7 +90,6 @@ Dopo avere compilato correttamente il progetto, usare il client FTP per copiare 
 
 > [!NOTE]
 > Se è già stato distribuito il BookReviewsWAP progetto ancora ma si desidera provare a distribuire il progetto BookReviewsWSP, eliminare innanzitutto tutti i file nel server web che sono stati caricati durante la distribuzione BookReviewsWAP e quindi distribuire i file per BookReviewsWSP.
-
 
 - `~/Default.aspx`
 - `~/Default.aspx.cs`
@@ -123,11 +115,9 @@ Dopo avere compilato correttamente il progetto, usare il client FTP per copiare 
 
 Figura 3 mostra FileZilla dopo aver copiato i file necessari. Come può notare, ASP.NET file del codice sorgente, ad esempio `About.aspx.cs`, sono presenti nel computer locale (l'ambiente di sviluppo) sia il provider di hosting web (l'ambiente di produzione) perché i file di codice devono essere distribuiti quando si usa automatico compilazione.
 
-
 [![Usare un Client FTP per copiare i file necessari dal Desktop al Server del Web il Provider di hosting Web](deploying-your-site-using-an-ftp-client-cs/_static/image8.png)](deploying-your-site-using-an-ftp-client-cs/_static/image7.png)
 
 **Figura 3**: Usare un FTP Client per copiare i file necessari da Your Desktop al Server del Web il Provider di hosting Web ([fare clic per visualizzare l'immagine con dimensioni normali](deploying-your-site-using-an-ftp-client-cs/_static/image9.png))
-
 
 L'esperienza dell'utente non è interessata dal modello di compilazione dell'applicazione. Le stesse pagine ASP.NET sono accessibili e l'aspetto e lo stesso comportamento se il sito Web è stato creato mediante il modello di progetto di applicazione Web o il modello di progetto di sito Web.
 
@@ -139,7 +129,6 @@ Come si può intuire, quando un'applicazione web che è sufficiente per copiare 
 
 > [!NOTE]
 > Un aspetto da tenere presenti quando si usa la compilazione esplicita è che ogni volta che si aggiunge una nuova pagina ASP.NET al progetto o apportare modifiche al codice, è necessario ricompilare il progetto, che aggiorna l'assembly nel `Bin` cartella. Di conseguenza, è necessario copiare questo assembly aggiornato nell'ambiente di produzione quando si aggiorna un'applicazione web in produzione (con gli altri contenuti nuovi e aggiornati).
-
 
 Inoltre comprendere che tutte le modifiche per il `Web.config` o i file nei `Bin` directory verrà arrestato e riavviato il Pool di applicazioni del sito Web. Se lo stato della sessione verrà archiviato utilizzando il `InProc` modalità (impostazione predefinita), quindi i visitatori del sito perderanno stato sessione ogni volta che vengono modificati i file di chiave. Per evitare questo inconveniente, è consigliabile archiviare sessione usando il `StateServer` o `SQLServer` modalità. Per altre informazioni su questo argomento leggere [modalità stato sessione](https://msdn.microsoft.com/library/ms178586.aspx).
 

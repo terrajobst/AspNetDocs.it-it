@@ -8,12 +8,12 @@ ms.date: 11/17/2011
 ms.assetid: a8d776af-4735-4612-87f6-9f326587f2d3
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-a-database-update-9-of-12
 msc.type: authoredcontent
-ms.openlocfilehash: 3bae4d72c8b653a5cda500b05dde50c6a7201589
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 3a5600aff3ba63cb7046e42d0bfd587c4181d99e
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59413113"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130277"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-deploying-a-database-update---9-of-12"></a>Distribuzione di un'applicazione Web ASP.NET con SQL Server Compact tramite Visual Studio o Visual Web Developer: Distribuzione di un aggiornamento di Database - 9 pari a 12
 
@@ -24,7 +24,6 @@ da [Tom Dykstra](https://github.com/tdykstra)
 > Questa serie di esercitazioni illustra come distribuire un ASP.NET (pubblicazione) progetto di applicazione web che include un database di SQL Server Compact tramite Visual Studio 2012 RC o Visual Studio Express 2012 RC per Web. Se si installa l'aggiornamento della pubblicazione sul Web, è anche possibile usare Visual Studio 2010. Per un'introduzione alla serie, vedere [la prima esercitazione della serie](deployment-to-a-hosting-provider-introduction-1-of-12.md).
 > 
 > Per un'esercitazione che illustra le funzionalità di distribuzione introdotte dopo la versione di Visual Studio 2012 RC, illustra come distribuire le edizioni di SQL Server diverse da SQL Server Compact e Mostra come distribuire in App Web di servizio App di Azure, vedere [distribuzione Web ASP.NET con Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
-
 
 ## <a name="overview"></a>Panoramica
 
@@ -88,7 +87,6 @@ Visual Studio distribuisce l'applicazione aggiornata e nel browser verrà aperta
 
 > [!NOTE]
 > Mentre l'applicazione è in uso nell'ambiente di produzione si deve implementare un piano di backup. Vale a dire, si dovrebbe essere periodicamente la copia di *School-Prod.sdf* e *aspnet-Prod.sdf* file dalla produzione del sito in un percorso di archiviazione protetta e si devono mantenere varie generazioni di tali backup. Quando si aggiorna il database, è necessario eseguire una copia di backup da immediatamente prima della modifica. Quindi, se si commette un errore e non individua solo dopo aver distribuito nell'ambiente di produzione, è comunque sarà in grado di ripristinare il database allo stato che precedente danneggiamento.
-
 
 Quando Visual Studio si apre l'URL della home page nel browser, il *app\_offline.htm* viene visualizzata la pagina. Dopo aver eliminato il *app\_offline.htm* file, è possibile passare a home page per verificare che l'aggiornamento è stato distribuito correttamente.
 

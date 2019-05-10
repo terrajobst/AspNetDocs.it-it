@@ -8,12 +8,12 @@ ms.date: 04/01/2009
 ms.assetid: 090e9205-52f3-4d72-ae31-44775b8b8421
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/core-differences-between-iis-and-the-asp-net-development-server-vb
 msc.type: authoredcontent
-ms.openlocfilehash: e156b15356b02c25ad3dbb082096fc41ee35e465
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 6556935aafa954f83a9efafdf4e0850e7730a947
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59403701"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65127126"
 ---
 # <a name="core-differences-between-iis-and-the-aspnet-development-server-vb"></a>Differenze principali tra IIS e il server di sviluppo ASP.NET (VB)
 
@@ -23,11 +23,9 @@ da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 > Quando si testa in locale un'applicazione ASP.NET, è probabile che si usa Server Web di sviluppo ASP.NET. Tuttavia, il sito Web di produzione è più probabile IIS spenta. Esistono alcune differenze tra la modalità di gestire le richieste di questi server web, e queste differenze possono avere conseguenze importanti. Questa esercitazione illustra alcune delle differenze più pertinente.
 
-
 ## <a name="introduction"></a>Introduzione
 
 Ogni volta che un utente visita un'applicazione ASP.NET browser dell'utente invia una richiesta al sito Web. Tale richiesta viene prelevata dal software di server web, che coordina con il runtime ASP.NET per generare e restituire il contenuto per la risorsa richiesta. Il[**ho** qdn **posso** nformation **S** ervices (IIS)](http://en.wikipedia.org/wiki/Internet_Information_Services) sono una suite di servizi che forniscono funzionalità comuni basati su Internet per Server di Windows. IIS è il server web più diffuso per le applicazioni ASP.NET in ambienti di produzione; è molto probabile che il software del server web sta utilizzando il provider di hosting web a servire l'applicazione ASP.NET. IIS può inoltre costituire il software del server web nell'ambiente di sviluppo, anche se ciò comporta l'installazione di IIS e configurarlo in modo corretto.
-
 
 Il Server di sviluppo ASP.NET è un'opzione di server web alternativi per l'ambiente di sviluppo. incluso in ed è integrato in Visual Studio. A meno che l'applicazione web è stato configurato per usare IIS, ASP.NET Development Server viene automaticamente avviato e utilizzato come server web la prima volta che si visita una pagina web da Visual Studio. Le applicazioni web demo creati nuovamente nel [ *determinare quali file devono essere distribuiti* ](determining-what-files-need-to-be-deployed-vb.md) esercitazione sono state entrambe le applicazioni web basate sul sistema di file che non sono state configurate per utilizzare IIS. Pertanto, quando si visita uno di questi siti Web da Visual Studio viene usato il Server di sviluppo ASP.NET.
 
@@ -46,22 +44,17 @@ Per visualizzare questo tipo di errore nell'azione ho creato una pagina nel sito
 > [!NOTE]
 > Il [ `File.WriteAllText` metodo](https://msdn.microsoft.com/library/system.io.file.writealltext.aspx) crea un nuovo file se non esiste e quindi scrive il contenuto specificato. Se il file esiste già, il contenuto esistente viene sovrascritto.
 
-
 Successivamente, visitare il *insegnare manualmente ASP.NET 3.5 in 24 ore* pagina revisione del libro nell'ambiente di sviluppo utilizzando ASP.NET Development Server. Supponendo che si è connessi al computer con un account che disponga di autorizzazioni adeguate per creare e modificare un file di testo all'interno del web directory radice dell'applicazione recensione di un libro sembra identico al precedente, ma ogni volta che la pagina visitata la data e ora e dell'utente  Indirizzo IP viene archiviato nel `LastTYASP35Access.txt` file. Puntare il browser in questo file. si dovrebbe vedere un messaggio simile a quello illustrato nella figura 1.
-
 
 [![Il File di testo contiene la data e ora ultima recensione di un libro è stato visitato&lt;](core-differences-between-iis-and-the-asp-net-development-server-vb/_static/image2.png)](core-differences-between-iis-and-the-asp-net-development-server-vb/_static/image1.png)
 
 **Figura 1**: Il File di testo contiene la data e ora ultima recensione di un libro è stato visitato ([fare clic per visualizzare l'immagine con dimensioni normali](core-differences-between-iis-and-the-asp-net-development-server-vb/_static/image3.png))
 
-
 Distribuire l'applicazione web nell'ambiente di produzione e quindi visitare di hosting *insegnare manualmente ASP.NET 3.5 in 24 ore* pagina revisione del libro. A questo punto si dovrebbe vedere sia la pagina di revisione del libro come normale o il messaggio di errore riportato nella figura 2. Alcuni provider host web concedere autorizzazioni di scrittura per l'account del computer ASP.NET anonimo, in cui i casi la pagina funzionerà senza errori. Se, tuttavia, il provider di hosting web non consente l'accesso in scrittura per l'account anonimo un' [ `UnauthorizedAccessException` eccezioni](https://msdn.microsoft.com/library/system.unauthorizedaccessexception.aspx) viene generato quando il `TYASP35.aspx` pagina tenta di scrivere la data e ora correnti per il `LastTYASP35Access.txt` file.
-
 
 [![L'Account del computer predefinito usato da IIS non dispone delle autorizzazioni per scrivere nel File System](core-differences-between-iis-and-the-asp-net-development-server-vb/_static/image5.png)](core-differences-between-iis-and-the-asp-net-development-server-vb/_static/image4.png)
 
 **Figura 2**: Il predefinito macchina Account usato da IIS viene non dispone delle autorizzazioni in scrittura nel File System ([fare clic per visualizzare l'immagine con dimensioni normali](core-differences-between-iis-and-the-asp-net-development-server-vb/_static/image6.png))
-
 
 La buona notizia è che la maggior parte dei provider di host web sono una sorta di strumento di autorizzazioni che è possibile specificare le autorizzazioni del file nel sito Web. Concedere l'accesso in scrittura account ASP.NET anonimo alla directory radice e quindi visitare di nuovo la pagina di revisione del libro. (Se necessario, contattare il provider di hosting web per ottenere assistenza su come concedere autorizzazioni di scrittura per l'account ASP.NET predefinito.) Questa volta deve caricare la pagina senza errori e `LastTYASP35Access.txt` file deve essere creata correttamente.
 
@@ -75,7 +68,6 @@ Il runtime ASP.NET esegue una serie di passaggi per generare il contenuto richie
 
 > [!NOTE]
 > Per un esame approfondito di ASP. L'autenticazione basata su form di NET, l'autorizzazione URL e altre funzionalità relative all'account utente, assicurarsi di consultare mio [sito Web di sicurezza esercitazioni](../../older-versions-security/introduction/security-basics-and-asp-net-support-cs.md).
-
 
 Prendere in considerazione un sito Web che supporta gli account utente con autorizzazione basata su form e dispone di una cartella che, utilizzando l'autorizzazione URL, è configurata per consentire solo agli utenti autenticati. Si supponga che questa cartella contiene pagine ASP.NET e i file PDF e che il motivo è che solo gli utenti autenticati possono visualizzare questi file PDF.
 
@@ -95,19 +87,15 @@ Utilizzo del Server di sviluppo ASP.NET, visitare il sito e immettere l'URL dire
 
 Inserendo l'URL nella barra degli indirizzi determina il browser inviare una richiesta al Server di sviluppo ASP.NET per il file. Il Server di sviluppo ASP.NET inoltra la richiesta al runtime di ASP.NET per l'elaborazione. Poiché è stata non ancora eseguito l'accesso e il `Web.config` nella `PrivateDocs` cartella è configurata per negare l'accesso anonimo, il runtime ASP.NET us reindirizza automaticamente alla pagina di accesso, `Login.aspx` (vedere la figura 3). Quando si reindirizza l'utente alla pagina di accesso, ASP.NET include un `ReturnUrl` parametro querystring che indica che la pagina utente tentava di visualizzazione. Dopo aver completato l'accesso l'utente può essere restituito da questa pagina.
 
-
 [![Gli utenti non autorizzati vengono automaticamente reindirizzati alla pagina di accesso](core-differences-between-iis-and-the-asp-net-development-server-vb/_static/image8.png)](core-differences-between-iis-and-the-asp-net-development-server-vb/_static/image7.png)
 
 **Figura 3**: Gli utenti non autorizzati vengono automaticamente reindirizzati alla pagina di accesso ([fare clic per visualizzare l'immagine con dimensioni normali](core-differences-between-iis-and-the-asp-net-development-server-vb/_static/image9.png))
 
-
 Ora vediamo come il comportamento è in produzione. Distribuire l'applicazione e immettere l'URL diretto tra i file PDF nel `PrivateDocs` cartella nell'ambiente di produzione. Verrà chiesto di specificare il browser per inviare una richiesta di IIS per il file. Poiché viene richiesto un file statico, IIS recupera e restituisce il file senza richiamare il runtime ASP.NET. Di conseguenza, si è verificato alcun controllo di autorizzazione URL eseguita. il contenuto del file PDF presumibilmente privati è accessibile a chiunque ne conosca l'URL diretto al file.
-
 
 [![Gli utenti anonimi possono scaricare i file di formato PDF privato immettendo l'URL diretto al File](core-differences-between-iis-and-the-asp-net-development-server-vb/_static/image11.png)](core-differences-between-iis-and-the-asp-net-development-server-vb/_static/image10.png)
 
 **Figura 4**: Anonimo gli utenti possono scaricare il privata PDF i file da immettendo l'URL diretto al File ([fare clic per visualizzare l'immagine con dimensioni normali](core-differences-between-iis-and-the-asp-net-development-server-vb/_static/image12.png))
-
 
 ### <a name="performing-forms-based-authentication-and-url-authentication-on-static-files-with-iis-7"></a>Eseguire l'autenticazione basata su form e URL nei file statici con IIS 7
 
@@ -121,7 +109,6 @@ Questo codice indica a IIS 7 per usare i moduli di autenticazione e autorizzazio
 
 > [!NOTE]
 > Se il provider di hosting web Usa ancora IIS 6 è possibile usare la funzionalità di pipeline integrata. Una soluzione alternativa consiste nell'inserire i documenti privati in una cartella che impedisce l'accesso HTTP (ad esempio `App_Data`) e quindi creare una pagina per gestire tali documenti. Questa pagina può essere chiamata `GetPDF.aspx`e viene passato il nome del file PDF tramite un parametro di stringa di query. Il `GetPDF.aspx` pagina eseguite prima di tutto verificare che l'utente dispone dell'autorizzazione per visualizzare il file e, se in questo caso, usare il [ `Response.WriteFile(filePath)` ](https://msdn.microsoft.com/library/system.web.httpresponse.writefile.aspx) metodo per inviare il contenuto del file PDF richiesto al client richiedente. Questa tecnica funzionerebbe anche per IIS 7 Se non necessario abilitare la pipeline integrata.
-
 
 ## <a name="summary"></a>Riepilogo
 

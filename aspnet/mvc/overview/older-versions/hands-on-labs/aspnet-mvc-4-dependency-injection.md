@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 84c7baca-1c54-4c44-8f52-4282122d6acb
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-dependency-injection
 msc.type: authoredcontent
-ms.openlocfilehash: 86781a1f46ce0c01a5d70b1f0cf8a81f3f96a032
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 15c9d4dcb9e2c6b9f6adf54d65d15737b32cca3b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59405924"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129747"
 ---
 # <a name="aspnet-mvc-4-dependency-injection"></a>Inserimento di dipendenze di ASP.NET MVC 4
 
@@ -57,7 +57,6 @@ Vantaggi dell'uso di modello di inserimento delle dipendenze e inversione di con
 > [!NOTE]
 > Inserimento di dipendenze in alcuni casi viene confrontato con schema progettuale Factory astratta, ma è presente una leggera differenza tra entrambi gli approcci. L'inserimento delle dipendenze è un Framework lavoro dietro a risolvere le dipendenze chiamando le factory e i servizi registrati.
 
-
 Dopo avere appreso il modello di inserimento delle dipendenze, imparerai in tutto questo lab di applicarlo in ASP.NET MVC 4. Si inizierà con inserimento delle dipendenze nel **controller** per includere un servizio di accesso ai database. Successivamente, si applicherà l'inserimento delle dipendenze per il **viste** per utilizzare un servizio e visualizzare le informazioni. Infine, si estenderà l'inserimento delle dipendenze per i filtri di ASP.NET MVC 4, inserimento di un filtro azioni personalizzato nella soluzione.
 
 In questo laboratorio pratico, si apprenderà come:
@@ -69,7 +68,6 @@ In questo laboratorio pratico, si apprenderà come:
 
 > [!NOTE]
 > Questa esercitazione Usa pacchetto NuGet Unity.Mvc3 per la risoluzione delle dipendenze, ma è possibile adattare qualsiasi Framework di inserimento delle dipendenze per lavorare con ASP.NET MVC 4.
-
 
 <a id="Prerequisites"></a>
 
@@ -107,7 +105,6 @@ In questo laboratorio pratico include gli esercizi seguenti:
 > [!NOTE]
 > Ogni esercizio è accompagnato da un **End** cartella che contiene la soluzione risultante si dovrebbe ottenere dopo aver completato gli esercizi. Se ti serve assistenza aggiuntiva esaminando gli esercizi, è possibile usare questa soluzione come guida.
 
-
 Tempo stimato per completare questa esercitazione: **30 minuti**.
 
 <a id="Exercise1"></a>
@@ -137,12 +134,10 @@ Si noterà che il **StoreController** implementazione presenta una dipendenza co
 > 
 > Per risolvere la dipendenza, il controller deve essere creato da una factory astratta (una classe che restituisce qualsiasi oggetto del tipo specificato).
 
-
 [!code-csharp[Main](aspnet-mvc-4-dependency-injection/samples/sample2.cs)]
 
 > [!NOTE]
 > Si otterrà un errore quando la classe tenta di creare il StoreController senza inviare l'oggetto di servizio, come non vi è alcun costruttore senza parametri dichiarati.
-
 
 <a id="Ex1Task1"></a>
 
@@ -181,7 +176,6 @@ In questa attività includerà **Unity.Mvc3** pacchetto NuGet per la soluzione.
 > Pacchetto Unity.Mvc3 è stata progettata per ASP.NET MVC 3, ma è completamente compatibile con ASP.NET MVC 4.
 > 
 > Unity è ad esempio un contenitore di inserimento delle dipendenze leggera ed estendibile con supporto facoltativo e intercettazione di tipo. È un contenitore per utilizzo generico per l'uso in qualsiasi tipo di applicazione .NET. Fornisce tutte le caratteristiche comuni presenti in meccanismi di inserimento delle dipendenze tra cui: creazione di oggetti, l'astrazione dei requisiti, specificando dipendenze in fase di esecuzione e la flessibilità, rinviando la configurazione del componente per il contenitore.
-
 
 1. Installare **Unity.Mvc3** pacchetto NuGet nel **MvcMusicStore** progetto. A tale scopo, aprire il **Console di gestione pacchetti** dalla **View** | **Other Windows**.
 2. Eseguire il seguente comando.
@@ -310,7 +304,6 @@ Nell'attività precedente, inserita una nuova dipendenza all'interno di una vist
 > 
 > 
 > [!code-csharp[Main](aspnet-mvc-4-dependency-injection/samples/sample11.cs)]
-
 
 1. Creare il /**factory** cartella nella cartella radice del progetto.
 2. Includere **CustomViewPageActivator.cs** per la soluzione dall'inizio **/origini/risorse/** al **factory** cartella. A tale scopo, fare doppio clic il **/Factories** cartella, selezionare **Add | Elemento esistente** e quindi selezionare **CustomViewPageActivator.cs**. Questa classe implementa il **IViewPageActivator** interface per mantenere il contenitore di Unity.

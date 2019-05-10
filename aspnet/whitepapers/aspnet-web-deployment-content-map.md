@@ -8,12 +8,12 @@ ms.date: 03/14/2014
 ms.assetid: 58b583cd-c4ab-47a3-8527-8c92c298c91f
 msc.legacyurl: /whitepapers/aspnet-web-deployment-content-map
 msc.type: content
-ms.openlocfilehash: 3f36f0c504678e1e8b40aef99db81ab99101568b
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 96873c8f2b0ad2415f371aceb651400c801a3338
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59383934"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65125654"
 ---
 # <a name="aspnet-web-deployment---recommended-resources"></a>Distribuzione Web ASP.NET - Risorse consigliate
 
@@ -24,7 +24,6 @@ ms.locfileid: "59383934"
 > > [!NOTE] 
 > > 
 > > Molte di queste risorse vengono descritte le funzionalità di distribuzione che sono disponibili solo se si installa una versione recente del [Visual Studio Web pubblica Update](https://go.microsoft.com/fwlink/?LinkID=208120). Alcune delle funzionalità sono disponibili solo in Visual Studio 2012 o Visual Studio 2013.
-
 
 Di seguito sono elencate le diverse sezioni di questo argomento:
 
@@ -48,9 +47,7 @@ Di seguito sono elencate le diverse sezioni di questo argomento:
 - [Ottenere informazioni della Guida con una domanda di distribuzione specifico](#gettinghelp)
 - [Risorse aggiuntive](#additional)
 
-
 <a id="understanding"></a>
-
 
 ## <a name="understanding-deployment-options-for-web-projects"></a>Informazioni sulle opzioni di distribuzione per i progetti web
 
@@ -59,17 +56,13 @@ Di seguito sono elencate le diverse sezioni di questo argomento:
 - [Miglioramenti di pubblicazione Web di Visual Studio 2012](../visual-studio/overview/2012/visual-studio-2012-web-publishing-improvements.md) (Video di Scott Hanselman).
 - [Post di panoramica per la distribuzione Web in Visual Studio 2010](http://vishaljoshi.blogspot.com/2009/09/overview-post-for-web-deployment-in-vs.html) (blog di Vishal Joshi). Un post di blog precedenti, ma alcune delle risorse di Visual Studio 2010 che fornisca un collegamento per le informazioni che sono ancora rilevanti per Visual Studio 2012.
 
-
 <a id="findinghosting"></a>
-
 
 ## <a name="finding-hosting-providers-for-an-aspnet-application"></a>Individuazione provider per un'applicazione ASP.NET di hosting
 
 - [ASP.NET Hosting](https://asp.net/hosting)
 
-
 <a id="fromvs"></a>
-
 
 ## <a name="deploying-a-web-application-from-visual-studio"></a>Distribuzione di un'applicazione web da Visual Studio
 
@@ -78,7 +71,6 @@ Di seguito sono elencate le diverse sezioni di questo argomento:
 - [Procedura: Distribuire un Web progetto tramite un solo clic la pubblicazione in Visual Studio](https://msdn.microsoft.com/library/dd465337.aspx) (informazioni di riferimento per la procedura guidata di pubblicazione di Visual Studio Web.)
 - [Distribuzione di un'applicazione Web ASP.NET con SQL Server Compact tramite Visual Studio](../web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-introduction-1-of-12.md). Si tratta di una versione precedente di **distribuzione Web ASP.NET tramite Visual Studio** elencati nella parte superiore di questa sezione. Ora principalmente utile per informazioni su come distribuire i database di SQL Server Compact e come eseguire la migrazione da SQL Server Compact a una versione completa di SQL Server.
 - [Applicazione multilivello .NET usando archiviazione tabelle, code e blob](https://code.msdn.microsoft.com/Windows-Azure-Multi-Tier-eadceb36) (sito Web Microsoft Azure). serie di esercitazioni 5 parti, viene illustrato come creare un progetto MVC e distribuirla in un servizio Cloud di Azure.
-
 
 <a id="package"></a>
 ## <a name="deploying-a-web-application-by-creating-and-installing-a-web-deployment-package"></a>Distribuzione di un'applicazione web creando e installando un pacchetto di distribuzione web
@@ -91,9 +83,7 @@ Di seguito sono elencate le diverse sezioni di questo argomento:
 
 Vedere anche la sezione seguente.
 
-
 <a id="ci"></a>
-
 
 ## <a name="deploying-a-web-application-using-a-continuous-integration-ci-process"></a>Distribuzione di un'applicazione web tramite un processo di integrazione continua (CI)
 
@@ -107,9 +97,7 @@ Vedere anche la sezione seguente.
 
 Vedere anche [assicurandosi di un'applicazione non in linea durante la distribuzione è](aspnet-web-deployment-content-map.md#appoffline) più avanti in questa pagina.
 
-
 <a id="transforms"></a>
-
 
 ## <a name="using-webconfig-transformations-to-change-settings-in-the-destination-webconfig-file-or-appconfig-file-during-deployment"></a>Uso di trasformazioni di Web. config per modificare le impostazioni nel file Web. config di destinazione o nel file app. config durante la distribuzione
 
@@ -121,9 +109,7 @@ Vedere anche [assicurandosi di un'applicazione non in linea durante la distribuz
 - [XDT (XML documento Transform) rilasciato sul sito codeplex.com](https://blogs.msdn.com/b/webdev/archive/2013/04/23/xdt-xml-document-transform-released-on-codeplex-com.aspx) (blog di strumenti e sviluppo Web .NET). Annuncia la disponibilità del codice sorgente per il motore di trasformazione del file Web. config e vengono elencati alcuni strumenti che lo usano.
 - [Siti Web di Azure di Windows: Come applicazione stringhe and Connection Strings Work](https://blogs.msdn.com/b/windowsazure/archive/2013/07/17/windows-azure-web-sites-how-application-strings-and-connection-strings-work.aspx) (blog di Microsoft Azure). Consente di trasformare un'alternativa al Web. config se l'ambiente di destinazione è siti Web di Azure e si desidera trasformare `appSettings` o `connectionStrings`.
 
-
 <a id="webdeployparms"></a>
-
 
 ## <a name="using-web-deploy-parameters-to-change-settings-in-the-destination-web-application-during-deployment"></a>Utilizzo di parametri di distribuzione Web per modificare le impostazioni dell'applicazione web di destinazione durante la distribuzione
 
@@ -134,9 +120,7 @@ Vedere anche [assicurandosi di un'applicazione non in linea durante la distribuz
 - [Visual Studio distribuisce la parametrizzazione di Web. Trasformazione Web. config](http://vishaljoshi.blogspot.com/2010/06/parameterization-vs-webconfig.html) (blog di Vishal Joshi).
 - [Siti Web di Azure di Windows: Come applicazione stringhe and Connection Strings Work](https://blogs.msdn.com/b/windowsazure/archive/2013/07/17/windows-azure-web-sites-how-application-strings-and-connection-strings-work.aspx) (blog di Microsoft Azure). Un'alternativa al Web i parametri di distribuzione se l'ambiente di destinazione sia siti Web di Azure e si vuole parametrizzare `appSettings` o `connectionStrings`.
 
-
 <a id="appoffline"></a>
-
 
 ## <a name="making-sure-an-application-is-off-line-during-deployment"></a>Assicurarsi di un'applicazione è offline durante la distribuzione
 
@@ -146,9 +130,7 @@ Vedere anche [assicurandosi di un'applicazione non in linea durante la distribuz
 - [Web pubblicazione degli aggiornamenti per l'app non in linea e usechecksum](https://blogs.msdn.com/b/webdev/archive/2013/10/30/web-publishing-updates-for-app-offline-and-usechecksum.aspx) (blog di sviluppo Web Microsoft). Un'altra opzione per l'uso dell'app automazione\_offline.htm file.
 - [Web distribuire RTW 3.5](https://blogs.iis.net/msdeploy/archive/2013/07/09/webdeploy-3-5-rtw.aspx) (IIS.net sito). Nuova funzionalità di 3.5 distribuzione Web per app personalizzata\_offline.htm file.
 
-
 <a id="databasewithweb"></a>
-
 
 ## <a name="deploying-a-database-or-changes-to-a-database-as-part-of-web-application-deployment"></a>Distribuzione di un database o le modifiche apportate a un database come parte della distribuzione di applicazioni web
 
@@ -160,9 +142,7 @@ Vedere anche [assicurandosi di un'applicazione non in linea durante la distribuz
 
 Vedere anche la distribuzione di un'applicazione web creando e installando un pacchetto di distribuzione web e distribuire un'applicazione web tramite un processo di integrazione continua (CI) in precedenza in questa pagina.
 
-
 <a id="databaseseparate"></a>
-
 
 ## <a name="deploying-a-database-separately-from-web-application-deployment"></a>Distribuzione di un database separatamente dalla distribuzione di applicazioni web
 
@@ -174,9 +154,7 @@ Vedere anche la distribuzione di un'applicazione web creando e installando un pa
 - [Migrazione di applicazioni incentrate sui dati in Windows Azure](https://msdn.microsoft.com/library/jj156154.aspx) (MSDN).
 - [La migrazione di database di SQL Server al Database SQL di Azure Windows](https://msdn.microsoft.com/library/windowsazure/jj156160.aspx) (MSDN).
 
-
 <a id="aspnetmembership"></a>
-
 
 ## <a name="deploying-a-web-application-that-uses-aspnet-application-services-such-as-membership-and-profiling"></a>Distribuzione di un'applicazione web che usa l'applicazione ASP.NET di servizi, ad esempio l'appartenenza e la profilatura
 
@@ -186,9 +164,7 @@ Vedere anche la distribuzione di un'applicazione web creando e installando un pa
 - [Configurazione di un sito Web che utilizza i servizi dell'applicazione](../web-forms/overview/older-versions-getting-started/deploying-web-site-projects/configuring-a-website-that-uses-application-services-cs.md). Per il sito web progetti ma è anche rilevanti per i progetti applicazione web.
 - [Utenti e ruoli nel sito Web di produzione](../web-forms/overview/older-versions-getting-started/deploying-web-site-projects/users-and-roles-on-the-production-website-cs.md). Per il sito web progetti ma è anche rilevanti per i progetti applicazione web.
 
-
 <a id="precompiling"></a>
-
 
 ## <a name="precompiling-for-deployment"></a>Precompilazione per la distribuzione
 
@@ -196,18 +172,14 @@ Vedere anche la distribuzione di un'applicazione web creando e installando un pa
 - [Pubblicazione/creazione pacchetto Web scheda, le proprietà del progetto](https://msdn.microsoft.com/library/dd410108.aspx) (MSDN).
 - [Advanced precompilare finestra di dialogo Impostazioni](https://msdn.microsoft.com/library/hh475319.aspx) (MSDN).
 
-
 <a id="intranet"></a>
-
 
 ## <a name="deploying-an-intranet-web-application"></a>Distribuzione di un'applicazione web intranet
 
 - [Usare l'opzione di autenticazione aziendale locale (ADFS) con ASP.NET core in Visual Studio 2013](http://www.cloudidentity.com/blog/2014/02/12/use-the-on-premises-organizational-authentication-option-adfs-with-asp-net-in-visual-studio-2013/) (Blog di Vittorio Bertocci.).
 - [Come creare un sito Intranet mediante ASP.NET MVC](https://msdn.microsoft.com/library/gg703322(VS.98).aspx) (MSDN). Precedente procedura dettagliata scritto per Visual Studio 2010, non riflette le modifiche principali nei modelli di progetto intranet introdotti in Visual Studio 2013.
 
-
 <a id="automating"></a>
-
 
 ## <a name="automating-common-deployment-tasks-that-are-not-automated-out-of-the-box"></a>Automazione delle attività di distribuzione comuni che vengono automatizzate non predefiniti
 
@@ -220,26 +192,20 @@ Vedere anche la distribuzione di un'applicazione web creando e installando un pa
 - [Come assembly .NET pacchetto](https://blogs.msdn.com/webdevtools/archive/2010/02/19/how-to-package-com-component.aspx) (blog di strumenti di sviluppo Web). Come distribuire gli assembly nella Global Assembly Cache.
 - [Nello script tutti gli elementi - Initialize Your Windows VM di Azure per il proprio Server Web con IIS, Web Deploy e altri elementi](http://www.tugberkugurlu.com/archive/script-out-everything-initialize-your-windows-azure-vm-for-your-web-server-with-iis-web-deploy-and-other-stuff) (blog di Tugberk Ugurlu).
 
-
 <a id="configuringservers"></a>
-
 
 ## <a name="configuring-web-servers-so-that-developers-can-deploy-web-applications-to-them-using-web-deploy"></a>Configurazione dei server web in modo che gli sviluppatori possono distribuire applicazioni web tramite distribuzione Web
 
 - [Installazione e configurazione di distribuzione Web per le distribuzioni non di amministratore e amministratore](https://www.iis.net/learn/install/installing-publishing-technologies/installing-and-configuring-web-deploy) (IIS.net sito).
 
-
 <a id="hostingprovider"></a>
-
 
 ## <a name="configuring-servers-for-a-hosting-provider"></a>Configurare i server per un provider di hosting
 
 - [Guida alla distribuzione di Hosting di Microsoft ASP.NET 4](https://go.microsoft.com/fwlink/?LinkId=191365) (area download Microsoft).
 - [Generare un File XML del profilo](https://www.iis.net/learn/web-hosting/joining-the-web-hosting-gallery/generate-a-profile-xml-file) (IIS.net sito).
 
-
 <a id="troubleshooting"></a>
-
 
 ## <a name="troubleshooting-deployment-problems"></a>Risoluzione dei problemi di distribuzione
 
@@ -252,18 +218,14 @@ Vedere anche la distribuzione di un'applicazione web creando e installando un pa
 - [Differenze di configurazione più comuni tra sviluppo e produzione](../web-forms/overview/older-versions-getting-started/deploying-web-site-projects/common-configuration-differences-between-development-and-production-cs.md).
 - [Hosting di applicazioni ASP.NET in attendibilità media](http://www.4guysfromrolla.com/articles/100307-1.aspx) (4 Guy dal sito Rolla).
 
-
 <a id="gettinghelp"></a>
-
 
 ## <a name="getting-help-with-a-specific-deployment-question"></a>Ottenere informazioni della Guida con una domanda di distribuzione specifico
 
 - [Forum di distribuzione e configurazione di ASP.NET](https://forums.asp.net/26.aspx/1?Configuration and Deployment).
 - [StackOverflow.com](http://www.StackOverflow.com).
 
-
 <a id="additional"></a>
-
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 

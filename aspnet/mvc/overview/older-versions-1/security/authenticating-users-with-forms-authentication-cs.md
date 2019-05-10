@@ -8,19 +8,18 @@ ms.date: 01/27/2009
 ms.assetid: 239fd3ca-5630-4b8d-bc4b-2f906b1d3504
 msc.legacyurl: /mvc/overview/older-versions-1/security/authenticating-users-with-forms-authentication-cs
 msc.type: authoredcontent
-ms.openlocfilehash: b52abab12503918603419c9ccfabefcffdfd7e06
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: bed2eafa47fec25ac04cb07e0037f596494bb7d9
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59418274"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65128200"
 ---
 # <a name="authenticating-users-with-forms-authentication-c"></a>Autenticazione degli utenti con l'autenticazione basata su form (C#)
 
 by [Microsoft](https://github.com/microsoft)
 
 > Informazioni su come usare l'attributo [Authorize] per proteggere una password specifiche pagine nell'applicazione MVC. Descrive come usare lo strumento Amministrazione sito Web per creare e gestire utenti e ruoli. Anche informazioni su come configurare l'archiviazione delle informazioni sui ruoli e account di utente.
-
 
 L'obiettivo di questa esercitazione è illustrare come è possibile utilizzare forme autenticazione password proteggere le viste nelle applicazioni ASP.NET MVC. Descrive come usare lo strumento Amministrazione sito Web per creare utenti e ruoli. Anche informazioni su come impedire agli utenti non autorizzati di richiamare le azioni del controller. Infine, informazioni su come configurare dove vengono archiviate i nomi utente e password.
 
@@ -117,7 +116,6 @@ L'installazione guidata di ASP.NET SQL Server consente di selezionare un databas
 > Se non si desidera utilizzare l'installazione guidata di ASP.NET SQL Server, è possibile trovare gli script SQL per aggiungere gli oggetti di database dell'applicazione servizi nella cartella seguente:
 > 
 > > C:\Windows\Microsoft.NET\Framework\v2.0.50727
-
 
 Dopo aver creato gli oggetti di database necessari, è necessario modificare la connessione al database usata dall'applicazione MVC. Modificare la stringa di connessione ApplicationServices nel file di configurazione (Web. config) web in modo che punti al database di produzione. Ad esempio, la connessione modificata nel listato 3 punta a un database denominato MyProductionDB (la stringa di connessione ApplicationServices originale è stata impostata come commento).
 

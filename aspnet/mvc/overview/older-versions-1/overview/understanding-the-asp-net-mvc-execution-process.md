@@ -8,12 +8,12 @@ ms.date: 01/27/2009
 ms.assetid: d1608db3-660d-4079-8c15-f452ff01f1db
 msc.legacyurl: /mvc/overview/older-versions-1/overview/understanding-the-asp-net-mvc-execution-process
 msc.type: authoredcontent
-ms.openlocfilehash: 4a47f51b08b66dfe9636b3992786df19d0ad72ad
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 28940947253e0af43886cf1231f8aaf4615526cc
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59414933"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65125475"
 ---
 # <a name="understanding-the-aspnet-mvc-execution-process"></a>Informazioni sul processo di esecuzione di ASP.NET MVC
 
@@ -21,14 +21,12 @@ by [Microsoft](https://github.com/microsoft)
 
 > Informazioni su come il framework ASP.NET MVC elabora una richiesta del browser dettagliata.
 
-
 Le richieste a un'applicazione Web basata su MVC ASP.NET passano innanzitutto attraverso il **UrlRoutingModule** oggetto, ovvero un modulo HTTP. Questo modulo analizza la richiesta ed esegue la selezione di route. Il **UrlRoutingModule** oggetto consente di selezionare il primo oggetto route che corrisponde alla richiesta corrente. (Un oggetto route è una classe che implementa **RouteBase**, ed è in genere un'istanza di **Route** classe.) Se nessuna route corrispondono, il **UrlRoutingModule** oggetto non esegue alcuna operazione e consente la richiesta di eseguire il fallback alla richiesta di ASP.NET o IIS normale elaborazione.
 
 Dall'oggetto selezionato **Route** oggetto, il **UrlRoutingModule** oggetto Ottiene il **IRouteHandler** oggetto a cui è associato il **Route**oggetto. In genere, in un'applicazione MVC, sarà un'istanza di **MvcRouteHandler**. Il **IRouteHandler** istanza crea un **IHttpHandler** dell'oggetto e lo passa il **IHttpContext** oggetto. Per impostazione predefinita, il **IHttpHandler** dell'istanza per MVC è la **MvcHandler** oggetto. Il **MvcHandler** oggetto seleziona quindi il controller che gestirà infine la richiesta.
 
 > [!NOTE]
 > Quando un'applicazione Web MVC ASP.NET viene eseguita in IIS 7.0, non è necessario per i progetti MVC estensione. In IIS 6.0, il gestore richiede tuttavia che è eseguire il mapping di estensione del nome di file MVC alla DLL ISAPI ASP.NET.
-
 
 Il modulo e il gestore sono i punti di ingresso per il framework ASP.NET MVC. Eseguire le operazioni seguenti:
 

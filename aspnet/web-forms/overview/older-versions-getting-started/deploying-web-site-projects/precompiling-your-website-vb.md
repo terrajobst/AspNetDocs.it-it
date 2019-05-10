@@ -8,12 +8,12 @@ ms.date: 06/09/2009
 ms.assetid: c285dc6f-a1c6-46e6-ac03-3830947f57e3
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/precompiling-your-website-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 1f6e8fd2c31aa4eaf563edc719bbb8d2b3006866
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 95ca336504d05c4ea82b979dd431a6d90fb2f7b4
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59386268"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130289"
 ---
 # <a name="precompiling-your-website-vb"></a>Precompilazione del sito Web (VB)
 
@@ -23,14 +23,12 @@ da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 > Visual Studio offre agli sviluppatori ASP.NET due tipi di progetti: Progetti applicazione Web (WAP) e progetti di sito Web (WSPs). Una delle principali differenze tra due tipi di progetto è che WAP deve avere il codice compilato in modo esplicito prima della distribuzione, mentre il codice in un WSP può essere compilato automaticamente nel server web. Tuttavia, è possibile precompilare un WSP prima della distribuzione. Questa esercitazione illustra i vantaggi della precompilazione e Mostra come precompilare un sito Web da Visual Studio e dalla riga di comando.
 
-
 ## <a name="introduction"></a>Introduzione
 
 Visual Studio offre agli sviluppatori ASP.NET due diversi tipi di progetto: Progetti applicazione Web (WAP) e progetti di siti Web (WSP). Una delle differenze principali tra questi tipi di progetto è che richiedono WAP *compilazione esplicita* mentre usano WSPs *compilazione automatica*, per impostazione predefinita. Con WAP, si compila codice dell'applicazione web in un singolo assembly, che viene creato del sito Web `Bin` cartella. Distribuzione comporta la copia del contenuto del markup (il `.aspx.ascx`, e `.master` file) del progetto, insieme all'assembly nel `Bin` cartella; il code-behind stessi file di classe non sono necessario per la distribuzione. D'altra parte, si distribuisce WSPs copiando sia le pagine di codice e delle relative classi di code-behind corrispondente all'ambiente di produzione. Le classi di code-behind vengono compilate su richiesta nel server web.
 
 > [!NOTE]
 > Fare riferimento alla sezione "Compilazione Versus automatica compilazione esplicita" i [ *determinare quali file devono essere distribuiti* esercitazione](determining-what-files-need-to-be-deployed-vb.md) per altre informazioni sulle differenze tra il progetto i modelli, la compilazione esplicita e automatica e influenza il modello di compilazione sulla distribuzione.
-
 
 L'opzione di compilazione automatica è semplice da usare. Non è necessario alcun passaggio di compilazione esplicita e solo i file che sono stati modificati necessità per la distribuzione, mentre compilazione esplicita richiede la distribuzione di pagine modificate markup e l'assembly compilato just. Tuttavia, la distribuzione automatica presenta due potenziali svantaggi:
 
@@ -49,7 +47,6 @@ Con compilazione automatica e WSPs, non c'è alcun passaggio di compilazione esp
 
 > [!NOTE]
 > Come si può immaginare, vi sarà un lieve ritardo quando si richiede una pagina per la prima volta (o per la prima volta, poiché è stata modificata) in un sito che usa la compilazione automatica perché richiede qualche secondo per il server compilare il codice della pagina e salvare l'assembly risulta per disco.
-
 
 In breve, con la compilazione esplicita è necessario per compilare codice sorgente del sito Web prima della distribuzione, salvando il runtime di dover eseguire questo passaggio. Compilazione automatica con il runtime gestisce la compilazione del codice sorgente alla pagina, ma con un costo di inizializzazione leggero per la prima visita alla pagina perché è stato creato o ultimo aggiornamento.
 
@@ -70,7 +67,6 @@ Lo strumento di compilazione fornisce due tipi generali di compilazione: posto l
 > [!NOTE]
 > Per altre informazioni sulla precompilazione sul posto, consultare [How To: Precompilazione di siti Web ASP.NET](https://msdn.microsoft.com/library/ms227972.aspx) e [precompilazione in ASP.NET 2.0](http://www.odetocode.com/Articles/417.aspx).
 
-
 Invece di compilare le pagine nel sito Web per il `Temporary ASP.NET Files` cartella precompilazione per la distribuzione consente di compilare le pagine in una directory di propria scelta e in un formato che può essere distribuito nell'ambiente di produzione.
 
 Esistono due tipologie di precompilazione per la distribuzione che verrà esaminata in questa esercitazione: precompilazione con un'interfaccia utente aggiornabili e precompilazione con un'interfaccia utente non aggiornabili. La precompilazione con un'interfaccia utente aggiornabili lascia il markup dichiarativo nel `.aspx`, `.ascx`, e `.master` file, consentendo agli sviluppatori di visualizzare e, se si desidera, modificare il markup dichiarativo nel server di produzione. Genera la precompilazione con un'interfaccia utente non aggiornabili `.aspx` pagine void di qualsiasi contenuto e rimuove `.ascx` e `.master` file, in tal modo nascondere il markup dichiarativo e divieto di uno sviluppatore di modificarla dal ambiente di produzione.
@@ -88,7 +84,6 @@ Aprire WSP revisione libro in Visual Studio, passare al menu della compilazione 
 
 > [!NOTE]
 > L'opzione Pubblica sito Web nel menu di compilazione non è disponibile in Visual Web Developer. Se si usa Visual Web Developer, sarà necessario usare la versione della riga di comando dello strumento di compilazione ASP.NET, come illustrato nella sezione "precompilazione dalla riga di comando".
-
 
 Dopo la precompilazione del sito Web, passare al percorso di destinazione che è stato immesso nella finestra di dialogo Pubblica sito Web. Si consiglia di confrontare il contenuto della cartella con il contenuto del sito Web. **Figura 2** Mostra la cartella del sito Web le recensioni dei libri. Si noti che lo contiene entrambe `.aspx` e `.aspx.cs` file. Si noti inoltre che il `Bin` directory include un solo file, `Elmah.dll`, che è stato aggiunto nel [esercitazione precedente](logging-error-details-with-elmah-vb.md)
 
@@ -108,7 +103,6 @@ A differenza di compilazione esplicita in WAP, di precompilazione per processo d
 
 > [!NOTE]
 > È possibile indicare allo strumento di compilazione per creare un assembly per ogni pagina ASP.NET, controllo utente o pagina master selezionando la casella di controllo "Usati nomi fissato e assembly con pagina singola" dalla finestra di dialogo Pubblica sito Web. Disponibilità di ogni pagina ASP.NET compilata in un proprio assembly consente un controllo più accurato sulla distribuzione. Ad esempio, se si aggiornata una singola pagina web ASP.NET ed è necessaria distribuire tale modifica, è necessario distribuire solo tale pagina `.aspx` file e assembly associato all'ambiente di produzione. Consultare [come: Generare nomi fissi con lo strumento di compilazione ASP.NET](https://msdn.microsoft.com/library/ms228040.aspx) per altre informazioni.
-
 
 La directory del percorso di destinazione contiene anche un file che non faceva parte del progetto web precompilate, vale a dire `PrecompiledApp.config`. Questo file informa il runtime ASP.NET che l'applicazione è stata precompilata e indica se è stato precompilato con un'interfaccia utente aggiornabile o mezzogiorno aggiornabile.
 

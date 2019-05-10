@@ -8,19 +8,18 @@ ms.date: 03/02/2009
 ms.assetid: ec26f264-d0ea-4031-9943-825505a3ac4b
 msc.legacyurl: /mvc/overview/older-versions-1/views/using-the-tagbuilder-class-to-build-html-helpers-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 4fe34858aadb705ffb59e06ba805493d89aa4028
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 3b0aa9816209cc326d3dea4b8dfb1b13cf697fcd
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59403207"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130368"
 ---
 # <a name="using-the-tagbuilder-class-to-build-html-helpers-vb"></a>Utilizzo della classe TagBuilder per creazione di helper HTML (VB)
 
 da [Stephen Walther](https://github.com/StephenWalther)
 
 > Stephen Walther presenta una classe di utilità vantaggiosi nel framework di MVC ASP.NET denominata della classe TagBuilder. È possibile usare la classe TagBuilder per creare con facilità i tag HTML.
-
 
 Il framework ASP.NET MVC include una classe di utilità denominata della classe TagBuilder che è possibile usare durante la creazione di helper HTML. Classe TagBuilder, come suggerisce il nome della classe, consente di compilare facilmente i tag HTML. In questa breve esercitazione vengono fornite una panoramica della classe TagBuilder e descrive come utilizzare questa classe quando si compila un helper HTML semplice che esegue il rendering HTML &lt;img&gt; tag.
 
@@ -33,7 +32,6 @@ Classe TagBuilder è contenuta nello spazio dei nomi System. Dispone di cinque m
 - MergeAttribute() – consente di aggiungere attributi ad un tag. Sono disponibili più overload di questo metodo.
 - SetInnerText() – consente di impostare il testo interno del tag. Il testo interno viene automaticamente codifica HTML.
 - Metodo ToString (): consente di eseguire il rendering del tag. È possibile specificare se si desidera creare un tag normale, un tag di inizio, un tag di fine o un tag di chiusura automatica.
-  
 
 Classe TagBuilder ha quattro proprietà importanti:
 
@@ -64,11 +62,9 @@ Dopo aver creato l'helper di immagine, è possibile usare l'helper nelle visuali
 
 [!code-aspx[Main](using-the-tagbuilder-class-to-build-html-helpers-vb/samples/sample2.aspx)]
 
-
 [![La finestra di dialogo Nuovo progetto](using-the-tagbuilder-class-to-build-html-helpers-vb/_static/image1.jpg)](using-the-tagbuilder-class-to-build-html-helpers-vb/_static/image1.png)
 
 **Figura 01**: Utilizzo dell'helper di immagine ([fare clic per visualizzare l'immagine con dimensioni normali](using-the-tagbuilder-class-to-build-html-helpers-vb/_static/image2.png))
-
 
 Si noti che è necessario importare lo spazio dei nomi associato all'helper immagine nella parte superiore della visualizzazione index. aspx. L'helper viene importato con la direttiva seguente:
 

@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 093c1362-f10b-407c-a708-be370f4b62b0
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-entity-framework-scaffolding-and-migrations
 msc.type: authoredcontent
-ms.openlocfilehash: ca47f6fe6d55153354d38fcf1ba5e844215279b2
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 2b26224390af70e19ca0593abe93a6867140f8ab
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59389037"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129733"
 ---
 # <a name="aspnet-mvc-4-entity-framework-scaffolding-and-migrations"></a>Scaffolding e migrazioni di ASP.NET MVC 4 Entity Framework
 
@@ -72,7 +72,6 @@ L'esercizio seguente che costituiscono questo laboratorio pratico:
 > [!NOTE]
 > Questo esercizio è accompagnato da un **End** cartella che contiene la soluzione risultante si dovrebbe ottenere dopo aver completato l'esercizio. Se ti serve assistenza aggiuntiva, utilizzo l'esercizio, è possibile usare questa soluzione come guida.
 
-
 Tempo stimato per completare questa esercitazione: **30 minuti**
 
 <a id="Exercise1"></a>
@@ -90,7 +89,7 @@ In questo esercizio, si apprenderà come usare lo scaffolding di ASP.NET MVC 4 c
 #### <a name="task-1--creating-a-new-aspnet-mvc-4-project-using-scaffolding"></a>Attività 1-Creazione in corso un nuovo ASP.NET MVC 4 progetto usando lo Scaffolding
 
 1. Se non è già aperta, avviare **Visual Studio 2012**.
-2. Selezionare **File | Nuovo progetto**. Nella nuova finestra di dialogo progetto, sotto il **Visual c# | Web** sezione, selezionare **applicazione Web ASP.NET MVC 4**. Denominare il progetto di **MVC4andEFMigrations** e impostare il percorso al **Source\Ex1 UsingMVC4ScaffoldingEFMigrations** cartella della presente esercitazione. Impostare il **Nome soluzione** a **Begin** e verificare che **Crea directory per soluzione** sia selezionata. Fare clic su **OK**.
+2. Selezionare **File | Nuovo progetto**. Nella nuova finestra di dialogo progetto, sotto il **Visual c# | Web** sezione, selezionare **applicazione Web ASP.NET MVC 4**. Denominare il progetto di **MVC4andEFMigrations** e impostare il percorso al **Source\Ex1 UsingMVC4ScaffoldingEFMigrations** cartella della presente esercitazione. Impostare il **Nome soluzione** a **Begin** e verificare che **Crea directory per soluzione** sia selezionata. Scegliere **OK**.
 
     ![Finestra di dialogo Nuovo progetto ASP.NET MVC 4](aspnet-mvc-4-entity-framework-scaffolding-and-migrations/_static/image1.png "finestra di dialogo Nuovo progetto ASP.NET MVC 4")
 

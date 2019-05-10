@@ -8,12 +8,12 @@ ms.date: 07/30/2013
 ms.assetid: f81f3d80-3674-4d8e-a9b1-87feed1a93c9
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/creating-a-more-complex-data-model-for-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: 15bdaa588792c3cf4a8e6eee651e0675f959f942
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 2ba7ca22074fe3c131209482180f8f7706714dd5
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59382234"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129827"
 ---
 # <a name="creating-a-more-complex-data-model-for-an-aspnet-mvc-application-4-of-10"></a>Creazione di un modello di dati più complesso per un'applicazione ASP.NET MVC (4 di 10)
 
@@ -26,7 +26,6 @@ da [Tom Dykstra](https://github.com/tdykstra)
 > > [!NOTE] 
 > > 
 > > Se si verifica un problema è possibile risolvere, [Scarica il capitolo completato](building-the-ef5-mvc4-chapter-downloads.md) e provare a riprodurre il problema. Confrontando il codice per il codice completo è generalmente possibile trovare la soluzione al problema. Per alcuni errori comuni e come risolverli, vedere [errori e soluzioni alternative.](advanced-entity-framework-scenarios-for-an-mvc-web-application.md#errors)
-
 
 Nelle esercitazioni precedenti si è lavorato con un semplice modello di dati che è stato composto da tre entità. In questa esercitazione si aggiungeranno altre entità e relazioni e si personalizzerà il modello di dati specificando regole di formattazione, convalida e database mapping. Si vedrà due modi per personalizzare il modello di dati: aggiungendo attributi alle classi di entità e aggiungendo codice alla classe contesto di database.
 
@@ -52,9 +51,7 @@ Il [DataType](https://msdn.microsoft.com/library/system.componentmodel.dataannot
 
 L'attributo `DisplayFormat` viene usato per specificare in modo esplicito il formato della data:
 
-
 [!code-csharp[Main](creating-a-more-complex-data-model-for-an-asp-net-mvc-application/samples/sample2.cs)]
-
 
 Il `ApplyFormatInEditMode` impostazione specifica che la formattazione specificata deve essere applicata anche quando il valore viene visualizzato in una casella di testo per la modifica. (Non è consigliabile che per alcuni campi, ad esempio, per i valori di valuta, è possibile evitare il simbolo di valuta nella casella di testo per la modifica.)
 
@@ -124,7 +121,6 @@ L'immagine seguente mostra il nome della colonna originale come accadeva prima d
 
 > [!NOTE]
 > Se si prova a compilare prima di aver creato tutte queste classi di entità, si potrebbero ottenere errori del compilatore.
-
 
 ## <a name="create-the-instructor-entity"></a>Creare l'entità Instructor
 
@@ -260,12 +256,11 @@ Le proprietà di chiave esterna e le proprietà di navigazione riflettono le rel
 
 [!code-csharp[Main](creating-a-more-complex-data-model-for-an-asp-net-mvc-application/samples/sample24.cs)]
 
-
 ## <a name="modifying-the-student-entity"></a>Modificare l'entità Student
 
 ![Student_entity](creating-a-more-complex-data-model-for-an-asp-net-mvc-application/_static/image10.png)
 
-Nelle *Models\Student.cs*, sostituire il codice aggiunto in precedenza con il codice seguente. Le modifiche vengono evidenziate.
+Nelle *Models\Student.cs*, sostituire il codice aggiunto in precedenza con il codice seguente. Le modifiche sono evidenziate.
 
 [!code-csharp[Main](creating-a-more-complex-data-model-for-an-asp-net-mvc-application/samples/sample25.cs?highlight=12,15,24-27)]
 
@@ -378,7 +373,6 @@ Dopo aver completato la modifica di &lt; *timestamp&gt;\_Chap4.cs* file, immette
 > [!code-xml[Main](creating-a-more-complex-data-model-for-an-asp-net-mvc-application/samples/sample35.xml?highlight=1-2)]
 > 
 > Con un nuovo database, non sono presenti dati per eseguire la migrazione e il `update-database` comando è molto probabile che venga completato senza errori. Per istruzioni su come eliminare il database, vedere [come eliminare un Database da Visual Studio 2012](http://romiller.com/2013/05/17/how-to-drop-a-database-from-visual-studio-2012/).
-
 
 Aprire il database in **Esplora Server** eseguita in precedenza, quindi espandere il **tabelle** nodo per verificare che tutte le tabelle sono state create. (Se continuano a verificarsi **Esplora Server** aperto dall'operazione precedente, fare clic il **aggiornare** pulsante.)
 

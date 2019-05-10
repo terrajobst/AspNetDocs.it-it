@@ -8,12 +8,12 @@ ms.date: 04/21/2011
 ms.assetid: 0c6e4c2f-fcdb-4978-9656-1990c6f15727
 msc.legacyurl: /mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-10
 msc.type: authoredcontent
-ms.openlocfilehash: 48404f449ce2641bdff55b9ad75aa5eec1aee46b
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: f701d1fbabc3e1a97c3750d00e96bf8dba1105cd
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59403298"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129710"
 ---
 # <a name="part-10-final-updates-to-navigation-and-site-design-conclusion"></a>Parte 10: Aggiornamenti finali all'esplorazione e alla struttura del sito, conclusioni
 
@@ -24,7 +24,6 @@ by [Jon Galloway](https://github.com/jongalloway)
 > Music Store MVC è un semplice esempio di implementazione di un archivio per un negozio che vende album musicali online e implementa l'amministrazione di base del sito, l'accesso dell'utente e la funzionalità del carrello acquisti.  
 >   
 > Questa serie di esercitazioni illustra tutti i passaggi necessari per compilare l'applicazione di esempio ASP.NET MVC Music Store. Parte 10 copre aggiornamenti finali allo spostamento e struttura del sito, conclusioni.
-
 
 Abbiamo completato tutte le funzionalità principali per il sito, ma sono ancora disponibili alcune funzionalità da aggiungere al riquadro di spostamento del sito, la home page e la pagina Sfoglia Store.
 
@@ -133,7 +132,6 @@ A questo punto quando si esegue l'applicazione, si vedrà la home page aggiornat
 ## <a name="conclusion"></a>Conclusione
 
 Abbiamo visto che ASP.NET MVC rende più semplice per creare un sito Web sofisticate con accesso al database, l'appartenenza, AJAX, e così via. abbastanza rapidamente. Si spera in questa esercitazione è stata fornita gli strumenti che necessari per iniziare a compilare applicazioni personalizzati ASP.NET MVC.
-
 
 > [!div class="step-by-step"]
 > [Precedente](mvc-music-store-part-9.md)

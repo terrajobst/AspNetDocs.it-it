@@ -8,12 +8,12 @@ ms.date: 01/12/2011
 ms.assetid: 0b8c56b5-fdf3-42dd-a866-98fbe0ab78a0
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/adding-a-controller
 msc.type: authoredcontent
-ms.openlocfilehash: 18c8f2a95222a28d95950b34c816539f723542f2
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 635fae26ade5c99fb3a010b25e1d74d214e3c32e
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59396486"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130267"
 ---
 # <a name="adding-a-controller-c"></a>Aggiunta di un controller (C#)
 
@@ -32,7 +32,6 @@ da [Rick Anderson]((https://twitter.com/RickAndMSFT))
 > Se si usa Visual Studio 2010 anziché Visual Web Developer 2010, installare i prerequisiti, fare clic sul collegamento seguente: [Prerequisiti di Visual Studio 2010](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=VS2010SP1Pack).
 > 
 > Un progetto di Visual Web Developer con codice sorgente c# è disponibile a complemento di questo argomento. [Scaricare la versione c#](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098). Se si preferisce Visual Basic, passare al [versione Visual Basic](../vb/intro-to-aspnet-mvc-3.md) di questa esercitazione.
-
 
 MVC è l'acronimo *model-view-controller*. MVC è un modello per lo sviluppo di applicazioni che sono ben strutturata e facile da gestire. Le applicazioni basate su MVC contengono:
 

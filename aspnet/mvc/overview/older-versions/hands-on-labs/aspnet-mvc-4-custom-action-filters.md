@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 969ab824-1b98-4552-81fe-b60ef5fc6887
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-custom-action-filters
 msc.type: authoredcontent
-ms.openlocfilehash: 32587c7b0fd3075cd46678922b40bda2019f3a26
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: eaeb32180f79fabf557cbc38ff067eb26b47fea7
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59381133"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129757"
 ---
 # <a name="aspnet-mvc-4-custom-action-filters"></a>Filtri per azioni personalizzati di ASP.NET MVC 4
 
@@ -76,7 +76,6 @@ Tempo stimato per completare questa esercitazione: **30 minuti**.
 > [!NOTE]
 > Ogni esercizio è accompagnato da un **End** cartella che contiene la soluzione risultante si dovrebbe ottenere dopo aver completato gli esercizi. Se ti serve assistenza aggiuntiva esaminando gli esercizi, è possibile usare questa soluzione come guida.
 
-
 <a id="Exercise1"></a>
 
 <a id="Exercise_1_Logging_Actions"></a>
@@ -95,7 +94,6 @@ Il filtro estenderà **ActionFilterAttributeClass** ed eseguire l'override **OnA
 > - **Eccezione** filtro, che viene eseguita se si verifica un'eccezione non gestita generata in un punto nel metodo di azione, inizia con i filtri di autorizzazione e termina l'esecuzione del risultato. I filtri eccezioni sono utilizzabile per attività quali la registrazione o la visualizzazione di una pagina di errore.
 > 
 > Per altre informazioni sui provider di filtri, visitare il sito Web MSDN: ([https://msdn.microsoft.com/library/dd410209.aspx](https://msdn.microsoft.com/library/dd410209.aspx)).
-
 
 <a id="AboutLoggingFeature"></a>
 
@@ -132,7 +130,6 @@ In questa attività si creerà una classe di attributo di filtro personalizzato 
 > - **OnResultExecuted**(ResultExecutedContext filterContext): Dopo l'esecuzione del risultato (dopo il rendering).
 > 
 > Eseguendo l'override di uno di questi metodi in una classe derivata, è possibile eseguire il proprio codice di filtro.
-
 
 1. Aprire il **Begin** soluzione disponibile all'indirizzo **\Source\Ex01-LoggingActions\Begin** cartella.
 
@@ -352,7 +349,6 @@ In questa attività si aggiornerà la soluzione per registrare il nuovo filtro (
 
 > [!NOTE]
 > Inoltre, è possibile distribuire questa applicazione per siti Web di Azure seguenti [appendice b: Pubblicazione di un'applicazione ASP.NET MVC 4 con distribuzione Web](#AppendixB).
-
 
 ---
 

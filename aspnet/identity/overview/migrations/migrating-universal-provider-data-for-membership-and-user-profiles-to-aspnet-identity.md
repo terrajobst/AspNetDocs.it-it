@@ -9,12 +9,12 @@ ms.custom: seoapril2019
 ms.assetid: 2e260430-d13c-4658-bd05-e256fc0d63b8
 msc.legacyurl: /identity/overview/migrations/migrating-universal-provider-data-for-membership-and-user-profiles-to-aspnet-identity
 msc.type: authoredcontent
-ms.openlocfilehash: 1043dce4cdd62f94ae9d2344a9301c1b03426f3d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: de154dde122886976054159ad745982669ca9315
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59422265"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65121379"
 ---
 # <a name="migrating-universal-provider-data-for-membership-and-user-profiles-to-aspnet-identity-c"></a>Migrazione dei dati dei provider universali per l'appartenenza e i profili utente ad ASP.NET Identity (C#)
 
@@ -22,14 +22,12 @@ dal [Pranav Rastogi](https://github.com/rustd), [Rick Anderson]((https://twitter
 
 > Questa esercitazione vengono descritti i passaggi necessari eseguire la migrazione di utenti e i dati del ruolo e dati del profilo utente creati con i provider universali di un'applicazione esistente per il modello di identità di ASP.NET. L'approccio sopra indicate per eseguire la migrazione di dati del profilo utente possono essere utilizzate in un'applicazione con appartenenza SQL anche.
 
-
 Con la versione di Visual Studio 2013, il team ASP.NET ha introdotto un nuovo sistema di identità di ASP.NET e altre informazioni sulla versione [qui](../../index.md). Dopo l'analisi dell'articolo per eseguire la migrazione di applicazioni web dai [appartenenza SQL nel nuovo sistema di identità](migrating-an-existing-website-from-sql-membership-to-aspnet-identity.md), questo articolo illustra i passaggi per eseguire la migrazione di applicazioni esistenti che seguono il modello di provider per la gestione di utenti e ruoli il nuovo modello di identità. L'obiettivo di questa esercitazione sarà principalmente sulla migrazione di dati del profilo utente per associarlo in modo trasparente nel nuovo sistema. Migrazione delle informazioni utente e il ruolo è simile per l'appartenenza SQL. L'approccio seguito per eseguire la migrazione dei dati di profilo può essere utilizzato in un'applicazione con anche l'appartenenza SQL.
 
 Ad esempio, si inizierà con un'app web creata utilizzando Visual Studio 2012 che viene utilizzato il modello di provider. Si verrà quindi aggiungere codice per la gestione dei profili, registrazione di un utente, aggiungere dati del profilo per gli utenti, eseguire la migrazione dello schema del database e modificare l'applicazione a usare il sistema di identità per la gestione di utenti e ruoli. Come un test della migrazione, gli utenti creati tramite Universal Providers dovrebbero essere possibile accedere e devono essere in grado di registrare i nuovi utenti.
 
 > [!NOTE]
 > È possibile trovare l'esempio completo alla [ https://github.com/suhasj/UniversalProviders-Identity-Migrations ](https://github.com/suhasj/UniversalProviders-Identity-Migrations).
-
 
 ## <a name="profile-data-migration-summary"></a>Riepilogo della migrazione dei dati del profilo
 

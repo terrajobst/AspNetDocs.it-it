@@ -8,12 +8,12 @@ ms.date: 07/30/2013
 ms.assetid: 0d6fb83b-71f7-425d-8dec-981197d7ec42
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/reading-related-data-with-the-entity-framework-in-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: f86212c1cb559c164342997fb0e4208339b5e3cc
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: cc629f84bbf8c271780a8e7deba3d04d23d5fbb1
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59421121"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129824"
 ---
 # <a name="reading-related-data-with-the-entity-framework-in-an-aspnet-mvc-application-5-of-10"></a>La lettura di dati correlati con Entity Framework in un'applicazione ASP.NET MVC (5 di 10)
 
@@ -26,7 +26,6 @@ da [Tom Dykstra](https://github.com/tdykstra)
 > > [!NOTE] 
 > > 
 > > Se si verifica un problema è possibile risolvere, [Scarica il capitolo completato](building-the-ef5-mvc4-chapter-downloads.md) e provare a riprodurre il problema. Confrontando il codice per il codice completo è generalmente possibile trovare la soluzione al problema. Per alcuni errori comuni e come risolverli, vedere [errori e soluzioni alternative.](advanced-entity-framework-scenarios-for-an-mvc-web-application.md#errors)
-
 
 Nell'esercitazione precedente è stato completato il modello di dati dell'istituto di istruzione. In questa esercitazione verrà letto e visualizzare dati correlati, ovvero i dati che Entity Framework carica all'interno di proprietà di navigazione.
 
@@ -176,7 +175,6 @@ Il metodo accetta i dati di route facoltativi (`id`) e un parametro di stringa d
 > 
 > [!code-cshtml[Main](reading-related-data-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample11.cshtml)]
 
-
 Il codice inizia creando un'istanza del modello di visualizzazione e inserendola nell'elenco degli insegnanti. Nel codice viene specificato il caricamento eager per la `Instructor.OfficeAssignment` e il `Instructor.Courses` proprietà di navigazione.
 
 [!code-csharp[Main](reading-related-data-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample12.cs?highlight=3-4)]
@@ -237,7 +235,6 @@ Questo codice legge la proprietà `Courses` del modello di visualizzazione per v
 
 > [!NOTE]
 > Il *CSS* file viene memorizzato nella cache dal browser. Se quando si esegue l'applicazione non vengono visualizzate le modifiche, eseguire un aggiornamento di disco rigido (tenere premuto il tasto CTRL mentre si fa clic il **Aggiorna** , oppure premere CTRL + F5).
-
 
 Eseguire la pagina e selezionare un insegnante. È ora possibile vedere una griglia con i corsi assegnati all'insegnante selezionato. Per ogni corso è possibile vedere il nome del dipartimento assegnato.
 

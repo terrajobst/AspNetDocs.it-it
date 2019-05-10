@@ -8,12 +8,12 @@ ms.date: 02/10/2014
 ms.assetid: f3f4b8c8-e8f6-4474-ad94-69228a6c01ee
 msc.legacyurl: /web-pages/overview/ui-layouts-and-themes/4-working-with-forms
 msc.type: authoredcontent
-ms.openlocfilehash: 680739cbcf54bc9ca7a3bd8167d043ff537eaad5
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ec5ad784978b2d5191d59398fc4b5ed25ae516fb
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59417533"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65128397"
 ---
 # <a name="working-with-html-forms-in-aspnet-web-pages-razor-sites"></a>Uso dei moduli HTML in ASP.NET Web Pages (Razor) Sites
 
@@ -42,7 +42,6 @@ da [Tom FitzMacken](https://github.com/tfitzmac)
 >   
 > 
 > Questa esercitazione si integra inoltre con ASP.NET Web Pages 2.
-
 
 ## <a name="creating-a-simple-html-form"></a>Creazione di un Form HTML semplice
 
@@ -89,7 +88,6 @@ Per elaborare il form, si aggiunge codice che legge i valori dei campi inviato e
 > È consigliabile usare ogni volta che si visualizza stringhe codificate in formato HTML (input) che è stato creato da un utente. In caso contrario, un utente può provare a ottenere la pagina web per eseguire uno script dannoso o eseguire altre operazioni che compromette la protezione del sito oppure non è previsto. (Ciò è particolarmente importante se si accettano input dell'utente, archiviarlo altre fonti e quindi visualizzarli in un secondo momento &#8212; , ad esempio, come un commento di blog, verifica utente o qualcosa del genere.)
 > 
 > Per consentire di evitare questi problemi, ASP.NET Web Pages automaticamente codifica in HTML qualsiasi testo di contenuto che si dal codice di output. Ad esempio, quando si visualizza il contenuto di una variabile o espressione tramite codice come `@MyVar`, ASP.NET Web Pages codifica automaticamente l'output.
-
 
 ## <a name="validating-user-input"></a>Convalida dell'Input utente
 

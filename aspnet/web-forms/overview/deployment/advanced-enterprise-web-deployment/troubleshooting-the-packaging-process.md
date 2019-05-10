@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 794bd819-00fc-47e2-876d-fc5d15e0de1c
 msc.legacyurl: /web-forms/overview/deployment/advanced-enterprise-web-deployment/troubleshooting-the-packaging-process
 msc.type: authoredcontent
-ms.openlocfilehash: 79774c6a1a1d05d5a7bcd82a5d7aa888933cf089
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 8ad649dfff085a8774cc13c11d8a3e3d48277d66
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59420107"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65128696"
 ---
 # <a name="troubleshooting-the-packaging-process"></a>Risoluzione dei problemi del processo di creazione di pacchetti
 
@@ -34,7 +34,6 @@ da [Jason Lee](https://github.com/jrjlee)
 > > [!NOTE]
 > > Il **EnablePackageProcessLoggingAndAssert** proprietà funziona solo se si compila il progetto usando la **Debug** configurazione. La proprietà viene ignorata in altre configurazioni.
 
-
 In questo argomento fa parte di una serie di esercitazioni basate su requisiti di distribuzione aziendale di una società fittizia, denominata Fabrikam, Inc. Questa serie di esercitazioni Usa una soluzione di esempio&#x2014;il [soluzione Contact Manager](../web-deployment-in-the-enterprise/the-contact-manager-solution.md)&#x2014;per rappresentare un'applicazione web con un livello di complessità, tra cui un'applicazione ASP.NET MVC 3, una comunicazione Windows realistico Servizio Foundation (WCF) e un progetto di database.
 
 Il metodo di distribuzione il fulcro delle esercitazioni seguenti si basa sull'approccio di file di progetto split descritto in [informazioni sul File di progetto](../web-deployment-in-the-enterprise/understanding-the-project-file.md), in cui il processo di compilazione è controllato da due file di progetto&#x2014;contenente una istruzioni che si applicano a tutti gli ambienti di destinazione e quella che contiene le impostazioni di compilazione e distribuzione specifiche dell'ambiente di creazione. In fase di compilazione, il file di progetto specifici dell'ambiente viene unito nel file di progetto indipendenti dall'ambiente in modo da formare un set completo di istruzioni di compilazione.
@@ -45,13 +44,10 @@ Il metodo di distribuzione il fulcro delle esercitazioni seguenti si basa sull'a
 
 Molte di queste destinazioni WPP includono logica condizionale che consente di registrare informazioni aggiuntive quando la **EnablePackageProcessLoggingAndAssert** è impostata su **true**. Ad esempio, se si esamina il **Package** destinazione, è possibile vedere che crea una directory di log aggiuntivi e scrive un elenco di file in un file di testo se **EnablePackageProcessLoggingAndAssert** è uguale a **true**.
 
-
 [!code-xml[Main](troubleshooting-the-packaging-process/samples/sample1.xml)]
-
 
 > [!NOTE]
 > Le destinazioni WPP sono definite nel *Microsoft.Web.Publishing.targets* file nella cartella %\MSBuild\Microsoft\VisualStudio\v10.0\Web % programmi (x86). È possibile aprire questo file ed esaminare le destinazioni in Visual Studio 2010 o qualsiasi editor XML. Prestare attenzione a non per modificare il contenuto del file.
-
 
 ## <a name="enabling-the-additional-logging"></a>Abilitare la registrazione aggiuntiva
 
@@ -59,27 +55,20 @@ Molte di queste destinazioni WPP includono logica condizionale che consente di r
 
 Se si compila il progetto dalla riga di comando, è possibile fornire un valore per il **EnablePackageProcessLoggingAndAssert** proprietà come un argomento della riga di comando:
 
-
 [!code-console[Main](troubleshooting-the-packaging-process/samples/sample2.cmd)]
-
 
 Se si usa un file di progetto personalizzati per compilare i progetti, è possibile includere il **EnablePackageProcessLoggingAndAssert** valore nel **delle proprietà** attributo del **MSBuild**attività:
 
-
 [!code-xml[Main](troubleshooting-the-packaging-process/samples/sample3.xml)]
-
 
 Se si usa una definizione di compilazione di Team Foundation Server (TFS) per compilare i progetti, è possibile fornire un valore per il **EnablePackageProcessLoggingAndAssert** proprietà di **argomenti MSBuild** riga:![](troubleshooting-the-packaging-process/_static/image1.png)
 
 > [!NOTE]
 > Per altre informazioni sulla creazione e configurazione di definizioni di compilazione, vedere [creazione di una compilazione che supporta la distribuzione della definizione](../configuring-team-foundation-server-for-web-deployment/creating-a-build-definition-that-supports-deployment.md).
 
-
 In alternativa, se si desidera includere il pacchetto in ogni build, è possibile modificare il file di progetto per il progetto di applicazione web impostare il **EnablePackageProcessLoggingAndAssert** proprietà **true**. È necessario aggiungere la proprietà per il primo **PropertyGroup** elemento all'interno del file con estensione csproj o vbproj.
 
-
 [!code-xml[Main](troubleshooting-the-packaging-process/samples/sample4.xml)]
-
 
 ## <a name="reviewing-the-log-files"></a>Esaminare i file di Log
 
@@ -100,7 +89,6 @@ L'elenco dei file visualizzati variano in base alle operazioni nel progetto e il
 
 > [!NOTE]
 > I nomi dei file di log aggiuntivi in genere corrispondono a destinazioni WPP. È possibile esaminare queste destinazioni esaminando il *Microsoft.Web.Publishing.targets* file nella cartella %\MSBuild\Microsoft\VisualStudio\v10.0\Web % programmi (x86).
-
 
 Se il contenuto del pacchetto di web non è quelli previsti, esaminare questi file può essere utile per identificare a quale punto le operazioni di processo causa dell'errore.
 

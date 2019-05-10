@@ -9,19 +9,18 @@ ms.custom: seoapril2019
 ms.assetid: adbc175a-14eb-4ab2-a441-d056ffa8266f
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-routing-conventions
 msc.type: authoredcontent
-ms.openlocfilehash: 8916f8b7a024636be1be055457081487f46a7936
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 63df4a82cd8df92631485b2544117844cfd0ca56
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59421628"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130486"
 ---
 # <a name="routing-conventions-in-aspnet-web-api-2-odata"></a>Convenzioni di routing in ASP.NET Web API 2 Odata
 
 da [Mike Wasson](https://github.com/MikeWasson)
 
 > Questo articolo descrive le convenzioni di routing di tale API Web 2 ASP.NET 4.x usi gli endpoint OData.
-
 
 Quando l'API Web riceve una richiesta di OData, esegue il mapping della richiesta a un nome di controller e un nome di azione. Il mapping si basa sul metodo HTTP e l'URI. Ad esempio, `GET /odata/Products(1)` esegue il mapping a `ProductsController.GetProduct`.
 
@@ -53,7 +52,6 @@ Pertanto, questo percorso preleva il fornitore del prodotto 1.
 
 > [!NOTE]
 > I segmenti di percorso OData non sempre corrispondono a segmenti dell'URI. Ad esempio, "1" è considerato un segmento di percorso.
-
 
 **Nomi dei controller.** Il nome del controller è sempre derivato dal set alla radice del percorso della risorsa di entità. Ad esempio, se è il percorso della risorsa `/Products(1)/Supplier`, API Web è simile per un controller denominato `ProductsController`.
 

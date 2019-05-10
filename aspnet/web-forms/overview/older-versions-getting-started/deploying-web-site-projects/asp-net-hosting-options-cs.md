@@ -8,12 +8,12 @@ ms.date: 04/01/2009
 ms.assetid: 89a1d2bc-fdfd-4c5c-a3b0-49a08baaf63a
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/asp-net-hosting-options-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 90285eac8e45d542c4ccca3e3db00493546aac57
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 0ec92a3b719116d8ef457156788ac451a300dbfc
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59398449"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130659"
 ---
 # <a name="aspnet-hosting-options-c"></a>Opzioni di hosting ASP.NET (C#)
 
@@ -22,7 +22,6 @@ da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Scaricare PDF](http://download.microsoft.com/download/E/8/9/E8920AE6-D441-41A7-8A77-9EF8FF970D8B/aspnet_tutorial01_Basics_cs.pdf)
 
 > Le applicazioni web ASP.NET sono in genere progettate, create e testate in un ambiente di sviluppo locale e debbano essere distribuite in un ambiente di produzione dopo che è pronta per il rilascio. Questa esercitazione offre una panoramica generale del processo di distribuzione e costituisce un'introduzione a questa serie di esercitazioni.
-
 
 ## <a name="introduction"></a>Introduzione
 
@@ -57,7 +56,6 @@ Le informazioni di configurazione per un'applicazione web si trova in genere nel
 
 Oltre alle modifiche alla configurazione dell'applicazione web, passaggio 1 anche può comportare una configurazione per il database e server web. Ad esempio, se una pagina ASP.NET crea o Elimina i file da una directory nel server web del server web deve quindi essere configurato per consentire le modifiche al sistema questi file. Analogamente, potrebbe esserci delle impostazioni di autorizzazione o autenticazione che devono essere apportate al database.
 
-
 Passaggio 2 richiede la sincronizzazione il set di pagine ASP.NET essenziali e file di supporto tra gli ambienti di sviluppo e produzione. Il set specifico di ASP. I file correlati alla rete che devono essere sincronizzati tra i due ambienti varia a seconda del tipo di progetto creato in Visual Studio e la discussione nella prossima esercitazione, viene [ *determinare quali file devono essere distribuiti*](determining-what-files-need-to-be-deployed-cs.md). Le esercitazioni terza e quarta - [ *distribuzione del sito tramite FTP* ](deploying-your-site-using-an-ftp-client-cs.md) e [ *distribuzione del sito tramite Visual Studio* ](deploying-your-site-using-visual-studio-cs.md) -esaminare diversi strumenti e tecniche per la sincronizzazione di questi file.
 
 Quando si compilano applicazioni basate sui dati sono in genere due database in uso: uno per lo sviluppo e uno in produzione. Durante lo sviluppo, lo sviluppo schema del database possa essere modificato per includere le nuove tabelle, colonne, le stored procedure e trigger, o può essere modificato per rimuovere o rinominare gli oggetti di database esistenti. Tra l'ora in cui vengono apportate queste modifiche e l'ora che l'applicazione viene distribuita nell'ambiente di produzione, i database di sviluppo e produzione non sono sincronizzati. Questa asincronia deve essere corretto durante il processo di distribuzione. Queste sfide verranno esaminate in esercitazioni future.
@@ -69,7 +67,6 @@ Le applicazioni ASP.NET possono essere distribuite in qualsiasi server web con .
 > [!NOTE]
 > [IIS](https://www.iis.net/) è server web di livello aziendale di Microsoft. Fornito con le edizioni Home non di Windows, ad esempio Windows Server 2008 e in alcune edizioni di Windows Vista. Non occorre installare IIS per la gestione di applicazioni ASP.NET in un ambiente di sviluppo come Visual Studio include Server Web di sviluppo ASP.NET. Tuttavia, il Server Web di sviluppo ASP.NET accetta solo connessioni locali e pertanto non può essere utilizzato in un ambiente di produzione.
 
-
 Prima di poter distribuire il sito per un provider di hosting web, è prima necessario decidere quali aziendali per svolgere attività commerciali con. Esistono innumerevoli web che ospita le aziende nel marketplace; cercare "società di hosting web" restituisce i risultati di più di cinque milioni. Come individuare quella più adatta a te? Motore di ricerca preferito è un buon punto di partenza, come siti Web, ad esempio [TopHosts](http://www.tophosts.com/) e [HostCritique](http://www.hostcritique.net/), quale analizzare e confrontare vari servizi di hosting. Consiglio inoltre porre colleghi e i colleghi per eventuali indicazioni; è anche possibile porre per le indicazioni nel [Hosting Forum Open](https://forums.asp.net/158.aspx) sentiamo i [forum ASP.NET](https://forums.asp.net/).
 
 Le società di hosting Web in genere offrono servizi di hosting condivisi e dedicati i piani di hosting. Con host condivisi un host di server web single decine se non centinaia di siti Web diversi. Con l'hosting dedicato lease un computer della società che gestisce il sito e il sito. Un piano di hosting condiviso potrebbe includere il supporto per le pagine ASP.NET, la possibilità di lavorare con database Microsoft Access, 5 GB di spazio su disco e 100 GB di traffico mensile in larghezza di banda per 9,95 dollari al mese. Un altro piano di hosting condiviso potrebbe includere il supporto per le pagine ASP.NET, l'accesso al server di database Microsoft SQL Server 2008, 10 GB di spazio su disco e 250 GB di traffico mensile in larghezza di banda per 19,95 dollari con acquisto al mese. Dedicato i piani di hosting sono in genere molto più costosi e determinazione costi centinaia dollari diversi per ogni mese, ma offrono prestazioni migliorate e maggiore controllo rispetto a condiviso opzioni di hosting. Il piano scelto dipende il tuo budget, la quantità di traffico del sito Web riceve e le funzionalità si prevede si saranno necessario.
@@ -78,7 +75,6 @@ Due considerazioni importanti quando si sceglie un provider di hosting web sono 
 
 > [!NOTE]
 > Alcune società di hosting web loro attività aziendali di concentrarsi su uno stack particolare tecnologia, ad esempio .NET o [LAMP](http://en.wikipedia.org/wiki/LAMP_stack) (**L** inux, **oggetto** pache, **M** ySQL, e **P** HP), quindi assicurarsi che la società si seleziona ospita le applicazioni ASP.NET. Verificare anche che supportano la versione di ASP.NET si usa per compilare l'applicazione. E se si compila un'applicazione basata su dati, assicurarsi che l'host web offre il server di database e la versione che si sta utilizzando stesso.
-
 
 ## <a name="summary"></a>Riepilogo
 

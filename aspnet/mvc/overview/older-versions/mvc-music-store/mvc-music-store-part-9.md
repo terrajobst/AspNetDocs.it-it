@@ -8,12 +8,12 @@ ms.date: 04/21/2011
 ms.assetid: d65c5c2b-a039-463f-ad29-25cf9fb7a1ba
 msc.legacyurl: /mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-9
 msc.type: authoredcontent
-ms.openlocfilehash: c7151351b087439f17457b254cd9e373af21cae3
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 040bc0ccef889fb9a7c3d9b5ce88c75b7b754248
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59380899"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129630"
 ---
 # <a name="part-9-registration-and-checkout"></a>Parte 9: Registrazione e completamento della transazione
 
@@ -24,7 +24,6 @@ by [Jon Galloway](https://github.com/jongalloway)
 > Music Store MVC è un semplice esempio di implementazione di un archivio per un negozio che vende album musicali online e implementa l'amministrazione di base del sito, l'accesso dell'utente e la funzionalità del carrello acquisti.  
 >   
 > Questa serie di esercitazioni illustra tutti i passaggi necessari per compilare l'applicazione di esempio ASP.NET MVC Music Store. Parte 9 vengono illustrate la registrazione e l'estrazione.
-
 
 In questa sezione verranno creati un CheckoutController che raccoglierà le informazioni di pagamento e indirizzo dell'acquirente. Sarà necessario agli utenti di registrarsi con il nostro sito prima dell'estrazione, in modo che questo controller richiederà l'autorizzazione.
 
@@ -158,7 +157,6 @@ Il modello predefinito include una visualizzazione di errori nella cartella view
 Poiché si tratta di una pagina di errore generico, il contenuto è molto semplice. Verrà incluso un messaggio e un collegamento per passare alla pagina precedente nella cronologia se l'utente vuole riprovare l'azione.
 
 [!code-cshtml[Main](mvc-music-store-part-9/samples/sample13.cshtml)]
-
 
 > [!div class="step-by-step"]
 > [Precedente](mvc-music-store-part-8.md)

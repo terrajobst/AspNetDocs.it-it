@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: c711b453-01ac-4e65-a48c-93d99bf22e58
 msc.legacyurl: /web-forms/overview/deployment/advanced-enterprise-web-deployment/performing-a-what-if-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: a222aa6bf52ee72e6a0f4ac5503b4b4f78d294fb
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 73a0e038cc0d4ebae0ffc8ed3fd2de4c9dad673c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59414322"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65127071"
 ---
 # <a name="performing-a-what-if-deployment"></a>Esecuzione di una distribuzione di simulazione
 
@@ -22,7 +22,6 @@ da [Jason Lee](https://github.com/jrjlee)
 [Scaricare PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > In questo argomento viene descritto come eseguire "what if" (o simulati) le distribuzioni usando lo strumento di distribuzione Web di Internet Information Services (IIS) (distribuzione Web) e VSDBCMD. Ciò consente di determinare gli effetti della logica di distribuzione in un ambiente di destinazione specifico prima di distribuire effettivamente l'applicazione.
-
 
 In questo argomento fa parte di una serie di esercitazioni basate su requisiti di distribuzione aziendale di una società fittizia, denominata Fabrikam, Inc. Questa serie di esercitazioni Usa una soluzione di esempio&#x2014;il [soluzione Contact Manager](../web-deployment-in-the-enterprise/the-contact-manager-solution.md)&#x2014;per rappresentare un'applicazione web con un livello di complessità, tra cui un'applicazione ASP.NET MVC 3, una comunicazione Windows realistico Servizio Foundation (WCF) e un progetto di database.
 
@@ -42,31 +41,23 @@ Come descritto in [distribuzione di pacchetti Web](../web-deployment-in-the-ente
 
 Se si usa MSDeploy.exe direttamente, è possibile eseguire una distribuzione di "what if" aggiungendo il **– whatif** flag al comando. Ad esempio, per valutare cosa accadrebbe se il pacchetto ContactManager.Mvc.zip è stato distribuito in un ambiente di staging, il comando di MSDeploy sarà analogo al seguente:
 
-
 [!code-console[Main](performing-a-what-if-deployment/samples/sample1.cmd)]
-
 
 Quando si è soddisfatti dei risultati della distribuzione di "what if", è possibile rimuovere il **– whatif** flag per eseguire una distribuzione in tempo reale.
 
 > [!NOTE]
 > Per altre informazioni sulle opzioni della riga di comando per MSDeploy.exe, vedere [Web Deploy operazione Settings](https://technet.microsoft.com/library/dd569089(WS.10).aspx).
 
-
 Se si usa la *. deploy. cmd* file, è possibile eseguire una distribuzione di "what if", includendo il **/t** flag flag (modalità valutazione) anziché il **/y** flag ("yes" o la modalità di aggiornamento) in il comando. Ad esempio, per valutare cosa accadrebbe se è stato distribuito il pacchetto ContactManager.Mvc.zip eseguendo il *. deploy. cmd* file, il comando sarà analogo al seguente:
-
 
 [!code-console[Main](performing-a-what-if-deployment/samples/sample2.cmd)]
 
-
 Quando si è soddisfatti dei risultati della distribuzione di "modalità di valutazione", è possibile sostituire il **/t** contrassegnare con un **/y** flag per eseguire una distribuzione in tempo reale:
-
 
 [!code-console[Main](performing-a-what-if-deployment/samples/sample3.cmd)]
 
-
 > [!NOTE]
 > Per altre informazioni sulle opzioni della riga di comando per la *. deploy. cmd* i file, vedere [come: Installare un pacchetto di distribuzione usando il File deploy. cmd](https://msdn.microsoft.com/library/ff356104.aspx). Se si esegue la *. deploy. cmd* file senza specificare alcun flag, il prompt dei comandi verrà visualizzato un elenco dei flag.
-
 
 ## <a name="performing-a-what-if-deployment-for-databases"></a>Esecuzione di una distribuzione "What If" per i database
 
@@ -80,12 +71,9 @@ Quando si usa VSDBCMD nelle **Deploy** modalità, è possibile utilizzare il **/
 > [!NOTE]
 > Se si distribuisce un file DeployManifest anziché un file. dbschema, il comportamento dei **/dd** commutatore è molto più complicato. In pratica, VSDBCMD ignorerà il valore della **/dd** passare, se il file con estensione deploymanifest include una **DeployToDatabase** elemento con il valore **True**. [Distribuzione di progetti di Database](../web-deployment-in-the-enterprise/deploying-database-projects.md) descrive questo comportamento in modo completo.
 
-
 Ad esempio, per generare uno script di distribuzione per il **ContactManager** database senza distribuire effettivamente il database, il comando VSDBCMD sarà analogo al seguente:
 
-
 [!code-console[Main](performing-a-what-if-deployment/samples/sample4.cmd)]
-
 
 VSDBCMD è uno strumento di distribuzione di backup differenziali del database e di conseguenza lo script di distribuzione viene generato dinamicamente per contenere tutti i comandi SQL necessari per aggiornare il database corrente, se presente, lo schema specificato. Esaminare lo script di distribuzione è un modo utile per determinare l'impatto della distribuzione sarà necessario nel database corrente e i dati in che esso contenuti. Ad esempio, voler determinare:
 
@@ -107,29 +95,21 @@ Quando si integra la distribuzione di più pacchetti web e/o i database in un un
 
 Il *Publish.proj* file viene illustrato come è possibile eseguire questa operazione. In primo luogo, è necessario creare una proprietà per archiviare il valore "what if":
 
-
 [!code-xml[Main](performing-a-what-if-deployment/samples/sample5.xml)]
-
 
 In questo caso, è stata creata una proprietà denominata **WhatIf** con valore predefinito è **false**. Gli utenti possono eseguire l'override di questo valore impostando la proprietà su **true** in un parametro della riga di comando, come si vedrà a breve.
 
 La fase successiva consiste nell'impostare i parametri per qualsiasi distribuzione Web e VSDBCMD i comandi in modo che rispecchino i flag di **WhatIf** valore della proprietà. Ad esempio, la destinazione successiva (tratto dal *Publish.proj* file e semplificato) viene eseguito il *. deploy. cmd* file per distribuire un pacchetto di web. Per impostazione predefinita, il comando include un' **/Y** switch ("yes" o la modalità di aggiornamento). Se **WhatIf** è impostata su **true**, che viene sostituita da una **/T** switch (versione di valutazione o modalità "what if").
 
-
 [!code-xml[Main](performing-a-what-if-deployment/samples/sample6.xml)]
-
 
 Analogamente, la destinazione successiva utilizza l'utilità VSDBCMD per distribuire un database. Per impostazione predefinita, un **/dd** commutatore non è incluso. Ciò significa che VSDBCMD verrà generato uno script di distribuzione ma non verrà distribuito il database&#x2014;in altre parole, uno scenario "what if". Se il **WhatIf** proprietà non è impostata su **true**, una **/dd** commutatore viene aggiunto e VSDBCMD verrà distribuito il database.
 
-
 [!code-xml[Main](performing-a-what-if-deployment/samples/sample7.xml)]
-
 
 È possibile utilizzare lo stesso approccio per impostare i parametri per tutti i comandi rilevanti nel file di progetto. Quando si desidera eseguire una distribuzione di "what if", è possibile quindi sufficiente fornire un **WhatIf** valore della proprietà dalla riga di comando:
 
-
 [!code-console[Main](performing-a-what-if-deployment/samples/sample8.cmd)]
-
 
 In questo modo, è possibile eseguire una distribuzione di "what if" per tutti i componenti di progetto in un unico passaggio.
 

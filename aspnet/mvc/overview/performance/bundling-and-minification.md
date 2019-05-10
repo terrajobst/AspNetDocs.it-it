@@ -8,19 +8,18 @@ ms.date: 08/23/2012
 ms.assetid: 5894dc13-5d45-4dad-8096-136499120f1d
 msc.legacyurl: /mvc/overview/performance/bundling-and-minification
 msc.type: authoredcontent
-ms.openlocfilehash: 9e4a2a9fc56393ac816f25a1039b233aa8961608
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 79d6b38c6464a749db9cd6d35e1f277b0adf2a02
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59383837"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129426"
 ---
 # <a name="bundling-and-minification"></a>Creazione di bundle e minimizzazione
 
 da [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > Creazione di bundle e minimizzazione sono due tecniche è possibile usare in ASP.NET 4.5 per migliorare il tempo di caricamento di richiesta. Creazione di bundle e minimizzazione aumenta il tempo di caricamento riducendo il numero di richieste al server e ridurre le dimensioni dell'asset richiesti (ad esempio CSS e JavaScript.)
-
 
 La maggior parte dei browser principali corrente limitare il numero di [connessioni simultanee](http://www.browserscope.org/?category=network) per ogni nome host a 6. Ciò significa che durante l'elaborazione le sei richieste, richieste aggiuntive per gli asset in un host verranno inserito nella coda dal browser. Nell'immagine seguente, le schede di rete F12 di Internet Explorer developer tools indicato l'intervallo per gli asset necessari per la visualizzazione di informazioni su un'applicazione di esempio.
 
@@ -96,7 +95,6 @@ Per abilitare la creazione di bundle e minimizzazione, impostare il `debug` valo
 
 > [!NOTE]
 > A meno che non `EnableOptimizations` viene `true` o l'attributo di debug nel [elemento compilation](https://msdn.microsoft.com/library/s10awwz0.aspx) nel *Web. config* file sia impostato su `false`, i file non verrà incluso o minimizzati. Inoltre, la versione .min dei file non verrà utilizzata, verranno selezionate le versioni di debug completi. `EnableOptimizations` sostituisce l'attributo di debug nel [elemento compilation](https://msdn.microsoft.com/library/s10awwz0.aspx) nel *Web. config* file
-
 
 ## <a name="using-bundling-and-minification-with-aspnet-web-forms-and-web-pages"></a>Tramite creazione di bundle e minimizzazione con Web Form ASP.NET e pagine Web
 

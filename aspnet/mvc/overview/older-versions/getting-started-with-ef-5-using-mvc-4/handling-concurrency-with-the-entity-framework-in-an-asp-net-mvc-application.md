@@ -8,12 +8,12 @@ ms.date: 07/30/2013
 ms.assetid: b83f47c4-8521-4d0a-8644-e8f77e39733e
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/handling-concurrency-with-the-entity-framework-in-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: a79cca143df9a10b4255796a6d034688713e4e52
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: d55f01bd2204a2fdb26664827b92c72d68e00a89
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59379755"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129808"
 ---
 # <a name="handling-concurrency-with-the-entity-framework-in-an-aspnet-mvc-application-7-of-10"></a>Gestione della concorrenza con Entity Framework in un'applicazione ASP.NET MVC (7 di 10)
 
@@ -26,7 +26,6 @@ da [Tom Dykstra](https://github.com/tdykstra)
 > > [!NOTE] 
 > > 
 > > Se si verifica un problema è possibile risolvere, [Scarica il capitolo completato](building-the-ef5-mvc4-chapter-downloads.md) e provare a riprodurre il problema. Confrontando il codice per il codice completo è generalmente possibile trovare la soluzione al problema. Per alcuni errori comuni e come risolverli, vedere [errori e soluzioni alternative.](advanced-entity-framework-scenarios-for-an-mvc-web-application.md#errors)
-
 
 Nelle due esercitazioni precedenti si è lavorato con i dati correlati. Questa esercitazione illustra come gestire la concorrenza. Creerete pagine web che funzionano con il `Department` entità e le pagine edit e delete `Department` entità gestirà gli errori di concorrenza. Le illustrazioni seguenti mostrano le pagine di indice e Delete, inclusi alcuni messaggi che vengono visualizzati se si verifica un conflitto di concorrenza.
 
@@ -189,7 +188,7 @@ Anche il nome del metodo di azione è stato modificato da `DeleteConfirmed` a `D
 
 Se viene rilevato un errore di concorrenza, il codice visualizza nuovamente la pagina di conferma Delete (Elimina) e visualizza un flag indicante che è necessario visualizzare un messaggio di errore di concorrenza.
 
-Nelle *Views\Department\Delete.cshtml*, sostituire il codice con scaffolding con il codice seguente che effettua alcune informazioni di formattazione viene modificato e aggiunge un campo di messaggio di errore. Le modifiche vengono evidenziate.
+Nelle *Views\Department\Delete.cshtml*, sostituire il codice con scaffolding con il codice seguente che effettua alcune informazioni di formattazione viene modificato e aggiunge un campo di messaggio di errore. Le modifiche sono evidenziate.
 
 [!code-cshtml[Main](handling-concurrency-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample16.cshtml?highlight=9,37,40,45-46)]
 

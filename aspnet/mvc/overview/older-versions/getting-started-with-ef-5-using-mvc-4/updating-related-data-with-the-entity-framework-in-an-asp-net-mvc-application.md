@@ -8,12 +8,12 @@ ms.date: 07/30/2013
 ms.assetid: 7871dc05-2750-470f-8b4c-3a52511949bc
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: 5dc49d7467db01e62db147c7083ed62379d23940
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 68f8bdeeb85bc66cf790c2005cf0f0ff24b3b653
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59394159"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129762"
 ---
 # <a name="updating-related-data-with-the-entity-framework-in-an-aspnet-mvc-application-6-of-10"></a>Aggiornamento dei dati correlati con Entity Framework in un'applicazione ASP.NET MVC (6 di 10)
 
@@ -26,7 +26,6 @@ da [Tom Dykstra](https://github.com/tdykstra)
 > > [!NOTE] 
 > > 
 > > Se si verifica un problema è possibile risolvere, [Scarica il capitolo completato](building-the-ef5-mvc4-chapter-downloads.md) e provare a riprodurre il problema. Confrontando il codice per il codice completo è generalmente possibile trovare la soluzione al problema. Per alcuni errori comuni e come risolverli, vedere [errori e soluzioni alternative.](advanced-entity-framework-scenarios-for-an-mvc-web-application.md#errors)
-
 
 Nell'esercitazione precedente si visualizzati dati correlati. in questa esercitazione si aggiornerà i dati correlati. Per la maggior parte delle relazioni, questa operazione può essere eseguita tramite l'aggiornamento di campi di chiave esterna appropriati. Per le relazioni molti-a-molti, Entity Framework non espone la tabella di join direttamente, in modo esplicito è necessario aggiungere, rimuovere le entità da e verso le proprietà di navigazione appropriate.
 
@@ -137,7 +136,7 @@ Per fornire i dati alla visualizzazione dell'elenco di caselle di controllo, si 
 
 [!code-csharp[Main](updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample13.cs)]
 
-Nelle *InstructorController.cs*, sostituire il `HttpGet` `Edit` metodo con il codice seguente. Le modifiche vengono evidenziate.
+Nelle *InstructorController.cs*, sostituire il `HttpGet` `Edit` metodo con il codice seguente. Le modifiche sono evidenziate.
 
 [!code-csharp[Main](updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample14.cs?highlight=5,8,12-27)]
 
@@ -145,7 +144,7 @@ Il codice aggiunge il caricamento eager per la proprietà di navigazione `Course
 
 Il codice nel `PopulateAssignedCourseData` metodo legge tutti `Course` classe modello le entità per caricare un elenco di corsi tramite la vista. Per ogni corso, il codice verifica se è presente nella proprietà di navigazione `Courses` dell'insegnante. Per creare un ricerca efficiente quando si verifica se un corso viene assegnato all'insegnante, i corsi assegnati all'insegnante vengono inseriti in una [HashSet](https://msdn.microsoft.com/library/bb359438.aspx) raccolta. Il `Assigned` è impostata su `true` per i corsi l'insegnante è assegnato. La visualizzazione usa questa proprietà per determinare quali caselle di controllo devono essere visualizzate come selezionate. Infine, tale elenco viene passato alla visualizzazione in un `ViewBag` proprietà.
 
-Aggiungere quindi il codice che viene eseguito quando l'utente fa clic su **Save** (Salva). Sostituire il `HttpPost` `Edit` metodo con il codice seguente, che chiama un nuovo metodo che aggiorni le `Courses` proprietà di navigazione del `Instructor` entità. Le modifiche vengono evidenziate.
+Aggiungere quindi il codice che viene eseguito quando l'utente fa clic su **Save** (Salva). Sostituire il `HttpPost` `Edit` metodo con il codice seguente, che chiama un nuovo metodo che aggiorni le `Courses` proprietà di navigazione del `Instructor` entità. Le modifiche sono evidenziate.
 
 [!code-csharp[Main](updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample15.cs?highlight=3,7,20,33,37-65)]
 
@@ -194,14 +193,12 @@ Fare clic su **modifica** per un insegnante per visualizzare la pagina di modifi
 Modificare alcune assegnazioni di corsi e fare clic su **salvare**. Le modifiche effettuate si riflettono nella pagina di indice.
 
  Nota: L'approccio adottato per la modifica di dati del corso insegnante funziona bene quando è presente un numero limitato di corsi. Per raccolte molto più grandi, sarebbero necessari un'interfaccia utente diversa e un altro metodo di aggiornamento.  
- 
 
 ## <a name="update-the-delete-method"></a>Aggiornare il metodo Delete
 
 Modificare il codice nel metodo HttpPost Delete in modo che il record di assegnazione di office (se presente) viene eliminato quando viene eliminato l'insegnante:
 
 [!code-csharp[Main](updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample22.cs?highlight=6,10)]
-
 
 Se si prova a eliminare un istruttore viene assegnato a un reparto come amministratore, si otterrà un errore di integrità referenziale. Visualizzare [la versione corrente di questa esercitazione](../../getting-started/getting-started-with-ef-using-mvc/updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application.md) di codice aggiuntivo che rimuoverà automaticamente l'insegnante da qualsiasi reparto in cui l'insegnante è assegnato come amministratore.
 

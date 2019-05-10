@@ -8,12 +8,12 @@ ms.date: 11/01/2010
 ms.assetid: 658b149b-d770-46bf-8b4b-4e47cca242f3
 msc.legacyurl: /mvc/overview/older-versions/creating-a-mvc-3-application-with-razor-and-unobtrusive-javascript
 msc.type: authoredcontent
-ms.openlocfilehash: 91c96cc413e63ad2fc160ffbb473c4f3e1ada3e4
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: fb63493ff22c9261fc5746a998a32f2511141f87
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59401062"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130394"
 ---
 # <a name="creating-a-mvc-3-application-with-razor-and-unobtrusive-javascript"></a>Creazione di un'applicazione MVC 3 con Razor e JavaScript discreto
 
@@ -22,7 +22,6 @@ by [Microsoft](https://github.com/microsoft)
 > L'applicazione web di esempio elenco utenti viene illustrato quanto sia semplice creare applicazioni ASP.NET MVC 3 con il motore di visualizzazione Razor. L'applicazione di esempio viene illustrato come usare il nuovo motore di visualizzazione Razor con ASP.NET MVC versione 3 e Visual Studio 2010 per creare un sito Web di elenco di utenti fittizi che include funzionalità quali la creazione, visualizzazione, modifica e l'eliminazione degli utenti.
 > 
 > Questa esercitazione vengono descritti i passaggi che sono stati eseguiti per compilare l'applicazione ASP.NET MVC 3 esempio di elenco degli utenti. Un progetto di Visual Studio con C# e il codice sorgente Visual Basic è disponibile a complemento di questo argomento: [Download](https://code.msdn.microsoft.com/aspnetmvcsamples/Release/ProjectReleases.aspx?ReleaseId=5114). Se hai domande su questa esercitazione, è possibile pubblicarle per il [forum MVC](https://forums.asp.net/1146.aspx).
-
 
 ## <a name="overview"></a>Panoramica
 
@@ -185,7 +184,6 @@ Per altre informazioni sulla convalida del client non intrusivi, vedere l'interv
 
 > [!NOTE]
 > Nella versione Beta di ASP.NET MVC 3, è talvolta necessario inviare il modulo per avviare la convalida lato client. Ciò potrebbe essere modificato nella versione finale.
-
 
 ## <a name="creating-the-create-view"></a>Creazione della visualizzazione Create
 

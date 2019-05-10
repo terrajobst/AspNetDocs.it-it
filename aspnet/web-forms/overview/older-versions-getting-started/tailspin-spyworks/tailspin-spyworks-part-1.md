@@ -8,12 +8,12 @@ ms.date: 07/21/2010
 ms.assetid: 15d4652b-d5aa-4172-b186-2c7f96ba316d
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-1
 msc.type: authoredcontent
-ms.openlocfilehash: 70d2efb789d694a0aaecc046615c7b3622079dc1
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 05a3ace3d8fef9c1f3593f7948e42b4725d70134
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59385358"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130564"
 ---
 # <a name="part-1-file--new-project"></a>Parte 1. File -> Nuovo progetto
 
@@ -23,7 +23,6 @@ da [Joe Stagner](https://github.com/JoeStagner)
 > 
 > Questa serie di esercitazioni illustra tutti i passaggi necessari per compilare l'applicazione di esempio Tailspin Spyworks. Parte 1 illustra panoramica e File/nuovo progetto.
 
-
 ## <a id="_Toc260221666"></a>  Panoramica
 
 Questa esercitazione viene fornita un'introduzione a Web Form ASP.NET. Si sarà possibile avviare lentamente, in modo che l'esperienza di sviluppo di livello web per principianti è corretto.
@@ -31,7 +30,6 @@ Questa esercitazione viene fornita un'introduzione a Web Form ASP.NET. Si sarà 
 L'applicazione che sarà compilata si è un semplice negozio online.
 
 ![](tailspin-spyworks-part-1/_static/image1.jpg)
-
 
 I visitatori possono sfogliare i prodotti per categoria:
 
@@ -54,7 +52,6 @@ Verrà richiesto loro di procedere con l'acquisto
 Dopo l'ordinamento, visualizzano una schermata di conferma semplice:
 
 ![](tailspin-spyworks-part-1/_static/image7.jpg)
-
 
 Iniziamo creando un nuovo progetto di Web Form ASP.NET in Visual Studio 2010 e verrà aggiunto in modo incrementale le funzionalità per creare un'applicazione funziona completa. Lungo il percorso, si affronterà l'accesso al database, le visualizzazioni elenco e griglia, le pagine di aggiornamento dati, la convalida dei dati, utilizzando le pagine master per layout delle pagine coerente, AJAX, convalida, l'appartenenza degli utenti e altro ancora.
 

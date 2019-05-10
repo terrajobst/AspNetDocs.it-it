@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: c979535f-48a3-4ec4-a633-a77889b86ddb
 msc.legacyurl: /web-forms/overview/deployment/configuring-team-foundation-server-for-web-deployment/deploying-a-specific-build
 msc.type: authoredcontent
-ms.openlocfilehash: 0ab58aee6f1203beaf3990536b059f8209e66547
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 6bede6b36c24ade928ab052e14daec1e017bd0b2
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59393483"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131932"
 ---
 # <a name="deploying-a-specific-build"></a>Distribuzione di una compilazione specifica
 
@@ -22,7 +22,6 @@ da [Jason Lee](https://github.com/jrjlee)
 [Scaricare PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Questo argomento descrive come distribuire i pacchetti web e script di database da una specifica build precedente a una nuova destinazione, ad esempio un ambiente di gestione temporanea o produzione.
-
 
 In questo argomento fa parte di una serie di esercitazioni basate su requisiti di distribuzione aziendale di una società fittizia, denominata Fabrikam, Inc. Questa serie di esercitazioni Usa una soluzione di esempio&#x2014;il [soluzione Contact Manager](../web-deployment-in-the-enterprise/the-contact-manager-solution.md)&#x2014;per rappresentare un'applicazione web con un livello di complessità, tra cui un'applicazione ASP.NET MVC 3, una comunicazione Windows realistico Servizio Foundation (WCF) e un progetto di database.
 
@@ -47,21 +46,15 @@ Nel [soluzione di esempio](../web-deployment-in-the-enterprise/the-contact-manag
 > [!NOTE]
 > **OutputRoot** è un nome di proprietà di uso comune. File di progetto Visual c# e Visual Basic anche dichiarano questa proprietà per archiviare il percorso radice per tutti gli output di compilazione.
 
-
 [!code-xml[Main](deploying-a-specific-build/samples/sample1.xml)]
-
 
 Se si desidera che il file di progetto per la distribuzione dei pacchetti web e script da una posizione diversa del database&#x2014;desidera che gli output di una compilazione TFS precedente&#x2014;è sufficiente eseguire l'override di **OutputRoot** proprietà. È necessario impostare il valore della proprietà nella cartella di compilazione rilevanti nel server di Team Build. Se si eseguiva MSBuild dalla riga di comando, è possibile specificare un valore per **OutputRoot** come argomento della riga di comando:
 
-
 [!code-console[Main](deploying-a-specific-build/samples/sample2.cmd)]
-
 
 In pratica, tuttavia, anche si ignora la **compilare** destinazione&#x2014;non ha senso nel creare la tua soluzione se non si prevede di usare gli output di compilazione. È possibile eseguire questa operazione specificando le destinazioni da eseguire dalla riga di comando:
 
-
 [!code-console[Main](deploying-a-specific-build/samples/sample3.cmd)]
-
 
 Tuttavia, nella maggior parte dei casi, è opportuno creare una logica di distribuzione in una definizione di compilazione TFS. Ciò consente agli utenti con il **accodare compilazioni** autorizzati ad attivare la distribuzione da qualsiasi installazione di Visual Studio con una connessione al server TFS.
 

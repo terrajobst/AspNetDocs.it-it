@@ -9,12 +9,12 @@ ms.custom: seoapril2019
 ms.assetid: 0150e67b-c50d-4613-83ea-7b4ef8cacc5a
 msc.legacyurl: /web-api/overview/getting-started-with-aspnet-web-api/creating-api-help-pages
 msc.type: authoredcontent
-ms.openlocfilehash: e3f6a9b8a6835b034a075d580cd9a33136969990
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 8308dab8bd66aa8f5a3c5fb4133fc7a3df78f671
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59395017"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65125237"
 ---
 # <a name="creating-help-pages-for-aspnet-web-api"></a>Creazione di pagine della Guida per l'API Web ASP.NET
 
@@ -92,7 +92,6 @@ Aprire quindi il codice per il `ValuesController` controller API, che viene defi
 
 > [!NOTE]
 > Suggerimento: Se si posiziona il cursore sulla riga sopra il metodo e digitare i tre barre, Visual Studio inserisce automaticamente gli elementi XML. È quindi possibile compilare i campi vuoti.
-
 
 A questo punto compilare ed eseguire nuovamente l'applicazione e passare alle pagine della Guida. Stringhe di documentazione verrà visualizzato nella tabella dell'API.
 

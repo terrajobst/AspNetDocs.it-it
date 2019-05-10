@@ -8,19 +8,18 @@ ms.date: 08/15/2012
 ms.assetid: 27dc4fc8-1b51-43b0-933f-fc1b52476523
 msc.legacyurl: /mvc/overview/older-versions/aspnet-mvc-4-mobile-features
 msc.type: authoredcontent
-ms.openlocfilehash: de65e01b888d9ed15da3903f086b40c49b32b9fb
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 62050f561440a2c0fbbe91ec49fb1f9e30885e9f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59402414"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130353"
 ---
 # <a name="aspnet-mvc-4-mobile-features"></a>Funzionalità per dispositivi mobili ASP.NET MVC 4
 
 da [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > È ora disponibile una versione di MVC 5 con esempi di codice in questa esercitazione [distribuire un'applicazione Web ASP.NET MVC 5 per dispositivi mobili su siti Web Azure](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/).
-
 
 Questa esercitazione insegnerà le nozioni di base di come usare le funzionalità per dispositivi mobili in un'applicazione Web ASP.NET MVC 4. Per questa esercitazione, è possibile usare [Visual Studio Express 2012](https://www.microsoft.com/visualstudio/11/products/express) o Visual Web Developer 2010 Express Service Pack 1 (&quot;VWD o Visual Web Developer&quot;). Se si dispone già di questo, è possibile utilizzare la versione professional di Visual Studio.
 
@@ -214,7 +213,6 @@ Il codice seguente illustra l'intero *Global. asax* file.
 > [!NOTE]
 > Se si usa Internet Explorer 9 e non viene visualizzato il `BundleMobileConfig` riga sopra nell'evidenziazione di colore giallo, fare clic sui [pulsante visualizzazione compatibilità](https://windows.microsoft.com/windows7/How-to-use-Compatibility-View-in-Internet-Explorer-9)![immagine del pulsante visualizzazione compatibilità (disattivato)](http://res2.windows.microsoft.com/resbox/en/Windows 7/main/f080e77f-9b66-4ac8-9af0-803c4f8a859c_15.jpg " Immagine del pulsante visualizzazione compatibilità (disattivato)") in Internet Explorer per verificare l'icona di modifica da un contorno ![immagine del pulsante visualizzazione compatibilità (disattivato)](http://res2.windows.microsoft.com/resbox/en/Windows 7/main/f080e77f-9b66-4ac8-9af0-803c4f8a859c_15.jpg "immagine del pulsante visualizzazione compatibilità (disattivato) ") a un colore a tinta unita ![immagine del pulsante visualizzazione compatibilità (on)](http://res1.windows.microsoft.com/resbox/en/Windows 7/main/156805ff-3130-481b-a12d-4d3a96470f36_14.jpg "immagine del pulsante visualizzazione compatibilità (on)"). In alternativa è possibile visualizzare in questa esercitazione in FireFox o Chrome.
 
-
 Aprire il *MvcMobile\Views\Shared\\_Layout.Mobile.cshtml* file e aggiungere il markup seguente direttamente dopo il `Html.Partial` chiamare:
 
 [!code-cshtml[Main](aspnet-mvc-4-mobile-features/samples/sample12.cshtml)]
@@ -229,7 +227,6 @@ Compilare l'applicazione e nell'emulatore di browser per dispositivi mobili sele
 
 > [!NOTE]
 > È possibile eseguire il debug di codice specifico per dispositivi mobili dal [impostando la stringa agente utente](http://www.howtogeek.com/113439/how-to-change-your-browsers-user-agent-without-installing-any-extensions/) per Internet Explorer o Chrome per iPhone e quindi usare gli strumenti di sviluppo F-12. Se il browser per dispositivi mobili non viene visualizzato il **casa**, **relatore**, **Tag**, e **data** collegamenti come pulsanti, i riferimenti a jQuery Mobile gli script e file CSS probabilmente non sono corretti.
-
 
 Oltre alle modifiche di stile, vedrai **visualizzazione versione mobile** e un collegamento che consente di passare dalla visualizzazione per dispositivi mobili per la visualizzazione desktop. Scegliere il **visualizzazione Desktop** collegamento e visualizzazione desktop viene visualizzato.
 
@@ -251,7 +248,6 @@ Aggiorna il *AllTags* Visualizza nel browser per dispositivi mobili. È ora poss
 > e aggiungere l'intestazione seguente per il *Views\Shared\\layout. cshtml* file.
 >
 > [!code-html[Main](aspnet-mvc-4-mobile-features/samples/sample16.html)]
-
 
 Selezionare il *AllTags* pagina in un browser desktop. Il widget di cambio di visualizzazione non viene visualizzato in un browser desktop, perché viene aggiunta solo alla pagina di layout per dispositivi mobili. Più avanti nell'esercitazione scoprirai come è possibile aggiungere il widget di cambio di visualizzazione per la visualizzazione desktop.
 

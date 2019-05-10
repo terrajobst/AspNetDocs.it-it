@@ -8,12 +8,12 @@ ms.date: 07/30/2013
 ms.assetid: 44761193-04ba-4990-9f90-145d3c10a716
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: 71ff3c269c5d1ed43a67d19442eda8e9d4728295
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: d0d6c9dd5234c8085b5c1dea5552854486314010
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59405703"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129783"
 ---
 # <a name="implementing-the-repository-and-unit-of-work-patterns-in-an-aspnet-mvc-application-9-of-10"></a>Implementazione di Repository e unità di lavoro modelli in un'applicazione ASP.NET MVC (9 di 10)
 
@@ -26,7 +26,6 @@ da [Tom Dykstra](https://github.com/tdykstra)
 > > [!NOTE] 
 > > 
 > > Se si verifica un problema è possibile risolvere, [Scarica il capitolo completato](building-the-ef5-mvc4-chapter-downloads.md) e provare a riprodurre il problema. Confrontando il codice per il codice completo è generalmente possibile trovare la soluzione al problema. Per alcuni errori comuni e come risolverli, vedere [errori e soluzioni alternative.](advanced-entity-framework-scenarios-for-an-mvc-web-application.md#errors)
-
 
 Nell'esercitazione precedente ereditarietà è utilizzato per ridurre il codice ridondante nel `Student` e `Instructor` classi di entità. In questa esercitazione si noterà alcuni modi per usare il repository di modelli e unità di lavoro per le operazioni CRUD. Come nell'esercitazione precedente, in questo sarà necessario modificare il funzionamento del codice con le pagine è già creati anziché crearne nuove pagine.
 
@@ -52,7 +51,6 @@ Unit test non vengono creati in questa serie di esercitazioni. Per un'introduzio
 > [!NOTE]
 > Esistono diversi modi per implementare il repository di modelli e unità di lavoro. È possibile usare classi di repository con o senza una classe di unità di lavoro. È possibile implementare un unico repository per tutti i tipi di entità o uno per ogni tipo. Se si implementa uno per ogni tipo, è possibile usare classi separate, una classe di base generica e le classi derivate, o una classe base astratta e le classi derivate. È possibile includere la logica di business in un repository o ridurlo alla logica di accesso ai dati. È anche possibile creare un livello di astrazione nella classe del contesto di database usando [IDbSet](https://msdn.microsoft.com/library/gg679233(v=vs.103).aspx) sono interfacce anziché [DbSet](https://msdn.microsoft.com/library/system.data.entity.dbset(v=vs.103).aspx) tipi per i set di entità. L'approccio all'implementazione di un livello di astrazione illustrato in questa esercitazione è un'opzione da prendere in considerazione, non una raccomandazione per tutti gli ambienti e scenari.
 
-
 ## <a name="creating-the-student-repository-class"></a>Creazione della classe di Repository per studenti
 
 Nel *DAL* cartella, creare un file di classe denominato *IStudentRepository.cs* e sostituire il codice esistente con il codice seguente:
@@ -75,7 +73,7 @@ Implementa il repository [IDisposable](https://msdn.microsoft.com/library/system
 
 ## <a name="change-the-student-controller-to-use-the-repository"></a>Modificare il Controller di studente per l'uso del Repository
 
-Nelle *StudentController.cs*, sostituire il codice attualmente nella classe con il codice seguente. Le modifiche vengono evidenziate.
+Nelle *StudentController.cs*, sostituire il codice attualmente nella classe con il codice seguente. Le modifiche sono evidenziate.
 
 [!code-csharp[Main](implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application/samples/sample4.cs?highlight=13-18,44,75,77,102-103,120,137-138,159,172-174,186)]
 
@@ -142,7 +140,6 @@ Nella versione originale del codice, `students` tipizzata come una `IQueryable` 
 > [!code-sql[Main](implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application/samples/sample16.sql)]
 > 
 > (L'esercitazione seguente illustra come esaminare le query inviate a SQL Server).
-
 
 La sezione seguente viene illustrato come implementare i metodi di repository che consentono di specificare che questa operazione deve essere eseguita dal database.
 

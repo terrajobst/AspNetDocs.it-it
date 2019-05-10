@@ -9,12 +9,12 @@ ms.custom: seoapril2019
 ms.assetid: e42c8388-04ed-4341-9fdb-41b1b4c06320
 msc.legacyurl: /web-api/overview/formats-and-model-binding/parameter-binding-in-aspnet-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: f121f12ce689a079412bbd5392fde4fea863ff1f
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: da0b9e12fcbe5cd2bfb5478162b7453d34931edf
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59401972"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65127515"
 ---
 # <a name="parameter-binding-in-aspnet-web-api"></a>Associazione di parametri nell'API Web ASP.NET
 
@@ -173,7 +173,6 @@ Il **ExecuteBindingAsync** metodo esegue l'associazione. All'interno di questo m
 
 > [!NOTE]
 > Se il **ExecuteBindingAsync** metodo legge il corpo del messaggio di richiesta, sostituire il **WillReadBody** proprietà da restituire true. Il corpo della richiesta potrebbe essere un flusso non memorizzato nel buffer che può essere letto una sola volta, in modo che l'API Web consente di applicare una regola che al massimo uno di associazione può leggere il corpo del messaggio.
-
 
 Per applicare un oggetto personalizzato **HttpParameterBinding**, è possibile definire un attributo che deriva da **ParameterBindingAttribute**. Per la `ETagParameterBinding`, verranno definiti due attributi, uno per `if-match` informazioni sulle intestazioni e uno per `if-none-match` intestazioni. Entrambi derivano dalla classe base astratta.
 

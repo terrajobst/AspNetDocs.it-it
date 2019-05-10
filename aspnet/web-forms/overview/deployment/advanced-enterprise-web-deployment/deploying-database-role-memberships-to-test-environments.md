@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 9b2af539-7ad9-47aa-b66e-873bd9906e79
 msc.legacyurl: /web-forms/overview/deployment/advanced-enterprise-web-deployment/deploying-database-role-memberships-to-test-environments
 msc.type: authoredcontent
-ms.openlocfilehash: fd0914ed62a280fea290b9f1b150fc25c8ed6d40
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: a15f5bf5f659d151e91ef9e53c5ad55bcd8e2b01
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59385332"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130401"
 ---
 # <a name="deploying-database-role-memberships-to-test-environments"></a>Distribuzione delle appartenenze ai ruoli del database negli ambienti di test
 
@@ -32,7 +32,6 @@ da [Jason Lee](https://github.com/jrjlee)
 > In questo scenario, è spesso utile creare gli utenti del database e assegnare le appartenenze ai ruoli di database come parte del processo di distribuzione automaticamente.
 > 
 > Il fattore chiave è che questa operazione deve essere condizionale in base all'ambiente di destinazione. Se si esegue la distribuzione di gestione temporanea o di un ambiente di produzione, si desidera ignorare l'operazione. Se si esegue la distribuzione a uno sviluppatore o ambiente di test, si vuole distribuire le appartenenze ai ruoli senza ulteriore intervento. In questo argomento viene descritto un approccio che è possibile usare per affrontare questa sfida.
-
 
 In questo argomento fa parte di una serie di esercitazioni basate su requisiti di distribuzione aziendale di una società fittizia, denominata Fabrikam, Inc. Questa serie di esercitazioni Usa una soluzione di esempio&#x2014;il [soluzione Contact Manager](../web-deployment-in-the-enterprise/the-contact-manager-solution.md)&#x2014;per rappresentare un'applicazione web con un livello di complessità, tra cui un'applicazione ASP.NET MVC 3, una comunicazione Windows realistico Servizio Foundation (WCF) e un progetto di database.
 
@@ -79,13 +78,10 @@ In questo argomento illustrerà come eseguire ognuna di queste procedure.
 
 In teoria, si sarebbero eseguire gli script di Transact-SQL necessari come parte di uno script di post-distribuzione quando si distribuisce il progetto di database. Tuttavia, gli script di post-distribuzione non consentono di eseguire la logica condizionale in base a configurazioni di soluzione o le proprietà di compilazione. L'alternativa consiste nell'eseguire gli script SQL direttamente dal file di progetto MSBuild, creando un **destinazione** elemento che esegue un comando sqlcmd.exe. È possibile usare questo comando per eseguire lo script nel database di destinazione:
 
-
 [!code-console[Main](deploying-database-role-memberships-to-test-environments/samples/sample2.cmd)]
-
 
 > [!NOTE]
 > Per altre informazioni sulle opzioni della riga di comando sqlcmd, vedere [utilità sqlcmd](https://msdn.microsoft.com/library/ms162773.aspx).
-
 
 Prima di incorporare questo comando in una destinazione di MSBuild, è necessario prendere in considerazione in quali condizioni si desidera che l'esecuzione dello script:
 
@@ -100,15 +96,11 @@ Se si usa l'approccio di file di progetto split descritto in [informazioni sul F
 
 Nel file di progetto specifici dell'ambiente, è necessario definire il nome del server di database, il nome di database di destinazione e una proprietà booleana che consente all'utente di specificare se si desidera distribuire le appartenenze ai ruoli.
 
-
 [!code-xml[Main](deploying-database-role-memberships-to-test-environments/samples/sample3.xml)]
-
 
 Nel file di progetto universale, è necessario fornire il percorso dell'eseguibile sqlcmd e il percorso dello script SQL da eseguire. Queste proprietà subiranno modifiche indipendentemente dall'ambiente di destinazione. È anche necessario creare una destinazione di MSBuild per eseguire il comando sqlcmd.
 
-
 [!code-xml[Main](deploying-database-role-memberships-to-test-environments/samples/sample4.xml)]
-
 
 Si noti che è aggiungere il percorso dell'eseguibile sqlcmd come proprietà statica, come può essere utile ad altre destinazioni. Al contrario, si definiscono il percorso dello script SQL e la sintassi del comando sqlcmd come proprietà dinamica all'interno della destinazione, come non saranno necessarie prima che venga eseguita la destinazione. In questo caso, il **DeployTestDBPermissions** destinazione verrà eseguita solo se vengono soddisfatte queste condizioni:
 
@@ -117,9 +109,7 @@ Si noti che è aggiungere il percorso dell'eseguibile sqlcmd come proprietà sta
 
 Infine non dimenticare di richiamare la destinazione. Nel *Publish.proj* file, è possibile farlo mediante l'aggiunta di destinazione per l'elenco di dipendenze per il valore predefinito **FullPublish** destinazione. È necessario assicurarsi che il **DeployTestDBPermissions** destinazione non viene eseguita finché il **PublishDbPackages** destinazione è stata eseguita.
 
-
 [!code-xml[Main](deploying-database-role-memberships-to-test-environments/samples/sample5.xml)]
-
 
 ## <a name="conclusion"></a>Conclusione
 

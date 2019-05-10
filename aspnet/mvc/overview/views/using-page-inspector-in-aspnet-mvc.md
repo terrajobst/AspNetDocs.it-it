@@ -8,12 +8,12 @@ ms.date: 08/15/2012
 ms.assetid: c7e4e1ab-4932-4614-9f53-aaf7c706d498
 msc.legacyurl: /mvc/overview/views/using-page-inspector-in-aspnet-mvc
 msc.type: authoredcontent
-ms.openlocfilehash: ef0ae42e1c6114849a311164eac242db6dab2b1d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 5da3e142c52a770f59222c21d9f9a53cbbdbf498
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59385800"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65126346"
 ---
 # <a name="using-page-inspector-in-aspnet-mvc"></a>Utilizzo di Controllo pagina in ASP.NET MVC
 
@@ -38,7 +38,6 @@ da Tim Ammann
 > - [Tramite la selezione colori CSS](#css_color_picker)
 > - [Mapping di elementi della pagina dinamica a JavaScript](#map_dynamic_elements)
 
-
 <a id="_prerequisites"></a><a id="_1_prerequisites"></a>
 
 ## <a name="prerequisites"></a>Prerequisiti
@@ -47,7 +46,6 @@ da Tim Ammann
 
 > [!NOTE]
 > Per ottenere la versione più recente di controllo pagina, usare [instalace Webové Platformy](https://go.microsoft.com/fwlink/?LinkId=255386) per installare Windows Azure SDK per .NET 2.0.
-
 
 Page Inspector è abbinato a Microsoft Web Developer Tools. La versione più recente è 1.3x. Per verificare quale versione hanno, eseguire Visual Studio e selezionare **informazioni su Microsoft Visual Studio** dal **Guida** menu.
 
@@ -81,7 +79,7 @@ Nelle **Esplora soluzioni**, espandere il **viste** cartella e quindi il **Home*
 
 ![Visualizzazione index. cshtml in controllo pagina](using-page-inspector-in-aspnet-mvc/_static/image8.png)
 
-Per impostazione predefinita, controllo pagina è ancorato come finestra sul lato sinistro dell'ambiente di Visual Studio. Se si preferisce, è possibile ancorarlo altrove o disancorare la finestra. Vedere [How to: Disporre e ancorare le finestre](https://msdn.microsoft.com/library/z4y0hsax.aspx).
+Per impostazione predefinita, controllo pagina è ancorato come finestra sul lato sinistro dell'ambiente di Visual Studio. Se si preferisce, è possibile ancorarlo altrove o disancorare la finestra. Vedere [Procedura: Disporre e ancorare le finestre](https://msdn.microsoft.com/library/z4y0hsax.aspx).
 
 Il riquadro superiore della finestra di controllo pagina Mostra la pagina corrente in una finestra del browser. Nel riquadro inferiore mostra la pagina nel markup HTML con alcune schede che consentono di controllare diversi aspetti della pagina. Il riquadro inferiore è simile al [strumenti di sviluppo F12](https://msdn.microsoft.com/ie/aa740478) in Internet Explorer.
 
@@ -179,7 +177,6 @@ Il **stili** rende finestra è più facile testare e visualizzare in anteprima C
 > [!NOTE]
 > Questa funzionalità richiede la versione 1.3 di controllo pagina.
 
-
 La funzionalità di sincronizzazione automatica CSS consente di modificare direttamente un file CSS e visualizzare le modifiche immediatamente nel browser di controllo pagina.
 
 Fare clic su **Inspect** inserire controllo pagina in modalità controllo.
@@ -238,7 +235,6 @@ Con la versione 1.3, controllo pagina può ora eseguire il mapping di elementi c
 
 > [!NOTE]
 > Il modello di applicazione a singola pagina richiede la [ASP.NET and Web Tools 2012.2](https://go.microsoft.com/fwlink/?LinkId=282650) aggiornare.
-
 
 In Visual Studio, scegliere **File** &gt; **nuovo progetto**. A sinistra, espandere **Visual c#**, selezionare **Web**, quindi selezionare **applicazione Web di ASP.NET MVC4**. Fare clic su **OK**.
 

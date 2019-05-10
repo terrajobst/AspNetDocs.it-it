@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 6d40d276-1642-4a77-b6c9-02ac914f6805
 msc.legacyurl: /web-forms/overview/getting-started/hands-on-labs/whats-new-in-aspnet-and-web-development-in-visual-studio-2012
 msc.type: authoredcontent
-ms.openlocfilehash: 3833e3f3c6c49ff2b317ad04aff33c9119cb1f41
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 80c77ec65ed86b06e417d3f6ba608e404c46768b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59420211"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132094"
 ---
 # <a name="whats-new-in-aspnet-and-web-development-in-visual-studio-2012"></a>Novità di ASP.NET e dello sviluppo Web in Visual Studio 2012
 
@@ -30,7 +30,6 @@ da [Camp Web Team](https://twitter.com/webcamps)
 > Questa esercitazione illustra i miglioramenti e nuove funzionalità descritte in precedenza applicando modifiche minime a un'applicazione Web di esempio fornita nella cartella di origine.
 > 
 > Tutto il codice di esempio e frammenti di codice sono inclusi nel Web Camp Kit di formazione, disponibile all'indirizzo [ https://go.microsoft.com/fwlink/?LinkID=248297&clcid=0x409 ](https://go.microsoft.com/fwlink/?LinkID=248297&clcid=0x409).
-
 
 <a id="Objectives"></a>
 
@@ -331,7 +330,6 @@ Una delle procedure consigliate in formato HTML è il rientro di elementi annida
 > [!NOTE]
 > Nella versione precedente di Visual Studio, erano disponibili rientri nell'editor XML, ma non nell'editor HTML.
 
-
 1. Assicurarsi che la configurazione di rientri sull'Editor HTML è impostata su rientro intelligente. A tale scopo, selezionare il **strumenti | Le opzioni** l'opzione di menu e quindi selezionare il **Editor di testo | HTML | Schede** pagina nel riquadro sinistro della schermata. Selezionare l'opzione rientro intelligente.
 
     ![Le impostazioni dell'Editor HTML](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image33.png "le impostazioni dell'Editor HTML")
@@ -433,7 +431,6 @@ In questa attività consente di individuare la nuova convalida di JavaScript per
 > [!NOTE]
 > Visual Studio 2010 implementato ECMAStript3 conformità, anche se Visual Studio 2012 offre la conformità di ECMAScript5.
 
-
 1. Aprire **ECMA5script5.js** sotto il **Scripts\custom** cartella del progetto. A questo punto si testerà la convalida di ECMAScript5 standard.
 
     [!code-html[Main](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/samples/sample8.html)]
@@ -493,7 +490,6 @@ In questa attività verranno analizzate le funzionalità di Visual Studio per la
 
 > [!NOTE]
 > Assicurarsi che GotoDefinition.js siano presenti errori di sintassi prima di salvare il file.
-
 
 <a id="Exercise4"></a>
 
@@ -675,7 +671,6 @@ In questo esempio, si apprenderà come usare il **DynamicFolderBundle** classe p
 
 > [!NOTE]
 > Inoltre, è possibile distribuire questa applicazione per siti Web di Azure seguenti [appendice b: Pubblicazione di un'applicazione ASP.NET MVC 4 con distribuzione Web](#AppendixB).
-
 
 <a id="Summary"></a>
 ## <a name="summary"></a>Riepilogo

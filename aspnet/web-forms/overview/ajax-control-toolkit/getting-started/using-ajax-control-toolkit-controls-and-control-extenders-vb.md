@@ -8,12 +8,12 @@ ms.date: 05/12/2009
 ms.assetid: 763650a9-ffde-46a9-b779-7a9145dd5d88
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/getting-started/using-ajax-control-toolkit-controls-and-control-extenders-vb
 msc.type: authoredcontent
-ms.openlocfilehash: f3371165a30018c8096da8b6b9de567ed6fe6365
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 90a6003ff50ba6e85196c25cf175e057810f0f84
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59382626"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65127183"
 ---
 # <a name="using-ajax-control-toolkit-controls-and-control-extenders-vb"></a>Uso di controlli e controlli Extender di AJAX Control Toolkit (VB)
 
@@ -21,13 +21,11 @@ by [Microsoft](https://github.com/microsoft)
 
 > Informazioni su come aggiungere i controlli di AJAX Control Toolkit e dispositivi Extender alle pagine ASP.NET.
 
-
 AJAX Control Toolkit contiene un set di controlli e controlli Extender. In questa breve esercitazione descrive come aggiungere controlli e controlli Extender per una pagina ASP.NET.
 
 > [!NOTE] 
 > 
 > Per istruzioni sull'installazione di AJAX Control Toolkit e aggiunta di AJAX Control Toolkit alla casella degli strumenti in Visual Studio e Visual Web Developer, vedere l'esercitazione [Introduzione a AJAX Control Toolkit](get-started-with-the-ajax-control-toolkit-vb.md).
-
 
 ## <a name="using-ajax-control-toolkit-controls"></a>Utilizzo dei controlli AJAX controllo Toolkit
 
@@ -43,21 +41,17 @@ Ad esempio, la scheda di AJAX Control Toolkit include un controllo denominato il
 4. Eseguire il sito web selezionando l'opzione di menu **eseguire il Debug, Avvia debug** o premere F5.
 5. Verrà visualizzata la pagina nella figura 3.
 
-
 [![Selezionare il controllo dell'Editor HTML](using-ajax-control-toolkit-controls-and-control-extenders-vb/_static/image1.jpg)](using-ajax-control-toolkit-controls-and-control-extenders-vb/_static/image1.png)
 
 **Figura 01**: Selezione del controllo HTMLEditor ([fare clic per visualizzare l'immagine con dimensioni normali](using-ajax-control-toolkit-controls-and-control-extenders-vb/_static/image2.png))
-
 
 [![Progettazione di Visual Studio con il controllo ScriptManager e modifica](using-ajax-control-toolkit-controls-and-control-extenders-vb/_static/image2.jpg)](using-ajax-control-toolkit-controls-and-control-extenders-vb/_static/image3.png)
 
 **Figura 02**: Progettazione di Visual Studio con il controllo ScriptManager e modifica ([fare clic per visualizzare l'immagine con dimensioni normali](using-ajax-control-toolkit-controls-and-control-extenders-vb/_static/image4.png))
 
-
 [![La pagina DisplayEditor.aspx](using-ajax-control-toolkit-controls-and-control-extenders-vb/_static/image3.jpg)](using-ajax-control-toolkit-controls-and-control-extenders-vb/_static/image5.png)
 
 **Figura 03**: La pagina DisplayEditor.aspx ([fare clic per visualizzare l'immagine con dimensioni normali](using-ajax-control-toolkit-controls-and-control-extenders-vb/_static/image6.png))
-
 
 ## <a name="using-ajax-control-toolkit-control-extenders"></a>Uso di controlli Toolkit controllo Extender di AJAX
 
@@ -75,29 +69,23 @@ Seguire questi passaggi per usare il controllo extender ConfirmButton:
 6. Selezionare il controllo pulsante nella finestra di progettazione ed espandere le estensioni, Button1\_nodo ConfirmButtonExtender nella finestra Proprietà (vedere la figura 6). Assegnare il valore *realmente?* alla proprietà ConfirmText.
 7. Eseguire la pagina selezionando l'opzione di menu **eseguire il Debug, Avvia debug** o premere il tasto F5.
 
-
 [![L'opzione dell'attività Aggiungi estensione](using-ajax-control-toolkit-controls-and-control-extenders-vb/_static/image4.jpg)](using-ajax-control-toolkit-controls-and-control-extenders-vb/_static/image7.png)
 
 **Figura 04**: L'opzione dell'attività Aggiungi estensione ([fare clic per visualizzare l'immagine con dimensioni normali](using-ajax-control-toolkit-controls-and-control-extenders-vb/_static/image8.png))
-
 
 [![Selezionare il controllo extender ConfirmButton](using-ajax-control-toolkit-controls-and-control-extenders-vb/_static/image5.jpg)](using-ajax-control-toolkit-controls-and-control-extenders-vb/_static/image9.png)
 
 **Figura 05**: Selezionare il controllo extender ConfirmButton ([fare clic per visualizzare l'immagine con dimensioni normali](using-ajax-control-toolkit-controls-and-control-extenders-vb/_static/image10.png))
 
-
 [![Impostazione di una proprietà di ConfirmButton](using-ajax-control-toolkit-controls-and-control-extenders-vb/_static/image6.jpg)](using-ajax-control-toolkit-controls-and-control-extenders-vb/_static/image11.png)
 
 **Figura 06**: Impostazione di una proprietà di ConfirmButton ([fare clic per visualizzare l'immagine con dimensioni normali](using-ajax-control-toolkit-controls-and-control-extenders-vb/_static/image12.png))
 
-
 Quando si apre la pagina, dovrebbe essere un pulsante. Quando si fa clic sul pulsante, si ottiene la finestra di dialogo di conferma nella figura 7.
-
 
 [![Visualizzare la finestra di dialogo di conferma](using-ajax-control-toolkit-controls-and-control-extenders-vb/_static/image7.jpg)](using-ajax-control-toolkit-controls-and-control-extenders-vb/_static/image13.png)
 
 **Figura 07**: Visualizzare la finestra di dialogo di conferma ([fare clic per visualizzare l'immagine con dimensioni normali](using-ajax-control-toolkit-controls-and-control-extenders-vb/_static/image14.png))
-
 
 Si noti che in genere non si trascina un controllo extender in una pagina. Usare invece i **Aggiungi estensione** opzione per aggiungere un'estensione a un controllo che già stato aggiunto a una pagina di attività. Si noti, inoltre, impostare controllo le proprietà di estensione, aprire la finestra delle proprietà per il controllo esteso.
 

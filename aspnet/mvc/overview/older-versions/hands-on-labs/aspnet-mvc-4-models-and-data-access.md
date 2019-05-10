@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 634ea84b-f904-4afe-b71b-49cccef4d9cc
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-models-and-data-access
 msc.type: authoredcontent
-ms.openlocfilehash: 53ca3bc4e550f488f3ae4c41f02a636e747107cb
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 90635b617930d0a9c126795f4c8790d542e33dc9
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59384890"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129683"
 ---
 # <a name="aspnet-mvc-4-models-and-data-access"></a>Modelli e accesso ai dati di ASP.NET MVC 4
 
@@ -53,7 +53,6 @@ Vantaggi dell'uso di questo approccio è che il modello rimane indipendente dal 
 > 
 > Se si vuole esplorare l'intera **Music Store** applicazione di esercitazione è possibile trovarlo nel [MVC-musica-Store](https://github.com/evilDave/MVC-Music-Store).
 
-
 <a id="Prerequisites"></a>
 
 <a id="Prerequisites"></a>
@@ -89,7 +88,6 @@ In questo laboratorio pratico include gli esercizi seguenti:
 
 > [!NOTE]
 > Ogni esercizio è accompagnato da un **End** cartella che contiene la soluzione risultante si dovrebbe ottenere dopo aver completato gli esercizi. Se ti serve assistenza aggiuntiva esaminando gli esercizi, è possibile usare questa soluzione come guida.
-
 
 Tempo stimato per completare questa esercitazione: **35 minuti**.
 
@@ -186,7 +184,6 @@ In questa attività si creerà un modello di dati per interagire con i database 
     > [!NOTE]
     > I modelli T4 (con estensione TT) eseguire il codice per generare le classi di entità e sovrascriveranno le classi esistenti con lo stesso nome. In questo esempio, le classi &quot;Album&quot;, &quot;Genre&quot; e &quot;artista&quot; sono stati sovrascritti con il codice generato.
 
-
 <a id="Ex1Task3"></a>
 
 <a id="Task_3_-_Building_the_Application"></a>
@@ -273,7 +270,6 @@ Una volta che viene generato il modello, si modificherà il StoreController per 
 
 > [!NOTE]
 > Se si hanno completato l'esercizio 1 e si abbia già familiarità con l'approccio Database First, ora si apprenderà come ottenere gli stessi risultati con un altro processo. Le attività che sono in comune con esercizio 1 sono state contrassegnate per rendere più facile la lettura. Se non si hanno completato l'esercizio 1 ma si vogliono acquisire l'approccio Code First, è possibile iniziare da questo esercizio e Ottieni una copertura completa dell'argomento.
-
 
 <a id="Ex2Task1"></a>
 
@@ -383,7 +379,6 @@ In questa attività si aggiornerà la classe StoreController in modo che, invece
 > Questa attività è in comune con esercizio 1.
 > 
 > Se è stato completato l'esercizio 1 si noterà questi passaggi sono gli stessi in entrambi gli approcci (Database prima di tutto o Code first). Sono diversi in modalità di collegamento dati con il modello, ma l'accesso alle entità di dati è ancora trasparente dal controller.
-
 
 1. Aprire **Controllers\StoreController.cs** e aggiungere il campo seguente alla classe per contenere un'istanza del **MusicStoreEntities** classe, denominata **storeDB**:
 
