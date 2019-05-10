@@ -9,12 +9,12 @@ ms.custom: seoapril2019
 ms.assetid: 7d061207-22b8-4883-bafa-e89b1e7749ca
 msc.legacyurl: /web-api/overview/formats-and-model-binding/model-validation-in-aspnet-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: d4e792f8cc2f79c2ab82c5a74fd50f49475fac4f
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 531a66b7ab642bd012663517640f2766f1917f25
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59404572"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65112813"
 ---
 # <a name="model-validation-in-aspnet-web-api"></a>Convalida del modello in API Web ASP.NET
 
@@ -66,7 +66,6 @@ Preferibile che gli utenti per l'aggiornamento di `IsAdmin` proprietà ed elevar
 
 > [!NOTE]
 > Post di blog di Brad Wilson "[vs: convalida dell'Input. Convalida del modello in ASP.NET MVC](http://bradwilson.typepad.com/blog/2010/01/input-validation-vs-model-validation-in-aspnet-mvc.html)"dispone per una trattazione correggerà la registrazione, evitare l'overposting. Anche se il post è su ASP.NET MVC 2, i problemi sono ancora rilevanti per l'API Web.
-
 
 ## <a name="handling-validation-errors"></a>Gestione degli errori di convalida
 

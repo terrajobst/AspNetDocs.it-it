@@ -8,12 +8,12 @@ ms.date: 03/31/2010
 ms.assetid: a92cd6ed-609a-4e40-ad23-004b54afd436
 msc.legacyurl: /web-forms/overview/data-access/custom-formatting/using-templatefields-in-the-gridview-control-vb
 msc.type: authoredcontent
-ms.openlocfilehash: c2d6294824ad3081c2bb65ee98cb8088230a021d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: c6b69d6782e2a8822fdcf6d646f2f39b154ffb6c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59404078"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65109190"
 ---
 # <a name="using-templatefields-in-the-gridview-control-vb"></a>Uso di TemplateFields nel controllo GridView (VB)
 
@@ -22,7 +22,6 @@ da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Scaricare l'App di esempio](http://download.microsoft.com/download/5/7/0/57084608-dfb3-4781-991c-407d086e2adc/ASPNET_Data_Tutorial_12_VB.exe) o [Scarica il PDF](using-templatefields-in-the-gridview-control-vb/_static/datatutorial12vb1.pdf)
 
 > Per garantire flessibilità, il controllo GridView offre il TemplateField, che esegue il rendering usando un modello. Un modello può includere una combinazione di codice HTML statico, controlli Web e sintassi di associazione dati. In questa esercitazione verrà esaminato come utilizzare il TemplateField per ottenere un maggiore livello di personalizzazione con il controllo GridView.
-
 
 ## <a name="introduction"></a>Introduzione
 
@@ -36,11 +35,9 @@ In questa esercitazione verrà esaminato come utilizzare il TemplateField per ot
 
 Per questa esercitazione si userà TemplateFields per personalizzare l'aspetto di un elenco di dipendenti. In particolare, è possibile elencare tutti i dipendenti, ma verrà visualizzato il dipendente nomi e cognomi in una colonna, data di assunzione in un controllo calendario e una colonna di stato che indica il numero di giorni è state impiegate presso la società.
 
-
 [![Tre TemplateFields vengono usati per personalizzare la visualizzazione](using-templatefields-in-the-gridview-control-vb/_static/image2.png)](using-templatefields-in-the-gridview-control-vb/_static/image1.png)
 
 **Figura 1**: Tre TemplateFields vengono usati per personalizzare la visualizzazione ([fare clic per visualizzare l'immagine con dimensioni normali](using-templatefields-in-the-gridview-control-vb/_static/image3.png))
-
 
 ## <a name="step-1-binding-the-data-to-the-gridview"></a>Passaggio 1: Associazione dei dati a GridView
 
@@ -48,11 +45,9 @@ In reporting scenari in cui è necessario usare TemplateFields per personalizzar
 
 Aprire il `GridViewTemplateField.aspx` pagina e trascinare un controllo GridView dalla casella degli strumenti nella finestra di progettazione. Dallo smart tag del controllo GridView scegliere di aggiungere un nuovo controllo ObjectDataSource che richiama il `EmployeesBLL` della classe `GetEmployees()` (metodo).
 
-
 [![Aggiungere un nuovo controllo ObjectDataSource che richiama il metodo EmployeesDataTable](using-templatefields-in-the-gridview-control-vb/_static/image5.png)](using-templatefields-in-the-gridview-control-vb/_static/image4.png)
 
 **Figura 2**: Aggiungere un nuovo controllo ObjectDataSource tale Invoke il `GetEmployees()` metodo ([fare clic per visualizzare l'immagine con dimensioni normali](using-templatefields-in-the-gridview-control-vb/_static/image6.png))
-
 
 Associazione GridView in questo modo verrà aggiunto automaticamente un BoundField per ciascuna delle proprietà del dipendente: `EmployeeID`, `LastName`, `FirstName`, `Title`, `HireDate`, `ReportsTo`, e `Country`. Per questo report è possibile non preoccuparsi di visualizzare il `EmployeeID`, `ReportsTo`, o `Country` proprietà. Per rimuovere questi BoundField è possibile:
 
@@ -61,16 +56,13 @@ Associazione GridView in questo modo verrà aggiunto automaticamente un BoundFie
 
 Dopo aver rimosso il `EmployeeID`, `ReportsTo`, e `Country` BoundField markup di GridView simile a:
 
-
 [!code-aspx[Main](using-templatefields-in-the-gridview-control-vb/samples/sample1.aspx)]
 
 Si consiglia di visualizzare lo stato di avanzamento in un browser. A questo punto si dovrebbe essere visualizzata una tabella con un record per ogni dipendente e verranno visualizzate quattro colonne: uno per il dipendente cognome, uno per il nome di battesimo, uno per il titolo e una data di assunzione.
 
-
 [![Il LastName, FirstName, titolo e HireDate campi vengono visualizzati per ogni dipendente](using-templatefields-in-the-gridview-control-vb/_static/image8.png)](using-templatefields-in-the-gridview-control-vb/_static/image7.png)
 
 **Figura 3**: Il `LastName`, `FirstName`, `Title`, e `HireDate` campi vengono visualizzati per ogni dipendente ([fare clic per visualizzare l'immagine con dimensioni normali](using-templatefields-in-the-gridview-control-vb/_static/image9.png))
-
 
 ## <a name="step-2-displaying-the-first-and-last-names-in-a-single-column"></a>Passaggio 2: Visualizzare i nomi e il cognome in una singola colonna
 
@@ -80,14 +72,11 @@ Entrambi gli approcci net lo stesso risultato, ma personalmente preferisco conve
 
 Per convertire un BoundField esistente in un TemplateField, fare clic sul collegamento Modifica colonne dallo smart tag del controllo GridView, visualizzare la finestra di dialogo campi. Selezionare i BoundField convertire dall'elenco nell'angolo inferiore sinistro e quindi fare clic sul collegamento "Converti il campo in un TemplateField" nell'angolo inferiore destro.
 
-
 [![Convertire un BoundField in un TemplateField dalla finestra di dialogo campi](using-templatefields-in-the-gridview-control-vb/_static/image11.png)](using-templatefields-in-the-gridview-control-vb/_static/image10.png)
 
 **Figura 4**: Convertire un BoundField in un TemplateField dalla finestra di dialogo campi ([fare clic per visualizzare l'immagine con dimensioni normali](using-templatefields-in-the-gridview-control-vb/_static/image12.png))
 
-
 Proseguo e convertire il `FirstName` BoundField in un TemplateField. Dopo questa modifica è indifferente perceptive nella finestra di progettazione. Questo avviene perché la conversione i BoundField in un TemplateField crea un TemplateField che gestisce l'aspetto dei BoundField. Nonostante esista in corso alcuna differenza visual a questo punto nella finestra di progettazione, questo processo di conversione ha sostituito la sintassi dichiarativa del BoundField - `<asp:BoundField DataField="FirstName" HeaderText="FirstName" SortExpression="FirstName" />` : con la sintassi TemplateField seguente:
-
 
 [!code-aspx[Main](using-templatefields-in-the-gridview-control-vb/samples/sample2.aspx)]
 
@@ -95,63 +84,48 @@ Come si può notare, il TemplateField è costituita da due modelli di un' `ItemT
 
 Per aggiungere il `LastName` questo TemplateField dobbiamo aggiungere un altro controllo Web etichetta nel valore del campo dati il `ItemTemplate` ed eseguire l'associazione relativa `Text` proprietà `LastName`. Questa operazione può essere eseguita manualmente o tramite la finestra di progettazione. Per eseguire l'operazione manualmente, è sufficiente aggiungere la sintassi dichiarativa appropriata per il `ItemTemplate`:
 
-
 [!code-aspx[Main](using-templatefields-in-the-gridview-control-vb/samples/sample3.aspx)]
 
 Per aggiungerla tramite la finestra di progettazione, fare clic sul collegamento di modifica modelli dallo smart tag del controllo GridView. Interfaccia per la modifica modello del controllo GridView verranno visualizzate. In questo smart tag dell'interfaccia è un elenco dei modelli in GridView. Poiché è disponibile un TemplateField a questo punto, i solo i modelli presenti nell'elenco a discesa sono tali modelli per la `FirstName` TemplateField lungo con la `EmptyDataTemplate` e `PagerTemplate`. Il `EmptyDataTemplate` modello, se specificato, viene utilizzato per eseguire il rendering di output del controllo GridView se non sono presenti risultati i dati associati a GridView; il `PagerTemplate`, se specificato, viene utilizzato per il rendering di interfaccia di paging per un controllo GridView che supporta il paging.
-
 
 [![I modelli del controllo GridView possono essere modificati tramite la finestra di progettazione](using-templatefields-in-the-gridview-control-vb/_static/image14.png)](using-templatefields-in-the-gridview-control-vb/_static/image13.png)
 
 **Figura 5**: Modelli può essere modificato tramite la progettazione GridView ([fare clic per visualizzare l'immagine con dimensioni normali](using-templatefields-in-the-gridview-control-vb/_static/image15.png))
 
-
 Anche visualizzare le `LastName` nella `FirstName` TemplateField trascinare il controllo etichetta nella casella degli strumenti nel `FirstName` del TemplateField `ItemTemplate` in GridView di modifica dei modelli dell'interfaccia.
-
 
 [![Aggiungere un controllo Web etichetta a ItemTemplate di FirstName TemplateField](using-templatefields-in-the-gridview-control-vb/_static/image17.png)](using-templatefields-in-the-gridview-control-vb/_static/image16.png)
 
 **Figura 6**: Aggiungere un controllo Web etichetta per il `FirstName` ItemTemplate del TemplateField ([fare clic per visualizzare l'immagine con dimensioni normali](using-templatefields-in-the-gridview-control-vb/_static/image18.png))
 
-
 A questo punto ha il controllo etichetta Web aggiunto per il TemplateField relativo `Text` proprietà è impostata su "Label". È necessario modificare questa impostazione in modo che questa proprietà è associata al valore della `LastName` invece del campo dati. Per eseguire questo, fare clic sullo smart tag del controllo etichetta e scegliere l'opzione Modifica DataBindings.
-
 
 [![Scegliere l'opzione di Modifica DataBindings dallo Smart Tag dell'etichetta](using-templatefields-in-the-gridview-control-vb/_static/image20.png)](using-templatefields-in-the-gridview-control-vb/_static/image19.png)
 
 **Figura 7**: Scegliere l'opzione Modifica DataBindings dallo Smart Tag dell'etichetta ([fare clic per visualizzare l'immagine con dimensioni normali](using-templatefields-in-the-gridview-control-vb/_static/image21.png))
 
-
 Verrà visualizzata la finestra di dialogo DataBindings. Da qui è possibile selezionare la proprietà per partecipare al Data Binding nell'elenco a sinistra e scegliere il campo per associare i dati nell'elenco a discesa a destra. Scegliere il `Text` proprietà dal lato sinistro e `LastName` campo a destra e fare clic su OK.
-
 
 [![Associare la proprietà Text al campo LastName dati](using-templatefields-in-the-gridview-control-vb/_static/image23.png)](using-templatefields-in-the-gridview-control-vb/_static/image22.png)
 
 **Figura 8**: Associare il `Text` proprietà per il `LastName` campo dati ([fare clic per visualizzare l'immagine con dimensioni normali](using-templatefields-in-the-gridview-control-vb/_static/image24.png))
 
-
 > [!NOTE]
 > La finestra di dialogo DataBindings consente di indicare se eseguire l'associazione dati bidirezionale. Se si lascia questa opzione è deselezionata, la sintassi di Data Binding `<%# Eval("LastName")%>` verrà usato al posto di `<%# Bind("LastName")%>`. Entrambi gli approcci sono ottimale per questa esercitazione. Data Binding bidirezionale diventa importante quando vengono inseriti e la modifica dei dati. Per visualizzare semplicemente i dati, tuttavia, entrambi gli approcci funzioneranno altrettanto bene. Si parlerà dell'associazione dati bidirezionale dettagliatamente in esercitazioni future.
 
-
 Richiedere qualche istante per visualizzare questa pagina tramite un browser. Come può notare, il controllo GridView ancora include quattro colonne. Tuttavia, il `FirstName` colonna sono ora elencati *entrambi* il `FirstName` e `LastName` valori del campo dati.
-
 
 [![FirstName e LastName valori vengono visualizzati in una singola colonna](using-templatefields-in-the-gridview-control-vb/_static/image26.png)](using-templatefields-in-the-gridview-control-vb/_static/image25.png)
 
 **Figura 9**: Sia la `FirstName` e `LastName` i valori vengono visualizzati in una sola colonna ([fare clic per visualizzare l'immagine con dimensioni normali](using-templatefields-in-the-gridview-control-vb/_static/image27.png))
 
-
 Per completare il primo passaggio, rimuovere il `LastName` BoundField e rinominare il `FirstName` del TemplateField `HeaderText` proprietà "Name". Dopo tali modifiche markup dichiarativo del controllo GridView dovrebbe essere simile al seguente:
 
-
 [!code-aspx[Main](using-templatefields-in-the-gridview-control-vb/samples/sample4.aspx)]
-
 
 [![Il primo e i cognomi di ogni dipendente vengono visualizzati in una colonna](using-templatefields-in-the-gridview-control-vb/_static/image29.png)](using-templatefields-in-the-gridview-control-vb/_static/image28.png)
 
 **Figura 10**: Il primo e i cognomi di ogni dipendente vengono visualizzati in una colonna ([fare clic per visualizzare l'immagine con dimensioni normali](using-templatefields-in-the-gridview-control-vb/_static/image30.png))
-
 
 ## <a name="step-3-using-the-calendar-control-to-display-thehireddatefield"></a>Passaggio 3: Utilizzando il controllo Calendar in visualizzazione di`HiredDate`campo
 
@@ -159,47 +133,37 @@ La visualizzazione di un valore del campo dati come testo in un controllo GridVi
 
 A tale scopo, iniziare convertendo il `HiredDate` BoundField in un TemplateField. È sufficiente passare a smart tag del controllo GridView e fare clic sul collegamento Modifica colonne, visualizzare la finestra di dialogo campi. Selezionare il `HiredDate` BoundField e fare clic su "Converti il campo in un TemplateField."
 
-
 [![Convertire i HiredDate BoundField in un TemplateField](using-templatefields-in-the-gridview-control-vb/_static/image32.png)](using-templatefields-in-the-gridview-control-vb/_static/image31.png)
 
 **Figura 11**: Convertire le `HiredDate` BoundField in un TemplateField ([fare clic per visualizzare l'immagine con dimensioni normali](using-templatefields-in-the-gridview-control-vb/_static/image33.png))
-
 
 Come abbiamo visto nel passaggio 2, si sostituirà i BoundField con un TemplateField che contiene un `ItemTemplate` e `EditItemTemplate` con un'etichetta e una casella di testo cui `Text` sono associate ai `HiredDate` valore utilizzando la sintassi di associazione dati `<%# Bind("HiredDate")%>`.
 
 Per sostituire il testo con un controllo di calendario, modificare il modello rimuovendo l'etichetta e aggiunta di un controllo calendario. Dalla finestra di progettazione, selezionare Modifica modelli dallo smart tag del controllo GridView e scegliere il `HireDate` del TemplateField `ItemTemplate` nell'elenco a discesa. Successivamente, eliminare il controllo etichetta e trascinare un controllo di calendario dalla casella degli strumenti all'interfaccia di modifica del modello.
 
-
 [![Aggiungere un controllo calendario per l'HireDate ItemTemplate del TemplateField](using-templatefields-in-the-gridview-control-vb/_static/image35.png)](using-templatefields-in-the-gridview-control-vb/_static/image34.png)
 
 **Figura 12**: Aggiungere un controllo calendario per il `HireDate` del TemplateField `ItemTemplate` ([fare clic per visualizzare l'immagine con dimensioni normali](using-templatefields-in-the-gridview-control-vb/_static/image36.png))
-
 
 A questo punto, ogni riga in GridView conterrà un controllo calendario nel relativo `HiredDate` TemplateField. Tuttavia, il dipendente dell'effettivo `HiredDate` valore non è impostato un punto qualsiasi nel controllo calendario, causando ogni controllo di calendario per l'impostazione predefinita che mostra la data e il mese corrente. Per risolvere questo problema, è necessario assegnare ogni dipendente `HiredDate` del controllo calendario [SelectedDate](https://msdn.microsoft.com/library/system.web.ui.webcontrols.calendar.selecteddate(VS.80).aspx) e [VisibleDate](https://msdn.microsoft.com/library/system.web.ui.webcontrols.calendar.visibledate(VS.80).aspx) proprietà.
 
 Dallo smart tag del controllo calendario, scegliere Modifica DataBindings. Successivamente, eseguire l'associazione entrambe `SelectedDate` e `VisibleDate` delle proprietà per il `HiredDate` campo dati.
 
-
 [![Associare le proprietà di VisibleDate e SelectedDate al campo dati HiredDate](using-templatefields-in-the-gridview-control-vb/_static/image38.png)](using-templatefields-in-the-gridview-control-vb/_static/image37.png)
 
 **Figura 13**: Associare il `SelectedDate` e `VisibleDate` delle proprietà per il `HiredDate` campo dati ([fare clic per visualizzare l'immagine con dimensioni normali](using-templatefields-in-the-gridview-control-vb/_static/image39.png))
 
-
 > [!NOTE]
 > Data selezionata del controllo calendario non debba necessariamente essere visibile. Ad esempio, un calendario può avere 1 ° agosto<sup>st</sup>, 1999 come la data selezionata, ma visualizza il mese corrente e l'anno. La data selezionata e visibili vengono specificati per il controllo di calendario `SelectedDate` e `VisibleDate` proprietà. Poiché si vogliono selezionare entrambe del dipendente `HiredDate` e assicurarsi che venga visualizzato dobbiamo entrambe queste proprietà per associare il `HireDate` campo dati.
 
-
 Quando si visualizza la pagina in un browser, il calendario a questo punto viene illustrato il mese della data di assunzione del dipendente e seleziona data specifica.
-
 
 [![HiredDate del dipendente viene visualizzato nel controllo calendario](using-templatefields-in-the-gridview-control-vb/_static/image41.png)](using-templatefields-in-the-gridview-control-vb/_static/image40.png)
 
 **Figura 14**: Il dipendente `HiredDate` viene visualizzato nel controllo calendario ([fare clic per visualizzare l'immagine con dimensioni normali](using-templatefields-in-the-gridview-control-vb/_static/image42.png))
 
-
 > [!NOTE]
 > Contrariamente a tutti gli esempi che abbiamo visto finora, per questa esercitazione abbiamo *non* impostare `EnableViewState` proprietà `False` per questo controllo GridView. Il motivo di questa decisione è perché scegliendo le date del controllo calendario, un postback, impostando la data del calendario selezionata per la data selezionata. Se lo stato di visualizzazione del controllo GridView è disabilitato, tuttavia, in ogni postback dei dati del controllo GridView sono riassociati alla relativa origine dati sottostante, causando la data del calendario selezionata da impostare *nuovamente* al dipendente `HireDate`, sovrascrittura data scelta dall'utente.
-
 
 Per questa esercitazione è una discussione opinabile poiché l'utente non è in grado di aggiornare il dipendente `HireDate`. Sarebbe probabilmente consigliabile configurare il controllo di calendario in modo che le date non sono selezionabili. Indipendentemente dal fatto che, in questa esercitazione viene illustrato che in alcuni casi lo stato di visualizzazione deve essere abilitato per offrire determinate funzionalità.
 
@@ -218,21 +182,17 @@ Entrambi questi scenari possono essere gestiti mediante la creazione di un *meto
 
 Per illustrare questo concetto, è possibile aumentare il corso di questa esercitazione per mostrare una colonna che elenca il numero totale di giorni di che un dipendente ha completato il processo. Questo metodo di formattazione richiederà un `Northwind.EmployeesRow` dell'oggetto e restituire il numero di giorni il dipendente è stato impiegato sotto forma di stringa. Questo metodo può essere aggiunto alla classe code-behind della pagina ASP.NET, ma *devono* contrassegnato come `Protected` o `Public` perché sia accessibile dal modello.
 
-
 [!code-vb[Main](using-templatefields-in-the-gridview-control-vb/samples/sample5.vb)]
 
 Poiché il `HiredDate` campo può contenere `NULL` valori è innanzitutto necessario assicurarsi che il valore non di database `NULL` prima di procedere con il calcolo. Se il `HiredDate` valore è `NULL`, abbiamo semplicemente restituire la stringa "Unknown"; in caso contrario `NULL`, si calcola la differenza tra l'ora corrente e il `HiredDate` valore e restituire il numero di giorni.
 
 Per poter usare questo metodo occorre richiamarla da un TemplateField in GridView mediante la sintassi di associazione dati. Iniziare aggiungendo un nuovo TemplateField a GridView facendo clic sul collegamento Modifica colonne nello smart tag del controllo GridView e aggiungendo un TemplateField nuovo.
 
-
 [![Aggiungere un nuovo TemplateField a GridView](using-templatefields-in-the-gridview-control-vb/_static/image44.png)](using-templatefields-in-the-gridview-control-vb/_static/image43.png)
 
 **Figura 15**: Aggiungere un nuovo TemplateField a GridView ([fare clic per visualizzare l'immagine con dimensioni normali](using-templatefields-in-the-gridview-control-vb/_static/image45.png))
 
-
 Impostare questo nuovo TemplateField `HeaderText` proprietà su "Giorni del processo" e la relativa `ItemStyle`del `HorizontalAlign` proprietà `Center`. Per chiamare il `DisplayDaysOnJob` metodo dal modello, aggiungere un `ItemTemplate` e usare la sintassi di Data Binding seguenti:
-
 
 [!code-aspx[Main](using-templatefields-in-the-gridview-control-vb/samples/sample6.aspx)]
 
@@ -241,21 +201,17 @@ Impostare questo nuovo TemplateField `HeaderText` proprietà su "Giorni del proc
 > [!NOTE]
 > In alternativa, anziché passare un `EmployeesRow` istanza, è possibile solo passare nel `HireDate` valore usando `<%# DisplayDaysOnJob(Eval("HireDate")) %>`. Tuttavia, il `Eval` restituzione del metodo un' `Object`, quindi dobbiamo modificare nostro `DisplayDaysOnJob` firma del metodo per accettare un parametro di input di tipo `Object`, invece. Abbiamo alla cieca non possiamo eseguire il cast il `Eval("HireDate")` le chiamate a un `DateTime` perché la `HireDate` colonna il `Employees` tabella può contenere `NULL` valori. Pertanto, è necessario accettare un `Object` come parametro di input per il `DisplayDaysOnJob` metodo, verificare se disponesse di un database `NULL` valore (che è possibile usare `Convert.IsDBNull(objectToCheck)`) e quindi procedere di conseguenza.
 
-
 A causa di questi sottigliezze ho scelto di passare all'interno dell'intero `EmployeesRow` istanza. Nella prossima esercitazione vedremo un esempio di adattamento altre per l'uso di `Eval("columnName")` sintassi per passare un parametro di input in un metodo di formattazione.
 
 Di seguito è riportata la sintassi dichiarativa per il controllo GridView dopo aver aggiunto il TemplateField e il `DisplayDaysOnJob` chiamato dal metodo di `ItemTemplate`:
-
 
 [!code-aspx[Main](using-templatefields-in-the-gridview-control-vb/samples/sample7.aspx)]
 
 Figura 16 mostra l'esercitazione completa, quando viene visualizzato tramite un browser.
 
-
 [![Viene visualizzato il numero di giorni che il dipendente ha completato il processo](using-templatefields-in-the-gridview-control-vb/_static/image47.png)](using-templatefields-in-the-gridview-control-vb/_static/image46.png)
 
 **Figura 16**: Il numero di giorni il dipendente è stato per l'oggetto processo viene visualizzato ([fare clic per visualizzare l'immagine con dimensioni normali](using-templatefields-in-the-gridview-control-vb/_static/image48.png))
-
 
 ## <a name="summary"></a>Riepilogo
 

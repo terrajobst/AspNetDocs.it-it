@@ -8,12 +8,12 @@ ms.date: 03/31/2010
 ms.assetid: 0f982827-f8f9-420d-b36b-57b23f5aa519
 msc.legacyurl: /web-forms/overview/data-access/masterdetail/master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 13538e5e2f60745d338b87ba4ea08c21ae997424
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 6c6c4d6176dc87007346791dcf665e5288e4d6cc
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59409122"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108250"
 ---
 # <a name="masterdetail-using-a-selectable-master-gridview-with-a-details-detailview-c"></a>Report master o di dettaglio con un controllo GridView master selezionabile e un controllo DetailView per i dettagli (C#)
 
@@ -23,16 +23,13 @@ da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 > Questa esercitazione sarà necessario un controllo GridView cui righe includono il nome e il prezzo di ogni prodotto insieme a un pulsante di selezione. Facendo clic sul pulsante Seleziona per un determinato prodotto comporterà i dettagli completi da visualizzare nel controllo DetailsView nella stessa pagina.
 
-
 ## <a name="introduction"></a>Introduzione
 
 Nel [esercitazione precedente](master-detail-filtering-across-two-pages-cs.md) è stato illustrato come creare un report master-Details mediante due pagine web: una pagina web "master", da cui è visualizzato l'elenco di fornitori e una pagina web "Dettagli" elencati questi prodotti forniti dall'oggetto selezionato fornitore. È preferibile ridurre questo formato di report di due pagine in un'unica pagina. Questa esercitazione sarà necessario un controllo GridView cui righe includono il nome e il prezzo di ogni prodotto insieme a un pulsante di selezione. Facendo clic sul pulsante Seleziona per un determinato prodotto comporterà i dettagli completi da visualizzare nel controllo DetailsView nella stessa pagina.
 
-
 [![Fare clic sul pulsante Seleziona Visualizza i dettagli del prodotto](master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs/_static/image2.png)](master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs/_static/image1.png)
 
 **Figura 1**: Fare clic sul pulsante Seleziona Visualizza i dettagli del prodotto ([fare clic per visualizzare l'immagine con dimensioni normali](master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs/_static/image3.png))
-
 
 ## <a name="step-1-creating-a-selectable-gridview"></a>Passaggio 1: Creazione di un controllo GridView selezionabile
 
@@ -40,45 +37,35 @@ Tenere presente che nei due pagine master/dettagli del report che ogni record ma
 
 Iniziare aggiungendo un controllo GridView per il `DetailsBySelecting.aspx` nella pagina la `Filtering` cartella, l'impostazione relativa `ID` proprietà `ProductsGrid`. Successivamente, aggiungere un nuovo oggetto ObjectDataSource denominato `AllProductsDataSource` che richiama la `ProductsBLL` della classe `GetProducts()` (metodo).
 
-
 [![Creare un oggetto ObjectDataSource denominato AllProductsDataSource](master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs/_static/image5.png)](master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs/_static/image4.png)
 
 **Figura 2**: Creare una Named ObjectDataSource `AllProductsDataSource` ([fare clic per visualizzare l'immagine con dimensioni normali](master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs/_static/image6.png))
-
 
 [![Usare la classe ProductsBLL](master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs/_static/image8.png)](master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs/_static/image7.png)
 
 **Figura 3**: Usare la `ProductsBLL` classe ([fare clic per visualizzare l'immagine con dimensioni normali](master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs/_static/image9.png))
 
-
 [![Configurare ObjectDataSource per richiamare il metodo GetProducts()](master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs/_static/image11.png)](master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs/_static/image10.png)
 
 **Figura 4**: Configurare ObjectDataSource per richiamare il `GetProducts()` metodo ([fare clic per visualizzare l'immagine con dimensioni normali](master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs/_static/image12.png))
 
-
 Modificare i campi di GridView rimuovendo tutto tranne le `ProductName` e `UnitPrice` BoundField. Inoltre, è possibile personalizzare questi BoundField in base alle esigenze, ad esempio la formattazione il `UnitPrice` BoundField come valuta e modificando il `HeaderText` le proprietà dei BoundField. Questi passaggi possono essere eseguiti in formato grafico facendo clic sul collegamento Modifica colonne dallo smart tag del controllo GridView, o configurare manualmente la sintassi dichiarativa.
-
 
 [![Rimuovi tutto tranne il ProductName e un BoundField UnitPrice](master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs/_static/image14.png)](master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs/_static/image13.png)
 
 **Figura 5**: Rimuovere tutti, ma il `ProductName` e `UnitPrice` BoundField ([fare clic per visualizzare l'immagine con dimensioni normali](master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs/_static/image15.png))
 
-
 Il markup finale per il controllo GridView è:
-
 
 [!code-aspx[Main](master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs/samples/sample1.aspx)]
 
 Successivamente, è necessario contrassegnare il controllo GridView come selezionabile, che consentirà di aggiungere un pulsante Seleziona per ciascuna riga. A tale scopo, è sufficiente selezionare la casella di controllo di selezione attiva nello smart tag del controllo GridView.
 
-
 [![Rendere selezionabile righe del controllo GridView](master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs/_static/image17.png)](master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs/_static/image16.png)
 
 **Figura 6**: Rendere selezionabile di righe del controllo GridView ([fare clic per visualizzare l'immagine con dimensioni normali](master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs/_static/image18.png))
 
-
 Selezionando l'opzione di abilitazione della selezione viene aggiunto un CommandField per il `ProductsGrid` GridView con relativo `ShowSelectButton` proprietà è impostata su True. Ciò comporta un pulsante Seleziona per ciascuna riga di GridView, come illustrato nella figura 6. Per impostazione predefinita, vengono visualizzati i pulsanti di selezione come LinkButton, ma è possibile usare i pulsanti o ImageButtons invece tramite la CommandField `ButtonType` proprietà.
-
 
 [!code-aspx[Main](master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs/samples/sample2.aspx)]
 
@@ -90,11 +77,9 @@ Il `DataKeyNames` proprietà viene impostata automaticamente per i campi di dati
 
 È possibile visualizzare lo stato di avanzamento fino a quel momento tramite un browser. Si noti che il controllo GridView sono elencati il nome e il prezzo per tutti i prodotti con un controllo LinkButton selezionare. Fare clic sul pulsante Select determina un postback. Nel passaggio 2 vedremo come disporre un controllo DetailsView possa rispondere il postback visualizzando i dettagli per il prodotto selezionato.
 
-
 [![Ogni riga del prodotto contiene un controllo LinkButton selezionare](master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs/_static/image20.png)](master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs/_static/image19.png)
 
 **Figura 7**: Ogni riga del prodotto contiene un controllo LinkButton selezionare ([fare clic per visualizzare l'immagine con dimensioni normali](master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs/_static/image21.png))
-
 
 ### <a name="highlighting-the-selected-row"></a>L'evidenziazione della riga selezionata
 
@@ -102,52 +87,41 @@ Il `ProductsGrid` include anche un `SelectedRowStyle` proprietà che può essere
 
 Come con le esercitazioni precedenti, si impegna a mantenere le impostazioni relative alla estetici definite come classi CSS. Pertanto, creare una nuova classe CSS `Styles.css` denominato `SelectedRowStyle`.
 
-
 [!code-css[Main](master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs/samples/sample3.css)]
 
 Da questa classe CSS da applicare il `SelectedRowStyle` proprietà di *tutti* GridView nella nostra serie di esercitazioni, modificare il `GridView.skin` interfaccia personalizzata nel `DataWebControls` tema per includere il `SelectedRowStyle` impostazioni come illustrato di seguito:
-
 
 [!code-aspx[Main](master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs/samples/sample4.aspx)]
 
 Grazie a questa aggiunta, la riga selezionata di GridView a questo punto verrà evidenziata da un colore di sfondo giallo.
 
-
 [![Personalizzare l'aspetto della riga selezionata tramite proprietà SelectedRowStyle di GridView](master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs/_static/image23.png)](master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs/_static/image22.png)
 
 **Figura 8**: Personalizzare usando l'aspetto della riga selezionata di GridView `SelectedRowStyle` proprietà ([fare clic per visualizzare l'immagine con dimensioni normali](master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs/_static/image24.png))
-
 
 ## <a name="step-2-displaying-the-selected-products-details-in-a-detailsview"></a>Passaggio 2: Visualizzazione dei dettagli del prodotto selezionato in un controllo DetailsView
 
 Con la `ProductsGrid` completare GridView, tutto ciò che resta consiste nell'aggiungere un controllo DetailsView che visualizza le informazioni del prodotto specifico selezionato. Aggiungere un controllo DetailsView sopra il controllo GridView e creare un nuovo oggetto ObjectDataSource denominato `ProductDetailsDataSource`. Poiché si desidera che questa DetailsView per visualizzare determinate informazioni relative al prodotto selezionato, configurare il `ProductDetailsDataSource` usare il `ProductsBLL` della classe `GetProductByProductID(productID)` (metodo).
 
-
 [![Richiamare metodo della classe GetProductByProductID(productID) ProductsBLL](master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs/_static/image26.png)](master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs/_static/image25.png)
 
 **Figura 9**: Richiama il `ProductsBLL` della classe `GetProductByProductID(productID)` metodo ([fare clic per visualizzare l'immagine con dimensioni normali](master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs/_static/image27.png))
 
-
 Disporre le *`productID`* valore del parametro ottenuto dalla proprietà del controllo GridView `SelectedValue` proprietà. Come accennato in precedenza, il controllo GridView `SelectedValue` proprietà restituisce il primo valore chiave dati per la riga selezionata. Pertanto, è fondamentale che il controllo GridView `DataKeyNames` è impostata su `ProductID`, in modo che la riga selezionata `ProductID` valore viene restituito da `SelectedValue`.
-
 
 [![Impostare il parametro productID alla proprietà SelectedValue di GridView](master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs/_static/image29.png)](master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs/_static/image28.png)
 
 **Figura 10**: Impostare il *`productID`* parametro per il controllo GridView `SelectedValue` proprietà ([fare clic per visualizzare l'immagine con dimensioni normali](master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs/_static/image30.png))
 
-
 Una volta il `productDetailsDataSource` ObjectDataSource è stato configurato correttamente e associato a DetailsView, questa esercitazione è stata completata. Quando la pagina viene prima visitata è selezionata alcuna riga, pertanto il GridView `SelectedValue` restituisce proprietà `null`. Poiché non sono presenti prodotti con un `NULL` `ProductID` valore, viene restituito alcun record per il `GetProductByProductID(productID)` metodo, vale a dire che non viene visualizzato il controllo DetailsView (vedere la figura 11). Facendo clic sul pulsante di selezione di una riga GridView, un postback previsioni e DetailsView viene aggiornato. Si time del controllo GridView `SelectedValue` proprietà restituisce il `ProductID` della riga selezionata, il `GetProductByProductID(productID)` metodo restituisce un `ProductsDataTable` con informazioni su quel particolare prodotto e DetailsView Mostra questi dettagli (vedere la figura 12).
-
 
 [![Quando viene visualizzata prima visita, solo il controllo GridView](master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs/_static/image32.png)](master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs/_static/image31.png)
 
 **Figura 11**: Alla prima visita, viene visualizzato solo il controllo GridView ([fare clic per visualizzare l'immagine con dimensioni normali](master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs/_static/image33.png))
 
-
 [![Dopo aver selezionato una riga, vengono visualizzati i dettagli del prodotto](master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs/_static/image35.png)](master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs/_static/image34.png)
 
 **Figura 12**: Dopo aver selezionato una riga, vengono visualizzati i dettagli del prodotto ([fare clic per visualizzare l'immagine con dimensioni normali](master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs/_static/image36.png))
-
 
 ## <a name="summary"></a>Riepilogo
 

@@ -9,12 +9,12 @@ ms.date: 10/03/2018
 ms.assetid: 2a127d3b-21ed-4cc9-bec0-cdab4e742a25
 msc.legacyurl: /signalr/overview/performance/using-signalr-performance-counters-in-an-azure-web-role
 msc.type: authoredcontent
-ms.openlocfilehash: 8e17e945bc144731dd149bd7ddfc9e29160eaf0b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 969a2ce43a7cb8d649555daf282f900401c0c914
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57049198"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65113600"
 ---
 # <a name="using-signalr-performance-counters-in-an-azure-web-role"></a>Usando i contatori delle prestazioni di SignalR in un ruolo Web di Azure
 
@@ -36,7 +36,7 @@ I contatori delle prestazioni di SignalR vengono utilizzati per monitorare le pr
 
 2. In Visual Studio selezionare **File** > **Nuovo** > **Progetto**.
 
-3. Nel **nuovo progetto** finestra di dialogo, seleziona la **Visual C#** > **Cloud** categorie a sinistra e quindi selezionare il **servizioClouddiAzure** modello. Denominare l'app **SignalRPerfCounters** e selezionare **OK**.
+3. Nel **nuovo progetto** finestra di dialogo, seleziona la **Visual c#** > **Cloud** categorie a sinistra e quindi selezionare il **servizioClouddiAzure** modello. Denominare l'app **SignalRPerfCounters** e selezionare **OK**.
 
    ![Nuova applicazione Cloud](using-signalr-performance-counters-in-an-azure-web-role/_static/image1.png)
 
@@ -88,7 +88,6 @@ I contatori delle prestazioni di SignalR vengono utilizzati per monitorare le pr
     ![Set di copia in Directory di Output alla copia sempre](using-signalr-performance-counters-in-an-azure-web-role/_static/image8.png)
 
 15. Ripetere il passaggio precedente per il *SignalRPerfCounterInstall.cmd* file.
-
 
 16. Fare clic sui *SignalRPerfCounterInstall.cmd* del file e selezionare **aperta con**. Nella finestra di dialogo visualizzata, selezionare **Editor binario** e selezionare **OK**.
 

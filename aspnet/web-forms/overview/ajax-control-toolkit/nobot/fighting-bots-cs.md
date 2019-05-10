@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: 0a1917e0-884a-4576-8e93-9ed660faae51
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/nobot/fighting-bots-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 178d839f67d70670b3b5acf470acb7ae8cf1c33f
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: e45fa613e985b797eef4348d26492af88a688fd8
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59405807"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65115534"
 ---
 # <a name="fighting-bots-c"></a>Lotta contro i bot (C#)
 
@@ -22,7 +22,6 @@ da [Christian Wenz](https://github.com/wenz)
 [Scaricare il codice](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/NoBot0.cs.zip) o [Scarica il PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/nobot0CS.pdf)
 
 > BOT automatizzati effetto intonaco i blog e altri siti Web con la posta indesiderata, invio di moduli di commento senza alcuna interazione dell'utente. Il controllo NoBot di ASP.NET AJAX Control Toolkit può combattere i bot.
-
 
 ## <a name="overview"></a>Panoramica
 
@@ -63,7 +62,6 @@ Infine, è necessario un modulo per inviare e un elemento etichetta per il messa
 [!code-aspx[Main](fighting-bots-cs/samples/sample4.aspx)]
 
 Quando si esegue questo script e disattivare JavaScript o inviare il modulo entro i primi due secondi o inviare il modulo di sette volte all'interno di trenta secondi, si otterrà un messaggio di errore. Tuttavia utilizzare questo controllo con cautela, poiché solo 90-95% degli utenti hanno attivato JavaScript, pertanto circa 5-10% degli utenti avrà esito negativo `NoBot`del test.
-
 
 [![Questo messaggio di errore potrebbe essere stato causato da un robot](fighting-bots-cs/_static/image2.png)](fighting-bots-cs/_static/image1.png)
 

@@ -8,12 +8,12 @@ ms.date: 05/03/2012
 ms.assetid: aa862153-4cd8-4e33-beeb-abf502c6664f
 msc.legacyurl: /web-forms/overview/deployment/deploying-web-applications-in-enterprise-scenarios/enterprise-web-deployment-scenario-overview
 msc.type: authoredcontent
-ms.openlocfilehash: 326abfe4fe86d0741b0bf807d5454d6cf87a7c12
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 9786879844da13c21e6a953b1ab24b29ca8121e2
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59411969"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65109137"
 ---
 # <a name="enterprise-web-deployment-scenario-overview"></a>Distribuzione Web aziendale: Panoramica dello scenario
 
@@ -22,7 +22,6 @@ da [Jason Lee](https://github.com/jrjlee)
 [Scaricare PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Questa serie di esercitazioni pratiche Usa una soluzione di esempio con un livello di complessità, insieme a uno scenario di distribuzione azienda fittizia, realistico per fornire un'implementazione di riferimento e per assegnare le attività e procedure dettagliate di contesto comune. In questo argomento viene descritto lo scenario dell'esercitazione e introduce la soluzione di esempio.
-
 
 ## <a name="scenario-description"></a>Descrizione dello scenario
 

@@ -8,12 +8,12 @@ ms.date: 04/04/2013
 ms.assetid: 00aca413-f067-4108-9bd1-cf21e64a2646
 msc.legacyurl: /single-page-application/overview/templates/backbonejs-template
 msc.type: authoredcontent
-ms.openlocfilehash: 8148974eacd1db05947ba54fe40776df69f92290
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: e5c98b7a9678f8251eccce05344c2014a769fc3b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59404117"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65113354"
 ---
 # <a name="backbone-template"></a>Modello Backbone
 
@@ -22,7 +22,6 @@ by [Mads Kristensen](https://github.com/madskristensen)
 > Il modello di applicazione a singola pagina Backbone è stato scritto da Kazi Manzur Rashid
 > 
 > [Scaricare il modello di applicazione a singola pagina backbone](https://go.microsoft.com/fwlink/?LinkId=293631)
-
 
 Il modello backbone SPA è progettato per iniziare a creare rapidamente App web lato client interattivo con [backbone.](http://backbonejs.org/)
 

@@ -8,12 +8,12 @@ ms.date: 04/21/2011
 ms.assetid: 998ce4e1-9d72-435b-8f1c-399a10ae4360
 msc.legacyurl: /mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-2
 msc.type: authoredcontent
-ms.openlocfilehash: b452c59f16107be6d356f86e6c313ba3229dbce6
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 9dc2226f4951d4bed122df37d35bbb94730a00ad
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59392755"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65112418"
 ---
 # <a name="part-2-controllers"></a>Parte 2. Controllers
 
@@ -24,7 +24,6 @@ by [Jon Galloway](https://github.com/jongalloway)
 > Music Store MVC è un semplice esempio di implementazione di un archivio per un negozio che vende album musicali online e implementa l'amministrazione di base del sito, l'accesso dell'utente e la funzionalità del carrello acquisti.  
 >   
 > Questa serie di esercitazioni illustra tutti i passaggi necessari per compilare l'applicazione di esempio ASP.NET MVC Music Store. Parte 2 illustra i controller.
-
 
 Framework web tradizionali, gli URL in ingresso vengono in genere mappati ai file su disco. Ad esempio: una richiesta per un URL, ad esempio "/ Products. aspx" o "/ Products" potrebbe essere elaborata da un file "Products" o "Products".
 
@@ -136,7 +135,6 @@ Eseguire l'applicazione e passare a /Store/Details/5:
 - È stato appreso come eseguire il nostro sito Web utilizzando ASP.NET Development Server
 - Abbiamo creato due classi Controller: una classe HomeController e un StoreController
 - Sono stati aggiunti i metodi di azione per il controller che rispondono alle richieste di URL e restituiscono testo al browser
-
 
 > [!div class="step-by-step"]
 > [Precedente](mvc-music-store-part-1.md)

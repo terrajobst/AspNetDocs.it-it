@@ -8,12 +8,12 @@ ms.date: 12/01/2014
 ms.assetid: 61941e64-0c0d-4996-9270-cb8ccfd0cabc
 msc.legacyurl: /visual-studio/overview/2013/creating-web-projects-in-visual-studio
 msc.type: authoredcontent
-ms.openlocfilehash: a62c821159cd097507019d5efb29e01958ec9fba
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 3a446be8e2dff2ac66e2432c51b2d9f43bcb817d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59398104"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65113176"
 ---
 # <a name="creating-aspnet-web-projects-in-visual-studio-2013"></a>Creazione di progetti Web ASP.NET in Visual Studio 2013
 
@@ -29,7 +29,6 @@ da [Tom Dykstra](https://github.com/tdykstra)
 > - Nuove funzionalità per Web Form che consente di essere disponibili solo per MVC, ad esempio [la creazione del progetto di test automatici](#testproj) e un [modello di sito Intranet](#winauth).
 > 
 > Per informazioni su come creare progetti web per servizi Cloud di Azure o servizi mobili di Azure, vedere [Introduzione a servizi Cloud di Azure e ASP.NET](https://azure.microsoft.com/documentation/articles/cloud-services-dotnet-get-started/) e [la creazione di un'App Leaderboard con .NET di servizi mobili di Azure Back-end](https://azure.microsoft.com/documentation/articles/mobile-services-dotnet-backend-windows-store-dotnet-leaderboard/).
-
 
 <a id="prerequisites"></a>
 ## <a name="prerequisites"></a>Prerequisiti
@@ -350,7 +349,6 @@ Se si vuole provare una delle opzioni di Azure AD ma non ha ancora un account [f
 > Se si sceglie una delle opzioni di Azure AD, il progetto richiede un database e si devono eseguire l'accesso a un account amministratore globale per il tenant di Azure AD. Immettere il nome e la password per un account aziendale (ad esempio, admin@contoso.onmicrosoft.com) che dispone di autorizzazioni amministrative per il tenant di Azure AD.
 > 
 > **Non immettere le credenziali per un account Microsoft (ad esempio, contoso@hotmail.com) nella finestra di dialogo di accesso.**
-
 
 <a id="orgauthsingle"></a>
 ### <a name="cloud---single-organization-authentication"></a>Cloud - organizzazione singola autenticazione

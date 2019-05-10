@@ -8,12 +8,12 @@ ms.date: 04/17/2013
 ms.assetid: 03e4b9f5-0fea-4d94-959f-014b2762a301
 msc.legacyurl: /signalr/overview/older-versions/signalr-1x-hubs-api-guide-server
 msc.type: authoredcontent
-ms.openlocfilehash: 7d75c832f704ea88d365f6a8b83c1c3a024b30ca
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: d9cd3fad36c0300d96c6dbdc61291ef119da2327
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59382251"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65113039"
 ---
 # <a name="aspnet-signalr-hubs-api-guide---server-signalr-1x"></a>Guida all'API di ASP.NET SignalR Hubs - Server (SignalR 1.x)
 
@@ -26,7 +26,6 @@ dal [Patrick Fletcher](https://github.com/pfletcher), [Tom Dykstra](https://gith
 > L'API di hub SignalR consente di eseguire chiamate di procedure remote (RPC) da un server ai client connessi e dai client al server. Nel codice server, si definiscono i metodi che possono essere chiamati da parte dei client e si chiamano i metodi eseguiti nel client. Nel codice client, si definiscono i metodi che possono essere chiamati dal server e si chiamano metodi che eseguono sul server. SignalR si occupa di tutte le attività client-server.
 > 
 > SignalR offre inoltre un'API di livello inferiore denominata connessioni permanenti. Per un'introduzione a SignalR hub e connessioni permanenti o per un'esercitazione che illustra come compilare un'applicazione di SignalR completa, vedere [SignalR - Guida introduttiva](index.md).
-
 
 ## <a name="overview"></a>Panoramica
 
@@ -516,7 +515,6 @@ Nella classe Hub, è possibile accedere a questi dati nel `Clients.Caller` propr
 
 > [!NOTE]
 > Questo meccanismo di persistenza dello stato non è progettato per grandi quantità di dati, poiché tutto ciò che si inserisce nel `state` o `Clients.Caller` proprietà è sottoposto a round trip con ogni chiamata al metodo. È utile per gli elementi più piccoli, ad esempio nomi utente o i contatori.
-
 
 <a id="handleErrors"></a>
 

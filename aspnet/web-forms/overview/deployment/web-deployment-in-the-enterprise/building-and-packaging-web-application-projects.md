@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 94e92f80-a7e3-4d18-9375-ff8be5d666ac
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/building-and-packaging-web-application-projects
 msc.type: authoredcontent
-ms.openlocfilehash: 82134b8da7ab5ca49fef8e769128db9010fd231f
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 1d0ee0264ce6461d7b0159f1a44de4de31e2d079
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59396330"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65114657"
 ---
 # <a name="building-and-packaging-web-application-projects"></a>Compilazione e creazione di pacchetti di progetti di applicazione Web
 
@@ -27,7 +27,6 @@ da [Jason Lee](https://github.com/jrjlee)
 > - Lo strumento di distribuzione di Internet Information Services (IIS) Web (distribuzione Web) come attiva l'applicazione web in un pacchetto di distribuzione.
 > - La modalità di compilazione e creazione di pacchetti funzionamento sul processo e sui file creati.
 
-
 In Visual Studio 2010, il processo di compilazione e distribuzione per i progetti applicazione web è supportato da WPP. WPP fornisce un set di destinazioni di Microsoft Build Engine (MSBuild) che estendono la funzionalità di MSBuild e abilitarlo per l'integrazione con distribuzione Web. All'interno di Visual Studio, è possibile visualizzare questa funzionalità estesa nelle pagine delle proprietà per il progetto di applicazione web. Il **pubblicazione/creazione pacchetto Web** pagina, insieme con la **pubblicazione/creazione pacchetto SQL** pagina consente di configurare il modo in cui il progetto di applicazione web viene incluso nel pacchetto per la distribuzione di una volta completato il processo di compilazione.
 
 ![](building-and-packaging-web-application-projects/_static/image1.png)
@@ -36,17 +35,13 @@ In Visual Studio 2010, il processo di compilazione e distribuzione per i progett
 
 Se esaminiamo il file di progetto per c#-progetto di applicazione basata su web, è possibile vedere che importa due file con estensione targets.
 
-
 [!code-xml[Main](building-and-packaging-web-application-projects/samples/sample1.xml)]
-
 
 Il primo **importazione** istruzione è comune a tutti i progetti Visual c#. Questo file, *targets*, contiene le destinazioni e attività specifiche per Visual c#. Ad esempio, il compilatore c# (**Csc**) attività viene richiamata qui. Il *targets* file a sua volta Importa il *microsoftcommon. targets* file. Ciò consente di definire le destinazioni che sono comuni a tutti i progetti, ad esempio **compilare**, **Ricompila**, **eseguire**, **compilare**, e **Pulisci** . La seconda **importazione** istruzione è specifica per i progetti applicazione web. Il *Microsoft.WebApplication.targets* file a sua volta Importa il *Microsoft.Web.Publishing.targets* file. Il *Microsoft.Web.Publishing.targets* file essenzialmente *è* WPP. Definisce le destinazioni, ad esempio **Package** e **MSDeployPublish**, che richiamano distribuzione Web per completare varie attività di distribuzione.
 
 Per comprendere come vengono usate questi destinazioni aggiuntive, nella soluzione di esempio Contact Manager, aprire il *Publish.proj* del file e osservare il **BuildProjects** destinazione.
 
-
 [!code-xml[Main](building-and-packaging-web-application-projects/samples/sample2.xml)]
-
 
 Questa destinazione utilizza il **MSBuild** attività per compilare progetti diversi. Si noti che il **DeployOnBuild** e **DeployTarget** proprietà:
 
@@ -58,7 +53,6 @@ Il **Package** destinazione definita nel *Microsoft.Web.Publishing.targets* file
 > [!NOTE]
 > Per visualizzare un file di progetto (ad esempio, <em>ContactManager.Mvc.csproj</em>) in Visual Studio 2010, è innanzitutto necessario scaricare il progetto dalla soluzione. Nel <strong>Esplora soluzioni</strong> finestra, fare doppio clic sul nodo del progetto e quindi fare clic su <strong>Scarica progetto</strong>. Fare doppio clic sul nodo del progetto anche in questo caso e quindi fare clic su <strong>Edit</strong><em>[file di progetto]</em>). Il file di progetto verrà aperto in formato XML non elaborato. Ricordarsi di ricaricare il progetto al termine.  
 > Per altre informazioni sulle destinazioni di MSBuild, attività, e <strong>importazione</strong> istruzioni, vedere [informazioni sul File di progetto](understanding-the-project-file.md). Per un'introduzione più dettagliata per i file di progetto e il sito, vedere [all'interno di Microsoft Build Engine: Utilizzo di MSBuild e Team Foundation Build](http://amzn.com/0735645248) Sayed Ibrahim Hashimi, William Bartholomew, ISBN: 978-0-7356-4524-0.
-
 
 ## <a name="what-is-a-web-deployment-package"></a>Che cos'è un pacchetto di distribuzione Web?
 
@@ -87,7 +81,6 @@ Il *SetParameters* file è fondamentale per la gestione del processo di distribu
 
 > [!NOTE]
 > In Visual Studio 2010, WPP non supporta la precompilazione le pagine in un'applicazione web prima della creazione del pacchetto. La prossima versione di Visual Studio e WPP includerà la possibilità di precompilare un'applicazione web come opzione di creazione dei pacchetti.
-
 
 ## <a name="conclusion"></a>Conclusione
 

@@ -8,19 +8,18 @@ ms.date: 01/26/2011
 ms.assetid: 4e43455e-dfa1-42db-83cb-c987703f04b5
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/continuing-with-ef/maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application
 msc.type: authoredcontent
-ms.openlocfilehash: 116c557ad0d6c158f983da75668e634c9eb9747c
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 5630200a1ad1d30f6d89b38e15179f15b699fa9f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59379592"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108580"
 ---
 # <a name="maximizing-performance-with-the-entity-framework-40-in-an-aspnet-4-web-application"></a>Ottimizzazione delle prestazioni con Entity Framework 4.0 in un'applicazione Web 4 ASP.NET
 
 da [Tom Dykstra](https://github.com/tdykstra)
 
 > Questa serie di esercitazioni si basa sull'applicazione web Contoso University specificano che viene creato per il [Introduzione a Entity Framework 4.0](https://asp.net/entity-framework/tutorials#Getting%20Started) serie di esercitazioni. Se si non è stato completato le esercitazioni precedenti, come punto di partenza per questa esercitazione è possibile [scaricare l'applicazione](https://code.msdn.microsoft.com/ASPNET-Web-Forms-97f8ee9a) verrebbe creato. È anche possibile [scaricare l'applicazione](https://code.msdn.microsoft.com/ASPNET-Web-Forms-6c7197aa) creato dalla serie di esercitazioni complete. Se si hanno domande sulle esercitazioni, è possibile pubblicarli per i [forum di ASP.NET Entity Framework](https://forums.asp.net/1227.aspx).
-
 
 Nell'esercitazione precedente, è stato illustrato come gestire i conflitti di concorrenza. Questa esercitazione illustra le opzioni per migliorare le prestazioni di un'applicazione web ASP.NET che usa Entity Framework. Si apprenderà diversi metodi per ottimizzare le prestazioni o per la diagnosi dei problemi di prestazioni.
 
@@ -43,7 +42,6 @@ Le informazioni presentate nella sezione seguente sono potenzialmente utile per 
 > Le prestazioni dell'applicazione Web sono influenzata da molti fattori, tra cui operazioni quali la dimensione dei dati richiesta e risposta, la velocità delle query di database, quante richieste che il server è possibile accodare e rapidità con cui può soddisfare e anche l'efficienza di qualsiasi librerie di script client che si stia usando. Se le prestazioni sono critiche nell'applicazione, o se il test o esperienza mostra che le prestazioni dell'applicazione non sono soddisfacente, è necessario seguire il protocollo normale per ottimizzare le prestazioni. Effettuare una misurazione per determinare dove si verificano i colli di bottiglia delle prestazioni e quindi indirizzare le aree che hanno il maggiore impatto sulle prestazioni complessive dell'applicazione.
 > 
 > In questo argomento è incentrato principalmente sui modi in cui è potenzialmente utili per migliorare le prestazioni in modo specifico di Entity Framework in ASP.NET. I suggerimenti riportati di seguito sono utili se si determina che l'accesso ai dati sia presente tra i colli di bottiglia delle prestazioni nell'applicazione. Ad eccezione del fatto come indicato, i metodi illustrati in questo argomento non devono essere considerati &quot;procedure consigliate&quot; in generale, molti di essi sono appropriate solo in situazioni eccezionali o a tipi molto specifici indirizzi dei colli di bottiglia delle prestazioni.
-
 
 Per avviare l'esercitazione, avviare Visual Studio e aprire l'applicazione web di Contoso University specificano che si stava lavorando nell'esercitazione precedente.
 
@@ -179,7 +177,6 @@ In alternativa, la funzionalità di IntelliTrace in Visual Studio Ultimate forni
 > [!NOTE]
 > È possibile eseguire le procedure seguenti solo se si dispone di Visual Studio Ultimate.
 
-
 Ripristinare il codice originale di `GetDepartmentsByName` (metodo) e quindi eseguire il *Departments.aspx* pagina nel debugger.
 
 In Visual Studio, selezionare la **Debug** menu, quindi **IntelliTrace**e quindi **eventi IntelliTrace**.
@@ -219,14 +216,12 @@ La query partendo da reparti è diventato un semplice `Select` eseguire una quer
 > [!NOTE]
 > Se si esce dalla modalità differita potrebbe causare l'abilitazione del caricamento, il modello riportato di seguito, con la stessa query ripetute più volte, il caricamento lazy. Un modello che si desidera evitare in genere è il caricamento lazy dei dati correlati per ogni riga della tabella primaria. A meno che non aver verificato che una query join singola è troppo complessa per essere efficace, in genere sarà in grado di migliorare le prestazioni in questi casi, modificare la query principale per usare il caricamento eager.
 
-
 ## <a name="pre-generating-views"></a>Pregenerazione di visualizzazioni
 
 Quando un `ObjectContext` oggetto viene inizialmente creato in un nuovo dominio applicazione, Entity Framework genera un set di classi che lo usa per accedere al database. Queste classi vengono chiamate *viste*, e se si dispone di un modello di dati molto grandi, generazione di queste visualizzazioni possono ritardare la risposta del sito web per la prima richiesta per una pagina dopo l'inizializzazione di un nuovo dominio applicazione. È possibile ridurre questo ritardo prima richiesta mediante la creazione di visualizzazioni in fase di compilazione anziché in fase di esecuzione.
 
 > [!NOTE]
 > Se l'applicazione non dispone di un modello di dati molto grandi, o se dispone di un modello di dati di grandi dimensioni, ma non si è preoccupati per un problema di prestazioni che interessa solo la prima richiesta di pagina dopo IIS viene riciclato, è possibile ignorare questa sezione. Visualizzazione creazione non avviene ogni volta che crea un'istanza di un `ObjectContext` dell'oggetto, poiché le visualizzazioni vengono memorizzati nella cache nel dominio dell'applicazione. Pertanto, a meno che non si sta riciclo frequente l'applicazione in IIS, un numero molto ridotto di richieste di pagine possono trarre vantaggio dalle visualizzazioni pregenerate.
-
 
 È possibile pre-generare viste tramite il *EdmGen.exe* dello strumento da riga di comando o tramite un *Toolkit di trasformazione di modelli di testo* modello (T4). In questa esercitazione si userà un modello T4.
 

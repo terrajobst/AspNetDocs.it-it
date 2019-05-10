@@ -8,12 +8,12 @@ ms.date: 06/10/2014
 ms.assetid: 98358b6e-9139-4239-ba3a-2d7dd74dd664
 msc.legacyurl: /signalr/overview/performance/scaleout-with-sql-server
 msc.type: authoredcontent
-ms.openlocfilehash: c0c214ea32ad13b3a63be9ef84bcb4b8bc7311aa
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 709a9ebf8f3396842bee0d87e621c00ae1418ec1
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59393581"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65113625"
 ---
 # <a name="signalr-scaleout-with-sql-server"></a>Scale-out di SignalR con SQL Server
 
@@ -37,7 +37,6 @@ dal [Mike Wasson](https://github.com/MikeWasson), [Patrick Fletcher](https://git
 > ## <a name="questions-and-comments"></a>Domande e commenti
 >
 > Inviaci un feedback sul modo in cui è stato apprezzato questa esercitazione e cosa possiamo migliorare nei commenti nella parte inferiore della pagina. Se hai domande che non sono direttamente correlate con l'esercitazione, è possibile pubblicarli per i [forum ASP.NET SignalR](https://forums.asp.net/1254.aspx/1?ASP+NET+SignalR) oppure [StackOverflow.com](http://stackoverflow.com/).
-
 
 In questa esercitazione si userà SQL Server per distribuire i messaggi tra un'applicazione di SignalR distribuito in due istanze separate di IIS. È anche possibile eseguire questa esercitazione in un computer singolo test, ma per ottenere l'effetto completo, è necessario distribuire l'applicazione di SignalR in due o più server. È anche necessario installare SQL Server in uno dei server o in un server dedicato distinto. Un'altra opzione consiste nell'eseguire l'esercitazione usando le macchine virtuali in Azure.
 
@@ -87,7 +86,6 @@ Per abilitare Service Broker, usare la query SQL seguente:
 
 > [!NOTE]
 > Se questa query viene visualizzato un deadlock, assicurarsi che non sono presenti applicazioni connesse al database.
-
 
 Se è stata abilitata la traccia, le tracce verranno inoltre descritto se Service Broker è abilitato.
 

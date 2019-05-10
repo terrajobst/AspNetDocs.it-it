@@ -8,12 +8,12 @@ ms.date: 04/21/2011
 ms.assetid: 26b2f55e-ed42-4277-89b0-c941eb754145
 msc.legacyurl: /mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-8
 msc.type: authoredcontent
-ms.openlocfilehash: 2ba210d8c541c6c330dda74706470fa73a81474a
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 89897ad41b217764cbd17317d4bf5d6a5c5d488f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59379482"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65112902"
 ---
 # <a name="part-8-shopping-cart-with-ajax-updates"></a>Parte 8: Carrello con aggiornamenti Ajax
 
@@ -24,7 +24,6 @@ by [Jon Galloway](https://github.com/jongalloway)
 > Music Store MVC è un semplice esempio di implementazione di un archivio per un negozio che vende album musicali online e implementa l'amministrazione di base del sito, l'accesso dell'utente e la funzionalità del carrello acquisti.  
 >   
 > Questa serie di esercitazioni illustra tutti i passaggi necessari per compilare l'applicazione di esempio ASP.NET MVC Music Store. Parte 8 copre carrello con aggiornamenti Ajax.
-
 
 Sarà consentito agli utenti di inserire gli album nel carrello acquisti senza eseguire la registrazione, ma sarà necessario registrarsi come utenti guest a completare il checkpoint. Il processo di estrazione e acquisti sarà separato in due controller: un ShoppingCart Controller che consente di aggiungere in modo anonimo elementi al carrello e un Controller di estrazione che gestisce il processo di estrazione. Si sarà il carrello della spesa in questa sezione per iniziare, quindi compilare il processo di estrazione nella sezione seguente.
 
@@ -156,7 +155,6 @@ Dopo aver caricato il carrello, è possibile fare clic sul pulsante Rimuovi dal 
 ![](mvc-music-store-part-8/_static/image8.png)
 
 Abbiamo creato un lavoro carrello della spesa che consente agli utenti non registrati aggiungere elementi al carrello acquisti. Nella sezione seguente, sarà consentito loro di registrare e completare il processo di estrazione.
-
 
 > [!div class="step-by-step"]
 > [Precedente](mvc-music-store-part-7.md)

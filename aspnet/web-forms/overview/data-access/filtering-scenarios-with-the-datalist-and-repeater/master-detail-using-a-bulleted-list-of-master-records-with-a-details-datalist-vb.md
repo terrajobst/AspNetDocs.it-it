@@ -8,12 +8,12 @@ ms.date: 10/17/2006
 ms.assetid: ee20742f-6fb7-49a0-a009-058fe363aacb
 msc.legacyurl: /web-forms/overview/data-access/filtering-scenarios-with-the-datalist-and-repeater/master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb
 msc.type: authoredcontent
-ms.openlocfilehash: bdf1d69ea8020ce055d7765591cf2d488de71245
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 0f7f42545d2492c7330da57f7e767199f50b659e
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59388700"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108428"
 ---
 # <a name="masterdetail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb"></a>Report master o di dettaglio con un elenco puntato di record master e un controllo DataList di dettagli (VB)
 
@@ -23,18 +23,15 @@ da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 > In questa esercitazione verranno compressi i report di due pagine master-details dell'esercitazione precedente in una singola pagina, che mostra un elenco puntato di nomi di categorie sul lato sinistro della schermata e i prodotti della categoria selezionata a destra della schermata.
 
-
 ## <a name="introduction"></a>Introduzione
 
 Nel [esercitazione precedente](master-detail-filtering-acess-two-pages-datalist-vb.md) è stato descritto come separare un report master o di dettaglio su due pagine. Nella pagina master è utilizzato un controllo Repeater per il rendering di un elenco puntato delle categorie. Ogni nome di categoria è un collegamento ipertestuale che, quando si fa clic, verrebbe take all'utente di pagina dei dettagli, in cui un controllo DataList di due colonne è stato illustrato i prodotti appartenenti alla categoria selezionata.
 
 In questa esercitazione verranno compressi dell'esercitazione di due pagine in un'unica pagina, che mostra un elenco puntato di nomi di categorie sul lato sinistro della schermata con il nome di ogni categoria viene eseguito il rendering come un controllo LinkButton. Facendo clic sul nome della categoria LinkButton provoca un postback e associa i prodotti s categoria selezionata per un controllo DataList di due colonne a destra della schermata. Oltre a visualizzare ogni nome di categoria s, il controllo Repeater a sinistra mostra del numero totale di prodotti sono per una determinata categoria (vedere la figura 1).
 
-
 [![La categoria s nome e il numero totale di prodotti vengono visualizzate a sinistra](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image2.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image1.png)
 
 **Figura 1**: La categoria s nome e il numero totale di prodotti vengono visualizzate a sinistra ([fare clic per visualizzare l'immagine con dimensioni normali](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image3.png))
-
 
 ## <a name="step-1-displaying-a-repeater-in-the-left-portion-of-the-screen"></a>Passaggio 1: Visualizzazione di un controllo Repeater nella parte sinistra della schermata
 
@@ -42,11 +39,9 @@ Per questa esercitazione è necessario avere l'elenco puntato delle categorie ve
 
 Aprire il `CategoriesAndProducts.aspx` dalla pagina il `DataListRepeaterFiltering` cartella e aggiungere alla pagina un controllo Repeater e DataList. Impostare il controllo Repeater s `ID` al `Categories` e il controllo DataList s a `CategoryProducts`. Passare alla visualizzazione origine e inserire i controlli DataList e Repeater entro le proprie `<div>` elementi. Vale a dire, racchiudere il controllo Repeater all'interno di un `<div>` elemento prima e quindi di DataList nel proprio `<div>` elemento subito dopo il controllo Repeater. Il markup a questo punto dovrebbe essere simile al seguente:
 
-
 [!code-aspx[Main](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/samples/sample1.aspx)]
 
 Per float Repeater a sinistra del controllo DataList, è necessario usare il `float` attributo di stile CSS, come illustrato di seguito:
-
 
 [!code-html[Main](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/samples/sample2.html)]
 
@@ -54,18 +49,15 @@ Il `float: left;` viene spostato il primo `<div>` elemento a sinistra del second
 
 Anziché specificare l'impostazione di stile direttamente tramite il primo `<p>` elemento s' `style` dell'attributo, lasciare s invece creare una nuova classe CSS `Styles.css` denominato `FloatLeft`:
 
-
 [!code-css[Main](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/samples/sample3.css)]
 
 Quindi è possibile sostituire il `<div>` con `<div class="FloatLeft">`.
 
 Dopo aver aggiunto la classe CSS e il markup nella configurazione di `CategoriesAndProducts.aspx` page, passare alla finestra di progettazione. Verrà visualizzato il controllo Repeater a virgola mobile a sinistra di DataList (sebbene destra ora entrambi vengono visualizzati come le caselle di grigie poiché è ve ancora consente di configurare le origini dati o modelli di).
 
-
 [![Il controllo Repeater è resa mobile a sinistra di DataList](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image5.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image4.png)
 
 **Figura 2**: Il controllo Repeater è resa mobile a sinistra di DataList ([fare clic per visualizzare l'immagine con dimensioni normali](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image6.png))
-
 
 ## <a name="step-2-determining-the-number-of-products-for-each-category"></a>Passaggio 2: Determinazione del numero di prodotti per ogni categoria
 
@@ -80,11 +72,9 @@ Let s esplorare entrambe queste tecniche. Il primo approccio è più semplice da
 
 Determinazione del numero di prodotti per ogni categoria nel Repeater s `ItemDataBound` gestore dell'evento non richiede alcuna modifica per il livello di accesso ai dati esistenti. Tutte le modifiche possono essere apportate direttamente all'interno di `CategoriesAndProducts.aspx` pagina. Iniziare aggiungendo un nuovo oggetto ObjectDataSource denominato `CategoriesDataSource` tramite lo smart tag Repeater s. A questo punto, configurare il `CategoriesDataSource` ObjectDataSource in modo che recupera i relativi dati di `CategoriesBLL` classe s `GetCategories()` (metodo).
 
-
 [![Configurare ObjectDataSource per usare la classe CategoriesBLL s GetCategories() (metodo)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image8.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image7.png)
 
 **Figura 3**: Configurare ObjectDataSource per usare la `CategoriesBLL` classe s `GetCategories()` metodo ([fare clic per visualizzare l'immagine con dimensioni normali](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image9.png))
-
 
 Ogni elemento il `Categories` Repeater deve essere selezionabile e, quando si fa clic, causare il `CategoryProducts` DataList per visualizzare i prodotti per la categoria selezionata. A questo scopo, rendendo ogni categoria di un collegamento ipertestuale, tornare a questa pagina stesso (`CategoriesAndProducts.aspx`), ma passando il `CategoryID` tramite la stringa di query, come illustrato nell'esercitazione precedente. Il vantaggio di questo approccio è che una pagina che visualizza i prodotti di una particolare categoria s può essere contrassegnato con un segnalibro e indicizzata da un motore di ricerca.
 
@@ -93,23 +83,18 @@ In alternativa, è possibile inviare ogni categoria di un controllo LinkButton, 
 > [!NOTE]
 > Sono invitati a ripetere questa esercitazione Usa un controllo collegamento ipertestuale o `<a>` elemento anziché il LinkButton.
 
-
 Il markup seguente mostra la sintassi dichiarativa per il controllo Repeater e ObjectDataSource. Si noti che i modelli di s Repeater eseguire il rendering di un elenco puntato con ogni elemento come un controllo LinkButton:
-
 
 [!code-aspx[Main](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/samples/sample4.aspx)]
 
 > [!NOTE]
 > Per questa esercitazione il Repeater deve avere il proprio stato abilitato (si noti l'omissione del `EnableViewState="False"` dalla sintassi dichiarativa per il controllo Repeater s). Nel passaggio 3 verrà creato un gestore eventi per il controllo Repeater s `ItemCommand` eventi in cui verrà aggiornata di DataList s s ObjectDataSource `SelectParameters` raccolta. Il controllo Repeater s `ItemCommand`, tuttavia, non verrà attivato se lo stato di visualizzazione è disabilitato. Visualizzare [Stumper A una domanda ASP.NET](http://scottonwriting.net/sowblog/posts/1263.aspx) e [la propria soluzione](http://scottonwriting.net/sowBlog/posts/1268.aspx) per altre informazioni sui motivi per cui lo stato di visualizzazione deve essere abilitato per un controllo Repeater s `ItemCommand` dell'evento da generare.
 
-
 Elemento LinkButton con il `ID` valore della proprietà `ViewCategory` non è relativo `Text` set di proprietà. Se avessimo appena voler visualizzare il nome della categoria, si sarebbe impostato la proprietà Text in modo dichiarativo, tramite la sintassi di associazione dati, come illustrato di seguito:
-
 
 [!code-aspx[Main](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/samples/sample5.aspx)]
 
 Tuttavia, si vuole visualizzare sia il nome di categoria 1!s *e* il numero di prodotti appartenenti alla categoria selezionata. Queste informazioni possono essere recuperate da Repeater s `ItemDataBound` gestore dell'evento, eseguire una chiamata per il `ProductBLL` classe s `GetCategoriesByProductID(categoryID)` (metodo) e determinare il numero di record viene restituito in risultante `ProductsDataTable`, come il codice seguente viene illustrato:
-
 
 [!code-vb[Main](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/samples/sample6.vb)]
 
@@ -118,71 +103,55 @@ Iniziamo assicurandosi che si ri utilizzo di un elemento di dati (un cui `ItemTy
 > [!NOTE]
 > In alternativa, avremmo potuto aggiungere una *funzione di formattazione* alla classe code-behind ASP.NET pagina s che accetta una categoria s `CategoryName` e `CategoryID` valori e restituisce il `CategoryName` concatenato con il numero di i prodotti della categoria (come determinato dalla chiamata di `GetCategoriesByProductID(categoryID)` (metodo)). I risultati di tale funzione formattazione potrebbero essere assegnati in modo dichiarativo a s LinkButton sostituendo la necessità di proprietà di testo di `ItemDataBound` gestore dell'evento. Vedere le [uso di TemplateFields nel controllo GridView](../custom-formatting/using-templatefields-in-the-gridview-control-vb.md) o [formattazione di DataList e Repeater in base al momento i dati](../displaying-data-with-the-datalist-and-repeater/formatting-the-datalist-and-repeater-based-upon-data-vb.md) esercitazioni per altre informazioni sull'uso di funzioni di formattazione.
 
-
 Dopo aver aggiunto questo gestore eventi, si consiglia di testare la pagina tramite un browser. Si noti come viene elencato ogni categoria in un elenco puntato, visualizzando il nome della categoria s e il numero di prodotti associate alla categoria (vedere la figura 4).
-
 
 [![Ogni nome di categoria e il numero di prodotti vengono visualizzati](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image11.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image10.png)
 
 **Figura 4**: Ogni nome di categoria e il numero di prodotti vengono visualizzati ([fare clic per visualizzare l'immagine con dimensioni normali](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image12.png))
 
-
 ## <a name="updating-thecategoriesdatatableandcategoriestableadapterto-include-the-number-of-products-for-each-category"></a>L'aggiornamento di`CategoriesDataTable`e`CategoriesTableAdapter`per includere il numero di prodotti per ogni categoria
 
 Invece di determinare il numero di prodotti per ogni categoria che s associato al controllo Repeater, è possibile semplificare questo processo modificando la `CategoriesDataTable` e `CategoriesTableAdapter` nel livello di accesso ai dati da includere queste informazioni in modo nativo. A tale scopo, è necessario aggiungere una nuova colonna a `CategoriesDataTable` per contenere il numero di prodotti associati. Per aggiungere una nuova colonna a un oggetto DataTable, aprire il DataSet tipizzato (`App_Code\DAL\Northwind.xsd`), fare clic su oggetto DataTable da modificare e fare clic su Aggiungi / colonna. Aggiungere una nuova colonna per il `CategoriesDataTable` (vedere la figura 5).
-
 
 [![Aggiungere una nuova colonna per il CategoriesDataSource](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image14.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image13.png)
 
 **Figura 5**: Aggiungere una nuova colonna per il `CategoriesDataSource` ([fare clic per visualizzare l'immagine con dimensioni normali](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image15.png))
 
-
 Verrà aggiunta una nuova colonna denominata `Column1`, che è possibile modificare semplicemente digitando un nome diverso. Rinominare la nuova colonna `NumberOfProducts`. Successivamente, è necessario configurare questa proprietà delle colonne s. Fare clic sulla nuova colonna e passare alla finestra Proprietà. Modificare la colonna s `DataType` proprietà dal `System.String` al `System.Int32` e impostare il `ReadOnly` proprietà `True`, come illustrato nella figura 6.
-
 
 ![Impostare le proprietà di sola lettura della nuova colonna e il tipo di dati](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image16.png)
 
 **Figura 6**: Impostare il `DataType` e `ReadOnly` le proprietà della nuova colonna
 
-
 Mentre il `CategoriesDataTable` include ora un `NumberOfProducts` colonna, il relativo valore non è impostato da una delle query s TableAdapter corrispondente. È possibile aggiornare il `GetCategories()` per restituire queste informazioni se si vuole che tali informazioni restituite ogni volta che viene recuperati informazioni sulle categorie. Se, tuttavia, è necessario solo ottenere il numero di prodotti associati per le categorie in rari casi (ad esempio solo per questa esercitazione), quindi è possibile lasciare `GetCategories()` come- e creare un nuovo metodo che restituisce queste informazioni. S ti permettono di usare questo secondo approccio, la creazione di un nuovo metodo denominato `GetCategoriesAndNumberOfProducts()`.
 
 Per aggiungere nuovi ciò `GetCategoriesAndNumberOfProducts()` metodo, pulsante destro del mouse sul `CategoriesTableAdapter` e scegliere Nuova Query. In questo modo verticale TableAdapter Query configurazione guidata, che si va usato più volte nelle esercitazioni precedenti. Per questo metodo, avviare la procedura guidata, indicando che la query utilizza un'istruzione SQL ad hoc che vengono restituite righe.
-
 
 [![Creare il metodo usando un'istruzione SQL Ad Hoc](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image18.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image17.png)
 
 **Figura 7**: Creare il metodo usando un'istruzione SQL Ad Hoc ([fare clic per visualizzare l'immagine con dimensioni normali](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image19.png))
 
-
 [![L'istruzione SQL restituisce righe](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image21.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image20.png)
 
 **Figura 8**: L'istruzione restituisce righe di SQL ([fare clic per visualizzare l'immagine con dimensioni normali](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image22.png))
 
-
 La schermata successiva della procedura richiede per la query da usare. Per restituire ogni categoria 1!s `CategoryID`, `CategoryName`, e `Description` campi, insieme al numero di prodotti associati alla categoria, usano il comando seguente `SELECT` istruzione:
 
-
 [!code-sql[Main](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/samples/sample7.sql)]
-
 
 [![Specificare la Query da usare](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image24.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image23.png)
 
 **Figura 9**: Specificare la Query da usare ([fare clic per visualizzare l'immagine con dimensioni normali](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image25.png))
 
-
 Si noti che la sottoquery che calcola il numero di prodotti associati con la categoria è associato un alias come `NumberOfProducts`. Questa corrispondenza dei nomi fa sì che il valore restituito da questa sottoquery può essere associato il `CategoriesDataTable` s `NumberOfProducts` colonna.
 
 Dopo aver immesso la query, l'ultimo passaggio consiste nello scegliere il nome per il nuovo metodo. Uso `FillWithNumberOfProducts` e `GetCategoriesAndNumberOfProducts` per il riempimento un DataTable e restituire un oggetto DataTable modelli, rispettivamente.
-
 
 [![Nome di metodi FillWithNumberOfProducts nuovo TableAdapter s e GetCategoriesAndNumberOfProducts](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image27.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image26.png)
 
 **Figura 10**: Assegnare un nome ai TableAdapter nuovi metodi `FillWithNumberOfProducts` e `GetCategoriesAndNumberOfProducts` ([fare clic per visualizzare l'immagine con dimensioni normali](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image28.png))
 
-
 A questo punto il livello di accesso ai dati è stata estesa per includere il numero di prodotti per categoria. Poiché tutti i nostri livello di presentazione consente di indirizzare tutte le chiamate alla funzione tramite un livello di logica di Business separato DAL dobbiamo aggiungere un oggetto corrispondente `GetCategoriesAndNumberOfProducts` metodo di `CategoriesBLL` classe:
-
 
 [!code-vb[Main](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/samples/sample8.vb)]
 
@@ -190,14 +159,11 @@ Con DAL e BLL completa, è nuovamente pronto per associare dati al `Categories` 
 
 Con il controllo Repeater nuovamente nello stato originale, aggiungere un nuovo oggetto ObjectDataSource denominato `CategoriesDataSource` tramite lo smart tag Repeater s. Configurare ObjectDataSource per usare la `CategoriesBLL` (classe), ma viene invece di usare il `GetCategories()` metodo, necessario utilizzare `GetCategoriesAndNumberOfProducts()` invece (vedere la figura 11).
 
-
 [![Configurare ObjectDataSource per usare il metodo GetCategoriesAndNumberOfProducts](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image30.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image29.png)
 
 **Figura 11**: Configurare ObjectDataSource per usare la `GetCategoriesAndNumberOfProducts` metodo ([fare clic per visualizzare l'immagine con dimensioni normali](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image31.png))
 
-
 A questo punto, aggiornare il `ItemTemplate` in modo che la s LinkButton `Text` proprietà viene assegnata in modo dichiarativo utilizzando la sintassi di associazione dati e include sia la `CategoryName` e `NumberOfProducts` campi dati. Il markup dichiarativo completo per il controllo Repeater e `CategoriesDataSource` ObjectDataSource seguire:
-
 
 [!code-aspx[Main](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/samples/sample9.aspx)]
 
@@ -212,29 +178,23 @@ Una sfida che ci viene illustrato come fare in modo che il controllo DataList vi
 > [!NOTE]
 > Questo è uno di tali sfide che vengono visualizzati quando si usa il LinkButton in un controllo Repeater. Se avessimo è stato usato un collegamento ipertestuale per passare il `CategoryID` tramite il parametro querystring utilizziamo, invece avremmo quel campo QueryString come origine per il valore del parametro s.
 
-
 Prima ci preoccupiamo la mancanza di un `SelectedValue` proprietà per il controllo Repeater, tuttavia, consentire s prima di tutto associare ObjectDataSource DataList e come specificare relativo `ItemTemplate`.
 
 Nello smart tag, DataList s scegliere di aggiungere un nuovo oggetto ObjectDataSource denominato `CategoryProductsDataSource` e configurarlo per usare il `ProductsBLL` classe s `GetProductsByCategoryID(categoryID)` (metodo). Poiché il controllo DataList in questa esercitazione offre un'interfaccia di sola lettura, è possibile impostare gli elenchi a discesa nell'istruzione INSERT, UPDATE, ed eliminare schede su (nessuno).
-
 
 [![Configurare ObjectDataSource per utilizzare ProductsBLL s GetProductsByCategoryID(categoryID) metodo della classe](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image33.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image32.png)
 
 **Figura 12**: Configurare ObjectDataSource per utilizzare `ProductsBLL` classe s `GetProductsByCategoryID(categoryID)` metodo ([fare clic per visualizzare l'immagine con dimensioni normali](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image34.png))
 
-
 Poiché il `GetProductsByCategoryID(categoryID)` metodo prevede un parametro di input (*`categoryID`*), la procedura guidata Configura origine dati consente di specificare l'origine di s parametri. Le categorie è state elencate in un controllo DataList o GridView, d impostiamo l'elenco di riepilogo a discesa Origine parametro al controllo e il ControlID al `ID` dei dati di controllo Web. Tuttavia, poiché non ha il controllo Repeater un `SelectedValue` proprietà non può essere usato come origine di parametro. Se si archivia, si noterà che l'elenco di riepilogo a discesa ControlID contiene solo un controllo `ID``CategoryProducts`, il `ID` di DataList.
 
 Per ora, impostare l'elenco di riepilogo a discesa Origine parametro su None. Si otterrà l'assegnazione a livello di codice il valore di questo parametro, quando una categoria LinkButton si fa clic su nel Repeater.
-
 
 [![Eseguire operazioni non specifica un parametro di origine per il parametro categoryID](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image36.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image35.png)
 
 **Figura 13**: Eseguire operazioni non specifica un parametro di origine il *`categoryID`* parametro ([fare clic per visualizzare l'immagine con dimensioni normali](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image37.png))
 
-
 Dopo aver completato la procedura guidata Configura origine dati, Visual Studio genera automaticamente il controllo DataList s `ItemTemplate`. Sostituire il valore predefinito `ItemTemplate` con il modello viene usato nell'esercitazione precedente; inoltre, impostare il controllo DataList s `RepeatColumns` proprietà su 2. Dopo aver apportato queste modifiche markup dichiarativo di DataList e relativo ObjectDataSource associati dovrebbe essere simile al seguente:
-
 
 [!code-aspx[Main](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/samples/sample10.aspx)]
 
@@ -250,28 +210,23 @@ Quando un `Command` evento viene generato da all'interno di un modello nel Repea
 
 Nell'esempio `ItemTemplate` markup per il controllo Repeater categorie implementa i passaggi 1 e 2. Si noti come il `CommandArgument` valore viene assegnato l'elemento di dati s `CategoryID` usando la sintassi di associazione dati:
 
-
 [!code-aspx[Main](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/samples/sample11.aspx)]
 
 Ogni volta che la creazione di un' `ItemCommand` gestore dell'evento è consigliabile verificare sempre prima di tutto in ingresso `CommandName` valore poiché *qualsiasi* `Command` evento generato da *qualsiasi* pulsante, LinkButton, o ImageButton all'interno di Repeater causerà il `ItemCommand` dell'evento da generare. Anche se si dispone solo una tale LinkButton a questo punto, in futuro è (o un altro sviluppatore del nostro team) Potrei aggiungere controlli pulsante aggiuntive di Web a Repeater che, quando si fa clic, genera lo stesso `ItemCommand` gestore dell'evento. Pertanto, è s preferibile sempre accertarsi di controllare il `CommandName` proprietà e procedere con la logica a livello di codice solo se stabilisce una corrispondenza tra il valore previsto.
 
 Dopo aver verificato che passato `CommandName` valore è uguale a ListProducts, quindi assegna il gestore dell'evento il `CategoryProductsDataSource` s ObjectDataSource `CategoryID` parametro per il valore del passato aggiuntivo `CommandArgument`. Questa modifica al s ObjectDataSource `SelectParameters` automaticamente fa sì che il controllo DataList riassociare stesso all'origine dati, che mostra i prodotti per la categoria appena selezionato.
 
-
 [!code-vb[Main](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/samples/sample12.vb)]
 
 Con queste aggiunte, seguire l'esercitazione è stata completata. Si consiglia di testarlo in un browser. Figura 14 mostra la schermata durante la prima visita la pagina. Poiché una categoria deve ancora essere selezionato, non i prodotti vengono visualizzati. Facendo clic su una categoria, ad esempio produrre, consente di visualizzare i prodotti della categoria di prodotto in una visualizzazione di due colonne (vedere Figura 15).
-
 
 [![Nessun prodotto viene visualizzati quando prima visita la pagina](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image39.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image38.png)
 
 **Figura 14**: Nessun prodotto viene visualizzati quando prima visita la pagina ([fare clic per visualizzare l'immagine con dimensioni normali](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image40.png))
 
-
 [![Facendo clic sugli elenchi di categoria producono i prodotti corrispondenti a destra](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image42.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image41.png)
 
 **Figura 15**: Facendo clic sulla categoria di prodotti sono elencati i prodotti corrispondenti a destra ([fare clic per visualizzare l'immagine con dimensioni normali](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image43.png))
-
 
 ## <a name="summary"></a>Riepilogo
 

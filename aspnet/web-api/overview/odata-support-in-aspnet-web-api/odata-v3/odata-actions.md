@@ -8,12 +8,12 @@ ms.date: 02/25/2014
 ms.assetid: 2d7b3aa2-aa47-4e6e-b0ce-3d65a1c6fe02
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-v3/odata-actions
 msc.type: authoredcontent
-ms.openlocfilehash: 62ac526a9b0861af73ab17e9714bde1266a86221
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 523225d86b06914349ebd689c4042b0b20393b9b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59392365"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65112305"
 ---
 # <a name="supporting-odata-actions-in-aspnet-web-api-2"></a>Supportare le azioni OData nell'API Web ASP.NET 2
 
@@ -34,7 +34,6 @@ da [Mike Wasson](https://github.com/MikeWasson)
 > - API Web 2
 > - OData versione 3
 > - Entity Framework 6
-
 
 ## <a name="example-rating-a-product"></a>Esempio: Valutazione di un prodotto
 

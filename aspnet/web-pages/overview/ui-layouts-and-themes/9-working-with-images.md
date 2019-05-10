@@ -8,12 +8,12 @@ ms.date: 02/20/2014
 ms.assetid: 778c4e58-4372-4d25-bab9-aec4a8d8e38d
 msc.legacyurl: /web-pages/overview/ui-layouts-and-themes/9-working-with-images
 msc.type: authoredcontent
-ms.openlocfilehash: fedd1013c036ebdb85877a868aaaa172733e5b8a
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 53514b3c314fc182a43c82974ffcfa8158a636a1
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59394705"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65114357"
 ---
 # <a name="working-with-images-in-an-aspnet-web-pages-razor-site"></a>Utilizzo di immagini in un sito di ASP.NET Web Pages (Razor)
 
@@ -44,7 +44,6 @@ da [Tom FitzMacken](https://github.com/tfitzmac)
 >   
 > 
 > Questa esercitazione si integra inoltre con WebMatrix 3.
-
 
 <a id="Adding_an_Image"></a>
 ## <a name="adding-an-image-to-a-web-page-dynamically"></a>Aggiunta di un'immagine a una pagina Web in modo dinamico
@@ -133,7 +132,6 @@ Nell'esempio precedente è stato illustrato come visualizzare un'immagine in mod
 > 
 > Un GUID (globally unique ID) è un identificatore che in genere viene eseguito il rendering in un formato simile al seguente: `936DA01F-9ABD-4d9d-80C7-02AF85C822A8`. I numeri e lettere (da A-F) sono diversi per ogni GUID, ma seguono il modello d'uso dei gruppi di 8-4-4-4-12 caratteri. (Tecnicamente, un GUID è un numero di 16 byte/128 bit) Quando è necessario un GUID, è possibile chiamare codice specializzato che genera un GUID per l'utente. L'idea alla base GUID è che tra le dimensioni del numero enorme (3,4 x 10<sup>38</sup>) e l'algoritmo per generarlo, il numero risulta è praticamente garantito a essere uno di questi tipi. I GUID sono pertanto un ottimo modo per generare nomi per le cose quando è necessario garantire che non usi lo stesso nome due volte. Lo svantaggio, naturalmente, è che i GUID non sono particolarmente intuitivo, tendono a essere utilizzato quando il nome viene usato solo nel codice.
 
-
 <a id="Resizing_an_Image"></a>
 ## <a name="resizing-an-image"></a>Ridimensionamento di un'immagine
 
@@ -218,7 +216,6 @@ Invece di usare il testo per un limite, è possibile usare un'altra immagine. Ta
 
 <a id="Additional_Resources"></a>
 ## <a name="additional-resources"></a>Risorse aggiuntive
-
 
 [Uso di file in un sito con pagine Web ASP.NET](https://go.microsoft.com/fwlink/?LinkId=202896)
 

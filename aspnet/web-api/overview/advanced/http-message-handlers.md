@@ -9,12 +9,12 @@ ms.custom: seoapril2019
 ms.assetid: 9002018b-3aa3-4358-bb1c-fbb5bc751d01
 msc.legacyurl: /web-api/overview/advanced/http-message-handlers
 msc.type: authoredcontent
-ms.openlocfilehash: 308d2e3dd21917e7656f7ffe889dc965d9275d74
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: a8e6f1da8df4802e1acf7779a2fc75bfe8ab876f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59392106"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65115540"
 ---
 # <a name="http-message-handlers-in-aspnet-web-api"></a>Gestori di messaggi HTTP nell'API Web ASP.NET
 
@@ -47,7 +47,6 @@ Questo diagramma mostra due gestori personalizzati inseriti nella pipeline:
 > [!NOTE]
 > Sul lato client, HttpClient Usa anche i gestori di messaggi. Per altre informazioni, vedere [gestori di messaggi HttpClient](httpclient-message-handlers.md).
 
-
 ## <a name="custom-message-handlers"></a>Gestori di messaggi personalizzato
 
 Per scrivere un gestore di messaggi personalizzato, derivare da **System.Net.Http.DelegatingHandler** ed eseguire l'override di **SendAsync** (metodo). Questo metodo ha la firma seguente:
@@ -67,7 +66,6 @@ Ecco un esempio semplice:
 
 > [!NOTE]
 > La chiamata a `base.SendAsync` è asincrona. Se il gestore esegue qualsiasi attività dopo questa chiamata, usare il **await** (parola chiave), come illustrato.
-
 
 Un gestore delega può anche ignorare il gestore interno e creare direttamente la risposta:
 
@@ -131,7 +129,6 @@ Se la richiesta non ha una chiave valida, il gestore consente di creare un messa
 
 > [!NOTE]
 > Se la chiave API si applica solo a determinate azioni del controller, prendere in considerazione l'uso di un filtro azione invece di un gestore di messaggi. I filtri azione eseguiti dopo l'esecuzione dell'URI di routing.
-
 
 ## <a name="per-route-message-handlers"></a>Gestori di messaggi per ogni Route
 

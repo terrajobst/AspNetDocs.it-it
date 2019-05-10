@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: b5b86e03-b8ed-46e6-90fa-e1da88ef34e9
 msc.legacyurl: /web-forms/overview/deployment/configuring-server-environments-for-web-deployment/configuring-deployment-properties-for-a-target-environment
 msc.type: authoredcontent
-ms.openlocfilehash: 74fc0f4cb7d3ed7d1ef091cdb8fa829091af5a7a
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 9742be7d718384c1b108d5f2c0c43e8e8d4fe8a9
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59388686"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108680"
 ---
 # <a name="configuring-deployment-properties-for-a-target-environment"></a>Configurazione delle proprietà di distribuzione per un ambiente di destinazione
 
@@ -22,7 +22,6 @@ da [Jason Lee](https://github.com/jrjlee)
 [Scaricare PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Questo argomento descrive come configurare le proprietà specifiche dell'ambiente per distribuire la soluzione Contact Manager di esempio in un ambiente di destinazione specifico.
-
 
 In questo argomento fa parte di una serie di esercitazioni basate su requisiti di distribuzione aziendale di una società fittizia, denominata Fabrikam, Inc. Questa serie di esercitazioni Usa una soluzione di esempio&#x2014;il [Contact Manager](../web-deployment-in-the-enterprise/the-contact-manager-solution.md) soluzione&#x2014;per rappresentare un'applicazione web con un livello di complessità, tra cui un'applicazione ASP.NET MVC 3, una comunicazione Windows realistico Servizio Foundation (WCF) e un progetto di database.
 
@@ -64,7 +63,6 @@ Per distribuire la soluzione Contact Manager per il proprio ambiente di destinaz
 
 La tabella seguente descrive lo scopo di ogni proprietà nel file di progetto specifici dell'ambiente di esempio, *Env-Dev.proj*e offre alcune indicazioni sui valori è necessario fornire.
 
-
 |                                                        Nome proprietà                                                         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Dettagli                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 |------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |              <strong>MSDeployComputerName</strong> il nome dell'endpoint server o un servizio web di destinazione.               |                                                                                                                                                                                                                                              Se si distribuisce il servizio agente remoto nel server web di destinazione, è possibile specificare il nome del computer di destinazione (ad esempio, <strong>TESTWEB1</strong> oppure <strong>TESTWEB1.fabrikam.net</strong>), oppure è possibile specificare il computer remoto endpoint dell'agente (ad esempio, `http://TESTWEB1/MSDEPLOYAGENTSERVICE`). La distribuzione funziona allo stesso modo in ogni caso. Se si esegue la distribuzione del gestore distribuzione Web nel server web di destinazione, è necessario specificare l'endpoint del servizio e includere il nome del sito Web IIS come parametro di stringa di query (ad esempio, `https://STAGEWEB1:8172/MSDeploy.axd?site=DemoSite`).                                                                                                                                                                                                                                              |
@@ -87,9 +85,7 @@ In questo esempio:
 - Si indica la distribuzione Web per usare l'autenticazione NTLM. La funzionalità distribuzione Web verrà eseguito usando le credenziali usate per richiamare Microsoft Build Engine (MSBuild).
 - Si usa l'autenticazione integrata per distribuire il **ContactManager** database TESTDB1. Verrà distribuito il database usando le credenziali usate per richiamare MSBuild.
 
-
 [!code-xml[Main](configuring-deployment-properties-for-a-target-environment/samples/sample1.xml)]
-
 
 ### <a name="example-2x2014deployment-to-the-web-deploy-handler-endpoint"></a>Esempio 2&#x2014;distribuzione sul Web distribuire Endpoint gestore
 
@@ -100,9 +96,7 @@ In questo esempio:
 - Si specifica che distribuzione Web deve rappresentare l'account FABRIKAM\stagingdeployer nel computer remoto.
 - Si usa l'autenticazione di SQL Server per distribuire il **ContactManager** database STAGEDB1.
 
-
 [!code-xml[Main](configuring-deployment-properties-for-a-target-environment/samples/sample2.xml)]
-
 
 ## <a name="conclusion"></a>Conclusione
 

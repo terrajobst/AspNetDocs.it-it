@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 37947d79-ab1e-4ba9-9017-52e7a2757414
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/configuring-parameters-for-web-package-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: f738d1c0b3cd99bb6df5f8b24dca907fa0b31f4d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: f04ace98d81a33053b10cab7e40dbd75a6c0992c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59413100"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108719"
 ---
 # <a name="configuring-parameters-for-web-package-deployment"></a>Configurazione dei parametri per la distribuzione di pacchetti Web
 
@@ -23,7 +23,6 @@ da [Jason Lee](https://github.com/jrjlee)
 
 > In questo argomento viene descritto come impostare i valori dei parametri, come i nomi delle applicazioni web Internet Information Services (IIS), le stringhe di connessione e gli endpoint di servizio, quando si distribuisce un pacchetto web a un server web IIS remoto.
 
-
 Quando si compila un progetto di applicazione web, la compilazione e il processo di creazione dei pacchetti vengono generati tre file principali:
 
 - Oggetto *ZIP [nome progetto]* file. Questo è il pacchetto di distribuzione web per il progetto di applicazione web. Questo pacchetto contiene tutti i assembly, file, script di database e le risorse necessarie per ricreare l'applicazione web in un server web IIS remoto.
@@ -32,7 +31,6 @@ Quando si compila un progetto di applicazione web, la compilazione e il processo
 
 > [!NOTE]
 > Per altre informazioni sulla compilazione e il processo di creazione dei pacchetti, vedere [compilazione e creazione di pacchetti Web Application Projects](building-and-packaging-web-application-projects.md).
-
 
 Il *SetParameters* file viene generato in modo dinamico dal file di progetto applicazione web e i file di configurazione all'interno del progetto. Quando si compila e creare un pacchetto del progetto, la Pipeline di pubblicazione sul Web (WPP) rileva automaticamente un numero elevato di variabili che potrebbero essere diversi tra ambienti di distribuzione, ad esempio la destinazione dell'applicazione web IIS e tutte le stringhe di connessione di database. Questi valori con parametri nel pacchetto di distribuzione web e aggiunto a automaticamente le *SetParameters* file. Ad esempio, se si aggiunge una stringa di connessione per il *Web. config* file nel progetto di applicazione web, il processo di compilazione rileverà questa modifica e aggiungerà una voce per il *SetParameters* file di conseguenza.
 
@@ -48,9 +46,7 @@ Quando si compila e assemblare un'applicazione web, WPP verrà parametrizzare au
 
 Ad esempio, se si intende compilare e assemblare il [Contact Manager](the-contact-manager-solution.md) genererà questa soluzione di esempio senza modificare il processo di parametrizzazione in qualsiasi modo, WPP *ContactManager.Mvc.SetParameters.xml* file:
 
-
 [!code-xml[Main](configuring-parameters-for-web-package-deployment/samples/sample1.xml)]
-
 
 In questo caso:
 
@@ -73,15 +69,11 @@ Per impostare i parametri per queste proprietà in modo semplice consiste nell'a
 
 Se si apre questo file, si noterà che contiene un singolo **parametro** voce. La voce viene utilizzata una query XML Path Language (XPath) consente di individuare e impostare i parametri per l'URL dell'endpoint del servizio ContactService Windows Communication Foundation (WCF) nei *Web. config* file.
 
-
 [!code-xml[Main](configuring-parameters-for-web-package-deployment/samples/sample2.xml)]
-
 
 Oltre alla definizione di parametri per l'URL dell'endpoint nel pacchetto di distribuzione, WPP aggiunge inoltre una voce corrispondente per il *SetParameters* file generato insieme al pacchetto di distribuzione.
 
-
 [!code-xml[Main](configuring-parameters-for-web-package-deployment/samples/sample3.xml)]
-
 
 Se si installa manualmente il pacchetto di distribuzione, Gestione IIS richiederà per l'indirizzo dell'endpoint servizio con le proprietà che sono state parametrizzate automaticamente. Se si installa il pacchetto di distribuzione eseguendo il *. deploy. cmd* file, è possibile modificare il *SetParameters* file per fornire un valore per l'indirizzo dell'endpoint servizio insieme ai valori per il proprietà che sono state parametrizzate automaticamente.
 
@@ -96,22 +88,16 @@ Il [soluzione di esempio Contact Manager](the-contact-manager-solution.md) viene
 > [!NOTE]
 > Per una panoramica più ampia del modello di file di progetto nella soluzione di esempio e un'introduzione ai file di progetto personalizzato in generale, vedere [informazioni sul File di progetto](understanding-the-project-file.md) e [informazioni sul processo di compilazione](understanding-the-build-process.md).
 
-
 In primo luogo, i valori dei parametri di interesse sono definiti come proprietà nel file di progetto specifici dell'ambiente (ad esempio, *Env-Dev.proj*).
 
-
 [!code-xml[Main](configuring-parameters-for-web-package-deployment/samples/sample4.xml)]
-
 
 > [!NOTE]
 > Per indicazioni su come personalizzare i file di progetto specifici dell'ambiente per ambienti server, vedere [configurare le proprietà di distribuzione per un ambiente di destinazione](../configuring-server-environments-for-web-deployment/configuring-deployment-properties-for-a-target-environment.md).
 
-
 Successivamente, il *Publish.proj* file Importa queste proprietà. Poiché ogni *SetParameters* file è associato un *. deploy. cmd* file e si desidera in definitiva il file di progetto per richiamare ogni *. deploy. cmd* file, il progetto file crea un MSBuild *articoli* per ogni *. deploy. cmd* del file e definisce le proprietà di interesse come *metadati dell'elemento*.
 
-
 [!code-xml[Main](configuring-parameters-for-web-package-deployment/samples/sample5.xml)]
-
 
 In questo caso:
 
@@ -122,9 +108,7 @@ In questo caso:
 
 Infine, nella *Publish.proj* file, il **PublishWebPackages** viene utilizzato come destinazione il **XmlPoke** attività per modificare questi valori nel *SetParameters* file.
 
-
 [!code-xml[Main](configuring-parameters-for-web-package-deployment/samples/sample6.xml)]
-
 
 Si noterà che ogni **XmlPoke** attività specifica quattro valori di attributo:
 

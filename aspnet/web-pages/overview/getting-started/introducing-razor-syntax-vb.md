@@ -8,12 +8,12 @@ ms.date: 02/07/2014
 ms.assetid: 5da59646-e973-41cd-88a9-c6b2c0594027
 msc.legacyurl: /web-pages/overview/getting-started/introducing-razor-syntax-vb
 msc.type: authoredcontent
-ms.openlocfilehash: e6b63afb9492e810e19999c7c7ffe074ad510bda
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 2be57655b8c9b76b94e1d9a7ae5fbee27545a0a9
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59406769"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65113085"
 ---
 # <a name="introduction-to-aspnet-web-programming-using-the-razor-syntax-visual-basic"></a>Introduzione alla programmazione Web ASP.NET usando la sintassi Razor (Visual Basic)
 
@@ -36,12 +36,10 @@ da [Tom FitzMacken](https://github.com/tfitzmac)
 > 
 > Questa esercitazione si integra inoltre con ASP.NET Web Pages 2.
 
-
 La maggior parte degli esempi dell'uso di ASP.NET Web Pages con sintassi Razor usano c#. Ma la sintassi Razor supporta anche Visual Basic. Per programmare una pagina web ASP.NET in Visual Basic, si crea una pagina web con un *vbhtml* estensione nome file, quindi aggiungere il codice Visual Basic. Questo articolo offre una panoramica dell'utilizzo con la sintassi per creare pagine Web ASP.NET e il linguaggio Visual Basic.
 
 > [!NOTE]
 > I modelli di sito Web predefinito di Microsoft WebMatrix (**panificio**, **raccolta foto**, e **Starter Site**e così via) sono disponibili nelle versioni c# e Visual Basic. È possibile installare i modelli di Visual Basic da come pacchetti NuGet. Modelli di siti Web vengono installati nella cartella radice del sito in una cartella denominata *Templates Microsoft*.
-
 
 ## <a name="the-top-8-programming-tips"></a>8 suggerimenti di programmazione principali
 
@@ -66,7 +64,6 @@ Il risultato visualizzato in un browser:
 > Se l'obiettivo consiste nel markup HTML che esegue il rendering dei tag come markup di output (ad esempio `<p></p>` per un paragrafo o `<em></em>` per enfatizzare il testo), vedere la sezione [combinazione di testo, Markup e codice nei blocchi di codice](#BM_CombiningTextMarkupAndCode) più avanti in questo articolo.
 > 
 > Altre informazioni sulla codifica HTML [utilizzo di form HTML nei siti di ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=202892).
-
 
 ### <a name="2-you-enclose-code-blocks-with-codeend-code"></a>2. Si racchiudere i blocchi di codice con il codice... Codice di fine
 
@@ -151,7 +148,6 @@ Il risultato visualizzato in un browser (dopo aver fatto clic **Submit**):
 > Il protocollo usato per le pagine web (HTTP) supporta un numero molto limitato di metodi (&quot;verbi&quot;) che consentono di effettuare richieste al server. Le due cause più comuni sono GET, che viene usato per leggere una pagina, e POST, che consente di inviare una pagina. In generale, la prima volta che un utente richiede una pagina, la pagina viene richiesta con GET. Se l'utente inserisce in un form e quindi fa clic su **Submit**, il browser invia una richiesta POST al server.
 > 
 > Nella programmazione web, è spesso utile sapere se una pagina viene richiesta come un'operazione GET o un POST in modo da sapere come elaborare la pagina. In ASP.NET Web Pages, è possibile usare il `IsPost` proprietà per vedere se una richiesta è un'operazione GET o POST. Se la richiesta viene pubblicato un POST, il `IsPost` proprietà restituirà true ed è possibile eseguire operazioni come leggere i valori di caselle di testo in un form. Molti esempi verrà visualizzato mostrano come elaborare la pagina in modo diverso a seconda del valore di `IsPost`.
-
 
 ## <a name="a-simple-code-example"></a>Un semplice esempio di codice
 
@@ -272,7 +268,6 @@ Per convertire i valori interi, si chiama il `AsInt` (metodo). Se la conversione
 
 La tabella seguente elenca alcuni metodi di conversione e di test comuni per le variabili.
 
-
 :::row:::
     :::column:::
         <strong>Method</strong>
@@ -369,11 +364,9 @@ La tabella seguente elenca alcuni metodi di conversione e di test comuni per le 
     :::column-end:::
 :::row-end:::
 
-
 ## <a name="operators"></a>Operatori
 
 Un operatore è una parola chiave o un carattere che indica ad ASP.NET che tipo di comando da eseguire in un'espressione. Visual Basic supporta molti operatori, ma è sufficiente riconoscere alcune per iniziare a sviluppare le pagine web ASP.NET. Nella tabella seguente sono riepilogati gli operatori più comuni.
-
 
 :::row:::
     :::column:::
@@ -732,7 +725,6 @@ In situazioni in cui il codice che si verifichino eccezioni e per evitare messag
 
 > [!NOTE]
 > È consigliabile evitare di utilizzare il `Response.Redirect` metodo `Try/Catch` (istruzioni), poiché potrebbe causare un'eccezione nella pagina.
-
 
 Nell'esempio seguente mostra una pagina che consente di creare un file di testo per la prima richiesta e quindi visualizza un pulsante che consente all'utente di aprire il file. L'esempio Usa un nome file errato deliberatamente in modo che lo genererà un'eccezione. Il codice riporta `Catch` istruzioni per due possibili eccezioni: `FileNotFoundException`, che si verifica se il nome del file non è corretto, e `DirectoryNotFoundException`, che si verifica se ASP.NET non è possibile anche trovare la cartella. (È possibile rimuovere il commento nell'esempio, un'istruzione per verificarne l'esecuzione quando tutto funziona correttamente.)
 

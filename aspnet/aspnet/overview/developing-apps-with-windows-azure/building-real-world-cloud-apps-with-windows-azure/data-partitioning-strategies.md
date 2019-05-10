@@ -8,12 +8,12 @@ ms.date: 06/12/2014
 ms.assetid: 513837a7-cfea-4568-a4e9-1f5901245d24
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/data-partitioning-strategies
 msc.type: authoredcontent
-ms.openlocfilehash: 1050018794526e12aad43cd473665de5ff575d7d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 3aecd64bc59ffa961aa97dd30b037f9aeb2acdd8
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59403558"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118902"
 ---
 # <a name="data-partitioning-strategies-building-real-world-cloud-apps-with-azure"></a>Dati (creazione di App Cloud funzionanti con Azure) di strategie di partizionamento
 
@@ -22,7 +22,6 @@ dal [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitt
 [Download risolverlo Project](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [Scarica l'E-book](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
 > Il **creazione Real World di App Cloud con Azure** eBook si basa su una presentazione sviluppata da Scott Guthrie. Viene illustrato 13 modelli e procedure consigliate che consentono di avere esito positivo lo sviluppo di App web per il cloud. Per informazioni sulla serie, vedere [capitolo prima](introduction.md).
-
 
 In precedenza è stato illustrato come è facile scalare il livello web di un'applicazione cloud, aggiungendo e rimuovendo i server web. Ma se sono tutti verificano lo stesso archivio dati, collo di bottiglia dell'applicazione viene spostato dal front-end al back-end e il livello dati è più difficile da ridimensionare. In questo capitolo illustra come è possibile apportare al livello dati scalabili tramite il partizionamento dei dati in più database relazionali o combinando l'archiviazione del database relazionale con altre opzioni di archiviazione dei dati.
 

@@ -8,19 +8,18 @@ ms.date: 08/29/2011
 ms.assetid: c23d27f7-b0cf-44f2-8445-fb69e045c674
 msc.legacyurl: /mvc/overview/older-versions/using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc/using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-1
 msc.type: authoredcontent
-ms.openlocfilehash: 31a01f250e4f5473e954f040e1a506dbaf61be76
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 6e7d31d96a36b55e2e1a9a475e2d90526cc6a5b2
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59393588"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65112402"
 ---
 # <a name="using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc---part-1"></a>Uso di HTML5 e jQuery UI Datepicker Popup Calendar con ASP.NET MVC - parte 1
 
 da [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > Questa esercitazione insegnerà le nozioni di base di come usare i modelli nell'editor di modelli di visualizzazione e il calendario di jQuery UI datepicker popup in un'applicazione Web ASP.NET MVC.
-
 
 Questa esercitazione insegnerà le nozioni di base di come usare i modelli nell'editor di modelli di visualizzazione e il componente aggiuntivo jQuery [calendario UI datepicker popup](http://plugins.jquery.com/project/datepicker) in un'applicazione Web ASP.NET MVC. Per questa esercitazione, è possibile usare Microsoft Visual Web Developer 2010 Express Service Pack 1 (&quot;in Visual Web Developer&quot;), che è una versione gratuita di Microsoft Visual Studio o se si dispone già di questo, è possibile usare Visual Studio 2010 SP1.
 

@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: a7fe5de5-a964-4780-ae5e-70821dfb50a0
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/changing-an-animation-using-client-side-code-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 4254b7e1f2086a9cc5fbc1e8c2a4f7e2e3d2925e
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 476b807ca48744648b6e2435af6db7b343c0f854
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59416571"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108773"
 ---
 # <a name="changing-an-animation-using-client-side-code-vb"></a>Modifica di un'animazione tramite codice lato client (VB)
 
@@ -22,7 +22,6 @@ da [Christian Wenz](https://github.com/wenz)
 [Scaricare il codice](http://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation11.vb.zip) o [Scarica il PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation11VB.pdf)
 
 > Il controllo di animazione in ASP.NET AJAX Control Toolkit non è semplicemente un controllo, ma un intero framework aggiungere animazioni a un controllo. L'animazione può essere modificata anche utilizzando codice JavaScript lato client personalizzato.
-
 
 ## <a name="overview"></a>Panoramica
 
@@ -69,7 +68,6 @@ Di seguito è una stringa JSON (senza le virgolette di delimitazione e formattat
 Il codice JavaScript seguente assegna questa descripting JSON per il `OnClick` animazione dell'oggetto extender corrente e lo esegue:
 
 [!code-html[Main](changing-an-animation-using-client-side-code-vb/samples/sample7.html)]
-
 
 [![L'animazione viene eseguita immediatamente, senza un clic del mouse (e con markup minimo)](changing-an-animation-using-client-side-code-vb/_static/image2.png)](changing-an-animation-using-client-side-code-vb/_static/image1.png)
 

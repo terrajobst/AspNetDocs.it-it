@@ -8,12 +8,12 @@ ms.date: 02/24/2014
 ms.assetid: 7a77c2c0-deea-4290-a9c3-97958891758e
 msc.legacyurl: /web-pages/overview/security/16-adding-security-and-membership
 msc.type: authoredcontent
-ms.openlocfilehash: 1291417755e3fa4fb030bc6ba3089c38c4719c71
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 0be3e767a42939a3c343f6d4a730eb1d9a6b367c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59389664"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65112368"
 ---
 # <a name="adding-security-and-membership-to-an-aspnet-web-pages-razor-site"></a>L'aggiunta della protezione e l'appartenenza a un sito di ASP.NET Web Pages (Razor)
 
@@ -42,7 +42,6 @@ da [Tom FitzMacken](https://github.com/tfitzmac)
 > - ASP.NET Web Pages (Razor) 2
 > - WebMatrix 3
 > - ASP.NET Web Helpers Library
-
 
 È possibile configurare il sito Web in modo che gli utenti possono accedere al suo interno &#8212; , ovvero in modo che il sito supporta *appartenenza*. Ciò può essere utile per diversi motivi. Ad esempio, il sito potrebbe essere pagine che devono essere disponibili solo per i membri. In alcuni casi, è possibile richiedere agli utenti di accedere per inviare commenti o lasciare un commento.
 

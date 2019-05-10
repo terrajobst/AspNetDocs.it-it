@@ -8,12 +8,12 @@ ms.date: 06/12/2014
 ms.assetid: 52d6c941-2cd9-442f-9872-2c798d6d90cd
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/web-development-best-practices
 msc.type: authoredcontent
-ms.openlocfilehash: 1b9c7bacb37cc4487fb3af392a6048021679718d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: e64e41bfc600811cecb8d20a67fb397ff9dc9a45
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59396733"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118372"
 ---
 # <a name="web-development-best-practices-building-real-world-cloud-apps-with-azure"></a>Procedure guidate di sviluppo Web (creazione di App Cloud funzionanti con Azure)
 
@@ -22,7 +22,6 @@ dal [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitt
 [Download risolverlo Project](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [Scarica l'E-book](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
 > Il **creazione Real World di App Cloud con Azure** eBook si basa su una presentazione sviluppata da Scott Guthrie. Viene illustrato 13 modelli e procedure consigliate che consentono di avere esito positivo lo sviluppo di App web per il cloud. Per informazioni sull'e-book, vedere [capitolo prima](introduction.md).
-
 
 I primi tre modelli sono stati sulla configurazione di un processo di sviluppo agile. gli altri sono sull'architettura e codice. Questa è una raccolta di procedure consigliate per lo sviluppo web:
 

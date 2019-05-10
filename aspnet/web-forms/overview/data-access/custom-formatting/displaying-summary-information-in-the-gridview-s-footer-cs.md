@@ -8,12 +8,12 @@ ms.date: 03/31/2010
 ms.assetid: d50edc31-9286-4c6a-8635-be09e72752a4
 msc.legacyurl: /web-forms/overview/data-access/custom-formatting/displaying-summary-information-in-the-gridview-s-footer-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 0bc3127974341a65fb5f38ac0a974782099fffce
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 685917250247e6a36952de29404146d85af3c46d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59385917"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65114994"
 ---
 # <a name="displaying-summary-information-in-the-gridviews-footer-c"></a>Visualizzazione di informazioni di riepilogo nel piè di pagina del controllo GridView (C#)
 
@@ -22,7 +22,6 @@ da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Scaricare l'App di esempio](http://download.microsoft.com/download/9/6/9/969e5c94-dfb6-4e47-9570-d6d9e704c3c1/ASPNET_Data_Tutorial_15_CS.exe) o [Scarica il PDF](displaying-summary-information-in-the-gridview-s-footer-cs/_static/datatutorial15cs1.pdf)
 
 > Le informazioni di riepilogo viene spesso visualizzate nella parte inferiore del report in una riga di riepilogo. Il controllo GridView può includere una riga di piè di pagina in cui le celle a livello di codice è possibile inserire aggregare i dati. In questa esercitazione si noterà come visualizzare i dati aggregati in questa riga di piè di pagina.
-
 
 ## <a name="introduction"></a>Introduzione
 
@@ -36,11 +35,9 @@ Questa attività presenta tre problemi:
 
 In questa esercitazione vedremo come ovviare a questi problemi. In particolare, si creerà una pagina che elenca le categorie in un elenco a discesa con i prodotti della categoria selezionati visualizzati in un controllo GridView. Il controllo GridView includerà una riga di piè di pagina che mostra il prezzo medio e totale delle unità a magazzino e sull'ordine per i prodotti in tale categoria.
 
-
 [![Le informazioni di riepilogo viene visualizzate nella riga di piè di pagina di GridView](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image2.png)](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image1.png)
 
 **Figura 1**: Le informazioni di riepilogo viene visualizzate nella riga di piè di pagina del controllo GridView ([fare clic per visualizzare l'immagine con dimensioni normali](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image3.png))
-
 
 Questa esercitazione, con relativa categoria all'interfaccia master/dettaglio prodotti, si basa sui concetti illustrati in precedenza [Master/Dettagli filtro con un controllo DropDownList](../masterdetail/master-detail-filtering-with-a-dropdownlist-cs.md) esercitazione. Se si è già non ancora l'esercitazione precedente, farlo prima di proseguire con questo.
 
@@ -50,92 +47,71 @@ Prima di noi stessi relative con l'aggiunta di informazioni di riepilogo al piè
 
 Iniziare aprendo il `SummaryDataInFooter.aspx` nella pagina di `CustomFormatting` cartella. Aggiungere un controllo DropDownList e impostare relativi `ID` a `Categories`. Successivamente, fare clic sul collegamento dallo smart tag del controllo DropDownList Scegli origine dati e scegliere di aggiungere un nuovo oggetto ObjectDataSource denominato `CategoriesDataSource` che richiama la `CategoriesBLL` della classe `GetCategories()` (metodo).
 
-
 [![Aggiungere un nuovo oggetto ObjectDataSource denominato CategoriesDataSource](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image5.png)](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image4.png)
 
 **Figura 2**: Aggiungere un nuovo oggetto ObjectDataSource denominato `CategoriesDataSource` ([fare clic per visualizzare l'immagine con dimensioni normali](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image6.png))
-
 
 [![Avere ObjectDataSource richiama metodo della classe GetCategories() CategoriesBLL](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image8.png)](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image7.png)
 
 **Figura 3**: Dispone di ObjectDataSource richiama il `CategoriesBLL` della classe `GetCategories()` metodo ([fare clic per visualizzare l'immagine con dimensioni normali](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image9.png))
 
-
 Dopo la configurazione di ObjectDataSource, restituisce la procedura guidata di configurazione dell'origine dati del controllo DropDownList guidata dalla quale è necessario specificare quale valore del campo dati deve essere visualizzato e quello che deve corrispondere al valore del DropDownList `ListItem` s. Dispone il `CategoryName` campo visualizzato e l'utilizzo di `CategoryID` come valore.
-
 
 [![Usare i campi di CategoryID e CategoryName come testo e il valore per gli elementi ListItem, rispettivamente](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image11.png)](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image10.png)
 
 **Figura 4**: Usare la `CategoryName` e `CategoryID` i campi come il `Text` e `Value` per il `ListItem` s, rispettivamente ([fare clic per visualizzare l'immagine con dimensioni normali](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image12.png))
 
-
 A questo punto si dispone di un controllo DropDownList (`Categories`) che elenca le categorie nel sistema. È ora necessario aggiungere un controllo GridView in cui sono elencati i prodotti appartenenti alla categoria selezionata. Prima di procedere, tuttavia, si consiglia di controllare la casella di controllo Abilita AutoPostBack nello smart tag del controllo DropDownList. Come descritto nel *Master/Dettagli filtro con un controllo DropDownList* tutorial, impostando il controllo DropDownList `AutoPostBack` proprietà `true` la pagina verrà registrata nuovamente ogni volta che viene modificato il valore di DropDownList. In questo modo il controllo GridView per l'aggiornamento, che mostra i prodotti per la categoria appena selezionato. Se il `AutoPostBack` è impostata su `false` (impostazione predefinita), la modifica della categoria non causino un postback e pertanto non vengono aggiornate prodotti elencati.
-
 
 [![La casella di AutoPostBack Enable nello Smart Tag del controllo DropDownList](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image14.png)](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image13.png)
 
 **Figura 5**: La casella Abilita AutoPostBack nello Smart Tag del controllo DropDownList ([fare clic per visualizzare l'immagine con dimensioni normali](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image15.png))
 
-
 Aggiungere un controllo GridView alla pagina per visualizzare i prodotti per la categoria selezionata. Impostare il controllo GridView `ID` al `ProductsInCategory` e associarlo a un nuovo oggetto ObjectDataSource denominato `ProductsInCategoryDataSource`.
-
 
 [![Aggiungere un nuovo oggetto ObjectDataSource denominato ProductsInCategoryDataSource](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image17.png)](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image16.png)
 
 **Figura 6**: Aggiungere un nuovo oggetto ObjectDataSource denominato `ProductsInCategoryDataSource` ([fare clic per visualizzare l'immagine con dimensioni normali](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image18.png))
 
-
 Configurare ObjectDataSource in modo che richiama il `ProductsBLL` della classe `GetProductsByCategoryID(categoryID)` (metodo).
-
 
 [![Avere ObjectDataSource richiama il metodo GetProductsByCategoryID(categoryID)](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image20.png)](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image19.png)
 
 **Figura 7**: Dispone di ObjectDataSource richiama il `GetProductsByCategoryID(categoryID)` metodo ([fare clic per visualizzare l'immagine con dimensioni normali](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image21.png))
 
-
 Poiché il `GetProductsByCategoryID(categoryID)` metodo accetta un parametro di input, nel passaggio finale della procedura guidata è possibile specificare l'origine del valore del parametro. Per visualizzare i prodotti della categoria selezionata, hanno il parametro proveniente dal `Categories` DropDownList.
-
 
 [![Ottenere il valore del parametro categoryID da DropDownList categorie selezionate](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image23.png)](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image22.png)
 
 **Figura 8**: Ottenere il *`categoryID`* valore del parametro da DropDownList categorie selezionate ([fare clic per visualizzare l'immagine con dimensioni normali](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image24.png))
 
-
 Dopo aver completato la procedura guidata GridView avrà un BoundField per ciascuna delle proprietà del prodotto. È possibile pulire questi BoundField in modo che solo le `ProductName`, `UnitPrice`, `UnitsInStock`, e `UnitsOnOrder` BoundField vengono visualizzati. È possibile aggiungere le impostazioni a livello di campo per i restanti BoundField (ad esempio la formattazione di `UnitPrice` come valuta). Dopo aver apportato queste modifiche, markup dichiarativo del controllo GridView dovrebbe essere simile al seguente:
-
 
 [!code-aspx[Main](displaying-summary-information-in-the-gridview-s-footer-cs/samples/sample1.aspx)]
 
 A questo punto abbiamo un rapporto master/dettagli completamente funzionante che mostra il nome, prezzo unitario, unità a magazzino e unità sull'ordine per tali prodotti appartenenti alla categoria selezionata.
 
-
 [![Ottenere il valore del parametro categoryID da DropDownList categorie selezionate](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image26.png)](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image25.png)
 
 **Figura 9**: Ottenere il *`categoryID`* valore del parametro da DropDownList categorie selezionate ([fare clic per visualizzare l'immagine con dimensioni normali](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image27.png))
-
 
 ## <a name="step-2-displaying-a-footer-in-the-gridview"></a>Passaggio 2: Visualizzazione di un piè di pagina in GridView
 
 Il controllo GridView può visualizzare righe sia un'intestazione e piè di pagina. Vengono visualizzate queste righe a seconda dei valori del `ShowHeader` e `ShowFooter` delle proprietà, rispettivamente, con `ShowHeader` verrà utilizzato `true` e `ShowFooter` a `false`. Per includere un piè di pagina in GridView è sufficiente impostare relativi `ShowFooter` proprietà `true`.
 
-
 [![Impostare la proprietà del controllo GridView ShowFooter su true](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image29.png)](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image28.png)
 
 **Figura 10**: Impostare il controllo GridView `ShowFooter` proprietà `true` ([fare clic per visualizzare l'immagine con dimensioni normali](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image30.png))
 
-
 La riga di piè di pagina dispone di una cella per ognuno dei campi definiti in GridView; Tuttavia, queste celle sono vuote per impostazione predefinita. Si consiglia di visualizzare lo stato di avanzamento in un browser. Con il `ShowFooter` ora impostata su `true`, GridView include una riga di piè di pagina vuota.
-
 
 [![L'ora di GridView include una riga di piè di pagina](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image32.png)](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image31.png)
 
 **Figura 11**: Il controllo GridView include ora una riga di piè di pagina ([fare clic per visualizzare l'immagine con dimensioni normali](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image33.png))
 
-
 La riga di piè di pagina nella figura 11 non spiccano perché ha uno sfondo bianco. È possibile creare un `FooterStyle` della classe CSS in `Styles.css` che specifica uno sfondo rosso scuro e quindi configurare il `GridView.skin` soubor skinu nel `DataWebControls` tema per assegnare questa classe CSS per il controllo GridView `FooterStyle`del `CssClass` proprietà. Se è necessario perfezionare le interfacce e temi, vedere la [visualizzazione di dati con ObjectDataSource](../basic-reporting/displaying-data-with-the-objectdatasource-cs.md) esercitazione.
 
 Iniziare aggiungendo la seguente classe CSS da `Styles.css`:
-
 
 [!code-css[Main](displaying-summary-information-in-the-gridview-s-footer-cs/samples/sample2.css)]
 
@@ -143,16 +119,13 @@ Il `FooterStyle` classe CSS è simile in stile per il `HeaderStyle` classe, anch
 
 Successivamente, per associare questa classe CSS a piè di pagina ogni di GridView, aprire il `GridView.skin` del file nel `DataWebControls` tema e impostare il `FooterStyle`del `CssClass` proprietà. Dopo l'aggiunta markup del file simile a:
 
-
 [!code-aspx[Main](displaying-summary-information-in-the-gridview-s-footer-cs/samples/sample3.aspx)]
 
 Come nell'immagine riportata di seguito viene illustrata, questa modifica rende il piè di pagina maggiore risalto chiaramente.
 
-
 [![Riga di piè di pagina di GridView ha ora un colore di sfondo rossastri](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image35.png)](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image34.png)
 
 **Figura 12**: Riga di piè di pagina di GridView ha ora un colore di sfondo rossastri ([fare clic per visualizzare l'immagine con dimensioni normali](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image36.png))
-
 
 ## <a name="step-3-computing-the-summary-data"></a>Passaggio 3: Elaborazione dati di riepilogo
 
@@ -169,7 +142,6 @@ Il secondo approccio in genere si utilizza come Salva una corsa nel database e l
 
 Creare un `RowDataBound` gestore dell'evento per il controllo GridView selezionando il controllo GridView nella finestra di progettazione, scegliendo l'icona a forma di fulmine dalla finestra delle proprietà e fare doppio clic su di `RowDataBound` evento. Verrà creato un nuovo gestore eventi denominato `ProductsInCategory_RowDataBound` nella `SummaryDataInFooter.aspx` classe code-behind della pagina.
 
-
 [!code-csharp[Main](displaying-summary-information-in-the-gridview-s-footer-cs/samples/sample5.cs)]
 
 Per annotare un totale parziale, è necessario definire le variabili all'esterno dell'ambito del gestore dell'evento. Creare le seguenti quattro variabili a livello di pagina:
@@ -181,7 +153,6 @@ Per annotare un totale parziale, è necessario definire le variabili all'esterno
 
 Successivamente, scrivere il codice per incrementare queste tre variabili per ogni riga di dati rilevati nel `RowDataBound` gestore dell'evento.
 
-
 [!code-csharp[Main](displaying-summary-information-in-the-gridview-s-footer-cs/samples/sample6.cs)]
 
 Il `RowDataBound` gestore dell'evento viene avviato, garantendo che stiamo affrontando una DataRow. Dopo che è stata stabilita, il `Northwind.ProductsRow` istanza in cui è stata appena associata ai `GridViewRow` dell'oggetto `e.Row` viene archiviato nella variabile `product`. Le variabili totale successive, in esecuzione vengono incrementate di valori corrispondenti del prodotto corrente (presupponendo che non contengono un database `NULL` valore). Viene tenuta traccia dell'esecuzione di entrambe `UnitPrice` totale e il numero di non -`NULL` `UnitPrice` registra perché il prezzo medio è il quoziente di questi due numeri.
@@ -190,23 +161,19 @@ Il `RowDataBound` gestore dell'evento viene avviato, garantendo che stiamo affro
 
 Con i dati di riepilogo calcolato il totale, l'ultimo passaggio consiste di visualizzarla nella riga di piè di pagina di GridView. Questa attività, troppo, può essere eseguita a livello di programmazione tramite le `RowDataBound` gestore dell'evento. Si tenga presente che il `RowDataBound` gestore dell'evento viene generato per *ogni* riga in cui è associato a GridView, inclusa la riga di piè di pagina. Di conseguenza, è possibile aumentare nostro gestore di eventi per visualizzare i dati della riga di piè di pagina usando il codice seguente:
 
-
 [!code-csharp[Main](displaying-summary-information-in-the-gridview-s-footer-cs/samples/sample7.cs)]
 
 Poiché la riga di piè di pagina viene aggiunta a GridView dopo l'aggiunta di tutte le righe di dati, possiamo essere certi che nel momento siamo pronti per visualizzare i dati di riepilogo nel piè di pagina che verranno completati i calcoli totali parziale. L'ultimo passaggio, quindi, consiste nell'impostare questi valori nelle celle del piè di pagina.
 
 Per visualizzare il testo in una cella del piè di pagina specifico, usare `e.Row.Cells[index].Text = value`, dove il `Cells` indicizzazione inizia in corrispondenza di 0. Il codice seguente calcola il prezzo medio (il prezzo totale diviso per il numero di prodotti) e visualizzarlo insieme al numero totale di unità in magazzino e quantità ordinata nelle celle di un piè di pagina appropriate di GridView.
 
-
 [!code-csharp[Main](displaying-summary-information-in-the-gridview-s-footer-cs/samples/sample8.cs)]
 
 Figura 13 Mostra il report dopo l'aggiunta di questo codice. Si noti come il `ToString("c")` fa sì che le informazioni di riepilogo prezzo medio di essere formattato come una valuta.
 
-
 [![Riga di piè di pagina di GridView ha ora un colore di sfondo rossastri](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image38.png)](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image37.png)
 
 **Figura 13**: Riga di piè di pagina di GridView ha ora un colore di sfondo rossastri ([fare clic per visualizzare l'immagine con dimensioni normali](displaying-summary-information-in-the-gridview-s-footer-cs/_static/image39.png))
-
 
 ## <a name="summary"></a>Riepilogo
 

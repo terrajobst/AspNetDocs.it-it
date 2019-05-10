@@ -8,12 +8,12 @@ ms.date: 07/16/2014
 ms.assetid: 4fe2558d-67cc-4d12-a5c1-6fb9f6f16137
 msc.legacyurl: /visual-studio/overview/2013/one-aspnet-integrating-aspnet-web-forms-mvc-and-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: 1023d9bef311e58fb5fb0bb24cde80e8320e6bac
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 165d104b5d3ef3281af449cc8673ad96f531d628
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59419054"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65113076"
 ---
 # <a name="hands-on-lab-one-aspnet-integrating-aspnet-web-forms-mvc-and-web-api"></a>Lab pratico: One ASP.NET: integrazione di Web Forms ASP.NET, MVC e API Web
 
@@ -26,7 +26,6 @@ da [Camp Web Team](https://twitter.com/webcamps)
 > Visual Studio 2013 introduce un nuovo sistema di progetto unificato che consente di creare un'applicazione e usare tutte le tecnologie ASP.NET in un unico progetto. Questa funzionalità Elimina la necessità di scegliere una tecnologia all'inizio di un progetto e stilizzata con esso e invece consiglia l'utilizzo di più framework ASP.NET all'interno di un progetto.
 > 
 > Tutto il codice di esempio e frammenti di codice sono inclusi nel Web Camp Kit di formazione, disponibile all'indirizzo [ https://aka.ms/webcamps-training-kit ](https://aka.ms/webcamps-training-kit).
-
 
 <a id="Overview"></a>
 ## <a name="overview"></a>Panoramica
@@ -62,7 +61,6 @@ Per eseguire gli esercizi in questo laboratorio pratico, è necessario configura
 > [!NOTE]
 > Assicurarsi che tutte le dipendenze per questo ambiente lab che sono stati verificati prima di eseguire il programma di installazione.
 
-
 <a id="CodeSnippets"></a>
 ### <a name="using-the-code-snippets"></a>Usando i frammenti di codice
 
@@ -70,7 +68,6 @@ In tutto il documento di laboratorio, verrà invitati a inserire blocchi di codi
 
 > [!NOTE]
 > Ogni esercizio è accompagnata da una soluzione inizia che si trova nel **iniziare** cartella dell'esercizio che consente di seguire ogni esercizio indipendentemente dagli altri. Tenere presente che i frammenti di codice aggiunti durante un esercizio non sono presenti queste soluzioni di avvio e potrebbero non funzionare fino a quando non si have completato l'esercizio. All'interno del codice sorgente per un esercizio, si noterà anche un **End** cartella che contiene una soluzione di Visual Studio con il codice che scaturisce da completare i passaggi nell'esercizio corrispondente. È possibile usare queste soluzioni come prassi consigliata se ti serve assistenza aggiuntiva durante l'esecuzione in questo laboratorio pratico.
-
 
 ---
 
@@ -87,7 +84,6 @@ Tempo stimato per completare questa esercitazione: **60 minuti**
 
 > [!NOTE]
 > Al primo avvio di Visual Studio, è necessario selezionare una delle raccolte di impostazioni predefinite. Ogni raccolta predefinita è pensata per associare un particolare stile di sviluppo e determina i layout delle finestre, il comportamento dell'editor, frammenti di codice IntelliSense e opzioni della finestra di dialogo. Le procedure descritte in questa esercitazione vengono descritte le azioni necessarie per eseguire una determinata attività in Visual Studio quando si usa la **delle impostazioni di sviluppo generale** raccolta. Se si sceglie una raccolta di impostazioni diverse per l'ambiente di sviluppo, possono essere presenti differenze nei passaggi che è necessario tenere conto.
-
 
 <a id="Exercise1"></a>
 ### <a name="exercise-1-creating-a-new-web-forms-project"></a>Esercizio 1: Creazione di un nuovo progetto di Web Form
@@ -189,7 +185,6 @@ Il flusso di lavoro di modellazione Code First di Entity Framework consente di u
 
 > [!NOTE]
 > Altre informazioni su Entity Framework [qui](../../../entity-framework.md).
-
 
 <a id="Ex2Task1"></a>
 #### <a name="task-1--creating-a-new-model"></a>Attività 1: creazione di un nuovo modello
@@ -342,7 +337,6 @@ In questa attività si userà di Internet Explorer **strumenti di sviluppo F12**
 > ![Opzione di Internet Explorer](one-aspnet-integrating-aspnet-web-forms-mvc-and-web-api/_static/image27.png)
 > 
 > Il **strumenti di sviluppo F12** hanno un ampio set di funzionalità non trattate in questo-pratica. Se si vuole ottenere altre informazioni, vedere [usando gli strumenti di sviluppo F12](https://msdn.microsoft.com/library/ie/bg182326(v=vs.85)).
-
 
 1. Premere **F5** per eseguire la soluzione.
 

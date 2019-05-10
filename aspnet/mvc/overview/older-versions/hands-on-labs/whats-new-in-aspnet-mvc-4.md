@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 48f7feb3-872f-485d-b96f-e30011ff8c4a
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/whats-new-in-aspnet-mvc-4
 msc.type: authoredcontent
-ms.openlocfilehash: b9da2522cfaed324a23f43265d4e234ebb4950bd
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: adb6e990d0ca98df38c47adf8c37fdffeb6d3d73
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59411124"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65112992"
 ---
 # <a name="whats-new-in-aspnet-mvc-4"></a>Novità di ASP.NET MVC 4
 
@@ -82,7 +82,6 @@ Questo laboratorio pratico include gli esercizi seguenti:
 
 > [!NOTE]
 > Ogni esercizio è accompagnato da un **End** cartella che contiene la soluzione risultante si dovrebbe ottenere dopo aver completato gli esercizi. Se ti serve assistenza aggiuntiva esaminando gli esercizi, è possibile usare questa soluzione come guida.
-
 
 Tempo stimato per completare questa esercitazione: **60 minuti**.
 
@@ -223,7 +222,6 @@ ASP.NET MVC 4 facilita lo sviluppo di siti Web per dispositivi mobili e browser 
 8. Il nuovo modello Usa anche il **Viewport metatag**. Browser per dispositivi mobili più definire una larghezza per una finestra del browser virtuale oppure &quot;viewport&quot;, che è maggiore della larghezza effettiva del dispositivo mobile. In questo modo il browser per dispositivi mobili visualizzare l'intera pagina web all'interno di schermo virtuale. Il **Viewport metatag** consente agli sviluppatori web impostare la larghezza, altezza e la scala dell'area del browser per dispositivi mobili **.** Il modello di ASP.NET MVC 4 per le applicazioni per dispositivi mobili imposta il viewport per la larghezza del dispositivo (&quot;larghezza = larghezza dispositivo&quot;) nel modello di layout (*Views\Shared\_layout. cshtml*), in modo che tutti i pagine verranno impostato il viewport per la larghezza dello schermo di dispositivi. Si noti che il tag meta Viewport non cambierà la visualizzazione di esplorazione predefinita.
 9. Open  **\_layout. cshtml**, all'interno di **viste | Condiviso** cartella e commento per il tag meta Viewport. Eseguire l'applicazione, se non è già aperto e Scopri le differenze.
 
-
 [!code-cshtml[Main](whats-new-in-aspnet-mvc-4/samples/sample2.cshtml)]
 
 ![Il sito dopo l'aggiunta di commenti il tag meta viewport](whats-new-in-aspnet-mvc-4/_static/image15.png "il sito dopo l'aggiunta di commenti il tag meta viewport")
@@ -231,7 +229,6 @@ ASP.NET MVC 4 facilita lo sviluppo di siti Web per dispositivi mobili e browser 
 *Il sito dopo l'aggiunta di commenti il tag meta viewport*
 10. In Visual Studio, premere **SHIFT** + **F5** per arrestare il debug dell'applicazione.
 11. Rimuovere il commento del tag meta viewport.
-
 
 [!code-cshtml[Main](whats-new-in-aspnet-mvc-4/samples/sample3.cshtml)]
 
@@ -249,7 +246,6 @@ Tramite la tecnica di rendering adattivo, il sito sarà **visualizzati in modo c
 > [!NOTE]
 > Il formato di base di una query di supporto è: @media \[Ambito: tutti | palmari | stampa | proiezione | schermata\] ([proprietà: valore] e... [proprietà: valore])
 
-
 Esempi di query sui supporti: &gt;  **@media tutti e (larghezza massima: 1000px) e (min-width: 700px) {}:** Per tutte le risoluzioni tra 700px e 1000px.
 
 > **@media schermata e (min-width: 400 px) e (larghezza massima: 700px) { ... }:** Solo per le schermate. La risoluzione deve essere compreso tra 400 e 700px.
@@ -257,7 +253,6 @@ Esempi di query sui supporti: &gt;  **@media tutti e (larghezza massima: 1000px)
 > **@media palmari e (min-width: 20em), dello schermo e (min-width: 20em) {...}:** Per palmari (per dispositivi mobili e dispositivi) e le schermate. La larghezza minima deve essere maggiore di 20em.
 > 
 > È possibile trovare altre informazioni su questo sul [W3C sito](http://www.w3.org/TR/css3-mediaqueries/).
-
 
 Si esaminerà ora come funziona il rendering, migliorando la leggibilità di ASP.NET MVC 4 predefiniti di modello di sito Web.
 
@@ -584,7 +579,6 @@ Quando si esegue questo codice, quando si genera una richiesta di un browser di 
 5. Aprire  **\_cshtml** creato nel passaggio precedente.
 6. Trovare l'elemento div con l'attributo data-role impostato **pagina** e modificare le **data-theme** dell'attributo &quot; **un**&quot;.
 
-
 [!code-cshtml[Main](whats-new-in-aspnet-mvc-4/samples/sample17.cshtml)]
 
 Ora si dispone di 3 layout nell'applicazione ASP.NET MVC 4:
@@ -696,7 +690,6 @@ Metodi di azione asincroni che restituiscono istanze delle attività possono sup
 
 > [!NOTE]
 > Inoltre, è possibile distribuire questa applicazione per siti Web di Azure seguenti [appendice d: Pubblicazione di un'applicazione ASP.NET MVC 4 con distribuzione Web](#AppendixD).
-
 
 <a id="Summary"></a>
 

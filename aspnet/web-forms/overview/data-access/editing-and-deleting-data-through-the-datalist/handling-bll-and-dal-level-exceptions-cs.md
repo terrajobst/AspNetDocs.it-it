@@ -8,12 +8,12 @@ ms.date: 10/30/2006
 ms.assetid: f8fd58e2-f932-4f08-ab3d-fbf8ff3295d2
 msc.legacyurl: /web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/handling-bll-and-dal-level-exceptions-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 5714b118a5894731820d8e9775c8f5c8a375856c
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 3edd37259a3624757dd5bc69ffba7159c9b85ad1
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59390129"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65113736"
 ---
 # <a name="handling-bll--and-dal-level-exceptions-c"></a>Gestione delle eccezioni a livello BLL e DAL (C#)
 
@@ -22,7 +22,6 @@ da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Scaricare l'App di esempio](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_38_CS.exe) o [Scarica il PDF](handling-bll-and-dal-level-exceptions-cs/_static/datatutorial38cs1.pdf)
 
 > In questa esercitazione, vedremo come tactfully gestire le eccezioni generate durante l'aggiornamento flusso di lavoro di DataList un modificabile.
-
 
 ## <a name="introduction"></a>Introduzione
 
@@ -35,38 +34,30 @@ Le esercitazioni di DataList, tuttavia, non si usa ObjectDataSource per l'aggior
 > [!NOTE]
 > Nel *una panoramica di modifica e l'eliminazione dei dati in DataList* esercitazione sono illustrate le diverse tecniche per la modifica ed eliminazione dei dati da DataList, alcune tecniche coinvolte utilizzando ObjectDataSource per l'aggiornamento e l'eliminazione. Se si utilizzano queste tecniche, è possibile gestire le eccezioni dal livello BLL o DAL tramite gli oggetti ObjectDataSource `Updated` o `Deleted` gestori eventi.
 
-
 ## <a name="step-1-creating-an-editable-datalist"></a>Passaggio 1: Creazione di un DataList modificabile
 
 Prima ci preoccupiamo la gestione delle eccezioni che si verificano durante l'aggiornamento del flusso di lavoro, consentire s prima di tutto creare un DataList modificabile. Aprire il `ErrorHandling.aspx` nella pagina la `EditDeleteDataList` cartella, aggiungere un controllo DataList alla finestra di progettazione, imposta relativo `ID` proprietà `Products`, e aggiungere un nuovo oggetto ObjectDataSource denominato `ProductsDataSource`. Configurare ObjectDataSource per usare la `ProductsBLL` classe s `GetProducts()` metodo per la selezione di registra; impostare gli elenchi a discesa nell'istruzione INSERT, UPDATE ed eliminare schede su (nessuno).
-
 
 [![Restituisce le informazioni sul prodotto utilizzando il metodo GetProducts()](handling-bll-and-dal-level-exceptions-cs/_static/image2.png)](handling-bll-and-dal-level-exceptions-cs/_static/image1.png)
 
 **Figura 1**: Restituisce le informazioni di prodotto usando il `GetProducts()` metodo ([fare clic per visualizzare l'immagine con dimensioni normali](handling-bll-and-dal-level-exceptions-cs/_static/image3.png))
 
-
 Dopo aver completato la procedura guidata ObjectDataSource, Visual Studio creerà automaticamente un `ItemTemplate` per DataList. Sostituire con un `ItemTemplate` che visualizza ogni nome di prodotto s e il prezzo e include un pulsante di modifica. Creare quindi un `EditItemTemplate` con un controllo TextBox Web per nome e prezzo e i pulsanti Annulla e Update. Infine, impostare il controllo DataList s `RepeatColumns` proprietà su 2.
 
 Dopo tali modifiche, il markup dichiarativo s pagina dovrebbe essere simile al seguente. Controllare per verificare che la modifica, Cancel, e pulsanti di aggiornamento è stato assegnato loro `CommandName` impostate su Modifica, annullare e aggiornare, rispettivamente.
-
 
 [!code-aspx[Main](handling-bll-and-dal-level-exceptions-cs/samples/sample1.aspx)]
 
 > [!NOTE]
 > Per questa esercitazione DataList lo stato di visualizzazione s deve essere abilitato.
 
-
 Si consiglia di visualizzare lo stato di avanzamento tramite un browser (vedere la figura 2).
-
 
 [![Ogni prodotto include un pulsante Modifica](handling-bll-and-dal-level-exceptions-cs/_static/image5.png)](handling-bll-and-dal-level-exceptions-cs/_static/image4.png)
 
 **Figura 2**: Ogni prodotto include un pulsante Modifica ([fare clic per visualizzare l'immagine con dimensioni normali](handling-bll-and-dal-level-exceptions-cs/_static/image6.png))
 
-
 Attualmente, il pulsante Modifica fa sì che solo un postback, t l ancora consente di rendere il prodotto modificabile. Per abilitare la modifica, è necessario creare i gestori eventi per s DataList `EditCommand`, `CancelCommand`, e `UpdateCommand` eventi. Il `EditCommand` e `CancelCommand` eventi aggiornare semplicemente DataList s `EditItemIndex` proprietà e i dati per il controllo DataList riassociazione:
-
 
 [!code-csharp[Main](handling-bll-and-dal-level-exceptions-cs/samples/sample2.cs)]
 
@@ -74,16 +65,13 @@ Il `UpdateCommand` gestore eventi è un po' più complessa. Per la lettura nel p
 
 Per ora, ti permettono di s usare semplicemente esattamente lo stesso codice dal `UpdateCommand` gestore dell'evento nel *Panoramica di modifica e l'eliminazione dei dati in DataList* esercitazione. Si aggiungerà il codice per gestire correttamente le eccezioni nel passaggio 2.
 
-
 [!code-csharp[Main](handling-bll-and-dal-level-exceptions-cs/samples/sample3.cs)]
 
 In caso di input non valido che può essere sotto forma di un prezzo unitario formattato in modo errato, un valore del prezzo unità non valida, ad esempio - 5,00 dollari USA o l'omissione del nome del prodotto di s che verrà generata un'eccezione. Poiché il `UpdateCommand` gestore dell'evento non include alcun codice gestione delle eccezioni a questo punto, l'eccezione esegue il bubbling fino al runtime di ASP.NET, in cui verrà visualizzato all'utente finale (vedere la figura 3).
 
-
 ![Quando si verifica un'eccezione non gestita, l'utente finale vedrà una pagina di errore](handling-bll-and-dal-level-exceptions-cs/_static/image7.png)
 
 **Figura 3**: Quando si verifica un'eccezione non gestita, l'utente finale vedrà una pagina di errore
-
 
 ## <a name="step-2-gracefully-handling-exceptions-in-the-updatecommand-event-handler"></a>Passaggio 2: Normalmente la gestione delle eccezioni nel gestore dell'evento UpdateCommand
 
@@ -93,13 +81,11 @@ Quando si verifica un'eccezione, si vuole visualizzare un messaggio informativo 
 
 Quando si verifica un errore, si vuole solo che l'etichetta da visualizzare una sola volta. Vale a dire, durante i postback successivi, il messaggio di avviso etichetta s scomparirà. A questo scopo cancellando entrambi l'etichetta s `Text` impostazioni o proprietà relativi `Visible` proprietà `False` nel `Page_Load` gestore dell'evento (come abbiamo fatto nel [BLL - la gestione e le eccezioni di livello in una pagina ASP Pagina .NET](../editing-inserting-and-deleting-data/handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs.md) esercitazione) oppure disabilitare il supporto dello stato di visualizzazione etichetta s. Consentire s utilizzare l'opzione di quest'ultima.
 
-
 [!code-aspx[Main](handling-bll-and-dal-level-exceptions-cs/samples/sample4.aspx)]
 
 Quando viene generata un'eccezione, si assegneranno i dettagli dell'eccezione per il `ExceptionDetails` controllo s etichetta `Text` proprietà. Poiché lo stato di visualizzazione è disabilitato, durante i postback successivi il `Text` le modifiche a livello di codice alle proprietà s andranno persi, eseguendo il ripristino del testo predefinito (una stringa vuota), quindi nascondendo il messaggio di avviso.
 
 Per determinare quando è stato generato un errore per visualizzare un messaggio utile nella pagina, è necessario aggiungere un `Try ... Catch` bloccare il `UpdateCommand` gestore dell'evento. Il `Try` parte contiene codice che può causare un'eccezione, mentre il `Catch` blocco contiene codice che viene eseguito in caso di un'eccezione. Consultare il [nozioni fondamentali sulla gestione delle eccezioni](https://msdn.microsoft.com/library/2w8f0bss.aspx) sezione nella documentazione di .NET Framework per altre informazioni sul `Try ... Catch` blocco.
-
 
 [!code-csharp[Main](handling-bll-and-dal-level-exceptions-cs/samples/sample5.cs)]
 
@@ -107,23 +93,19 @@ Quando viene generata un'eccezione di qualsiasi tipo dal codice all'interno di `
 
 Possiamo fornire una spiegazione più utile all'utente finale da basare il testo del messaggio del tipo di eccezione rilevata. Il codice seguente che è stato usato in un form quasi identico nel [BLL - la gestione e le eccezioni di livello in una pagina ASP.NET](../editing-inserting-and-deleting-data/handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs.md) esercitazione fornisce questo livello di dettaglio:
 
-
 [!code-csharp[Main](handling-bll-and-dal-level-exceptions-cs/samples/sample6.cs)]
 
 Per completare questa esercitazione, è sufficiente chiamare il `DisplayExceptionDetails` metodo dal `Catch` blocco passando intercettato `Exception` istanza (`ex`).
 
 Con la `Try ... Catch` blocco posto, gli utenti visualizzano un messaggio di errore più informativo, come nelle figure 4 e 5 show. Si noti che in caso di un'eccezione di DataList rimangano in modalità di modifica. Infatti, quando si verifica l'eccezione, il flusso di controllo viene immediatamente reindirizzato alla pagina di `Catch` blocco, ignorando il codice che ripristina lo stato di pre-modifica di DataList.
 
-
 [![Viene visualizzato un messaggio di errore quando un utente la omette un campo obbligatorio](handling-bll-and-dal-level-exceptions-cs/_static/image9.png)](handling-bll-and-dal-level-exceptions-cs/_static/image8.png)
 
 **Figura 4**: Viene visualizzato un messaggio di errore quando un utente la omette un campo obbligatorio ([fare clic per visualizzare l'immagine con dimensioni normali](handling-bll-and-dal-level-exceptions-cs/_static/image10.png))
 
-
 [![Un messaggio di errore viene visualizzato quando immettendo un prezzo negativo](handling-bll-and-dal-level-exceptions-cs/_static/image12.png)](handling-bll-and-dal-level-exceptions-cs/_static/image11.png)
 
 **Figura 5**: Un messaggio di errore viene visualizzato quando immettendo un prezzo negativo ([fare clic per visualizzare l'immagine con dimensioni normali](handling-bll-and-dal-level-exceptions-cs/_static/image13.png))
-
 
 ## <a name="summary"></a>Riepilogo
 

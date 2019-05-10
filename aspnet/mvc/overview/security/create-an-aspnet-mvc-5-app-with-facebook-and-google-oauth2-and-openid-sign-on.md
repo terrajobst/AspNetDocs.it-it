@@ -8,12 +8,12 @@ ms.date: 04/03/2015
 ms.assetid: 81ee500f-fc37-40d6-8722-f1b64720fbb6
 msc.legacyurl: /mvc/overview/security/create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on
 msc.type: authoredcontent
-ms.openlocfilehash: f78100178d5cdc25a10603907e77fe81386877a6
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 8432a7610ac7be79ad03651a5fac21a62b0ca1f0
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59386463"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65112961"
 ---
 # <a name="create-an-aspnet-mvc-5-app-with-facebook-twitter-linkedin-and-google-oauth2-sign-on-c"></a>Creare un'app ASP.NET MVC 5 con l'accesso OAuth2 di Facebook, Twitter, LinkedIn e Google (C#)
 
@@ -27,7 +27,6 @@ da [Rick Anderson]((https://twitter.com/RickAndMSFT))
 > 
 > L'esercitazione illustra anche come aggiungere dati del profilo dell'utente e come usare l'API di appartenenza per aggiungere i ruoli. Questa esercitazione è stato scritto dal [Rick Anderson](https://blogs.msdn.com/rickAndy) (me, seguire in Twitter: [ @RickAndMSFT ](https://twitter.com/RickAndMSFT) ).
 
-
 <a id="start"></a>
 ## <a name="getting-started"></a>Introduzione
 
@@ -36,11 +35,9 @@ Per iniziare, installare ed eseguire [Visual Studio Express 2013 per il Web](htt
 > [!NOTE]
 > È necessario installare Visual Studio [2013 Update 3](https://go.microsoft.com/fwlink/?LinkId=390521) o versione successiva per usare Google OAuth 2 e per eseguire il debug in locale senza eventuali avvisi SSL.
 
-
 Fare clic su **nuovo progetto** dalle **avviare** pagina oppure è possibile usare il menu e selezionare **File**e quindi **nuovo progetto**.
 
 ![](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/_static/image1.png)  
- 
 
 <a id="1st"></a>
 ## <a name="creating-your-first-application"></a>Creazione della prima applicazione
@@ -56,7 +53,6 @@ Nel **nuovo progetto ASP.NET** finestra di dialogo, fare clic su **MVC**. Se l'a
 Se è stato selezionato **ospita nel cloud**, completare la finestra di dialogo Configura.
 
 ![](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/_static/image4.png)
-
 
 ### <a name="use-nuget-to-update-to-the-latest-owin-middleware"></a>Usare NuGet per aggiornare il middleware OWIN più recente
 
@@ -161,7 +157,6 @@ Per connettersi ai provider di autenticazione, ad esempio Google e Facebook, è 
 
 > [!WARNING]
 > Per istruzioni di autenticazione Facebook OAuth2 corrente, vedere [l'autenticazione di configurazione di Facebook](/aspnet/core/security/authentication/social/facebook-logins)
-
 
 <a id="mdb"></a>
 ## <a name="examine-the-membership-data"></a>Esaminare i dati di appartenenza

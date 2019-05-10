@@ -8,12 +8,12 @@ ms.date: 07/18/2007
 ms.assetid: 675531a7-cb54-4dd6-89ac-2636e4c285a5
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/updating-the-tableadapter-to-use-joins-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 297496e590caf9c8ded83cb16b5fef1dfc542dc7
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 8ba750e8a07a7a88822116d2779633bf253f48d2
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59381393"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108844"
 ---
 # <a name="updating-the-tableadapter-to-use-joins-c"></a>Aggiornamento del TableAdapter per l'uso dei join (C#)
 
@@ -22,7 +22,6 @@ da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Scaricare il codice](http://download.microsoft.com/download/3/9/f/39f92b37-e92e-4ab3-909e-b4ef23d01aa3/ASPNET_Data_Tutorial_69_CS.zip) o [Scarica il PDF](updating-the-tableadapter-to-use-joins-cs/_static/datatutorial69cs1.pdf)
 
 > Quando si lavora con un database è comune per i dati della richiesta che viene distribuiti tra più tabelle. Per recuperare dati da due diverse tabelle è possibile usare una sottoquery correlata o un'operazione di JOIN. In questa esercitazione si confronta sottoquery correlate e la sintassi di JOIN prima di esaminare come creare un oggetto TableAdapter che include un JOIN nella query principale.
-
 
 ## <a name="introduction"></a>Introduzione
 
@@ -38,13 +37,11 @@ In questa esercitazione verrà confrontato brevemente e contrasto sottoquery cor
 
 Si tenga presente che il `ProductsTableAdapter` creato nella prima esercitazione nel `Northwind` set di dati Usa sottoquery correlate per riportare in ciascun prodotto s categoria e il fornitore nome corrispondente. Il `ProductsTableAdapter` query principale s è illustrata di seguito.
 
-
 [!code-sql[Main](updating-the-tableadapter-to-use-joins-cs/samples/sample1.sql)]
 
 I due sottoquery - correlate `(SELECT CategoryName FROM Categories WHERE Categories.CategoryID = Products.CategoryID)` e `(SELECT CompanyName FROM Suppliers WHERE Suppliers.SupplierID = Products.SupplierID)` -sono `SELECT` query che restituiscono un singolo valore per ogni prodotto come una colonna aggiuntiva in esterna `SELECT` elenco colonne istruzione s.
 
 In alternativa, un `JOIN` può essere utilizzato per restituire ogni nome di un fornitore e la categoria di prodotto s. La query seguente restituisce lo stesso output come quello riportato sopra, ma usa `JOIN` s al posto di sottoquery:
-
 
 [!code-sql[Main](updating-the-tableadapter-to-use-joins-cs/samples/sample2.sql)]
 
@@ -53,45 +50,35 @@ Oggetto `JOIN` unisce i record da una tabella con i record da un'altra tabella i
 > [!NOTE]
 > `JOIN` s sono comunemente usate durante l'esecuzione di query dei dati dai database relazionali. Se si ha familiarità con le `JOIN` sintassi o senza dover rinfrescarti un bit sul relativo utilizzo, d consiglio il [esercitazione SQL Join](http://www.w3schools.com/sql/sql_join.asp) alla [W3 scuole](http://www.w3schools.com/). Inoltre la pena di leggere sono la [ `JOIN` Fundamentals](https://msdn.microsoft.com/library/ms191517.aspx) e [nozioni fondamentali di sottoquery](https://msdn.microsoft.com/library/ms189575.aspx) sezioni del [documentazione Online di SQL](https://msdn.microsoft.com/library/ms130214.aspx).
 
-
 Poiché `JOIN` s e sottoquery correlate sia utilizzabile per recuperare i dati correlati da altre tabelle, molti sviluppatori vengono lasciati imbattuto mentalmente e chiedersi quale approccio usare. Tutti i guru di SQL si ve parlata per avrebbe dovuto dirlo di approssimativamente la stessa cosa, che t davvero importanti termini di prestazioni poiché SQL Server produrranno i piani di esecuzione all'incirca identico. I consigli, quindi, consiste nell'usare la tecnica che ha maggiore familiarità con il team. Occorre fare particolare notare che dopo imprimere a questo consiglio questi esperti immediatamente express le preferenze di `JOIN` s sulle sottoquery correlate.
 
 Quando si compila un livello di accesso ai dati utilizzando dataset tipizzati, gli strumenti funzionano meglio quando si utilizza una sottoquery. In particolare, la configurazione guidata TableAdapter s non genererà automaticamente corrispondente `INSERT`, `UPDATE`, e `DELETE` istruzioni se la query principale contiene `JOIN` s, ma genererà automaticamente queste istruzioni quando correlate sottoquery vengono usati.
 
 Per esplorare questa lacuna, creare un DataSet tipizzato temporaneo nel `~/App_Code/DAL` cartella. Durante la configurazione guidata TableAdapter, scegliere di usare le istruzioni SQL ad hoc e immettere le informazioni seguenti `SELECT` query (vedere la figura 1):
 
-
 [!code-sql[Main](updating-the-tableadapter-to-use-joins-cs/samples/sample3.sql)]
-
 
 [![Immettere una Query principale che contiene i join](updating-the-tableadapter-to-use-joins-cs/_static/image2.png)](updating-the-tableadapter-to-use-joins-cs/_static/image1.png)
 
 **Figura 1**: Immettere una Query principale contenente `JOIN` s ([fare clic per visualizzare l'immagine con dimensioni normali](updating-the-tableadapter-to-use-joins-cs/_static/image3.png))
 
-
 Per impostazione predefinita, verrà automaticamente creato dell'oggetto TableAdapter `INSERT`, `UPDATE`, e `DELETE` istruzioni in base alla query principale. Se si fa clic sul pulsante Avanzate è possibile vedere che questa funzionalità è abilitata. Nonostante questa impostazione, l'oggetto TableAdapter non sarà in grado di creare il `INSERT`, `UPDATE`, e `DELETE` istruzioni perché la query principale include un `JOIN`.
-
 
 ![Immettere una Query principale che contiene i join](updating-the-tableadapter-to-use-joins-cs/_static/image4.png)
 
 **Figura 2**: Immettere una Query principale contenente `JOIN` s
 
-
 Fare clic su Fine per completare la procedura guidata. A questo punto il set di dati s progettazione includerà un singolo TableAdapter con un oggetto DataTable con colonne per ognuno dei campi restituiti nel `SELECT` elenco colonne query s. Ciò include la `CategoryName` e `SupplierName`, come illustrato nella figura 3.
-
 
 ![L'oggetto DataTable include una colonna per ogni campo restituito nell'elenco delle colonne](updating-the-tableadapter-to-use-joins-cs/_static/image5.png)
 
 **Figura 3**: L'oggetto DataTable include una colonna per ogni campo restituito nell'elenco delle colonne
 
-
 Mentre la classe DataTable ha le colonne appropriate, TableAdapter non include i valori per la relativa `InsertCommand`, `UpdateCommand`, e `DeleteCommand` proprietà. Per verificarlo, fare clic sull'oggetto TableAdapter nella finestra di progettazione e quindi passare alla finestra Proprietà. Si vedrà che il `InsertCommand`, `UpdateCommand`, e `DeleteCommand` proprietà vengono impostate su (nessuno).
-
 
 [![La proprietà InsertCommand UpdateCommand e proprietà DeleteCommand sono impostate su (nessuno)](updating-the-tableadapter-to-use-joins-cs/_static/image7.png)](updating-the-tableadapter-to-use-joins-cs/_static/image6.png)
 
 **Figura 4**: Il `InsertCommand`, `UpdateCommand`, e `DeleteCommand` proprietà vengono impostate su (nessuno) ([fare clic per visualizzare l'immagine con dimensioni normali](updating-the-tableadapter-to-use-joins-cs/_static/image8.png))
-
 
 Per risolvere questo problema, è possibile specificare manualmente le istruzioni SQL e i parametri per il `InsertCommand`, `UpdateCommand`, e `DeleteCommand` proprietà tramite la finestra Proprietà. In alternativa, è possibile iniziare configurando query TableAdapter s principale per *non* includere eventuali `JOIN` s. In questo modo il `INSERT`, `UPDATE`, e `DELETE` istruzioni per essere generato automaticamente per noi. Dopo aver completato la procedura guidata, quindi è stato possibile aggiornare manualmente i TableAdapter `SelectCommand` dalla finestra delle proprietà in modo che includa il `JOIN` sintassi.
 
@@ -107,14 +94,11 @@ Per questa esercitazione si aggiungerà un TableAdapter e fortemente tipizzata d
 
 Iniziare aprendo il `NorthwindWithSprocs` set di dati nel `~/App_Code/DAL` cartella. Pulsante destro del mouse nella finestra di progettazione, selezionare l'opzione Aggiungi dal menu di scelta rapida e scegliere la voce di menu TableAdapter. Verrà avviata la configurazione guidata TableAdapter. Come viene illustrata nella figura 5, hanno la procedura guidata Crea nuove stored procedure e fare clic su Avanti. Per rivedere la creazione di nuove stored procedure dalla procedura guidata s TableAdapter, consultare il [creazione di nuove Stored procedure per DataSet tipizzata s TableAdapter](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-cs.md) esercitazione.
 
-
 [![Selezionare Crea nuove stored procedure. opzione](updating-the-tableadapter-to-use-joins-cs/_static/image10.png)](updating-the-tableadapter-to-use-joins-cs/_static/image9.png)
 
 **Figura 5**: Selezionare Crea nuove stored procedure opzione ([fare clic per visualizzare l'immagine con dimensioni normali](updating-the-tableadapter-to-use-joins-cs/_static/image11.png))
 
-
 Usare il comando seguente `SELECT` istruzione per query TableAdapter s principale:
-
 
 [!code-sql[Main](updating-the-tableadapter-to-use-joins-cs/samples/sample4.sql)]
 
@@ -122,27 +106,21 @@ Poiché questa query non includa alcun `JOIN` s, la configurazione guidata Table
 
 Il passaggio seguente consente di denominare le procedure di archiviati TableAdapter. Usare i nomi `Employees_Select`, `Employees_Insert`, `Employees_Update`, e `Employees_Delete`, come illustrato nella figura 6.
 
-
 [![Denominare le procedure di archiviati TableAdapter](updating-the-tableadapter-to-use-joins-cs/_static/image13.png)](updating-the-tableadapter-to-use-joins-cs/_static/image12.png)
 
 **Figura 6**: Assegnare un nome Stored procedure del TableAdapter s ([fare clic per visualizzare l'immagine con dimensioni normali](updating-the-tableadapter-to-use-joins-cs/_static/image14.png))
 
-
 Il passaggio finale viene richiesto di denominare i metodi di s TableAdapter. Uso `Fill` e `GetEmployees` come nomi di metodo. Inoltre assicurarsi di lasciare il Crea metodi per inviare aggiornamenti direttamente per la casella di controllo database (GenerateDBDirectMethods) selezionata.
-
 
 [![Nome del riempimento di metodi TableAdapter s e GetEmployees](updating-the-tableadapter-to-use-joins-cs/_static/image16.png)](updating-the-tableadapter-to-use-joins-cs/_static/image15.png)
 
 **Figura 7**: Assegnare un nome ai metodi di TableAdapter `Fill` e `GetEmployees` ([fare clic per visualizzare l'immagine con dimensioni normali](updating-the-tableadapter-to-use-joins-cs/_static/image17.png))
 
-
 Dopo aver completato la procedura guidata, si consiglia di esaminare le stored procedure nel database. Dovrebbe essere quattro nuovi file: `Employees_Select`, `Employees_Insert`, `Employees_Update`, e `Employees_Delete`. Successivamente, esaminare i `EmployeesDataTable` e `EmployeesTableAdapter` appena creato. L'oggetto DataTable contiene una colonna per ogni campo restituito dalla query principale. Fare clic sull'oggetto TableAdapter e quindi passare alla finestra Proprietà. Si vedrà che il `InsertCommand`, `UpdateCommand`, e `DeleteCommand` proprietà siano configurate correttamente per chiamare le stored procedure corrispondente.
-
 
 [![TableAdapter include Insert, Update e Delete funzionalità](updating-the-tableadapter-to-use-joins-cs/_static/image19.png)](updating-the-tableadapter-to-use-joins-cs/_static/image18.png)
 
 **Figura 8**: Il TableAdapter include Insert, Update e le funzionalità di eliminazione ([fare clic per visualizzare l'immagine con dimensioni normali](updating-the-tableadapter-to-use-joins-cs/_static/image20.png))
-
 
 Con l'inserimento, aggiornamento ed eliminazione di stored procedure create automaticamente e il `InsertCommand`, `UpdateCommand`, e `DeleteCommand` proprietà configurata correttamente, siamo pronti personalizzare il `SelectCommand` s stored procedure per restituire aggiuntive informazioni su ogni dipendente s responsabile. In particolare, è necessario aggiornare il `Employees_Select` stored procedure per usare una `JOIN` e restituisce il gestore s `FirstName` e `LastName` valori. Dopo aver aggiornata la stored procedure, è necessario aggiornare l'oggetto DataTable in modo che includa queste colonne aggiuntive. Che verranno affrontati queste due attività in passaggi 2 e 3.
 
@@ -150,16 +128,13 @@ Con l'inserimento, aggiornamento ed eliminazione di stored procedure create auto
 
 Inizio passando a Esplora Server, eseguire il drill-nella cartella Northwind database s Stored procedure e aprendo la `Employees_Select` stored procedure. Se non viene visualizzata questa stored procedure, fare doppio clic sulla cartella Stored procedure e scegliere Aggiorna. Aggiornare la stored procedure in modo che utilizzi un `LEFT JOIN` per restituire la gestione s prima di tutto nome e cognome:
 
-
 [!code-sql[Main](updating-the-tableadapter-to-use-joins-cs/samples/sample5.sql)]
 
 Dopo aver aggiornato il `SELECT` istruzione, salvare le modifiche selezionando il menu File e scegliendo Salva `Employees_Select`. In alternativa, è possibile fare clic sull'icona Salva nella barra degli strumenti o premere Ctrl + S. Dopo aver salvato le modifiche, fare clic su di `Employees_Select` stored procedure in Esplora Server e scegliere Execute. Verrà eseguito la stored procedure e visualizzare i risultati nella finestra di Output (vedere la figura 9).
 
-
 [![I risultati di procedure archiviate sono visualizzati nella finestra di Output](updating-the-tableadapter-to-use-joins-cs/_static/image22.png)](updating-the-tableadapter-to-use-joins-cs/_static/image21.png)
 
 **Figura 9**: I risultati di procedure archiviate sono visualizzati nella finestra di Output ([fare clic per visualizzare l'immagine con dimensioni normali](updating-the-tableadapter-to-use-joins-cs/_static/image23.png))
-
 
 ## <a name="step-3-updating-the-datatable-s-columns"></a>Passaggio 3: L'aggiornamento di colonne DataTable s
 
@@ -172,26 +147,21 @@ Sono stati esplorati aggiunta manuale di colonne DataTable nelle esercitazioni p
 
 Per iniziare, facendo clic su di `EmployeesTableAdapter` e selezione di Configura dal menu di scelta rapida. Verrà visualizzata la configurazione guidata TableAdapter, cui sono elencate le stored procedure utilizzate per la selezione, inserimento, aggiornamento ed eliminazione, insieme ai relativi valori restituiti e parametri (se presente). Figura 10 è illustrata la procedura guidata. Qui possiamo vedere che il `Employees_Select` stored procedure restituisce ora il `ManagerFirstName` e `ManagerLastName` campi.
 
-
 [![La procedura guidata Mostra elenco delle colonne aggiornate per il Employees_Select Stored Procedure](updating-the-tableadapter-to-use-joins-cs/_static/image25.png)](updating-the-tableadapter-to-use-joins-cs/_static/image24.png)
 
 **Figura 10**: La procedura guidata mostra l'elenco delle colonne aggiornate per il `Employees_Select` Stored Procedure ([fare clic per visualizzare l'immagine con dimensioni normali](updating-the-tableadapter-to-use-joins-cs/_static/image26.png))
 
-
 Completare la procedura guidata, fare clic su Fine. Quando si torna alla finestra di progettazione set di dati, il `EmployeesDataTable` include due colonne aggiuntive: `ManagerFirstName` e `ManagerLastName`.
-
 
 [![Della scheda Seleziona contiene due nuove colonne](updating-the-tableadapter-to-use-joins-cs/_static/image28.png)](updating-the-tableadapter-to-use-joins-cs/_static/image27.png)
 
 **Figura 11**: Il `EmployeesDataTable` contiene due nuove colonne ([fare clic per visualizzare l'immagine con dimensioni normali](updating-the-tableadapter-to-use-joins-cs/_static/image29.png))
-
 
 Per dimostrare che l'aggiornamento `Employees_Select` stored procedure è attivo e che l'inserimento, aggiornamento ed eliminazione di funzionalità dell'oggetto TableAdapter sono ancora attivi, consentire s di creare una pagina web che consente agli utenti di visualizzare ed eliminare i dipendenti. Prima di creare tale pagina, tuttavia, è necessario innanzitutto creare una nuova classe nel livello di logica di Business per l'uso con i dipendenti dal `NorthwindWithSprocs` set di dati. Nel passaggio 4, si creerà un `EmployeesBLLWithSprocs` classe. Nel passaggio 5, si userà questa classe da una pagina ASP.NET.
 
 ## <a name="step-4-implementing-the-business-logic-layer"></a>Passaggio 4: Implementazione del livello di logica di Business
 
 Creare un nuovo file di classe nel `~/App_Code/BLL` cartella denominata `EmployeesBLLWithSprocs.cs`. Questa classe in grado di simulare la semantica dell'oggetto esistente `EmployeesBLL` (classe), solo questa nuova uno fornisce metodi di un numero minore e si usa la `NorthwindWithSprocs` set di dati (anziché il `Northwind` set di dati). Aggiungere il codice seguente alla classe `EmployeesBLLWithSprocs` .
-
 
 [!code-csharp[Main](updating-the-tableadapter-to-use-joins-cs/samples/sample6.cs)]
 
@@ -203,39 +173,31 @@ Con il `EmployeesBLLWithSprocs` classe completa, sono pronti per lavorare con i 
 
 Configurare ObjectDataSource per usare la `EmployeesBLLWithSprocs` classe e, tra le schede SELECT e DELETE, assicurarsi che il `GetEmployees` e `DeleteEmployee` metodi sono selezionati dagli elenchi a discesa. Fare clic su Fine per completare la configurazione di s ObjectDataSource.
 
-
 [![Configurare ObjectDataSource per usare la classe EmployeesBLLWithSprocs](updating-the-tableadapter-to-use-joins-cs/_static/image31.png)](updating-the-tableadapter-to-use-joins-cs/_static/image30.png)
 
 **Figura 12**: Configurare ObjectDataSource per usare la `EmployeesBLLWithSprocs` classe ([fare clic per visualizzare l'immagine con dimensioni normali](updating-the-tableadapter-to-use-joins-cs/_static/image32.png))
-
 
 [![È possibile utilizzare ObjectDataSource i metodi di DeleteEmployee e GetEmployees](updating-the-tableadapter-to-use-joins-cs/_static/image34.png)](updating-the-tableadapter-to-use-joins-cs/_static/image33.png)
 
 **Figura 13**: È possibile utilizzare ObjectDataSource i `GetEmployees` e `DeleteEmployee` metodi ([fare clic per visualizzare l'immagine con dimensioni normali](updating-the-tableadapter-to-use-joins-cs/_static/image35.png))
 
-
 Visual Studio aggiungerà un BoundField di GridView per ciascuna del `EmployeesDataTable` colonne s. Rimuovere tutti questi BoundField, ad eccezione di `Title`, `LastName`, `FirstName`, `ManagerFirstName`, e `ManagerLastName` e rinominare il `HeaderText` le proprietà per le ultime quattro BoundField Last Name, First Name, nome Manager s, e Gestione s Last Name, rispettivamente.
 
 Per consentire agli utenti di eliminare i dipendenti da questa pagina è necessario eseguire due operazioni. In primo luogo, indicare il controllo GridView per fornire funzionalità di eliminazione selezionando l'opzione Abilita eliminazione dal suo smart tag. In secondo luogo, modificare gli oggetti ObjectDataSource `OldValuesParameterFormatString` proprietà dal valore impostato dalla procedura guidata ObjectDataSource (`original_{0}`) il valore predefinito (`{0}`). Dopo aver apportato queste modifiche, il markup dichiarativo s GridView e ObjectDataSource dovrebbe essere simile al seguente:
-
 
 [!code-aspx[Main](updating-the-tableadapter-to-use-joins-cs/samples/sample7.aspx)]
 
 Testare la pagina visitando, tramite un browser. Come illustrato nella figura 14, la pagina consente di visualizzare ogni dipendente e il suo nome s manager (presupponendo che dispongono di uno).
 
-
 [![Il JOIN nel Employees_Select Stored Procedure restituisce il nome della gestione s](updating-the-tableadapter-to-use-joins-cs/_static/image37.png)](updating-the-tableadapter-to-use-joins-cs/_static/image36.png)
 
 **Figura 14**: Il `JOIN` nella `Employees_Select` Stored Procedure restituisce il nome di gestione ([fare clic per visualizzare l'immagine con dimensioni normali](updating-the-tableadapter-to-use-joins-cs/_static/image38.png))
 
-
 Facendo clic sul pulsante Elimina viene avviato il flusso di lavoro l'eliminazione, che culmina nell'esecuzione del `Employees_Delete` stored procedure. Tuttavia, il tentativo `DELETE` istruzione nella stored procedure ha esito negativo a causa di una violazione di vincolo di chiave esterna (vedere Figura 15). In particolare, ciascun dipendente ha uno o più record `Orders` tabella, che causa l'eliminazione esito negativo.
-
 
 [![L'eliminazione di un dipendente con risultati gli ordini corrispondenti in una violazione di vincolo di chiave esterna](updating-the-tableadapter-to-use-joins-cs/_static/image40.png)](updating-the-tableadapter-to-use-joins-cs/_static/image39.png)
 
 **Figura 15**: L'eliminazione di un dipendente con risultati gli ordini corrispondenti in una violazione di vincolo di chiave esterna ([fare clic per visualizzare l'immagine con dimensioni normali](updating-the-tableadapter-to-use-joins-cs/_static/image41.png))
-
 
 Per consentire a un dipendente eliminato è possibile:
 
