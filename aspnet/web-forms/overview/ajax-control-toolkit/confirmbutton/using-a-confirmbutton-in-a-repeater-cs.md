@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: a973ed3e-400c-4925-ace2-0b086b479301
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/confirmbutton/using-a-confirmbutton-in-a-repeater-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 1ab979f220c06d22f51931c7c00fc4d273731f85
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 783562bb1a8790e1254dab5bff92da480a6fd56d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59413945"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65109156"
 ---
 # <a name="using-a-confirmbutton-in-a-repeater-c"></a>Uso di ConfirmButton in un controllo Repeater (C#)
 
@@ -22,7 +22,6 @@ da [Christian Wenz](https://github.com/wenz)
 [Scaricare il codice](http://download.microsoft.com/download/8/6/d/86dea6c6-bb92-4fa6-aa14-f8c0f82100f5/ConfirmButton1.cs.zip) o [Scarica il PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/confirmbutton1CS.pdf)
 
 > Il dispositivo extender ConfirmButton in AJAX Control Toolkit crea Sì/Nessun popup quando l'utente fa clic su un pulsante (compresi controllo LinkButton). Solo se si seleziona Sì, del pulsante viene eseguita l'azione in caso contrario, è stata annullata. Questo è anche possibile in un controllo repeater.
-
 
 ## <a name="overview"></a>Panoramica
 
@@ -45,7 +44,6 @@ Quindi, un'origine dati è obbligatoria. Per ragioni di semplicità, vengono rec
 Questa origine dati può quindi essere utilizzata all'interno di un controllo repeater. Come di consueto, la `DataBinder.Eval()` metodo recupera i dati dall'origine dati. Il `ConfirmButtonExtender` controllo deve quindi essere inserito all'interno di `<ItemTemplate>` sezione del ripetitore in modo che venga visualizzato per ogni voce nell'origine dati.
 
 [!code-aspx[Main](using-a-confirmbutton-in-a-repeater-cs/samples/sample3.aspx)]
-
 
 [![Il pulsante di conferma viene visualizzato accanto a ogni voce dell'origine dati](using-a-confirmbutton-in-a-repeater-cs/_static/image2.png)](using-a-confirmbutton-in-a-repeater-cs/_static/image1.png)
 

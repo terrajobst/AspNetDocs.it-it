@@ -8,12 +8,12 @@ ms.date: 01/18/2008
 ms.assetid: 17772912-b47b-4557-9ce9-80f22df642f7
 msc.legacyurl: /web-forms/overview/older-versions-security/membership/validating-user-credentials-against-the-membership-user-store-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 98869574adb8ac85a2b6dad8db2a583e013150fe
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 98c13d076e20f8f57fc551cbcffe140d42c652da
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59393177"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108395"
 ---
 # <a name="validating-user-credentials-against-the-membership-user-store-vb"></a>Convalida delle credenziali utente rispetto all'archivio utente di appartenenza (VB)
 
@@ -22,7 +22,6 @@ da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Scaricare il codice](http://download.microsoft.com/download/3/f/5/3f5a8605-c526-4b34-b3fd-a34167117633/ASPNET_Security_Tutorial_06_VB.zip) o [Scarica il PDF](http://download.microsoft.com/download/3/f/5/3f5a8605-c526-4b34-b3fd-a34167117633/aspnet_tutorial06_LoggingIn_vb.pdf)
 
 > In questa esercitazione verrà esaminato come convalidare le credenziali dell'utente rispetto all'archivio utente di appartenenza utilizzando sia a livello di codice indica che il controllo di accesso. Si esaminerà anche come personalizzare l'aspetto e il comportamento del controllo di accesso.
-
 
 ## <a name="introduction"></a>Introduzione
 
@@ -42,11 +41,9 @@ Il `SqlMembershipProvider` convalida le credenziali fornite per ottenere la pass
 
 È possibile aggiornare la pagina di accesso (~ /`Login.aspx`) in modo che convalida le credenziali specificate nell'archivio utente framework di appartenenza. Abbiamo creato questa pagina di accesso nel <a id="Tutorial02"> </a> [ *una panoramica dell'autenticazione basata su form* ](../introduction/an-overview-of-forms-authentication-vb.md) esercitazione, creare un'interfaccia con due caselle di testo per il nome utente e password, un Memorizza account casella di controllo e un pulsante di accesso (vedere la figura 1). Il codice di convalida delle credenziali immesse in un elenco hardcoded di coppie di nome utente e password (Scott/password Jisun/password e Sam/password). Nel <a id="Tutorial03"> </a> [ *configurazione dell'autenticazione form e argomenti avanzati* ](../introduction/forms-authentication-configuration-and-advanced-topics-vb.md) esercitazione abbiamo aggiornato il codice della pagina di accesso per memorizzare informazioni aggiuntive nei moduli ticket di autenticazione `UserData` proprietà.
 
-
 [![Interfaccia di pagina di accesso include due caselle di testo, un controllo CheckBoxList e un pulsante](validating-user-credentials-against-the-membership-user-store-vb/_static/image2.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image1.png)
 
 **Figura 1**: Interfaccia include due caselle di testo della pagina di accesso, un controllo CheckBoxList e un pulsante ([fare clic per visualizzare l'immagine con dimensioni normali](validating-user-credentials-against-the-membership-user-store-vb/_static/image3.png))
-
 
 Interfaccia utente della pagina di accesso può rimanere invariato, ma è necessario sostituire il pulsante di accesso `Click` gestore dell'evento con il codice che convalida l'utente rispetto all'archivio utente framework di appartenenza. Aggiornare il gestore dell'evento in modo che il relativo codice viene visualizzato come segue:
 
@@ -60,7 +57,6 @@ Per verificare che la pagina di accesso funziona come previsto, provare ad acced
 
 > [!NOTE]
 > Quando l'utente immette le proprie credenziali e invia il modulo della pagina account di accesso, le credenziali, inclusa la password vengono trasmesse tramite Internet al server web nel *testo normale*. Ciò significa che qualsiasi utente malintenzionato sniffing del traffico di rete è possibile visualizzare il nome utente e password. Per evitare questo problema, è essenziale per crittografare il traffico di rete mediante [livelli SSL (Secure Socket)](http://en.wikipedia.org/wiki/Secure_Sockets_Layer). Ciò garantisce che le credenziali (così come markup HTML della pagina intera) vengono crittografati dal momento in cui che gli utenti lasciano il browser fino a quando non vengono ricevuti dal server web.
-
 
 ### <a name="how-the-membership-framework-handles-invalid-login-attempts"></a>Come il Framework di appartenenza gestisce i tentativi di accesso non valido
 
@@ -78,30 +74,24 @@ Sfortunatamente, non è Nessuno strumento incorporato per sbloccare un account u
 > [!NOTE]
 > Uno svantaggio del `ValidateUser` metodo è che quando le credenziali specificate non sono validi, non fornisce alcun spiegazione per questo motivo. Le credenziali potrebbero non essere valide poiché non esiste alcuna coppia di nome utente/password corrispondenti nell'archivio dell'utente, o perché l'utente non è ancora stata approvata, oppure perché l'utente è stato bloccato. Nel passaggio 4 si vedrà come visualizzare un messaggio più dettagliato per l'utente quando il tentativo di accesso ha esito negativo.
 
-
 ## <a name="step-2-collecting-credentials-through-the-login-web-control"></a>Passaggio 2: Raccolta delle credenziali tramite il controllo di accesso Web
 
 Il [controllo di accesso Web](https://msdn.microsoft.com/library/system.web.ui.webcontrols.login.aspx) esegue il rendering di molto simile a quello creati in un'interfaccia utente predefinita di <a id="Tutorial02"> </a> [ *una panoramica dell'autenticazione basata su form* ](../introduction/an-overview-of-forms-authentication-vb.md) esercitazione. Utilizzo del controllo di accesso ci consente di risparmiare il lavoro di dover creare l'interfaccia per raccogliere le credenziali del visitatore. Inoltre, il controllo di accesso accede automaticamente all'utente (presupponendo che le credenziali inviate non sono valide), in tal modo il salvataggio di Stati Uniti di dover scrivere alcun codice.
 
 Aggiorniamo `Login.aspx`, sostituendo l'interfaccia creato manualmente e scrivere il codice con un controllo di accesso. Iniziare rimuovendo il markup esistente e scrivere il codice `Login.aspx`. Si può eliminarlo direttamente o semplicemente impostarlo come commento. Per impostare come commento markup dichiarativo, racchiuderlo tra il `<%--` e `--%>` delimitatori. È possibile immettere manualmente questi delimitatori o, come illustrato nella figura 2, è possibile selezionare il testo da impostare come commento e quindi il commento l'icona di righe selezionate nella barra degli strumenti. Analogamente, è possibile utilizzare il commento l'icona di righe selezionate come commento il codice selezionato nella classe code-behind.
 
-
 [![Commento di Markup dichiarativo esistente e il codice sorgente in Login. aspx](validating-user-credentials-against-the-membership-user-store-vb/_static/image5.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image4.png)
 
 **Figura 2**: Commento Out the esistente Markup dichiarativo e codice sorgente in Login. aspx ([fare clic per visualizzare l'immagine con dimensioni normali](validating-user-credentials-against-the-membership-user-store-vb/_static/image6.png))
 
-
 > [!NOTE]
 > Il commento l'icona di righe selezionate non è disponibile quando si Visualizza markup dichiarativo in Visual Studio 2005. Se non si usa Visual Studio 2008 è necessario aggiungere manualmente il `<%--` e `--%>` delimitatori.
 
-
 Successivamente, trascinare un controllo di accesso dalla casella degli strumenti sulla pagina e impostare relativi `ID` proprietà `myLogin`. A questo punto la schermata dovrebbe essere simile alla figura 3. Si noti che l'interfaccia predefinita del controllo di accesso include i controlli casella di testo per il nome utente e password, un memorizza dati per la volta successiva che la casella di controllo e un pulsante nel registro. Sono inoltre disponibili `RequiredFieldValidator` controlli per le due caselle di testo.
-
 
 [![Aggiungere un controllo di accesso alla pagina](validating-user-credentials-against-the-membership-user-store-vb/_static/image8.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image7.png)
 
 **Figura 3**: Aggiungere un controllo di accesso alla pagina ([fare clic per visualizzare l'immagine con dimensioni normali](validating-user-credentials-against-the-membership-user-store-vb/_static/image9.png))
-
 
 E abbiamo finito! Quando si fa clic sul pulsante Accedi del controllo di accesso, si verificherà un postback e il controllo Login chiamerà il `Membership.ValidateUser` , passando il nome utente immesso e una password. Se le credenziali sono valide, il controllo di accesso viene visualizzato un apposito messaggio. Se, tuttavia, le credenziali sono valide, il controllo Login crea moduli di ticket di autenticazione e l'utente viene reindirizzato alla pagina appropriata.
 
@@ -114,11 +104,9 @@ Per determinare la pagina appropriata per reindirizzare l'utente al momento di u
 
 Figura 4 illustra come il controllo di accesso utilizza questi quattro parametri per poi arrivare alla propria decisione pagina appropriata.
 
-
 [![Aggiungere un controllo di accesso alla pagina](validating-user-credentials-against-the-membership-user-store-vb/_static/image11.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image10.png)
 
 **Figura 4**: Aggiungere un controllo di accesso alla pagina ([fare clic per visualizzare l'immagine con dimensioni normali](validating-user-credentials-against-the-membership-user-store-vb/_static/image12.png))
-
 
 Si consiglia di testare il controllo di accesso da visitare il sito tramite un browser e accedere come un utente esistente nel framework di appartenenza.
 
@@ -139,16 +127,13 @@ Il controllo di accesso offre due proprietà per regolare il layout dei relativi
 > [!NOTE]
 > Nella sezione successiva, la configurazione di Layout del controllo di accesso, si esaminerà usando i modelli per definire il layout preciso degli elementi dell'interfaccia utente del controllo di Layout.
 
-
 Riepilogo impostazioni delle proprietà del controllo di accesso, impostando il [ `CreateUserText` ](https://msdn.microsoft.com/library/system.web.ui.webcontrols.login.createusertext.aspx) e [ `CreateUserUrl` proprietà](https://msdn.microsoft.com/library/system.web.ui.webcontrols.login.createuserurl.aspx) a non ancora registrato? Crea un account. e `~/Membership/CreatingUserAccounts.aspx`, rispettivamente. Verrà aggiunto un collegamento ipertestuale all'interfaccia del controllo di accesso che punta alla pagina creata nel <a id="Tutorial05"> </a> [esercitazione precedente](creating-user-accounts-vb.md). Il controllo di accesso [ `HelpPageText` ](https://msdn.microsoft.com/library/system.web.ui.webcontrols.login.helppagetext.aspx) e [ `HelpPageUrl` proprietà](https://msdn.microsoft.com/library/system.web.ui.webcontrols.login.helppageurl.aspx) e [ `PasswordRecoveryText` ](https://msdn.microsoft.com/library/system.web.ui.webcontrols.login.passwordrecoverytext.aspx) e [ `PasswordRecoveryUrl` proprietà](https://msdn.microsoft.com/library/system.web.ui.webcontrols.login.passwordrecoveryurl.aspx) funzionano allo stesso modo, il rendering di collegamenti a una pagina della Guida in linea e una pagina di recupero della password.
 
 Dopo aver apportato queste modifiche delle proprietà, l'account di accesso markup dichiarativo e l'aspetto dovrebbe essere simile a quella mostrata nella figura 5.
 
-
 [![I valori delle proprietà del controllo di accesso determinano l'aspetto del controllo](validating-user-credentials-against-the-membership-user-store-vb/_static/image14.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image13.png)
 
 **Figura 5**: I valori determinano aspetto delle proprietà del controllo di accesso Its ([fare clic per visualizzare l'immagine con dimensioni normali](validating-user-credentials-against-the-membership-user-store-vb/_static/image15.png))
-
 
 ### <a name="configuring-the-login-controls-layout"></a>Configurazione di Layout del controllo di accesso
 
@@ -163,23 +148,18 @@ Per portare a termine la prima attività, è necessario convertire il controllo 
 
 Aggiorniamo il controllo di accesso in modo che richiede agli utenti il nome utente, password e l'indirizzo di posta elettronica e l'utente viene autenticato solo se l'indirizzo di posta elettronica fornito corrisponde al proprio indirizzo di posta elettronica sul file. È innanzitutto necessario convertire interfaccia del controllo account di accesso a un modello. Dallo Smart Tag del controllo di accesso, scegliere la funzione Convert per l'opzione del modello.
 
-
 [![Convertire il controllo di accesso a un modello](validating-user-credentials-against-the-membership-user-store-vb/_static/image17.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image16.png)
 
 **Figura 6**: Convertire un modello di controllo di accesso ([fare clic per visualizzare l'immagine con dimensioni normali](validating-user-credentials-against-the-membership-user-store-vb/_static/image18.png))
 
-
 > [!NOTE]
 > Per ripristinare il controllo di accesso alla versione pre-templata, fare clic sul collegamento di reimpostazione dallo Smart Tag del controllo.
 
-
 Conversione di controllo di accesso a un modello aggiunge un `LayoutTemplate` al markup dichiarativo del controllo con gli elementi HTML e controlli Web che definisce l'interfaccia utente. Come illustrato nella figura 7, convertendo il controllo a un modello rimuove un numero di proprietà dalla finestra delle proprietà, ad esempio `TitleText`, `CreateUserUrl`e così via, poiché i valori delle proprietà vengono ignorati quando si usa un modello.
-
 
 [![Meno proprietà sono che disponibili quando il controllo di accesso viene convertito in un modello](validating-user-credentials-against-the-membership-user-store-vb/_static/image20.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image19.png)
 
 **Figura 7**: Meno proprietà sono disponibili quando il controllo di accesso viene convertito in un modello ([fare clic per visualizzare l'immagine con dimensioni normali](validating-user-credentials-against-the-membership-user-store-vb/_static/image21.png))
-
 
 Il markup HTML nel `LayoutTemplate` può essere modificato in base alle esigenze. Analogamente, è possibile aggiungere nuovi controlli Web per il modello. Tuttavia, è importante tale account di accesso principali Web controlli rimangono nel modello e mantenere assegnato loro `ID` valori. In particolare, non rimuovere o rinominare il `UserName` o `Password` caselle di testo, il `RememberMe` casella di controllo, il `LoginButton` pulsante, il `FailureText` etichetta, o il `RequiredFieldValidator` controlli.
 
@@ -189,11 +169,9 @@ Per raccogliere l'indirizzo di posta elettronica del visitatore, è necessario a
 
 Dopo aver aggiunto il `Email` nella casella di testo, visitare la pagina tramite un browser. Come illustrato nella figura 8, interfaccia utente del controllo di accesso include ora una terza casella di testo.
 
-
 [![Il controllo di accesso ora include una casella di testo per l'indirizzo di posta elettronica dell'utente](validating-user-credentials-against-the-membership-user-store-vb/_static/image23.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image22.png)
 
 **Figura 8**: Il controllo di accesso ora include una casella di testo per l'indirizzo di posta elettronica dell'utente ([fare clic per visualizzare l'immagine con dimensioni normali](validating-user-credentials-against-the-membership-user-store-vb/_static/image24.png))
-
 
 A questo punto, il controllo di accesso continua a usare il `Membership.ValidateUser` metodo per convalidare le credenziali fornite. Di conseguenza, il valore immesso nel `Email` nella casella di testo non incide sul fatto che l'utente può accedere. Nel passaggio 3 si esaminerà come eseguire l'override della logica di autenticazione del controllo di accesso in modo che le credenziali vengono considerate valide solo se il nome utente e la password siano validi e l'indirizzo di posta elettronica specificato corrisponde all'indirizzo di posta elettronica sul file.
 
@@ -207,15 +185,12 @@ Se le credenziali specificate sono valide, quindi viene creato il ticket di aute
 
 Figura 9 offre un diagramma di flusso del flusso di lavoro autenticazione.
 
-
 [![Flusso di lavoro di autenticazione del controllo di accesso](validating-user-credentials-against-the-membership-user-store-vb/_static/image26.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image25.png)
 
 **Figura 9**: Flusso di lavoro di autenticazione del controllo di accesso ([fare clic per visualizzare l'immagine con dimensioni normali](validating-user-credentials-against-the-membership-user-store-vb/_static/image27.png))
 
-
 > [!NOTE]
 > Sapere quando si utilizza il `FailureAction`del `RedirectToLogin` pagina opzione, prendere in considerazione lo scenario seguente. Attualmente il `Site.master` pagina master ha attualmente il testo Hello, stranger visualizzato nella colonna sinistra quando visitati da un utente anonimo, ma si supponga di voler sostituire tale testo con un controllo di accesso. In questo modo un utente anonimo per l'accesso da qualsiasi pagina nel sito, anziché richiedere di visitare la pagina di accesso direttamente. Tuttavia, se un utente non è riuscito per l'accesso tramite il controllo di accesso viene eseguito il rendering dalla pagina master, si potrebbe avere senso per reindirizzarle alla pagina di accesso (`Login.aspx`) poiché tale pagina probabilmente include istruzioni aggiuntive, collegamenti e altri argomenti della Guida, ad esempio i collegamenti per creare un nuovo account o recuperare una password persa - che non sono stati aggiunti alla pagina master.
-
 
 ### <a name="creating-theauthenticateevent-handler"></a>Creazione di`Authenticate`gestore dell'evento
 
@@ -246,15 +221,12 @@ Il codice seguente implementa questi due controlli. Se entrambi passa, quindi `e
 
 Con questo codice, tentare di accedere come un utente valido, immettere la correttezza del nome utente, password e l'indirizzo di posta elettronica. Provare di nuovo, ma questa volta intenzionalmente usare un indirizzo di posta elettronica non corretto (vedere la figura 10). Infine, è possibile provarlo una terza volta con un nome utente inesistente. Nel primo caso è necessario essere è riuscito ad accedere al sito, ma negli ultimi due casi verrà visualizzato il messaggio di credenziali non valide del controllo di accesso.
 
-
 [![Non è possibile accedere tito quando si specifica un indirizzo di posta elettronica non corretto](validating-user-credentials-against-the-membership-user-store-vb/_static/image29.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image28.png)
 
 **Figura 10**: Tito Impossibile Log In quando fornisce un indirizzo di posta elettronica non corretto ([fare clic per visualizzare l'immagine con dimensioni normali](validating-user-credentials-against-the-membership-user-store-vb/_static/image30.png))
 
-
 > [!NOTE]
 > Come descritto nella sezione come l'appartenenza al Framework gestisce non valido i tentativi di accesso nel passaggio 1, quando il `Membership.ValidateUser` metodo viene chiamato e passato credenziali non valide, tiene traccia del tentativo di accesso non è valido e blocca utente se superano una determinata soglia di tentativi non validi all'interno di un intervallo di tempo specificato. Poiché le chiamate di autenticazione personalizzato per la logica di `ValidateUser` metodo, una password errata per un nome utente valido incrementa il contatore dei tentativi di accesso non validi, ma questo contatore viene incrementato non nel caso in cui il nome utente e password sono validi, ma il indirizzo di posta elettronica non è corretto. Probabile che questo comportamento è appropriato, poiché è improbabile che un pirata informatico verrà conosce il nome utente e password, ma è necessario utilizzare le tecniche di attacco di forza bruta per determinare l'indirizzo di posta elettronica dell'utente.
-
 
 ## <a name="step-4-improving-the-login-controls-invalid-credentials-message"></a>Passaggio 4: Miglioramento credenziali non valide messaggio del controllo di accesso
 
@@ -279,11 +251,9 @@ Il codice sopra riportato viene avviato impostando il controllo di accesso `Fail
 
 Per testare questo codice, intenzionalmente tenta di accedere come un utente esistente, ma usare una password errata. Eseguire l'operazione cinque volte in una riga all'interno di un intervallo di tempo di 10 minuti e l'account verrà bloccato. Come illustrato nella figura 11, accesso successivi tentativi verranno viene sempre esito negativo (anche con la password corretta), ma verranno ora visualizzati più descrittivo all'account è stato bloccato a causa di troppi tentativi di accesso non è valido. Contattare l'amministratore per richiedere il messaggio di sbloccare account.
 
-
 [![Tito eseguiti troppi tentativi di accesso non è valido ed è stato bloccato](validating-user-credentials-against-the-membership-user-store-vb/_static/image32.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image31.png)
 
 **Figura 11**: Tito eseguita troppo numerosi tentativi non validi account di accesso ed è stato bloccato ([fare clic per visualizzare l'immagine con dimensioni normali](validating-user-credentials-against-the-membership-user-store-vb/_static/image33.png))
-
 
 ## <a name="summary"></a>Riepilogo
 

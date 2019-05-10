@@ -8,12 +8,12 @@ ms.date: 05/30/2007
 ms.assetid: 2e56a733-5512-48a6-9276-70a65bbe4d5d
 msc.legacyurl: /web-forms/overview/data-access/caching-data/caching-data-with-the-objectdatasource-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 6bde070dae3b295c8d7a04098b874d41fab54830
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: bdec60c1d031cb8b6516f03801b5306a1c9fbe09
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59380210"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108208"
 ---
 # <a name="caching-data-with-the-objectdatasource-vb"></a>Memorizzazione di dati nella cache con ObjectDataSource (VB)
 
@@ -22,7 +22,6 @@ da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Scaricare l'App di esempio](http://download.microsoft.com/download/4/a/7/4a7a3b18-d80e-4014-8e53-a6a2427f0d93/ASPNET_Data_Tutorial_58_VB.exe) o [Scarica il PDF](caching-data-with-the-objectdatasource-vb/_static/datatutorial58vb1.pdf)
 
 > La memorizzazione nella cache può fare la differenza tra una lenta e una rapida applicazione Web. Questa esercitazione è la prima delle quattro proprietà che accettano un quadro dettagliato di memorizzazione nella cache in ASP.NET. Informazioni su come applicare la memorizzazione nella cache a livello di presentazione tramite il controllo ObjectDataSource e i concetti principali di memorizzazione nella cache.
-
 
 ## <a name="introduction"></a>Introduzione
 
@@ -57,32 +56,25 @@ Prima di iniziare l'esplorazione delle funzionalità di caching s ObjectDataSour
 - `AtApplicationStartup.aspx`
 - `SqlCacheDependencies.aspx`
 
-
 ![Aggiungere le pagine ASP.NET per le esercitazioni relative alla memorizzazione nella cache](caching-data-with-the-objectdatasource-vb/_static/image1.png)
 
 **Figura 1**: Aggiungere le pagine ASP.NET per le esercitazioni relative alla memorizzazione nella cache
 
-
 In altre cartelle, analogo a `Default.aspx` nella `Caching` cartella elencherà le esercitazioni nella relativa sezione. Si tenga presente che il `SectionLevelTutorialListing.ascx` controllo utente fornisce questa funzionalità. Pertanto, aggiungere questo controllo utente da `Default.aspx` trascinandolo da Esplora soluzioni nella pagina di visualizzazione della struttura s.
-
 
 [![Figura 2: Aggiungere il controllo utente sectionleveltutoriallisting. ascx a default. aspx](caching-data-with-the-objectdatasource-vb/_static/image3.png)](caching-data-with-the-objectdatasource-vb/_static/image2.png)
 
 **Figura 2**: Figura 2: Aggiungere il `SectionLevelTutorialListing.ascx` controllo utente da `Default.aspx` ([fare clic per visualizzare l'immagine con dimensioni normali](caching-data-with-the-objectdatasource-vb/_static/image4.png))
 
-
 Infine, aggiungere queste pagine come voci per il `Web.sitemap` file. In particolare, aggiungere il markup seguente dopo l'utilizzo di dati binari `<siteMapNode>`:
-
 
 [!code-xml[Main](caching-data-with-the-objectdatasource-vb/samples/sample1.xml)]
 
 Dopo aver aggiornato `Web.sitemap`, si consiglia di visualizzare il sito Web di esercitazioni tramite un browser. Il menu a sinistra ora include elementi per le esercitazioni di memorizzazione nella cache.
 
-
 ![Mappa del sito include ora voci per le esercitazioni di memorizzazione nella cache](caching-data-with-the-objectdatasource-vb/_static/image5.png)
 
 **Figura 3**: Mappa del sito include ora voci per le esercitazioni di memorizzazione nella cache
-
 
 ## <a name="step-2-displaying-a-list-of-products-in-a-web-page"></a>Passaggio 2: Visualizzazione di un elenco di prodotti in una pagina Web
 
@@ -90,19 +82,15 @@ Questa esercitazione illustra come usare ObjectDataSource controllo s incorporat
 
 Iniziare aprendo il `ObjectDataSource.aspx` nella pagina di `Caching` cartella. Trascinare un controllo GridView dalla casella degli strumenti nella finestra di progettazione, impostare relativi `ID` proprietà `Products`, quindi, dal suo smart tag da associare a un nuovo controllo ObjectDataSource denominato `ProductsDataSource`. Configurare ObjectDataSource per lavorare con i `ProductsBLL` classe.
 
-
 [![Configurare ObjectDataSource per usare la classe ProductsBLL](caching-data-with-the-objectdatasource-vb/_static/image7.png)](caching-data-with-the-objectdatasource-vb/_static/image6.png)
 
 **Figura 4**: Configurare ObjectDataSource per usare la `ProductsBLL` classe ([fare clic per visualizzare l'immagine con dimensioni normali](caching-data-with-the-objectdatasource-vb/_static/image8.png))
 
-
 Per questa pagina, consentire s di creare un controllo GridView modificabili in modo che possa essere esaminato cosa accade quando vengono modificati i dati memorizzati nella cache in ObjectDataSource tramite l'interfaccia s GridView. Lasciare l'elenco a discesa nella scheda Imposta sul valore predefinito, seleziona `GetProducts()`, ma modificare l'elemento selezionato nella scheda aggiornamenti per il `UpdateProduct` overload che accetta `productName`, `unitPrice`, e `productID` come i parametri di input.
-
 
 [![Impostare l'elenco di riepilogo a discesa aggiornamento scheda s sull'Overload appropriato UpdateProduct](caching-data-with-the-objectdatasource-vb/_static/image10.png)](caching-data-with-the-objectdatasource-vb/_static/image9.png)
 
 **Figura 5**: Impostare la scheda aggiornamento s elenco a discesa scegliere l'appropriato `UpdateProduct` rapporto di Overload ([fare clic per visualizzare l'immagine con dimensioni normali](caching-data-with-the-objectdatasource-vb/_static/image11.png))
-
 
 Infine, impostare gli elenchi a discesa nelle schede INSERT e DELETE su (nessuno) e fare clic su Fine. Dopo aver completato la procedura guidata Configura origine dati, Visual Studio imposta la s ObjectDataSource `OldValuesParameterFormatString` proprietà `original_{0}`. Come descritto nel [una panoramica di inserimento, aggiornamento ed eliminazione di dati](../editing-inserting-and-deleting-data/an-overview-of-inserting-updating-and-deleting-data-vb.md) esercitazione, questa proprietà deve essere rimosso dalla sintassi dichiarativa o reimpostate sul valore predefinito, `{0}`, affinché l'aggiornamento del flusso di lavoro continuare senza errori.
 
@@ -113,24 +101,19 @@ Rendere modificabile il controllo GridView selezionando la casella di controllo 
 > [!NOTE]
 > Richiedono un'attenzione da parte di come personalizzare l'interfaccia di modifica s GridView? In questo caso, vedere la [personalizzazione dell'interfaccia di modifica dei dati](../editing-inserting-and-deleting-data/customizing-the-data-modification-interface-vb.md) esercitazione.
 
-
 [![Abilitare il supporto di GridView per la modifica, l'ordinamento e Paging](caching-data-with-the-objectdatasource-vb/_static/image13.png)](caching-data-with-the-objectdatasource-vb/_static/image12.png)
 
 **Figura 6**: Abilitare il supporto di GridView per la modifica, l'ordinamento e Paging ([fare clic per visualizzare l'immagine con dimensioni normali](caching-data-with-the-objectdatasource-vb/_static/image14.png))
 
-
 Dopo aver apportato queste modifiche di GridView, il markup dichiarativo s GridView e ObjectDataSource dovrebbe essere simile al seguente:
-
 
 [!code-aspx[Main](caching-data-with-the-objectdatasource-vb/samples/sample2.aspx)]
 
 Come illustrato nella figura 7, il controllo GridView modificabile Elenca il nome, categoria e prezzo della ognuno dei prodotti nel database. Si consiglia di testare i risultati, spostarsi tra loro, l'ordinamento di funzionalità pagina s e modificare un record.
 
-
 [![Ogni nome di prodotto, categoria e il prezzo è elencati in un ordinabile, Pageable, GridView modificabile](caching-data-with-the-objectdatasource-vb/_static/image16.png)](caching-data-with-the-objectdatasource-vb/_static/image15.png)
 
 **Figura 7**: Ogni nome di prodotto, categoria e il prezzo è elencati in un ordinabile, Pageable, GridView modificabile ([fare clic per visualizzare l'immagine con dimensioni normali](caching-data-with-the-objectdatasource-vb/_static/image17.png))
-
 
 ## <a name="step-3-examining-when-the-objectdatasource-is-requesting-data"></a>Passaggio 3: Esame ObjectDataSource the quando è richiesta dati
 
@@ -140,14 +123,11 @@ Questa sequenza di eventi si verifica ogni volta che il controllo GridView deve 
 
 Per apprezzare pienamente la frequenza con cui i dati vengono recuperati dal database, lasciare s visualizzato un messaggio che indica quando i dati vengono recuperati nuovamente. Aggiungere un controllo etichetta Web sopra il controllo GridView denominato `ODSEvents`. Cancellare il contenuto relativo `Text` proprietà e set relativo `EnableViewState` proprietà `False`. Sotto l'etichetta, aggiungere un controllo Web pulsante e impostarne il `Text` proprietà per il Postback.
 
-
 [![Aggiungere un'etichetta e un pulsante alla pagina sopra il controllo GridView](caching-data-with-the-objectdatasource-vb/_static/image19.png)](caching-data-with-the-objectdatasource-vb/_static/image18.png)
 
 **Figura 8**: Aggiungere un'etichetta e un pulsante alla pagina sopra il controllo GridView ([fare clic per visualizzare l'immagine con dimensioni normali](caching-data-with-the-objectdatasource-vb/_static/image20.png))
 
-
 Durante il flusso di lavoro di accesso dati s ObjectDataSource `Selecting` viene generato l'evento prima che venga creato l'oggetto sottostante e il relativo metodo configurato richiamato. Creare un gestore eventi per questo evento e aggiungere il codice seguente:
-
 
 [!code-vb[Main](caching-data-with-the-objectdatasource-vb/samples/sample3.vb)]
 
@@ -155,16 +135,13 @@ Ogni volta che ObjectDataSource effettua una richiesta per l'architettura per i 
 
 Visitare questa pagina in un browser. Quando la pagina viene prima visitata, viene visualizzato l'evento di selezione di testo generato. Fare clic sul pulsante di Postback e notare che il testo scomparirà (supponendo che i dispositivi di GridView `EnableViewState` è impostata su `True`, il valore predefinito). Infatti, durante il postback, il controllo GridView viene ricostruito dal relativo stato di visualizzazione e pertanto t disattivare a ObjectDataSource per i propri dati. L'ordinamento, paging, o la modifica dei dati, tuttavia, provoca GridView riassociare l'origine dati, e pertanto l'evento di selezione generato viene visualizzato nuovamente il testo.
 
-
 [![Ogni volta che il controllo GridView è riassociato alla relativa origine dati, viene visualizzato quando si seleziona evento generato](caching-data-with-the-objectdatasource-vb/_static/image22.png)](caching-data-with-the-objectdatasource-vb/_static/image21.png)
 
 **Figura 9**: Ogni volta che il controllo GridView è riassociato alla relativa origine dati, viene visualizzato se si seleziona evento attivato ([fare clic per visualizzare l'immagine con dimensioni normali](caching-data-with-the-objectdatasource-vb/_static/image23.png))
 
-
 [![Facendo clic su pulsante Postback fa sì che il controllo GridView per essere ricostruiti dal relativo stato di visualizzazione](caching-data-with-the-objectdatasource-vb/_static/image25.png)](caching-data-with-the-objectdatasource-vb/_static/image24.png)
 
 **Figura 10**: Fare clic sul pulsante Postback fa sì che il controllo GridView essere ricostruiti dal relativo stato di visualizzazione ([fare clic per visualizzare l'immagine con dimensioni normali](caching-data-with-the-objectdatasource-vb/_static/image26.png))
-
 
 Può sembrare inutili recuperare i dati del database ogni volta che i dati di paging tramite o ordinati. Dopo tutto, poiché si stia usando il paging predefinito, ObjectDataSource ha recuperato tutti i record quando si visualizzano la prima pagina. Anche se il controllo GridView non fornisce l'ordinamento e il supporto di paging, i dati devono essere recuperati dal database ogni volta che viene prima visitata da altri utenti (e in ogni postback, se lo stato di visualizzazione è disabilitato). Ma se il controllo GridView verrà visualizzati gli stessi dati a tutti gli utenti, queste richieste di database aggiuntivi sono superflue. Perché non memorizzare nella cache i risultati restituiti dai `GetProducts()` metodo e associare il controllo GridView a quelli memorizzati nella cache i risultati?
 
@@ -179,11 +156,9 @@ Semplicemente impostando alcune proprietà, ObjectDataSource può essere configu
 
 Configurare automaticamente s il `ProductsDataSource` ObjectDataSource per memorizzare nella cache i dati per 30 secondi su una scala assoluta. Impostare la s ObjectDataSource `EnableCaching` proprietà `True` e il relativo `CacheDuration` proprietà su 30. Lasciare il `CacheExpirationPolicy` impostata sul valore predefinito, proprietà `Absolute`.
 
-
 [![Configurare ObjectDataSource per memorizzare nella Cache i dati per 30 secondi](caching-data-with-the-objectdatasource-vb/_static/image28.png)](caching-data-with-the-objectdatasource-vb/_static/image27.png)
 
 **Figura 11**: Configurare ObjectDataSource per memorizzare nella Cache i dati per 30 secondi ([fare clic per visualizzare l'immagine con dimensioni normali](caching-data-with-the-objectdatasource-vb/_static/image29.png))
-
 
 Salvare le modifiche e visitare di nuovo questa pagina in un browser. Il testo dell'evento generato quando si seleziona rimarrà durante la prima visita la pagina, inizialmente i dati non sono nella cache. A differenza di postback successivi attivato facendo clic sul pulsante di Postback, l'ordinamento, paging, o utilizzare i pulsanti di modifica o annullamento *non* nuovamente l'evento di selezione viene generato il testo. Infatti, il `Selecting` evento viene generato solo quando l'oggetto ObjectDataSource Ottiene i dati dal relativo oggetto sottostante; il `Selecting` evento non viene generato se i dati vengono spostati dalla cache dei dati.
 
@@ -192,14 +167,11 @@ Dopo 30 secondi, i dati verranno rimossi dalla cache. I dati verranno rimossi an
 > [!NOTE]
 > Se il testo dell'evento generato quando si seleziona viene visualizzato spesso, anche quando si prevede che ObjectDataSource a lavorare con i dati memorizzati nella cache, è possibile a causa dei vincoli di memoria. Se non vi è memoria sufficiente, i dati aggiunti alla cache da ObjectDataSource possono avere stato lo scavenging. Se la t ObjectDataSource sembra essere correttamente la memorizzazione nella cache i dati o solo le cache i dati sporadicamente, chiudere alcune applicazioni per liberare memoria e ripetere l'operazione.
 
-
 Figura 12 illustra gli oggetti ObjectDataSource la memorizzazione nella cache del flusso di lavoro. Quando viene generato l'evento quando si seleziona il testo visualizzato sullo schermo, è perché i dati non è stato nella cache e dovevano essere recuperata dall'oggetto sottostante. Quando questo testo è presente, tuttavia, è s perché i dati erano disponibili dalla cache. Quando i dati vengono restituiti dalla cache lì s alcuna chiamata all'oggetto sottostante e, di conseguenza, nessuna query di database eseguiti.
-
 
 ![Gli archivi di ObjectDataSource e recupera i dati dalla Cache dei dati](caching-data-with-the-objectdatasource-vb/_static/image30.png)
 
 **Figura 12**: Gli archivi di ObjectDataSource e recupera i dati dalla Cache dei dati
-
 
 Ogni applicazione ASP.NET ha la propria cache dei dati dell'istanza che s condivisi tra tutte le pagine e i visitatori. Ciò significa che i dati memorizzati nella cache dei dati da ObjectDataSource sono condiviso in modo analogo a tutti gli utenti che visitano la pagina. Per verificarlo, aprire il `ObjectDataSource.aspx` pagina in un browser. Prima di tutto gli utenti in visita la pagina, verrà visualizzato il testo dell'evento generato quando si seleziona (presupponendo che i dati aggiunti nella cache per i test precedenti, a questo punto, eliminati). Aprire una seconda istanza del browser e copiare e incollare l'URL della prima istanza del browser al secondo. Nella seconda istanza del browser, il testo dell'evento generato quando si seleziona non viene visualizzato perché si usano lo stesso memorizzato nella cache i dati del primo.
 

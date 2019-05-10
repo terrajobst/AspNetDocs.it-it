@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 187ee9cd-bc70-479b-bfed-f568b8da96eb
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-helpers-forms-and-validation
 msc.type: authoredcontent
-ms.openlocfilehash: 639a8e0e5fd9557221c95aee1bef0294df047ae8
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 0e2605a4188eaf814f6ab0ebfeaabed4457bcfa3
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59406314"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65112497"
 ---
 # <a name="aspnet-mvc-4-helpers-forms-and-validation"></a>Helper, moduli e convalida di ASP.NET MVC 4
 
@@ -89,7 +89,6 @@ Gli esercizi seguenti che costituiscono questo laboratorio pratico:
 
 > [!NOTE]
 > Ogni esercizio è accompagnato da un **End** cartella che contiene la soluzione risultante si dovrebbe ottenere dopo aver completato gli esercizi. Se ti serve assistenza aggiuntiva esaminando gli esercizi, è possibile usare questa soluzione come guida.
-
 
 Tempo stimato per completare questa esercitazione: **60 minuti**
 
@@ -177,7 +176,6 @@ In questa attività si regolerà il semplice modello di vista creato con funzion
 > [!NOTE]
 > Il **scaffolding** supporto all'interno di ASP.NET MVC genera un semplice modello di vista in cui sono elencati tutti i campi nel modello di Album. **Lo scaffolding** offre un modo rapido per iniziare a usare in una visualizzazione fortemente tipizzata: invece di dover scrivere manualmente il modello di vista, lo scaffolding rapidamente genera un modello predefinito e quindi è possibile modificare il codice generato.
 
-
 1. Esaminare il codice creato. L'elenco dei campi generato faranno parte della seguente tabella HTML **Scaffolding** utilizza per la visualizzazione di dati tabulari.
 
     [!code-cshtml[Main](aspnet-mvc-4-helpers-forms-and-validation/samples/sample4.cshtml)]
@@ -224,7 +222,6 @@ In questa attività si aggiungerà un nuovo metodo **Truncate** per il **HTML** 
 
 > [!NOTE]
 > Per altre informazioni, vedere **metodi di estensione**, vedere questo articolo di msdn. [https://msdn.microsoft.com/library/bb383977.aspx](https://msdn.microsoft.com/library/bb383977.aspx).
-
 
 1. Aprire il **Begin** soluzione disponibile all'indirizzo **origine/Ex2-AddingAnHTMLHelper/inizio/** cartella. In caso contrario, è possibile continuare a usare il **End** soluzione ottenuta completando l'esercizio precedente.
 
@@ -665,7 +662,6 @@ In questo esercizio, si apprenderà come abilitare MVC 4 Unobtrusive validation 
 
 > [!NOTE]
 > Il componente aggiuntivo jQuery Unobtrusive Usa dati ajax prefisso JavaScript per richiamare i metodi di azione sul server anziché intrusivo che genera gli script client inline.
-
 
 <a id="Ex7Task1"></a>
 

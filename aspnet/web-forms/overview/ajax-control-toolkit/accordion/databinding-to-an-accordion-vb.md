@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: b19f0875-7d3e-4ecf-baa1-a0c693c765b3
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/accordion/databinding-to-an-accordion-vb
 msc.type: authoredcontent
-ms.openlocfilehash: dde3d60f82bb5f32fdd8b6b5cf8a0e1accebd1a7
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: a5032fa1438594796ea774776f13f4909f24f2fe
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59408927"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108399"
 ---
 # <a name="databinding-to-an-accordion-vb"></a>Data binding a un controllo Accordion (VB)
 
@@ -22,7 +22,6 @@ da [Christian Wenz](https://github.com/wenz)
 [Scaricare il codice](http://download.microsoft.com/download/5/6/d/56d50cef-2011-4c8f-9891-7edc6dc57df9/Accordion1.vb.zip) o [Scarica il PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/accordion1VB.pdf)
 
 > Il controllo Accordion in AJAX Control Toolkit fornisce più riquadri e consente all'utente di visualizzare uno di essi alla volta. I pannelli in genere vengono dichiarati all'interno della pagina, ma l'associazione a un'origine dati offre una maggiore flessibilità.
-
 
 ## <a name="overview"></a>Panoramica
 
@@ -57,7 +56,6 @@ Quando la pagina viene caricata, l'origine dati deve essere associato ai accordi
 Per concludere questo esempio, è necessario definire le due classi CSS a cui fanno riferimento nel controllo Accordion (nelle relative proprietà `HeaderCssClass` e `ContentCssClass`). Inserire il seguente markup nel `<head>` sezione della pagina:
 
 [!code-css[Main](databinding-to-an-accordion-vb/samples/sample6.css)]
-
 
 [![I dati di controllo accordion provengono direttamente dall'origine dati](databinding-to-an-accordion-vb/_static/image2.png)](databinding-to-an-accordion-vb/_static/image1.png)
 

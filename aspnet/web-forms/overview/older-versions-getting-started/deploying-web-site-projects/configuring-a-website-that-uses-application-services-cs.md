@@ -8,12 +8,12 @@ ms.date: 04/23/2009
 ms.assetid: 1e33d1c6-3f9f-4c26-81e2-2a8f8907bb05
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/configuring-a-website-that-uses-application-services-cs
 msc.type: authoredcontent
-ms.openlocfilehash: fe6097c32e4584fd4c577fb8d2afee9b3483c22f
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: b9488a294de8f23ecd2b22812d728a5904a8ef18
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59418417"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65106873"
 ---
 # <a name="configuring-a-website-that-uses-application-services-c"></a>Configurazione di un sito Web che usa i servizi per le applicazioni (C#)
 
@@ -22,7 +22,6 @@ da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Scaricare il codice](http://download.microsoft.com/download/E/6/F/E6FE3A1F-EE3A-4119-989A-33D1A9F6F6DD/ASPNET_Hosting_Tutorial_09_CS.zip) o [Scarica il PDF](http://download.microsoft.com/download/C/3/9/C391A649-B357-4A7B-BAA4-48C96871FEA6/aspnet_tutorial09_AppServicesConfig_cs.pdf)
 
 > Verze Technologie ASP.NET 2.0 introdotto una serie di servizi delle applicazioni, che fanno parte di .NET Framework e vengono usati come una suite di servizi di blocchi predefiniti che è possibile usare per aggiungere funzionalità avanzate per l'applicazione web. Questa esercitazione illustra come configurare un sito Web nell'ambiente di produzione usare i servizi dell'applicazione e risolve i problemi comuni con la gestione degli account utente e i ruoli nell'ambiente di produzione.
-
 
 ## <a name="introduction"></a>Introduzione
 
@@ -34,7 +33,6 @@ Verze Technologie ASP.NET 2.0 introdotto una serie di *servizi delle applicazion
 - **Mappa del sito** : un'API per la definizione di una struttura logica sito s sotto forma di una gerarchia, che può quindi essere visualizzata tramite i controlli di navigazione, ad esempio menu e percorsi di navigazione.
 - **Personalizzazione** : un'API per la gestione delle preferenze di personalizzazione, generalmente utilizzate con [ *WebParts*](https://msdn.microsoft.com/library/e0s9t4ck.aspx).
 - **Monitoraggio dell'integrità** : un'API per il monitoraggio delle prestazioni, sicurezza, gli errori e altre metriche di integrità di sistema per un'applicazione web in esecuzione.
-  
 
 I servizi delle applicazioni API non sono associati a un'implementazione specifica. In alternativa, è indicare i servizi delle applicazioni di utilizzare un determinato *provider*, e che il provider implementa il servizio utilizzando una tecnologia specifica. I provider di usati più comune per le applicazioni web basati su Internet ospitate in una società di hosting web sono i provider che usano un'implementazione di database di SQL Server. Ad esempio, il `SqlMembershipProvider` è un provider per l'API di appartenenza che archivia informazioni sull'account utente in un database Microsoft SQL Server.
 
@@ -42,7 +40,6 @@ Usando i servizi delle applicazioni e i provider di SQL Server rende piuttosto c
 
 > [!NOTE]
 > I servizi delle applicazioni API sono state progettate con il [ *modello di provider*](http://aspnet.4guysfromrolla.com/articles/101905-1.aspx), uno schema progettuale che consente un'API s dettagli di implementazione essere fornito in fase di esecuzione. .NET Framework viene fornito con un numero di provider di servizi di applicazione che può essere utilizzato, ad esempio la `SqlMembershipProvider` e `SqlRoleProvider`, quali sono i provider per l'appartenenza e ruoli API che usano un Server SQL database implementazione. È anche possibile creare e plug-in un provider personalizzato. In effetti, l'applicazione web le recensioni dei libri già contiene un provider personalizzato per l'API di mappa del sito (`ReviewSiteMapProvider`), che costruisce la mappa del sito dai dati di `Genres` e `Books` nelle tabelle del database.
-
 
 Questa esercitazione inizia con uno sguardo al modo in cui l'applicazione web le recensioni dei libri per usare le API di ruoli e appartenenza esteso. Quindi illustra in modo dettagliato la distribuzione di un'applicazione web che usa i servizi dell'applicazione con un'implementazione di database di SQL Server e si conclude con una risoluzione dei problemi comuni con la gestione degli account utente e i ruoli nell'ambiente di produzione.
 
@@ -53,7 +50,6 @@ Ultimi esercitazioni che l'applicazione web di verifiche di libro è stato aggio
 > [!NOTE]
 > Ho creato tre account utente nell'applicazione web le recensioni dei libri: Scott Jisun e Alice. Tutti e tre gli utenti hanno la stessa password: **password!** In cui Scott e Jisun fanno parte del ruolo di amministratore, Alice non è presente. Le pagine di amministrazione non s sito sono ancora accessibili agli utenti anonimi. Vale a dire, non è necessario accedere a visitare il sito, a meno che non si desidera amministrare, nel qual caso è necessario accedere come utente nel ruolo di amministratore.
 
-
 Pagina master le recensioni dei libri applicazione s è stata aggiornata per includere un'interfaccia utente diversa per gli utenti autenticati e anonimi. Se un utente anonimo visita il sito vede un collegamento di accesso nell'angolo superiore destro. Un utente autenticato vede il messaggio ", Bentornato *username*!" e un collegamento per effettuare la disconnessione. Esiste anche una pagina di accesso s (`~/Login.aspx`), che contiene un controllo di accesso Web che fornisce l'interfaccia utente e per la logica per l'autenticazione di un visitatore. Solo gli amministratori possono creare nuovi account. (Sono presenti pagine per la creazione e la gestione degli account utente di `~/Admin` cartella.)
 
 ### <a name="configuring-the-membership-and-roles-apis"></a>La configurazione di appartenenza e ruoli API
@@ -62,7 +58,6 @@ L'applicazione web le recensioni dei libri Usa le API di ruoli e appartenenza pe
 
 > [!NOTE]
 > Questa esercitazione non intende essere un esame approfondito la configurazione di un'applicazione web per supportare le API di ruoli e appartenenza. Per un'analisi approfondita queste API e i passaggi da eseguire per configurare un sito Web per il loro uso, consultare il [ *sito Web di sicurezza esercitazioni*](../../older-versions-security/introduction/security-basics-and-asp-net-support-cs.md).
-
 
 Usare i servizi delle applicazioni con un database di SQL Server, che è innanzitutto necessario aggiungere gli oggetti di database usati da questi provider per il database in cui si desidera che l'account utente e le informazioni sui ruoli archiviate. Questi oggetti di database necessarie includono un'ampia gamma di tabelle, viste e stored procedure. Se non diversamente specificato, il `SqlMembershipProvider` e `SqlRoleProvider` classi provider usano un database di SQL Server Express Edition denominato `ASPNETDB` che si trova in s applicazione `App_Data` cartella; se tale database non esiste, viene creato automaticamente con gli oggetti di database necessari da questi provider in fase di esecuzione.
 
@@ -73,7 +68,6 @@ Se si aggiunge l'applicazione di servizi gli oggetti di database a un database d
 [!code-xml[Main](configuring-a-website-that-uses-application-services-cs/samples/sample1.xml)]
 
 Il `Web.config` file s `<authentication>` elemento è stato configurato anche per supportare l'autenticazione basata su form.
-  
 
 [!code-xml[Main](configuring-a-website-that-uses-application-services-cs/samples/sample2.xml)]
 
@@ -100,43 +94,34 @@ Il *distribuzione di un Database* esercitazione ha illustrato come copiare le ta
 > [!NOTE]
 > Il `aspnet_regsql.exe` strumento crea gli oggetti di database in un database specificato. Non eseguire la migrazione di dati in tali oggetti di database dal database di sviluppo per il database di produzione. Se si intende copiare le informazioni di account e il ruolo utente nel database di sviluppo per il database di produzione usare le tecniche illustrate nel *distribuzione di un Database* esercitazione.
 
-
 Let s esaminare come aggiungere gli oggetti di database al database di produzione usando il `aspnet_regsql.exe` dello strumento. Iniziare aprendo Esplora Windows e passare alla directory .NET Framework versione 2.0 nel computer, %WINDIR%\ Microsoft.NET\Framework\v2.0.50727. Vi deve trovare la `aspnet_regsql.exe` dello strumento. Questo strumento può essere usato dalla riga di comando, ma include anche un'interfaccia utente grafica. Fare doppio clic il `aspnet_regsql.exe` file per avviare il componente con interfaccia grafica.
 
 Lo strumento si avvia visualizzando una schermata iniziale che spiega lo scopo. Fare clic su Avanti per passare alla schermata di "Selezionare un'opzione di installazione", come illustrata nella figura 1. Da qui è possibile scegliere di aggiungere i servizi delle applicazioni di oggetti di database o rimuoverli da un database. Poiché si vuole aggiungere questi oggetti nel database di produzione, selezionare l'opzione "Configura SQL Server per i servizi dell'applicazione" e fare clic su Avanti.
 
-
 [![Scegliere di configurare SQL Server per i servizi dell'applicazione](configuring-a-website-that-uses-application-services-cs/_static/image2.jpg)](configuring-a-website-that-uses-application-services-cs/_static/image1.jpg)
 
 **Figura 1**: Scegliere di configurare SQL Server per i servizi dell'applicazione ([fare clic per visualizzare l'immagine con dimensioni normali](configuring-a-website-that-uses-application-services-cs/_static/image3.jpg))
-
 
 Nella finestra "Selezionare il Server e Database" schermata richiede per le informazioni per connettersi al database. Immettere il server di database, le credenziali di sicurezza e il nome del database fornito all'utente da società di hosting web e fare clic su Avanti.
 
 > [!NOTE]
 > Dopo aver immesso il server di database e credenziali è potrebbe verificarsi un errore quando si espande l'elenco di riepilogo a discesa di database. Il `aspnet_regsql.exe` dello strumento di query di `sysdatabases` tabella di sistema per recuperare un elenco di database nel server, ma alcuni web hosting bloccare le aziende i server di database in modo che queste informazioni non sono disponibili pubblicamente. Se si verifica questo errore è possibile digitare il nome del database direttamente nell'elenco a discesa.
 
-
 [![Fornire allo strumento con le informazioni di connessione Database s](configuring-a-website-that-uses-application-services-cs/_static/image5.jpg)](configuring-a-website-that-uses-application-services-cs/_static/image4.jpg)
 
 **Figura 2**: Specificare gli oggetti degli strumenti con il Database le informazioni di connessione ([fare clic per visualizzare l'immagine con dimensioni normali](configuring-a-website-that-uses-application-services-cs/_static/image6.jpg))
 
-
 La schermata successiva sono riepilogate le azioni che verranno eseguite, vale a dire che gli oggetti di database dell'applicazione Servizi stanno per essere aggiunto al database specificato. Fare clic su Avanti per completare questa azione. Dopo alcuni istanti, viene visualizzata la schermata finale, notare che sono stati aggiunti gli oggetti di database (vedere la figura 3).
-
 
 [![Vero successo! Gli oggetti di Database di servizi di applicazione sono stati aggiunti al Database di produzione](configuring-a-website-that-uses-application-services-cs/_static/image8.jpg)](configuring-a-website-that-uses-application-services-cs/_static/image7.jpg)
 
 **Figura 3**: Operazione completata L'applicazione Servizi di Database sono oggetti aggiunti al Database di produzione ([fare clic per visualizzare l'immagine con dimensioni normali](configuring-a-website-that-uses-application-services-cs/_static/image9.jpg))
 
-
 Per verificare che gli oggetti di database di servizi di applicazione sono stati aggiunti al database di produzione, aprire SQL Server Management Studio e connettersi al database di produzione. Come illustrato nella figura 4, si noterà ora le tabelle di database di servizi di applicazione nel database `aspnet_Applications`, `aspnet_Membership`, `aspnet_Users`e così via.
-
 
 [![Verificare che gli oggetti di Database sono stati aggiunti al Database di produzione](configuring-a-website-that-uses-application-services-cs/_static/image11.jpg)](configuring-a-website-that-uses-application-services-cs/_static/image10.jpg)
 
 **Figura 4**: Verificare che gli oggetti di Database sono stati aggiunti al Database di produzione ([fare clic per visualizzare l'immagine con dimensioni normali](configuring-a-website-that-uses-application-services-cs/_static/image12.jpg))
-
 
 È necessario usare il `aspnet_regsql.exe` strumento quando si distribuisce l'applicazione web per la prima volta o per la prima volta dopo avere avviato usando i servizi delle applicazioni. Dopo aver installato questi oggetti di database nel database di produzione che non dovranno essere nuovamente aggiunto o modificato.
 
@@ -152,7 +137,6 @@ Ma cosa succede se il `applicationName` attributo viene omesso in `Web.config`? 
 
 > [!NOTE]
 > Se ci si ritrova in questo caso - con gli account utente copiati nell'ambiente di produzione con una mancata corrispondenza `ApplicationId` valore, è possibile scrivere una query per aggiornare questi errato `ApplicationId` i valori per il `ApplicationId` utilizzata in produzione. Al termine dell'aggiornamento, gli utenti con account creati nell'ambiente di sviluppo a questo punto sarebbe in grado di accedere all'applicazione web in produzione.
-
 
 La buona notizia è che vi sia un semplice passaggio da eseguire per assicurarsi che i due ambienti usino gli stessi `ApplicationId` - impostare in modo esplicito il `applicationName` attributo `Web.config` per tutti i provider di servizi di applicazione. Impostato in modo esplicito il `applicationName` attributo su "BookReviews" il `<membership>` e `<roleManager>` elementi come questo frammento di codice da `Web.config` Mostra.
 
@@ -171,11 +155,9 @@ La buona notizia è che tutte le funzionalità esposte fornito dal WSAT è dispo
 > [!NOTE]
 > Per altre informazioni sull'uso di appartenenza e ruoli API con i controlli correlati all'accesso Web di ASP.NET, assicurarsi di leggere mio [ *sito Web di sicurezza esercitazioni*](../../older-versions-security/introduction/security-basics-and-asp-net-support-cs.md). Per altre informazioni sulla personalizzazione del controllo CreateUserWizard, vedere la [ *creazione degli account utente* ](../../older-versions-security/membership/creating-user-accounts-cs.md) e [ *archiviare informazioni utente aggiuntive* ](../../older-versions-security/membership/storing-additional-user-information-cs.md) esercitazioni o guarda [ *Erich Peterson* ](http://www.erichpeterson.com/) articolo s [ *personalizzare il controllo CreateUserWizard* ](http://aspnet.4guysfromrolla.com/articles/070506-1.aspx).
 
-
 [![Gli amministratori possono creare nuovi account utente](configuring-a-website-that-uses-application-services-cs/_static/image14.jpg)](configuring-a-website-that-uses-application-services-cs/_static/image13.jpg)
 
 **Figura 5**: Gli amministratori possono creare nuovi account utente ([fare clic per visualizzare l'immagine con dimensioni normali](configuring-a-website-that-uses-application-services-cs/_static/image15.jpg))
-
 
 Se necessaria la funzionalità completa l'estrazione WSAT [ *Rolling Your proprio strumento Amministrazione sito Web*](http://aspnet.4guysfromrolla.com/articles/052307-1.aspx), in cui l'autore Dan Clem descrive il processo di compilazione di uno strumento simile a WSAT personalizzato. Dan condivide il suo codice sorgente s dell'applicazione (in c#) e vengono fornite istruzioni dettagliate per aggiungerla al sito Web ospitato.
 

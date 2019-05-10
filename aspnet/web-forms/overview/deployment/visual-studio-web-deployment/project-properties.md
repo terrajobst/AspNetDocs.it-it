@@ -8,12 +8,12 @@ ms.date: 02/15/2013
 ms.assetid: ec1cec4c-a75f-47af-a2ba-b1e2f971d24b
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/project-properties
 msc.type: authoredcontent
-ms.openlocfilehash: 464146bc8af5cf978902a3e634398ed3f8d15404
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: e17155317e484c8efdf87a1598fb2795b1619587
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59400048"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65109640"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-project-properties"></a>Distribuzione Web ASP.NET tramite Visual Studio: Proprietà progetto
 
@@ -22,7 +22,6 @@ da [Tom Dykstra](https://github.com/tdykstra)
 [Download progetto iniziale](http://go.microsoft.com/fwlink/p/?LinkId=282627)
 
 > Questa serie di esercitazioni illustra come distribuire, pubblicare, ASP.NET per App Web di servizio App di Azure o per un provider di hosting di terze parti, di applicazioni web usando Visual Studio 2012 o Visual Studio 2010. Per informazioni sulla serie, vedere [la prima esercitazione della serie](introduction.md).
-
 
 ## <a name="overview"></a>Panoramica
 

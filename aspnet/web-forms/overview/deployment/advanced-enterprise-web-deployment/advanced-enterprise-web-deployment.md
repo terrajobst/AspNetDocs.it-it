@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 7dcaba80-f2ec-4db3-ad98-daadc3afdb49
 msc.legacyurl: /web-forms/overview/deployment/advanced-enterprise-web-deployment/advanced-enterprise-web-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: 2f27e9436f246e3da2fbb129bbcd2d80e39b5f28
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: bf4c7d021763017592483df35cb717295c4924aa
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59385319"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108901"
 ---
 # <a name="advanced-enterprise-web-deployment"></a>Distribuzione Web aziendale avanzata
 
@@ -24,7 +24,6 @@ da [Jason Lee](https://github.com/jrjlee)
 > Questa esercitazione illustrerà come eseguire diverse attività che sono necessari o utili in molti scenari di distribuzione enterprise.
 > 
 > Per una traduzione italiana di queste esercitazioni, visitare [ http://www.lucamorelli.it ](http://www.lucamorelli.it).
-
 
 Ciò fa parte di una serie di esercitazioni basate su requisiti di distribuzione aziendale di una società fittizia, denominata Fabrikam, Inc. Questa serie di esercitazioni Usa una soluzione di esempio&#x2014;il [Contact Manager](../web-deployment-in-the-enterprise/the-contact-manager-solution.md) soluzione&#x2014;per rappresentare un'applicazione web con un livello di complessità, tra cui un'applicazione ASP.NET MVC 3, una comunicazione Windows realistico Servizio Foundation (WCF) e un progetto di database.
 

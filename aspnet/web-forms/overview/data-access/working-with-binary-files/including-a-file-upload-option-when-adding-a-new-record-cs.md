@@ -8,12 +8,12 @@ ms.date: 03/27/2007
 ms.assetid: 362ade25-3965-4fb2-88d2-835c4786244f
 msc.legacyurl: /web-forms/overview/data-access/working-with-binary-files/including-a-file-upload-option-when-adding-a-new-record-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 9ec09bfcadaa56401a08a389028766ee04f1daad
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 648703bdd5ed985332291b16e973c417cef36cde
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59379880"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131973"
 ---
 # <a name="including-a-file-upload-option-when-adding-a-new-record-c"></a>Inclusione di un'opzione per il caricamento di file durante l'aggiunta di un nuovo record (C#)
 
@@ -22,7 +22,6 @@ da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Scaricare l'App di esempio](http://download.microsoft.com/download/4/a/7/4a7a3b18-d80e-4014-8e53-a6a2427f0d93/ASPNET_Data_Tutorial_56_CS.exe) o [Scarica il PDF](including-a-file-upload-option-when-adding-a-new-record-cs/_static/datatutorial56cs1.pdf)
 
 > Questa esercitazione illustra come creare un'interfaccia Web che consente all'utente sia immettere i dati di testo e caricare i file binari. Per illustrare le opzioni disponibili per archiviare i dati binari, un file verrà salvato nel database mentre l'altra viene archiviata nel file system.
-
 
 ## <a name="introduction"></a>Introduzione
 
@@ -41,40 +40,32 @@ Poiché il `CategoriesTableAdapter` s principali query non fa riferimento il `Pi
 > [!NOTE]
 > Questo seccatura è un problema quando si utilizzano le stored procedure anziché le istruzioni SQL ad hoc. Un'esercitazione futura illustrerà l'uso di stored procedure al posto di istruzioni SQL ad hoc nel livello di accesso ai dati.
 
-
 Per evitare questo rischio problema dover, anziché le istruzioni SQL generate automaticamente di personalizzazione consentono s invece creare un nuovo metodo per l'oggetto TableAdapter. Questo metodo, denominato `InsertWithPicture`, accetta i valori per il `CategoryName`, `Description`, `BrochurePath`, e `Picture` colonne ed eseguire un `INSERT` istruzione che archivia tutti i quattro valori in un nuovo record.
 
 Aprire il DataSet tipizzato e, dalla finestra di progettazione, fare clic su di `CategoriesTableAdapter` intestazione s e scegliere Aggiungi Query dal menu di scelta rapida. Verrà avviata la configurazione guidata Query TableAdapter che inizia con richiede la modalità della query TableAdapter di accesso del database. Scegliere Usa istruzioni SQL e fare clic su Avanti. Il passaggio successivo richiede il tipo di query da generare. Poiché abbiamo nuovamente la creazione di una query per aggiungere un nuovo record per il `Categories` tabella scegliere INSERT e fare clic su Avanti.
-
 
 [![Selezionare l'opzione di inserimento](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image1.gif)](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image1.png)
 
 **Figura 1**: Selezionare l'opzione di inserimento ([fare clic per visualizzare l'immagine con dimensioni normali](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image2.png))
 
-
 È ora necessario specificare il `INSERT` istruzione SQL. La procedura guidata suggerisce automaticamente un `INSERT` istruzione corrisponde alla query principale s TableAdapter. In questo caso, è s un' `INSERT` istruzione che consente di inserire il `CategoryName`, `Description`, e `BrochurePath` valori. L'istruzione Update in modo che il `Picture` colonna è incluso con un `@Picture` parametro, come illustrato di seguito:
-
 
 [!code-sql[Main](including-a-file-upload-option-when-adding-a-new-record-cs/samples/sample1.sql)]
 
 Schermata finale della procedura guidata viene chiesto di specificare un nome al nuovo metodo di TableAdapter. Immettere `InsertWithPicture` e fare clic su Fine.
 
-
 [![Denominare il nuovo InsertWithPicture TableAdapter (metodo)](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image2.gif)](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image3.png)
 
 **Figura 2**: Denominare il nuovo metodo TableAdapter `InsertWithPicture` ([fare clic per visualizzare l'immagine con dimensioni normali](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image4.png))
-
 
 ## <a name="step-2-updating-the-business-logic-layer"></a>Passaggio 2: Aggiornare il livello di logica di Business
 
 Poiché il livello di presentazione deve solo interfacciarsi con il livello di logica di Business anziché ignorando che consente di passare direttamente a livello di accesso ai dati, è necessario creare un metodo BLL che richiama il metodo DAL appena creato (`InsertWithPicture`). Per questa esercitazione, creare un metodo nella `CategoriesBLL` classe denominata `InsertWithPicture` che accetta come input tre `string` s e una `byte` matrice. Il `string` sono parametri di input per il nome della categoria s, descrizione e percorso del file brochure, mentre il `byte` array sia per il contenuto binario di immagine categoria s. Come illustrato nel codice seguente, questo metodo BLL richiama il metodo DAL corrispondente:
 
-
 [!code-csharp[Main](including-a-file-upload-option-when-adding-a-new-record-cs/samples/sample2.cs)]
 
 > [!NOTE]
 > Assicurarsi che sia stato salvato del DataSet tipizzato prima di aggiungere il `InsertWithPicture` metodo per il livello BLL. Poiché il `CategoriesTableAdapter` codice della classe viene generato automaticamente basata su set di dati tipizzati, se non si t prima di tutto salvare le modifiche al set di dati tipizzati i `Adapter` proprietà non sarà a conoscenza di `InsertWithPicture` (metodo).
-
 
 ## <a name="step-3-listing-the-existing-categories-and-their-binary-data"></a>Passaggio 3: Elenca le categorie esistenti e i relativi dati binari
 
@@ -82,19 +73,15 @@ In questa esercitazione si creerà una pagina che consente agli utenti finali di
 
 Iniziare aprendo il `DisplayOrDownload.aspx` dalla pagina di `BinaryData` cartella. Passare alla visualizzazione origine e copiare i GridView e ObjectDataSource s sintassi dichiarativa, averla poi incollata all'interno di `<asp:Content>` elemento `UploadInDetailsView.aspx`. Dimenticare di copiare anche tenere sempre il `GenerateBrochureLink` metodo della classe code-behind di `DisplayOrDownload.aspx` a `UploadInDetailsView.aspx`.
 
-
 [![Copiare e incollare la sintassi dichiarativa dalla DisplayOrDownload.aspx a UploadInDetailsView.aspx](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image3.gif)](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image5.png)
 
 **Figura 3**: Copiare e incollare la sintassi dichiarativa dalla `DisplayOrDownload.aspx` al `UploadInDetailsView.aspx` ([fare clic per visualizzare l'immagine con dimensioni normali](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image6.png))
 
-
 Dopo aver copiato la sintassi dichiarativa e `GenerateBrochureLink` metodo tramite la `UploadInDetailsView.aspx` pagina, visualizzare la pagina tramite un browser per assicurarsi che tutto ciò che è stato copiato correttamente. Verrà visualizzato un controllo GridView di otto categorie di elenco che include un collegamento per scaricare il brochure, nonché l'immagine di categoria s.
-
 
 [![Si noterà ora ogni categoria insieme ai relativi dati binari](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image4.gif)](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image7.png)
 
 **Figura 4**: Si noterà ora ogni categoria insieme ai relativi dati binari ([fare clic per visualizzare l'immagine con dimensioni normali](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image8.png))
-
 
 ## <a name="step-4-configuring-thecategoriesdatasourceto-support-inserting"></a>Passaggio 4: Configurazione di`CategoriesDataSource`all'inserimento di supporto
 
@@ -102,18 +89,14 @@ Il `CategoriesDataSource` ObjectDataSource usato dal `Categories` GridView attua
 
 Avviare facendo clic sul collegamento Configura origine dati nello smart tag s ObjectDataSource. La prima schermata mostra l'oggetto origine dati è configurato per funzionare con, `CategoriesBLL`. Lasciare questa impostazione come- e fare clic su Avanti per passare alla schermata di definire i metodi di dati. Passare alla scheda Inserisci e scegli la `InsertWithPicture` metodo dall'elenco a discesa. Fare clic su Fine per completare la procedura guidata.
 
-
 [![Configurare ObjectDataSource per usare il metodo InsertWithPicture](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image5.gif)](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image9.png)
 
 **Figura 5**: Configurare ObjectDataSource per usare la `InsertWithPicture` metodo ([fare clic per visualizzare l'immagine con dimensioni normali](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image10.png))
 
-
 > [!NOTE]
 > Dopo aver completato la procedura guidata, Visual Studio potrebbe chiedere se si desidera aggiornare i campi e le chiavi, che rigenera i dati Web controlla i campi. Scegliere No, perché se si sceglie Sì sovrascriverà le personalizzazioni qualsiasi campo per avviare l'applicazione.
 
-
 Dopo aver completato la procedura guidata, ObjectDataSource includerà ora un valore per la relativa `InsertMethod` proprietà nonché `InsertParameters` per le colonne di quattro categoria, come il seguente markup dichiarativo illustra:
-
 
 [!code-aspx[Main](including-a-file-upload-option-when-adding-a-new-record-cs/samples/sample3.aspx)]
 
@@ -123,11 +106,9 @@ Come primo trattati nel [una panoramica di inserimento, aggiornamento ed elimina
 
 Avvio mediante il trascinamento di un controllo DetailsView dalla casella degli strumenti nella finestra di progettazione sopra il controllo GridView, l'impostazione relativa `ID` proprietà `NewCategory` e cancellare il `Height` e `Width` i valori delle proprietà. DetailsView s nello smart tag, eseguirne l'associazione esistente `CategoriesDataSource` e quindi selezionare la casella di controllo Attiva paging.
 
-
 [![Associare il CategoriesDataSource DetailsView e Abilita inserimento](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image6.gif)](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image11.png)
 
 **Figura 6**: Associare il controllo DetailsView per la `CategoriesDataSource` e Abilita inserimento ([fare clic per visualizzare l'immagine con dimensioni normali](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image12.png))
-
 
 Per il rendering in modo permanente DetailsView nella relativa interfaccia inserimento, impostare relativi `DefaultMode` proprietà `Insert`.
 
@@ -135,14 +116,11 @@ Si noti che il controllo DetailsView ha cinque BoundField `CategoryID`, `Categor
 
 Rimuovere il `NumberOfProducts` BoundField dal DetailsView completamente e quindi aggiornare il `HeaderText` delle proprietà delle `CategoryName` e `BrochurePath` BoundField per categoria e Brochure, rispettivamente. Successivamente, convertire le `BrochurePath` BoundField in un TemplateField e aggiungere un nuovo TemplateField dell'immagine, fornendo in questo nuovo TemplateField un `HeaderText` valore dell'immagine. Spostare il `Picture` TemplateField in modo che sia tra il `BrochurePath` TemplateField e CommandField.
 
-
 ![Associare il CategoriesDataSource DetailsView e Abilita inserimento](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image7.gif)
 
 **Figura 7**: Associare il DetailsView al `CategoriesDataSource` e Abilita inserimento
 
-
 Se è stato convertito il `BrochurePath` include il TemplateField BoundField in un TemplateField tramite la finestra di dialogo Modifica campi, un' `ItemTemplate`, `EditItemTemplate`, e `InsertItemTemplate`. Solo il `InsertItemTemplate` è necessario, tuttavia, è possibile rimuovere gli altri due modelli. La sintassi dichiarativa per il controllo DetailsView s a questo punto dovrebbe essere simile al seguente:
-
 
 [!code-aspx[Main](including-a-file-upload-option-when-adding-a-new-record-cs/samples/sample4.aspx)]
 
@@ -152,14 +130,11 @@ Attualmente, il `BrochurePath` s TemplateField `InsertItemTemplate` contiene una
 
 DetailsView s smart tag, scegliere l'opzione di modifica modelli e quindi selezionare il `BrochurePath` TemplateField s `InsertItemTemplate` nell'elenco a discesa. Rimuovere la casella di testo e quindi trascinare un controllo FileUpload dalla casella degli strumenti nel modello. Impostare il controllo FileUpload 1!s `ID` a `BrochureUpload`. Analogamente, aggiungere un controllo FileUpload per il `Picture` TemplateField s `InsertItemTemplate`. Impostare questo controllo FileUpload 1!s `ID` a `PictureUpload`.
 
-
 [![Aggiungere un controllo FileUpload al InsertItemTemplate](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image8.gif)](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image13.png)
 
 **Figura 8**: Aggiungere un controllo FileUpload per il `InsertItemTemplate` ([fare clic per visualizzare l'immagine con dimensioni normali](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image14.png))
 
-
 Dopo aver apportato queste aggiunte, le due sintassi dichiarativa per s TemplateField sarà:
-
 
 [!code-aspx[Main](including-a-file-upload-option-when-adding-a-new-record-cs/samples/sample5.aspx)]
 
@@ -170,13 +145,11 @@ Se un utente carica un tipo di file non corretto, è necessario annullare l'inse
 > [!NOTE]
 > In teoria, il `CategoryName` e `Description` BoundField viene convertita come TemplateFields e le relative interfacce inserimento personalizzati. Il `Description` inserimento dell'interfaccia, ad esempio, sarebbe probabilmente ottimizzandola tramite una casella di testo su più righe. E, poiché il `CategoryName` non accetta un colonna `NULL` valori, RequiredFieldValidator deve essere aggiunto per verificare che l'utente fornisce un valore per il nuovo nome di categoria s. Questi passaggi vengono lasciati come esercizio per il lettore. Fare riferimento a [personalizzazione dell'interfaccia di modifica dati](../editing-inserting-and-deleting-data/customizing-the-data-modification-interface-cs.md) per un approfondimento aumentando le interfacce di modifica dei dati.
 
-
 ## <a name="step-6-saving-the-uploaded-brochure-to-the-web-server-s-file-system"></a>Passaggio 6: Salvataggio Brochure caricata nel File System s Server Web
 
 Quando l'utente immette i valori per una nuova categoria e fa clic sul pulsante di inserimento, si verifica un postback ed espande il flusso di lavoro di inserimento. Per prima cosa, la s DetailsView [ `ItemInserting` evento](https://msdn.microsoft.com/library/system.web.ui.webcontrols.detailsview.iteminserting.aspx) viene attivato. Successivamente, gli oggetti ObjectDataSource `Insert()` metodo viene richiamato, offrendo un nuovo record viene aggiunto al `Categories` tabella. Successivamente, la s DetailsView [ `ItemInserted` evento](https://msdn.microsoft.com/library/system.web.ui.webcontrols.detailsview.iteminserted.aspx) viene attivato.
 
 Prima di ObjectDataSource s `Insert()` metodo viene richiamato, è necessario verificare innanzitutto che dall'utente sono stati caricati i tipi di file appropriato e quindi salvare il brochure PDF nel file System s server web. Creare un gestore eventi per s DetailsView `ItemInserting` eventi e aggiungere il codice seguente:
-
 
 [!code-csharp[Main](including-a-file-upload-option-when-adding-a-new-record-cs/samples/sample6.cs)]
 
@@ -185,16 +158,13 @@ Il gestore dell'evento inizia facendo la `BrochureUpload` controllo FileUpload d
 > [!NOTE]
 > Basandosi sull'estensione s file caricato non è una tecnica più efficiente per garantire che il file caricato non è un documento PDF. L'utente potrebbe comportare un documento PDF valido con estensione `.Brochure`, o potrebbe aver creato un documento non PDF e averlo assegnato un `.pdf` estensione. Il contenuto binario del file s dovrà essere esaminato a livello di codice per più di concludere il tipo di file. Questi approcci completi, tuttavia, sono spesso eccessivamente; verifica l'estensione è sufficiente per la maggior parte degli scenari.
 
-
 Come descritto nel [caricamento di file](uploading-files-cs.md) dell'esercitazione, è necessario prestare attenzione durante il salvataggio dei file nel file System in modo che il caricamento di un utente s non sovrascrive un altro s. Per questa esercitazione si proverà a usare lo stesso nome del file caricato. Se esiste già un file nei `~/Brochures` directory con lo stesso nome file, tuttavia, è possibile aggiungere un numero alla fine fino a quando non viene trovato un nome univoco. Ad esempio, se l'utente ha caricato un file brochure denominato `Meats.pdf`, ma è già presente un file denominato `Meats.pdf` nel `~/Brochures` cartella, si modificherà il nome del file salvato a `Meats-1.pdf`. Se presente, si proverà a eseguire `Meats-2.pdf`e così via, fino a quando non viene trovato un nome file univoco.
 
 Il codice seguente usa il [ `File.Exists(path)` metodo](https://msdn.microsoft.com/library/system.io.file.exists.aspx) per determinare se esiste già un file con il nome file specificato. In questo caso, continuerà a tentare di nuovi nomi di file per brochure fino a quando non viene trovato alcun conflitto.
 
-
 [!code-csharp[Main](including-a-file-upload-option-when-adding-a-new-record-cs/samples/sample7.cs)]
 
 Una volta individuato un nome file valido, il file deve essere salvato nel file system e gli oggetti ObjectDataSource `brochurePath``InsertParameter` valore deve essere aggiornato in modo che il nome del file viene scritto nel database. Come abbiamo visto nella *caricamento di file* esercitazione, il file può essere salvato utilizzando il controllo FileUpload s `SaveAs(path)` (metodo). Per aggiornare gli oggetti ObjectDataSource `brochurePath` parametro, usare il `e.Values` raccolta.
-
 
 [!code-csharp[Main](including-a-file-upload-option-when-adding-a-new-record-cs/samples/sample8.cs)]
 
@@ -204,13 +174,11 @@ Per archiviare l'immagine caricata nel nuovo `Categories` record, è necessario 
 
 Mentre il `Categories` table consente `NULL` i valori per il `Picture` colonna, tutte le categorie attualmente dispone di un'immagine. Let s forzare l'utente per fornire un'immagine quando si aggiunge una nuova categoria tramite questa pagina. Il codice seguente controlla per verificare che sia stata caricata un'immagine e che disponga di un'estensione appropriata.
 
-
 [!code-csharp[Main](including-a-file-upload-option-when-adding-a-new-record-cs/samples/sample9.cs)]
 
 Questo codice deve essere posizionato *prima di* il codice dal passaggio 6 in modo che se si è verificato un problema con il caricamento di immagini, il gestore dell'evento termina prima che il file brochure viene salvato nel file System.
 
 Supponendo che è stato caricato un file appropriato, assegnare il contenuto binario caricato per il valore di s parametri immagine con la riga di codice seguente:
-
 
 [!code-csharp[Main](including-a-file-upload-option-when-adding-a-new-record-cs/samples/sample10.cs)]
 
@@ -218,41 +186,33 @@ Supponendo che è stato caricato un file appropriato, assegnare il contenuto bin
 
 Per motivi di completezza, ecco il `ItemInserting` gestore eventi nella loro interezza:
 
-
 [!code-csharp[Main](including-a-file-upload-option-when-adding-a-new-record-cs/samples/sample11.cs)]
 
 ## <a name="step-8-fixing-thedisplaycategorypictureaspxpage"></a>Passaggio 8: Correzione di`DisplayCategoryPicture.aspx`pagina
 
 Let s si consiglia di testare l'interfaccia di inserimento e `ItemInserting` gestore eventi che è stato creato negli ultimi passaggi successivi. Visita il `UploadInDetailsView.aspx` pagina tramite un browser e si tenta di aggiungere una categoria, ma omettere l'immagine o specificare un'immagine non JPG o una brochure non PDF. In uno di questi casi, verrà visualizzato un messaggio di errore e il flusso di lavoro di inserimento annullata.
 
-
 [![Un messaggio di avviso viene visualizzato se viene caricato un tipo di File non valido](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image9.gif)](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image15.png)
 
 **Figura 9**: Un messaggio di avviso viene visualizzato se viene caricato un tipo di File non valido ([fare clic per visualizzare l'immagine con dimensioni normali](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image16.png))
 
-
 Dopo avere verificato che la pagina richiede un'immagine da caricare e non accetta i file non PDF o non JPG, aggiungere una nuova categoria con un'immagine JPG valida, se si lascia vuoto il campo Brochure. Dopo aver fatto clic sul pulsante Inserisci, verrà postback della pagina e verrà aggiunto un nuovo record per il `Categories` tabella con il contenuto binario di immagine caricata s archiviati direttamente nel database. Il controllo GridView viene aggiornato e Mostra una riga per la categoria appena aggiunta, ma, come illustrato nella figura 10, la nuova immagine s categoria non viene visualizzata correttamente.
-
 
 [![La nuova categoria s che immagine non viene visualizzata](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image10.gif)](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image17.png)
 
 **Figura 10**: La nuova categoria di s immagine non viene visualizzata ([fare clic per visualizzare l'immagine con dimensioni normali](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image18.png))
 
-
 Il motivo non viene visualizzata la nuova immagine è che il `DisplayCategoryPicture.aspx` pagina che restituisce un'immagine di categoria specificata s è configurato per elaborare le bitmap con un'intestazione OLE. Questa intestazione 78 byte viene rimosso dal `Picture` s binario del contenuto delle colonne prima che vengano inviati al client. Ma il file JPG che è appena caricati per la nuova categoria non dispone di questa intestazione OLE. Pertanto, vengono revocate byte validi, necessari dai dati binari s immagine.
 
 Poiché sono ora disponibili entrambe le bitmap con intestazioni OLE e jpg nel `Categories` tabella, è necessario aggiornare `DisplayCategoryPicture.aspx` in modo che non l'intestazione OLE rimozione per le categorie di otto originale e consente di ignorare questa rimozione ai record di categoria più recenti. Nell'esercitazione successiva esamineremo come aggiornare un'immagine di record s esistente e verrà aggiornato tutte le immagini di categoria precedente in modo che siano file. jpg. Per ora, tuttavia, usare il codice seguente nel `DisplayCategoryPicture.aspx` per rimuovere le intestazioni OLE solo per le otto categorie originale:
-
 
 [!code-csharp[Main](including-a-file-upload-option-when-adding-a-new-record-cs/samples/sample12.cs)]
 
 Con questa modifica, l'immagine JPG viene ora eseguito il rendering correttamente in GridView.
 
-
 [![Le immagini JPG di nuove categorie sono correttamente eseguito il rendering](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image11.gif)](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image19.png)
 
 **Figura 11**: Le immagini JPG di nuove categorie sono correttamente eseguito il rendering ([fare clic per visualizzare l'immagine con dimensioni normali](including-a-file-upload-option-when-adding-a-new-record-cs/_static/image20.png))
-
 
 ## <a name="step-9-deleting-the-brochure-in-the-face-of-an-exception"></a>Passaggio 9: L'eliminazione Brochure in caso di un'eccezione
 
@@ -261,7 +221,6 @@ Uno dei problemi di archiviazione dei dati binari nel file system s server web �
 Ora, cosa accade se il database è offline o se si verifica un errore nel `INSERT` istruzione SQL? Chiaramente l'inserimento avrà esito negativo, in modo che nessuna nuova riga category verrà aggiunto al database. Ma viene comunque mantenuto il file caricato brochure che si trova nel file system s server web. Questo file deve essere eliminata in caso di un'eccezione durante l'inserimento del flusso di lavoro.
 
 Come illustrato in precedenza nel [BLL - la gestione e le eccezioni di livello in una pagina ASP.NET](../editing-inserting-and-deleting-data/handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs.md) esercitazione, quando viene generata un'eccezione da entro le profondità dell'architettura viene propagata alle attraverso i vari livelli. A livello di presentazione, è possibile determinare se si è verificata un'eccezione da s DetailsView `ItemInserted` evento. Questo gestore dell'evento fornisce anche i valori di istanze della classe ObjectDataSource `InsertParameters`. Pertanto, è possibile creare un gestore eventi per il `ItemInserted` evento che controlla se si è verificata un'eccezione e, in questo caso, Elimina il file specificato da s ObjectDataSource `brochurePath` parametro:
-
 
 [!code-csharp[Main](including-a-file-upload-option-when-adding-a-new-record-cs/samples/sample13.cs)]
 

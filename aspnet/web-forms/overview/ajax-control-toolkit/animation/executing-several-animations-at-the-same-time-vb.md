@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: 2469f7ea-1489-42fb-a8e1-414c90141ce9
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/executing-several-animations-at-the-same-time-vb
 msc.type: authoredcontent
-ms.openlocfilehash: f8bb91de9642814a79d0fddd642928c25c58ebfd
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 02eb078a4fb8fddbbac18e4631214f354388cc2f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59402843"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133407"
 ---
 # <a name="executing-several-animations-at-the-same-time-vb"></a>Esecuzione di diverse animazioni contemporaneamente (VB)
 
@@ -22,7 +22,6 @@ da [Christian Wenz](https://github.com/wenz)
 [Scaricare il codice](http://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation2.vb.zip) o [Scarica il PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation2VB.pdf)
 
 > Il controllo di animazione in ASP.NET AJAX Control Toolkit non è semplicemente un controllo, ma un intero framework aggiungere animazioni a un controllo. Consente l'esecuzione di diverse animazioni in parallelo.
-
 
 ## <a name="overview"></a>Panoramica
 
@@ -53,7 +52,6 @@ Di seguito è riportato l'un markup possibili per il `AnimationExtender` control
 [!code-aspx[Main](executing-several-animations-at-the-same-time-vb/samples/sample5.aspx)]
 
 E infatti: quando si esegue questo script, il pannello viene visualizzato, quindi deve essere ridimensionato (più di triplicare la larghezza e dimezzamento dell'altezza) e dissolve nello stesso momento.
-
 
 [![Il pannello è dissolvenza in uscita e il ridimensionamento (incluso il relativo contenuto, grazie al motore di rendering del browser)](executing-several-animations-at-the-same-time-vb/_static/image2.png)](executing-several-animations-at-the-same-time-vb/_static/image1.png)
 

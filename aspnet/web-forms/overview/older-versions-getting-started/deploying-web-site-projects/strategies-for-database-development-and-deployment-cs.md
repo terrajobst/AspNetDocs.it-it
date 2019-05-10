@@ -8,12 +8,12 @@ ms.date: 04/23/2009
 ms.assetid: 3e8b0627-3eb7-488e-807e-067cba7cec05
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/strategies-for-database-development-and-deployment-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 3951ab4562e2c172f418c74136d511f0f9f50454
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 7efdb13ae67c8485fc35bf759901fec85c31669c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59415843"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65109266"
 ---
 # <a name="strategies-for-database-development-and-deployment-c"></a>Strategie per lo sviluppo e la distribuzione del database (C#)
 
@@ -22,7 +22,6 @@ da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Scaricare PDF](http://download.microsoft.com/download/C/3/9/C391A649-B357-4A7B-BAA4-48C96871FEA6/aspnet_tutorial10_DBDevel_cs.pdf)
 
 > Quando si distribuisce un'applicazione basata su dati per la prima volta che è possibile copiare il database alla cieca nell'ambiente di sviluppo all'ambiente di produzione. Ma esegue una forzata copia nelle distribuzioni successive sovrascriverà tutti i dati immessi nel database di produzione. Al contrario, la distribuzione di un database comporta applicando le modifiche apportate al database di sviluppo dopo l'ultima distribuzione nel database di produzione. Questa esercitazione esamina questi problemi e offre diverse strategie per agevolare chronicling e applicare le modifiche apportate al database dopo l'ultima distribuzione.
-
 
 ## <a name="introduction"></a>Introduzione
 
@@ -54,13 +53,11 @@ Il modo più semplice per mantenere un registro delle modifiche al modello di da
 
 <a id="0.4_table01"></a>
 
-
 | **Data modifica** | **Dettagli delle modifiche** |
 | --- | --- |
 | 2009-02-03: | Colonna aggiunta `DepartmentID` (`int`, non NULL) per il `Employees` tabella. Aggiungere un vincolo foreign key dalla `Departments.DepartmentID` a `Employees.DepartmentID`. |
 | 2009-02-05: | Colonna rimossa `TotalWeight` dal `Orders` tabella. Associati a dati già acquisiti in `OrderDetails` record. |
 | 2009-02-12: | Creazione di `ProductCategories` tabella. Esistono tre colonne: `ProductCategoryID` (`int`, `IDENTITY`, `NOT NULL`), `CategoryName` (`nvarchar(50)`, `NOT NULL`), e `Active` (`bit`, `NOT NULL`). Aggiunto a un vincolo di chiave primaria `ProductCategoryID`e il valore predefinito 1 per `Active`. |
-
 
 Esistono una serie di svantaggi di questo approccio. Prima di tutto, non vi è alcuna speranza per l'automazione. In qualsiasi momento queste modifiche devono essere applicati a un database -, ad esempio quando l'applicazione viene distribuita, uno sviluppatore deve implementare manualmente ogni modifica, uno alla volta. Inoltre, se è necessario ricostruire una particolare versione del database dalla linea di base usando il log delle modifiche, tale operazione così richiederà più tempo man mano che aumenta le dimensioni del log. Un altro svantaggio di questo metodo è che la chiarezza e a livello di dettaglio di ogni voce del registro modifiche è lasciato al rappresentante la registrazione della modifica. In un team con più sviluppatori alcuni potrebbe rendere le voci più dettagliate, più leggibile o più precise rispetto ad altri. Inoltre, errori di digitazione e altri errori di immissione dati umane correlati sono possibili.
 
@@ -70,7 +67,6 @@ Gestione del log delle modifiche nella prosa è, è vero, non molto sofisticati 
 
 > [!NOTE]
 > Sebbene le informazioni nel log delle modifiche, tecnicamente, necessari solo fino alla fase di distribuzione, consigliabile mantenere una cronologia delle modifiche. Ma anziché mantenere un singolo, in continua crescita di file di log delle modifiche, è consigliabile che un file di log di modifica diversi per ogni versione del database. In genere è opportuno alla versione del database ogni volta che viene distribuita. Tramite la gestione di un log di log delle modifiche è possibile, a partire dalla linea di base, ricreare tutte le versioni di database eseguendo gli script di log delle modifiche a partire dalla versione 1 e continuando fino a raggiungere la versione è necessario ricreare.
-
 
 ## <a name="recording-the-sql-change-statements"></a>Registrare le istruzioni di modifica SQL
 
@@ -95,18 +91,14 @@ Sono disponibili numerosi strumenti di confronto del database di terze parti off
 > [!NOTE]
 > Al momento della stesura di questo articolo la versione corrente di SQL Compare era versione 7.1, con l'edizione Standard a partire da 395 dollari un calcolo dei costi. È possibile seguire la procedura, scaricare una versione di valutazione gratuita di 14 giorni.
 
-
 All'avvio di SQL Compare apre la finestra di dialogo confronto tra progetti, che mostra i progetti SQL Compare salvati. Creare un nuovo progetto. Verrà avviata la procedura guidata configurazione del progetto, che richiede informazioni sul database per il confronto (vedere la figura 1). Immettere le informazioni per i database ambiente di sviluppo e produzione.
-
 
 [![Confrontare il database di sviluppo e produzione](strategies-for-database-development-and-deployment-cs/_static/image2.jpg)](strategies-for-database-development-and-deployment-cs/_static/image1.jpg)
 
 **Figura 1**: Confrontare il database di sviluppo e produzione ([fare clic per visualizzare l'immagine con dimensioni normali](strategies-for-database-development-and-deployment-cs/_static/image3.jpg))
 
-
 > [!NOTE]
 > Se il database ambiente di sviluppo è un file di database di SQL Express Edition nel `App_Data` cartella del sito Web è necessario registrare il database nel server di database SQL Server Express per selezionarlo dalla finestra di dialogo illustrata nella figura 1. Il modo più semplice per farlo è aprire SQL Server Management Studio (SSMS), connettersi al server di database SQL Server Express e collegare il database. Se non è installato nel computer SQL Server Management Studio è possibile scaricare e installare la versione gratuita [ *versione di SQL Server 2008 Management Studio Basic*](https://www.microsoft.com/downloads/details.aspx?FamilyId=7522A683-4CB2-454E-B908-E805E9BD4E28&amp;displaylang=en).
-
 
 Oltre a selezionare i database da confrontare, è possibile specificare anche un'ampia gamma di impostazioni di confronto nella scheda Opzioni. È possibile attivare è "Ignora indice e vincolo nomi." È importante ricordare che nell'esercitazione precedente è stato aggiunto che l'applicazione di servizi gli oggetti di database ai database di sviluppo e produzione. Se è stato usato il `aspnet_regsql.exe` dello strumento per creare questi oggetti nel database di produzione sarà presente che i nomi di vincolo unique e chiave primaria sono diversi tra i database di sviluppo e produzione. Di conseguenza, SQL Compare contrassegnerà tutte le tabelle di servizi di applicazione come diverse. È possibile lasciare i "Ignora indice e vincolo nomi" è deselezionata e sincronizzare i nomi di vincolo o indicare a SQL Compare per ignorare queste differenze.
 
@@ -115,11 +107,9 @@ Dopo aver selezionato i database da confrontare e verificare le opzioni di confr
 > [!NOTE]
 > Le modifiche al modello di dati apportate in questa esercitazione sono stati eseguiti per illustrare l'utilizzo di uno strumento di confronto del database. Queste modifiche nel database si troverà non in esercitazioni future.
 
-
 [![Confronto SQL sono elencate le differenze tra lo sviluppo e i database di produzione](strategies-for-database-development-and-deployment-cs/_static/image5.jpg)](strategies-for-database-development-and-deployment-cs/_static/image4.jpg)
 
 **Figura 2**: Confronto SQL sono elencate le differenze tra sviluppo e i database di produzione ([fare clic per visualizzare l'immagine con dimensioni normali](strategies-for-database-development-and-deployment-cs/_static/image6.jpg))
-
 
 SQL Compare suddivide gli oggetti di database in gruppi, mostrare rapidamente gli oggetti che esistono in entrambi i database ma sono diversi, gli oggetti esistenti in un database ma non in altra e gli oggetti che sono identici. Come può notare, sono presenti due oggetti presenti in entrambi i database, ma sono diversi: il `Authors` tabella che dispone di una colonna aggiunta, e il `Books` tabella, che ha colpito all'improvviso rimosso. È presente un oggetto che esiste solo nel database di sviluppo, vale a dire l'oggetto appena creato `Ratings` tabella. E sono presenti 117 oggetti sono identici in entrambi i database.
 
@@ -127,17 +117,14 @@ Selezione di un oggetto di database consente di visualizzare la finestra delle d
 
 Dopo aver esaminato le differenze e selezionare gli oggetti da sincronizzare, il successivo passaggio consiste nel generare i comandi SQL necessari per aggiornare lo schema del database s in modo che corrisponda il database di sviluppo. Questa operazione viene eseguita tramite la configurazione guidata sincronizzazione. La configurazione guidata sincronizzazione conferma di ciò che gli oggetti per la sincronizzazione e riepiloga l'azione di pianificazione (vedere la figura 3). È possibile sincronizzare i database immediatamente o generare uno script con i comandi SQL che può essere eseguito in base alle esigenze specifiche.
 
-
 [![Usare la configurazione guidata sincronizzazione per sincronizzare gli schemi di database](strategies-for-database-development-and-deployment-cs/_static/image8.jpg)](strategies-for-database-development-and-deployment-cs/_static/image7.jpg)
 
 **Figura 3**: Utilizzare la procedura guidata di sincronizzazione per sincronizzare Your gli schemi di database ([fare clic per visualizzare l'immagine con dimensioni normali](strategies-for-database-development-and-deployment-cs/_static/image9.jpg))
-
 
 Strumenti di confronto del database, come Red Gate Software s SQL Compare assicurarsi di aver applicato le modifiche allo schema del database di sviluppo nel database di produzione semplice come puntare e fare clic su.
 
 > [!NOTE]
 > SQL Compare Confronta e consente di sincronizzare due database *schemi*. Sfortunatamente, non confrontare e sincronizzare i dati all'interno delle tabelle di due database. Red Gate Software offre un prodotto denominato [ *confronto dati SQL* ](http://www.red-gate.com/products/SQL_Data_Compare/) che confronta e sincronizza i dati tra due database, ma è un prodotto distinto da SQL Compare e i costi di un altro 395 dollari.
-
 
 ## <a name="taking-the-application-offline-during-deployment"></a>Portare Offline l'applicazione durante la distribuzione
 

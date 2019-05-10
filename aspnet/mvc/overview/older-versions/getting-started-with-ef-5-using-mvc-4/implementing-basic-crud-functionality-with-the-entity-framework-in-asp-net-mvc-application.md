@@ -8,12 +8,12 @@ ms.date: 07/30/2013
 ms.assetid: f7bace3f-b85a-47ff-b5fe-49e81441cdf9
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-basic-crud-functionality-with-the-entity-framework-in-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: be1fcf2c7a0eec5473b2e3a10f51d7e22656b671
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: d42c13b01d798b6c35327826812e853d327eeae9
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59402206"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65112484"
 ---
 # <a name="implementing-basic-crud-functionality-with-the-entity-framework-in-aspnet-mvc-application-2-of-10"></a>Implementazione della funzionalità CRUD di base con Entity Framework nell'applicazione ASP.NET MVC (2 di 10)
 
@@ -27,12 +27,10 @@ da [Tom Dykstra](https://github.com/tdykstra)
 > > 
 > > Se si verifica un problema è possibile risolvere, [Scarica il capitolo completato](building-the-ef5-mvc4-chapter-downloads.md) e provare a riprodurre il problema. Confrontando il codice per il codice completo è generalmente possibile trovare la soluzione al problema. Per alcuni errori comuni e come risolverli, vedere [errori e soluzioni alternative.](advanced-entity-framework-scenarios-for-an-mvc-web-application.md#errors)
 
-
 Nell'esercitazione precedente è creata un'applicazione MVC che memorizza e Visualizza dati tramite Entity Framework e SQL Server LocalDB. In questa esercitazione verrà esaminato e personalizzare il CRUD (create, leggere, aggiornare ed eliminare) il codice che lo scaffolding di MVC crea automaticamente per l'utente nel controller e visualizzazioni.
 
 > [!NOTE]
 > È pratica comune implementare il modello di repository per creare un livello di astrazione tra il controller e il livello di accesso ai dati. Per semplificare queste esercitazioni, è non implementare un repository fino a un'esercitazione successiva di questa serie.
-
 
 In questa esercitazione si creerà le pagine web seguenti:
 

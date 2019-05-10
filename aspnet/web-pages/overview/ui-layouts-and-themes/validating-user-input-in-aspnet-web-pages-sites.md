@@ -8,12 +8,12 @@ ms.date: 02/20/2014
 ms.assetid: 4eb060cc-cf14-41ae-bab1-14a2c15332d0
 msc.legacyurl: /web-pages/overview/ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites
 msc.type: authoredcontent
-ms.openlocfilehash: fd3ba36891aa66f78c28c538a4d3ba0da6736765
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: e6f8e1051d09d11f1756bfada44a73ba7c2a1db2
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59392989"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108589"
 ---
 # <a name="validating-user-input-in-aspnet-web-pages-razor-sites"></a>Convalida dell'Input utente in ASP.NET Web Pages (Razor) Sites
 
@@ -42,7 +42,6 @@ da [Tom FitzMacken](https://github.com/tfitzmac)
 > 
 > Questa esercitazione si integra inoltre con ASP.NET Web Pages 2.
 
-
 In questo articolo sono contenute le sezioni seguenti:
 
 - [Panoramica della convalida dell'Input utente](#Overview_of_User_Input_Validation)
@@ -65,7 +64,6 @@ Potrebbe anche essere determinate restrizioni in base ai valori. Anche se gli ut
 > [!NOTE] 
 > 
 > **Importante** convalida dell'input utente è importante anche per la sicurezza. Quando si limitano i valori che possono essere immessi nel form, si riduce la probabilità che un utente può immettere un valore che può compromettere la sicurezza del sito.
-
 
 <a id="Validating_User_Input"></a>
 ## <a name="validating-user-input"></a>Convalida dell'Input utente
@@ -114,7 +112,6 @@ Per impostazione predefinita, viene convalidato input utente dopo l'invio della 
 > [!NOTE]
 > Anche se si usa la convalida lato client, la convalida viene eseguita sempre anche nel codice server. Esegue la convalida nel codice del server è una misura di sicurezza, nel caso in cui gli utenti di ignorare la convalida basata su client.
 
-
 1. Registra le librerie JavaScript seguente nella pagina:  
 
     [!code-html[Main](validating-user-input-in-aspnet-web-pages-sites/samples/sample3.html)]
@@ -159,7 +156,6 @@ Se si include questo blocco di stile nelle pagine di esempio da sopra nell'artic
 > [!NOTE]
 > Se non si usa la convalida del client in ASP.NET Web Pages 2, le classi CSS per il `<input>` elementi (`input-validation-error` e `input-validation-valid` non hanno alcun effetto.
 
-
 ### <a name="static-and-dynamic-error-display"></a>Visualizzazione degli errori statici e dinamici
 
 Le regole CSS sono disponibili in coppie, ad esempio `validation-summary-errors` e `validation-summary-valid`. Queste coppie consentono di definire le regole per entrambe le condizioni: una condizione di errore e una condizione (non degli errori) "normale". È importante comprendere che il markup per la visualizzazione degli errori viene sempre eseguito, anche se non sono presenti errori. Ad esempio, se una pagina presenta un `Html.ValidationSummary` metodo nel markup, l'origine della pagina conterrà il markup seguente anche quando viene richiesta la pagina per la prima volta:
@@ -182,7 +178,6 @@ In questo caso, si desidera assicurarsi che il valore passato alla pagina (a que
 > [!NOTE] 
 > 
 > **Importanti** convalidare sempre i valori che si ottiene mediante *qualsiasi* origine, inclusi i valori del campo del form, i valori di stringa di query e i valori dei cookie. È facile agli utenti di modificare questi valori (ad esempio per scopi dannosi). Pertanto, è necessario verificare questi valori per proteggere l'applicazione.
-
 
 Nell'esempio seguente viene illustrato come è possibile convalidare un valore che viene passato una stringa di query. Il codice verifica che il valore non vuoto e che sia un numero intero.
 

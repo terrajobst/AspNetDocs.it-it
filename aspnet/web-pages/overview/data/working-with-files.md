@@ -8,12 +8,12 @@ ms.date: 02/20/2014
 ms.assetid: eee916e4-ba4c-439a-a24e-68df7d45a569
 msc.legacyurl: /web-pages/overview/data/working-with-files
 msc.type: authoredcontent
-ms.openlocfilehash: 4a62cce3af57b507882744f948ce208becdb03ac
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 3ff852232212ddda4930597731911be60c092667
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59382303"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108951"
 ---
 # <a name="working-with-files-in-an-aspnet-web-pages-razor-site"></a>Uso di file in un sito di ASP.NET Web Pages (Razor)
 
@@ -48,7 +48,6 @@ da [Tom FitzMacken](https://github.com/tfitzmac)
 >   
 > 
 > Questa esercitazione si integra inoltre con WebMatrix 3.
-
 
 <a id="Creating_a_Text_File"></a>
 ## <a name="creating-a-text-file-and-writing-data-to-it"></a>Creazione di un File di testo e la scrittura dei dati
@@ -145,7 +144,6 @@ Questa procedura viene illustrato come leggere e visualizzare i dati che è stat
 > 
 > È possibile usare Microsoft Excel per salvare i dati contenuti in un foglio di calcolo come file delimitato da virgole (*CSV* file). Quando esegue questa operazione, il file viene salvato in formato testo normale, non in formato Excel. Ogni riga del foglio di calcolo è separato da un'interruzione di riga nel file di testo e ogni elemento di dati è separato da virgole. È possibile usare il codice illustrato nell'esempio precedente per leggere un file delimitato da virgole di Excel semplicemente modificando il nome del file di dati nel codice.
 
-
 <a id="Deleting_Files"></a>
 ## <a name="deleting-files"></a>L'eliminazione di file
 
@@ -154,7 +152,6 @@ Per eliminare file dal sito Web, è possibile usare il `File.Delete` (metodo). Q
 > [!NOTE] 
 > 
 > **Importante** In siti Web di produzione, è in genere limitare chi è autorizzato per apportare modifiche ai dati. Per informazioni su come configurare l'appartenenza e sui modi per consentire agli utenti di eseguire attività nel sito, vedere [aggiunta di sicurezza e l'appartenenza a un sito con pagine Web ASP.NET](https://go.microsoft.com/fwlink/?LinkId=202904).
-
 
 1. Nel sito Web, creare una sottocartella denominata *immagini*.
 2. Copia una o più *jpg* di file nei *immagini* cartella.
@@ -255,7 +252,6 @@ Nell'esempio precedente, consentire agli utenti di caricare un file. Ma è possi
 
 <a id="Additional_Resources"></a>
 ## <a name="additional-resources"></a>Risorse aggiuntive
-
 
 [Utilizzo di immagini in un sito con pagine Web ASP.NET](https://go.microsoft.com/fwlink/?LinkId=202897)
 

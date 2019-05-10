@@ -8,12 +8,12 @@ ms.date: 07/04/2012
 ms.assetid: eb32a17b-626c-4373-9a7d-3387992f3c04
 msc.legacyurl: /web-api/overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-7
 msc.type: authoredcontent
-ms.openlocfilehash: 028631f8855e4d94bebb0e965de75c4025e22859
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: aaffcecccd138d30355ac0e7ce6c86a67246cc08
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59409265"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108931"
 ---
 # <a name="part-7-creating-the-main-page"></a>Parte 7: Creazione della pagina principale
 
@@ -63,7 +63,6 @@ Successivamente, aggiungere queste funzioni per `AppViewModel`:
 - `resetCart` Rimuove tutti gli elementi del carrello.
 - `getDetails` Ottiene i dettagli per un ordine (eseguendo il push di una nuova `OrderDetailsViewModel` nella `details` elenco).
 - `createOrder` Crea un nuovo ordine e lo svuota il carrello della spesa.
-
 
 [!code-javascript[Main](using-web-api-with-entity-framework-part-7/samples/sample6.js?highlight=4)]
 

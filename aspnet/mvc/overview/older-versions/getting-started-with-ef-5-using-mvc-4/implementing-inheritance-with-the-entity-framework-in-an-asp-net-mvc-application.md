@@ -8,12 +8,12 @@ ms.date: 07/30/2013
 ms.assetid: a5c3feff-5335-4cdd-a97d-f7a8785c2494
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-inheritance-with-the-entity-framework-in-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: fe2bc91c1bb37282389a45f662a34f8865dee301
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: d61d02e23bbcaf9eff910613880ac49f79c15cac
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59381068"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65112383"
 ---
 # <a name="implementing-inheritance-with-the-entity-framework-in-an-aspnet-mvc-application-8-of-10"></a>Implementazione dell'ereditarietà con Entity Framework in un'applicazione ASP.NET MVC (8 di 10)
 
@@ -26,7 +26,6 @@ da [Tom Dykstra](https://github.com/tdykstra)
 > > [!NOTE] 
 > > 
 > > Se si verifica un problema è possibile risolvere, [Scarica il capitolo completato](building-the-ef5-mvc4-chapter-downloads.md) e provare a riprodurre il problema. Confrontando il codice per il codice completo è generalmente possibile trovare la soluzione al problema. Per alcuni errori comuni e come risolverli, vedere [errori e soluzioni alternative.](advanced-entity-framework-scenarios-for-an-mvc-web-application.md#errors)
-
 
 Nell'esercitazione precedente si gestite le eccezioni di concorrenza. In questa esercitazione viene illustrato come implementare l'ereditarietà nel modello di dati.
 
@@ -142,7 +141,6 @@ Eseguire il `update-database` nuovo il comando.
 > [!code-xml[Main](implementing-inheritance-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample8.xml?highlight=1-2)]
 > 
 > Con un nuovo database, non sono presenti dati per eseguire la migrazione e il `update-database` comando è molto probabile che venga completato senza errori. Per istruzioni su come eliminare il database, vedere [come eliminare un Database da Visual Studio 2012](http://romiller.com/2013/05/17/how-to-drop-a-database-from-visual-studio-2012/). Se si adotta questo approccio per poter continuare con l'esercitazione, ignorare il passaggio di distribuzione alla fine di questa esercitazione, poiché il sito distribuito otterrebbe lo stesso errore quando viene eseguita automaticamente le migrazioni. Se si desidera risolvere un errore di migrazioni, la risorsa migliore è uno dei forum di Entity Framework o StackOverflow.com.
-
 
 ## <a name="testing"></a>Test
 

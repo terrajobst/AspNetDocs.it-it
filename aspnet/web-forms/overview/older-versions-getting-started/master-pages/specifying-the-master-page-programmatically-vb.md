@@ -8,12 +8,12 @@ ms.date: 07/28/2008
 ms.assetid: 0edcd653-f24a-41aa-aef4-75f868fe5ac2
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/specifying-the-master-page-programmatically-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 96f6ebb47af38c77cba11a92c883700730324226
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: d075d0b66da8a0f4e2f0155c08b09a02a4ca71fb
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59389232"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65106950"
 ---
 # <a name="specifying-the-master-page-programmatically-vb"></a>Impostazione della pagina master a livello di codice (VB)
 
@@ -23,11 +23,9 @@ da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 > Esamina l'impostazione di pagina master alla pagina di contenuto a livello di programmazione tramite il gestore eventi PreInit.
 
-
 ## <a name="introduction"></a>Introduzione
 
 Dall'esempio inaugurale [ *creazione di un Layout a livello di sito tramite le pagine Master*](creating-a-site-wide-layout-using-master-pages-vb.md), tutto il contenuto di pagine sono fatto riferimento a loro pagina master in modo dichiarativo tramite la `MasterPageFile` attributo nel `@Page`della direttiva. Ad esempio, il seguente `@Page` direttiva collega la pagina di contenuto della pagina master `Site.master`:
-
 
 [!code-aspx[Main](specifying-the-master-page-programmatically-vb/samples/sample1.aspx)]
 
@@ -41,11 +39,9 @@ Ogni volta che arriva una richiesta nel server web per una pagina ASP.NET che è
 
 Figura 1 illustra questa fusion. Passaggio 1 nella figura 1 mostra il contenuto iniziale e le gerarchie di controllo pagina master. Nella parte finale della fase PreInit il contenuto nella pagina vengono aggiunti di elementi ContentPlaceHolder corrispondente nella pagina master (passaggio 2). Dopo questo fusion, la pagina master viene utilizzato come la radice della gerarchia del controllo congiunta. Questa istruzione fused controllo gerarchia viene quindi aggiunto alla pagina per produrre la gerarchia dei controlli finalizzato (passaggio 3). Il risultato finale è che la gerarchia dei controlli della pagina include la gerarchia dei controlli congiunta.
 
-
 [![Della pagina Master e le gerarchie di controllo della pagina contenuto vengono combinati insieme durante la fase di PreInit](specifying-the-master-page-programmatically-vb/_static/image2.png)](specifying-the-master-page-programmatically-vb/_static/image1.png)
 
 **Figura 01**: Della pagina Master e le gerarchie di controllo della pagina contenuto vengono combinati insieme durante la fase di PreInit ([fare clic per visualizzare l'immagine con dimensioni normali](specifying-the-master-page-programmatically-vb/_static/image3.png))
-
 
 ## <a name="step-2-setting-themasterpagefileproperty-from-code"></a>Passaggio 2: L'impostazione di`MasterPageFile`proprietà dal codice
 
@@ -55,18 +51,15 @@ All'inizio della fase PreInit il `Page` oggetto genera relativi [ `PreInit` even
 
 Iniziare aprendo `Default.aspx.vb`, il file di classe code-behind per la home page del sito. Aggiungere un gestore eventi per la pagina `PreInit` eventi digitando il codice seguente:
 
-
 [!code-vb[Main](specifying-the-master-page-programmatically-vb/samples/sample2.vb)]
 
 Da qui è possibile impostare il `MasterPageFile` proprietà. Aggiornare il codice in modo che assegna il valore "~ / Site. master" per il `MasterPageFile` proprietà.
-
 
 [!code-vb[Main](specifying-the-master-page-programmatically-vb/samples/sample3.vb)]
 
 Se si imposta un punto di interruzione e avvio con il debug si noterà che ogni volta che il `Default.aspx` viene visitata oppure ogni volta che è un postback a questa pagina, il `Page_PreInit` gestore dell'evento e il `MasterPageFile` proprietà viene assegnata a "~ / Site. master".
 
 In alternativa, è possibile eseguire l'override di `Page` della classe `OnPreInit` metodo e impostare il `MasterPageFile` proprietà non esiste. Per questo esempio, è possibile non impostare la pagina master in una pagina specifica, ma piuttosto da `BasePage`. È importante ricordare che abbiamo creato una classe di base di pagine personalizzate (`BasePage`) nella [ *specificazione di titolo, metatag e altre intestazioni HTML nella pagina Master* ](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb.md) esercitazione. Attualmente `BasePage` esegue l'override di `Page` della classe `OnLoadComplete` metodo, in cui imposta la pagina `Title` proprietà basate sui dati della mappa del sito. Aggiorniamo `BasePage` per eseguire l'override anche di `OnPreInit` metodo per specificare a livello di codice della pagina master.
-
 
 [!code-vb[Main](specifying-the-master-page-programmatically-vb/samples/sample4.vb)]
 
@@ -82,11 +75,9 @@ Se il `MasterPageFile` viene impostata tramite il `@Page` direttiva o a livello 
 
 In breve, è necessario lasciare il `MasterPageFile` attributo la `@Page` direttiva per usufruire di esperienze in fase di progettazione in Visual Studio.
 
-
 [![Visual Studio Usa il @Page attributo MasterPageFile della direttiva per il rendering della visualizzazione di progettazione](specifying-the-master-page-programmatically-vb/_static/image5.png)](specifying-the-master-page-programmatically-vb/_static/image4.png)
 
 **Figura 02**: Visual Studio Usa la `@Page` della direttiva `MasterPageFile` dell'attributo da sottoporre a rendering l'area di progettazione ([fare clic per visualizzare l'immagine con dimensioni normali](specifying-the-master-page-programmatically-vb/_static/image6.png))
-
 
 ## <a name="step-3-creating-an-alternative-master-page"></a>Passaggio 3: Creazione di una pagina Master alternativa
 
@@ -96,22 +87,18 @@ Verrà ora esaminato come caricare in modo dinamico una pagina master in fase di
 
 Creare una nuova pagina master nella cartella radice denominata `Alternate.master`. Aggiungere anche un nuovo foglio di stile per il sito Web denominato `AlternateStyles.css`.
 
-
 [![Aggiungere un altro File pagina Master e CSS al sito Web](specifying-the-master-page-programmatically-vb/_static/image8.png)](specifying-the-master-page-programmatically-vb/_static/image7.png)
 
 **Figura 03**: Aggiungere un'altra pagina Master e File CSS per il sito Web ([fare clic per visualizzare l'immagine con dimensioni normali](specifying-the-master-page-programmatically-vb/_static/image9.png))
-
 
 Ho ho progettato il `Alternate.master` pagina master per il titolo visualizzato nella parte superiore della pagina, centrata e su uno sfondo blu. Ho erogate della colonna a sinistra e spostare tale contenuto di sotto di `MainContent` controllo ContentPlaceHolder, che si estende per l'intera larghezza della pagina. Inoltre, ho nixed l'elenco non ordinato di lezioni e sostituito con un elenco orizzontale precedente `MainContent`. Ho aggiornato anche i tipi di carattere e colori utilizzati dalla pagina master (e, di conseguenza, le pagine di contenuto). La figura 4 illustra `Default.aspx` quando si usa il `Alternate.master` pagina master.
 
 > [!NOTE]
 > ASP.NET include la possibilità di definire *temi*. Un tema è una raccolta di immagini, file CSS e correlate allo stile proprietà impostazioni di controlli Web che possono essere applicate a una pagina in fase di esecuzione. I temi sono il modo per vedere se i layout del sito differiscono solo nelle immagini visualizzate e le regole CSS. Se il layout si distinguono più significativo, ad esempio usando i controlli Web diversi o impostare un layout radicalmente diverso, è necessario usare pagine master separate. Alla fine di questa esercitazione per altre informazioni sui temi, consultare la sezione altre informazioni.
 
-
 [![Le pagine di contenuto possono ora usare un nuovo aspetto grafico](specifying-the-master-page-programmatically-vb/_static/image11.png)](specifying-the-master-page-programmatically-vb/_static/image10.png)
 
 **Figura 04**: Le pagine di contenuto possono ora usare un nuovo aspetto ([fare clic per visualizzare l'immagine con dimensioni normali](specifying-the-master-page-programmatically-vb/_static/image12.png))
-
 
 Quando il server master e markup di pagine contenuto sono fusibile, il `MasterPage` classe controlli per verificare che il contenuto ogni controllo nella pagina di contenuto fa riferimento a un controllo ContentPlaceHolder nella pagina master. Se viene trovato un elemento ContentControl che fa riferimento a un controllo ContentPlaceHolder inesistente, viene generata un'eccezione. In altre parole, è fondamentale che la pagina master da assegnare alla pagina di contenuto include un controllo ContentPlaceHolder per ogni controllo nella pagina di contenuto del contenuto.
 
@@ -126,11 +113,9 @@ Alcune delle pagine di contenuto nel nostro sito Web includono solo una o due co
 
 Per ottenere il `Alternate.master` pagina master per renderli simili per eseguire il data mining (vedere la figura 4), iniziare definendo gli stili della pagina master di `AlternateStyles.css` foglio di stile. Aggiungere le regole seguenti in `AlternateStyles.css`:
 
-
 [!code-css[Main](specifying-the-master-page-programmatically-vb/samples/sample5.css)]
 
 Successivamente, aggiungere il seguente markup dichiarativo per `Alternate.master`. Come si vede `Alternate.master` contiene quattro controlli ContentPlaceHolder con lo stesso `ID` i valori dei controlli ContentPlaceHolder `Site.master`. Inoltre, include un controllo ScriptManager, che è necessario per le pagine nel nostro sito Web che usano il framework ASP.NET AJAX.
-
 
 [!code-aspx[Main](specifying-the-master-page-programmatically-vb/samples/sample6.aspx)]
 
@@ -139,7 +124,6 @@ Successivamente, aggiungere il seguente markup dichiarativo per `Alternate.maste
 Per testare questo nuovo aggiornamento pagina master le `BasePage` della classe `OnPreInit` metodo in modo che il `MasterPageFile` proprietà viene assegnato il valore `"~/Alternate.maser"` e quindi visitare il sito Web. Ogni pagina dovrebbe funzionare senza errori tranne due: `~/Admin/AddProduct.aspx` e `~/Admin/Products.aspx`. Aggiunta di un prodotto in DetailsView nella `~/Admin/AddProduct.aspx` genera una `NullReferenceException` dalla riga di codice che tenta di impostare la pagina master `GridMessageText` proprietà. Quando si visita `~/Admin/Products.aspx` un `InvalidCastException` generata al caricamento della pagina con il messaggio: "Impossibile eseguire il cast dell'oggetto di tipo ' ASP.alternate\_master' nel tipo ' ASP.site\_master'."
 
 Questi errori si verificano perché le `Site.master` classe code-behind include gli eventi pubblici, le proprietà e metodi che non sono definiti nel `Alternate.master`. La parte di markup di queste due pagine hanno una `@MasterType` direttiva che fa riferimento il `Site.master` pagina master.
-
 
 [!code-aspx[Main](specifying-the-master-page-programmatically-vb/samples/sample7.aspx)]
 
@@ -157,18 +141,15 @@ Che cosa dobbiamo fare è configurare `BaseMasterPage` in modo che questi membri
 
 Aggiornamento di `BaseMasterPage` classe in modo che contenga il codice seguente:
 
-
 [!code-vb[Main](specifying-the-master-page-programmatically-vb/samples/sample8.vb)]
 
 Passare quindi ad il `Site.master` code-behind classe e fare in modo che derivano da `BaseMasterPage`. In quanto `BaseMasterPage` contiene i membri contrassegnati `MustOverride` è necessario eseguire l'override di tali membri in `Site.master`. Aggiungere il `Overrides` una parola chiave per le definizioni di metodo e proprietà. Aggiornare anche il codice che genera la `PricesDoubled` eventi nel `DoublePrice` del pulsante `Click` gestore dell'evento con una chiamata per la classe di base `OnPricesDoubled` (metodo).
 
 Dopo queste modifiche di `Site.master` classe code-behind deve contenere il codice seguente:
 
-
 [!code-vb[Main](specifying-the-master-page-programmatically-vb/samples/sample9.vb)]
 
 È anche necessario aggiornare `Alternate.master`della classe code-behind da cui derivare `BaseMasterPage` ed eseguire l'override di due `MustOverride` membri. Tuttavia, poiché `Alternate.master` non contiene un controllo GridView che elenca i prodotti più recenti né un'etichetta che visualizza un messaggio dopo un nuovo prodotto viene aggiunto al database, questi metodi non sono necessario eseguire alcuna operazione.
-
 
 [!code-vb[Main](specifying-the-master-page-programmatically-vb/samples/sample10.vb)]
 
@@ -176,11 +157,9 @@ Dopo queste modifiche di `Site.master` classe code-behind deve contenere il codi
 
 Ora che è stata completata la `BaseMasterPage` classi e le due pagine master estenderlo, il passaggio finale consiste nell'aggiornare il `~/Admin/AddProduct.aspx` e `~/Admin/Products.aspx` pagine per fare riferimento a questo tipo comune. Iniziare cambiando il `@MasterType` direttiva in entrambe le pagine da:
 
-
 [!code-aspx[Main](specifying-the-master-page-programmatically-vb/samples/sample11.aspx)]
 
 A:
-
 
 [!code-aspx[Main](specifying-the-master-page-programmatically-vb/samples/sample12.aspx)]
 
@@ -188,11 +167,9 @@ Invece che fanno riferimento a un percorso di file, il `@MasterType` proprietà 
 
 È una piccola modifica che deve essere inviata `~/Admin/AddProduct.aspx`. Il controllo DetailsView `ItemInserted` gestore dell'evento Usa entrambi fortemente tipizzato `Master` proprietà e il non fortemente tipizzate `Page.Master` proprietà. È stato risolto il riferimento fortemente tipizzato quando sono stati aggiornati i `@MasterType` direttiva, ma è comunque necessario aggiornare il riferimento non fortemente tipizzato. Sostituire la riga di codice seguente:
 
-
 [!code-vb[Main](specifying-the-master-page-programmatically-vb/samples/sample13.vb)]
 
 Con il comando seguente, che viene eseguito il cast `Page.Master` al tipo di base:
-
 
 [!code-vb[Main](specifying-the-master-page-programmatically-vb/samples/sample14.vb)]
 
@@ -205,14 +182,11 @@ Nostri `BasePage` classe imposta attualmente tutte le pagine di contenuto `Maste
 > [!NOTE]
 > In quanto `Site.master` e `Alternate.master` hanno lo stesso set di controlli ContentPlaceHolder non importa quale pagina master scelto durante la creazione della nuova pagina contenuta. Per coerenza, è preferibile usando `Site.master`.
 
-
 [![Aggiungere una nuova pagina contenuta per il sito Web](specifying-the-master-page-programmatically-vb/_static/image14.png)](specifying-the-master-page-programmatically-vb/_static/image13.png)
 
 **Figura 05**: Aggiungere una nuova pagina contenuto per il sito Web ([fare clic per visualizzare l'immagine con dimensioni normali](specifying-the-master-page-programmatically-vb/_static/image15.png))
 
-
 Aggiornamento di `Web.sitemap` file da includere una voce per questa lezione. Aggiungere il markup seguente sotto il `<siteMapNode>` per la lezione pagine Master e ASP.NET AJAX:
-
 
 [!code-xml[Main](specifying-the-master-page-programmatically-vb/samples/sample15.xml)]
 
@@ -220,11 +194,9 @@ Prima di aggiungere qualsiasi contenuto per il `ChooseMasterPage.aspx` pagina si
 
 Aggiungere un controllo pulsante Web alla pagina e impostare relativi `ID` e `Text` delle proprietà per `SaveLayout` e "Salva Layout scelta", rispettivamente. A questo punto markup dichiarativo della pagina dovrebbe essere simile al seguente:
 
-
 [!code-aspx[Main](specifying-the-master-page-programmatically-vb/samples/sample16.aspx)]
 
 Quando la pagina viene visitata prima di tutto è necessario visualizzare la scelta dell'utente attualmente selezionato pagina master. Creare un `Page_Load` gestore dell'evento e aggiungere il codice seguente:
-
 
 [!code-vb[Main](specifying-the-master-page-programmatically-vb/samples/sample17.vb)]
 
@@ -232,34 +204,27 @@ Il codice riportato sopra esegue solo nella prima visita pagina (e non nei postb
 
 È necessario anche il codice che consente di salvare la scelta dell'utente nel `MyMasterPage` variabile di sessione. Creare un gestore eventi per il `SaveLayout` del pulsante `Click` eventi e aggiungere il codice seguente:
 
-
 [!code-vb[Main](specifying-the-master-page-programmatically-vb/samples/sample18.vb)]
 
 > [!NOTE]
 > Entro l'ora di `Click` gestore eventi viene eseguita durante il postback, la pagina master è già stata selezionata. Selezione elenco a discesa dell'utente, pertanto non avranno effetto fino a quando non visitare la pagina successiva. Il `Response.Redirect` forza il browser per richiedere nuovamente `ChooseMasterPage.aspx`.
 
-
 Con il `ChooseMasterPage.aspx` pagina completa, l'attività finale consiste per avere `BasePage` assegnare il `MasterPageFile` proprietà in base al valore della `MyMasterPage` variabile di sessione. Se non è impostata la variabile di sessione hanno `BasePage` per impostazione predefinita `Site.master`.
-
 
 [!code-vb[Main](specifying-the-master-page-programmatically-vb/samples/sample19.vb)]
 
 > [!NOTE]
 > Quando si sposta il codice che assegna il `Page` dell'oggetto `MasterPageFile` proprietà fuori il `OnPreInit` gestore dell'evento e in due metodi distinti. Il primo metodo, `SetMasterPageFile`, assegna la `MasterPageFile` sul valore restituito dal metodo secondo, `GetMasterPageFileFromSession`. È stata contrassegnata la `SetMasterPageFile` metodo `Overridable` in modo che i futuri nelle classi che estendono `BasePage` può facoltativamente eseguire l'override per implementare logica personalizzata, se necessario. Vedremo un esempio di override `BasePage`del `SetMasterPageFile` proprietà nella prossima esercitazione.
 
-
 Con questo codice, visitare il `ChooseMasterPage.aspx` pagina. Inizialmente, il `Site.master` pagina master è selezionato (vedere la figura 6), ma l'utente può selezionare un'altra pagina master nell'elenco a discesa.
-
 
 [![Le pagine di contenuto vengono visualizzate utilizzando la pagina Master Site. master](specifying-the-master-page-programmatically-vb/_static/image17.png)](specifying-the-master-page-programmatically-vb/_static/image16.png)
 
 **Figura 06**: Contenuto di pagine vengono visualizzate usando il `Site.master` pagina Master ([fare clic per visualizzare l'immagine con dimensioni normali](specifying-the-master-page-programmatically-vb/_static/image18.png))
 
-
 [![Le pagine di contenuto vengono ora visualizzate utilizzando la pagina Master Alternate.master](specifying-the-master-page-programmatically-vb/_static/image20.png)](specifying-the-master-page-programmatically-vb/_static/image19.png)
 
 **Figura 07**: Contenuto di pagine sono ora visualizzati utilizzando il `Alternate.master` pagina Master ([fare clic per visualizzare l'immagine con dimensioni normali](specifying-the-master-page-programmatically-vb/_static/image21.png))
-
 
 ## <a name="summary"></a>Riepilogo
 

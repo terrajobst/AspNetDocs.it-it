@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: 918026b4-2f63-421d-8546-df12856960a8
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/disabling-actions-during-animation-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 1cce2b05f125902ab05d493bebe753b2060b4d95
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: dd69317c4a9b5a98302683766e6bc699d3b6396d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59384279"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108637"
 ---
 # <a name="disabling-actions-during-animation-c"></a>Disabilitazione delle azioni durante l'animazione (C#)
 
@@ -22,7 +22,6 @@ da [Christian Wenz](https://github.com/wenz)
 [Scaricare il codice](http://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation7.cs.zip) o [Scarica il PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation7CS.pdf)
 
 > Il controllo di animazione in ASP.NET AJAX Control Toolkit non è semplicemente un controllo, ma un intero framework aggiungere animazioni a un controllo. Supporta anche azioni, ad esempio un clic del mouse. Tuttavia quando un clic del mouse viene avviata un'animazione, è consigliabile disabilitare i clic del mouse durante l'animazione.
-
 
 ## <a name="overview"></a>Panoramica
 
@@ -53,7 +52,6 @@ All'interno di `<Animations>` nodo, `<OnClick>` è l'elemento a destra per gesti
 [!code-xml[Main](disabling-actions-during-animation-cs/samples/sample5.xml)]
 
 Tuttavia in questo scenario specifico questo sarebbe inutile perché il pulsante dissolve e non è visibile alla fine dell'animazione.
-
 
 [![Il pulsante è disabilitato, non appena viene eseguita l'animazione](disabling-actions-during-animation-cs/_static/image2.png)](disabling-actions-during-animation-cs/_static/image1.png)
 

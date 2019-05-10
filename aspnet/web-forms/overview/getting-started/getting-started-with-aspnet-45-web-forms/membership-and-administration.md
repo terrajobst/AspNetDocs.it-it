@@ -8,12 +8,12 @@ ms.date: 09/08/2014
 ms.assetid: 732a2316-e49f-4f72-becd-0cd72f14457e
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/membership-and-administration
 msc.type: authoredcontent
-ms.openlocfilehash: 7263a7d7ee791be8a1369934aac4d091736a658b
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 59f859ea30572fbe66184f29555ac2c5c2f22f82
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59417481"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132123"
 ---
 # <a name="membership-and-administration"></a>Appartenenza e amministrazione
 
@@ -22,7 +22,6 @@ da [Erik Reitan](https://github.com/Erikre)
 [Scaricare progetto di esempio Wingtip Toys (c#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) o [Scarica l'E-book (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
 
 > Questa serie di esercitazioni insegnerà le nozioni di base della creazione di un'applicazione Web Form ASP.NET con ASP.NET 4.5 e Microsoft Visual Studio Express 2013 per Web. Un Visual Studio 2013 [progetto con codice sorgente c#](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) complemento a questa serie di esercitazioni è disponibile.
-
 
 Questa esercitazione illustra come aggiornare l'applicazione di esempio Wingtip Toys per aggiungere un ruolo personalizzato e usare ASP.NET Identity. Viene inoltre illustrato come implementare una pagina di amministrazione da cui l'utente con un ruolo personalizzato è possibile aggiungere e rimuovere i prodotti dal sito Web.
 
@@ -81,7 +80,6 @@ Il codice sopra riportato innanzitutto stabilisce un contesto di database per il
 > 
 > Se si desidera archiviare i dati di appartenenza con i dati del prodotto, è possibile utilizzare lo stesso **DbContext** usato per archiviare i dati del prodotto nel codice precedente.
 
-
  Il *interne* (parola chiave) è un modificatore di accesso per tipi (ad esempio le classi) e i membri dei tipi (ad esempio metodi o proprietà). Tipi interni o i membri sono accessibili solo all'interno dei file contenuti nell'assembly stesso *(con estensione dll* file). Quando si compila l'applicazione, un file di assembly *(con estensione dll*) viene creato che contiene il codice che viene eseguito quando si esegue l'applicazione. 
 
 Oggetto `RoleStore` oggetto, che fornisce la gestione dei ruoli, viene creato in base al contesto di database.
@@ -89,7 +87,6 @@ Oggetto `RoleStore` oggetto, che fornisce la gestione dei ruoli, viene creato in
 > [!NOTE] 
 > 
 > Si noti che durante la `RoleStore` viene creato l'oggetto utilizza un oggetto generico `IdentityRole` tipo. Ciò significa che il `RoleStore` può solo contenere `IdentityRole` oggetti. Anche con i Generics, le risorse in memoria vengono gestite meglio.
-
 
 Successivamente, il `RoleManager` dell'oggetto, viene creato in base il `RoleStore` oggetto appena creato. il `RoleManager` API che consente di salvare automaticamente le modifiche a correlate al ruolo di oggetto espone il `RoleStore`. Il `RoleManager` può solo contenere `IdentityRole` oggetti perché il codice Usa il `<IdentityRole>` tipo generico.
 
@@ -102,7 +99,6 @@ Successivamente viene creato l'utente "canEditUser" creando un nuovo `Applicatio
 > [!NOTE] 
 > 
 > La gestione degli errori verrà aggiornato durante l'esercitazione "ASP.NET Error Handling" più avanti in questa serie di esercitazioni.
-
 
 Al successivo avvio dell'applicazione, l'utente denominato "canEditUser" verrà aggiunto come il ruolo "canEdit" dell'applicazione denominato. Più avanti in questa esercitazione, sarà l'accesso come utente "canEditUser" per visualizzare le funzionalità aggiuntive che si verranno aggiunti durante questa esercitazione. Per informazioni dettagliate API su ASP.NET Identity, vedere la [ASPNET Namespace](https://msdn.microsoft.com/library/microsoft.aspnet.identity(v=vs.111).aspx). Per altre informazioni sull'inizializzazione il sistema di identità di ASP.NET, vedere la [AspnetIdentitySample](https://github.com/rustd/AspnetIdentitySample/blob/master/AspnetIdentitySample/App_Start/IdentityConfig.cs).
 

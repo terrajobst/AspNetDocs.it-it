@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: 97a3d33c-c856-43f3-8acb-f1ccbc48221a
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/cascadingdropdown/using-cascadingdropdown-with-a-database-vb
 msc.type: authoredcontent
-ms.openlocfilehash: d0b6f8651e327cf9ad2a3051edd323efba4f64fc
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 9e3f842faea2ec04225d779c1b8d71c62d4c1f35
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59418729"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108176"
 ---
 # <a name="using-cascadingdropdown-with-a-database-vb"></a>Uso di CascadingDropDown con un database (VB)
 
@@ -22,7 +22,6 @@ da [Christian Wenz](https://github.com/wenz)
 [Scaricare il codice](http://download.microsoft.com/download/9/0/7/907760b1-2c60-4f81-aeb6-ca416a573b0d/cascadingdropdown1.vb.zip) o [Scarica il PDF](http://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/cascadingdropdown1VB.pdf)
 
 > Il controllo CascadingDropDown in AJAX Control Toolkit estende un controllo DropDownList in modo che le modifiche in un controllo DropDownList Carica valori in un altro controllo DropDownList associati. Affinché il corretto funzionamento, è necessario creare un servizio web speciale.
-
 
 ## <a name="overview"></a>Panoramica
 
@@ -85,11 +84,9 @@ Il resto del metodo è piuttosto semplice, quindi. ID del fornitore viene utiliz
 
 Caricare la pagina ASP.NET e dopo un breve periodo di tempo viene inserito nell'elenco di fornitori con le voci di 25. Selezionare una voce e notare come il secondo elenco a discesa viene riempita con i dati.
 
-
 [![Nel primo elenco viene compilato automaticamente](using-cascadingdropdown-with-a-database-vb/_static/image2.png)](using-cascadingdropdown-with-a-database-vb/_static/image1.png)
 
 Nel primo elenco viene compilato automaticamente ([fare clic per visualizzare l'immagine con dimensioni normali](using-cascadingdropdown-with-a-database-vb/_static/image3.png))
-
 
 [![Nel secondo elenco viene compilato in base della selezione nel primo elenco](using-cascadingdropdown-with-a-database-vb/_static/image5.png)](using-cascadingdropdown-with-a-database-vb/_static/image4.png)
 

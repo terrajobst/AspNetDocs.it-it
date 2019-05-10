@@ -8,15 +8,14 @@ ms.date: 01/13/2011
 ms.assetid: b558e481-775a-4aa0-bd3b-ad61e530c2d2
 msc.legacyurl: /web-pages/content-guide
 msc.type: content
-ms.openlocfilehash: 5e410ac0c6d3430c00e171775d842ee30eeab021
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 33b1fa8aa1db90b8995fa86ab64782d482753d4b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59383164"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133236"
 ---
 # <a name="webmatrix-content-guide"></a>Guida ai contenuti su WebMatrix
-
 
 > [!NOTE] 
 > WebMatrix non è più consigliata come ambiente di sviluppo integrato per ASP.NET Web Pages. Uso [Visual Studio](xref:aspnet/web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio) oppure [Visual Studio Code](https://code.visualstudio.com/).

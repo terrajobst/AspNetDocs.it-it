@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 2488a91e-b0a8-465a-b874-3233f724b56b
 msc.legacyurl: /web-forms/overview/deployment/configuring-team-foundation-server-for-web-deployment/configuring-permissions-for-team-build-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: 62e5c5622743447e1119141469c894dc905e6b43
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 5699f72af6b8d7f18d1a2c631dfdedd63c66e1e6
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59381055"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133848"
 ---
 # <a name="configuring-permissions-for-team-build-deployment"></a>Configurazione delle autorizzazioni per la distribuzione di Team Build
 
@@ -22,7 +22,6 @@ da [Jason Lee](https://github.com/jrjlee)
 [Scaricare PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Questo argomento descrive come configurare le autorizzazioni per abilitare il server di compilazione distribuire il contenuto al server web e server di database come parte di un processo di compilazione automatizzata.
-
 
 In questo argomento fa parte di una serie di esercitazioni basate su requisiti di distribuzione aziendale di una società fittizia, denominata Fabrikam, Inc. Questa serie di esercitazioni Usa una soluzione di esempio&#x2014;il [soluzione Contact Manager](../web-deployment-in-the-enterprise/the-contact-manager-solution.md)&#x2014;per rappresentare un'applicazione web con un livello di complessità, tra cui un'applicazione ASP.NET MVC 3, una comunicazione Windows realistico Servizio Foundation (WCF) e un progetto di database.
 
@@ -36,7 +35,6 @@ Qualsiasi attività di distribuzione che richiedono l'autenticazione di Windows 
 
 > [!NOTE]
 > L'account del servizio di rete Usa l'account del computer per eseguire l'autenticazione ad altri computer. Gli account Machine assumono la forma * [nome dominio]\[nome macchina] ***$**&#x2014;, ad esempio, **FABRIKAM\TFSBUILD$**. Di conseguenza, se il servizio di compilazione viene eseguita usando l'identità del servizio di rete, si devono concedere le autorizzazioni necessarie per l'identità dell'account computer per il server di compilazione.
-
 
 ## <a name="configuring-web-server-permissions"></a>Configurazione delle autorizzazioni per Server Web
 

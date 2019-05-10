@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: f97a1145-6470-4bca-8f15-ccfb25fb903c
 msc.legacyurl: /web-forms/overview/deployment/deploying-web-applications-in-enterprise-scenarios/application-lifecycle-management-from-development-to-production
 msc.type: authoredcontent
-ms.openlocfilehash: 3b7f154936222c85bd7897ea10cbb5ae9d1aa670
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 230cf4393db0ee19cfc42ed54359d61e7926a49d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59408940"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65109279"
 ---
 # <a name="application-lifecycle-management-from-development-to-production"></a>Gestione del ciclo di vita delle applicazioni: dallo sviluppo alla produzione
 
@@ -27,7 +27,6 @@ da [Jason Lee](https://github.com/jrjlee)
 > 
 > > [!NOTE]
 > > Per ragioni di semplicità, in questo argomento non vengono trattate in aggiornamento database come parte del processo di distribuzione. Tuttavia, rendendo gli aggiornamenti incrementali per le funzionalità dei database è un requisito di molti scenari di distribuzione dell'organizzazione ed è possibile trovare istruzioni su come eseguire questa operazione più avanti in questa serie di esercitazioni. Per altre informazioni, vedere [distribuire progetti di Database](../web-deployment-in-the-enterprise/deploying-database-projects.md).
-
 
 ## <a name="overview"></a>Panoramica
 
@@ -94,7 +93,6 @@ Per eseguire la distribuzione, un utente esegue il *Publish.proj* file utilizzan
 > Il modo di che lavorare di questi file di progetto personalizzato è indipendenti dal meccanismo che consente di richiamare MSBuild. Ad esempio, è possibile usare la riga di comando di MSBuild direttamente, come descritto in [informazioni sul File di progetto](../web-deployment-in-the-enterprise/understanding-the-project-file.md). È possibile eseguire i file di progetto da un file di comando, come descritto in [creare ed eseguire un File di comando di distribuzione](../web-deployment-in-the-enterprise/creating-and-running-a-deployment-command-file.md). In alternativa, è possibile eseguire i file di progetto da una definizione di compilazione in TFS, come descritto in [creazione di una definizione di compilazione che la distribuzione supporta](../configuring-team-foundation-server-for-web-deployment/creating-a-build-definition-that-supports-deployment.md).  
 > In ogni caso il risultato finale è lo stesso&#x2014;MSBuild esegue il file di progetto unito e distribuisce la soluzione nell'ambiente di destinazione. Ciò offre una notevole flessibilità nel modo in cui si attiva il processo di pubblicazione.
 
-
 Dopo che ha creato i file di progetto personalizzati, Matt li aggiunge a una cartella della soluzione e li archivia nel controllo del codice sorgente.
 
 ### <a name="create-build-definitions"></a>Creazione delle definizioni di compilazione
@@ -125,15 +123,12 @@ Il risultato finale è che, se la soluzione viene compilata correttamente e pass
 
 Il **DeployToTest** questi argomenti a MSBuild forniture di definizione di compilazione:
 
-
 [!code-console[Main](application-lifecycle-management-from-development-to-production/samples/sample1.cmd)]
-
 
 Il **DeployOnBuild = true** e **DeployTarget = pacchetto** proprietà vengono usate quando Team Build Compila i progetti all'interno della soluzione. Quando il progetto è un progetto di applicazione web, queste proprietà indicare a MSBuild per creare un pacchetto di distribuzione web per il progetto. Il **TargetEnvPropsFile** proprietà indica il *Publish.proj* dove trovare il file di progetto specifici dell'ambiente per l'importazione del file.
 
 > [!NOTE]
 > Per una procedura dettagliata su come creare una definizione di compilazione simile al seguente, vedere [creazione di una definizione di compilazione che la distribuzione supporta](../configuring-team-foundation-server-for-web-deployment/creating-a-build-definition-that-supports-deployment.md).
-
 
 Il *Publish.proj* file contiene le destinazioni che compila ogni progetto nella soluzione. Tuttavia, include anche la logica condizionale che ignora gli compilazione destinazioni se si sta tentando di eseguire il file in Team Build. Ciò consente di sfruttare i vantaggi delle funzionalità di compilazione aggiuntivi Team Build offre, come la possibilità di eseguire unit test. Se la compilazione della soluzione o l'unità di test hanno esito negativo, il *Publish.proj* file non verrà eseguito e non verrà distribuita l'applicazione.
 
@@ -164,9 +159,7 @@ Questo è il processo generale per una distribuzione in ambiente di gestione tem
 
 Il **DeployToStaging** questi argomenti a MSBuild forniture di definizione di compilazione:
 
-
 [!code-console[Main](application-lifecycle-management-from-development-to-production/samples/sample2.cmd)]
-
 
 Il **TargetEnvPropsFile** proprietà indica il *Publish.proj* dove trovare il file di progetto specifici dell'ambiente per l'importazione del file. Il **OutputRoot** proprietà sostituisce il valore predefinito e indica la posizione della cartella di compilazione che contiene le risorse da distribuire. Quando Rob mette in coda la compilazione, Usa la **parametri** pressione di tab per fornire un valore aggiornato per il **OutputRoot** proprietà.
 
@@ -175,24 +168,19 @@ Il **TargetEnvPropsFile** proprietà indica il *Publish.proj* dove trovare il fi
 > [!NOTE]
 > Per altre informazioni su come creare una definizione di compilazione simile al seguente, vedere [distribuire un'istanza di Build specifico](../configuring-team-foundation-server-for-web-deployment/deploying-a-specific-build.md).
 
-
 Il **DeployToStaging-WhatIf** definizione di compilazione contiene la stessa logica di distribuzione come la **DeployToStaging** definizione di compilazione. Tuttavia, include l'argomento aggiuntivo **WhatIf = true**:
 
-
 [!code-console[Main](application-lifecycle-management-from-development-to-production/samples/sample3.cmd)]
-
 
 All'interno di *Publish.proj* file, il **WhatIf** proprietà indica che tutte le risorse di distribuzione devono essere pubblicate in modalità di "what if". In altre parole, i file di log vengono generati come se la distribuzione ha voluto, ma nulla viene modificato effettivamente nell'ambiente di destinazione. Ciò consente di valutare l'impatto di una distribuzione proposta&#x2014;in particolare, ciò che verranno aggiunti, cosa verrà aggiornata e che cosa verrà eliminata&#x2014;prima di apportare effettivamente le modifiche.
 
 > [!NOTE]
 > Per altre informazioni su come configurare le distribuzioni di "what if", vedere [esecuzione di una distribuzione "What If"](../advanced-enterprise-web-deployment/performing-a-what-if-deployment.md).
 
-
 Dopo aver distribuito l'applicazione per il server web primario nell'ambiente di staging, il WFF verranno automaticamente sincronizzati l'applicazione su tutti i server nella server farm.
 
 > [!NOTE]
 > Per altre informazioni sulla configurazione di WFF per sincronizzare i server web, vedere [creare una Server Farm con Web Farm Framework](../configuring-server-environments-for-web-deployment/creating-a-server-farm-with-the-web-farm-framework.md).
-
 
 ## <a name="deployment-to-production"></a>Distribuzione nell'ambiente di produzione
 

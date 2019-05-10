@@ -8,12 +8,12 @@ ms.date: 08/03/2007
 ms.assetid: ad8dd396-30f7-4abe-ac02-a0b84422e5be
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/protecting-connection-strings-and-other-configuration-information-cs
 msc.type: authoredcontent
-ms.openlocfilehash: eab1ad6cd4636ab3d35988ec8dc762c8a8f51ef4
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 40b143acc246ec47f29975177752d457c5413950
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59421134"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108529"
 ---
 # <a name="protecting-connection-strings-and-other-configuration-information-c"></a>Protezione delle stringhe di connessione e di altre informazioni di configurazione (C#)
 
@@ -23,18 +23,15 @@ da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 > Un'applicazione ASP.NET in genere archivia le informazioni di configurazione in un file Web. config. Alcune di queste informazioni è sensibile e garantisce la protezione dati. Per impostazione predefinita questo file non verrà servito da un visitatore di un sito Web, ma un amministratore o un utente malintenzionato potrebbe ottenere l'accesso al file system del server Web e visualizzare il contenuto del file. In questa esercitazione si apprenderà che ASP.NET 2.0 consente di proteggere informazioni sensibili tramite la crittografia delle sezioni del file Web. config.
 
-
 ## <a name="introduction"></a>Introduzione
 
 Le informazioni di configurazione per le applicazioni ASP.NET vengono in genere archiviate in un file XML denominato `Web.config`. Nel corso delle esercitazioni seguenti sono state aggiornate le `Web.config` un numero limitato di volte. Durante la creazione il `Northwind` DataSet tipizzata nel [prima esercitazione](../introduction/creating-a-data-access-layer-cs.md), ad esempio, informazioni sulla stringa di connessione aggiunto automaticamente al `Web.config` nel `<connectionStrings>` sezione. Più avanti, nelle [pagine Master e spostamento nel sito](../introduction/master-pages-and-site-navigation-cs.md) esercitazione abbiamo aggiornato manualmente `Web.config`, l'aggiunta un `<pages>` elemento che indica che tutte le pagine ASP.NET nel nostro progetto deve utilizzare il `DataWebControls` tema.
 
 Poiché `Web.config` potrebbe contenere dati riservati, ad esempio le stringhe di connessione, è importante che il contenuto di `Web.config` rimanere sicuri e nascosta dai visualizzatori autorizzati. Per impostazione predefinita, qualsiasi HTTP richiesta in un file con il `.config` estensione viene gestita dal motore di ASP.NET, che restituisce il *questo tipo di pagina non è servito* messaggio illustrato nella figura 1. Di conseguenza, i visitatori non è possibile visualizzare le `Web.config` s contenuto dei file immettendo semplicemente http://www.YourServer.com/Web.config nella barra degli indirizzi del browser s.
 
-
 [![Visita di Web. config tramite un Browser restituisce un questo tipo di pagina non è servito messaggio](protecting-connection-strings-and-other-configuration-information-cs/_static/image2.png)](protecting-connection-strings-and-other-configuration-information-cs/_static/image1.png)
 
 **Figura 1**: Visita `Web.config` attraverso un Browser restituisce un questo tipo di pagina non è servita messaggio ([fare clic per visualizzare l'immagine con dimensioni normali](protecting-connection-strings-and-other-configuration-information-cs/_static/image3.png))
-
 
 Ma cosa succede se un utente malintenzionato è in grado di trovare alcuni altri exploit che consenta di visualizzare il `Web.config` s contenuto dei file? Che cosa può fare con queste informazioni un utente malintenzionato e le operazioni possono essere eseguite per proteggere ulteriormente le informazioni sensibili all'interno di `Web.config`? Fortunatamente, la maggior parte delle sezioni in `Web.config` non contengono informazioni riservate. Il danno può un utente malintenzionato selettivo se si conosce il nome del tema usato da pagine ASP.NET predefinito?
 
@@ -49,7 +46,6 @@ In questa esercitazione si esaminerà le tecniche per la protezione di tali info
 
 > [!NOTE]
 > Questa esercitazione si conclude con uno sguardo alle raccomandazioni di Microsoft s per la connessione a un database da un'applicazione ASP.NET. Oltre a crittografare le stringhe di connessione, è possibile consentire la protezione avanzata del sistema, garantendo che ci si connette al database in modo sicuro.
-
 
 ## <a name="step-1-exploring-aspnet-20-s-protected-configuration-options"></a>Passaggio 1: Esplorazione di ASP.NET 2.0 s protette le opzioni di configurazione
 
@@ -69,7 +65,6 @@ In questa esercitazione si userà questi esempi il provider di DPAPI e le chiavi
 > [!NOTE]
 > Il `RSAProtectedConfigurationProvider` e `DPAPIProtectedConfigurationProvider` i provider vengono registrati nel `machine.config` file con i nomi di provider `RsaProtectedConfigurationProvider` e `DataProtectionConfigurationProvider`, rispettivamente. Quando la crittografia o decrittografia le informazioni di configurazione è necessario specificare il nome del provider appropriato (`RsaProtectedConfigurationProvider` oppure `DataProtectionConfigurationProvider`) anziché il nome di tipo effettivo (`RSAProtectedConfigurationProvider` e `DPAPIProtectedConfigurationProvider`). È possibile trovare il `machine.config` del file nei `$WINDOWS$\Microsoft.NET\Framework\version\CONFIG` cartella.
 
-
 ## <a name="step-2-programmatically-encrypting-and-decrypting-configuration-sections"></a>Passaggio 2: A livello di programmazione crittografare e decrittografare le sezioni di configurazione
 
 Con poche righe di codice è possibile crittografare o decrittografare una sezione di configurazione specifico utilizzando un provider specificato. Il codice, come vedremo tra breve, deve semplicemente fare riferimento a livello di codice la sezione di configurazione appropriato chiamare relativo `ProtectSection` oppure `UnprotectSection` (metodo) e quindi chiamare il `Save` metodo per rendere permanenti le modifiche. Inoltre, .NET Framework include un'utilità della riga di comando utili che è possibile crittografare e decrittografare le informazioni di configurazione. Esamineremo questa utilità della riga di comando nel passaggio 3.
@@ -82,21 +77,17 @@ Sotto la casella di testo, aggiungere due controlli Button denominati `EncryptCo
 
 A questo punto la schermata dovrebbe essere simile alla figura 2.
 
-
 [![Aggiungere una casella di testo e due controlli Web pulsante alla pagina](protecting-connection-strings-and-other-configuration-information-cs/_static/image5.png)](protecting-connection-strings-and-other-configuration-information-cs/_static/image4.png)
 
 **Figura 2**: Aggiungere una casella di testo e due controlli Web pulsante alla pagina ([fare clic per visualizzare l'immagine con dimensioni normali](protecting-connection-strings-and-other-configuration-information-cs/_static/image6.png))
 
-
 Successivamente, è necessario scrivere codice che carica e visualizza il contenuto del `Web.config` nella `WebConfigContents` nella casella di testo quando la pagina viene caricata. Aggiungere il codice seguente alla classe code-behind s di pagina. Questo codice aggiunge un metodo denominato `DisplayWebConfig` e lo chiama dal `Page_Load` gestore dell'evento quando `Page.IsPostBack` è `false`:
-
 
 [!code-csharp[Main](protecting-connection-strings-and-other-configuration-information-cs/samples/sample1.cs)]
 
 Il `DisplayWebConfig` metodo viene utilizzato il [ `File` classe](https://msdn.microsoft.com/library/system.io.file.aspx) per aprire l'applicazione s `Web.config` file, il [ `StreamReader` classe](https://msdn.microsoft.com/library/system.io.streamreader.aspx) leggerne il contenuto in una stringa e il [ `Path` classe](https://msdn.microsoft.com/library/system.io.path.aspx) per generare il percorso fisico di `Web.config` file. Queste tre classi tutti reperibili nel [ `System.IO` dello spazio dei nomi](https://msdn.microsoft.com/library/system.io.aspx). Di conseguenza, è necessario aggiungere un `using` `System.IO` istruzione per l'inizio della classe code-behind o, in alternativa, queste classi nomi con prefisso `System.IO.` .
 
 Successivamente, è necessario aggiungere i gestori eventi per i due controlli Button `Click` gli eventi e aggiungere il codice necessario per crittografare e decrittografare il `<connectionStrings>` sezione usando una chiave a livello di computer con il provider DPAPI. Dalla finestra di progettazione, fare doppio clic su ognuno dei pulsanti per aggiungere un `Click` gestore nel code-behind in classe e quindi aggiungere il codice seguente:
-
 
 [!code-csharp[Main](protecting-connection-strings-and-other-configuration-information-cs/samples/sample2.cs)]
 
@@ -110,14 +101,11 @@ Dopo la chiamata di `ProtectSection(provider)` o `UnprotectSection` metodo, è n
 
 Dopo aver immesso il codice sopra riportato, testarla visitando il `EncryptingConfigSections.aspx` pagina tramite un browser. Inizialmente viene visualizzata una pagina che elenca il contenuto della `Web.config` con il `<connectionStrings>` sezione visualizzati in testo normale (vedere la figura 3).
 
-
 [![Aggiungere una casella di testo e due controlli Web pulsante alla pagina](protecting-connection-strings-and-other-configuration-information-cs/_static/image8.png)](protecting-connection-strings-and-other-configuration-information-cs/_static/image7.png)
 
 **Figura 3**: Aggiungere una casella di testo e due controlli Web pulsante alla pagina ([fare clic per visualizzare l'immagine con dimensioni normali](protecting-connection-strings-and-other-configuration-information-cs/_static/image9.png))
 
-
 Fare clic sul pulsante di crittografare le stringhe di connessione. Se la convalida delle richieste è abilitata, il markup restituita dal `WebConfigContents` casella di testo produrrà un' `HttpRequestValidationException`, che viene visualizzato il messaggio, potenzialmente pericoloso `Request.Form` valore rilevato dal client. Convalida delle richieste, che è abilitata per impostazione predefinita in ASP.NET 2.0, non consente i postback che includono HTML non codificato ed è progettata per aiutare a evitare attacchi script injection. È possibile disabilitare questo controllo alla pagina - o a livello di applicazione. Per disattivarla per questa pagina, impostare il `ValidateRequest` se si imposta su `false` nel `@Page` direttiva. Il `@Page` direttiva si trova nella parte superiore di markup dichiarativo pagina s.
-
 
 [!code-aspx[Main](protecting-connection-strings-and-other-configuration-information-cs/samples/sample3.aspx)]
 
@@ -125,28 +113,22 @@ Per ulteriori informazioni sulla convalida della richiesta, il suo scopo, come d
 
 Dopo aver disabilitato la convalida delle richieste per la pagina, provare a fare nuovamente clic sul pulsante di crittografare le stringhe di connessione. Durante il postback, si accederà il file di configurazione e la relativa `<connectionStrings>` sezione crittografata con il provider DPAPI. La casella di testo viene quindi aggiornato per visualizzare il nuovo `Web.config` contenuto. Come illustrato nella figura 4, il `<connectionStrings>` informazioni sono ora crittografate.
 
-
 [![Facendo clic la Crittografa connessione stringhe pulsante Crittografa il &lt;connectionString&gt; sezione](protecting-connection-strings-and-other-configuration-information-cs/_static/image11.png)](protecting-connection-strings-and-other-configuration-information-cs/_static/image10.png)
 
 **Figura 4**: Facendo clic la Crittografa connessione stringhe pulsante Crittografa il `<connectionString>` sezione ([fare clic per visualizzare l'immagine con dimensioni normali](protecting-connection-strings-and-other-configuration-information-cs/_static/image12.png))
 
-
 Crittografata `<connectionStrings>` segue sezione generati sul mio computer, sebbene alcuni contenuti nel `<CipherData>` elemento è stato rimosso per motivi di brevità:
-
 
 [!code-xml[Main](protecting-connection-strings-and-other-configuration-information-cs/samples/sample4.xml)]
 
 > [!NOTE]
 > Il `<connectionStrings>` elemento specifica il provider utilizzato per eseguire la crittografia (`DataProtectionConfigurationProvider`). Queste informazioni vengono usate per il `UnprotectSection` metodo quando si fa clic sul pulsante decrittografare le stringhe di connessione.
 
-
 Quando le informazioni sulla stringa di connessione si accede da `Web.config` - in base al codice che abbiamo scritto, da un controllo SqlDataSource, o il codice generato automaticamente dagli oggetti TableAdapter in set di dati tipizzato - verrà decrittografato automaticamente. In breve, non dobbiamo aggiungere alcun codice aggiuntivo o per la logica per decrittografare il crittografato `<connectionString>` sezione. Per dimostrare questo concetto, visitare una delle esercitazioni precedenti in questa fase, ad esempio l'esercitazione di visualizzazione semplice nella sezione Basic Reporting (`~/BasicReporting/SimpleDisplay.aspx`). Come illustrato nella figura 5, l'esercitazione funziona esattamente come si può immaginare, che indica che le informazioni sulla stringa di connessione crittografata viene automaticamente decrittografate dalla pagina ASP.NET.
-
 
 [![Il livello di accesso ai dati decrittografa automaticamente le informazioni sulla stringa di connessione](protecting-connection-strings-and-other-configuration-information-cs/_static/image14.png)](protecting-connection-strings-and-other-configuration-information-cs/_static/image13.png)
 
 **Figura 5**: Il livello di accesso ai dati decrittografa automaticamente le informazioni sulla stringa di connessione ([fare clic per visualizzare l'immagine con dimensioni normali](protecting-connection-strings-and-other-configuration-information-cs/_static/image15.png))
-
 
 Per ripristinare il `<connectionStrings>` sezione alla relativa rappresentazione di testo normale, fare clic sul pulsante di decrittografare le stringhe di connessione. Durante il postback dovrebbe le stringhe di connessione in `Web.config` in testo normale. A questo punto la schermata dovrebbe essere simile a quella prima di tutto gli utenti in visita questa pagina (vedere la figura 3).
 
@@ -156,27 +138,22 @@ Per ripristinare il `<connectionStrings>` sezione alla relativa rappresentazione
 
 L'istruzione seguente viene illustrata la sintassi generale utilizzata per crittografare una sezione di configurazione con il `aspnet_regiis.exe` strumento da riga di comando:
 
-
 [!code-console[Main](protecting-connection-strings-and-other-configuration-information-cs/samples/sample5.cmd)]
 
 *sezione* è la sezione di configurazione per la crittografia (ad esempio connectionStrings), il *fisico\_directory* è il percorso fisico completo alla directory radice dell'applicazione s, web e *provider*  è il nome del provider di configurazione protetta da usare (ad esempio DataProtectionConfigurationProvider). In alternativa, se è registrata l'applicazione web in IIS è possibile immettere il percorso virtuale anziché il percorso fisico usando la sintassi seguente:
-
 
 [!code-console[Main](protecting-connection-strings-and-other-configuration-information-cs/samples/sample6.cmd)]
 
 Quanto segue `aspnet_regiis.exe` nell'esempio seguente il `<connectionStrings>` sezione Utilizzo del provider DPAPI con una chiave a livello di computer:
 
-
 [!code-console[Main](protecting-connection-strings-and-other-configuration-information-cs/samples/sample7.cmd)]
 
 Analogamente, il `aspnet_regiis.exe` strumento della riga di comando può essere usato per decrittografare le sezioni di configurazione. Invece di usare la `-pef` interruttore, utilizzare `-pdf` (o instead of `-pe`, usare `-pd`). Si noti inoltre che il nome del provider non è necessario durante la decrittografia.
-
 
 [!code-console[Main](protecting-connection-strings-and-other-configuration-information-cs/samples/sample8.cmd)]
 
 > [!NOTE]
 > Poiché si sta usando il provider di DPAPI che usa chiavi specifiche per il computer, è necessario eseguire `aspnet_regiis.exe` dallo stesso computer da cui vengono gestite le pagine web. Ad esempio, se si esegue il programma della riga di comando dal computer di sviluppo locale e quindi carica il file Web. config crittografato al server di produzione, il server di produzione non sarà in grado di decrittografare le informazioni sulla stringa di connessione perché è stato crittografato uso delle chiavi specifiche di computer di sviluppo. Il provider RSA è privo di questa limitazione come è possibile esportare le chiavi RSA a un'altra macchina.
-
 
 ## <a name="understanding-database-authentication-options"></a>Informazioni sulle opzioni di autenticazione Database
 
@@ -201,7 +178,6 @@ Si supponga che un utente malintenzionato è in grado di visualizzare la s appli
 
 > [!NOTE]
 > Per altre informazioni sui diversi tipi di autenticazione disponibile in SQL Server, vedere [Building Secure ASP.NET Applications: L'autenticazione, autorizzazione e comunicazioni protette](https://msdn.microsoft.com/library/aa302392.aspx). Per ulteriori esempi stringhe di connessione che illustra le differenze tra la sintassi di autenticazione di Windows e SQL, consultare [ConnectionStrings.com](http://www.connectionstrings.com/).
-
 
 ## <a name="summary"></a>Riepilogo
 

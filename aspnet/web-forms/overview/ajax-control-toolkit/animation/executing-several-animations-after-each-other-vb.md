@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: 21ece509-79cc-4d9d-892d-7b6e9c4d3502
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/executing-several-animations-after-each-other-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 53984f03cf01caab859f44fdc018b1598ed62def
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 0e0c9aa2c9ce8b55824c24ef43881e35a0788d28
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59383044"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108306"
 ---
 # <a name="executing-several-animations-after-each-other-vb"></a>Esecuzione di diverse animazioni una dopo l'altra (VB)
 
@@ -22,7 +22,6 @@ da [Christian Wenz](https://github.com/wenz)
 [Scaricare il codice](http://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation3.vb.zip) o [Scarica il PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation3VB.pdf)
 
 > Il controllo di animazione in ASP.NET AJAX Control Toolkit non è semplicemente un controllo, ma un intero framework aggiungere animazioni a un controllo. Consente l'esecuzione di diverse animazioni una dopo l'altro.
-
 
 ## <a name="overview"></a>Panoramica
 
@@ -52,11 +51,9 @@ All'interno di `<Animations>` nodo, usare `<OnLoad>` per eseguire le animazioni 
 
 Quando si esegue questo script, il pannello prima ottiene più larghi e quindi più piccoli.
 
-
 [![Prima di tutto la larghezza viene aumentata](executing-several-animations-after-each-other-vb/_static/image2.png)](executing-several-animations-after-each-other-vb/_static/image1.png)
 
 Prima di tutto la larghezza viene aumentata ([fare clic per visualizzare l'immagine con dimensioni normali](executing-several-animations-after-each-other-vb/_static/image3.png))
-
 
 [![Quindi viene diminuito l'altezza](executing-several-animations-after-each-other-vb/_static/image5.png)](executing-several-animations-after-each-other-vb/_static/image4.png)
 

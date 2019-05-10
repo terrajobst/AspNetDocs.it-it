@@ -8,12 +8,12 @@ ms.date: 02/27/2014
 ms.assetid: 7ef664b3-1cc8-4cbf-bb18-9f0f3a3ada2b
 msc.legacyurl: /web-forms/overview/presenting-and-managing-data/model-binding/adding-business-logic-layer
 msc.type: authoredcontent
-ms.openlocfilehash: a229ebd71c913f3fe086892786988d0b3e42ec88
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: a824d06d3781e11706f2a48d44ea3ad89bdb7c8b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59411579"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65109170"
 ---
 # <a name="adding-business-logic-layer-to-a-project-that-uses-model-binding-and-web-forms"></a>Livello di logica di business aggiunta a un progetto che usa l'associazione di modelli e web form
 
@@ -26,7 +26,6 @@ da [Tom FitzMacken](https://github.com/tfitzmac)
 > Questa esercitazione si basa sul progetto creato nel [precedenti](retrieving-data.md) parti della serie.
 > 
 > È possibile [scaricare](https://go.microsoft.com/fwlink/?LinkId=286116) il progetto completo in c# o VB. Il codice scaricabile funziona con Visual Studio 2012 o Visual Studio 2013. Usa il modello di Visual Studio 2012, che è leggermente diverso rispetto al modello di Visual Studio 2013 illustrato in questa esercitazione.
-
 
 ## <a name="what-youll-build"></a>Scopo dell'esercitazione
 

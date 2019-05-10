@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 44a22ac7-1fc7-4174-b946-c6129fb6a19b
 msc.legacyurl: /web-forms/overview/deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-test-environment-for-web-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: 7ea8c74a6621200e3a0d52a7c37fed6b5eeff4e5
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: d580e550f2461837f0e8a4e477273348b49cb53e
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59391624"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132387"
 ---
 # <a name="scenario-configuring-a-test-environment-for-web-deployment"></a>Scenario: Configurazione di un ambiente di test per la distribuzione Web
 
@@ -22,7 +22,6 @@ da [Jason Lee](https://github.com/jrjlee)
 [Scaricare PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > In questo argomento viene descritto uno scenario di distribuzione web tipica per sviluppatori o ambienti di test e illustra le attività da completare per poter configurare un ambiente simile.
-
 
 Quando gli sviluppatori di lavorano alle applicazioni web, spesso assegnata loro l'accesso a un ambiente server che possono usare per testare le modifiche alle applicazioni in un'impostazione test realistica. Questo tipo di ambiente di sviluppo o test in genere presenta queste caratteristiche:
 
@@ -47,7 +46,6 @@ L'ambiente di test deve supportare solo passaggio oppure automatizzata la distri
 
 > [!NOTE]
 > È anche possibile usare [distribuzione Web su richiesta](https://technet.microsoft.com/library/ee517345(WS.10).aspx) (il "agente temp"). È simile all'approccio dell'agente remoto in termini di requisiti e vincoli.
-
 
 In questo caso, gli sviluppatori con privilegi di amministratore per i server di destinazione e l'ambiente di test non è soggetta a vincoli di sicurezza restrittivi, pertanto la scelta più ovvia consiste nel configurare il server web di test per supportare la distribuzione usando l'agente remoto. Questo è meno complesso e richiede la configurazione iniziale meno rispetto all'approccio gestore distribuzione Web. È anche necessario configurare il server di database per supportare la distribuzione e accesso remoto.
 

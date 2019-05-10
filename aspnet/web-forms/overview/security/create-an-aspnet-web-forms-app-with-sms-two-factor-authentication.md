@@ -8,12 +8,12 @@ ms.date: 10/09/2014
 ms.assetid: 716264ae-ab72-45de-bfc5-53a6237089cf
 msc.legacyurl: /web-forms/overview/security/create-an-aspnet-web-forms-app-with-sms-two-factor-authentication
 msc.type: authoredcontent
-ms.openlocfilehash: 2010de510cf44bba1b95d29dbdb573ab78f452f7
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 02c511f0e99e306daaf595da5bc618fe738e806c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59411358"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65106794"
 ---
 # <a name="create-an-aspnet-web-forms-app-with-sms-two-factor-authentication-c"></a>Creare un'app Web Forms ASP.NET con l'autenticazione a due fattori SMS (C#)
 
@@ -22,7 +22,6 @@ da [Erik Reitan](https://github.com/Erikre)
 [Scaricare l'applicazione Web Form ASP.NET con indirizzo di posta elettronica e l'autenticazione a due fattori tramite SMS](https://code.msdn.microsoft.com/ASPNET-Web-Forms-App-with-5a0ff94e)
 
 > Questa esercitazione illustra come compilare un'app Web Form ASP.NET con autenticazione a due fattori. Questa esercitazione è stata progettata per integrare l'esercitazione intitolata [creare un'app Web Form ASP.NET sicura con registrazione utente, posta elettronica di conferma e reimpostazione della password](create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset.md). Inoltre, questa esercitazione è stata basata sul di Rick Anderson [esercitazione su MVC](../../../mvc/overview/security/aspnet-mvc-5-app-with-sms-and-email-two-factor-authentication.md).
-
 
 ## <a name="introduction"></a>Introduzione
 
@@ -42,7 +41,6 @@ Per iniziare, installare ed eseguire [Visual Studio Express 2013 per il Web](htt
 
 > [!NOTE]
 > Importante: È necessario installare [Visual Studio 2013 Update 3](https://go.microsoft.com/fwlink/?LinkId=390465) o versione successiva per completare questa esercitazione.
-
 
 1. Creare un nuovo progetto (**File**  - &gt; **nuovo progetto**) e selezionare il **applicazione Web ASP.NET** modello insieme a .NET Framework versione 4.5.2 dal **nuovo progetto** nella finestra di dialogo.
 2. Dal **nuovo progetto ASP.NET** finestra di dialogo, seleziona la **Web Form** modello. Lasciare l'autenticazione predefinita come **singoli account utente di**. Fare quindi clic **OK** per creare un nuovo progetto.  

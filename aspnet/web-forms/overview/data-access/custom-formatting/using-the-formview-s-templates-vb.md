@@ -8,12 +8,12 @@ ms.date: 03/31/2010
 ms.assetid: 67b25f4c-2823-42b6-b07d-1d650b3fd711
 msc.legacyurl: /web-forms/overview/data-access/custom-formatting/using-the-formview-s-templates-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 268403a7b832596421120a24c64580f63eb987c3
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ae21259a14378ea6b41f5d45cf2cac6954175dfa
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59383895"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65109091"
 ---
 # <a name="using-the-formviews-templates-vb"></a>Usando i modelli del controllo FormView (VB)
 
@@ -22,7 +22,6 @@ da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Scaricare l'App di esempio](http://download.microsoft.com/download/5/7/0/57084608-dfb3-4781-991c-407d086e2adc/ASPNET_Data_Tutorial_14_VB.exe) o [Scarica il PDF](using-the-formview-s-templates-vb/_static/datatutorial14vb1.pdf)
 
 > A differenza di DetailsView, FormView non comprende i campi. Al contrario, FormView rendering viene eseguito usando i modelli. In questa esercitazione che verrà esaminato tramite il controllo FormView per presentare una visualizzazione di dati meno rigida.
-
 
 ## <a name="introduction"></a>Introduzione
 
@@ -39,21 +38,17 @@ A differenza di DetailsView, FormView non comprende i campi. È possibile aggiun
 
 In questa esercitazione che verrà esaminato tramite il controllo FormView per presentare una visualizzazione di prodotti meno rigida. Evitando che i campi per il nome, categoria, fornitore e del così via, FormView `ItemTemplate` mostrerà tali valori usando una combinazione di un elemento di intestazione e un `<table>` (vedere la figura 1).
 
-
 [![FormView suddivide la del Layout di tipo griglia visualizzato nel controllo DetailsView.](using-the-formview-s-templates-vb/_static/image2.png)](using-the-formview-s-templates-vb/_static/image1.png)
 
 **Figura 1**: FormView esce il Layout Grid-Like visualizzato nel controllo DetailsView ([fare clic per visualizzare l'immagine con dimensioni normali](using-the-formview-s-templates-vb/_static/image3.png))
-
 
 ## <a name="step-1-binding-the-data-to-the-formview"></a>Passaggio 1: Associazione dei dati a FormView
 
 Aprire il `FormView.aspx` pagina e trascinare un controllo FormView dalla casella degli strumenti nella finestra di progettazione. Quando si aggiunge innanzitutto FormView viene visualizzato come una casella grigia, che indicano a noi che un `ItemTemplate` è necessaria.
 
-
 [![FormView non è possibile visualizzare nella finestra di progettazione fino a quando non viene fornito un ItemTemplate](using-the-formview-s-templates-vb/_static/image5.png)](using-the-formview-s-templates-vb/_static/image4.png)
 
 **Figura 2**: Il controllo FormView non è possibile visualizzare la finestra di progettazione fino a quando non un' `ItemTemplate` viene fornito ([fare clic per visualizzare l'immagine con dimensioni normali](using-the-formview-s-templates-vb/_static/image6.png))
-
 
 Il `ItemTemplate` possono essere creati manualmente (tramite la sintassi dichiarativa) o possono essere creati automaticamente mediante l'associazione FormView a un controllo origine dati tramite la finestra di progettazione. Ciò creato automaticamente `ItemTemplate` contiene codice HTML che elenca il nome di ogni campo e un'etichetta di controllo la cui `Text` è associata la proprietà per il valore del campo. Questo approccio anche auto-crea un' `InsertItemTemplate` e `EditItemTemplate`, entrambi vengono popolati con i controlli di input per ognuno dei campi dati restituiti dal controllo origine dati.
 
@@ -62,7 +57,6 @@ Se si desidera creare automaticamente il modello, dallo smart tag del controllo 
 Se si preferisce creare di `ItemTemplate` manualmente, è possibile aggiungere e configurare ObjectDataSource, trascinarlo dalla casella degli strumenti nella finestra di progettazione. Tuttavia, non imposta origine dati del controllo FormView dalla finestra di progettazione. Al contrario, passare alla visualizzazione origine e impostare manualmente il controllo FormView `DataSourceID` proprietà per il `ID` pari a ObjectDataSource. Successivamente, aggiungere manualmente il `ItemTemplate`.
 
 Indipendentemente dal quale approccio si deciso di sfruttare, a questo punto markup dichiarativo di FormView deve sono simili a:
-
 
 [!code-aspx[Main](using-the-formview-s-templates-vb/samples/sample1.aspx)]
 
@@ -76,7 +70,6 @@ Questo markup può essere immessi tramite l'interfaccia di modifica modello del 
 
 Il markup seguente illustra il markup dichiarativo di FormView dopo il `ItemTemplate`della struttura è stata completata:
 
-
 [!code-aspx[Main](using-the-formview-s-templates-vb/samples/sample2.aspx)]
 
 Si noti che la sintassi di Data Binding - `<%# Eval("ProductName") %>`, ad esempio può essere inserito direttamente nell'output del modello. Vale a dire, è necessario non assegnarlo a un controllo etichetta `Text` proprietà. Ad esempio, è necessario il `ProductName` valore visualizzato un `<h3>` elemento usando `<h3><%# Eval("ProductName") %></h3>`, che per il prodotto Chai verranno sottoposti a rendering come `<h3>Chai</h3>`.
@@ -87,16 +80,13 @@ Poiché non esistono disponibili con FormView, nessun CheckBoxFields per mostrar
 
 Con la `ItemTemplate` completo, vengono visualizzate le informazioni di prodotto in modo molto più fluido. Confrontare l'output di DetailsView dall'ultima esercitazione (figura 3) con l'output generato dal FormView in questa esercitazione (figura 4).
 
-
 [![L'Output di DetailsView rigida](using-the-formview-s-templates-vb/_static/image8.png)](using-the-formview-s-templates-vb/_static/image7.png)
 
 **Figura 3**: L'Output di DetailsView rigida ([fare clic per visualizzare l'immagine con dimensioni normali](using-the-formview-s-templates-vb/_static/image9.png))
 
-
 [![L'Output di FormView fluide](using-the-formview-s-templates-vb/_static/image11.png)](using-the-formview-s-templates-vb/_static/image10.png)
 
 **Figura 4**: L'Output di FormView fluidodinamica ([fare clic per visualizzare l'immagine con dimensioni normali](using-the-formview-s-templates-vb/_static/image12.png))
-
 
 ## <a name="summary"></a>Riepilogo
 

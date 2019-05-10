@@ -8,19 +8,18 @@ ms.date: 01/26/2011
 ms.assetid: 393df4a8-b1db-44c4-9db7-2b533ca887d0
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/continuing-with-ef/what-s-new-in-the-entity-framework-4
 msc.type: authoredcontent
-ms.openlocfilehash: 0bc24a59e09728a5ecb6e18378c4cde0c8e046f2
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 29d2bd61e8361b130e7b9415dad4fe1d5b847945
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59387451"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65109313"
 ---
 # <a name="whats-new-in-the-entity-framework-40"></a>Novità di Entity Framework 4.0
 
 da [Tom Dykstra](https://github.com/tdykstra)
 
 > Questa serie di esercitazioni si basa sull'applicazione web Contoso University specificano che viene creato per il [Introduzione a Entity Framework](../getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-1.md) serie di esercitazioni. Se si non è stato completato le esercitazioni precedenti, come punto di partenza per questa esercitazione è possibile [scaricare l'applicazione](https://code.msdn.microsoft.com/ASPNET-Web-Forms-97f8ee9a) verrebbe creato. È anche possibile [scaricare l'applicazione](https://code.msdn.microsoft.com/ASPNET-Web-Forms-6c7197aa) creato dalla serie di esercitazioni complete. Se si hanno domande sulle esercitazioni, è possibile pubblicarli per i [forum di ASP.NET Entity Framework](https://forums.asp.net/1227.aspx).
-
 
 Nell'esercitazione precedente si è visto alcuni metodi per ottimizzare le prestazioni di un'applicazione web che usa Entity Framework. Questa esercitazione esamina alcune delle nuove funzionalità più importanti nella versione 4 di Entity Framework ed è collegato a risorse che forniscono un'introduzione più completa per tutte le nuove funzionalità. Le funzionalità evidenziate in questa esercitazione includono quanto segue:
 

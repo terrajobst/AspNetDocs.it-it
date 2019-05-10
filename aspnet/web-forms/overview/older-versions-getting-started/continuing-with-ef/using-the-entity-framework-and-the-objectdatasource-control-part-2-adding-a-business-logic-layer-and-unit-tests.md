@@ -8,19 +8,18 @@ ms.date: 01/26/2011
 ms.assetid: efb0e677-10b8-48dc-93d3-9ba3902dd807
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-2-adding-a-business-logic-layer-and-unit-tests
 msc.type: authoredcontent
-ms.openlocfilehash: 4d436b0e5d605027cfcf5243f615f9ac167c5888
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 24344cc33d7c26d7c408db26c0530ef2c708a7d3
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59388049"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133444"
 ---
 # <a name="using-the-entity-framework-40-and-the-objectdatasource-control-part-2-adding-a-business-logic-layer-and-unit-tests"></a>Utilizzo di Entity Framework 4.0 e il controllo ObjectDataSource, parte 2: Aggiunta di un livello di logica di business e unit test
 
 da [Tom Dykstra](https://github.com/tdykstra)
 
 > Questa serie di esercitazioni si basa sull'applicazione web Contoso University specificano che viene creato per il [Introduzione a Entity Framework 4.0](https://asp.net/entity-framework/tutorials#Getting%20Started) serie di esercitazioni. Se si non è stato completato le esercitazioni precedenti, come punto di partenza per questa esercitazione è possibile [scaricare l'applicazione](https://code.msdn.microsoft.com/ASPNET-Web-Forms-97f8ee9a) verrebbe creato. È anche possibile [scaricare l'applicazione](https://code.msdn.microsoft.com/ASPNET-Web-Forms-6c7197aa) creato dalla serie di esercitazioni complete. Se si hanno domande sulle esercitazioni, è possibile pubblicarli per i [forum di ASP.NET Entity Framework](https://forums.asp.net/1227.aspx).
-
 
 Nell'esercitazione precedente è stata creata un'applicazione web a più livelli con Entity Framework e `ObjectDataSource` controllo. Questa esercitazione illustra come aggiungere la logica di business, mantenendo separate il livello di logica di business (BLL) e il livello di accesso ai dati (DAL) e viene illustrato come creare unit test automatizzati per il livello BLL.
 
@@ -72,7 +71,6 @@ I metodi CRUD di chiamare la classe di repository e i due costruttori consentono
 
 > [!NOTE]
 > Tecnicamente, gli oggetti entità sono comunque non riconoscono la persistenza, perché ne è creata l'istanza da classi che ereditano da di Entity Framework `EntityObject` classe. Mancato riconoscimento della persistenza completa, è possibile utilizzare *plain old CLR Object*, o *poco*, al posto degli oggetti da cui ereditare il `EntityObject` classe. Uso poco esula dall'ambito di questa esercitazione. Per altre informazioni, vedere [testabilità ed Entity Framework 4.0](https://msdn.microsoft.com/library/ff714955.aspx) sul sito Web MSDN.)
-
 
 A questo punto è possibile connettere il `ObjectDataSource` controlli per la logica di business classe anziché al repository e verificare che tutto funzioni come in precedenza.
 

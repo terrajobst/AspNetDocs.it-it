@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: f70ac2b3-900f-40fa-858f-ab057904506b
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/modalpopup/handling-postbacks-from-a-modalpopup-vb
 msc.type: authoredcontent
-ms.openlocfilehash: add305855d876b5033bbd7921ad24b5e840b9acc
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 3c1951e1ae4f97982d1263dfa9dc29454f7ce55a
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59386398"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132681"
 ---
 # <a name="handling-postbacks-from-a-modalpopup-vb"></a>Gestione dei postback da un controllo ModalPopup (VB)
 
@@ -22,7 +22,6 @@ da [Christian Wenz](https://github.com/wenz)
 [Scaricare il codice](http://download.microsoft.com/download/2/4/0/24052038-f942-4336-905b-b60ae56f0dd5/ModalPopup3.vb.zip) o [Scarica il PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/modalpopup3VB.pdf)
 
 > Il controllo ModalPopup in AJAX Control Toolkit offre un modo semplice per creare un popup modale utilizzano i canali lato client. È necessario prestare particolare attenzione quando si crea un postback dal entro la finestra popup.
-
 
 ## <a name="overview"></a>Panoramica
 
@@ -53,7 +52,6 @@ Ora ogni volta che il `Save` entro la finestra popup modale è fatto clic sul pu
 Inoltre, i controlli casella di testo all'interno del popup modale devono essere riempiti con il nome corrente e il messaggio di posta elettronica. Tuttavia questo è necessario solo quando si verifica alcun postback. Se si verifica un postback, la funzionalità di viewstate ASP.NET compilerà automaticamente le caselle di testo con i valori appropriati.
 
 [!code-vb[Main](handling-postbacks-from-a-modalpopup-vb/samples/sample6.vb)]
-
 
 [![La finestra popup modale causa un postback](handling-postbacks-from-a-modalpopup-vb/_static/image2.png)](handling-postbacks-from-a-modalpopup-vb/_static/image1.png)
 

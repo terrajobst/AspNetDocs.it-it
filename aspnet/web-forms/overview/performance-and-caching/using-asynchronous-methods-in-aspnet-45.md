@@ -8,12 +8,12 @@ ms.date: 01/02/2019
 ms.assetid: a585c9a2-7c8e-478b-9706-90f3739c50d1
 msc.legacyurl: /web-forms/overview/performance-and-caching/using-asynchronous-methods-in-aspnet-45
 msc.type: authoredcontent
-ms.openlocfilehash: a47d428830fa6c43bcb9ce797d65b73891b44618
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ef5402da1e97d2c5e5d98ff2d04dadca1180453b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59381887"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65112307"
 ---
 # <a name="using-asynchronous-methods-in-aspnet-45"></a>Uso di metodi asincroni in ASP.NET 4.5
 
@@ -32,7 +32,6 @@ da [Rick Anderson]((https://twitter.com/RickAndMSFT))
 > 
 > Un esempio completo è disponibile per questa esercitazione in  
 > [https://github.com/RickAndMSFT/Async-ASP.NET/](https://github.com/RickAndMSFT/Async-ASP.NET/) nel [GitHub](https://github.com/) sito.
-
 
 Pagine Web ASP.NET 4.5 in combinazione [.NET 4.5](https://msdn.microsoft.com/library/w0x726c2(VS.110).aspx) consente di registrare i metodi asincroni che restituiscono un oggetto di tipo [attività](https://msdn.microsoft.com/library/system.threading.tasks.task.aspx). .NET Framework 4 introdotto un concetto di programmazione asincrono detto una [Task](https://msdn.microsoft.com/library/system.threading.tasks.task.aspx) e supporta ASP.NET 4.5 [attività](https://msdn.microsoft.com/library/system.threading.tasks.task.aspx). Le attività sono rappresentate dal **Task** tipo e i tipi correlati nel [Tasks](https://msdn.microsoft.com/library/system.threading.tasks.aspx) dello spazio dei nomi. .NET Framework 4.5 si basa su questo supporto asincrono con il [await](https://msdn.microsoft.com/library/hh156528(VS.110).aspx) e [async](https://msdn.microsoft.com/library/hh156513(VS.110).aspx) parole chiave che rendono l'utilizzo dei [attività](https://msdn.microsoft.com/library/system.threading.tasks.task.aspx) oggetti molto meno complessi precedente approccio asincrono. Il [await](https://msdn.microsoft.com/library/hh156528(VS.110).aspx) parola chiave è una sintassi abbreviata per indicare che un frammento di codice deve attendere in modo asincrono in altre parti di codice. Il [async](https://msdn.microsoft.com/library/hh156513(VS.110).aspx) parola chiave rappresenta un suggerimento che è possibile usare per contrassegnare i metodi come metodi asincroni basati su attività. La combinazione delle **await**, **async**e il **attività** oggetto rende molto più semplice per la scrittura di codice asincrono in .NET 4.5. Il nuovo modello per i metodi asincroni viene chiamato il *Task-based Asynchronous Pattern* (**toccare**). Questa esercitazione si presuppone una certa conoscenza di programmazione asincrono utilizzando [await](https://msdn.microsoft.com/library/hh156528(VS.110).aspx) e [async](https://msdn.microsoft.com/library/hh156513(VS.110).aspx) parole chiave e il [attività](https://msdn.microsoft.com/library/system.threading.tasks.task.aspx) dello spazio dei nomi.
 

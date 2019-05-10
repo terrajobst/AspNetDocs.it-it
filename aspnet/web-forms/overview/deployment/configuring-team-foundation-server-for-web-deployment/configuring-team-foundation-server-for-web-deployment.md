@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: ff55233a-e795-4007-a4fc-861fe1bb590b
 msc.legacyurl: /web-forms/overview/deployment/configuring-team-foundation-server-for-web-deployment/configuring-team-foundation-server-for-web-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: 188ab63dd84be5559d5a3646eb95caa77ab01bd1
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 638d696abbc5f05957c0ed2eb7ebb65fce7813ea
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59392001"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133864"
 ---
 # <a name="configuring-team-foundation-server-for-web-deployment"></a>Configurazione di Team Foundation Server per la distribuzione Web
 
@@ -30,7 +30,6 @@ da [Jason Lee](https://github.com/jrjlee)
 > - Come configurare le autorizzazioni per la distribuzione automatizzata.
 > 
 > Per una traduzione italiana di queste esercitazioni, visitare [ http://www.lucamorelli.it ](http://www.lucamorelli.it).
-
 
 Questa esercitazione si presuppone di avere installato TFS 2010 e creato una raccolta di progetti team come parte del processo di configurazione iniziale. Il [Guida all'installazione di Team Foundation per Visual Studio 2010](https://go.microsoft.com/?linkid=9805132) fornisce indicazioni complete su queste attività.
 

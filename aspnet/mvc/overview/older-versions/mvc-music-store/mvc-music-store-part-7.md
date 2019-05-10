@@ -8,12 +8,12 @@ ms.date: 10/13/2010
 ms.assetid: c8511ebe-68bc-4240-87c3-d5ced84a3f37
 msc.legacyurl: /mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-7
 msc.type: authoredcontent
-ms.openlocfilehash: f5431d60506f5b0a0f4bbcd8e86b316c728a1191
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: a6a1a936e0ea29ea36721ba78f35845401f74c01
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59415921"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65112460"
 ---
 # <a name="part-7-membership-and-authorization"></a>Parte 7: Appartenenza e autorizzazione
 
@@ -24,7 +24,6 @@ by [Jon Galloway](https://github.com/jongalloway)
 > Music Store MVC è un semplice esempio di implementazione di un archivio per un negozio che vende album musicali online e implementa l'amministrazione di base del sito, l'accesso dell'utente e la funzionalità del carrello acquisti.  
 >   
 > Questa serie di esercitazioni illustra tutti i passaggi necessari per compilare l'applicazione di esempio ASP.NET MVC Music Store. Parte 7 riguarda l'appartenenza e l'autorizzazione.
-
 
 Il controller di gestione Store è attualmente accessibile a tutti gli utenti che visitano il sito. È possibile modificare questa impostazione per limitare le autorizzazioni per gli amministratori del sito.
 

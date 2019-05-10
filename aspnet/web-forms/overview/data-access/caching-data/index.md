@@ -8,17 +8,16 @@ ms.date: 10/05/2011
 ms.assetid: 7d7ee56c-a867-4777-9407-ec8f73a605a3
 msc.legacyurl: /web-forms/overview/data-access/caching-data
 msc.type: chapter
-ms.openlocfilehash: 5bf69b1caacf32fe6a5bce3bcd2da037b3defc26
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 3426a83f0b42d40ee57d4eb40abeecde6fac2985
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59395706"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65109552"
 ---
 # <a name="caching-data"></a>Memorizzazione di dati nella cache
 
 > Questa serie di esercitazioni illustra la memorizzazione nella cache, che può migliorare le prestazioni del sito e come applicare la memorizzazione nella cache a livello di presentazione tramite il controllo ObjectDataSource.
-
 
 - [Memorizzazione di dati nella cache con ObjectDataSource (C#)](caching-data-with-the-objectdatasource-cs.md)
 - [Memorizzazione di dati nella cache nell'architettura (C#)](caching-data-in-the-architecture-cs.md)

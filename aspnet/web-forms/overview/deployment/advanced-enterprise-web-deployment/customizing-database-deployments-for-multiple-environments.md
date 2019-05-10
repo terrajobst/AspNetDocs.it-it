@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: a172979a-1318-4318-a9c6-4f9560d26267
 msc.legacyurl: /web-forms/overview/deployment/advanced-enterprise-web-deployment/customizing-database-deployments-for-multiple-environments
 msc.type: authoredcontent
-ms.openlocfilehash: 865e901618b48bc4bfdc6d7a3ca4e8868d4cb46b
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 8ae8cb1a322afb95c5d2e8d5e73c7825c7b2fe5a
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59412983"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108315"
 ---
 # <a name="customizing-database-deployments-for-multiple-environments"></a>Personalizzazione delle distribuzioni di database per più ambienti
 
@@ -30,7 +30,6 @@ da [Jason Lee](https://github.com/jrjlee)
 > Quando si distribuisce un progetto di database a più destinazioni, è spesso opportuno personalizzare le proprietà di distribuzione di database per ogni ambiente di destinazione. Ad esempio, in ambienti di test è consigliabile in genere ricreare il database in ogni distribuzione, mentre negli ambienti di gestione temporanea o produzione sarebbe stato molto più probabile che gli aggiornamenti incrementali per conservare i dati.
 > 
 > In un progetto di database di Visual Studio 2010, le impostazioni di distribuzione sono contenute all'interno di un file di configurazione (sqldeployment) di distribuzione. In questo argomento illustrerà come creare i file di configurazione di distribuzione specifici dell'ambiente e specificare quello da usare come parametro VSDBCMD.
-
 
 In questo argomento fa parte di una serie di esercitazioni basate su requisiti di distribuzione aziendale di una società fittizia, denominata Fabrikam, Inc. Questa serie di esercitazioni Usa una soluzione di esempio&#x2014;il [soluzione Contact Manager](../web-deployment-in-the-enterprise/the-contact-manager-solution.md)&#x2014;per rappresentare un'applicazione web con un livello di complessità, tra cui un'applicazione ASP.NET MVC 3, una comunicazione Windows realistico Servizio Foundation (WCF) e un progetto di database.
 
@@ -68,7 +67,7 @@ Questa tabella mostra le impostazioni di distribuzione tipico per gli ambienti d
 
 |  | Sviluppo/Test | Integrazione di gestione temporanea / | Produzione |
 | --- | --- | --- | --- |
-| **Regole di confronto distribuzione** | Source | destinazione | destinazione |
+| **Regole di confronto distribuzione** | Origine | destinazione | destinazione |
 | **Distribuisci proprietà database** | True | Solo la prima volta | Solo la prima volta |
 | **Ricrea sempre database** | True | False | False |
 | **Blocca distribuzione incrementale in caso di perdita di dati** | False | Forse | True |
@@ -76,11 +75,9 @@ Questa tabella mostra le impostazioni di distribuzione tipico per gli ambienti d
 | **Eseguire il backup del database prima della distribuzione** | False | Forse | True |
 | **Genera istruzioni DROP per gli oggetti nel database di destinazione, ma non nel progetto di database** | False | True | True |
 | **Non utilizzare le istruzioni ALTER ASSEMBLY per aggiornare tipi CLR** | False | False | False |
-  
 
 > [!NOTE]
 > Per altre informazioni sulle proprietà di distribuzione di database e considerazioni relative all'ambiente, vedere [An Overview of Database progetto Settings](https://msdn.microsoft.com/library/aa833291(v=VS.100).aspx), [come: Configurare le proprietà per i dettagli della distribuzione](https://msdn.microsoft.com/library/dd172125.aspx), [compilare e distribuire Database in un ambiente di sviluppo isolato](https://msdn.microsoft.com/library/dd193409.aspx), e [compilare e distribuire i database in una gestione temporanea o di un ambiente di produzione](https://msdn.microsoft.com/library/dd193413.aspx).
-
 
 Per supportare la distribuzione di un progetto di database a più destinazioni, è necessario creare un file di configurazione di distribuzione per ogni ambiente di destinazione.
 
@@ -104,13 +101,10 @@ Quando si usano configurazioni di soluzione (ad esempio Debug e rilascio) all'in
 
 Per specificare un file di configurazione di distribuzione di VSDBCMD, usare il **p: / DeploymentConfigurationFile** passare e specificare il percorso completo del file. Questa impostazione sostituirà il file di configurazione di distribuzione che identifica il manifesto di distribuzione. Ad esempio, è possibile utilizzare questo comando VSDBCMD per distribuire il **ContactManager** database in un ambiente di test:
 
-
 [!code-console[Main](customizing-database-deployments-for-multiple-environments/samples/sample1.cmd)]
-
 
 > [!NOTE]
 > Si noti che il processo di compilazione può rinominare il file. sqldeployment quando copia il file nella directory di output.
-
 
 Se si usano variabili di comandi SQL negli script SQL pre-distribuzione o post-distribuzione, è possibile usare un approccio simile per associare un file sqlcmdvars specifici dell'ambiente con la distribuzione. In questo caso, si utilizza il **p: / SqlCommandVariablesFile** switch per identificare il file sqlcmdvars.
 
@@ -118,9 +112,7 @@ Se si usano variabili di comandi SQL negli script SQL pre-distribuzione o post-d
 
 È possibile richiamare un comando VSDBCMD da un file di progetto MSBuild tramite un **Exec** attività all'interno di una destinazione di MSBuild. Nella sua forma più semplice, lo si presenta come segue:
 
-
 [!code-xml[Main](customizing-database-deployments-for-multiple-environments/samples/sample2.xml)]
-
 
 - In pratica, per rendere i file di progetto facili da leggere e riutilizzare, è opportuno creare proprietà per archiviare i parametri della riga di comando diverse. Questo rende più semplice per gli utenti per fornire i valori delle proprietà in un file di progetto specifici dell'ambiente o eseguire l'override di valori predefiniti dalla riga di comando di MSBuild. Se si usa l'approccio di file di progetto split descritto in [informazioni sul File di progetto](../web-deployment-in-the-enterprise/understanding-the-project-file.md), è necessario dividere conseguenza le istruzioni di compilazione e le proprietà tra i due file:
 - Impostazioni specifiche dell'ambiente, ad esempio il nome di file di configurazione di distribuzione, la stringa di connessione di database e il nome di database di destinazione, devono passare nel file di progetto specifici dell'ambiente.
