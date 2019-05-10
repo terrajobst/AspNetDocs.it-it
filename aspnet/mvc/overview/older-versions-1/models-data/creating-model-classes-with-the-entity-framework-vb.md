@@ -8,19 +8,18 @@ ms.date: 01/27/2009
 ms.assetid: ff8322c9-12f3-4e24-aba6-a38046b9bb0d
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/creating-model-classes-with-the-entity-framework-vb
 msc.type: authoredcontent
-ms.openlocfilehash: b3c6726c2d08e2e6ac37501f2ab455e427df82bb
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: f6c896c6f5f6d898ac6f99d5998fb29cb73bcb10
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59414054"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65117593"
 ---
 # <a name="creating-model-classes-with-the-entity-framework-vb"></a>Creazione di classi di modelli con Entity Framework (VB)
 
 by [Microsoft](https://github.com/microsoft)
 
 > In questa esercitazione descrive come usare ASP.NET MVC con Entity Framework Microsoft. Descrive come usare la procedura guidata Entity per creare un modello ADO.NET Entity Data Model. Nel corso di questa esercitazione, creiamo un'applicazione web che illustra come selezionare, inserire, aggiornare ed eliminare i dati del database tramite Entity Framework.
-
 
 L'obiettivo di questa esercitazione è illustrare come è possibile creare classi di accesso ai dati mediante Microsoft Entity Framework quando si compila un'applicazione ASP.NET MVC. Questa esercitazione si presuppone alcuna conoscenza di Microsoft Entity Framework. Al termine di questa esercitazione, si sarà informazioni su come usare Entity Framework per selezionare, inserire, aggiornare ed eliminare i record del database.
 
@@ -30,13 +29,11 @@ Microsoft Entity Framework è uno strumento di Mapping relazionale oggetti (O/RM
 > 
 > Non c'è alcuna connessione essenziali tra ASP.NET MVC ed Entity Framework Microsoft. Sono disponibili numerose alternative a Entity Framework che è possibile usare ASP.NET MVC. Ad esempio, è possibile compilare le classi del modello MVC usando altri strumenti O/RM, ad esempio Microsoft LINQ to SQL o NHibernate SubSonic.
 
-
 Per illustrare come è possibile usare Microsoft Entity Framework con MVC ASP.NET, verrà compilata un'applicazione di esempio semplice. Si creerà un'applicazione di Database di film che consente di visualizzare e modificare i record di database di film.
 
 Questa esercitazione si presuppone che sia installato Visual Studio 2008 o Visual Web Developer 2008 con Service Pack 1. È necessario Service Pack 1 per usare Entity Framework. È possibile scaricare Visual Studio 2008 Service Pack 1 o Visual Web Developer con Service Pack 1 dall'indirizzo seguente:
 
 > [https://www.asp.net/downloads/](https://www.asp.net/downloads)
-
 
 ## <a name="creating-the-movie-sample-database"></a>Creazione del Database di esempio del film
 
@@ -108,9 +105,7 @@ Se si desidera rinominare una classe di entità, è possibile fare doppio clic s
 
 Ricordarsi di salvare il modello di dati di entità dopo aver apportato una modifica, fare clic sul pulsante Salva (l'icona del disco floppy). Dietro le quinte, Entity Designer genera un set di classi Visual Basic .NET. È possibile visualizzare queste classi, aprire il file MoviesDBModel.Designer.vb dalla finestra Esplora soluzioni.
 
-
 Non modificare il codice nel file vb poiché le modifiche verranno sovrascritte la volta successiva che si utilizza Entity Designer. Se si desidera estendere le funzionalità delle classi di entità definito nel file di Designer. vb, è possibile creare *classi parziali* in file separati.
-
 
 #### <a name="selecting-database-records-with-the-entity-framework"></a>Selezione dei record di Database con Entity Framework
 
@@ -158,9 +153,7 @@ Si noti che la seconda azione Add () è decorata con l'attributo AcceptVerbs. Qu
 
 La seconda azione Add () consente di creare una nuova istanza della classe Entity Framework film con l'aiuto del metodo TryUpdateModel() MVC ASP.NET. Il metodo TryUpdateModel() accetta i campi di FormCollection passato al metodo Add () e assegna i valori di questi campi modulo HTML alla classe del film.
 
-
 Quando si usa Entity Framework, è necessario fornire un elenco"white" delle proprietà quando si utilizzano i metodi UpdateModel o TryUpdateModel per aggiornare le proprietà di una classe di entità.
-
 
 Successivamente, l'azione di Add () esegue alcune convalide modulo semplice. L'azione di verifica che il titolo e direttore proprietà hanno valori. Se si verifica un errore di convalida, viene aggiunto un messaggio di errore di convalida per ModelState.
 

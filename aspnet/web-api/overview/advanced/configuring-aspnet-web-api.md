@@ -9,12 +9,12 @@ ms.custom: seoapril2019
 ms.assetid: 9e10a700-8d91-4d2e-a31e-b8b569fe867c
 msc.legacyurl: /web-api/overview/advanced/configuring-aspnet-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: 39629ba404e536b29318db00bce8c4443a782497
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 4f76728fa5e4602e35e1b7cb2d41b2245093cad8
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59411943"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65115958"
 ---
 # <a name="configuring-aspnet-web-api-2"></a>Configurazione di ASP.NET Web API 2
 
@@ -45,7 +45,6 @@ Impostazioni di configurazione Web API sono definite nel [HttpConfiguration](htt
 | **Proprietà** | Un contenitore delle proprietà generiche. |
 | **Route** | Raccolta di route. Visualizzare [Routing nell'API Web ASP.NET](../web-api-routing-and-actions/routing-in-aspnet-web-api.md). |
 | **Servizi** | La raccolta di servizi. Visualizzare [Services](#services). |
-
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -91,11 +90,9 @@ Il **HttpConfiguration.Services** raccolta contiene un set di servizi globali ch
 > [!NOTE]
 > Il **Services** raccolta non è un meccanismo per utilizzo generico per l'inserimento delle dipendenze o individuazione del servizio. Archivia solo i tipi di servizio che sono noti per il framework API Web.
 
-
 Il **Services** raccolta viene inizializzata con un set predefinito di servizi ed è possibile fornire implementazioni personalizzate. Alcuni servizi supportano più istanze, mentre altri possono avere una sola istanza. (Tuttavia, è anche possibile fornire servizi a livello di controller, vedere [la configurazione per ogni Controller](#percontrollerconfig).
 
 Servizi a istanza singola
-
 
 | Service | Descrizione |
 | --- | --- |
@@ -116,7 +113,6 @@ Servizi a istanza singola
 | **IModelValidatorCache** | Fornisce una cache di validator del modello. |
 
 Servizi di più istanze
-
 
 |                 Service                 |                                                                                                              Descrizione                                                                                                               |
 |-----------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

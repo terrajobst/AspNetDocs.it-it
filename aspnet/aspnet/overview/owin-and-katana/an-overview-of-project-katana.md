@@ -8,19 +8,18 @@ ms.date: 08/30/2013
 ms.assetid: 0ee21741-c1bf-4025-a9b0-24580cae24bc
 msc.legacyurl: /aspnet/overview/owin-and-katana/an-overview-of-project-katana
 msc.type: authoredcontent
-ms.openlocfilehash: 72f70faa151007558ecbb270143ecd5b37c2134d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 1f28db822930cdfd2ebf4cf9bb27d173f4aa4201
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59392573"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118289"
 ---
 # <a name="an-overview-of-project-katana"></a>Panoramica del progetto Katana
 
 da [Howard Dierking](https://github.com/howarddierking)
 
 > Il Framework ASP.NET ormai da oltre dieci anni, e la piattaforma è abilitato lo sviluppo di innumerevoli siti Web e servizi. Come si sono evolute strategie di sviluppo di applicazioni Web, il framework è stato in grado di evolvere nel passaggio con tecnologie quali ASP.NET MVC e API Web ASP.NET. Come lo sviluppo di applicazioni Web richiede il passaggio successivo evolutivo nel mondo del cloud computing, proiettare [Katana](https://channel9.msdn.com/Shows/Web+Camps+TV/The-Katana-Project-OWIN-for-ASPNET) fornisce un set di componenti per le applicazioni ASP.NET, consentendo loro di essere flessibile e portabile, sottostante caricamento leggero e garantiscono prestazioni migliori, in altri termini, progetti [Katana](https://channel9.msdn.com/Shows/Web+Camps+TV/The-Katana-Project-OWIN-for-ASPNET) cloud consente di ottimizzare le applicazioni ASP.NET.
-
 
 ## <a name="why-katana--why-now"></a>Il motivo per cui Katana: perché ora?
 
@@ -214,7 +213,6 @@ Katana 2.0, i componenti middleware sono principalmente interessati al fornisce 
 ## <a name="conclusion"></a>Conclusione
 
  Dall'inizio, l'obiettivo del progetto Katana non è stata per creare e imporre in tal modo gli sviluppatori per informazioni su un altro framework Web. Piuttosto, l'obiettivo è stata un'astrazione per consentire agli sviluppatori di applicazioni Web .NET più scelta che in precedenza è stato possibile creare. Suddividendo i livelli logici di uno stack di applicazioni Web tipiche in un set di componenti sostituibili, al Katana project consente ai componenti in tutto lo stack per migliorare alla tariffa di senso per tali componenti. Mediante la generazione di tutti i componenti per l'astrazione di OWIN semplice, Katana Abilita i Framework e la portabilità delle applicazioni basato su essi in un'ampia gamma di host e server diversi. Inserendo lo sviluppatore nel controllo dello stack, Katana assicura che lo sviluppatore rende la scelta finale sulla modalità caricamento leggero o ricco di funzionalità devono essere proprio stack Web.  
-  
 
 ## <a name="for-more-information-about-katana"></a>Per altre informazioni su Katana
 

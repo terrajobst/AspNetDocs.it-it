@@ -8,12 +8,12 @@ ms.date: 05/01/2013
 ms.assetid: 501db899-e68c-49ff-81b2-1dc561bfe908
 msc.legacyurl: /signalr/overview/older-versions/scaleout-with-windows-azure-service-bus
 msc.type: authoredcontent
-ms.openlocfilehash: cab185ccb048a374a08f4b5d978b30675c30a60d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: e64f84db00b571c01ea52f48d1ac1af46698d391
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59383961"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65117003"
 ---
 # <a name="signalr-scaleout-with-azure-service-bus-signalr-1x"></a>Scale-out di SignalR con il bus di servizio di Azure (SignalR 1.x)
 
@@ -33,7 +33,7 @@ Prerequisiti:
 
 È anche compatibile con il backplane del bus di servizio [Service Bus per Windows Server](https://msdn.microsoft.com/library/windowsazure/dn282144.aspx), versione 1.1. Tuttavia, non compatibile con la versione 1.0 di Service Bus per Windows Server.
 
-## <a name="pricing"></a>Pricing
+## <a name="pricing"></a>Prezzi
 
 Backplane del Bus di servizio Usa gli argomenti per inviare messaggi. Per informazioni più aggiornate sui prezzi, vedere [del Bus di servizio](https://azure.microsoft.com/pricing/details/service-bus/). Al momento della stesura di questo articolo, è possibile inviare 1.000.000 di messaggi al mese per meno di $1. Backplane invia un messaggio del bus di servizio per ogni chiamata di un metodo dell'hub SignalR. Esistono anche alcuni messaggi di controllo per le connessioni, disconnessioni, unita tramite join o uscire da gruppi e così via. Nella maggior parte delle applicazioni, la maggior parte del traffico di messaggi sarà chiamate del metodo dell'hub.
 
@@ -65,7 +65,6 @@ Creare un nuovo spazio dei nomi del Bus di servizio, come descritto in [procedur
 
 > [!NOTE]
 > Assicurarsi di selezionare la stessa area per il servizio cloud e lo spazio dei nomi del Bus di servizio.
-
 
 ## <a name="create-the-visual-studio-project"></a>Creare il progetto di Visual Studio
 

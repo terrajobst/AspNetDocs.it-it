@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.assetid: 095abad4-3bfe-4f06-b092-ae6a735b7e49
 msc.legacyurl: /mvc/overview/getting-started/database-first-development/setting-up-database
 msc.type: authoredcontent
-ms.openlocfilehash: d99fdb5382037038d4428ff1946f39aee380fb75
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a760767839a834a9c7e9fe358a3fd806a833261f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57055908"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65121169"
 ---
 # <a name="tutorial-get-started-with-ef-database-first-using-mvc-5"></a>Esercitazione: Introduzione a Entity Framework Database First con MVC 5
 
@@ -35,14 +35,11 @@ Le attività di questa esercitazione sono le seguenti:
 
 [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/)
 
-
 ## <a name="set-up-the-database"></a>Configurare il database
 
 Per simulare l'ambiente di disporre di un database esistente, è prima di tutto creare un database con alcuni dati pre-popolata e quindi creare l'applicazione web che si connette al database.
 
-
 Questa esercitazione è stata sviluppata l'utilizzo di LocalDB con Visual Studio 2017. È possibile usare un server di database esistente anziché LocalDB, ma a seconda della versione di Visual Studio e il tipo di database, tutti gli strumenti dati in Visual Studio potrebbe non essere supportati. Se gli strumenti non sono disponibili per il database, si potrebbe essere necessario eseguire alcuni passaggi specifici del database all'interno della suite di gestione per il database.
-
 
 Se si dispone di un problema con gli strumenti di database nella versione di Visual Studio, assicurarsi che sia installata la versione più recente degli strumenti di database. Per informazioni sull'aggiornamento o installazione degli strumenti di database, vedere [Microsoft SQL Server Data Tools](https://msdn.microsoft.com/data/hh297027).
 

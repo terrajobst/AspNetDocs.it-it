@@ -9,12 +9,12 @@ ms.custom: seoapril2019
 ms.assetid: e3d3e7ba-87f0-4032-bdd3-31f3c1aa9d9c
 msc.legacyurl: /web-api/overview/advanced/dependency-injection
 msc.type: authoredcontent
-ms.openlocfilehash: 0ad0b3c63741803e05274df4da3fcbe5481d32a4
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 138ccb5800e801d382c11e3989ec3e3c074a79fe
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59391934"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65115696"
 ---
 # <a name="dependency-injection-in-aspnet-web-api-2"></a>Inserimento delle dipendenze in ASP.NET Web API 2
 
@@ -30,7 +30,6 @@ da [Mike Wasson](https://github.com/MikeWasson)
 > - API Web 2
 > - [Unity Application Block](https://www.nuget.org/packages/Unity/)
 > - Entity Framework 6 (versione 5 funziona anche)
-
 
 ## <a name="what-is-dependency-injection"></a>Che cos'è l'inserimento delle dipendenze?
 
@@ -88,7 +87,6 @@ Un contenitore IoC è un componente software che è responsabile della gestione 
 > [!NOTE]
 > "IoC" è l'acronimo di "inversione di controllo", ovvero un modello generale in cui un framework chiama il codice dell'applicazione. Un contenitore IoC costruisce oggetti, quali "inverte" il normale flusso di controllo.
 
-
 Per questa esercitazione, useremo [Unity](https://msdn.microsoft.com/library/ff647202.aspx) da Microsoft Patterns &amp; procedure consigliate. (Includono altre librerie molto diffuse [Castle Windsor](http://www.castleproject.org/), [Spring.Net](http://www.springframework.net/), [Autofac](https://code.google.com/p/autofac/), [Ninject](http://www.ninject.org/), e [StructureMap ](http://structuremap.github.io/documentation/).) È possibile usare Gestione pacchetti NuGet per installare Unity. Dal **strumenti** menu in Visual Studio, selezionare **Gestione pacchetti NuGet**, quindi **Console di Gestione pacchetti**. Nella finestra della Console di gestione pacchetti, digitare il comando seguente:
 
 [!code-console[Main](dependency-injection/samples/sample7.cmd)]
@@ -99,7 +97,6 @@ Ecco un'implementazione di **IDependencyResolver** che esegue il wrapping di un 
 
 > [!NOTE]
 > Se il **GetService** metodo non è possibile risolvere un tipo, deve restituire **null**. Se il **GetServices** (metodo) non è possibile risolvere un tipo, deve restituire un oggetto raccolta vuoto. Non generare eccezioni per i tipi sconosciuti.
-
 
 ## <a name="configuring-the-dependency-resolver"></a>Configurare il Resolver di dipendenza
 

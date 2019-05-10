@@ -8,12 +8,12 @@ ms.date: 06/12/2014
 ms.assetid: 7d82d5e9-0619-4f22-9e03-32a6d52940a5
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/single-sign-on
 msc.type: authoredcontent
-ms.openlocfilehash: da1136e085776c63886b6ac25533521fa1479d4f
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 8f6c23eb71ea323b6ab06943097f927f717a8099
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59406288"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118738"
 ---
 # <a name="single-sign-on-building-real-world-cloud-apps-with-azure"></a>Single Sign-On (creazione di App Cloud funzionanti con Azure)
 
@@ -22,7 +22,6 @@ dal [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitt
 [Download risolverlo Project](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [Scarica l'E-book](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
 > Il **creazione Real World di App Cloud con Azure** eBook si basa su una presentazione sviluppata da Scott Guthrie. Viene illustrato 13 modelli e procedure consigliate che consentono di avere esito positivo lo sviluppo di App web per il cloud. Per informazioni sull'e-book, vedere [capitolo prima](introduction.md).
-
 
 Esistono molti problemi di protezione da considerare quando si sviluppa un'app cloud, ma per questa serie ci concentreremo solo su uno: l'accesso single sign-on. Una domanda gente chiede spesso è la seguente: "Io stia principalmente creando App per i dipendenti della mia azienda; come ospitare le app nel cloud e comunque consentire loro di usare lo stesso modello di sicurezza dipendenti conosceranno e usano nell'ambiente locale quando si eseguono le app che sono ospitati all'interno del firewall?" Azure Active Directory (Azure AD) viene chiamato uno dei modi che è abilitare questo scenario. Azure AD consente di rendere enterprise line-of-business (LOB) disponibili le applicazioni su Internet e consente di rendere disponibili ai partner commerciali anche queste app.
 

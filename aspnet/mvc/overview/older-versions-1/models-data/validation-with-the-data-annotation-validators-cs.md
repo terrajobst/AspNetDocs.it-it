@@ -8,12 +8,12 @@ ms.date: 05/29/2009
 ms.assetid: 7ca8013e-9dfc-4e33-8336-cdccfd5f9414
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/validation-with-the-data-annotation-validators-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 300fc9f7e82fe8201b083de9e740e1620f5d09b9
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: e154384c08adf0c14920afff85e983a67b41707c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59411813"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65122298"
 ---
 # <a name="validation-with-the-data-annotation-validators-c"></a>Convalida con i validator di annotazione dei dati (C#)
 
@@ -21,14 +21,11 @@ by [Microsoft](https://github.com/microsoft)
 
 > È possibile sfruttare il raccoglitore di modelli di annotazione dei dati per eseguire la convalida all'interno di un'applicazione ASP.NET MVC. Informazioni su come usare i diversi tipi di attributi di convalida e usarle in Microsoft Entity Framework.
 
-
 In questa esercitazione descrive come usare i validator di annotazione dei dati per eseguire la convalida in un'applicazione ASP.NET MVC. Il vantaggio di usare i validator di annotazione dei dati è che consentono di eseguire la convalida mediante la semplice aggiunta di uno o più attributi, come richiesto o un attributo StringLength: per una proprietà di classe.
 
 Prima di poter usare i validator di annotazione dei dati, è necessario scaricare lo strumento individuerebbe annotazioni dei dati. È possibile scaricare l'esempio di strumento di associazione di modello annotazioni dati dal sito Web CodePlex facendo [qui](http://aspnet.codeplex.com/Release/ProjectReleases.aspx?ReleaseId=24471).
 
-
 È importante comprendere che lo strumento individuerebbe annotazioni dei dati non è una parte ufficiale di Microsoft ASP.NET MVC framework. Anche se lo strumento individuerebbe annotazioni dei dati è stato creato dal team di Microsoft ASP.NET MVC, Microsoft non offre il supporto ufficiale del prodotto per lo strumento individuerebbe annotazioni dei dati descritti e usati in questa esercitazione.
-
 
 ## <a name="using-the-data-annotation-model-binder"></a>Usando lo strumento individuerebbe annotazione dei dati
 
@@ -40,9 +37,7 @@ Per usare lo strumento individuerebbe annotazioni dei dati in un'applicazione AS
 
 Selezionare sia la Microsoft.Web.Mvc.DataAnnotations.dll agli assembly e DataAnnotations e scegliere il **OK** pulsante.
 
-
 È possibile usare l'assembly DataAnnotations incluso in .NET Framework Service Pack 1 con lo strumento individuerebbe annotazioni dei dati. È necessario usare la versione dell'assembly DataAnnotations incluso con il download di esempio dello strumento di associazione di dati le annotazioni del modello.
-
 
 Infine, è necessario registrare il gestore di associazione di modelli di DataAnnotations nel file Global. asax. Aggiungere la riga di codice seguente all'applicazione\_gestore dell'evento Start () in modo che l'applicazione\_metodo Start () si presenta come segue:
 
@@ -64,7 +59,6 @@ Quando si usa lo strumento individuerebbe annotazioni dei dati, si usano attribu
 > 
 > Se le esigenze di convalida non sono soddisfatte da una delle funzioni di convalida standard quindi avere sempre la possibilità di creare un attributo di validator personalizzato ereditando un nuovo attributo di convalida dall'attributo di convalida di base.
 
-
 La classe di prodotto nel **listato 1** illustra come usare questi attributi di convalida. La proprietà Name, Description e UnitPrice sono contrassegnate come richiesto. La proprietà del nome deve avere una lunghezza di stringa contenente meno di 10 caratteri. Infine, la proprietà UnitPrice deve corrispondere un criterio di espressione regolare che rappresenta un importo di valuta.
 
 [!code-csharp[Main](validation-with-the-data-annotation-validators-cs/samples/sample2.cs)]
@@ -76,7 +70,6 @@ La classe di prodotto viene illustrato come utilizzare un attributo aggiuntivo: 
 > [!NOTE] 
 > 
 > Se si desidera personalizzare completamente il messaggio di errore visualizzato da un servizio validator è possibile assegnare un messaggio di errore personalizzato per la proprietà del validator messaggio di errore simile al seguente: `<Required(ErrorMessage:="This field needs a value!")>`
-
 
 È possibile usare la classe di prodotto nel **listato 1** con l'azione del controller create () in **listato 2**. Questa azione del controller Visualizza di nuovo la visualizzazione Create quando lo stato del modello contiene eventuali errori.
 
@@ -97,7 +90,6 @@ Infine, è possibile creare la vista **listato 3** facendo clic su azione create
 > [!NOTE] 
 > 
 > Rimuovere il campo Id dal form crea generato per il **Aggiungi visualizzazione** l'opzione di menu. Poiché il campo Id corrisponde a una colonna Identity, non si vuole consentire agli utenti di immettere un valore per questo campo.
-
 
 Se si invia il modulo per la creazione di un prodotto e non si immette i valori per i campi obbligatori, quindi i messaggi di errore di convalida nella **figura 3** vengono visualizzati.
 
@@ -138,7 +130,6 @@ Gli attributi di convalida vengono applicati alle proprietà della classe MovieM
 > [!NOTE] 
 > 
 > Si noti che la proprietà nella classe MovieMetaData proxy non è necessario rappresentare gli stessi tipi di proprietà corrispondenti nella classe di film. Ad esempio, la proprietà Director è una proprietà di stringa della classe di film e proprietà di un oggetto della classe MovieMetaData.
-
 
 La pagina **figura 6** illustra i messaggi di errore restituiti quando si immettono valori non validi per le proprietà di film.
 

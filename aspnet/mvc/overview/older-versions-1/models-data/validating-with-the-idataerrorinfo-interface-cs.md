@@ -8,19 +8,18 @@ ms.date: 03/02/2009
 ms.assetid: 4733b9f1-9999-48fb-8b73-6038fbcc5ecb
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/validating-with-the-idataerrorinfo-interface-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 3e1399d17840a2f5301349cb91deb07b0cc34363
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 938b180da02b1963acffd021d18621d75d1d0447
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59421979"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65117562"
 ---
 # <a name="validating-with-the-idataerrorinfo-interface-c"></a>Convalida con l'interfaccia IDataErrorInfo (C#)
 
 da [Stephen Walther](https://github.com/StephenWalther)
 
 > Stephen Walther illustra come visualizzare i messaggi di errore di convalida personalizzata implementando l'interfaccia IDataErrorInfo in una classe di modello.
-
 
 L'obiettivo di questa esercitazione è per indicare un approccio all'esecuzione della convalida in un'applicazione ASP.NET MVC. Informazioni su come impedire l'invio di un form HTML senza fornire valori per i campi modulo necessari. In questa esercitazione descrive come eseguire la convalida tramite l'interfaccia IErrorDataInfo.
 
@@ -30,7 +29,6 @@ In questa esercitazione si utilizzerà il database MoviesDB e la tabella di data
 
 <a id="0.5_table01"></a>
 
-
 | **Nome della colonna** | **Tipo di dati** | **Consenti valori null** |
 | --- | --- | --- |
 | Id | Int | False |
@@ -38,19 +36,15 @@ In questa esercitazione si utilizzerà il database MoviesDB e la tabella di data
 | Director | Nvarchar(100) | False |
 | DateReleased | DateTime | False |
 
-
 In questa esercitazione, usare Microsoft Entity Framework per generare classi modello del mio database. La classe di film generata da Entity Framework viene visualizzata nella figura 1.
-
 
 [![L'entità film](validating-with-the-idataerrorinfo-interface-cs/_static/image1.jpg)](validating-with-the-idataerrorinfo-interface-cs/_static/image1.png)
 
 **Figura 01**: L'entità film ([fare clic per visualizzare l'immagine con dimensioni normali](validating-with-the-idataerrorinfo-interface-cs/_static/image2.png))
 
-
 > [!NOTE] 
 > 
 > Per altre informazioni sull'utilizzo di Entity Framework per generare le classi di modello di database, vedere che l'esercitazione intitolata Creazione di classi del modello con Entity Framework.
-
 
 ## <a name="the-controller-class"></a>La classe Controller
 
@@ -72,11 +66,9 @@ La proprietà IsValid restituisce false quando si verifica un errore di convalid
 
 La classe di film viene generata da Entity Framework. È possibile visualizzare il codice per la classe Movie se si espande il file MoviesDBModel.edmx nella finestra Esplora soluzioni e aprire il file MoviesDBModel.Designer.cs nell'Editor del codice (vedere la figura 2).
 
-
 [![Il codice per l'entità film](validating-with-the-idataerrorinfo-interface-cs/_static/image2.jpg)](validating-with-the-idataerrorinfo-interface-cs/_static/image3.png)
 
 **Figura 02**: Il codice per l'entità film ([fare clic per visualizzare l'immagine con dimensioni normali](validating-with-the-idataerrorinfo-interface-cs/_static/image4.png))
-
 
 La classe di film è una classe parziale. Ciò significa che possiamo aggiungere un'altra classe parziale con lo stesso nome per estendere le funzionalità della classe di film. Si aggiungerà la logica di convalida per la nuova classe parziale.
 
@@ -110,7 +102,6 @@ Il metodo OnChanging viene chiamato a destra prima che venga modificata la propr
 > [!NOTE] 
 > 
 > Un metodo parziale è un metodo definito in una classe che non si deve implementare. Se non si implementa un metodo parziale il compilatore rimuove la firma del metodo e tutte le chiamate al metodo pertanto vi sono previsti costi di runtime associati al metodo parziale. Nell'Editor di codice di Visual Studio, è possibile aggiungere un metodo parziale digitando la parola chiave *parziale* seguita da uno spazio per visualizzare un elenco di righe parzialmente eseguite da implementare.
-
 
 **Listato 3 - Models\Movie.cs**
 
@@ -146,11 +137,9 @@ Nel listato 4, controlla la proprietà dell'indicizzatore di \_raccolta errori p
 
 Non devi modificare il controller Home in alcun modo per usare la classe film modificata. La pagina visualizzata nella figura 3 illustra cosa accade quando viene immesso alcun valore per i campi modulo titolo o Director.
 
-
 [![La creazione automatica di metodi di azione](validating-with-the-idataerrorinfo-interface-cs/_static/image3.jpg)](validating-with-the-idataerrorinfo-interface-cs/_static/image5.png)
 
 **Figura 03**: Un modulo con i valori mancanti ([fare clic per visualizzare l'immagine con dimensioni normali](validating-with-the-idataerrorinfo-interface-cs/_static/image6.png))
-
 
 Si noti che il valore DateReleased viene convalidato automaticamente. Poiché la proprietà DateReleased non accetta valori NULL, il DefaultModelBinder genera un errore di convalida per questa proprietà automaticamente quando non dispone di un valore. Se si desidera modificare il messaggio di errore per la proprietà DateReleased quindi è necessario creare uno strumento di associazione di modelli personalizzato.
 

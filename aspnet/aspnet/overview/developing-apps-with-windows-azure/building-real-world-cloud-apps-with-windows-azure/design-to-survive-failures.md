@@ -8,12 +8,12 @@ ms.date: 06/12/2014
 ms.assetid: 364ce84e-5af8-4e08-afc9-75a512b01f84
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/design-to-survive-failures
 msc.type: authoredcontent
-ms.openlocfilehash: fbe618acfc70711933996f97657a4326d389b3dd
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 54bfa40a7d853e29c42512ba375271587fb6f565
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59411241"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118834"
 ---
 # <a name="design-to-survive-failures-building-real-world-cloud-apps-with-azure"></a>Progettare per sopravvivere a errori (creazione di App Cloud funzionanti con Azure)
 
@@ -22,7 +22,6 @@ dal [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitt
 [Download risolverlo Project](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [Scarica l'E-book](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
 > Il **creazione Real World di App Cloud con Azure** eBook si basa su una presentazione sviluppata da Scott Guthrie. Viene illustrato 13 modelli e procedure consigliate che consentono di avere esito positivo lo sviluppo di App web per il cloud. Per informazioni sull'e-book, vedere [capitolo prima](introduction.md).
-
 
 Una delle operazioni è necessario preoccuparsi quando si compila qualsiasi tipo di applicazione, ma specialmente uno che verrà eseguito nel cloud in cui un numero elevato di persone useranno, viene illustrato come progettare l'app in modo che possa gestire gli errori e continuare a offrire valore normalmente quanto più possibili. Dato un tempo sufficiente, procede per andare storto in qualsiasi ambiente o da qualsiasi sistema software. Come l'app gestisce tali situazioni determina come contrariati ai clienti verranno visualizzato e la quantità di tempo è necessario dedicare l'analisi e correzione dei problemi.
 
