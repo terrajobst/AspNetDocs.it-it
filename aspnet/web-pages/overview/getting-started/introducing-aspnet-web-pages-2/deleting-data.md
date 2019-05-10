@@ -8,12 +8,12 @@ ms.date: 01/02/2018
 ms.assetid: 75b5c1cf-84bd-434f-8a86-85c568eb5b09
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/deleting-data
 msc.type: authoredcontent
-ms.openlocfilehash: e9ffe0ea3e2bf817675a4a771d3471ec6eb91133
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: c8620fc1abc61d514bdc039c66f7a84e67e89abe
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59406743"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133506"
 ---
 # <a name="introducing-aspnet-web-pages---deleting-database-data"></a>Introduzione a pagine Web ASP.NET: l'eliminazione dei dati di Database
 
@@ -33,7 +33,6 @@ da [Tom FitzMacken](https://github.com/tfitzmac)
 > - Il `WebGrid` helper.
 > - Il codice SQL `Delete` comando.
 > - Il `Database.Execute` metodo per l'esecuzione di un database SQL `Delete` comando.
-
 
 ## <a name="what-youll-build"></a>Scopo dell'esercitazione
 
@@ -86,7 +85,6 @@ Ora è possibile creare la pagina che sarà la destinazione per il **eliminare**
 > Quando l'app consente agli utenti di modificare un record, è necessario presentare all'utente il record per la modifica comunque. Ma si potrebbe essere tentati di ignorare questo passaggio per l'eliminazione di un record. Non ignorare questo passaggio, tuttavia. (È anche utile per gli utenti visualizzino il record e confermare che si vuole eliminare il record che sono destinate.)
 > 
 > In una serie di esercitazioni successive, verrà illustrato come aggiungere funzionalità di accesso in modo che un utente deve accedere prima di eliminare un record.
-
 
 Creare una pagina denominata *DeleteMovie.cshtml* e sostituire quello presente nel file con il markup seguente:
 

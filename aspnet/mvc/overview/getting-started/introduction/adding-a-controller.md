@@ -8,12 +8,12 @@ ms.date: 10/17/2013
 ms.assetid: cc764f3b-6921-486a-8f44-c6ccd1249acd
 msc.legacyurl: /mvc/overview/getting-started/introduction/adding-a-controller
 msc.type: authoredcontent
-ms.openlocfilehash: ad5f32a08270ce318c03e1b29acd74d12bbb3d3b
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: da914986ff020879dfe634967b39b32250cbf43b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59394055"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65120843"
 ---
 # <a name="adding-a-controller"></a>Aggiunta di un controller
 
@@ -34,13 +34,11 @@ Si verrà che coprono tutti questi concetti in questa serie di esercitazioni e m
 
 È innanzitutto necessario creare una classe controller. In **Esplora soluzioni**, fare doppio clic il *controller* cartella e quindi fare clic su **Add**, quindi **Controller**.
 
-
 ![](adding-a-controller/_static/image1.png)
 
 Nel **Add Scaffold** della finestra di dialogo fare clic su **Controller MVC 5 - vuoto**, quindi fare clic su **Aggiungi**.
 
 ![](adding-a-controller/_static/image2.png)  
- 
 
 Assegnare un nome al controller "HelloWorldController" e fare clic su **Add**.
 
@@ -80,7 +78,6 @@ Passare a `http://localhost:xxxx/HelloWorld/Welcome`. Il `Welcome` metodo viene 
 
 > [!NOTE]
 > Nota sulla sicurezza: Il codice precedente Usa [HttpUtility](https://msdn.microsoft.com/library/ee360286(v=vs.110).aspx) per proteggere l'applicazione da input dannoso (in particolare in JavaScript). Per altre informazioni, vedere [Procedura: Protezione contro gli attacchi tramite Script in un'applicazione Web applicando la codifica HTML in stringhe](https://msdn.microsoft.com/library/a2a4yykt(v=vs.100).aspx).
-
 
  Eseguire l'applicazione e passare all'URL di esempio (`http://localhost:xxxx/HelloWorld/Welcome?name=Scott&numtimes=4`). È possibile provare diversi valori per `name` e `numtimes` nell'URL. Il [sistema di associazione di modelli ASP.NET MVC](http://odetocode.com/Blogs/scott/archive/2009/04/27/6-tips-for-asp-net-mvc-model-binding.aspx) esegue automaticamente il mapping di parametri denominati dalla stringa di query nella barra degli indirizzi ai parametri nel metodo.
 

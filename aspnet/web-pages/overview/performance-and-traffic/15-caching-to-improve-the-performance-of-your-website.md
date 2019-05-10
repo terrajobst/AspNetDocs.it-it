@@ -8,12 +8,12 @@ ms.date: 02/14/2014
 ms.assetid: 961e525b-7700-469e-8a68-d7010b6fb68c
 msc.legacyurl: /web-pages/overview/performance-and-traffic/15-caching-to-improve-the-performance-of-your-website
 msc.type: authoredcontent
-ms.openlocfilehash: 10b853966ba80b673e1a6786987893f919369e7a
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 01796d3ca699a6af5d9162b22a926551435c2040
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59412905"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134586"
 ---
 # <a name="caching-data-in-an-aspnet-web-pages-razor-site-for-better-performance"></a>La memorizzazione nella cache i dati in un sito di ASP.NET Web Pages (Razor) per ottenere prestazioni migliori
 
@@ -38,7 +38,6 @@ da [Tom FitzMacken](https://github.com/tfitzmac)
 > 
 > Questa esercitazione si integra inoltre con ASP.NET Web Pages 2.
 
-
 Ogni volta che un utente richiede una pagina del sito, il server web deve eseguire alcune operazioni per soddisfare la richiesta. Per alcune delle pagine, il server potrebbe essere necessario eseguire le attività che richiedono tempo (relativamente) lungo, ad esempio il recupero dei dati da un database. Anche se queste attività traggono tempo in termini assoluti, se il sito si verifica una grande quantità di traffico, un'intera serie di richieste singole in modo che il server web eseguire l'attività complessa o lenta possibile aggiungere fino a una grande quantità di lavoro. Ciò può in ultima analisi sulle prestazioni del sito.
 
 Un modo per migliorare le prestazioni del tuo sito Web in casi come questo è per memorizzare i dati. Se il sito Ottiene le richieste ripetute per le stesse informazioni, le informazioni non devono essere modificate per ogni persona e non è ora sensibile, anziché recuperare nuovamente o ricalcolo, è possibile recuperare i dati una sola volta e quindi archiviare i risultati. La volta successiva che viene ricevuta una richiesta per tale informazioni, è sufficiente ottenerlo dalla cache.
@@ -47,7 +46,6 @@ In generale, si memorizzano nella cache le informazioni che non cambiano di freq
 
 > [!NOTE]
 > Le voci nella cache potrebbero essere rimossa per motivi diversi da che siano scaduti. Ad esempio, il server web potrebbe essere temporaneamente insufficiente memoria e può recuperare la memoria, è possibile generare le voci dalla cache. Come si vedrà, anche se è stata inserire informazioni nella cache, è necessario verificare che è ancora disponibile quando ti serve.
-
 
 Si supponga che il sito Web ha una pagina che consente di visualizzare la temperatura attuale e le previsioni meteo. Per ottenere questo tipo di informazioni, è possibile inviare una richiesta a un servizio esterno. Poiché queste informazioni non cambia molto (entro un periodo di tempo di due ore, ad esempio) e poiché le chiamate esterne richiedano tempo e larghezza di banda, è un buon candidato per la memorizzazione nella cache.
 
@@ -77,7 +75,6 @@ ASP.NET include un `WebCache` helper che rende più semplice aggiungere la memor
 
 <a id="Additional_Resources"></a>
 ## <a name="additional-resources"></a>Risorse aggiuntive
-
 
 - [Visualizzazione dei dati in un grafico](https://go.microsoft.com/fwlink/?LinkId=202895)
 - [Riferimento all'API WebCache](https://msdn.microsoft.com/library/system.web.helpers.webcache(v=vs.99).aspx) (MSDN)

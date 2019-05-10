@@ -8,12 +8,12 @@ ms.date: 03/03/2014
 ms.assetid: 5344b74e-b888-479a-92bc-601a33bd61a2
 msc.legacyurl: /web-forms/overview/getting-started/code-editing-in-web-forms-pages
 msc.type: authoredcontent
-ms.openlocfilehash: 328dc6fb61ac562131b11b36b40f574ca5a53866
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 3473ad476fbbebc58e12586334b4600f57cf17ed
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59397370"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134248"
 ---
 # <a name="code-editing-aspnet-web-forms-in-visual-studio-2013"></a>Modifica del codice di Web Forms ASP.NET in Visual Studio 2013
 
@@ -31,7 +31,6 @@ Durante questa procedura dettagliata, si apprenderà come:
 - Inserire frammenti di codice.
 
 ## <a name="prerequisites"></a>Prerequisiti
-
 
 Per completare questa procedura dettagliata, è necessario:
 
@@ -65,14 +64,11 @@ In questa parte della procedura dettagliata, si verrà creare un progetto di app
 
     Visual Studio crea un nuovo progetto che include funzionalità predefinite in base al modello Web Form.
 
-
 ## <a name="creating-a-new-aspnet-web-forms-page"></a>Creazione di una nuova pagina ASP.NET Web Form
-
 
 Quando si crea una nuova applicazione Web Form usando la **applicazione Web ASP.NET** modello di progetto, Visual Studio aggiunge una pagina ASP.NET (pagina Web Form) denominata *default. aspx*, nonché di numerosi altri file e le cartelle. È possibile usare la *default. aspx* pagina come pagina iniziale per l'applicazione Web. Tuttavia, per questa procedura dettagliata, crea e lavorare con una nuova pagina.
 
 ### <a name="to-add-a-page-to-the-web-application"></a>Per aggiungere una pagina per l'applicazione Web
-
 
 1. Nella **Esplora soluzioni**, fare clic sul nome dell'applicazione Web (in questa esercitazione è il nome dell'applicazione **BasicWebSite**), quindi fare clic su **Add**  - &gt; **Nuovo elemento**.   
 Verrà visualizzata la finestra di dialogo **Aggiungi nuovo elemento**.
@@ -82,14 +78,11 @@ Verrà visualizzata la finestra di dialogo **Aggiungi nuovo elemento**.
  Visual Studio crea la nuova pagina e lo apre.
 4. Successivamente, impostare la nuova pagina come pagina di avvio predefinito. Nelle **Esplora soluzioni**, fare doppio clic su nuova pagina denominata *FirstWebPage* e selezionare **imposta come pagina iniziale**. Alla successiva esecuzione di questa applicazione per testare lo stato di avanzamento, verrà visualizzato automaticamente la nuova pagina nel browser.
 
-
 ## <a name="correcting-inline-coding-errors"></a>La correzione degli errori del codice Inline
-
 
 L'editor di codice in Visual Studio consente di evitare errori quando si scrive codice, e se sono state apportate a un errore, l'editor di codice consente di correggere l'errore. In questa parte della procedura dettagliata, si scriverà una riga di codice che illustrano le funzionalità di correzione di errore nell'editor.
 
 ### <a name="to-correct-simple-coding-errors-in-visual-studio"></a>Per correggere gli errori di scrittura di codice semplici in Visual Studio
-
 
 1. Nella **Design** consente di visualizzare, fare doppio clic sulla pagina vuota per creare un gestore per il **carico** eventi per la pagina.   
    Si usa il gestore dell'evento solo come un'unica posizione per scrivere codice.
@@ -109,7 +102,6 @@ L'editor di codice in Visual Studio consente di evitare errori quando si scrive 
     > [!NOTE] 
     > 
     > Visualizzare il codice corrente la formattazione delle impostazioni in Visual Studio facendo clic **degli strumenti**  - &gt; **opzioni**  - &gt; **i tipi di carattere e I colori**.
-
 
 ## <a name="refactoring-and-renaming"></a>La ridenominazione e refactoring
 
@@ -156,7 +148,6 @@ Quando si lavora con le variabili, nonché gli oggetti, si potrebbe voler rinomi
 
 ### <a name="to-use-refactoring-to-rename-a-variable"></a>Per utilizzare il refactoring per rinominare una variabile
 
-
 1. Nel **fare clic su** gestore eventi, individuare la riga seguente:
 
     [!code-csharp[Main](code-editing-in-web-forms-pages/samples/sample6.cs)]
@@ -173,7 +164,6 @@ Quando si lavora con le variabili, nonché gli oggetti, si potrebbe voler rinomi
     [!code-csharp[Main](code-editing-in-web-forms-pages/samples/sample7.cs)]
 
     La variabile `alist` in questa riga non viene rinominato poiché non rappresenta lo stesso valore della variabile `alist` che sono stati rinominati. La variabile `alist` nella `DisplayArray` dichiarazione è una variabile locale per tale metodo. Ciò viene illustrato che con refactoring per rinominare le variabili è diverso da quello semplicemente eseguire un'azione trova e Sostituisci nell'editor. refactoring di ridenominazione variabili con conoscenza della semantica della variabile che può essere utilizzato con.
-
 
 ## <a name="inserting-snippets"></a>Inserimento di frammenti di codice
 

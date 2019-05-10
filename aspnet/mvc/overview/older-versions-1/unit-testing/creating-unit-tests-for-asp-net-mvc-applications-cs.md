@@ -8,12 +8,12 @@ ms.date: 08/19/2008
 ms.assetid: d3a270b9-d7b1-47f2-8775-fc3beb518b5c
 msc.legacyurl: /mvc/overview/older-versions-1/unit-testing/creating-unit-tests-for-asp-net-mvc-applications-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 1193d7dc6fc29dfdac5637c9391a82f9f3566073
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 633e28a100937c5d40d62fe5cc151e613171cc8f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59407731"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65126886"
 ---
 # <a name="creating-unit-tests-for-aspnet-mvc-applications-c"></a>Creazione di unit test per le applicazioni ASP.NET MVC (C#)
 
@@ -22,7 +22,6 @@ da [Stephen Walther](https://github.com/StephenWalther)
 [Scaricare PDF](http://download.microsoft.com/download/8/4/8/84843d8d-1575-426c-bcb5-9d0c42e51416/ASPNET_MVC_Tutorial_07_CS.pdf)
 
 > Informazioni su come creare unit test per le azioni del controller. In questa esercitazione, Stephen Walther spiega come verificare se un'azione del controller restituisce una visualizzazione specifica, restituisce un set di dati specifico oppure un altro tipo di risultato dell'azione.
-
 
 L'obiettivo di questa esercitazione è dimostrare come è possibile scrivere unit test per i controller in ASP.NET MVC applications. Illustreremo come creare tre tipi diversi di unit test. Descrive come testare la visualizzazione restituita da un'azione del controller, come i dati della visualizzazione restituito da un'azione del controller di test e come testare un'azione del controller si viene reindirizzati a una seconda azione del controller o meno.
 
@@ -58,16 +57,13 @@ Questa azione del controller restituisce anche una visualizzazione denominata `D
 
 È possibile eseguire lo unit test nel listato 2 entrambi immettendo la combinazione di tasti **Ctrl-R, A** oppure fare clic il **eseguire tutti i test nella soluzione** pulsante (vedere la figura 1). Se il test ha esito positivo, si noterà nella finestra Risultati Test nella figura 2.
 
-
 [![Eseguire tutti i test nella soluzione](creating-unit-tests-for-asp-net-mvc-applications-cs/_static/image2.png)](creating-unit-tests-for-asp-net-mvc-applications-cs/_static/image1.png)
 
 **Figura 01**: Eseguire tutti i test nella soluzione ([fare clic per visualizzare l'immagine con dimensioni normali](creating-unit-tests-for-asp-net-mvc-applications-cs/_static/image3.png))
 
-
 [![Vero successo!](creating-unit-tests-for-asp-net-mvc-applications-cs/_static/image5.png)](creating-unit-tests-for-asp-net-mvc-applications-cs/_static/image4.png)
 
 **Figura 02**: Operazione completata ([Fare clic per visualizzare l'immagine con dimensioni normali](creating-unit-tests-for-asp-net-mvc-applications-cs/_static/image6.png))
-
 
 ## <a name="testing-the-view-data-returned-by-a-controller"></a>Verifica i dati della visualizzazione restituita da un Controller
 

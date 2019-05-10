@@ -8,12 +8,12 @@ ms.date: 02/15/2013
 ms.assetid: 82b8dea0-f062-4ee4-8784-3ffa30fbb1ca
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/command-line-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: c9aadec642837953dde4cf3e89ec9a7d484b380e
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: e6fc995ca812a461247989204caff580d06e2343
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59401335"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134274"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-command-line-deployment"></a>Distribuzione Web ASP.NET tramite Visual Studio: Distribuzione dalla riga di comando
 
@@ -22,7 +22,6 @@ da [Tom Dykstra](https://github.com/tdykstra)
 [Download progetto iniziale](http://go.microsoft.com/fwlink/p/?LinkId=282627)
 
 > Questa serie di esercitazioni illustra come distribuire, pubblicare, ASP.NET per App Web di servizio App di Azure o per un provider di hosting di terze parti, di applicazioni web usando Visual Studio 2012 o Visual Studio 2010. Per informazioni sulla serie, vedere [la prima esercitazione della serie](introduction.md).
-
 
 ## <a name="overview"></a>Panoramica
 

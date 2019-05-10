@@ -8,12 +8,12 @@ ms.date: 06/10/2014
 ms.assetid: a14121ae-02cf-4024-8af0-9dd0dc810690
 msc.legacyurl: /signalr/overview/advanced/dependency-injection
 msc.type: authoredcontent
-ms.openlocfilehash: 1b5d36529b52dfcbebf34cbfa230b3b3b4e83b81
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 52978b10b6c131ac8eff4535216cc60b43fdf3de
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59405378"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65120111"
 ---
 # <a name="dependency-injection-in-signalr"></a>Inserimento delle dipendenze in SignalR
 
@@ -37,7 +37,6 @@ dal [Mike Wasson](https://github.com/MikeWasson), [Patrick Fletcher](https://git
 > ## <a name="questions-and-comments"></a>Domande e commenti
 >
 > Inviaci un feedback sul modo in cui è stato apprezzato questa esercitazione e cosa possiamo migliorare nei commenti nella parte inferiore della pagina. Se hai domande che non sono direttamente correlate con l'esercitazione, è possibile pubblicarli per i [forum ASP.NET SignalR](https://forums.asp.net/1254.aspx/1?ASP+NET+SignalR) oppure [StackOverflow.com](http://stackoverflow.com/).
-
 
 Inserimento di dipendenze è un modo per rimuovere le dipendenze hardcoded tra gli oggetti, rendendo più semplice per sostituire le dipendenze di un oggetto, uno per i test (tramite oggetti fittizi) o per modificare il comportamento in fase di esecuzione. Questa esercitazione illustra come eseguire l'inserimento di dipendenze sugli hub SignalR. Viene inoltre illustrato come usare contenitori IoC con SignalR. Un contenitore IoC è un framework generale per l'inserimento di dipendenze.
 
@@ -93,7 +92,6 @@ Un'unica soluzione consiste nell'usare un contenitore IoC. Un contenitore IoC è
 
 > [!NOTE]
 > "IoC" è l'acronimo di "inversione di controllo", ovvero un modello generale in cui un framework chiama il codice dell'applicazione. Un contenitore IoC costruisce oggetti, quali "inverte" il normale flusso di controllo.
-
 
 ## <a name="using-ioc-containers-in-signalr"></a>Uso dei contenitori IoC in SignalR
 

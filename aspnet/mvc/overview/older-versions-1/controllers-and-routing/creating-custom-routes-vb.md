@@ -8,19 +8,18 @@ ms.date: 02/16/2009
 ms.assetid: 6ac5758b-6199-42af-adcb-21954b864951
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/creating-custom-routes-vb
 msc.type: authoredcontent
-ms.openlocfilehash: a7b8b85ba1cf5c18e605eb8114a305272baf41a6
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 22b44e9e575c9d404881a23ee735bb0c8b7109e1
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59404871"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123347"
 ---
 # <a name="creating-custom-routes-vb"></a>Creazione di route personalizzate (VB)
 
 by [Microsoft](https://github.com/microsoft)
 
 > Informazioni su come aggiungere route personalizzati a un'applicazione ASP.NET MVC. In questa esercitazione descrive come modificare la tabella di route predefinito nel file Global. asax.
-
 
 In questa esercitazione descrive come aggiungere una route personalizzata a un'applicazione ASP.NET MVC. Descrive come modificare la tabella di route predefinito nel file Global. asax con una route personalizzata.
 
@@ -60,11 +59,9 @@ Si noti che il metodo Entry() nel listato 2 accetta un parametro di tipo DateTim
 
 **Figura 1. errore di conversione del parametro**
 
-
 [![La finestra di dialogo Nuovo progetto](creating-custom-routes-vb/_static/image1.jpg)](creating-custom-routes-vb/_static/image1.png)
 
 **Figura 01**: Errore di conversione del parametro ([fare clic per visualizzare l'immagine con dimensioni normali](creating-custom-routes-vb/_static/image2.png))
-
 
 ## <a name="summary"></a>Riepilogo
 

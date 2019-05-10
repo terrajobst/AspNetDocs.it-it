@@ -8,12 +8,12 @@ ms.date: 10/17/2013
 ms.assetid: 4085de68-d243-4378-8a64-86236ea8d2da
 msc.legacyurl: /mvc/overview/getting-started/introduction/adding-a-new-field
 msc.type: authoredcontent
-ms.openlocfilehash: a5de73d93d0af21a3b59d6c21014810184292adb
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 55e635c967e07e193dda0358b020638af46c688e
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59379352"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65120830"
 ---
 # <a name="adding-a-new-field"></a>Aggiunta di un nuovo campo
 
@@ -79,7 +79,6 @@ In questo modo consente di aggiungere la seguente istruzione using:
 > 
 > Per altre informazioni sul [AddOrUpdate](https://msdn.microsoft.com/library/system.data.entity.migrations.idbsetextensions.addorupdate(v=vs.103).aspx) metodo, vedere [prestare attenzione con Entity Framework 4.3 AddOrUpdate metodo](http://thedatafarm.com/blog/data-access/take-care-with-ef-4-3-addorupdate-method/)...
 
-
 **Premere CTRL + MAIUSC + B per compilare il progetto.** (La procedura seguente avrà esito negativo se non crei a questo punto.)
 
 Il passaggio successivo consiste nel creare un `DbMigration` classe per la migrazione iniziale. Questa migrazione crea un nuovo database, che è per questo motivo hai eliminato il *movie.mdf* file in un passaggio precedente.
@@ -138,13 +137,11 @@ Il modello supporta il contesto 'MovieDBContext' è stato modificato dal momento
 
 Viene visualizzato questo errore perché aggiornato `Movie` classe di modello nell'applicazione ora è diverso rispetto allo schema del `Movie` tabella del database esistente. Nella tabella del database non è presente una colonna `Rating`.
 
-
 Per correggere questo errore, esistono alcuni approcci:
 
 1. Fare in modo che Entity Framework elimini e crei di nuovo automaticamente il database in base al nuovo schema di classi del modello. Questo approccio è molto utile nelle prime fasi del ciclo di sviluppo in una fase attiva di sviluppo di un database di test e consente di migliorare rapidamente lo schema del modello e il database insieme. Lo svantaggio, tuttavia, è che si perdono i dati esistenti nel database, in modo che è *non* vuole usare questo approccio in un database di produzione. Un modo efficace per sviluppare un'applicazione consiste nell'inizializzare automaticamente un database con dati di test usando un inizializzatore. Per altre informazioni sugli inizializzatori di database di Entity Framework, vedere [esercitazione su ASP.NET MVC o Entity Framework](../getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md).
 2. Modificare esplicitamente lo schema del database esistente in modo che corrisponda alle classi del modello. Il vantaggio di questo approccio è che i dati vengono mantenuti. È possibile apportare questa modifica manualmente o creando uno script di modifica del database.
 3. Usare Migrazioni Code First per aggiornare lo schema del database.
-
 
 Per questa esercitazione si userà Migrazioni Code First.
 

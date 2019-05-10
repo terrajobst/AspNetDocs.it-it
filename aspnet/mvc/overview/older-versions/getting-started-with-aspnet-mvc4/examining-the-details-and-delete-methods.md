@@ -8,12 +8,12 @@ ms.date: 08/28/2012
 ms.assetid: 11425ff3-09fc-4efa-be9a-b53bce503460
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc4/examining-the-details-and-delete-methods
 msc.type: authoredcontent
-ms.openlocfilehash: 0359af8d5558bdaa6a73be9774fec2284ab87c73
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 455bdfd4cfca65cadd94e8ce189c1a185a03805d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59384773"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129887"
 ---
 # <a name="examining-the-details-and-delete-methods"></a>Analisi dei dettagli e dei metodi di eliminazione
 
@@ -21,7 +21,6 @@ da [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > > [!NOTE]
 > > È disponibile una versione aggiornata di questa esercitazione [qui](../../getting-started/introduction/getting-started.md) che usa ASP.NET MVC 5 e Visual Studio 2013. È più sicuro, molto più semplice da seguire e vengono illustrate altre funzionalità.
-
 
 In questa parte dell'esercitazione, si esamineranno generato automaticamente `Details` e `Delete` metodi.
 

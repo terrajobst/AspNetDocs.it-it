@@ -8,19 +8,18 @@ ms.date: 08/14/2010
 ms.assetid: a3a90963-0286-4fa0-9b3d-c230cc18b0a3
 msc.legacyurl: /mvc/overview/older-versions-1/getting-started-with-mvc/getting-started-with-mvc-part6
 msc.type: authoredcontent
-ms.openlocfilehash: f648e0cb53dd410105adc22401f19a5a15f9e8c1
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 05a281720f76b107fe8d902ef60d5d2e72af3ef5
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59380808"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65122906"
 ---
 # <a name="adding-a-create-method-and-create-view"></a>Aggiunta di un metodo di creazione e di una visualizzazione di creazione
 
 da [Scott Hanselman](https://github.com/shanselman)
 
 > Si tratta di un'esercitazione per principianti che introduce i concetti di base di ASP.NET MVC. Si creerà una semplice applicazione web che legge e scrive da un database. Visitare il [centro di formazione di ASP.NET MVC](../../../index.md) per trovare altri ASP.NET MVC, esercitazioni ed esempi.
-
 
 In questa sezione si intende implementare il supporto necessario per consentire agli utenti di creare nuovi film nel database. Faremo implementando l'azione URL Movies/Create.
 

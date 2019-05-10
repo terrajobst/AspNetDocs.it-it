@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: a5c5eed2-8683-40a5-a2e1-35c9f8d17c29
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/deploying-web-packages
 msc.type: authoredcontent
-ms.openlocfilehash: c42fa327c324ac2b721268c56782a24755ec7225
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 91b99e6e250342851aea6860164b6f6af54818d1
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59391065"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65119309"
 ---
 # <a name="deploying-web-packages"></a>Distribuzione di pacchetti Web
 
@@ -37,7 +37,6 @@ da [Jason Lee](https://github.com/jrjlee)
 > - È stata creata ed è stato incluso nel pacchetto di applicazione web, come descritto in [compilazione e creazione di pacchetti Web Application Projects](building-and-packaging-web-application-projects.md).
 > - È stato modificato il *SetParameters* file per fornire i valori del parametro corretto per l'ambiente di destinazione, come descritto in [configurazione dei parametri per una distribuzione pacchetto Web](configuring-parameters-for-web-package-deployment.md).
 
-
 Esegue il [*nome progetto*]*. deploy. cmd* file è il modo più semplice per distribuire un pacchetto di web. In particolare, tramite il *. deploy. cmd* file offre questi vantaggi rispetto all'uso MSDeploy.exe direttamente:
 
 - Non è necessario specificare il percorso del pacchetto di distribuzione web&#x2014;il *. deploy. cmd* file è già noto in cui è.
@@ -52,9 +51,7 @@ Prima di usare la *. deploy. cmd* file per distribuire un pacchetto web, è nece
 
 Il *. deploy. cmd* file supporta varie opzioni della riga di comando. Quando si esegue il file da un prompt dei comandi, si tratta la sintassi di base:
 
-
 [!code-console[Main](deploying-web-packages/samples/sample1.cmd)]
-
 
 È necessario specificare una **/T** flag o un' **/Y** flag, per indicare se si desidera eseguire rispettivamente un'esecuzione della versione di valutazione o una distribuzione in tempo reale (non usare entrambi i flag nello stesso comando). Questa tabella illustra le finalità di ciascuno di questi flag.
 
@@ -71,7 +68,6 @@ Il *. deploy. cmd* file supporta varie opzioni della riga di comando. Quando si 
 
 > [!NOTE]
 > Ogni volta che il processo di compilazione crea un pacchetto web, crea anche un file denominato *[nome progetto] deploy-file Readme. txt* che spiega queste opzioni di distribuzione.
-
 
 Oltre a questi flag, è possibile specificare impostazioni per le operazioni di distribuzione Web come aggiuntiva *. deploy. cmd* parametri. Eventuali impostazioni aggiuntive specificate vengono semplicemente passati al comando MSDeploy.exe sottostante. Per altre informazioni su queste impostazioni, vedere [Web Deploy operazione Settings](https://technet.microsoft.com/library/dd569089(WS.10).aspx).
 
@@ -94,9 +90,7 @@ In questo esempio:
 
 Per illustrare come l'uso di *. deploy. cmd* file semplifica il processo di distribuzione, esaminare il comando MSDeploy.exe che ottiene generato ed eseguito quando si esegue *ContactManager.Mvc.deploy.cmd* utilizzando le opzioni illustrate in precedenza.
 
-
 [!code-console[Main](deploying-web-packages/samples/sample3.cmd)]
-
 
 Per altre informazioni sull'uso di *. deploy. cmd* file per distribuire un pacchetto web, vedere [come: Installare un pacchetto di distribuzione usando il File deploy. cmd](https://msdn.microsoft.com/library/ff356104.aspx).
 
@@ -152,13 +146,10 @@ In molti scenari aziendali, si desidera distribuire i pacchetti web come parte d
 
 Nella soluzione di esempio Contact Manager, esaminare i **PublishWebPackages** di destinazione nel *Publish.proj* file. Questa destinazione viene eseguita una volta per ogni *. deploy. cmd* file identificato da un elenco di elementi denominato **PublishPackages**. La destinazione Usa le proprietà e metadati degli elementi per creare un set completo di valori di argomento per ogni *. deploy. cmd* file e quindi Usa le **Exec** attività per eseguire il comando.
 
-
 [!code-xml[Main](deploying-web-packages/samples/sample8.xml)]
-
 
 > [!NOTE]
 > Per una panoramica più ampia del modello di file di progetto nella soluzione di esempio e un'introduzione ai file di progetto personalizzato in generale, vedere [informazioni sul File di progetto](understanding-the-project-file.md) e [informazioni sul processo di compilazione](understanding-the-build-process.md).
-
 
 ## <a name="endpoint-considerations"></a>Considerazioni sull'endpoint
 
@@ -166,33 +157,24 @@ Indipendentemente dal fatto se si distribuisce il pacchetto web eseguendo il *. 
 
 Se il server web di destinazione è configurato per la distribuzione usando il servizio Web distribuire l'agente remoto, specificare l'URL del servizio di destinazione come destinazione.
 
-
 [!code-console[Main](deploying-web-packages/samples/sample9.cmd)]
-
 
 In alternativa, è possibile specificare il nome del server solo come destinazione e distribuzione Web verrà dedotto l'URL del servizio agente remoto.
 
-
 [!code-console[Main](deploying-web-packages/samples/sample10.cmd)]
-
 
 Se il server web di destinazione è configurato per la distribuzione usando il gestore di distribuzione Web, è necessario specificare l'indirizzo dell'endpoint del servizio di gestione Web (WMSvc) di IIS come destinazione. Per impostazione predefinita, questo assume il formato:
 
-
 [!code-console[Main](deploying-web-packages/samples/sample11.cmd)]
-
 
 È possibile assegnare uno qualsiasi di questi endpoint usando il *. deploy. cmd* MSDeploy.exe direttamente o file. Tuttavia, se si desidera distribuire il gestore di distribuzione Web come un utente senza privilegi di amministratore, come descritto in [configurare un Server Web per la pubblicazione distribuzione Web (gestore di distribuzione Web)](../configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-web-deploy-handler.md), è necessario aggiungere una stringa di query per l'indirizzo dell'endpoint servizio.
 
-
 [!code-console[Main](deploying-web-packages/samples/sample12.cmd)]
-
 
 Infatti, l'utente non amministratore non ha accesso a livello di server in IIS; Egli può accedere solo a un sito Web IIS specifico. Al momento della scrittura, a causa di un bug nella Pipeline di pubblicazione sul Web (WPP), non è possibile eseguire la *. deploy. cmd* file usando un indirizzo endpoint che include una stringa di query. In questo scenario, è necessario distribuire il pacchetto web usando MSDeploy.exe direttamente.
 
 > [!NOTE]
 > Per altre informazioni sul servizio di Web Deploy Remote Agent e il gestore di distribuzione Web, vedere [scelta dell'approccio a destra per la distribuzione Web](../configuring-server-environments-for-web-deployment/choosing-the-right-approach-to-web-deployment.md). Per indicazioni su come configurare i file di progetto specifici dell'ambiente per la distribuzione a questi endpoint, vedere [configurare le proprietà di distribuzione per un ambiente di destinazione](../configuring-server-environments-for-web-deployment/configuring-deployment-properties-for-a-target-environment.md).
-
 
 ## <a name="authentication-considerations"></a>Considerazioni sull'autenticazione
 

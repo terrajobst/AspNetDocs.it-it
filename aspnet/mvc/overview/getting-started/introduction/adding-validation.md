@@ -8,12 +8,12 @@ ms.date: 01/06/2019
 ms.assetid: 9f35ca15-e216-4db6-9ebf-24380b0f31b4
 msc.legacyurl: /mvc/overview/getting-started/introduction/adding-validation
 msc.type: authoredcontent
-ms.openlocfilehash: 2b5d2a355a27bfe9a3aa8b2fa4a2de79c7f74314
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 6894d01af7cd142a5579f73ae5209ca13756ca52
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59387126"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65120742"
 ---
 # <a name="adding-validation"></a>Aggiunta della convalida
 
@@ -84,7 +84,6 @@ Scegliere il **Crea nuovo** collegamento per aggiungere un nuovo film. Completar
 > [!NOTE]
 > per supportare la convalida di jQuery per impostazioni locali di lingua diversa dall'inglese che usano la virgola (",") per un separatore decimale, è necessario includere il NuGet globalizzare come descritto in precedenza in questa esercitazione.
 
-
 Si noti come il form è automaticamente usavano un colore bordo rosso per evidenziare le caselle di testo che contengono dati non validi e ha generato un messaggio di errore di convalida appropriato accanto a ciascuna di esse. Gli errori vengono applicati sia sul lato client (utilizzo di JavaScript e jQuery) sia sul lato server (nel caso di un utente con JavaScript disabilitato).
 
 Dei vantaggi reale è che non è necessario modificare una singola riga di codice nel `MoviesController` classe o nel *create. cshtml* visualizzazione per consentire la convalida dell'interfaccia utente. Il controller e le viste creati in una fase precedente di questa esercitazione hanno selezionato automaticamente le regole di convalida specificate usando gli attributi di convalida delle proprietà della classe `Movie` del modello. Eseguire il test della convalida usando il metodo di azione `Edit` e viene applicata la stessa convalida.
@@ -135,9 +134,7 @@ Il [DataType](https://msdn.microsoft.com/library/system.componentmodel.dataannot
 
 L'attributo `DisplayFormat` viene usato per specificare in modo esplicito il formato della data:
 
-
 [!code-csharp[Main](adding-validation/samples/sample8.cs)]
-
 
 Il `ApplyFormatInEditMode` impostazione specifica che la formattazione specificata deve essere applicata anche quando il valore viene visualizzato in una casella di testo per la modifica. (Non è consigliabile che per alcuni campi, ad esempio, per i valori di valuta, è possibile evitare il simbolo di valuta nella casella di testo per la modifica.)
 
@@ -155,7 +152,6 @@ Se si usa la `DataType` attributo con un campo Data, è necessario specificare i
 > [!code-csharp[Main](adding-validation/samples/sample9.cs)]
 > 
 > È necessario disabilitare la convalida della data jQuery per usare il [Range](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.rangeattribute.aspx) dell'attributo con [DateTime](https://msdn.microsoft.com/library/system.datetime.aspx). In genere non è consigliabile compilare date reali nei modelli, usando il [Range](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.rangeattribute.aspx) attributo e [DateTime](https://msdn.microsoft.com/library/system.datetime.aspx) è sconsigliato.
-
 
 Il codice seguente illustra la combinazione di attributi in una sola riga:
 

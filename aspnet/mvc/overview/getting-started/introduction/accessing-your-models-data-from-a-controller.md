@@ -8,12 +8,12 @@ ms.date: 10/17/2013
 ms.assetid: caa1ba4a-f9f0-4181-ba21-042e3997861d
 msc.legacyurl: /mvc/overview/getting-started/introduction/accessing-your-models-data-from-a-controller
 msc.type: authoredcontent
-ms.openlocfilehash: 91948b1b997b083606a53e6e02bc00d2c58cb791
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 17a176b8bf3b1de8a0ff9145ab6f5f26cf210503
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59418144"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65120868"
 ---
 # <a name="accessing-your-models-data-from-a-controller"></a>Accesso ai dati del modello da un controller
 
@@ -57,12 +57,10 @@ Eseguire l'applicazione e fare clic sulla **MVC Movie** collegamento (o selezion
 
 Selezionare il collegamento **Crea nuovo**. Immettere alcuni dettagli sui filmati, quindi scegliere il **Create** pulsante.
 
-
 ![](accessing-your-models-data-from-a-controller/_static/image5.png)
 
 > [!NOTE]
 > Potrebbe non essere in grado di immettere i separatori decimali o virgole nel campo di prezzo. Per supportare la convalida di jQuery per impostazioni locali di lingua diversa dall'inglese che usano la virgola (&quot;,&quot;) per un separatore decimale e formati di data non in lingua inglese Stati Uniti, è necessario includere *globalize.js* specifiche e  *Cultures/globalize.Cultures.js* file (da [ https://github.com/jquery/globalize ](https://github.com/jquery/globalize) ) e JavaScript usare `Globalize.parseFloat`. Verrà illustrato come eseguire questa operazione nella prossima esercitazione. Per il momento, immettere solo numeri interi come 10.
-
 
 Facendo clic sui **Create** pulsante fa sì che il modulo viene inviato al server, in cui le informazioni sui film viene salvati nel database. Si verrà quindi reindirizzati per il */Movies* URL, in cui è possibile visualizzare i film appena creato nell'elenco.
 

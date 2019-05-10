@@ -8,12 +8,12 @@ ms.date: 11/17/2011
 ms.assetid: a2d7f33b-8c4a-4b48-9fb1-9139cf9b9878
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-introduction-1-of-12
 msc.type: authoredcontent
-ms.openlocfilehash: ae53e23dda3ac63e26590edab692188bb44e9f65
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 838ee5b3620c50ca5f29ff8cb2c2ac876d3041d8
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59413204"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133303"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-introduction---1-of-12"></a>Distribuzione di un'applicazione Web ASP.NET con SQL Server Compact tramite Visual Studio: Introduzione - 1 di 12
 
@@ -30,7 +30,6 @@ da [Tom Dykstra](https://github.com/tdykstra)
 > Le esercitazioni presuppongono che una conoscenza di come usare ASP.NET core in Visual Studio. In caso contrario, un buon punto di partenza è una [esercitazione di base ASP.NET Web Forms](../tailspin-spyworks/tailspin-spyworks-part-1.md) o una [esercitazione di base ASP.NET MVC](../../../../mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3.md).
 > 
 > Se hai domande che non sono direttamente correlate con l'esercitazione, è possibile pubblicarli per i [forum sulla distribuzione di ASP.NET](https://forums.asp.net/26.aspx/1?Configuration+and+Deployment).
-
 
 ## <a name="overview"></a>Panoramica
 

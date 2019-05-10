@@ -8,12 +8,12 @@ ms.date: 12/03/2010
 ms.assetid: 5cb00916-8f46-491f-be25-4739a615d619
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-1
 msc.type: authoredcontent
-ms.openlocfilehash: 51e3010f6e01434c495201af4af3bbdcde993da7
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: fd88b32ad2a65e5b4c7ead15f0d6dc5dc6e97e75
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59398436"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65126942"
 ---
 # <a name="getting-started-with-entity-framework-40-database-first-and-aspnet-4-web-forms"></a>Introduzione a Entity Framework 4.0 Database First e ASP.NET 4 Web Form
 
@@ -43,7 +43,6 @@ da [Tom Dykstra](https://github.com/tdykstra)
 > ## <a name="questions"></a>Domande
 > 
 > Se hai domande che non sono direttamente correlate con l'esercitazione, è possibile pubblicarli per i [forum di ASP.NET Entity Framework](https://forums.asp.net/1227.aspx), il [Entity Framework e LINQ al forum su entità](https://social.msdn.microsoft.com/forums/adodotnetentityframework/threads/), o [ StackOverflow.com](http://stackoverflow.com/).
-
 
 ## <a name="overview"></a>Panoramica
 

@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.assetid: 1568247f-60b5-4eca-96e0-e661fbb2b273
 msc.legacyurl: /signalr/overview/getting-started/tutorial-server-broadcast-with-signalr
 msc.type: authoredcontent
-ms.openlocfilehash: aa8c0be6e4a758da34fc6eed902e31049d0a9a9c
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 14924109fff8db3e537e6bc08b6dc868792ee660
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59379729"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65119922"
 ---
 # <a name="tutorial-server-broadcast-with-signalr-2"></a>Esercitazione: Server di trasmissione con SignalR 2
 
@@ -39,7 +39,6 @@ Le attività di questa esercitazione sono le seguenti:
 
 > [!IMPORTANT]
 > Se non si desidera eseguire i passaggi di compilazione dell'applicazione, è possibile installare il pacchetto SignalR.Sample in un nuovo progetto di applicazione Web ASP.NET vuota. Se si installa il pacchetto NuGet senza eseguire i passaggi descritti in questa esercitazione, è necessario seguire le istruzioni riportate nel *Readme. txt* file. Per eseguire il pacchetto è necessario aggiungere una OWIN startup classe che chiama il `ConfigureSignalR` metodo nel pacchetto installato. Si riceverà un errore se non si aggiunge la classe di avvio OWIN. Vedere le [installare il campione StockTicker](#install-the-stockticker-sample) sezione di questo articolo.
-
 
 ## <a name="prerequisites"></a>Prerequisiti
 

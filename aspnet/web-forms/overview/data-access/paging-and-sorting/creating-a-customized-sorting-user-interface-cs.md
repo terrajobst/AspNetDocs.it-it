@@ -8,12 +8,12 @@ ms.date: 08/15/2006
 ms.assetid: 6f81b633-9d01-4e52-ae4a-2ea6bc109475
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting/creating-a-customized-sorting-user-interface-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 34a182278cfa57369643ab151492532bc92bd623
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: af4f91ffed7b8884a7441b5ccf4f390aba867fed
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59393496"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65121896"
 ---
 # <a name="creating-a-customized-sorting-user-interface-c"></a>Creazione di un'interfaccia utente per l'ordinamento personalizzato (C#)
 
@@ -23,18 +23,15 @@ da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 > Quando la visualizzazione di un lungo elenco di dati ordinati, può essere molto utile per raggruppare i dati correlati con l'introduzione di righe di separazione. In questa esercitazione vedremo come creare un'interfaccia utente ordinamento.
 
-
 ## <a name="introduction"></a>Introduzione
 
 Quando la visualizzazione di un lungo elenco di dati ordinati in cui sono presenti solo un numero limitato di diversi valori nella colonna ordinata, un utente finale può risultare difficile distinguere in cui, esattamente, si verificano i limiti di differenza. Ad esempio, sono disponibili 81 prodotti nel database, ma solo nove scelte categoria diversa (otto categorie univoche più il `NULL` opzione). Si consideri il caso di un utente che è interessato a esaminare i prodotti che rientrano nella categoria frutti di mare. Da una pagina che elenca *tutti* dei prodotti in un singolo GridView, l'utente potrebbe decidere il modo migliore consiste nell'ordinare i risultati per categoria, che raggruppa insieme tutti i prodotti di frutti di mare insieme. Dopo l'ordinamento in base alla categoria, l'utente deve quindi cercare nell'elenco, cercando in cui i prodotti raggruppati frutti di mare iniziare e terminare. Poiché i risultati vengono ordinati in ordine alfabetico per nome della categoria di prodotti di frutti di mare di ricerca non è difficile, ma è comunque necessario strettamente l'analisi dell'elenco di elementi nella griglia.
 
 Per aiutare a evidenziare i limiti tra i gruppi ordinati, molti siti Web utilizzano un'interfaccia utente che aggiunge un separatore tra tali gruppi. I separatori, ad esempio quelli illustrati nella figura 1 consente a un utente a più rapidamente trovare un gruppo specifico e identificare i suoi limiti, nonché verificare quali gruppi distinti esistono nei dati.
 
-
 [![Ogni gruppo di categorie è chiaramente](creating-a-customized-sorting-user-interface-cs/_static/image2.png)](creating-a-customized-sorting-user-interface-cs/_static/image1.png)
 
 **Figura 1**: Ogni gruppo di categorie è chiaramente ([fare clic per visualizzare l'immagine con dimensioni normali](creating-a-customized-sorting-user-interface-cs/_static/image3.png))
-
 
 In questa esercitazione vedremo come creare un'interfaccia utente ordinamento.
 
@@ -44,16 +41,13 @@ Prima viene analizzato come aumentare il controllo GridView per fornire l'interf
 
 Successivamente, configurare il controllo GridView in modo che contenga solo le `ProductName`, `CategoryName`, `SupplierName`, e `UnitPrice` BoundField e le CampoCasellaDiControllo non più disponibile. Infine, configurare il controllo GridView per supportare l'ordinamento selezionando la casella di controllo Abilita ordinamento nello smart tag s GridView (oppure tramite l'impostazione relativa `AllowSorting` proprietà `true`). Dopo aver apportato queste aggiunte per il `CustomSortingUI.aspx` pagina dichiarativo dovrebbe essere simile al seguente:
 
-
 [!code-aspx[Main](creating-a-customized-sorting-user-interface-cs/samples/sample1.aspx)]
 
 Si consiglia di visualizzare lo stato di avanzamento fino a quel momento in un browser. Figura 2 mostra il controllo GridView ordinabile quando i dati viene ordinati in base alla categoria in ordine alfabetico.
 
-
 [![Le s ordinabile GridView i dati sono ordinati per categoria](creating-a-customized-sorting-user-interface-cs/_static/image5.png)](creating-a-customized-sorting-user-interface-cs/_static/image4.png)
 
 **Figura 2**: Le s GridView ordinabile dati vengono ordinati in base alla categoria ([fare clic per visualizzare l'immagine con dimensioni normali](creating-a-customized-sorting-user-interface-cs/_static/image6.png))
-
 
 ## <a name="step-2-exploring-techniques-for-adding-the-separator-rows"></a>Passaggio 2: Esplorare le tecniche per l'aggiunta di righe del separatore
 
@@ -73,11 +67,9 @@ Gli altri due le opzioni di aggiunta di righe separatore per i dati effettivi da
 
 Quando il controllo GridView è associato a un'origine dati, viene creato un `GridViewRow` per ogni record restituito dall'origine dati. Pertanto, è possibile inserire le righe necessarie separatore aggiungendo separatore record nell'origine dati prima di associarlo a GridView. Figura 3 illustra questo concetto.
 
-
 ![Una tecnica prevede l'aggiunta di separatore righe nell'origine dati](creating-a-customized-sorting-user-interface-cs/_static/image7.png)
 
 **Figura 3**: Una tecnica prevede l'aggiunta di separatore righe nell'origine dati
-
 
 Usare i record del termine separatore racchiuso tra virgolette perché non sono presenti record di separazione speciale; piuttosto, è necessario in qualche modo flag che un record specifico nell'origine dati viene usato come separatore anziché a una riga di dati normali. Per questi esempi si ri associazione un `ProductsDataTable` istanza per il controllo GridView, composto da `ProductRows`. È possibile contrassegnare un record come una riga del separatore impostando relativi `CategoryID` proprietà `-1` (perché tale valore non è stato esiste in genere).
 
@@ -99,22 +91,18 @@ Invece di messaggistica i dati prima di associarlo a GridView, possiamo aggiunge
 
 Per aggiungere righe separatore tra ciascun gruppo di ordinamento, è possibile gestire direttamente la gerarchia dei controlli dopo che è stato creato. Possiamo essere certi che sia stata creata la gerarchia dei controlli GridView s per l'ultima volta nel momento in cui che viene eseguito il rendering della pagina. Pertanto, esegue l'override di questo approccio il `Page` classe s `Render` metodo, a questo punto la gerarchia dei controlli finale s GridView viene aggiornata per includere le righe del separatore necessario. Figura 4 illustra questo processo.
 
-
 [![Una tecnica alternativa consente di modificare la gerarchia dei controlli GridView s](creating-a-customized-sorting-user-interface-cs/_static/image9.png)](creating-a-customized-sorting-user-interface-cs/_static/image8.png)
 
 **Figura 4**: Una tecnica alternativa consente di modificare la gerarchia dei controlli di s GridView ([fare clic per visualizzare l'immagine con dimensioni normali](creating-a-customized-sorting-user-interface-cs/_static/image10.png))
-
 
 Per questa esercitazione si userà questo secondo approccio per personalizzare l'esperienza utente di ordinamento.
 
 > [!NOTE]
 > Il codice si m presentando in questa esercitazione è basata sull'esempio fornito in [Teemu Keiski](http://aspadvice.com/blogs/joteke/default.aspx) intervento nel blog s [a cui è assegnato un Bit con il raggruppamento di ordinamento di GridView](http://aspadvice.com/blogs/joteke/archive/2006/02/11/15130.aspx).
 
-
 ## <a name="step-3-adding-the-separator-rows-to-the-gridview-s-control-hierarchy"></a>Passaggio 3: Aggiungere le righe di separazione per la gerarchia dei controlli GridView s
 
 Poiché si vuole solo aggiungere le righe di separazione per la gerarchia dei controlli GridView s dopo aver creata la gerarchia dei controlli e creata per l'ultima volta in visita la pagina, è opportuno eseguire questa aggiunta alla fine del ciclo di vita di pagina, ma prima dell'effettiva c GridView gerarchia ontrollo è stato eseguito il rendering in HTML. L'ultimo punto possibile in corrispondenza del quale è possibile eseguire questa operazione è il `Page` classe s `Render` evento, che è possibile eseguire l'override nella classe code-behind uso della firma di metodo seguente:
-
 
 [!code-csharp[Main](creating-a-customized-sorting-user-interface-cs/samples/sample2.cs)]
 
@@ -125,16 +113,13 @@ Per inserire le intestazioni di gruppo di ordinamento è necessario innanzitutto
 > [!NOTE]
 > Se si desidera che il controllo GridView in base a una determinata colonna quando la pagina viene caricata, chiamare il controllo GridView `Sort` metodo nella prima visita pagina (ma non nei postback successivi). A tale scopo, aggiungere questa chiamata nel `Page_Load` gestore dell'evento all'interno di un `if (!Page.IsPostBack)` condizionale. Fare riferimento al [Paging e ordinamento dei dati del Report](paging-and-sorting-report-data-cs.md) esercitazione informazioni per ulteriori informazioni sul `Sort` (metodo).
 
-
 Supponendo che i dati sono stati ordinati, l'attività successiva consiste nel determinare quale colonna è stata ordinati i dati e quindi per analizzare le righe per le differenze in tale colonna s valori. Il codice seguente assicura che i dati sono stati ordinati e consente di trovare la colonna da cui i dati sono stati ordinati:
-
 
 [!code-csharp[Main](creating-a-customized-sorting-user-interface-cs/samples/sample3.cs)]
 
 Se il controllo GridView è ancora essere ordinati, la s GridView `SortExpression` proprietà sarà non siano stata impostata. Pertanto, si vuole solo aggiungere le righe del separatore se questa proprietà ha un valore. In caso affermativo, è necessario quindi determinare l'indice della colonna mediante il quale è stati ordinati i dati. Questa operazione viene eseguita eseguendo un ciclo s GridView `Columns` raccolta, la ricerca della colonna la cui proprietà `SortExpression` proprietà è uguale a s GridView `SortExpression` proprietà. Oltre all'indice della colonna s, si ottiene anche il `HeaderText` proprietà, che viene usata quando si visualizzano le righe del separatore.
 
 Con l'indice della colonna mediante il quale i dati sono ordinati, il passaggio finale consiste nell'enumerare le righe di GridView. Per ogni riga è necessario determinare se il valore di colonna ordinata s è diverso dal valore di s colonna s ordinati riga precedente. Se è quindi necessario inserire un nuovo `GridViewRow` istanza nella gerarchia dei controlli. Questa operazione viene eseguita con il codice seguente:
-
 
 [!code-csharp[Main](creating-a-customized-sorting-user-interface-cs/samples/sample4.cs)]
 
@@ -143,33 +128,27 @@ Inizia questo codice facendo riferimento a livello di codice le `Table` nella ra
 > [!NOTE]
 > Per determinare il valore della colonna particolare riga s ordinati utilizzerò la cella s `Text` proprietà. Ciò vale per BoundField, ma verrà non funziona nel modo desiderato per TemplateFields, CheckBoxFields e così via. Esamineremo come tener conto per i campi di GridView alternativi a breve.
 
-
 Il `currentValue` e `lastValue` variabili vengono quindi confrontate. Se sono diversi è necessario aggiungere una nuova riga del separatore per la gerarchia dei controlli. Questa operazione viene eseguita determinando l'indice della `GridViewRow` nella `Table` oggetto s `Rows` raccolta, la creazione di nuove `GridViewRow` e `TableCell` istanze e l'aggiunta del `TableCell` e `GridViewRow` per il gerarchia dei controlli.
 
 Si noti che il separatore di riga s contatteranno `TableCell` viene formattato in modo che comprenda l'intera larghezza del controllo GridView, viene formattato usando il `SortHeaderRowStyle` classe CSS e ha relativo `Text` ad che mostra sia il gruppo di ordinamento basato sul nome della proprietà (ad esempio, categoria) e il valore s del gruppo (ad esempio bibite). Infine `lastValue` viene aggiornato al valore di `currentValue`.
 
 La classe CSS utilizzata per formattare la riga di intestazione gruppo ordinamento `SortHeaderRowStyle` deve essere specificato il `Styles.css` file. È possibile usare qualsiasi impostazione di stile contestare all'utente; Ho utilizzato il seguente:
 
-
 [!code-css[Main](creating-a-customized-sorting-user-interface-cs/samples/sample5.css)]
 
 Con il codice corrente, l'interfaccia ordinamento aggiunge intestazioni di gruppo ordinamento ordinare in base a qualsiasi BoundField (vedere la figura 5, che viene mostrata una schermata durante l'ordinamento dal fornitore). Tuttavia, quando l'ordinamento in base a qualsiasi altro tipo di campo (ad esempio un CampoCasellaDiControllo o TemplateField), le intestazioni di gruppo di ordinamento sono disponibile una destinazione da cercare (vedere la figura 6).
-
 
 [![L'interfaccia ordinamento include intestazioni di gruppo di ordinamento durante l'ordinamento in base BoundField](creating-a-customized-sorting-user-interface-cs/_static/image12.png)](creating-a-customized-sorting-user-interface-cs/_static/image11.png)
 
 **Figura 5**: L'ordinamento interfaccia include ordinamento gruppo intestazioni quando l'ordinamento in base BoundField ([fare clic per visualizzare l'immagine con dimensioni normali](creating-a-customized-sorting-user-interface-cs/_static/image13.png))
 
-
 [![Le intestazioni di gruppo di ordinamento sono mancanti durante l'ordinamento un CampoCasellaDiControllo](creating-a-customized-sorting-user-interface-cs/_static/image15.png)](creating-a-customized-sorting-user-interface-cs/_static/image14.png)
 
 **Figura 6**: Le intestazioni di gruppo di ordinamento sono mancanti durante l'ordinamento un CampoCasellaDiControllo ([fare clic per visualizzare l'immagine con dimensioni normali](creating-a-customized-sorting-user-interface-cs/_static/image16.png))
 
-
 Il motivo non sono presenti le intestazioni di gruppo di ordinamento durante l'ordinamento in base un CampoCasellaDiControllo è che il codice Usa attualmente solo il `TableCell` s `Text` proprietà per determinare il valore della colonna ordinata per ogni riga. Per CheckBoxFields, il `TableCell` s `Text` proprietà è una stringa vuota, invece, il valore è disponibile tramite un controllo casella di controllo Web che si trova all'interno di `TableCell` s `Controls` raccolta.
 
 Per gestire i tipi di campo diverso da BoundField, è necessario aumentare il codice in cui il `currentValue` variabile è assegnata a verificare l'esistenza di una casella di controllo nel `TableCell` s `Controls` raccolta. Invece di usare `currentValue = gvr.Cells[sortColumnIndex].Text`, sostituire questo codice con quanto segue:
-
 
 [!code-csharp[Main](creating-a-customized-sorting-user-interface-cs/samples/sample6.cs)]
 
@@ -177,15 +156,12 @@ Questo codice esamina la colonna ordinata `TableCell` per la riga corrente deter
 
 Con l'aggiunta di codice precedente, le intestazioni di gruppo Ordina ora sono presenti quando si ordinano le il CampoCasellaDiControllo non più disponibili (vedere la figura 7).
 
-
 [![Le intestazioni di gruppo di ordinamento sono ora presenti durante l'ordinamento un CampoCasellaDiControllo](creating-a-customized-sorting-user-interface-cs/_static/image18.png)](creating-a-customized-sorting-user-interface-cs/_static/image17.png)
 
 **Figura 7**: Le intestazioni di gruppo di ordinamento sono ora presenti durante l'ordinamento un CampoCasellaDiControllo ([fare clic per visualizzare l'immagine con dimensioni normali](creating-a-customized-sorting-user-interface-cs/_static/image19.png))
 
-
 > [!NOTE]
 > Se si dispone di prodotti con `NULL` database i valori per il `CategoryID`, `SupplierID`, o `UnitPrice` , tali valori verranno visualizzati i campi come stringhe vuote in GridView per impostazione predefinita, vale a dire il testo riga s separatore per i prodotti con `NULL`leggeranno i valori come categoria: (vale a dire che vi s alcun nome dopo la categoria: come con categoria: Bevande). Se si desidera che un valore visualizzato qui è possibile impostare i BoundField [ `NullDisplayText` proprietà](https://msdn.microsoft.com/library/system.web.ui.webcontrols.boundfield.nulldisplaytext.aspx) per il testo da visualizzare oppure è possibile aggiungere un'istruzione condizionale nel metodo di rendering durante l'assegnazione di `currentValue` per il separatore riga s `Text` proprietà.
-
 
 ## <a name="summary"></a>Riepilogo
 

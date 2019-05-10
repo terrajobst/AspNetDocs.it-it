@@ -8,12 +8,12 @@ ms.date: 02/15/2013
 ms.assetid: 416438a1-3b2f-4d27-bf53-6b76223c33bf
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/deploying-to-production
 msc.type: authoredcontent
-ms.openlocfilehash: 19cda45ce1b425462ec491bcc86b7a0b76dec162
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: b9c4a4d035c78b4f4c53942219ccfa3048c7a82b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59409798"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133810"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-deploying-to-production"></a>Distribuzione Web ASP.NET tramite Visual Studio: Distribuzione in produzione
 
@@ -22,7 +22,6 @@ da [Tom Dykstra](https://github.com/tdykstra)
 [Download progetto iniziale](http://go.microsoft.com/fwlink/p/?LinkId=282627)
 
 > Questa serie di esercitazioni illustra come distribuire, pubblicare, ASP.NET per App Web di servizio App di Azure o per un provider di hosting di terze parti, di applicazioni web usando Visual Studio 2012 o Visual Studio 2010. Per informazioni sulla serie, vedere [la prima esercitazione della serie](introduction.md).
-
 
 ## <a name="overview"></a>Panoramica
 
@@ -41,7 +40,6 @@ Se non si ha già un account Azure, è possibile creare un account di valutazion
 > [!NOTE]
 > Poiché questa esercitazione è stata scritta, servizio App di Azure aggiunta una nuova funzionalità per automatizzare molti processi per la creazione di ambienti di staging e produzione. Visualizzare [configurare ambienti di staging per le app web nel servizio App di Azure](https://azure.microsoft.com/documentation/articles/web-sites-staged-publishing/).
 
-
 Come spiegato nel [Distribuisci con l'esercitazione di ambiente di Test](deploying-to-iis.md), più ambiente di testing affidabile è un sito web al provider di hosting che dispone esattamente come il sito web di produzione. In molti provider di hosting è necessario valutare i vantaggi di questa in significativi costi aggiuntivi, ma in Azure è possibile creare un'app web gratuita aggiuntive come le app di gestione temporanea. È necessario anche un database e i costi aggiuntivi per tale failover il costo del database di produzione sarà entrambi nessuno o minimo. In Azure si paga la quantità di archiviazione del database che si utilizza invece che per ogni database e la quantità di spazio di archiviazione aggiuntivo che si useranno in gestione temporanea sarà minima.
 
 Come spiegato nel [Distribuisci con l'esercitazione di ambiente di Test](deploying-to-iis.md), in gestione temporanea e produzione che si intende distribuire i due database in un unico database. Se si vuole mantenerli distinti, il processo è lo stesso ad eccezione del fatto che si crea un database aggiuntivo per ogni ambiente e scegliere la stringa di destinazione corretto per ogni database quando si crea il profilo di pubblicazione.
@@ -50,7 +48,6 @@ In questa sezione dell'esercitazione si creerà un'app web e database da utilizz
 
 > [!NOTE]
 > La procedura seguente illustra come creare un'app web in servizio App di Azure usando il portale di gestione di Azure. Nella versione più recente di Azure SDK, è possibile anche eseguire questa operazione senza uscire da Visual Studio, usando Esplora Server. In Visual Studio 2013, è anche possibile creare un'app web direttamente dalla finestra di dialogo pubblica. Per altre informazioni, vedere [creare un'app web ASP.NET in servizio App di Azure.](https://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-dotnet)
-
 
 1. Nel [portale di gestione di Azure](https://manage.windowsazure.com/), fare clic su **siti Web**, quindi fare clic su **New**.
 2. Fare clic su **sito Web**, quindi fare clic su **creazione personalizzata**.
@@ -97,7 +94,6 @@ Ora che è stato creato un'app web e database per l'ambiente di gestione tempora
 
 > [!NOTE]
 > Queste istruzioni illustrano come creare un profilo di pubblicazione scaricando una *publishsettings* file, che funziona non solo per Azure ma anche per i provider di hosting di terze parti. La versione più recente SDK di Azure consente inoltre di connettersi direttamente ad Azure da Visual Studio e scegliere da un elenco di App web presenti nel proprio account Azure. In Visual Studio 2013, è possibile accedere ad Azure dal **pubblicazione sul Web** finestra di dialogo o dalle **Esplora Server** finestra. Per altre informazioni, vedere [creare un'app web ASP.NET in servizio App di Azure](https://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-dotnet).
-
 
 ### <a name="download-the-publishsettings-file"></a>Scaricare il file con estensione publishsettings
 
@@ -165,7 +161,6 @@ Ora che è stato creato un'app web e database per l'ambiente di gestione tempora
 
 > [!NOTE]
 > Questa sezione illustra come configurare una trasformazione Web. config per l'indicatore di ambiente. Poiché l'indicatore è nel `<appSettings>` elemento, si dispone di un'altra alternativa per specificare la trasformazione quando si esegue la distribuzione servizio App di Azure. Per altre informazioni, vedere [Web. config che specifica le impostazioni in Azure](web-config-transformations.md#watransforms).
-
 
 1. Nelle **Esplora soluzioni**, espandere **delle proprietà**, quindi espandere **PublishProfiles**.
 2. Fare doppio clic su *Staging.pubxml*, quindi fare clic su **aggiungere Config trasformare**.

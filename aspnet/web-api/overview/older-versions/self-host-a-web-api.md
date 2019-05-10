@@ -9,12 +9,12 @@ ms.custom: seoapril2019
 ms.assetid: be5ab1e2-4140-4275-ac59-ca82a1bac0c1
 msc.legacyurl: /web-api/overview/older-versions/self-host-a-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: 7c73bf4734f8ed8a1bf93595c0847f611ad9cc15
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: bae1737ba5b16bc67fa0ed0474ff04df0add1b3a
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59409603"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134767"
 ---
 # <a name="self-host-aspnet-web-api-1-c"></a>Self-hosting di API Web ASP.NET 1 (c#)
 
@@ -29,7 +29,6 @@ da [Mike Wasson](https://github.com/MikeWasson)
 > 
 > - API Web 1
 > - Visual Studio 2012
-
 
 ## <a name="create-the-console-application-project"></a>Creare il progetto di applicazione Console
 
@@ -95,7 +94,7 @@ Aggiungere una classe pubblica denominata `ProductsController`. Questa classe da
 
 Per altre informazioni sul codice in questo controller, vedere la [introduttiva](../getting-started-with-aspnet-web-api/tutorial-your-first-web-api.md) esercitazione. Questo controller definisce tre operazioni GET:
 
-| URI | Descrizione |
+| URI | Description |
 | --- | --- |
 | prodotti/api / | Ottenere un elenco di tutti i prodotti. |
 | /api/products/*id* | Ottenere un prodotto base all'ID. |
@@ -153,7 +152,7 @@ Aggiungere un riferimento in ClientApp al progetto SelfHost:
 - Selezionare **Aggiungi riferimento**.
 - Nel **gestione riferimenti** finestra di dialogo, sotto **soluzione**, selezionare **progetti**.
 - Selezionare il progetto SelfHost.
-- Fare clic su **OK**.
+- Scegliere **OK**.
 
 ![](self-host-a-web-api/_static/image6.png)
 

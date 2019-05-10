@@ -8,12 +8,12 @@ ms.date: 06/12/2014
 ms.assetid: e51fcecb-cb33-4f9e-8428-6d2b3d0fe1bf
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/data-storage-options
 msc.type: authoredcontent
-ms.openlocfilehash: 9969a68a3e1aa043845fb5affd6d3b73dec4136d
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 8656f4a4211c2e97d71d76dd2f799412539896ca
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425392"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118853"
 ---
 # <a name="data-storage-options-building-real-world-cloud-apps-with-azure"></a>Opzioni di archiviazione di dati (creazione di App Cloud funzionanti con Azure)
 
@@ -22,7 +22,6 @@ dal [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitt
 [Download risolverlo Project](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [Scarica l'E-book](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
 > Il **creazione Real World di App Cloud con Azure** eBook si basa su una presentazione sviluppata da Scott Guthrie. Viene illustrato 13 modelli e procedure consigliate che consentono di avere esito positivo lo sviluppo di App web per il cloud. Per informazioni sull'e-book, vedere [capitolo prima](introduction.md).
-
 
 La maggior parte delle persone vengono utilizzati per i database relazionali e tendono a sottovalutare altre opzioni di archiviazione dei dati quando si progetta un'applicazione cloud. Il risultato può essere prestazioni non ottimali, le spese elevate o peggio, poiché [NoSQL](http://en.wikipedia.org/wiki/NoSQL) database (non relazionali) possono gestire alcune attività in modo più efficiente rispetto ai database relazionali. Quando i clienti ci chiedono per poter risolvere un problema di archiviazione di dati critici, è spesso perché hanno un database relazionale in cui una delle opzioni NoSQL avrebbe avuto meglio. In questi casi il cliente sarebbe stato meglio se si avesse implementato la soluzione NoSQL prima di distribuire l'app nell'ambiente di produzione.
 

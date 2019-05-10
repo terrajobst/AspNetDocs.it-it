@@ -8,12 +8,12 @@ ms.date: 06/09/2009
 ms.assetid: b1abb452-642a-4ff3-8504-37b85590ff79
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/logging-error-details-with-asp-net-health-monitoring-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 52b1aec577634dfb9fec7753e4f9b8bf46d159f0
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 6b444de67f3bce3d09dd8c3c172895cf07f58df8
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59416259"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134406"
 ---
 # <a name="logging-error-details-with-aspnet-health-monitoring-c"></a>Registrazione dei dettagli degli errori con il monitoraggio dell'integrità di ASP.NET (C#)
 
@@ -22,7 +22,6 @@ da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Scaricare il codice](http://download.microsoft.com/download/1/0/C/10CC829F-A808-4302-97D3-59989B8F9C01/ASPNET_Hosting_Tutorial_13_CS.zip) o [Scarica il PDF](http://download.microsoft.com/download/5/C/5/5C57DB8C-5DEA-4B3A-92CA-4405544D313B/aspnet_tutorial13_HealthMonitoring_cs.pdf)
 
 > Sistema di monitoraggio dell'integrità di Microsoft fornisce un modo semplice e personalizzabile per registrare eventi web diversi, tra cui le eccezioni non gestite. Questa esercitazione spiega come impostare il sistema di monitoraggio dello stato per registrare le eccezioni non gestite in un database e per notificare agli sviluppatori tramite un messaggio di posta elettronica.
-
 
 ## <a name="introduction"></a>Introduzione
 
@@ -67,7 +66,6 @@ Il `SqlWebEventProvider` classe fa parte del sistema di monitoraggio dell'integr
 > [!NOTE]
 > Il `aspnet_regsql.exe` strumento è stato esaminato nel [ *configurazione di un sito Web che usa servizi delle applicazioni* esercitazione](configuring-a-website-that-uses-application-services-cs.md) quando è stato aggiunto il supporto per ASP. Servizi delle applicazioni di rete. Di conseguenza, il database del sito Web le recensioni dei libri già contiene il `aspnet_WebEvent_LogEvent` stored procedure, che archivia le informazioni sull'evento in una tabella denominata `aspnet_WebEvent_Events`.
 
-
 Dopo aver creato la stored procedure necessaria e la tabella aggiunta al database, è ora indicare per registrare tutte le eccezioni non gestite nel database di monitoraggio dell'integrità. Eseguire questa operazione aggiungendo il markup seguente nel sito Web `Web.config` file:
 
 [!code-xml[Main](logging-error-details-with-asp-net-health-monitoring-cs/samples/sample2.xml)]
@@ -82,7 +80,6 @@ Le informazioni di configurazione indica l'integrità di sistema per registrare 
 
 > [!NOTE]
 > Il `WebBaseErrorEvent` evento viene generato solo per gli errori del server; non viene generato per gli errori HTTP, ad esempio una richiesta per una risorsa di ASP.NET che non viene trovata. Questo comportamento è diverso dal comportamento dei `HttpApplication` della classe `Error` evento, che viene generato per il server e gli errori HTTP.
-
 
 Per visualizzare l'integrità di sistema nell'azione di monitoraggio, visitare il sito Web e generare un errore di runtime visitando `Genre.aspx?ID=foo`. È consigliabile vedere la pagina di errore appropriato: eccezione dettagli giallo schermata di morte (quando si visita in locale) o la pagina di errore personalizzata (quando si visita il sito nell'ambiente di produzione). Dietro le quinte, sistema di monitoraggio dell'integrità registrate le informazioni sull'errore nel database. Deve essere presente un record di `aspnet_WebEvent_Events` tabella (vedere **figura 1**); questo record contiene informazioni sull'errore di runtime che si è verificato.
 
@@ -99,7 +96,6 @@ Se si crea tale pagina, accertarsi di eseguire questa procedura per consentire s
 
 > [!NOTE]
 > L'esercitazione successiva illustra un sistema di registrazione e la notifica di errore alternativo denominato ELMAH. ELMAH include un meccanismo predefinito per visualizzare il log degli errori da entrambi una pagina web e come un feed RSS.
-
 
 ## <a name="logging-events-to-email"></a>La registrazione di eventi messaggio di posta elettronica
 

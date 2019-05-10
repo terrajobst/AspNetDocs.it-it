@@ -8,12 +8,12 @@ ms.date: 01/14/2008
 ms.assetid: b9c29865-a34e-48bb-92c0-c443a72cb860
 msc.legacyurl: /web-forms/overview/older-versions-security/introduction/forms-authentication-configuration-and-advanced-topics-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 9665dafb23b885fdf9e4ea5f1a515a0c6dcc9a9a
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 75e7da4c993bc59a2ff34c2838f36312e1571668
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59410630"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134397"
 ---
 # <a name="forms-authentication-configuration-and-advanced-topics-c"></a>Configurazione dell'autenticazione basata su form e argomenti avanzati (C#)
 
@@ -22,7 +22,6 @@ da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Scaricare il codice](http://download.microsoft.com/download/2/F/7/2F705A34-F9DE-4112-BBDE-60098089645E/ASPNET_Security_Tutorial_03_CS.zip) o [Scarica il PDF](http://download.microsoft.com/download/2/F/7/2F705A34-F9DE-4112-BBDE-60098089645E/aspnet_tutorial03_AuthAdvanced_cs.pdf)
 
 > In questa esercitazione verranno esaminare le varie impostazioni di autenticazione form e informazioni su come modificarle tramite l'elemento di form. Ciò comporterà un quadro dettagliato di personalizzazione di valore di timeout del ticket di autenticazione form, usando una pagina di accesso con un URL personalizzato (ad esempio SignIn.aspx anziché Login. aspx) e i ticket di autenticazione form senza cookie.
-
 
 ## <a name="introduction"></a>Introduzione
 
@@ -37,7 +36,6 @@ Il sistema di autenticazione form in ASP.NET offre una serie di impostazioni di 
 [!code-xml[Main](forms-authentication-configuration-and-advanced-topics-cs/samples/sample1.xml)]
 
 Tabella 1 sono riepilogate le proprietà che possono essere personalizzate tramite il &lt;form&gt; elemento. Poiché Web. config è un file XML, i nomi di attributo nella colonna sinistra sono tra maiuscole e minuscole.
-
 
 | <strong>Attributo</strong> |                                                                                                                                                                                                                                     <strong>Descrizione</strong>                                                                                                                                                                                                                                      |
 |----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -60,7 +58,6 @@ In ASP.NET 2.0 e versioni successive, l'impostazione predefinita i valori di aut
 > [!NOTE]
 > Diverse impostazioni di autenticazione form, ad esempio il timeout, dominio e il percorso, specificano i dettagli per il cookie di ticket di autenticazione form risultante. Per altre informazioni sui cookie, sul relativo funzionamento e le relative proprietà diverse, leggere [in questa esercitazione i cookie](http://www.quirksmode.org/js/cookies.html).
 
-
 ### <a name="specifying-the-tickets-timeout-value"></a>Se si specifica il valore di Timeout del Ticket
 
 Il ticket di autenticazione form è un token che rappresenta un'identità. Con i ticket di autenticazione basata su cookie, questo token verrà mantenuto sotto forma di un cookie e inviato al server web per ogni richiesta. Il possesso del token, in sostanza, viene dichiarata, mi *username*, già effettuato l'accesso e viene usato in modo che un'identità dell'utente possa essere memorizzati nella navigazione tra le visite di pagina.
@@ -72,7 +69,6 @@ Un tale bit di informazioni inclusa nel ticket è un' *scadenza*, ovvero la data
 > [!NOTE]
 > Passaggio 3 informazioni tecniche aggiuntive utilizzate dal sistema di autenticazione form per proteggere il ticket di autenticazione.
 
-
 Quando si crea il ticket di autenticazione, il sistema di autenticazione form determina la scadenza del consultando l'impostazione di timeout. Come indicato nella tabella 1, il timeout impostando i valori predefiniti per 30 minuti, il che significa che quando viene creato il ticket di autenticazione form di scadenza è impostata su una data e ora nel futuro di 30 minuti.
 
 La scadenza definisce un'ora assoluta in futuro in cui scade il ticket di autenticazione form. Ma in genere gli sviluppatori vogliono implementare una scadenza variabile, che viene reimpostato ogni volta che l'utente ritorna al sito. Questo comportamento è determinato dalle impostazioni di slidingExpiration. Se impostato su true (impostazione predefinita), ogni volta che un utente viene autenticato FormsAuthenticationModule, aggiorna la scadenza del ticket. Se impostato su false, la scadenza non viene aggiornata a ogni richiesta, determinando il ticket scadere esattamente timeout numero di minuti passati quando il ticket è stato inizialmente creato.
@@ -80,28 +76,22 @@ La scadenza definisce un'ora assoluta in futuro in cui scade il ticket di autent
 > [!NOTE]
 > La scadenza archiviata nel ticket di autenticazione è una data assoluta e il valore di ora, ad esempio il 2 agosto 2008 11 34 AM. Inoltre, la data e ora sono rispetto all'ora locale del server web. Questa decisione progettuale può avere alcuni effetti collaterali interessanti intorno all'ora legale (DST), ovvero quando orologi negli Stati Uniti vengono spostati avanti un'ora (presupponendo che il server web è ospitato nelle impostazioni locali in cui si osserva ora legale). Si consideri cosa accadrebbe per un sito Web ASP.NET con una scadenza di 30 minuti in prossimità l'ora di inizio dell'ora legale (ovvero alle 2.00). Si immagini che un visitatore accede al sito del 11 marzo 2008 alle ore 01:00: 55. Ciò potrebbe generare un ticket di autenticazione form che scade alle 11 marzo 2008 alle 25 2:00 (30 minuti in futuro). Tuttavia, una volta 2:00 versione RTM, l'orologio passa alla 3:00 AM a causa dell'ora legale. Quando l'utente carica una nuova pagina sei minuti dopo l'accesso (alle 01 AM), FormsAuthenticationModule viene rilevato che il ticket è scaduto e l'utente viene reindirizzato alla pagina di accesso. Per una discussione più approfondita su questo e altro comportamento imprevisto dei timeout ticket di autenticazione, nonché le soluzioni alternative, procurarsi una copia di Stefan Schackow *Professional ASP.NET 2.0 Security e l'appartenenza al ruolo Gestione* (ISBN: 978-0-7645-9698-8).
 
-
 Figura 1 illustra il flusso di lavoro quando slidingExpiration viene impostata su false e timeout è impostato su 30. Si noti che il ticket di autenticazione generato all'account di accesso contiene la data di scadenza, questo valore non viene aggiornato nelle richieste successive. Se la classe FormsAuthenticationModule rileva che il ticket è scaduto, lo ignora e considera la richiesta anonima.
-
 
 [![Una rappresentazione grafica di slidingExpiration quando la scadenza del Ticket di autenticazione form è false](forms-authentication-configuration-and-advanced-topics-cs/_static/image2.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image1.png)
 
 **Figura 01**: Una rappresentazione grafica di slidingExpiration quando la scadenza del Ticket di autenticazione form è false ([fare clic per visualizzare l'immagine con dimensioni normali](forms-authentication-configuration-and-advanced-topics-cs/_static/image3.png))
 
-
 Figura 2 mostra il flusso di lavoro quando slidingExpiration viene impostata su true e il timeout è impostato su 30. Quando viene ricevuta una richiesta autenticata (con un ticket non scaduti) viene aggiornata la scadenza del timeout numero di minuti in futuro.
-
 
 [![Una rappresentazione grafica del Ticket di autenticazione form quando viene soddisfatta slidingExpiration](forms-authentication-configuration-and-advanced-topics-cs/_static/image5.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image4.png)
 
 **Figura 02**: Una rappresentazione grafica del Ticket di autenticazione form quando viene soddisfatta slidingExpiration ([fare clic per visualizzare l'immagine con dimensioni normali](forms-authentication-configuration-and-advanced-topics-cs/_static/image6.png))
 
-
 Quando si usano i ticket di autenticazione basata su cookie (predefinito), questa discussione diventa più complicato perché i cookie possono anche avere i propri oggetti scaduti nella specificato. Scadenza del cookie (o l'assenza) indica al browser quando il cookie deve essere eliminato. Se il cookie non ha una scadenza, che è definitivamente quando il browser viene arrestato. Se è presente una scadenza, tuttavia, il cookie rimane memorizzato nel computer dell'utente fino alla data e intervallo di tempo specificato in scadenza. Quando viene eliminato un cookie dal browser, non viene inviato al server web. Pertanto, l'eliminazione di un cookie è analoga all'utente di registrazione all'esterno del sito.
 
 > [!NOTE]
 > Naturalmente, un utente può rimuovere in modo proattivo i cookie memorizzati sul proprio computer. In Internet Explorer 7, si potrebbe passare a strumenti, opzioni e fare clic sul pulsante di eliminazione nella sezione della cronologia di esplorazione. Da qui, fare clic sul pulsante Elimina i cookie.
-
 
 Il sistema di autenticazione form crea basati su sessione o basata su scadenza cookie a seconda del valore passato al *persistCookie* parametro. Tenere presente che i FormsAuthentication metodi della classe GetAuthCookie SetAuthCookie e RedirectFromLoginPage accettano due parametri di input: *nomeutente* e *persistCookie*. La pagina di accesso che è stato creato nell'esercitazione precedente è incluso una memorizza dati controllo CheckBox, determinare se è stato creato un cookie persistente. I cookie permanenti sono basati su scadenza; i cookie non persistente sono basati su sessione.
 
@@ -137,7 +127,6 @@ Le impostazioni di rilevamento automatico e UseDeviceProfile si basano su un *pr
 > [!NOTE]
 > Questo database delle funzionalità del dispositivo viene archiviato in un numero di file XML che rispettano il [schema di File di definizione Browser](https://msdn.microsoft.com/library/ms228122.aspx). I file del profilo di dispositivo predefinite si trovano nella cartella % WINDIR%\Microsoft.Net\Framework\v2.0.50727\CONFIG\Browsers. È anche possibile aggiungere file personalizzati all'App dell'applicazione\_cartella browser. Per altre informazioni, vedere [How To: Rilevare i tipi di Browser nelle pagine Web ASP.NET](https://msdn.microsoft.com/library/3yekbd5b.aspx).
 
-
 Poiché l'impostazione predefinita è UseDeviceProfile, i ticket di autenticazione form senza cookie verranno utilizzati quando si visita il sito da un dispositivo con profilo segnala che non supporta i cookie.
 
 ### <a name="encoding-the-authentication-ticket-in-the-url"></a>Codifica il Ticket di autenticazione nell'URL
@@ -169,7 +158,6 @@ SomePage.aspx l'URL del collegamento è stata convertita automaticamente in un U
 > [!NOTE]
 > I ticket di autenticazione form senza cookie rispettano gli stessi criteri di timeout come i ticket di autenticazione basata su cookie. Tuttavia, i ticket di autenticazione senza cookie sono più soggetti a attacchi di tipo replay poiché il ticket di autenticazione è incorporato direttamente nell'URL. Si immagini un utente visita un sito Web, effettua l'accesso e quindi Incolla l'URL in un messaggio di posta elettronica a un collega. Se il collega fa clic sul collegamento prima che venga raggiunta la scadenza, essi verrà registrati dell'utente che ha inviato il messaggio di posta elettronica.
 
-
 ## <a name="step-3-securing-the-authentication-ticket"></a>Passaggio 3: Proteggere il Ticket di autenticazione
 
 Il ticket di autenticazione form viene trasmesso in rete in un cookie o incorporati direttamente all'interno dell'URL. Oltre alle informazioni di identità, il ticket di autenticazione può includere anche dati utente (come si vedrà in passaggio 4). Di conseguenza, è importante che i dati del ticket sono crittografati da occhi indiscreti e, ancora più importante, che il sistema di autenticazione form in grado di garantire che il ticket non è stato manomesso.
@@ -180,11 +168,9 @@ Per garantire l'autenticità del ticket, è necessario il sistema di autenticazi
 
 Durante la creazione (o la modifica) un ticket, il sistema di autenticazione form crea un computer MAC e lo collega a dati del ticket. Quando arriva una richiesta successiva, il sistema di autenticazione form confronta i dati di MAC e ticket per convalidare l'autenticità dei dati del ticket. La figura 3 illustra questo flusso di lavoro graficamente.
 
-
 [![Autenticità del Ticket viene garantita tramite un MAC](forms-authentication-configuration-and-advanced-topics-cs/_static/image8.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image7.png)
 
 **Figura 03**: Autenticità del Ticket viene garantita tramite un MAC ([fare clic per visualizzare l'immagine con dimensioni normali](forms-authentication-configuration-and-advanced-topics-cs/_static/image9.png))
-
 
 Le misure di sicurezza vengono applicate al ticket di autenticazione dipende l'impostazione della protezione la &lt;form&gt; elemento. L'impostazione di protezione può essere assegnata a uno dei tre valori seguenti:
 
@@ -226,7 +212,6 @@ Per ulteriori informazioni consultare [How To: Configurare MachineKey di ASP.NET
 > [!NOTE]
 > I valori decryptionKey e validationKey sono stati ricavati dalla [Steve Gibson](http://www.grc.com/stevegibson.htm)del [pagina web password perfetto](https://www.grc.com/passwords.htm), che genera i 64 caratteri esadecimali casuali su ogni visita di pagina. Per ridurre la probabilità che queste chiavi facciano strada le applicazioni di produzione, sono invitati a sostituire le chiavi precedenti con quelli generati casualmente dalla pagina password perfetto.
 
-
 ## <a name="step-4-storing-additional-user-data-in-the-ticket"></a>Passaggio 4: L'archiviazione dei dati utente aggiuntivi nel Ticket
 
 Molte applicazioni web su cui visualizzare informazioni o visualizzazione della pagina basata sull'utente attualmente connesso. Ad esempio, una pagina web potrebbe visualizzare il nome dell'utente e la data che ha effettuato l'ultimo accesso nell'angolo superiore di ogni pagina. Il ticket di autenticazione form archivia il nome utente dell'utente attualmente connesso, ma quando qualsiasi altra informazione è necessaria, la pagina deve passare nell'archivio utente, in genere un database - per cercare le informazioni non archiviate nel ticket di autenticazione.
@@ -237,11 +222,9 @@ Per archiviare i dati utente del ticket di autenticazione, è necessario scriver
 
 Ogni volta che è necessario accedere ai dati archiviati nel ticket, è possibile eseguire da selezionandola FormsAuthenticationTicket della richiesta corrente e la deserializzazione della proprietà UserData. Nel caso la data di nascita e il datore di lavoro di esempio di nome, si potrebbe suddividere la stringa UserData in due sottostringhe in base al delimitatore (|).
 
-
 [![Informazioni aggiuntive sull'utente possono essere archiviati nel Ticket di autenticazione](forms-authentication-configuration-and-advanced-topics-cs/_static/image11.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image10.png)
 
 **Figura 04**: Altri utenti informazioni possono essere archiviati nel Ticket di autenticazione ([fare clic per visualizzare l'immagine con dimensioni normali](forms-authentication-configuration-and-advanced-topics-cs/_static/image12.png))
-
 
 ### <a name="writing-information-to-userdata"></a>La scrittura di informazioni per UserData
 
@@ -288,7 +271,6 @@ Tutto il codice è necessaria perché la proprietà UserData è di sola lettura 
 > [!NOTE]
 > Il codice che viene esaminato solo archivia informazioni specifiche dell'utente in un ticket di autenticazione basata su cookie. Le classi responsabili per la serializzazione il ticket di autenticazione form all'URL sono interne a .NET Framework. In breve, è possibile archiviare i dati utente in un ticket di autenticazione form senza cookie.
 
-
 ### <a name="accessing-the-userdata-information"></a>Accesso alle informazioni UserData
 
 A questo punto il nome della società e titolo di ogni utente viene archiviato nella proprietà UserData del ticket di autenticazione form all'accesso. Queste informazioni sono accessibili dal ticket di autenticazione in qualsiasi pagina senza richiedere una corsa all'archivio dell'utente. Per illustrare come queste informazioni possono essere recuperate dalla proprietà UserData, aggiorniamo default. aspx in modo che il messaggio di benvenuto include non solo il nome dell'utente, ma anche l'azienda che lavorano per e titolo.
@@ -301,15 +283,12 @@ Se Request.IsAuthenticated è true e quindi del WelcomeBackMessage testo viene i
 
 Figura 5 mostra una schermata di questa visualizzazione in azione. Accedere come Scott Visualizza un messaggio di back-benvenuto che include aziendale e il titolo di Scott.
 
-
 [![Vengono visualizzati l'attualmente registrati dell'utente aziendale e titolo](forms-authentication-configuration-and-advanced-topics-cs/_static/image14.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image13.png)
 
 **Figura 05**: Vengono visualizzati l'attualmente registrati dell'utente aziendale e Title ([fare clic per visualizzare l'immagine con dimensioni normali](forms-authentication-configuration-and-advanced-topics-cs/_static/image15.png))
 
-
 > [!NOTE]
 > Proprietà di UserData del ticket di autenticazione viene utilizzata come una cache per l'archivio dell'utente. Ad esempio una cache qualsiasi, deve essere aggiornato quando vengono modificati i dati sottostanti. Ad esempio, se è presente una pagina web da cui gli utenti possono aggiornare il proprio profilo, è necessario aggiornare i campi memorizzato nella cache nella proprietà UserData in modo da riflettere le modifiche apportate dall'utente.
-
 
 ## <a name="step-5-using-a-custom-principal"></a>Passaggio 5: Usando un'entità personalizzata
 
@@ -322,7 +301,6 @@ La classe di oggetti GenericPrincipal soddisfa le esigenze per la maggior parte 
 > [!NOTE]
 > Come si vedrà in futuro le esercitazioni, quando ASP. Framework di ruoli del .NET è abilitata viene creato un oggetto personalizzato dell'entità di tipo [RolePrincipal](https://msdn.microsoft.com/library/system.web.security.roleprincipal.aspx) e sovrascrive l'oggetto GenericPrincipal creati dall'autenticazione form. Ciò avviene per personalizzare il metodo IsInRole dell'entità all'interfaccia con l'API del framework dei ruoli.
 
-
 Poiché è stato non occupa noi stessi ruoli ancora, l'unico motivo per cui che è stato per la creazione di un'entità personalizzata a questo punto, è possibile associare un oggetto IIdentity personalizzato all'entità. Nel passaggio 4 è stato illustrato l'archiviazione delle informazioni utente aggiuntive nella proprietà UserData del ticket di autenticazione, in particolare il nome dell'utente aziendale e qualifica professionale. Tuttavia, le informazioni di UserData sono solo accessibili tramite il ticket di autenticazione e quindi solo sotto forma di stringa serializzata, vale a dire che ogni volta che si desidera visualizzare le informazioni utente archiviate nel ticket è necessario analizzare la proprietà UserData.
 
 L'esperienza di sviluppo migliorare creando una classe che implementa IIdentity e include le proprietà di CompanyName e il titolo. In questo modo, uno sviluppatore può accedere a nome della società dell'utente attualmente connesso e titolo direttamente tramite le proprietà di CompanyName e titolo senza necessario conoscere le modalità per analizzare la proprietà UserData.
@@ -334,14 +312,11 @@ Per questa esercitazione, è possibile creare gli oggetti principal e identity p
 > [!NOTE]
 > L'App\_cartella del codice deve essere usata solo quando la gestione del progetto tramite il modello di progetto sito Web. Se si usa la [modello di progetto applicazione Web](https://msdn.microsoft.com/asp.net/Aa336618.aspx), creare una cartella standard e aggiungervi le classi. Ad esempio, è possibile aggiungere una nuova cartella denominata classi e inserirvi il codice.
 
-
 Successivamente, aggiungere due nuovi file di classe per l'App\_cartella del codice, CustomIdentity.cs denominata uno e uno denominato CustomPrincipal.cs.
-
 
 [![Aggiungere tutte le classi CustomPrincipal CustomIdentity al progetto](forms-authentication-configuration-and-advanced-topics-cs/_static/image17.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image16.png)
 
 **Figura 06**: Aggiungere tutte le classi CustomPrincipal CustomIdentity a un progetto ([fare clic per visualizzare l'immagine con dimensioni normali](forms-authentication-configuration-and-advanced-topics-cs/_static/image18.png))
-
 
 La classe CustomIdentity è responsabile dell'implementazione dell'interfaccia IIdentity, che definisce le proprietà AuthenticationType IsAuthenticated e nome. Oltre a queste proprietà richieste, siamo interessati a esporre la sottostante ticket di autenticazione form, nonché le proprietà per nome della società e il titolo dell'utente. Immettere il codice seguente nella classe CustomIdentity.
 
@@ -361,19 +336,15 @@ La pipeline ASP.NET accetta una richiesta in ingresso e lo elabora mediante una 
 
 Dopo l'evento, AuthenticateRequest della pipeline ASP.NET genera il [evento PostAuthenticateRequest](https://msdn.microsoft.com/library/system.web.httpapplication.postauthenticaterequest.aspx), che è in cui è possibile sostituire l'oggetto GenericPrincipal creato da FormsAuthenticationModule con un'istanza di nostro Oggetto CustomPrincipal. Figura 7 illustra questo flusso di lavoro.
 
-
 [![L'oggetto GenericPrincipal viene sostituito da un CustomPrincipal nell'evento PostAuthenticationRequest](forms-authentication-configuration-and-advanced-topics-cs/_static/image20.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image19.png)
 
 **Figura 07**: L'oggetto GenericPrincipal viene sostituito da un CustomPrincipal nell'evento PostAuthenticationRequest ([fare clic per visualizzare l'immagine con dimensioni normali](forms-authentication-configuration-and-advanced-topics-cs/_static/image21.png))
 
-
 Per eseguire codice in risposta a un evento di pipeline ASP.NET, è possibile creare il gestore eventi appropriato in Global. asax o creare un modulo HTTP. Per questa esercitazione è possibile creare il gestore dell'evento in Global. asax. Iniziare aggiungendo Global. asax per il sito Web. Fare doppio clic sul nome del progetto in Esplora soluzioni e aggiungere un elemento di tipo classe di applicazione globale denominato Global. asax.
-
 
 [![Aggiungere un File Global. asax per il sito Web](forms-authentication-configuration-and-advanced-topics-cs/_static/image23.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image22.png)
 
 **Figura 08**: Aggiungere un File Global. asax per il sito Web ([fare clic per visualizzare l'immagine con dimensioni normali](forms-authentication-configuration-and-advanced-topics-cs/_static/image24.png))
-
 
 Il modello di Global. asax predefinito include i gestori eventi per un numero di eventi della pipeline ASP.NET, tra cui inizio, fine e [evento di errore](https://msdn.microsoft.com/library/system.web.httpapplication.error.aspx), tra gli altri. È possibile rimuovere questi gestori eventi, come abbiamo non siano necessarie per questa applicazione. L'evento che si è interessati è PostAuthenticateRequest. Aggiornare il file Global. asax in modo che il markup ha un aspetto simile al seguente:
 

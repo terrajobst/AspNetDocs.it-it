@@ -8,12 +8,12 @@ ms.date: 07/18/2007
 ms.assetid: 615f3361-f21f-4338-8bc1-fce8ae071de9
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/adding-additional-datatable-columns-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 1e1751c6969f1a278ee438c3bee6171644aacdbf
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 931a918d51c1accec1757a9370c8e611a9a038ec
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59406184"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65124446"
 ---
 # <a name="adding-additional-datatable-columns-c"></a>Aggiunta di colonne DataTable aggiuntive (C#)
 
@@ -22,7 +22,6 @@ da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Scaricare il codice](http://download.microsoft.com/download/3/9/f/39f92b37-e92e-4ab3-909e-b4ef23d01aa3/ASPNET_Data_Tutorial_70_CS.zip) o [Scarica il PDF](adding-additional-datatable-columns-cs/_static/datatutorial70cs1.pdf)
 
 > Quando si usa la configurazione guidata TableAdapter per creare un set di dati tipizzato, l'oggetto DataTable corrispondente contiene le colonne restituite dalla query sul database principale. Ma esistono alcuni casi quando l'oggetto DataTable deve includere colonne aggiuntive. In questa esercitazione viene illustrato il motivo per cui le stored procedure sono consigliate al momento del bisogno colonne DataTable aggiuntive.
-
 
 ## <a name="introduction"></a>Introduzione
 
@@ -48,19 +47,15 @@ Per questa esercitazione, ti permettono di s aggiungere un metodo per la `Produc
 
 Aprire il `NorthwindWithSprocs` set di dati e fare clic su di `ProductsDataTable`. Scegliere Aggiungi dal menu di scelta rapida e quindi selezionare colonne.
 
-
 [![Aggiungere una nuova colonna per il ProductsDataTable](adding-additional-datatable-columns-cs/_static/image2.png)](adding-additional-datatable-columns-cs/_static/image1.png)
 
 **Figura 1**: Aggiungere una nuova colonna per il `ProductsDataTable` ([fare clic per visualizzare l'immagine con dimensioni normali](adding-additional-datatable-columns-cs/_static/image3.png))
 
-
 Verrà aggiunto una nuova colonna alla DataTable denominato Column1 typu `System.String`. È necessario aggiornare il nome della colonna s PriceQuartile e relativo tipo su `System.Int32` perché che verrà usato per contenere un numero compreso tra 1 e 4. Selezionare la colonna appena aggiunto nel `ProductsDataTable` e, dalla finestra delle proprietà, impostare il `Name` proprietà PriceQuartile e il `DataType` proprietà `System.Int32`.
-
 
 [![Impostare le proprietà di tipo di dati e il nome della nuova colonna s](adding-additional-datatable-columns-cs/_static/image5.png)](adding-additional-datatable-columns-cs/_static/image4.png)
 
 **Figura 2**: Impostare la nuova colonna s `Name` e `DataType` delle proprietà ([fare clic per visualizzare l'immagine con dimensioni normali](adding-additional-datatable-columns-cs/_static/image6.png))
-
 
 Come illustrato nella figura 2, sono disponibili proprietà aggiuntive che è possibile impostare, ad esempio se i valori nella colonna devono essere univoci, se la colonna è una colonna a incremento automatico, o meno database `NULL` sono consentiti valori e così via. Lasciare questi valori impostati sui valori predefiniti.
 
@@ -68,22 +63,17 @@ Come illustrato nella figura 2, sono disponibili proprietà aggiuntive che è po
 
 Ora che il `ProductsDataTable` è stata aggiornata per includere il `PriceQuartile` colonna, siamo pronti creare il `GetProductsWithPriceQuartile` (metodo). Avviare facendo clic sull'oggetto TableAdapter e scegliendo Aggiungi Query dal menu di scelta rapida. Verrà visualizzata la configurazione guidata Query TableAdapter, che richiede prima di tutto per quanto riguarda se si desidera utilizzare istruzioni SQL ad hoc o una stored procedure nuova o esistente. Poiché abbiamo desidero ancora privo di una stored procedure che restituisce i dati di quartile prezzo, consentire s consentire TableAdapter creare questa stored procedure per noi. Selezionare l'opzione di creazione nuova stored procedure e fare clic su Avanti.
 
-
 [![Indicare la procedura guidata TableAdapter per creare la Stored Procedure per noi](adding-additional-datatable-columns-cs/_static/image8.png)](adding-additional-datatable-columns-cs/_static/image7.png)
 
 **Figura 3**: Indicare la procedura guidata TableAdapter per creare la Stored Procedure per Stati Uniti ([fare clic per visualizzare l'immagine con dimensioni normali](adding-additional-datatable-columns-cs/_static/image9.png))
 
-
 Nella schermata successiva, illustrata nella figura 4, la procedura guidata viene chiesto di specificare il tipo di query da aggiungere. Poiché il `GetProductsWithPriceQuartile` metodo restituirà tutte le colonne e i record dal `Products` di tabella, selezionare il SELECT che restituisce righe opzione e fare clic su Avanti.
-
 
 [![La Query sarà un'istruzione SELECT che restituisce più righe](adding-additional-datatable-columns-cs/_static/image11.png)](adding-additional-datatable-columns-cs/_static/image10.png)
 
 **Figura 4**: La Query sarà un `SELECT` istruzione che restituisce più righe ([fare clic per visualizzare l'immagine con dimensioni normali](adding-additional-datatable-columns-cs/_static/image12.png))
 
-
 Successivamente vengono richieste per il `SELECT` query. Nella procedura guidata, immettere la query seguente:
-
 
 [!code-sql[Main](adding-additional-datatable-columns-cs/samples/sample1.sql)]
 
@@ -94,41 +84,32 @@ Sfortunatamente, il generatore delle Query non sa come analizzare il `OVER` (par
 > [!NOTE]
 > Per altre informazioni su SQL Server 2005 e NTILE s altre funzioni di rango, vedere [restituzione di risultati con classificazione più con Microsoft SQL Server 2005](http://www.4guysfromrolla.com/webtech/010406-1.shtml) e il [sezione funzioni di rango](https://msdn.microsoft.com/library/ms189798.aspx) dal [SQL Documentazione Online di Server 2005](https://msdn.microsoft.com/library/ms189798.aspx).
 
-
 Dopo aver immesso il `SELECT` query e facendo clic su Avanti, la procedura guidata chiede di specificare un nome per la stored procedure viene creato. Denominare la nuova stored procedure `Products_SelectWithPriceQuartile` e fare clic su Avanti.
-
 
 [![Nome Products_SelectWithPriceQuartile la Stored Procedure](adding-additional-datatable-columns-cs/_static/image14.png)](adding-additional-datatable-columns-cs/_static/image13.png)
 
 **Figura 5**: Nome della Stored Procedure `Products_SelectWithPriceQuartile` ([fare clic per visualizzare l'immagine con dimensioni normali](adding-additional-datatable-columns-cs/_static/image15.png))
 
-
 Infine, vengono richieste per denominare metodi dell'oggetto TableAdapter. Lasciare entrambi il riempimento di un oggetto DataTable e restituire un oggetto DataTable caselle di controllo selezionata e il nome dei metodi `FillWithPriceQuartile` e `GetProductsWithPriceQuartile`.
-
 
 [![I metodi di nomi ai TableAdapter e fare clic su Fine](adding-additional-datatable-columns-cs/_static/image17.png)](adding-additional-datatable-columns-cs/_static/image16.png)
 
 **Figura 6**: Nomi dei metodi s TableAdapter e fare clic su Fine ([fare clic per visualizzare l'immagine con dimensioni normali](adding-additional-datatable-columns-cs/_static/image18.png))
 
-
 Con la `SELECT` query specificata e la stored procedure e i metodi TableAdapter denominati, fare clic su Fine per completare la procedura guidata. A questo punto è possibile che venga visualizzato un avviso o due dalla procedura guidata che informa che il `OVER` istruzione o costrutto SQL non è supportato. Questi avvisi possono essere ignorati.
 
 Dopo aver completato la procedura guidata, l'oggetto TableAdapter deve includere il `FillWithPriceQuartile` e `GetProductsWithPriceQuartile` metodi e il database deve includere una stored procedure denominata `Products_SelectWithPriceQuartile`. Si consiglia di verificare che l'oggetto TableAdapter contenga effettivamente questo nuovo metodo e che la stored procedure è stato aggiunto correttamente al database. Durante il controllo del database, se non è possibile visualizzare la stored procedure try pulsante destro del mouse sulla cartella Stored procedure e scegliere Aggiorna.
-
 
 ![Verificare che sia stato aggiunto un nuovo metodo all'oggetto TableAdapter](adding-additional-datatable-columns-cs/_static/image19.png)
 
 **Figura 7**: Verificare che sia stato aggiunto un nuovo metodo all'oggetto TableAdapter
 
-
 [![Verificare che il Database contenga il Products_SelectWithPriceQuartile Stored Procedure](adding-additional-datatable-columns-cs/_static/image21.png)](adding-additional-datatable-columns-cs/_static/image20.png)
 
 **Figura 8**: Verificare che il Database contiene le `Products_SelectWithPriceQuartile` Stored Procedure ([fare clic per visualizzare l'immagine con dimensioni normali](adding-additional-datatable-columns-cs/_static/image22.png))
 
-
 > [!NOTE]
 > Uno dei vantaggi dell'utilizzo delle stored procedure anziché le istruzioni SQL ad hoc è che eseguire di nuovo la configurazione guidata TableAdapter non modifica gli elenchi di colonne di stored procedure. Effettuare questa verifica facendo clic sul TableAdapter, scegliendo l'opzione Configura il menu di scelta rapida per avviare la procedura guidata e quindi fare clic su Fine per completare l'operazione. Passare quindi al database e visualizzare il `Products_SelectWithPriceQuartile` stored procedure. Si noti che l'elenco di colonne non è stato modificato. Se avessimo si Usa istruzioni SQL ad hoc, eseguire di nuovo la configurazione guidata TableAdapter verrebbe ripristinato attivo questo elenco di colonne query s in modo da corrispondere l'elenco di colonne query principale, eliminando l'istruzione NTILE dalla query utilizzata dal `GetProductsWithPriceQuartile` (metodo).
-
 
 Quando il livello di accesso ai dati di s `GetProductsWithPriceQuartile` metodo viene richiamato, viene eseguito il TableAdapter il `Products_SelectWithPriceQuartile` stored procedure e aggiunge una riga per il `ProductsDataTable` per ciascun record restituito. Vengono eseguito il mapping ai campi di dati restituiti dalla stored procedure per la `ProductsDataTable` colonne s. Poiché non esiste un `PriceQuartile` campo di dati restituito dalla stored procedure, il relativo valore viene assegnato per il `ProductsDataTable` s `PriceQuartile` colonna.
 
@@ -140,7 +121,6 @@ A questo punto sono stati eseguiti i passaggi necessari per l'aggiunta di una co
 
 Prima che si usa il nuovo `GetProductsWithPriceQuartile` metodo dal livello di presentazione, si dovrebbe innanzitutto aggiungere un metodo corrispondente per il livello BLL. Aprire il `ProductsBLLWithSprocs` file di classe e aggiungere il codice seguente:
 
-
 [!code-csharp[Main](adding-additional-datatable-columns-cs/samples/sample2.cs)]
 
 Come gli altri metodi di recupero dei dati in `ProductsBLLWithSprocs`, il `GetProductsWithPriceQuartile` metodo chiama semplicemente DAL corrispondente s `GetProductsWithPriceQuartile` (metodo) e restituisce i relativi risultati.
@@ -149,16 +129,13 @@ Come gli altri metodi di recupero dei dati in `ProductsBLLWithSprocs`, il `GetPr
 
 Con l'aggiunta di BLL completare sono pronti per creare una pagina ASP.NET che illustra il quartile prezzo per ogni prodotto. Aprire il `AddingColumns.aspx` nella pagina la `AdvancedDAL` cartelle e trascinare un controllo GridView dalla casella degli strumenti nella finestra di progettazione, l'impostazione relativo `ID` proprietà `Products`. GridView s nello smart tag, associarlo a un nuovo oggetto ObjectDataSource denominato `ProductsDataSource`. Configurare ObjectDataSource per usare la `ProductsBLLWithSprocs` classe s `GetProductsWithPriceQuartile` (metodo). Poiché questa sarà una griglia di sola lettura, impostare gli elenchi a discesa nell'aggiornamento, inserimento ed eliminare schede su (nessuno).
 
-
 [![Configurare ObjectDataSource per usare la classe ProductsBLLWithSprocs](adding-additional-datatable-columns-cs/_static/image24.png)](adding-additional-datatable-columns-cs/_static/image23.png)
 
 **Figura 9**: Configurare ObjectDataSource per usare la `ProductsBLLWithSprocs` classe ([fare clic per visualizzare l'immagine con dimensioni normali](adding-additional-datatable-columns-cs/_static/image25.png))
 
-
 [![Recuperare le informazioni sul prodotto dal metodo GetProductsWithPriceQuartile](adding-additional-datatable-columns-cs/_static/image27.png)](adding-additional-datatable-columns-cs/_static/image26.png)
 
 **Figura 10**: Recuperare informazioni sui prodotti dal `GetProductsWithPriceQuartile` metodo ([fare clic per visualizzare l'immagine con dimensioni normali](adding-additional-datatable-columns-cs/_static/image28.png))
-
 
 Dopo aver completato la procedura guidata Configura origine dati, Visual Studio aggiungerà automaticamente un BoundField o CampoCasellaDiControllo a GridView per ognuno dei campi di dati restituiti dal metodo. Uno di questi campi di dati viene `PriceQuartile`, ovvero la colonna viene aggiunta al `ProductsDataTable` nel passaggio 1.
 
@@ -166,25 +143,20 @@ Modificare i campi s GridView, rimuovendo tutto tranne le `ProductName`, `UnitPr
 
 Dopo queste modifiche, il markup dichiarativo s GridView e ObjectDataSource dovrebbe essere simile al seguente:
 
-
 [!code-aspx[Main](adding-additional-datatable-columns-cs/samples/sample3.aspx)]
 
 Figura 11 Mostra questa pagina quando visitati tramite un browser. Si noti che, inizialmente, i prodotti vengono ordinati in base i prezzi in ordine decrescente con ogni prodotto assegnato appropriata `PriceQuartile` valore. Ovviamente questi dati possono essere ordinati in base ad altri criteri con il valore della colonna prezzo Quartile ancora che riflette la classificazione prodotto s rispetto al prezzo (vedere la figura 12).
-
 
 [![I prodotti vengono ordinati in base i prezzi](adding-additional-datatable-columns-cs/_static/image30.png)](adding-additional-datatable-columns-cs/_static/image29.png)
 
 **Figura 11**: I prodotti vengono ordinati in base i relativi prezzi ([fare clic per visualizzare l'immagine con dimensioni normali](adding-additional-datatable-columns-cs/_static/image31.png))
 
-
 [![I prodotti vengono ordinati in base i relativi nomi](adding-additional-datatable-columns-cs/_static/image33.png)](adding-additional-datatable-columns-cs/_static/image32.png)
 
 **Figura 12**: I prodotti vengono ordinati in base i relativi nomi ([fare clic per visualizzare l'immagine con dimensioni normali](adding-additional-datatable-columns-cs/_static/image34.png))
 
-
 > [!NOTE]
 > Con poche righe di codice potremmo forniamo GridView in modo che colorato le righe di prodotti in base i `PriceQuartile` valore. Si potrebbe essere il primo quartile una luce verde, quelli di quartile secondo un giallo chiaro, tali prodotti di colore e così via. Ti invitiamo a si consiglia di aggiungere questa funzionalità. Se è necessario un aggiornamento sulla formattazione di un controllo GridView, consultare il [formattazione basata su dati personalizzati](../custom-formatting/custom-formatting-based-upon-data-cs.md) esercitazione.
-
 
 ## <a name="an-alternative-approach---creating-another-tableadapter"></a>Un approccio alternativo: creazione di un altro oggetto TableAdapter
 

@@ -8,12 +8,12 @@ ms.date: 10/15/2014
 ms.assetid: 92c84846-f0ea-4b5e-94b6-5004874eb060
 msc.legacyurl: /web-api/overview/security/individual-accounts-in-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: 29c3670ad7ab93acb0be878e5bd961d0ea446eee
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 7492c4aa4c2a0a8aeed64c3462bda8fc51f35a6b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59396232"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134305"
 ---
 # <a name="secure-a-web-api-with-individual-accounts-and-local-login-in-aspnet-web-api-22"></a>Proteggere un'API Web con singoli account e un account di accesso locale in API Web ASP.NET 2.2
 
@@ -29,7 +29,6 @@ da [Mike Wasson](https://github.com/MikeWasson)
 > - [Visual Studio 2013 Update 3](https://www.microsoft.com/visualstudio/eng/2013-downloads)
 > - [API Web 2.2](../releases/whats-new-in-aspnet-web-api-22.md)
 > - [ASP.NET Identity 2.1](../../../identity/index.md)
-
 
 In Visual Studio 2013, il modello di progetto API Web offre tre opzioni per l'autenticazione:
 
@@ -239,7 +238,6 @@ Il **SuppressDefaultHostAuthentication** metodo indica a Web API per ignorare qu
 
 > [!NOTE]
 > In particolare, la parte MVC dell'app potrebbe usare autenticazione basata su form, che archivia le credenziali in un cookie. L'autenticazione basata su cookie richiede l'uso dei token antifalsificazione, per impedire attacchi CSRF. Questo è un problema per le API web perché non vi è alcun modo pratico per l'API web per inviare il token antifalsificazione al client. (Per altre informazioni generali su questo problema, vedere [impedisce gli attacchi CSRF nell'API Web](preventing-cross-site-request-forgery-csrf-attacks.md).) La chiamata **SuppressDefaultHostAuthentication** garantisce che l'API Web non è vulnerabile agli attacchi CSRF da credenziali archiviate nei cookie.
-
 
 Quando il client richiede una risorsa protetta, ecco cosa accade nella pipeline di Web API:
 

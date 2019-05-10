@@ -8,12 +8,12 @@ ms.date: 01/27/2009
 ms.assetid: 2ddd4407-d143-4a94-877c-21771bfb97a6
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/adding-dynamic-content-to-a-cached-page-cs
 msc.type: authoredcontent
-ms.openlocfilehash: c126270304178d178f4b8f9739fa5c51e5dd0551
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: be43712d3dd5235117558e991d9dd71aa30ec470
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59415362"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123732"
 ---
 # <a name="adding-dynamic-content-to-a-cached-page-c"></a>Aggiunta di contenuto dinamico a una pagina memorizzata nella cache (C#)
 
@@ -21,16 +21,13 @@ by [Microsoft](https://github.com/microsoft)
 
 > Informazioni su come combinare il contenuto dinamico e memorizzati nella cache nella stessa pagina. Sostituzione post-cache consente di visualizzare il contenuto dinamico, ad esempio pubblicitari o notizie, all'interno di una pagina in cui è stata di output memorizzate nella cache.
 
-
 Sfruttando i vantaggi della memorizzazione nella cache di output, è possibile migliorare notevolmente le prestazioni di un'applicazione ASP.NET MVC. Anziché la rigenerazione di una pagina ogni volta che viene richiesta la pagina, la pagina può essere generata una volta e memorizzata nella cache per più utenti.
 
 Ma si è verificato un problema. Cosa accade se è necessario visualizzare il contenuto dinamico nella pagina? Si supponga, ad esempio, che si desidera visualizzare un banner pubblicitario nella pagina. Non si desidera il banner pubblicitario da memorizzare nella cache in modo che ogni utente veda l'advertisement le stesse. È non risulterebbero alcuna spesa in questo modo.
 
 Fortunatamente, è una pratica soluzione. È possibile sfruttare i vantaggi di una funzionalità del framework ASP.NET chiamato *sostituzione post-cache*. Sostituzione post-cache consente di sostituire il contenuto dinamico in una pagina in cui è stato memorizzato in memoria.
 
-
 In genere, quando tramite l'attributo [OutputCache] è l'output della cache una pagina, la pagina viene memorizzato nella cache il server sia nel client (browser web). Quando si usa la sostituzione post-cache, viene memorizzato nella cache una pagina solo sul server.
-
 
 #### <a name="using-post-cache-substitution"></a>Usare la sostituzione post-Cache
 

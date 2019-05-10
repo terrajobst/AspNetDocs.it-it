@@ -8,12 +8,12 @@ ms.date: 07/09/2015
 ms.assetid: 7e986ab5-6615-4638-add7-4614ce7b51db
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/monitoring-and-telemetry
 msc.type: authoredcontent
-ms.openlocfilehash: 48a66eea839f7f48899040ad20bbfee95b9a1902
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 2fc8f6cdefe1e940f3e3eafc2b9acc9144690284
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59403909"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118725"
 ---
 # <a name="monitoring-and-telemetry-building-real-world-cloud-apps-with-azure"></a>Monitoraggio e telemetria (creazione di App Cloud funzionanti con Azure)
 
@@ -23,14 +23,12 @@ dal [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitt
 
 > Il **creazione Real World di App Cloud con Azure** eBook si basa su una presentazione sviluppata da Scott Guthrie. Viene illustrato 13 modelli e procedure consigliate che consentono di avere esito positivo lo sviluppo di App web per il cloud. Per informazioni sull'e-book, vedere [capitolo prima](introduction.md).
 
-
 Molte persone si basano sui clienti per informarli quando l'applicazione è inattiva. Che non è realmente una procedura consigliata ovunque e in particolare, non nel cloud. Non c'è garanzia di notifica rapida e quando si riceva una notifica, si ottengono spesso dati minima o ingannevoli su cosa è successo. Con è possibile controllare cosa sta succedendo con l'app e quando qualcosa di sistemi di registrazione e telemetria efficaci, andare individuare subito eventuali problemi e avere informazioni utili per lavorare con.
 
 ## <a name="buy-or-rent-a-telemetry-solution"></a>Acquista o noleggiare una soluzione di telemetria
 
 > [!NOTE]
 > Questo articolo è stato scritto prima [Application Insights](/azure/application-insights/app-insights-overview) è stata rilasciata. Application Insights è la scelta migliore per le soluzioni di dati di telemetria in Azure. Visualizzare [configurazione di Application Insights per il sito Web ASP.NET](/azure/application-insights/app-insights-asp-net) per altre informazioni.
-
 
 Uno degli aspetti che è ideale sull'ambiente cloud è che è molto facile da acquistare o noleggiare verso vittoria. I dati di telemetria è riportato un esempio. Senza un notevole sforzo è possibile ottenere un sistema di telemetria davvero efficaci verso l'alto e in esecuzione, in modo molto conveniente. Esistono una serie di ottimo partner che si integrano con Azure e alcune non sono i livelli gratuiti, quindi è possibile ottenere i dati di telemetria di base per nulla. Ecco solo alcuni di quelli attualmente disponibili in Azure:
 

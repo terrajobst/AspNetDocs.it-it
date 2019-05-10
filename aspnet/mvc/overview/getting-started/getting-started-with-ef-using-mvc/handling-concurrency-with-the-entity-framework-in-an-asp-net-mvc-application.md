@@ -9,12 +9,12 @@ ms.date: 01/15/2019
 ms.assetid: be0c098a-1fb2-457e-b815-ddca601afc65
 msc.legacyurl: /mvc/overview/getting-started/getting-started-with-ef-using-mvc/handling-concurrency-with-the-entity-framework-in-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: 11b1bc316f730e31b4a01924765db3c982783652
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 43c5fdff5601c9bff32300d3460de0079a498d28
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59383018"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65120918"
 ---
 # <a name="tutorial-handle-concurrency-with-ef-in-an-aspnet-mvc-5-app"></a>Esercitazione: Gestire la concorrenza con Entity Framework in un'app ASP.NET MVC 5
 
@@ -26,14 +26,12 @@ Nelle esercitazioni precedenti è stato illustrato come aggiornare i dati. Quest
 
 Le attività di questa esercitazione sono le seguenti:
 
-
 > [!div class="checklist"]
 > * Scoprire di più sui conflitti di concorrenza
 > * Aggiungere la concorrenza ottimistica
 > * Modificare il controller di reparto
 > * Gestione della concorrenza test
 > * Aggiornare la pagina Delete (Elimina)
-
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -180,7 +178,7 @@ Anche il nome del metodo di azione è stato modificato da `DeleteConfirmed` a `D
 
 Se viene rilevato un errore di concorrenza, il codice visualizza nuovamente la pagina di conferma Delete (Elimina) e visualizza un flag indicante che è necessario visualizzare un messaggio di errore di concorrenza.
 
-Nelle *Views\Department\Delete.cshtml*, sostituire il codice con scaffolding con il codice seguente che aggiunge un campo di messaggio di errore e i campi nascosti per le proprietà DepartmentID e RowVersion. Le modifiche vengono evidenziate.
+Nelle *Views\Department\Delete.cshtml*, sostituire il codice con scaffolding con il codice seguente che aggiunge un campo di messaggio di errore e i campi nascosti per le proprietà DepartmentID e RowVersion. Le modifiche sono evidenziate.
 
 [!code-cshtml[Main](handling-concurrency-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample17.cshtml?highlight=9-10,21,52-54)]
 

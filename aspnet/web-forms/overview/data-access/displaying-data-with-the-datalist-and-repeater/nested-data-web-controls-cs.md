@@ -8,12 +8,12 @@ ms.date: 09/13/2006
 ms.assetid: ad3cb0ec-26cf-42d7-b81b-184a34ec9f86
 msc.legacyurl: /web-forms/overview/data-access/displaying-data-with-the-datalist-and-repeater/nested-data-web-controls-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 5dcb0b302a814f25ab8f0e89fb8859fbc0ca665d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 02b5b23120431c5066eb899099c8af3e29d998c5
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59399502"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134525"
 ---
 # <a name="nested-data-web-controls-c"></a>Controlli Web dei dati annidati (C#)
 
@@ -22,7 +22,6 @@ da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Scaricare l'App di esempio](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_32_CS.exe) o [Scarica il PDF](nested-data-web-controls-cs/_static/datatutorial32cs1.pdf)
 
 > In questa esercitazione che verrà presa in esame come usare un controllo Repeater annidate all'interno di un altro controllo Repeater. Gli esempi illustrerà come popolare il Repeater interno in modo dichiarativo sia a livello di codice.
-
 
 ## <a name="introduction"></a>Introduzione
 
@@ -34,11 +33,9 @@ I modelli possono inoltre contenere altri controlli Web dei dati. Vale a dire go
 
 In questa esercitazione che verrà presa in esame come usare un controllo Repeater annidate all'interno di un altro controllo Repeater. Il Repeater outer conterrà un elemento per ogni categoria nel database, visualizzare il nome della categoria s e una descrizione. Ogni elemento di categoria s Repeater interni verranno visualizzate informazioni per ogni prodotto che appartengono alla categoria (vedere la figura 1) in un elenco puntato. Questi esempi verranno illustrato come popolare il Repeater interno in modo dichiarativo sia a livello di codice.
 
-
 [![Ogni categoria, insieme ai propri prodotti, sono elencati](nested-data-web-controls-cs/_static/image2.png)](nested-data-web-controls-cs/_static/image1.png)
 
 **Figura 1**: Ogni categoria, insieme ai propri prodotti, sono elencati ([fare clic per visualizzare l'immagine con dimensioni normali](nested-data-web-controls-cs/_static/image3.png))
-
 
 ## <a name="step-1-creating-the-category-listing"></a>Passaggio 1: Creazione elenco categoria
 
@@ -46,39 +43,31 @@ Durante la creazione di una pagina che utilizza annidati controlli Web dei dati,
 
 Iniziare aprendo il `NestedControls.aspx` nella pagina la `DataListRepeaterBasics` cartella e aggiungere un controllo Repeater alla pagina, l'impostazione relativa `ID` proprietà `CategoryList`. Nello smart tag, Repeater s scegliere di creare un nuovo oggetto ObjectDataSource denominato `CategoriesDataSource`.
 
-
 [![Denominare il nuovo ObjectDataSource CategoriesDataSource](nested-data-web-controls-cs/_static/image5.png)](nested-data-web-controls-cs/_static/image4.png)
 
 **Figura 2**: Denominare il nuovo oggetto ObjectDataSource `CategoriesDataSource` ([fare clic per visualizzare l'immagine con dimensioni normali](nested-data-web-controls-cs/_static/image6.png))
 
-
 Configurare ObjectDataSource in modo che effettua il pull dei relativi dati dal `CategoriesBLL` classe s `GetCategories` (metodo).
-
 
 [![Configurare ObjectDataSource per usare il metodo GetCategories CategoriesBLL classe s](nested-data-web-controls-cs/_static/image8.png)](nested-data-web-controls-cs/_static/image7.png)
 
 **Figura 3**: Configurare ObjectDataSource per usare la `CategoriesBLL` classe s `GetCategories` metodo ([fare clic per visualizzare l'immagine con dimensioni normali](nested-data-web-controls-cs/_static/image9.png))
 
-
 Per specificare il modello del ripetitore s contenuto è necessario passare alla visualizzazione origine e di immettere manualmente la sintassi dichiarativa. Aggiungere un `ItemTemplate` che visualizza il nome della categoria s in un `<h4>` elemento e la descrizione della categoria s in un elemento paragrafo (`<p>`). Inoltre, ti permettono di s separare ogni categoria con una regola orizzontale (`<hr>`). Dopo aver apportato queste modifiche della pagina deve contenere la sintassi dichiarativa per il controllo Repeater e ObjectDataSource corrispondente è simile al seguente:
-
 
 [!code-aspx[Main](nested-data-web-controls-cs/samples/sample1.aspx)]
 
 Figura 4 mostra lo stato di avanzamento quando viene visualizzato tramite un browser.
 
-
 [![Viene elencato ogni nome di categoria e una descrizione, separati da una regola orizzontale](nested-data-web-controls-cs/_static/image11.png)](nested-data-web-controls-cs/_static/image10.png)
 
 **Figura 4**: Viene elencato ogni nome di categoria e una descrizione, separati da una regola orizzontale ([fare clic per visualizzare l'immagine con dimensioni normali](nested-data-web-controls-cs/_static/image12.png))
-
 
 ## <a name="step-2-adding-the-nested-product-repeater"></a>Passaggio 2: Aggiunta di Repeater prodotto annidati
 
 Con la categoria di visualizzazione di un elenco completo, l'attività successiva consiste nell'aggiungere un controllo Repeater per la `CategoryList` s `ItemTemplate` che visualizza informazioni su tali prodotti appartenenti alla categoria appropriata. Esistono diversi modi, che è possibile recuperare i dati per il controllo Repeater interno, due dei quali verrà illustrato tra breve. Per ora, ti permettono di s creare solo i prodotti Repeater all'interno di `CategoryList` Repeater s `ItemTemplate`. In particolare, lasciare s che hanno visualizzato Repeater ogni prodotto in un elenco puntato con ogni elemento elenco tra cui il nome del prodotto s e il prezzo del prodotto.
 
 Per creare il Repeater è necessario immettere manualmente le sintassi dichiarativa per il controllo Repeater s interna e i modelli nel `CategoryList` s `ItemTemplate`. Aggiungere il markup seguente all'interno di `CategoryList` Repeater s `ItemTemplate`:
-
 
 [!code-aspx[Main](nested-data-web-controls-cs/samples/sample2.aspx)]
 
@@ -94,11 +83,9 @@ Poiché è già stato utilizzato ObjectDataSource ampiamente in tutta questa ser
 
 Sfortunatamente, il controllo Repeater Consen relativi modelli per la modifica tramite la visualizzazione di progettazione in modo che è necessario aggiungere manualmente la sintassi dichiarativa per il controllo ObjectDataSource. Il sintassi seguente sono illustrati i `CategoryList` Repeater s `ItemTemplate` dopo aver aggiunto il nuovo oggetto ObjectDataSource (`ProductsByCategoryDataSource`):
 
-
 [!code-aspx[Main](nested-data-web-controls-cs/samples/sample3.aspx)]
 
 Quando si usa l'approccio di ObjectDataSource, dobbiamo impostare il `ProductsByCategoryList` Repeater s `DataSourceID` proprietà per il `ID` di ObjectDataSource (`ProductsByCategoryDataSource`). Inoltre, si noti che l'oggetto ObjectDataSource ha un `<asp:Parameter>` elemento che specifica il *`categoryID`* valore che verrà passati i `GetProductsByCategoryID(categoryID)` (metodo). Ma come si specifica questo valore? In teoria, d sarà in grado di impostare il `DefaultValue` proprietà del `<asp:Parameter>` elemento usando la sintassi di associazione dati, come illustrato di seguito:
-
 
 [!code-aspx[Main](nested-data-web-controls-cs/samples/sample4.aspx)]
 
@@ -108,30 +95,25 @@ Per impostare questo valore, è necessario creare un gestore eventi per il `Cate
 
 Creare un gestore eventi per il `CategoryList` Repeater s `ItemDataBound` evento con il codice seguente:
 
-
 [!code-csharp[Main](nested-data-web-controls-cs/samples/sample5.cs)]
 
 Questo gestore eventi viene avviato, garantendo che abbiamo re gestione di un dato elemento anziché l'elemento di intestazione, piè di pagina o un separatore. Successivamente, si fa riferimento l'oggetto effettivo `CategoriesRow` istanza che è appena stata associata all'oggetto corrente `RepeaterItem`. Infine, si fa riferimento l'oggetto ObjectDataSource nel `ItemTemplate` e assegnare relativi `CategoryID` valore del parametro per il `CategoryID` dell'oggetto corrente `RepeaterItem`.
 
 A questo gestore eventi, il `ProductsByCategoryList` Repeater in ognuno `RepeaterItem` è associato a tali prodotti nel `RepeaterItem` categoria s. Figura 5 mostra una cattura di schermata dell'output risultante.
 
-
 [![Outer Repeater elenca ogni categoria. Quello interno sono elencati i prodotti per categoria](nested-data-web-controls-cs/_static/image14.png)](nested-data-web-controls-cs/_static/image13.png)
 
 **Figura 5**: Outer Repeater elenca ogni categoria. gli elenchi di un Inner i prodotti per categoria ([fare clic per visualizzare l'immagine con dimensioni normali](nested-data-web-controls-cs/_static/image15.png))
 
-
 ## <a name="accessing-the-products-by-category-data-programmatically"></a>L'accesso a individuare i prodotti per categoria dati a livello di codice
 
 Anziché utilizzare ObjectDataSource per recuperare i prodotti per la categoria corrente, è possibile creare un metodo nella classe code-behind ASP.NET pagina s (o nel `App_Code` cartella o in un progetto libreria di classi separato) che restituisce il set appropriato di prodotti quando vengono passati un `CategoryID`. Si supponga che abbiamo dovuto tale metodo nella classe code-behind ASP.NET pagina s e che il file è stato denominato `GetProductsInCategory(categoryID)`. Con questo metodo posto è stato possibile associazione i prodotti per la categoria corrente a Repeater interno usando la sintassi dichiarativa per il seguente:
-
 
 [!code-aspx[Main](nested-data-web-controls-cs/samples/sample6.aspx)]
 
 S Repeater `DataSource` proprietà viene utilizzata la sintassi di associazione dati per indicare che i relativi dati provengono dal `GetProductsInCategory(categoryID)` (metodo). Poiché `Eval("CategoryID")` restituisce un valore di tipo `Object`, si esegue il cast dell'oggetto da un `Integer` prima di passarlo nel `GetProductsInCategory(categoryID)` (metodo). Si noti che il `CategoryID` a cui si accede tramite l'associazione dati sintassi Ecco il `CategoryID` nel *outer* Repeater (`CategoryList`), quello che s associato ai record nel `Categories` tabella. Pertanto, sappiamo che la `CategoryID` non può essere un database `NULL` valore, ovvero il motivo per cui abbiamo alla cieca possiamo eseguire il cast di `Eval` metodo senza controllare se si ri affrontare un `DBNull`.
 
 Con questo approccio, è necessario creare il `GetProductsInCategory(categoryID)` metodo e recuperare il set appropriato di prodotti ha fornito *`categoryID`*. È possibile eseguire questa operazione semplicemente restituire la `ProductsDataTable` restituiti dai `ProductsBLL` classe s `GetProductsByCategoryID(categoryID)` (metodo). Consente di creare s il `GetProductsInCategory(categoryID)` metodo nella classe code-behind per il `NestedControls.aspx` pagina. Eseguire questa operazione usando il codice seguente:
-
 
 [!code-csharp[Main](nested-data-web-controls-cs/samples/sample7.cs)]
 
@@ -141,7 +123,6 @@ Dopo aver apportato queste modifiche per usare questa tecnica di nuovo, si consi
 
 > [!NOTE]
 > Potrebbe sembrare busywork per creare il `GetProductsInCategory(categoryID)` metodo nella classe code-behind ASP.NET pagina s. Dopo tutto, questo metodo crea un'istanza del `ProductsBLL` classe e restituisce i risultati del relativo `GetProductsByCategoryID(categoryID)` (metodo). Perché non semplicemente chiamare questo metodo direttamente dalla sintassi del data binding nel Repeater interna, ad esempio: `DataSource='<%# ProductsBLL.GetProductsByCategoryID((int)(Eval("CategoryID"))) %>'`? Sebbene questa sintassi non funziona con l'implementazione corrente del `ProductsBLL` classe (poiché il `GetProductsByCategoryID(categoryID)` è un metodo di istanza), è possibile modificare `ProductsBLL` da includere un valore statico `GetProductsByCategoryID(categoryID)` metodo o che la classe includa un valore statico `Instance()` per restituire una nuova istanza di `ProductsBLL` classe.
-
 
 Anche se queste modifiche avrebbe eliminato la necessità per il `GetProductsInCategory(categoryID)` metodo nella classe code-behind ASP.NET pagina s, il metodo della classe code-behind offre una maggiore flessibilità nell'utilizzo dei dati recuperati, come vedremo tra breve.
 
@@ -153,7 +134,6 @@ Dato *N* viene separata di categorie nel sistema, questo approccio *N* + 1 chiam
 
 Per fornire questa funzionalità, è necessario apportare solo una modifica quasi irrilevante il `GetProductsInCategory(categoryID)` metodo nella classe code-behind ASP.NET pagina s. Invece di restituire alla cieca i risultati del `ProductsBLL` classe s `GetProductsByCategoryID(categoryID)` metodo, è possibile invece prima di tutto accedere *tutte* dei prodotti (se non sono state usate già) e quindi restituire solo la visualizzazione filtrata del prodotti di base passato `CategoryID`.
 
-
 [!code-csharp[Main](nested-data-web-controls-cs/samples/sample8.cs)]
 
 Si noti l'aggiunta della variabile a livello di pagina, `allProducts`. Contiene informazioni su tutti i prodotti e viene popolata la prima volta il `GetProductsInCategory(categoryID)` metodo viene richiamato. Dopo aver verificato che il `allProducts` oggetto è stato creato e popolato, il metodo di filtrare i risultati di s DataTable in modo che solo le righe la cui proprietà `CategoryID` corrisponde al valore specificato `CategoryID` sono accessibili. Questo approccio riduce il numero di volte in cui il database è accessibile dalla *N* + 1 fino a due.
@@ -162,7 +142,6 @@ Questa funzionalità avanzata non introduce modifiche al markup sottoposto a ren
 
 > [!NOTE]
 > Uno potrebbe intuitivamente motivo che la riduzione del numero di accessi al database con certezza le prestazioni. Tuttavia, ciò potrebbe non essere il caso. Se si dispone di un numero elevato di prodotti il cui `CategoryID` viene `NULL`, ad esempio, la chiamata al `GetProducts` metodo restituisce un numero di prodotti che non vengono mai visualizzate. Inoltre, la restituzione di tutti i prodotti può essere dispendiosa se si ri Visualizza solo un subset delle categorie, che potrebbe essere il caso se è stato implementato il paging.
-
 
 Come sempre, per quanto riguarda l'analisi delle prestazioni delle due tecniche seguenti, la misura solo surefire consiste nell'eseguire test controllati personalizzate per gli scenari di casi comuni di s dell'applicazione.
 

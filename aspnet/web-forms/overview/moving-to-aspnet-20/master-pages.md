@@ -8,19 +8,18 @@ ms.date: 02/20/2005
 ms.assetid: 9c0cce4d-efd9-4c14-b0e8-a1a140abb3f4
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/master-pages
 msc.type: authoredcontent
-ms.openlocfilehash: 348e28778e0e7d96230534df1d61386ed39f8f11
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 36f2caf7c2c9bcafd22c8f6681c1d6b19fe5078a
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59381146"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131063"
 ---
 # <a name="master-pages"></a>Pagine master
 
 by [Microsoft](https://github.com/microsoft)
 
 > Uno dei componenti principali di un sito Web corretto è un aspetto uniforme e coerente. In ASP.NET 1.x, gli sviluppatori utilizzavano controlli utente per la replica di elementi comuni delle pagine in un'applicazione Web. Anche se si tratta di una soluzione utilizzabile per ottenere, tramite i controlli utente presenta tuttavia alcuni svantaggi. Ad esempio, una modifica della posizione di un controllo utente richiede una modifica a più pagine in un sito. Controlli utente non viene eseguiti anche nella visualizzazione Progettazione dopo l'inserimento in una pagina.
-
 
 Uno dei componenti principali di un sito Web corretto è un aspetto uniforme e coerente. In ASP.NET 1.x, gli sviluppatori utilizzavano controlli utente per la replica di elementi comuni delle pagine in un'applicazione Web. Anche se si tratta di una soluzione utilizzabile per ottenere, tramite i controlli utente presenta tuttavia alcuni svantaggi. Ad esempio, una modifica della posizione di un controllo utente richiede una modifica a più pagine in un sito. Controlli utente non viene eseguiti anche nella visualizzazione Progettazione dopo l'inserimento in una pagina.
 
@@ -47,14 +46,11 @@ Una pagina master può contenere qualsiasi numero di controlli ContentPlaceHolde
 > [!NOTE]
 > Spesso si farà persone vengono descritte le pagine master come una classe di base per le altre pagine. Memorizzate in realtà non è true. La relazione tra le pagine master e le pagine di contenuto non fa parte di ereditarietà.
 
-
 **Figura 1** Mostra una pagina master e da una pagina di contenuto associata come appaiono in Visual Studio 2005. È possibile visualizzare il controllo ContentPlaceHolder nella pagina master e il corrispondente nella pagina di contenuto controllo contenuto. Si noti che il contenuto di pagine master di fuori di ContentPlaceHolder sia visibile ma grigio nella pagina di contenuto. Solo il contenuto all'interno di ContentPlaceHolder può essere sostituito dalla pagina contenuto. Tutti gli altri contenuti da cui deriva la pagina master non sono modificabili.
-
 
 ![Una pagina master e la relativa pagina di contenuto associata](master-pages/_static/image1.jpg)
 
 **Figura 1**: Una pagina master e la relativa pagina di contenuto associata
-
 
 ## <a name="creating-a-master-page"></a>Creazione di una pagina Master
 
@@ -65,11 +61,9 @@ Per creare una nuova pagina master:
 3. Scegliere Master File dalla finestra di dialogo Aggiungi nuovo elemento, come illustrato nella **figura 2**.
 4. Fare clic su Aggiungi.
 
-
 ![Creazione di una nuova pagina Master](master-pages/_static/image2.jpg)
 
 **Figura 2**: Creazione di una nuova pagina Master
-
 
 Si noti che è l'estensione di file per una pagina master *master*. Questo è uno dei modi in cui una pagina master è diverso da una pagina normale. La principale differenza è che anziché un @Page direttiva della pagina master contiene un @Master direttiva. Passare alla visualizzazione origine per il servizio master pagina è stata appena creata ed esaminare il codice.
 
@@ -86,29 +80,23 @@ In questo laboratorio, si verrà creare una nuova pagina master e definire tre c
     3. Selezionare il controllo ContentPlaceHolder facendo clic sul bordo ombreggiato superiore del controllo e quindi eliminarla premendo il tasto CANC sulla tastiera.
     4. Inserire una nuova tabella tramite il *intestazione e il lato* modello come illustrato nella figura 3. Modificare la larghezza e altezza per il 90% ogni in modo che l'intera tabella è visibile nella finestra di progettazione.
 
-
 ![](master-pages/_static/image3.jpg)
 
 **Figura 3**
-
 
 1. Posizionare il cursore in ogni cella della tabella e impostare il *valign* proprietà *top*.
 2. Dalla casella degli strumenti, inserire un controllo ContentPlaceHolder nella prima cella della tabella (la cella di intestazione.)
 3. Quando si inserisce questo controllo ContentPlaceHolder, si noterà che l'altezza della riga verrà occupano quasi tutta la pagina come illustrato nella figura 4. Non c'è da preoccuparsi che a questo punto.
 
-
 ![Lo spazio vuoto è nella stessa cella come il controllo ContentPlaceHolder](master-pages/_static/image1.gif)
 
 **Figura 4**: Lo spazio vuoto è nella stessa cella come il controllo ContentPlaceHolder
 
-
 1. Inserire un controllo ContentPlaceHolder le altre due celle. Dopo che sono stati inseriti gli altri controlli ContentPlaceHolder, le dimensioni delle celle della tabella devono essere come previsto. La pagina deve ora apparire come illustrata nella pagina **figura 5**.
-
 
 ![Il Master con tutti i controlli ContentPlaceHolder. Si noti che l'altezza della cella per cella di intestazione è ciò che deve essere](master-pages/_static/image2.gif)
 
 **Figura 5**: Il Master con tutti i controlli ContentPlaceHolder. Si noti che l'altezza della cella per cella di intestazione è ciò che deve essere
-
 
 1. Immettere il testo di propria scelta in ognuna delle tre controlli ContentPlaceHolder.
 2. Salvare la pagina master come exercise1.master.
@@ -117,11 +105,9 @@ In questo laboratorio, si verrà creare una nuova pagina master e definire tre c
 5. Selezionare **Web Form** nella finestra di dialogo Aggiungi nuovo elemento.
 6. Assicurarsi che sia selezionata la casella di controllo Seleziona pagina master come illustrato nella figura 6.
 
-
 ![Aggiunta di una nuova pagina contenuto](master-pages/_static/image3.gif)
 
 **Figura 6**: Aggiunta di una nuova pagina contenuto
-
 
 1. Fare clic su Aggiungi.
 2. Selezionare lo exercise1.master selezionare una finestra di dialogo pagina master come illustrato nella figura 7.
@@ -129,11 +115,9 @@ In questo laboratorio, si verrà creare una nuova pagina master e definire tre c
 
 La nuova pagina di contenuto viene visualizzato in Visual Studio con un controllo contenuto che per ogni controllo ContentPlaceHolder nella pagina master. Per impostazione predefinita, i controlli contenuto sono vuoti, in modo che sia possibile aggiungere il proprio contenuto. Se si desidera per poter usare il contenuto dal controllo ContentPlaceHolder nella pagina master, è sufficiente fare clic sul simbolo di smart tag (la piccola freccia nera nell'angolo superiore destro del controllo) e scegliere *Masters contenuto predefinito* nello smart tag come illustrato nella **figura 8**. Quando in questo caso, la voce di menu viene modificato in *creare contenuto personalizzato*. Clic su di esso a questo punto rimuove il contenuto della pagina master che consente di definire il contenuto personalizzato per tale controllo contenuto.
 
-
 ![L'impostazione di un controllo contenuto sul valore predefinito per il contenuto di pagine Master](master-pages/_static/image4.gif)
 
 **Figura 7**: L'impostazione di un controllo contenuto sul valore predefinito per il contenuto di pagine Master
-
 
 ## <a name="connecting-master-page-and-content-pages"></a>Pagina Master che esegue la connessione e le pagine di contenuto
 
@@ -183,15 +167,11 @@ Si noti che in questo scenario, il master figlio anche una pagina di contenuto p
 > [!NOTE]
 > Supporto della finestra di progettazione non è disponibile per le pagine master annidate. Quando si sviluppa usando master nidificati, è necessario utilizzare la visualizzazione origine.
 
-
 In questo video viene illustrata una procedura dettagliata dell'uso di pagine master annidate.
-
 
 ![](master-pages/_static/image1.png)
 
-
 [Aprirlo Video a schermo intero](master-pages/_static/nested1.wmv)
-
 
 ![Selezione di una pagina Master](master-pages/_static/image4.jpg)
 

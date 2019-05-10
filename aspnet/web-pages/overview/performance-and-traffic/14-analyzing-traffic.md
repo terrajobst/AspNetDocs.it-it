@@ -8,12 +8,12 @@ ms.date: 02/17/2014
 ms.assetid: 360bc6e1-84c5-4b8e-a84c-ea48ab807aa4
 msc.legacyurl: /web-pages/overview/performance-and-traffic/14-analyzing-traffic
 msc.type: authoredcontent
-ms.openlocfilehash: a99ed5cc8875ef9f39234e3f394b46b5782d0bc1
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 095a5572c755446e0661c052ca9de82d636429fd
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59390220"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134603"
 ---
 # <a name="tracking-visitor-information-analytics-for-an-aspnet-web-pages-razor-site"></a>Informazioni di rilevamento del visitatore (Analitica) per un sito di ASP.NET Web Pages (Razor)
 
@@ -35,7 +35,6 @@ da [Tom FitzMacken](https://github.com/tfitzmac)
 > 
 > - ASP.NET Web Pages (Razor) 2
 > - ASP.NET Web Helpers Library (pacchetto NuGet)
-
 
 Analitica è un termine generale per la tecnologia che misura il traffico nel sito Web in modo che è possibile comprendere come le persone usano il sito. Molti servizi di analitica sono disponibili, inclusi i servizi di Google, Yahoo, StatCounter e ad altri utenti.
 
@@ -60,7 +59,6 @@ In questa procedura si creerà una pagina di layout che utilizza il `GetGoogleHt
 
 > [!NOTE]
 > Quando si crea un account di analitica, registrare l'URL del sito che si desidera essere tracciati. Se si sta testando tutto nel computer locale, non sarà necessario registrare effettivo del traffico (il solo traffico è si), in modo non sarà in grado di registrare e visualizzare le statistiche del sito. Ma questa procedura viene illustrato come aggiungere un helper di analitica a una pagina. Quando si pubblica il sito, il sito live verrà inviate informazioni al provider di analitica.
-
 
 1. Aggiungere ASP.NET Web Helpers Library nel sito Web come descritto in [installazione di helper in un sito con pagine Web ASP.NET](https://go.microsoft.com/fwlink/?LinkId=252372), se non si già aggiunti.
 2. Creare un account con Google Analitica e registrare il nome dell'account.

@@ -8,12 +8,12 @@ ms.date: 02/25/2014
 ms.assetid: 262843d6-43a2-4f1c-82d9-0b90ae6df0cf
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-v3/creating-an-odata-endpoint
 msc.type: authoredcontent
-ms.openlocfilehash: fa0573738fee8f1decc13c9797f644002931e09d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: e31bf3215155b4b45bcf2eb90dd6947caf99b7f8
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59381497"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65125272"
 ---
 # <a name="creating-an-odata-v3-endpoint-with-web-api-2"></a>Creazione di un Endpoint OData v3 con API Web 2
 
@@ -35,7 +35,6 @@ da [Mike Wasson](https://github.com/MikeWasson)
 > - [Fiddler Web Debugging Proxy (facoltativo)](http://www.fiddler2.com)
 >
 > È stato aggiunto il supporto di Web API OData [ASP.NET e Web Tools 2012.2 Update](https://go.microsoft.com/fwlink/?LinkId=282650). Tuttavia, questa esercitazione Usa lo scaffolding che è stato aggiunto in Visual Studio 2013.
-
 
 In questa esercitazione si creerà un semplice endpoint OData che i client possono eseguire query. Si creerà anche un client c# per l'endpoint. Dopo aver completato questa esercitazione, il set successivo di esercitazioni illustrano come aggiungere ulteriori funzionalità, tra cui relazioni tra entità, le azioni, e selezionare $espandere / $.
 
@@ -77,7 +76,6 @@ Nel **Aggiungi nuovo** finestra di dialogo di elemento, denominare la classe &qu
 
 > [!NOTE]
 > Per convenzione, le classi del modello vengono inserite nella cartella Models. Non devi seguono questa convenzione nei propri progetti, ma è possibile usarlo per questa esercitazione.
-
 
 Nel file Product.cs, aggiungere la definizione di classe seguente:
 

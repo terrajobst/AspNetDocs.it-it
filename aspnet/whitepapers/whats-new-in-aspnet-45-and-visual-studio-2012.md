@@ -8,17 +8,16 @@ ms.date: 02/29/2012
 ms.assetid: ba1fabb4-31a3-4ebf-8327-41a6bbba6eaf
 msc.legacyurl: /whitepapers/whats-new-in-aspnet-45-and-visual-studio-2012
 msc.type: content
-ms.openlocfilehash: 5f50721b6f263b9cb025f5fa57c923dadeddcd28
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 32fbf7c25b00f3f0796c4c3fdd38ca2a86c89199
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59410591"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133682"
 ---
 # <a name="whats-new-in-aspnet-45-and-visual-studio-2012"></a>Novità di ASP.NET 4.5 e Visual Studio 2012
 
 > Questo documento descrive le nuove funzionalità e miglioramenti che sono stati introdotti in ASP.NET 4.5. Vengono inoltre descritti i miglioramenti apportati per lo sviluppo web in Visual Studio 2012. Questo documento è stato pubblicato originariamente 29 febbraio 2012.
-
 
 - [Framework e Runtime di ASP.NET Core](#_Toc318097372)
 
@@ -190,10 +189,8 @@ Usando l'esempio forum, sia in grado di leggere i dati della richiesta non conva
 
 [!code-csharp[Main](whats-new-in-aspnet-45-and-visual-studio-2012/samples/sample6.cs)]
 
-
 > [!WARNING]
 > Security - *usare i dati della richiesta non convalidati con cautela.* ASP.NET 4.5 ha aggiunto le raccolte per renderne più semplice per accedere ai dati della richiesta non convalidati molto specifici e la proprietà della richiesta non convalidati. Tuttavia, è necessario eseguire ancora la convalida personalizzata sui dati richiesta non elaborata per garantire che il testo pericoloso non viene eseguito agli utenti.
-
 
 <a id="_Toc318097382"></a>
 ### <a name="antixss-library"></a>Libreria AntiXSS
@@ -383,11 +380,9 @@ Tuttavia, le espressioni di associazione dati simile al seguente non supportano 
 
 Per risolvere questo problema, ASP.NET 4.5 aggiunge la possibilità di dichiarare il tipo di dati dei dati che è associato un controllo. Eseguire questa operazione usando le nuove *ItemType* proprietà. Quando si imposta questa proprietà, sono disponibili due nuove variabili tipizzate nell'ambito di espressioni di associazione dati: *Elemento* e *BindItem*. Poiché le variabili sono fortemente tipizzate, otterrai i vantaggi dell'esperienza di sviluppo Visual Studio.
 
-
 Per le espressioni di associazione dati bidirezionale, usare il *BindItem* variabile:
 
 [!code-aspx[Main](whats-new-in-aspnet-45-and-visual-studio-2012/samples/sample21.aspx)]
-
 
 La maggior parte dei controlli nel framework Web Form ASP.NET che supportano il data binding sono stati aggiornati per supportare le *ItemType* proprietà.
 

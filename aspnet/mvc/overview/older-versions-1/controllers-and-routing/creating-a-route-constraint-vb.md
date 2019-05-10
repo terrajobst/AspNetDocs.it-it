@@ -8,19 +8,18 @@ ms.date: 02/16/2009
 ms.assetid: b7cce113-c82c-45bf-b97b-357e5d9f7f56
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/creating-a-route-constraint-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 8c7b2274ff396f222382488ed877599e86ae5b99
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 205742dd8f866c8828008c8aac7ab3f98b173ceb
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59412684"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123428"
 ---
 # <a name="creating-a-route-constraint-vb"></a>Creazione di un vincolo di route (VB)
 
 da [Stephen Walther](https://github.com/StephenWalther)
 
 > In questa esercitazione, Stephen Walther spiega come è possibile controllare la modalità browser richiede le route di corrispondenza creando vincoli di route con espressioni regolari.
-
 
 Vincoli di route vengono utilizzati per limitare le richieste del browser che corrispondono a una particolare route. È possibile usare un'espressione regolare per specificare un vincolo di route.
 
@@ -50,11 +49,9 @@ Sfortunatamente, la route corrisponde anche agli URL seguenti:
 
 Poiché l'azione Details() prevede un parametro intero, una richiesta che contiene un valore diverso da un valore intero verrà generato un errore. Ad esempio, se si digita il /Product/apple URL nel browser quindi si otterrà la pagina di errore nella figura 1.
 
-
 [![La finestra di dialogo Nuovo progetto](creating-a-route-constraint-vb/_static/image1.jpg)](creating-a-route-constraint-vb/_static/image1.png)
 
 **Figura 01**: Viene visualizzata una pagina explode ([fare clic per visualizzare l'immagine con dimensioni normali](creating-a-route-constraint-vb/_static/image2.png))
-
 
 Che cosa si vuole eseguire è trovare solo gli URL contenenti un productId integer appropriata. È possibile usare un vincolo quando si definisce una route per limitare gli URL che corrispondono alla route. La route di prodotto modificata nel listato 3 contiene un vincolo di espressione regolare che corrisponde solo numeri interi.
 

@@ -8,19 +8,18 @@ ms.date: 08/19/2008
 ms.assetid: 87313792-0a96-4caf-89fc-1457d54e5c1e
 msc.legacyurl: /mvc/overview/older-versions-1/overview/understanding-models-views-and-controllers-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 8c57345c510ad0afccaabf377fda35afbfc05e17
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 57dc82d02d38adc2514aa2c02c6f156ed0fb88a6
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59383408"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65122063"
 ---
 # <a name="understanding-models-views-and-controllers-c"></a>Informazioni su modelli, visualizzazioni e controller (C#)
 
 da [Stephen Walther](https://github.com/StephenWalther)
 
 > Per informazioni dettagliate sugli modelli, visualizzazioni e controller? In questa esercitazione, Stephen Walther presenta le diverse parti di un'applicazione ASP.NET MVC.
-
 
 Questa esercitazione offre una panoramica generale di ASP.NET MVC modelli, visualizzazioni e controller. In altre parole, viene spiegato il valore M', V "e C' in ASP.NET MVC.
 
@@ -32,47 +31,37 @@ Il modello di Visual Studio predefinito per la creazione di applicazioni Web ASP
 
 Si crea una nuova applicazione MVC ASP.NET con il modello MVC, avviare Visual Studio 2008 e selezionando l'opzione di menu File, nuovo progetto (vedere la figura 1). Nella finestra di dialogo Nuovo progetto, selezionare il linguaggio di programmazione preferito in tipi di progetto (Visual Basic o c#) e selezionare **applicazione Web ASP.NET MVC** nei modelli. Fare clic sul pulsante OK.
 
-
 [![Finestra di dialogo Nuovo progetto](understanding-models-views-and-controllers-cs/_static/image1.jpg)](understanding-models-views-and-controllers-cs/_static/image1.png)
 
 **Figura 01**: Finestra di dialogo Nuovo progetto ([fare clic per visualizzare l'immagine con dimensioni normali](understanding-models-views-and-controllers-cs/_static/image2.png))
 
-
 Quando si crea una nuova applicazione ASP.NET MVC, il **Crea progetto Unit Test** (vedere la figura 2) viene visualizzata la finestra. Questa finestra di dialogo consente di creare un progetto separato nella soluzione per il test dell'applicazione ASP.NET MVC. Selezionare l'opzione **No, non creare un progetto unit test** e fare clic sui **OK** pulsante.
-
 
 [![Creare una finestra di dialogo di Unit Test](understanding-models-views-and-controllers-cs/_static/image2.jpg)](understanding-models-views-and-controllers-cs/_static/image3.png)
 
 **Figura 02**: Creare una finestra di dialogo di Unit Test ([fare clic per visualizzare l'immagine con dimensioni normali](understanding-models-views-and-controllers-cs/_static/image4.png))
 
-
 Dopo il nuovo di ASP.NET MVC viene creata l'applicazione. Si noterà diversi file nella finestra Esplora soluzioni e cartelle. In particolare, si noterà tre cartelle denominate modelli, visualizzazioni e controller. Come può immaginare dai nomi delle cartelle, queste cartelle contengono i file per l'implementazione di modelli, visualizzazioni e controller.
 
 Se si espande la cartella Controllers, si noterà un file denominato AccountController.cs e un file denominato HomeController.cs. Se si espande la cartella Views, si dovrebbero vedere tre sottocartelle denominate Account, Home e condiviso. Se si espande la cartella Home, verranno visualizzati due file aggiuntivi denominati index. aspx e About (vedere la figura 3). Tali file costituiscono l'applicazione di esempio incluso con il modello MVC di ASP.NET predefinito.
-
 
 [![La finestra di Esplora soluzioni](understanding-models-views-and-controllers-cs/_static/image3.jpg)](understanding-models-views-and-controllers-cs/_static/image5.png)
 
 **Figura 03**: La finestra di Esplora soluzioni ([fare clic per visualizzare l'immagine con dimensioni normali](understanding-models-views-and-controllers-cs/_static/image6.png))
 
-
 È possibile eseguire l'applicazione di esempio, selezionando l'opzione di menu **eseguire il Debug, Avvia debug**. In alternativa, è possibile premere il tasto F5.
 
 Quando si esegue prima un'applicazione ASP.NET, viene visualizzata la finestra di dialogo nella figura 4 che consiglia di abilitare la modalità di debug. Fare clic sul pulsante OK e verrà eseguita l'applicazione.
-
 
 [![Finestra di debug non abilitato](understanding-models-views-and-controllers-cs/_static/image4.jpg)](understanding-models-views-and-controllers-cs/_static/image7.png)
 
 **Figura 04**: Debug della finestra non è abilitato ([fare clic per visualizzare l'immagine con dimensioni normali](understanding-models-views-and-controllers-cs/_static/image8.png))
 
-
 Quando si esegue un'applicazione ASP.NET MVC, Visual Studio avvia l'applicazione nel web browser. L'applicazione di esempio è costituito da solo due pagine: la pagina di indice e la pagina di informazioni. All'avvio dell'applicazione prima di tutto, viene visualizzata la pagina di indice (vedere la figura 5). È possibile passare alla pagina About, selezionando il collegamento di menu in alto a destra dell'applicazione.
-
 
 [![La pagina di indice](understanding-models-views-and-controllers-cs/_static/image10.png)](understanding-models-views-and-controllers-cs/_static/image9.png)
 
 **Figura 05**: La pagina di indice ([fare clic per visualizzare l'immagine con dimensioni normali](understanding-models-views-and-controllers-cs/_static/image11.png))
-
 
 Si noti che gli URL nella barra degli indirizzi del browser. Ad esempio, quando si fa clic sul collegamento del menu About, l'URL nella barra degli indirizzi del browser viene modificato da **/Home/About**.
 

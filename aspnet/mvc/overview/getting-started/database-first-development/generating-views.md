@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.assetid: 669367cf-8e30-4eb6-821d-10a7d9bb906c
 msc.legacyurl: /mvc/overview/getting-started/database-first-development/generating-views
 msc.type: authoredcontent
-ms.openlocfilehash: 7a56c0f9197a99427bcde6103ebc69d245e8ce63
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: e71e13e22d8a72e1699cfc70d4d93af603edba5b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57025758"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65121222"
 ---
 # <a name="tutorial-generate-views-for-ef-database-first-with-aspnet-mvc-app"></a>Esercitazione: Generare viste per Entity Framework Database First con app ASP.NET MVC
 
@@ -51,7 +51,6 @@ Fare clic su **Aggiungi**.
 Se si riceve un errore, è possibile che il progetto nella sezione precedente non è stata compilata. In questo caso, provare a compilare il progetto e quindi aggiungere di nuovo l'elemento di scaffolding.
 
 Al termine il processo di generazione di codice, verrà visualizzato un nuovo controller e visualizzazioni del progetto **controller** e **viste** > **studenti** cartelle .
-
 
 Eseguire di nuovo gli stessi passaggi, ma aggiungere lo scaffolding per il **registrazione** classe. Al termine, disponibile un' **EnrollmentsController.cs** file e una cartella sotto **viste** denominato **registrazioni** con le visualizzazioni Create, Delete, i dettagli, modifica e indice.
 

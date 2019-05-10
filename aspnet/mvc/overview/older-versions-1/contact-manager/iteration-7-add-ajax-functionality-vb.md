@@ -8,12 +8,12 @@ ms.date: 02/20/2009
 ms.assetid: f640e063-150e-453d-8cfc-7e54a6ce0f1e
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-7-add-ajax-functionality-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 3df4258b2de309aed5a3a598caeb1e7332c321f6
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: cee2b6e7c7517a1e03ae26d5233fc438857a030c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59383960"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123872"
 ---
 # <a name="iteration-7--add-ajax-functionality-vb"></a>Iterazione #7-aggiungere funzionalità Ajax (VB)
 
@@ -23,9 +23,7 @@ by [Microsoft](https://github.com/microsoft)
 
 > Nell'iterazione del settimo, aggiungendo il supporto per Ajax è migliorare la velocità di risposta e le prestazioni dell'applicazione.
 
-
 ## <a name="building-a-contact-management-aspnet-mvc-application-vb"></a>Creazione di un'applicazione di gestione dei contatti ASP.NET MVC (VB)
-  
 
 In questa serie di esercitazioni, creiamo un'intera applicazione di gestione dei contatti dall'inizio alla fine. L'applicazione Contact Manager consente di archiviare le informazioni di contatto - nomi, i numeri di telefono e indirizzi di posta elettronica - per un elenco di persone.
 
@@ -93,11 +91,9 @@ Aggiungere il codice JavaScript seguente include all'interno di &lt;head&gt; tag
 
 Let s iniziare modificando la visualizzazione dell'indice in modo che facendo clic su un gruppo di contatto vengono aggiornati solo l'area della vista che consente di visualizzare i contatti. Il riquadro rosso nella figura 1 contiene l'area in cui si desidera aggiornare.
 
-
 [![L'aggiornamento solo i contatti](iteration-7-add-ajax-functionality-vb/_static/image1.jpg)](iteration-7-add-ajax-functionality-vb/_static/image1.png)
 
 **Figura 01**: L'aggiornamento solo i contatti ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-7-add-ajax-functionality-vb/_static/image2.png))
-
 
 Il primo passaggio consiste nel separare la parte della vista che si vuole aggiornare in modo asincrono in un elemento parziale separato (controllo utente visualizzazione). La sezione della visualizzazione Index che visualizza la tabella dei contatti è stata spostata in parziale nel listato 1.
 
@@ -133,9 +129,7 @@ Si noti che l'azione Index () non è necessario restituire tutti i dati quando v
 
 La visualizzazione dell'indice modificato funziona nel caso di browser di livello inferiore e superiore. Se si fa clic su un gruppo di contatto e il browser supporta JavaScript, viene aggiornato solo nell'area della vista che contiene l'elenco dei contatti. Se, d'altra parte, il browser non supporta JavaScript, viene aggiornata la vista intera.
 
-
 La visualizzazione dell'indice aggiornata presenta un problema. Quando si fa clic su un gruppo di contatto, il gruppo selezionato non viene evidenziato. Perché viene visualizzato l'elenco dei gruppi all'esterno dell'area che viene aggiornata durante una richiesta Ajax, il gruppo corretto non vengono evidenziato. Questo problema verrà risolto nella sezione successiva.
-
 
 ## <a name="adding-jquery-animation-effects"></a>Aggiunta di effetti di animazione di jQuery
 
@@ -193,11 +187,9 @@ Quando un utente raggiunge l'indietro del browser o il pulsante Avanti, viene ge
 
 Attualmente, per eliminare un contatto, è necessario fare clic sul collegamento Elimina e quindi fare clic sul pulsante di eliminazione visualizzato nella pagina di conferma delete (vedere la figura 2). Ciò dovrebbe essere un numero elevato di richieste di pagina per eseguire un'operazione semplice, come l'eliminazione di un record di database.
 
-
 [![La pagina di conferma delete](iteration-7-add-ajax-functionality-vb/_static/image2.jpg)](iteration-7-add-ajax-functionality-vb/_static/image3.png)
 
 **Figura 02**: La pagina di conferma delete ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-7-add-ajax-functionality-vb/_static/image4.png))
-
 
 Si è tentati di ignorare la pagina di conferma delete ed eliminare un contatto direttamente dalla visualizzazione Index. È consigliabile evitare la tentazione perché questo approccio consente di aprire l'applicazione per problemi di sicurezza. In generale, non si t desidera eseguire un'operazione GET HTTP quando si richiama un'azione che modifica lo stato dell'applicazione web. Quando si esegue un'operazione di eliminazione, si desidera eseguire una richiesta HTTP POST, o meglio ancora, un'operazione HTTP DELETE.
 
@@ -214,7 +206,6 @@ Il collegamento di eliminazione viene eseguito il rendering con la chiamata segu
 > [!NOTE] 
 > 
 > Il Ajax.ImageActionLink() non è una parte standard del framework ASP.NET MVC. Il Ajax.ImageActionLink() è un metodi helper personalizzati inclusi nel progetto Contact Manager.
-
 
 Il parametro AjaxOptions ha due proprietà. In primo luogo, la proprietà di Confirm consente di visualizzare una finestra di conferma popup JavaScript. In secondo luogo, la proprietà HttpMethod viene utilizzata per eseguire un'operazione HTTP DELETE.
 

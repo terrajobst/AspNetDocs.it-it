@@ -8,12 +8,12 @@ ms.date: 06/10/2008
 ms.assetid: 1c7d0916-0988-4b4f-9a03-935e4b5af6af
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/control-id-naming-in-content-pages-cs
 msc.type: authoredcontent
-ms.openlocfilehash: a398494df0ed2bf749620b717350b21669a1ae5c
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 6096e7b8b11f1c014d93fc9a1f857cd02c8958b0
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59395654"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134641"
 ---
 # <a name="control-id-naming-in-content-pages-c"></a>Denominazione degli ID di controllo nelle pagine di contenuto (C#)
 
@@ -22,7 +22,6 @@ da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Scaricare il codice](http://download.microsoft.com/download/e/e/f/eef369f5-743a-4a52-908f-b6532c4ce0a4/ASPNET_MasterPages_Tutorial_05_CS.zip) o [Scarica il PDF](http://download.microsoft.com/download/8/f/6/8f6349e4-6554-405a-bcd7-9b094ba5089a/ASPNET_MasterPages_Tutorial_05_CS.pdf)
 
 > Viene illustrato come controlli ContentPlaceHolder fungono da un contenitore di denominazione e pertanto rendono il lavoro a livello di codice con un controllo difficile (tramite il metodo FindControl). Esamina il problema e le soluzioni alternative. Spiega inoltre come accedere a livello di codice il valore ClientID risultante.
-
 
 ## <a name="introduction"></a>Introduzione
 
@@ -33,7 +32,6 @@ Per gestire tali scenari, ASP.NET consente a determinati controlli contrassegnar
 > [!NOTE]
 > Il [ `INamingContainer` interfaccia](https://msdn.microsoft.com/library/system.web.ui.inamingcontainer.aspx) viene utilizzato per indicare che un particolare controllo server ASP.NET dovrebbe funzionare come un contenitore di denominazione. Il `INamingContainer` interfaccia non compitare qualsiasi metodo che deve implementare il controllo del server; piuttosto, viene utilizzato come indicatore. Generare il markup sottoposto a rendering, se un controllo implementa questa interfaccia quindi il motore ASP.NET aggiunge automaticamente il prefisso relativo `ID` valore per i relativi discendenti sottoposto a rendering `id` i valori di attributo. Questo processo è descritto più dettagliatamente nel passaggio 2.
 
-
 Denominazione dei contenitori non solo modificare il rendering `id` valore dell'attributo, ma influisce anche sul modo in cui il controllo potrebbe a livello di programmazione farvi riferimento dalla classe code-behind della pagina ASP.NET. Il `FindControl("controlID")` metodo viene comunemente usato per fare riferimento a livello di codice un controllo Web. Tuttavia, `FindControl` non penetrare tramite i contenitori di denominazione. Di conseguenza, non è possibile usare direttamente il `Page.FindControl` metodo fare riferimento ai controlli all'interno di un controllo GridView o altro contenitore di denominazione.
 
 Come può avere conclusione, le pagine master ed elementi ContentPlaceHolder vengono entrambi implementati come contenitori di denominazione. In questa esercitazione esamineremo come master l'elemento HTML effetto pages `id` i valori e i modi per fare riferimento a livello di programmazione di controlli Web all'interno di una pagina di contenuto con `FindControl`.
@@ -42,34 +40,27 @@ Come può avere conclusione, le pagine master ed elementi ContentPlaceHolder ven
 
 Per illustrare i concetti illustrati in questa esercitazione, aggiungiamo una nuova pagina ASP.NET al nostro sito Web. Creare una nuova pagina di contenuto denominata `IDIssues.aspx` nella cartella radice di associazione per il `Site.master` pagina master.
 
-
 ![Aggiungere il contenuto di pagina IDIssues.aspx nella cartella radice](control-id-naming-in-content-pages-cs/_static/image1.png)
 
 **Figura 01**: Aggiungi pagina contenuto `IDIssues.aspx` nella cartella radice
 
-
 Visual Studio crea automaticamente un controllo contenuto per ognuna delle elementi quattro ContentPlaceHolder della pagina master. Come indicato nella [ *più elementi ContentPlaceHolder e contenuto predefinito* ](multiple-contentplaceholders-and-default-content-cs.md) dell'esercitazione, se un controllo contenuto non è presente il contenuto della pagina master predefinito ContentPlaceHolder viene generato invece. Poiché il `QuickLoginUI` e `LeftColumnContent` ContentPlaceHolder contengono il markup predefinite appropriate per questa pagina, proseguire e rimuovere i relativi controlli contenuto da `IDIssues.aspx`. A questo punto, il contenuto markup della pagina dichiarativo dovrebbe essere simile al seguente:
-
 
 [!code-aspx[Main](control-id-naming-in-content-pages-cs/samples/sample1.aspx)]
 
 Nel [ *specificazione di titolo, metatag e altre intestazioni HTML nella pagina Master* ](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs.md) esercitazione viene creata una classe di base di pagine personalizzate (`BasePage`) che configura automaticamente il titolo della pagina se si tratta di impostare in modo non esplicito. Per il `IDIssues.aspx` pagina per poter usare questa funzionalità, classe code-behind della pagina deve derivare dal `BasePage` classe (anziché `System.Web.UI.Page`). Modificare la definizione della classe code-behind in modo che risulti simile al seguente:
 
-
 [!code-csharp[Main](control-id-naming-in-content-pages-cs/samples/sample2.cs)]
 
 Aggiornare infine il `Web.sitemap` file da includere una voce per questa lezione di nuovo. Aggiungere un `<siteMapNode>` e impostare relativi `title` e `url` gli attributi su "Problemi di denominazione ID di controllo" e `~/IDIssues.aspx`, rispettivamente. Dopo aver apportato questa aggiunta di `Web.sitemap` markup del file dovrebbe essere simile al seguente:
-
 
 [!code-xml[Main](control-id-naming-in-content-pages-cs/samples/sample3.xml)]
 
 Come illustrato dalla figura 2, la nuova voce della mappa del sito in `Web.sitemap` verrà immediatamente aggiornata nella sezione lezioni nella colonna sinistra.
 
-
 ![La sezione lezioni ora include un collegamento a &quot;controllare i problemi di denominazione ID&quot;](control-id-naming-in-content-pages-cs/_static/image2.png)
 
 **Figura 02**: La sezione lezioni ora include un collegamento a "Problemi di denominazione degli ID di controllo"
-
 
 ## <a name="step-2-examining-the-renderedidchanges"></a>Passaggio 2: Esaminando il rendering`ID`modifiche
 
@@ -77,19 +68,15 @@ Per comprendere meglio le modifiche di ASP.NET rende motore per il rendering `id
 
 Il contenuto del markup del controllo dichiarativa a questo punto dovrebbe essere simile al seguente:
 
-
 [!code-aspx[Main](control-id-naming-in-content-pages-cs/samples/sample4.aspx)]
 
 Figura 3 mostra la pagina visualizzata mediante Progettazione di Visual Studio.
-
 
 [![La pagina include tre controlli Web: una casella di testo, pulsante ed etichetta](control-id-naming-in-content-pages-cs/_static/image4.png)](control-id-naming-in-content-pages-cs/_static/image3.png)
 
 **Figura 03**: Il pagina include tre controlli Web: una casella di testo, pulsante ed etichetta ([fare clic per visualizzare l'immagine con dimensioni normali](control-id-naming-in-content-pages-cs/_static/image5.png))
 
-
 Visita la pagina tramite un browser e visualizzare l'origine HTML. Come il markup seguente mostra, il `id` i valori degli elementi HTML per i controlli TextBox, Button ed etichetta Web sono una combinazione del `ID` i valori dei controlli Web e il `ID` i valori dei contenitori di denominazione nella pagina.
-
 
 [!code-html[Main](control-id-naming-in-content-pages-cs/samples/sample5.html)]
 
@@ -97,18 +84,14 @@ Come indicato in precedenza in questa esercitazione, la pagina master e relativi
 
 Figura 4 illustra questo comportamento. Per determinare il rendering `id` del `Age` casella di testo iniziano con la `ID` valore del controllo casella di testo, `Age`. Successivamente, proseguite sulla gerarchia dei controlli. In ogni contenitore di denominazione (i nodi con un colore rosa chiaro) corrente viene eseguito il rendering del prefisso `id` con il contenitore di denominazione `id`.
 
-
 ![Gli attributi di id di rendering sono valori basati su in the ID dei contenitori di denominazione](control-id-naming-in-content-pages-cs/_static/image6.png)
 
 **Figura 04**: Il rendering `id` gli attributi sono basate sul `ID` i valori dei contenitori di denominazione
 
-
 > [!NOTE]
 > Come accennato, il `ctl00` parte dell'oggetto sottoposto a rendering `id` attributo costituisce il `ID` valore della pagina master, ma è giusto chiedersi come questo `ID` coniato valore. È non è specificato, in un punto qualsiasi nella nostra pagina master e il contenuto. La maggior parte dei controlli del server in una pagina ASP.NET vengono aggiunte in modo esplicito tramite il markup della pagina dichiarativo. Il `MainContent` controllo ContentPlaceHolder è stato specificato in modo esplicito nel markup di `Site.master`; gli `Age` nella casella di testo è stato definito `IDIssues.aspx`del markup. È possibile specificare il `ID` valori per questi tipi di controlli nella finestra delle proprietà o dalla sintassi dichiarativa. Altri controlli, ad esempio la pagina master stessa, non sono definite nel markup dichiarativo. Di conseguenza, i `ID` valori devono essere generati automaticamente per noi. I set di motore ASP.NET il `ID` valori in fase di esecuzione per questi controlli il cui ID non sono state impostate in modo esplicito. Usa il modello di denominazione `ctlXX`, dove *XX* è un valore intero aumentino in sequenza.
 
-
 Poiché pagina master stessa viene utilizzato come un contenitore di denominazione, i controlli Web definiti nella pagina master anche avranno modificato sottoposto a rendering `id` i valori di attributo. Ad esempio, il `DisplayDate` etichetta viene aggiunta alla pagina master nel [ *creazione di un Layout a livello di sito con pagine Master* ](creating-a-site-wide-layout-using-master-pages-cs.md) esercitazione prevede i seguenti viene eseguito il rendering di markup:
-
 
 [!code-html[Main](control-id-naming-in-content-pages-cs/samples/sample6.html)]
 
@@ -125,18 +108,15 @@ Per illustrare l'utilizzo di `FindControl` metodo di ricerca dei controlli all'i
 > [!NOTE]
 > Naturalmente, non è necessario usare `FindControl` per fare riferimento ai controlli Label e TextBox per questo esempio. È possibile farvi riferimento direttamente tramite il loro `ID` i valori delle proprietà. Utilizzerò `FindControl` qui per illustrare cosa accade quando si usa `FindControl` da una pagina contenuto.
 
-
 [!code-csharp[Main](control-id-naming-in-content-pages-cs/samples/sample7.cs)]
 
 Mentre la sintassi utilizzata per chiamare il `FindControl` metodo differisce leggermente nelle prime due righe di `SubmitButton_Click`, sono semanticamente equivalenti. Tenere presente che tutti i controlli server ASP.NET includono un `FindControl` (metodo). Ciò include la `Page` (classe), da quali ASP.NET tutte le classi code-behind devono derivare da. Pertanto, la chiamata `FindControl("controlID")` è equivalente alla chiamata `Page.FindControl("controlID")`, presupponendo che è stato ancora eseguito l'override di `FindControl` metodo nella classe code-behind o in una classe di base personalizzata.
 
 Dopo aver immesso il codice, visitare il `IDIssues.aspx` pagina tramite un browser, immettere la tua età e fare clic sul pulsante "Invia". Fare clic sul pulsante "Invia" su un `NullReferenceException` generata (vedere la figura 5).
 
-
 [![Viene generata un'eccezione NullReferenceException](control-id-naming-in-content-pages-cs/_static/image8.png)](control-id-naming-in-content-pages-cs/_static/image7.png)
 
 **Figura 05**: Oggetto `NullReferenceException` viene generato ([fare clic per visualizzare l'immagine con dimensioni normali](control-id-naming-in-content-pages-cs/_static/image9.png))
-
 
 Se si imposta un punto di interruzione nel `SubmitButton_Click` si noterà che entrambe le chiamate al gestore dell'evento `FindControl` restituiscono una `null` valore. Il `NullReferenceException` viene generato quando si tenta di accedere al `Age` della casella di testo `Text` proprietà.
 
@@ -148,11 +128,9 @@ Esistono due soluzioni alternative per risolvere questo problema: cui possiamo e
 
 Per utilizzare `FindControl` per fare riferimento al `Results` etichetta o `Age` casella di testo, dobbiamo chiamare `FindControl` da un controllo predecessore nello stesso contenitore di denominazione. Come illustrato nella figura 4, il `MainContent` controllo ContentPlaceHolder è il predecessore di solo `Results` o `Age` che è all'interno del contenitore di denominazione stesso. In altre parole, la chiamata di `FindControl` metodo dal `MainContent` (controllo), come illustrato nel frammento di codice riportato di seguito, restituisce correttamente un riferimento al `Results` o `Age` controlli.
 
-
 [!code-csharp[Main](control-id-naming-in-content-pages-cs/samples/sample8.cs)]
 
 Tuttavia, è possibile lavorare con i `MainContent` ContentPlaceHolder dalla classe code-behind della pagina con il contenuto usando la sintassi precedente perché è definito il controllo ContentPlaceHolder nella pagina master. In alternativa, è necessario usare `FindControl` per ottenere un riferimento a `MainContent`. Sostituire il codice nel `SubmitButton_Click` gestore dell'evento con le modifiche seguenti:
-
 
 [!code-csharp[Main](control-id-naming-in-content-pages-cs/samples/sample9.cs)]
 
@@ -160,23 +138,19 @@ Se si visita la pagina tramite un browser, immettere la tua età e fare clic sul
 
 Per poter usare `FindControl` per ottenere un riferimento a `MainContent`, prima è necessario un riferimento al controllo pagina master. Dopo aver ottenuto un riferimento alla pagina master è possibile ottenere un riferimento al `MainContent` ContentPlaceHolder tramite `FindControl` e, da qui, fa riferimento il `Results` etichetta e `Age` casella di testo (anche in questo caso, l'utilizzo `FindControl`). Ma come si ottiene un riferimento alla pagina master? Controllando il `id` attributi nel rendering dei tag è evidente che la pagina master `ID` valore `ctl00`. Pertanto, è possibile usare `Page.FindControl("ctl00")` per ottenere un riferimento alla pagina master, quindi usare tale oggetto per ottenere un riferimento a `MainContent`e così via. Il frammento seguente illustra questa logica:
 
-
 [!code-csharp[Main](control-id-naming-in-content-pages-cs/samples/sample10.cs)]
 
 Mentre questo codice funzionerà senza dubbio, si presuppone che generati automaticamente della pagina master `ID` sarà sempre `ctl00`. Non è mai una buona idea verificare supposizioni su valori generati automaticamente.
 
 Fortunatamente, un riferimento alla pagina master è accessibile tramite il `Page` della classe `Master` proprietà. Pertanto, anziché dover usare `FindControl("ctl00")` per ottenere un riferimento della pagina master per poter accedere il `MainContent` ContentPlaceHolder, è possibile invece usare `Page.Master.FindControl("MainContent")`. Aggiornamento di `SubmitButton_Click` gestore dell'evento con il codice seguente:
 
-
 [!code-csharp[Main](control-id-naming-in-content-pages-cs/samples/sample11.cs)]
 
 In questo momento, visitando la pagina tramite un browser, immettendo la tua età e fare clic sul pulsante "Invia" Visualizza il messaggio nel `Results` assegnare un'etichetta, come previsto.
 
-
 [![L'età dell'utente viene visualizzato nell'etichetta](control-id-naming-in-content-pages-cs/_static/image11.png)](control-id-naming-in-content-pages-cs/_static/image10.png)
 
 **Figura 06**: L'età dell'utente viene visualizzato nell'etichetta ([fare clic per visualizzare l'immagine con dimensioni normali](control-id-naming-in-content-pages-cs/_static/image12.png))
-
 
 ### <a name="recursively-searching-through-naming-containers"></a>In modo ricorsivo la ricerca tramite i contenitori di denominazione
 
@@ -189,35 +163,28 @@ La buona notizia è che possiamo creare il nostro `FindControl` metodo tale in m
 > [!NOTE]
 > I metodi di estensione sono una funzionalità nuove per c# 3.0 e Visual Basic 9, quali sono le lingue forniti con .NET Framework versione 3.5 e Visual Studio 2008. In breve, i metodi di estensione consentono agli sviluppatori di creare un nuovo metodo per un tipo di classe esistente tramite una sintassi speciale. Per altre informazioni su questa funzionalità utile, vedere l'articolo [estendendo la funzionalità di tipo di Base con i metodi di estensione](http://aspnet.4guysfromrolla.com/articles/120507-1.aspx).
 
-
 Per creare il metodo di estensione, aggiungere un nuovo file per il `App_Code` cartella denominata `PageExtensionMethods.cs`. Aggiungere un metodo di estensione denominato `FindControlRecursive` che accetta come input un `string` parametro denominato `controlID`. Per i metodi di estensione per il corretto funzionamento, è fondamentale che la classe stessa e i relativi metodi di estensione essere contrassegnato `static`. Inoltre, tutti i metodi di estensione devono accettare come il primo parametro un oggetto del tipo a cui si applica il metodo di estensione e questo parametro di input deve essere preceduto dalla parola chiave `this`.
 
 Aggiungere il codice seguente per il `PageExtensionMethods.cs` file di classe per definire questa classe e il `FindControlRecursive` metodo di estensione:
-
 
 [!code-csharp[Main](control-id-naming-in-content-pages-cs/samples/sample12.cs)]
 
 Con questo codice, tornare al `IDIssues.aspx` classe code-behind della pagina e rimuovere i commenti corrente `FindControl` chiamate al metodo. Sostituirli con chiamate a `Page.FindControlRecursive("controlID")`. Che cos'è interessante sui metodi di estensione è che questi vengano visualizzati direttamente all'interno di elenchi a discesa di IntelliSense. Come illustrato nella figura 7, quando si digita pagina e quindi premere periodo, il `FindControlRecursive` metodo è incluso in IntelliSense elenco a discesa insieme all'altro `Control` metodi della classe.
 
-
 [![Sono inclusi i metodi di estensione in IntelliSense discesa](control-id-naming-in-content-pages-cs/_static/image14.png)](control-id-naming-in-content-pages-cs/_static/image13.png)
 
 **Figura 07**: Sono inclusi i metodi di estensione in IntelliSense discesa ([fare clic per visualizzare l'immagine con dimensioni normali](control-id-naming-in-content-pages-cs/_static/image15.png))
 
-
 Immettere il codice seguente nel `SubmitButton_Click` gestore dell'evento e quindi testarla visitando la pagina, immettendo l'età e facendo clic sul pulsante "Invia". Come illustrato nella figura 6, l'output risultante sarà il messaggio, "Sei anni d'età".
-
 
 [!code-csharp[Main](control-id-naming-in-content-pages-cs/samples/sample13.cs)]
 
 > [!NOTE]
 > Poiché i metodi di estensione ha familiarità con c# 3.0 e Visual Basic 9, se si usa Visual Studio 2005 è possibile utilizzare i metodi di estensione. In alternativa, è necessario implementare il `FindControlRecursive` metodo in una classe helper. [Rick Strahl](http://www.west-wind.com/WebLog/default.aspx) è un esempio di questo tipo nel suo post di blog [le pagine della ASP.NET e `FindControl` ](http://www.west-wind.com/WebLog/posts/5127.aspx).
 
-
 ## <a name="step-4-using-the-correctidattribute-value-in-client-side-script"></a>Passaggio 4: Il corretto utilizzo`id`valore nello Script lato Client dell'attributo
 
 Come accennato nell'introduzione dell'esercitazione, un controllo Web del sottoposto a rendering `id` attributo viene spesso usato in uno script lato client per fare riferimento a livello di codice a un particolare elemento HTML. Ad esempio, il codice JavaScript seguente fa riferimento a un elemento HTML dal `id` e quindi Visualizza il relativo valore in una finestra di messaggio modale:
-
 
 [!code-csharp[Main](control-id-naming-in-content-pages-cs/samples/sample14.cs)]
 
@@ -227,11 +194,9 @@ Il problema con questo approccio è che quando si usano le pagine master (o altr
 
 La buona notizia è che il `id` valore dell'attributo che viene eseguito il rendering è accessibile nel codice lato server tramite il controllo Web [ `ClientID` proprietà](https://msdn.microsoft.com/library/system.web.ui.control.clientid.aspx). È consigliabile utilizzare questa proprietà per determinare il `id` valore utilizzato nello script lato client dell'attributo. Ad esempio, per aggiungere una funzione JavaScript alla pagina che, quando viene chiamato, viene visualizzato il valore della `Age` nella casella di testo in una finestra di messaggio modale, aggiungere il codice seguente per il `Page_Load` gestore dell'evento:
 
-
 [!code-javascript[Main](control-id-naming-in-content-pages-cs/samples/sample15.js)]
 
 Il codice riportato sopra viene inserito il valore della `Age` proprietà ClientID della casella di testo nella chiamata JavaScript a `getElementById`. Se si accede a questa pagina tramite un browser e visualizzare l'origine HTML, sono disponibili il codice JavaScript seguente:
-
 
 [!code-html[Main](control-id-naming-in-content-pages-cs/samples/sample16.html)]
 
@@ -239,7 +204,6 @@ Si noti che la modalità corretta `id` valore dell'attributo, `ctl00_MainContent
 
 > [!NOTE]
 > In questo esempio di JavaScript viene semplicemente come aggiungere una funzione JavaScript che fa riferimento in modo corretto all'elemento HTML visualizzato da un controllo server. Per usare questa funzione è necessario creare JavaScript aggiuntive per chiamare la funzione quando il documento viene caricato o quando accade realmente un'azione utente specifico. Per altre informazioni su questi argomenti correlati, leggere [utilizzo di Script sul lato Client](https://msdn.microsoft.com/library/aa479302.aspx).
-
 
 ## <a name="summary"></a>Riepilogo
 

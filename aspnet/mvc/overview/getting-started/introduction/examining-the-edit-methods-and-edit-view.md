@@ -8,12 +8,12 @@ ms.date: 01/06/2019
 ms.assetid: 52a4d5fe-aa31-4471-b3cb-a064f82cb791
 msc.legacyurl: /mvc/overview/getting-started/introduction/examining-the-edit-methods-and-edit-view
 msc.type: authoredcontent
-ms.openlocfilehash: 4a4627bdce8b8f2085150aa08cdc4c1271e09e09
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: c42ec77b5d5107f3ef70e13b779fc1bebef70a14
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59422005"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65120709"
 ---
 # <a name="examining-the-edit-methods-and-edit-view"></a>Analisi dei metodi di modifica e della visualizzazione di modifica
 
@@ -98,7 +98,6 @@ Tutti i `HttpGet` metodi seguono un modello simile. Ricevono un oggetto film (o 
 ## <a name="jquery-validation-for-non-english-locales"></a>convalida di jQuery per inglesi
 
 Se si utilizza un computer in lingua inglese Stati Uniti, è possibile ignorare questa sezione e passare all'esercitazione successiva. È possibile scaricare la versione Globalize di questa esercitazione [qui](https://archive.msdn.microsoft.com/Project/Download/FileDownload.aspx?ProjectName=aspnetmvcsamples&amp;DownloadId=16475). Per un'esercitazione di due parti eccellente di internazionalizzazione, vedere [ASP.NET MVC 5 internazionalizzazione di Nadeem](http://afana.me/post/aspnet-mvc-internationalization.aspx).
-
 
 > [!NOTE]
 > Per supportare la convalida di jQuery per impostazioni locali di lingua diversa dall'inglese che usano la virgola (&quot;,&quot;) per un separatore decimale e formati di data non in lingua inglese Stati Uniti, è necessario includere *globalize.js* specifiche e  *Cultures/globalize.Cultures.js* file (da [ https://github.com/jquery/globalize ](https://github.com/jquery/globalize) ) e JavaScript usare `Globalize.parseFloat`. È possibile ottenere la convalida di jQuery non in lingua inglese da NuGet. (Non installare Globalize se si usa delle impostazioni locali in inglese.)

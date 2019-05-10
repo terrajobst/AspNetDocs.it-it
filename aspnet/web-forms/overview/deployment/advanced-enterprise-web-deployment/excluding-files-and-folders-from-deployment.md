@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: f4cc2d40-6a78-429b-b06f-07d000d4caad
 msc.legacyurl: /web-forms/overview/deployment/advanced-enterprise-web-deployment/excluding-files-and-folders-from-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: 4da291af4042e6e09c6917703b160ca717eecd15
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: a262ce43d7199fb1015d54d0b7c213857c360946
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59407991"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133887"
 ---
 # <a name="excluding-files-and-folders-from-deployment"></a>Esclusione di file e cartelle dalla distribuzione
 
@@ -22,7 +22,6 @@ da [Jason Lee](https://github.com/jrjlee)
 [Scaricare PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Questo argomento descrive come è possibile escludere file e cartelle da un pacchetto di distribuzione web quando si compila e creare un pacchetto un progetto di applicazione web.
-
 
 In questo argomento fa parte di una serie di esercitazioni basate su requisiti di distribuzione aziendale di una società fittizia, denominata Fabrikam, Inc. Questa serie di esercitazioni Usa una soluzione di esempio&#x2014;il [soluzione Contact Manager](../web-deployment-in-the-enterprise/the-contact-manager-solution.md)&#x2014;per rappresentare un'applicazione web con un livello di complessità, tra cui un'applicazione ASP.NET MVC 3, una comunicazione Windows realistico Servizio Foundation (WCF) e un progetto di database.
 
@@ -48,7 +47,6 @@ Quando si sceglie **solo i file necessari per eseguire questa applicazione**, WP
 > [!NOTE]
 > In questo file è contenuta la logica che determina i file da includere:   
 > *%PROGRAMFILES%\MSBuild\Microsoft\VisualStudio\v10.0\Web\ Microsoft.Web.Publishing.OnlyFilesToRunTheApp.targets*
-
 
 ## <a name="excluding-specific-files-and-folders"></a>Esclusione di specifici file e cartelle
 
@@ -77,9 +75,7 @@ Anche se è Impossibile modificare i file di progetto per escludere le cartelle 
 
 Questa è la struttura di base di questo *. WPP* file:
 
-
 [!code-xml[Main](excluding-files-and-folders-from-deployment/samples/sample1.xml)]
-
 
 Si noti che ogni elemento include un elemento dei metadati di elemento denominato **FromTarget**. Si tratta di un valore facoltativo che non influenza il processo di compilazione. è sufficiente serve a indicare il motivo per cui sono stati omessi cartelle o file specifici se un utente esamina i log di compilazione.
 

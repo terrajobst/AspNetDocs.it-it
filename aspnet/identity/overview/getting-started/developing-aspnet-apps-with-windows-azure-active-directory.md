@@ -9,12 +9,12 @@ ms.assetid: 457d7eaf-ee76-4ceb-9082-c7c1721435ad
 ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/getting-started/developing-aspnet-apps-with-windows-azure-active-directory
 msc.type: authoredcontent
-ms.openlocfilehash: 6f8b926c78097b68e6a159f2fdd30e7b8a6477a0
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 97c00494c210b5edb1894d1642cc6e40486c146f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59395173"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65121466"
 ---
 # <a name="developing-aspnet-apps-with-azure-active-directory"></a>Sviluppo di app ASP.NET con Azure Active Directory
 
@@ -73,13 +73,13 @@ La procedura seguente usa [Visual Studio Express 2013 per il Web](https://www.mi
 4. Dopo aver fatto clic **OK**, verrà visualizzata una finestra di dialogo Accedi e dovrai accedere con un account di amministratore globale (non l'account Microsoft associato alla sottoscrizione). Se è stato creato un nuovo account amministratore in precedenza, verrà richiesto di cambiare la password e quindi accedere di nuovo usando la nuova password.
 
     ![](developing-aspnet-apps-with-windows-azure-active-directory/_static/image9.png)
-5. Dopo aver eseguito l'autenticazione, il **nuovo progetto ASP.NET** finestra di dialogo Mostra la scelta di autenticazione (**Organizational** ) e la directory in cui la nuova applicazione verrà registrata (*aricka0yahoo.onmicrosoft.com* nell'immagine seguente). Sotto queste informazioni, selezionare la casella di controllo etichettato **ospita nel cloud**. Se questa casella di controllo è selezionata, il progetto verrà eseguito il provisioning come un'app web di Azure e verrà abilitato per la pubblicazione semplice in un secondo momento. Fare clic su **OK**.
+5. Dopo aver eseguito l'autenticazione, il **nuovo progetto ASP.NET** finestra di dialogo Mostra la scelta di autenticazione (**Organizational** ) e la directory in cui la nuova applicazione verrà registrata (*aricka0yahoo.onmicrosoft.com* nell'immagine seguente). Sotto queste informazioni, selezionare la casella di controllo etichettato **ospita nel cloud**. Se questa casella di controllo è selezionata, il progetto verrà eseguito il provisioning come un'app web di Azure e verrà abilitato per la pubblicazione semplice in un secondo momento. Scegliere **OK**.
 
     ![](developing-aspnet-apps-with-windows-azure-active-directory/_static/image10.png)
 6. Il **sito Web di Azure configura** verrà visualizzata finestra di dialogo, usando un nome del sito generato automaticamente e area. Si noti inoltre l'account che attualmente effettuato nella finestra di dialogo. Si desidera assicurarsi che questo account è quello che è associata la sottoscrizione di Azure, in genere un account Microsoft.
 
     > [!NOTE]
-    > Questo progetto richiede un database. È necessario selezionare uno dei database esistenti o crearne uno nuovo. Un database è necessario perché il progetto usa già un file di database locale per archiviare una piccola quantità di dati di configurazione di autenticazione. Quando si distribuisce l'applicazione in un sito Web di Azure, questo database non è incluso nel pacchetto di distribuzione, pertanto è necessario sceglierne uno che sia accessibile nel cloud. Fare clic su **OK**.
+    > Questo progetto richiede un database. È necessario selezionare uno dei database esistenti o crearne uno nuovo. Un database è necessario perché il progetto usa già un file di database locale per archiviare una piccola quantità di dati di configurazione di autenticazione. Quando si distribuisce l'applicazione in un sito Web di Azure, questo database non è incluso nel pacchetto di distribuzione, pertanto è necessario sceglierne uno che sia accessibile nel cloud. Scegliere **OK**.
 
     ![](developing-aspnet-apps-with-windows-azure-active-directory/_static/image11.png)
 7. Verrà creato il progetto e le opzioni di autenticazione e le opzioni di app web verranno configurate automaticamente con il progetto. Dopo aver completato questo processo, eseguire il progetto in locale premendo **^ F5**. È necessario accedere usando l'account dell'organizzazione. Specificare il nome utente e la password per l'account creato in precedenza e fare clic su **Accedi**.
@@ -130,7 +130,6 @@ La procedura seguente illustrerà come distribuire l'applicazione in Azure. Nei 
 Se viene visualizzato l'errore seguente: Valore non può essere null o vuoto. Nome del parametro: linkText
 
 ![](developing-aspnet-apps-with-windows-azure-active-directory/_static/image19.png)
-
 
 Sostituire il codice nel *Views\Shared\\loginpartial. cshtml* file con il codice seguente:
 

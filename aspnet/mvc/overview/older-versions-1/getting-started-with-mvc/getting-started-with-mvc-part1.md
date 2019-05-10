@@ -8,12 +8,12 @@ ms.date: 08/14/2010
 ms.assetid: bf4a1c19-0a94-4208-b268-a96ddcf26946
 msc.legacyurl: /mvc/overview/older-versions-1/getting-started-with-mvc/getting-started-with-mvc-part1
 msc.type: authoredcontent
-ms.openlocfilehash: dcc2e703829cfa0b77575870feff451fd0738f56
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: f8f0014776ba1313119e8c39c63a216b0fc864e7
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59416493"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123130"
 ---
 # <a name="intro-to-aspnet-mvc"></a>Introduzione ad ASP.NET MVC
 
@@ -24,7 +24,6 @@ da [Scott Hanselman](https://github.com/shanselman)
 >
 >
 > Si tratta di un'esercitazione per principianti che introduce i concetti di base di ASP.NET MVC. Si creerà una semplice applicazione web che legge e scrive da un database. Visitare il [centro di formazione di ASP.NET MVC](../../../index.md) per trovare altri ASP.NET MVC, esercitazioni ed esempi.
-
 
 Creare la prima applicazione Web MVC ASP.NET utilizzando [Visual Web Developer 2010 Express](https://www.microsoft.com/express/Web/). Ci assicureremo una piccola applicazione elenco di film che verrà creato e l'elenco di film invia i tuoi commenti.
 

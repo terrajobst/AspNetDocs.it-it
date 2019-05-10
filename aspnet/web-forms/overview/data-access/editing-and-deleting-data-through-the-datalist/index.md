@@ -8,17 +8,16 @@ ms.date: 10/05/2011
 ms.assetid: a6f02826-428a-49b1-ab2c-8e080b72f51e
 msc.legacyurl: /web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist
 msc.type: chapter
-ms.openlocfilehash: b242803a1f5d7db519314dc9349f8b4f6b1d0c6a
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: b19b983272988cc6802e56541a8dfed052eead04
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59393184"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133539"
 ---
 # <a name="editing-and-deleting-data-through-the-datalist"></a>Modifica ed eliminazione dei dati tramite DataList
 
 > Queste esercitazioni illustrano come modificare il controllo DataList, in modo che questo vantaggio ti Usa modificare i dati.
-
 
 - [Panoramica della modifica ed eliminazione dei dati in DataList (C#)](an-overview-of-editing-and-deleting-data-in-the-datalist-cs.md)
 - [Esecuzione di aggiornamenti batch (C#)](performing-batch-updates-cs.md)

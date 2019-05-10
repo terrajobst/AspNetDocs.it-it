@@ -8,17 +8,16 @@ ms.date: 08/08/2011
 ms.assetid: f645d3b1-1092-43c6-a28a-074b413924b4
 msc.legacyurl: /web-forms/overview/getting-started
 msc.type: chapter
-ms.openlocfilehash: 12dd89632f9ec9ebfb16bcefbd37e7311adfff08
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: d76e65ae807b1da97d07199e7f0fce21fbf14af6
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59422824"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133443"
 ---
 # <a name="getting-started-with-aspnet-web-forms"></a>Introduzione a Web Form ASP.NET
 
 > Il modello Web Form e come creare le pagine e usare i controlli.
-
 
 - [Introduzione a Web Form ASP.NET 4.5 e Visual Studio 2013](getting-started-with-aspnet-45-web-forms/index.md)
 

@@ -8,17 +8,16 @@ ms.date: 06/16/2014
 ms.assetid: b380c940-84c4-4e4a-980a-fa69986e919b
 msc.legacyurl: /web-api/overview/older-versions/using-web-api-1-with-entity-framework-5
 msc.type: chapter
-ms.openlocfilehash: be7322bae8f3d343866aae6e1c91ccce73ea6fd7
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: d244d3762aec001eecad399bdfe3347b48c1a5f2
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59405651"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134708"
 ---
 # <a name="using-aspnet-web-api-1-with-entity-framework-5"></a>Uso dell'API Web ASP.NET 1 con Entity Framework 5
 
 > Come creare un'applicazione API Web 1 che usa Entity Framework per la persistenza del database.
-
 
 - [Panoramica e creazione del progetto](using-web-api-with-entity-framework-part-1.md)
 - [Creazione dei modelli di dominio](using-web-api-with-entity-framework-part-2.md)

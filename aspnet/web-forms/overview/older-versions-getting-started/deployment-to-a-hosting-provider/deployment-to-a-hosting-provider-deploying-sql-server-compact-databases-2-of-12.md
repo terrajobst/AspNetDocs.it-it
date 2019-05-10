@@ -8,12 +8,12 @@ ms.date: 11/17/2011
 ms.assetid: c3c76516-4c48-4153-bd03-d70e3a3edbb0
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12
 msc.type: authoredcontent
-ms.openlocfilehash: cc8568847e050e868a3e7563b5fc1fc6fbf25d86
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: b265d210ff3b1eeb8697a973cc245f6c97b3eb07
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59405482"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134171"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-deploying-sql-server-compact-databases---2-of-12"></a>Distribuzione di un'applicazione Web ASP.NET con SQL Server Compact tramite Visual Studio o Visual Web Developer: Distribuzione database SQL Server Compact - 2 pari a 12
 
@@ -24,7 +24,6 @@ da [Tom Dykstra](https://github.com/tdykstra)
 > Questa serie di esercitazioni illustra come distribuire un ASP.NET (pubblicazione) progetto di applicazione web che include un database di SQL Server Compact tramite Visual Studio 2012 RC o Visual Studio Express 2012 RC per Web. Se si installa l'aggiornamento della pubblicazione sul Web, è anche possibile usare Visual Studio 2010. Per un'introduzione alla serie, vedere [la prima esercitazione della serie](deployment-to-a-hosting-provider-introduction-1-of-12.md).
 > 
 > Per un'esercitazione che illustra le funzionalità di distribuzione introdotte dopo la versione di Visual Studio 2012 RC, illustra come distribuire le edizioni di SQL Server diverse da SQL Server Compact e Mostra come distribuire in App Web di servizio App di Azure, vedere [distribuzione Web ASP.NET con Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
-
 
 ## <a name="overview"></a>Panoramica
 
@@ -144,7 +143,6 @@ Questa opzione di menu consente di aggiungere il codice seguente per il `using` 
 > 
 > In questo esempio viene visualizzato per questa esercitazione Usa la `AddOrUpdate` metodo nella `Seed` metodo per le migrazioni Code First `Configuration` classe. Codice prima le migrazioni chiamano il `Seed` metodo dopo tutte le migrazioni e questo metodo aggiorna le righe che sono già state inserite o li inserisce se non esistono ancora. Il `AddOrUpdate` metodo potrebbe non essere la scelta migliore per il proprio scenario. Per altre informazioni, vedere [prestare attenzione con Entity Framework 4.3 AddOrUpdate metodo](http://thedatafarm.com/blog/data-access/take-care-with-ef-4-3-addorupdate-method/) sul blog di Julie.
 
-
 Premere CTRL + MAIUSC + B per compilare il progetto.
 
 Il passaggio successivo consiste nel creare un `DbMigration` classe per la migrazione iniziale. Si desidera che questa migrazione per creare un nuovo database, pertanto è necessario eliminare il database già esistente. Contenuti nel database SQL Server Compact *sdf* file con il *App\_dati* cartella. Nelle **Esplora soluzioni**, espandere *App\_Data* nel progetto ContosoUniversity per vedere i due database di SQL Server Compact, che sono rappresentati da *sdf*i file.
@@ -187,7 +185,6 @@ Quando si distribuisce un sito per la prima volta, è comune per escludere la ma
 
 > [!NOTE]
 > Il database di appartenenza archivia un hash della password dell'account. Per distribuire gli account da un computer a un altro, è necessario assicurarsi che le routine di hash non generano hash diversi nel server di destinazione che non nel computer di origine. I generatori produrranno lo stesso hash quando si usa ASP.NET Universal Providers, fino a quando non modificare l'algoritmo predefinito. L'algoritmo predefinito è HMACSHA256 e viene specificato nel **convalida** attributo il **[machineKey](https://msdn.microsoft.com/library/w8h3skw9.aspx)** elemento nel file Web. config.
-
 
 Il database di appartenenza non viene mantenuto per le migrazioni Code First e non vi è alcun inizializzatore automatico che effettua il seeding del database con gli account di prova (quanto accade per il database School). Pertanto, per mantenere disponibili i dati di test è verrà effettuata una copia del database di test prima di creare una nuova.
 

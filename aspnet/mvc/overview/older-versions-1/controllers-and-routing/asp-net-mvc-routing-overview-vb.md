@@ -8,19 +8,18 @@ ms.date: 08/19/2008
 ms.assetid: 4bc8d19a-80f1-44b4-adbf-95ed22d691ca
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/asp-net-mvc-routing-overview-vb
 msc.type: authoredcontent
-ms.openlocfilehash: c135bacd7f9f87fac87a3c8cf41bad359bb3c0a2
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ed043d76b89ce31945cf3423b0c5afca9383cc21
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59379183"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123638"
 ---
 # <a name="aspnet-mvc-routing-overview-vb"></a>Panoramica del routing di ASP.NET MVC (VB)
 
 da [Stephen Walther](https://github.com/StephenWalther)
 
 > In questa esercitazione, Stephen Walther spiega come il framework ASP.NET MVC esegue il mapping alle richieste del browser per le azioni del controller.
-
 
 In questa esercitazione viene presentato una caratteristica importante di tutte le applicazioni ASP.NET MVC chiamata *Routing ASP.NET*. Il modulo di Routing di ASP.NET è responsabile del mapping di richieste del browser in ingresso alle azioni del controller MVC specifiche. Al termine di questa esercitazione, è possibile comprendere come la tabella di routing standard dei esegue il mapping delle richieste alle azioni del controller.
 
@@ -94,11 +93,9 @@ Infine, richiamare il metodo Index () nel listato 5 con l'URL avremo genera un'e
 
 [!code-vb[Main](asp-net-mvc-routing-overview-vb/samples/sample5.vb)]
 
-
 [![Richiamo di un'azione del controller che prevede un valore di parametro](asp-net-mvc-routing-overview-vb/_static/image1.jpg)](asp-net-mvc-routing-overview-vb/_static/image1.png)
 
 **Figura 01**: Richiamo di un'azione del controller che prevede un valore di parametro ([fare clic per visualizzare l'immagine con dimensioni normali](asp-net-mvc-routing-overview-vb/_static/image2.png))
-
 
 L'URL avremo/indice/3, d'altra parte, funziona perfettamente con l'azione Index del controller nel listato 5. La richiesta /Home/Index/3 induce il metodo Index () essere chiamato con un parametro di Id con il valore 3.
 

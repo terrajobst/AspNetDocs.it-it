@@ -8,12 +8,12 @@ ms.date: 02/20/2009
 ms.assetid: 4805e75a-7911-46e3-b11b-229a6eed245e
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-3-add-form-validation-vb
 msc.type: authoredcontent
-ms.openlocfilehash: e031417f2ee22533e7b5a606fc40526d7d911efc
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 73b307f53875abe84b592c75b1ff614ffd9d8b82
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59413334"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123988"
 ---
 # <a name="iteration-3--add-form-validation-vb"></a>Iterazione #3-aggiungere la convalida dei form (VB)
 
@@ -23,9 +23,7 @@ by [Microsoft](https://github.com/microsoft)
 
 > Nella terza iterazione, aggiungiamo la convalida dei form di base. Persone è impedire l'invio di un modulo senza completare i campi del modulo richiesto. È anche convalidare gli indirizzi di posta elettronica e numeri di telefono.
 
-
 ## <a name="building-a-contact-management-aspnet-mvc-application-vb"></a>Creazione di un'applicazione di gestione dei contatti ASP.NET MVC (VB)
-  
 
 In questa serie di esercitazioni, creiamo un'intera applicazione di gestione dei contatti dall'inizio alla fine. L'applicazione Contact Manager consente di archiviare le informazioni di contatto - nomi, i numeri di telefono e indirizzi di posta elettronica - per un elenco di persone.
 
@@ -45,16 +43,13 @@ Si compilerà l'applicazione a varie iterazioni. A ogni iterazione, abbiamo migl
 
 - Iterazione #7 - aggiungere funzionalità Ajax. Nell'iterazione del settimo, aggiungendo il supporto per Ajax è migliorare la velocità di risposta e le prestazioni dell'applicazione.
 
-
 ## <a name="this-iteration"></a>Questa iterazione
 
 In questa seconda iterazione dell'applicazione Contact Manager, viene aggiunto la convalida dei form di base. Si evita che gli utenti dall'invio di un contatto senza dover immettere i valori per i campi modulo necessari. È inoltre possibile convalidare i numeri di telefono e indirizzi di posta elettronica (vedere la figura 1).
 
-
 [![La finestra di dialogo Nuovo progetto](iteration-3-add-form-validation-vb/_static/image1.jpg)](iteration-3-add-form-validation-vb/_static/image1.png)
 
 **Figura 01**: Un modulo con la convalida ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-3-add-form-validation-vb/_static/image2.png))
-
 
 In questa iterazione, la logica di convalida viene aggiunto direttamente per le azioni del controller. In generale, non il metodo consigliato per aggiungere la convalida a un'applicazione ASP.NET MVC. Un approccio migliore consiste nell'inserire una logica di convalida s dell'applicazione in un oggetto separato [livello di servizio](http://martinfowler.com/eaaCatalog/serviceLayer.html). Nell'iterazione successiva, è eseguire il refactoring all'applicazione Contact Manager di eseguire l'applicazione più facilmente gestibile.
 
@@ -76,7 +71,6 @@ La classe di errore di convalida campo viene usata per definire lo stile dell'ou
 > 
 > È possibile modificare le classi del foglio di stile descritte in questa sezione per personalizzare l'aspetto dei messaggi di errore di convalida.
 
-
 ## <a name="adding-validation-logic-to-the-create-action"></a>Aggiunta della logica di convalida l'azione di creazione
 
 Al momento, la visualizzazione di creazione non visualizza mai i messaggi di errore di convalida perché non è stato scritto la logica per generare i messaggi. Per visualizzare i messaggi di errore di convalida, è necessario aggiungere i messaggi di errore per ModelState.
@@ -84,7 +78,6 @@ Al momento, la visualizzazione di creazione non visualizza mai i messaggi di err
 > [!NOTE] 
 > 
 > Il metodo UpdateModel() aggiunge messaggi di errore per ModelState automaticamente quando si verifica un errore assegnando il valore di un campo del form a una proprietà. Ad esempio, se si tenta di assegnare la stringa "apple" a una proprietà data di nascita che accetta i valori DateTime, il metodo UpdateModel() aggiunge un errore per ModelState.
-
 
 Il metodo Create () modificato nel listato 2 contiene una nuova sezione che convalida le proprietà della classe contattare prima il nuovo contatto viene inserito nel database.
 
@@ -106,7 +99,6 @@ Dopo che vengono eseguite le regole di convalida, viene verificata la proprietà
 > [!NOTE] 
 > 
 > Ho le espressioni regolari per convalidare l'indirizzo di posta elettronica e numero di telefono dal repository dell'espressione regolare in [*http://regexlib.com*](http://regexlib.com)
-
 
 ## <a name="adding-validation-logic-to-the-edit-action"></a>Aggiunta di logica di convalida per l'operazione di modifica
 

@@ -8,12 +8,12 @@ ms.date: 02/20/2009
 ms.assetid: 013c3c26-7dc3-41d1-8064-f233c86008b5
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-6-use-test-driven-development-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 94885984ebad90523369dcf5771d0f77a753008f
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: aee0ff9d8d7f17e8a00dab12467bd3a3457fbe18
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59405664"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65117761"
 ---
 # <a name="iteration-6--use-test-driven-development-c"></a>Iterazione #6-usare lo sviluppo basato su test (c#)
 
@@ -23,9 +23,7 @@ by [Microsoft](https://github.com/microsoft)
 
 > In questa iterazione sesta, viene aggiunto nuove funzionalità all'applicazione scrivendo unit test prima e scrivere codice sull'unit test. In questa iterazione, viene aggiunto gruppi di contatti.
 
-
 ## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>Creazione di un'applicazione MVC ASP.NET di gestione dei contatti (c#)
-  
 
 In questa serie di esercitazioni, creiamo un'intera applicazione di gestione dei contatti dall'inizio alla fine. L'applicazione Contact Manager consente di archiviare le informazioni di contatto - nomi, i numeri di telefono e indirizzi di posta elettronica - per un elenco di persone.
 
@@ -73,7 +71,6 @@ Infine, lo sviluppo basato su test forza la scrittura di unit test come parte de
 > 
 > Per altre informazioni sullo sviluppo basato su test, consiglia di leggere il libro di Michael Feathers **Working Effectively with Legacy Code**.
 
-
 In questa iterazione, aggiungiamo una nuova funzionalità all'applicazione Contact Manager. Viene aggiunto il supporto per i gruppi di contatto. È possibile usare gruppi di contatto per organizzare i contatti in categorie, ad esempio aziendale e Friend.
 
 Si aggiungerà questa nuova funzionalità all'applicazione seguendo un processo di sviluppo basato su test. Unit test verranno scritti prima di tutto e verrà scritto tutto il codice per questi test.
@@ -112,11 +109,9 @@ La nostra storia utente prima è che un utente deve essere in grado di visualizz
 
 Creare un nuovo unit test facendo clic su cartella controller nel progetto ContactManager.Tests selezionando **Aggiungi, nuovo Test**e selezionando le **Unit Test** modello (vedere la figura 1). Nome della nuova unità GroupControllerTest.cs di test, scegliere il **OK** pulsante.
 
-
 [![Aggiunta di GroupControllerTest unit test](iteration-6-use-test-driven-development-cs/_static/image1.jpg)](iteration-6-use-test-driven-development-cs/_static/image1.png)
 
 **Figura 01**: Aggiunta di unit test GroupControllerTest ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-6-use-test-driven-development-cs/_static/image2.png))
-
 
 Il primo unit test è contenuta nel listato 1. Questo test verifica che il metodo Index () del controller gruppo restituisce un set di gruppi. Il test verifica che una raccolta di gruppi viene restituita nella visualizzazione dei dati.
 
@@ -140,11 +135,9 @@ La classe controller del gruppo nel listato 2 contiene il livello minimo di codi
 
 Dopo che le classi GroupController e gruppo per il progetto, il primo unit test viene completato correttamente (vedere la figura 2). È stato eseguito il lavoro minimo richiesto per superare il test. È ora festeggiare.
 
-
 [![Vero successo!](iteration-6-use-test-driven-development-cs/_static/image2.jpg)](iteration-6-use-test-driven-development-cs/_static/image3.png)
 
 **Figura 02**: Vero successo! ([Fare clic per visualizzare l'immagine con dimensioni normali](iteration-6-use-test-driven-development-cs/_static/image4.png))
-
 
 ## <a name="creating-contact-groups"></a>Creazione di gruppi di contatto
 
@@ -220,7 +213,6 @@ Modifica il IContactManagerRepository richiede l'interfaccia consentono di imple
 
 [!code-csharp[Main](iteration-6-use-test-driven-development-cs/samples/sample12.cs)]
 
-
 Infine, queste modifiche alla progettazione della nostra applicazione rendono necessario apportare alcune modifiche al nostro unit test. È ora necessario usare il FakeContactManagerRepository durante l'esecuzione di unit test. La classe GroupControllerTest aggiornata è contenuta nel listato 12.
 
 **Listing 12 - Controllers\GroupControllerTest.cs**
@@ -242,12 +234,10 @@ Purtroppo, anche se è stata soddisfatta tutti i requisiti espressi l'unit test,
 
 <a id="0.11_table01"></a>
 
-
 | **Nome della colonna** | **Tipo di dati** | **Consenti valori null** |
 | --- | --- | --- |
 | Id | int | False |
-| Nome | nvarchar(50) | False |
-
+| nome | nvarchar(50) | False |
 
 Successivamente, è necessario eliminare tutti i dati dalla tabella di contatti (in caso contrario, non sarà in grado di creare una relazione tra le tabelle di contatti e gruppi). Attenersi ai passaggi riportati di seguito.
 
@@ -266,16 +256,13 @@ Successivamente, è necessario definire una relazione tra la tabella di database
 8. Fare clic sul pulsante chiude per chiudere la finestra di dialogo Relazioni chiavi esterne.
 9. Fare clic sul pulsante Salva per salvare le modifiche apportate alla tabella Contacts.
 
-
 [![Creazione di una relazione tra tabelle di database](iteration-6-use-test-driven-development-cs/_static/image3.jpg)](iteration-6-use-test-driven-development-cs/_static/image5.png)
 
 **Figura 03**: Creazione di una relazione tra tabelle di database ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-6-use-test-driven-development-cs/_static/image6.png))
 
-
 [![Specifica di relazioni tra tabelle](iteration-6-use-test-driven-development-cs/_static/image4.jpg)](iteration-6-use-test-driven-development-cs/_static/image7.png)
 
 **Figura 04**: Specifica di relazioni tra tabelle ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-6-use-test-driven-development-cs/_static/image8.png))
-
 
 ### <a name="updating-our-data-model"></a>Aggiornare il modello di dati
 
@@ -287,19 +274,15 @@ Successivamente, è necessario aggiornare il modello di dati per rappresentare l
 4. L'entità di gruppi e scegliere l'opzione di menu **Rinomina**. Modificare il nome del *gruppi* entità *gruppo* (singolare).
 5. Fare doppio clic su proprietà di navigazione i gruppi che viene visualizzato nella parte inferiore dell'entità Contact. Modificare il nome del *gruppi* proprietà di navigazione *gruppo* (singolare).
 
-
 [![Aggiornamento di un modello di Entity Framework dal database](iteration-6-use-test-driven-development-cs/_static/image5.jpg)](iteration-6-use-test-driven-development-cs/_static/image9.png)
 
 **Figura 05**: Aggiornamento di un modello di Entity Framework dal database ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-6-use-test-driven-development-cs/_static/image10.png))
 
-
 Dopo aver completato questi passaggi, il modello di dati rappresenta sia i contatti e gruppi di tabelle. La finestra di progettazione entità deve visualizzare entrambe le entità (vedere la figura 6).
-
 
 [![Finestra di progettazione entità visualizzando Group e Contact](iteration-6-use-test-driven-development-cs/_static/image6.jpg)](iteration-6-use-test-driven-development-cs/_static/image11.png)
 
 **Figura 06**: Finestra di progettazione entità visualizzando Group e Contact ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-6-use-test-driven-development-cs/_static/image12.png))
-
 
 ### <a name="creating-our-repository-classes"></a>Creare le classi di Repository
 
@@ -328,11 +311,9 @@ Applicazione MVC ASP.NET quando si usa il motore di visualizzazione ASP.NET pred
 - Views\Group\Index.aspx - Visualizza l'elenco di gruppi di contatto
 - Views\Group\Delete.aspx - modulo di conferma viene visualizzato per l'eliminazione di un gruppo di contatti
 
-
 [![La visualizzazione dell'indice di gruppo](iteration-6-use-test-driven-development-cs/_static/image7.jpg)](iteration-6-use-test-driven-development-cs/_static/image13.png)
 
 **Figura 07**: La visualizzazione dell'indice di gruppo ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-6-use-test-driven-development-cs/_static/image14.png))
-
 
 È necessario modificare le viste esistenti seguenti in modo che includano i gruppi di contatto:
 
@@ -342,11 +323,9 @@ Applicazione MVC ASP.NET quando si usa il motore di visualizzazione ASP.NET pred
 
 È possibile visualizzare le visualizzazioni modificate esaminando l'applicazione di Visual Studio che accompagna questa esercitazione. Ad esempio, la figura 8 mostra la visualizzazione Index dei contatti.
 
-
 [![La visualizzazione Index dei contatti](iteration-6-use-test-driven-development-cs/_static/image8.jpg)](iteration-6-use-test-driven-development-cs/_static/image15.png)
 
 **Figura 08**: La visualizzazione dell'indice di contatto ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-6-use-test-driven-development-cs/_static/image16.png))
-
 
 ## <a name="summary"></a>Riepilogo
 

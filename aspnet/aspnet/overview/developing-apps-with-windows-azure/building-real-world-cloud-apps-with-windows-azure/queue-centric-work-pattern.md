@@ -8,12 +8,12 @@ ms.date: 06/12/2014
 ms.assetid: cc1ad51b-40c3-4c68-8620-9aaa0fd1f6cf
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/queue-centric-work-pattern
 msc.type: authoredcontent
-ms.openlocfilehash: 0d6d8375425f3a0cb915c2f7844f6c5191ea4e95
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 9081691207a1a8ccd58e1a93a0be06af15c0b2d0
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59392014"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118721"
 ---
 # <a name="queue-centric-work-pattern-building-real-world-cloud-apps-with-azure"></a>Modello di lavoro incentrato sulle code (creazione di App Cloud funzionanti con Azure)
 
@@ -22,7 +22,6 @@ dal [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitt
 [Download risolverlo Project](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [Scarica l'E-book](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
 > Il **creazione Real World di App Cloud con Azure** eBook si basa su una presentazione sviluppata da Scott Guthrie. Viene illustrato 13 modelli e procedure consigliate che consentono di avere esito positivo lo sviluppo di App web per il cloud. Per informazioni sull'e-book, vedere [capitolo prima](introduction.md).
-
 
 Versioni precedenti, abbiamo visto che con più servizi può comportare un contratto di servizio "composto", in cui contratto di servizio effettivo dell'app è il *prodotto* singoli contratti di servizio. Ad esempio, l'app Fix It Usa siti Web, archiviazione e Database SQL. Se uno di questi servizi non riesce, l'app restituirà un errore all'utente.
 

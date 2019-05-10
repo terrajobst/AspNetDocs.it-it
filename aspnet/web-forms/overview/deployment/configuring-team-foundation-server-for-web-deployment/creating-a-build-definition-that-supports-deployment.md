@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: fe47a018-f6d0-4979-80e7-5b1fa75a5865
 msc.legacyurl: /web-forms/overview/deployment/configuring-team-foundation-server-for-web-deployment/creating-a-build-definition-that-supports-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: 97a60274d9306ea0ee332fcc1ab9e487355dbedb
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: e11c91a824446572aaf0b3bc6954b9b8ffb4eaff
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59384942"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133963"
 ---
 # <a name="creating-a-build-definition-that-supports-deployment"></a>Creazione di una definizione di compilazione che supporta la distribuzione
 
@@ -22,7 +22,6 @@ da [Jason Lee](https://github.com/jrjlee)
 [Scaricare PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Se si desidera eseguire qualsiasi tipo di compilazione in Team Foundation Server (TFS) 2010, è necessario creare una definizione di compilazione all'interno del progetto team. Questo argomento descrive come creare una nuova definizione di compilazione in TFS e come controllare la distribuzione web come parte del processo di compilazione in Team Build.
-
 
 In questo argomento fa parte di una serie di esercitazioni basate su requisiti di distribuzione aziendale di una società fittizia, denominata Fabrikam, Inc. Questa serie di esercitazioni Usa una soluzione di esempio&#x2014;il [soluzione Contact Manager](../web-deployment-in-the-enterprise/the-contact-manager-solution.md)&#x2014;per rappresentare un'applicazione web con un livello di complessità, tra cui un'applicazione ASP.NET MVC 3, una comunicazione Windows realistico Servizio Foundation (WCF) e un progetto di database.
 
@@ -40,7 +39,6 @@ Una definizione di compilazione è il meccanismo che consente di controllare com
 
 > [!NOTE]
 > Per altre informazioni sulle definizioni di compilazione, vedere [definire il processo di compilazione](https://msdn.microsoft.com/library/ms181715.aspx).
-
 
 In questo argomento illustrerà come creare una definizione di compilazione che usa integrazione continua, in modo che viene attivata una compilazione quando uno sviluppatore archivia il nuovo contenuto. Se la compilazione ha esito positivo, il servizio di compilazione esegue un file di progetto personalizzati per distribuire la soluzione in un ambiente di test.
 
@@ -60,7 +58,6 @@ Nella sezione successiva illustra come implementare questo processo creando una 
 
 > [!NOTE]
 > Questa procedura&#x2014;in cui automatizzata un singolo processo di build, test e distribuisce una soluzione&#x2014;è probabile che sia più adatto alla distribuzione in ambienti di test. Per gli ambienti di staging e produzione si è molto più probabile che vuole distribuire il contenuto da una compilazione precedente che già verificato e convalidato in un ambiente di test. Questo approccio è descritto nell'argomento successivo [distribuzione di una compilazione specifica](deploying-a-specific-build.md).
-
 
 ### <a name="who-performs-this-procedure"></a>Chi esegue questa procedura?
 
@@ -142,7 +139,6 @@ A questo punto, è possibile risolvere errori di compilazione. Se si fa doppio c
 
 > [!NOTE]
 > Le compilazioni che eseguono la logica di distribuzione sono potrebbe non riuscire fino a quando non si hanno concesso le autorizzazioni necessarie nell'ambiente di destinazione a server di compilazione. Per altre informazioni, vedere [configurazione delle autorizzazioni per la distribuzione di Team Build](configuring-permissions-for-team-build-deployment.md).
-
 
 ## <a name="monitor-the-build-process"></a>Monitorare il processo di compilazione
 

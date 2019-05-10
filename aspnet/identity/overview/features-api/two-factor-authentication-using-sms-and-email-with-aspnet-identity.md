@@ -9,12 +9,12 @@ ms.assetid: 053e23c4-13c9-40fa-87cb-3e9b0823b31e
 ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/features-api/two-factor-authentication-using-sms-and-email-with-aspnet-identity
 msc.type: authoredcontent
-ms.openlocfilehash: c41fc06ad98665f7d48efde030c1341b06e49dd0
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 4ca9c141b0b48acf2c775a083398d3fb66b51cc2
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59395291"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65121416"
 ---
 # <a name="two-factorauthentication-using-sms-and-email-with-aspnet-identity"></a>Autenticazione a due fattori tramite SMS e posta elettronica con ASP.NET Identity
 
@@ -23,7 +23,6 @@ dal [Hao Kung](https://github.com/HaoK), [Pranav Rastogi](https://github.com/rus
 > Questa esercitazione illustrerà come configurare l'autenticazione a due fattori (2FA) tramite SMS e posta elettronica.
 > 
 > Questo articolo è stato scritto da Rick Anderson ([@RickAndMSFT](https://twitter.com/#!/RickAndMSFT)), Pranav Rastogi ([@rustd](https://twitter.com/rustd)), Hao Kung e Suhas Joshi. L'esempio di NuGet è stato scritto principalmente da Hao Kung.
-
 
 In questo argomento illustra quanto segue:
 
@@ -43,7 +42,6 @@ In questa sezione si userà NuGet per scaricare un esempio che collaboreremo con
 > [!NOTE]
 > Avviso: È necessario installare Visual Studio [2013 Update 2](https://go.microsoft.com/fwlink/?LinkId=390521) per completare questa esercitazione.
 
-
 1. Creare una nuova ***vuoto*** progetto Web ASP.NET.
 2. Nella Console di gestione pacchetti immettere quanto segue i comandi seguenti:  
   
@@ -58,7 +56,6 @@ In questa sezione si userà NuGet per scaricare un esempio che collaboreremo con
 
 > [!NOTE]
 > Avviso: Se si modifica una qualsiasi delle impostazioni di sicurezza in questo esempio, le app di produzione dovrà essere sottoposto a un controllo di sicurezza che effettua chiamate in modo esplicito le modifiche apportate.
-
 
 <a id="SMS"></a>
 
@@ -212,7 +209,6 @@ Si noti il `SignInAsync` deve essere chiamato perché abilitare 2FA viene apport
 
 > [!NOTE]
 > I codici 2FA vengono generati usando [basati sul tempo algoritmo Password monouso](http://en.wikipedia.org/wiki/Time-based_One-time_Password_Algorithm) e i codici sono validi per sei minuti. Se si hanno più di sei minuti per immettere il codice, si riceverà un messaggio di errore di codice non valido.
-
 
 <a id="combine"></a>
 

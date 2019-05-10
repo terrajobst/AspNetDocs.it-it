@@ -8,12 +8,12 @@ ms.date: 10/16/2008
 ms.assetid: 37a1ebae-8773-408f-8645-d21da7ff9ae1
 msc.legacyurl: /mvc/overview/older-versions-1/views/passing-data-to-view-master-pages-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 7de5a1545ee59e671058f09789ce69d5062d3655
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ebf670fc0d8cf2cfd7df01d07d4119122b61a6a1
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59380977"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130412"
 ---
 # <a name="passing-data-to-view-master-pages-vb"></a>Passaggio di dati a pagine master di visualizzazione (VB)
 
@@ -23,7 +23,6 @@ by [Microsoft](https://github.com/microsoft)
 
 > L'obiettivo di questa esercitazione è illustrare come è possibile passare dati da un controller a una pagina master visualizzazione. Si esamineranno due strategie per passare dati a una pagina master di visualizzazione. In primo luogo, illustreremo una pratica soluzione risultante in un'applicazione che è difficile da gestire. Successivamente, esamineremo una soluzione migliore che richiede un po' più di lavoro iniziale ma i risultati in un'applicazione molto più facile da gestire.
 
-
 ## <a name="passing-data-to-view-master-pages"></a>Passaggio di dati a pagine Master di visualizzazione
 
 L'obiettivo di questa esercitazione è illustrare come è possibile passare dati da un controller a una pagina master visualizzazione. Si esamineranno due strategie per passare dati a una pagina master di visualizzazione. In primo luogo, illustreremo una pratica soluzione risultante in un'applicazione che è difficile da gestire. Successivamente, esamineremo una soluzione migliore che richiede un po' più di lavoro iniziale ma i risultati in un'applicazione molto più facile da gestire.
@@ -32,11 +31,9 @@ L'obiettivo di questa esercitazione è illustrare come è possibile passare dati
 
 Si supponga che si compila un'applicazione di database di film e si desidera visualizzare l'elenco delle categorie di film in ogni pagina dell'applicazione (vedere la figura 1). Si supponga inoltre che l'elenco delle categorie di film viene archiviato in una tabella di database. In tal caso, avrebbe senso per recuperare le categorie dal database e il rendering dell'elenco di categorie di film all'interno di una pagina master di visualizzazione.
 
-
 [![Visualizzare le categorie di film in una pagina master di visualizzazione](passing-data-to-view-master-pages-vb/_static/image2.png)](passing-data-to-view-master-pages-vb/_static/image1.png)
 
 **Figura 01**: Visualizzare le categorie di film in una pagina master di visualizzazione ([fare clic per visualizzare l'immagine con dimensioni normali](passing-data-to-view-master-pages-vb/_static/image3.png))
-
 
 Ecco il problema. Modo è possibile recuperare l'elenco delle categorie di film nella pagina master? Si è tentati di chiamare direttamente i metodi delle classi di modello nella pagina master. In altre parole, è tentato di includere il codice per recuperare i dati da destra nella pagina master del database. Tuttavia, ignorando i controller MVC per accedere al database violerebbe netta separazione degli aspetti che corrisponde a uno dei principali vantaggi della creazione di un'applicazione MVC.
 
@@ -58,11 +55,9 @@ Si noti che sia la `Index()` e il `Details()` azioni aggiungere due elementi per
 
 Il `Details()` azione aggiunge anche due chiavi denominate le categorie e filmati. La chiave di categorie, ancora una volta, rappresenta l'elenco delle categorie di film visualizzati dalla pagina master visualizzazione. La chiave di film rappresenta l'elenco di film in una determinata categoria visualizzata nella pagina di visualizzazione dei dettagli (vedere la figura 2).
 
-
 [![La visualizzazione dei dettagli](passing-data-to-view-master-pages-vb/_static/image5.png)](passing-data-to-view-master-pages-vb/_static/image4.png)
 
 **Figura 02**: La visualizzazione dei dettagli ([fare clic per visualizzare l'immagine con dimensioni normali](passing-data-to-view-master-pages-vb/_static/image6.png))
-
 
 La visualizzazione dell'indice è contenuta nel listato 2. Semplicemente scorre l'elenco di film rappresentata dall'elemento di film nei dati di visualizzazione.
 

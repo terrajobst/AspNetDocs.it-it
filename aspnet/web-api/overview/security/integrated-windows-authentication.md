@@ -8,12 +8,12 @@ ms.date: 12/18/2012
 ms.assetid: 71ee4c78-c500-4d1c-b761-b4e161a291b5
 msc.legacyurl: /web-api/overview/security/integrated-windows-authentication
 msc.type: authoredcontent
-ms.openlocfilehash: ce845eb6c914321736d77e989f10344eb7596eba
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: e4f31f191f3c0fabff308ea5dadb0f1d9ce7d448
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59416831"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65125207"
 ---
 # <a name="integrated-windows-authentication"></a>Autenticazione integrata di Windows
 
@@ -27,7 +27,6 @@ L'autenticazione integrata di Windows consente agli utenti di accedere con le pr
 
 > [!NOTE]
 > Se l'applicazione è ospitata in Azure e si dispone di un dominio di Active Directory in locale, prendere in considerazione la federazione di AD locali con Azure Active Directory. In questo modo, gli utenti possono accedere con le proprie credenziali in locale, ma l'autenticazione viene eseguita da Azure AD. Per altre informazioni, vedere [l'autenticazione di Azure](../../../visual-studio/overview/2012/windows-azure-authentication.md).
-
 
 Per creare un'applicazione che usa l'autenticazione Windows integrata, selezionare il modello "Applicazione Intranet" nella creazione guidata progetto MVC 4. Questo modello di progetto inserisce la seguente impostazione nel file Web. config:
 

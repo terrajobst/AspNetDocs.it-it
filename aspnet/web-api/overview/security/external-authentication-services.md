@@ -1,6 +1,6 @@
 ---
 uid: web-api/overview/security/external-authentication-services
-title: Servizi di autenticazione esterno con l'API Web ASP.NET (C#) | Microsoft Docs
+title: Servizi di autenticazione esterno con l'API Web ASP.NET (c#) | Microsoft Docs
 author: rmcmurray
 description: Viene descritto l'utilizzo di servizi di autenticazione esterni nell'API Web ASP.NET.
 ms.author: riande
@@ -8,14 +8,14 @@ ms.date: 01/28/2019
 ms.assetid: 3bb8eb15-b518-44f5-a67d-a27e051aedc6
 msc.legacyurl: /web-api/overview/security/external-authentication-services
 msc.type: authoredcontent
-ms.openlocfilehash: de9b64e6c582059ec66ab352f60773f50af7b1ff
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b2571552a3f8040ff42bfa0a9fa48981f71a1e4b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57064918"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133581"
 ---
-# <a name="external-authentication-services-with-aspnet-web-api-c"></a>Servizi di autenticazione esterno con l'API Web ASP.NET (C#)
+# <a name="external-authentication-services-with-aspnet-web-api-c"></a>Servizi di autenticazione esterno con l'API Web ASP.NET (c#)
 
 Visual Studio 2017 e ASP.NET 4.7.2 espandere le opzioni di sicurezza per [applicazioni a pagina singola](../../../single-page-application/index.md) (SPA) e [API Web](../../index.md) servizi per l'integrazione con servizi di autenticazione esterni, che includono numerosi OAuth/OpenID e servizi di autenticazione dei social media: Gli account Microsoft, Twitter, Facebook e Google.  
 
@@ -73,7 +73,6 @@ Gli esempi in questa procedura dettagliata verranno illustrato come configurare 
 > [!NOTE]
 > Se necessario, si potrebbe essere necessario aggiungere il nome di dominio completo per le impostazioni per il servizio di autenticazione esterni. Questo requisito si basa sui vincoli di sicurezza per alcuni servizi di autenticazione esterno che richiedono il FQDN nelle impostazioni dell'applicazione che corrisponde a quello utilizzato dal client. (I passaggi di questa procedura variano notevolmente per ogni servizio di autenticazione esterni, sarà necessario consultare la documentazione per ogni servizio di autenticazione esterni per vedere se questa operazione è necessaria e su come configurare queste impostazioni). Se è necessario configurare IIS Express per utilizzare un nome di dominio completo per questo ambiente di test, vedere la [configurazione di IIS Express per utilizzare un nome di dominio completo](#FQDN) sezione più avanti in questa procedura dettagliata.
 
-
 <a id="SAMPLE"></a>
 ## <a name="create-a-sample-web-application"></a>Creare un'applicazione Web di esempio
 
@@ -83,7 +82,7 @@ Avviare Visual Studio 2017 e selezionare **nuovo progetto** dalla pagina inizial
 
 <!-- [![](external-authentication-services/_static/image6.png "Click to Expand the Image")](external-authentication-services/_static/image5.png) -->
 
-Quando la **nuovo progetto** verrà visualizzata la finestra di dialogo, selezionare **installati** ed espandere **Visual C#** . Sotto **Visual C#**, selezionare **Web**. Nell'elenco dei modelli di progetto, selezionare **applicazione Web ASP.NET (.Net Framework)**. Immettere un nome per il progetto e fare clic su **OK**.
+Quando la **nuovo progetto** verrà visualizzata la finestra di dialogo, selezionare **installati** ed espandere **Visual C#** . Sotto **Visual c#**, selezionare **Web**. Nell'elenco dei modelli di progetto, selezionare **applicazione Web ASP.NET (.Net Framework)**. Immettere un nome per il progetto e fare clic su **OK**.
 
 [![](external-authentication-services/_static/image71.png "Fare clic per espandere l'immagine")](external-authentication-services/_static/image71.png)
 
@@ -139,7 +138,6 @@ Una volta ottenuto l'ID applicazione e la chiave privata, usare la procedura seg
 ## <a name="enabling-google-authentication"></a>Abilitazione dell'autenticazione di Google
 
 Usa Google richiede l'autenticazione è possibile creare un account per sviluppatore di Google e il progetto richiederà un ID applicazione e la chiave privata da Google per il funzionamento. Per informazioni sulla creazione di un account per sviluppatore di Google e come ottenere l'ID applicazione e la chiave privata, vedere [ https://developers.google.com ](https://developers.google.com).
-
 
 Per abilitare l'autenticazione di Google per l'applicazione web, procedere come segue:
 

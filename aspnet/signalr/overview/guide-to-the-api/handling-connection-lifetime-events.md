@@ -8,15 +8,14 @@ ms.date: 01/15/2019
 ms.assetid: 03960de2-8d95-4444-9169-4426dcc64913
 msc.legacyurl: /signalr/overview/guide-to-the-api/handling-connection-lifetime-events
 msc.type: authoredcontent
-ms.openlocfilehash: 9e6b0b3b86839efa393659531d8b74770226f383
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 5bdf20549fccab5d644e35fdf4ce351540c8620d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59401465"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65119890"
 ---
 # <a name="understanding-and-handling-connection-lifetime-events-in-signalr"></a>Comprensione e gestione degli eventi di durata della connessione in SignalR
-
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
 
@@ -148,7 +147,6 @@ Alcuni ambienti di rete deliberatamente chiudono le connessioni inattive e un'al
 >
 > **Importante**: Non è garantita la sequenza di eventi descritte di seguito. SignalR esegue ogni tentativo di generare eventi di durata connessione in modo prevedibile in base a questo schema, ma esistono molte varianti degli eventi di rete e molti modi in cui Framework di comunicazione sottostante, ad esempio trasporto API gestirle. Ad esempio, il `Reconnected` evento potrebbe non essere generato quando il client si riconnette, o `OnConnected` gestore nel server è possibile eseguire quando il tentativo di stabilire una connessione ha esito negativo. In questo argomento descrive solo gli effetti che può essere prodotto generalmente da determinate circostanze tipiche.
 
-
 <a id="clientdisconnect"></a>
 
 ### <a name="client-disconnection-scenarios"></a>Scenari di disconnessione client
@@ -247,7 +245,6 @@ SignalR versione 2 non è un server incorporato API per la disconnessione dei cl
 
 > [!WARNING]
 > Security - questo metodo per la disconnessione dei client né l'API predefinito proposto si occuperanno lo scenario di attacco client che eseguono codice dannoso, poiché è stato possibile riconnettere i client o il codice di attacco potrebbe rimuovere il `stopClient` metodo o modifica cosa. Consente di implementare la protezione delle informazioni sullo stato di tipo denial of service (DOS). è non in framework o il livello del server, ma piuttosto nel front-end dell'infrastruttura.
-
 
 <a id="detectingreasonfordisconnection"></a>
 ## <a name="detecting-the-reason-for-a-disconnection"></a>Rilevare il motivo di una disconnessione
