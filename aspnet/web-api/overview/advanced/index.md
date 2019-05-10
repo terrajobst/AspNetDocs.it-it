@@ -9,23 +9,22 @@ ms.custom: seoapril2019
 ms.assetid: 7404a0f1-52f7-410c-abd0-c96bab52d217
 msc.legacyurl: /web-api/overview/advanced
 msc.type: chapter
-ms.openlocfilehash: 2cec6138ffcd6019eae23c82abda2b96d7b0b625
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 546c7b0d868fcd7a3f3457d623b69eaefa646175
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59383460"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65126173"
 ---
-# <a name="advanced-topics-for-aspnet-web-api"></a><span data-ttu-id="f3c08-103">Argomenti avanzati per l'API Web ASP.NET</span><span class="sxs-lookup"><span data-stu-id="f3c08-103">Advanced Topics for ASP.NET Web API</span></span>
+# <a name="advanced-topics-for-aspnet-web-api"></a><span data-ttu-id="0cb52-103">Argomenti avanzati per l'API Web ASP.NET</span><span class="sxs-lookup"><span data-stu-id="0cb52-103">Advanced Topics for ASP.NET Web API</span></span>
 
-> <span data-ttu-id="f3c08-104">Argomenti per lo sviluppo di API Web ASP.NET più avanzati, dopo avere appreso le nozioni di base.</span><span class="sxs-lookup"><span data-stu-id="f3c08-104">More advanced topics for ASP.NET Web API development, after you've learned the basics.</span></span>
+> <span data-ttu-id="0cb52-104">Argomenti per lo sviluppo di API Web ASP.NET più avanzati, dopo avere appreso le nozioni di base.</span><span class="sxs-lookup"><span data-stu-id="0cb52-104">More advanced topics for ASP.NET Web API development, after you've learned the basics.</span></span>
 
-
-- [<span data-ttu-id="f3c08-105">Configurazione dell'API Web 2</span><span class="sxs-lookup"><span data-stu-id="f3c08-105">Configuring Web API 2</span></span>](configuring-aspnet-web-api.md)
-- [<span data-ttu-id="f3c08-106">Inserimento delle dipendenze nell'API Web 2</span><span class="sxs-lookup"><span data-stu-id="f3c08-106">Dependency Injection in Web API 2</span></span>](dependency-injection.md)
-- [<span data-ttu-id="f3c08-107">Chiamata di un'API Web da un client .NET (C#)</span><span class="sxs-lookup"><span data-stu-id="f3c08-107">Calling a Web API From a .NET Client (C#)</span></span>](calling-a-web-api-from-a-net-client.md)
-- [<span data-ttu-id="f3c08-108">Gestori di messaggi HTTP nell'API Web</span><span class="sxs-lookup"><span data-stu-id="f3c08-108">HTTP Message Handlers in Web API</span></span>](http-message-handlers.md)
-- [<span data-ttu-id="f3c08-109">Gestori di messaggi HttpClient nell'API Web</span><span class="sxs-lookup"><span data-stu-id="f3c08-109">HttpClient Message Handlers in Web API</span></span>](httpclient-message-handlers.md)
-- [<span data-ttu-id="f3c08-110">L'invio dei dati di Form HTML nell'API Web: Dati form-urlencoded</span><span class="sxs-lookup"><span data-stu-id="f3c08-110">Sending HTML Form Data in Web API: Form-urlencoded Data</span></span>](sending-html-form-data-part-1.md)
-- [<span data-ttu-id="f3c08-111">L'invio dei dati di Form HTML nell'API Web: Caricamento di file e MIME Multipart</span><span class="sxs-lookup"><span data-stu-id="f3c08-111">Sending HTML Form Data in Web API: File Upload and Multipart MIME</span></span>](sending-html-form-data-part-2.md)
-- [<span data-ttu-id="f3c08-112">Cookie HTTP nell'API Web ASP.NET</span><span class="sxs-lookup"><span data-stu-id="f3c08-112">HTTP Cookies in ASP.NET Web API</span></span>](http-cookies.md)
+- [<span data-ttu-id="0cb52-105">Configurazione dell'API Web 2</span><span class="sxs-lookup"><span data-stu-id="0cb52-105">Configuring Web API 2</span></span>](configuring-aspnet-web-api.md)
+- [<span data-ttu-id="0cb52-106">Inserimento delle dipendenze nell'API Web 2</span><span class="sxs-lookup"><span data-stu-id="0cb52-106">Dependency Injection in Web API 2</span></span>](dependency-injection.md)
+- [<span data-ttu-id="0cb52-107">Chiamata di un'API Web da un client .NET (C#)</span><span class="sxs-lookup"><span data-stu-id="0cb52-107">Calling a Web API From a .NET Client (C#)</span></span>](calling-a-web-api-from-a-net-client.md)
+- [<span data-ttu-id="0cb52-108">Gestori di messaggi HTTP nell'API Web</span><span class="sxs-lookup"><span data-stu-id="0cb52-108">HTTP Message Handlers in Web API</span></span>](http-message-handlers.md)
+- [<span data-ttu-id="0cb52-109">Gestori di messaggi HttpClient nell'API Web</span><span class="sxs-lookup"><span data-stu-id="0cb52-109">HttpClient Message Handlers in Web API</span></span>](httpclient-message-handlers.md)
+- [<span data-ttu-id="0cb52-110">L'invio dei dati di Form HTML nell'API Web: Dati form-urlencoded</span><span class="sxs-lookup"><span data-stu-id="0cb52-110">Sending HTML Form Data in Web API: Form-urlencoded Data</span></span>](sending-html-form-data-part-1.md)
+- [<span data-ttu-id="0cb52-111">L'invio dei dati di Form HTML nell'API Web: Caricamento di file e MIME Multipart</span><span class="sxs-lookup"><span data-stu-id="0cb52-111">Sending HTML Form Data in Web API: File Upload and Multipart MIME</span></span>](sending-html-form-data-part-2.md)
+- [<span data-ttu-id="0cb52-112">Cookie HTTP nell'API Web ASP.NET</span><span class="sxs-lookup"><span data-stu-id="0cb52-112">HTTP Cookies in ASP.NET Web API</span></span>](http-cookies.md)

@@ -8,51 +8,50 @@ ms.date: 06/02/2008
 ms.assetid: 2bfbc5cc-f942-44b7-a62d-a29520f1da9a
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/changing-an-animation-using-client-side-code-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 8bdee58aa04e1c8217c2a727b96aa8b239fe1aca
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 0ec519c8920e66e8b9081d53b4247ab517d819f5
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59395608"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132232"
 ---
-# <a name="changing-an-animation-using-client-side-code-c"></a><span data-ttu-id="9fd21-104">Modifica di un'animazione tramite codice lato client (C#)</span><span class="sxs-lookup"><span data-stu-id="9fd21-104">Changing an Animation Using Client-Side Code (C#)</span></span>
+# <a name="changing-an-animation-using-client-side-code-c"></a><span data-ttu-id="42313-104">Modifica di un'animazione tramite codice lato client (C#)</span><span class="sxs-lookup"><span data-stu-id="42313-104">Changing an Animation Using Client-Side Code (C#)</span></span>
 
-<span data-ttu-id="9fd21-105">da [Christian Wenz](https://github.com/wenz)</span><span class="sxs-lookup"><span data-stu-id="9fd21-105">by [Christian Wenz](https://github.com/wenz)</span></span>
+<span data-ttu-id="42313-105">da [Christian Wenz](https://github.com/wenz)</span><span class="sxs-lookup"><span data-stu-id="42313-105">by [Christian Wenz](https://github.com/wenz)</span></span>
 
-<span data-ttu-id="9fd21-106">[Scaricare il codice](http://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation11.cs.zip) o [Scarica il PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation11CS.pdf)</span><span class="sxs-lookup"><span data-stu-id="9fd21-106">[Download Code](http://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation11.cs.zip) or [Download PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation11CS.pdf)</span></span>
+<span data-ttu-id="42313-106">[Scaricare il codice](http://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation11.cs.zip) o [Scarica il PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation11CS.pdf)</span><span class="sxs-lookup"><span data-stu-id="42313-106">[Download Code](http://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation11.cs.zip) or [Download PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation11CS.pdf)</span></span>
 
-> <span data-ttu-id="9fd21-107">Il controllo di animazione in ASP.NET AJAX Control Toolkit non è semplicemente un controllo, ma un intero framework aggiungere animazioni a un controllo.</span><span class="sxs-lookup"><span data-stu-id="9fd21-107">The Animation control in the ASP.NET AJAX Control Toolkit is not just a control but a whole framework to add animations to a control.</span></span> <span data-ttu-id="9fd21-108">L'animazione può essere modificata anche utilizzando codice JavaScript lato client personalizzato.</span><span class="sxs-lookup"><span data-stu-id="9fd21-108">The animation can also be changed using custom client-side JavaScript code.</span></span>
+> <span data-ttu-id="42313-107">Il controllo di animazione in ASP.NET AJAX Control Toolkit non è semplicemente un controllo, ma un intero framework aggiungere animazioni a un controllo.</span><span class="sxs-lookup"><span data-stu-id="42313-107">The Animation control in the ASP.NET AJAX Control Toolkit is not just a control but a whole framework to add animations to a control.</span></span> <span data-ttu-id="42313-108">L'animazione può essere modificata anche utilizzando codice JavaScript lato client personalizzato.</span><span class="sxs-lookup"><span data-stu-id="42313-108">The animation can also be changed using custom client-side JavaScript code.</span></span>
 
+## <a name="overview"></a><span data-ttu-id="42313-109">Panoramica</span><span class="sxs-lookup"><span data-stu-id="42313-109">Overview</span></span>
 
-## <a name="overview"></a><span data-ttu-id="9fd21-109">Panoramica</span><span class="sxs-lookup"><span data-stu-id="9fd21-109">Overview</span></span>
+<span data-ttu-id="42313-110">Il controllo di animazione in ASP.NET AJAX Control Toolkit non è semplicemente un controllo, ma un intero framework aggiungere animazioni a un controllo.</span><span class="sxs-lookup"><span data-stu-id="42313-110">The Animation control in the ASP.NET AJAX Control Toolkit is not just a control but a whole framework to add animations to a control.</span></span> <span data-ttu-id="42313-111">L'animazione può essere modificata anche utilizzando codice JavaScript lato client personalizzato.</span><span class="sxs-lookup"><span data-stu-id="42313-111">The animation can also be changed using custom client-side JavaScript code.</span></span>
 
-<span data-ttu-id="9fd21-110">Il controllo di animazione in ASP.NET AJAX Control Toolkit non è semplicemente un controllo, ma un intero framework aggiungere animazioni a un controllo.</span><span class="sxs-lookup"><span data-stu-id="9fd21-110">The Animation control in the ASP.NET AJAX Control Toolkit is not just a control but a whole framework to add animations to a control.</span></span> <span data-ttu-id="9fd21-111">L'animazione può essere modificata anche utilizzando codice JavaScript lato client personalizzato.</span><span class="sxs-lookup"><span data-stu-id="9fd21-111">The animation can also be changed using custom client-side JavaScript code.</span></span>
+## <a name="steps"></a><span data-ttu-id="42313-112">Passaggi</span><span class="sxs-lookup"><span data-stu-id="42313-112">Steps</span></span>
 
-## <a name="steps"></a><span data-ttu-id="9fd21-112">Passaggi</span><span class="sxs-lookup"><span data-stu-id="9fd21-112">Steps</span></span>
-
-<span data-ttu-id="9fd21-113">Prima di tutto, includere il `ScriptManager` nella pagina; quindi, la libreria ASP.NET AJAX viene caricata, rendendo possibile usare il Toolkit di controllo:</span><span class="sxs-lookup"><span data-stu-id="9fd21-113">First of all, include the `ScriptManager` in the page; then, the ASP.NET AJAX library is loaded, making it possible to use the Control Toolkit:</span></span>
+<span data-ttu-id="42313-113">Prima di tutto, includere il `ScriptManager` nella pagina; quindi, la libreria ASP.NET AJAX viene caricata, rendendo possibile usare il Toolkit di controllo:</span><span class="sxs-lookup"><span data-stu-id="42313-113">First of all, include the `ScriptManager` in the page; then, the ASP.NET AJAX library is loaded, making it possible to use the Control Toolkit:</span></span>
 
 [!code-aspx[Main](changing-an-animation-using-client-side-code-cs/samples/sample1.aspx)]
 
-<span data-ttu-id="9fd21-114">Verrà applicata l'animazione a un pannello del testo che presenta un aspetto simile al seguente:</span><span class="sxs-lookup"><span data-stu-id="9fd21-114">The animation will be applied to a panel of text which looks like this:</span></span>
+<span data-ttu-id="42313-114">Verrà applicata l'animazione a un pannello del testo che presenta un aspetto simile al seguente:</span><span class="sxs-lookup"><span data-stu-id="42313-114">The animation will be applied to a panel of text which looks like this:</span></span>
 
 [!code-aspx[Main](changing-an-animation-using-client-side-code-cs/samples/sample2.aspx)]
 
-<span data-ttu-id="9fd21-115">Nella classe CSS associata per il pannello, definire un colore di sfondo interessante e anche impostare una larghezza fissa per il pannello:</span><span class="sxs-lookup"><span data-stu-id="9fd21-115">In the associated CSS class for the panel, define a nice background color and also set a fixed width for the panel:</span></span>
+<span data-ttu-id="42313-115">Nella classe CSS associata per il pannello, definire un colore di sfondo interessante e anche impostare una larghezza fissa per il pannello:</span><span class="sxs-lookup"><span data-stu-id="42313-115">In the associated CSS class for the panel, define a nice background color and also set a fixed width for the panel:</span></span>
 
 [!code-css[Main](changing-an-animation-using-client-side-code-cs/samples/sample3.css)]
 
-<span data-ttu-id="9fd21-116">L'animazione effettivo viene avviato da un pulsante HTML:</span><span class="sxs-lookup"><span data-stu-id="9fd21-116">The actual animation is launched by an HTML button:</span></span>
+<span data-ttu-id="42313-116">L'animazione effettivo viene avviato da un pulsante HTML:</span><span class="sxs-lookup"><span data-stu-id="42313-116">The actual animation is launched by an HTML button:</span></span>
 
 [!code-aspx[Main](changing-an-animation-using-client-side-code-cs/samples/sample4.aspx)]
 
-<span data-ttu-id="9fd21-117">Quindi, aggiungere il `AnimationExtender` alla pagina, fornendo un' `ID`, il `TargetControlID` attributo e l'obbligatoria `runat="server"`:</span><span class="sxs-lookup"><span data-stu-id="9fd21-117">Then, add the `AnimationExtender` to the page, providing an `ID`, the `TargetControlID` attribute and the obligatory `runat="server"`:</span></span>
+<span data-ttu-id="42313-117">Quindi, aggiungere il `AnimationExtender` alla pagina, fornendo un' `ID`, il `TargetControlID` attributo e l'obbligatoria `runat="server"`:</span><span class="sxs-lookup"><span data-stu-id="42313-117">Then, add the `AnimationExtender` to the page, providing an `ID`, the `TargetControlID` attribute and the obligatory `runat="server"`:</span></span>
 
 [!code-aspx[Main](changing-an-animation-using-client-side-code-cs/samples/sample5.aspx)]
 
-<span data-ttu-id="9fd21-118">Si noti che è presente alcun `<Animations>` nodo all'interno di `AnimationExtender` controllo.</span><span class="sxs-lookup"><span data-stu-id="9fd21-118">Note that there is no `<Animations>` node within the `AnimationExtender` control.</span></span> <span data-ttu-id="9fd21-119">Il codice JavaScript personalizzato viene utilizzato per fornire le animazioni da utilizzare con il controllo.</span><span class="sxs-lookup"><span data-stu-id="9fd21-119">Custom JavaScript code is used to provide the animations to be used with the control.</span></span>
+<span data-ttu-id="42313-118">Si noti che è presente alcun `<Animations>` nodo all'interno di `AnimationExtender` controllo.</span><span class="sxs-lookup"><span data-stu-id="42313-118">Note that there is no `<Animations>` node within the `AnimationExtender` control.</span></span> <span data-ttu-id="42313-119">Il codice JavaScript personalizzato viene utilizzato per fornire le animazioni da utilizzare con il controllo.</span><span class="sxs-lookup"><span data-stu-id="42313-119">Custom JavaScript code is used to provide the animations to be used with the control.</span></span>
 
-<span data-ttu-id="9fd21-120">Come con l'API del server di `AnimationExtender`, non esiste un modo semplice per assegnare un'animazione al dispositivo extender ancora.</span><span class="sxs-lookup"><span data-stu-id="9fd21-120">As with the server API of `AnimationExtender`, there is no easy way to assign an animation to the extender yet.</span></span> <span data-ttu-id="9fd21-121">Tuttavia il dispositivo extender esporre diversi metodi per leggere e scrivere le animazioni registrato con i vari eventi (`OnClick`, `OnLoad`e così via).</span><span class="sxs-lookup"><span data-stu-id="9fd21-121">However the extender does expose several methods to read and write animations registered with the various events (`OnClick`, `OnLoad`, and so on).</span></span> <span data-ttu-id="9fd21-122">Ecco alcuni esempi:</span><span class="sxs-lookup"><span data-stu-id="9fd21-122">Here are some examples:</span></span>
+<span data-ttu-id="42313-120">Come con l'API del server di `AnimationExtender`, non esiste un modo semplice per assegnare un'animazione al dispositivo extender ancora.</span><span class="sxs-lookup"><span data-stu-id="42313-120">As with the server API of `AnimationExtender`, there is no easy way to assign an animation to the extender yet.</span></span> <span data-ttu-id="42313-121">Tuttavia il dispositivo extender esporre diversi metodi per leggere e scrivere le animazioni registrato con i vari eventi (`OnClick`, `OnLoad`e così via).</span><span class="sxs-lookup"><span data-stu-id="42313-121">However the extender does expose several methods to read and write animations registered with the various events (`OnClick`, `OnLoad`, and so on).</span></span> <span data-ttu-id="42313-122">Ecco alcuni esempi:</span><span class="sxs-lookup"><span data-stu-id="42313-122">Here are some examples:</span></span>
 
 - `get_OnClick()`
 - `set_OnClick()`
@@ -60,22 +59,21 @@ ms.locfileid: "59395608"
 - `set_OnLoad()`
 - `...`
 
-<span data-ttu-id="9fd21-123">Il formato del valore restituito del `get_*()` funzioni e il formato dell'argomento per il `set_*()` funzioni è una stringa JSON, che fornisce una rappresentazione di oggetto di quello che sarebbe il markup XML.</span><span class="sxs-lookup"><span data-stu-id="9fd21-123">The format of the return value of the `get_*()` functions and the format of the argument for the `set_*()` functions is a JSON string, providing an object representation of what the XML markup would be.</span></span> <span data-ttu-id="9fd21-124">Attualmente, non è possibile passare un oggetto, ma è possibile leggere un oggetto da una determinata animazione (`get_OnXXXBehavior()` metodi).</span><span class="sxs-lookup"><span data-stu-id="9fd21-124">Currently, there is no way to pass an object in, but it is possible to read an object from a given animation (`get_OnXXXBehavior()` methods).</span></span>
+<span data-ttu-id="42313-123">Il formato del valore restituito del `get_*()` funzioni e il formato dell'argomento per il `set_*()` funzioni è una stringa JSON, che fornisce una rappresentazione di oggetto di quello che sarebbe il markup XML.</span><span class="sxs-lookup"><span data-stu-id="42313-123">The format of the return value of the `get_*()` functions and the format of the argument for the `set_*()` functions is a JSON string, providing an object representation of what the XML markup would be.</span></span> <span data-ttu-id="42313-124">Attualmente, non è possibile passare un oggetto, ma è possibile leggere un oggetto da una determinata animazione (`get_OnXXXBehavior()` metodi).</span><span class="sxs-lookup"><span data-stu-id="42313-124">Currently, there is no way to pass an object in, but it is possible to read an object from a given animation (`get_OnXXXBehavior()` methods).</span></span>
 
-<span data-ttu-id="9fd21-125">Di seguito è una stringa JSON (senza le virgolette di delimitazione e formattate) che rappresenta un'animazione attivata dal pulsante, ma l'animazione del pannello riadattarlo e dissolvenza in uscita nello stesso momento:</span><span class="sxs-lookup"><span data-stu-id="9fd21-125">Here is a JSON string (without the delimiting quotes and formatted nicely) representing an animation triggered by the button, but animating the panel by resizing it and fading it out at the same time:</span></span>
+<span data-ttu-id="42313-125">Di seguito è una stringa JSON (senza le virgolette di delimitazione e formattate) che rappresenta un'animazione attivata dal pulsante, ma l'animazione del pannello riadattarlo e dissolvenza in uscita nello stesso momento:</span><span class="sxs-lookup"><span data-stu-id="42313-125">Here is a JSON string (without the delimiting quotes and formatted nicely) representing an animation triggered by the button, but animating the panel by resizing it and fading it out at the same time:</span></span>
 
 [!code-json[Main](changing-an-animation-using-client-side-code-cs/samples/sample6.json)]
 
-<span data-ttu-id="9fd21-126">Il codice JavaScript seguente assegna questa descripting JSON per il `OnClick` animazione dell'oggetto extender corrente e lo esegue:</span><span class="sxs-lookup"><span data-stu-id="9fd21-126">The following JavaScript code assigns this JSON descripting to the `OnClick` animation of the current extender and runs it:</span></span>
+<span data-ttu-id="42313-126">Il codice JavaScript seguente assegna questa descripting JSON per il `OnClick` animazione dell'oggetto extender corrente e lo esegue:</span><span class="sxs-lookup"><span data-stu-id="42313-126">The following JavaScript code assigns this JSON descripting to the `OnClick` animation of the current extender and runs it:</span></span>
 
 [!code-html[Main](changing-an-animation-using-client-side-code-cs/samples/sample7.html)]
 
+<span data-ttu-id="42313-127">[![L'animazione viene eseguita immediatamente, senza un clic del mouse (e con markup minimo)](changing-an-animation-using-client-side-code-cs/_static/image2.png)](changing-an-animation-using-client-side-code-cs/_static/image1.png)</span><span class="sxs-lookup"><span data-stu-id="42313-127">[![The animation runs immediately, without a mouse click (and with very little markup)](changing-an-animation-using-client-side-code-cs/_static/image2.png)](changing-an-animation-using-client-side-code-cs/_static/image1.png)</span></span>
 
-<span data-ttu-id="9fd21-127">[![L'animazione viene eseguita immediatamente, senza un clic del mouse (e con markup minimo)](changing-an-animation-using-client-side-code-cs/_static/image2.png)](changing-an-animation-using-client-side-code-cs/_static/image1.png)</span><span class="sxs-lookup"><span data-stu-id="9fd21-127">[![The animation runs immediately, without a mouse click (and with very little markup)](changing-an-animation-using-client-side-code-cs/_static/image2.png)](changing-an-animation-using-client-side-code-cs/_static/image1.png)</span></span>
-
-<span data-ttu-id="9fd21-128">L'animazione viene eseguita immediatamente, senza un clic del mouse (e con markup minimo) ([fare clic per visualizzare l'immagine con dimensioni normali](changing-an-animation-using-client-side-code-cs/_static/image3.png))</span><span class="sxs-lookup"><span data-stu-id="9fd21-128">The animation runs immediately, without a mouse click (and with very little markup) ([Click to view full-size image](changing-an-animation-using-client-side-code-cs/_static/image3.png))</span></span>
+<span data-ttu-id="42313-128">L'animazione viene eseguita immediatamente, senza un clic del mouse (e con markup minimo) ([fare clic per visualizzare l'immagine con dimensioni normali](changing-an-animation-using-client-side-code-cs/_static/image3.png))</span><span class="sxs-lookup"><span data-stu-id="42313-128">The animation runs immediately, without a mouse click (and with very little markup) ([Click to view full-size image](changing-an-animation-using-client-side-code-cs/_static/image3.png))</span></span>
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="9fd21-129">[Precedente](executing-animations-using-client-side-code-cs.md)
-> [Successivo](animating-an-updatepanel-control-cs.md)</span><span class="sxs-lookup"><span data-stu-id="9fd21-129">[Previous](executing-animations-using-client-side-code-cs.md)
+> <span data-ttu-id="42313-129">[Precedente](executing-animations-using-client-side-code-cs.md)
+> [Successivo](animating-an-updatepanel-control-cs.md)</span><span class="sxs-lookup"><span data-stu-id="42313-129">[Previous](executing-animations-using-client-side-code-cs.md)
 [Next](animating-an-updatepanel-control-cs.md)</span></span>
