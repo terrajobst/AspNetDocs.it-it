@@ -8,19 +8,18 @@ ms.date: 01/27/2009
 ms.assetid: 4341f5b1-6fe5-44c5-8b8a-18fa84f80177
 msc.legacyurl: /mvc/overview/older-versions-1/security/authenticating-users-with-forms-authentication-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 0a4e8dc3ce5764c6b2ec59c7e3f507064f8a8cb5
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: a2c2140631d59a7f8b21aa73613a92ea5c7a91d0
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59422161"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65122075"
 ---
 # <a name="authenticating-users-with-forms-authentication-vb"></a>Autenticazione degli utenti con l'autenticazione basata su form (VB)
 
 by [Microsoft](https://github.com/microsoft)
 
 > Informazioni su come usare l'attributo [Authorize] per proteggere una password specifiche pagine nell'applicazione MVC. Descrive come usare lo strumento Amministrazione sito Web per creare e gestire utenti e ruoli. Anche informazioni su come configurare l'archiviazione delle informazioni sui ruoli e account di utente.
-
 
 L'obiettivo di questa esercitazione è illustrare come è possibile utilizzare forme autenticazione password proteggere le viste nelle applicazioni ASP.NET MVC. Descrive come usare lo strumento Amministrazione sito Web per creare utenti e ruoli. Anche informazioni su come impedire agli utenti non autorizzati di richiamare le azioni del controller. Infine, informazioni su come configurare dove vengono archiviate i nomi utente e password.
 
@@ -117,7 +116,6 @@ L'installazione guidata di ASP.NET SQL Server consente di selezionare un databas
 > 
 > 
 > C:\Windows\Microsoft.NET\Framework\v2.0.50727
-
 
 Dopo aver creato gli oggetti di database necessari, è necessario modificare la connessione al database usata dall'applicazione MVC. Modificare la stringa di connessione ApplicationServices nel file di configurazione (Web. config) web in modo che punti al database di produzione. Ad esempio, la connessione modificata nel listato 3 punta a un database denominato MyProductionDB (la stringa di connessione ApplicationServices originale è stata impostata come commento).
 

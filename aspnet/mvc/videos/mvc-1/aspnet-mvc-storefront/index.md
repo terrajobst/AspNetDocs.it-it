@@ -8,17 +8,16 @@ ms.date: 09/28/2011
 ms.assetid: 296b3a7a-483d-4937-ba2f-3f9c1319616a
 msc.legacyurl: /mvc/videos/mvc-1/aspnet-mvc-storefront
 msc.type: chapter
-ms.openlocfilehash: 7638940518bfa3b94135033f212f4c615f37028a
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 4b0ff6ca48648ac24d63d9a9ad353c11b6c04646
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59404611"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65120603"
 ---
 # <a name="aspnet-mvc-storefront"></a>ASP.NET MVC Storefront
 
 > ASP.NET MVC StoreFront-Starter Kit
-
 
 - [ASP.NET MVC StoreFront-parte 1: Panoramica e discussione dell'architettura](aspnet-mvc-storefront-part-1-architectural-discussion-and-overview.md)
 - [ASP.NET MVC StoreFront-parte 2: Schema repository](aspnet-mvc-storefront-part-2-the-repository-pattern.md)

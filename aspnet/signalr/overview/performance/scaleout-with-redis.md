@@ -8,12 +8,12 @@ ms.date: 06/10/2014
 ms.assetid: 6ecd08c1-e364-4cd7-ad4c-806521911585
 msc.legacyurl: /signalr/overview/performance/scaleout-with-redis
 msc.type: authoredcontent
-ms.openlocfilehash: 78efe409ab59df17ae71c26d4e280cc9971a64d2
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 58a7affa1769523955adc76455a1c33be6f49751
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59393250"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65114306"
 ---
 # <a name="signalr-scaleout-with-redis"></a>Scale-out di SignalR con Redis
 
@@ -38,7 +38,6 @@ da [Mike Wasson](https://github.com/MikeWasson)
 >
 > Inviaci un feedback sul modo in cui è stato apprezzato questa esercitazione e cosa possiamo migliorare nei commenti nella parte inferiore della pagina. Se hai domande che non sono direttamente correlate con l'esercitazione, è possibile pubblicarli per i [forum ASP.NET SignalR](https://forums.asp.net/1254.aspx/1?ASP+NET+SignalR) oppure [StackOverflow.com](http://stackoverflow.com/).
 
-
 In questa esercitazione si userà [Redis](http://redis.io/) distribuire i messaggi in un'applicazione di SignalR che viene distribuita in due istanze separate di IIS.
 
 Redis è un archivio chiave-valore in memoria. Supporta inoltre un sistema di messaggistica con un modello publish/subscribe. Backplane SignalR Redis Usa la funzionalità di pubblicazione/sottoscrizione per inoltrare i messaggi ad altri server.
@@ -57,7 +56,6 @@ Anche se in questa esercitazione Usa l'implementazione di Redis ufficiale, è in
 > [!NOTE]
 >
 > Scalabilità orizzontale di SignalR con Redis non supporta i cluster Redis.
-
 
 ## <a name="overview"></a>Panoramica
 

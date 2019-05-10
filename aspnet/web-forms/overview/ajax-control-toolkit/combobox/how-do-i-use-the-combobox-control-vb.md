@@ -8,19 +8,18 @@ ms.date: 05/12/2009
 ms.assetid: e887e7b2-a6e7-4a28-a134-ba334494badb
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/combobox/how-do-i-use-the-combobox-control-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 2e33c7cfae7eed3c0b38b66dad779ce7dcd77b54
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 468063a72253cce55a02bfaef1219bff03d06418
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59399684"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65119764"
 ---
 # <a name="how-do-i-use-the-combobox-control-vb"></a>Come si usa il controllo ComboBox? (VB)
 
 by [Microsoft](https://github.com/microsoft)
 
 > Casella combinata è un controllo ASP.NET AJAX che combina la flessibilità di una casella di testo con un elenco di opzioni da cui gli utenti possono scegliere.
-
 
 L'obiettivo di questa esercitazione è per descrivere il controllo casella combinata Toolkit di controllo AJAX. Casella combinata funziona come una combinazione tra un controllo DropDownList ASP.NET standard e un controllo casella di testo. È possibile selezionare da un elenco di elementi di pre-esistente o immettere un nuovo elemento.
 
@@ -36,27 +35,21 @@ Se si desidera utilizzare il controllo casella combinata nella pagina è necessa
 
 Successivamente, trascinare il controllo casella combinata nella pagina. È possibile trovare il controllo casella combinata della casella degli strumenti con altri controlli di AJAX Control Toolkit e dispositivi Extender dei controlli (vedere la figura 1).
 
-
 [![Modulo semplice per la creazione di un biglietto da visita](how-do-i-use-the-combobox-control-vb/_static/image1.jpg)](how-do-i-use-the-combobox-control-vb/_static/image1.png)
 
 **Figura 01**: Selezione del controllo ComboBox dalla casella degli strumenti ([fare clic per visualizzare l'immagine con dimensioni normali](how-do-i-use-the-combobox-control-vb/_static/image2.png))
 
-
 Si userà il controllo casella combinata per visualizzare un elenco statico di scelte. L'utente può selezionare un livello specifico di spiciness per loro cibo da un elenco di tre opzioni: Dolce, medio e a caldo (vedere la figura 2).
-
 
 [![La selezione da un elenco statico di elementi](how-do-i-use-the-combobox-control-vb/_static/image2.jpg)](how-do-i-use-the-combobox-control-vb/_static/image3.png)
 
 **Figura 02**: La selezione da un elenco statico di elementi ([fare clic per visualizzare l'immagine con dimensioni normali](how-do-i-use-the-combobox-control-vb/_static/image4.png))
 
-
 Esistono due modi, che è possibile aggiungere queste scelte alla casella combinata. In primo luogo, si seleziona l'opzione di attività di opzioni di modifica quando si posiziona il puntatore del mouse il controllo nella visualizzazione progettazione e aprire l'Editor di elemento (vedere la figura 3).
-
 
 [![Modifica degli elementi di controllo ComboBox](how-do-i-use-the-combobox-control-vb/_static/image3.jpg)](how-do-i-use-the-combobox-control-vb/_static/image5.png)
 
 **Figura 03**: Modifica degli elementi di controllo ComboBox ([fare clic per visualizzare l'immagine con dimensioni normali](how-do-i-use-the-combobox-control-vb/_static/image6.png))
-
 
 La seconda opzione consiste nell'aggiungere l'elenco di elementi tra l'apertura e chiusura &lt;asp: casella combinata&gt; tag nella visualizzazione origine. La pagina nel listato 1 contiene la casella combinata aggiornata con l'elenco di elementi.
 
@@ -70,11 +63,9 @@ Tuttavia, è possibile scegliere di immissione di una nuova scelta (ad esempio, 
 
 Indipendentemente dal fatto se si seleziona un preesistenti elemento oppure immettere un elemento personalizzato, quando si invia il form, la scelta viene visualizzata nel controllo etichetta. Quando si invia il form, il btnSubmit\_clic gestore esegue e aggiorna l'etichetta (vedere la figura 4).
 
-
 [![Visualizzare l'elemento selezionato](how-do-i-use-the-combobox-control-vb/_static/image4.jpg)](how-do-i-use-the-combobox-control-vb/_static/image7.png)
 
 **Figura 04**: Visualizzare l'elemento selezionato ([fare clic per visualizzare l'immagine con dimensioni normali](how-do-i-use-the-combobox-control-vb/_static/image8.png))
-
 
 Casella combinata supporta le stesse proprietà del controllo DropDownList per il recupero dell'elemento selezionato dopo che viene inviato un modulo:
 
@@ -103,16 +94,13 @@ Si supponga che si desidera visualizzare un elenco di film in una casella combin
 11. Nel **Scegli origine dati** passaggio, seleziona la colonna del titolo per il campo per la visualizzazione e la colonna Id per i dati di campo (vedere la figura).
 12. Fare clic su OK per chiudere la procedura guidata.
 
-
 [![Scelta di un'origine dati](how-do-i-use-the-combobox-control-vb/_static/image5.jpg)](how-do-i-use-the-combobox-control-vb/_static/image9.png)
 
 **Figura 05**: Scelta di un'origine dati ([fare clic per visualizzare l'immagine con dimensioni normali](how-do-i-use-the-combobox-control-vb/_static/image10.png))
 
-
 [![Scegliendo i campi di testo e il valore di dati](how-do-i-use-the-combobox-control-vb/_static/image6.jpg)](how-do-i-use-the-combobox-control-vb/_static/image11.png)
 
 **Figura 06**: Scegliendo i campi di testo e il valore di dati ([fare clic per visualizzare l'immagine con dimensioni normali](how-do-i-use-the-combobox-control-vb/_static/image12.png))
-
 
 Dopo aver completato i passaggi precedenti, la casella combinata è associata a un controllo SqlDataSource che rappresenta i film nella tabella di database di film. L'origine per la pagina è simile a listato 2 (pulito la formattazione un po').
 
@@ -122,11 +110,9 @@ Dopo aver completato i passaggi precedenti, la casella combinata è associata a 
 
 Si noti che il controllo casella combinata dispone di una proprietà DataSourceID che punta al controllo SqlDataSource. Quando si apre la pagina in un browser, viene visualizzato l'elenco di filmati dal database (vedere la figura 7). È possibile un prelievo un film nell'elenco o immettere un nuovo film digitando il film nella casella combinata.
 
-
 [![Visualizzazione di un elenco di film](how-do-i-use-the-combobox-control-vb/_static/image7.jpg)](how-do-i-use-the-combobox-control-vb/_static/image13.png)
 
 **Figura 07**: Visualizzazione di un elenco di film ([fare clic per visualizzare l'immagine con dimensioni normali](how-do-i-use-the-combobox-control-vb/_static/image14.png))
-
 
 ## <a name="setting-the-dropdownstyle"></a>Impostare la proprietà DropDownStyle
 
@@ -149,21 +135,17 @@ La proprietà ComboBox AutoCompleteMode per specificare cosa succede quando un u
 - Append: casella combinata non visualizza l'elenco e aggiunge l'elemento corrisponda dall'elenco nella digitato sono (vedere la figura 9).
 - SuggestAppend - ComboBox sia visualizzato l'elenco e aggiunge l'elemento corrisponda dall'elenco nella digitato sono (vedere la figura 10).
 
-
 [![Casella combinata rende un suggerimento](how-do-i-use-the-combobox-control-vb/_static/image8.jpg)](how-do-i-use-the-combobox-control-vb/_static/image15.png)
 
 **Figura 08**: Casella combinata rende un suggerimento ([fare clic per visualizzare l'immagine con dimensioni normali](how-do-i-use-the-combobox-control-vb/_static/image16.png))
-
 
 [![Casella combinata aggiunge il testo corrisponda](how-do-i-use-the-combobox-control-vb/_static/image9.jpg)](how-do-i-use-the-combobox-control-vb/_static/image17.png)
 
 **Figura 09**: Casella combinata aggiunge il testo corrisponda ([fare clic per visualizzare l'immagine con dimensioni normali](how-do-i-use-the-combobox-control-vb/_static/image18.png))
 
-
 [![Casella combinata suggerisce e accoda](how-do-i-use-the-combobox-control-vb/_static/image10.jpg)](how-do-i-use-the-combobox-control-vb/_static/image19.png)
 
 **Figura 10**: Casella combinata suggerisce e accoda ([fare clic per visualizzare l'immagine con dimensioni normali](how-do-i-use-the-combobox-control-vb/_static/image20.png))
-
 
 ## <a name="summary"></a>Riepilogo
 

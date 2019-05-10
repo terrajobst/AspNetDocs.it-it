@@ -8,12 +8,12 @@ ms.date: 10/21/2013
 ms.assetid: c34bc627-41af-4c21-a817-e97a19a7f252
 msc.legacyurl: /signalr/overview/older-versions/persistent-connection-authorization
 msc.type: authoredcontent
-ms.openlocfilehash: ef64729b4ad0bbdcaa132dd2b79f3f139f61254e
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 9ccc59e3ea502daf12ce82382ab30ca73ca0f9b5
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59416766"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65117034"
 ---
 # <a name="authentication-and-authorization-for-signalr-persistent-connections-signalr-1x"></a>Autenticazione e autorizzazione per le connessioni persistenti di SignalR (SignalR 1.x)
 
@@ -22,7 +22,6 @@ dal [Patrick Fletcher](https://github.com/pfletcher), [Tom FitzMacken](https://g
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
 
 > In questo argomento viene descritto come applicare l'autorizzazione in una connessione permanente. Per informazioni generali sull'integrazione della protezione in un'applicazione di SignalR, vedere [Introduzione alla sicurezza](index.md).
-
 
 ## <a name="enforce-authorization"></a>Imporre l'autorizzazione
 

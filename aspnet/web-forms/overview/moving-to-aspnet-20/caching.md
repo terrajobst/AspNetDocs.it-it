@@ -8,19 +8,18 @@ ms.date: 02/20/2005
 ms.assetid: 2bb109d2-e299-46ea-9054-fa0263b59165
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/caching
 msc.type: authoredcontent
-ms.openlocfilehash: 5e16415df5bd4203995bec943ffa682f7da82357
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 39f4eb7b0859cf52fe3ed2531e9c349b465b9327
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59400204"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65116857"
 ---
 # <a name="caching"></a>Memorizzazione nella cache
 
 by [Microsoft](https://github.com/microsoft)
 
 > La comprensione della memorizzazione nella cache è importante per un'applicazione ASP.NET con buone prestazioni. ASP.NET 1.x disponibili tre diverse opzioni per la memorizzazione nella cache; la memorizzazione nella cache di output, la memorizzazione nella cache di frammento e l'API della cache.
-
 
 La comprensione della memorizzazione nella cache è importante per un'applicazione ASP.NET con buone prestazioni. ASP.NET 1.x disponibili tre diverse opzioni per la memorizzazione nella cache; la memorizzazione nella cache di output, la memorizzazione nella cache di frammento e l'API della cache. ASP.NET 2.0 offre tutte e tre questi metodi, ma aggiunge alcune funzionalità aggiuntive significativo. Esistono diverse nuove dipendenze della cache e gli sviluppatori ora hanno la possibilità di creare anche le dipendenze della cache personalizzate. La configurazione della memorizzazione nella cache è stata migliorata in modo significativo anche in ASP.NET 2.0.
 
@@ -63,7 +62,6 @@ SQL Server 7 e 2000 usano il modello basati su polling per le dipendenze della c
 > [!NOTE]
 > SQL Server 2005 possono anche usare il modello basato su polling, ma poiché il modello basato su polling non è il modello più efficiente, è consigliabile usare un modello basato su query (illustrato più avanti) con SQL Server 2005.
 
-
 Affinché una dipendenza della cache SQL usando il modello basato su polling per funzionare correttamente, le tabelle devono avere abilitate le notifiche. A tale scopo a livello di codice usando la classe SqlCacheDependencyAdmin o utilizzando aspnet\_regsql.exe utilità.
 
 La seguente riga di comando registra la tabella Products del database Northwind che si trova in un'istanza di SQL Server denominata *dbase* per SQL della dipendenza dalla cache.
@@ -84,12 +82,10 @@ Di seguito è riportato una spiegazione delle opzioni della riga di comando util
 > [!NOTE]
 > Sono disponibili altre opzioni per aspnet\_regsql.exe. Per un elenco completo, eseguire aspnet\_regsql.exe-? dalla riga di comando.
 
-
 Quando questo comando esegue le seguenti modifiche sono apportate al database di SQL Server:
 
 - Un' **AspNet\_SqlCacheTablesForChangeNotification** tabella viene aggiunta. Questa tabella contiene una riga per ogni tabella nel database per cui è stata abilitata una dipendenza della cache SQL.
 - Le stored procedure seguenti vengono create all'interno del database:
-
 
 | AspNet\_SqlCachePollingStoredProcedure | Esegue una query AspNet\_SqlCacheTablesForChangeNotification tabella e restituisce tutte le tabelle abilitate per la dipendenza della cache SQL e il valore di changeId per ogni tabella. Questa stored procedure viene utilizzata per il polling per determinare se i dati sono stati modificati. |
 | --- | --- |
@@ -97,7 +93,6 @@ Quando questo comando esegue le seguenti modifiche sono apportate al database di
 | AspNet\_SqlCacheRegisterTableStoredProcedure | Registra una tabella per la dipendenza della cache SQL aggiungendo la voce necessaria nella tabella di notifica e aggiunge il trigger. |
 | AspNet\_SqlCacheUnRegisterTableStoredProcedure | Annulla la registrazione di una tabella per la dipendenza della cache SQL rimuovendo la voce nella tabella di notifica e rimuove il trigger. |
 | AspNet\_SqlCacheUpdateChangeIdStoredProcedure | Aggiorna la tabella di notifica mediante l'incremento di changeId per la tabella modificata. ASP.NET utilizza questo valore per determinare se i dati sono stati modificati. Come indicato di seguito, questa stored procedure viene eseguita dal trigger creato quando la tabella è abilitata. |
-
 
 - Un trigger di SQL Server denominato ***tabella\_nome *\_AspNet\_SqlCacheNotification\_Trigger** viene creato per la tabella. Questo trigger esegue AspNet\_SqlCacheUpdateChangeIdStoredProcedure quando un INSERT, UPDATE o DELETE viene eseguita sulla tabella.
 - Un ruolo di SQL Server denominata **aspnet\_ChangeNotification\_ReceiveNotificationsOnlyAccess** viene aggiunto al database.
@@ -161,7 +156,6 @@ In questo caso, se la query specificata nel **SelectCommand** restituisce un ris
 
 > [!NOTE]
 > Per altre informazioni sulle notifiche di query in SQL Server 2005, vedere la documentazione in linea di SQL Server.
-
 
 Un altro metodo per la configurazione di una dipendenza della cache SQL basati su query consiste nell'eseguire questa operazione a livello di codice usando la classe SqlCacheDependency. Esempio di codice seguente viene illustrato come eseguire questa operazione.
 
@@ -233,7 +227,6 @@ Gli attributi seguenti sono disponibili nel &lt;cache&gt; elemento:
 ### <a name="the-ltoutputcachegt-element"></a>Il &lt;outputCache&gt; elemento
 
 Gli attributi seguenti sono disponibili per il &lt;outputCache&gt; elemento.
-
 
 |       <strong>Attributo</strong>        |                                                                                                                                                                                                                                                       <strong>Descrizione</strong>                                                                                                                                                                                                                                                       |
 |-----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

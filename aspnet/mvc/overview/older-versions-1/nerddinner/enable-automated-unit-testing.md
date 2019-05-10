@@ -8,12 +8,12 @@ ms.date: 07/27/2010
 ms.assetid: a19ff2ce-3f7e-4358-9a51-a1403da9c63e
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/enable-automated-unit-testing
 msc.type: authoredcontent
-ms.openlocfilehash: b0c9cd7ab36a8414e0d7d50a68b05bb09a5f24f1
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 09a7aa186605a6cce48ee94028425ded957c00d3
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59387906"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65117348"
 ---
 # <a name="enable-automated-unit-testing"></a>Abilitare unit test automatici
 
@@ -26,7 +26,6 @@ by [Microsoft](https://github.com/microsoft)
 > Passaggio 12 illustra come sviluppare una suite di unit test automatizzati che consentono di verificare la funzionalità di NerdDinner e che fornirà la fiducia necessaria per apportare modifiche e miglioramenti per l'applicazione in futuro.
 > 
 > Se si usa ASP.NET MVC 3, è consigliabile seguire le [Guida introduttiva con MVC 3](../../older-versions/getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3.md) oppure [MVC Music Store](../../older-versions/mvc-music-store/mvc-music-store-part-1.md) esercitazioni.
-
 
 ## <a name="nerddinner-step-12-unit-testing"></a>NerdDinner Step 12: Testing unità
 
@@ -264,7 +263,6 @@ Lo scenario di test nuove interessano per supportare con questo metodo di azione
 Di seguito sono due test che dimostra come sia possibile fornire modulo inviato i valori per il metodo helper UpdateModel() da utilizzare. Si sarà eseguire questa operazione creando e popolando un oggetto FormCollection e quindi assegnarla alla proprietà "ValueProvider" nel Controller.
 
 Il primo test verifica che in un'operazione di salvataggio è reindirizzato il browser per l'azione di dettagli. Il secondo test verifica che quando viene pubblicato un input non valido l'azione viene visualizzata nuovamente la visualizzazione di modifica nuovamente con un messaggio di errore.
-
 
 [!code-csharp[Main](enable-automated-unit-testing/samples/sample17.cs)]
 

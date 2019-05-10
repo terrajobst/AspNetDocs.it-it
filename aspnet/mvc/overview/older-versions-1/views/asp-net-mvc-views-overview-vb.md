@@ -8,19 +8,18 @@ ms.date: 02/16/2008
 ms.assetid: c28ba88d-3a93-47f5-a306-049bd766714d
 msc.legacyurl: /mvc/overview/older-versions-1/views/asp-net-mvc-views-overview-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 84af745d338e38ece438fa58d51d0929c7b92967
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: f02728ed248f29b09d654e509977ed43889cbb83
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59408459"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65117428"
 ---
 # <a name="aspnet-mvc-views-overview-vb"></a>Panoramica delle visualizzazioni ASP.NET MVC (VB)
 
 da [Stephen Walther](https://github.com/StephenWalther)
 
 > Che cos'è una visualizzazione MVC ASP.NET e in che cosa differisce da una pagina HTML? In questa esercitazione, Stephen Walther presenta le viste e viene illustrato come è possibile sfruttare i vantaggi di visualizzare i dati e gli helper HTML all'interno di una vista.
-
 
 Lo scopo di questa esercitazione è fornire una breve introduzione a visualizzazioni ASP.NET MVC, visualizzare i dati e gli helper HTML. Al termine di questa esercitazione, è necessario comprendere come creare nuove viste, passare i dati da un controller a una visualizzazione e usare gli helper HTML per generare il contenuto in una vista.
 
@@ -68,7 +67,6 @@ Quando viene eseguita questa riga di codice, viene restituita una visualizzazion
 > 
 > Se si prevede di creare unit test per l'applicazione ASP.NET MVC è una buona idea definire esplicito i nomi delle visualizzazioni. In questo modo, è possibile creare uno unit test per verificare che la vista previsto è stata restituita da un'azione del controller.
 
-
 ## <a name="adding-content-to-a-view"></a>Aggiunta di contenuto a una vista
 
 Una vista è uno standard (documento HTML che può contenere gli script X). È utilizzare script per aggiungere contenuto dinamico a una visualizzazione.
@@ -103,11 +101,9 @@ Ad esempio, la visualizzazione nel listato 4 sfrutta le tre gli helper HTML, gli
 
 [!code-aspx[Main](asp-net-mvc-views-overview-vb/samples/sample4.aspx)]
 
-
 [![La finestra di dialogo Nuovo progetto](asp-net-mvc-views-overview-vb/_static/image1.jpg)](asp-net-mvc-views-overview-vb/_static/image1.png)
 
 **Figura 01**: Un modulo di accesso standard ([fare clic per visualizzare l'immagine con dimensioni normali](asp-net-mvc-views-overview-vb/_static/image2.png))
-
 
 Tutti i metodi helper HTML vengono chiamati nella proprietà Html della visualizzazione. Ad esempio, si esegue il rendering una casella di testo chiamando il metodo Html.TextBox().
 

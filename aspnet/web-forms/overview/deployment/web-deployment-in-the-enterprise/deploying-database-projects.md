@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 832f226a-1aa3-4093-8c29-ce4196793259
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/deploying-database-projects
 msc.type: authoredcontent
-ms.openlocfilehash: f5b7cecdd1a8dbd9be1bd781cec31c53c9096546
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 221808758492aedb8e8329364e511df28fd11105
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59383226"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65119328"
 ---
 # <a name="deploying-database-projects"></a>Distribuzione di progetti di database
 
@@ -23,7 +23,6 @@ da [Jason Lee](https://github.com/jrjlee)
 
 > [!NOTE]
 > In molti scenari di distribuzione aziendale, è necessario la possibilità di pubblicare aggiornamenti incrementali per un database distribuito. L'alternativa consiste nel ricreare il database in ogni distribuzione, il che significa che la perdita di dati del database esistente. Quando si lavora con Visual Studio 2010, utilizzando VSDBCMD è l'approccio consigliato per la pubblicazione incrementale di database. Tuttavia, la prossima versione di Visual Studio e la Pipeline di pubblicazione sul Web (WPP) include strumenti che supporta direttamente la pubblicazione incrementale.
-
 
 Se si apre la soluzione di esempio Contact Manager in Visual Studio 2010, si noterà che il progetto di database include una cartella di proprietà che contiene quattro file.
 
@@ -81,9 +80,7 @@ Il resto di questo argomento viene descritto l'utilizzo di VSDBCMD con MSBuild p
 
 L'utilità VSDBCMD ti permette di distribuire un database usando lo schema del database (file dbschema) o il manifesto di distribuzione (il file con estensione deploymanifest). In pratica, è quasi sempre userà il manifesto di distribuzione, come il manifesto di distribuzione consente di fornire valori predefiniti per varie proprietà di distribuzione e identificare eventuali script SQL pre-distribuzione o post-distribuzione da eseguire. Ad esempio, questo comando VSDBCMD consente di distribuire il **ContactManager** database a un server di database in un ambiente di test:
 
-
 [!code-console[Main](deploying-database-projects/samples/sample1.cmd)]
-
 
 In questo caso:
 
@@ -107,21 +104,17 @@ Il comportamento dei **/dd** oppure **/DeployToDatabase** commutatore dipende da
 
 Se si usa un file con estensione deploymanifest, il comportamento è molto più complesso. Infatti, il file con estensione deploymanifest contiene un nome di proprietà **DeployToDatabase** che determina anche se il database viene distribuito.
 
-
 [!code-xml[Main](deploying-database-projects/samples/sample2.xml)]
-
 
 Il valore di questa proprietà è impostato in base alle proprietà del progetto di database. Se si imposta la **azione di distribuzione** al **creare uno script di distribuzione (con estensione SQL)**, il valore sarà **False**. Se si imposta la **azione di distribuzione** al **creare uno script di distribuzione (con estensione SQL) e distribuire il database**, il valore sarà **True**.
 
 > [!NOTE]
 > Queste impostazioni sono associate a una piattaforma e configurazione della build specifica. Ad esempio, se si configurano le impostazioni per il **eseguire il Debug** configuration e quindi pubblicare usando la **versione** configurazione, non verranno utilizzate le impostazioni.
 
-
 ![](deploying-database-projects/_static/image3.png)
 
 > [!NOTE]
 > In questo scenario, il **azione di distribuzione** deve sempre essere impostata su **creare uno script di distribuzione (con estensione SQL)**, perché non si desidera che Visual Studio 2010 per distribuire il database. In altre parole, il **DeployToDatabase** proprietà deve essere sempre **False**.
-
 
 Quando un **DeployToDatabase** proprietà viene specificata, il **/dd** commutatore solo eseguirà l'override della proprietà se il valore della proprietà **false**:
 

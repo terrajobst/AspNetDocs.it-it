@@ -8,12 +8,12 @@ ms.date: 04/10/2013
 ms.assetid: ab7b2554-956a-4f6d-b2a0-4ae0c62e8580
 msc.legacyurl: /signalr/overview/older-versions/tutorial-server-broadcast-with-aspnet-signalr
 msc.type: authoredcontent
-ms.openlocfilehash: a63bca69f137a4d4765db6a4925ff027c9d8bf7d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 68908be34f6b010e512677fe5f5e31bfdefab592
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59403584"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65116060"
 ---
 # <a name="tutorial-server-broadcast-with-aspnet-signalr-1x"></a>Esercitazione: Trasmissione server con ASP.NET SignalR 1.x
 
@@ -26,7 +26,6 @@ dal [Patrick Fletcher](https://github.com/pfletcher), [Tom Dykstra](https://gith
 > L'applicazione che verrà creata in questa esercitazione simula le quotazioni di borsa, uno scenario tipico per la funzionalità di trasmissione di server.
 > 
 > Sono Benvenuti i commenti l'esercitazione. Se hai domande che non sono direttamente correlate con l'esercitazione, è possibile pubblicarli per i [forum ASP.NET SignalR](https://forums.asp.net/1254.aspx/1?ASP+NET+SignalR) oppure [StackOverflow.com](http://stackoverflow.com).
-
 
 ## <a name="overview"></a>Panoramica
 
@@ -54,7 +53,6 @@ Questa esercitazione include le sezioni seguenti:
 
 > [!NOTE]
 > Se non si desidera eseguire i passaggi di compilazione dell'applicazione, è possibile installare il pacchetto SignalR.Sample in una nuova **applicazione Web ASP.NET vuota** dei progetti e leggere con attenzione questi passaggi per ottenere una spiegazione del codice. La prima parte dell'esercitazione vengono illustrati un subset del codice SignalR.Sample e la seconda parte illustra le funzionalità principali di funzionalità aggiuntive nel pacchetto SignalR.Sample.
-
 
 <a id="prerequisites"></a>
 

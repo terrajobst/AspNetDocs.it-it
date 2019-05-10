@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: c61560e9-9f6c-4985-834a-08a3eabf9c3c
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/creating-and-running-a-deployment-command-file
 msc.type: authoredcontent
-ms.openlocfilehash: cbad35c9ef83b41e9d3f9a48ff37672d22338e7e
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: f1477ff423e4898385066a35b42503f3c70dcc68
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59395225"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65119453"
 ---
 # <a name="creating-and-running-a-deployment-command-file"></a>Creazione ed esecuzione di un file di comando per la distribuzione
 
@@ -22,7 +22,6 @@ da [Jason Lee](https://github.com/jrjlee)
 [Scaricare PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Questo argomento descrive come creare un file di comando che consentirà di eseguire una distribuzione con i file di progetto di Microsoft Build Engine (MSBuild) con un processo ripetibile, passo a passo.
-
 
 In questo argomento fa parte di una serie di esercitazioni basate su requisiti di distribuzione aziendale di una società fittizia, denominata Fabrikam, Inc. Questa serie di esercitazioni Usa una soluzione di esempio&#x2014;il [Contact Manager](the-contact-manager-solution.md) soluzione&#x2014;per rappresentare un'applicazione web con un livello di complessità, tra cui un'applicazione ASP.NET MVC 3, una comunicazione Windows realistico Servizio Foundation (WCF) e un progetto di database.
 
@@ -41,9 +40,7 @@ Come descritto in [informazioni sul processo di compilazione](understanding-the-
 
 Il *Publish.proj* file usa una **importare** elemento per importare il file di progetto specifici dell'ambiente.
 
-
 [!code-xml[Main](creating-and-running-a-deployment-command-file/samples/sample1.xml)]
-
 
 Di conseguenza, quando si usa MSBuild.exe per compilare e distribuire la soluzione Contact Manager, è necessario:
 
@@ -52,19 +49,14 @@ Di conseguenza, quando si usa MSBuild.exe per compilare e distribuire la soluzio
 
 A tale scopo, il comando di MSBuild sarà analogo al seguente:
 
-
 [!code-console[Main](creating-and-running-a-deployment-command-file/samples/sample2.cmd)]
-
 
 A questo punto, è un semplice passaggio per spostare in una distribuzione ripetibile, passo a passo. È necessario eseguire è sufficiente aggiungere il comando di MSBuild in un file con estensione cmd. Nella soluzione Contact Manager, la cartella di pubblicazione include un file denominato *Publish-Dev.cmd* che esegue esattamente questa.
 
-
 [!code-console[Main](creating-and-running-a-deployment-command-file/samples/sample3.cmd)]
-
 
 > [!NOTE]
 > Il **/fl** indica a MSBuild per creare un file di log denominato *MSBuild* nella directory di lavoro in cui è stata richiamata MSBuild.exe.
-
 
 Per distribuire o ridistribuire la soluzione Contact Manager, è sufficiente per eseguire operazioni viene eseguito il *Publish-Dev.cmd* file. Quando si esegue il file, MSBuild sarà:
 
@@ -99,19 +91,14 @@ Dopo aver creato un file di comando per l'ambiente di destinazione, sarà possib
 
 Creazione di un file di comando che contiene le istruzioni di MSBuild offre un modo facile e veloce di creazione e distribuzione di una soluzione multiprogetto in un ambiente di destinazione specifico. Se si desidera distribuire ripetutamente la soluzione in più ambienti di destinazione, è possibile creare più file di comando. In ogni file di comando, il comando di MSBuild compilerà il file di progetto universale stesso, ma viene specificato un file di progetto specifici dell'ambiente diverso. Ad esempio, un file di comando per la pubblicazione a uno sviluppatore o ambiente di test potrebbe contenere questo comando di MSBuild:
 
-
 [!code-console[Main](creating-and-running-a-deployment-command-file/samples/sample4.cmd)]
-
 
 Un file di comando per la pubblicazione in un ambiente di staging potrebbe contenere questo comando di MSBuild:
 
-
 [!code-console[Main](creating-and-running-a-deployment-command-file/samples/sample5.cmd)]
-
 
 > [!NOTE]
 > Per indicazioni su come personalizzare i file di progetto specifici dell'ambiente per ambienti server, vedere [configurare le proprietà di distribuzione per un ambiente di destinazione](../configuring-server-environments-for-web-deployment/configuring-deployment-properties-for-a-target-environment.md).
-
 
 È anche possibile personalizzare il processo di compilazione per ogni ambiente mediante l'override delle proprietà o l'impostazione di varie altre opzioni nel comando di MSBuild. Per altre informazioni, vedere [riferimenti alla riga di comando di MSBuild](https://msdn.microsoft.com/library/ms164311.aspx).
 

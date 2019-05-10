@@ -8,12 +8,12 @@ ms.date: 06/12/2014
 ms.assetid: eaece9f5-f80c-428b-b771-5db66d275b7d
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/continuous-integration-and-continuous-delivery
 msc.type: authoredcontent
-ms.openlocfilehash: 0fb0a331a2a6e2af5c5097db8b57942525d24ffc
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 25767303e3a8a3bfd9fc6c7c10cda32d73e9994d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59384305"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118854"
 ---
 # <a name="continuous-integration-and-continuous-delivery-building-real-world-cloud-apps-with-azure"></a>Integrazione continua e recapito continuo (creazione di App Cloud funzionanti con Azure)
 
@@ -22,7 +22,6 @@ dal [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitt
 [Download risolverlo Project](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [Scarica l'E-book](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
 > Il **creazione Real World di App Cloud con Azure** eBook si basa su una presentazione sviluppata da Scott Guthrie. Viene illustrato 13 modelli e procedure consigliate che consentono di avere esito positivo lo sviluppo di App web per il cloud. Per informazioni sull'e-book, vedere [capitolo prima](introduction.md).
-
 
 I primi due consigliate sono state modelli di processo di sviluppo [automatizzare tutto](automate-everything.md) e [controllo del codice sorgente](source-control.md), e li combina il terzo modello di processo. Integrazione continua (CI) significa che, ogni volta che uno sviluppatore archivia il codice al repository di origine, viene automaticamente attivata una compilazione. Recapito continuo (CD) accetta ulteriormente questo passaggio: dopo una compilazione e unit test automatizzati hanno esito positivo, si distribuisce automaticamente l'applicazione in un ambiente in cui è possibile eseguire test approfonditi più.
 
@@ -50,7 +49,6 @@ Servizi di Azure DevOps offre numerose funzionalità che consentono lo sviluppo 
 - Supporta il test di carico automatizzato. Il test di carico è fondamentale per un'app cloud ma è spesso sottovalutato fino a quando non è troppo tardi. Il test di carico simula un uso massiccio di un'app da migliaia di utenti, consentendo di trovare i colli di bottiglia e migliorare la velocità effettiva, prima di rilasciare l'app nell'ambiente di produzione.
 - Supporta la collaborazione nella chat team, che facilita la comunicazione in tempo reale e la collaborazione per piccoli team agile.
 - Supporta la gestione dei progetti agile.
-
 
 Per altre informazioni sulla funzionalità per la distribuzione dei servizi di Azure DevOps e integrazione continua, vedere [la documentazione di Azure DevOps](/azure/devops/index).
 

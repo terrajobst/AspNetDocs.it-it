@@ -8,19 +8,18 @@ ms.date: 02/10/2010
 ms.assetid: 1365eebb-bdf7-4a05-8d18-7f200531be55
 msc.legacyurl: /whitepapers/ms03-32-issue
 msc.type: content
-ms.openlocfilehash: faad1530a499fd3f46a6a6c6e7c194ba6c55fa6c
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: e0b6776cbfe22e341ac7105f03daac5074b480fc
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59386294"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65121539"
 ---
 # <a name="fix-for-server-application-unavailable-error-after-applying-security-update-for-ie"></a>Correggere l'errore 'Applicazione server non disponibile' dopo l'applicazione di un aggiornamento della sicurezza per Internet Explorer
 
 > In questo documento descrive la patch che corregge un problema con l'aggiornamento della sicurezza 32 MS03 per Internet Explorer, che influisce sulle applicazioni ASP.NET 1.0 in esecuzione in Windows XP Professional.
 > 
 > Si applica a Windows XP Professional e ASP.NET 1.0.
-
 
 Microsoft identificato un problema con l'aggiornamento della sicurezza 32 MS03 patch di sicurezza di Internet Explorer e ASP.NET 1.0 in esecuzione in Windows XP. Questa patch può essere installata manualmente o scaricando gli aggiornamenti critici di recente dal sito Windows Update.
 

@@ -8,17 +8,16 @@ ms.date: 08/08/2011
 ms.assetid: caeb0bcb-b2e3-4c37-a1d5-420bb4e917ac
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/tailspin-spyworks
 msc.type: chapter
-ms.openlocfilehash: cdd26f05aef75d1511482ae357f62258fbffce25
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ccb083a3ccb3228b8efe27a34d599e118ad84dff
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59422317"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65121956"
 ---
 # <a name="aspnet-4---tailspin-spyworks"></a>ASP.NET 4 - Tailspin Spyworks
 
 > Come usare le nuove funzionalità in ASP.NET 4 per creare un negozio online, tra cui acquisti, estrazione e l'amministrazione.
-
 
 - [Parte 1. File -> Nuovo progetto](tailspin-spyworks-part-1.md)
 - [Parte 2. Livello di accesso ai dati](tailspin-spyworks-part-2.md)

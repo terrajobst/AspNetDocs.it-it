@@ -8,12 +8,12 @@ ms.author: riande
 ms.date: 03/12/2010
 msc.legacyurl: ''
 msc.type: content
-ms.openlocfilehash: 1ab51453913b387ffecf898536eb55b7418b0285
-ms.sourcegitcommit: 2d53ed9e4c8b19d3526cbc689bfa8394c9449cec
+ms.openlocfilehash: d4b96bd2ff99bb30ff59b9697a27e33acb0f719d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59905631"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65120085"
 ---
 # <a name="aspnet-overview"></a>Panoramica di ASP.NET
 
@@ -100,10 +100,6 @@ I Webhook sono un pattern HTTP leggero che fornisce un modello pub/sub semplice 
 I Webhook vengono esposte da un numero elevato di servizi tra cui Dropbox, GitHub, Instagram, MailChimp, PayPal, Slack, Trello e molto altro ancora. Ad esempio, un WebHook può indicare che è stato modificato un file in Dropbox, è stato eseguito il commit di una modifica del codice in GitHub, o un pagamento è stato avviato in PayPal o è stata creata una scheda in Trello.
 
 [Altre informazioni sui Webhook](webhooks/index.md)
-
-
-
-
 
 <!--
 Create Deployment TOC based on https://www.asp.net/aspnet/overview/deployment

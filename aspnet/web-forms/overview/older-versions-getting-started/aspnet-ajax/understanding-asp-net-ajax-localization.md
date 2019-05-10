@@ -8,12 +8,12 @@ ms.date: 03/14/2008
 ms.assetid: c1a35f18-bab9-41f7-8497-15530c37a09d
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/aspnet-ajax/understanding-asp-net-ajax-localization
 msc.type: authoredcontent
-ms.openlocfilehash: 11e70493478d6810d63ba6b3ac813e32f03052eb
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ef4ee57496337fb13b4d1c09c058e89e04eb3138
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59381328"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65114597"
 ---
 # <a name="understanding-aspnet-ajax-localization"></a>Informazioni sulla localizzazione in ASP.NET AJAX
 
@@ -22,7 +22,6 @@ da [Scott Cate](https://github.com/scottcate)
 [Scaricare PDF](http://download.microsoft.com/download/C/1/9/C19A3451-1D14-477C-B703-54EF22E197EE/AJAX_tutorial04_Localization_cs.pdf)
 
 > La localizzazione è il processo di progettazione e l'integrazione di supporto per una lingua specifica e le impostazioni cultura in un'applicazione o un componente dell'applicazione. La piattaforma Microsoft ASP.NET offre ampio supporto per la localizzazione per le applicazioni ASP.NET standard grazie all'integrazione dal modello di localizzazione .NET standard. Il Framework AJAX di Microsoft utilizzano il modello integrato per supportare i diversi scenari in cui può essere eseguita la localizzazione.
-
 
 ## <a name="introduction"></a>Introduzione
 
@@ -105,16 +104,13 @@ Per chi ha familiarità con la sintassi JavaScript Regex, testo all'interno di s
 1. Premere F5. Se richiesto, abilita il debug. Quando la pagina viene caricata, premere il pulsante di eliminazione. Si noti che richiesta in lingua inglese (a meno che il computer è impostato per preferire le risorse di lingua spagnola per impostazione predefinita) di conferma.
 2. Chiudere la finestra del browser e tornare a default. aspx. Nel @Page direttiva di intestazione, sostituire auto per Culture e UICulture con es-ES. Premere nuovamente F5 per avviare nuovamente l'applicazione web nel browser. Questa volta, si noti che viene richiesto di eliminare il file in spagnolo:
 
-
 [![](understanding-asp-net-ajax-localization/_static/image2.png)](understanding-asp-net-ajax-localization/_static/image1.png)
 
 ([Fare clic per visualizzare l'immagine con dimensioni normali](understanding-asp-net-ajax-localization/_static/image3.png))
 
-
 [![](understanding-asp-net-ajax-localization/_static/image5.png)](understanding-asp-net-ajax-localization/_static/image4.png)
 
 ([Fare clic per visualizzare l'immagine con dimensioni normali](understanding-asp-net-ajax-localization/_static/image6.png))
-
 
 Si noti che esistono diverse varianti per questa procedura dettagliata. Ad esempio, gli script è stato possibile registrare con il controllo ScriptManager a livello di codice durante il caricamento della pagina.
 

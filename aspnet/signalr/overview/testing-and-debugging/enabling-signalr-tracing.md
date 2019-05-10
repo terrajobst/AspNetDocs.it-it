@@ -8,12 +8,12 @@ ms.date: 08/08/2014
 ms.assetid: 30060acb-be3e-4347-996f-3870f0c37829
 msc.legacyurl: /signalr/overview/testing-and-debugging/enabling-signalr-tracing
 msc.type: authoredcontent
-ms.openlocfilehash: 1dadbdb6fa1dc58b855402f1d6f18e8af861f756
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 34fe2cdb10c4b41a6e8cac7fb1741d53c02dfc80
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59399359"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65114396"
 ---
 # <a name="enabling-signalr-tracing"></a>Abilitazione della traccia di SignalR
 
@@ -37,7 +37,6 @@ da [Tom FitzMacken](https://github.com/tfitzmac)
 > ## <a name="questions-and-comments"></a>Domande e commenti
 >
 > Inviaci un feedback sul modo in cui è stato apprezzato questa esercitazione e cosa possiamo migliorare nei commenti nella parte inferiore della pagina. Se hai domande che non sono direttamente correlate con l'esercitazione, è possibile pubblicarli per i [forum ASP.NET SignalR](https://forums.asp.net/1254.aspx/1?ASP+NET+SignalR) oppure [StackOverflow.com](http://stackoverflow.com/).
-
 
 Quando la traccia è abilitata, un'applicazione di SignalR crea le voci di log per gli eventi. È possibile registrare eventi da client e server. Sulla connessione dei log del server, provider di scalabilità orizzontale e gli eventi del bus di messaggi di traccia. Per gli eventi di connessione client i log di traccia. In SignalR 2.1 e versioni successive, la traccia nel client registra il contenuto completo dei messaggi di chiamata dell'hub.
 

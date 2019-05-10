@@ -8,12 +8,12 @@ ms.date: 02/20/2009
 ms.assetid: 829f589f-e201-4f6e-9ae6-08ae84322065
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-4-make-the-application-loosely-coupled-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 8caa88d928517e1c71210cbe55e3961d4baf461a
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ce8e3c4ff8a59be9f2f572813db599604216119d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59381276"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65117795"
 ---
 # <a name="iteration-4--make-the-application-loosely-coupled-c"></a>Iterazione #4-rendere l'applicazione regime di controllo (c#)
 
@@ -22,7 +22,6 @@ by [Microsoft](https://github.com/microsoft)
 [Scaricare il codice](iteration-4-make-the-application-loosely-coupled-cs/_static/contactmanager_4_cs1.zip)
 
 > In questo quarta iterazione, possiamo usufruire dei diversi modelli di progettazione di software per renderne più semplice da gestire e modificare l'applicazione Contact Manager. Ad esempio, è eseguire il refactoring l'applicazione per usare il modello di Repository e il modello di inserimento delle dipendenze.
-
 
 ## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>Creazione di un'applicazione MVC ASP.NET di gestione dei contatti (c#)
 
@@ -54,7 +53,6 @@ Attualmente, tutta la logica di accesso e la convalida dei dati utilizzata dall'
 > 
 > (SRP), una classe non deve avere mai più di un motivo per cambiare. La combinazione di controller, convalida e logica del database è una violazione del principio di singola responsabilità enorme.
 
-
 Esistono diversi motivi per cui potrebbe essere necessario modificare l'applicazione. Potrebbe essere necessario aggiungere una nuova funzionalità all'applicazione, potrebbe essere necessario correggere un bug nell'applicazione o potrebbe essere necessario modificare la modalità in cui viene implementata una funzionalità dell'applicazione. Le applicazioni sono raramente statiche. Tendono a crescere e modificato nel corso del tempo.
 
 Si supponga, ad esempio, che si decide di cambiare modalità di implementazione del livello di accesso ai dati. Diritto a questo punto, l'applicazione Contact Manager utilizza Microsoft Entity Framework per accedere al database. Tuttavia, è possibile decidere di eseguire la migrazione a una tecnologia di accesso ai dati nuovi o alternativo, ad esempio ADO.NET Data Services o NHibernate. Tuttavia, poiché il codice di accesso ai dati non è isolato dal codice di convalida e il controller, non è alcun modo possibile modificare il codice di accesso ai dati nell'applicazione senza modificare l'altro codice che non è direttamente correlato all'accesso ai dati.
@@ -66,7 +64,6 @@ In questa iterazione, possiamo usufruire dei diversi modelli di progettazione so
 > [!NOTE] 
 > 
 > Il refactoring è il processo di riscrittura di un'applicazione in modo che non perdere le funzionalità esistenti.
-
 
 ## <a name="using-the-repository-software-design-pattern"></a>Usando lo schema progettuale Repository Software
 
@@ -105,7 +102,6 @@ La programmazione rispetto a interfacce (astrazioni) anziché le classi concrete
 > 
 > È possibile creare rapidamente un'interfaccia da una classe concreta all'interno di Visual Studio selezionando l'opzione di menu eseguire il refactoring Estrai interfaccia. Ad esempio, è possibile creare la classe EntityContactManagerRepository prima e quindi usare Estrai interfaccia per generare l'interfaccia IContactManagerRepository automaticamente.
 
-
 ## <a name="using-the-dependency-injection-software-design-pattern"></a>Usando il modello di progettazione Software di inserimento delle dipendenze
 
 Ora che è stata eseguita la migrazione di nostro codice di accesso ai dati a una classe di Repository separata, è necessario modificare il controller di contatto per l'uso di questa classe. Si sarà possibile avvalersi di un modello di progettazione software denominato inserimento delle dipendenze per usare la classe di Repository nel controller.
@@ -127,7 +123,6 @@ Inserimento delle dipendenze del costruttore rende inoltre alla classe controlle
 > [!NOTE] 
 > 
 > Se si vuole separare completamente la classe di controller di contatto da una particolare implementazione dell'interfaccia IContactManagerRepository quindi è possibile sfruttare un framework che supporta l'inserimento di dipendenze, ad esempio StructureMap o Microsoft Entity Framework (MEF). Grazie all'uso di un framework di inserimento delle dipendenze, è non necessario mai fare riferimento a una classe concreta nel codice.
-
 
 ## <a name="creating-a-service-layer"></a>Creazione di un livello di servizio
 

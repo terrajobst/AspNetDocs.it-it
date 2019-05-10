@@ -8,15 +8,14 @@ ms.date: 10/08/2013
 ms.assetid: 38b145db-a848-4bd7-b54a-e01bc36f4301
 msc.legacyurl: /aspnet/overview/web-development-best-practices
 msc.type: chapter
-ms.openlocfilehash: 6b415480fc3f1d86f74e5845eedb35d284806284
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 1a9a96bbdf17e9e4531488051865633fef8bbf47
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59412281"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118237"
 ---
 # <a name="web-development-best-practices"></a>Procedure consigliate per lo sviluppo Web
-
 
 - [Operazioni da eseguire e da evitare in ASP.NET](what-not-to-do-in-aspnet-and-what-to-do-instead.md)
 - [Async e Await](async-and-await.md)

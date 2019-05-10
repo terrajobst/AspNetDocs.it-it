@@ -8,15 +8,14 @@ ms.date: 07/16/2014
 ms.assetid: ba07958c-42e1-4da0-81db-ba6925ed6db0
 msc.legacyurl: /signalr/overview/getting-started/real-time-web-applications-with-signalr
 msc.type: authoredcontent
-ms.openlocfilehash: 9904582450d4386ef8b8656078f6d40dbd1e10be
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 9e39fd3f2fc9d4e791002450085215096c222fcd
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59412008"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65120009"
 ---
 # <a name="hands-on-lab-real-time-web-applications-with-signalr"></a>Lab pratico: Applicazioni Web in tempo reale con SignalR
-
 
 da [Camp Web Team](https://twitter.com/webcamps)
 
@@ -66,7 +65,6 @@ Per eseguire gli esercizi in questo laboratorio pratico, è necessario configura
 > [!NOTE]
 > Assicurarsi che tutte le dipendenze per questo ambiente lab che sono stati verificati prima di eseguire il programma di installazione.
 
-
 <a id="CodeSnippets"></a>
 ### <a name="using-the-code-snippets"></a>Usando i frammenti di codice
 
@@ -74,7 +72,6 @@ In tutto il documento di laboratorio, verrà invitati a inserire blocchi di codi
 
 > [!NOTE]
 > Ogni esercizio è accompagnata da una soluzione inizia che si trova nel **iniziare** cartella dell'esercizio che consente di seguire ogni esercizio indipendentemente dagli altri. Tenere presente che i frammenti di codice aggiunti durante un esercizio non sono presenti queste soluzioni di avvio e potrebbero non funzionare fino a quando non si have completato l'esercizio. All'interno del codice sorgente per un esercizio, si noterà anche un **End** cartella che contiene una soluzione di Visual Studio con il codice che scaturisce da completare i passaggi nell'esercizio corrispondente. È possibile usare queste soluzioni come prassi consigliata se ti serve assistenza aggiuntiva durante l'esecuzione in questo laboratorio pratico.
-
 
 ---
 
@@ -90,7 +87,6 @@ Tempo stimato per completare questa esercitazione: **60 minuti**
 
 > [!NOTE]
 > Al primo avvio di Visual Studio, è necessario selezionare una delle raccolte di impostazioni predefinite. Ogni raccolta predefinita è pensata per associare un particolare stile di sviluppo e determina i layout delle finestre, il comportamento dell'editor, frammenti di codice IntelliSense e opzioni della finestra di dialogo. Le procedure descritte in questa esercitazione vengono descritte le azioni necessarie per eseguire una determinata attività in Visual Studio quando si usa la **delle impostazioni di sviluppo generale** raccolta. Se si sceglie una raccolta di impostazioni diverse per l'ambiente di sviluppo, possono essere presenti differenze nei passaggi che è necessario tenere conto.
-
 
 <a id="Exercise1"></a>
 ### <a name="exercise-1-working-with-real-time-data-using-signalr"></a>Esercizio 1: Utilizzo di dati in tempo reale tramite SignalR
@@ -274,7 +270,6 @@ Per altre informazioni sull'uso di backplane SignalR, leggere questo [articolo](
 > - [Trasmissione del server](tutorial-server-broadcast-with-signalr.md) (ad esempio, le quotazioni di borsa): I ripiani posteriori delle funziona bene per questo scenario, perché il server controlla la frequenza con cui vengono inviati i messaggi.
 > - [Da client a](tutorial-getting-started-with-signalr.md) (ad esempio, avvia una chat): In questo scenario, il backplane potrebbe essere un collo di bottiglia se il numero di messaggi viene ridimensionato con il numero di client. vale a dire, se la frequenza dei messaggi aumenta in modo i client in modo proporzionale man mano join.
 > - [In tempo reale ad alta frequenza](tutorial-high-frequency-realtime-with-signalr.md) (ad esempio i giochi in tempo reale): Backplane non è consigliato per questo scenario.
-
 
 In questo esercizio si userà **SQL Server** per distribuire i messaggi tra le **fanatico Quiz** dell'applicazione. Si eseguirà queste attività in un computer singolo test per informazioni su come impostare la configurazione, ma per ottenere l'effetto completo, è necessario distribuire l'applicazione di SignalR in due o più server. È anche necessario installare SQL Server in uno dei server o in un server dedicato distinto.
 

@@ -8,12 +8,12 @@ ms.date: 01/28/2019
 ms.assetid: 20acee16-c70c-41e9-b38f-92bfcf9a4c1c
 msc.legacyurl: /aspnet/overview/owin-and-katana/owin-oauth-20-authorization-server
 msc.type: authoredcontent
-ms.openlocfilehash: d5c8262d48c79616ca3069c37077ba99ffafb650
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 6523d09e41fe10475d1bcb7fca06b2e0e2d3182c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58426048"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118192"
 ---
 # <a name="owin-oauth-20-authorization-server"></a>Server di autorizzazione OAuth 2.0 OWIN
 
@@ -34,7 +34,6 @@ ms.locfileid: "58426048"
 > ## <a name="questions-and-comments"></a>Domande e commenti
 >
 > Se hai domande che non sono direttamente correlate con l'esercitazione, è possibile pubblicarle in [Katana Project su GitHub](https://github.com/aspnet/AspNetKatana/). Per domande e commenti relativi all'esercitazione, vedere la sezione dei commenti nella parte inferiore della pagina.
-
 
 Il [OAuth 2.0 framework](http://tools.ietf.org/html/rfc6749) consente a un'app di terze parti ottenere l'accesso limitato a un servizio HTTP. Anziché utilizzare le credenziali del proprietario della risorsa per accedere a una risorsa protetta, il client ottenga un token di accesso (ovvero una stringa che denota un ambito specifico, durata e altri attributi di accesso). I token di accesso vengono rilasciati ai client di terze parti da un server di autorizzazione con l'approvazione del proprietario della risorsa.
 
@@ -175,7 +174,6 @@ Ecco l'implementazione di esempio per `Provider.GrantResourceOwnerCredentials`:
 > [!NOTE]
 > Il codice riportato sopra è destinato per spiegare in questa sezione dell'esercitazione e non deve essere utilizzato in sicura o le app di produzione. Non controlla le credenziali di proprietari di risorse. Si presuppone ogni credenziale è valida e crea una nuova identità per tale. La nuova identità verrà usata per generare il token di accesso e token di aggiornamento. Sostituire il codice con il proprio codice di gestione di account sicuro.
 
-
 ### <a name="client-credentials-grant"></a>Concessione delle credenziali client
 
 Fare riferimento OAuth 2 di IETF [concessione delle credenziali Client](http://tools.ietf.org/html/rfc6749#section-4.4) sezione ora.
@@ -195,7 +193,6 @@ Ecco l'implementazione di esempio per `Provider.GrantClientCredentials`:
 
 > [!NOTE]
 > Il codice riportato sopra è destinato per spiegare in questa sezione dell'esercitazione e non deve essere utilizzato in sicura o le app di produzione. Sostituire il codice con il proprio codice di gestione client protette.
-
 
 ### <a name="refresh-token"></a>Token di aggiornamento
 
@@ -274,7 +271,6 @@ Ecco il codice di esempio del `HomeController` del client.
 > [!WARNING]
 > Security - mai disabilitare SSL in un'app di produzione. Le credenziali di accesso vengono ora inviate via cavo in testo non crittografato. Il codice sopra riportato è solo per l'esplorazione e il debug di esempio locali.
 
-
 ### <a name="implicit-grant-client"></a>Client di concessione implicita
 
 Questo client utilizza JavaScript per:
@@ -296,7 +292,6 @@ Ecco il callback nel codice di gestione *SignIn.cshtml* file:
 
 > [!NOTE]
 > Una procedura consigliata è spostare il codice JavaScript in un file esterno e non incorporala con il markup Razor. Per semplificare questo esempio, sono stati combinati.
-
 
 ### <a name="resource-owner-password-credentials-grant-client"></a>Client concessione delle credenziali Password proprietario risorsa
 

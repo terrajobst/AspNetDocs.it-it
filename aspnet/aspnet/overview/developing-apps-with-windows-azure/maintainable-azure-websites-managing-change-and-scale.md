@@ -8,12 +8,12 @@ ms.date: 07/16/2014
 ms.assetid: ecfd0eb4-c4ad-44e6-9db9-a2a66611ff6a
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/maintainable-azure-websites-managing-change-and-scale
 msc.type: authoredcontent
-ms.openlocfilehash: ec0058472f8bc1d8d58e7c78deeb8b6097532510
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: c88bae40a8aa092037c0b359ee391acaf161cf10
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59409733"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118304"
 ---
 # <a name="hands-on-lab-maintainable-azure-websites-managing-change-and-scale"></a>Lab pratico: Siti Web di Azure di facile manutenzione: gestione di modifiche e scalabilità
 
@@ -34,7 +34,6 @@ da [Camp Web Team](https://twitter.com/webcamps)
 > Tutto il codice di esempio e frammenti di codice sono inclusi nel Web Camp Kit di formazione, disponibile all'indirizzo [ https://aka.ms/webcamps-training-kit ](https://aka.ms/webcamps-training-kit).
 >
 > Per una trattazione più approfondita di questo argomento, vedere la [creazione di App Cloud reali con e-book Azure](building-real-world-cloud-apps-with-windows-azure/introduction.md).
-
 
 <a id="Overview"></a>
 ## <a name="overview"></a>Panoramica
@@ -79,7 +78,6 @@ Per eseguire gli esercizi in questo laboratorio pratico, è necessario configura
 > [!NOTE]
 > Assicurarsi che tutte le dipendenze per questo ambiente lab che sono stati verificati prima di eseguire il programma di installazione.
 
-
 <a id="CodeSnippets"></a>
 ### <a name="using-the-code-snippets"></a>Usando i frammenti di codice
 
@@ -87,7 +85,6 @@ In tutto il documento di laboratorio, verrà invitati a inserire blocchi di codi
 
 > [!NOTE]
 > Ogni esercizio è accompagnata da una soluzione inizia che si trova nel **iniziare** cartella dell'esercizio che consente di seguire ogni esercizio indipendentemente dagli altri. Tenere presente che i frammenti di codice aggiunti durante un esercizio non sono presenti queste soluzioni di avvio e potrebbero non funzionare fino a quando non si have completato l'esercizio. All'interno del codice sorgente per un esercizio, si noterà anche un **End** cartella che contiene una soluzione di Visual Studio con il codice che scaturisce da completare i passaggi nell'esercizio corrispondente. È possibile usare queste soluzioni come prassi consigliata se ti serve assistenza aggiuntiva durante l'esecuzione in questo laboratorio pratico.
-
 
 ---
 
@@ -106,7 +103,6 @@ Tempo stimato per completare questa esercitazione: **75 minuti**
 
 > [!NOTE]
 > Al primo avvio di Visual Studio, è necessario selezionare una delle raccolte di impostazioni predefinite. Ogni raccolta predefinita è pensata per associare un particolare stile di sviluppo e determina i layout delle finestre, il comportamento dell'editor, frammenti di codice IntelliSense e opzioni della finestra di dialogo. Le procedure descritte in questa esercitazione vengono descritte le azioni necessarie per eseguire una determinata attività in Visual Studio quando si usa la **delle impostazioni di sviluppo generale** raccolta. Se si sceglie una raccolta di impostazioni diverse per l'ambiente di sviluppo, possono essere presenti differenze nei passaggi che è necessario tenere conto.
-
 
 <a id="Exercise1"></a>
 ### <a name="exercise-1-using-entity-framework-migrations"></a>Esercizio 1: Tramite migrazioni di Entity Framework
@@ -249,7 +245,6 @@ In questo esercizio, verrà distribuito il **fanatico Quiz** applicazione all'am
 
 > [!NOTE]
 > Per abilitare la pubblicazione di gestione temporanea, l'app web deve essere **modalità Standard**. Si noti che saranno soggette a costi aggiuntivi se si modifica l'app web in modalità Standard. Per altre informazioni sui prezzi, vedere [prezzi di servizio App](https://azure.microsoft.com/pricing/details/app-service/).
-
 
 <a id="Ex2Task1"></a>
 #### <a name="task-1--creating-a-web-app-in-azure-app-service"></a>Attività 1: creazione di un'App Web in servizio App di Azure
@@ -731,7 +726,6 @@ In questa attività si userà **Internet Explorer** per selezionare la **fanatic
 > [!NOTE]
 > Questo esercizio è facoltativo, poiché richiede il supporto per il carico Web &amp; cui è disponibile solo per il test delle prestazioni **Visual Studio 2013 Ultimate Edition**. Per altre informazioni su funzionalità specifiche di Visual Studio 2013, confrontare le versioni [qui](https://www.microsoft.com/visualstudio/eng/products/compare).
 
-
 **App Web di Azure App Service** fornisce la funzionalità scalabilità automatica per le app web in esecuzione in **modalità Standard**. Scalabilità automatica consente a Azure di ridimensionare automaticamente il numero di istanze dell'app web a seconda del carico. Quando è abilitata la scalabilità automatica, Azure controlla la CPU dell'app web una volta ogni cinque minuti e aggiunge istanze in base alle esigenze in quel punto nel tempo. Se l'utilizzo della CPU è basso, Azure rimuoverà le istanze di una volta ogni due ore per assicurarsi che le prestazioni dell'app web non sono danneggiata.
 
 In questo esercizio si passerà attraverso i passaggi necessari per configurare il **scalabilità automatica** funzionalità per il **fanatico Quiz** app web. Questa funzionalità verrà verificato eseguendo un test di carico di Visual Studio per generare un carico sufficiente CPU dell'applicazione per attivare un aggiornamento dell'istanza.
@@ -871,7 +865,7 @@ A questo punto **scalabilità automatica** è stato configurato, si creerà un *
     > [!NOTE]
     > In alternativa, è possibile configurare il progetto di test per eseguire i test di carico nel cloud usando **piani di Test Azure**. Piani di Test di Azure fornisce un carico basati sul cloud servizio che simula un carico più realistico di test, evitare i vincoli dell'ambiente locale, ad esempio la capacità della CPU, memoria disponibile e la larghezza di banda di rete. Per altre informazioni sull'utilizzo di piani di Test di Azure per eseguire i test di carico, vedere [scenari di test di carico](/azure/devops/test/load-test/overview?view=vsts).
 
-    ![Impostazioni test](maintainable-azure-websites-managing-change-and-scale/_static/image98.png)
+    ![Impostazioni di test](maintainable-azure-websites-managing-change-and-scale/_static/image98.png)
 
 <a id="Ex5Task3"></a>
 #### <a name="task-3--autoscale-verification"></a>Attività 3: verifica della scalabilità automatica

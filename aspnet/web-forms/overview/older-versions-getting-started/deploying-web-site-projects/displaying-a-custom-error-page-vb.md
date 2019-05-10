@@ -8,12 +8,12 @@ ms.date: 06/09/2009
 ms.assetid: 14873c5d-81a9-455b-bd71-30fb555583e7
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/displaying-a-custom-error-page-vb
 msc.type: authoredcontent
-ms.openlocfilehash: dc3ff989b6861fe62cce0199a62adef6107206d5
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 961959300f5481a297ed8a9a17131c076d1dfd69
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59384188"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65116696"
 ---
 # <a name="displaying-a-custom-error-page-vb"></a>Visualizzazione di una pagina di errore personalizzata (VB)
 
@@ -22,7 +22,6 @@ da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Scaricare il codice](http://download.microsoft.com/download/1/0/C/10CC829F-A808-4302-97D3-59989B8F9C01/ASPNET_Hosting_Tutorial_11_VB.zip) o [Scarica il PDF](http://download.microsoft.com/download/5/C/5/5C57DB8C-5DEA-4B3A-92CA-4405544D313B/aspnet_tutorial11_CustomErrors_vb.pdf)
 
 > Ciò che viene visualizzato quando si verifica un errore di runtime in un'applicazione web ASP.NET? La risposta dipende dalla modalità del sito Web &lt;customErrors&gt; configurazione. Per impostazione predefinita, gli utenti vengono visualizzati una schermata di gialla poco eleganti proclaiming che si è verificato un errore di runtime. Questa esercitazione illustra come personalizzare queste impostazioni alla pagina di errore personalizzato visualizzato un esteticamente piacevole corrispondente aspetto del sito.
-
 
 ## <a name="introduction"></a>Introduzione
 
@@ -47,7 +46,6 @@ Gli sviluppatori di pagina di errore più familiare con è la YSOD Dettagli ecce
 > [!NOTE]
 > Per riprodurre l'errore nell'applicazione demo web disponibile per il download è possibile visitare `Genre.aspx?ID=foo` direttamente oppure fare clic sul collegamento "Genera un errore di Runtime" `Default.aspx`.
 
-
 Tenere presente le informazioni sull'eccezione presentati nella **figura 1**. Il messaggio di eccezione, "conversione non riuscita durante la conversione da una stringa di caratteri a uniqueidentifier" è presente nella parte superiore della pagina. Il tipo dell'eccezione, `System.Data.SqlClient.SqlException`, è elencato. È inoltre disponibile l'analisi dello stack.
 
 [![](displaying-a-custom-error-page-vb/_static/image2.png)](displaying-a-custom-error-page-vb/_static/image1.png)
@@ -61,7 +59,6 @@ Per impostazione predefinita, il YSOD di errore di Runtime verrà visualizzato a
 
 > [!NOTE]
 > Se si seguono e Usa DiscountASP.NET dell'host web, è possibile notare che il YSOD di errore di Runtime non vengono visualizzate quando si visita il sito in tempo reale. Questo avviene perché DiscountASP.NET dispone di propri server configurato per mostrare il YSOD Dettagli eccezione per impostazione predefinita. La buona notizia è che è possibile eseguire l'override di questo comportamento predefinito tramite l'aggiunta di un `<customErrors>` sezione il `Web.config` file. La sezione "Configurazione quale pagina viene visualizzato errore" esamina le `<customErrors>` sezione in modo dettagliato.
-
 
 [![](displaying-a-custom-error-page-vb/_static/image5.png)](displaying-a-custom-error-page-vb/_static/image4.png)
 
@@ -139,7 +136,6 @@ Con questa modifica, ogni volta che un utente potrebbe visitare in modalità rem
 > [!NOTE]
 > Consulta [pagine di errore 404, una volta più](http://www.smashingmagazine.com/2009/01/29/404-error-pages-one-more-time/) per indicazioni sulla creazione di pagine di errore 404 efficace.
 
-
 [![](displaying-a-custom-error-page-vb/_static/image19.png)](displaying-a-custom-error-page-vb/_static/image18.png)**Figura 7**: La pagina di errore 404 personalizzata viene visualizzato un messaggio più mirato rispetto a `Oops.aspx`  
  ([Fare clic per visualizzare l'immagine con dimensioni normali](displaying-a-custom-error-page-vb/_static/image20.png)) 
 
@@ -147,7 +143,6 @@ Poiché è certo che il `404.aspx` pagina viene raggiunta solo quando l'utente e
 
 > [!NOTE]
 > Pagina di errore personalizzata viene visualizzata solo quando viene effettuata una richiesta a una risorsa gestita dal modulo di ASP.NET. Come illustrato nella [differenze principali tra IIS e ASP.NET Development Server](core-differences-between-iis-and-the-asp-net-development-server-vb.md) dell'esercitazione, il server web potrebbe gestire determinate richieste se stesso. Per impostazione predefinita, IIS web server elabora le richieste per il contenuto statico come immagini e file HTML senza richiamare il motore di ASP.NET. Di conseguenza, se l'utente richiede un file di immagine non esistenti otterranno nuovo messaggio di errore 404 predefinita di IIS anziché ASP. Pagina di errore configurata di NET.
-
 
 ## <a name="summary"></a>Riepilogo
 
