@@ -8,12 +8,12 @@ ms.date: 01/27/2009
 ms.assetid: 2dcb44a4-5cbf-4d62-b363-718104082d86
 msc.legacyurl: /mvc/overview/older-versions-1/overview/asp-net-mvc-overview
 msc.type: authoredcontent
-ms.openlocfilehash: 149312e2ddf0a5023a4a12f5b05852f7da6b18f8
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 73965c71f37de13e3813df089a253fde528ea7ee
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59418170"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65128219"
 ---
 # <a name="aspnet-mvc-overview"></a>Panoramica di ASP.NET MVC
 
@@ -21,18 +21,15 @@ by [Microsoft](https://github.com/microsoft)
 
 > Informazioni sulle differenze tra l'applicazione MVC ASP.NET e applicazioni Web Form ASP.NET. Informazioni su come stabilire quando compila un'applicazione ASP.NET MVC.
 
-
 Il modello architetturale Model-View-Controller (MVC) suddivide un'applicazione in tre componenti principali: il modello, la visualizzazione e il controller. Il framework ASP.NET MVC offre un'alternativa al modello Web Form ASP.NET per la creazione di applicazioni Web basate su MVC. Il framework ASP.NET MVC è un framework di presentazione leggero e facile da testare che (come con le applicazioni basate su Web Form) è integrato con funzionalità ASP.NET esistenti, ad esempio pagine master e l'autenticazione basata sull'appartenenza. Il framework di MVC è definito nel **System** dello spazio dei nomi ed è una parte fondamentale, supportata delle **System. Web** dello spazio dei nomi.   
   
 MVC è uno schema progettuale standard che hanno familiari con molti sviluppatori. Alcuni tipi di applicazioni Web trarranno vantaggio dal framework di MVC. Gli altri continueranno a usare il modello ASP.NET tradizionale basato su Web Form e postback. Altri tipi di applicazioni Web combineranno i due approcci; Nessuno dei due esclude l'altro.   
   
 Il framework di MVC include i componenti seguenti:
 
-
 [![Richiamo di un'azione del controller che prevede un valore di parametro](asp-net-mvc-overview/_static/image1.jpg)](asp-net-mvc-overview/_static/image1.png)
 
 **Figura 01**: Richiamo di un'azione del controller che prevede un valore di parametro ([fare clic per visualizzare l'immagine con dimensioni normali](asp-net-mvc-overview/_static/image2.png))
-
 
 - **I modelli**. Gli oggetti modello sono le parti dell'applicazione che implementano la logica per il dominio di applicazione s dei dati. Spesso, gli oggetti modello recupero e archiviano lo stato del modello in un database. Ad esempio, un oggetto Product potrebbe recuperare informazioni da un database, operare su di esso e quindi scrivere informazioni aggiornate in una tabella Products in SQL Server.
 

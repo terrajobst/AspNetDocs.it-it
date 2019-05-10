@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 0a1f88bd-97da-4ed1-86f1-605199dc75a4
 msc.legacyurl: /web-forms/overview/getting-started/hands-on-labs/whats-new-in-web-forms-in-aspnet-45
 msc.type: authoredcontent
-ms.openlocfilehash: 52f6ec17fb21019e93ebf2795e95d5b27e4edbe6
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 301af8ed877b58624e419c04f605c41f27dbdd0c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59401741"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132079"
 ---
 # <a name="whats-new-in-web-forms-in-aspnet-45"></a>Novità di Web Forms in ASP.NET 4.5
 
@@ -40,7 +40,6 @@ da [Camp Web Team](https://twitter.com/webcamps)
 > Nel portale di ASP.NET ufficiale è possibile trovare altri esempi delle nuove funzionalità in Web Form ASP.NET 4.5: [Novità di ASP.NET 4.5 e Visual Studio 2012](../../../../whitepapers/whats-new-in-aspnet-45-and-visual-studio-2012.md#_Toc318097385)
 > 
 > Tutto il codice di esempio e frammenti di codice sono inclusi nel Web Camp Kit di formazione, disponibile all'indirizzo [ https://go.microsoft.com/fwlink/?LinkID=248297&clcid=0x409 ](https://go.microsoft.com/fwlink/?LinkID=248297&clcid=0x409).
-
 
 <a id="Objectives"></a>
 ### <a name="objectives"></a>Obiettivi
@@ -82,7 +81,6 @@ Questo laboratorio pratico include gli esercizi seguenti:
 
 > [!NOTE]
 > Ogni esercizio è accompagnato da un **End** cartella che contiene la soluzione risultante si dovrebbe ottenere dopo aver completato gli esercizi. Se ti serve assistenza aggiuntiva esaminando gli esercizi, è possibile usare questa soluzione come guida.
-
 
 Tempo stimato per completare questa esercitazione: **60 minuti**.
 
@@ -610,7 +608,6 @@ Le operazioni che richiedono molto tempo nel proprio sito web sono ottimi candid
 
 > [!NOTE]
 > Inoltre, è possibile distribuire questa applicazione di Azure seguenti [appendice b: Pubblicazione di un'applicazione ASP.NET MVC 4 con distribuzione Web](#AppendixB).
-
 
 ---
 

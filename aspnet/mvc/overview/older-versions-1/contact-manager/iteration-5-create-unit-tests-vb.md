@@ -8,12 +8,12 @@ ms.date: 02/20/2009
 ms.assetid: c6e5c036-2265-4fa7-a9eb-47f197bdc262
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-5-create-unit-tests-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 476e5529e4fd53c6166c53766409268939a83c72
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 4ce1c6224a7e9203ff62f136f4f3a43e4561a904
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59380665"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123825"
 ---
 # <a name="iteration-5--create-unit-tests-vb"></a>Iterazione #5-creare gli unit test (VB)
 
@@ -22,7 +22,6 @@ by [Microsoft](https://github.com/microsoft)
 [Scaricare il codice](iteration-5-create-unit-tests-vb/_static/contactmanager_5_vb1.zip)
 
 > Nell'iterazione del quinto, si semplifica l'applicazione di manutenzione e la modifica mediante l'aggiunta di unit test. È simulare le classi di modello di dati e generare unit test per i controller e logica di convalida.
-
 
 ## <a name="building-a-contact-management-aspnet-mvc-application-vb"></a>Creazione di un'applicazione di gestione dei contatti ASP.NET MVC (VB)
 
@@ -43,7 +42,6 @@ Si compilerà l'applicazione a varie iterazioni. A ogni iterazione, abbiamo migl
 - Iterazione #6 - usare lo sviluppo basato su test. In questa iterazione sesta, viene aggiunto nuove funzionalità all'applicazione scrivendo unit test prima e scrivere codice sull'unit test. In questa iterazione, viene aggiunto gruppi di contatti.
 
 - Iterazione #7 - aggiungere funzionalità Ajax. Nell'iterazione del settimo, aggiungendo il supporto per Ajax è migliorare la velocità di risposta e le prestazioni dell'applicazione.
-
 
 ## <a name="this-iteration"></a>Questa iterazione
 
@@ -69,7 +67,6 @@ In questa iterazione, unit test viene aggiunto all'applicazione Contact Manager.
 > 
 > Sono disponibili un'ampia gamma di unit test Framework, tra cui MbUnit NUnit e xUnit.net. In questa esercitazione, si usa il framework di unit test inclusi in Visual Studio. Tuttavia, è possibile semplicemente utilizzare uno di questi Framework alternativi.
 
-
 ## <a name="what-gets-tested"></a>Che cosa verrà sottoposta a test
 
 Nel mondo perfetto, tutto il codice potrebbe essere coperto da unit test. In teoria, sarebbe necessario la rete di protezione perfetta. È possibile modificare qualsiasi riga di codice nell'applicazione e sapere immediatamente, eseguendo gli unit test, se la modifica si è interrotta funzionalità esistenti.
@@ -88,11 +85,9 @@ Se la vista contiene logica complessa quindi è consigliabile spostare la logica
 > 
 > Durante la scrittura di test per la logica di accesso ai dati o la logica di visualizzazione non è una buona idea durante la scrittura di unit test, questi test possono risultare estremamente utili edificio funzionale o integrazione dei test.
 
-
 > [!NOTE] 
 > 
 > ASP.NET MVC è il motore di visualizzazione Web Form. Mentre il motore di visualizzazione Web Form è dipendente da un server web, potrebbero non essere altri motori di visualizzazione.
-
 
 ## <a name="using-a-mock-object-framework"></a>Grazie a una struttura oggetto fittizio
 
@@ -115,16 +110,13 @@ Prima di poter usare Moq, è necessario completare i passaggi seguenti:
 3. Decomprimere il download.
 4. Aggiungere un riferimento all'assembly Moq al progetto di Test selezionando l'opzione di menu **progetto, Aggiungi riferimento** per aprire il **Aggiungi riferimento** finestra di dialogo. Nella scheda esplorazione, passare alla cartella in cui è stato decompresso Moq e selezionare l'assembly Moq.dll. Scegliere il **OK** pulsante (vedere la figura 2).
 
-
 [![Moq sblocco](iteration-5-create-unit-tests-vb/_static/image1.jpg)](iteration-5-create-unit-tests-vb/_static/image1.png)
 
 **Figura 01**: Moq sblocco ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-5-create-unit-tests-vb/_static/image2.png))
 
-
 [![Riferimenti dopo l'aggiunta di Moq](iteration-5-create-unit-tests-vb/_static/image2.jpg)](iteration-5-create-unit-tests-vb/_static/image3.png)
 
 **Figura 02**: Dopo aver aggiunto Moq i riferimenti ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-5-create-unit-tests-vb/_static/image4.png))
-
 
 ## <a name="creating-unit-tests-for-the-service-layer"></a>Creazione di Unit test per il livello di servizio
 
@@ -136,11 +128,9 @@ Creare una nuova cartella denominata Models nel progetto ContactManager.Tests. S
 > 
 > In generale, si desidera che la struttura di cartelle del progetto di Test per corrispondere alla struttura di cartelle del progetto ASP.NET MVC. Ad esempio, inserire i test controller in una cartella Controllers, i test del modello in una cartella modelli e così via.
 
-
 [![Models\ContactManagerServiceTest.cs](iteration-5-create-unit-tests-vb/_static/image3.jpg)](iteration-5-create-unit-tests-vb/_static/image5.png)
 
 **Figura 03**: Models\ContactManagerServiceTest.cs ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-5-create-unit-tests-vb/_static/image6.png))
-
 
 Inizialmente, si vuole testare il metodo CreateContact() esposto dalla classe ContactManagerService. Si creeranno i cinque test seguenti:
 
@@ -158,9 +148,7 @@ Il codice per questi test è contenuto nel listato 1.
 
 [!code-vb[Main](iteration-5-create-unit-tests-vb/samples/sample1.vb)]
 
-
 Poiché si usa la classe di contatto nel listato 1, è necessario aggiungere un riferimento a Microsoft Entity Framework per il progetto di Test. Aggiungere un riferimento all'assembly Data. Entity.
-
 
 L'elenco 1 contiene un metodo denominato Initialize () che è decorata con l'attributo [TestInitialize]. Questo metodo viene chiamato automaticamente prima esecuzione della ognuno degli unit test (viene chiamato 5 volte subito prima della ognuno degli unit test). Il metodo Initialize () consente di creare un repository fittizio con la riga di codice seguente:
 
@@ -172,7 +160,6 @@ Questa riga di codice Usa il framework Moq per generare un repository fittizio d
 > 
 > Quando si usa il framework Moq, vi è una differenza tra \_mockRepository e \_mockRepository.Object. Il primo si riferisce alla classe di simulazione (di IContactManagerRepository) che contiene i metodi che consentono di specificare come si comporterà il repository fittizio. Quest'ultimo si riferisce al repository fittizio effettivo che implementa l'interfaccia IContactManagerRepository.
 
-
 Il repository fittizio viene usato nel metodo Initialize () quando si crea un'istanza della classe ContactManagerService. Tutti i singoli unit test utilizzare questa istanza della classe ContactManagerService.
 
 L'elenco 1 contiene cinque metodi che corrispondono a ognuno degli unit test. Ognuno di questi metodi è decorata con l'attributo [TestMethod]. Quando si eseguono gli unit test, viene chiamato qualsiasi metodo con questo attributo. In altre parole, qualsiasi metodo che è decorata con l'attributo [TestMethod] è uno unit test.
@@ -183,11 +170,9 @@ I restanti test verificare che quando viene chiamato il metodo CreateContact() c
 
 È possibile eseguire gli unit test nel listato 1, selezionando l'opzione di menu **esecuzione dei Test, tutti i test nella soluzione (CTRL + R, A)**. I risultati dei test vengono visualizzati nella finestra Risultati Test (vedere la figura 4).
 
-
 [![Risultati dei test](iteration-5-create-unit-tests-vb/_static/image4.jpg)](iteration-5-create-unit-tests-vb/_static/image7.png)
 
 **Figura 04**: I risultati dei test ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-5-create-unit-tests-vb/_static/image8.png))
-
 
 ## <a name="creating-unit-tests-for-controllers"></a>Creazione di Unit test per i controller
 
@@ -211,7 +196,6 @@ Il secondo di unit test verifica che l'azione create () restituisce la visualizz
 
 Se il metodo Create () si comporta come prevedevamo quindi deve restituire la visualizzazione Create quando il livello di servizio restituisce il valore false. In questo modo, il controller può visualizzare i messaggi di errore di convalida nella visualizzazione di creazione e l'utente ha la possibilità di correggere tale proprietà di contatto non valide.
 
-
 Se si prevede di unit test per i controller di compilazione è necessario restituire i nomi di visualizzazione esplicita da azioni del controller. Ad esempio, non restituiscono una visualizzazione simile al seguente:
 
 Restituire View()
@@ -221,7 +205,6 @@ Al contrario, restituire la visualizzazione simile al seguente:
 Restituire View("Create")
 
 Se non si è esplicita la restituzione di una visualizzazione della proprietà ViewResult.ViewName restituisce una stringa vuota.
-
 
 **Listing 2 - Controllers\ContactControllerTest.vb**
 

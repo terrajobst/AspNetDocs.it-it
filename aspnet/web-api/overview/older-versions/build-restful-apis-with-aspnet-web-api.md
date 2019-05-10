@@ -9,12 +9,12 @@ ms.custom: seoapril2019
 ms.assetid: 87daa99f-3810-407e-b969-dd28a192959d
 msc.legacyurl: /web-api/overview/older-versions/build-restful-apis-with-aspnet-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: 3ba7f2d186e6f0837a32f69f964cec19fe625953
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 35b115d6b4f84084e78e429bbb4842670e57bba4
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59391481"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132269"
 ---
 # <a name="build-restful-apis-with-aspnet-web-api"></a>Compilare le API RESTful con l'API Web ASP.NET
 
@@ -33,7 +33,6 @@ Questa esercitazione richiede una conoscenza di base HTTP, REST e si presuppone 
 > 
 > 
 > Tutto il codice di esempio e frammenti di codice sono inclusi nel Web Camp Kit di formazione, disponibile all'indirizzo [ https://go.microsoft.com/fwlink/?LinkID=248297&clcid=0x409 ](https://go.microsoft.com/fwlink/?LinkID=248297&clcid=0x409).
-
 
 <a id="Objectives"></a>
 ### <a name="objectives"></a>Obiettivi
@@ -70,7 +69,6 @@ Questo laboratorio pratico include l'esercizio seguente:
 
 > [!NOTE]
 > Ogni esercizio è accompagnato da un **End** cartella che contiene la soluzione risultante si dovrebbe ottenere dopo aver completato gli esercizi. Se ti serve assistenza aggiuntiva esaminando gli esercizi, è possibile usare questa soluzione come guida.
-
 
 Tempo stimato per completare questa esercitazione: **60 minuti**.
 
@@ -420,7 +418,6 @@ In questa attività, si continuerà a modificare la visualizzazione dell'indice 
 
 > [!NOTE]
 > Inoltre, è possibile distribuire questa applicazione di Azure seguenti [appendice c: Pubblicazione di un'applicazione ASP.NET MVC 4 con distribuzione Web](#AppendixC).
-
 
 ---
 

@@ -8,12 +8,12 @@ ms.date: 01/02/2018
 ms.assetid: ac86ec9c-6b69-485b-b9e0-8b9127b13e6b
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/updating-data
 msc.type: authoredcontent
-ms.openlocfilehash: 4542ad3ac3e321629bb4de3cd4df12c22ff6cb20
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 8f8bcfb7d9d2416a2699776cadbdaae8e12415ba
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59414621"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131795"
 ---
 # <a name="introducing-aspnet-web-pages---updating-database-data"></a>Introduzione a pagine Web ASP.NET - aggiornamento di dati del Database
 
@@ -37,7 +37,6 @@ da [Tom FitzMacken](https://github.com/tfitzmac)
 > - Il codice SQL `Update` comando.
 > - Metodo `Database.Execute` .
 > - Campi nascosti (`<input type="hidden">`).
-
 
 ## <a name="what-youll-build"></a>Scopo dell'esercitazione
 
@@ -129,7 +128,6 @@ La colonna è costituita da *solo* del markup che esegue il rendering di collega
 > 
 > Ovviamente, per usare i parametri denominati, è necessario conoscere i nomi dei parametri. WebMatrix IntelliSense possono *mostrare* si i nomi, ma non è attualmente completarle automaticamente.
 
-
 ## <a name="creating-the-edit-page"></a>Creazione della pagina Edit
 
 Ora è possibile creare il *EditMovie* pagina. Quando gli utenti fanno clic la **modifica** collegamento, si otterrà in questa pagina.
@@ -206,7 +204,6 @@ La differenza fondamentale tra i *AddMovie* codice e questo codice è che in que
 > 
 > **Importanti** il `Where` clausola con l'ID è molto importante, perché questo è come il database sappia quale database record che si desidera aggiornare. Se è stata interrotta la `Where` clausola, il database aggiornerebbero *ogni* record nel database. Nella maggior parte dei casi, sarebbe una situazione di emergenza.
 
-
 Nel codice, i valori da aggiornare vengono passati all'istruzione SQL con i segnaposto. Per ripetere quanto abbiamo detto prima: per motivi di sicurezza *solo* usare i segnaposto per passare i valori in un'istruzione SQL.
 
 Dopo che il codice Usa `db.Execute` per eseguire il `Update` istruzione, viene reindirizzato alla pagina di presentazione, in cui è possibile visualizzare le modifiche.
@@ -222,7 +219,6 @@ Dopo che il codice Usa `db.Execute` per eseguire il `Update` istruzione, viene r
 > Naturalmente, il `Query` metodo può restituire solo una riga di database. ASP.NET, tuttavia, Considera sempre i risultati del `Query` metodo come una raccolta. Anche se il metodo restituisce una sola riga, è necessario estrarre tale singola riga dalla raccolta. Pertanto, nelle situazioni in cui si *conoscere* verranno restituite solo una riga, è un po' più comodo usare `QuerySingle`.
 > 
 > Esistono alcuni altri metodi che eseguono tipi specifici di operazioni di database. È possibile trovare un elenco dei metodi di database nel [riferimento rapido di ASP.NET Web Pages API](../../api-reference/asp-net-web-pages-api-reference.md#Data).
-
 
 ## <a name="making-validation-for-the-id-more-robust"></a>Effettua la convalida per l'ID più affidabile
 

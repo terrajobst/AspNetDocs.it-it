@@ -8,12 +8,12 @@ ms.date: 02/17/2014
 ms.assetid: a8aac1ac-89de-4415-afe0-97a41c6423d2
 msc.legacyurl: /web-pages/overview/routing/creating-readable-urls-in-aspnet-web-pages-sites
 msc.type: authoredcontent
-ms.openlocfilehash: bfce6120b76d68a3f212639eafa6aa091d7e345d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 832db8e144cab730f16c78f67c12feb9b7c92c7c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59381783"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131775"
 ---
 # <a name="creating-readable-urls-in-aspnet-web-pages-razor-sites"></a>Creazione di URL leggibili nei siti di ASP.NET Web Pages (Razor)
 
@@ -33,7 +33,6 @@ da [Tom FitzMacken](https://github.com/tfitzmac)
 >   
 > 
 > Questa esercitazione si integra inoltre con ASP.NET Web Pages 2.
-
 
 ## <a name="about-routing"></a>Informazioni sul Routing
 
@@ -77,7 +76,6 @@ Se la ricerca ha trovato non esatta corrisponda *cshtml* file nelle rispettive c
 > [!NOTE]
 > Per maggiore chiarezza, le richieste di pagine specifiche (vale a dire, le richieste che includono il *. cshtml* estensione del nome file) funzionare esattamente come si aspetterebbe. Una richiesta simile `http://www.contoso.com/a/b.cshtml` eseguiranno la pagina *b.cshtml* correttamente.
 
-
 All'interno di una pagina, è possibile ottenere le informazioni sui percorsi tramite la pagina `UrlData` proprietà, ovvero un dizionario. Si supponga di avere un file denominato *ViewCustomers.cshtml* e il sito riceve questa richiesta:
 
 `http://mysite.com/myWebSite/ViewCustomers/1000`
@@ -88,7 +86,6 @@ Come descritto nelle regole precedenti, la richiesta verrà inviata a una pagina
 
 > [!NOTE]
 > Poiché il routing non prevede l'utilizzo di nomi di file completi, è possibile che ambiguità nel caso di pagine che presentano lo stesso nome ma con una diversa estensioni di file (ad esempio, *MyPage.cshtml* e *MyPage.html*) . Per evitare problemi con il routing, è consigliabile verificare che non hai le pagine nel sito i cui nomi si differenziano solo per l'estensione.
-
 
 <a id="Additional_Resources"></a>
 ## <a name="additional-resources"></a>Risorse aggiuntive

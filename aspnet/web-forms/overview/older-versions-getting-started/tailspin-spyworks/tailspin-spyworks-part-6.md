@@ -8,12 +8,12 @@ ms.date: 07/21/2010
 ms.assetid: f70a310c-9557-4743-82cb-655265676d39
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-6
 msc.type: authoredcontent
-ms.openlocfilehash: 34c8776636478e8c40064bb29ae0311ee4fdc8d8
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: b0caa89dc9ffb5bb7451fa2d9d346c7db2bf1466
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59409785"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130878"
 ---
 # <a name="part-6-aspnet-membership"></a>Parte 6: Appartenenza ASP.NET
 
@@ -22,7 +22,6 @@ da [Joe Stagner](https://github.com/JoeStagner)
 > Tailspin Spyworks viene illustrato come saliente è davvero semplice per creare applicazioni potenti e scalabili per la piattaforma .NET. Illustra come usare le nuove funzionalità in ASP.NET 4 per creare un negozio online, tra cui acquisti, estrazione e l'amministrazione.
 > 
 > Questa serie di esercitazioni illustra tutti i passaggi necessari per compilare l'applicazione di esempio Tailspin Spyworks. Parte 6 aggiunge le appartenenze di ASP.NET.
-
 
 ## <a id="_Toc260221672"></a>  Utilizzo di appartenenza ASP.NET
 
@@ -99,7 +98,6 @@ SubmitOrder sarà:
 - Eseguire tutte le voci nel carrello acquisti e usarli per creare un nuovo Record di ordine e i record OrderDetails associati.
 - Calcola la data di spedizione.
 - Deselezionare il carrello acquisti.
-
 
 [!code-csharp[Main](tailspin-spyworks-part-6/samples/sample10.cs)]
 

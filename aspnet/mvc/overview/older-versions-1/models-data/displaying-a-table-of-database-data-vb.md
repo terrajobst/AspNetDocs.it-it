@@ -8,12 +8,12 @@ ms.date: 10/07/2008
 ms.assetid: 5bb4587f-5bcd-44f5-b368-3c1709162b35
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/displaying-a-table-of-database-data-vb
 msc.type: authoredcontent
-ms.openlocfilehash: c33812ab9d758c3155a2f75f59bfb63c55487dc7
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 9bb26e4364d1e32a428b34bd03918303206d21c9
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59396408"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65122419"
 ---
 # <a name="displaying-a-table-of-database-data-vb"></a>Visualizzazione di una tabella di dati del database (VB)
 
@@ -23,7 +23,6 @@ by [Microsoft](https://github.com/microsoft)
 
 > In questa esercitazione, illustrano due metodi di visualizzazione di un set di record di database. Visualizzare due metodi di formattazione di un set di record di database in una tabella HTML. In primo luogo, illustrato come è possibile formattare i record del database direttamente all'interno di una vista. Successivamente, si dimostrerà come è possibile sfruttare i vantaggi di righe parzialmente eseguite durante la formattazione dei record di database.
 
-
 L'obiettivo di questa esercitazione è illustrare come è possibile visualizzare una tabella HTML di dati del database in un'applicazione ASP.NET MVC. In primo luogo, descrive come usare gli strumenti di scaffolding inclusi in Visual Studio per generare una vista che consente di visualizzare automaticamente un set di record. Successivamente, informazioni su come usare un elemento parziale come modello durante la formattazione dei record di database.
 
 ## <a name="create-the-model-classes"></a>Creare le classi del modello
@@ -32,7 +31,6 @@ Verrà visualizzato il set di record dalla tabella di database di film. La tabel
 
 <a id="0.4_table01"></a>
 
-
 | **Nome della colonna** | **Tipo di dati** | **Consenti valori null** |
 | --- | --- | --- |
 | Id | Int | False |
@@ -40,13 +38,11 @@ Verrà visualizzato il set di record dalla tabella di database di film. La tabel
 | Director | NVarchar(50) | False |
 | DateReleased | DateTime | False |
 
-
 Per rappresentare la tabella di film nell'applicazione ASP.NET MVC, è necessario creare una classe di modello. In questa esercitazione, usiamo Microsoft Entity Framework per creare le classi di modello.
 
 > [!NOTE] 
 > 
 > In questa esercitazione, si usa Microsoft Entity Framework. Tuttavia, è importante comprendere che è possibile usare un'ampia gamma di tecnologie diverse per interagire con un database da un'applicazione ASP.NET MVC incluso LINQ to SQL, NHibernate o ADO.NET.
-
 
 Seguire questi passaggi per avviare la procedura guidata Entity Data Model:
 
@@ -60,19 +56,15 @@ Dopo aver fatto clic sul pulsante Aggiungi, viene visualizzata la procedura guid
 2. Nel **Seleziona connessione dati** istruzioni, utilizzare il *MoviesDB.mdf* connessione dati e il nome *MoviesDBEntities* per le impostazioni di connessione. Scegliere il **successivo** pulsante.
 3. Nel **Scegli oggetti di Database** passaggio, espandere il nodo tabelle, selezionare la tabella di film. Immettere lo spazio dei nomi *modelli* e fare clic sui **fine** pulsante.
 
-
 [![Creazione di LINQ alle classi di SQL](displaying-a-table-of-database-data-vb/_static/image1.jpg)](displaying-a-table-of-database-data-vb/_static/image1.png)
 
 **Figura 01**: Creazione di LINQ alle classi di SQL ([fare clic per visualizzare l'immagine con dimensioni normali](displaying-a-table-of-database-data-vb/_static/image2.png))
 
-
 Dopo aver completato la procedura guidata Entity Data Model, verrà visualizzata la finestra di Entity Data Model Designer. La finestra di progettazione deve visualizzare le entità film (vedere la figura 2).
-
 
 [![Entity Data Model Designer](displaying-a-table-of-database-data-vb/_static/image2.jpg)](displaying-a-table-of-database-data-vb/_static/image3.png)
 
 **Figura 02**: Entity Data Model Designer ([fare clic per visualizzare l'immagine con dimensioni normali](displaying-a-table-of-database-data-vb/_static/image4.png))
-
 
 È necessario apportare una modifica prima di continuare. La procedura guidata Entity Data genera una classe di modello denominata *film* che rappresenta la tabella di database di film. Poiché la classe di film verrà usato per rappresentare un filmato specifico, è necessario modificare il nome della classe sia *film* invece di *film* (singolare anziché plurale).
 
@@ -82,19 +74,15 @@ Fare doppio clic sul nome della classe nell'area di progettazione e modificare i
 
 Ora che abbiamo a disposizione un modo per rappresentare i record del database, è possibile creare un controller che restituisce la raccolta di film. All'interno della finestra Esplora soluzioni di Visual Studio, fare clic sulla cartella controller e selezionare l'opzione di menu **Controller, Aggiungi** (vedere la figura 3).
 
-
 [![Il Controller Menu Aggiungi](displaying-a-table-of-database-data-vb/_static/image3.jpg)](displaying-a-table-of-database-data-vb/_static/image5.png)
 
 **Figura 03**: Il Menu di aggiunta dei Controller ([fare clic per visualizzare l'immagine con dimensioni normali](displaying-a-table-of-database-data-vb/_static/image6.png))
 
-
 Quando la **Aggiungi Controller** finestra di dialogo viene visualizzata, immettere il nome del controller MovieController (vedere la figura 4). Scegliere il **Aggiungi** pulsante per aggiungere il nuovo controller.
-
 
 [![La finestra di dialogo Aggiungi Controller](displaying-a-table-of-database-data-vb/_static/image4.jpg)](displaying-a-table-of-database-data-vb/_static/image7.png)
 
 **Figura 04**: La finestra di dialogo Aggiungi Controller ([fare clic per visualizzare l'immagine con dimensioni normali](displaying-a-table-of-database-data-vb/_static/image8.png))
-
 
 È necessario modificare l'azione Index () esposto dal controller di film in modo che restituisca il set di record del database. Modificare il controller in modo che risulti come il controller nel listato 1.
 
@@ -112,19 +100,15 @@ Compilare l'applicazione selezionando l'opzione di menu **compilazione, Compila 
 
 L'azione Index () e scegliere l'opzione di menu **Aggiungi visualizzazione** (vedere la figura 5).
 
-
 [![Aggiunta di una vista](displaying-a-table-of-database-data-vb/_static/image5.jpg)](displaying-a-table-of-database-data-vb/_static/image9.png)
 
 **Figura 05**: Aggiunta di una vista ([fare clic per visualizzare l'immagine con dimensioni normali](displaying-a-table-of-database-data-vb/_static/image10.png))
 
-
 Nel **Aggiungi visualizzazione** finestra di dialogo, selezionare la casella di controllo etichettato **creare una visualizzazione fortemente tipizzata**. Selezionare la classe di film come le **visualizzare i dati classe**. Selezionare *elenco* come la **visualizzare contenuto** (vedere la figura 6). Selezionando queste opzioni genererà una visualizzazione fortemente tipizzato che consente di visualizzare un elenco di film.
-
 
 [![La finestra di dialogo Aggiungi visualizzazione](displaying-a-table-of-database-data-vb/_static/image6.jpg)](displaying-a-table-of-database-data-vb/_static/image11.png)
 
 **Figura 06**: La finestra di dialogo Aggiungi visualizzazione ([fare clic per visualizzare l'immagine con dimensioni normali](displaying-a-table-of-database-data-vb/_static/image12.png))
-
 
 Dopo aver selezionato il **Add** pulsante, la visualizzazione nel listato 2 viene generato automaticamente. Questa vista contiene il codice necessario per scorrere la raccolta di film e visualizzare ogni proprietà di un film.
 
@@ -134,11 +118,9 @@ Dopo aver selezionato il **Add** pulsante, la visualizzazione nel listato 2 vien
 
 È possibile eseguire l'applicazione selezionando l'opzione di menu **eseguire il Debug, Avvia debug** (o premere F5). Esegue l'applicazione avvia Internet Explorer. Se si passa all'URL /Movie verrà visualizzata la pagina nella figura 7.
 
-
 [![Una tabella di film](displaying-a-table-of-database-data-vb/_static/image7.jpg)](displaying-a-table-of-database-data-vb/_static/image13.png)
 
 **Figura 07**: Una tabella di film ([fare clic per visualizzare l'immagine con dimensioni normali](displaying-a-table-of-database-data-vb/_static/image14.png))
-
 
 Se non si desidera che tutti gli elementi l'aspetto della griglia di record del database nella figura 7 è possibile modificare semplicemente la visualizzazione dell'indice. Ad esempio, è possibile modificare il *DateReleased* intestazione *data di rilascio* modificando la visualizzazione dell'indice.
 
@@ -174,9 +156,7 @@ La visualizzazione nel listato 4 contiene un ciclo For Each che scorre tutti i f
 
 La visualizzazione dell'indice modificata esegue il rendering molto stessa tabella HTML di record di database. Tuttavia, la visualizzazione è stata notevolmente semplificata.
 
-
 Il metodo RenderPartial() è diverso rispetto alla maggior parte degli altri metodi helper perché non restituisce una stringa. Pertanto, è necessario chiamare il metodo RenderPartial() usando &lt;% Html.RenderPartial()&gt; invece di &lt;% = % Html.RenderPartial()&gt;.
-
 
 ## <a name="summary"></a>Riepilogo
 

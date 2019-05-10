@@ -8,17 +8,16 @@ ms.date: 04/08/2010
 ms.assetid: f1a01759-d251-4b09-8835-e112e336c6dd
 msc.legacyurl: /whitepapers/aspnet-mvc2-upgrade-notes
 msc.type: content
-ms.openlocfilehash: b012e859a6991872ba9bc3139bcfe5b137cc3e0c
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 27589f1b1c9d5038118e5ff0cc2e7cecae17d5ed
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59382524"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65125688"
 ---
 # <a name="upgrading-an-aspnet-mvc-10-application-to-aspnet-mvc-2"></a>Aggiornamento di un'applicazione ASP.NET MVC 1.0 ad ASP.NET MVC 2
 
 > Questo documento descrive entrambi come aggiornare una procedura guidata e manualmente un'applicazione ASP.NET MVC 1.0 per ASP.NET MVC 2. Questo documento è disponibile anche per [scaricare](https://download.microsoft.com/download/F/1/6/F16F9AF9-8EF4-4845-BC97-639791D5699C/MVC2-Upgrade-Notes.pdf)
-
 
 ## <a name="introduction"></a>Introduzione
 

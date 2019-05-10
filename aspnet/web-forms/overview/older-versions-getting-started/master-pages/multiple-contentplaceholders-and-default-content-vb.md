@@ -8,12 +8,12 @@ ms.date: 05/21/2008
 ms.assetid: 866a7177-6884-451e-88f4-c934b1dd1af5
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/multiple-contentplaceholders-and-default-content-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 488988bbf540cc809579a5ad5f80cb772ed6b1bf
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 02d94c340f79299beae77531e87f5c0d65902720
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59408368"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65126898"
 ---
 # <a name="multiple-contentplaceholders-and-default-content-vb"></a>Più elementi ContentPlaceHolder e contenuto predefinito (VB)
 
@@ -22,7 +22,6 @@ da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Scaricare il codice](http://download.microsoft.com/download/e/e/f/eef369f5-743a-4a52-908f-b6532c4ce0a4/ASPNET_MasterPages_Tutorial_02_VB.zip) o [Scarica il PDF](http://download.microsoft.com/download/8/f/6/8f6349e4-6554-405a-bcd7-9b094ba5089a/ASPNET_MasterPages_Tutorial_02_VB.pdf)
 
 > Esamina come aggiungere più segnaposto di contenuto a una pagina master e come specificare il contenuto predefinito i segnaposto del contenuto.
-
 
 ## <a name="introduction"></a>Introduzione
 
@@ -36,19 +35,15 @@ Molte progettazioni di sito Web contengono diverse aree dello schermo personaliz
 
 La figura 1 mostra `Default.aspx` quando viene visualizzato tramite un browser. L'area cerchiata in rosso è indicato il markup specifico della pagina corrispondente `MainContent`.
 
-
 [![L'area cerchiata è visualizzata l'Area attualmente personalizzabili in base a una pagina per pagina](multiple-contentplaceholders-and-default-content-vb/_static/image2.png)](multiple-contentplaceholders-and-default-content-vb/_static/image1.png)
 
 **Figura 01**: L'area con cerchio viene illustrata l'Area attualmente personalizzabili in base a una pagina per pagina ([fare clic per visualizzare l'immagine con dimensioni normali](multiple-contentplaceholders-and-default-content-vb/_static/image3.png))
 
-
 Si supponga che oltre a quella illustrata nella figura 1, è anche necessario aggiungere elementi specifici della pagina per la colonna a sinistra sotto le lezioni e le notizie sezioni. A tale scopo, aggiungiamo un altro controllo ContentPlaceHolder della pagina master. Per seguire la procedura, aprire il `Site.master` pagina in Visual Web Developer master e quindi trascinare un controllo ContentPlaceHolder dalla casella degli strumenti nella finestra di progettazione dopo la sezione Novità. Impostare il controllo ContentPlaceHolder `ID` a `LeftColumnContent`.
-
 
 [![Aggiungere un controllo ContentPlaceHolder alla colonna a sinistra della pagina Master](multiple-contentplaceholders-and-default-content-vb/_static/image5.png)](multiple-contentplaceholders-and-default-content-vb/_static/image4.png)
 
 **Figura 02**: Aggiungere un controllo ContentPlaceHolder alla colonna di sinistra della pagina Master ([fare clic per visualizzare l'immagine con dimensioni normali](multiple-contentplaceholders-and-default-content-vb/_static/image6.png))
-
 
 Con l'aggiunta del `LeftColumnContent` ContentPlaceHolder della pagina master, possiamo definire contenuto per l'area in base a una pagina per pagina includendo un contenuto controllo nella pagina la cui `ContentPlaceHolderID` è impostata su `LeftColumnContent`. Esaminiamo questo processo nel passaggio 2.
 
@@ -66,11 +61,9 @@ Immettere alcuni contenuti nel controllo contenuto che fa riferimento il `MainCo
 
 Dopo aver aggiunto questo markup, visitare la pagina tramite un browser. Come illustrato nella figura 3, il codice inserito nel `Content3` controllo contenuto viene visualizzato nella colonna sinistra sotto la sezione Novità (con un cerchio rosso). Il codice inserito in `Content2` viene visualizzato nella parte destra della pagina (con cerchiata blu).
 
-
 [![Nella colonna sinistra ora include il contenuto specifico della pagina di sotto la sezione Novità](multiple-contentplaceholders-and-default-content-vb/_static/image8.png)](multiple-contentplaceholders-and-default-content-vb/_static/image7.png)
 
 **Figura 03**: Sinistra colonna ora include specifico della pagina sezione del contenuto di sotto di notizie ([fare clic per visualizzare l'immagine con dimensioni normali](multiple-contentplaceholders-and-default-content-vb/_static/image9.png))
-
 
 ### <a name="defining-content-in-existing-content-pages"></a>Definizione del contenuto nelle pagine di contenuto esistente
 
@@ -80,11 +73,9 @@ A differenza di maggior parte dei controlli Web ASP.NET, casella degli strumenti
 
 Per aggiungere un controllo contenuto per il `LeftColumnContent` ContentPlaceHolder per `About.aspx`espandere tag intelligente del ContentPlaceHolder e fare clic sul collegamento creare contenuto personalizzato.
 
-
 [![La visualizzazione di progettazione per About Mostra il controllo LeftColumnContent ContentPlaceHolder](multiple-contentplaceholders-and-default-content-vb/_static/image11.png)](multiple-contentplaceholders-and-default-content-vb/_static/image10.png)
 
 **Figura 04**: Visualizzazione Progettazione `About.aspx` Mostra il `LeftColumnContent` ContentPlaceHolder ([fare clic per visualizzare l'immagine con dimensioni normali](multiple-contentplaceholders-and-default-content-vb/_static/image12.png))
-
 
 Facendo clic sul collegamento creare contenuto personalizzato che genera l'errore necessari controllo pagina e i set di contenuto relativo `ContentPlaceHolderID` proprietà per il controllo ContentPlaceHolder `ID`. Ad esempio, facendo clic sul collegamento creare contenuto personalizzato per `LeftColumnContent` area nella `About.aspx` aggiunge il seguente markup dichiarativo alla pagina:
 
@@ -96,11 +87,9 @@ ASP.NET non è necessario che tutte le pagine di contenuto includono i controlli
 
 Attualmente `Default.aspx` contiene due controlli contenuti per il `head` e `MainContent` elementi ContentPlaceHolder; che non è un controllo contenuto per `LeftColumnContent`. Di conseguenza, quando `Default.aspx` viene eseguito il rendering di `LeftColumnContent` viene usato il contenuto predefinito del controllo ContentPlaceHolder. Poiché è ancora necessario definire qualsiasi contenuto predefinito per questo controllo ContentPlaceHolder, il risultato finale è che non viene generato alcun codice per questa area. Per verificare questo comportamento, visitare `Default.aspx` tramite un browser. Come illustrato nella figura 5, non viene generato alcun markup nella colonna sinistra sotto la sezione Novità.
 
-
 [![Non viene eseguito il rendering di alcun contenuto per il LeftColumnContent ContentPlaceHolder](multiple-contentplaceholders-and-default-content-vb/_static/image14.png)](multiple-contentplaceholders-and-default-content-vb/_static/image13.png)
 
 **Figura 05**: Non viene eseguito il rendering di alcun contenuto per il `LeftColumnContent` ContentPlaceHolder ([fare clic per visualizzare l'immagine con dimensioni normali](multiple-contentplaceholders-and-default-content-vb/_static/image15.png))
-
 
 ## <a name="step-3-specifying-default-content-in-the-master-page"></a>Passaggio 3: Specifica il contenuto predefinito nella pagina Master
 
@@ -113,7 +102,6 @@ Una soluzione migliore consiste nel definire il nome utente e password nelle cas
 > [!NOTE]
 > Nella parte restante di questa esercitazione consente di aggiornare il sito Web Microsoft per includere un'interfaccia di accesso nella colonna a sinistra per tutte le pagine, ma la pagina di accesso. Tuttavia, questa esercitazione non esamina come configurare il sito Web per supportare gli account utente. Per altre informazioni su questo argomento, fare riferimento a mio [autenticazione basata su form, autorizzazione, gli account utente e ruoli](../../older-versions-security/introduction/security-basics-and-asp-net-support-cs.md) esercitazioni.
 
-
 ### <a name="adding-a-contentplaceholder-and-specifying-its-default-content"></a>Aggiunta di un controllo ContentPlaceHolder e specificando il relativo contenuto predefinito
 
 Aprire il `Site.master` pagina master e aggiungere il markup seguente alla colonna a sinistra tra le `DateDisplay` sezione etichetta e lezioni:
@@ -122,11 +110,9 @@ Aprire il `Site.master` pagina master e aggiungere il markup seguente alla colon
 
 Dopo aver aggiunto il markup dovrebbe essere simile alla figura 6 visualizzazione di progettazione della pagina master.
 
-
 [![La pagina Master include un controllo di accesso](multiple-contentplaceholders-and-default-content-vb/_static/image17.png)](multiple-contentplaceholders-and-default-content-vb/_static/image16.png)
 
 **Figura 06**: La pagina Master include un controllo di accesso ([fare clic per visualizzare l'immagine con dimensioni normali](multiple-contentplaceholders-and-default-content-vb/_static/image18.png))
-
 
 Questo controllo ContentPlaceHolder, `QuickLoginUI`, dispone di un controllo di accesso Web come proprio contenuto predefinito. Il controllo Login consente di visualizzare un'interfaccia utente che richiede l'immissione di nome utente e password con un pulsante Accedi. Facendo clic sul pulsante Accedi, il controllo di accesso convalida internamente le credenziali dell'utente con l'API di appartenenza. Per usare questo controllo di accesso in pratica, quindi, è necessario configurare il sito per utilizzare l'appartenenza. In questo argomento non rientra nell'ambito di questa esercitazione. Fare riferimento alla mia [autenticazione basata su form, autorizzazione, gli account utente e ruoli](../../older-versions-security/introduction/security-basics-and-asp-net-support-cs.md) esercitazioni per altre informazioni sulla creazione di un'applicazione web che supporta gli account utente.
 
@@ -144,11 +130,9 @@ Dopo aver definito il contenuto per il `MainContent` e `LeftColumnContent` aree,
 
 Figura 7 Mostra questa pagina quando viene visualizzato tramite un browser. Poiché questa pagina consente di specificare un controllo contenuto per il `QuickLoginUI` ContentPlaceHolder, viene eseguito l'override di contenuto predefinito specificato nella pagina master. Il risultato finale è che il controllo di accesso visualizzato nella progettazione della pagina master visualizzazione (vedere la figura 6) non viene eseguita in questa pagina.
 
-
 [![La pagina di accesso Represses contenuto predefinito di QuickLoginUI ContentPlaceHolder](multiple-contentplaceholders-and-default-content-vb/_static/image20.png)](multiple-contentplaceholders-and-default-content-vb/_static/image19.png)
 
 **Figura 07**: La pagina di accesso Represses il `QuickLoginUI` contenuto del ContentPlaceHolder predefinito ([fare clic per visualizzare l'immagine con dimensioni normali](multiple-contentplaceholders-and-default-content-vb/_static/image21.png))
-
 
 ### <a name="using-the-default-content-in-new-pages"></a>Usando il contenuto predefinito in nuove pagine
 
@@ -160,11 +144,9 @@ Per rimuovere il controllo contenuto, è possibile eliminare manualmente il mark
 
 Figura 8 mostra `Default.aspx` quando viene visualizzato tramite un browser. È importante ricordare che `Default.aspx` ha solo due controlli di contenuto specificati nel relativo markup dichiarativo - uno per `head` e uno per `MainContent`. Di conseguenza, il valore predefinito di contenuto per il `LeftColumnContent` e `QuickLoginUI` vengono visualizzati elementi ContentPlaceHolder.
 
-
 [![Il contenuto predefinito per il LeftColumnContent e QuickLoginUI ContentPlaceHolders vengono visualizzati](multiple-contentplaceholders-and-default-content-vb/_static/image23.png)](multiple-contentplaceholders-and-default-content-vb/_static/image22.png)
 
 **Figura 08**: Il contenuto predefinito per il `LeftColumnContent` e `QuickLoginUI` vengono visualizzati elementi ContentPlaceHolder ([fare clic per visualizzare l'immagine con dimensioni normali](multiple-contentplaceholders-and-default-content-vb/_static/image24.png))
-
 
 ## <a name="summary"></a>Riepilogo
 

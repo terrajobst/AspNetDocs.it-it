@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 55f1ae45-fcb5-43a9-8415-fa5b935fc9c9
 msc.legacyurl: /web-forms/overview/deployment/advanced-enterprise-web-deployment/running-windows-powershell-scripts-from-msbuild-project-files
 msc.type: authoredcontent
-ms.openlocfilehash: 198f8c907cf866bd0fd1ae67cf7169a63dda4bc9
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 7b09c07b8b7c2a61ca534f7a66a929593f3d04ca
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59384700"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131563"
 ---
 # <a name="running-windows-powershell-scripts-from-msbuild-project-files"></a>Esecuzione di script di Windows PowerShell dai file di progetto di MSBuild
 
@@ -35,7 +35,6 @@ da [Jason Lee](https://github.com/jrjlee)
 > 
 > In questo argomento illustrerà come eseguire gli script di Windows PowerShell in locale e in remoto da una destinazione personalizzata in un file di progetto di Microsoft Build Engine (MSBuild).
 
-
 In questo argomento fa parte di una serie di esercitazioni basate su requisiti di distribuzione aziendale di una società fittizia, denominata Fabrikam, Inc. Questa serie di esercitazioni Usa una soluzione di esempio&#x2014;il [soluzione Contact Manager](../web-deployment-in-the-enterprise/the-contact-manager-solution.md)&#x2014;per rappresentare un'applicazione web con un livello di complessità, tra cui un'applicazione ASP.NET MVC 3, una comunicazione Windows realistico Servizio Foundation (WCF) e un progetto di database.
 
 Il metodo di distribuzione il fulcro delle esercitazioni seguenti si basa sull'approccio di file di progetto split descritto in [informazioni sul File di progetto](../web-deployment-in-the-enterprise/understanding-the-project-file.md), in cui il processo di compilazione è controllato da due file di progetto&#x2014;contenente una istruzioni che si applicano a tutti gli ambienti di destinazione e quella che contiene le impostazioni di compilazione e distribuzione specifiche dell'ambiente di creazione. In fase di compilazione, il file di progetto specifici dell'ambiente viene unito nel file di progetto indipendenti dall'ambiente in modo da formare un set completo di istruzioni di compilazione.
@@ -55,15 +54,11 @@ In questo argomento illustrerà come eseguire queste procedure. Le attività e p
 
 Le attività in questo argomento utilizzano uno script di Windows PowerShell di esempio denominato **LogDeploy.ps1** per illustrare come eseguire gli script da MSBuild. Il **LogDeploy.ps1** script contiene una funzione semplice che scrive una voce a riga singola in un file di log:
 
-
 [!code-powershell[Main](running-windows-powershell-scripts-from-msbuild-project-files/samples/sample1.ps1)]
-
 
 Il **LogDeploy.ps1** script accetta due parametri. Il primo parametro rappresenta il percorso completo al file di log a cui si desidera aggiungere una voce e il secondo parametro rappresenta la destinazione di distribuzione che si desidera registrare nel file di log. Quando si esegue lo script, aggiunge una riga nel file di log nel formato seguente:
 
-
 [!code-html[Main](running-windows-powershell-scripts-from-msbuild-project-files/samples/sample2.html)]
-
 
 Per rendere il **LogDeploy.ps1** script disponibili per MSBuild, è necessario:
 
@@ -82,21 +77,15 @@ In alcuni scenari, è possibile eseguire gli script di Windows PowerShell nel co
 
 In termini di sintassi, esecuzione di uno script di Windows PowerShell da un file di progetto MSBuild è equivale all'esecuzione di uno script di Windows PowerShell da un prompt dei comandi normale. È necessario richiamare il powershell.exe eseguibile e usare la **– comando** commutatore per fornire i comandi che si desidera che Windows PowerShell per l'esecuzione. (In Windows PowerShell v2, è anche possibile usare la **– file** switch). Il comando deve accettare questo formato:
 
-
 [!code-console[Main](running-windows-powershell-scripts-from-msbuild-project-files/samples/sample3.cmd)]
-
 
 Ad esempio:
 
-
 [!code-console[Main](running-windows-powershell-scripts-from-msbuild-project-files/samples/sample4.cmd)]
-
 
 Se il percorso per lo script include spazi, è necessario racchiudere il percorso del file tra virgolette singole preceduto da una e commerciale. È possibile usare le virgolette doppie, perché è già stata usata per racchiudere il comando:
 
-
 [!code-console[Main](running-windows-powershell-scripts-from-msbuild-project-files/samples/sample5.cmd)]
-
 
 Esistono alcune considerazioni aggiuntive quando si richiama questo comando da MSBuild. In primo luogo, è necessario includere il **– NonInteractive** flag per verificare che lo script viene eseguito in modalità non interattiva. Successivamente, è necessario includere il **– ExecutionPolicy** flag con valore dell'argomento appropriato. Specifica i criteri di esecuzione che Windows PowerShell verranno applicate per lo script e consente di ignorare i criteri di esecuzione predefinito, che potrebbero impedire l'esecuzione dello script. È possibile scegliere tra i valori di argomento:
 
@@ -114,15 +103,11 @@ Infine, è necessario eseguire l'escape di tutti i caratteri XML riservati che s
 
 - Quando si apportano queste modifiche, il comando sarà analogo al seguente:
 
-
 [!code-console[Main](running-windows-powershell-scripts-from-msbuild-project-files/samples/sample6.cmd)]
-
 
 All'interno del file di progetto MSBuild personalizzato, è possibile creare una nuova destinazione e usare la **Exec** attività per eseguire questo comando:
 
-
 [!code-xml[Main](running-windows-powershell-scripts-from-msbuild-project-files/samples/sample7.xml)]
-
 
 In questo esempio, si noti che:
 
@@ -139,34 +124,24 @@ Windows PowerShell è in grado di eseguire gli script nei computer remoti tramit
 > [!NOTE]
 > Prima di usare la **Invoke-Command** generare script per cmdlet per eseguire Windows PowerShell in un computer remoto, è necessario configurare un listener WinRM per accettare i messaggi remoti. È possibile farlo eseguendo il comando **winrm quickconfig** nel computer remoto. Per altre informazioni, vedere [installazione e configurazione di Windows gestione remota](https://msdn.microsoft.com/library/windows/desktop/aa384372(v=vs.85).aspx).
 
-
 Da una finestra di Windows PowerShell, è necessario utilizzare questa sintassi per eseguire la **LogDeploy.ps1** script in un computer remoto:
 
-
 [!code-powershell[Main](running-windows-powershell-scripts-from-msbuild-project-files/samples/sample8.ps1)]
-
 
 > [!NOTE]
 > Esistono diversi altri modi di utilizzo **Invoke-Command** per eseguire uno script di file, ma questo approccio è la più semplice quando è necessario fornire i valori dei parametri e gestire i percorsi contenenti spazi.
 
-
 Quando si esegue questo prompt dei comandi, è necessario richiamare il comando eseguibile di Windows PowerShell e usare la **– comando** parametro per specificare le istruzioni:
-
 
 [!code-console[Main](running-windows-powershell-scripts-from-msbuild-project-files/samples/sample9.cmd)]
 
-
 Come prima, è necessario fornire alcune opzioni aggiuntive per evitare l'utilizzo di tutti i caratteri XML riservati quando si esegue il comando da MSBuild:
-
 
 [!code-console[Main](running-windows-powershell-scripts-from-msbuild-project-files/samples/sample10.cmd)]
 
-
 Infine, come in precedenza, è possibile usare la **Exec** attività all'interno di una destinazione di MSBuild personalizzata per eseguire il comando:
 
-
 [!code-xml[Main](running-windows-powershell-scripts-from-msbuild-project-files/samples/sample11.xml)]
-
 
 Quando si esegue questa destinazione come parte del processo di compilazione, Windows PowerShell verrà eseguito lo script nel computer specificato nel **– computername** argomento.
 

@@ -8,12 +8,12 @@ ms.date: 01/13/2008
 ms.assetid: 07e15538-2f29-40c6-b2e7-e6115075ac83
 msc.legacyurl: /web-forms/overview/older-versions-security/introduction/security-basics-and-asp-net-support-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 8f6fb4348e6ff703d329331b908e41763f24bb1f
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 75ed2e2d0d9e15d186cf39ddd376beae99a06b30
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59402947"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132271"
 ---
 # <a name="security-basics-and-aspnet-support-c"></a>Nozioni di base sulla sicurezza e supporto di ASP.NET (C#)
 
@@ -22,7 +22,6 @@ da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Scaricare PDF](http://download.microsoft.com/download/2/F/7/2F705A34-F9DE-4112-BBDE-60098089645E/aspnet_tutorial01_Basics_cs.pdf)
 
 > Questa è la prima esercitazione di una serie di esercitazioni che verranno illustrate le tecniche per l'autenticazione ai visitatori tramite un web form, autorizzare l'accesso a determinate pagine e le funzionalità e la gestione degli account utente in un'applicazione ASP.NET.
-
 
 ## <a name="introduction"></a>Introduzione
 
@@ -45,7 +44,6 @@ In questa esercitazione verranno illustrati i concetti di sicurezza importante e
 
 > [!NOTE]
 > La sicurezza è un aspetto importante di qualsiasi applicazione che si estende su fisica, tecnologica e le decisioni e richiedono un elevato livello di pianificazione e il dominio della Knowledge base di criteri. Questa serie di esercitazioni non è concepita come una Guida per lo sviluppo di applicazioni web sicure. Piuttosto, è incentrato specificamente su autenticazione basata su form, autorizzazione, gli account utente e ruoli. Mentre alcuni concetti relativi alla sicurezza vengono disposti intorno a questi problemi sono illustrati in questa serie, gli altri vengono lasciati non esplorati.
-
 
 ## <a name="authentication-authorization-user-accounts-and-roles"></a>L'autenticazione, autorizzazione, gli account utente e ruoli
 
@@ -75,11 +73,9 @@ Il flusso di lavoro di autenticazione di Windows Usa una delle tecniche di auten
 
 Tutti e tre le tecniche di funzionare approssimativamente allo stesso modo: quando un non autorizzato, arriva una richiesta anonima, il server web invia una risposta HTTP che indica tale autorizzazione è necessaria per continuare. Quindi, il browser visualizza una finestra di dialogo modale che richiede l'immissione di nome utente e password (vedere la figura 1). Queste informazioni vengono quindi inviate al server web tramite un'intestazione HTTP.
 
-
 ![Finestra di dialogo modale richiede all'utente le credenziali](security-basics-and-asp-net-support-cs/_static/image1.png)
 
 **Figura 1**: Finestra di dialogo modale richiede all'utente le credenziali
-
 
 Le credenziali fornite vengono convalidate rispetto Store utente di Windows del server web. Ciò significa che ogni utente autenticato nell'applicazione web deve avere un account di Windows nell'organizzazione. Ciò è comune negli scenari intranet. Infatti, quando si usa l'autenticazione integrata di Windows in un'impostazione dell'intranet, il browser fornisce automaticamente il server web con le credenziali usate per accedere alla rete, eliminando in tal modo la finestra di dialogo illustrata nella figura 1. L'autenticazione di Windows è ideale per applicazioni intranet, ma risulta in genere fattibile per applicazioni Internet perché si preferisce non creare gli account di Windows per ogni utente che effettua l'iscrizione il sito.
 
@@ -93,11 +89,9 @@ Figura 2 illustra il flusso di lavoro autenticazione form da un punto di vista d
 
 Una volta che l'utente è connesso correttamente, le successive richieste HTTP includono il ticket di autenticazione form. Il sistema di autenticazione Form identifica semplicemente l'utente: è il sistema di autorizzazione che determina se l'utente può accedere alla risorsa richiesta.
 
-
 ![Il flusso di lavoro di autenticazione form](security-basics-and-asp-net-support-cs/_static/image2.png)
 
 **Figura 2**: Il flusso di lavoro di autenticazione form
-
 
 Entrare nell'autenticazione basata su form molto più dettagliatamente nelle prossime due esercitazioni[una panoramica dell'autenticazione basata su form](an-overview-of-forms-authentication-cs.md) e [configurazione dell'autenticazione form e argomenti avanzati](forms-authentication-configuration-and-advanced-topics-cs.md). Per altre informazioni su ASP. Opzioni di autenticazione di rete, vedere [autenticazione ASP.NET](https://msdn.microsoft.com/library/eeyk640h.aspx).
 
@@ -113,7 +107,6 @@ I file di autorizzazione e l'autorizzazione URL definiscono le regole di autoriz
 Tali modifiche a livello di pagina possono essere eseguite in modo dichiarativo o a livello di codice. Per visualizzare un contenuto diverso per anonimi rispetto agli utenti autenticati, basta trascinare un [controllo LoginView](https://msdn.microsoft.com/library/system.web.ui.webcontrols.loginview.aspx) in una pagina e immettere il contenuto appropriato nel relativo AnonymousTemplate e LoggedInTemplate i modelli. In alternativa, è possibile a livello di programmazione determinare se la richiesta corrente è autenticata, l'utente e i ruoli appartengono a (se presente). È possibile usare queste informazioni quindi visualizzare o nascondere le colonne nei pannelli o una griglia nella pagina.
 
 Questa serie include tre esercitazioni incentrate su autorizzazione. ***Autorizzazione basata su utente***prende in esame come limitare l'accesso a una o più pagine in una directory per gli account utente specifico; ***Basato su ruolo autorizzazione*** esamina specificando regole di autorizzazione presso il ruolo livello; infine, il ***visualizzazione contenuto in base all'attualmente registrato nell'utente*** questa esercitazione illustra la modifica di un particolare il contenuto e funzionalità in base all'utente visitando la pagina della pagina. Per altre informazioni su ASP. Opzioni di autorizzazione di NET, vedere [autorizzazione ASP.NET](https://msdn.microsoft.com/library/wce3kxhd.aspx).
-
 
 ## <a name="user-accounts-and-roles"></a>Account utente e ruoli
 
@@ -139,11 +132,9 @@ Microsoft offre due classi di provider di appartenenza in .NET Framework:
 
 Questa serie di esercitazioni illustra esclusivamente il provider SqlMembershipProvider.
 
-
 [![Il modello consente a diverse implementazioni del Provider per essere facilmente collegato nel Framework di&lt;/ strong&gt;](security-basics-and-asp-net-support-cs/_static/image4.png)](security-basics-and-asp-net-support-cs/_static/image3.png)
 
 **Figura 03**: Il modello consente a diverse implementazioni del Provider per essere facilmente collegato nel Framework di ([fare clic per visualizzare l'immagine con dimensioni normali](security-basics-and-asp-net-support-cs/_static/image5.png))
-
 
 Il vantaggio del modello di provider è che implementazioni alternative possono essere sviluppate da Microsoft, fornitori di terze parti o singoli sviluppatori e collegate senza problemi il framework di appartenenza. Ad esempio, Microsoft ha rilasciato [un provider di appartenenza per database di Microsoft Access](https://download.microsoft.com/download/5/5/b/55bc291f-4316-4fd7-9269-dbf9edbaada8/sampleaccessproviders.vsi). Per altre informazioni sul provider di appartenenze, consultare il [Toolkit del Provider](https://msdn.microsoft.com/asp.net/aa336558.aspx), che include una procedura dettagliata di provider di appartenenze, i provider personalizzato di esempio, più di 100 pagine della documentazione sul modello di provider e il completare il codice sorgente per i provider di appartenenze predefiniti (vale a dire, ActiveDirectoryMembershipProvider e SqlMembershipProvider).
 

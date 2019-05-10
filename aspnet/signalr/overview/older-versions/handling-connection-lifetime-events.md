@@ -8,12 +8,12 @@ ms.date: 06/05/2013
 ms.assetid: e608e263-264d-448b-b0eb-6eeb77713b22
 msc.legacyurl: /signalr/overview/older-versions/handling-connection-lifetime-events
 msc.type: authoredcontent
-ms.openlocfilehash: a8121a2d7c4ed14e296dc72c72ca7c25939a2b50
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 2fb671e730a1d41c07b350bf1d64ac1d0b1be55c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59414010"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65128788"
 ---
 # <a name="understanding-and-handling-connection-lifetime-events-in-signalr-1x"></a>Comprensione e gestione degli eventi di durata connessione in SignalR 1.x
 
@@ -28,7 +28,6 @@ dal [Patrick Fletcher](https://github.com/pfletcher), [Tom Dykstra](https://gith
 > - [Come gestire gli eventi di durata connessione nella classe Hub](index.md)
 > - [Come gestire gli eventi di durata connessione nei client JavaScript](index.md)
 > - [Come gestire gli eventi di durata connessione nei client .NET](index.md)
-
 
 ## <a name="overview"></a>Panoramica
 
@@ -132,7 +131,6 @@ Alcuni ambienti di rete deliberatamente chiudono le connessioni inattive e un'al
 > 
 > [!IMPORTANT]
 > Non è garantita la sequenza di eventi descritte di seguito. SignalR esegue ogni tentativo di generare eventi di durata connessione in modo prevedibile in base a questo schema, ma esistono molte varianti degli eventi di rete e molti modi in cui Framework di comunicazione sottostante, ad esempio trasporto API gestirle. Ad esempio, il `Reconnected` evento potrebbe non essere generato quando il client si riconnette, o `OnConnected` gestore nel server è possibile eseguire quando il tentativo di stabilire una connessione ha esito negativo. In questo argomento descrive solo gli effetti che può essere prodotto generalmente da determinate circostanze tipiche.
-
 
 <a id="clientdisconnect"></a>
 

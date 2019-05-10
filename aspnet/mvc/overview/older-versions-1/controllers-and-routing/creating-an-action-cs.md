@@ -8,19 +8,18 @@ ms.date: 03/02/2009
 ms.assetid: cb33b28c-3025-4bd1-a1fa-eaa3af7bb56f
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/creating-an-action-cs
 msc.type: authoredcontent
-ms.openlocfilehash: c66e066bd3e241e667924dacc114f57151df822a
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ebba935383819935ad85c95245666f4eaf6a0dca
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59389557"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123458"
 ---
 # <a name="creating-an-action-c"></a>Creazione di un'azione (C#)
 
 by [Microsoft](https://github.com/microsoft)
 
 > Informazioni su come aggiungere una nuova azione a un controller MVC ASP.NET. Informazioni sui requisiti per un metodo su cui eseguire un'azione.
-
 
 L'obiettivo di questa esercitazione è illustrare come è possibile creare una nuova azione del controller. Informazioni sui requisiti di un metodo di azione. Anche informazioni su come impedire che un metodo viene esposta come un'azione.
 
@@ -55,7 +54,6 @@ Se è necessario creare un metodo pubblico in una classe controller e non si vuo
 [!code-csharp[Main](creating-an-action-cs/samples/sample2.cs)]
 
 Se si prova a richiamare l'azione del controller CompanySecrets() digitando /Work/CompanySecrets nella barra degli indirizzi del browser si riceverà il messaggio di errore nella figura 1.
-
 
 [![Richiama un metodo NonAction](creating-an-action-cs/_static/image1.jpg)](creating-an-action-cs/_static/image1.png)
 

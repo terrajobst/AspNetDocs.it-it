@@ -8,19 +8,18 @@ ms.date: 01/27/2009
 ms.assetid: 521c9117-81cd-4d8d-9d96-0256dc7bf50f
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/improving-performance-with-output-caching-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 5dd5b96d0365c55cbbfa2dfe0856beda41f915e1
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 548c5bea2e9cf26e0574e72d2c0ea204dbd90f9c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59384766"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123390"
 ---
 # <a name="improving-performance-with-output-caching-c"></a>Miglioramento delle prestazioni con la cache di output (C#)
 
 by [Microsoft](https://github.com/microsoft)
 
 > In questa esercitazione descrive come è possibile migliorare notevolmente le prestazioni delle applicazioni web ASP.NET MVC, sfruttando i vantaggi della memorizzazione nella cache di output. Informazioni su come memorizzare nella cache il risultato restituito da un'azione del controller in modo che lo stesso contenuto non devono essere creati ogni volta che un nuovo utente richiama l'azione.
-
 
 L'obiettivo di questa esercitazione è spiegare come si possono migliorare notevolmente le prestazioni di un'applicazione ASP.NET MVC, sfruttando i vantaggi della cache di output. La cache di output consente di memorizzare nella cache il contenuto restituito da un'azione del controller. In questo modo, lo stesso contenuto non dovrà essere generato ogni volta che viene richiamata l'azione del controller stesso.
 
@@ -78,7 +77,6 @@ Per impostazione predefinita, quando si usa l'attributo [OutputCache], il conten
 > 
 > · ServerAndClient
 
-
 Per impostazione predefinita, la proprietà Location contiene il valore Any. Tuttavia, esistono situazioni in cui potrebbe voler cache solo in browser o solo sul server. Ad esempio, se si memorizza informazioni personalizzati per ogni utente quindi è necessario non memorizzare nella cache le informazioni sul server. Se si visualizzano informazioni diverse a utenti diversi è necessario memorizzare nella cache le informazioni solo sul client.
 
 Ad esempio, il controller nel listato 3 espone un'azione denominata GetName() che restituisce il nome dell'utente corrente. Se Jack accede al sito Web e richiama l'azione GetName() quindi l'azione restituisce la stringa "Hi Jack". Se, successivamente, Jill accede al sito Web e richiama l'azione GetName() quindi Lei anche otterrà la stringa "Hi Jack". La stringa viene memorizzato nella cache sul server web per tutti gli utenti dopo Jack richiama inizialmente l'azione del controller.
@@ -134,7 +132,6 @@ L'azione Details() include una proprietà VaryByParam con il valore "Id". Quando
 > None = mai creare diverse versioni memorizzate nella cache
 > 
 > Elenco di punti e virgola di parametri = crea diverse versioni memorizzate nella cache, ogni volta che uno dei parametri di stringa query o di modulo nell'elenco varia
-
 
 ## <a name="creating-a-cache-profile"></a>Creazione di un profilo della Cache
 

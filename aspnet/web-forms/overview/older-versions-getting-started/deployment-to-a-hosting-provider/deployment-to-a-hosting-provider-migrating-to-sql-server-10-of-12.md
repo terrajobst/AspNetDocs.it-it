@@ -8,12 +8,12 @@ ms.date: 11/17/2011
 ms.assetid: a89d6f32-b71b-4036-8ff7-5f8ac2a6eca8
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12
 msc.type: authoredcontent
-ms.openlocfilehash: 98e521f348cdf1c2bd563f96badbaea6b23f4bcf
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: cc4db5b1fcedca675a18f1b78e28f65e51b6cf09
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59398956"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132760"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-migrating-to-sql-server---10-of-12"></a>Distribuzione di un'applicazione Web ASP.NET con SQL Server Compact tramite Visual Studio o Visual Web Developer: Migrazione a SQL Server - 10 pari a 12
 
@@ -24,7 +24,6 @@ da [Tom Dykstra](https://github.com/tdykstra)
 > Questa serie di esercitazioni illustra come distribuire un ASP.NET (pubblicazione) progetto di applicazione web che include un database di SQL Server Compact tramite Visual Studio 2012 RC o Visual Studio Express 2012 RC per Web. Se si installa l'aggiornamento della pubblicazione sul Web, è anche possibile usare Visual Studio 2010. Per un'introduzione alla serie, vedere [la prima esercitazione della serie](deployment-to-a-hosting-provider-introduction-1-of-12.md).
 > 
 > Per un'esercitazione che illustra le funzionalità di distribuzione introdotte dopo la versione di Visual Studio 2012 RC, illustra come distribuire le edizioni di SQL Server diverse da SQL Server Compact e Mostra come distribuire in App Web di servizio App di Azure, vedere [distribuzione Web ASP.NET con Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
-
 
 ## <a name="overview"></a>Panoramica
 
@@ -89,11 +88,9 @@ Della soluzione *SolutionFiles* creato nella cartella la [distribuzione nell'amb
 > [!NOTE]
 > Questo script è progettato per funzionare con SQL Server 2008 e le impostazioni di IIS in Windows 7, secondo quanto specificato in questa esercitazione. Se si usa una versione diversa di SQL Server o di Windows, o se si configura IIS nel computer in modo diverso, le modifiche apportate allo script potrebbero essere necessari. Per altre informazioni sugli script di SQL Server, vedere [documentazione Online di SQL Server](https://go.microsoft.com/fwlink/?LinkId=132511).
 
-
 > [!NOTE] 
 > 
 > **Nota sulla sicurezza** nello script viene db\_autorizzazioni di proprietario per l'utente che accede al database in fase di esecuzione, che è ciò che è possibile nell'ambiente di produzione. In alcuni scenari è possibile specificare un utente che contiene lo schema completo del database, aggiornare le autorizzazioni solo per la distribuzione e specificare in fase di esecuzione di un utente diverso che disponga delle autorizzazioni solo per leggere e scrivere dati. Per altre informazioni, vedere **rivedono le modifiche automatiche di Web. config per le migrazioni Code First** nelle [distribuzione in IIS come ambiente di Test](deployment-to-a-hosting-provider-deploying-to-iis-as-a-test-environment-5-of-12.md).
-
 
 ## <a name="configuring-database-deployment-for-the-test-environment"></a>Configurazione della distribuzione di Database per l'ambiente di Test
 

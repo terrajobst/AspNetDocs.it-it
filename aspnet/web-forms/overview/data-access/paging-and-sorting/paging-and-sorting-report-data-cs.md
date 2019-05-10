@@ -8,12 +8,12 @@ ms.date: 08/15/2006
 ms.assetid: 811a6ef2-ec66-4c8e-a089-6f795056e288
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting/paging-and-sorting-report-data-cs
 msc.type: authoredcontent
-ms.openlocfilehash: dc5b2a2888eebb4b812caf3fc11bf109d54bb73d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 6828c5c6724c84d84fc3fefa53a1b13da1b3a16f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59420692"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131581"
 ---
 # <a name="paging-and-sorting-report-data-c"></a>Suddivisione in pagine e ordinamento dei dati dei report (C#)
 
@@ -22,7 +22,6 @@ da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Scaricare l'App di esempio](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_24_CS.exe) o [Scarica il PDF](paging-and-sorting-report-data-cs/_static/datatutorial24cs1.pdf)
 
 > Paging e ordinamento sono due funzionalità molto comune quando si visualizzano i dati in un'applicazione online. In questa esercitazione articolo verrà fornita una panoramica dell'aggiunta di ordinamento e paging ai nostri report, che verrà quindi creata al momento delle esercitazioni in futuro.
-
 
 ## <a name="introduction"></a>Introduzione
 
@@ -40,71 +39,55 @@ Prima di iniziare questa esercitazione, lasciare s prima di tutto si consiglia d
 - `SortParameter.aspx`
 - `CustomSortingUI.aspx`
 
-
 ![Creare una cartella PagingAndSorting e aggiungere le pagine ASP.NET dell'esercitazione](paging-and-sorting-report-data-cs/_static/image1.png)
 
 **Figura 1**: Creare una cartella PagingAndSorting e aggiungere le pagine ASP.NET dell'esercitazione
 
-
 Successivamente, aprire il `Default.aspx` pagina e trascinare il `SectionLevelTutorialListing.ascx` controllo utente dal `UserControls` cartella nell'area di progettazione. Questo controllo utente, che è stato creato nel [pagine Master e spostamento nel sito](../introduction/master-pages-and-site-navigation-cs.md) esercitazione enumera la mappa del sito e consente di visualizzare tali esercitazioni nella sezione corrente in un elenco puntato.
-
 
 ![Aggiungere il controllo utente sectionleveltutoriallisting. ascx a default. aspx](paging-and-sorting-report-data-cs/_static/image2.png)
 
 **Figura 2**: Aggiungere il controllo utente sectionleveltutoriallisting. ascx a default. aspx
 
-
 Per visualizzare il paging e ordinamento esercitazioni che verrà creato in elenco puntato, è necessario aggiungerli alla mappa del sito. Aprire il `Web.sitemap` file e aggiungere il markup seguente dopo che il markup di nodo della mappa di sito modifica, inserimento ed eliminazione:
 
-
 [!code-xml[Main](paging-and-sorting-report-data-cs/samples/sample1.xml)]
-
 
 ![Aggiornare la mappa del sito in modo da includere le nuove pagine ASP.NET](paging-and-sorting-report-data-cs/_static/image3.png)
 
 **Figura 3**: Aggiornare la mappa del sito in modo da includere le nuove pagine ASP.NET
 
-
 ## <a name="step-2-displaying-product-information-in-a-gridview"></a>Passaggio 2: Visualizzazione di informazioni sul prodotto in un oggetto GridView
 
 Prima che abbiamo effettivamente implementare funzionalità di ordinamento e paging, consentire s prima di tutto creare un GridView non ordinabile, non paginabile standard che elenca le informazioni sul prodotto. Si tratta di un'attività si va eseguita molte volte in tutta questa serie di esercitazioni, pertanto questi passaggi dovrebbe essere familiare. Iniziare aprendo il `SimplePagingSorting.aspx` pagina e trascinare un controllo GridView dalla casella degli strumenti nella finestra di progettazione, l'impostazione relativa `ID` proprietà `Products`. Successivamente, creare un nuovo oggetto ObjectDataSource che utilizza la classe ProductsBLL s `GetProducts()` per restituire tutte le informazioni sul prodotto.
-
 
 ![Recuperare informazioni su tutti i prodotti usando il metodo GetProducts()](paging-and-sorting-report-data-cs/_static/image4.png)
 
 **Figura 4**: Recuperare informazioni su tutti i prodotti usando il metodo GetProducts()
 
-
 Poiché questo report è un report di sola lettura, non vi s non è necessario eseguire il mapping s ObjectDataSource `Insert()`, `Update()`, o `Delete()` metodi corrispondente `ProductsBLL` metodi; pertanto, scegliere (nessuno) nell'elenco a discesa per l'aggiornamento, inserimento, e le schede di eliminazione.
-
 
 ![Scegliere (nessuno) opzione nell'elenco a discesa scegliere l'aggiornamento, inserimento ed eliminare le schede](paging-and-sorting-report-data-cs/_static/image5.png)
 
 **Figura 5**: Scegliere (nessuno) opzione nell'elenco a discesa scegliere l'aggiornamento, inserimento ed eliminare le schede
 
-
 Successivamente, consentire s personalizzare i campi di s GridView in modo che vengano visualizzati solo il nomi di prodotti, fornitori, categorie, prezzi e gli Stati non più utilizzati. Inoltre, è possibile apportare qualsiasi formattazione a livello di campo cambia, ad esempio modificando il `HeaderText` proprietà o la formattazione di price come valuta. Dopo tali modifiche, il markup dichiarativo di GridView s dovrebbe essere simile al seguente:
-
 
 [!code-aspx[Main](paging-and-sorting-report-data-cs/samples/sample2.aspx)]
 
 Figura 6 mostra lo stato di avanzamento fino ad ora, quando viene visualizzato tramite un browser. Si noti che la pagina elenca tutti i prodotti in una schermata che mostra ogni nome di prodotto s, categoria, fornitore, prezzo e lo stato sospeso.
 
-
 [![Ognuno dei prodotti sono elencati](paging-and-sorting-report-data-cs/_static/image7.png)](paging-and-sorting-report-data-cs/_static/image6.png)
 
 **Figura 6**: Ognuno dei prodotti sono elencati ([fare clic per visualizzare l'immagine con dimensioni normali](paging-and-sorting-report-data-cs/_static/image8.png))
-
 
 ## <a name="step-3-adding-paging-support"></a>Passaggio 3: Aggiunta del supporto di Paging
 
 Listato *tutti* dei prodotti in un'unica schermata può causare il sovraccarico di informazioni per l'utente ad analizzare i dati. Per rendere più gestibili i risultati, è possibile suddividere i dati in pagine più piccole di dati e consentire all'utente di scorrere i dati una pagina alla volta. Per eseguire questo è sufficiente selezionare la casella di controllo Attiva Paging nello smart tag s GridView (viene impostata la s GridView [ `AllowPaging` proprietà](https://msdn.microsoft.com/library/system.web.ui.webcontrols.gridview.allowpaging.aspx) a `true`).
 
-
 [![Controllo casella di controllo Abilita il Paging per aggiungere il supporto di Paging](paging-and-sorting-report-data-cs/_static/image10.png)](paging-and-sorting-report-data-cs/_static/image9.png)
 
 **Figura 7**: Abilita Paging la casella di controllo per aggiungere il supporto di Paging ([fare clic per visualizzare l'immagine con dimensioni normali](paging-and-sorting-report-data-cs/_static/image11.png))
-
 
 Abilitazione di paging limita il numero di record visualizzati per pagina e aggiunge un *interfaccia di paging* a GridView. L'interfaccia di paging predefinito, illustrato nella figura 7, è una serie di numeri di pagina, consentendo all'utente di spostarsi rapidamente da una pagina di dati a un altro. Questa interfaccia di paging dovrebbe essere familiare, come abbiamo ve di rete quando si aggiunge il supporto di paging per i controlli DetailsView e FormView nelle esercitazioni precedenti.
 
@@ -124,11 +107,9 @@ Inoltre, il controllo GridView, DetailsView e FormView tutti offrono la `PageInd
 
 Let s si consiglia di migliorare l'aspetto predefinito dell'interfaccia di paging s GridView. In particolare, lasciare s che hanno l'interfaccia di paging allineato a destra con uno sfondo grigio chiaro. Anziché impostare queste proprietà direttamente tramite la s GridView `PagerStyle` proprietà, s ti permettono di creare una classe CSS in `Styles.css` denominate `PagerRowStyle` e quindi assegnare il `PagerStyle` s `CssClass` proprietà tramite il nostro tema. Iniziare aprendo `Styles.css` e definizione della classe aggiungendo il codice CSS seguente:
 
-
 [!code-css[Main](paging-and-sorting-report-data-cs/samples/sample3.css)]
 
 Successivamente, aprire il `GridView.skin` del file nel `DataWebControls` cartella all'interno di `App_Themes` cartella. Come accennato nel *pagine Master e spostamento nel sito* file dell'esercitazione, interfaccia possono essere utilizzati per specificare i valori di proprietà predefiniti per un controllo Web. Pertanto, aumentare le impostazioni esistenti per includere l'impostazione di `PagerStyle` s `CssClass` proprietà `PagerRowStyle`. Inoltre, ti permettono di s configurare l'interfaccia di paging per visualizzare al massimo i pulsanti di cinque pagina numerici usando la `NumericFirstLast` interfaccia di paging.
-
 
 [!code-aspx[Main](paging-and-sorting-report-data-cs/samples/sample4.aspx)]
 
@@ -136,19 +117,15 @@ Successivamente, aprire il `GridView.skin` del file nel `DataWebControls` cartel
 
 Figura 8 mostra la pagina web quando visitati tramite un browser dopo che è stata selezionata la casella di controllo s Abilita Paging del controllo GridView e il `PagerStyle` e `PagerSettings` configurazioni sono state apportate tramite la `GridView.skin` file. Si noti come solo dieci record vengono visualizzati e l'interfaccia di paging indica che si sta visualizzando la prima pagina di dati.
 
-
 [![Con Paging abilitata, solo un Subset dei record vengono visualizzati contemporaneamente](paging-and-sorting-report-data-cs/_static/image13.png)](paging-and-sorting-report-data-cs/_static/image12.png)
 
 **Figura 8**: Con Paging abilitata, vengono visualizzati solo un Subset dei record alla volta ([fare clic per visualizzare l'immagine con dimensioni normali](paging-and-sorting-report-data-cs/_static/image14.png))
 
-
 Quando l'utente fa clic su uno dei numeri di pagina nell'interfaccia di paging, un postback previsioni e la pagina Ricarica con cui pagina s record richiesti. Figura 9 mostra i risultati dopo avere acconsentito esplicitamente per visualizzare la pagina finale dei dati. Si noti che la pagina finale ha solo un record; infatti, sono presenti 81 record in totale, risultante in otto pagine di 10 record per ogni pagina più di una pagina con un unico record.
-
 
 [![Facendo clic su un numero di pagine determina un Postback e Mostra il Subset appropriato di record](paging-and-sorting-report-data-cs/_static/image16.png)](paging-and-sorting-report-data-cs/_static/image15.png)
 
 **Figura 9**: Facendo clic su un numero di pagine determina un Postback e Mostra i Subset dei record appropriati ([fare clic per visualizzare l'immagine con dimensioni normali](paging-and-sorting-report-data-cs/_static/image17.png))
-
 
 ## <a name="paging-s-server-side-workflow"></a>Flusso di lavoro di paging s lato Server
 
@@ -165,7 +142,6 @@ Nella prossima esercitazione verrà esaminato come implementare *paging personal
 > [!NOTE]
 > Anche il paging predefinito non è idoneo quando il paging tramite set di risultati sufficientemente elevato o per i siti con molti utenti simultanei, tenere presente che il paging personalizzato richiede altre modifiche e allo scopo di implementare e non è semplice come selezionare una casella di controllo (come valore predefinito è paging). Pertanto, il paging predefinito potrebbe essere la scelta ideale per siti Web con traffico ridotto, piccoli o quando set paging di risultati relativamente piccolo, come s molto più semplice e più veloce da implementare.
 
-
 Ad esempio, se si sa che mai avremo più di 100 prodotti nel nostro database, il miglioramento delle prestazioni minimo a disposizione il paging personalizzato è probabilmente offset del lavoro richiesto per l'implementazione. Se, tuttavia, un giorno è migliaia o decine di migliaia di prodotti *non* implementare il paging personalizzato sarebbe notevolmente ostacolare la scalabilità dell'applicazione.
 
 ## <a name="step-4-customizing-the-paging-experience"></a>Passaggio 4: Personalizzazione dell'esperienza di Paging
@@ -174,23 +150,19 @@ Controlli Web dei dati offrono numerose proprietà che può essere utilizzato pe
 
 In primo luogo, aggiungere un controllo etichetta Web alla pagina, impostare relativi `ID` proprietà `PagingInformation`e cancellare il `Text` proprietà. Successivamente, creare un gestore eventi per s GridView `DataBound` eventi e aggiungere il codice seguente:
 
-
 [!code-csharp[Main](paging-and-sorting-report-data-cs/samples/sample5.cs)]
 
 Assegna questo gestore dell'evento il `PagingInformation` etichetta s `Text` proprietà a un messaggio che informa l'utente della pagina che attualmente stanno visitando `Products.PageIndex + 1` quante le pagine totali `Products.PageCount` (viene aggiunto 1 e il `Products.PageIndex` proprietà perché `PageIndex` vengono indicizzati a partire da 0). È possibile scegliere di assegnare questa etichetta s `Text` proprietà nel `DataBound` gestore dell'evento in contrapposizione al `PageIndexChanged` gestore dell'evento perché il `DataBound` evento viene generato ogni volta che i dati sono associati a GridView mentre il `PageIndexChanged` solo gestore di eventi generato quando viene modificato l'indice della pagina. Quando il controllo GridView è inizialmente i dati associati nella prima pagina visita, il `PageIndexChanging` fire t l di eventi (mentre il `DataBound` evento).
 
 Grazie a questa aggiunta, all'utente viene ora visualizzato un messaggio che indica quale pagina che stanno visitando e è il numero di pagine complessivo dei dati non esiste.
 
-
 [![Il numero di pagina corrente e il numero totale di pagine vengono visualizzati](paging-and-sorting-report-data-cs/_static/image19.png)](paging-and-sorting-report-data-cs/_static/image18.png)
 
 **Figura 10**: Vengono visualizzati il numero di pagina corrente e il numero totale di pagine ([fare clic per visualizzare l'immagine con dimensioni normali](paging-and-sorting-report-data-cs/_static/image20.png))
 
-
 Oltre al controllo etichetta, consentire s anche aggiungere un controllo DropDownList che elenca i numeri di pagina in GridView con la pagina correntemente visualizzata selezionata. L'idea è che l'utente può passare rapidamente dalla pagina corrente a altro semplicemente selezionando il nuovo indice di pagina da DropDownList. Iniziare aggiungendo un controllo DropDownList alla finestra di progettazione, l'impostazione relativa `ID` proprietà `PageList` e selezionando l'opzione Abilita AutoPostBack dal suo smart tag.
 
 Successivamente, tornare al `DataBound` gestore dell'evento e aggiungere il codice seguente:
-
 
 [!code-csharp[Main](paging-and-sorting-report-data-cs/samples/sample6.cs)]
 
@@ -200,16 +172,13 @@ Successivamente, è necessario creare di nuovo i numeri di pagina e avere quello
 
 Infine, è necessario creare un gestore eventi per s DropDownList `SelectedIndexChanged` evento, che viene attivato ogni volta che l'utente seleziona un elemento diverso dall'elenco. Per creare questo gestore eventi, è sufficiente fare doppio clic su DropDownList nella finestra di progettazione, quindi aggiungere il codice seguente:
 
-
 [!code-csharp[Main](paging-and-sorting-report-data-cs/samples/sample7.cs)]
 
 Come illustrato nella figura 11, semplicemente modificando la s GridView `PageIndex` proprietà fa in modo che i dati riassociare a GridView. In s GridView `DataBound` gestore eventi appropriato DropDownList `ListItem` sia selezionata.
 
-
 [![L'utente viene automaticamente visualizzata la sesta pagina quando selezionano l'elemento dell'elenco a discesa scegliere pagina 6](paging-and-sorting-report-data-cs/_static/image22.png)](paging-and-sorting-report-data-cs/_static/image21.png)
 
 **Figura 11**: L'utente viene automaticamente visualizzata la sesta pagina quando selezionano l'elemento dell'elenco a discesa scegliere pagina 6 ([fare clic per visualizzare l'immagine con dimensioni normali](paging-and-sorting-report-data-cs/_static/image23.png))
-
 
 ## <a name="step-5-adding-bi-directional-sorting-support"></a>Passaggio 5: Aggiunta del supporto per l'ordinamento bidirezionali
 
@@ -218,11 +187,9 @@ L'aggiunta di supporto bidirezionale è semplice quanto l'aggiunta di supporto d
 > [!NOTE]
 > Se si usa un livello di accesso ai dati personalizzati anziché a un set di dati tipizzato, non si abbia un'opzione Abilita ordinamento nello smart tag s GridView. Solo i GridView associati alle origini dati che in modo nativo supportano l'ordinamento sono questa casella di controllo disponibile. Il set di dati tipizzato fornisce il supporto dell'ordinamento della finestra poiché l'oggetto DataTable di ADO.NET fornisce un `Sort` metodo che, quando richiamata, Ordina gli oggetti DataTable DataRow usando i criteri specificati.
 
-
 Se DAL non restituisce oggetti che supportano l'ordinamento che sarà necessario configurare ObjectDataSource per passare le informazioni di ordinamento per il livello di logica di Business, che può ordinare i dati o i dati ordinato in modo nativo per DAL. Verrà illustrato come ordinare i dati nella logica di Business e livelli di accesso ai dati in un'esercitazione futura.
 
 L'ordinamento LinkButton vengono visualizzati come collegamenti ipertestuali HTML, i cui colori corrente (blu per un collegamento non visitato e un rosso scuro per un collegamento visitato) in conflitto con il colore di sfondo della riga di intestazione. Let s presenti, invece, tutti i collegamenti di riga di intestazione visualizzati in bianco, indipendentemente dal fatto che essi ve stato visitato o meno. Questa operazione può essere eseguita aggiungendo il codice seguente per il `Styles.css` classe:
-
 
 [!code-css[Main](paging-and-sorting-report-data-cs/samples/sample8.css)]
 
@@ -230,11 +197,9 @@ Questa sintassi indica di usare testo bianco quando tali collegamenti ipertestua
 
 Dopo l'aggiunta di CSS, quando si visita la pagina tramite un browser la schermata dovrebbe essere simile alla figura 12. In particolare, nella figura 12 mostra i risultati dopo che è stato fatto clic sul collegamento di intestazione s campo Prezzo.
 
-
 [![I risultati sono stati ordinati per l'elemento UnitPrice in ordine crescente](paging-and-sorting-report-data-cs/_static/image25.png)](paging-and-sorting-report-data-cs/_static/image24.png)
 
 **Figura 12**: I risultati sono ordinati in base all'elemento UnitPrice in ordine crescente ([fare clic per visualizzare l'immagine con dimensioni normali](paging-and-sorting-report-data-cs/_static/image26.png))
-
 
 ## <a name="examining-the-sorting-workflow"></a>Analisi di flusso di lavoro di ordinamento
 
@@ -250,24 +215,19 @@ Come con il paging predefinito, l'impostazione predefinita l'opzione di ordiname
 
 Quando si associa un ObjectDataSource a GridView mediante l'elenco di riepilogo a discesa nello smart tag s GridView, ogni campo di GridView dispone automaticamente relativi `SortExpression` assegnato al nome del campo dati nella proprietà il `ProductsRow` classe. Ad esempio, il `ProductName` s BoundField `SortExpression` è impostata su `ProductName`, come illustrato nel markup dichiarativo seguenti:
 
-
 [!code-aspx[Main](paging-and-sorting-report-data-cs/samples/sample9.aspx)]
 
 Un campo può essere configurato in modo che è non ordinabile cancellando s relativo `SortExpression` proprietà (assegnazione a una stringa vuota). Per illustrare questo concetto, si supponga che non si vuole consentire ai clienti di ordinare i nostri prodotti in base al prezzo. Il `UnitPrice` BoundField s `SortExpression` proprietà può essere rimosso dal markup dichiarativo o tramite la finestra di dialogo campi (che è accessibile facendo clic sul collegamento Modifica colonne nello smart tag GridView s).
-
 
 ![I risultati sono stati ordinati per l'elemento UnitPrice in ordine crescente](paging-and-sorting-report-data-cs/_static/image27.png)
 
 **Figura 13**: I risultati sono stati ordinati per l'elemento UnitPrice in ordine crescente
 
-
 Una volta il `SortExpression` proprietà è stata rimossa la `UnitPrice` BoundField, l'intestazione viene eseguito il rendering come testo anziché come un collegamento, impedendo in tal modo agli utenti di ordinamento dei dati in base al prezzo.
-
 
 [![Rimuovendo la proprietà SortExpression, gli utenti non sarà più possono ordinare i prodotti in base al prezzo](paging-and-sorting-report-data-cs/_static/image29.png)](paging-and-sorting-report-data-cs/_static/image28.png)
 
 **Figura 14**: Rimuovendo la proprietà SortExpression, gli utenti non è più possono ordinare il prezzo per i prodotti ([fare clic per visualizzare l'immagine con dimensioni normali](paging-and-sorting-report-data-cs/_static/image30.png))
-
 
 ## <a name="programmatically-sorting-the-gridview"></a>L'ordinamento a livello di programmazione di GridView
 
@@ -277,16 +237,13 @@ Si supponga che il motivo è disattivata l'ordinamento in base il `UnitPrice` er
 
 Per eseguire questo aggiungere un controllo pulsante Web alla pagina, impostare relativi `ID` proprietà `SortPriceDescending`e il relativo `Text` proprietà da ordinare in base al prezzo. Successivamente, creare un gestore eventi per il pulsante s `Click` eventi facendo doppio clic sul controllo pulsante nella finestra di progettazione. Aggiungere il codice seguente a questo gestore eventi:
 
-
 [!code-csharp[Main](paging-and-sorting-report-data-cs/samples/sample10.cs)]
 
 Facendo clic su questo pulsante l'utente torna alla prima pagina con i prodotti ordinati in base al prezzo, dal metodo più costoso meno costoso (vedere Figura 15).
 
-
 [![Fare clic sul pulsante Ordina i prodotti da del più costoso alla meno](paging-and-sorting-report-data-cs/_static/image32.png)](paging-and-sorting-report-data-cs/_static/image31.png)
 
 **Figura 15**: Fare clic sul pulsante Ordina i prodotti da the più dispendiose alla meno ([fare clic per visualizzare l'immagine con dimensioni normali](paging-and-sorting-report-data-cs/_static/image33.png))
-
 
 ## <a name="summary"></a>Riepilogo
 

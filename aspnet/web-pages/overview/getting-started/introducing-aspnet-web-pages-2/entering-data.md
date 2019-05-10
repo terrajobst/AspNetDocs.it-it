@@ -8,12 +8,12 @@ ms.date: 05/28/2015
 ms.assetid: d37c93fc-25fd-4e94-8671-0d437beef206
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/entering-data
 msc.type: authoredcontent
-ms.openlocfilehash: d76f607f1d5e779d43ee15d8f2d697e7b0f147ae
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: b9354a7b97a7df9020a681f709e16a92650cfcf0
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59380119"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132965"
 ---
 # <a name="introducing-aspnet-web-pages---entering-database-data-by-using-forms"></a>Introduzione a ASP.NET Web Pages: immissione di dati del Database tramite moduli
 
@@ -36,7 +36,6 @@ da [Tom FitzMacken](https://github.com/tfitzmac)
 > - Il codice SQL `Insert Into` istruzione
 > - Il `Validation` helper.
 > - Metodo `Response.Redirect` .
-
 
 ## <a name="what-youll-build"></a>Scopo dell'esercitazione
 
@@ -155,7 +154,6 @@ Ovviamente, non si vuole consentire agli utenti di immettere informazioni relati
 > E quindi è importante comprendere esattamente quando un valore è null e quando è semplicemente una stringa vuota. Nel codice per il *AddMovie* pagina, per ottenere i valori di caselle di testo utilizzare `Request.Form["title"]` e così via. Quando la pagina prima di tutto viene eseguita (prima di fare clic sul pulsante), il valore di `Request.Form["title"]` è null. Ma quando si invia il modulo `Request.Form["title"]` Ottiene il valore della `title` casella di testo. Non è ovvio, ma una casella di testo vuota non è null. è presente solo una stringa vuota in esso. Pertanto, quando il codice viene eseguito in risposta al pulsante fare clic su, `Request.Form["title"]` contiene una stringa vuota.
 > 
 > Perché questa distinzione è importante? Quando è stato creato il *film* tabella, in modo esplicito ha dichiarato che nessuno dei campi potrebbe essere null. Ma qui è un modulo di immissione di nuovi film che si sta lasciando vuota campi. Ragionevolmente prevedibile il database da ricevere lamentele da parte quando si è provato a salvare di nuovo film che non dispongono di valori per genere o un anno. Ma questo è il punto &mdash; anche se tali caselle di testo viene lasciato vuoto, i valori non null, ma sono stringhe vuote. Di conseguenza, si è in grado di salvare nuovi film nel database con queste colonne vuote &mdash; , ma non null. valori &mdash;. Pertanto, è necessario assicurarsi che gli utenti non inviano una stringa vuota, a questo scopo, convalidando l'input dell'utente.
-
 
 ### <a name="the-validation-helper"></a>L'Helper di convalida
 

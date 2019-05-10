@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 200b973c-776b-4a9b-9e82-39fda6120a52
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/setting-up-the-contact-manager-solution
 msc.type: authoredcontent
-ms.openlocfilehash: d0a7c29a590fcde504e5f5227806df62454f6add
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: d9774ee01cb0515d7e733b24baa661f2648bd7c4
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59410487"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131035"
 ---
 # <a name="setting-up-the-contact-manager-solution"></a>Configurazione della soluzione Contact Manager
 
@@ -22,7 +22,6 @@ da [Jason Lee](https://github.com/jrjlee)
 [Scaricare PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > In questo argomento viene descritto come scaricare e configurare la soluzione Contact Manager venga eseguita in locale in una workstation di sviluppo.
-
 
 ## <a name="system-requirements"></a>Requisiti di sistema
 
@@ -70,7 +69,6 @@ Il resto di questa sezione fornisce altre indicazioni su come completare queste 
 > [!NOTE]
 > Per altre informazioni su aspnet\_regsql utilità, vedere [strumento di registrazione di SQL Server ASP.NET (Aspnet\_regsql.exe)](https://msdn.microsoft.com/library/ms229862(v=vs.100).aspx).
 
-
 Il passaggio successivo è assicurarsi che le stringhe di connessione della soluzione Contact Manager puntano all'istanza locale di SQL Server Express.
 
 **Per aggiornare le stringhe di connessione**
@@ -97,7 +95,6 @@ A questo punto dovrebbe essere pronto per l'esecuzione della soluzione Contact M
 
 > [!NOTE]
 > Se si seguono questi passaggi senza aver prima creato un database di servizi dell'applicazione, ASP.NET verrà creato il database la prima volta che si tenta di creare un utente. Tuttavia, creazione manuale del database offre molto più controllo all'interno del set di funzionalità di servizi dell'applicazione che si desidera supportare.
-
 
 **Per eseguire la soluzione Contact Manager**
 

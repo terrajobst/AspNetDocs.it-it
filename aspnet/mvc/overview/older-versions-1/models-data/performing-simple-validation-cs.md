@@ -8,12 +8,12 @@ ms.date: 03/02/2009
 ms.assetid: 21383c9d-6aea-4bad-a99b-b5f2c9d6503f
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/performing-simple-validation-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 12fe89ec83a33ece2971c8186783326d165cbf79
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: e33f522af74efe97b5a245e956bc0b918ea769af
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59388504"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65122359"
 ---
 # <a name="performing-simple-validation-c"></a>Esecuzione di una convalida semplice (C#)
 
@@ -21,16 +21,13 @@ da [Stephen Walther](https://github.com/StephenWalther)
 
 > Informazioni su come eseguire la convalida in un'applicazione ASP.NET MVC. In questa esercitazione, Stephen Walther introduce per lo stato del modello e gli helper di convalida HTML.
 
-
 L'obiettivo di questa esercitazione è illustrare come è possibile eseguire la convalida all'interno di un'applicazione ASP.NET MVC. Ad esempio, informazioni su come impedire a qualcuno di invio di un modulo che non contiene un valore per un campo obbligatorio. Descrive come usare lo stato del modello e gli helper HTML di convalida.
 
 ## <a name="understanding-model-state"></a>Informazioni sullo stato del modello
 
 Si usa lo stato del modello - o, più precisamente, dizionario di stato del modello - per rappresentare errori di convalida. L'azione create () nel listato 1, ad esempio, convalida le proprietà di una classe di prodotto prima di aggiungere la classe di prodotto a un database.
 
-
 Non sto consigliata aggiungere la logica di convalida o di database a un controller. Un controller deve contenere solo la logica correlata al controllo di flusso dell'applicazione. Si sta eseguendo un collegamento a semplificare le operazioni.
-
 
 **Listato 1 - Controllers\ProductController.cs**
 
@@ -52,19 +49,15 @@ Gli helper Html.ValidationMessage() e Html.ValidationSummary() vengono usati nel
 4. Dal **visualizzare il contenuto** dall'elenco a discesa selezionare Crea.
 5. Fare clic sul pulsante **Aggiungi**.
 
-
 Assicurarsi che si compila l'applicazione prima di aggiungere una visualizzazione. In caso contrario, non sarà più visualizzato l'elenco delle classi nel **visualizzare i dati classe** nell'elenco a discesa.
-
 
 [![La finestra di dialogo Nuovo progetto](performing-simple-validation-cs/_static/image1.jpg)](performing-simple-validation-cs/_static/image1.png)
 
 **Figura 01**: Aggiunta di una vista ([fare clic per visualizzare l'immagine con dimensioni normali](performing-simple-validation-cs/_static/image2.png))
 
-
 [![La finestra di dialogo Nuovo progetto](performing-simple-validation-cs/_static/image2.jpg)](performing-simple-validation-cs/_static/image3.png)
 
 **Figura 02**: Creazione di una visualizzazione fortemente tipizzata ([fare clic per visualizzare l'immagine con dimensioni normali](performing-simple-validation-cs/_static/image4.png))
-
 
 Dopo aver completato questi passaggi, si ottiene la visualizzazione di creazione nel listato 2.
 
@@ -78,11 +71,9 @@ Viene chiamato l'helper Html.ValidationMessage() accanto a ogni campo di form HT
 
 La pagina nella figura 3 illustra i messaggi di errore viene eseguito il rendering per gli helper di convalida quando il form viene inviato con i campi mancanti e valori non validi.
 
-
 [![La finestra di dialogo Nuovo progetto](performing-simple-validation-cs/_static/image3.jpg)](performing-simple-validation-cs/_static/image5.png)
 
 **Figura 03**: Visualizzazione di creazione inviata con problemi ([fare clic per visualizzare l'immagine con dimensioni normali](performing-simple-validation-cs/_static/image6.png))
-
 
 Si noti che l'aspetto del codice HTML di input campi vengono modificati anche quando si verifica un errore di convalida. I renderer di helper Html.TextBox() una *classe = "errore di convalida input"* attributo quando si verifica un errore di convalida associato alla proprietà viene eseguito il rendering dall'helper Html.TextBox().
 
@@ -98,16 +89,13 @@ Esistono tre le classi foglio di stile utilizzate per controllare l'aspetto degl
 > 
 > La classe HtmlHelper include le proprietà statiche di sola lettura per il recupero della convalida i nomi relativi a CSS classi. Queste proprietà statiche sono denominate ValidationInputCssClassName, ValidationFieldCssClassName e ValidationSummaryCssClassName.
 
-
 ## <a name="prebinding-validation-and-postbinding-validation"></a>Prebinding Postbinding convalida e convalida
 
 Se si invia il form HTML per la creazione di un prodotto e immettere un valore non valido per il campo price e nessun valore per il campo UnitsInStock, ricevere i messaggi di convalida visualizzati nella figura 4. Questi messaggi di errore di convalida da dove provengono?
 
-
 [![La finestra di dialogo Nuovo progetto](performing-simple-validation-cs/_static/image4.jpg)](performing-simple-validation-cs/_static/image7.png)
 
 **Figura 04**: Prebinding gli errori di convalida ([fare clic per visualizzare l'immagine con dimensioni normali](performing-simple-validation-cs/_static/image8.png))
-
 
 Esistono effettivamente due tipi di messaggi di errore di convalida - quelli generati prima che i campi di form HTML sono associati a una classe e quelli generati dopo che i campi del modulo sono associati alla classe. In altre parole, esistono prebinding gli errori di convalida e postbinding gli errori di convalida.
 

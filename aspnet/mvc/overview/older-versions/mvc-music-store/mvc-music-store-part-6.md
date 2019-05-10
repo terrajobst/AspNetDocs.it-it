@@ -8,12 +8,12 @@ ms.date: 04/21/2011
 ms.assetid: b3193d33-2d0b-4d98-9712-58bd897c62ec
 msc.legacyurl: /mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-6
 msc.type: authoredcontent
-ms.openlocfilehash: b1e7bd0b16190b00e0e78a01ef71475e1c8d048a
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: bc031dd5be61cc6707c522f85f6af77a420c8b31
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59394822"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129661"
 ---
 # <a name="part-6-using-data-annotations-for-model-validation"></a>Parte 6: Uso delle annotazioni dei dati per la convalida del modello
 
@@ -24,7 +24,6 @@ by [Jon Galloway](https://github.com/jongalloway)
 > Music Store MVC è un semplice esempio di implementazione di un archivio per un negozio che vende album musicali online e implementa l'amministrazione di base del sito, l'accesso dell'utente e la funzionalità del carrello acquisti.  
 >   
 > Questa serie di esercitazioni illustra tutti i passaggi necessari per compilare l'applicazione di esempio ASP.NET MVC Music Store. Nella Parte 6 viene illustrato l'utilizzo di annotazioni dei dati per la convalida del modello.
-
 
 È presente un problema principale con la creazione e modifica di moduli: non dovranno più svolgere alcuna operazione di convalida. È possibile, ad esempio, lasciare vuoti i campi obbligatori o lettere tipo nel campo di prezzo ed è il primo errore che vedremo dal database.
 
@@ -76,7 +75,6 @@ Per fortuna, i modelli di scaffolding di ASP.NET MVC 3 hanno la convalida lato c
 Digitare una sola lettera nel campo del titolo soddisfa i requisiti di convalida, in modo che il messaggio di convalida viene rimosso immediatamente.
 
 ![](mvc-music-store-part-6/_static/image3.png)
-
 
 > [!div class="step-by-step"]
 > [Precedente](mvc-music-store-part-5.md)

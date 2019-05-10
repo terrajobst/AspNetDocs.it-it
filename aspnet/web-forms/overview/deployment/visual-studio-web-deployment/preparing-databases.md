@@ -8,12 +8,12 @@ ms.date: 02/15/2013
 ms.assetid: ae4def81-fa37-4883-a13e-d9896cbf6c36
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/preparing-databases
 msc.type: authoredcontent
-ms.openlocfilehash: 786be61d48f26e5765eac0c8d6fad7551897f711
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 72d69c0690c52c41f899e6cbe7cc656e537fe112
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59387686"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131109"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-preparing-for-database-deployment"></a>Distribuzione Web ASP.NET tramite Visual Studio: Preparazione per la distribuzione del database
 
@@ -22,7 +22,6 @@ da [Tom Dykstra](https://github.com/tdykstra)
 [Download progetto iniziale](http://go.microsoft.com/fwlink/p/?LinkId=282627)
 
 > Questa serie di esercitazioni illustra come distribuire, pubblicare, ASP.NET per App Web di servizio App di Azure o per un provider di hosting di terze parti, di applicazioni web usando Visual Studio 2012 o Visual Studio 2010. Per informazioni sulla serie, vedere [la prima esercitazione della serie](introduction.md).
-
 
 ## <a name="overview"></a>Panoramica
 
@@ -134,7 +133,6 @@ Il progetto è ora pronto per distribuire il *ContosoUniversity* database. Dopo 
 > 
 > `Sql("UPDATE Department SET Budget = 1000");`
 
-
 ## <a name="create-scripts-for-membership-database-deployment"></a>Creare script per la distribuzione del database di appartenenza
 
 L'applicazione Contoso University Usa l'autenticazione di sistema e form di appartenenza ASP.NET per autenticare e autorizzare gli utenti. Il **crediti Update** pagina è accessibile solo agli utenti che appartengono al ruolo di amministratore.
@@ -160,14 +158,12 @@ Questo database non è gestito da Code First di Entity Framework, pertanto è po
 > [!NOTE]
 > Con Visual Studio 2013 è stato introdotto un nuovo sistema di appartenenze ASP.NET (ora denominato ASP.NET Identity). Il nuovo sistema consente di mantenere l'applicazione sia nelle tabelle di appartenenza nello stesso database ed è possibile usare migrazioni Code First per distribuire entrambi. L'applicazione di esempio Usa il sistema di appartenenze ASP.NET precedenti, che non può essere distribuito usando migrazioni Code First. Le procedure per la distribuzione di questo database di appartenenza si applicano anche a qualsiasi altro scenario in cui l'applicazione deve distribuire un database di SQL Server che non viene creato da Code First di Entity Framework.
 
-
 Di seguito, in genere non si desidera gli stessi dati nell'ambiente di produzione che è necessario in fase di sviluppo. Quando si distribuisce un sito per la prima volta, è comune per escludere la maggior parte o tutti gli account utente creati per il test. Pertanto, il progetto scaricato è disponibili due database di appartenenza: *aspnet-ContosoUniversity.mdf* con gli utenti di sviluppo e *aspnet-ContosoUniversity-Prod.mdf* con gli utenti di produzione. Per questa esercitazione i nomi utente sono gli stessi in entrambi i database: *admin* e *nonadmin*. Gli utenti dispongono della password *devpwd* nel database di sviluppo e *prodpwd* nel database di produzione.
 
 Gli utenti di sviluppo verrà distribuito l'ambiente di test e gli utenti di produzione in gestione temporanea e produzione. A tale scopo si creerà due script SQL in questa esercitazione, uno per lo sviluppo e uno per la produzione e nelle esercitazioni successive si configurerà il processo di pubblicazione per eseguirli.
 
 > [!NOTE]
 > Il database di appartenenza archivia un hash della password dell'account. Per distribuire gli account da un computer a un altro, è necessario assicurarsi che le routine di hash non generano hash diversi nel server di destinazione che non nel computer di origine. I generatori produrranno lo stesso hash quando si usa ASP.NET Universal Providers, fino a quando non modificare l'algoritmo predefinito. L'algoritmo predefinito è HMACSHA256 e viene specificato nel **convalida** attributo il **[machineKey](https://msdn.microsoft.com/library/system.web.configuration.machinekeysection.aspx)** elemento nel file Web. config.
-
 
 È possibile creare script di distribuzione dei dati manualmente, usando SQL Server Management Studio (SSMS) o tramite uno strumento di terze parti. La parte restante di questa esercitazione illustrerà come eseguire questa operazione in SQL Server Management Studio, ma se non si vuole installare e usare SQL Server Management Studio è possibile ottenere gli script dalla versione completata del progetto e passare alla sezione in cui vengono archiviati nella cartella della soluzione.
 

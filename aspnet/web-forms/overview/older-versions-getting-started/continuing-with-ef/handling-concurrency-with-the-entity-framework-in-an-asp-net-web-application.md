@@ -8,19 +8,18 @@ ms.date: 01/26/2011
 ms.assetid: a5aa22a6-fb7f-4f41-9c7f-addda151940b
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/continuing-with-ef/handling-concurrency-with-the-entity-framework-in-an-asp-net-web-application
 msc.type: authoredcontent
-ms.openlocfilehash: fc9ce539005bce1790c726dfb859305f4ff78a6b
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 3df5f7d9c8fb22e1ea34fe16560bdb9a1309bb56
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59422564"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131889"
 ---
 # <a name="handling-concurrency-with-the-entity-framework-40-in-an-aspnet-4-web-application"></a>Gestione della concorrenza con Entity Framework 4.0 in un'applicazione Web 4 ASP.NET
 
 da [Tom Dykstra](https://github.com/tdykstra)
 
 > Questa serie di esercitazioni si basa sull'applicazione web Contoso University specificano che viene creato per il [Introduzione a Entity Framework 4.0](https://asp.net/entity-framework/tutorials#Getting%20Started) serie di esercitazioni. Se si non è stato completato le esercitazioni precedenti, come punto di partenza per questa esercitazione è possibile [scaricare l'applicazione](https://code.msdn.microsoft.com/ASPNET-Web-Forms-97f8ee9a) verrebbe creato. È anche possibile [scaricare l'applicazione](https://code.msdn.microsoft.com/ASPNET-Web-Forms-6c7197aa) creato dalla serie di esercitazioni complete. Se si hanno domande sulle esercitazioni, è possibile pubblicarli per i [forum di ASP.NET Entity Framework](https://forums.asp.net/1227.aspx).
-
 
 Nell'esercitazione precedente si è appreso come ordinare e filtro dei dati tramite il `ObjectDataSource` controllo ed Entity Framework. Questa esercitazione illustra le opzioni per la gestione della concorrenza in un'applicazione web ASP.NET che usa Entity Framework. Si creerà una nuova pagina web dedicato all'aggiornamento le assegnazioni di insegnati office. Gestire i problemi di concorrenza in tale pagina e nella pagina Departments creato in precedenza.
 

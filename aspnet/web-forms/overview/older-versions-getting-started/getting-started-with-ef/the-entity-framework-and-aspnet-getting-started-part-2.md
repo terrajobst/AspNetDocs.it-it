@@ -8,19 +8,18 @@ ms.date: 12/03/2010
 ms.assetid: fb63a326-a4ae-4b0c-a4f5-412327197216
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-2
 msc.type: authoredcontent
-ms.openlocfilehash: f436044b0887d6b092ab18a6128019aa87747566
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: bd6a2e29e6f0df04e39be29160e2e08cc99c4706
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59422304"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65126857"
 ---
 # <a name="getting-started-with-entity-framework-40-database-first-and-aspnet-4-web-forms---part-2"></a>Introduzione a Entity Framework 4.0 Database First e ASP.NET 4 Web Form - parte 2
 
 da [Tom Dykstra](https://github.com/tdykstra)
 
 > L'applicazione web di esempio Contoso University illustra come creare applicazioni Web Form ASP.NET usando il Entity Framework 4.0 e Visual Studio 2010. Per informazioni sulla serie di esercitazioni, vedere [la prima esercitazione della serie](the-entity-framework-and-aspnet-getting-started-part-1.md)
-
 
 ## <a name="the-entitydatasource-control"></a>Il controllo EntityDataSource
 

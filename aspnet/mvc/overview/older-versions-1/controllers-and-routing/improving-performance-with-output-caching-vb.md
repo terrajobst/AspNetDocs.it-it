@@ -8,19 +8,18 @@ ms.date: 01/27/2009
 ms.assetid: 0e7b4d85-2c46-4eaf-b6a8-6cd566a67334
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/improving-performance-with-output-caching-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 0f824bd5e080d42a9df3525ca47b87bcef407f7a
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: b713b56e149f196794b3223ba88e3b41bf3e34c4
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59405625"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123366"
 ---
 # <a name="improving-performance-with-output-caching-vb"></a>Miglioramento delle prestazioni con la cache di output (VB)
 
 by [Microsoft](https://github.com/microsoft)
 
 > In questa esercitazione descrive come è possibile migliorare notevolmente le prestazioni delle applicazioni web ASP.NET MVC, sfruttando i vantaggi della memorizzazione nella cache di output. Informazioni su come memorizzare nella cache il risultato restituito da un'azione del controller in modo che lo stesso contenuto non devono essere creati ogni volta che un nuovo utente richiama l'azione.
-
 
 L'obiettivo di questa esercitazione è spiegare come si possono migliorare notevolmente le prestazioni di un'applicazione ASP.NET MVC, sfruttando i vantaggi della cache di output. La cache di output consente di memorizzare nella cache il contenuto restituito da un'azione del controller. In questo modo, lo stesso contenuto non dovrà essere generato ogni volta che viene richiamata l'azione del controller stesso.
 
@@ -36,9 +35,7 @@ Si abilita la memorizzazione nella cache di output mediante l'aggiunta di un &lt
 
 [!code-vb[Main](improving-performance-with-output-caching-vb/samples/sample1.vb)]
 
-
 Nelle versioni Beta di ASP.NET MVC, la memorizzazione nella cache di output non funziona per un URL come [ http://www.MySite.com/ ](http://www.mysite.com/). In alternativa, è necessario immettere un URL come [ http://www.MySite.com/Home/Index ](http://www.mysite.com/Home/Index).
-
 
 Nel listato 1, l'output dell'azione Index () viene memorizzato nella cache per 10 secondi. Se si preferisce, è possibile specificare una durata molto più tempo della cache. Ad esempio, se si vuole memorizzare nella cache l'output di un'azione del controller per un giorno è possibile specificare una durata della cache di 86400 secondi (60 secondi \* 60 minuti \* 24 ore).
 
@@ -79,7 +76,6 @@ Per impostazione predefinita, quando si usa la &lt;OutputCache&gt; attributo, de
 > · Nessuno
 > 
 > · ServerAndClient
-
 
 Per impostazione predefinita, la proprietà Location contiene il valore Any. Tuttavia, esistono situazioni in cui potrebbe voler cache solo in browser o solo sul server. Ad esempio, se si memorizza informazioni personalizzati per ogni utente quindi è necessario non memorizzare nella cache le informazioni sul server. Se si visualizzano informazioni diverse a utenti diversi è necessario memorizzare nella cache le informazioni solo sul client.
 
@@ -136,7 +132,6 @@ L'azione Details() include una proprietà VaryByParam con il valore "Id". Quando
 > None = mai creare diverse versioni memorizzate nella cache
 > 
 > Elenco di punti e virgola di parametri = crea diverse versioni memorizzate nella cache, ogni volta che uno dei parametri di stringa query o di modulo nell'elenco varia
-
 
 #### <a name="creating-a-cache-profile"></a>Creazione di un profilo della Cache
 

@@ -8,12 +8,12 @@ ms.date: 05/28/2015
 ms.assetid: 81ed82bf-b940-44f1-b94a-555d0cb7cc98
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/form-basics
 msc.type: authoredcontent
-ms.openlocfilehash: f88f7a31551abda029bee0ec16aa35ce2ef5d2f0
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: f57661077ec3bb13f3d4ec41b130bda4d2fb9070
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59385956"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132953"
 ---
 # <a name="introducing-aspnet-web-pages---html-form-basics"></a>Introduzione a pagine Web ASP.NET - nozioni fondamentali sui moduli HTML
 
@@ -33,7 +33,6 @@ da [Tom FitzMacken](https://github.com/tfitzmac)
 > 
 > - Oggetto `Request`.
 > - Il codice SQL `Where` clausola.
-
 
 ## <a name="what-youll-build"></a>Scopo dell'esercitazione
 
@@ -82,7 +81,6 @@ Il `<form>` elemento racchiude gli elementi HTML da inviare. (Un semplice errore
 > 
 > (Per altre informazioni sui verbi HTTP, vedere la [le definizioni di metodo](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html) articolo sul sito di W3C.)
 
-
 La maggior parte degli elementi di input utente sono in formato HTML `<input>` elementi. Sono simili `<input type="type" name="name">,` in cui *tipo* indica il tipo di controllo di input utente desiderato. Questi elementi sono gli eventi più comuni:
 
 - Casella di testo: `<input type="text">`
@@ -104,7 +102,6 @@ La parte interessante è, lo sviluppatore della pagina, operazioni con l'input d
 > Come saprete, HTML è in fase di transizione e la versione più recente (HTML5) include il supporto per la modalità più intuitive agli utenti di immettere le informazioni. Ad esempio, in formato HTML5 è (sviluppatore della pagina) può indicare la pagina che si desidera che l'utente di immettere una data. Il browser può quindi visualizzare automaticamente un calendario, anziché richiedere all'utente di immettere manualmente una data. Tuttavia, HTML5 è nuovo e non è supportato in tutti i browser ancora.
 > 
 > ASP.NET Web Pages supporta HTML5 nella misura in cui il browser dell'utente non di input. Per avere un'idea dei nuovi attributi per il `<input>` elemento di HTML5, vedere [HTML &lt;input&gt; attributo type](http://www.w3schools.com/html/html_form_input_types.asp) sul sito W3Schools.
-
 
 ## <a name="creating-the-form"></a>Creazione del form
 
@@ -176,7 +173,6 @@ Questo blocco Prepara il terreno per la creazione di una query che usa il termin
 > 
 > È consigliabile essere specifici e usare il subset di `Request` che si è interessati, ad esempio `Request.Form` o `Request.QueryString`. Per le pagine semplici che si sta creando questa esercitazione, probabilmente non molto effettua alcuna differenza. Tuttavia, quando si creano pagine più complesse, utilizzando la versione esplicita `Request.Form` o `Request.QueryString` può aiutare a evitare i problemi che possono verificarsi quando la pagina contiene un modulo (o più moduli), i cookie, i valori di stringa di query e così via.
 
-
 ## <a name="creating-a-query-by-using-a-search-term"></a>Creazione di una Query con un termine di ricerca
 
 Ora che sai come ottenere il termine di ricerca immesso dall'utente, è possibile creare una query che lo usa. Tenere presente che per ottenere tutti gli elementi di film all'esterno del database, si usa una query SQL che è simile a questa istruzione:
@@ -218,7 +214,6 @@ Se è mettere in pratica tutti questi elementi, viene visualizzato il codice seg
 > **Importante**: Utilizzo di segnaposti (come `@0`) per passare valori a un comando SQL viene *estremamente importante* per la sicurezza. Il modo in cui è visualizzato qui, con segnaposto per i dati delle variabili, è l'unico modo, è necessario costruire i comandi SQL.
 > 
 > Mai comporre un'istruzione SQL tramite la realizzazione di testo letterale (concatenando) e i valori che ottenere dall'utente. Concatenazione di input dell'utente in un'istruzione SQL viene aperto il sito a un *attacco SQL injection* in cui un utente malintenzionato invia i valori a una pagina che hack del database. (Altre informazioni nell'articolo [attacchi SQL Injection](https://msdn.microsoft.com/library/ms161953.aspx) il sito Web MSDN.)
-
 
 ## <a name="updating-the-movies-page-with-search-code"></a>Aggiornare la pagina di film con codice di ricerca
 
@@ -280,7 +275,6 @@ In questa pagina, è possibile avere impostare anche il `value` dell'attributo d
 
 > [!NOTE]
 > Non si "ricorda" il valore di una casella di testo che viene usato per le password. Sarebbe un problema di sicurezza per consentire agli utenti di compilare un campo della password tramite il codice.
-
 
 Eseguire nuovamente la pagina, immettere un genere e fare clic su **Genre ricerca**. Questa volta non solo vengono visualizzati i risultati della ricerca, ma la casella di testo memorizza l'ora dell'ultimo immesso:
 

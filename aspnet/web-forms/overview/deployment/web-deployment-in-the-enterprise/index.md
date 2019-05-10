@@ -8,17 +8,16 @@ ms.date: 05/16/2012
 ms.assetid: 83e0a572-428f-4bea-9638-1a031c6901c0
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise
 msc.type: chapter
-ms.openlocfilehash: 109a0dc1e1ebe0b644e9414561c798a7bb3d0531
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 7701f7d73aa8f0bae28f16dc2381317e6e02a4a5
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59414829"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131754"
 ---
 # <a name="aspnet-4---enterprise-deployment-series-1"></a>ASP.NET 4 - Serie sulla distribuzione aziendale 1
 
 > Questa esercitazione descrive come soddisfare molte delle sfide che possono incontrare quando si gestisce la distribuzione di applicazioni web su larga scala per ambienti di sviluppo, test, staging e produzione. L'esercitazione include una soluzione di riferimento insieme a una combinazione di contenuto concettuale e orientati alle attività consentono di eseguire varie attività comuni e procedure.
-
 
 - [Distribuzione Web nell'organizzazione](web-deployment-in-the-enterprise.md)
 - [Soluzione Contact Manager](the-contact-manager-solution.md)

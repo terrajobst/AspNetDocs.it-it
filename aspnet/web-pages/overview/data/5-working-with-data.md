@@ -8,12 +8,12 @@ ms.date: 02/18/2014
 ms.assetid: 673d502f-2c16-4a6f-bb63-dbfd9a77ef47
 msc.legacyurl: /web-pages/overview/data/5-working-with-data
 msc.type: authoredcontent
-ms.openlocfilehash: 0fc828e39cfcce22d4cc226954cf7d1731b04e42
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 4ed2a2a1ee3cff7a50e67b6571b85f74d01efab7
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59379781"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133223"
 ---
 # <a name="introduction-to-working-with-a-database-in-aspnet-web-pages-razor-sites"></a>Introduzione all'uso di un Database in ASP.NET Web Pages (Razor) siti
 
@@ -44,7 +44,6 @@ da [Tom FitzMacken](https://github.com/tfitzmac)
 > 
 > Questa esercitazione si integra inoltre con WebMatrix 3. È possibile usare 3 pagine Web ASP.NET e Visual Studio 2013 (o Visual Studio Express 2013 per il Web); Tuttavia, l'interfaccia utente sarà diversa.
 
-
 ## <a name="introduction-to-databases"></a>Introduzione a database
 
 Si immagini una rubrica tipico. Per ogni voce della Rubrica (vale a dire, per ogni persona) disporre di varie informazioni quali nome, cognome, indirizzo, indirizzo di posta elettronica e numero di telefono.
@@ -67,7 +66,6 @@ Con questa conoscenza di base dei database, si è pronti per imparare a creare u
 > È possibile archiviare i dati in molti modi, tra cui fogli di calcolo e file di testo. Per la maggior parte degli usi di business, tuttavia, i dati vengono archiviati in un database relazionale.
 > 
 > Questo articolo non andare molto approfonditamente nel database. Tuttavia, si potrebbe risultare utile per comprendere un po' riguardo. In un database relazionale, informazioni viene suddiviso logicamente in tabelle separate. Ad esempio, un database per un istituto di istruzione potrebbe contenere tabelle separate per gli studenti e per le offerte di classe. Software (ad esempio SQL Server) supporta avanzato dei comandi di database che consentono in modo dinamico stabiliscono relazioni tra le tabelle. Ad esempio, è possibile utilizzare il database relazionale per stabilire una relazione logica tra gli studenti e classi per creare una pianificazione. L'archiviazione dei dati in tabelle separate riduce la complessità di struttura della tabella e riduce la necessità di mantenere i dati ridondanti nelle tabelle.
-
 
 ## <a name="creating-a-database"></a>Creazione di un database
 
@@ -173,7 +171,6 @@ Dopo che è disponibile un database con dati in esso, è possibile visualizzare 
 > 
 > Sono disponibili decine di comandi SQL, ma seguono un modello simile al seguente. È possibile usare i comandi SQL per creare tabelle di database, contare il numero di record in una tabella, calcolo dei prezzi ed eseguire molte più operazioni.
 
-
 ## <a name="inserting-data-in-a-database"></a>Inserimento di dati in un Database
 
 In questa sezione viene illustrato come creare una pagina che consente agli utenti di aggiungere un nuovo prodotto per il *prodotto* tabella di database. Dopo che viene inserito un nuovo record di prodotto, la pagina viene visualizzata la tabella aggiornata con le *ListProducts.cshtml* pagina creata nella sezione precedente.
@@ -238,7 +235,6 @@ Dopo l'immissione dei dati in una tabella, si potrebbe essere necessario aggiorn
 > [!NOTE] 
 > 
 > **Importante** In siti Web di produzione, è in genere limitare chi è autorizzato per apportare modifiche ai dati. Per informazioni su come configurare l'appartenenza e sui modi per consentire agli utenti di eseguire attività nel sito, vedere [aggiunta di sicurezza e l'appartenenza a un sito con pagine Web ASP.NET](https://go.microsoft.com/fwlink/?LinkId=202904).
-
 
 1. Nel sito Web, creare un nuovo file con estensione CSHTML denominato *EditProducts.cshtml*.
 2. Sostituire il markup esistente nel file con il codice seguente:
@@ -321,7 +317,6 @@ Questa sezione illustra come consentire agli utenti di eliminare un prodotto dal
 > 
 > **Importante** In siti Web di produzione, è in genere limitare chi è autorizzato per apportare modifiche ai dati. Per informazioni su come configurare l'appartenenza e sui modi per autorizzare l'utente di eseguire le attività nel sito, vedere [aggiunta di sicurezza e l'appartenenza a un sito con pagine Web ASP.NET](https://go.microsoft.com/fwlink/?LinkId=202904).
 
-
 1. Nel sito Web, creare un nuovo file con estensione CSHTML denominato *ListProductsForDelete.cshtml*.
 2. Sostituire il markup esistente con il codice seguente:
 
@@ -384,7 +379,6 @@ Questa sezione illustra come consentire agli utenti di eliminare un prodotto dal
 > Come accennato, la `Database.Open` metodo consente di passare un nome di database o una stringa di connessione e possibile individuare i cui si desidera utilizzare. Ciò è molto utile quando si distribuisce (pubblica) nel sito Web. È possibile usare un *sdf* del file nei *App\_dati* cartella durante lo sviluppo e test del sito. Quando si sposta il sito in un server di produzione, è possibile usare una stringa di connessione nel *Web. config* file con lo stesso nome del *sdf* file, ma che punta al provider di hosting database &#8212;senza dover modificare il codice.
 > 
 > Infine, se si desidera lavorare direttamente con una stringa di connessione, è possibile chiamare il `Database.OpenConnectionString` metodo e passare è l'effettiva della stringa di connessione anziché il nome di un oggetto incluso il *Web. config* file. Ciò può risultare utile nelle situazioni in cui per qualche motivo non si ha accesso alla stringa di connessione (o valori in essa contenuti, ad esempio la *sdf* nome file) fino a quando la pagina è in esecuzione. Tuttavia, per la maggior parte degli scenari, è possibile usare `Database.Open` come descritto in questo articolo.
-
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 

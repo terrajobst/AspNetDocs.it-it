@@ -8,12 +8,12 @@ ms.date: 04/23/2009
 ms.assetid: 0177dabd-d888-449f-91b2-24190cf5e842
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/configuring-the-production-web-application-to-use-the-production-database-cs
 msc.type: authoredcontent
-ms.openlocfilehash: fa05645db9d43a836cc75b399153dd2e2c288f7c
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 1e93a5314129b2a05ede603ae9c01cd57b574f88
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59388766"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65127023"
 ---
 # <a name="configuring-the-production-web-application-to-use-the-production-database-c"></a>Configurazione dell'applicazione Web di produzione per l'uso del database di produzione (C#)
 
@@ -22,7 +22,6 @@ da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Scaricare il codice](http://download.microsoft.com/download/E/6/F/E6FE3A1F-EE3A-4119-989A-33D1A9F6F6DD/ASPNET_Hosting_Tutorial_08_CS.zip) o [Scarica il PDF](http://download.microsoft.com/download/C/3/9/C391A649-B357-4A7B-BAA4-48C96871FEA6/aspnet_tutorial08_DBConfig_cs.pdf)
 
 > Come illustrato nelle esercitazioni precedenti, non è insolito per le informazioni di configurazione in modo diverso tra gli ambienti di sviluppo e produzione. Ciò vale soprattutto per le applicazioni web basate sui dati, come le stringhe di connessione del database differiscono tra ambienti di sviluppo e produzione. Questa esercitazione illustra alcuni modi per configurare l'ambiente di produzione in modo da includere la stringa di connessione appropriate in modo più dettagliato.
-
 
 ## <a name="introduction"></a>Introduzione
 
@@ -44,7 +43,6 @@ La stringa di connessione - origine dati =. \SQLEXPRESS; AttachDbFilename = | Da
 - `AttachDbFilename` -Specifica il percorso del file di database. Il valore contiene il segnaposto `|DataDirectory|`, che viene risolto il percorso completo di s applicazione `App_Data` cartella in fase di esecuzione.
 - `Integrated Security` -un valore booleano che indica se utilizzare un nome utente/password specificata durante la connessione al database (false) o di Windows corrente le credenziali dell'account (true).
 - `User Instance` -un'opzione di configurazione specifica per edizioni di SQL Server Express che indica se consentire agli utenti senza privilegi di amministratore nel computer locale collegarsi e connettersi a un database di SQL Server Express Edition. Visualizzare [istanze di SQL Server Express utente](https://msdn.microsoft.com/library/ms254504.aspx) per altre informazioni su questa impostazione.
-  
 
 Le opzioni di stringa di connessione consentite variano a seconda del database a cui a che ci si connette e il provider di database ADO.NET in uso. Ad esempio, la stringa di connessione per la connessione a Microsoft SQL Server database è diverso da usare per connettersi a un database Oracle. Allo stesso modo, ci si connette a un database di Microsoft SQL Server tramite il provider SqlClient utilizza una stringa di connessione diversa rispetto all'uso di provider OLE DB.
 
@@ -52,19 +50,15 @@ Le opzioni di stringa di connessione consentite variano a seconda del database a
 
 Aprire Visual Studio e quindi passare alla finestra di Esplora Server (in Visual Web Developer, questa finestra è denominata Database Explorer). Fare doppio clic sull'opzione connessioni dati e scegliere l'opzione Aggiungi connessione dal menu di scelta rapida. Verrà visualizzata la procedura guidata illustrata nella figura 1. Scegliere l'origine dati appropriata e fare clic su Continua.
 
-
 [![Scegliere di aggiungere un nuovo Database in Esplora Server](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image2.jpg)](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image1.jpg) 
 
 **Figura 1**: Scegliere di aggiungere un nuovo Database in Esplora Server ([fare clic per visualizzare l'immagine con dimensioni normali](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image3.jpg))
 
-
 Successivamente, specificare i vari database le informazioni di connessione (vedere la figura 2). Quando si è effettuata l'iscrizione con la società di hosting web si devono fornite informazioni su come connettersi al database - il nome del server di database, il nome del database, il nome utente e password da usare per connettersi al database e così via. Dopo aver immesso queste informazioni fare clic su OK per completare questa procedura guidata e aggiungere il database in Esplora Server.
-
 
 [![Specificare le informazioni di connessione di Database](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image5.jpg)](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image4.jpg) 
 
 **Figura 2**: Specificare le informazioni di connessione di Database ([fare clic per visualizzare l'immagine con dimensioni normali](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image6.jpg))
-
 
 Il database ambiente di produzione dovrebbe ora essere elencato in Esplora Server. Selezionare il database da Esplora Server e passare alla finestra Proprietà. Qui troverai una proprietà denominata stringa di connessione con la stringa di connessione database s. Supponendo che si usa un database Microsoft SQL Server in ambiente di produzione e il provider SqlClient la stringa di connessione dovrebbe essere simile al seguente:
 
@@ -87,14 +81,11 @@ A meno che non si dispone di un flusso di lavoro di distribuzione più formale, 
 > [!NOTE]
 > Se si distribuisce accidentalmente un `Web.config` file che contiene la stringa di connessione di database di sviluppo, vi sarà un errore quando l'applicazione in produzione prova a connettersi al database. Questo errore manifesta come un `SqlException` con un messaggio di creazione di report che il server non è stato trovato o non è accessibile.
 
-
 Dopo aver distribuito il sito alla produzione, visitare il sito di produzione tramite il browser. È consigliabile vedere e sfruttare la stessa esperienza utente durante l'esecuzione locale dell'applicazione basate sui dati. Naturalmente quando si visita il sito Web in produzione al sito si basa su server di database di produzione, mentre visitando il sito Web nell'ambiente di sviluppo viene utilizzato il database in fase di sviluppo. Figura 3 mostra le *insegnare manualmente ASP.NET 3.5 in 24 ore* esaminare pagina dal sito Web nell'ambiente di produzione (si noti l'URL nella barra degli indirizzi del browser s).
-
 
 [![Le applicazioni guidate dai dati è ora disponibile in produzione.](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image8.jpg)](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image7.jpg) 
 
 **Figura 3**: Le applicazioni guidate dai dati è ora disponibile in produzione. ([Fare clic per visualizzare l'immagine con dimensioni normali](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image9.jpg))
-
 
 ### <a name="storing-connection-strings-in-a-separate-configuration-file"></a>L'archiviazione delle stringhe di connessione in un File di configurazione separato
 
@@ -113,14 +104,11 @@ Creare una copia del file databaseConnectionStrings.dev.config e denominarlo dat
 > [!NOTE]
 > È possibile assegnare un nome file di configurazione diverso databaseConnectionStrings.config, se d desiderato, ad esempio `connectionStrings.config` o `dbInfo.config`. Tuttavia, assicurarsi di assegnare un nome del file con un `.config` estensione come `.config` file, per impostazione predefinita, non vengono serviti dal motore di ASP.NET. Se si assegnano nomi file di un altro elemento, ad esempio `connectionStrings.txt`, un utente può puntare il browser al [www.yoursite.com/ConfigSettings/connectionStrings.txt](http://www.yoursite.com/ConfigSettings/connectionStrings.txt) e visualizzare il contenuto del file.
 
-
 A questo punto il `ConfigSections` cartella deve contenere tre file (vedere la figura 4). I file databaseConnectionStrings.dev.config e databaseConnectionStrings.production.config contengono le stringhe di connessione per gli ambienti di sviluppo e produzione, rispettivamente. Il file databaseConnectionStrings.config contiene le informazioni sulla stringa di connessione che verrà usati dall'applicazione web in fase di esecuzione. Di conseguenza, il file databaseConnectionStrings.config deve essere identico al file databaseConnectionStrings.dev.config nell'ambiente di sviluppo, mentre in produzione, il file databaseConnectionStrings.config deve essere identico a databaseConnectionStrings.production.config.
-
 
 [![ConfigSections](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image11.jpg)](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image10.jpg) 
 
 **Figura 4**: ConfigSections ([fare clic per visualizzare l'immagine con dimensioni normali](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image12.jpg))
-
 
 È ora necessario indicare a `Web.config` per utilizzare il file databaseConnectionStrings.config per il proprio archivio di stringhe di connessione. Aprire `Web.config` e sostituire l'elemento `<connectionStrings>` esistente con il codice seguente:
 
@@ -132,7 +120,6 @@ Grazie a questa modifica, gli ambienti di sviluppo e produzione contengono gli s
 
 > [!NOTE]
 > È possibile specificare le informazioni di presenza `Web.config` elemento in un file separato e usare il `configSource` attributo fare riferimento a tale file dall'interno `Web.config`.
-
 
 ## <a name="summary"></a>Riepilogo
 

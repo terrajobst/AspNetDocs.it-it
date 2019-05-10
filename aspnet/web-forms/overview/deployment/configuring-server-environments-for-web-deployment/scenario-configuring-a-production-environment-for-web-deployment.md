@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 2e861511-450e-4752-a61e-4a01933f9b6e
 msc.legacyurl: /web-forms/overview/deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-production-environment-for-web-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: 586508039b9a3d78492aa02a77a1f29c64668b5e
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 2d76e715cdbf6ec484fa0ff98b3b3d1d8dfd3961
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59409694"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65125841"
 ---
 # <a name="scenario-configuring-a-production-environment-for-web-deployment"></a>Scenario: Configurazione di un ambiente di produzione per la distribuzione Web
 
@@ -22,7 +22,6 @@ da [Jason Lee](https://github.com/jrjlee)
 [Scaricare PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > In questo argomento descrive uno scenario di distribuzione web tipico per un ambiente di produzione e illustra le attività da completare per poter configurare un ambiente simile.
-
 
 L'ambiente di produzione è la destinazione finale per un'applicazione web o un sito Web. A questo punto l'applicazione è stato sottoposto a test, è stato distribuito in un ambiente di staging e sia pronto per "go live". Le caratteristiche di un ambiente di produzione possono variare notevolmente in base alla natura e finalità del contenuto web, le dimensioni dell'organizzazione, i destinatari e molti altri fattori. In uno scenario di livello aziendale, l'ambiente di produzione può presentare queste caratteristiche:
 
@@ -33,7 +32,6 @@ L'ambiente di produzione è la destinazione finale per un'applicazione web o un 
 
 > [!NOTE]
 > Scalabilità orizzontale di una distribuzione di database tra più server esula dall'ambito di questa esercitazione. Per altre informazioni su quest'area, consultare [documentazione Online di SQL Server](https://technet.microsoft.com/library/ms130214.aspx).
-
 
 Ad esempio, nel nostro [scenario dell'esercitazione](../deploying-web-applications-in-enterprise-scenarios/enterprise-web-deployment-scenario-overview.md), un server Team Build include definizioni di compilazione che consentono agli utenti di compilare la soluzione Contact Manager e distribuirla in un ambiente di staging in un unico passaggio. Quando l'applicazione è pronta per essere distribuita nell'ambiente di produzione, a causa di vincoli imposti dai requisiti di sicurezza e l'infrastruttura di rete, l'amministratore di ambiente di produzione è necessario copiare il pacchetto web a un server web di produzione e importare manualmente esso tramite Gestione Internet Information Services (IIS).
 

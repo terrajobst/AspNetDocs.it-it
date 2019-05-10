@@ -8,19 +8,18 @@ ms.date: 08/14/2010
 ms.assetid: e8f1515c-c277-47ff-a23e-224118f13f02
 msc.legacyurl: /mvc/overview/older-versions-1/getting-started-with-mvc/getting-started-with-mvc-part3
 msc.type: authoredcontent
-ms.openlocfilehash: 3eff3aceea302c51e6970bb13fbee3a8bf98a71d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 462b1210c45da67058899193afcea973f3daf122
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59411982"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123045"
 ---
 # <a name="adding-a-view"></a>Aggiunta di una visualizzazione
 
 da [Scott Hanselman](https://github.com/shanselman)
 
 > Si tratta di un'esercitazione per principianti che introduce i concetti di base di ASP.NET MVC. Si creerà una semplice applicazione web che legge e scrive da un database. Visitare il [centro di formazione di ASP.NET MVC](../../../index.md) per trovare altri ASP.NET MVC, esercitazioni ed esempi.
-
 
 In questa sezione si intende esaminare come possiamo nostra classe HelloWorldController utilizzare un file di modello di visualizzazione per incapsulare correttamente la generazione di risposte HTML a un client.
 
@@ -99,7 +98,6 @@ Anche se è su più righe, il metodo iniziale è davvero solo due istruzioni del
 A questo punto è necessario un modello di vista Welcome! Fare clic con il pulsante destro del metodo iniziale e selezionare Aggiungi visualizzazione. Questa volta, si sarà controllare "Crea una visualizzazione fortemente tipizzata" e selezionare la classe WelcomeViewModel dall'elenco a discesa. Questa nuova visualizzazione verrà solo a conoscenza WelcomeViewModels e non altri tipi di oggetti.
 
 > *NOTA: È necessario avere compilato una sola volta dopo l'aggiunta di WelcomeViewModel per venga visualizzato nell'elenco a discesa.*
-
 
 Ecco come dovrebbe risultare la finestra di dialogo Aggiungi visualizzazione. Fare clic sul pulsante Aggiungi. ![Aggiungere che un cerchio di visualizzazione](getting-started-with-mvc-part3/_static/image10.png)
 

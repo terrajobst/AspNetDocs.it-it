@@ -8,12 +8,12 @@ ms.date: 09/08/2014
 ms.assetid: 2ce36f78-8ecb-4ab1-b748-6d0ab633ea3f
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/create-the-project
 msc.type: authoredcontent
-ms.openlocfilehash: 9e2cd1beca03b81140b9d58c5e43dbf7c6b8808b
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 1819704a4cfd3e6b82de1d8db916e729459d244f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59393054"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130908"
 ---
 # <a name="create-the-project"></a>Creare il progetto
 
@@ -22,7 +22,6 @@ da [Erik Reitan](https://github.com/Erikre)
 [Scaricare progetto di esempio Wingtip Toys (c#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) o [Scarica l'E-book (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
 
 > Questa serie di esercitazioni insegnerà le nozioni di base della creazione di un'applicazione Web Form ASP.NET con ASP.NET 4.5 e Microsoft Visual Studio Express 2013 per Web. Un Visual Studio 2013 [progetto con codice sorgente c#](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) complemento a questa serie di esercitazioni è disponibile.
-
 
 In questa esercitazione si verranno creare, esaminare ed eseguire il progetto predefinito in Visual Studio, che consentirà di acquisire familiarità con le funzionalità di ASP.NET. Inoltre, si esaminerà l'ambiente di Visual Studio.
 
@@ -83,7 +82,6 @@ Il progetto richiederà un po' di tempo per creare. Quando è pronto, aprire il 
 > 
 > - [ASP.NET Web API](../../../../web-api/index.md) -un framework per la creazione di servizi HTTP che soddisfano una vasta gamma di client, inclusi browser e dispositivi mobili.
 > - [ASP.NET SignalR](../../../../signalr/index.md) -una libreria che semplifica lo sviluppo funzionalità web in tempo reale.
-
 
 ### <a name="reviewing-the-project"></a>Revisione del progetto
 

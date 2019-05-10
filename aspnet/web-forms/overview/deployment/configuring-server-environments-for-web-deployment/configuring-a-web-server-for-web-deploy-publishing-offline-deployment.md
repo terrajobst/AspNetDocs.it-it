@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: ba92788f-9f03-44b1-b6b2-af8413e6a35d
 msc.legacyurl: /web-forms/overview/deployment/configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-offline-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: 66a784430de734c8b1387c950382472ce59d5ccc
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 873eb9e350d5fadb017b20c4b6d2889e0df00091
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59422135"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65126006"
 ---
 # <a name="configuring-a-web-server-for-web-deploy-publishing-offline-deployment"></a>Configurazione di un server Web per la pubblicazione con Distribuzione Web (distribuzione offline)
 
@@ -30,7 +30,6 @@ da [Jason Lee](https://github.com/jrjlee)
 > - Uso *distribuzione offline*. Questo approccio richiede la minima configurazione del server web, ma un amministratore del server deve copiare il pacchetto web nel server e importarlo tramite Gestione IIS manualmente.
 > 
 > Per altre informazioni su funzionalità chiave, vantaggi e gli svantaggi di questi approcci, vedere [scelta dell'approccio a destra per la distribuzione Web](choosing-the-right-approach-to-web-deployment.md).
-
 
 Sì, se le restrizioni di infrastruttura o della sicurezza di rete impediscono la distribuzione remota. Ciò è probabilmente ad esempio, negli ambienti di produzione con connessione Internet, in cui i server web sono isolati&#x2014;fisicamente o dal firewall e le subnet&#x2014;dal resto dell'infrastruttura server.
 
@@ -59,7 +58,6 @@ In questo argomento illustrerà come eseguire ognuna di queste procedure. Le att
 > [!NOTE]
 > Per ulteriori informazioni sull'aggiunta di computer a un dominio, vedere [aggiunta di computer al dominio ed effettuare l'accesso](https://technet.microsoft.com/library/cc725618(v=WS.10).aspx). Per altre informazioni su come configurare gli indirizzi IP statici, vedere [configurare un indirizzo IP statico](https://technet.microsoft.com/library/cc754203(v=ws.10).aspx).
 
-
 ## <a name="install-products-and-components"></a>Installare i prodotti e componenti
 
 In questa sezione consentirà di installare i componenti e prodotti necessari nel server web. Prima di iniziare, è consigliabile eseguire Windows Update per verificare che il server sia completamente aggiornato.
@@ -73,7 +71,6 @@ In questo caso, è necessario installare quanto segue:
 
 > [!NOTE]
 > Questa procedura dettagliata viene descritto l'utilizzo dell'installazione guidata piattaforma Web per installare e configurare i vari componenti. Sebbene non sia necessario usare l'installazione guidata piattaforma Web, semplifica il processo di installazione automaticamente rilevando le dipendenze e assicurare che ottengano sempre le versioni di prodotto più recenti. Per altre informazioni, vedere [programma di installazione di piattaforma Web Microsoft 3.0](https://go.microsoft.com/?linkid=9805118).
-
 
 **Per installare i componenti e prodotti necessari**
 
@@ -180,7 +177,6 @@ L'approccio più comune consiste nell'assegnare autorizzazioni a locale **IIS\_I
 > [!NOTE]
 > Per ulteriori informazioni sull'identità del pool di applicazioni in IIS 7.5, vedere [Application Pool Identities](https://go.microsoft.com/?linkid=9805123).
 
-
 **Configurare le autorizzazioni di cartella per un sito Web IIS**
 
 1. In Windows Explorer passare al percorso della cartella locale.
@@ -199,7 +195,6 @@ Quando si installa distribuzione Web, il servizio agente di distribuzione Web è
 
 > [!NOTE]
 > Non è necessario arrestare il servizio agente remoto per importare e distribuire manualmente un pacchetto di web. Tuttavia, è consigliabile arrestare e disabilitare il servizio se non si prevede di usarlo.
-
 
 È possibile arrestare e disabilitare un servizio in diversi modi, mediante diverse utilità della riga di comando o i cmdlet di Windows PowerShell. Questa procedura viene descritto un approccio basato su interfaccia utente semplice.
 

@@ -8,12 +8,12 @@ ms.date: 01/14/2008
 ms.assetid: 83267f7d-64d9-41ee-82cf-da91b1bf534d
 msc.legacyurl: /web-forms/overview/older-versions-security/introduction/an-overview-of-forms-authentication-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 84b1c4c562603eddc5b82500700957bc78f236f4
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 4fb644ed61399ba1e7a98080e591867c675f3d61
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59386451"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65127774"
 ---
 # <a name="an-overview-of-forms-authentication-vb"></a>Una panoramica dell'autenticazione basata su form (VB)
 
@@ -24,7 +24,6 @@ da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 > In questa esercitazione verrà convertito dalla discussione semplice all'implementazione; in particolare, si esaminerà l'implementazione di autenticazione basata su form. L'applicazione web che viene avviata la costruzione di questa esercitazione continueranno a essere basati su nelle esercitazioni successive, parliamo di autenticazione basata su form semplice ai ruoli e appartenenza.
 > 
 > Vedere questo video per altre informazioni su questo argomento: [Utilizza Basic autenticazione basata su form in ASP.NET](../../../videos/authentication/using-basic-forms-authentication-in-aspnet.md).
-
 
 ## <a name="introduction"></a>Introduzione
 
@@ -47,11 +46,9 @@ FormsAuthenticationModule tenta di autenticare l'utente prima di UrlAuthorizatio
 
 La responsabilità della pagina di accesso consiste nel determinare se le credenziali dell'utente sono valide e, in questo caso, per creare un ticket di autenticazione form e reindirizzerà l'utente torna alla pagina stava tentando di visitare. Il ticket di autenticazione è incluso nelle richieste successive per le pagine nel sito Web, che FormsAuthenticationModule utilizza per identificare l'utente.
 
-
 [![Il flusso di lavoro di autenticazione form](an-overview-of-forms-authentication-vb/_static/image2.png)](an-overview-of-forms-authentication-vb/_static/image1.png)
 
 **Figura 01**: Il flusso di lavoro di autenticazione form ([fare clic per visualizzare l'immagine con dimensioni normali](an-overview-of-forms-authentication-vb/_static/image3.png))
-
 
 ### <a name="remembering-the-authentication-ticket-across-page-visits"></a>Ricordare il Ticket di autenticazione tra visite di pagina
 
@@ -60,12 +57,10 @@ Dopo l'accesso, il ticket di autenticazione form deve essere inviato al server w
 > [!NOTE]
 > L'applicazione web demo usata in ogni esercitazione è disponibile come download. Questa applicazione scaricabile è stata creata con Visual Web Developer 2008 destinato a .NET Framework versione 3.5. Poiché l'applicazione è destinata a .NET 3.5, il relativo file Web. config include gli elementi di configurazione aggiuntive, specifiche 3.5. In breve, se hai ancora a installare .NET 3.5 nel computer, l'applicazione scaricabile dal web non funzionerà senza prima rimuovere il markup specifico della 3.5 da Web. config.
 
-
 Un aspetto dei cookie è la scadenza, ovvero la data e ora in cui il browser Elimina il cookie. Quando il cookie di autenticazione form scade, l'utente può non è più essere autenticato e diventano pertanto anonimo. Quando si visita a un utente da un terminale pubblico, probabile che si desidera che i ticket di autenticazione scada quando si chiude il browser. Quando si visita da casa, tuttavia, lo stesso utente potrebbe essere necessario il ticket di autenticazione vengano memorizzate tra i riavvii del browser in modo che non hanno per ripetere l'accesso ogni volta che visitano il sito. Spesso, questa decisione viene presa dall'utente sotto forma di un controllo checkbox memorizza dati nella pagina di accesso. Nel passaggio 3 esamineremo come implementare un controllo checkbox memorizza dati nella pagina di accesso. L'esercitazione seguente illustra le impostazioni di timeout ticket di autenticazione in modo dettagliato.
 
 > [!NOTE]
 > È possibile che l'agente utente utilizzato per accedere al sito Web potrebbe non supportare i cookie. In tal caso, ASP.NET può utilizzare i ticket di autenticazione form senza cookie. In questa modalità, il ticket di autenticazione è codificato nell'URL. Si esaminerà quando vengono utilizzati i ticket di autenticazione senza cookie e modo in cui vengono creati e gestiti nella prossima esercitazione.
-
 
 ### <a name="the-scope-of-forms-authentication"></a>L'ambito dell'autenticazione basata su form
 
@@ -84,21 +79,17 @@ Prima di poter configurare autenticazione basata su form, è innanzitutto necess
 > [!NOTE]
 > Visual Studio supporta due modalità di gestione del progetto: Progetti di siti Web e progetti di applicazione Web. Progetti di siti Web non dispongono di un file di progetto, mentre i progetti applicazione Web imitare l'architettura di progetto in Visual Studio .NET 2002/2003: includono un file di progetto e compilare codice sorgente del progetto in un singolo assembly, il quale viene inserito nella cartella /bin. Visual Studio 2005 inizialmente solo supportati progetti di sito Web, anche se è stato reintrodotto il modello di progetto di applicazione Web con Service Pack 1. Visual Studio 2008 offre entrambi i modelli di progetto. Visual Web Developer 2005 e 2008 edizioni, tuttavia, supportano solo progetti di siti Web. Userà il modello di progetto di sito Web. Se si utilizza un'edizione non Express e si vuole usare il [modello di progetto di applicazione Web](https://msdn.microsoft.com/library/aa730880(vs.80).aspx) invece, è possibile eseguire questa operazione, ma tenere presente che potrebbero esserci alcune discrepanze tra ciò che viene visualizzato nella schermata e la procedura è necessario eseguire e il schermate visualizzate e le istruzioni fornite in queste esercitazioni.
 
-
 [![Creare un nuovo sito di Web File basate sul sistema](an-overview-of-forms-authentication-vb/_static/image5.png)](an-overview-of-forms-authentication-vb/_static/image4.png)
 
 **Figura 02**: Creare un sito Web New File System-Based ([fare clic per visualizzare l'immagine con dimensioni normali](an-overview-of-forms-authentication-vb/_static/image6.png))
-
 
 ### <a name="adding-a-master-page"></a>Aggiunta di una pagina Master
 
 Successivamente, aggiungere una nuova pagina Master al sito nella directory radice denominato Site. master. [Pagine master](https://msdn.microsoft.com/library/wtxbf3hh.aspx) consentono allo sviluppatore di pagina definire un modello a livello di sito che può essere applicato alle pagine ASP.NET. Il vantaggio principale delle pagine master è che l'aspetto generale del sito può essere definito in un'unica posizione, rendendo in tal modo più semplice aggiornare o modificare il layout del sito.
 
-
 [![Aggiungere una pagina Master denominato Site. master al sito Web](an-overview-of-forms-authentication-vb/_static/image8.png)](an-overview-of-forms-authentication-vb/_static/image7.png)
 
 **Figura 03**: Aggiungere un site. Master pagina denominato master al sito Web ([fare clic per visualizzare l'immagine con dimensioni normali](an-overview-of-forms-authentication-vb/_static/image9.png))
-
 
 Definire il layout delle pagine nell'intero sito nella pagina master. È possibile usare la visualizzazione di progettazione e aggiungere i controlli Web o Layout è necessario oppure è possibile aggiungere manualmente il markup manualmente nella vista origine. Strutturato layout della pagina master per riprodurre il layout utilizzato nella mio *[uso dei dati in ASP.NET 2.0](../../data-access/index.md)* serie di esercitazioni (vedere la figura 4). Nella pagina master viene utilizzata [fogli di stile CSS](http://www.w3schools.com/css/default.asp) per il posizionamento e gli stili con le impostazioni CSS definite nel file Style. CSS (che è incluso nel download associato dell'esercitazione). Sebbene non sia evidente dai tag riportati di seguito, le regole CSS sono definite in modo che la navigazione &lt;div&gt;del contenuto sia sempre posizionato in modo che viene visualizzata a sinistra e abbia una larghezza fissa di 200 pixel.
 
@@ -108,11 +99,9 @@ Una pagina master definisce sia il layout delle pagine statico sia le aree che p
 
 Con i tag inseriti precedentemente, passando alla visualizzazione progettazione, viene illustrato il layout della pagina master. Tutte le pagine ASP.NET che utilizzano tale pagina master avrà questo layout uniforme, con la possibilità di specificare il markup per l'area MainContent.
 
-
 [![Nella pagina Master visualizzata mediante la visualizzazione di progettazione](an-overview-of-forms-authentication-vb/_static/image11.png)](an-overview-of-forms-authentication-vb/_static/image10.png)
 
 **Figura 04**: la pagina Master, quando visualizzati tramite la visualizzazione di progettazione ([fare clic per visualizzare l'immagine con dimensioni normali](an-overview-of-forms-authentication-vb/_static/image12.png))
-
 
 ### <a name="creating-content-pages"></a>Creazione di pagine di contenuto
 
@@ -120,20 +109,16 @@ A questo punto si dispone di una pagina default. aspx nel nostro sito Web, ma no
 
 Successivamente, fare doppio clic sul nome del progetto in Esplora soluzioni e scegliere di aggiungere un nuovo modulo Web denominato default. aspx. Questa volta, selezionare la casella di controllo Seleziona pagina master e scegliere la pagina master Site. master dall'elenco.
 
-
 [![Aggiungere una nuova pagina default. aspx scelta selezionare una pagina Master](an-overview-of-forms-authentication-vb/_static/image14.png)](an-overview-of-forms-authentication-vb/_static/image13.png)
 
 **Figura 05**: Aggiungere un nuovo default. aspx pagina scelta per selezionare una pagina Master ([fare clic per visualizzare l'immagine con dimensioni normali](an-overview-of-forms-authentication-vb/_static/image15.png))
-
 
 [![Utilizzare la pagina Master Site. master](an-overview-of-forms-authentication-vb/_static/image17.png)](an-overview-of-forms-authentication-vb/_static/image16.png)
 
 **Figura 06**: Utilizzare la pagina Master Site. master ([fare clic per visualizzare l'immagine con dimensioni normali](an-overview-of-forms-authentication-vb/_static/image18.png))
 
-
 > [!NOTE]
 > Se si usa il modello di progetto applicazione Web di finestra di dialogo Aggiungi nuovo elemento non include una casella di controllo Seleziona pagina master. In alternativa, è necessario aggiungere un elemento del tipo di Form di contenuto Web. Dopo la scelta dell'opzione di Form di contenuto Web e facendo clic su Aggiungi, Visual Studio verrà visualizzata l'istruzione Select stesso un Master finestra di dialogo illustrata nella figura 6.
-
 
 Markup dichiarativo della nuova pagina default. aspx include solo un @Page direttiva che specifica il percorso al master pagina file e un controllo contenuto MainContent ContentPlaceHolder della pagina master.
 
@@ -143,7 +128,6 @@ Per il momento, lasciare vuoto default. aspx. Si tornerà a, più avanti in ques
 
 > [!NOTE]
 > Questa pagina master include una sezione di un menu o altre interfacce navigazione. Si creerà un'interfaccia di questo tipo in un'esercitazione futura.
-
 
 ## <a name="step-2-enabling-forms-authentication"></a>Passaggio 2: Abilitare l'autenticazione basata su form
 
@@ -158,11 +142,9 @@ Per impostazione predefinita, le applicazioni ASP.NET usano l'autenticazione di 
 
 Se il progetto non contiene ancora un file Web. config, aggiungere uno ora facendo clic sul nome del progetto in Esplora soluzioni, scegliendo Aggiungi nuovo elemento e quindi aggiungere un file di configurazione Web.
 
-
 [![Se il progetto non contiene ancora file Web. config, aggiungerlo ora](an-overview-of-forms-authentication-vb/_static/image20.png)](an-overview-of-forms-authentication-vb/_static/image19.png)
 
 **Figura 07**: Se il progetto viene non ancora includere file Web. config, aggiungere subito ([fare clic per visualizzare l'immagine con dimensioni normali](an-overview-of-forms-authentication-vb/_static/image21.png))
-
 
 Successivamente, individuare il &lt;autenticazione&gt; elemento e aggiornamento, è possibile utilizzare l'autenticazione di form. Dopo questa modifica, markup del file Web. config dovrebbe essere simile al seguente:
 
@@ -170,7 +152,6 @@ Successivamente, individuare il &lt;autenticazione&gt; elemento e aggiornamento,
 
 > [!NOTE]
 > Poiché Web. config è un file XML, maiuscole/minuscole sono importante. Assicurarsi di impostare l'attributo mode di form, con una lettera maiuscola F. Se si usano una maiuscole e minuscole diverse, ad esempio moduli, si riceverà un errore di configurazione quando si visita il sito tramite un browser.
-
 
 Il &lt;authentication&gt; elemento può includere facoltativamente un &lt;forms&gt; elemento figlio che contiene impostazioni specifiche dell'autenticazione form. Per ora, è possibile semplicemente usare le impostazioni di autenticazione form predefinito. Verrà presa in esame il &lt;form&gt; elemento figlio in modo più dettagliato nella prossima esercitazione.
 
@@ -190,11 +171,9 @@ La pagina di accesso ha tre responsabilità:
 
 Attività iniziali con la prima attività. Aggiungere una nuova pagina ASP.NET alla directory radice del sito denominata Login. aspx e associarla alla pagina master Site. master.
 
-
 [![Aggiungere una nuova pagina ASP.NET denominata Login.](an-overview-of-forms-authentication-vb/_static/image23.png)](an-overview-of-forms-authentication-vb/_static/image22.png)
 
 **Figura 08**: Aggiungere un nuovo ASP.NET pagina denominata Login. aspx ([fare clic per visualizzare l'immagine con dimensioni normali](an-overview-of-forms-authentication-vb/_static/image24.png))
-
 
 L'interfaccia della pagina account di accesso tipico è costituito da due caselle di testo - uno per il nome dell'utente, uno per la propria password - e un pulsante per inviare il modulo. Siti Web include spesso una memorizza dati per la casella di controllo che, se selezionata, il ticket di autenticazione risultante viene mantenuto tra i riavvii del browser.
 
@@ -204,11 +183,9 @@ A questo punto la schermata dovrebbe essere simile allo screenshot nella figura 
 
 [!code-aspx[Main](an-overview-of-forms-authentication-vb/samples/sample4.aspx)]
 
-
 [![La pagina di accesso contiene due caselle di testo, una casella di controllo, un pulsante e un'etichetta](an-overview-of-forms-authentication-vb/_static/image26.png)](an-overview-of-forms-authentication-vb/_static/image25.png)
 
 **Figura 09**: L'account di accesso di pagina contiene due caselle di testo, una casella di controllo, un pulsante e un'etichetta ([fare clic per visualizzare l'immagine con dimensioni normali](an-overview-of-forms-authentication-vb/_static/image27.png))
-
 
 Infine, creare un gestore eventi per clic del LoginButton evento. Dalla finestra di progettazione, semplicemente fare doppio clic sul controllo Button per creare questo gestore dell'evento.
 
@@ -250,11 +227,9 @@ Durante la creazione di ticket di autenticazione form di usiamo il ticket di aut
 
 Per testare la pagina di accesso, vederla in un browser. Per iniziare, immettere le credenziali non valide, ad esempio un nome utente di e la password errata. Facendo clic sul pulsante di accesso verrà eseguito un postback e verrà visualizzata l'etichetta InvalidCredentialsMessage.
 
-
 [![L'etichetta InvalidCredentialsMessage è visualizzato quando immettendo credenziali non valide](an-overview-of-forms-authentication-vb/_static/image29.png)](an-overview-of-forms-authentication-vb/_static/image28.png)
 
 **Figura 10**: L'etichetta InvalidCredentialsMessage è visualizzato quando immettendo credenziali non valide ([fare clic per visualizzare l'immagine con dimensioni normali](an-overview-of-forms-authentication-vb/_static/image30.png))
-
 
 Successivamente, immettere le credenziali valide e fare clic sul pulsante di accesso. Questa volta si verifica il postback un ticket di autenticazione form viene creata e si verrà reindirizzati automaticamente a default. aspx. A questo punto è connesso al sito Web, anche se non esistono Nessun segnali visivi per indicare che si è attualmente connessi. Nel passaggio 4 che si vedrà come determinare a livello di programmazione se un utente viene registrato in o non, nonché come identificare l'utente visitando la pagina.
 
@@ -268,7 +243,6 @@ A meno che il sito Web contiene informazioni riservate, dovrai solo usare SSL ne
 
 > [!NOTE]
 > Molti siti Web finanziari o medici sono configurati per utilizzare SSL sul *tutti* pagine accessibili agli utenti autenticati. Se si sta creando un sito Web è possibile configurare il sistema di autenticazione form in modo che il ticket di autenticazione form verrà trasmessi solo tramite una connessione sicura. Si esaminerà le varie opzioni di configurazione di autenticazione form nell'esercitazione successiva  *[configurazione dell'autenticazione form e argomenti avanzati](../membership/creating-the-membership-schema-in-sql-server-vb.md)*.
-
 
 ## <a name="step-4-detecting-authenticated-visitors-and-determining-their-identity"></a>Passaggio 4: Rilevamento dei visitatori autenticati e determinando la propria identità
 
@@ -286,16 +260,13 @@ Il [Request.IsAuthenticated proprietà](https://msdn.microsoft.com/library/syste
 
 Con questo codice, visitare default. aspx con un browser. Supponendo che hai ancora per l'accesso, verrà visualizzato un collegamento alla pagina di accesso (vedere la figura 11). Fare clic su questo collegamento e accedere al sito. Come abbiamo visto nel passaggio 3, dopo aver immesso le credenziali verrà di nuovo a default. aspx, ma questa volta la pagina Mostra il Bentornato! messaggio (vedere la figura 12).
 
-
 [![Quando visitare in modo anonimo, un collegamento Log viene visualizzato](an-overview-of-forms-authentication-vb/_static/image32.png)](an-overview-of-forms-authentication-vb/_static/image31.png)
 
 **Figura 11**: Quando si visita in modo anonimo, viene visualizzato un collegamento Log ([fare clic per visualizzare l'immagine con dimensioni normali](an-overview-of-forms-authentication-vb/_static/image33.png))
 
-
 [![Gli utenti autenticati sono visualizzati il Bentornato! Messaggio](an-overview-of-forms-authentication-vb/_static/image35.png)](an-overview-of-forms-authentication-vb/_static/image34.png)
 
 **Figura 12**: Gli utenti autenticati sono visualizzati il Bentornato! Messaggio ([fare clic per visualizzare l'immagine con dimensioni normali](an-overview-of-forms-authentication-vb/_static/image36.png))
-
 
 È possibile determinare l'identità dell'utente attualmente connesso tramite il [oggetto HttpContext](https://msdn.microsoft.com/library/system.web.httpcontext.aspx)del [proprietà utente](https://msdn.microsoft.com/library/system.web.httpcontext.user.aspx). L'oggetto HttpContext rappresenta le informazioni sulla richiesta corrente ed è la home page per tali oggetti ASP.NET comuni come risposta, richiesta e della sessione, tra gli altri. La proprietà utente rappresenta il contesto di sicurezza della richiesta HTTP corrente e si implementa il [interfaccia IPrincipal](https://msdn.microsoft.com/library/system.security.principal.iprincipal.aspx).
 
@@ -324,11 +295,9 @@ WelcomeBackMessage.Text = "Welcome back, " &amp; User.Identity.Name &amp; "!"
 
 Figura 13 illustra l'effetto di questa modifica (quando si accede come utente Scott l'autorizzazione).
 
-
 [![Il messaggio di benvenuto include attualmente connesso In Nome dell'utente](an-overview-of-forms-authentication-vb/_static/image38.png)](an-overview-of-forms-authentication-vb/_static/image37.png)
 
 **Figura 13**: Il messaggio di benvenuto include nome dell'utente nel registrati attualmente ([fare clic per visualizzare l'immagine con dimensioni normali](an-overview-of-forms-authentication-vb/_static/image39.png))
-
 
 ### <a name="using-the-loginview-and-loginname-controls"></a>Usando i controlli di LoginName e LoginView
 
@@ -344,7 +313,6 @@ Il [controllo LoginView](https://msdn.microsoft.com/library/system.web.ui.webcon
 > [!NOTE]
 > Oltre al AnonymousTemplate e LoggedInTemplate, il controllo LoginView può includere i modelli specifici per il ruolo. Modelli specifici per il ruolo mostrano commenti solo agli utenti che appartengono a un ruolo specificato. Verranno esaminate le funzionalità del controllo LoginView basata sui ruoli in un'esercitazione futura.
 
-
 Iniziare aggiungendo un controllo ContentPlaceHolder denominato LoginContent nella pagina master all'interno di spostamento &lt;div&gt; elemento. È possibile trascinare un controllo ContentPlaceHolder semplicemente dalla casella degli strumenti alla visualizzazione origine, posizionare il tag risulta immediatamente sopra l'attività: Menu si troveranno testo.
 
 [!code-aspx[Main](an-overview-of-forms-authentication-vb/samples/sample8.aspx)]
@@ -353,11 +321,9 @@ Successivamente, aggiungere un controllo LoginView all'interno di LoginContent C
 
 Nella scheda account di accesso della casella degli strumenti si trovano i LoginView e altri controlli correlati all'accesso.
 
-
 [![Il controllo LoginView della casella degli strumenti](an-overview-of-forms-authentication-vb/_static/image41.png)](an-overview-of-forms-authentication-vb/_static/image40.png)
 
 **Figura 14**: Il controllo LoginView della casella degli strumenti ([fare clic per visualizzare l'immagine con dimensioni normali](an-overview-of-forms-authentication-vb/_static/image42.png))
-
 
 Successivamente, aggiungere due &lt;br /&gt; elementi immediatamente dopo il controllo LoginView, ma comunque entro il controllo ContentPlaceHolder. A questo punto, la navigazione &lt;div&gt; markup dell'elemento dovrebbe essere simile al seguente:
 
@@ -373,33 +339,26 @@ Dopo aver apportato queste aggiunte ai modelli di LoginView, il markup dovrebbe 
 
 Grazie a questa aggiunta alla pagina master Site. master, ogni pagina nel nostro sito Web verrà visualizzato un messaggio diverso a seconda del fatto che l'utente viene autenticato. Figura 15 viene mostrata la pagina di default. aspx quando tramite un browser visitati dall'utente Jisun. Bentornato, Jisun messaggio viene ripetuto due volte: una volta nella sezione di navigazione della pagina master a sinistra (tramite il controllo LoginView appena aggiunto) e una nella finestra di default. aspx area (tramite controlli Panel e a livello di codice per la logica) del contenuto.
 
-
 [![Il LoginView controllo Visualizza Bentornato, Jisun.](an-overview-of-forms-authentication-vb/_static/image44.png)](an-overview-of-forms-authentication-vb/_static/image43.png)
 
 **Figura 15**: Il LoginView controllo Visualizza Bentornato, Jisun. ([Fare clic per visualizzare l'immagine con dimensioni normali](an-overview-of-forms-authentication-vb/_static/image45.png))
 
-
 Perché abbiamo aggiunto il LoginView alla pagina master, ma può essere visualizzato in ogni pagina nel sito. Tuttavia, potrebbero esserci pagine web in cui non si desidera visualizzare più questo messaggio. Una tale pagina è la pagina di accesso, perché sembra che un collegamento alla pagina di accesso esiste sul posto. Poiché il controllo LoginView è inserito in un controllo ContentPlaceHolder nella pagina master, è possibile ignorare questo tag predefinito nella nostra pagina contenuta. Aprire Login. aspx e passare alla finestra di progettazione. Poiché non è stato definito in modo esplicito un controllo contenuto in Login. aspx per LoginContent ContentPlaceHolder nella pagina master, la pagina di accesso mostrerà il master markup della pagina predefinita per questo controllo ContentPlaceHolder. È possibile verificarlo tramite la finestra di progettazione - LoginContent ContentPlaceHolder viene illustrato il markup predefinito (il controllo LoginView).
-
 
 [![La pagina di accesso Mostra il valore predefinito del contenuto per LoginContent ContentPlaceHolder della pagina Master](an-overview-of-forms-authentication-vb/_static/image47.png)](an-overview-of-forms-authentication-vb/_static/image46.png)
 
 **Figura 16**: La pagina di accesso Mostra il contenuto predefinito per the Master Page's LoginContent ContentPlaceHolder ([fare clic per visualizzare l'immagine con dimensioni normali](an-overview-of-forms-authentication-vb/_static/image48.png))
-
 
 Per sostituire il markup predefinito per il LoginContent ContentPlaceHolder, semplicemente fare doppio clic sull'area nella finestra di progettazione e scegliere l'opzione Crea contenuto personalizzato dal menu di scelta rapida. (Quando utilizzando Visual Studio 2008 ContentPlaceHolder include uno smart tag che, quando selezionata, offre la stessa opzione.) Verrà aggiunto un nuovo controllo contenuto a markup della pagina e quindi ci permette di definire il contenuto personalizzato per questa pagina. È possibile aggiungere un messaggio personalizzato in questo caso, ad esempio effettuare l'accesso, ma è possibile semplicemente lasciare vuoto questo campo.
 
 > [!NOTE]
 > In Visual Studio 2005, la creazione di contenuto personalizzato crea un oggetto vuoto controllo in una pagina ASP.NET del contenuto. In Visual Studio 2008, tuttavia, la creazione di contenuto personalizzato copia il contenuto della pagina master predefinito nel controllo contenuto appena creato. Se si usa Visual Studio 2008, quindi, dopo aver creato il nuovo controllo contenuto assicurarsi di cancellare il contenuto copiato dalla pagina master.
 
-
 Figura 17 mostra la pagina aspx quando visitati dal browser dopo aver apportato questa modifica. Si noti che non vi sia alcun Hello, estraneo oppure Bentornato, *nomeutente* messaggio nel riquadro di spostamento a sinistra &lt;div&gt; di quanto accade quando si visita default. aspx.
-
 
 [![La pagina di accesso consente di nascondere il Markup di LoginContent ContentPlaceHolder predefinito](an-overview-of-forms-authentication-vb/_static/image50.png)](an-overview-of-forms-authentication-vb/_static/image49.png)
 
 **Figura 17**: La pagina di accesso consente di nascondere del tipo ContentPlaceHolder predefinito LoginContent ([fare clic per visualizzare l'immagine con dimensioni normali](an-overview-of-forms-authentication-vb/_static/image51.png))
-
 
 ## <a name="step-5-logging-out"></a>Passaggio 5: La disconnessione
 
@@ -426,20 +385,16 @@ Poiché LoginStatus è all'esterno del controllo LoginView, esso verrà visualiz
 
 Figura 18 Mostra default. aspx quando l'utente visita Jisun. Si noti che la colonna a sinistra viene visualizzato il messaggio, Bentornato, Jisun insieme a un collegamento per effettuare la disconnessione. Scegliere il LinkButton per la disconnessione causa un postback Jisun alla disconnessione del sistema e relativa viene quindi reindirizzata alla Logout. Come illustrato nella figura 19, entro l'ora di che jisun raggiunge Logout Anna è già stata effettuata la disconnessione ed è pertanto anonimo. Di conseguenza, la colonna a sinistra mostra il testo di benvenuto, estraneo e un collegamento alla pagina di accesso.
 
-
 [![Default. aspx Mostra Bentornato, Jisun insieme a un controllo Logout LinkButton](an-overview-of-forms-authentication-vb/_static/image53.png)](an-overview-of-forms-authentication-vb/_static/image52.png)
 
 **Figura 18**: Default. aspx Mostra benvenuto indietro, Jisun lungo con Logout LinkButton ([fare clic per visualizzare l'immagine con dimensioni normali](an-overview-of-forms-authentication-vb/_static/image54.png))
-
 
 [![Logout Mostra iniziale, estraneo insieme a un controllo LinkButton account di accesso](an-overview-of-forms-authentication-vb/_static/image56.png)](an-overview-of-forms-authentication-vb/_static/image55.png)
 
 **Figura 19**: Logout Mostra iniziale, estraneo insieme a un account di accesso LinkButton ([fare clic per visualizzare l'immagine con dimensioni normali](an-overview-of-forms-authentication-vb/_static/image57.png))
 
-
 > [!NOTE]
 > Consiglia di personalizzare la pagina Logout per nascondere LoginContent ContentPlaceHolder della pagina master (come abbiamo fatto per Login. aspx nel passaggio 4). Il motivo è che il LinkButton account di accesso di cui è stato eseguito il rendering tramite il controllo LoginStatus (quello di sotto di Hello, estraneo) invia l'utente alla pagina di accesso passando il parametro di stringa di query ReturnUrl all'URL corrente. In breve, se un utente che si è disconnesso fa clic su account di accesso LinkButton di questo LoginStatus e quindi accede, viene reindirizzato al Logout, che è stato facile confondere l'utente.
-
 
 ## <a name="summary"></a>Riepilogo
 

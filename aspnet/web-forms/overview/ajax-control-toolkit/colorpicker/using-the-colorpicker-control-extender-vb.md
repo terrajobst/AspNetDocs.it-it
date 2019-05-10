@@ -8,12 +8,12 @@ ms.date: 05/12/2009
 ms.assetid: 577ae07b-a872-4818-a804-bca489b40ad0
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/colorpicker/using-the-colorpicker-control-extender-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 311cd61ae971dd6b902411eca87f75f87f5868ae
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 77e2e3bc61a5e1498570959ca40acff83dc3fc82
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59384059"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65126005"
 ---
 # <a name="using-the-colorpicker-control-extender-vb"></a>Tramite il controllo Extender ColorPicker (VB)
 
@@ -21,18 +21,15 @@ by [Microsoft](https://github.com/microsoft)
 
 > ColorPicker è un extender di AJAX ASP.NET che fornisce funzionalità di selezione colore lato client con l'interfaccia utente in un controllo popup. Può essere collegato a qualsiasi controllo TextBox ASP.NET. It.
 
-
 L'obiettivo di questa esercitazione è illustrare come è possibile usare il controllo extender Toolkit ColorPicker di controllo AJAX. Il controllo extender ColorPicker Visualizza una finestra di dialogo popup che consente di selezionare un colore. ColorPicker è utile ogni volta che si desidera fornire un'interfaccia utente intuitiva per un utente di scegliere un colore.
 
 ## <a name="extending-a-textbox-control-with-the-colorpicker-control-extender"></a>Estensione di un controllo casella di testo con il controllo Extender ColorPicker
 
 Si supponga, ad esempio, che si desidera creare un sito Web che consente ai visitatori di creare schede di business personalizzate. I visitatori possono immettere il testo di un biglietto da visita e scegliere il colore. La pagina ASP.NET nel listato 1 contiene due controlli TextBox denominato txtCardText e txtCardColor. Quando si invia il form, i valori selezionati vengono visualizzati (vedere la figura 1).
 
-
 [![Modulo semplice per la creazione di un biglietto da visita](using-the-colorpicker-control-extender-vb/_static/image1.jpg)](using-the-colorpicker-control-extender-vb/_static/image1.png)
 
 **Figura 01**: Modulo semplice per la creazione di un biglietto da visita ([fare clic per visualizzare l'immagine con dimensioni normali](using-the-colorpicker-control-extender-vb/_static/image2.png))
-
 
 **Listing 1 - CreateCard.aspx**
 
@@ -42,11 +39,9 @@ Il modulo in funzionamento del listato 1, ma non fornisce un'esperienza utente e
 
 È possibile usare il controllo extender ColorPicker per creare un'esperienza utente migliore. ColorPicker Visualizza una finestra di dialogo colore quando si sposta lo stato attivo a un controllo casella di testo (vedere la figura 2).
 
-
 [![Il controllo Extender ColorPicker](using-the-colorpicker-control-extender-vb/_static/image2.jpg)](using-the-colorpicker-control-extender-vb/_static/image3.png)
 
 **Figura 02**: Il controllo Extender ColorPicker ([fare clic per visualizzare l'immagine con dimensioni normali](using-the-colorpicker-control-extender-vb/_static/image4.png))
-
 
 È necessario completare due passaggi per usare il controllo extender ColorPicker con il modulo nel listato 1:
 
@@ -59,16 +54,13 @@ Prima di poter usare ColorPicker, è necessario aggiungere uno ScriptManager nel
 
 Il modo più semplice per aggiungere il controllo extender ColorPicker alla pagina è in visualizzazione progettazione. Se si posiziona il puntatore del mouse txtCardColor nella casella di testo, un'opzione automatica verrà visualizzata la consente è quindi necessario aggiungere un'estensione (vedere la figura 3). Se si seleziona questa opzione, viene visualizzata la procedura guidata estensione (vedere la figura 4).
 
-
 [![Aggiunta di un dispositivo extender](using-the-colorpicker-control-extender-vb/_static/image3.jpg)](using-the-colorpicker-control-extender-vb/_static/image5.png)
 
 **Figura 03**: Aggiunta di un'estensione ([fare clic per visualizzare l'immagine con dimensioni normali](using-the-colorpicker-control-extender-vb/_static/image6.png))
 
-
 [![Selezione di un controllo extender con la procedura guidata dispositivo Extender](using-the-colorpicker-control-extender-vb/_static/image4.jpg)](using-the-colorpicker-control-extender-vb/_static/image7.png)
 
 **Figura 04**: Selezione di un controllo extender con la procedura guidata estensione ([fare clic per visualizzare l'immagine con dimensioni normali](using-the-colorpicker-control-extender-vb/_static/image8.png))
-
 
 È possibile selezionare il dispositivo extender ColorPicker per estendere il txtCardColor nella casella di testo con il dispositivo extender ColorPicker. Fare clic su OK per chiudere la finestra di dialogo.
 
@@ -101,11 +93,9 @@ La proprietà ColorPicker PopupButtonID viene utilizzata per associare il pulsan
 
 La proprietà SampleControlID viene utilizzata per associare un controllo che visualizza il colore selezionato con ColorPicker. ColorPicker di modificare il colore di sfondo di questo controllo attualmente selezionato.
 
-
 [![Visualizzare la finestra di dialogo di selezione dei colori con un pulsante](using-the-colorpicker-control-extender-vb/_static/image5.jpg)](using-the-colorpicker-control-extender-vb/_static/image9.png)
 
 **Figura 05**: Visualizzare la finestra di dialogo di selezione dei colori con un pulsante ([fare clic per visualizzare l'immagine con dimensioni normali](using-the-colorpicker-control-extender-vb/_static/image10.png))
-
 
 ## <a name="summary"></a>Riepilogo
 

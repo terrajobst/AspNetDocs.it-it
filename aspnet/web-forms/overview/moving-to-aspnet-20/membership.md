@@ -8,19 +8,18 @@ ms.date: 02/20/2005
 ms.assetid: f2339485-5d78-4c5e-8c0a-dc9b8a315345
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/membership
 msc.type: authoredcontent
-ms.openlocfilehash: f3f8c649932682fd96e0640ddf4595c19c755909
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: da6fc205bd852a818d65425586cec38fdb08d310
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59408186"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131049"
 ---
 # <a name="membership"></a>Appartenenza
 
 by [Microsoft](https://github.com/microsoft)
 
 > Sistema di appartenenze ASP.NET si basa sul successo del modello di autenticazione form da ASP.NET 1.x. Autenticazione basata su form ASP.NET fornisce un modo pratico per incorporare un modulo di accesso nell'applicazione ASP.NET e convalidare gli utenti in un database o un altro archivio dati.
-
 
 Sistema di appartenenze ASP.NET si basa sul successo del modello di autenticazione form da ASP.NET 1.x. Autenticazione basata su form ASP.NET fornisce un modo pratico per incorporare un modulo di accesso nell'applicazione ASP.NET e convalidare gli utenti in un database o un altro archivio dati. I membri della classe FormsAuthentication rendono possibile la gestione dei cookie per l'autenticazione, verificare la presenza di un account di accesso valido, accedere a un utente e così via. Tuttavia, l'implementazione di autenticazione basata su form in un'applicazione di ASP.NET 1.x possono richiedere una notevole quantità di codice.
 
@@ -48,11 +47,9 @@ Se si usa SQL Server 7.0 o versioni successive come archivio di appartenenza, è
 
 Quando si esegue il comando, verrà visualizzata con l'installazione guidata di ASP.NET SQL Server come illustrato di seguito.
 
-
 ![](membership/_static/image1.jpg)
 
 **Figura 1**
-
 
 L'installazione guidata di ASP.NET SQL Server crea il sito Web dell'istanza che è specificare nella procedura guidata. Tuttavia, ASP.NET utilizzerà la stringa di connessione nel file Machine. config per connettersi al database. Per impostazione predefinita, questa stringa di connessione faranno riferimento a un'istanza di SQL Server 2005, pertanto se si usa un'istanza di SQL Server 2000 o SQL Server 7.0, è necessario modificare la stringa di connessione nel file Machine. config. Stringa di connessione può essere disponibile qui:
 
@@ -66,11 +63,9 @@ Il passaggio successivo nella configurazione appartenenza consiste nell'aggiunge
 
 È possibile avviare l'interfaccia Web facendo clic sul pulsante di configurazione ASP.NET sulla barra degli strumenti Esplora soluzioni, come illustrato di seguito. È anche possibile avviare l'interfaccia Web tramite i popup visualizzate quando vengono inseriti i controlli di accesso.
 
-
 ![](membership/_static/image2.jpg)
 
 **Figura 2**
-
 
 Verrà avviato lo strumento Amministrazione sito Web di ASP.NET illustrato di seguito. L'amministrazione del sito Web ASP.NET è un'interfaccia con quattro schede che rende più semplice gestire le impostazioni dell'applicazione. Sono disponibili le schede seguenti:
 
@@ -83,21 +78,17 @@ Lo strumento Amministrazione sito Web consente facilmente creare nuovi utenti, c
 
 Per avviare l'interfaccia di Windows, aprire lo snap-in Internet Information Services, fare doppio clic sull'applicazione e scegliere Proprietà. Fare clic sulla scheda ASP.NET e quindi fare clic sul pulsante Modifica configurazione. (L'applicazione deve essere eseguito con ASP.NET 2.0 per il pulsante di modifica configurazione deve essere abilitata. È possibile configurare la versione di ASP.NET in anche la finestra di dialogo ASP.NET.) La finestra di dialogo Impostazioni di configurazione ASP.NET viene visualizzato come illustrato di seguito.
 
-
 ![](membership/_static/image3.jpg)
 
 **Figura 3**
-
 
 Nella scheda Generale, sono elencate le stringhe di connessione e le impostazioni dell'applicazione. Tutte le impostazioni in corsivo vengono definite in un file di configurazione padre (Machine. config o Web. config a un livello superiore) e le impostazioni non in corsivo sono dal file di configurazione delle applicazioni. Se un'impostazione viene aggiunto, rimosso o modificato a livello di applicazione, ASP.NET verrà aggiungere, rimuovere o modificare l'impostazione in Web. config livelli applicazione invece di rimuovere l'impostazione dal file di configurazione da cui viene ereditato.
 
 Di seguito è illustrata la scheda di autenticazione. Si tratta in cui si configureranno le impostazioni di appartenenza. Form di impostazioni di autenticazione provider di appartenenze, e i provider di ruoli possono essere configurati qui.
 
-
 ![](membership/_static/image4.jpg)
 
 **Figura 4**
-
 
 ## <a name="implementing-membership-in-your-application"></a>Implementazione di appartenenza nell'applicazione
 
@@ -133,11 +124,9 @@ Il controllo LoginName Visualizza il nome utente dell'utente attualmente conness
 
 Il controllo CreateUserWizard offre agli utenti un modo pratico per registrarsi per il sistema di appartenenza. È possibile aggiungere passaggi (implementati come una raccolta di WizardStep) tramite l'interfaccia illustrato di seguito.
 
-
 ![](membership/_static/image5.jpg)
 
 **Figura 5**
-
 
 CreateUserWizard è un controllo basato su modelli che deriva dalla classe di procedura guidata e fornisce i modelli seguenti:
 
@@ -167,29 +156,23 @@ Per abilitare la gestione dei ruoli all'interno dell'applicazione, apportare la 
 
 Quando la **cacheRolesInCookie** attributo è impostato su true, memorizzazione nella cache ASP.NET un'appartenenza a ruoli utenti in un cookie sul client. In questo modo le ricerche di ruolo essere eseguita senza le chiamate a RoleProvider. Quando si usa questo attributo, gli sviluppatori sono invitati a verificare che il **cookieProtection** attributo è impostato su tutte. (Questo è l'impostazione predefinita). Ciò garantisce che i dati del cookie vengono crittografati e consente di garantire che il contenuto dei cookie non è stato alterato. È possibile aggiungere i ruoli usando lo strumento Amministrazione sito Web. Consente di definire i ruoli, configurare l'accesso alle parti del sito in base ai ruoli e assegnare utenti ai ruoli.
 
-
 ![](membership/_static/image6.jpg)
 
 **Figura 6**
-
 
 Come illustrato in precedenza, è sufficiente immettere il nome del ruolo e quindi facendo clic su Aggiungi ruolo è possibile aggiungere nuovi ruoli. Ruoli esistenti possono essere gestiti o eliminati facendo clic sul collegamento appropriato nell'elenco dei ruoli esistenti.
 
 Quando si gestisce un ruolo, è possibile aggiungere o rimuovere gli utenti, come illustrato di seguito.
 
-
 ![](membership/_static/image7.jpg)
 
 **Figura 7**
 
-
 Selezionando la casella di controllo è nel ruolo utente, è possibile aggiungere facilmente un utente a un ruolo specifico. ASP.NET aggiornerà automaticamente il database di appartenenza con le voci appropriate. È anche possibile configurare le regole di accesso per l'applicazione. ASP.NET 1.x sviluppatori ha familiarità con questa operazione tramite il &lt;autorizzazione&gt; elemento nel file Web. config e che l'opzione è ancora disponibile in ASP.NET 2.0. Tuttavia, più semplice gestire l'accesso delle regole utilizzando la strumento Amministrazione sito Web come mostrato di seguito.
-
 
 ![](membership/_static/image8.jpg)
 
 **Figura 8**
-
 
 In questo caso, viene evidenziata la cartella di amministrazione (difficile vedere perché lo strumento viene evidenziato in grigio chiaro) e il ruolo di amministratore è stato concesso l'accesso. Vengono negati tutti gli altri utenti. È possibile fare clic sull'icona di head per selezionare una regola e quindi usare i pulsanti Sposta su e Sposta giù per organizzare le regole. Come con ASP.NET &lt;autorizzazione&gt; elemento, le regole vengono elaborate nell'ordine in cui vengono visualizzati. In altre parole, se l'ordine delle regole della ripresa precedente sono stata annullata, nessuno avrebbe accesso alla cartella Administration perché la prima regola che ASP.NET incontrerebbe sarebbe la regola che neghi a tutti gli utenti della cartella.
 
@@ -209,19 +192,15 @@ ASP.NET crea anche un'istanza RolePrincipal come membro del contesto corrente. L
 
 Ora che avete la comprensione della gestione dei ruoli e appartenenza, consente di illustrare brevemente come il controllo LoginView sfrutta i vantaggi di questa funzionalità in ASP.NET 2.0. Come indicato in precedenza, il controllo LoginView è un controllo basato su modelli che contiene due modelli per impostazione predefinita. il modello AnonymousTemplate e LoggedInTemplate. All'interno di LoginView attività di finestra di dialogo è un collegamento (mostrato sotto) che consente di eseguire upravit kolekci RoleGroups.
 
-
 ![](membership/_static/image9.jpg)
 
 **Figura 9**
 
-
 Ogni oggetto RoleGroup contiene una matrice di stringhe che definisce i ruoli che RoleGroup si applica a. Per aggiungere un nuovo RoleGroup per il controllo LoginView, fare clic sul collegamento di modifica RoleGroup. Nell'immagine precedente, si noterà che è stato aggiunto un nuovo RoleGroup per gli amministratori. Selezionando tale RoleGroup (RoleGroup[0]) dall'elenco a discesa di visualizzazioni, è possibile configurare un modello che verrà visualizzato solo ai membri del ruolo amministratori di. Nell'immagine seguente, è stato aggiunto un nuovo RoleGroup che si applica ai membri del ruolo relativo alle vendite e il ruolo di distribuzione. Questo modo viene aggiunta un secondario RoleGroup l'elenco a discesa di viste nella finestra di dialogo Attività LoginView e qualsiasi elemento aggiunto a tale modello sarà visibile per tutti gli utenti di vendita o di distribuzione ruolo.
-
 
 ![](membership/_static/image10.jpg)
 
 **Figura 10**
-
 
 ## <a name="overriding-the-existing-membership-provider"></a>Si esegue l'override del Provider di appartenenza esistente
 

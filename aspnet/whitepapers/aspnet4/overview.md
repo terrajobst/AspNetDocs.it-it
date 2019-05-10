@@ -8,19 +8,18 @@ ms.date: 02/10/2010
 ms.assetid: d7729af4-1eda-4ff2-8b61-dbbe4fc11d10
 msc.legacyurl: /whitepapers/aspnet4
 msc.type: content
-ms.openlocfilehash: 0991ce5c866aa9e31ef23812e953d9ee10dda3d1
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: fbbb9e2ef6ce540f0ab422d2b80e4a5409076c83
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59409720"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132934"
 ---
 # <a name="aspnet-4-and-visual-studio-2010-web-development-overview"></a>Panoramica sullo sviluppo Web con ASP.NET 4 e Visual Studio 2010
 
 > Questo documento fornisce una panoramica di molte delle nuove funzionalità per ASP.NET che sono inclusi in.NET Framework 4 e in Visual Studio 2010.
 > 
 > [Scarica questo white paper](https://download.microsoft.com/download/7/1/A/71A105A9-89D6-4201-9CC5-AD6A3B7E2F22/ASP_NET_4_and_Visual_Studio_2010_Web_Development_Overview.pdf)
-
 
 **Sommario**
 
@@ -145,7 +144,6 @@ Una nuova funzionalità di scalabilità denominata *avvio automatico* che dirett
 > 
 > Per altre informazioni, vedere [Application warm-up](https://www.iis.net/extensions/applicationwarmup%20on%20the%20IIS.net) sul sito IIS.net Web. Per una procedura dettagliata che illustra come usare la funzionalità di riscaldamento, vedere [Guida introduttiva con il modulo di IIS 7.5 Application warm-up](https://www.iis.net/learn/manage) sul sito IIS.net Web.
 
-
 Per usare la funzionalità avvio automatico, un amministratore IIS imposta un pool di applicazioni in IIS 7.5 per essere avviato automaticamente con la configurazione seguente nel `applicationHost.config` file:
 
 [!code-xml[Main](overview/samples/sample5.xml)]
@@ -206,7 +204,6 @@ Per impostazione predefinita, il *requestPathInvalidChars* attributo definisce o
 
 > [!NOTE]
 > Si noti che ASP.NET 4 sempre rifiuta i percorsi URL che contengono caratteri compresi nell'intervallo ASCII da 0x00 a 0x1F, perché questi sono i caratteri URL non validi come definito in RFC 2396 di IETF ([http://www.ietf.org/rfc/rfc2396.txt](http://www.ietf.org/rfc/rfc2396.txt)). Nelle versioni di Windows Server che eseguono IIS 6 o versioni successive, il driver di dispositivo del protocollo HTTP. sys Rifiuta automaticamente gli URL con questi caratteri.
-
 
 <a id="0.2__Toc253429245"></a><a id="0.2__Toc243304619"></a>
 
@@ -270,7 +267,6 @@ ASP.NET 4 si avvale delle nuove funzionalità di monitoraggio delle risorse intr
 
 > [!NOTE]
 > Si noti il `aspnet.config` file si trova nella directory in cui è installato .NET Framework. Non è il `Web.config` file.
-
 
 Quando la *appDomainResourceMonitoring* funzionalità è stata abilitata, due nuovi contatori delle prestazioni sono disponibili nella categoria performance "Le applicazioni ASP.NET": *% tempo processore gestito* e *Gestione della memoria usata*. Entrambi questi contatori delle prestazioni consente di tenere traccia del tempo di CPU stimato e utilizzo della memoria gestita delle singole applicazioni ASP.NET la nuova funzionalità di gestione risorse di dominio dell'applicazione CLR. Con ASP.NET 4, di conseguenza, gli amministratori hanno ora una vista più granulare sull'utilizzo di risorse di singole applicazioni in esecuzione in un singolo processo di lavoro.
 
@@ -678,7 +674,6 @@ Il *statici* impostazione ha l'effetto di reimpostare la gerarchia di denominazi
 > [!NOTE]
 > Si noti che è responsabilità dell'utente per assicurarsi che gli ID di controllo sottoposto a rendering siano univoci. Se non lo sono le funzionalità che richiede gli ID univoci per i singoli elementi HTML, ad esempio, il client può causare interruzioni *Document. getElementById* (funzione).
 
-
 #### <a name="creating-predictable-client-ids-in-data-bound-controls"></a>Creazione di ID Client prevedibili nei controlli con associazione a dati
 
 Il *ClientID* valori generati per i controlli in un controllo elenco associato ai dati dall'algoritmo legacy possono essere lunghe e non sono molto prevedibili. Il *ClientIDMode* funzionalità consente di avere un maggior controllo sul modo in cui questi ID vengono generati.
@@ -1004,12 +999,10 @@ Nell'esempio precedente viene eseguito il rendering il seguente output, senza la
 
 > Content
 
-
 Questa funzionalità avanzata può rendere più semplice per applicare uno stile il contenuto del controllo con CSS, perché non viene eseguito il rendering di nessun tag imprevisto dal controllo.
 
 > [!NOTE]
 > Si noti che questa modifica disabilita il supporto per la funzione di formattazione automatica nella finestra di progettazione di Visual Studio 2010, perché non è più disponibile un' *tabella* elemento che può contenere gli attributi di stile vengono generati dall'opzione di formattazione automatica.
-
 
 <a id="0.2__Toc253429270"></a><a id="0.2__Toc243304644"></a>
 
@@ -1057,7 +1050,6 @@ Il markup precedente genera il codice HTML seguente:
 
 > [!NOTE]
 > Nota Se si imposta *RepeatLayout* al *OrderedList* oppure *UnorderedList*, il *RepeatDirection* proprietà non può più essere utilizzata e verrà generare un'eccezione in fase di esecuzione se la proprietà è stata impostata all'interno del markup o codice. La proprietà potrebbe non hanno alcun valore perché il layout visivo di questi controlli viene definito utilizzando invece CSS.
-
 
 <a id="0.2__Toc253429272"></a><a id="0.2__Toc243304646"></a>
 
@@ -1146,7 +1138,6 @@ I dati dinamici è stata introdotta nella versione di .NET Framework 3.5 SP1 in 
 
 > [!NOTE]
 > Nota: per altre informazioni, vedere la [documentazione di Dynamic Data](https://msdn.microsoft.com/library/cc488545.aspx) in MSDN Library.
-
 
 Per ASP.NET 4, i dati dinamici è stato migliorato per consentire agli sviluppatori di eseguire operazioni più avanzate consente di creare rapidamente siti Web basati sui dati.
 

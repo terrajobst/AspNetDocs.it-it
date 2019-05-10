@@ -9,12 +9,12 @@ ms.assetid: 97902c66-cb61-4d11-be52-73f962f2db0a
 ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/features-api/best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure
 msc.type: authoredcontent
-ms.openlocfilehash: 2620d9e2eaf3c7719d9a289e42bb91270708ae79
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 0e02df967df8acf346b9fcd1c75dbe304cc5407b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59419444"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65121551"
 ---
 # <a name="best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure-app-service"></a>Procedure consigliate per la distribuzione delle password e di altri dati sensibili in ASP.NET e in Servizio app di Azure
 
@@ -25,7 +25,6 @@ da [Rick Anderson]((https://twitter.com/RickAndMSFT))
 > Il codice di esempio è una semplice app console processo Web e un'app ASP.NET MVC che deve accedere a un database connection string password, Twilio, Google e SendGrid le chiavi di sicurezza.
 > 
 > In locale le impostazioni e PHP viene menzionata anche.
-
 
 - [Utilizzo delle password nell'ambiente di sviluppo](#pwd)
 - [Uso delle stringhe di connessione nell'ambiente di sviluppo](#con)
@@ -54,7 +53,6 @@ Il runtime ASP.NET unisce il contenuto del file esterno con il markup nel &lt;ap
 > [!WARNING]
 > Security - non aggiungere il *segreti con estensione config* file al progetto o archiviarlo nel controllo del codice sorgente. Per impostazione predefinita, Visual Studio imposta la `Build Action` a `Content`, ovvero il file viene distribuito. Per altre informazioni vedere [perché non tutti i file nella cartella del progetto vengono distribuiti?](https://msdn.microsoft.com/library/ee942158(v=vs.110).aspx#can_i_exclude_specific_files_or_folders_from_deployment) Sebbene sia possibile utilizzare qualsiasi estensione per il *segreti con estensione config* file, è consigliabile mantenere *config*, come i file di configurazione non vengono serviti da IIS. Si noti inoltre che il *AppSettingsSecrets.config* file sia due livelli di directory backup dalle *Web. config* file, in modo che rientra completamente la directory della soluzione. Spostando il file dalla directory della soluzione, &quot;git aggiungere \* &quot; non aggiungerlo al repository.
 
-
 <a id="con"></a>
 ## <a name="working-with-connection-strings-in-the-development-environment"></a>Uso delle stringhe di connessione nell'ambiente di sviluppo
 
@@ -67,14 +65,11 @@ Visual Studio crea nuovi progetti ASP.NET che utilizzano [LocalDB](https://blogs
 > [!NOTE]
 > Se si usa il `configSource` attributo come illustrato in precedenza per spostare le stringhe di connessione a un file esterno e dispone di Visual Studio creare un nuovo sito web, non sarà in grado di rilevare si usa un database e non si otterrà l'opzione di configurazione del database quando si pu bblica su Azure da Visual Studio. Se si usa il `configSource` attributo, è possibile usare PowerShell per creare e distribuire il sito web e database, oppure è possibile creare il sito web e il database nel portale, prima della pubblicazione. Il [New-AzureWebsitewithDB.ps1](https://gallery.technet.microsoft.com/scriptcenter/Ultimate-Create-Web-SQL-DB-9e0fdfd3) script creerà un nuovo sito web e database.
 
-
 > [!WARNING]
 > Security - a differenza di *AppSettingsSecrets.config* file, il file di stringhe di connessione esterna deve essere nella stessa directory radice *Web. config* file, in modo che è possibile adottare delle precauzioni per assicurarsi di non archiviarlo nel repository del codice sorgente.
 
-
 > [!NOTE]
 > **Avviso di sicurezza nel file dei segreti:** Una procedura consigliata è di non usare i segreti di produzione nel test e sviluppo. Utilizzo delle password di produzione in sviluppo o test di perdite di questi segreti.
-
 
 <a id="wj"></a>
 ## <a name="webjobs-console-apps"></a>App console di WebJobs
@@ -105,7 +100,6 @@ Nello script precedente, 'Name' è il nome della chiave privata, ad esempio '&qu
 > [!WARNING]
 > Security - non includere le password o altri segreti nello script di PowerShell, eseguire in questo caso vanifica lo scopo dell'uso di uno script di PowerShell per distribuire i dati sensibili. Il [Get-Credential](https://technet.microsoft.com/library/hh849815.aspx) cmdlet offre un meccanismo protetto per ottenere una password. Usando un prompt dei comandi dell'interfaccia utente può impedire la perdita di una password.
 
-
 ### <a name="deploying-db-connection-strings"></a>Le stringhe di connessione di database di distribuzione
 
 Le stringhe di connessione di database vengono gestite in modo analogo alle impostazioni dell'app. Se si distribuisce l'app web da Visual Studio, la stringa di connessione verrà configurata automaticamente. È possibile verificarlo nel portale. È consigliabile impostare la stringa di connessione con PowerShell. Per un esempio di uno script di PowerShell di crea un sito Web e database e imposta la stringa di connessione nel sito Web di download [New-AzureWebsitewithDB.ps1](https://gallery.technet.microsoft.com/scriptcenter/Ultimate-Create-Web-SQL-DB-9e0fdfd3) dal [libreria di Script di Azure](https://gallery.technet.microsoft.com/scriptcenter/site/search?f%5B0%5D.Type=RootCategory&amp;f%5B0%5D.Value=WindowsAzure).
@@ -125,6 +119,5 @@ Se si distribuiscono i server web in locale, è possibile consentire proteggere 
 Per un esempio di un PowerShell script che crea un'app web e database, imposta la stringa di connessione e le impostazioni dell'app, download [New-AzureWebsitewithDB.ps1](https://gallery.technet.microsoft.com/scriptcenter/Ultimate-Create-Web-SQL-DB-9e0fdfd3) dalle [libreria di Script di Azure](https://gallery.technet.microsoft.com/scriptcenter/site/search?f%5B0%5D.Type=RootCategory&amp;f%5B0%5D.Value=WindowsAzure). 
 
 Vedere di Stefan Schackow [siti Web di Azure: Come funzionano le stringhe applicazione e stringhe di connessione](https://azure.microsoft.com/blog/2013/07/17/windows-azure-web-sites-how-application-strings-and-connection-strings-work/)
-
 
 Ringraziamenti Barry Dorrans speciali ( [ @blowdart ](https://twitter.com/blowdart) ) e Farre Carlos per la revisione.

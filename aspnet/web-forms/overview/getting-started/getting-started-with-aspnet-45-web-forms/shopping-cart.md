@@ -8,12 +8,12 @@ ms.date: 09/08/2014
 ms.assetid: 6898c601-6c31-432f-8388-e6843f8a17cb
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/shopping-cart
 msc.type: authoredcontent
-ms.openlocfilehash: e079318b37563b1b7afe0f842f5b463541de0a81
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 1c54449e778eac96133cccdc90d86cbbaf05a70f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59405430"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132101"
 ---
 # <a name="shopping-cart"></a>Carrello acquisti
 
@@ -22,7 +22,6 @@ da [Erik Reitan](https://github.com/Erikre)
 [Scaricare progetto di esempio Wingtip Toys (c#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) o [Scarica l'E-book (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
 
 > Questa serie di esercitazioni insegnerà le nozioni di base della creazione di un'applicazione Web Form ASP.NET con ASP.NET 4.5 e Microsoft Visual Studio Express 2013 per Web. Un Visual Studio 2013 [progetto con codice sorgente c#](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) complemento a questa serie di esercitazioni è disponibile.
-
 
 Questa esercitazione illustra la logica di business richiesta per aggiungere un carrello della spesa per l'applicazione Web Form ASP.NET di esempio Wingtip Toys. Questa esercitazione si basa sull'esercitazione precedente "Visualizzazione dei dati e i dettagli degli elementi" e fa parte della serie di esercitazioni di Wingtip giocattoli Store. Dopo aver completato questa esercitazione, gli utenti dell'app di esempio saranno in grado di aggiungere, rimuovere e modificare i prodotti nel carrello.
 
@@ -49,7 +48,6 @@ In precedenza in questa serie di esercitazioni, è stato aggiunto le pagine e il
 > [!NOTE] 
 > 
 > Lo stato della sessione ASP.NET è un modo pratico per archiviare le informazioni specifiche dell'utente che scadranno dopo che l'utente ha lasciato il sito. Mentre un utilizzo improprio dello stato della sessione può avere implicazioni sulle prestazioni in siti di grandi dimensioni, chiaro di sessione stato funziona bene per scopi dimostrativi. Il progetto di esempio Wingtip Toys viene illustrato come utilizzare lo stato della sessione senza un provider esterno, in cui lo stato della sessione è archiviato in-process nel server web che ospita il sito. Per i siti di grandi dimensioni che forniscono più istanze di un'applicazione o per siti che eseguono più istanze di un'applicazione in server diversi, è consigliabile usare **il servizio Cache di Windows Azure**. Questo servizio Cache fornisce un servizio di memorizzazione nella cache distribuito che è esterno al sito web e consente di risolvere il problema dell'utilizzo dello stato sessione in-process. Per altre informazioni, vedere [come usare lo stato della sessione ASP.NET con siti Web di Azure](https://docs.microsoft.com/azure/redis-cache/cache-aspnet-session-state-provider).
-
 
 ### <a name="add-cartitem-as-a-model-class"></a>Aggiungere CartItem come classe di modello
 
@@ -128,7 +126,6 @@ Come accennato in precedenza, si creerà una pagina di elaborazione denominata *
 > [!NOTE] 
 > 
 > Verrà modificato il code-behind (*AddToCart.aspx.cs*) per questa pagina, non l'interfaccia utente della pagina (*AddToCart.aspx*).
-
 
 #### <a name="to-create-the-add-to-cart-functionality"></a>Per creare l'Add To Cart funzionalità:
 
@@ -215,7 +212,6 @@ Prima di tutto la `GetTotal` metodo ottiene l'ID del carrello acquisti dell'uten
 > [!NOTE] 
 > 
 > Il codice precedente Usa il tipo nullable "`int?`". Tipi nullable possono rappresentare tutti i valori di un tipo sottostante ma anche come un valore null. Per altre informazioni, vedere [utilizzando i tipi Nullable](https://msdn.microsoft.com/library/2cf62fcy(v=vs.110).aspx).
-
 
 ### <a name="modify-the-shopping-cart-display"></a>Modificare la visualizzazione del carrello acquisti
 

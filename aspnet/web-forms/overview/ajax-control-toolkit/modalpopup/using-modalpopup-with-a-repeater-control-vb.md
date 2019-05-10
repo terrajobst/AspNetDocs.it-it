@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: 0c8e74f1-b3ba-4ca9-a1c5-f5c4831a359a
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/modalpopup/using-modalpopup-with-a-repeater-control-vb
 msc.type: authoredcontent
-ms.openlocfilehash: f1875ae95d79ec2a6762a547aabfbd03e0930b2c
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 4da3a08feae4c5fd43e9176f34e929b450c76674
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59386502"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132610"
 ---
 # <a name="using-modalpopup-with-a-repeater-control-vb"></a>Uso di ModalPopup con un controllo Repeater (VB)
 
@@ -22,7 +22,6 @@ da [Christian Wenz](https://github.com/wenz)
 [Scaricare il codice](http://download.microsoft.com/download/2/4/0/24052038-f942-4336-905b-b60ae56f0dd5/ModalPopup2.vb.zip) o [Scarica il PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/modalpopup2VB.pdf)
 
 > Il controllo ModalPopup in AJAX Control Toolkit offre un modo semplice per creare un popup modale utilizzano i canali lato client. È anche possibile usare questo controllo all'interno di un controllo repeater.
-
 
 ## <a name="overview"></a>Panoramica
 
@@ -47,7 +46,6 @@ Per rendere il popup di lavorare all'interno di repeater, il `ModalPopupExtender
 [!code-aspx[Main](using-modalpopup-with-a-repeater-control-vb/samples/sample4.aspx)]
 
 Quindi, ogni elemento nell'origine dati viene visualizzato con un pulsante accanto a esso che attiva la finestra popup modale.
-
 
 [![La finestra popup modale può essere attivato per ogni voce di origine dati](using-modalpopup-with-a-repeater-control-vb/_static/image2.png)](using-modalpopup-with-a-repeater-control-vb/_static/image1.png)
 

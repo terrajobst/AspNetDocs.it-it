@@ -8,12 +8,12 @@ ms.date: 10/30/2006
 ms.assetid: 718628e2-224c-455f-b33a-a41efd48d5a0
 msc.legacyurl: /web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/customizing-the-datalist-s-editing-interface-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 1c99ce1528b1a28a4ec470a05d62abef6d4bb888
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ead74bd23301e2e6a42b26c065664ffe158ead8f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59391858"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65126007"
 ---
 # <a name="customizing-the-datalists-editing-interface-vb"></a>Personalizzazione dell'interfaccia di modifica di DataList (VB)
 
@@ -22,7 +22,6 @@ da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Scaricare l'App di esempio](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_40_VB.exe) o [Scarica il PDF](customizing-the-datalist-s-editing-interface-vb/_static/datatutorial40vb1.pdf)
 
 > In questa esercitazione si creerà un'interfaccia di modifica più completa per il controllo DataList, che include controlli DropDownList e una casella di controllo.
-
 
 ## <a name="introduction"></a>Introduzione
 
@@ -36,34 +35,27 @@ Il `EditItemTemplate` possono essere ulteriormente ampliato per includere i cont
 
 In questa esercitazione si creerà un'interfaccia di modifica più completa per il controllo DataList, che include controlli DropDownList e una casella di controllo. In particolare, verrà creato un controllo DataList che elenca le informazioni sul prodotto e consente la s nome prodotto, fornitore, categoria e lo stato non più supportato da aggiornare (vedere la figura 1).
 
-
 [![L'interfaccia di modifica include un controllo TextBox, due controlli DropDownList e una casella di controllo](customizing-the-datalist-s-editing-interface-vb/_static/image2.png)](customizing-the-datalist-s-editing-interface-vb/_static/image1.png)
 
 **Figura 1**: L'interfaccia di modifica include un controllo TextBox, due controlli DropDownList e una casella di controllo ([fare clic per visualizzare l'immagine con dimensioni normali](customizing-the-datalist-s-editing-interface-vb/_static/image3.png))
-
 
 ## <a name="step-1-displaying-product-information"></a>Passaggio 1: Visualizzazione di informazioni sul prodotto
 
 Prima di poter creare l'interfaccia modificabile s DataList, è innanzitutto necessario compilare l'interfaccia di sola lettura. Iniziare aprendo il `CustomizedUI.aspx` pagina dal `EditDeleteDataList` cartella e, dalla finestra di progettazione, aggiungere un controllo DataList alla pagina, l'impostazione relativa `ID` proprietà `Products`. DataList s nello smart tag, creare un nuovo oggetto ObjectDataSource. Denominare il nuovo oggetto ObjectDataSource `ProductsDataSource` e configurarlo per recuperare i dati di `ProductsBLL` classe s `GetProducts` (metodo). Come con le esercitazioni di DataList modificabile precedente, verrà aggiornato le informazioni di prodotto modificato s accedendo direttamente al livello della logica di Business. Di conseguenza, impostare gli elenchi a discesa nell'aggiornamento, inserimento ed eliminare schede su (nessuno).
 
-
 [![Impostare gli elenchi di riepilogo a discesa schede DELETE, INSERT e UPDATE su (nessuno)](customizing-the-datalist-s-editing-interface-vb/_static/image5.png)](customizing-the-datalist-s-editing-interface-vb/_static/image4.png)
 
 **Figura 2**: Impostare l'UPDATE, INSERT e DELETE schede elenco a discesa Elenca su (nessuno) ([fare clic per visualizzare l'immagine con dimensioni normali](customizing-the-datalist-s-editing-interface-vb/_static/image6.png))
 
-
 Dopo la configurazione di ObjectDataSource, Visual Studio creerà predefinito `ItemTemplate` per il controllo DataList che elenca il nome e il valore per ognuno dei campi di dati restituito. Modificare il `ItemTemplate` in modo che il modello viene elencato il nome di prodotto in un `<h4>` elemento con il nome della categoria, nome del fornitore, prezzo e lo stato non più utilizzato. Inoltre, aggiungere un pulsante di modifica, assicurandosi che relativo `CommandName` è impostata su Modifica. Il markup dichiarativo per la mia `ItemTemplate` segue:
-
 
 [!code-aspx[Main](customizing-the-datalist-s-editing-interface-vb/samples/sample1.aspx)]
 
 Il markup riportato sopra viene disposto l'informazioni di prodotto usando un &lt;h4&gt; intestazione per il nome del prodotto s e una colonna di quattro `<table>` per i campi rimanenti. Il `ProductPropertyLabel` e `ProductPropertyValue` classi CSS, definite in `Styles.css`, sono stati trattati nelle esercitazioni precedenti. Figura 3 mostra lo stato di avanzamento quando viene visualizzato tramite un browser.
 
-
 [![Viene visualizzato il nome, fornitore, categoria, lo stato non più utilizzate e prezzo di ogni prodotto](customizing-the-datalist-s-editing-interface-vb/_static/image8.png)](customizing-the-datalist-s-editing-interface-vb/_static/image7.png)
 
 **Figura 3**: Viene visualizzato il nome, fornitore, categoria, lo stato non più utilizzate e prezzo di ogni prodotto ([fare clic per visualizzare l'immagine con dimensioni normali](customizing-the-datalist-s-editing-interface-vb/_static/image9.png))
-
 
 ## <a name="step-2-adding-the-web-controls-to-the-editing-interface"></a>Passaggio 2: Aggiunta dei controlli Web per l'interfaccia di modifica
 
@@ -71,24 +63,19 @@ Il primo passaggio nella creazione di DataList personalizzato interfaccia per la
 
 Per personalizzare l'interfaccia di modifica, fare clic sul collegamento di modifica modelli dello smart tag DataList s e scegliere il `EditItemTemplate` opzione nell'elenco a discesa. Aggiungere un controllo DropDownList per il `EditItemTemplate` e impostare relativi `ID` a `Categories`.
 
-
 [![Aggiungere un controllo DropDownList per le categorie](customizing-the-datalist-s-editing-interface-vb/_static/image11.png)](customizing-the-datalist-s-editing-interface-vb/_static/image10.png)
 
 **Figura 4**: Aggiungere un controllo DropDownList per le categorie ([fare clic per visualizzare l'immagine con dimensioni normali](customizing-the-datalist-s-editing-interface-vb/_static/image12.png))
 
-
 Successivamente, DropDownList s nello smart tag, selezionare l'opzione Scegli origine dati e creare un nuovo oggetto ObjectDataSource denominato `CategoriesDataSource`. Configurare ObjectDataSource per usare la `CategoriesBLL` classe s `GetCategories()` (metodo) (vedere la figura 5). Successivamente, la s DropDownList chiede di configurazione guidata origine dati per i campi di dati da usare per ognuno `ListItem` s `Text` e `Value` proprietà. La visualizzazione DropDownList il `CategoryName` campo dati e usare il `CategoryID` come valore, come illustrato nella figura 6.
-
 
 [![Creare un nuovo oggetto ObjectDataSource denominato CategoriesDataSource](customizing-the-datalist-s-editing-interface-vb/_static/image14.png)](customizing-the-datalist-s-editing-interface-vb/_static/image13.png)
 
 **Figura 5**: Creare un nuovo oggetto ObjectDataSource denominato `CategoriesDataSource` ([fare clic per visualizzare l'immagine con dimensioni normali](customizing-the-datalist-s-editing-interface-vb/_static/image15.png))
 
-
 [![Configurare la visualizzazione di s DropDownList e il valore di campi](customizing-the-datalist-s-editing-interface-vb/_static/image17.png)](customizing-the-datalist-s-editing-interface-vb/_static/image16.png)
 
 **Figura 6**: Configurare il controllo DropDownList s visualizzato e i campi dei valori ([fare clic per visualizzare l'immagine con dimensioni normali](customizing-the-datalist-s-editing-interface-vb/_static/image18.png))
-
 
 Ripetere questa serie di passaggi per creare un controllo DropDownList per i fornitori. Impostare il `ID` per questo controllo DropDownList per `Suppliers` e assegnare un nome relativo ObjectDataSource `SuppliersDataSource`.
 
@@ -98,14 +85,11 @@ Infine, aggiungere i pulsanti Annulla e Update. Tenere presente che per questi d
 
 È possibile definire il layout di interfaccia di modifica, tuttavia si desidera. Ho scelto di usare lo stesso quattro colonne ve `<table>` layout dall'interfaccia di sola lettura, come la seguente sintassi dichiarativa e screenshot illustra:
 
-
 [!code-aspx[Main](customizing-the-datalist-s-editing-interface-vb/samples/sample2.aspx)]
-
 
 [![L'interfaccia di modifica non è più Laid valido, ad esempio l'interfaccia di sola lettura](customizing-the-datalist-s-editing-interface-vb/_static/image20.png)](customizing-the-datalist-s-editing-interface-vb/_static/image19.png)
 
 **Figura 7**: L'interfaccia di modifica non è più Laid valido, ad esempio l'interfaccia di sola lettura ([fare clic per visualizzare l'immagine con dimensioni normali](customizing-the-datalist-s-editing-interface-vb/_static/image21.png))
-
 
 ## <a name="step-3-creating-the-editcommand-and-cancelcommand-event-handlers"></a>Passaggio 3: Creazione del EditCommand e gestori eventi CancelCommand
 
@@ -113,16 +97,13 @@ Attualmente non è disponibile alcuna sintassi di associazione dati nel `EditIte
 
 Creare questi due gestori di eventi e richiedere loro di utilizzare il codice seguente:
 
-
 [!code-vb[Main](customizing-the-datalist-s-editing-interface-vb/samples/sample3.vb)]
 
 Con questi due gestori di eventi sul posto, facendo clic sul pulsante Modifica consente di visualizzare l'interfaccia di modifica e facendo clic sul pulsante di annullamento restituisce l'elemento modificato per la modalità di sola lettura. Figura 8 Mostra DataList dopo che il pulsante Modifica è stato fatto clic per s Chef Anton's Gumbo Mix. Poiché abbiamo ve ancora per aggiungere una sintassi di associazione dati all'interfaccia di modifica, il `ProductName` nella casella di testo è vuota, il `Discontinued` selezionati dalla casella di controllo è deselezionata e i primi elementi il `Categories` e `Suppliers` controlli DropDownList.
 
-
 [![Facendo clic su verrà visualizzato il pulsante Modifica l'interfaccia di modifica](customizing-the-datalist-s-editing-interface-vb/_static/image23.png)](customizing-the-datalist-s-editing-interface-vb/_static/image22.png)
 
 **Figura 8**: Facendo clic sul pulsante Modifica consente di visualizzare l'interfaccia di modifica ([fare clic per visualizzare l'immagine con dimensioni normali](customizing-the-datalist-s-editing-interface-vb/_static/image24.png))
-
 
 ## <a name="step-4-adding-the-databinding-syntax-to-the-editing-interface"></a>Passaggio 4: Aggiunta della sintassi di associazione dati all'interfaccia di modifica
 
@@ -130,16 +111,13 @@ Per visualizzare i valori correnti di s prodotto l'interfaccia di modifica, è n
 
 Assegnare il `ProductName` valore del campo dati il `ProductName` s nella casella di testo `Text` proprietà, il `CategoryID` e `SupplierID` datové pole i valori per i `Categories` e `Suppliers` controlli DropDownList `SelectedValue` proprietà e il `Discontinued` valore del campo dati il `Discontinued` casella di controllo s `Checked` proprietà. Dopo aver apportato queste modifiche, tramite la finestra di progettazione o direttamente tramite markup dichiarativo, visitare di nuovo la pagina tramite un browser e fare clic sul pulsante Modifica per s Chef Anton's Gumbo Mix. Come illustrato nella figura 9, la sintassi di data binding ha aggiunto i valori correnti di casella di testo e controlli DropDownList e casella di controllo.
 
-
 [![Facendo clic su verrà visualizzato il pulsante Modifica l'interfaccia di modifica](customizing-the-datalist-s-editing-interface-vb/_static/image26.png)](customizing-the-datalist-s-editing-interface-vb/_static/image25.png)
 
 **Figura 9**: Facendo clic sul pulsante Modifica consente di visualizzare l'interfaccia di modifica ([fare clic per visualizzare l'immagine con dimensioni normali](customizing-the-datalist-s-editing-interface-vb/_static/image27.png))
 
-
 ## <a name="step-5-saving-the-user-s-changes-in-the-updatecommand-event-handler"></a>Passaggio 5: Salvataggio delle modifiche s utente nel gestore dell'evento UpdateCommand
 
 Quando l'utente modifica un prodotto e fa clic sul pulsante di aggiornamento, si verifica un postback e DataList s `UpdateCommand` viene generato l'evento. Nell'evento gestore, è necessario leggere i valori dai controlli Web nel `EditItemTemplate` e l'interfaccia con il livello BLL per aggiornare il prodotto nel database. Come abbiamo ve illustrata nelle esercitazioni precedenti, il `ProductID` del prodotto aggiornato è accessibile tramite il `DataKeys` raccolta. I campi immesso dall'utente sono accessibili facendo riferimento a livello di codice i controlli Web usando `FindControl("controlID")`, come illustrato nel codice seguente:
-
 
 [!code-vb[Main](customizing-the-datalist-s-editing-interface-vb/samples/sample4.vb)]
 
@@ -147,7 +125,6 @@ Il codice inizia consultando il `Page.IsValid` proprietà per assicurarsi che tu
 
 > [!NOTE]
 > Ho ve omesso aggiunta una logica di gestione delle eccezioni di [BLL - la gestione e le eccezioni a livello DAL](handling-bll-and-dal-level-exceptions-vb.md) esercitazione per mantenere il codice e in questo esempio con stato attivo. Come esercizio, aggiungere questa funzionalità dopo aver completato questa esercitazione.
-
 
 ## <a name="step-6-handling-null-categoryid-and-supplierid-values"></a>Passaggio 6: Gestire CategoryID NULL e valori di ID fornitore
 
@@ -157,23 +134,18 @@ Per supportare `NULL` i valori per la categoria e il fornitore controlli DropDow
 
 Dopo aver apportato queste modifiche, il markup controlli DropDownList in DataList s `EditItemTemplate` dovrebbe essere simile al seguente:
 
-
 [!code-aspx[Main](customizing-the-datalist-s-editing-interface-vb/samples/sample5.aspx)]
 
 > [!NOTE]
 > Statico `ListItem` s può essere aggiunto a un controllo DropDownList tramite la finestra di progettazione o direttamente tramite la sintassi dichiarativa. Quando si aggiunge un elemento DropDownList per rappresentare un database `NULL` valore, assicurarsi di aggiungere il `ListItem` tramite la sintassi dichiarativa. Se si usa la `ListItem` Editor della raccolta nella finestra di progettazione, la sintassi dichiarativa generata ometterà il `Value` impostazione completamente quando assegnato a una stringa vuota, la creazione di markup dichiarativo simile a quello: `<asp:ListItem>(None)</asp:ListItem>`. Anche se ciò potrebbe avere un aspetto innocuo, parametro mancante `Value` fa sì che il controllo DropDownList usare il `Text` valore della proprietà al suo posto. Ciò significa che se si `NULL` `ListItem` è selezionata, il valore (nessuno) verrà tentato da assegnare al campo dati del prodotto (`CategoryID` o `SupplierID`, in questa esercitazione), che genererà un'eccezione. Impostando in modo esplicito `Value=""`, una `NULL` valore verrà assegnato il prodotto del campo dati quando il `NULL` `ListItem` sia selezionata.
 
-
 Si consiglia di visualizzare lo stato di avanzamento tramite un browser. Quando si modifica un prodotto, si noti che il `Categories` e `Suppliers` dispone di due controlli DropDownList (nessuno) opzione all'inizio di DropDownList.
-
 
 [![Le categorie e controlli DropDownList fornitori includono (nessuna) opzione](customizing-the-datalist-s-editing-interface-vb/_static/image29.png)](customizing-the-datalist-s-editing-interface-vb/_static/image28.png)
 
 **Figura 10**: Il `Categories` e `Suppliers` controlli DropDownList includono (nessuna) opzione ([fare clic per visualizzare l'immagine con dimensioni normali](customizing-the-datalist-s-editing-interface-vb/_static/image30.png))
 
-
 Salvare opzione (nessuno) come un database `NULL` valore, è necessario restituire il `UpdateCommand` gestore dell'evento. Modifica il `categoryIDValue` e `supplierIDValue` variabili integer nullable e assegnarle un valore diverso da `Nothing` solo se s DropDownList `SelectedValue` non è una stringa vuota:
-
 
 [!code-vb[Main](customizing-the-datalist-s-editing-interface-vb/samples/sample6.vb)]
 

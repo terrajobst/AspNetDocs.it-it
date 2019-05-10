@@ -8,12 +8,12 @@ ms.date: 02/17/2014
 ms.assetid: e158bed7-226f-4275-b02e-7553bd58c669
 msc.legacyurl: /web-pages/overview/ui-layouts-and-themes/18-customizing-site-wide-behavior
 msc.type: authoredcontent
-ms.openlocfilehash: 2763cae0f8124cfcaccfd737622cb17b6dd947e1
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: f05e05f725d9209bce283ce18659ae5efe4de2ee
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59413295"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131863"
 ---
 # <a name="customizing-site-wide-behavior-for-aspnet-web-pages-razor-sites"></a>Personalizzazione del comportamento a livello di sito per i siti di ASP.NET Web Pages (Razor)
 
@@ -39,7 +39,6 @@ da [Tom FitzMacken](https://github.com/tfitzmac)
 >   
 > 
 > Questa esercitazione funziona anche con 3 pagine Web ASP.NET e Visual Studio 2013 o Visual Studio Express 2013 per Web, è possibile usare ASP.NET Web Helpers Library.
-
 
 <a id="Adding_Website_Startup_Code"></a>
 ## <a name="adding-website-startup-code-for-aspnet-web-pages"></a>Aggiunta di codice di avvio del sito Web per ASP.NET Web Pages

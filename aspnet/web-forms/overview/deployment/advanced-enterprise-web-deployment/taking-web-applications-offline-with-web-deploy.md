@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 3e9f6e7d-8967-4586-94d5-d3a122f12529
 msc.legacyurl: /web-forms/overview/deployment/advanced-enterprise-web-deployment/taking-web-applications-offline-with-web-deploy
 msc.type: authoredcontent
-ms.openlocfilehash: 017eceb8567859fdbe28bb87af844eee20dfa525
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ba54454bcb6f5e4ceb269b128a6b72a4b75f64be
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59415479"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131402"
 ---
 # <a name="taking-web-applications-offline-with-web-deploy"></a>Impostazione delle applicazioni Web in modalità offline con Distribuzione Web
 
@@ -22,7 +22,6 @@ da [Jason Lee](https://github.com/jrjlee)
 [Scaricare PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > In questo argomento viene descritto come eseguire un'applicazione web in modalità offline per la durata di una distribuzione automatizzata tramite lo strumento di distribuzione di Internet Information Services (IIS) Web (distribuzione Web). Gli utenti che esplorano per l'applicazione web vengono reindirizzati a un *App\_offline.htm* fino al completamento della distribuzione di file.
-
 
 In questo argomento fa parte di una serie di esercitazioni basate su requisiti di distribuzione aziendale di una società fittizia, denominata Fabrikam, Inc. Questa serie di esercitazioni Usa una soluzione di esempio&#x2014;il [soluzione Contact Manager](../web-deployment-in-the-enterprise/the-contact-manager-solution.md)&#x2014;per rappresentare un'applicazione web con un livello di complessità, tra cui un'applicazione ASP.NET MVC 3, una comunicazione Windows realistico Servizio Foundation (WCF) e un progetto di database.
 
@@ -70,18 +69,13 @@ Il passaggio successivo consiste nel modificare la logica di distribuzione per c
 > [!NOTE]
 > La procedura seguente si presuppone che si sta usando un file di progetto MSBuild personalizzato per controllare il processo di distribuzione, come descritto in [informazioni sul File di progetto](../web-deployment-in-the-enterprise/understanding-the-project-file.md). Se si distribuisce direttamente da Visual Studio, è necessario usare un approccio diverso. Sayed Ibrahim Hashimi descrive un approccio in [richiedere Your Offline durante la pubblicazione di App Web come](http://sedodream.com/2012/01/08/HowToTakeYourWebAppOfflineDuringPublishing.aspx).
 
-
 Per distribuire un' *App\_offline* file a un sito Web IIS di destinazione, è necessario richiamare MSDeploy.exe utilizzando la [distribuzione Web **contentPath** provider](https://technet.microsoft.com/library/dd569034(WS.10).aspx). Il **contentPath** provider supporta entrambi i percorsi di directory fisica e i percorsi di applicazione o sito Web IIS, che rende la scelta ideale per la sincronizzazione di un file tra una cartella di progetto di Visual Studio e un'applicazione web IIS. Per distribuire il file, il comando di MSDeploy sarà analogo al seguente:
-
 
 [!code-console[Main](taking-web-applications-offline-with-web-deploy/samples/sample1.cmd)]
 
-
 Per rimuovere il file dal sito di destinazione al termine del processo di distribuzione, il comando di MSDeploy sarà analogo al seguente:
 
-
 [!code-console[Main](taking-web-applications-offline-with-web-deploy/samples/sample2.cmd)]
-
 
 Per automatizzare i comandi seguenti come parte di un processo di compilazione e distribuzione, è necessario integrarli nel file di progetto MSBuild personalizzato. La procedura seguente descrive come eseguire questa operazione.
 
@@ -129,9 +123,7 @@ La Pipeline di pubblicazione sul Web (WPP) usa un elenco di elementi denominato 
 
 Il *. WPP* file sarà analogo al seguente:
 
-
 [!code-xml[Main](taking-web-applications-offline-with-web-deploy/samples/sample8.xml)]
-
 
 Questi sono i punti chiave della nota in questo esempio:
 
@@ -160,7 +152,6 @@ La prossima volta che pacchetto e compilazione progetto di applicazione web, WPP
 
 > [!NOTE]
 > Se la distribuzione non riesce, il *App\_offline.htm* file rimarranno nella posizione e l'applicazione rimarrà offline. In genere si tratta del comportamento desiderato. Per riportare l'applicazione torna online, è possibile eliminare il *App\_offline.htm* file dal server web. In alternativa, se si correggere eventuali errori, esecuzione una corretta distribuzione, il *App\_offline.htm* file verrà rimosso.
-
 
 ## <a name="conclusion"></a>Conclusione
 

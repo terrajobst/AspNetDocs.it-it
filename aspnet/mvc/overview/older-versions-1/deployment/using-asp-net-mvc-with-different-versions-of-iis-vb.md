@@ -8,19 +8,18 @@ ms.date: 08/19/2008
 ms.assetid: 1c1283b2-6956-4937-b568-d30de432ce23
 msc.legacyurl: /mvc/overview/older-versions-1/deployment/using-asp-net-mvc-with-different-versions-of-iis-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 0446a125845134d2fad869094a540c960f6b0a25
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: b754175c853c20eec6be3521376b62d62f33106d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59406470"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123219"
 ---
 # <a name="using-aspnet-mvc-with-different-versions-of-iis-vb"></a>Uso di ASP.NET MVC con versioni diverse di IIS (VB)
 
 by [Microsoft](https://github.com/microsoft)
 
 > In questa esercitazione descrive come usare ASP.NET MVC e Routing degli URL, con diverse versioni di Internet Information Services. Illustra diverse strategie per l'utilizzo di ASP.NET MVC con versioni precedenti di IIS, IIS 6.0 e IIS 7.0 (modalità classica).
-
 
 Il framework ASP.NET MVC dipende dal Routing ASP.NET per indirizzare le richieste del browser per le azioni del controller. Per poter sfruttare i vantaggi di Routing di ASP.NET, potrebbe essere necessario eseguire ulteriori passaggi di configurazione nel server web. Tutto dipende dalla versione di Internet Information Services (IIS) e la modalità per l'applicazione di elaborazione delle richieste.
 
@@ -53,18 +52,15 @@ La modalità di elaborazione della richiesta è determinata dal pool di applicaz
 
 Per impostazione predefinita, IIS è configurato per supportare due pool di applicazioni: **DefaultAppPool** e **Classic .NET AppPool**. Se DefaultAppPool è selezionata, quindi l'applicazione è in esecuzione in modalità di elaborazione della richiesta integrata. Se Classic .NET AppPool è selezionata, l'applicazione è in esecuzione in modalità di elaborazione della richiesta classico.
 
-
 [![La finestra di dialogo Nuovo progetto](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image1.jpg)](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image1.png)
 
 **Figura 1**: Rilevamento della modalità di elaborazione della richiesta ([fare clic per visualizzare l'immagine con dimensioni normali](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image2.png))
-
 
 Si noti che è possibile modificare la modalità di elaborazione delle richieste nella finestra di dialogo Modifica applicazione. Scegliere il pulsante di selezione e modificare il pool di applicazioni associato all'applicazione. Tenere presente che esistono problemi di compatibilità quando si modifica un'applicazione ASP.NET dalla distribuzione classica alla modalità integrata. Per altre informazioni, vedere i seguenti articoli:
 
 - L'aggiornamento di ASP.NET 1.1 a IIS 7.0 in Windows Vista e Windows Server 2008: [https://www.iis.net/learn/application-frameworks/building-and-running-aspnet-applications/upgrading-aspnet-11-to-iis-on-windows-vista-and-windows-server-2008](https://www.iis.net/learn/application-frameworks/building-and-running-aspnet-applications/upgrading-aspnet-11-to-iis-on-windows-vista-and-windows-server-2008)
 
 - Integrazione di ASP.NET con IIS 7.0: [https://www.iis.net/learn/application-frameworks/building-and-running-aspnet-applications/aspnet-integration-with-iis](https://www.iis.net/learn/application-frameworks/building-and-running-aspnet-applications/aspnet-integration-with-iis)
-
 
 Se un'applicazione ASP.NET utilizza DefaultAppPool, quindi non devi eseguire ulteriori passaggi per ottenere il Routing di ASP.NET (e pertanto ASP.NET MVC) per lavorare. Tuttavia, se l'applicazione ASP.NET è configurato per usare il Classic .NET AppPool quindi continuare a leggere, è necessario eseguire altre operazioni.
 
@@ -96,11 +92,9 @@ La route predefinita configurata nel listato 1 consente di accedere agli URL di 
 
 Sfortunatamente, le versioni precedenti di IIS non passare tali richieste per il framework ASP.NET. Pertanto, queste richieste non vengono instradate a un controller. Ad esempio, se si esegue una richiesta del browser per l'URL avremo/indice si verrà visualizzata la pagina di errore nella figura 2.
 
-
 [![La finestra di dialogo Nuovo progetto](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image2.jpg)](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image3.png)
 
 **Figura 2**: Ricezione di un errore 404 non trovato ([fare clic per visualizzare l'immagine con dimensioni normali](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image4.png))
-
 
 Le versioni precedenti di IIS eseguire il mapping solo determinate richieste per il framework ASP.NET. La richiesta deve essere un URL con l'estensione di file a destra. Ad esempio, una richiesta per /SomePage.aspx viene mappata al framework di ASP.NET. Tuttavia, una richiesta per /SomePage.htm non lo consente.
 
@@ -116,9 +110,7 @@ Il file Global. asax modificato nel listato 2 funziona con le versioni precedent
 
 [!code-vb[Main](using-asp-net-mvc-with-different-versions-of-iis-vb/samples/sample2.vb)]
 
-
 Importante: ricordare di compilare l'applicazione ASP.NET MVC dopo aver modificato il file Global. asax.
-
 
 Esistono due importanti modifiche nel file Global. asax nel listato 2. Sono ora disponibili due route definite in Global. asax. Simile a questo punto il modello di URL per la route predefinita, la prima route:
 
@@ -138,9 +130,7 @@ La seconda route, la route radice, è una novità. Questo modello di URL per la 
 
 Dopo aver apportato queste modifiche alla tabella di route, è necessario assicurarsi che tutti i collegamenti nell'applicazione siano compatibili con questi nuovi modelli di URL. In altre parole, assicurarsi che tutti i collegamenti includere l'estensione di MVC. Se si usa il metodo helper Html.ActionLink() per generare i collegamenti, quindi non dovrebbe essere necessario apportare alcuna modifica.
 
-
 Invece di usare lo script registermvc.wcf, è possibile aggiungere una nuova estensione per IIS in cui viene eseguito il mapping per il framework ASP.NET manualmente. Quando si aggiunge una nuova estensione, assicurarsi che la casella di controllo etichettato **verifica esistenza del file** non è selezionata.
-
 
 ## <a name="hosted-server"></a>Server ospitato
 
@@ -172,11 +162,9 @@ Ecco la procedura per attivare un mapping di script con caratteri jolly per IIS 
 6. Immettere il nome MVC
 7. Scegliere il **OK** pulsante
 
-
 [![La finestra di dialogo Nuovo progetto](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image3.jpg)](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image5.png)
 
 **Figura 3**: Creazione di un mapping di script con caratteri jolly con IIS 7.0 ([fare clic per visualizzare l'immagine con dimensioni normali](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image6.png))
-
 
 Seguire questi passaggi per creare un mapping di script con caratteri jolly con IIS 6.0:
 
@@ -189,19 +177,15 @@ Seguire questi passaggi per creare un mapping di script con caratteri jolly con 
 7. Deselezionare la casella di controllo **verifica esistenza del file**
 8. Scegliere il **OK** pulsante
 
-
 [![La finestra di dialogo Nuovo progetto](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image4.jpg)](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image7.png)
 
 **Figura 4**: Creazione di un mapping di script con caratteri jolly con IIS 6.0 ([fare clic per visualizzare l'immagine con dimensioni normali](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image8.png))
 
-
 Dopo aver abilitato il mapping di script con caratteri jolly, è necessario modificare la tabella di route nel file Global. asax in modo che includa una route radice. In caso contrario, si otterrà la pagina di errore nella figura 5 quando si effettua una richiesta per la pagina principale dell'applicazione. È possibile usare il file Global. asax modificato nel listato 4.
-
 
 [![La finestra di dialogo Nuovo progetto](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image5.jpg)](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image9.png)
 
 **Figura 5**: Errore di route radice mancante ([fare clic per visualizzare l'immagine con dimensioni normali](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image10.png))
-
 
 **Listato 4 - Global. asax (modificato con la route radice)**
 

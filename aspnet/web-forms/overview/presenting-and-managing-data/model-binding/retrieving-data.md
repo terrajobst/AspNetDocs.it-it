@@ -8,15 +8,14 @@ ms.date: 02/27/2014
 ms.assetid: 9f24fb82-c7ac-48da-b8e2-51b3da17e365
 msc.legacyurl: /web-forms/overview/presenting-and-managing-data/model-binding/retrieving-data
 msc.type: authoredcontent
-ms.openlocfilehash: 29baaf2917e47ac46a78a252721be725b4e9b58f
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 08cb65f9ef8f5c36070454e011f41554d81f333f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59398475"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131533"
 ---
 # <a name="retrieving-and-displaying-data-with-model-binding-and-web-forms"></a>Il recupero e visualizzazione dei dati con l'associazione di modelli e web form
-
 
 > Questa serie di esercitazioni illustra aspetti di base dell'uso di associazione di modelli con un progetto di Web Form ASP.NET. Associazione di modelli consente l'interazione dei dati più semplice rispetto a gestione dati di oggetti di origine (ad esempio ObjectDataSource o SqlDataSource). Questa serie inizia con materiale introduttivo e sposta i concetti più avanzati nelle esercitazioni successive.
 > 
@@ -34,7 +33,6 @@ ms.locfileid: "59398475"
 > - Microsoft Visual Studio 2017 or Microsoft Visual Studio Community 2017
 >   
 > Questa esercitazione funziona anche con Visual Studio 2012 e Visual Studio 2013, ma esistono alcune differenze nel modello di progetto e dell'interfaccia utente.
-
 
 ## <a name="what-youll-build"></a>Scopo dell'esercitazione
 
@@ -96,7 +94,6 @@ In questa esercitazione, sarà:
    4. Per la pagina master del web form, selezionare **Site. master**.
    
    5. Scegliere **OK**.
-   
 
 ## <a name="add-the-data-model"></a>Aggiungere il modello di dati
 

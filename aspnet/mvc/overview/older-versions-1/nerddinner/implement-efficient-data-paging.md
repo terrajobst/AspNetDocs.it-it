@@ -8,12 +8,12 @@ ms.date: 07/27/2010
 ms.assetid: adea836d-dbc2-4005-94ea-53aef09e9e34
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/implement-efficient-data-paging
 msc.type: authoredcontent
-ms.openlocfilehash: ff12bc43ad68fdc4bbcd478624f47ea0d2774c2d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 2d9a0dba381b71755ac626f76d52bc5bcb434447
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59399307"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65125646"
 ---
 # <a name="implement-efficient-data-paging"></a>Implementare una suddivisione in pagine efficiente dei dati
 
@@ -26,7 +26,6 @@ by [Microsoft](https://github.com/microsoft)
 > Passaggio 8 viene illustrato come aggiungere supporto per lo spostamento al nostro URL /Dinners in modo che anziché visualizzare 1000 nastri in caso dinners in una sola volta, verranno solo 10 dinners imminente di visualizzare contemporaneamente - e consentire agli utenti finali di pagina indietro e inoltrare tramite l'intero elenco in un modo descrittivo SEO.
 > 
 > Se si usa ASP.NET MVC 3, è consigliabile seguire le [Guida introduttiva con MVC 3](../../older-versions/getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3.md) oppure [MVC Music Store](../../older-versions/mvc-music-store/mvc-music-store-part-1.md) esercitazioni.
-
 
 ## <a name="nerddinner-step-8-paging-support"></a>NerdDinner Step 8: Supporto di paging
 

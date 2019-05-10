@@ -8,12 +8,12 @@ ms.date: 02/21/2014
 ms.assetid: 5fa1daf9-1161-4cfa-bd4c-658f48b2c229
 msc.legacyurl: /web-forms/what-is-web-forms
 msc.type: content
-ms.openlocfilehash: cb7a4ff9dbf746c0729129445042e53e506df5d2
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 19be419c499759713971a6c77674c924867d1bbc
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59385735"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133211"
 ---
 # <a name="what-is-web-forms"></a>What ' s Web Forms
 
@@ -26,7 +26,6 @@ Usa Visual Studio, è possibile creare Web Form ASP.NET. L'IDE Visual Studio Int
 > [!NOTE] 
 > 
 > Documentazione di ASP.NET e Visual Studio si estende su più versioni. Gli argomenti che illustrano le funzionalità di versioni precedenti possono essere utili per le attività correnti e scenari con le versioni più recenti.
-
 
 **Web Form ASP.NET sono:** 
 

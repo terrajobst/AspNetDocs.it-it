@@ -8,12 +8,12 @@ ms.date: 08/19/2008
 ms.assetid: d0136da6-81a4-4815-b002-baa84744c09e
 msc.legacyurl: /mvc/overview/older-versions-1/security/preventing-javascript-injection-attacks-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 2d954cbc001a62f021f942f1ff44522a2769f516
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: e7294be63ac06dbf548df9d99c07503d4bfff55f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59389583"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65125500"
 ---
 # <a name="preventing-javascript-injection-attacks-c"></a>Prevenzione degli attacchi injection JavaScript (C#)
 
@@ -23,7 +23,6 @@ da [Stephen Walther](https://github.com/StephenWalther)
 
 > Evitare attacchi Injection JavaScript e gli attacchi di Cross-Site Scripting accada all'utente. In questa esercitazione, Stephen Walther spiega come si possono annullare facilmente questi tipi di attacchi di codifica del contenuto HTML.
 
-
 L'obiettivo di questa esercitazione è illustrare come è possibile impedire attacchi intrusivi nel codice JavaScript nelle applicazioni ASP.NET MVC. Questa esercitazione illustra due approcci per la difesa contro il sito Web da attacchi intrusivi nel codice JavaScript. Descrive come evitare attacchi injection JavaScript codificando i dati visualizzati. Anche informazioni su come evitare attacchi injection JavaScript codificando i dati che accettano.
 
 ## <a name="what-is-a-javascript-injection-attack"></a>Che cos'è un attacco Injection JavaScript?
@@ -32,11 +31,9 @@ Ogni volta che si accettano input dall'utente e quindi visualizzare di nuovo l'i
 
 Si supponga che sia stato creato un sito di commenti e suggerimenti dei clienti (vedere la figura 1). I clienti possono visitare il sito Web e inserire commenti e suggerimenti sulla loro esperienza usando i propri prodotti. Quando un cliente invia i commenti e suggerimenti, commenti e suggerimenti viene nuovamente visualizzato la pagina commenti e suggerimenti.
 
-
 [![Sito Web di commenti e suggerimenti dei clienti](preventing-javascript-injection-attacks-cs/_static/image2.png)](preventing-javascript-injection-attacks-cs/_static/image1.png)
 
 **Figura 01**: Sito Web di commenti e suggerimenti dei clienti ([fare clic per visualizzare l'immagine con dimensioni normali](preventing-javascript-injection-attacks-cs/_static/image3.png))
-
 
 Il sito Web commenti e suggerimenti dei clienti Usa il `controller` nel listato 1. Ciò `controller` contiene due azioni denominate `Index()` e `Create()`.
 
@@ -64,11 +61,9 @@ Si supponga che si immette il testo seguente nel modulo di commenti e suggerimen
 
 Questo testo rappresenta uno script JavaScript che visualizza una finestra di messaggio di avviso. Dopo che un utente invia lo script in commenti e suggerimenti modulo, il messaggio <em>Boo!</em> verrà visualizzata ogni volta che chiunque visiti il sito Web dei clienti che a in futuro (vedere la figura 2).
 
-
 [![Attacchi Injection JavaScript](preventing-javascript-injection-attacks-cs/_static/image5.png)](preventing-javascript-injection-attacks-cs/_static/image4.png)
 
 **Figura 02**: Attacchi Injection JavaScript ([fare clic per visualizzare l'immagine con dimensioni normali](preventing-javascript-injection-attacks-cs/_static/image6.png))
-
 
 A questo punto, la risposta iniziale a attacchi injection JavaScript potrebbe essere apatia. Si potrebbe pensare che degli attacchi injection JavaScript sono semplicemente un tipo di *al danneggiamento* attacco. Si potrebbe ritenere che non possono eseguire qualsiasi operazione davvero evil eseguendo il commit di un attacco injection JavaScript.
 
@@ -92,11 +87,9 @@ Si noti che il valore di `feedback.Message` è in formato HTML con codificata pr
 
 Che cosa significa in formato HTML codificare una stringa? Quando si HTML codifica una stringa, pericoloso caratteri, ad esempio `<` e `>` vengono sostituiti dai riferimenti alle entità HTML, ad esempio `&lt;` e `&gt;`. Pertanto quando la stringa `<script>alert("Boo!")</script>` è in formato HTML con codifica, verranno convertiti in `&lt;script&gt;alert(&quot;Boo!&quot;)&lt;/script&gt;`. La stringa con codifica non viene più eseguito come script JavaScript quando vengono interpretati da un browser. Al contrario, viene visualizzata la pagina innocua nella figura 3.
 
-
 [![Attacco JavaScript annullato](preventing-javascript-injection-attacks-cs/_static/image8.png)](preventing-javascript-injection-attacks-cs/_static/image7.png)
 
 **Figura 03**: Sconfitto attacco JavaScript ([fare clic per visualizzare l'immagine con dimensioni normali](preventing-javascript-injection-attacks-cs/_static/image9.png))
-
 
 Si noti che il `Index` visualizzare nel listato 3 solo il valore di `feedback.Message` è codificato. Il valore di `feedback.EntryDate` non viene codificato. Devi solo codificare i dati immessi dall'utente. Poiché il valore di EntryDate è stato generato nel controller, è non necessario in formato HTML codificare questo valore.
 

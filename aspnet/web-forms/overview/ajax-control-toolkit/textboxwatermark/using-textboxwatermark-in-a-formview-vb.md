@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: 41497361-7fba-4825-b36c-f58d79522a88
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/textboxwatermark/using-textboxwatermark-in-a-formview-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 056e89b20ccab0e56b1fab422c817d842beff446
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 7dd213e632f6114b0ef468e97943e789e71a474a
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59400841"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65124524"
 ---
 # <a name="using-textboxwatermark-in-a-formview-vb"></a>Uso di TextBoxWatermark in un controllo FormView (VB)
 
@@ -22,7 +22,6 @@ da [Christian Wenz](https://github.com/wenz)
 [Scaricare il codice](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/TextBoxWatermark1.vb.zip) o [Scarica il PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/textboxwatermark1VB.pdf)
 
 > Il controllo di TextBoxWatermark in AJAX Control Toolkit estende una casella di testo in modo che sia visualizzato all'interno della casella. Quando un utente fa clic nella casella, viene svuotato. Se l'utente lascia la casella senza dover immettere testo, viene nuovamente visualizzato il testo precompilato. Questo è anche possibile all'interno di un controllo FormView.
-
 
 ## <a name="overview"></a>Panoramica
 
@@ -47,7 +46,6 @@ Ricordare il nome (`ID`) dell'origine dati, poiché verrà usato nel `DataSource
 [!code-aspx[Main](using-textboxwatermark-in-a-formview-vb/samples/sample3.aspx)]
 
 A questo punto quando l'utente modifica la modalità di inserimento del `FormView` controllare, il campo di testo per il nuovo fornitore è precompilato grazie alla `TextBoxWatermarkExtender` controllo. Un clic nella casella di testo consente il testo di riempimento non vengono più visualizzati.
-
 
 [![Il limite nel campo proviene il dispositivo extender](using-textboxwatermark-in-a-formview-vb/_static/image2.png)](using-textboxwatermark-in-a-formview-vb/_static/image1.png)
 

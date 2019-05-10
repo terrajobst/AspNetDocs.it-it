@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: f11d22a7-5d32-4ad0-8a9b-276460a61c06
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/manually-installing-web-packages
 msc.type: authoredcontent
-ms.openlocfilehash: 9d0e57eb85242a0d6fa8ca9eef7f6c741862069d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: f778549d3e26989a2e71ef21171adec521842729
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59408797"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132117"
 ---
 # <a name="manually-installing-web-packages"></a>Installazione manuale dei pacchetti Web
 
@@ -29,7 +29,6 @@ da [Jason Lee](https://github.com/jrjlee)
 > 
 > In questi scenari, l'unica opzione possibile trasferire il pacchetto web nel server di destinazione e importarlo manualmente in IIS. Sebbene questo approccio impedisce la distribuzione automatica, è comunque una tecnica molto efficace per la pubblicazione di un'applicazione web&#x2014;sufficiente copiare un unico file zip nel server web e consentono di eseguire il processo di importazione usando una procedura guidata.
 
-
 In questo argomento fa parte di una serie di esercitazioni basate su requisiti di distribuzione aziendale di una società fittizia, denominata Fabrikam, Inc. Questa serie di esercitazioni Usa una soluzione di esempio&#x2014;il [soluzione Contact Manager](the-contact-manager-solution.md)&#x2014;per rappresentare un'applicazione web con un livello di complessità, tra cui un'applicazione ASP.NET MVC 3, una comunicazione Windows realistico Servizio Foundation (WCF) e un progetto di database.
 
 ## <a name="task-overview"></a>Panoramica di Task
@@ -44,7 +43,6 @@ In questo argomento illustrerà come eseguire queste procedure. Le attività e p
 
 > [!NOTE]
 > In questo argomento è particolarmente utile in combinazione con [configurare un Server Web per la pubblicazione distribuzione Web (distribuzione Offline)](../configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-offline-deployment.md), che illustra come installare i componenti necessari e preparare un sito Web IIS per l'importazione del pacchetto.
-
 
 ## <a name="create-a-web-deployment-package"></a>Creare un pacchetto di distribuzione Web
 
@@ -68,9 +66,7 @@ Se si compila il progetto di applicazione web usando MSBuild direttamente, trami
 
 È possibile creare un pacchetto di distribuzione web dalla riga di comando quando si richiama il **pacchetto** destinazione nel progetto di applicazione web tramite MSBuild. Il comando sarà analogo al seguente:
 
-
 [!code-console[Main](manually-installing-web-packages/samples/sample1.cmd)]
-
 
 A seconda di quale approccio si usa, il risultato finale è lo stesso. WPP crea un pacchetto di distribuzione web come un file con estensione zip, insieme a varie risorse di supporto, nella cartella di output per il progetto di applicazione web.
 

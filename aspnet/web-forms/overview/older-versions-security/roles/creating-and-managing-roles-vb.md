@@ -8,12 +8,12 @@ ms.date: 03/24/2008
 ms.assetid: 83af9f5f-9a00-4f83-8afc-e98bdd49014e
 msc.legacyurl: /web-forms/overview/older-versions-security/roles/creating-and-managing-roles-vb
 msc.type: authoredcontent
-ms.openlocfilehash: ef00ae5ddac44f17aed040db7df04a5c0f896caf
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: c6c18e78701ba6a62bf07cc1bc18e4f9e8d2cb3f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59386333"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130988"
 ---
 # <a name="creating-and-managing-roles-vb"></a>Creazione e gestione di ruoli (VB)
 
@@ -22,7 +22,6 @@ da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Scaricare il codice](http://download.microsoft.com/download/6/0/3/6032582f-360d-4739-b935-38721fdb86ea/VB.09.zip) o [Scarica il PDF](http://download.microsoft.com/download/6/0/3/6032582f-360d-4739-b935-38721fdb86ea/aspnet_tutorial09_CreatingRoles_vb.pdf)
 
 > Questa esercitazione vengono esaminate le procedure necessarie per configurare il framework di ruoli. In seguito, verrà compilata pagine web per creare ed eliminare ruoli.
-
 
 ## <a name="introduction"></a>Introduzione
 
@@ -47,11 +46,9 @@ Iniziare creando una nuova cartella nel progetto denominato `Roles`. Successivam
 
 Esplora soluzioni del progetto a questo punto dovrebbe essere simile allo screenshot illustrato nella figura 1.
 
-
 [![Quattro nuove pagine sono stati aggiunti alla cartella dei ruoli](creating-and-managing-roles-vb/_static/image2.png)](creating-and-managing-roles-vb/_static/image1.png)
 
 **Figura 1**: Quattro nuove pagine sono stati aggiunti per il `Roles` cartella ([fare clic per visualizzare l'immagine con dimensioni normali](creating-and-managing-roles-vb/_static/image3.png))
-
 
 Ogni pagina, a questo punto, avranno i controlli contenuto di due, uno per ognuno degli elementi ContentPlaceHolder della pagina master: `MainContent` e `LoginContent`.
 
@@ -67,11 +64,9 @@ Infine, è possibile aggiornare la mappa del sito (`Web.sitemap`) per includere 
 
 Con la mappa del sito aggiornata, visitare il sito tramite un browser. Come illustrato nella figura 2, la navigazione a sinistra ora include elementi per le esercitazioni di ruoli.
 
-
 [![Quattro nuove pagine sono stati aggiunti alla cartella dei ruoli](creating-and-managing-roles-vb/_static/image5.png)](creating-and-managing-roles-vb/_static/image4.png)
 
 **Figura 2**: Quattro nuove pagine sono stati aggiunti per il `Roles` cartella ([fare clic per visualizzare l'immagine con dimensioni normali](creating-and-managing-roles-vb/_static/image6.png))
-
 
 ## <a name="step-2-specifying-and-configuring-the-roles-framework-provider"></a>Passaggio 2: Specificare e configurare il Provider di Framework di ruoli
 
@@ -107,7 +102,6 @@ Con questo codice di configurazione posto, siamo pronti iniziare a usare funzion
 > [!NOTE]
 > Il markup di configurazione precedente viene illustrato l'utilizzo di `<roleManager>` dell'elemento `enabled` e `defaultProvider` attributi. Esistono numerosi altri attributi che influiscono sul modo in cui il framework di ruoli associa le informazioni sui ruoli in base a utente. Verranno esaminate queste impostazioni nella finestra di <a id="_msoanchor_8"> </a> [ *autorizzazione basata sui ruoli* ](role-based-authorization-vb.md) esercitazione.
 
-
 ## <a name="step-3-examining-the-roles-api"></a>Passaggio 3: Esaminare i ruoli API
 
 Funzionalità del framework ruoli sono esposte tramite il [ `Roles` classe](https://msdn.microsoft.com/library/system.web.security.roles.aspx), che contiene metodi condivisi tredici per l'esecuzione di operazioni basato sui ruoli. Quando si esamina la creazione e l'eliminazione di ruoli in 4 passaggi e 6 si userà il [ `CreateRole` ](https://msdn.microsoft.com/library/system.web.security.roles.createrole.aspx) e [ `DeleteRole` ](https://msdn.microsoft.com/library/system.web.security.roles.deleterole.aspx) metodi, aggiungere o rimuovere un ruolo dal sistema.
@@ -121,7 +115,6 @@ Nel <a id="_msoanchor_9"> </a> [ *autorizzazione basata sui ruoli* ](role-based-
 > [!NOTE]
 > Tenere presente che qualsiasi momento uno di questi metodi viene richiamato, il `Roles` classe delega la chiamata al provider configurato. In questo caso, ciò significa che la chiamata viene inviata al `SqlRoleProvider`. Il `SqlRoleProvider` quindi esegue l'operazione di database appropriato in base al metodo richiamato. Ad esempio, il codice `Roles.CreateRole("Administrators")` comporta la `SqlRoleProvider` l'esecuzione il `aspnet_Roles_CreateRole` stored procedure, che inserisce un nuovo record nel `aspnet_Roles` tabella denominata gli amministratori.
 
-
 Nella parte restante di questa esercitazione vengono esaminati tramite il `Roles` della classe `CreateRole`, `GetAllRoles`, e `DeleteRole` metodi per gestire i ruoli del sistema.
 
 ## <a name="step-4-creating-new-roles"></a>Passaggio 4: Creazione di nuovi ruoli
@@ -130,7 +123,6 @@ Ruoli offrono un modo per utenti del gruppo in modo arbitrario e questo raggrupp
 
 > [!NOTE]
 > Se non è presente alcun controllo CreateRoleWizard Web, è il [strumento Amministrazione sito Web ASP.NET](https://msdn.microsoft.com/library/ms228053.aspx), ovvero un'applicazione ASP.NET locale progettata per facilitare la visualizzazione e gestione della configurazione dell'applicazione web. Tuttavia, non sono un grande fan dello strumento di amministrazione sito Web ASP.NET per due motivi. In primo luogo, è un po' anomalo e l'esperienza utente lascia un possono essere notevolmente. In secondo luogo, lo strumento Amministrazione sito Web di ASP.NET è progettato per funzionare solo in locale, vale a dire che è necessario creare il proprio ruolo le pagine web di gestione se si desidera gestire in remoto ruoli in un sito live. Per questi due motivi, in questa esercitazione e i successivi sarà incentrata sugli Creazione ruolo necessario strumenti di gestione in una pagina web anziché basarsi sullo strumento Amministrazione sito Web di ASP.NET.
-
 
 Aprire il `ManageRoles.aspx` nella pagina di `Roles` cartella e aggiungere una casella di testo e un controllo pulsante Web alla pagina. Impostare il controllo TextBox `ID` proprietà `RoleName` e il pulsante `ID` e `Text` le proprietà da `CreateRoleButton` e Create Role, rispettivamente. A questo punto, markup dichiarativo della pagina dovrebbe essere simile al seguente:
 
@@ -145,22 +137,17 @@ Il codice sopra riportato inizia assegnando il nome del ruolo tagliati immesso n
 > [!NOTE]
 > Si potrebbe chiedere cosa succede se l'utente non immette qualsiasi valore nel `RoleName` nella casella di testo. Se il valore passato nel `CreateRole` metodo `Nothing` o una stringa vuota, un'eccezione viene generata. Analogamente, se il nome del ruolo contiene una virgola viene generata un'eccezione. Di conseguenza, la pagina deve contenere i controlli di convalida per assicurare che l'utente immette un ruolo e che non contiene virgole. Lascia come esercizio per il lettore.
 
-
 È possibile creare un ruolo denominato Administrators. Visita il `ManageRoles.aspx` tramite un browser, digitare nella casella di testo negli amministratori (vedere la figura 3), quindi fare clic sul pulsante Crea ruolo.
-
 
 [![Creare un ruolo di amministratori](creating-and-managing-roles-vb/_static/image8.png)](creating-and-managing-roles-vb/_static/image7.png)
 
 **Figura 3**: Creare un ruolo di amministratori ([fare clic per visualizzare l'immagine con dimensioni normali](creating-and-managing-roles-vb/_static/image9.png))
 
-
 Che succede? Si verifica un postback, ma non esiste alcun segnale visivo che il ruolo è stata effettivamente aggiunta al sistema. Microsoft potrebbe aggiornare questa pagina nel passaggio 5 per includere indicazioni visive. Per il momento, tuttavia, è possibile verificare che sia stato creato il ruolo selezionando la `SecurityTutorials.mdf` database e la visualizzazione dei dati il `aspnet_Roles` tabella. Come illustrato nella figura 4, il `aspnet_Roles` tabella contiene un record per i ruoli di amministratori appena aggiunti.
-
 
 [![La tabella aspnet_Roles dispone di una riga per gli amministratori](creating-and-managing-roles-vb/_static/image11.png)](creating-and-managing-roles-vb/_static/image10.png)
 
 **Figura 4**: Il `aspnet_Roles` la tabella contiene una riga per gli amministratori ([fare clic per visualizzare l'immagine con dimensioni normali](creating-and-managing-roles-vb/_static/image12.png))
-
 
 ## <a name="step-5-displaying-the-roles-in-the-system"></a>Passaggio 5: Visualizzare i ruoli del sistema
 
@@ -174,11 +161,9 @@ Il `Roles` della classe `GetAllRoles` metodo restituisce tutti i ruoli del siste
 
 Con questo codice, visitare la pagina tramite un browser. Come illustrato nella figura 5, verrà visualizzata una griglia con una singola colonna con etichetta elemento. La griglia include una riga per il ruolo di amministratore che è stato aggiunto nel passaggio 4.
 
-
 [![GridView Visualizza i ruoli in una singola colonna](creating-and-managing-roles-vb/_static/image14.png)](creating-and-managing-roles-vb/_static/image13.png)
 
 **Figura 5**: GridView Visualizza i ruoli in una sola colonna ([fare clic per visualizzare l'immagine con dimensioni normali](creating-and-managing-roles-vb/_static/image15.png))
-
 
 GridView Visualizza una colonna singola con etichettata elemento perché il controllo GridView `AutoGenerateColumns` viene impostata su True (impostazione predefinita), che fa sì che il controllo GridView creare automaticamente una colonna per ogni proprietà nel relativo `DataSource`. Una matrice ha una singola proprietà che rappresenta gli elementi nella matrice, di conseguenza la singola colonna in GridView.
 
@@ -195,18 +180,15 @@ Indipendentemente dal fatto che l'approccio scelto, dopo aver dovrebbe essere si
 > [!NOTE]
 > Il contenuto della matrice viene visualizzato utilizzando la sintassi di associazione dati `<%# Container.DataItem %>`. Una descrizione dettagliata del motivo per cui viene usata questa sintassi quando la visualizzazione del contenuto di una matrice associato a GridView esula dall'ambito di questa esercitazione. Per altre informazioni al riguardo, consultare [associazione di una matrice scalare a un controllo Web](http://aspnet.4guysfromrolla.com/articles/082504-1.aspx).
 
-
 Attualmente, il `RoleList` GridView è associato solo all'elenco dei ruoli quando viene prima visitata la pagina. È necessario aggiornare la griglia ogni volta che viene aggiunto un nuovo ruolo. A tale scopo, aggiornare il `CreateRoleButton` del pulsante `Click` gestore dell'evento in modo che venga chiamato il `DisplayRolesInGrid` metodo se viene creato un nuovo ruolo.
 
 [!code-vb[Main](creating-and-managing-roles-vb/samples/sample11.vb)]
 
 A questo punto quando l'utente aggiunge un nuovo ruolo di `RoleList` GridView viene illustrato il ruolo appena aggiunti durante il postback, che fornisce feedback visivo che è stato creato il ruolo. Per illustrare questo scenario, visitare il `ManageRoles.aspx` pagina tramite un browser e aggiungere un ruolo denominato supervisori. Facendo clic sul pulsante Create Role, negativi a un postback e la griglia verrà aggiornato per includere gli amministratori, nonché il nuovo ruolo, supervisori.
 
-
 [![Il ruolo supervisori è stato aggiunto](creating-and-managing-roles-vb/_static/image17.png)](creating-and-managing-roles-vb/_static/image16.png)
 
 **Figura 6**: Il ruolo supervisori è stato aggiunto ([fare clic per visualizzare l'immagine con dimensioni normali](creating-and-managing-roles-vb/_static/image18.png))
-
 
 ## <a name="step-6-deleting-roles"></a>Passaggio 6: Eliminazione di ruoli
 
@@ -219,11 +201,9 @@ Il `DeleteRole` metodo genererà anche un'eccezione se *roleName* viene `Nothing
 
 È possibile aumentare il controllo GridView in `ManageRoles.aspx` da includere un'operazione di eliminazione pulsante che, quando si fa clic, consente di eliminare il ruolo selezionato. Iniziare aggiungendo un pulsante di eliminazione a GridView passando alla finestra di dialogo campi e aggiunta di un pulsante di eliminazione, che si trova sotto l'opzione CommandField. Rendere l'eliminazione colonna all'estrema sinistra pulsante e impostarne il `DeleteText` proprietà da eliminare ruoli.
 
-
 [![Aggiungere un pulsante di eliminazione a RoleList GridView](creating-and-managing-roles-vb/_static/image20.png)](creating-and-managing-roles-vb/_static/image19.png)
 
 **Figura 7**: Aggiungere un pulsante Elimina per il `RoleList` GridView ([fare clic per visualizzare l'immagine con dimensioni normali](creating-and-managing-roles-vb/_static/image21.png))
-
 
 Dopo aver aggiunto il pulsante di eliminazione, markup dichiarativo di GridView dovrebbe essere simile al seguente:
 
@@ -237,7 +217,6 @@ Il codice inizia facendo riferimento a livello di codice il `RoleNameLabel` cont
 
 > [!NOTE]
 > Il pulsante Elimina ruolo non richiede una sorta di conferma da parte dell'utente prima di eliminare il ruolo. Uno dei modi più semplici per confermare un'azione è tramite una finestra di dialogo di conferma dal lato client. Per altre informazioni su questa tecnica, vedere [aggiunta di conferma dal lato Client quando Elimina](https://asp.net/learn/data-access/tutorial-42-vb.aspx).
-
 
 ## <a name="summary"></a>Riepilogo
 

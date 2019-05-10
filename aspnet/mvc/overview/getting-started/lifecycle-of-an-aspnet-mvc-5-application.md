@@ -8,12 +8,12 @@ ms.date: 02/28/2014
 ms.assetid: 9c1e3a75-b644-4480-8326-11300b1ec4b3
 msc.legacyurl: /mvc/overview/getting-started/lifecycle-of-an-aspnet-mvc-5-application
 msc.type: authoredcontent
-ms.openlocfilehash: 952d13fec206bdb8d398cead70d10335731f583d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: f4a9b3fb61552b070db11fba617b5627fcd71cd5
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59402219"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65124089"
 ---
 # <a name="lifecycle-of-an-aspnet-mvc-5-application"></a>Ciclo di vita di un'applicazione ASP.NET MVC 5
 
@@ -31,7 +31,6 @@ Qui è possibile scaricare un documento PDF grafici il ciclo di vita di ogni app
 - Selezione host e lo scopo di tutti i metodi sottoponibili a override nel [Controller](https://msdn.microsoft.com/library/system.web.mvc.controller.aspx) oggetto nella pipeline di elaborazione della richiesta. È possibile o non abbia la necessità di eseguire l'override di qualsiasi metodo di uno, ma è importante comprendere il loro ruolo nel ciclo di vita dell'applicazione in modo che sia possibile scrivere codice nella fase del ciclo di vita appropriato per ottenere l'effetto desiderato.
 - Diagrammi-up entusiasmante che mostra come ognuno dei tipi di filtro (autenticazione, autorizzazione, azioni e risultati) viene richiamata.
 - Collega a un articolo utile o blog da ogni punto di interesse nella visualizzazione dettagli.
-
 
 ## <a name="next-steps"></a>Passaggi successivi
 

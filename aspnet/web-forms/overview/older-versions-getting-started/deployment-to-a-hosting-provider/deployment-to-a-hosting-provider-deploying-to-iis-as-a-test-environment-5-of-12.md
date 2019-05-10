@@ -8,12 +8,12 @@ ms.date: 11/17/2011
 ms.assetid: 493b2a66-816c-485c-8315-952ed1085ccc
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-to-iis-as-a-test-environment-5-of-12
 msc.type: authoredcontent
-ms.openlocfilehash: 191d194d4aaad15ac6c5187105d49a03a2f06bf2
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 624d99ccbb0da1281b8c9cd8503507f22742e7a7
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59413347"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132317"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-deploying-to-iis-as-a-test-environment---5-of-12"></a>Distribuzione di un'applicazione Web ASP.NET con SQL Server Compact tramite Visual Studio o Visual Web Developer: Distribuzione in IIS come ambiente di Test - 5 di 12
 
@@ -24,7 +24,6 @@ da [Tom Dykstra](https://github.com/tdykstra)
 > Questa serie di esercitazioni illustra come distribuire un ASP.NET (pubblicazione) progetto di applicazione web che include un database di SQL Server Compact tramite Visual Studio 2012 RC o Visual Studio Express 2012 RC per Web. Se si installa l'aggiornamento della pubblicazione sul Web, è anche possibile usare Visual Studio 2010. Per un'introduzione alla serie, vedere [la prima esercitazione della serie](deployment-to-a-hosting-provider-introduction-1-of-12.md).
 > 
 > Per un'esercitazione che illustra le funzionalità di distribuzione introdotte dopo la versione di Visual Studio 2012 RC, illustra come distribuire le edizioni di SQL Server diverse da SQL Server Compact e Mostra come distribuire in App Web di servizio App di Azure, vedere [distribuzione Web ASP.NET con Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
-
 
 ## <a name="overview"></a>Panoramica
 
@@ -56,7 +55,6 @@ L'applicazione verrà ora eseguita in attendibilità media in IIS anche nel comp
 
 > [!NOTE]
 > Se si usa migrazioni di Entity Framework Code First, assicurarsi di avere la versione 5.0 o versione successiva. In Entity Framework versione 4.3, migrazioni richiede attendibilità totale per aggiornare lo schema del database.
-
 
 ## <a name="installing-iis-and-web-deploy"></a>Distribuzione di installazione Web e IIS
 

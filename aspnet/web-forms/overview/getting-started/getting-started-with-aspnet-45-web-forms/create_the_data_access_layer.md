@@ -8,12 +8,12 @@ ms.date: 09/08/2014
 ms.assetid: 0bbf7a6e-d7eb-4091-91e4-fff892777f32
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/create_the_data_access_layer
 msc.type: authoredcontent
-ms.openlocfilehash: bc91eba17938de15f03ecc1e745aac57c7eac7a1
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 61a9dae22efed9cb7e8957a8c131396cbdeea3c9
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59419496"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131349"
 ---
 # <a name="create-the-data-access-layer"></a>Creare il livello di accesso ai dati
 
@@ -22,7 +22,6 @@ da [Erik Reitan](https://github.com/Erikre)
 [Scaricare progetto di esempio Wingtip Toys (c#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) o [Scarica l'E-book (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
 
 > Questa serie di esercitazioni insegnerà le nozioni di base della creazione di un'applicazione Web Form ASP.NET con ASP.NET 4.5 e Microsoft Visual Studio Express 2013 per Web. Un Visual Studio 2013 [progetto con codice sorgente c#](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) complemento a questa serie di esercitazioni è disponibile.
-
 
 Questa esercitazione descrive come creare, accedere ed esaminare i dati da un database tramite Entity Framework Code First e Web Form ASP.NET. Questa esercitazione si basa sull'esercitazione precedente "Creare il progetto" e fa parte della serie di esercitazioni di Wingtip giocattoli Store. Dopo aver completato questa esercitazione, verrà generata un gruppo di classi di accesso ai dati inclusi tra i *modelli* cartella del progetto.
 
@@ -119,7 +118,6 @@ Come si può notare nel codice precedente, quando il database viene creato e ini
 > 
 > Se si desidera che il database viene ricreato ogni volta che è stata eseguita l'applicazione, è possibile usare la `DropCreateDatabaseAlways` classe anziché il `DropCreateDatabaseIfModelChanges` classe. Tuttavia per questa serie di esercitazioni usano il `DropCreateDatabaseIfModelChanges` classe.
 
-
 A questo punto in questa esercitazione, si otterrà un *modelli* cartella con quattro nuove classi e classi di un valore predefinito:
 
 ![Creare il livello di accesso ai dati - cartella modelli](create_the_data_access_layer/_static/image3.png)
@@ -136,7 +134,6 @@ Per inizializzare i modelli di dati all'avvio dell'applicazione, si aggiornerà 
 > 
 > In Esplora soluzioni, è possibile selezionare i *Global. asax* file o la *Global.asax.cs* file per modificare il *Global.asax.cs* file.
 
-
 1. Aggiungere il seguente codice evidenziato in giallo per il `Application_Start` metodo nella *Global.asax.cs* file.   
 
     [!code-csharp[Main](create_the_data_access_layer/samples/sample5.cs?highlight=9-10,22-23)]
@@ -144,7 +141,6 @@ Per inizializzare i modelli di dati all'avvio dell'applicazione, si aggiornerà 
 > [!NOTE] 
 > 
 > Il browser deve supportare HTML5 per visualizzare il codice evidenziato in giallo quando si visualizza questa serie di esercitazioni in un browser.
-
 
 Come illustrato nel codice precedente, all'avvio dell'applicazione, l'applicazione specifica si accede l'inizializzatore che verrà eseguito durante la prima volta che i dati. I due spazi dei nomi aggiuntivi sono necessari per l'accesso di `Database` oggetto e il `ProductDatabaseInitializer` oggetto.
 

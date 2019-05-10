@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.assetid: 7ba88418-5d0a-437d-b6dc-7c3816d4ec07
 msc.legacyurl: /mvc/overview/getting-started/getting-started-with-ef-using-mvc/updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: d90a327da40ffd6d7956c5fbe019cf9de30c706d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 4d5f6447fdccefdcdf9497a9e94f23243302a0e1
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59407510"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65120901"
 ---
 # <a name="tutorial-update-related-data-with-ef-in-an-aspnet-mvc-app"></a>Esercitazione: Aggiornare i dati correlati in un'app ASP.NET MVC con Entity Framework
 
@@ -126,7 +126,6 @@ Sostituire il `HttpPost` `Edit` metodo con il codice seguente. gestione degli ag
 
 Il riferimento al `RetryLimitExceededException` richiede un `using` istruzione; per aggiungerlo: posizionare il mouse sopra `RetryLimitExceededException`. Viene visualizzato il messaggio seguente: ![ Ripetere il messaggio di eccezione](updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application/_static/image13.png)
 
-
 Selezionare **Mostra possibili correzioni**, quindi **usando System.Data.Entity.Infrastructure**
 
 ![Risolvere eccezioni tentativi](updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application/_static/image14.png)
@@ -161,7 +160,7 @@ Per fornire i dati alla visualizzazione dell'elenco di caselle di controllo, si 
 
 [!code-csharp[Main](updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample15.cs)]
 
-Nelle *InstructorController.cs*, sostituire il `HttpGet` `Edit` metodo con il codice seguente. Le modifiche vengono evidenziate.
+Nelle *InstructorController.cs*, sostituire il `HttpGet` `Edit` metodo con il codice seguente. Le modifiche sono evidenziate.
 
 [!code-csharp[Main](updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample16.cs?highlight=9,12,20-35)]
 
@@ -169,7 +168,7 @@ Il codice aggiunge il caricamento eager per la proprietà di navigazione `Course
 
 Il codice nel `PopulateAssignedCourseData` metodo legge tutti `Course` classe modello le entità per caricare un elenco di corsi tramite la vista. Per ogni corso, il codice verifica se è presente nella proprietà di navigazione `Courses` dell'insegnante. Per creare un ricerca efficiente quando si verifica se un corso viene assegnato all'insegnante, i corsi assegnati all'insegnante vengono inseriti in una [HashSet](https://msdn.microsoft.com/library/bb359438.aspx) raccolta. Il `Assigned` è impostata su `true` per i corsi l'insegnante è assegnato. La visualizzazione usa questa proprietà per determinare quali caselle di controllo devono essere visualizzate come selezionate. Infine, tale elenco viene passato alla visualizzazione in un `ViewBag` proprietà.
 
-Aggiungere quindi il codice che viene eseguito quando l'utente fa clic su **Save** (Salva). Sostituire il `EditPost` metodo con il codice seguente, che chiama un nuovo metodo che aggiorni le `Courses` proprietà di navigazione del `Instructor` entità. Le modifiche vengono evidenziate.
+Aggiungere quindi il codice che viene eseguito quando l'utente fa clic su **Save** (Salva). Sostituire il `EditPost` metodo con il codice seguente, che chiama un nuovo metodo che aggiorni le `Courses` proprietà di navigazione del `Instructor` entità. Le modifiche sono evidenziate.
 
 [!code-csharp[Main](updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample17.cs?highlight=3,11,25,37,40-68)]
 
@@ -234,7 +233,6 @@ Questo codice non gestisce lo scenario di un insegnante assegnato come amministr
 ## <a name="add-office-location-and-courses-to-the-create-page"></a>Aggiungere posizione dell'ufficio e corsi alla pagina Create (Crea)
 
 Nelle *InstructorController.cs*, eliminare il `HttpGet` e `HttpPost` `Create` metodi e quindi aggiungere il codice seguente al loro posto:
-
 
 [!code-csharp[Main](updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample25.cs)]
 

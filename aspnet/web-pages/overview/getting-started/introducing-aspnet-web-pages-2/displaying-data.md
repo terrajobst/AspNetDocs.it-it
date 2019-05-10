@@ -8,12 +8,12 @@ ms.date: 05/28/2015
 ms.assetid: b3a006a0-3ea2-4d45-b833-e20e3a3c0a1a
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/displaying-data
 msc.type: authoredcontent
-ms.openlocfilehash: 5415913626eb063a4cb1013ba03857c130487f42
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 9e665ca8dd064c23a8b8bd3593014969d0c3da48
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59412177"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65128506"
 ---
 # <a name="introducing-aspnet-web-pages---displaying-data"></a>Introduzione a pagine Web ASP.NET - visualizzazione di dati
 
@@ -34,7 +34,6 @@ da [Tom FitzMacken](https://github.com/tfitzmac)
 > 
 > - Strumenti di database di WebMatrix.
 > - `WebGrid` metodo di supporto.
-
 
 ## <a name="what-youll-build"></a>Scopo dell'esercitazione
 
@@ -96,7 +95,6 @@ Premere TAB per passare il **tipo di dati** elenco e scegliere **int**. Questo v
 
 > [!NOTE]
 > Non lo chiamiamo noi eventuali informazioni sono disponibili qui (molto), ma è possibile usare i movimenti della tastiera di Windows standard per spostarsi all'interno di questa griglia. Ad esempio, è possibile spostarsi con tab tra i campi, è semplicemente possibile iniziare a digitare per poter selezionare un elemento in un elenco e così via.
-
 
 Scheda successiva di **Default Value** casella (vale a dire, lasciare vuoto). Premere TAB per passare il **chiave primaria è** casella di controllo e selezionarla. Questa opzione indica il database che il *ID* colonna conterrà i dati che identifica singole righe. (Ovvero, ogni riga avrà un valore univoco nella colonna ID che è possibile usare per trovare quella riga.)
 
@@ -177,7 +175,6 @@ Per eseguire la griglia, è possibile scrivere poche righe di codice. Queste poc
 > [!NOTE]
 > Effettivamente disponibili molte opzioni per la visualizzazione dei dati in una pagina. il `WebGrid` helper è solo uno. Abbiamo scelto, per questa esercitazione perché è il modo più semplice per visualizzare i dati e perché è abbastanza flessibile. Nel set successivo dell'esercitazione, verrà illustrato come usare un altro modo "manuale" per lavorare con i dati nella pagina, che offre un controllo più diretto su come visualizzare i dati.
 
-
 Nel riquadro sinistro di WebMatrix, fare clic sui **file** dell'area di lavoro.
 
 Il nuovo database creato è nel *App\_dati* cartella. Se la cartella non esiste già, WebMatrix creato per il nuovo database. (La cartella potrebbe essere che fosse presente se è stato installato in precedenza gli helper.)
@@ -241,7 +238,6 @@ In questa fase, il database è stato aperto, ottenuti i dati da e avere preparat
 > Per alcune di queste operazioni (ad esempio, inserimento ed eliminazione di record), il processo che sta richiedendo l'operazione deve disporre delle autorizzazioni appropriate nel database. Ecco perché per i database di produzione spesso è necessario specificare un nome utente e password quando ci si connette al database.
 > 
 > Sono disponibili decine di comandi SQL, ma seguono un modello, ad esempio i comandi riportato di seguito. È possibile usare i comandi SQL per creare tabelle di database, contare il numero di record in una tabella, calcolo dei prezzi ed eseguire molte più operazioni.
-
 
 ### <a name="adding-markup-to-display-the-data"></a>Aggiunta di tag per visualizzare i dati
 

@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: e7c447f9-eddf-4bbe-9f18-3326d965d093
 msc.legacyurl: /web-forms/overview/deployment/configuring-server-environments-for-web-deployment/configuring-a-database-server-for-web-deploy-publishing
 msc.type: authoredcontent
-ms.openlocfilehash: 2cd99e23904276e89cf043a2332ad07c0f01716d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ade3c1ba1c470092f512436f39b8831458408c2c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59415349"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131568"
 ---
 # <a name="configuring-a-database-server-for-web-deploy-publishing"></a>Configurazione di un server di database per la pubblicazione con Distribuzione Web
 
@@ -24,7 +24,6 @@ da [Jason Lee](https://github.com/jrjlee)
 > Questo argomento descrive come configurare un server di database di SQL Server 2008 R2 per supportare la pubblicazione e distribuzione web.
 > 
 > Le attività descritte in questo argomento sono comuni a tutti gli scenari di distribuzione&#x2014;non importa se i server web configurati per usare il servizio agente remoto di strumento di distribuzione Web IIS (distribuzione Web), il gestore di distribuzione Web o distribuzione non in linea con il applicazione è in esecuzione in un singolo server web o una farm di server. La modalità di distribuzione del database può cambiare in base ai requisiti di sicurezza e altre considerazioni. Ad esempio, è possibile distribuire il database con o senza dati di esempio e si potrebbe distribuire mapping dei ruoli utente o configurare manualmente dopo la distribuzione. Tuttavia, la modalità di configurazione il server di database rimane invariato.
-
 
 Non è necessario installare altri prodotti o gli strumenti per la configurazione di un server di database per supportare la distribuzione di web. Supponendo che il server di database e server web eseguiti in computer diversi, è sufficiente:
 
@@ -46,7 +45,6 @@ Istanza di SQL Server è sufficiente includere il **servizi motore di Database**
 
 > [!NOTE]
 > Per ulteriori informazioni sull'aggiunta di computer a un dominio, vedere [aggiunta di computer al dominio ed effettuare l'accesso](https://technet.microsoft.com/library/cc725618(v=WS.10).aspx). Per altre informazioni su come configurare gli indirizzi IP statici, vedere [configurare un indirizzo IP statico](https://technet.microsoft.com/library/cc754203(v=ws.10).aspx). Per altre informazioni sull'installazione di SQL Server, vedere [installazione di SQL Server 2008 R2](https://technet.microsoft.com/library/bb500395.aspx).
-
 
 ## <a name="enable-remote-access-to-sql-server"></a>Abilitare l'accesso remoto a SQL Server
 
@@ -96,11 +94,9 @@ Supponendo che si usa un'istanza predefinita di SQL Server, è necessario config
 | --- | --- | --- | --- |
 | Connessioni in entrata | Qualsiasi | 1433 | TCP |
 | In uscita | 1433 | Qualsiasi | TCP |
-  
 
 > [!NOTE]
 > Tecnicamente, un computer client userà una porta TCP assegnata in modo casuale compreso tra 1024 e 5000 per comunicare con SQL Server e si possono limitare le regole del firewall di conseguenza. Per altre informazioni sulle porte di SQL Server e i firewall, vedere [numeri di porta TCP/IP necessari per comunicare con SQL su un firewall](https://go.microsoft.com/?linkid=9805125) e [come: Configurare un Server per l'ascolto su una porta TCP specifica (Gestione configurazione SQL Server)](https://msdn.microsoft.com/library/ms177440.aspx).
-
 
 Nella maggior parte degli ambienti Windows Server, probabilmente è possibile configurare Windows Firewall nel server di database. Per impostazione predefinita, Windows Firewall consente tutto il traffico in uscita, a meno che una regola impedisce in modo specifico. Per consentire al server web di raggiungere il database, è necessario configurare una regola in ingresso che consenta il traffico TCP per il numero di porta utilizzato dall'istanza di SQL Server. Se si usa un'istanza predefinita di SQL Server, è possibile utilizzare la procedura successiva per configurare questa regola.
 
@@ -136,7 +132,6 @@ Se l'applicazione web è in esecuzione in una server farm, anziché un singolo s
 
 > [!NOTE]
 > Per altre informazioni su identità del pool di applicazioni e accesso alle risorse di rete, vedere [Application Pool Identities](https://go.microsoft.com/?linkid=9805123).
-
 
 È possibile eseguire queste attività in vari modi. Per creare l'account di accesso, è possibile:
 
@@ -182,14 +177,12 @@ Sebbene manualmente il mapping di ruoli predefiniti del database è spesso più 
 > [!NOTE]
 > Per altre informazioni sui progetti server e progetti di database, vedere [progetti di Visual Studio 2010 SQL Server Database](https://msdn.microsoft.com/library/ff678491.aspx).
 
-
 ## <a name="configure-permissions-for-the-deployment-account"></a>Configurare le autorizzazioni per l'Account di distribuzione
 
 Se l'account che si userà per eseguire la distribuzione non è un amministratore di SQL Server, è necessario anche creare un account di accesso per questo account. Per creare il database, l'account deve essere un membro del **dbcreator** ruolo del server o avere autorizzazioni equivalenti.
 
 > [!NOTE]
 > Quando si usa distribuzione Web o VSDBCMD per distribuire un database, è possibile usare le credenziali di Windows o le credenziali di SQL Server (se l'istanza di SQL Server è configurata per supportare l'autenticazione modalità mista). La procedura seguente si presuppone che si desidera utilizzare le credenziali di Windows, ma non c'è nulla che vieti di specificare un nome utente di SQL Server e una password nella stringa di connessione quando si configura la distribuzione.
-
 
 **Per impostare le autorizzazioni per l'account di distribuzione**
 

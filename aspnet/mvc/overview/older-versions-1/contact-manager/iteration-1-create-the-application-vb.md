@@ -8,12 +8,12 @@ ms.date: 02/20/2009
 ms.assetid: 5b033582-1646-42c2-b20d-7edc8814e970
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-1-create-the-application-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 9228fd7bb1a816dc1e7e068c47ee603b91c6c218
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: c6bf4712fb734cf14420fd62c9eaf190a2c28168
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59389778"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123990"
 ---
 # <a name="iteration-1--create-the-application-vb"></a>Iterazione #1-creare l'applicazione (VB)
 
@@ -22,7 +22,6 @@ by [Microsoft](https://github.com/microsoft)
 [Scaricare il codice](iteration-1-create-the-application-vb/_static/contactmanager_1_vb1.zip)
 
 > Nella prima iterazione, verranno create Contact Manager nel modo più semplice possibile. Viene aggiunto il supporto per le operazioni di base dei database: Creare, leggere, aggiornare ed eliminare (CRUD).
-
 
 ## <a name="building-a-contact-management-aspnet-mvc-application-vb"></a>Creazione di un'applicazione di gestione dei contatti ASP.NET MVC (VB)
 
@@ -70,7 +69,6 @@ Nelle applicazioni ASP.NET MVC, è necessario disporre di Visual Studio 2008 o V
 > 
 > Per le applicazioni ASP.NET MVC con Visual Web Developer, è necessario disporre di Visual Web Developer Service Pack 1 installato. Senza Service Pack 1, è possibile creare progetti di applicazione Web.
 
-
 Framework di MVC ASP.NET. È possibile scaricare il framework ASP.NET MVC dall'indirizzo seguente:
 
 [https://www.asp.net/mvc](../../../index.md)
@@ -87,14 +85,11 @@ In alternativa all'esecuzione di ognuno di questi download uno alla volta, è po
 
 Progetto di applicazione Web ASP.NET MVC. Avviare Visual Studio e selezionare l'opzione di menu **File, nuovo progetto**. Il **nuovo progetto** (vedere la figura 1) viene visualizzata la finestra. Selezionare il **Web** tipo di progetto e il **applicazione Web ASP.NET MVC** modello. Denominare il nuovo progetto *ContactManager* e fare clic sul pulsante OK.
 
-
 Assicurarsi di aver selezionato nell'elenco a discesa nella parte superiore di .NET Framework 3.5 a destra il **nuovo progetto** finestra di dialogo. In caso contrario, non verrà visualizzato il modello di applicazione Web ASP.NET MVC.
-
 
 [![La finestra di dialogo Nuovo progetto](iteration-1-create-the-application-vb/_static/image1.jpg)](iteration-1-create-the-application-vb/_static/image1.png)
 
 **Figura 01**: La finestra di dialogo Nuovo progetto ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-1-create-the-application-vb/_static/image2.png))
-
 
 Applicazione ASP.NET MVC, il **Crea progetto Unit Test** viene visualizzata la finestra. È possibile utilizzare questa finestra di dialogo per indicare che si desidera creare e aggiungere un progetto unit test alla soluzione quando si crea l'applicazione ASP.NET MVC. Anche se non è da compilare unit test in questa iterazione, è necessario selezionare l'opzione **Sì, è possibile creare un progetto di unit test** perché si prevede di aggiungere unit test in un'iterazione successiva. Aggiunta di un progetto di Test quando si crea un nuovo progetto ASP.NET MVC è molto più semplice rispetto all'aggiunta di un progetto di Test dopo aver creato il progetto ASP.NET MVC.
 
@@ -102,19 +97,15 @@ Applicazione ASP.NET MVC, il **Crea progetto Unit Test** viene visualizzata la f
 > 
 > Poiché Visual Web Developer non supporta progetti di Test, non si ottiene la finestra di dialogo Crea progetto Unit Test quando si utilizza Visual Web Developer.
 
-
 [![La finestra di dialogo Nuovo progetto](iteration-1-create-the-application-vb/_static/image2.jpg)](iteration-1-create-the-application-vb/_static/image3.png)
 
 **Figura 02**: La finestra di dialogo Crea progetto Unit Test ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-1-create-the-application-vb/_static/image4.png))
 
-
 Applicazione MVC ASP.NET viene visualizzato nella finestra Esplora soluzioni di Visual Studio (vedere la figura 3). Se non si t, vedere la finestra Esplora soluzioni, quindi è possibile aprire questa finestra selezionando l'opzione di menu **Esplora soluzioni, visualizzazione**. Si noti che la soluzione contiene due progetti: il progetto ASP.NET MVC e il progetto di Test. Il progetto ASP.NET MVC viene denominato ContactManager e il progetto di Test è denominato ContactManager.Tests.
-
 
 [![La finestra di dialogo Nuovo progetto](iteration-1-create-the-application-vb/_static/image3.jpg)](iteration-1-create-the-application-vb/_static/image5.png)
 
 **Figura 03**: Finestra Esplora soluzioni ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-1-create-the-application-vb/_static/image6.png))
-
 
 ## <a name="deleting-the-project-sample-files"></a>Eliminare i file di esempio di progetto
 
@@ -140,11 +131,9 @@ Il framework di MVC ASP.NET con qualsiasi database moderni, inclusi i database d
 
 Creare un nuovo database facendo clic con l'App\_cartella di dati nella finestra Esplora soluzioni e selezionando l'opzione di menu **Aggiungi, elemento nuovo**. Nel **Aggiungi nuovo elemento** finestra di dialogo, seleziona la **Data** categoria e il **Database di SQL Server** modello (vedere la figura 4). Denominare il nuovo database ContactManagerDB.mdf e fare clic sul pulsante OK.
 
-
 [![La finestra di dialogo Nuovo progetto](iteration-1-create-the-application-vb/_static/image4.jpg)](iteration-1-create-the-application-vb/_static/image7.png)
 
 **Figura 04**: Crea un nuovo database di Microsoft SQL Server Express ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-1-create-the-application-vb/_static/image8.png))
-
 
 Dopo aver creato il nuovo database, il database viene visualizzato nell'App\_cartella di dati nella finestra Esplora soluzioni. Fare doppio clic sul file ContactManager.mdf per aprire la finestra di Esplora Server e connettersi al database.
 
@@ -152,19 +141,15 @@ Dopo aver creato il nuovo database, il database viene visualizzato nell'App\_car
 > 
 > Nel caso di Microsoft Visual Web Developer la finestra di Esplora Server è denominata Esplora Database.
 
-
 È possibile usare la finestra Esplora Server per creare nuovi oggetti di database quali tabelle del database, viste, trigger e stored procedure. Fare doppio clic sulla cartella tabelle e selezionare l'opzione di menu **Aggiungi nuova tabella**. La progettazione di tabelle di Database viene visualizzata (vedere la figura 5).
-
 
 [![La finestra di dialogo Nuovo progetto](iteration-1-create-the-application-vb/_static/image5.jpg)](iteration-1-create-the-application-vb/_static/image9.png)
 
 **Figura 05**: La progettazione di tabelle di Database ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-1-create-the-application-vb/_static/image10.png))
 
-
 È necessario creare una tabella che contiene le colonne seguenti:
 
 <a id="0.2_table01"></a>
-
 
 | **Nome della colonna** | **Tipo di dati** | **Consenti valori null** |
 | --- | --- | --- |
@@ -173,7 +158,6 @@ Dopo aver creato il nuovo database, il database viene visualizzato nell'App\_car
 | LastName | nvarchar(50) | False |
 | Phone | nvarchar(50) | False |
 | Email | nvarchar(255) | False |
-
 
 La prima colonna, la colonna Id, è speciale. È necessario contrassegnare la colonna Id come una colonna Identity e una colonna chiave primaria. Si indica che una colonna è una colonna Identity espandendo le proprietà delle colonne (ricerca nella parte inferiore della figura 6) e lo scorrimento fino alla proprietà specifica Identity. Impostare il **(identità)** il valore della proprietà **Yes**.
 
@@ -193,7 +177,6 @@ In questa esercitazione verrà usato il Framework di entità di Microsoft per ge
 > 
 > Il framework ASP.NET MVC non è associato a Microsoft Entity Framework in alcun modo. È possibile usare ASP.NET MVC con tecnologie di accesso ai database alternativi NHibernate, LINQ to SQL o ADO.NET incluse.
 
-
 Seguire questi passaggi per creare le classi di modello di dati:
 
 1. La cartella Models nella finestra Esplora soluzioni e scegliere **Aggiungi, elemento nuovo**. Il **Aggiungi nuovo elemento** viene visualizzata la finestra (vedere la figura 6).
@@ -202,36 +185,29 @@ Seguire questi passaggi per creare le classi di modello di dati:
 4. Nel **Seleziona connessione dati** passaggio, selezionare il database ContactManagerDB.mdf e immettere il nome *ContactManagerDBEntities* per le impostazioni di connessione Entity (vedere la figura 8).
 5. Nel **Scegli oggetti di Database** passaggio, selezionare la casella di controllo tabelle (vedere la figura 9). Il modello di dati includerà tutte le tabelle contenute nel database (vi è solo una, la tabella Contacts). Immettere lo spazio dei nomi *modelli*. Fare clic sul pulsante Fine per completare la procedura guidata.
 
-
 [![La finestra di dialogo Nuovo progetto](iteration-1-create-the-application-vb/_static/image6.jpg)](iteration-1-create-the-application-vb/_static/image11.png)
 
 **Figura 06**: La finestra di dialogo Aggiungi nuovo elemento ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-1-create-the-application-vb/_static/image12.png))
-
 
 [![La finestra di dialogo Nuovo progetto](iteration-1-create-the-application-vb/_static/image7.jpg)](iteration-1-create-the-application-vb/_static/image13.png)
 
 **Figura 07**: Scegli contenuto Model ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-1-create-the-application-vb/_static/image14.png))
 
-
 [![La finestra di dialogo Nuovo progetto](iteration-1-create-the-application-vb/_static/image8.jpg)](iteration-1-create-the-application-vb/_static/image15.png)
 
 **Figura 08**: Scegliere la connessione dati ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-1-create-the-application-vb/_static/image16.png))
-
 
 [![La finestra di dialogo Nuovo progetto](iteration-1-create-the-application-vb/_static/image9.jpg)](iteration-1-create-the-application-vb/_static/image17.png)
 
 **Figura 09**: Scegli oggetti di Database ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-1-create-the-application-vb/_static/image18.png))
 
-
 Dopo aver completato la procedura guidata Entity Data Model, verrà visualizzato Entity Data Model Designer. La finestra di progettazione consente di visualizzare una classe che corrisponde a ogni tabella da modellare. Dovrebbe essere una classe denominata Contacts.
 
 La procedura guidata Entity Data Model genera i nomi delle classi in base ai nomi delle tabelle di database. È quasi sempre necessario modificare il nome della classe generata dalla procedura guidata. La classe Contacts nella finestra di progettazione e scegliere l'opzione di menu **Rinomina**. Modificare il nome della classe dai contatti (plurali) al contatto (singolo). Dopo aver modificato il nome della classe, la classe risulterà a quello della figura 10.
 
-
 [![La finestra di dialogo Nuovo progetto](iteration-1-create-the-application-vb/_static/image10.jpg)](iteration-1-create-the-application-vb/_static/image19.png)
 
 **Figura 10**: Alla classe Contact ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-1-create-the-application-vb/_static/image20.png))
-
 
 A questo punto, è stata creata il nostro modello di database. È possibile usare la classe di contatto per rappresentare un record di contatto specifico nel nostro database.
 
@@ -241,11 +217,9 @@ Il passaggio successivo consiste nel creare il controller Home. Il controller Ho
 
 Creare la classe controller Home page facendo clic sulla cartella controller in Esplora soluzioni e selezionando l'opzione di menu **Controller, Aggiungi** (vedere la figura 11). Si noti che la casella di controllo etichettato **aggiungere i metodi di azione per gli scenari Create, Update e dettagli**. Assicurarsi che sia selezionata questa casella di controllo prima di scegliere la **Add** pulsante.
 
-
 [![La finestra di dialogo Nuovo progetto](iteration-1-create-the-application-vb/_static/image11.jpg)](iteration-1-create-the-application-vb/_static/image21.png)
 
 **Figura 11**: Aggiunta del controller Home ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-1-create-the-application-vb/_static/image22.png))
-
 
 Quando si crea il controller Home, si ottiene la classe nel listato 1.
 
@@ -271,19 +245,15 @@ Ora che abbiamo creato il controller di indice, è quindi necessario creare la v
 
 Si crea la visualizzazione dell'indice facendo clic sul metodo Index () e selezionando l'opzione di menu **Aggiungi visualizzazione** (vedere la figura 12). Selezionando questa opzione di menu si apre la **Aggiungi visualizzazione** finestra di dialogo (vedere la figura 13).
 
-
 [![La finestra di dialogo Nuovo progetto](iteration-1-create-the-application-vb/_static/image12.jpg)](iteration-1-create-the-application-vb/_static/image23.png)
 
 **Figura 12**: Aggiunta della visualizzazione Index ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-1-create-the-application-vb/_static/image24.png))
 
-
 Nel **Aggiungi visualizzazione** finestra di dialogo, selezionare la casella di controllo etichettato **creare una visualizzazione fortemente tipizzata**. Selezionare la classe di dati di visualizzazione ContactManager.Contact e la Visualizza elenco del contenuto. Selezionando queste opzioni genera una vista che visualizza un elenco di record di contatto.
-
 
 [![La finestra di dialogo Nuovo progetto](iteration-1-create-the-application-vb/_static/image13.jpg)](iteration-1-create-the-application-vb/_static/image25.png)
 
 **Figura 13**: La finestra di dialogo Aggiungi visualizzazione ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-1-create-the-application-vb/_static/image26.png))
-
 
 Quando si sceglie la **Add** pulsante, la visualizzazione dell'indice nel listato 3 viene generato. Si noti che il &lt;% @ % pagina&gt; direttiva che viene visualizzato nella parte superiore del file. La visualizzazione dell'indice eredita il ViewPage&lt;IEnumerable&lt;ContactManager.Models.Contact&gt; &gt; classe. In altre parole, la classe del modello nella visualizzazione rappresenta un elenco di entità Contact.
 
@@ -299,19 +269,15 @@ Il corpo della visualizzazione Index contiene un ciclo foreach che scorre ogni c
 
 Dopo aver modificato la visualizzazione dell'indice, è possibile eseguire l'applicazione Contact Manager. Selezionare l'opzione di menu Debug, Avvia debug o è sufficiente premere F5. La prima volta che si esegue l'applicazione, otterrai la finestra di dialogo nella figura 14. Selezionare l'opzione **modificare il file Web. config per abilitare il debug** e fare clic sul pulsante OK.
 
-
 [![La finestra di dialogo Nuovo progetto](iteration-1-create-the-application-vb/_static/image14.jpg)](iteration-1-create-the-application-vb/_static/image27.png)
 
 **Figura 14**: Abilitazione del debug ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-1-create-the-application-vb/_static/image28.png))
 
-
 La visualizzazione dell'indice viene restituita per impostazione predefinita. In questa vista sono elencati tutti i dati dalla tabella di database dei contatti (vedere Figura 15).
-
 
 [![La finestra di dialogo Nuovo progetto](iteration-1-create-the-application-vb/_static/image15.jpg)](iteration-1-create-the-application-vb/_static/image29.png)
 
 **Figura 15**: La visualizzazione dell'indice ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-1-create-the-application-vb/_static/image30.png))
-
 
 Si noti che la visualizzazione dell'indice include un collegamento con l'etichetta Crea nuovo nella parte inferiore della visualizzazione. Nella sezione successiva imparare a creare nuovi contatti.
 
@@ -335,19 +301,15 @@ Nel corpo del metodo Create (), Entity Framework consente di inserire il nuovo c
 
 È possibile generare un form HTML per la creazione di nuovi contatti facendo clic su uno dei due metodi Create () e selezionando l'opzione di menu **Aggiungi visualizzazione** (vedere Figura 16).
 
-
 [![La finestra di dialogo Nuovo progetto](iteration-1-create-the-application-vb/_static/image16.jpg)](iteration-1-create-the-application-vb/_static/image31.png)
 
 **Figura 16**: Aggiunta della visualizzazione di creazione ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-1-create-the-application-vb/_static/image32.png))
 
-
 Nel **Aggiungi visualizzazione** finestra di dialogo, seleziona la **ContactManager.Contact** classe e il **Create** opzione per visualizzare il contenuto (vedere Figura 17). Quando si fa clic il **Add** pulsante, una creazione vista viene generata automaticamente.
-
 
 [![La finestra di dialogo Nuovo progetto](iteration-1-create-the-application-vb/_static/image17.jpg)](iteration-1-create-the-application-vb/_static/image33.png)
 
 **Figura 17**: Viene visualizzata una pagina explode ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-1-create-the-application-vb/_static/image34.png))
-
 
 Crea visualizzazione contiene i campi del modulo per ognuna delle proprietà della classe di contatto. Il codice per la visualizzazione di creazione è incluso nel listato 5.
 
@@ -357,11 +319,9 @@ Crea visualizzazione contiene i campi del modulo per ognuna delle proprietà del
 
 Dopo avere modificato i metodi Create () e aggiungere la visualizzazione di creazione, è possibile eseguire l'applicazione Contact Manager e creare nuovi contatti. Scegliere il **Crea nuovo** collegamento visualizzato nella vista Index per passare alla visualizzazione di creazione. Verrà visualizzata la vista nella figura 18.
 
-
 [![La finestra di dialogo Nuovo progetto](iteration-1-create-the-application-vb/_static/image18.jpg)](iteration-1-create-the-application-vb/_static/image35.png)
 
 **Figura 18**: Create View ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-1-create-the-application-vb/_static/image36.png))
-
 
 ## <a name="editing-contacts"></a>Modifica dei contatti
 
@@ -379,11 +339,9 @@ Entity Framework consente di salvare il contatto modificato nel database. Il con
 
 È possibile generare la vista che contiene il modulo di modifica facendo clic sul metodo Edit () e selezionando l'opzione di menu Aggiungi visualizzazione. Nella finestra di dialogo Aggiungi visualizzazione, selezionare la **ContactManager.Models.Contact** classe e il **modificare** visualizzare il contenuto (vedere la figura 19).
 
-
 [![La finestra di dialogo Nuovo progetto](iteration-1-create-the-application-vb/_static/image19.jpg)](iteration-1-create-the-application-vb/_static/image37.png)
 
 **Figura 19**: Aggiunta di una visualizzazione di modifica ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-1-create-the-application-vb/_static/image38.png))
-
 
 Quando si fa clic sul pulsante Aggiungi, viene generata automaticamente una nuova visualizzazione di modifica. Il form HTML generato contiene i campi corrispondenti a ognuna delle proprietà della classe contatto (vedere listato 7).
 
@@ -399,7 +357,6 @@ Se si desidera eliminare contatti, quindi è necessario aggiungere due azioni De
 > 
 > In un secondo momento, in iterazione #7, viene modificato di Contact Manager, in modo che supporti un unico passaggio Elimina Ajax.
 
-
 I due nuovi metodi Delete () sono contenuti nel listato 8.
 
 **Listato 8 - Controllers\HomeController.vb (metodi di eliminazione)**
@@ -408,31 +365,25 @@ I due nuovi metodi Delete () sono contenuti nel listato 8.
 
 Il primo metodo Delete () restituisce un formato di conferma per l'eliminazione di un record di contatto dal database (vedere Figure20). Il secondo metodo Delete () esegue l'operazione di eliminazione sul database. Dopo il contatto originale è stato recuperato dal database, vengono chiamati i metodi di DeleteObject () di Entity Framework e SaveChanges () per eseguire l'eliminazione di database.
 
-
 [![La finestra di dialogo Nuovo progetto](iteration-1-create-the-application-vb/_static/image20.jpg)](iteration-1-create-the-application-vb/_static/image39.png)
 
 **Figura 20**: La visualizzazione di conferma delete ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-1-create-the-application-vb/_static/image40.png))
-
 
 È necessario modificare la visualizzazione dell'indice, in modo che contenga un collegamento per l'eliminazione di record dei contatti (vedere Figura 21). È necessario aggiungere il codice seguente per la stessa cella di tabella che contiene il collegamento di modifica:
 
 {.id = item.Id})%&gt;
 
-
 [![La finestra di dialogo Nuovo progetto](iteration-1-create-the-application-vb/_static/image21.jpg)](iteration-1-create-the-application-vb/_static/image41.png)
 
 **Figura 21**: Indicizzare la vista con collegamento di modifica ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-1-create-the-application-vb/_static/image42.png))
-
 
 Successivamente, è necessario creare la visualizzazione di conferma di eliminazione. Fare doppio clic il metodo Delete () nella classe controller Home e selezionare l'opzione di menu Aggiungi visualizzazione. La finestra di dialogo Aggiungi visualizzazione viene visualizzata (vedere la figura 22).
 
 A differenza nel caso le visualizzazioni elenco, creazione e modifica, la finestra di dialogo Aggiungi visualizzazione non contiene un'opzione per creare una visualizzazione di eliminazione. In alternativa, selezionare la **ContactManager.Models.Contact** classi di dati e il **vuota** visualizzare il contenuto. Selezione della vista vuota opzione content richiederà di creare la vista noi stessi.
 
-
 [![La finestra di dialogo Nuovo progetto](iteration-1-create-the-application-vb/_static/image22.jpg)](iteration-1-create-the-application-vb/_static/image43.png)
 
 **Figura 22**: Aggiunta della visualizzazione di conferma delete ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-1-create-the-application-vb/_static/image44.png))
-
 
 Il contenuto della visualizzazione Delete è contenuto nel listato 9. In questa vista contiene un modulo che viene confermata o meno un contatto specifico deve essere eliminato (vedere Figura 21).
 
@@ -446,26 +397,21 @@ Potrebbe essere necessario creare anche è che il nome della nostra classe di co
 
 È abbastanza semplice risolvere questo problema. Innanzitutto, è necessario effettuare il refactoring il nome del controller Home. Aprire la classe HomeController nell'Editor di codice di Visual Studio, pulsante destro del mouse sul nome della classe e selezionare l'opzione di menu **Rinomina**. Selezionando questa opzione di menu viene visualizzata la finestra di dialogo di ridenominazione.
 
-
 [![La finestra di dialogo Nuovo progetto](iteration-1-create-the-application-vb/_static/image23.jpg)](iteration-1-create-the-application-vb/_static/image45.png)
 
 **Figura 23**: Refactoring di un nome controller ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-1-create-the-application-vb/_static/image46.png))
-
 
 [![La finestra di dialogo Nuovo progetto](iteration-1-create-the-application-vb/_static/image24.jpg)](iteration-1-create-the-application-vb/_static/image47.png)
 
 **Figura 24**: Usando la finestra di dialogo di ridenominazione ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-1-create-the-application-vb/_static/image48.png))
 
-
 Se si rinomina la classe controller, Visual Studio aggiornerà il nome della cartella nella cartella Views anche. Visual Studio verrà rinominare la cartella \Views\Home nella cartella \Views\Contact.
 
 Dopo aver apportato questa modifica, l'applicazione non sarà più possibile un controller Home. Quando si esegue l'applicazione, si otterrà la pagina di errore nella figura 25.
 
-
 [![La finestra di dialogo Nuovo progetto](iteration-1-create-the-application-vb/_static/image25.jpg)](iteration-1-create-the-application-vb/_static/image49.png)
 
 **Figura 25**: Nessun controller predefinito ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-1-create-the-application-vb/_static/image50.png))
-
 
 È necessario aggiornare la route predefinita nel file Global. asax per utilizzare il controller contattare invece il controller Home. Aprire il file Global. asax e modificare il controller predefinito usato dalla route predefinita (vedere il listato 10).
 

@@ -8,12 +8,12 @@ ms.date: 02/20/2014
 ms.assetid: 68de4326-7611-4b9b-b5f6-79b7adc3069f
 msc.legacyurl: /web-pages/overview/testing-and-debugging/introduction-to-debugging
 msc.type: authoredcontent
-ms.openlocfilehash: d4be58f618ed990b1932b4388f84cd743c21f009
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ae7d871e56326610c043dc20fe6e0919e1b4ac89
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59389609"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65127820"
 ---
 # <a name="introduction-to-debugging-aspnet-web-pages-razor-sites"></a>Introduzione al debug ASP.NET Web Pages (Razor) siti
 
@@ -41,7 +41,6 @@ da [Tom FitzMacken](https://github.com/tfitzmac)
 >
 >
 > Questa esercitazione si integra inoltre con ASP.NET Web Pages 2. È possibile utilizzare WebMatrix 3 ma il debugger integrato non è supportato.
-
 
 Un aspetto importante della risoluzione dei problemi relativi a errori e problemi nel codice è per evitare il problema in primo luogo. È possibile farlo mediante l'inserimento di sezioni del codice che possono causare errori in `try/catch` blocchi. Per altre informazioni, vedere la sezione sulla gestione degli errori nelle [Introduzione alla programmazione Web ASP.NET usando la sintassi Razor](https://go.microsoft.com/fwlink/?LinkId=202890).
 

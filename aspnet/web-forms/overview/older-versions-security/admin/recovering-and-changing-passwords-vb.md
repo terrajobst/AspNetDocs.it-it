@@ -8,12 +8,12 @@ ms.date: 04/01/2008
 ms.assetid: f9adcb5d-6d70-4885-a3bf-ed95efb4da1a
 msc.legacyurl: /web-forms/overview/older-versions-security/admin/recovering-and-changing-passwords-vb
 msc.type: authoredcontent
-ms.openlocfilehash: ba70db591c373fd9514fdb7079af83a511067162
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 180d2d7a7544b976f923bf8a4055281e36a3e526
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59380834"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130894"
 ---
 # <a name="recovering-and-changing-passwords-vb"></a>Recupero e modifica delle password (VB)
 
@@ -22,7 +22,6 @@ da [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Scaricare il codice](http://download.microsoft.com/download/6/0/e/60e1bd94-e5f9-4d5a-a079-f23c98f4f67d/VB.13.zip) o [Scarica il PDF](http://download.microsoft.com/download/6/0/e/60e1bd94-e5f9-4d5a-a079-f23c98f4f67d/aspnet_tutorial13_ChangingPasswords_vb.pdf)
 
 > ASP.NET include due controlli Web per il supporto tramite il recupero e modifica delle password. Il controllo PassaggiwordRecovery Abilita un visitatore ripristinare la password persa. Il controllo ChangePassword consente all'utente di aggiornare la relativa password. Come gli altri controlli correlati all'accesso Web abbiamo visto in tutta questa serie di esercitazioni di PassaggiwordRecovery e ChangePassword controlla funzionano con il framework di appartenenza dietro le quinte di reimpostare o modificare le password degli utenti.
-
 
 ## <a name="introduction"></a>Introduzione
 
@@ -38,7 +37,6 @@ Tutti i siti Web che supportano gli account utente necessario fornire agli utent
 
 > [!NOTE]
 > Poiché i messaggi di posta elettronica vengono trasmessi in rete in testo normale sono i rischi di sicurezza con l'invio della password dell'utente tramite posta elettronica.
-
 
 Il controllo PassaggiwordRecovery è costituito da tre visualizzazioni:
 
@@ -59,18 +57,14 @@ Dopo che l'utente ha fornito il suo nome utente - o il suo nome utente e la sicu
 > [!NOTE]
 > Si tenga presente che il `SqlMembershipProvider` archivia le password degli utenti in uno dei tre formati: Clear, Hashed (predefinito) o crittografato. Il meccanismo di archiviazione usato dipende le impostazioni di configurazione di appartenenza; l'applicazione demo Usa il formato della password con hash. Quando si usa il formato della password con hash di `EnablePasswordRetrieval` opzione deve essere impostata su False perché il sistema non può determinare la password dell'utente effettivo della versione con hash archiviato nel database.
 
-
 Figura 1 illustra come interfaccia e il comportamento di PassaggiwordRecovery è influenzato dalla configurazione di appartenenza.
-
 
 [![Il RequiresQuestionAndAnswer EnablePasswordRetrieval ed EnablePasswordReset influenzare l'aspetto e il comportamento del controllo PassaggiwordRecovery](recovering-and-changing-passwords-vb/_static/image2.png)](recovering-and-changing-passwords-vb/_static/image1.png)
 
 **Figura 1**: Il `RequiresQuestionAndAnswer`, `EnablePasswordRetrieval`, e `EnablePasswordReset` influenzare l'aspetto e il comportamento del controllo PassaggiwordRecovery ([fare clic per visualizzare l'immagine con dimensioni normali](recovering-and-changing-passwords-vb/_static/image3.png))
 
-
 > [!NOTE]
 > Nel <a id="_msoanchor_2"> </a> [ *creazione dello Schema di appartenenza in SQL Server* ](../membership/creating-the-membership-schema-in-sql-server-vb.md) esercitazione è stato configurato il provider di appartenenza impostando `RequiresQuestionAndAnswer` su True, `EnablePasswordRetrieval` a False, e `EnablePasswordReset` su True.
-
 
 ### <a name="using-the-passwordrecovery-control"></a>Utilizzo del controllo PassaggiwordRecovery
 
@@ -85,34 +79,27 @@ La configurazione di recapito di posta elettronica viene specificata tramite il 
 > [!NOTE]
 > `<system.net>` è un elemento figlio della radice `<configuration>` elemento e pari livello `<system.web>`. Pertanto, non inserire il `<system.net>` elemento all'interno di `<system.web>` elemento; invece inserirlo allo stesso livello.
 
-
 [!code-xml[Main](recovering-and-changing-passwords-vb/samples/sample1.xml)]
 
 Oltre a usare un server SMTP nella rete, è possibile specificare una directory di prelievo in cui devono essere depositati messaggi di posta elettronica da inviare.
 
 Dopo aver configurato le impostazioni SMTP, visitare il `RecoverPassword.aspx` pagina tramite un browser. Innanzitutto provare a immettere un nome utente che non esiste nell'archivio dell'utente. Come illustrato nella figura 2, il controllo PassaggiwordRecovery Visualizza un messaggio che indica che le informazioni dell'utente non sono accessibile. Il testo del messaggio può essere personalizzato tramite il controllo [ `UserNameFailureText` proprietà](https://msdn.microsoft.com/library/system.web.ui.webcontrols.passwordrecovery.usernamefailuretext.aspx).
 
-
 [![Viene visualizzato un messaggio di errore se viene immesso un nome utente non valido](recovering-and-changing-passwords-vb/_static/image5.png)](recovering-and-changing-passwords-vb/_static/image4.png)
 
 **Figura 2**: Viene visualizzato un messaggio di errore se viene immesso un nome utente non valido ([fare clic per visualizzare l'immagine con dimensioni normali](recovering-and-changing-passwords-vb/_static/image6.png))
 
-
 A questo punto immettere un nome utente. Usare il nome utente di un account nel sistema con un indirizzo di posta elettronica che è possibile accedere e rispondere a cui sicurezza è conoscere. Dopo aver immesso il nome utente e facendo clic su Invia, il controllo PassaggiwordRecovery consente di visualizzare la relativa visualizzazione domanda. Come con la visualizzazione nome utente, se si immette un'implementazione non corretta di rispondere il controllo PassaggiwordRecovery Visualizza un messaggio di errore (vedere la figura 3). Usare la [ `QuestionFailureText` proprietà](https://msdn.microsoft.com/library/system.web.ui.webcontrols.passwordrecovery.questionfailuretext.aspx) per personalizzare questo messaggio di errore.
-
 
 [![Viene visualizzato un messaggio di errore se l'utente immette una risposta di sicurezza non valido](recovering-and-changing-passwords-vb/_static/image8.png)](recovering-and-changing-passwords-vb/_static/image7.png)
 
 **Figura 3**: Viene visualizzato un messaggio di errore se l'utente immette una risposta di sicurezza non valido ([fare clic per visualizzare l'immagine con dimensioni normali](recovering-and-changing-passwords-vb/_static/image9.png))
 
-
 Infine, immettere la risposta di sicurezza corrette e fare clic su Invia. Dietro le quinte, il controllo PassaggiwordRecovery genera una password casuale, viene assegnato all'account utente, invia un messaggio di posta elettronica per informare l'utente della nuova password (vedere la figura 4) e quindi Visualizza la visualizzazione operazione riuscita.
-
 
 [![L'utente viene inviato un messaggio di posta elettronica con la nuova Password](recovering-and-changing-passwords-vb/_static/image11.png)](recovering-and-changing-passwords-vb/_static/image10.png)
 
 **Figura 4**: L'utente viene inviato un messaggio di posta elettronica con la nuova Password ([fare clic per visualizzare l'immagine con dimensioni normali](recovering-and-changing-passwords-vb/_static/image12.png))
-
 
 ### <a name="customizing-the-email"></a>Personalizzare il messaggio di posta elettronica
 
@@ -144,11 +131,9 @@ Infine, scegliere il `MailDefinition`del [ `BodyFileName` proprietà](https://ms
 
 Dopo aver apportare modifiche a rivedere il `RecoverPassword.aspx` pagina e immettere la risposta di nome utente e la sicurezza. Si riceve un messaggio di posta elettronica simile a quello in figura 5 deve. Si noti che `webmaster@example.com` è stata CC sarebbe e che l'oggetto e corpo sono stati aggiornati.
 
-
 [![L'oggetto, corpo e CC elenco sono stati aggiornati](recovering-and-changing-passwords-vb/_static/image14.png)](recovering-and-changing-passwords-vb/_static/image13.png)
 
 **Figura 5**: Oggetto, corpo e CC elenco sono state aggiornate ([fare clic per visualizzare l'immagine con dimensioni normali](recovering-and-changing-passwords-vb/_static/image15.png))
-
 
 Per inviare un messaggio di posta elettronica in formato HTML impostata [ `IsBodyHtml` ](https://msdn.microsoft.com/library/system.web.ui.webcontrols.maildefinition.isbodyhtml.aspx) su True (impostazione predefinita è False) e aggiornare il modello di messaggio di posta elettronica da includere HTML.
 
@@ -156,7 +141,6 @@ Il `MailDefinition` proprietà non è univoca per la classe PassaggiwordRecovery
 
 > [!NOTE]
 > Attualmente non sono presenti collegamenti nel riquadro di spostamento a sinistra per raggiungere il `RecoverPassword.aspx` pagina. Un utente potrebbe essere interessato solo a visitare questa pagina se Anna non è riuscita ad accedere correttamente al sito. Di conseguenza, aggiornare il `Login.aspx` per includere un collegamento alla pagina di `RecoverPassword.aspx` pagina.
-
 
 ### <a name="programmatically-resetting-a-users-password"></a>A livello di codice la reimpostazione Password di un utente
 
@@ -183,7 +167,6 @@ Il `GeneratePassword` metodo Usa un generatore di numeri casuali crittograficame
 > [!NOTE]
 > Il `SqlMembershipProvider` classe genera sempre una password casuale lunga almeno 14 caratteri, pertanto se `MinRequiredPasswordLength` è inferiore a 14, il relativo valore viene ignorato.
 
-
 ## <a name="step-2-changing-passwords"></a>Passaggio 2: Modifica delle password
 
 Le password generata casualmente sono difficili da ricordare. Prendere in considerazione la password illustrata nella figura 4: `WWGUZv(f2yM:Bd`. Provare a eseguire il commit che per la memoria. Inutile a dirsi, dopo che un utente viene inviato una password generata casualmente di questo tipo, è opportuno modificare la password in modo che più facili da ricordare.
@@ -193,14 +176,11 @@ Per creare un'interfaccia per un utente di modificare la password, usare il cont
 > [!NOTE]
 > Controllo ChangePassword modifica la password dell'utente chiamando il `MembershipUser` dell'oggetto [ `ChangePassword` metodo](https://msdn.microsoft.com/library/system.web.security.membershipuser.changepassword.aspx). Il metodo ChangePassword accetta due `String` - parametri di input *oldPassword* e *newPassword*- e aggiorna l'account dell'utente con il *newPassword*, Supponendo che il parametro fornito *oldPassword* sia corretto.
 
-
 Aprire il `ChangePassword.aspx` pagina e aggiungere un controllo ChangePassword alla pagina, denominarlo `ChangePwd`. A questo punto, la visualizzazione della struttura deve mostrare al cambiamento della Password (vedere la figura 6). Ad esempio con il controllo PassaggiwordRecovery, è possibile passare tra le visualizzazioni tramite Smart Tag del controllo. Inoltre, aspetti di queste visualizzazioni sono personalizzabili tramite le proprietà di stile vengono formattati diversi o convertendole in un modello.
-
 
 [![Aggiungere un controllo ChangePassword alla pagina](recovering-and-changing-passwords-vb/_static/image17.png)](recovering-and-changing-passwords-vb/_static/image16.png)
 
 **Figura 6**: Aggiungere un controllo ChangePassword alla pagina ([fare clic per visualizzare l'immagine con dimensioni normali](recovering-and-changing-passwords-vb/_static/image18.png))
-
 
 Controllo ChangePassword possibile aggiornare la password dell'utente attualmente connesso *o* la password dell'utente specificato, un altro. Come illustrato nella figura 6, la visualizzazione di modifica della Password predefinita esegue il rendering solo tre controlli TextBox: uno per la vecchia password e due per la nuova password. Questa interfaccia predefinita viene utilizzata per aggiornare la password dell'utente attualmente connesso.
 
@@ -211,14 +191,11 @@ Impostazione `DisplayUserName` a True è utile se si desidera consentire agli ut
 > [!NOTE]
 > Può sembrare che il `DisplayUserName` proprietà è utile per consentire agli amministratori di cambiare le password degli altri utenti. Tuttavia, anche quando `DisplayUserName` è impostata su True la vecchia password corretta deve essere nota e immesso. Si discuterà tecniche per consentire agli amministratori di cambiare le password degli utenti nel passaggio 3.
 
-
 Visita il `ChangePassword.aspx` pagina tramite un browser e cambia la password. Si noti che se si immette una nuova password che non riesce a soddisfare i requisiti di carattere non alfanumerico specificati nella configurazione di appartenenza e la lunghezza della password viene visualizzato un messaggio di errore (vedere la figura 7).
-
 
 [![Aggiungere un controllo ChangePassword alla pagina](recovering-and-changing-passwords-vb/_static/image20.png)](recovering-and-changing-passwords-vb/_static/image19.png)
 
 **Figura 7**: Aggiungere un controllo ChangePassword alla pagina ([fare clic per visualizzare l'immagine con dimensioni normali](recovering-and-changing-passwords-vb/_static/image21.png))
-
 
 Al momento immettendo la vecchia password corrette e una valida nuova password, usato per l'accesso dell'utente di modifica della password e visualizzato visualizzazione operazione riuscita.
 
@@ -234,11 +211,9 @@ Successivamente, impostare il controllo di ChangePassword `MailDefinition` della
 
 Dopo aver apportato queste modifiche, visitare di nuovo la pagina e modificare nuovamente la password. Questa volta, il controllo ChangePassword invia un messaggio di posta elettronica personalizzato, in formato HTML all'indirizzo di posta elettronica dell'utente nel file (vedere la figura 8).
 
-
 [![Un messaggio di posta elettronica per informare l'utente che Their Password è stata modificata](recovering-and-changing-passwords-vb/_static/image23.png)](recovering-and-changing-passwords-vb/_static/image22.png)
 
 **Figura 8**: Un messaggio di posta elettronica per informare l'utente che Their Password è stata modificata ([fare clic per visualizzare l'immagine con dimensioni normali](recovering-and-changing-passwords-vb/_static/image24.png))
-
 
 ## <a name="step-3-allowing-administrators-to-change-users-passwords"></a>Passaggio 3: Consentendo agli amministratori di modificare le password degli utenti
 
@@ -267,20 +242,16 @@ E lo seleziono implementato il terzo approccio, la scrittura di codice che conse
 > [!NOTE]
 > La possibilità di lavorare direttamente con il database, l'incapsulamento fornito dal framework di appartenenza è esplosi. Consente di associare a questa decisione di `SqlMembershipProvider`, rendendo il nostro codice meno portabile. Inoltre, questo codice potrebbe non funzionare come previsto nelle future versioni di ASP.NET, se viene modificato lo schema di appartenenza. Questo approccio è una soluzione alternativa e, come la maggior parte delle soluzioni alternative, non è un esempio di procedure consigliate.
 
-
 Il codice presenta alcuni bit graficamente meno elegante ed è abbastanza lungo. Pertanto, non desidero creare confusione in questa esercitazione con un'analisi approfondita di esso. Se è interessati a ulteriori informazioni, scaricare il codice per questa esercitazione e visita il `~/Administration/ManageUsers.aspx` pagina. Questa pagina, che è stato creato nel <a id="_msoanchor_5"> </a> [esercitazione precedente](building-an-interface-to-select-one-user-account-from-many-vb.md), elenco degli utenti. È già stato aggiornato il controllo GridView per includere un collegamento per il `UserInformation.aspx` pagina, passando il nome utente dell'utente selezionato tramite la stringa di query. Il `UserInformation.aspx` pagina vengono visualizzate informazioni sull'utente selezionato e caselle di testo per modificare la password (vedere la figura 9).
 
 Dopo aver immesso la nuova password, conferma nella seconda casella di testo e facendo clic sul pulsante di aggiornamento utente, un postback previsioni e `aspnet_Membership_SetPassword` stored procedure viene richiamata, aggiornare la password dell'utente. Ti suggeriamo coloro che interessati a questa funzionalità per acquisire familiarità con il codice e provare a estendere la funzionalità per includere l'invio di un messaggio di posta elettronica all'utente la cui password è stata modificata.
-
 
 [![Un amministratore può modificare la Password dell'utente](recovering-and-changing-passwords-vb/_static/image26.png)](recovering-and-changing-passwords-vb/_static/image25.png)
 
 **Figura 9**: Un amministratore può modificare la Password dell'utente ([fare clic per visualizzare l'immagine con dimensioni normali](recovering-and-changing-passwords-vb/_static/image27.png))
 
-
 > [!NOTE]
 > Il `UserInformation.aspx` pagina attualmente funziona solo se il framework di appartenenza è configurato per archiviare le password in formato chiaro o Hashed. Manca il codice per crittografare la nuova password, anche se viene visualizzato un messaggio per aggiungere questa funzionalità. Il modo in cui è consigliabile aggiungere il codice necessario consiste nell'usare un decompilatore, ad esempio [Reflector](http://www.aisto.com/roeder/dotnet/) per esaminare il codice sorgente per i metodi in .NET Framework; iniziare esaminando le `SqlMembershipProvider` della classe `ChangePassword` (metodo). Si tratta della tecnica che consente di scrivere il codice per la creazione di un hash della password.
-
 
 ## <a name="summary"></a>Riepilogo
 

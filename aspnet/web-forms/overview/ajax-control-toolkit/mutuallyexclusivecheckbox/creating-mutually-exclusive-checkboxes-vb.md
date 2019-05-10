@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: e9dd1d5a-a1db-4114-981d-6a91acb1d709
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/mutuallyexclusivecheckbox/creating-mutually-exclusive-checkboxes-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 45ea3c3dbcf7816f67081a61230c4b055a90fcf5
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 5bf96cf287f2fe5f394449587c70d9fc6fb33af9
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59393626"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132543"
 ---
 # <a name="creating-mutually-exclusive-checkboxes-vb"></a>Creazione di caselle di controllo che si escludono a vicenda (VB)
 
@@ -22,7 +22,6 @@ da [Christian Wenz](https://github.com/wenz)
 [Scaricare il codice](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/MutuallyExclusiveCheckBox0.vb.zip) o [Scarica il PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/mutuallyexclusivecheckbox0VB.pdf)
 
 > Quando è possibile selezionare solo uno di un set di opzioni, pulsanti di opzione in genere vengono usati. C'è però uno svantaggio: Dopo aver selezionato un pulsante di opzione in un gruppo, non è possibile deselezionare tutti i pulsanti di opzione. Le caselle di controllo può essere deselezionate in qualsiasi momento, tuttavia non si escludono a vicenda. Questa esercitazione offre il meglio di entrambi gli approcci: caselle di controllo che si escludono a vicenda.
-
 
 ## <a name="overview"></a>Panoramica
 
@@ -45,7 +44,6 @@ Infine, includere ASP.NET AJAX `ScriptManager` necessaria per tutti gli elementi
 [!code-aspx[Main](creating-mutually-exclusive-checkboxes-vb/samples/sample3.aspx)]
 
 Salvare ed eseguire la pagina: È possibile selezionare e deselezionare caselle di controllo, tuttavia in nessuna circostanza entrambe le caselle di controllo controllare.
-
 
 [![Solo una casella di controllo può essere controllato in un momento](creating-mutually-exclusive-checkboxes-vb/_static/image2.png)](creating-mutually-exclusive-checkboxes-vb/_static/image1.png)
 

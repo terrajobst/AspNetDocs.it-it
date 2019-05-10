@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 4d8c8d19-055b-4b70-9ee1-f748f0db3a01
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/the-contact-manager-solution
 msc.type: authoredcontent
-ms.openlocfilehash: 7998b5bb2983410479123514661a4ddb67afc8c6
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 12ed7827f7392e559e04121386f7cd045de8462b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59398371"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130923"
 ---
 # <a name="the-contact-manager-solution"></a>Soluzione Contact Manager
 
@@ -24,7 +24,6 @@ da [Jason Lee](https://github.com/jrjlee)
 > Ciò [serie di esercitazioni](web-deployment-in-the-enterprise.md) utilizza una soluzione di esempio&#x2014;della soluzione Contact Manager&#x2014;per rappresentare un'applicazione di livello aziendale con un livello di complessità realistico. In questo argomento viene introdotta la soluzione Contact Manager, vengono descritti i componenti chiave della soluzione e identifica le problematiche correlate alla distribuzione di questo tipo di applicazione a diverse piattaforme di destinazione in un ambiente aziendale.
 > 
 > Mentre si lavora con gli argomenti in queste esercitazioni, è possibile usare la soluzione Contact Manager come un'implementazione di riferimento che illustra come è possibile soddisfare specifiche problematiche in scenari di distribuzione enterprise. Argomento successivo [impostazione di backup della soluzione Contact Manager](setting-up-the-contact-manager-solution.md), viene descritto come scaricare ed eseguire la soluzione in della workstation dello sviluppatore.
-
 
 ## <a name="solution-overview"></a>Panoramica della soluzione
 
@@ -45,7 +44,6 @@ A livello concettuale, i componenti della soluzione si integrino simile al segue
 
 > [!NOTE]
 > Mentre l'applicazione web ASP.NET MVC 3 Usa il provider di appartenenze ASP.NET, tutte le pagine all'interno dell'applicazione web consentono accessi anonimi. Non si tratta chiaramente una configurazione realistica. Tuttavia, la soluzione è configurata in questo modo per renderne più semplice per distribuire e testare la soluzione non si configurano i ruoli e gli account utente.
-
 
 ## <a name="deployment-challenges"></a>Sfide della distribuzione
 
