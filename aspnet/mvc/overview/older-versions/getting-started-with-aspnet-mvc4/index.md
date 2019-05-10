@@ -8,24 +8,23 @@ ms.date: 02/15/2012
 ms.assetid: a35183ac-cbcb-4070-9233-6331cde921ad
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc4
 msc.type: chapter
-ms.openlocfilehash: 0cce120be702ffa4c21e56cbbbe472aebf7f1889
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: a73935f74d696bad9070c56b506d3aa2dbcceb25
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59402258"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129864"
 ---
-# <a name="getting-started-with-aspnet-mvc-4"></a><span data-ttu-id="5111d-103">Presentazione di ASP.NET MVC 4</span><span class="sxs-lookup"><span data-stu-id="5111d-103">Getting Started with ASP.NET MVC 4</span></span>
+# <a name="getting-started-with-aspnet-mvc-4"></a><span data-ttu-id="0afe7-103">Presentazione di ASP.NET MVC 4</span><span class="sxs-lookup"><span data-stu-id="0afe7-103">Getting Started with ASP.NET MVC 4</span></span>
 
-> <span data-ttu-id="5111d-104">Questa serie di esercitazioni insegnerà le nozioni di base della creazione di un'applicazione Web MVC ASP.NET utilizzando Microsoft Visual Web Developer 2010 Express Service Pack 1, che è una versione gratuita di Microsoft Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="5111d-104">This tutorial series will teach you the basics of building an ASP.NET MVC Web application using Microsoft Visual Web Developer 2010 Express Service Pack 1, which is a free version of Microsoft Visual Studio.</span></span>
+> <span data-ttu-id="0afe7-104">Questa serie di esercitazioni insegnerà le nozioni di base della creazione di un'applicazione Web MVC ASP.NET utilizzando Microsoft Visual Web Developer 2010 Express Service Pack 1, che è una versione gratuita di Microsoft Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="0afe7-104">This tutorial series will teach you the basics of building an ASP.NET MVC Web application using Microsoft Visual Web Developer 2010 Express Service Pack 1, which is a free version of Microsoft Visual Studio.</span></span>
 
-
-- [<span data-ttu-id="5111d-105">Introduzione ad ASP.NET MVC 4</span><span class="sxs-lookup"><span data-stu-id="5111d-105">Intro to ASP.NET MVC 4</span></span>](intro-to-aspnet-mvc-4.md)
-- [<span data-ttu-id="5111d-106">Aggiunta di un controller</span><span class="sxs-lookup"><span data-stu-id="5111d-106">Adding a Controller</span></span>](adding-a-controller.md)
-- [<span data-ttu-id="5111d-107">Aggiunta di una visualizzazione</span><span class="sxs-lookup"><span data-stu-id="5111d-107">Adding a View</span></span>](adding-a-view.md)
-- [<span data-ttu-id="5111d-108">Aggiunta di un modello</span><span class="sxs-lookup"><span data-stu-id="5111d-108">Adding a Model</span></span>](adding-a-model.md)
-- [<span data-ttu-id="5111d-109">Accesso ai dati del modello da un controller</span><span class="sxs-lookup"><span data-stu-id="5111d-109">Accessing Your Model's Data from a Controller</span></span>](accessing-your-models-data-from-a-controller.md)
-- [<span data-ttu-id="5111d-110">Analisi dei metodi di modifica e della visualizzazione di modifica</span><span class="sxs-lookup"><span data-stu-id="5111d-110">Examining the Edit Methods and Edit View</span></span>](examining-the-edit-methods-and-edit-view.md)
-- [<span data-ttu-id="5111d-111">Aggiunta di un nuovo campo al modello di filmato e alla tabella</span><span class="sxs-lookup"><span data-stu-id="5111d-111">Adding a New Field to the Movie Model and Table</span></span>](adding-a-new-field-to-the-movie-model-and-table.md)
-- [<span data-ttu-id="5111d-112">Aggiunta della convalida al modello</span><span class="sxs-lookup"><span data-stu-id="5111d-112">Adding Validation to the Model</span></span>](adding-validation-to-the-model.md)
-- [<span data-ttu-id="5111d-113">Analisi dei dettagli e dei metodi di eliminazione</span><span class="sxs-lookup"><span data-stu-id="5111d-113">Examining the Details and Delete Methods</span></span>](examining-the-details-and-delete-methods.md)
+- [<span data-ttu-id="0afe7-105">Introduzione ad ASP.NET MVC 4</span><span class="sxs-lookup"><span data-stu-id="0afe7-105">Intro to ASP.NET MVC 4</span></span>](intro-to-aspnet-mvc-4.md)
+- [<span data-ttu-id="0afe7-106">Aggiunta di un controller</span><span class="sxs-lookup"><span data-stu-id="0afe7-106">Adding a Controller</span></span>](adding-a-controller.md)
+- [<span data-ttu-id="0afe7-107">Aggiunta di una visualizzazione</span><span class="sxs-lookup"><span data-stu-id="0afe7-107">Adding a View</span></span>](adding-a-view.md)
+- [<span data-ttu-id="0afe7-108">Aggiunta di un modello</span><span class="sxs-lookup"><span data-stu-id="0afe7-108">Adding a Model</span></span>](adding-a-model.md)
+- [<span data-ttu-id="0afe7-109">Accesso ai dati del modello da un controller</span><span class="sxs-lookup"><span data-stu-id="0afe7-109">Accessing Your Model's Data from a Controller</span></span>](accessing-your-models-data-from-a-controller.md)
+- [<span data-ttu-id="0afe7-110">Analisi dei metodi di modifica e della visualizzazione di modifica</span><span class="sxs-lookup"><span data-stu-id="0afe7-110">Examining the Edit Methods and Edit View</span></span>](examining-the-edit-methods-and-edit-view.md)
+- [<span data-ttu-id="0afe7-111">Aggiunta di un nuovo campo al modello di filmato e alla tabella</span><span class="sxs-lookup"><span data-stu-id="0afe7-111">Adding a New Field to the Movie Model and Table</span></span>](adding-a-new-field-to-the-movie-model-and-table.md)
+- [<span data-ttu-id="0afe7-112">Aggiunta della convalida al modello</span><span class="sxs-lookup"><span data-stu-id="0afe7-112">Adding Validation to the Model</span></span>](adding-validation-to-the-model.md)
+- [<span data-ttu-id="0afe7-113">Analisi dei dettagli e dei metodi di eliminazione</span><span class="sxs-lookup"><span data-stu-id="0afe7-113">Examining the Details and Delete Methods</span></span>](examining-the-details-and-delete-methods.md)
