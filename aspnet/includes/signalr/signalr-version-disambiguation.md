@@ -1,10 +1,2 @@
----
-ms.openlocfilehash: 96cd0276487695ef8c46f3817f139e3f449744a5
-ms.sourcegitcommit: 24e58ac74c660306cd98c580eb5cb9e87d823330
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58134157"
----
-> [!NOTE]
-> <span data-ttu-id="9c077-101">Questo articolo si riferisce a ASP.NET SignalR.</span><span class="sxs-lookup"><span data-stu-id="9c077-101">This article refers to ASP.NET SignalR.</span></span> <span data-ttu-id="9c077-102">Se si sta valutando l'uso di SignalR per abilitare scenari in tempo reale con Java, Node. js, o in uno scenario senza server, dare un'occhiata [ASP.NET Core SignalR](/aspnet/core/signalr/introduction).</span><span class="sxs-lookup"><span data-stu-id="9c077-102">If you're thinking about using SignalR to enable real-time scenarios with Java, Node.js, or in a serverless scenario, take a look at [ASP.NET Core SignalR](/aspnet/core/signalr/introduction).</span></span> <span data-ttu-id="9c077-103">Se è già stato usato ASP.NET SignalR, esaminiamo il [differenze tra le versioni](/aspnet/core/signalr/version-differences) pagina per comprendere le differenze nelle versioni e i miglioramenti di ASP.NET Core SignalR.</span><span class="sxs-lookup"><span data-stu-id="9c077-103">If you've already used ASP.NET SignalR, take a look at the [version differences](/aspnet/core/signalr/version-differences) page to understand the differences in the versions and the improvements in ASP.NET Core SignalR.</span></span> <span data-ttu-id="9c077-104">Infine, se si conosce a cui verrà eseguita l'App in tempo reale in Microsoft Azure, esaminiamo il [servizio Azure SignalR](/azure/azure-signalr/signalr-overview), offrendo scalabilità basata sul cloud dopo che l'App necessaria.</span><span class="sxs-lookup"><span data-stu-id="9c077-104">Finally, if you know you'll be running your real-time apps in Microsoft Azure, take a look at the [Azure SignalR Service](/azure/azure-signalr/signalr-overview), as it provides cloud-based scale-out once your apps need it.</span></span>
+> [!WARNING]
+> <span data-ttu-id="c6dfc-101">Questa documentazione non per l'ultima versione di SignalR.</span><span class="sxs-lookup"><span data-stu-id="c6dfc-101">This documentation isn't for the latest version of SignalR.</span></span> <span data-ttu-id="c6dfc-102">Dare un'occhiata [ASP.NET Core SignalR](/aspnet/core/signalr/introduction).</span><span class="sxs-lookup"><span data-stu-id="c6dfc-102">Take a look at [ASP.NET Core SignalR](/aspnet/core/signalr/introduction).</span></span>
