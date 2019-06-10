@@ -34,7 +34,7 @@ Quando si installa il servizio di compilazione 2010 Team Foundation Server (TFS)
 Qualsiasi attività di distribuzione che richiedono l'autenticazione di Windows e che si intende automatizzare con Team Build, verrà eseguito usando l'identità del servizio di compilazione. Di conseguenza, è necessario concedere l'identità del servizio di compilazione di tutte le autorizzazioni necessarie per i server web e i server di database.
 
 > [!NOTE]
-> L'account del servizio di rete Usa l'account del computer per eseguire l'autenticazione ad altri computer. Gli account Machine assumono la forma * [nome dominio]\[nome macchina] ***$**&#x2014;, ad esempio, **FABRIKAM\TFSBUILD$**. Di conseguenza, se il servizio di compilazione viene eseguita usando l'identità del servizio di rete, si devono concedere le autorizzazioni necessarie per l'identità dell'account computer per il server di compilazione.
+> L'account del servizio di rete Usa l'account del computer per eseguire l'autenticazione ad altri computer. Gli account Machine assumono la forma *[nome dominio]\[nome macchina]* **$** &#x2014;, ad esempio, **FABRIKAM\TFSBUILD$** . Di conseguenza, se il servizio di compilazione viene eseguita usando l'identità del servizio di rete, si devono concedere le autorizzazioni necessarie per l'identità dell'account computer per il server di compilazione.
 
 ## <a name="configuring-web-server-permissions"></a>Configurazione delle autorizzazioni per Server Web
 
