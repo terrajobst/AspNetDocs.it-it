@@ -88,7 +88,7 @@ Per supportare la distribuzione di un progetto di database a più destinazioni, 
 
     ![](customizing-database-deployments-for-multiple-environments/_static/image1.png)
 3. Nel **nuovo File di configurazione di distribuzione** finestra di dialogo casella, assegnare al file un nome significativo (ad esempio, **TestEnvironment.sqldeployment**) e quindi fare clic su **Salva**.
-4. Nel *[nomefile] * * *. sqldeployment** pagina, impostare le proprietà di distribuzione per corrispondono ai requisiti dell'ambiente di destinazione e quindi salvare il file.
+4. Nel *[nomefile]* **.sqldeployment** pagina, impostare le proprietà di distribuzione per corrispondono ai requisiti dell'ambiente di destinazione e quindi salvare il file.
 
     ![](customizing-database-deployments-for-multiple-environments/_static/image2.png)
 5. Si noti che il nuovo file viene aggiunto alla cartella Properties del progetto di database.
