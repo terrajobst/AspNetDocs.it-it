@@ -94,7 +94,7 @@ Per automatizzare i comandi seguenti come parte di un processo di compilazione e
 7. Aggiungere una nuova destinazione denominata **DeployAppOffline**. All'interno di questa destinazione, richiamare il comando MSDeploy.exe che distribuisce i *App\_offline* file al server web di destinazione.
 
     [!code-xml[Main](taking-web-applications-offline-with-web-deploy/samples/sample5.xml)]
-8. In questo esempio, il **ContactManagerIisPath** proprietà è definita in un' posizione nel file di progetto. Si tratta semplicemente un percorso applicazione IIS, nel formato *[nome sito Web IIS] / [nome applicazione]*. Inclusione di una condizione nel database di destinazione consente agli utenti di passare il *App\_offline* distribuzione attiva o disattiva la modifica di un valore della proprietà o fornendo un parametro della riga di comando.
+8. In questo esempio, il **ContactManagerIisPath** proprietà è definita in un' posizione nel file di progetto. Si tratta semplicemente un percorso applicazione IIS, nel formato *[nome sito Web IIS] / [nome applicazione]* . Inclusione di una condizione nel database di destinazione consente agli utenti di passare il *App\_offline* distribuzione attiva o disattiva la modifica di un valore della proprietà o fornendo un parametro della riga di comando.
 9. Aggiungere una nuova destinazione denominata **DeleteAppOffline**. All'interno di questa destinazione, richiamare il comando MSDeploy.exe che rimuove i *App\_offline* file dal server web di destinazione.
 
     [!code-xml[Main](taking-web-applications-offline-with-web-deploy/samples/sample6.xml)]
@@ -137,7 +137,7 @@ La procedura seguente viene illustrato come aggiungere quanto segue *. WPP* file
 1. Aprire la soluzione in Visual Studio 2010.
 2. Nel **Esplora soluzioni** finestra, fare clic sul nodo del progetto di applicazione web (ad esempio, **ContactManager.Mvc**), scegliere **Add**e quindi fare clic su **Nuovo elemento**.
 3. Nel **Aggiungi nuovo elemento** finestra di dialogo, seleziona la **File XML** modello.
-4. Nel **nome** , digitare *[nome progetto] * * *.wpp.targets** (ad esempio, **ContactManager.Mvc.wpp.targets**), quindi fare clic su **Aggiungi**.
+4. Nel **nome** , digitare *[nome progetto]* **.wpp.targets** (ad esempio, **ContactManager.Mvc.wpp.targets**), quindi fare clic su **Aggiungi**.
 
     ![](taking-web-applications-offline-with-web-deploy/_static/image4.png)
 

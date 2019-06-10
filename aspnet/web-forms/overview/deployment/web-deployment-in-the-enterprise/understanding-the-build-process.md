@@ -164,7 +164,7 @@ In primo luogo, si noti che il tag di apertura include un' **output** attributo.
 
 [!code-xml[Main](understanding-the-build-process/samples/sample10.xml)]
 
-Questo è un esempio di *batch di destinazione*. Nei file di progetto MSBuild, l'invio in batch è una tecnica per scorrere le raccolte. Il valore del **output** attributo **"% (DbPublishPackages.Identity)"**, fa riferimento al **identità** proprietà dei metadati il **DbPublishPackages**  elenco di elementi. Questa notazione, **Outputs=%***(ItemList.ItemMetadataName)*, viene convertito come:
+Questo è un esempio di *batch di destinazione*. Nei file di progetto MSBuild, l'invio in batch è una tecnica per scorrere le raccolte. Il valore del **output** attributo **"% (DbPublishPackages.Identity)"** , fa riferimento al **identità** proprietà dei metadati il **DbPublishPackages**  elenco di elementi. Questa notazione, **Outputs=%** *(ItemList.ItemMetadataName)* , viene convertito come:
 
 - Suddividere gli elementi in **DbPublishPackages** in batch di elementi che contengono gli stessi **identità** valore dei metadati.
 - Eseguire la destinazione di una sola volta per ogni batch.
@@ -178,7 +178,7 @@ In questo caso, perché non sono mai più di un elemento con lo stesso percorso 
 
 [!code-xml[Main](understanding-the-build-process/samples/sample11.xml)]
 
-In questo caso **%(DbPublishPackages.DatabaseConnectionString)**, **%(DbPublishPackages.TargetDatabase)**, e **%(DbPublishPackages.FullPath)** fanno tutte riferimento i valori dei metadati del **DbPublishPackages** raccolta di elementi. Il  **\_Cmd** proprietà viene utilizzata per il **Exec** attività che richiama il comando.
+In questo caso **%(DbPublishPackages.DatabaseConnectionString)** , **%(DbPublishPackages.TargetDatabase)** , e **%(DbPublishPackages.FullPath)** fanno tutte riferimento i valori dei metadati del **DbPublishPackages** raccolta di elementi. Il **\_Cmd** proprietà viene utilizzata per il **Exec** attività che richiama il comando.
 
 [!code-xml[Main](understanding-the-build-process/samples/sample12.xml)]
 

@@ -83,7 +83,7 @@ In genere un file di progetto deve fornire un numero elevato di tipi diversi di 
 
 [!code-xml[Main](understanding-the-project-file/samples/sample2.xml)]
 
-Per recuperare un valore della proprietà, si utilizza il formato **$(***NomeProprietà***) * * *.* Ad esempio, per recuperare il valore della **ServerName** proprietà, digitare:
+Per recuperare un valore della proprietà, si utilizza il formato * *$(***NomeProprietà***)***.* Ad esempio, per recuperare il valore della **ServerName** proprietà, digitare:
 
 [!code-powershell[Main](understanding-the-project-file/samples/sample3.ps1)]
 
@@ -161,8 +161,8 @@ Attività e destinazioni può includere **condizione** attributi. Di conseguenza
 
 In generale, quando si creano utili attività e destinazioni, è necessario fare riferimento alle proprietà e gli elementi che sono stati definiti in un' posizione nel file di progetto:
 
-- Per utilizzare un valore della proprietà, digitare **$(***PropertyName***)**, dove *PropertyName* è il nome del **proprietà** elemento o il nome del parametro.
-- Per usare un elemento, digitare **@(***ItemName***)**, dove *ItemName* è il nome del **elemento** elemento.
+- Per utilizzare un valore della proprietà, digitare **$(***PropertyName***)** , dove *PropertyName* è il nome del **proprietà** elemento o il nome del parametro.
+- Per usare un elemento, digitare **@(***ItemName***)** , dove *ItemName* è il nome del **elemento** elemento.
 
 > [!NOTE]
 > Tenere presente che se si creano più elementi con lo stesso nome, si sta creando un elenco. Al contrario, se si creano più proprietà con lo stesso nome, l'ultimo valore della proprietà è fornire sovrascrive qualsiasi proprietà precedente con lo stesso nome&#x2014;una proprietà può contenere solo un singolo valore.
