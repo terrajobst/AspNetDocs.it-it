@@ -8,12 +8,12 @@ ms.date: 02/10/2014
 ms.assetid: f3f4b8c8-e8f6-4474-ad94-69228a6c01ee
 msc.legacyurl: /web-pages/overview/ui-layouts-and-themes/4-working-with-forms
 msc.type: authoredcontent
-ms.openlocfilehash: ec5ad784978b2d5191d59398fc4b5ed25ae516fb
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: c7d4802063c8610a246afe67bd15eea429f7304a
+ms.sourcegitcommit: dd0dc556a3d99a31d8fdbc763e9a2e53f3441b70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65128397"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67410835"
 ---
 # <a name="working-with-html-forms-in-aspnet-web-pages-razor-sites"></a>Uso dei moduli HTML in ASP.NET Web Pages (Razor) Sites
 
@@ -51,7 +51,7 @@ da [Tom FitzMacken](https://github.com/tfitzmac)
     [!code-html[Main](4-working-with-forms/samples/sample1.html)]
 3. Avvio della pagina nel browser. (In WebMatrix, nelle **file** dell'area di lavoro, il pulsante destro e quindi selezionare **Avvia nel browser**.) Un modulo semplice con tre campi di input e un **Submit** pulsante viene visualizzato.
 
-    ![Screenshot di un form tre caselle di testo.](4-working-with-forms/_static/image1.jpg)
+    ![Screenshot di un form tre caselle di testo.](4-working-with-forms/_static/image1.png)
 
     A questo punto, se si sceglie la **Submit** pulsante, non accade nulla. Per rendere il modulo è utile, è necessario aggiungere il codice che verrà eseguito nel server.
 
@@ -67,7 +67,7 @@ Per elaborare il form, si aggiunge codice che legge i valori dei campi inviato e
 
     Quando si invia la pagina in questo momento, i valori immessi vengono visualizzati sopra la forma:
 
-    ![Screenshot che mostra i valori che immessi sono visualizzati nella pagina.](4-working-with-forms/_static/image2.jpg)
+    ![Screenshot che mostra i valori che immessi sono visualizzati nella pagina.](4-working-with-forms/_static/image2.png)
 
     Esaminare il codice per la pagina. Utilizzare innanzitutto la `IsPost` metodo per determinare se la pagina viene registrata &#8212; , ovvero se è stato selezionato un il **Invia** pulsante. Se si tratta di un post, `IsPost` restituisce true. Questo è il modo standard nelle pagine Web ASP.NET per determinare se si lavora con una richiesta iniziale (una richiesta GET) o un postback (una richiesta POST). (Per ulteriori informazioni su GET e POST, vedere l'intestazione laterale "HTTP GET e POST e l'istruzione IsPost Property" nella [Introduzione a ASP.NET Web Pages di programmazione utilizzando la sintassi Razor](https://go.microsoft.com/fwlink/?LinkId=202890#SB_HttpGetPost).)
 

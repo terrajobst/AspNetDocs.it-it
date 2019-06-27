@@ -8,12 +8,12 @@ ms.date: 02/20/2005
 ms.assetid: 2bb109d2-e299-46ea-9054-fa0263b59165
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/caching
 msc.type: authoredcontent
-ms.openlocfilehash: 39f4eb7b0859cf52fe3ed2531e9c349b465b9327
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 4f0b021ca6ca151544dd9fb0587ed9e0cf14ff65
+ms.sourcegitcommit: dd0dc556a3d99a31d8fdbc763e9a2e53f3441b70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65116857"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67411246"
 ---
 # <a name="caching"></a>Memorizzazione nella cache
 
@@ -94,7 +94,7 @@ Quando questo comando esegue le seguenti modifiche sono apportate al database di
 | AspNet\_SqlCacheUnRegisterTableStoredProcedure | Annulla la registrazione di una tabella per la dipendenza della cache SQL rimuovendo la voce nella tabella di notifica e rimuove il trigger. |
 | AspNet\_SqlCacheUpdateChangeIdStoredProcedure | Aggiorna la tabella di notifica mediante l'incremento di changeId per la tabella modificata. ASP.NET utilizza questo valore per determinare se i dati sono stati modificati. Come indicato di seguito, questa stored procedure viene eseguita dal trigger creato quando la tabella è abilitata. |
 
-- Un trigger di SQL Server denominato ***tabella\_nome *\_AspNet\_SqlCacheNotification\_Trigger** viene creato per la tabella. Questo trigger esegue AspNet\_SqlCacheUpdateChangeIdStoredProcedure quando un INSERT, UPDATE o DELETE viene eseguita sulla tabella.
+- Un trigger di SQL Server denominata  **_tabella\_name_\_AspNet\_SqlCacheNotification\_Trigger** viene creato per la tabella. Questo trigger esegue AspNet\_SqlCacheUpdateChangeIdStoredProcedure quando un INSERT, UPDATE o DELETE viene eseguita sulla tabella.
 - Un ruolo di SQL Server denominata **aspnet\_ChangeNotification\_ReceiveNotificationsOnlyAccess** viene aggiunto al database.
 
 Il **aspnet\_ChangeNotification\_ReceiveNotificationsOnlyAccess** ruolo di SQL Server disponga delle autorizzazioni EXEC per AspNet\_SqlCachePollingStoredProcedure. Affinché il modello di polling funzionare correttamente, è necessario aggiungere l'account di processo per aspnet\_ChangeNotification\_ReceiveNotificationsOnlyAccess ruolo. Aspnet\_strumento regsql.exe non eseguirà questa operazione automaticamente.

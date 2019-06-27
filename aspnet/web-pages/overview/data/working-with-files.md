@@ -8,12 +8,12 @@ ms.date: 02/20/2014
 ms.assetid: eee916e4-ba4c-439a-a24e-68df7d45a569
 msc.legacyurl: /web-pages/overview/data/working-with-files
 msc.type: authoredcontent
-ms.openlocfilehash: 3ff852232212ddda4930597731911be60c092667
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 684c47a8a8480dc040e5144144577c94c35d39e5
+ms.sourcegitcommit: dd0dc556a3d99a31d8fdbc763e9a2e53f3441b70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65108951"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67411192"
 ---
 # <a name="working-with-files-in-an-aspnet-web-pages-razor-site"></a>Uso di file in un sito di ASP.NET Web Pages (Razor)
 
@@ -22,7 +22,7 @@ da [Tom FitzMacken](https://github.com/tfitzmac)
 > Questo articolo illustra come lettura, scrittura, aggiungere, eliminare e caricare file in un sito di ASP.NET Web Pages (Razor).
 > 
 > > [!NOTE]
-> > Se si desidera caricare immagini e modificarli (ad esempio, capovolgere o li ridimensiono), vedere [utilizzo di immagini in un sito di ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=202897).
+> > Se si desidera caricare immagini e modificarli (ad esempio, capovolgere o li ridimensiono), vedere [utilizzo di immagini in un sito di ASP.NET Web Pages](/aspnet/web-pages/overview/ui-layouts-and-themes/9-working-with-images).
 > 
 > 
 > **Che cosa si apprenderà come:** 
@@ -72,7 +72,7 @@ Se si desidera archiviare i dati in un file di testo, è possibile usare il `Fil
 
     Creare quindi una variabile (`dataFile`) che contiene il percorso e nome del file in cui archiviare i dati. Il percorso dell'impostazione richiede una gestione speciale. In siti Web, è una prassi non corretta per fare riferimento nel codice percorsi assoluti, ad esempio *C:\Folder\File.txt* per i file nel server web. Se viene spostato un sito Web, un percorso assoluto, sarà errato. Inoltre, per un sito di hosting (in contrapposizione nel proprio computer) è in genere non anche conoscere qual è il percorso corretto quando si scrive il codice.
 
-    Ma a volte (ad esempio, ora, per la scrittura di un file) è necessario un percorso completo. La soluzione consiste nell'usare la `MapPath` metodo di `Server` oggetto. Viene restituito il percorso completo al sito Web. Per ottenere il percorso per la radice del sito Web, si utilizza il `~` operatore (per represen del virtuale nel sito radice) per `MapPath`. (È anche possibile passare un nome della sottocartella, come *~/App\_dati /*, per ottenere il percorso per tale sottocartella.) È quindi possibile concatenare le informazioni aggiuntive su qualunque sia il metodo restituisce per creare un percorso completo. In questo esempio, si aggiunge un nome di file. (Altre informazioni su come usare i percorsi di file e cartelle nella [Introduzione a ASP.NET Web Pages di programmazione utilizzando la sintassi Razor](https://go.microsoft.com/fwlink/?LinkId=195205#ID_WorkingWithFileAndFolderPaths).)
+    Ma a volte (ad esempio, ora, per la scrittura di un file) è necessario un percorso completo. La soluzione consiste nell'usare la `MapPath` metodo di `Server` oggetto. Viene restituito il percorso completo al sito Web. Per ottenere il percorso per la radice del sito Web, si utilizza il `~` operatore (per represen del virtuale nel sito radice) per `MapPath`. (È anche possibile passare un nome della sottocartella, come *~/App\_dati /* , per ottenere il percorso per tale sottocartella.) È quindi possibile concatenare le informazioni aggiuntive su qualunque sia il metodo restituisce per creare un percorso completo. In questo esempio, si aggiunge un nome di file. (Altre informazioni su come usare i percorsi di file e cartelle nella [Introduzione a ASP.NET Web Pages di programmazione utilizzando la sintassi Razor](https://go.microsoft.com/fwlink/?LinkId=195205#ID_WorkingWithFileAndFolderPaths).)
 
     Il file viene salvato nel *App\_dati* cartella. Questa cartella è una cartella speciale in ASP.NET che consente di archiviare i file di dati, come descritto in [Introduzione all'uso di un Database nei siti di ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=195209).
 

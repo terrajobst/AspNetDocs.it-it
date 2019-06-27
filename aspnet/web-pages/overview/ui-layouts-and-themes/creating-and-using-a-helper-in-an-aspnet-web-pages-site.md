@@ -8,12 +8,12 @@ ms.date: 02/17/2014
 ms.assetid: 46bff772-01e0-40f0-9ae6-9e18c5442ee6
 msc.legacyurl: /web-pages/overview/ui-layouts-and-themes/creating-and-using-a-helper-in-an-aspnet-web-pages-site
 msc.type: authoredcontent
-ms.openlocfilehash: 1f5109324ff3ce919e88fe976587a179eeaa5a5d
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 380663951094c9fc7d5f0601e30995fa073a204b
+ms.sourcegitcommit: dd0dc556a3d99a31d8fdbc763e9a2e53f3441b70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65116045"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67410974"
 ---
 # <a name="creating-and-using-a-helper-in-an-aspnet-web-pages-razor-site"></a>Creazione e uso di un Helper in un sito ASP.NET Web Pages (Razor)
 
@@ -71,7 +71,7 @@ Questa procedura illustra come creare l'helper che crea la nota, come descritto 
     Per chiamare il supporto è stato creato, usare `@` aggiungendo il nome del file in cui l'helper è, un punto e quindi il nome di supporto. (Se si dispone di più cartelle *App\_codice* cartella, è possibile utilizzare la sintassi `@FolderName.FileName.HelperName` per chiamare l'helper all'interno di qualsiasi nidificate a livello di cartella). Il testo che aggiunta in virgolette doppie all'interno delle parentesi è il testo che l'helper verrà visualizzato come parte della nota nella pagina web.
 3. Salvare la pagina ed eseguirlo in un browser. L'helper che genera l'errore nota elemento a destra in cui è stato chiamato l'helper: tra i due paragrafi.
 
-    ![Screenshot che mostra la pagina nel browser e modalità di generazione di markup che inserisce una casella intorno al testo specificato dell'helper.](creating-and-using-a-helper-in-an-aspnet-web-pages-site/_static/image1.jpg)
+    ![Screenshot che mostra la pagina nel browser e modalità di generazione di markup che inserisce una casella intorno al testo specificato dell'helper.](creating-and-using-a-helper-in-an-aspnet-web-pages-site/_static/image1.png)
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 

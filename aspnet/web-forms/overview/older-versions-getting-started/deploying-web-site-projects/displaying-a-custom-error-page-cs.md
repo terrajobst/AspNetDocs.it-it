@@ -8,12 +8,12 @@ ms.date: 06/09/2009
 ms.assetid: cb061642-faf3-41b2-9372-69e13444d458
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/displaying-a-custom-error-page-cs
 msc.type: authoredcontent
-ms.openlocfilehash: f56241a6a3d1d54f917d366b08edb4a1a43bbce8
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 2b84b4e0f57bdddb83fc79494b66be76edcad664
+ms.sourcegitcommit: dd0dc556a3d99a31d8fdbc763e9a2e53f3441b70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65134454"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67411136"
 ---
 # <a name="displaying-a-custom-error-page-c"></a>Visualizzazione di una pagina di errore personalizzata (C#)
 
@@ -137,8 +137,10 @@ Con questa modifica, ogni volta che un utente potrebbe visitare in modalità rem
 > [!NOTE]
 > Consulta [pagine di errore 404, una volta più](http://www.smashingmagazine.com/2009/01/29/404-error-pages-one-more-time/) per indicazioni sulla creazione di pagine di errore 404 efficace.
 
-[![](displaying-a-custom-error-page-cs/_static/image19.png)](displaying-a-custom-error-page-cs/_static/image18.png)**Figura 7**: La pagina di errore 404 personalizzata viene visualizzato un messaggio più mirato rispetto a `Oops.aspx`  
- ([Fare clic per visualizzare l'immagine con dimensioni normali](displaying-a-custom-error-page-cs/_static/image20.png)) 
+[![](displaying-a-custom-error-page-cs/_static/image19.png)](displaying-a-custom-error-page-cs/_static/image18.png)
+
+**Figura 7**: La pagina di errore 404 personalizzata viene visualizzato un messaggio più mirato rispetto a `Oops.aspx`  
+([Fare clic per visualizzare l'immagine con dimensioni normali](displaying-a-custom-error-page-cs/_static/image20.png)) 
 
 Poiché è certo che il `404.aspx` pagina viene raggiunta solo quando l'utente effettua una richiesta per una pagina che non è stata trovata, è possibile migliorare questa pagina di errore personalizzato per includere funzionalità per consentire all'utente di risolvere questo tipo specifico di errore. Ad esempio, è possibile creare una tabella di database che esegue il mapping nota URL non valido a un URL valido e quindi chiedere il `404.aspx` personalizzato pagina di errore eseguire una query sulla tabella e suggerire l'utente stia tentando di raggiungere le pagine.
 

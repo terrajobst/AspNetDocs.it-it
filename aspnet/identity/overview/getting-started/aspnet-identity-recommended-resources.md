@@ -9,12 +9,12 @@ ms.assetid: 0f78aec2-f509-46fa-b20f-d5208425d8ec
 ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/getting-started/aspnet-identity-recommended-resources
 msc.type: authoredcontent
-ms.openlocfilehash: 8e476f8a4172ebbe55819cda1ceb5458426243bd
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: fa4b22438fffe4f5b95a877e96eb4ec26b6de8d9
+ms.sourcegitcommit: dd0dc556a3d99a31d8fdbc763e9a2e53f3441b70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59381900"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67410885"
 ---
 # <a name="aspnet-identity-recommended-resources"></a>Risorse consigliate su ASP.NET Identity
 
@@ -147,7 +147,6 @@ Se si desidera scrivere un proprio provider, leggere [Panoramica di archiviazion
 - Blog: [Implementazione di ASP.NET Identity](http://odetocode.com/blogs/scott/archive/2014/01/20/implementing-asp-net-identity.aspx)
 - Esercitazione:[configurare gli account di identità di base e che punta a un database esterno](http://typecastexception.com/post/2013/10/27/Configuring-Db-Connection-and-Code-First-Migration-for-Identity-Accounts-in-ASPNET-MVC-5-and-Visual-Studio-2013.aspx). Dal [ @xivSolutions ](https://twitter.com/xivSolutions).
 - Esercitazione[: Implementazione di un Provider di archiviazione MySQL personalizzato ASP.NET Identity](../extensibility/implementing-a-custom-mysql-aspnet-identity-storage-provider.md)
-- [Le entità CodeFluent](http://blog.codefluententities.com/2014/04/30/asp-net-identity-v2-and-codefluent-entities/) da [SoftFluent](http://www.softfluent.com/)
 - [Archiviazione tabelle di Azure](https://www.nuget.org/packages/accidentalfish.aspnet.identity.azure/) Randall James.
 - Archiviazione tabelle di Azure: [AspNet.Identity.TableStorage](https://github.com/stuartleeks/leeksnet.AspNet.Identity.TableStorage) dal [ @stuartleeks ](https://twitter.com/stuartleeks).
 - [CouchDB / Cloudant da Daniel Wertheim.](https://github.com/danielwertheim/mycouch.aspnet.identity)

@@ -8,12 +8,12 @@ ms.date: 02/10/2010
 ms.assetid: d601c540-f86b-4feb-890c-20c806b3da6c
 msc.legacyurl: /whitepapers/aspnet4/breaking-changes
 msc.type: content
-ms.openlocfilehash: 65b13065ae5324ce64ec1b87b2127e5277542fb8
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 8ccad3b40a723c92a3164de082e1f94577141008
+ms.sourcegitcommit: dd0dc556a3d99a31d8fdbc763e9a2e53f3441b70
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65125668"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67411203"
 ---
 # <a name="aspnet-4-breaking-changes"></a>Modifiche importanti in ASP.NET 4
 
@@ -362,7 +362,7 @@ Quando si ripristina il modello CAS legacy, sono abilitati i seguenti comportame
 - Sono consentiti più set di autorizzazioni diverso in un solo dominio applicazione.
 - Le asserzioni di autorizzazioni esplicite non sono necessarie per gli assembly nella Global Assembly Cache che vengono richiamati quando solo ASP.NET o altro codice di .NET Framework è nello stack.
 
-Uno scenario non può essere annullato in .NET Framework 4: applicazioni con attendibilità parziale non Web non è più possono chiamare alcune API nella DLL e System.Web.Extensions.dll. Nelle versioni precedenti di .NET Framework, è possibile per le applicazioni con attendibilità parziale non Web essere concessi esplicitamente <strong>AspNetHostingPermission</strong> autorizzazioni. Sarebbe quindi possibile usare queste applicazioni <strong>System.Web.HttpUtility</strong>, digita il <strong>System.Web.ClientServices.\< / strong > * gli spazi dei nomi e i tipi correlati a appartenenza, ruoli e profili. La chiamata di questi tipi di applicazioni con attendibilità parziale non Web non è più supportata in .NET Framework 4.
+Uno scenario non può essere annullato in .NET Framework 4: applicazioni con attendibilità parziale non Web non è più possono chiamare alcune API nella DLL e System.Web.Extensions.dll. Nelle versioni precedenti di .NET Framework, è possibile per le applicazioni con attendibilità parziale non Web essere concessi esplicitamente **AspNetHostingPermission** autorizzazioni. Sarebbe quindi possibile usare queste applicazioni **System.Web.HttpUtility**, digita il **System.Web.ClientServices.\***  gli spazi dei nomi e i tipi correlati a appartenenza, ruoli e profili. La chiamata di questi tipi di applicazioni con attendibilità parziale non Web non è più supportata in .NET Framework 4.
 
 > [!NOTE]
 > Il **HtmlEncode** e **HtmlDecode** funzionalità del **System.Web.HttpUtility** classe è stata spostata in .NET Framework 4 nuovi  **System.Net.WebUtility** classe. Se era l'unica funzionalità ASP.NET che veniva utilizzato, modificare il codice dell'applicazione per usare le nuove **WebUtility** classe.
