@@ -309,7 +309,7 @@ In questa esercitazione si è appreso sulla gestione degli errori a livello di a
 
 ## <a name="tutorial-series-conclusion"></a>Serie di esercitazioni conclusioni
 
-*Grazie per seguire. Mi auguro che questa serie di esercitazioni pratiche permesso di acquisire maggiore familiarità con Web Form ASP.NET. Se sono necessarie altre informazioni sulle funzionalità di Web Form disponibili in ASP.NET 4.5 e Visual Studio 2013, vedere* [ *ASP.NET and Web Tools per Visual Studio 2013 Release Notes* ](../../../../visual-studio/overview/2013/release-notes.md)  *. Inoltre, assicurarsi di esaminare l'esercitazione indicata nella* ***passaggi successivi * * * sezione e defintely provare il* [ *gratuita di Azure* ](https://azure.microsoft.com/pricing/free-trial/)*.*
+*Grazie per seguire. Mi auguro che questa serie di esercitazioni pratiche permesso di acquisire maggiore familiarità con Web Form ASP.NET. Se sono necessarie altre informazioni sulle funzionalità di Web Form disponibili in ASP.NET 4.5 e Visual Studio 2013, vedere* [ *ASP.NET and Web Tools per Visual Studio 2013 Release Notes* ](../../../../visual-studio/overview/2013/release-notes.md)  *. Inoltre, assicurarsi di esaminare l'esercitazione indicata nella* * **passaggi successivi * * * sezione e defintely provare il* [ *gratuita di Azure* ](https://azure.microsoft.com/pricing/free-trial/)* .*
 
 ![Grazie aver - Erik](aspnet-error-handling/_static/image10.png)  
 

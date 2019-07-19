@@ -234,7 +234,7 @@ Se si desidera /Mobile l'URL per raggiungere l'operazione sull'indice in HomeCon
 
 Ciò significa la home page per dispositivi mobili a questo punto si troverà /Mobile, piuttosto che per dispositivi mobili/Home, in quanto "Home" è ora l'in modo implicito i nome controller predefinito per le pagine mobile.
 
-Successivamente, si noti che aggiungendo un secondo HomeController all'applicazione (ad esempio, per dispositivi mobili quello, oltre a desktop uno esistente), si verrà hanno interferito con regolari home page del desktop. Avrà esito negativo con l'errore "*sono stati trovati più tipi corrispondenti ai controller di denominato 'Home'*". Per risolvere questo problema, aggiornare la configurazione di routing di livello superiore (in Global.asax.cs) per specificare che la classe HomeController desktop devono avere la priorità quando vi è ambiguità:
+Successivamente, si noti che aggiungendo un secondo HomeController all'applicazione (ad esempio, per dispositivi mobili quello, oltre a desktop uno esistente), si verrà hanno interferito con regolari home page del desktop. Avrà esito negativo con l'errore "*sono stati trovati più tipi corrispondenti ai controller di denominato 'Home'* ". Per risolvere questo problema, aggiornare la configurazione di routing di livello superiore (in Global.asax.cs) per specificare che la classe HomeController desktop devono avere la priorità quando vi è ambiguità:
 
 [!code-csharp[Main](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/samples/sample9.cs)]
 
