@@ -63,19 +63,19 @@ L'API consente le operazioni CRUD sul database. Di seguito sono riepilogate le A
 
 | Autori |  |
 | --- | -- |
-| OTTENERE/autori di api | Ottenere tutti gli autori. |
-| Api/autori di GET / {id} | Ottenere un autore per ID. |
-| Autori di POST/api / | Creare un nuovo autore. |
-| PUT/API/autori / {id} | Aggiornare un autore esistente. |
-| ELIMINARE/API/autori / {id} | Eliminare un autore. |
+| GET api/authors | Ottenere tutti gli autori. |
+| GET api/authors/{id} | Ottenere un autore per ID. |
+| POST /api/authors | Creare un nuovo autore. |
+| PUT /api/authors/{id} | Aggiornare un autore esistente. |
+| DELETE /api/authors/{id} | Eliminare un autore. |
 
 | Libri |  |
 | --- | -- |
-| OTTENERE /api/books | Ottenere tutti i libri. |
+| GET /api/books | Ottenere tutti i libri. |
 | GET /api/books/{id} | Ottenere un libro di ID. |
-| POST/api/documentazione | Creare un nuovo libro. |
-| PUT/API/documentazione / {id} | Aggiornare un libro esistente. |
-| ELIMINARE/API/documentazione / {id} | Eliminare un libro. |
+| POST /api/books | Creare un nuovo libro. |
+| PUT /api/books/{id} | Aggiornare un libro esistente. |
+| DELETE /api/books/{id} | Eliminare un libro. |
 
 ## <a name="view-the-database-optional"></a>Visualizzare il Database (facoltativo)
 
