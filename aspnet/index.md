@@ -7,12 +7,12 @@ ms.author: riande
 title: Documentazione di ASP.NET
 ms.date: 08/24/2018
 description: Informazioni su come sviluppatore per ASP.NET e applicazioni Web ASP.NET. Ottenere la documentazione, il codice di esempio, le esercitazioni e altro ancora.
-ms.openlocfilehash: c907f2ba66ba6ff197ced0c67243a963ffab17e3
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 4bfa5b2a161cdf67f3d2df0057bd68958d8a5769
+ms.sourcegitcommit: f774732a3960fca079438a88a5472c37cf7be08a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59384721"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68810747"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -27,7 +27,7 @@ ms.locfileid: "59384721"
                         <ul id="core_overview" class="cardsC">
                             <li>
                                 <div class="container intro">
-                                    <p>ASP.NET Core è un nuovo framework .NET open source e multipiattaforma per la compilazione di moderne applicazioni Web basate sul cloud in Windows, Mac o Linux.</p>
+                                    <p>ASP.NET Core è un framework .NET open source e multipiattaforma per la compilazione di moderne applicazioni Web basate sul cloud in Windows, Mac o Linux.</p>
                                     <p><a href="https://docs.microsoft.com/aspnet/core/choose-aspnet-framework" data-raw-source="[Learn the benefits of both ASP.NET Core and ASP.NET](https://docs.microsoft.com/aspnet/core/choose-aspnet-framework)">Informazioni sui vantaggi di ASP.NET Core e ASP.NET</a> per scegliere la soluzione più adatta alle proprie esigenze.</p>
                                 </div>
                             </li>
@@ -148,7 +148,6 @@ ms.locfileid: "59384721"
                             <li class="fullSpan">
                                 <div class="container footer">
                                     <p><a href="https://github.com/aspnet/Docs/blob/master/CONTRIBUTING.md">Contributi agli esempi e alla documentazione ASP.NET Core</a></p>
-                                    <p><a href="https://docs.microsoft.com/dotnet/articles/project-json">Versione di Visual Studio 2015/project.json della documentazione</a></p>
                                 </div>
                             </li>
                         </ul>
