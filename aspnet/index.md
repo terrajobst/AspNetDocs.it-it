@@ -1,18 +1,18 @@
 ---
 uid: index
 layout: HubPage
-ms.topic: conceptual
+ms.topic: hub-page
 author: Rick-Anderson
 ms.author: riande
 title: Documentazione di ASP.NET
 ms.date: 08/24/2018
 description: Informazioni su come sviluppatore per ASP.NET e applicazioni Web ASP.NET. Ottenere la documentazione, il codice di esempio, le esercitazioni e altro ancora.
-ms.openlocfilehash: 4bfa5b2a161cdf67f3d2df0057bd68958d8a5769
-ms.sourcegitcommit: f774732a3960fca079438a88a5472c37cf7be08a
+ms.openlocfilehash: 6309704444d60d42d49c3a8f1683045dc503e761
+ms.sourcegitcommit: cd35be4b25eb05724a5f074214bbdf6573349eda
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810747"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70161685"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
