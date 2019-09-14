@@ -9,14 +9,16 @@ ms.custom: seoapril2019
 ms.assetid: 2fc4797c-38ef-4cc7-926c-ca431c4739e8
 msc.legacyurl: /web-api/overview/getting-started-with-aspnet-web-api/action-results
 msc.type: authoredcontent
-ms.openlocfilehash: 1eaaf8e87168096683212fa66d3ddf415ad6b22b
-ms.sourcegitcommit: b95316530fa51087d6c400ff91814fe37e73f7e8
+ms.openlocfilehash: f00ac0db453053e53d6d6942dd1557b409f4167b
+ms.sourcegitcommit: 4b324a11131e38f920126066b94ff478aa9927f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70000724"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70985843"
 ---
 # <a name="action-results-in-web-api-2"></a>Risultati delle azioni nell'API Web 2
+
+[!INCLUDE[](~/includes/coreWebAPI.md)]
 
 In questo argomento viene descritto come API Web ASP.NET converte il valore restituito da un'azione del controller in un messaggio di risposta HTTP.
 
@@ -106,7 +108,7 @@ Per tutti gli altri tipi restituiti, l'API Web usa un [formattatore multimediale
 
 [!code-csharp[Main](action-results/samples/sample11.cs)]
 
-Uno svantaggio di questo approccio è che non è possibile restituire direttamente un codice di errore, ad esempio 404. Tuttavia, è possibile generare un oggetto HttpResponseException per i codici di errore. Per ulteriori informazioni, vedere [gestione delle eccezioni in API Web ASP.NET](../error-handling/exception-handling.md).
+Uno svantaggio di questo approccio è che non è possibile restituire direttamente un codice di errore, ad esempio 404. Tuttavia, è possibile generare un oggetto **HttpResponseException** per i codici di errore. Per ulteriori informazioni, vedere [gestione delle eccezioni in API Web ASP.NET](../error-handling/exception-handling.md).
 
 L'API Web usa l'intestazione Accept nella richiesta per scegliere il formattatore. Per altre informazioni, vedere [negoziazione del contenuto](../formats-and-model-binding/content-negotiation.md).
 
