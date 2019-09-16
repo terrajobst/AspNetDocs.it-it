@@ -1,7 +1,7 @@
 ---
 uid: mvc/overview/getting-started/getting-started-with-ef-using-mvc/advanced-entity-framework-scenarios-for-an-mvc-web-application
-title: "Esercitazione: Informazioni sugli scenari avanzati di Entity Framework per un'app Web MVC 5"
-description: Sono incluse in questa esercitazione presenta diversi argomenti che è utili tenere presente dopo aver appreso le nozioni di base dello sviluppo di applicazioni web ASP.NET che usano Entity Framework Code First.
+title: "Esercitazione: Informazioni sugli scenari EF avanzati per un'app Web MVC 5"
+description: Questa esercitazione include alcuni argomenti utili da tenere presente quando si vanno oltre le nozioni di base dello sviluppo di applicazioni Web ASP.NET che usano Entity Framework Code First.
 author: tdykstra
 ms.author: riande
 ms.date: 01/22/2019
@@ -10,17 +10,17 @@ ms.assetid: f35a9b0c-49ef-4cde-b06d-19d1543feb0b
 msc.legacyurl: /mvc/overview/getting-started/getting-started-with-ef-using-mvc/advanced-entity-framework-scenarios-for-an-mvc-web-application
 msc.type: authoredcontent
 ms.openlocfilehash: d7cc83a5b78a60f575f5c3065079679189296a0c
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.sourcegitcommit: fe5c7512383a9b0a05d321ff10d3cca1611556f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
+ms.lasthandoff: 09/11/2019
 ms.locfileid: "58425275"
 ---
-# <a name="tutorial-learn-about-advanced-ef-scenarios-for-an-mvc-5-web-app"></a>Esercitazione: Informazioni sugli scenari avanzati di Entity Framework per un'app Web MVC 5
+# <a name="tutorial-learn-about-advanced-ef-scenarios-for-an-mvc-5-web-app"></a>Esercitazione: Informazioni sugli scenari EF avanzati per un'app Web MVC 5
 
-Nell'esercitazione precedente è implementata l'ereditarietà tabella per gerarchia. Sono incluse in questa esercitazione presenta diversi argomenti che è utili tenere presente dopo aver appreso le nozioni di base dello sviluppo di applicazioni web ASP.NET che usano Entity Framework Code First. Le prossime sezioni prima abbiano istruzioni dettagliate che consentono di eseguire il codice e con Visual Studio per completare le attività le sezioni seguenti introducono diversi argomenti con brevi introduzioni seguite da collegamenti alle risorse per altre informazioni.
+Nell'esercitazione precedente è stata implementata l'ereditarietà tabella per gerarchia. Questa esercitazione include alcuni argomenti utili da tenere presente quando si vanno oltre le nozioni di base dello sviluppo di applicazioni Web ASP.NET che usano Entity Framework Code First. Nelle prime sezioni sono disponibili istruzioni dettagliate che illustrano in dettaglio il codice e l'uso di Visual Studio per completare le attività descritte nelle sezioni che seguono introduce diversi argomenti con brevi presentazioni seguite da collegamenti alle risorse.
 
-Per la maggior parte degli argomenti seguenti, si utilizzeranno le pagine in cui è già stato creato. Per usare SQL non elaborate per effettuare aggiornamenti bulk si creerà una nuova pagina che aggiorna il numero di crediti di tutti i corsi nel database:
+Per la maggior parte di questi argomenti, si useranno le pagine già create. Per usare SQL non elaborato per eseguire aggiornamenti in blocco, è possibile creare una nuova pagina che aggiorna il numero di crediti di tutti i corsi nel database:
 
 ![Update_Course_Credits_initial_page](advanced-entity-framework-scenarios-for-an-mvc-web-application/_static/image1.png)
 
@@ -28,10 +28,10 @@ Le attività di questa esercitazione sono le seguenti:
 
 > [!div class="checklist"]
 > * Eseguire query SQL non elaborate
-> * Eseguire query senza registrazione
-> * Esaminare il codice SQL le query inviate al database
+> * Eseguire query senza rilevamento
+> * Esaminare le query SQL inviate al database
 
-Anche le informazioni seguenti:
+Vengono inoltre fornite informazioni su:
 
 > [!div class="checklist"]
 > * Creazione di un livello di astrazione
@@ -39,7 +39,7 @@ Anche le informazioni seguenti:
 > * Rilevamento automatico delle modifiche
 > * Convalida automatica
 > * Entity Framework Power Tools
-> * Codice sorgente di Entity Framework
+> * Codice sorgente Entity Framework
 
 ## <a name="prerequisite"></a>Prerequisito
 
@@ -47,55 +47,55 @@ Anche le informazioni seguenti:
 
 ## <a name="perform-raw-sql-queries"></a>Eseguire query SQL non elaborate
 
-L'API di Entity Framework Code First include metodi che consentono di passare i comandi SQL direttamente al database. Sono disponibili le seguenti opzioni:
+L'API Code First Entity Framework include metodi che consentono di passare i comandi SQL direttamente al database. Sono disponibili le seguenti opzioni:
 
-- Usare la [DbSet.SqlQuery](https://msdn.microsoft.com/library/system.data.entity.dbset.sqlquery.aspx) metodo per le query che restituiscono tipi di entità. Gli oggetti restituiti devono essere del tipo previsto per il `DbSet` oggetto che vengono automaticamente registrate dal contesto del database a meno che non è disattivata la registrazione. (Vedere la sezione seguente [AsNoTracking](https://msdn.microsoft.com/library/system.data.entity.dbextensions.asnotracking.aspx) (metodo).)
-- Usare la [Database.SqlQuery](https://msdn.microsoft.com/library/system.data.entity.database.sqlquery.aspx) metodo per le query che restituiscono tipi non entità. I dati restituiti non vengono registrati dal contesto di database, anche se il metodo viene usato per recuperare i tipi di entità.
-- Usare la [Database.ExecuteSqlCommand](https://msdn.microsoft.com/library/gg679456.aspx) per i comandi non query.
+- Usare il metodo [DbSet. sqlQuery](https://msdn.microsoft.com/library/system.data.entity.dbset.sqlquery.aspx) per le query che restituiscono tipi di entità. Gli oggetti restituiti devono essere del tipo previsto dall' `DbSet` oggetto e vengono rilevati automaticamente dal contesto di database, a meno che non si spenga la traccia. Vedere la sezione seguente sul metodo [AsNoTracking](https://msdn.microsoft.com/library/system.data.entity.dbextensions.asnotracking.aspx) .
+- Utilizzare il metodo [database. sqlQuery](https://msdn.microsoft.com/library/system.data.entity.database.sqlquery.aspx) per le query che restituiscono tipi che non sono entità. I dati restituiti non vengono registrati dal contesto di database, anche se il metodo viene usato per recuperare i tipi di entità.
+- Utilizzare il [database. ExecuteSqlCommand](https://msdn.microsoft.com/library/gg679456.aspx) per i comandi non di query.
 
-Uno dei vantaggi dell'utilizzo di Entity Framework è la mancanza di un collegamento troppo stretto del codice a un particolare metodo di archiviazione dei dati. Le query e i comandi SQL vengono generati automaticamente e non è necessario scriverli. Ma esistono alcuni scenari particolari in cui è necessario eseguire query SQL specifiche create manualmente e questi metodi consentono di gestire tali eccezioni.
+Uno dei vantaggi dell'utilizzo di Entity Framework è la mancanza di un collegamento troppo stretto del codice a un particolare metodo di archiviazione dei dati. Le query e i comandi SQL vengono generati automaticamente e non è necessario scriverli. Tuttavia, esistono scenari eccezionali in cui è necessario eseguire query SQL specifiche create manualmente e questi metodi consentono di gestire tali eccezioni.
 
 Come avviene quando si eseguono comandi SQL in un'applicazione Web, è necessario adottare delle precauzioni per proteggere il sito dagli attacchi SQL injection. A questo scopo è possibile usare query parametrizzate per assicurarsi che le stringhe inviate da una pagina Web non possano essere interpretate come comandi SQL. In questa esercitazione verranno usate query parametrizzate quando l'input dell'utente viene integrato in una query.
 
-### <a name="calling-a-query-that-returns-entities"></a>Chiamata di una Query che restituisce le entità
+### <a name="calling-a-query-that-returns-entities"></a>Chiamata di una query che restituisce entità
 
-Il [DbSet&lt;TEntity&gt; ](https://msdn.microsoft.com/library/gg696460.aspx) classe fornisce un metodo che è possibile usare per eseguire una query che restituisce un'entità di tipo `TEntity`. Per visualizzarne il funzionamento è necessario modificare il codice nel `Details` metodo di `Department` controller.
+La [classe&lt;DbSet&gt; tention](https://msdn.microsoft.com/library/gg696460.aspx) fornisce un metodo che è possibile usare per eseguire una query che restituisce un'entità di `TEntity`tipo. Per verificarne il funzionamento, modificare il codice nel `Details` metodo `Department` del controller.
 
-Nella *DepartmentController.cs*, nella `Details` metodo, sostituire il `db.Departments.FindAsync` chiamata al metodo con un `db.Departments.SqlQuery` chiamata al metodo, come illustrato nel codice evidenziato seguente:
+In *DepartmentController.cs*, nel `Details` metodo, sostituire la `db.Departments.FindAsync` chiamata al metodo con una `db.Departments.SqlQuery` chiamata al metodo, come illustrato nel codice evidenziato seguente:
 
 [!code-csharp[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample1.cs?highlight=8-14)]
 
-Per verificare il corretto funzionamento del nuovo codice, selezionare la scheda **Departments** e quindi **Dettagli** per uno dei reparti. Assicurarsi che tutti i dati vengono visualizzati come previsto.
+Per verificare il corretto funzionamento del nuovo codice, selezionare la scheda **Departments** e quindi **Dettagli** per uno dei reparti. Verificare che tutti i dati vengano visualizzati come previsto.
 
-### <a name="calling-a-query-that-returns-other-types-of-objects"></a>Chiamata di una Query che restituisce altri tipi di oggetti
+### <a name="calling-a-query-that-returns-other-types-of-objects"></a>Chiamata di una query che restituisce altri tipi di oggetti
 
-In precedenza è stata creata una griglia delle statistiche degli studenti per la pagina About che visualizza il numero di studenti per ogni data di registrazione. Il codice che esegue questa operazione nel *HomeController.cs* Usa LINQ:
+In precedenza è stata creata una griglia delle statistiche degli studenti per la pagina About che visualizza il numero di studenti per ogni data di registrazione. Il codice che esegue questa operazione in *HomeController.cs* USA LINQ:
 
 [!code-csharp[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample2.cs)]
 
-Si supponga di che voler scrivere il codice che recupera i dati direttamente in SQL, anziché usare LINQ. Per farlo è necessario eseguire una query che restituisce un valore diverso da oggetti entità, ovvero è necessario usare il [Database.SqlQuery](https://msdn.microsoft.com/library/system.data.entity.database.sqlquery(v=VS.103).aspx) (metodo).
+Si supponga di voler scrivere il codice che recupera questi dati direttamente in SQL anziché usare LINQ. A tale scopo, è necessario eseguire una query che restituisca un valore diverso da oggetti entità, il che significa che è necessario utilizzare il metodo [database. sqlQuery](https://msdn.microsoft.com/library/system.data.entity.database.sqlquery(v=VS.103).aspx) .
 
-Nelle *HomeController.cs*, sostituire l'istruzione LINQ nel `About` metodo con un'istruzione SQL, come illustrato nel codice evidenziato seguente:
+In *HomeController.cs*sostituire l'istruzione LINQ nel `About` metodo con un'istruzione SQL, come illustrato nel codice evidenziato seguente:
 
 [!code-csharp[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample3.cs?highlight=3-18)]
 
-Eseguire la pagina di informazioni. Verificare che vengano visualizzati i dati stessi che non è stato modificato.
+Eseguire la pagina informazioni su. Verificare che vengano visualizzati gli stessi dati precedenti.
 
-### <a name="calling-an-update-query"></a>La chiamata a una Query di aggiornamento
+### <a name="calling-an-update-query"></a>Chiamata di una query di aggiornamento
 
-Si supponga che gli amministratori di Contoso University vogliono essere in grado di eseguire modifiche di massa nel database, ad esempio modificare il numero di crediti per ogni corso. Se il numero di corsi dell'università è elevato, potrebbe non essere utile recuperarli tutti come entità e modificarli singolarmente. In questa sezione è possibile implementare una pagina web che consente all'utente di specificare un fattore in base a cui si desidera modificare il numero di crediti per tutti i corsi e viene apportata la modifica tramite l'esecuzione di un database SQL `UPDATE` istruzione. 
+Si supponga che gli amministratori di Contoso University vogliano essere in grado di eseguire modifiche bulk nel database, ad esempio la modifica del numero di crediti per ogni corso. Se il numero di corsi dell'università è elevato, potrebbe non essere utile recuperarli tutti come entità e modificarli singolarmente. In questa sezione verrà implementata una pagina Web che consente all'utente di specificare un fattore in base al quale modificare il numero di crediti per tutti i corsi e di apportare la modifica eseguendo un'istruzione SQL `UPDATE` . 
 
-Nelle *CourseController.cs*, aggiungere `UpdateCourseCredits` per i metodi `HttpGet` e `HttpPost`:
+In *CourseController.cs*aggiungere `UpdateCourseCredits` i metodi per `HttpGet` e `HttpPost`:
 
 [!code-csharp[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample4.cs)]
 
-Quando il controller elabora un' `HttpGet` richiesta, non viene restituito il `ViewBag.RowsAffected` variabile, mentre la vista viene visualizzata una casella di testo vuoto e un pulsante di invio.
+Quando il controller elabora una `HttpGet` richiesta, non viene restituito alcun elemento `ViewBag.RowsAffected` nella variabile e la vista Visualizza una casella di testo vuota e un pulsante di invio.
 
-Quando la **Update** si fa clic sul pulsante, il `HttpPost` viene chiamato il metodo e `multiplier` ha il valore immesso nella casella di testo. Il codice esegue quindi il codice SQL che aggiorna i corsi e restituisce il numero di righe interessate nella visualizzazione nel `ViewBag.RowsAffected` variabile. Quando la vista Ottiene un valore nella variabile stessa, Visualizza il numero di righe aggiornate invece la casella di testo e pulsante di invio.
+Quando si fa clic sul pulsante **Aggiorna** , viene `HttpPost` chiamato il metodo e `multiplier` il valore immesso nella casella di testo. Il codice esegue quindi l'istruzione SQL che aggiorna i corsi e restituisce il numero di righe interessate alla visualizzazione nella `ViewBag.RowsAffected` variabile. Quando la visualizzazione Ottiene un valore nella variabile, viene visualizzato il numero di righe aggiornate al posto della casella di testo e del pulsante Invia.
 
-Nelle *CourseController.cs*, fare doppio clic su uno delle `UpdateCourseCredits` metodi e quindi fare clic su **Aggiungi visualizzazione**. Il **Aggiungi visualizzazione** viene visualizzata la finestra. Lasciare le impostazioni predefinite e selezionare **Add**.
+In *CourseController.cs*fare clic con il `UpdateCourseCredits` pulsante destro del mouse su uno dei metodi, quindi scegliere **Aggiungi visualizzazione**. Verrà visualizzata la finestra di dialogo **Aggiungi visualizzazione** . Lasciare le impostazioni predefinite e selezionare **Aggiungi**.
 
-Nelle *Views\Course\UpdateCourseCredits.cshtml*, sostituire il codice del modello con il codice seguente:
+In *Views\Course\UpdateCourseCredits.cshtml*sostituire il codice del modello con il codice seguente:
 
 [!code-cshtml[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample5.cshtml)]
 
@@ -107,96 +107,96 @@ Fare clic su **Aggiorna**. Viene visualizzato il numero di righe interessate.
 
 Fare clic su **Torna all'elenco** per visualizzare l'elenco dei corsi con il numero di crediti modificato.
 
-Per altre informazioni sulle query SQL non elaborate, vedere [query SQL non elaborate](https://msdn.microsoft.com/data/jj592907) su MSDN.
+Per ulteriori informazioni sulle query SQL non elaborate, vedere [query SQL non elaborate](https://msdn.microsoft.com/data/jj592907) su MSDN.
 
 ## <a name="no-tracking-queries"></a>Query senza registrazione
 
 Quando un contesto di database recupera righe di tabella e crea oggetti entità che le rappresentano, per impostazione predefinita rileva se le entità in memoria sono sincronizzate con ciò che è presente nel database. I dati in memoria svolgono la funzione di una cache e vengono usati per l'aggiornamento di un'entità. Questa memorizzazione nella cache spesso non è necessaria in un'applicazione Web poiché le istanze del contesto hanno spesso una durata breve (viene creata ed eliminata una nuova istanza per ogni richiesta) e il contesto che legge un'entità viene in genere eliminato prima che l'entità venga riutilizzata.
 
-È possibile disabilitare il rilevamento di oggetti entità in memoria usando il [AsNoTracking](https://msdn.microsoft.com/library/gg679352(v=vs.103).aspx) (metodo). Gli scenari tipici in cui viene disabilitata la registrazione includono i seguenti:
+È possibile disabilitare il rilevamento degli oggetti entità in memoria usando il metodo [AsNoTracking](https://msdn.microsoft.com/library/gg679352(v=vs.103).aspx) . Gli scenari tipici in cui viene disabilitata la registrazione includono i seguenti:
 
-- Una query recupera tali una grande quantità di dati che potrebbero migliorare notevolmente le prestazioni disattivazione del rilevamento.
-- Si vuole collegare un'entità per aggiornarla, ma è recuperato in precedenza alla stessa entità per uno scopo diverso. Poiché l'entità viene già registrata dal contesto di database, non è possibile collegare l'entità che si vuole modificare. Un modo per gestire questa situazione consiste nell'utilizzare il `AsNoTracking` opzione con la query precedente.
+- Una query recupera un volume elevato di dati che la disattivazione del rilevamento può migliorare notevolmente le prestazioni.
+- Si vuole alleghi un'entità per aggiornarla, ma in precedenza è stata recuperata la stessa entità per uno scopo diverso. Poiché l'entità viene già registrata dal contesto di database, non è possibile collegare l'entità che si vuole modificare. Un modo per gestire questa situazione consiste nell'usare l' `AsNoTracking` opzione con la query precedente.
 
-Per un esempio che illustra come usare il [AsNoTracking](https://msdn.microsoft.com/library/gg679352(v=vs.103).aspx) metodo, vedere [la versione precedente di questa esercitazione](../../older-versions/getting-started-with-ef-5-using-mvc-4/advanced-entity-framework-scenarios-for-an-mvc-web-application.md). Questa versione dell'esercitazione non imposta il flag modificato su un'entità modello dello strumento di associazione creato nel metodo di modifica, è necessario `AsNoTracking`.
+Per un esempio in cui viene illustrato come usare il metodo [AsNoTracking](https://msdn.microsoft.com/library/gg679352(v=vs.103).aspx) , vedere [la versione precedente di questa esercitazione](../../older-versions/getting-started-with-ef-5-using-mvc-4/advanced-entity-framework-scenarios-for-an-mvc-web-application.md). Questa versione dell'esercitazione non imposta il flag modificato in un'entità creata dal gestore di associazione del modello nel metodo Edit, pertanto non è necessario `AsNoTracking`.
 
-## <a name="examine-sql-sent-to-database"></a>Esaminare il codice inviato al database SQL
+## <a name="examine-sql-sent-to-database"></a>Esamina SQL inviato al database
 
-A volte può essere utile visualizzare le query SQL inviate al database. In un'esercitazione precedente è stato illustrato come eseguire questa operazione nel codice dell'intercettore. a questo punto si noterà che alcuni modi per farlo senza scrivere codice dell'intercettore. Per provare questo timeout, verrà esaminare una semplice query e quindi esaminare che cosa succede quando si aggiungono le opzioni di questo tipo eager il caricamento, filtro e ordinamento.
+A volte può essere utile visualizzare le query SQL inviate al database. In un'esercitazione precedente è stato illustrato come eseguire questa operazione nel codice dell'intercettore; a questo punto, verranno visualizzati alcuni modi per eseguire questa operazione senza scrivere codice intercettore. Per provare questa operazione, è possibile esaminare una semplice query e quindi osservare cosa accade quando si aggiungono opzioni quali il caricamento, l'applicazione di filtri e l'ordinamento eager.
 
-Nelle *controller/CourseController*, sostituire il `Index` metodo con il codice seguente, per arrestare temporaneamente il caricamento eager:
+In *Controllers/CourseController*sostituire il `Index` metodo con il codice seguente per arrestare temporaneamente il caricamento eager:
 
 [!code-csharp[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample6.cs)]
 
-Ora impostare un punto di interruzione il `return` istruzione (F9 con il cursore sulla riga). Premere **F5** per eseguire il progetto in modalità di debug e selezionare la pagina di indice del corso. Quando il codice raggiunge il punto di interruzione, esaminare il `sql` variabile. Viene visualizzata la query che viene inviata a SQL Server. È una semplice `Select` istruzione.
+Impostare ora un punto di `return` interruzione nell'istruzione (F9 con il cursore sulla riga). Premere **F5** per eseguire il progetto in modalità di debug e selezionare la pagina di indice del corso. Quando il codice raggiunge il punto di interruzione, `sql` esaminare la variabile. Viene visualizzata la query inviata a SQL Server. Si tratta di un' `Select` istruzione semplice.
 
 [!code-json[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample7.json)]
 
-Fare clic sulla lente di ingrandimento per visualizzare la query nella **Visualizzatore testo**.
+Fare clic sulla lente di ingrandimento per visualizzare la query nel **Visualizzatore di testo**.
 
 ![](advanced-entity-framework-scenarios-for-an-mvc-web-application/_static/image10.png)
 
-Ora si aggiungerà un elenco di riepilogo a discesa per la pagina di indice dei corsi in modo che gli utenti possono filtrare per un reparto specifico. Si ordinerà i corsi per titolo, e si specificano il caricamento eager per la `Department` proprietà di navigazione.
+A questo punto si aggiungerà un elenco a discesa nella pagina di indice dei corsi, in modo che gli utenti possano filtrare per un reparto specifico. I corsi verranno ordinati in base al titolo e si specificherà il caricamento eager per `Department` la proprietà di navigazione.
 
-Nelle *CourseController.cs*, sostituire il `Index` metodo con il codice seguente:
+In *CourseController.cs*sostituire il `Index` metodo con il codice seguente:
 
 [!code-csharp[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample8.cs)]
 
-Ripristinare il punto di interruzione sul `return` istruzione.
+Ripristinare il punto di `return` interruzione nell'istruzione.
 
-Il metodo riceve il valore dell'elenco di riepilogo a discesa selezionato il `SelectedDepartment` parametro. Se è stata eseguita alcuna selezione, questo parametro sarà null.
+Il metodo riceve il valore selezionato dell'elenco a discesa nel `SelectedDepartment` parametro. Se non è selezionato alcun elemento, questo parametro sarà null.
 
-Oggetto `SelectList` insieme contenente tutti i reparti è passato alla visualizzazione per l'elenco a discesa. I parametri passati al `SelectList` costruttore specificare il nome del campo valore, il nome del campo di testo e l'elemento selezionato.
+Una `SelectList` raccolta che contiene tutti i reparti viene passata alla visualizzazione per l'elenco a discesa. I parametri passati al `SelectList` Costruttore specificano il nome del campo del valore, il nome del campo di testo e l'elemento selezionato.
 
-Per il `Get` metodo per il `Course` repository, il codice specifica un'espressione di filtro, ordinamento e il caricamento eager per la `Department` proprietà di navigazione. L'espressione restituisce sempre `true` se è stata eseguita alcuna selezione nell'elenco a discesa scegliere (vale a dire `SelectedDepartment` è null).
+Per il `Get` metodo `Course` del repository, il codice specifica un'espressione di filtro, un ordinamento e il caricamento eager per la `Department` proprietà di navigazione. L'espressione di filtro restituisce `true` sempre se non è selezionato alcun elemento nell'elenco a discesa ( `SelectedDepartment` ovvero è null).
 
-Nelle *Views\Course\Index.cshtml*, immediatamente prima dell'apertura `table` tag, aggiungere il codice seguente per creare l'elenco a discesa e un pulsante di invio:
+In *Views\Course\Index.cshtml*, immediatamente prima del tag `table` di apertura, aggiungere il codice seguente per creare l'elenco a discesa e un pulsante Submit (Invia):
 
 [!code-cshtml[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample9.cshtml)]
 
-Con il punto di interruzione impostato, eseguire la pagina di indice del corso. Continuare con le volte che il codice raggiunge un punto di interruzione, in modo che la pagina viene visualizzata nel browser. Selezionare un reparto dall'elenco a discesa e fare clic su **filtro**.
+Con il punto di interruzione ancora impostato, eseguire la pagina di indice del corso. Continuare con la prima volta che il codice raggiunge un punto di interruzione, in modo che la pagina venga visualizzata nel browser. Selezionare un reparto dall'elenco a discesa e fare clic su **filtro**.
 
-Questa volta sarà il primo punto di interruzione per la query di reparti per l'elenco a discesa. Ignora che e visualizzare il `query` variabile la volta successiva che il codice raggiunge il punto di interruzione per vedere quali il `Course` query dovrebbe ora apparire così. Si otterrà un risultato simile al seguente:
+Questa volta il primo punto di interruzione sarà per la query Departments per l'elenco a discesa. Ignorarlo e visualizzare la `query` variabile la volta successiva che il codice raggiunge il punto di interruzione per visualizzare l' `Course` aspetto della query. Verrà visualizzata una schermata simile alla seguente:
 
 [!code-sql[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample10.sql)]
 
-Si noterà che la query è ora un `JOIN` query che consente di caricare `Department` insieme ai dati di `Course` dati e che includa un `WHERE` clausola.
+Si può notare che la query è ora una `JOIN` query che carica `Department` i dati insieme `Course` ai dati e che include una `WHERE` clausola.
 
-Rimuovere il `var sql = courses.ToString()` riga.
+Rimuovere la `var sql = courses.ToString()` riga.
 
 ## <a name="create-an-abstraction-layer"></a>Creare un livello di astrazione
 
-Molti sviluppatori scrivono codice per implementare i modelli di repository e unità di lavoro come wrapper per il codice usato con Entity Framework. Questi modelli sono progettati per la creazione di un livello di astrazione tra il livello di accesso ai dati e il livello della logica di business di un'applicazione. L'implementazione di questi modelli può essere utile per isolare l'applicazione dalle modifiche nell'archivio dati e può semplificare il testing unità automatizzato o lo sviluppo basato su test (TDD). Tuttavia, la scrittura di codice aggiuntivo per l'implementazione di questi modelli non è sempre la scelta migliore per le applicazioni che usano Entity Framework, per diversi motivi:
+Molti sviluppatori scrivono codice per implementare i modelli di repository e unità di lavoro come wrapper per il codice usato con Entity Framework. Questi modelli sono progettati per la creazione di un livello di astrazione tra il livello di accesso ai dati e il livello della logica di business di un'applicazione. L'implementazione di questi modelli può essere utile per isolare l'applicazione dalle modifiche nell'archivio dati e può semplificare il testing unità automatizzato o lo sviluppo basato su test (TDD). Tuttavia, la scrittura di codice aggiuntivo per implementare questi modelli non è sempre la scelta migliore per le applicazioni che usano EF, per diversi motivi:
 
 - La classe del contesto EF isola il codice dal codice specifico dell'archivio dati.
 - La classe del contesto di EF può svolgere la funzione di classe di unità di lavoro per gli aggiornamenti di database eseguiti usando EF.
-- Nuove funzionalità di Entity Framework 6 rendono più semplice da implementare TDD senza scrivere codice di repository.
+- Le funzionalità introdotte in Entity Framework 6 semplificano l'implementazione di TDD senza scrivere codice del repository.
 
-Per altre informazioni su come implementare il repository di modelli e unità di lavoro, vedere [la versione di Entity Framework 5 di questa serie di esercitazioni](../../older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application.md). Per informazioni sui metodi di implementazione TDD in Entity Framework 6, vedere le risorse seguenti:
+Per altre informazioni su come implementare i modelli di repository e unità di lavoro, vedere [la versione Entity Framework 5 di questa serie di esercitazioni](../../older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application.md). Per informazioni sui modi per implementare TDD in Entity Framework 6, vedere le risorse seguenti:
 
-- [EF6 modo DbSet Mocking più facilmente](http://thedatafarm.com/data-access/how-ef6-enables-mocking-dbsets-more-easily/)
-- [Test con un framework di simulazione](https://msdn.microsoft.com/data/dn314429)
-- [Test con il proprio copie di test](https://msdn.microsoft.com/data/dn314431)
+- [Come EF6 consente di simulare DbSet più facilmente](http://thedatafarm.com/data-access/how-ef6-enables-mocking-dbsets-more-easily/)
+- [Test con un Framework fittizio](https://msdn.microsoft.com/data/dn314429)
+- [Test con i doppi test personalizzati](https://msdn.microsoft.com/data/dn314431)
 
 <a id="proxies"></a>
 
 ## <a name="proxy-classes"></a>Classi proxy
 
-Quando Entity Framework crea istanze di entità (ad esempio, quando si esegue una query), vengono spesso creati come istanze di un tipo derivato generata dinamicamente che funge da proxy per l'entità. Ad esempio, vedere le seguenti due immagini del debugger. Si può vedere nell'immagine prima, la `student` variabile è quella prevista `Student` digitare subito dopo si crea un'istanza dell'entità. Nell'immagine secondo dopo EF è stato usato per leggere un'entità student dal database, noterete che la classe proxy.
+Quando il Entity Framework crea istanze di entità, ad esempio quando si esegue una query, le crea spesso come istanze di un tipo derivato generato dinamicamente che funge da proxy per l'entità. Vedere ad esempio le due immagini del debugger seguenti. Nella prima immagine si noterà che la `student` variabile è il tipo previsto `Student` immediatamente dopo la creazione di un'istanza dell'entità. Nella seconda immagine, dopo che EF è stato usato per leggere un'entità Student dal database, viene visualizzata la classe proxy.
 
-![Prima della classe proxy](advanced-entity-framework-scenarios-for-an-mvc-web-application/_static/image12.png)
+![Prima classe proxy](advanced-entity-framework-scenarios-for-an-mvc-web-application/_static/image12.png)
 
-![Dopo la classe proxy](advanced-entity-framework-scenarios-for-an-mvc-web-application/_static/image13.png)
+![Classe proxy after](advanced-entity-framework-scenarios-for-an-mvc-web-application/_static/image13.png)
 
-Questa classe proxy esegue l'override di alcune proprietà dell'entità da inserire hook per eseguire automaticamente azioni quando si accede alla proprietà virtuale. Questo meccanismo viene usato per una funzione è il caricamento lazy.
+Questa classe proxy esegue l'override di alcune proprietà virtuali dell'entità per inserire hook per eseguire automaticamente le azioni quando si accede alla proprietà. Una funzione per cui viene usato questo meccanismo è il caricamento lazy.
 
-La maggior parte dei casi non è necessario essere a conoscenza di questo utilizzo di proxy, ma sono presenti eccezioni:
+Nella maggior parte dei casi non è necessario essere a conoscenza di questo utilizzo di proxy, ma esistono alcune eccezioni:
 
-- In alcuni scenari si potrebbe voler impedire la creazione di istanze del proxy di Entity Framework. Ad esempio, quando si esegue la serializzazione delle entità in generale le classi POCO, non le classi proxy. È un modo per evitare problemi di serializzazione per serializzare gli oggetti di trasferimento di dati (DTO) invece di oggetti entità, come illustrato nella [uso di API Web con Entity Framework](../../../../web-api/overview/data/using-web-api-with-entity-framework/part-1.md) esercitazione. È anche possibile [disabilita la creazione di proxy](https://msdn.microsoft.com/data/jj592886.aspx).
-- Quando si crea un'istanza di una classe di entità mediante il `new` operatore, non si ottiene un'istanza del proxy. Ciò significa che non si ottengono funzionalità, ad esempio il caricamento lazy e automatico il rilevamento delle modifiche. Si tratta in genere bene; in genere non è necessario il caricamento lazy, perché si sta creando una nuova entità che non è presente nel database, e in genere non occorre rilevamento delle modifiche se si sta contrassegnare in modo esplicito l'entità come `Added`. Tuttavia, se è necessario il caricamento lazy ed è necessario il rilevamento delle modifiche, è possibile creare nuove istanze dell'entità con proxy usando il [Create](https://msdn.microsoft.com/library/gg679504.aspx) metodo del `DbSet` classe.
-- È possibile ottenere un tipo di entità effettivo da un tipo di proxy. È possibile usare la [GetObjectType](https://msdn.microsoft.com/library/system.data.objects.objectcontext.getobjecttype.aspx) metodo il `ObjectContext` classe per ottenere il tipo di entità effettivo di un'istanza del tipo proxy.
+- In alcuni scenari potrebbe essere necessario impedire al Entity Framework di creare istanze proxy. Ad esempio, quando si esegue la serializzazione di entità si desiderano in genere le classi POCO, non le classi proxy. Un modo per evitare problemi di serializzazione consiste nel serializzare gli oggetti DTO (Data Transfer Objects) invece degli oggetti entità, come illustrato nell'esercitazione [utilizzo dell'API Web con Entity Framework](../../../../web-api/overview/data/using-web-api-with-entity-framework/part-1.md) . Un altro modo consiste nel [disabilitare la creazione di proxy](https://msdn.microsoft.com/data/jj592886.aspx).
+- Quando si crea un'istanza di una classe di `new` entità usando l'operatore, non si ottiene un'istanza del proxy. Ciò significa che non si ottengono funzionalità come il caricamento lazy e il rilevamento automatico delle modifiche. Si tratta in genere di un problema. in genere non è necessario il caricamento lazy perché si sta creando una nuova entità che non si trova nel database e in genere non è necessario il rilevamento delle modifiche se si contrassegna in modo `Added`esplicito l'entità come. Tuttavia, se è necessario il caricamento lazy ed è necessario il rilevamento delle modifiche, è possibile creare nuove istanze di entità con proxy usando il metodo [Create](https://msdn.microsoft.com/library/gg679504.aspx) della classe `DbSet`.
+- Potrebbe essere necessario ottenere un tipo di entità effettivo da un tipo di proxy. Per ottenere il tipo di entità effettivo di un' `ObjectContext` istanza del tipo proxy, è possibile usare il metodo [GetObjectType](https://msdn.microsoft.com/library/system.data.objects.objectcontext.getobjecttype.aspx) della classe.
 
-Per altre informazioni, vedere [utilizzo di proxy](https://msdn.microsoft.com/data/JJ592886.aspx) su MSDN.
+Per ulteriori informazioni, vedere [utilizzo di proxy](https://msdn.microsoft.com/data/JJ592886.aspx) in MSDN.
 
 ## <a name="automatic-change-detection"></a>Rilevamento automatico delle modifiche
 
@@ -212,71 +212,71 @@ Entity Framework determina come è stata modificata un'entità (e di conseguenza
 - `DbContext.Entry`
 - `DbChangeTracker.Entries`
 
-Se si desidera monitorare un numero elevato di entità e si chiama uno di questi metodi molte volte in un ciclo, è possibile ottenere miglioramenti significativi delle prestazioni disattivando temporaneamente il rilevamento automatico delle modifiche tramite il [AutoDetectChangesEnabled](https://msdn.microsoft.com/library/system.data.entity.infrastructure.dbcontextconfiguration.autodetectchangesenabled.aspx) proprietà. Per altre informazioni, vedere [rilevare automaticamente le modifiche](https://msdn.microsoft.com/data/jj556205) su MSDN.
+Se si tiene traccia di un numero elevato di entità e si chiama uno di questi metodi molte volte in un ciclo, è possibile ottenere miglioramenti significativi delle prestazioni disattivando temporaneamente il rilevamento automatico delle modifiche usando la proprietà [AutoDetectChangesEnabled](https://msdn.microsoft.com/library/system.data.entity.infrastructure.dbcontextconfiguration.autodetectchangesenabled.aspx) . Per ulteriori informazioni, vedere [rilevamento automatico delle modifiche](https://msdn.microsoft.com/data/jj556205) in MSDN.
 
 ## <a name="automatic-validation"></a>Convalida automatica
 
-Quando si chiama il `SaveChanges` (metodo), per impostazione predefinita Entity Framework convalida i dati in tutte le proprietà di tutte le entità modificate prima di aggiornare il database. Se è stato aggiornato un numero elevato di entità e aver già convalidato i dati, questa operazione è necessaria e far sì che il processo di salvataggio le modifiche diventano meno tempo disattivando temporaneamente la convalida. È possibile farlo tramite il [ValidateOnSaveEnabled](https://msdn.microsoft.com/library/system.data.entity.infrastructure.dbcontextconfiguration.validateonsaveenabled.aspx) proprietà. Per altre informazioni, vedere [convalida](https://msdn.microsoft.com/data/gg193959) su MSDN.
+Quando si chiama il `SaveChanges` metodo, per impostazione predefinita il Entity Framework convalida i dati in tutte le proprietà di tutte le entità modificate prima di aggiornare il database. Se è stato aggiornato un numero elevato di entità e sono già stati convalidati i dati, questa operazione non è necessaria ed è possibile fare in modo che il processo di salvataggio delle modifiche imprenda meno tempo disattivando temporaneamente la convalida. Questa operazione può essere eseguita usando la proprietà [ValidateOnSaveEnabled](https://msdn.microsoft.com/library/system.data.entity.infrastructure.dbcontextconfiguration.validateonsaveenabled.aspx) . Per ulteriori informazioni, vedere la pagina relativa alla [convalida](https://msdn.microsoft.com/data/gg193959) su MSDN.
 
 ## <a name="entity-framework-power-tools"></a>Entity Framework Power Tools
 
-[Entity Framework Power Tools](https://marketplace.visualstudio.com/items?itemName=ErikEJ.EntityFramework6PowerToolsCommunityEdition) è un componente aggiuntivo di Visual Studio che è stato utilizzato per creare i diagrammi di modello di dati visualizzato in queste esercitazioni. Gli strumenti è anche possono eseguire altre funzioni, ad esempio generare classi di entità basate sulle tabelle in un database esistente in modo che è possibile usare il database con Code First. Dopo aver installato gli strumenti, alcune opzioni aggiuntive vengono visualizzati nel menu di scelta rapida. Ad esempio, quando mouse sulla classe di contesto nella **Esplora soluzioni**, viene visualizzato e **Entity Framework** opzione. Questo offre la possibilità di generare un diagramma. Quando si utilizza Code First è possibile modificare il modello di dati nel diagramma, ma è possibile spostarsi cose per renderlo più facile da comprendere.
+[Entity Framework Power Tools](https://marketplace.visualstudio.com/items?itemName=ErikEJ.EntityFramework6PowerToolsCommunityEdition) è un componente aggiuntivo di Visual Studio che è stato usato per creare i diagrammi del modello di dati illustrati in queste esercitazioni. Gli strumenti consentono inoltre di eseguire altre funzioni, ad esempio generare classi di entità basate sulle tabelle di un database esistente, in modo da poter utilizzare il database con Code First. Dopo aver installato gli strumenti, verranno visualizzate alcune opzioni aggiuntive nei menu di scelta rapida. Ad esempio, quando si fa clic con il pulsante destro del mouse sulla classe Context in **Esplora soluzioni**, viene visualizzata l'opzione e **Entity Framework** . Ciò consente di generare un diagramma. Quando si usa Code First non è possibile modificare il modello di dati nel diagramma, ma è possibile spostarlo in modo da renderlo più facile da comprendere.
 
-![Diagramma di Entity Framework](advanced-entity-framework-scenarios-for-an-mvc-web-application/_static/image15.png)
+![Diagramma EF](advanced-entity-framework-scenarios-for-an-mvc-web-application/_static/image15.png)
 
-## <a name="entity-framework-source-code"></a>Codice sorgente di Entity Framework
+## <a name="entity-framework-source-code"></a>Codice sorgente Entity Framework
 
-Il codice sorgente per Entity Framework 6 è disponibile all'indirizzo [GitHub](https://github.com/aspnet/EntityFramework6). È possibile archiviare il bug e contribuire con i proprio miglioramenti al codice sorgente di Entity Framework.
+Il codice sorgente per Entity Framework 6 è disponibile in [GitHub](https://github.com/aspnet/EntityFramework6). È possibile archiviare i bug ed è possibile contribuire con i miglioramenti apportati al codice sorgente EF.
 
-Anche se il codice sorgente è aperto, Entity Framework è completamente supportato come prodotto di Microsoft. Il team di Microsoft Entity Framework controlla i contributi accettati ed esegue il test di tutte le modifiche al codice per garantire la qualità di ogni rilascio.
+Sebbene il codice sorgente sia aperto, Entity Framework è completamente supportato come prodotto Microsoft. Il team di Microsoft Entity Framework controlla i contributi accettati ed esegue il test di tutte le modifiche al codice per garantire la qualità di ogni rilascio.
 
 ## <a name="acknowledgments"></a>Ringraziamenti
 
-- Tom Dykstra ha scritto la versione originale di questa esercitazione, coautore l'aggiornamento di Entity Framework 5 ed è stata scritta l'aggiornamento di Entity Framework 6. Tom è una scrittrice senior di programmazione in Microsoft Web Platform and Tools Team del contenuto.
-- [Rick Anderson](https://blogs.msdn.com/b/rickandy/) (twitter [ @RickAndMSFT ](http://twitter.com/RickAndMSFT)) non ha la maggior parte delle operazioni di aggiornamento nell'esercitazione per Entity Framework 5 e MVC 4 ed è coautore l'aggiornamento di Entity Framework 6. Rick è una scrittrice senior di programmazione per Microsoft che si occupa in Azure e MVC.
-- [Rowan Miller](http://www.romiller.com) e altri membri del team di Entity Framework assistito con revisioni del codice e il debug dei molti problemi con le migrazioni che si è verificato mentre si stava aggiornando l'esercitazione per Entity Framework 5 e 6 di Entity Framework.
+- Tom Dykstra ha scritto la versione originale di questa esercitazione, co-autore dell'aggiornamento EF 5 e ha scritto l'aggiornamento di EF 6. Tom è uno scrittore di programmazione senior sul team di contenuti degli strumenti e della piattaforma Web Microsoft.
+- [Rick Anderson](https://blogs.msdn.com/b/rickandy/) (Twitter [@RickAndMSFT](http://twitter.com/RickAndMSFT)) ha eseguito la maggior parte del lavoro che ha aggiornato l'esercitazione per EF 5 e MVC 4 e ha co-creato l'aggiornamento EF 6. Rick è Senior Programming Writer per Microsoft focalizzato su Azure e MVC.
+- [Rowan Miller](http://www.romiller.com) e altri membri del team di Entity Framework hanno assistito con le revisioni del codice e hanno aiutato a eseguire il debug di molti problemi con le migrazioni emerse durante l'aggiornamento dell'esercitazione per EF 5 e EF 6.
 
-## <a name="troubleshoot-common-errors"></a>Risolvere gli errori comuni
+## <a name="troubleshoot-common-errors"></a>Risoluzione dei problemi comuni
 
-### <a name="cannot-createshadow-copy"></a>Non è possibile creare/shadow copia
+### <a name="cannot-createshadow-copy"></a>Non è possibile creare/copiare copie shadow
 
 Messaggio di errore:
 
-> Non è possibile creare/shadow copia '&lt;filename&gt;' quando il file esiste già.
+> Non è possibile creare la copia&lt;Shadow&gt;' filename ' se il file esiste già.
 
 Soluzione
 
 Attendere alcuni secondi e aggiornare la pagina.
 
-### <a name="update-database-not-recognized"></a>Update-Database non riconosciuto
+### <a name="update-database-not-recognized"></a>Update-database non riconosciuto
 
-Messaggio di errore (dal `Update-Database` comando nella console di gestione pacchetti):
+Messaggio di errore (dal `Update-Database` comando in PMC):
 
-> Il termine "Update-Database" non è riconosciuto come il nome di un cmdlet, funzione, file di script o programma eseguibile. Controllare l'ortografia del nome, o se è stato incluso un percorso, verificare che il percorso sia corretto e riprovare.
+> Il termine "Update-database" non è riconosciuto come nome di un cmdlet, di una funzione, di un file di script o di un programma eseguibile. Controllare l'ortografia del nome o, se è stato incluso un percorso, verificare che il percorso sia corretto e riprovare.
 
 Soluzione
 
-Uscire da Visual Studio. Riaprire progetto e riprovare.
+Uscire da Visual Studio. Riaprire il progetto e riprovare.
 
 ### <a name="validation-failed"></a>Convalida non riuscita
 
-Messaggio di errore (dal `Update-Database` comando nella console di gestione pacchetti):
+Messaggio di errore (dal `Update-Database` comando in PMC):
 
-> Convalida non riuscita per uno o più entità. Vedere la proprietà 'EntityValidationErrors' per altri dettagli.
+> Convalida non riuscita per una o più entità. Per ulteriori informazioni, vedere la proprietà' EntityValidationErrors '.
 
 Soluzione
 
-Una delle cause di questo problema è errori di convalida quando il `Seed` esecuzione del metodo. Visualizzare [Seeding e al debug di Entity Framework (EF) DBs](https://blogs.msdn.com/b/rickandy/archive/2013/02/12/seeding-and-debugging-entity-framework-ef-dbs.aspx) per suggerimenti sul debug di `Seed` (metodo).
+Una causa di questo problema è costituita da errori `Seed` di convalida durante l'esecuzione del metodo. Vedere [seeding and Debugging Entity Framework (EF) DB](https://blogs.msdn.com/b/rickandy/archive/2013/02/12/seeding-and-debugging-entity-framework-ef-dbs.aspx) per suggerimenti sul debug `Seed` del metodo.
 
-### <a name="http-50019-error"></a>HTTP 500.19 errore
+### <a name="http-50019-error"></a>Errore HTTP 500,19
 
 Messaggio di errore:
 
-> Errore HTTP 500.19 - errore interno del Server alla pagina richiesta non è accessibile perché i dati di configurazione per la pagina non sono validi.
+> Errore HTTP 500,19-errore interno del server. Impossibile accedere alla pagina richiesta perché i dati di configurazione correlati per la pagina non sono validi.
 
 Soluzione
 
-È possibile ottenere questo errore è da più copie della soluzione, ognuna di esse usando lo stesso numero di porta. È in genere possibile risolvere questo problema, uscire da tutte le istanze di Visual Studio, quindi riavviare il progetto che si sta lavorando. Se il problema persiste, provare a modificare il numero di porta. Fare clic con il pulsante destro sul file di progetto e quindi fare clic su proprietà. Selezionare il **Web** scheda e quindi cambiare il numero di porta la **Url progetto** casella di testo.
+Un modo per ottenere questo errore consiste nel disporre di più copie della soluzione, ognuna con lo stesso numero di porta. In genere è possibile risolvere questo problema chiudendo tutte le istanze di Visual Studio e riavviando il progetto su cui si sta lavorando. Se l'operazione non funziona, provare a modificare il numero di porta. Fare clic con il pulsante destro del mouse sul file di progetto e quindi scegliere Proprietà. Selezionare la scheda **Web** , quindi modificare il numero di porta nella casella di testo **URL progetto** .
 
 ### <a name="error-locating-sql-server-instance"></a>Errore di individuazione dell'istanza di SQL Server
 
@@ -286,19 +286,19 @@ Messaggio di errore:
 
 Soluzione
 
-Controllare la stringa di connessione. Se è stato eliminato manualmente il database, modificare il nome del database nella stringa di costruzione.
+Controllare la stringa di connessione. Se il database è stato eliminato manualmente, modificare il nome del database nella stringa di costruzione.
 
 ## <a name="get-the-code"></a>Ottenere il codice
 
-[Download progetto completato](https://webpifeed.blob.core.windows.net/webpifeed/Partners/ASP.NET%20MVC%20Application%20Using%20Entity%20Framework%20Code%20First.zip)
+[Scarica progetto completato](https://webpifeed.blob.core.windows.net/webpifeed/Partners/ASP.NET%20MVC%20Application%20Using%20Entity%20Framework%20Code%20First.zip)
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
- Per altre informazioni su come usare i dati con Entity Framework, vedere la [pagina della documentazione di Entity Framework in MSDN](https://msdn.microsoft.com/data/ee712907) e [l'accesso ai dati ASP.NET - risorse consigliate](../../../../whitepapers/aspnet-data-access-content-map.md).
+ Per ulteriori informazioni su come utilizzare i dati utilizzando la Entity Framework, vedere la [pagina della documentazione di EF su MSDN](https://msdn.microsoft.com/data/ee712907) e [ASP.NET Data Access-risorse consigliate](../../../../whitepapers/aspnet-data-access-content-map.md).
 
-Per altre informazioni su come distribuire l'applicazione web dopo aver creato, vedere [distribuzione Web ASP.NET - risorse consigliate](../../../../whitepapers/aspnet-web-deployment-content-map.md) in MSDN Library.
+Per ulteriori informazioni su come distribuire l'applicazione Web dopo averla compilata, vedere la pagina relativa alle [risorse consigliate per la distribuzione web ASP.NET](../../../../whitepapers/aspnet-web-deployment-content-map.md) in MSDN Library.
 
-Per informazioni su altri argomenti correlati a MVC, ad esempio l'autenticazione e autorizzazione, vedere la [MVC ASP.NET - risorse consigliate](../recommended-resources-for-mvc.md).
+Per informazioni su altri argomenti correlati a MVC, ad esempio l'autenticazione e l'autorizzazione, vedere le [risorse consigliate per mvc ASP.NET](../recommended-resources-for-mvc.md).
 
 ## <a name="next-steps"></a>Passaggi successivi
 
@@ -306,10 +306,10 @@ Le attività di questa esercitazione sono le seguenti:
 
 > [!div class="checklist"]
 > * Eseguire query SQL non elaborate
-> * Eseguire query senza registrazione
-> * Viene esaminato le query SQL inviate al database
+> * Esecuzione di query senza rilevamento
+> * Sono state esaminate le query SQL inviate al database
 
-Anche appreso come:
+Si è inoltre appreso come:
 
 > [!div class="checklist"]
 > * Creazione di un livello di astrazione
@@ -317,8 +317,8 @@ Anche appreso come:
 > * Rilevamento automatico delle modifiche
 > * Convalida automatica
 > * Entity Framework Power Tools
-> * Codice sorgente di Entity Framework
+> * Codice sorgente Entity Framework
 
-Questa serie di esercitazioni sull'uso di Entity Framework in un'applicazione ASP.NET MVC è stata completata. Se si desidera ottenere informazioni sui Database First di Entity Framework, vedere la serie di esercitazioni DB prima.
+Questa operazione completa questa serie di esercitazioni sull'uso del Entity Framework in un'applicazione MVC ASP.NET. Per informazioni su EF Database First, vedere la serie di esercitazioni su DB First.
 > [!div class="nextstepaction"]
 > [Entity Framework Database First](../database-first-development/setting-up-database.md)
