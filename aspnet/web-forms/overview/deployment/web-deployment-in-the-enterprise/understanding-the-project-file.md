@@ -1,227 +1,227 @@
 ---
 uid: web-forms/overview/deployment/web-deployment-in-the-enterprise/understanding-the-project-file
-title: Informazioni sul File di progetto | Microsoft Docs
+title: Informazioni sul file di progetto | Microsoft Docs
 author: jrjlee
-description: I file di progetto di Microsoft Build Engine (MSBuild) si trovano il fulcro del processo di compilazione e distribuzione. Questo argomento inizia con una panoramica concettuale di MSBuild...
+description: I file di progetto Microsoft Build Engine (MSBuild) si trovano nella parte centrale del processo di compilazione e distribuzione. Questo argomento inizia con una panoramica concettuale di MSBuild...
 ms.author: riande
 ms.date: 05/04/2012
 ms.assetid: 07978d9d-341c-4524-bcba-62976f390f77
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/understanding-the-project-file
 msc.type: authoredcontent
-ms.openlocfilehash: a72de5c143bf760292975778b0cf5e0ccdda0973
-ms.sourcegitcommit: 6a564984ad448db34cdfab5458af755d6b65e69c
+ms.openlocfilehash: 419fe51aaf65bddcc2c50380f099f842a8d9439c
+ms.sourcegitcommit: 84b1681d4e6253e30468c8df8a09fe03beea9309
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67538829"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73445689"
 ---
 # <a name="understanding-the-project-file"></a>Informazioni sul file di progetto
 
-da [Jason Lee](https://github.com/jrjlee)
+di [Jason Lee](https://github.com/jrjlee)
 
 [Scaricare PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
-> I file di progetto di Microsoft Build Engine (MSBuild) si trovano il fulcro del processo di compilazione e distribuzione. Questo argomento inizia con una panoramica concettuale di MSBuild e il file di progetto. Vengono descritti i componenti chiave, che è possibile riscontrare quando si lavora con i file di progetto e può essere utilizzato con un esempio di come è possibile utilizzare i file di progetto per distribuire le applicazioni reali.
+> I file di progetto Microsoft Build Engine (MSBuild) si trovano nella parte centrale del processo di compilazione e distribuzione. Questo argomento inizia con una panoramica concettuale di MSBuild e del file di progetto. Descrive i componenti principali che verranno usati quando si lavora con i file di progetto e funziona con un esempio di come è possibile usare i file di progetto per distribuire applicazioni reali.
 > 
-> Che cosa si apprenderà come:
+> Cosa si apprenderà:
 > 
-> - Come MSBuild Usa i file di progetto MSBuild per compilare i progetti.
-> - Modo in cui MSBuild si integra con le tecnologie di distribuzione, come lo strumento di distribuzione di Internet Information Services (IIS) Web (distribuzione Web).
+> - Modalità di utilizzo dei file di progetto MSBuild per la compilazione di progetti.
+> - Il modo in cui MSBuild si integra con le tecnologie di distribuzione, ad esempio lo strumento di distribuzione Web Internet Information Services (IIS) (Distribuzione Web).
 > - Come comprendere i componenti chiave di un file di progetto.
 > - Come è possibile utilizzare i file di progetto per compilare e distribuire applicazioni complesse.
 
-## <a name="msbuild-and-the-project-file"></a>MSBuild e il File di progetto
+## <a name="msbuild-and-the-project-file"></a>MSBuild e il file di progetto
 
-Quando si creano e creare soluzioni in Visual Studio, Visual Studio Usa MSBuild per compilare ogni progetto nella soluzione. Ogni progetto di Visual Studio include un file di progetto MSBuild, con un'estensione di file che riflette il tipo di progetto&#x2014;, ad esempio, un progetto c# (con estensione csproj), un progetto di Visual Basic.NET (con estensione vbproj) o un progetto di database (con estensione dbproj). Per compilare un progetto, MSBuild deve elaborare il file di progetto associato al progetto. Il file di progetto è un documento XML che contiene tutte le informazioni e istruzioni che MSBuild è necessario per compilare il progetto, ad esempio il contenuto da includere, i requisiti di piattaforma, le informazioni di controllo delle versioni, server web o impostazioni server di database e il attività che devono essere eseguite.
+Quando si creano e si compilano soluzioni in Visual Studio, Visual Studio USA MSBuild per compilare ogni progetto nella soluzione. Ogni progetto di Visual Studio include un file di progetto MSBuild, con un'estensione di file che riflette il&#x2014;tipo di progetto, C# ad esempio un progetto (csproj), un progetto Visual Basic.NET (vbproj) o un progetto di database (. dbproj). Per compilare un progetto, MSBuild deve elaborare il file di progetto associato al progetto. Il file di progetto è un documento XML contenente tutte le informazioni e le istruzioni necessarie a MSBuild per compilare il progetto, ad esempio il contenuto da includere, i requisiti della piattaforma, le informazioni sul controllo delle versioni, le impostazioni del server Web o del server di database e il attività che devono essere eseguite.
 
-I file di progetto MSBuild si basano le [dello schema XML di MSBuild](https://msdn.microsoft.com/library/5dy88c2e.aspx), e di conseguenza il processo di compilazione è completamente aperto e trasparente. Inoltre, non è necessario installare Visual Studio per poter utilizzare il motore MSBuild&#x2014;dell'eseguibile MSBuild.exe fa parte di .NET Framework ed è possibile eseguirlo da un prompt dei comandi. Gli sviluppatori, è possibile creare i proprio file di progetto MSBuild, usando lo schema XML di MSBuild, per imporre controllo con granularità fine e sofisticata come compilare e distribuire i progetti. Questi file di progetto personalizzati funzionano in esattamente allo stesso modo dei file di progetto Visual Studio genera automaticamente.
+I file di progetto MSBuild sono basati sulla [XML schema MSBuild](/visualstudio/msbuild/msbuild-project-file-schema-reference)e, di conseguenza, il processo di compilazione è completamente aperto e trasparente. Inoltre, non è necessario installare Visual Studio per usare il motore&#x2014;MSBuild. il file eseguibile di MSBuild. exe fa parte della .NET Framework ed è possibile eseguirlo da un prompt dei comandi. Gli sviluppatori possono creare file di progetto MSBuild personalizzati, usando il XML Schema MSBuild, per imporre un controllo sofisticato e con granularità fine sulla modalità di compilazione e distribuzione dei progetti. Questi file di progetto personalizzati funzionano esattamente allo stesso modo dei file di progetto generati automaticamente da Visual Studio.
 
 > [!NOTE]
-> È anche possibile usare i file di progetto MSBuild con il servizio di compilazione Team in Team Foundation Server (TFS). Ad esempio, è possibile utilizzare i file di progetto in scenari di integrazione continua (CI) per automatizzare la distribuzione in un ambiente di test quando viene archiviato nuovo codice. Per altre informazioni, vedere [configurazione di Team Foundation Server per la distribuzione di Web automatizzata](../configuring-team-foundation-server-for-web-deployment/configuring-team-foundation-server-for-web-deployment.md).
+> È anche possibile usare i file di progetto MSBuild con il servizio Team Build in Team Foundation Server (TFS). Ad esempio, è possibile usare i file di progetto in scenari di integrazione continua (CI) per automatizzare la distribuzione in un ambiente di test quando viene archiviato nuovo codice. Per altre informazioni, vedere [configurazione di Team Foundation Server per la distribuzione Web automatizzata](../configuring-team-foundation-server-for-web-deployment/configuring-team-foundation-server-for-web-deployment.md).
 
-### <a name="project-file-naming-conventions"></a>Convenzioni di denominazione di File di progetto
+### <a name="project-file-naming-conventions"></a>Convenzioni di denominazione dei file di progetto
 
-Quando si creano i proprio file di progetto, è possibile usare qualsiasi estensione di file desiderato. Tuttavia, per semplificare le soluzioni ad altri utenti, è consigliabile usare tali convenzioni comuni:
+Quando si creano file di progetto personalizzati, è possibile usare qualsiasi estensione di file. Tuttavia, per semplificare la comprensione delle soluzioni, è consigliabile usare le convenzioni comuni seguenti:
 
-- Quando si crea un file di progetto che compila i progetti, usare l'estensione proj.
-- Usare l'estensione con estensione targets quando si crea un file di progetto riutilizzabili per importare in altri file di progetto. File con estensione targets in genere non vengono compilati alcuna operazione se stessi, semplicemente contengono istruzioni che è possibile importare i file con estensione proj.
+- Utilizzare l'estensione proj quando si crea un file di progetto che compila i progetti.
+- Utilizzare l'estensione. targets quando si crea un file di progetto riutilizzabile per l'importazione in altri file di progetto. I file con estensione targets in genere non compilano nulla, ma contengono semplicemente istruzioni che è possibile importare nei file con estensione proj.
 
-### <a name="integration-with-deployment-technologies"></a>Integrazione con tecnologie di distribuzione
+### <a name="integration-with-deployment-technologies"></a>Integrazione con le tecnologie di distribuzione
 
-Se è lavorato con i progetti applicazione web in Visual Studio 2010, come le applicazioni web ASP.NET e applicazioni web ASP.NET MVC, si saprà che questi progetti includono supporto incorporato per l'assemblaggio e distribuzione dell'applicazione web in un ambiente di destinazione. Il **delle proprietà** pagine per questi progetti includono **pubblicazione/creazione pacchetto Web** e **pubblicazione/creazione pacchetto SQL** schede che è possibile usare per configurare come i componenti del pacchetto di installazione dell'applicazione. Viene illustrato il **pubblicazione/creazione pacchetto Web** scheda:
+Se sono stati usati progetti di applicazione Web in Visual Studio 2010, come le applicazioni Web ASP.NET e le applicazioni Web ASP.NET MVC, si saprà che questi progetti includono il supporto incorporato per la creazione di pacchetti e la distribuzione dell'applicazione Web in un ambiente di destinazione. Le pagine delle **Proprietà** per questi progetti includono le schede **pubblicazione/pubblicazione** **del pacchetto e** del Web, che è possibile usare per configurare il pacchetto e la distribuzione dei componenti dell'applicazione. Viene visualizzata la scheda **pubblicazione/pubblicazione del pacchetto Web** :
 
 ![](understanding-the-project-file/_static/image1.png)
 
-La tecnologia su queste funzionalità è noto come Pipeline di pubblicazione sul Web (WPP). WPP offre essenzialmente MSBuild e [distribuzione Web](https://go.microsoft.com/?linkid=9805122) interagiscono per fornire un processo di compilazione, distribuzione e pacchetto completo per le applicazioni web.
+La tecnologia sottostante di queste funzionalità è nota come Web Publishing pipeline (WPP). Il WPP in sostanza unisce MSBuild e [distribuzione Web](https://go.microsoft.com/?linkid=9805122) per offrire un processo completo di compilazione, creazione di pacchetti e distribuzione per le applicazioni Web.
 
-La buona notizia è che è possibile sfruttare i vantaggi dei punti di integrazione che WPP fornisce quando si creano file di progetto personalizzati per i progetti web. È possibile includere istruzioni per la distribuzione nel file di progetto, che consente di compilare i progetti, creare pacchetti di distribuzione web e installare questi pacchetti su server remoti tramite un singolo file di progetto e una singola chiamata a MSBuild. È inoltre possibile chiamare qualsiasi altro file eseguibili come parte del processo di compilazione. Ad esempio, è possibile eseguire lo strumento da riga di comando VSDBCMD.exe per distribuire un database da un file di schema. Nel corso di questo argomento, si noterà come è possibile sfruttare queste funzionalità per soddisfare i requisiti degli scenari di utilizzo dell'organizzazione.
+La novità è che è possibile sfruttare i punti di integrazione forniti da WPP quando si creano file di progetto personalizzati per i progetti Web. È possibile includere nel file di progetto le istruzioni per la distribuzione, che consentono di compilare i progetti, creare pacchetti di distribuzione Web e installare i pacchetti in server remoti tramite un singolo file di progetto e una singola chiamata a MSBuild. È anche possibile chiamare qualsiasi altro file eseguibile come parte del processo di compilazione. È ad esempio possibile eseguire lo strumento da riga di comando VSDBCMD. exe per distribuire un database da un file di schema. Nel corso di questo argomento, si vedrà come sfruttare queste funzionalità per soddisfare i requisiti degli scenari di distribuzione aziendali.
 
 > [!NOTE]
-> Per altre informazioni su come funziona il processo di distribuzione dell'applicazione web, vedere [Panoramica della distribuzione progetto applicazione Web ASP.NET](https://msdn.microsoft.com/library/dd394698.aspx).
+> Per altre informazioni sul funzionamento del processo di distribuzione dell'applicazione Web, vedere [Panoramica della distribuzione del progetto di applicazione web ASP.NET](https://msdn.microsoft.com/library/dd394698.aspx).
 
-## <a name="the-anatomy-of-a-project-file"></a>Anatomia di un File di progetto
+## <a name="the-anatomy-of-a-project-file"></a>Anatomia di un file di progetto
 
-Prima di esaminare il processo di compilazione in modo più dettagliato, vale la pena richiede alcuni minuti per acquisire familiarità con la struttura di base di un file di progetto MSBuild. In questa sezione viene fornita una panoramica degli elementi più comuni che possono verificare in caso esaminare, modificare o creare un file di progetto. In particolare, si apprenderà come:
+Prima di esaminare il processo di compilazione in modo più dettagliato, è opportuno richiedere alcuni istanti per acquisire familiarità con la struttura di base di un file di progetto MSBuild. In questa sezione viene fornita una panoramica degli elementi più comuni che si verificheranno quando si esamina, si modifica o si crea un file di progetto. In particolare, si apprenderà come:
 
-- Come usare *proprietà* per gestire le variabili per il processo di compilazione.
-- Come usare *elementi* per identificare l'input al processo di compilazione, ad esempio i file di codice.
-- Come usare *destinazioni* e *attività* ricevano le istruzioni di esecuzione a MSBuild, tramite *proprietà* e *elementi* definito altrove nel file di progetto.
+- Come usare le *Proprietà* per gestire le variabili per il processo di compilazione.
+- Come usare *gli elementi* per identificare gli input per il processo di compilazione, ad esempio i file di codice.
+- Come usare le *destinazioni* e le *attività* per fornire istruzioni di esecuzione a MSBuild, usando le *proprietà* e *gli elementi* definiti in un'altra posizione nel file di progetto.
 
-Ciò viene illustrata la relazione tra gli elementi chiave in un file di progetto MSBuild:
+Viene visualizzata la relazione tra gli elementi chiave in un file di progetto MSBuild:
 
 ![](understanding-the-project-file/_static/image2.png)
 
-### <a name="the-project-element"></a>L'elemento di progetto
+### <a name="the-project-element"></a>Elemento Project
 
-Il [progetto](https://msdn.microsoft.com/library/bcxfsh87.aspx) elemento è l'elemento radice di ogni file di progetto. Oltre a identificare il XML schema per il file di progetto, il **progetto** elemento può includere attributi per specificare i punti di ingresso per il processo di compilazione. Ad esempio, nelle [soluzione di esempio Contact Manager](the-contact-manager-solution.md), il *Publish.proj* file specifica che la compilazione deve essere avviato tramite la chiamata di destinazione denominata **FullPublish**.
+L'elemento [Project](https://msdn.microsoft.com/library/bcxfsh87.aspx) è l'elemento radice di ogni file di progetto. Oltre a identificare i XML Schema per il file di progetto, l'elemento **Project** può includere attributi per specificare i punti di ingresso per il processo di compilazione. Nella [soluzione di esempio Contact Manager](the-contact-manager-solution.md), ad esempio, il file *Publish. proj* specifica che la compilazione deve iniziare chiamando la destinazione denominata **FullPublish**.
 
 [!code-xml[Main](understanding-the-project-file/samples/sample1.xml)]
 
-### <a name="properties-and-conditions"></a>Le proprietà e le condizioni
+### <a name="properties-and-conditions"></a>Proprietà e condizioni
 
-In genere un file di progetto deve fornire un numero elevato di tipi diversi di informazioni per compilare e distribuire i progetti correttamente. Questi tipi di informazioni può includere i nomi dei server, le stringhe di connessione, le credenziali, le configurazioni della build, percorsi dei file di origine e di destinazione e qualsiasi altra informazione da includere per supportare la personalizzazione. In un file di progetto, è necessario definire le proprietà all'interno di un [PropertyGroup](https://msdn.microsoft.com/library/t4w159bs.aspx) elemento. Proprietà di MSBuild sono costituiti da coppie chiave-valore. All'interno di **PropertyGroup** elemento, il nome dell'elemento definisce la chiave di proprietà e il contenuto dell'elemento definisce il valore della proprietà. Ad esempio, è possibile definire le proprietà denominate **ServerName** e **ConnectionString** per archiviare una stringa di connessione e nome del server statico.
+Un file di progetto in genere deve fornire diverse informazioni per compilare e distribuire i progetti in modo corretto. Queste informazioni possono includere nomi di server, stringhe di connessione, credenziali, configurazioni di compilazione, percorsi di file di origine e di destinazione e qualsiasi altra informazione che si desidera includere per supportare la personalizzazione. In un file di progetto, le proprietà devono essere definite all'interno di un elemento [PropertyGroup](https://msdn.microsoft.com/library/t4w159bs.aspx) . Le proprietà di MSBuild sono costituite da coppie chiave-valore. All'interno dell'elemento **PropertyGroup** , il nome dell'elemento definisce la chiave della proprietà e il contenuto dell'elemento definisce il valore della proprietà. Ad esempio, è possibile definire proprietà denominate **ServerName** e **ConnectionString** per archiviare un nome di server statico e una stringa di connessione.
 
 [!code-xml[Main](understanding-the-project-file/samples/sample2.xml)]
 
-Per recuperare un valore della proprietà, usare il formato *$ (PropertyName)* . Ad esempio, per recuperare il valore della **ServerName** proprietà, digitare:
+Per recuperare un valore di proprietà, utilizzare il formato *$ (propertyName)* . Ad esempio, per recuperare il valore della proprietà **ServerName** , digitare:
 
 [!code-powershell[Main](understanding-the-project-file/samples/sample3.ps1)]
 
 > [!NOTE]
-> Si noterà esempi su come e quando usare i valori delle proprietà più avanti in questo argomento.
+> Verranno visualizzati esempi di come e quando utilizzare i valori delle proprietà più avanti in questo argomento.
 
-Incorporare le informazioni come proprietà statiche in un file di progetto non è sempre l'approccio ideale per la gestione del processo di compilazione. In molti scenari, vorrai ottenere le informazioni provenienti da altre origini oppure permettere all'utente di specificare le informazioni dal prompt dei comandi. MSBuild consente di specificare qualsiasi valore della proprietà come un parametro della riga di comando. Ad esempio, l'utente è stato possibile fornire un valore per **ServerName** quando direste esegue MSBuild.exe dalla riga di comando.
+L'incorporamento di informazioni come proprietà statiche in un file di progetto non è sempre l'approccio ideale per la gestione del processo di compilazione. In numerosi scenari, è opportuno ottenere le informazioni da altre origini o consentire all'utente di fornire le informazioni dal prompt dei comandi. MSBuild consente di specificare qualsiasi valore di proprietà come parametro della riga di comando. Ad esempio, l'utente può specificare un valore per **nomeserver** quando esegue MSBuild. exe dalla riga di comando.
 
 [!code-console[Main](understanding-the-project-file/samples/sample4.cmd)]
 
 > [!NOTE]
-> Per altre informazioni sugli argomenti e parametri utilizzabili MSBuild.exe, vedere [riferimenti alla riga di comando di MSBuild](https://msdn.microsoft.com/library/ms164311.aspx).
+> Per altre informazioni sugli argomenti e sulle opzioni che è possibile usare con MSBuild. exe, vedere [riferimenti alla riga di comando di MSBuild](https://msdn.microsoft.com/library/ms164311.aspx).
 
-È possibile usare la stessa sintassi di proprietà per ottenere i valori delle variabili di ambiente e le proprietà del progetto incorporati. Un numero elevato di proprietà usate di frequente è definito per l'utente e di utilizzarli nei file di progetto, includendo il nome di parametro in questione. Ad esempio, per recuperare la piattaforma del progetto corrente&#x2014;, ad esempio, **x86** oppure **AnyCpu**&#x2014;è possibile includere il **$ (Platform)** riferimento alla proprietà in file di progetto. Per altre informazioni, vedere [macro per comandi di compilazione e la proprietà](https://msdn.microsoft.com/library/c02as0cs.aspx), [proprietà di progetto MSBuild comuni](https://msdn.microsoft.com/library/bb629394.aspx), e [le proprietà riservate](https://msdn.microsoft.com/library/ms164309.aspx).
+È possibile utilizzare la stessa sintassi di proprietà per ottenere i valori delle variabili di ambiente e delle proprietà predefinite del progetto. Molte proprietà di uso comune sono definite per l'utente e possono essere usate nei file di progetto includendo il nome del parametro pertinente. &#x2014;Ad esempio, per recuperare la piattaforma del progetto corrente, ad esempio **x86** o **AnyCpu**&#x2014;, è possibile includere il riferimento alla proprietà **$ (Platform)** nel file di progetto. Per ulteriori informazioni, vedere [macro per comandi e proprietà di compilazione](https://msdn.microsoft.com/library/c02as0cs.aspx), [proprietà del progetto MSBuild comuni](https://msdn.microsoft.com/library/bb629394.aspx)e [proprietà riservate](https://msdn.microsoft.com/library/ms164309.aspx).
 
-Le proprietà vengono spesso usate in combinazione con *condizioni*. La maggior parte degli elementi di MSBuild supportano la **condizione** attributo, che consente di specificare i criteri su cui MSBuild deve valutare l'elemento. Ad esempio, prendere in considerazione questa definizione delle proprietà:
+Le proprietà vengono spesso utilizzate in combinazione con *le condizioni*. La maggior parte degli elementi MSBuild supporta l'attributo **Condition** , che consente di specificare i criteri in base ai quali MSBuild deve valutare l'elemento. Si consideri ad esempio questa definizione di proprietà:
 
 [!code-xml[Main](understanding-the-project-file/samples/sample5.xml)]
 
-Quando MSBuild elabora questa definizione delle proprietà, viene verificata per vedere se un **$(OutputRoot)** valore della proprietà è disponibile. Se è vuoto il valore della proprietà&#x2014;in altre parole, l'utente non ha fornito un valore per questa proprietà&#x2014;la condizione viene valutata **true** e il valore della proprietà è impostato su **... \Publish\Out**. Se l'utente ha fornito un valore per questa proprietà, la condizione viene valutata **false** e non viene usato il valore della proprietà statica.
+Quando MSBuild elabora questa definizione di proprietà, verifica innanzitutto se è disponibile un valore della proprietà **$ (OutputRoot)** . Se il valore della proprietà è&#x2014;vuoto in altre parole, l'utente non ha specificato un valore per&#x2014;questa proprietà, la condizione restituisce **true** e il valore della proprietà è impostato su **. \Publish\Out**. Se l'utente ha specificato un valore per questa proprietà, la condizione restituisce **false** e il valore della proprietà statica non viene utilizzato.
 
-Per altre informazioni sulle diverse modalità in cui è possibile specificare le condizioni, vedere [condizioni di MSBuild](https://msdn.microsoft.com/library/7szfhaft.aspx).
+Per altre informazioni sui diversi modi in cui è possibile specificare le condizioni, vedere [condizioni di MSBuild](https://msdn.microsoft.com/library/7szfhaft.aspx).
 
-### <a name="items-and-item-groups"></a>Gli elementi e gruppi di elementi
+### <a name="items-and-item-groups"></a>Elementi e gruppi di elementi
 
-Uno dei ruoli del file di progetto importanti consiste nel definire gli input per il processo di compilazione. I dati di input sono in genere, i file&#x2014;codice file, i file di configurazione, file di comando e qualsiasi altro file che è necessario elaborare o copia come parte del processo di compilazione. Nello schema di progetto MSBuild, i dati di input sono rappresentati da [elemento](https://msdn.microsoft.com/library/ms164283.aspx) elementi. In un file di progetto, è necessario definire gli elementi all'interno di un' [ItemGroup](https://msdn.microsoft.com/library/646dk05y.aspx) elemento. Analogamente **proprietà** gli elementi, è possibile assegnare un nome un **elemento** elemento tuttavia si desidera. Tuttavia, è necessario specificare un **inclusione** attributo per identificare il file o carattere jolly che rappresenta l'elemento.
+Uno dei ruoli importanti del file di progetto consiste nel definire gli input per il processo di compilazione. In genere, questi input sono&#x2014;file di codice file, file di configurazione, file di comando e qualsiasi altro file che è necessario elaborare o copiare come parte del processo di compilazione. Nello schema del progetto MSBuild questi input sono rappresentati da elementi [elemento](https://msdn.microsoft.com/library/ms164283.aspx) . In un file di progetto, gli elementi devono essere definiti all'interno di un elemento [ItemGroup](https://msdn.microsoft.com/library/646dk05y.aspx) . Analogamente agli elementi della **Proprietà** , è possibile assegnare un nome a un elemento **Item** . Tuttavia, è necessario specificare un attributo **include** per identificare il file o il carattere jolly rappresentato dall'elemento.
 
 [!code-xml[Main](understanding-the-project-file/samples/sample6.xml)]
 
-Specificando multiplo **elemento** elementi con lo stesso nome, in modo efficace si sta creando un elenco di risorse denominato. Un buon metodo per vedere un esempio pratico è dare uno sguardo all'interno di uno dei file di progetto creato da Visual Studio. Ad esempio, il *ContactManager.Mvc.csproj* file nella soluzione di esempio sono inclusi numerosi gruppi di elementi, ognuno con diverse denominate **elemento** elementi.
+Specificando più elementi **Item** con lo stesso nome, si crea effettivamente un elenco denominato di risorse. Un modo efficace per verificare questo aspetto è esaminare uno dei file di progetto creati da Visual Studio. Ad esempio, il file *ContactManager. Mvc. csproj* nella soluzione di esempio include molti gruppi **di elementi,** ognuno con diversi elementi con nome identico.
 
 [!code-xml[Main](understanding-the-project-file/samples/sample7.xml)]
 
-In questo modo, il file di progetto è che indicano a MSBuild per costruire gli elenchi di file che devono essere elaborati nello stesso modo di&#x2014;il **riferimento** elenco include gli assembly che devono essere presenti per una compilazione corretta, il  **Compilare** elenco include i file di codice che devono essere compilati, e il **contenuto** elenco include le risorse che devono essere copiate senza modificate. Esamineremo come il processo di compilazione fa riferimento e utilizza questi elementi più avanti in questo argomento.
+In questo modo, il file di progetto indica a MSBuild di costruire elenchi di file che devono essere elaborati nello stesso modo&#x2014;in cui l'elenco di **riferimenti** include gli assembly che devono essere disponibili per una compilazione corretta, l'elenco di **compilazione** include il codice i file che devono essere compilati e l'elenco di **contenuto** includono risorse che devono essere copiate invariate. Si esaminerà il modo in cui il processo di compilazione fa riferimento a questi elementi e li usa più avanti in questo argomento.
 
-Possono includere anche elementi Item [ItemMetadata](https://msdn.microsoft.com/library/ms164284.aspx) gli elementi figlio. Si tratta di coppie chiave-valore definite dall'utente ed essenzialmente rappresentano le proprietà specifiche per quell'elemento. Ad esempio, molti il **compilare** gli elementi nel file di progetto includono **DependentUpon** gli elementi figlio.
+Gli elementi elemento possono includere anche elementi figlio [ItemMetadata](https://msdn.microsoft.com/library/ms164284.aspx) . Si tratta di coppie chiave-valore definite dall'utente e rappresentano essenzialmente proprietà specifiche di tale elemento. Ad esempio, una gran parte degli elementi di **compilazione** nel file di progetto include gli elementi figlio **DependentUpon** .
 
 [!code-xml[Main](understanding-the-project-file/samples/sample8.xml)]
 
 > [!NOTE]
-> Oltre ai metadati degli elementi creati dall'utente, tutti gli elementi vengono assegnati diversi metadati comuni al momento della creazione. Per altre informazioni, vedere [Metadati noti degli elementi](https://msdn.microsoft.com/library/ms164313.aspx).
+> Oltre ai metadati degli elementi creati dall'utente, a tutti gli elementi vengono assegnati diversi metadati comuni durante la creazione. Per altre informazioni, vedere [Metadati noti degli elementi](https://msdn.microsoft.com/library/ms164313.aspx).
 
-È possibile creare **ItemGroup** gli elementi all'interno del livello di radice **Project** elemento o all'interno di specifiche **destinazione** elementi. **Elemento ItemGroup** supportano anche gli elementi **condizione** attributi, che consente di personalizzare l'input al processo di compilazione in base alle condizioni, ad esempio la configurazione di progetto o la piattaforma.
+È possibile creare elementi **ItemGroup** all'interno dell'elemento di **progetto** a livello di radice o in specifici elementi di **destinazione** . Gli elementi **ItemGroup** supportano anche attributi di **condizione** , che consentono di adattare gli input al processo di compilazione in base a condizioni come la configurazione o la piattaforma del progetto.
 
 ### <a name="targets-and-tasks"></a>Destinazioni e attività
 
-Nello schema di MSBuild, un [attività](https://msdn.microsoft.com/library/77f2hx1s.aspx) elemento rappresenta un'istruzione singola build (o attività). MSBuild include una vasta gamma di attività predefinite. Ad esempio:
+Nello schema MSBuild, un elemento [Task](https://msdn.microsoft.com/library/77f2hx1s.aspx) rappresenta una singola istruzione di compilazione (o attività). MSBuild include numerose attività predefinite. Esempio:
 
-- Il **copia** attività Copia file in una nuova posizione.
-- Il **Csc** attività richiama il compilatore Visual c#.
-- Il **Vbc** attività richiama il compilatore Visual Basic.
-- Il **Exec** attività esegue un programma specifico.
-- Il **messaggio** attività scrive un messaggio a un logger.
+- L'attività **Copy** copia i file in un nuovo percorso.
+- L'attività **CSC** richiama il compilatore visivo C# .
+- L'attività **vbc** richiama il compilatore Visual Basic.
+- L'attività **Exec** esegue un programma specifico.
+- L'attività **Message** scrive un messaggio in un logger.
 
 > [!NOTE]
-> Per informazioni dettagliate delle attività che sono disponibili per impostazione predefinita, vedere [riferimenti delle attività MSBuild](https://msdn.microsoft.com/library/7z253716.aspx). Per altre informazioni sulle attività, incluse quelle sulla creazione di attività personalizzate, vedere [attività MSBuild](https://msdn.microsoft.com/library/ms171466.aspx).
+> Per informazioni dettagliate sulle attività disponibili predefinite, vedere informazioni di riferimento sulle attività di [MSBuild](https://msdn.microsoft.com/library/7z253716.aspx). Per altre informazioni sulle attività, inclusa la creazione di attività personalizzate, vedere [attività MSBuild](https://msdn.microsoft.com/library/ms171466.aspx).
 
-Attività devono essere contenute sempre all'interno [destinazione](https://msdn.microsoft.com/library/t50z2hka.aspx) elementi. Oggetto **destinazione** elemento è un set di uno o più attività che vengono eseguite in sequenza e un file di progetto può contenere più destinazioni. Quando si desidera eseguire un'attività o un set di attività, si richiama la destinazione che li contiene. Si supponga, ad esempio, che si dispone di un file di progetto semplice che registri un messaggio.
+Le attività devono essere sempre contenute negli elementi di [destinazione](https://msdn.microsoft.com/library/t50z2hka.aspx) . Un elemento di **destinazione** è un set di una o più attività eseguite in sequenza e un file di progetto può contenere più destinazioni. Quando si desidera eseguire un'attività o un set di attività, è necessario richiamare la destinazione che li contiene. Si supponga, ad esempio, di disporre di un file di progetto semplice che registra un messaggio.
 
 [!code-xml[Main](understanding-the-project-file/samples/sample9.xml)]
 
-È possibile richiamare la destinazione dalla riga di comando, usando il **/t** per specificare la destinazione.
+È possibile richiamare la destinazione dalla riga di comando usando l'opzione **/t** per specificare la destinazione.
 
 [!code-console[Main](understanding-the-project-file/samples/sample10.cmd)]
 
-In alternativa, è possibile aggiungere un **DefaultTargets** attributo il **progetto** elemento, per specificare le destinazioni che si vuole richiamare.
+In alternativa, è possibile aggiungere un attributo **DefaultTargets** all'elemento **Project** per specificare le destinazioni che si desidera richiamare.
 
 [!code-xml[Main](understanding-the-project-file/samples/sample11.xml)]
 
-In questo caso, non devi specificare la destinazione dalla riga di comando. È possibile specificare semplicemente il file di progetto e MSBuild richiamerà il **FullPublish** destinazione per l'utente.
+In questo caso, non è necessario specificare la destinazione dalla riga di comando. È possibile specificare semplicemente il file di progetto e MSBuild richiamerà la destinazione **FullPublish** .
 
 [!code-console[Main](understanding-the-project-file/samples/sample12.cmd)]
 
-Attività e destinazioni può includere **condizione** attributi. Di conseguenza, è possibile omettere le singole attività o destinazioni intere se vengono soddisfatte determinate condizioni.
+Sia le destinazioni che le attività possono includere attributi di **condizione** . Di conseguenza, è possibile scegliere di omettere intere destinazioni o singole attività se vengono soddisfatte determinate condizioni.
 
-In generale, quando si creano utili attività e destinazioni, è necessario fare riferimento alle proprietà e gli elementi che sono stati definiti in un' posizione nel file di progetto:
+In generale, quando si creano attività e destinazioni utili, è necessario fare riferimento alle proprietà e agli elementi definiti in un'altra posizione nel file di progetto:
 
-- Per utilizzare un valore della proprietà, digitare **$(***PropertyName***)** , dove *PropertyName* è il nome del **proprietà** elemento o il nome del parametro.
-- Per usare un elemento, digitare **@(***ItemName***)** , dove *ItemName* è il nome del **elemento** elemento.
+- Per usare un valore di proprietà, digitare **$ (***PropertyName***)** , dove *PropertyName* è il nome dell'elemento **Property** o il nome del parametro.
+- Per usare un elemento, digitare **@ (***ItemName***)** , dove *ItemName* è il nome dell'elemento **Item** .
 
 > [!NOTE]
-> Tenere presente che se si creano più elementi con lo stesso nome, si sta creando un elenco. Al contrario, se si creano più proprietà con lo stesso nome, l'ultimo valore della proprietà è fornire sovrascrive qualsiasi proprietà precedente con lo stesso nome&#x2014;una proprietà può contenere solo un singolo valore.
+> Tenere presente che se si creano più elementi con lo stesso nome, si compila un elenco. Al contrario, se si creano più proprietà con lo stesso nome, l'ultimo valore di proprietà fornito sovrascriverà eventuali proprietà precedenti con lo stesso&#x2014;nome, una proprietà può contenere solo un valore singolo.
 
-Ad esempio, nelle *Publish.proj* file nella soluzione di esempio, esaminiamo il **BuildProjects** destinazione.
+Ad esempio, nel file *Publish. proj* della soluzione di esempio esaminare la destinazione **BuildProjects** .
 
 [!code-xml[Main](understanding-the-project-file/samples/sample13.xml)]
 
-In questo esempio, è possibile osservare questi punti importanti:
+In questo esempio è possibile osservare questi punti chiave:
 
-- Se il **BuildingInTeamBuild** parametro è specificato e ha il valore **true**, nessuna attività all'interno di questa destinazione verrà eseguita.
-- La destinazione contiene una singola istanza di [MSBuild](https://msdn.microsoft.com/library/z7f65y0d.aspx) attività. Questa attività consente di compilare gli altri progetti MSBuild.
-- Il **ProjectsToBuild** elemento viene passato all'attività. Questo elemento è stato possibile rappresentano un elenco dei file progetto o una soluzione, tutto definiti da **ProjectsToBuild** elementi all'interno di un gruppo di elementi item. In questo caso, il **ProjectsToBuild** elemento fa riferimento a un singolo file di soluzione.
+- Se il parametro **BuildingInTeamBuild** è specificato e il valore è **true**, nessuna delle attività all'interno di questa destinazione verrà eseguita.
+- La destinazione contiene una singola istanza dell'attività [MSBuild](https://msdn.microsoft.com/library/z7f65y0d.aspx) . Questa attività consente di compilare altri progetti MSBuild.
+- L'elemento **ProjectsToBuild** viene passato all'attività. Questo elemento potrebbe rappresentare un elenco di file di progetto o di soluzione, tutti definiti da elementi elemento **ProjectsToBuild** all'interno di un gruppo di elementi. In questo caso, l'elemento **ProjectsToBuild** fa riferimento a un singolo file di soluzione.
 
     [!code-xml[Main](understanding-the-project-file/samples/sample14.xml)]
-- I valori delle proprietà passati per il **MSBuild** attività include parametri denominati **OutputRoot** e **configurazione**. Questi vengono impostati se vengono forniti i valori dei parametri o valori di proprietà statica se non sono.
+- I valori delle proprietà passati all'attività **MSBuild** includono i parametri denominati **OutputRoot** e **Configuration**. Sono impostati sui valori dei parametri, se specificati, o i valori di proprietà statiche in caso contrario.
 
     [!code-xml[Main](understanding-the-project-file/samples/sample15.xml)]
 
-È anche possibile vedere che il **MSBuild** attività richiama una destinazione denominata **compilazione**. Questa è una delle diverse destinazioni predefinite che vengono ampiamente usate nel file di progetto di Visual Studio e sono disponibile nei file di progetto personalizzati, ad esempio **compilare**, **Pulisci**, **ricompilare**, e **pubblicare**. Verranno fornite altre informazioni sull'uso di destinazioni e attività per controllare il processo di compilazione e sui **MSBuild** di attività, in particolare, più avanti in questo argomento.
+È anche possibile vedere che l'attività **MSBuild** richiama una destinazione denominata **Build**. Questa è una delle diverse destinazioni predefinite che sono ampiamente usate nei file di progetto di Visual Studio e sono disponibili nei file di progetto personalizzati, ad esempio **compilazione**, **pulizia**, **ricompilazione**e **pubblicazione**. Verranno fornite altre informazioni sull'utilizzo di destinazioni e attività per controllare il processo di compilazione e sull'attività **MSBuild** in particolare, più avanti in questo argomento.
 
 > [!NOTE]
 > Per altre informazioni sulle destinazioni, vedere [destinazioni di MSBuild](https://msdn.microsoft.com/library/ms171462.aspx).
 
 ## <a name="splitting-project-files-to-support-multiple-environments"></a>Suddivisione dei file di progetto per supportare più ambienti
 
-Si supponga che si desidera essere in grado di distribuire una soluzione in più ambienti, ad esempio un server di prova, piattaforme di gestione temporanea e gli ambienti di produzione. La configurazione può variare notevolmente tra questi ambienti&#x2014;non solo in termini di nomi di server, le stringhe di connessione e così via, ma anche potenzialmente in termini di credenziali, le impostazioni di sicurezza e molti altri fattori. Se è necessario eseguire questa operazione regolarmente, non è molto più agevole modificare più proprietà nel file di progetto ogni volta che si passa all'ambiente di destinazione. Non è una soluzione ideale per richiedere un elenco di valori di proprietà devono essere fornite al processo di compilazione infinito.
+Si supponga di voler essere in grado di distribuire una soluzione in più ambienti, ad esempio server di prova, piattaforme di staging e ambienti di produzione. La configurazione può variare sostanzialmente tra questi ambienti&#x2014;non solo in termini di nomi di server, stringhe di connessione e così via, ma anche in termini di credenziali, impostazioni di sicurezza e molti altri fattori. Se è necessario eseguire questa operazione regolarmente, non è molto opportuno modificare più proprietà nel file di progetto ogni volta che si cambia l'ambiente di destinazione. Né è una soluzione ideale per richiedere un elenco infinito di valori di proprietà da fornire al processo di compilazione.
 
-Fortunatamente è un'alternativa. MSBuild consente di dividere la configurazione della build su più file di progetto. Per visualizzarne il funzionamento, nella soluzione di esempio, si noti che sono presenti due file di progetto personalizzati:
+Fortunatamente esiste un'alternativa. MSBuild consente di suddividere la configurazione della build tra più file di progetto. Per verificarne il funzionamento, nella soluzione di esempio si noti che sono presenti due file di progetto personalizzati:
 
-- *Publish.proj*, che contiene gli elementi, proprietà e destinazioni che sono comuni a tutti gli ambienti.
-- *Env-Dev.proj*, che contiene le proprietà specifiche per un ambiente di sviluppo.
+- *Publish. proj*, che contiene proprietà, elementi e destinazioni comuni a tutti gli ambienti.
+- *Env-dev. proj*, che contiene le proprietà specifiche di un ambiente di sviluppo.
 
-A questo punto si noti che il *Publish.proj* file include un [importazione](https://msdn.microsoft.com/library/92x05xfs.aspx) elemento, immediatamente sotto la parentesi graffa **progetto** tag.
+Si noti ora che il file *Publish. proj* include un elemento [Import](https://msdn.microsoft.com/library/92x05xfs.aspx) immediatamente sotto il tag del **progetto** Opening.
 
 [!code-xml[Main](understanding-the-project-file/samples/sample16.xml)]
 
-Il **importare** elemento viene usato per importare il contenuto di un altro file di progetto MSBuild nel file di progetto MSBuild corrente. In questo caso, il **TargetEnvPropsFile** parametro fornisce il nome del file del file di progetto da importare. Quando si esegue MSBuild, è possibile fornire un valore per questo parametro.
+L'elemento **Import** viene usato per importare il contenuto di un altro file di progetto MSBuild nel file di progetto MSBuild corrente. In questo caso, il parametro **TargetEnvPropsFile** fornisce il nome del file di progetto che si vuole importare. Quando si esegue MSBuild, è possibile specificare un valore per questo parametro.
 
 [!code-console[Main](understanding-the-project-file/samples/sample17.cmd)]
 
-Ciò in modo efficace unisce il contenuto dei due file in un unico file di progetto. Con questo approccio, è possibile creare un file di progetto che contiene la configurazione della build universal e più file di progetto complementare contenente le proprietà specifiche dell'ambiente. Di conseguenza, è sufficiente eseguire un comando con un valore di parametro diversi ti permette di distribuire la soluzione a un altro ambiente.
+In questo modo, i contenuti dei due file vengono uniti in un unico file di progetto. Utilizzando questo approccio, è possibile creare un file di progetto contenente la configurazione della build universale e più file di progetto supplementari contenenti proprietà specifiche dell'ambiente. Di conseguenza, è sufficiente eseguire un comando con un valore di parametro diverso, che consente di distribuire la soluzione in un ambiente diverso.
 
 ![](understanding-the-project-file/_static/image3.png)
 
-La suddivisione dei file di progetto in questo modo è una buona norma da seguire. Consente agli sviluppatori di distribuire in più ambienti mediante l'esecuzione di un singolo comando, evitando la duplicazione di proprietà di compilazione universali su più file di progetto.
+La suddivisione dei file di progetto in questo modo è una procedura consigliata da seguire. Consente agli sviluppatori di eseguire la distribuzione in più ambienti eseguendo un unico comando, evitando la duplicazione delle proprietà di compilazione universale tra più file di progetto.
 
 > [!NOTE]
-> Per indicazioni su come personalizzare i file di progetto specifici dell'ambiente per ambienti server, vedere [configurare le proprietà di distribuzione per un ambiente di destinazione](../configuring-server-environments-for-web-deployment/configuring-deployment-properties-for-a-target-environment.md).
+> Per istruzioni su come personalizzare i file di progetto specifici dell'ambiente per gli ambienti server, vedere [configurazione delle proprietà di distribuzione per un ambiente di destinazione](../configuring-server-environments-for-web-deployment/configuring-deployment-properties-for-a-target-environment.md).
 
 ## <a name="conclusion"></a>Conclusione
 
-In questo argomento viene fornita un'introduzione generale ai file di progetto MSBuild e illustrato come creare i proprio file di progetto personalizzati per controllare il processo di compilazione. È stato anche introdotto il concetto di suddividere i file di progetto in compilazione universal istruzioni e le proprietà di compilazione specifici dell'ambiente, per renderlo semplice compilare e distribuire i progetti a più destinazioni.
+Questo argomento fornisce un'introduzione generale ai file di progetto MSBuild e spiega come creare file di progetto personalizzati per controllare il processo di compilazione. È stato inoltre introdotto il concetto di suddivisione dei file di progetto nelle istruzioni di compilazione universale e delle proprietà di compilazione specifiche dell'ambiente, per semplificare la compilazione e la distribuzione di progetti in più destinazioni.
 
-Argomento successivo [informazioni sul processo di compilazione](understanding-the-build-process.md), fornisce informazioni più dettagliate su come usare i file di progetto al controllo di compilazione e distribuzione attraverso la distribuzione di una soluzione con un livello di complessità realistico.
+L'argomento successivo, che [comprende il processo di compilazione](understanding-the-build-process.md), fornisce informazioni più approfondite su come usare i file di progetto per controllare la compilazione e la distribuzione seguendo la distribuzione di una soluzione con un livello di complessità realistico.
 
 ## <a name="further-reading"></a>Ulteriori informazioni
 
-Per un'introduzione più dettagliata per i file di progetto e il sito, vedere [all'interno di Microsoft Build Engine: Utilizzo di MSBuild e Team Foundation Build](http://amzn.com/0735645248) Sayed Ibrahim Hashimi, William Bartholomew, ISBN: 978-0-7356-4524-0.
+Per un'introduzione più approfondita ai file di progetto e WPP, vedere [all'interno del Microsoft Build Engine: uso di MSBuild e Team Foundation Build](http://amzn.com/0735645248) di Sayed Ibrahim Hashimi e William Bartholomew, ISBN: 978-0-7356-4524-0.
 
 > [!div class="step-by-step"]
 > [Precedente](setting-up-the-contact-manager-solution.md)
