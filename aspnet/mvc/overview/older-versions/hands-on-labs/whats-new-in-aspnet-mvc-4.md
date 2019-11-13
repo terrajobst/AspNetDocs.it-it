@@ -1,433 +1,433 @@
 ---
 uid: mvc/overview/older-versions/hands-on-labs/whats-new-in-aspnet-mvc-4
-title: What ' s New in ASP.NET MVC 4 | Microsoft Docs
+title: Novità di ASP.NET MVC 4 | Microsoft Docs
 author: rick-anderson
-description: ASP.NET MVC 4 è un framework per compilare applicazioni scalabili, basati su standard web usando le potenzialità di ASP.NET e modelli di progettazione consolidati e...
+description: ASP.NET MVC 4 è un Framework per la creazione di applicazioni Web scalabili basate su standard usando modelli di progettazione ben stabiliti e la potenza del ASP.NET e...
 ms.author: riande
 ms.date: 02/18/2013
 ms.assetid: 48f7feb3-872f-485d-b96f-e30011ff8c4a
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/whats-new-in-aspnet-mvc-4
 msc.type: authoredcontent
-ms.openlocfilehash: adb6e990d0ca98df38c47adf8c37fdffeb6d3d73
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 4235f4fe666cdeb7d0821127a2b349f2ff30cd6e
+ms.sourcegitcommit: 295cf898a4c87e264b0c35c7254b0fa4169f2278
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65112992"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74057036"
 ---
 # <a name="whats-new-in-aspnet-mvc-4"></a>Novità di ASP.NET MVC 4
 
-da [Camp Web Team](https://twitter.com/webcamps)
+Dal [team di Web Camp](https://twitter.com/webcamps)
 
-[Download Web Camp Kit di formazione](https://aka.ms/webcamps-training-kit)
+[Scarica il kit di formazione di Web Camp](https://aka.ms/webcamps-training-kit)
 
-ASP.NET MVC 4 è un framework per compilare applicazioni scalabili, basati su standard web usando le potenzialità di ASP.NET e .NET framework e modelli di progettazione consolidati. Questa nuova, quarta versione del framework è incentrato su come rendere più semplice lo sviluppo di applicazioni web per dispositivi mobili.
+ASP.NET MVC 4 è un Framework per la creazione di applicazioni Web scalabili basate su standard usando modelli di progettazione ben stabiliti e la potenza di ASP.NET e .NET Framework. Questa nuova versione del Framework è incentrata sulla semplificazione dello sviluppo di applicazioni Web per dispositivi mobili.
 
-Per iniziare, quando si crea un nuovo progetto ASP.NET MVC 4 è ora disponibile un modello di progetto di applicazione per dispositivi mobili che è possibile usare per compilare un'app autonoma in modo specifico per i dispositivi mobili. Inoltre, ASP.NET MVC 4 si integra con jQuery Mobile tramite un pacchetto NuGet jQuery.Mobile.MVC. jQuery Mobile è un framework basato su HTML5 per lo sviluppo di App web che sono compatibili con tutte le piattaforme dei dispositivi mobili più diffusi, tra cui Windows Phone, iPhone, Android e così via. Tuttavia, se è necessario specializzazione, ASP.NET MVC 4 consente inoltre di fornire viste diverse per diversi dispositivi e fornire le ottimizzazioni specifiche del dispositivo.
+Per iniziare, quando si crea un nuovo progetto ASP.NET MVC 4, è ora disponibile un modello di progetto di applicazione per dispositivi mobili che è possibile usare per compilare un'app autonoma in modo specifico per i dispositivi mobili. ASP.NET MVC 4 si integra inoltre con jQuery Mobile tramite un pacchetto NuGet jQuery. mobile. MVC. jQuery Mobile è un Framework basato su HTML5 per lo sviluppo di app Web compatibili con tutte le piattaforme per dispositivi mobili più diffuse, tra cui Windows Phone, iPhone, Android e così via. Tuttavia, se è necessaria la specializzazione, ASP.NET MVC 4 consente inoltre di gestire visualizzazioni diverse per dispositivi diversi e di fornire ottimizzazioni specifiche del dispositivo.
 
-In questo laboratorio pratico, iniziare con ASP.NET MVC 4 &quot;applicazione Internet&quot; modello di progetto per creare un'applicazione Raccolta foto. Si procederà al miglioramento progressivo l'app usando nuove funzionalità di ASP.NET MVC 4 e jQuery Mobile per renderlo compatibile con diversi dispositivi mobili e i browser desktop. Si apprenderà anche sul nuovo recipe di codice per la generazione di codice e come ASP.NET MVC 4 rende più semplice per la scrittura di metodi di azione asincroni tramite il supporto di attività&lt;ActionResult&gt; tipi restituiti.
+In questo laboratorio pratico si inizierà con il modello di progetto ASP.NET MVC 4 &quot;Internet Application&quot; per creare un'applicazione raccolta foto. L'app verrà migliorata progressivamente usando jQuery Mobile e le nuove funzionalità di ASP.NET MVC 4 per renderla compatibile con diversi dispositivi mobili e Web browser desktop. Verranno inoltre fornite informazioni sulle nuove ricette di codice per la generazione di codice e su come ASP.NET MVC 4 semplifica la scrittura di metodi di azione asincroni mediante il supporto di attività&lt;ActionResult&gt; tipi restituiti.
 
 > [!NOTE]
-> Tutto il codice di esempio e frammenti di codice sono inclusi nel Web Camp Kit di formazione, disponibile all'indirizzo [Microsoft-Web/WebCampTrainingKit versioni](https://aka.ms/webcamps-training-kit). Il progetto specifico per questo lab è disponibile all'indirizzo [What ' s New in Web Form in ASP.NET 4.5](https://github.com/Microsoft-Web/HOL-ASPNETWebForms).
+> Tutti i codici e i frammenti di codice di esempio sono inclusi nel kit di training di Web Camps, disponibile in [Microsoft-Web/WebCampTrainingKit Releases](https://aka.ms/webcamps-training-kit). Il progetto specifico di questo Lab è disponibile in [What ' s New in Web Forms in ASP.NET 4,5](https://github.com/Microsoft-Web/HOL-ASPNETWebForms).
 
 <a id="Objectives"></a>
 ### <a name="objectives"></a>Obiettivi
 
-In questo laboratorio pratico, si apprenderà come:
+In questo laboratorio pratico si apprenderà come:
 
-- Sfruttare i vantaggi dei miglioramenti apportati a di ASP.NET MVC progetto modelli, che comprende il nuovo modello di progetto di applicazione per dispositivi mobili
-- Utilizzare l'attributo viewport HTML5 e query sui supporti CSS per migliorare la visualizzazione su dispositivi mobili
-- Usare jQuery Mobile per i miglioramenti progressivi e la creazione di web touchscreen ottimizzata dell'interfaccia utente
-- Creazione di visualizzazioni specifiche per dispositivi mobili
-- Utilizzare il componente di cambio di visualizzazione per passare tra le visualizzazioni per dispositivi mobili e desktop nell'applicazione
-- Creare controller asincrono usando il supporto di attività
-
-<a id="Prerequisites"></a>
+- Sfruttare i miglioramenti apportati ai modelli di progetto MVC ASP.NET, incluso il nuovo modello di progetto di applicazione per dispositivi mobili
+- Usare l'attributo viewport HTML5 e le query multimediali CSS per migliorare la visualizzazione sui dispositivi mobili
+- Usare jQuery Mobile per miglioramenti progressivi e per creare un'interfaccia utente Web ottimizzata per il tocco
+- Creare visualizzazioni specifiche per dispositivi mobili
+- Usare il componente View-Switcher per passare tra le visualizzazioni per dispositivi mobili e desktop nell'applicazione
+- Creazione di controller asincroni mediante supporto attività
 
 <a id="Prerequisites"></a>
-### <a name="prerequisites"></a>Prerequisiti
 
-Sono necessari gli elementi seguenti per completare questa esercitazione:
+<a id="Prerequisites"></a>
+### <a name="prerequisites"></a>Prerequisites
 
-- [Microsoft Visual Studio Express 2012 per Web](https://www.microsoft.com/visualstudio/eng/products/visual-studio-express-for-web) o superiore (leggere [appendice B](#AppendixB) per istruzioni su come installarlo).
+Per completare il Lab, è necessario disporre degli elementi seguenti:
+
+- [Microsoft Visual Studio Express 2012 per il Web](https://www.microsoft.com/visualstudio/eng/products/visual-studio-express-for-web) o Superior (leggere l' [Appendice B](#AppendixB) per istruzioni su come installarlo).
 - [ASP.NET MVC 4](../../../mvc4.md) (incluso nell'installazione di Microsoft Visual Studio 2012)
-- Emulatore Windows Phone (incluso nel [Windows Phone 7.1.1 SDK](https://www.microsoft.com/download/details.aspx?id=29233))
-- Facoltativo: [WebMatrix 2](https://www.microsoft.com/web/webmatrix/) con **Electric Plum iPhone simulatore** estensione (solo per i 3 esercizio consente di visualizzare l'applicazione web con un simulatore di iPhone)
+- Emulatore di Windows Phone (incluso in [Windows Phone 7.1.1 SDK](https://www.microsoft.com/download/details.aspx?id=29233))
+- Facoltativo: [WebMatrix 2](https://www.microsoft.com/web/webmatrix/) con estensione del **simulatore Electric Plume iPhone** (solo per l'esercizio 3 usato per esplorare l'applicazione Web con un simulatore iPhone)
 
 <a id="Setup"></a>
 
 <a id="Setup"></a>
 ### <a name="setup"></a>Configurazione
 
-In tutto il documento di laboratorio, verrà invitati a inserire blocchi di codice. Per praticità, la maggior parte di tale codice viene fornito come Visual Studio frammenti di codice che è possibile utilizzare da Visual Studio per evitare di dover aggiungerla manualmente.
+Nell'intero documento del Lab verrà richiesto di inserire blocchi di codice. Per praticità, la maggior parte del codice viene fornita come Visual Studio Code frammenti, che è possibile usare in Visual Studio per evitare di aggiungerla manualmente.
 
 Per installare i frammenti di codice:
 
-1. Aprire una finestra di Windows Explorer e passare a del lab **Source\Setup** cartella.
-2. Fare doppio clic il **Setup. cmd** file in questa cartella in cui installare i frammenti di codice di Visual Studio.
+1. Aprire una finestra di Esplora risorse e passare alla cartella **Source\Setup** del Lab.
+2. Fare doppio clic sul file **Setup. cmd** in questa cartella per installare i frammenti di codice di Visual Studio.
 
-Se non ha familiarità con i frammenti di codice di Visual Studio e si vuole imparare a usarle, è possibile fare riferimento all'appendice di questo documento &quot; [appendice a: Uso dei frammenti di codice](#AppendixA)&quot;.
+Se non si ha familiarità con i frammenti di Visual Studio Code e si desidera apprendere come utilizzarli, è possibile fare riferimento all'appendice di questo documento &quot;[Appendice A: uso dei frammenti di codice](#AppendixA)&quot;.
 
 <a id="Exercises"></a>
 
 <a id="Exercises"></a>
 ## <a name="exercises"></a>Esercizi
 
-Questo laboratorio pratico include gli esercizi seguenti:
+Questa esercitazione pratica include gli esercizi seguenti:
 
 1. [Nuovi modelli di progetto ASP.NET MVC 4](#Exercise1)
-2. [Creazione dell'applicazione Web di raccolta foto](#Exercise2)
+2. [Creazione dell'applicazione Web raccolta foto](#Exercise2)
 3. [Aggiunta del supporto per i dispositivi mobili](#Exercise3)
-4. [Utilizzo di controller asincroni](#Exercise4)
+4. [Uso di controller asincroni](#Exercise4)
 
 > [!NOTE]
-> Ogni esercizio è accompagnato da un **End** cartella che contiene la soluzione risultante si dovrebbe ottenere dopo aver completato gli esercizi. Se ti serve assistenza aggiuntiva esaminando gli esercizi, è possibile usare questa soluzione come guida.
+> Ogni esercizio è accompagnato da una cartella **finale** che contiene la soluzione risultante che è necessario ottenere dopo aver completato gli esercizi. È possibile utilizzare questa soluzione come guida se è necessario ulteriore supporto per gli esercizi.
 
-Tempo stimato per completare questa esercitazione: **60 minuti**.
+Tempo stimato per il completamento del Lab: **60 minuti**.
 
 <a id="Exercise1"></a>
 
 <a id="Exercise_1_New_ASPNET_MVC_4_Project_Templates"></a>
-### <a name="exercise-1-new-aspnet-mvc-4-project-templates"></a>Esercizio 1: Nuovi modelli di progetto ASP.NET MVC 4
+### <a name="exercise-1-new-aspnet-mvc-4-project-templates"></a>Esercizio 1: nuovi modelli di progetto ASP.NET MVC 4
 
-In questo esercizio si esploreranno i miglioramenti nei modelli di progetto ASP.NET MVC 4. Oltre al modello di applicazione Internet, già presente in MVC 3, questa versione include ora un modello separato per le applicazioni per dispositivi mobili. In primo luogo, esaminerà alcune funzionalità pertinenti della ognuno dei modelli. Quindi, verranno usati per il rendering della pagina in modo corretto su piattaforme diverse utilizzando l'approccio giusto.
+In questo esercizio si esamineranno i miglioramenti apportati ai modelli di progetto ASP.NET MVC 4. Oltre al modello di applicazione Internet, già presente in MVC 3, questa versione include ora un modello separato per le applicazioni per dispositivi mobili. In primo luogo, si esamineranno alcune funzionalità rilevanti di ogni modello. Sarà quindi possibile eseguire correttamente il rendering della pagina sulle diverse piattaforme utilizzando l'approccio appropriato.
 
 <a id="Task_1_-_Exploring_the_Internet_Application_Template"></a>
-#### <a name="task-1---exploring-the-internet-application-template"></a>Attività 1: esplorare il modello di applicazione Internet
+#### <a name="task-1---exploring-the-internet-application-template"></a>Attività 1: esplorazione del modello di applicazione Internet
 
 1. Aprire **Visual Studio**.
-2. Selezionare il **File | New | Progetto** comando di menu. Nel **nuovo progetto** finestra di dialogo, seleziona il **Visual c# | Web** modello nel riquadro sinistro della struttura ad albero e scegliere **applicazione Web ASP.NET MVC 4.** Denominare il progetto **PhotoGallery**, selezionare una località (o lasciare il valore predefinito) e fare clic su **OK**.
+2. Selezionare il **file | Nuovo |** Comando di menu Project. Nella finestra di dialogo **nuovo progetto** selezionare l' **oggetto C# visivo | Modello Web** nell'albero del riquadro a sinistra e scegliere **applicazione Web ASP.NET MVC 4.** Denominare la **Photogallery**del progetto, selezionare un percorso (oppure lasciare l'impostazione predefinita) e fare clic su **OK**.
 
     > [!NOTE]
-    > Successivamente si personalizzerà la soluzione PhotoGallery ASP.NET MVC 4 a questo punto, si sta creando.
+    > In un secondo momento sarà possibile personalizzare la soluzione ASP.NET MVC 4 che si sta creando.
 
-    ![Crea un nuovo progetto](whats-new-in-aspnet-mvc-4/_static/image1.png "creando un nuovo progetto")
+    ![Creazione di un nuovo progetto](whats-new-in-aspnet-mvc-4/_static/image1.png "Creazione di un nuovo progetto")
 
-    *Crea un nuovo progetto*
-3. Nel **nuovo progetto ASP.NET MVC 4** finestra di dialogo, seleziona la **applicazione Internet** modello di progetto e fare clic su **OK**. Verificare che è stato selezionato Razor come motore di visualizzazione.
+    *Creazione di un nuovo progetto*
+3. Nella finestra di dialogo **New ASP.NET MVC 4 Project** selezionare il modello di progetto **applicazione Internet** e fare clic su **OK**. Assicurarsi di aver selezionato Razor come motore di visualizzazione.
 
-    ![Crea una nuova applicazione Internet ASP.NET MVC 4](whats-new-in-aspnet-mvc-4/_static/image2.png "crea una nuova applicazione Internet ASP.NET MVC 4")
+    ![Creazione di una nuova applicazione ASP.NET MVC 4 Internet](whats-new-in-aspnet-mvc-4/_static/image2.png "Creazione di una nuova applicazione ASP.NET MVC 4 Internet")
 
-    *Crea una nuova applicazione Internet ASP.NET MVC 4*
+    *Creazione di una nuova applicazione ASP.NET MVC 4 Internet*
 
     > [!NOTE]
-    > Sintassi Razor è stato introdotto in ASP.NET MVC 3. L'obiettivo consiste nel ridurre al minimo il numero di caratteri e sequenze di tasti richieste in un file, abilitando un veloce e fluido codifica del flusso di lavoro. Razor Usa esistente c# / VB (o altro) competenze linguistiche e offre una sintassi di markup di modello che consente un'incredibile HTML costruzione del flusso di lavoro.
-4. Premere **F5** per eseguire la soluzione e visualizzare i modelli rinnovati. È possibile estrarre le funzionalità seguenti:
+    > Sintassi Razor è stato introdotto in ASP.NET MVC 3. L'obiettivo è ridurre al minimo il numero di caratteri e le sequenze di tasti richiesti in un file, abilitando un flusso di lavoro di codifica veloce e fluido. Razor sfrutta le competenze C# in linguaggio esistente/VB (o altro) e offre una sintassi di markup del modello che consente un flusso di lavoro di costruzione html impressionante.
+4. Premere **F5** per eseguire la soluzione e visualizzare i modelli rinnovati. È possibile consultare le funzionalità seguenti:
 
     **Modelli di stile moderno**
 
-    I modelli sono stati rinnovati, che fornisce altri stili dall'aspetto moderno.
+    I modelli sono stati rinnovati, offrendo stili più moderni.
 
-    ![I modelli ASP.NET MVC 4 modificato nello stile](whats-new-in-aspnet-mvc-4/_static/image3.png "modificato nello stile di modelli MVC 4")
+    ![Modelli ASP.NET MVC 4 ridisegnati](whats-new-in-aspnet-mvc-4/_static/image3.png "Modelli di MVC 4 ridisegnati")
 
-    *Modelli ASP.NET MVC 4 modificato nello stile*
+    *Modelli ASP.NET MVC 4 ridisegnati*
 
-    ![Nuova pagina di contatto](whats-new-in-aspnet-mvc-4/_static/image4.png "pagina nuovo contatto")
+    ![Pagina nuovo contatto](whats-new-in-aspnet-mvc-4/_static/image4.png "Pagina nuovo contatto")
 
-    *Nuova pagina di contatto*
+    *Pagina nuovo contatto*
 
-    **Adaptive Rendering**
+    **Rendering adattivo**
 
-    Consulta il ridimensionamento della finestra del browser e notare come il layout di pagina si adatta dinamicamente per le nuove dimensioni della finestra. Questi modelli utilizzano la tecnica di rendering adattivo per eseguire il rendering correttamente in piattaforme mobili e desktop senza eseguire alcuna personalizzazione.
+    Estrarre il ridimensionamento della finestra del browser e notare il modo in cui il layout di pagina si adatta dinamicamente alle nuove dimensioni della finestra. Questi modelli usano la tecnica di rendering adattivo per il rendering corretto nelle piattaforme desktop e per dispositivi mobili senza alcuna personalizzazione.
 
-    ![Modello di progetto ASP.NET MVC 4 in dimensioni di browser differenti](whats-new-in-aspnet-mvc-4/_static/image5.png "modello di progetto ASP.NET MVC 4 in dimensioni diversa del browser")
+    ![Modello di progetto ASP.NET MVC 4 in dimensioni del browser diverse](whats-new-in-aspnet-mvc-4/_static/image5.png "Modello di progetto ASP.NET MVC 4 in dimensioni del browser diverse")
 
-    *Modello di progetto ASP.NET MVC 4 in dimensioni diversa del browser*
+    *Modello di progetto ASP.NET MVC 4 in dimensioni del browser diverse*
 
-    **Interfaccia utente più completa con JavaScript**
+    **Interfaccia utente più ricca con JavaScript**
 
-    Un altro miglioramento per i modelli di progetto predefinito è l'uso di JavaScript per fornire un JavaScript più interattiva. I collegamenti di accesso e registrazione usati nel modello di esemplificare da utilizzare il componente aggiuntivo jQuery convalide per convalidare i campi di input dal lato client.
+    Un altro miglioramento dei modelli di progetto predefiniti è l'uso di JavaScript per fornire un linguaggio JavaScript più interattivo. I collegamenti login e Register usati nel modello esemplificano come usare le convalide jQuery per convalidare i campi di input dal lato client.
 
-    ![Convalida di jQuery](whats-new-in-aspnet-mvc-4/_static/image6.png)
+    ![Convalida jQuery](whats-new-in-aspnet-mvc-4/_static/image6.png)
 
-    *jQuery Validation*
+    *Convalida jQuery*
 
     > [!NOTE]
-    > Si noti che il registro due sezioni, nella prima sezione è possibile accedere usando un account registrato dal sito e nella seconda sezione è possibile in alternativa accedere con un altro servizio di autenticazione, ad esempio google (disabilitato per impostazione predefinita).
-5. Chiudere il browser per arrestare il debugger, tornare a Visual Studio.
-6. Aprire il file **AuthConfig.cs** sotto il **App\_avviare** cartella.
-7. Rimuovere il commento dall'ultima riga per registrare il client di Google per *OAuth* l'autenticazione.
+    > Si notino le due sezioni log in, nella prima sezione è possibile accedere con un account registrato dal sito e nella seconda sezione è possibile accedere in alternativa usando un altro servizio di autenticazione come Google (disabilitato per impostazione predefinita).
+5. Chiudere il browser per arrestare il debugger e tornare a Visual Studio.
+6. Aprire il file **authconfig.cs** che si trova nella cartella **app\_Start** .
+7. Rimuovere il commento dall'ultima riga per registrare il client Google per l'autenticazione *OAuth* .
 
     [!code-csharp[Main](whats-new-in-aspnet-mvc-4/samples/sample1.cs)]
 
     > [!NOTE]
-    > Si noti che è possibile abilitare facilmente l'autenticazione usando qualsiasi servizio OAuth o OpenID, ad esempio Facebook, Twitter, Microsoft, e così via.
+    > Si noti che è possibile abilitare con facilità l'autenticazione usando qualsiasi servizio OpenID o OAuth, ad esempio Facebook, Twitter, Microsoft e così via.
 8. Premere **F5** per eseguire la soluzione e passare alla pagina di accesso.
-9. Selezionare **Google** servizio per l'accesso.
+9. Selezionare il servizio **Google** per accedere.
 
-    ![Selezione del log nel servizio](whats-new-in-aspnet-mvc-4/_static/image7.png)
+    ![Selezione del servizio di accesso](whats-new-in-aspnet-mvc-4/_static/image7.png)
 
-    *Selezione del log nel servizio*
-10. Accedere usando l'account Google.
-11. Consentire al sito (localhost) per recuperare informazioni dall'account di Google.
-12. Infine, è necessario registrarsi nel sito per associare l'account Google.
+    *Selezione del servizio di accesso*
+10. Accedere con l'account Google.
+11. Consentire al sito (localhost) di recuperare le informazioni dall'account Google.
+12. Infine, sarà necessario registrarsi nel sito per associare l'account Google.
 
-   ![Associare il proprio account Google](whats-new-in-aspnet-mvc-4/_static/image8.png)
+   ![Associare l'account Google](whats-new-in-aspnet-mvc-4/_static/image8.png)
 
-   *Associare l'account Google*
-13. Chiudere il browser per arrestare il debugger, tornare a Visual Studio.
-14. È ora possibile esplorare la soluzione di estrarre alcune altre nuove funzionalità introdotte da ASP.NET MVC 4 nel modello di progetto.
+   *Associazione dell'account Google*
+13. Chiudere il browser per arrestare il debugger e tornare a Visual Studio.
+14. A questo punto, esplorare la soluzione per esaminare alcune altre nuove funzionalità introdotte da ASP.NET MVC 4 nel modello di progetto.
 
-   ![Il modello di progetto applicazione Internet ASP.NET MVC 4](whats-new-in-aspnet-mvc-4/_static/image9.png "il modello di progetto applicazione Internet ASP.NET MVC 4")
+   ![Modello di progetto di applicazione Internet MVC 4 ASP.NET](whats-new-in-aspnet-mvc-4/_static/image9.png "Modello di progetto di applicazione Internet MVC 4 ASP.NET")
 
-   *Il modello di progetto applicazione Internet ASP.NET MVC 4*
+   *Modello di progetto di applicazione Internet MVC 4 ASP.NET*
 
-    - **HTML 5 Markup**
+    - **Markup HTML 5**
 
-       Sfogliare le viste del modello per individuare il nuovo tag di tema.
+       Sfogliare le viste dei modelli per individuare il nuovo markup del tema.
 
-       ![Nuovo modello, utilizzando il markup About.cshtml Razor e HTML5. ](whats-new-in-aspnet-mvc-4/_static/image10.png "Nuovo modello, utilizzando il markup About.cshtml Razor e HTML5.")
+       ![Nuovo modello, usando il markup Razor e HTML5 about. cshtml.](whats-new-in-aspnet-mvc-4/_static/image10.png "Nuovo modello, usando il markup Razor e HTML5 about. cshtml.")
 
-       *Nuovo modello, utilizzando il markup di HTML5 e Razor (cshtml).*
+       *Nuovo modello, usando il markup Razor e HTML5 (about. cshtml).*
     - **Librerie JavaScript aggiornate**
 
-       Il modello predefinito di ASP.NET MVC 4 include ora Knockout. js, un framework MVVM di JavaScript che consente di creare avanzate e le applicazioni web altamente reattive con JavaScript e HTML. Ad esempio in MVC 3, jQuery e librerie dell'interfaccia utente di jQuery sono inoltre inclusi in ASP.NET MVC 4.
+       Il modello predefinito MVC 4 ASP.NET include ora Knockout, un framework MVVM JavaScript che consente di creare applicazioni Web complete e altamente reattive usando JavaScript e HTML. Come in MVC3, le librerie dell'interfaccia utente jQuery e jQuery sono incluse anche in ASP.NET MVC 4.
 
      > [!NOTE]
-     > È possibile ottenere altre informazioni sulla libreria Knockout. js in questo collegamento: [ [ http://learn.knockoutjs.com/ ](http://learn.knockoutjs.com/) ](http://learn.knockoutjs.com/). Inoltre, sono disponibili informazioni jQuery UI e jQuery nelle [ [ http://docs.jquery.com/ ](http://docs.jquery.com/) ](http://docs.jquery.com/).
+     > È possibile ottenere altre informazioni sulla libreria knockout in questo collegamento: [[http://learn.knockoutjs.com/](http://learn.knockoutjs.com/)](http://learn.knockoutjs.com/). Inoltre, è possibile ottenere informazioni sull'interfaccia utente di jQuery e jQuery in [[http://docs.jquery.com/](http://docs.jquery.com/)](http://docs.jquery.com/).
 
 <a id="Task_2_-_Exploring_the_Mobile_Application_Template"></a>
-#### <a name="task-2---exploring-the-mobile-application-template"></a>Attività 2: esplorare il modello di applicazione per dispositivi mobili
+#### <a name="task-2---exploring-the-mobile-application-template"></a>Attività 2: esplorazione del modello di applicazione per dispositivi mobili
 
-ASP.NET MVC 4 facilita lo sviluppo di siti Web per dispositivi mobili e browser tablet. Questo modello ha la stessa struttura dell'applicazione come il modello di applicazione Internet (si noti che il codice del controller è praticamente identico), ma è stato modificato lo stile per il rendering correttamente in dispositivi mobili basati su touch.
+ASP.NET MVC 4 semplifica lo sviluppo di siti Web per i browser per dispositivi mobili e tablet. Questo modello ha la stessa struttura dell'applicazione del modello di applicazione Internet (si noti che il codice del controller è praticamente identico), ma lo stile è stato modificato per il rendering corretto nei dispositivi mobili basati su touch.
 
-1. Selezionare il **File | New | Progetto** comando di menu. Nel **nuovo progetto** finestra di dialogo, seleziona il **Visual c# | Web** modello nel riquadro sinistro della struttura ad albero e scegliere il **applicazione Web ASP.NET MVC 4.** Denominare il progetto **PhotoGallery.Mobile**, selezionare una località (o lasciare l'impostazione predefinita), selezionare &quot;aggiungere alla soluzione&quot; e fare clic su **OK**.
-2. Nel **nuovo progetto ASP.NET MVC 4** finestra di dialogo, seleziona la **dell'applicazione per dispositivi mobili** modello di progetto e fare clic su **OK**. Verificare che è stato selezionato Razor come motore di visualizzazione.
+1. Selezionare il **file | Nuovo |** Comando di menu Project. Nella finestra di dialogo **nuovo progetto** selezionare l' **oggetto C# visivo | Modello Web** nell'albero del riquadro sinistro e scegliere l' **applicazione Web ASP.NET MVC 4.** Denominare il progetto **Photogallery. mobile**, selezionare un percorso (oppure lasciare l'impostazione predefinita), selezionare &quot;Aggiungi a soluzione&quot; e fare clic su **OK**.
+2. Nella finestra di dialogo **New ASP.NET MVC 4 Project** selezionare il modello di progetto **applicazione per dispositivi mobili** e fare clic su **OK**. Assicurarsi di aver selezionato Razor come motore di visualizzazione.
 
-    ![Crea una nuova applicazione per dispositivi mobili ASP.NET MVC 4](whats-new-in-aspnet-mvc-4/_static/image11.png "crea una nuova applicazione per dispositivi mobili ASP.NET MVC 4")
+    ![Creazione di una nuova applicazione ASP.NET MVC 4 per dispositivi mobili](whats-new-in-aspnet-mvc-4/_static/image11.png "Creazione di una nuova applicazione ASP.NET MVC 4 per dispositivi mobili")
 
-    *Crea una nuova applicazione per dispositivi mobili ASP.NET MVC 4*
-3. A questo punto è in grado di esplorare la soluzione e Scopri alcune delle nuove funzionalità introdotte dal modello di soluzione ASP.NET MVC 4 per dispositivi mobili:
+    *Creazione di una nuova applicazione ASP.NET MVC 4 per dispositivi mobili*
+3. A questo punto è possibile esplorare la soluzione e vedere alcune delle nuove funzionalità introdotte dal modello di soluzione ASP.NET MVC 4 per dispositivi mobili:
 
-    - **jQuery Mobile Library**
+    - **Libreria Mobile jQuery**
 
-        Il modello di progetto di applicazione per dispositivi mobili include la libreria jQuery Mobile, che è una libreria open source per la compatibilità di browser per dispositivi mobili. jQuery Mobile applica miglioramento progressivo a browser per dispositivi mobili che supportano JavaScript e CSS. Miglioramento progressivo consente a tutti i browser visualizzare il contenuto di base di una pagina web, mentre Abilita solamente i browser più potenti visualizzare il contenuto avanzato. I file CSS e JavaScript, inclusi in jQuery Mobile stile, consentono di browser per dispositivi mobili per adattare il contenuto nella schermata senza apportare modifiche nel markup della pagina.
+        Il modello di progetto di applicazione per dispositivi mobili include jQuery mobile Library, una libreria open source per la compatibilità del browser per dispositivi mobili. jQuery Mobile applica un miglioramento progressivo ai browser per dispositivi mobili che supportano CSS e JavaScript. Il miglioramento progressivo consente a tutti i browser di visualizzare il contenuto di base di una pagina Web, mentre consente solo ai browser più potenti di visualizzare i contenuti avanzati. I file JavaScript e CSS, inclusi nello stile jQuery Mobile, consentono ai browser per dispositivi mobili di adattarsi al contenuto della schermata senza apportare alcuna modifica nel markup della pagina.
 
-        ![jQuery-mobile-library-included-in-the-template](whats-new-in-aspnet-mvc-4/_static/image12.png)
+        ![jQuery-mobile-Library-incluso nel modello](whats-new-in-aspnet-mvc-4/_static/image12.png)
 
-        *libreria mobile jQuery inclusa nel modello*
-    - **Markup basati su HTML5**
+        *raccolta di jQuery Mobile inclusa nel modello*
+    - **Markup basato su HTML5**
 
-        ![Mobile-application-template-using-HTML5-markup](whats-new-in-aspnet-mvc-4/_static/image13.png)
+        ![Mobile-Application-Template-using-HTML5-markup](whats-new-in-aspnet-mvc-4/_static/image13.png)
 
-        *Modello di applicazione per dispositivi mobili tramite markup HTML5, (cshtml e index. cshtml)*
+        *Modello di applicazione mobile con markup HTML5 (login. cshtml e index. cshtml)*
 4. Premere **F5** per eseguire la soluzione.
-5. Aprire il **Windows Phone 7 emulatore**.
-6. Nella schermata start phone, aprire Internet Explorer. Estrarre l'URL in cui avviata l'applicazione desktop e passare a tale URL dal telefono (ad esempio `http://localhost:[PortNumber]/`).
-7. A questo punto è in grado di immettere la pagina di accesso o estrarre le informazioni sulla pagina. Si noti che lo stile del sito Web è basato sulla nuova app Metro per dispositivi mobili. Il modello di progetto ASP.NET MVC 4 viene visualizzato correttamente sui dispositivi mobili, assicurandosi che tutti gli elementi della pagina siano visibili e abilitati. Si noti che i collegamenti nell'intestazione sono sufficientemente grandi per essere selezionato o toccato.
+5. Aprire l' **emulatore Windows Phone 7**.
+6. Nella schermata Start del telefono aprire Internet Explorer. Controllare l'URL in cui è stata avviata l'applicazione desktop e passare a tale URL dal telefono, ad esempio `http://localhost:[PortNumber]/`.
+7. A questo punto è possibile accedere alla pagina di accesso o consultare la pagina About (informazioni). Si noti che lo stile del sito Web è basato sulla nuova app metro per dispositivi mobili. Il modello di progetto ASP.NET MVC 4 viene visualizzato correttamente nei dispositivi mobili, assicurandosi che tutti gli elementi della pagina siano visibili e abilitati. Si noti che i collegamenti nell'intestazione sono sufficientemente grandi da fare clic o toccare.
 
-    ![Progetti di modelli delle pagine in un dispositivo mobile](whats-new-in-aspnet-mvc-4/_static/image14.png "progetto modelli delle pagine in un dispositivo mobile")
+    ![Pagine modello di progetto in un dispositivo mobile](whats-new-in-aspnet-mvc-4/_static/image14.png "Pagine modello di progetto in un dispositivo mobile")
 
     *Pagine modello di progetto in un dispositivo mobile*
-8. Il nuovo modello Usa anche il **Viewport metatag**. Browser per dispositivi mobili più definire una larghezza per una finestra del browser virtuale oppure &quot;viewport&quot;, che è maggiore della larghezza effettiva del dispositivo mobile. In questo modo il browser per dispositivi mobili visualizzare l'intera pagina web all'interno di schermo virtuale. Il **Viewport metatag** consente agli sviluppatori web impostare la larghezza, altezza e la scala dell'area del browser per dispositivi mobili **.** Il modello di ASP.NET MVC 4 per le applicazioni per dispositivi mobili imposta il viewport per la larghezza del dispositivo (&quot;larghezza = larghezza dispositivo&quot;) nel modello di layout (*Views\Shared\_layout. cshtml*), in modo che tutti i pagine verranno impostato il viewport per la larghezza dello schermo di dispositivi. Si noti che il tag meta Viewport non cambierà la visualizzazione di esplorazione predefinita.
-9. Open  **\_layout. cshtml**, all'interno di **viste | Condiviso** cartella e commento per il tag meta Viewport. Eseguire l'applicazione, se non è già aperto e Scopri le differenze.
+8. Il nuovo modello usa anche il **tag meta del viewport**. La maggior parte dei browser per dispositivi mobili definisce una larghezza per una finestra del browser virtuale o &quot;&quot;del viewport, che è maggiore della larghezza effettiva del dispositivo mobile. Questo consente ai browser per dispositivi mobili di visualizzare l'intera pagina Web all'interno dello schermo virtuale. Il **tag meta del viewport** consente agli sviluppatori Web di impostare la larghezza, l'altezza e la scala dell'area del browser nei dispositivi mobili **.** Il modello ASP.NET MVC 4 per le applicazioni per dispositivi mobili imposta il viewport sulla larghezza del dispositivo (&quot;width = larghezza dispositivo&quot;) nel modello di layout (*Views\Shared\_layout. cshtml*), in modo che tutte le pagine dispongano del viewport impostato sulla larghezza dello schermo del dispositivo. Si noti che il tag meta del viewport non modificherà la visualizzazione del browser predefinita.
+9. Aprire **\_layout. cshtml**, che si trova nelle **visualizzazioni | Cartella condivisa** e commento al tag meta del viewport. Eseguire l'applicazione, se non è già aperta, e verificare le differenze.
 
 [!code-cshtml[Main](whats-new-in-aspnet-mvc-4/samples/sample2.cshtml)]
 
-![Il sito dopo l'aggiunta di commenti il tag meta viewport](whats-new-in-aspnet-mvc-4/_static/image15.png "il sito dopo l'aggiunta di commenti il tag meta viewport")
+![Sito dopo il commento al tag meta del viewport](whats-new-in-aspnet-mvc-4/_static/image15.png "Sito dopo il commento al tag meta del viewport")
 
-*Il sito dopo l'aggiunta di commenti il tag meta viewport*
-10. In Visual Studio, premere **SHIFT** + **F5** per arrestare il debug dell'applicazione.
-11. Rimuovere il commento del tag meta viewport.
+*Sito dopo il commento al tag meta del viewport*
+10. In Visual Studio premere **maiusc** + **F5** per arrestare il debug dell'applicazione.
+11. Rimuovere il commento dal tag meta del viewport.
 
 [!code-cshtml[Main](whats-new-in-aspnet-mvc-4/samples/sample3.cshtml)]
 
 <a id="Task_3_-_Using_Adaptive_Rendering"></a>
-#### <a name="task-3---using-adaptive-rendering"></a>Attività 3: Rendering adattivo utilizzo
+#### <a name="task-3---using-adaptive-rendering"></a>Attività 3-uso del rendering adattivo
 
-In questa attività si apprenderà a un altro metodo per eseguire il rendering di una pagina Web correttamente nei dispositivi mobili e Web browser allo stesso tempo senza eseguire alcuna personalizzazione. Tag meta Viewport è già stato utilizzato con uno scopo simile. A questo punto si soddisfano un altro metodo potente: *rendering adattivo*.
+In questa attività verrà illustrato un altro metodo per eseguire correttamente il rendering di una pagina Web su dispositivi mobili e browser Web contemporaneamente senza alcuna personalizzazione. È già stato usato un tag meta del viewport con uno scopo simile. A questo punto si incontrerà un altro metodo potente: *rendering adattivo*.
 
-Rendering adattivo è una tecnica che utilizza **query sui supporti di CSS3** per personalizzare lo stile applicato a una pagina. Query sui supporti definire condizioni all'interno di un foglio di stile, il raggruppamento di stili CSS in una determinata condizione. Solo quando la condizione è true, viene applicato lo stile per gli oggetti dichiarati.
+Il rendering adattivo è una tecnica che usa le **query di supporto CSS3** per personalizzare lo stile applicato a una pagina. Le query multimediali definiscono le condizioni all'interno di un foglio di stile, raggruppando gli stili CSS in una determinata condizione. Solo quando la condizione è true, lo stile viene applicato agli oggetti dichiarati.
 
-La flessibilità offerta dalla tecnica di rendering adattivo consente qualsiasi personalizzazione per la visualizzazione del sito in diversi dispositivi. È possibile definire tutti gli stili desiderati in un foglio di stile singolo senza scrivere codice per la logica per scegliere lo stile. Pertanto, è un modo molto chiaro per adeguare gli stili di pagina, in quanto riduce la quantità di codice duplicato e per la logica per ragioni di rendering. D'altra parte, della larghezza di banda aumenterebbe, come le dimensioni dei file CSS può avere dimensioni leggermente.
+La flessibilità fornita dalla tecnica di rendering adattivo consente qualsiasi personalizzazione per la visualizzazione del sito su dispositivi diversi. È possibile definire tutti gli stili desiderati in un singolo foglio di stile senza scrivere codice logico per scegliere lo stile. Pertanto, si tratta di un modo molto accurato per adattare gli stili di pagina, perché riduce la quantità di codice duplicato e la logica per scopi di rendering. D'altra parte, l'aumento dell'utilizzo della larghezza di banda aumenta, perché le dimensioni dei file CSS possono aumentare in modo marginale.
 
-Tramite la tecnica di rendering adattivo, il sito sarà **visualizzati in modo corretto, indipendentemente dal browser.** Tuttavia, è necessario considerare se carico la larghezza di banda aggiuntiva rappresenta un problema.
+Utilizzando la tecnica di rendering adattivo, il sito verrà **visualizzato correttamente, indipendentemente dal browser.** Tuttavia, è necessario considerare se il carico aggiuntivo della larghezza di banda rappresenta un problema.
 
 > [!NOTE]
-> Il formato di base di una query di supporto è: @media \[Ambito: tutti | palmari | stampa | proiezione | schermata\] ([proprietà: valore] e... [proprietà: valore])
+> Il formato di base di una query supporti è: @media \[ambito: All | palmare | stampa | proiezione |\] schermo ([proprietà: valore] e... [proprietà: valore])
 
-Esempi di query sui supporti: &gt;  **@media tutti e (larghezza massima: 1000px) e (min-width: 700px) {}:** Per tutte le risoluzioni tra 700px e 1000px.
+Esempi di query sui supporti: &gt; **@media all e (max-width: 1000px) e (min-width: 700px) {}:** per tutte le risoluzioni tra 700px e 1000px.
 
-> **@media schermata e (min-width: 400 px) e (larghezza massima: 700px) { ... }:** Solo per le schermate. La risoluzione deve essere compreso tra 400 e 700px.
+> **@media schermata e (min-width: 400px) e (max-width: 700px) {...}:** Solo per le schermate. La risoluzione deve essere compresa tra 400 e 700px.
 > 
-> **@media palmari e (min-width: 20em), dello schermo e (min-width: 20em) {...}:** Per palmari (per dispositivi mobili e dispositivi) e le schermate. La larghezza minima deve essere maggiore di 20em.
+> **@media palmare e (min-width: 20em), schermo e (min-width: 20em) {...}:** Per i palmari (dispositivi mobili e dispositivi) e le schermate. La larghezza minima deve essere maggiore di 20em.
 > 
-> È possibile trovare altre informazioni su questo sul [W3C sito](http://www.w3.org/TR/css3-mediaqueries/).
+> Per ulteriori informazioni su questa pagina, vedere il [sito W3C](http://www.w3.org/TR/css3-mediaqueries/).
 
-Si esaminerà ora come funziona il rendering, migliorando la leggibilità di ASP.NET MVC 4 predefiniti di modello di sito Web.
+Si esaminerà ora il modo in cui funziona il rendering adattivo, migliorando la leggibilità del modello di sito Web predefinito ASP.NET MVC 4.
 
-1. Aprire il **PhotoGallery.sln** soluzione è stato creato al passaggio 1 e selezionare il **PhotoGallery** progetto. Premere **F5** per eseguire la soluzione.
-2. Ridimensionare la larghezza del browser, l'impostazione di windows per la metà o meno di un quarto delle dimensioni originali. Si noti che ciò che accade con gli elementi nell'intestazione: Alcuni elementi non saranno visualizzati nell'area visibile dell'intestazione.
-3. Aprire **CSS** file da Esplora soluzioni di Visual Studio, che si trova **contenuto** cartella del progetto. Premere **CTRL + F** per aprire ricerca integrata in Visual Studio e scrivere **@media** individuare il **query supporti CSS**.
+1. Aprire la soluzione **Photogallery. sln** creata nell'attività 1 e selezionare il progetto **Photogallery** . Premere **F5** per eseguire la soluzione.
+2. Ridimensionare la larghezza del browser, impostando le finestre su metà o su un valore inferiore a un trimestre delle dimensioni originali. Si noti che cosa accade con gli elementi nell'intestazione: alcuni elementi non verranno visualizzati nell'area visibile dell'intestazione.
+3. Aprire il file **site. CSS** da Esplora soluzioni di Visual Studio, disponibile nella cartella del progetto di **contenuto** . Premere **CTRL + F** per aprire la ricerca integrata di Visual Studio e scrivere `@media` per individuare la **query supporti CSS**.
 
-    La condizione di query di supporto definita in questo modello funziona in questo modo: Quando sono di dimensioni della finestra del browser sotto **850 px**, le regole CSS applicate sono quelle definite all'interno del blocco supporti.
+    La condizione della query multimediale definita in questo modello funziona in questo modo: se le dimensioni della finestra del browser sono inferiori a **850 px**, le regole CSS applicate sono quelle definite all'interno di questo blocco multimediale.
 
-    ![Individuare la query di supporto](whats-new-in-aspnet-mvc-4/_static/image16.png "individuare la query supporti")
+    ![Individuazione della query supporti](whats-new-in-aspnet-mvc-4/_static/image16.png "Individuazione della query supporti")
 
-    *Individuare la query supporti*
-4. Sostituire il valore dell'attributo larghezza massima impostato di 850 px con **10px**, in modo da disabilitare il rendering e premere **CTRL + S** per salvare le modifiche. Tornare al browser e premere **CTRL + F5** per aggiornare la pagina con le modifiche apportate. Notare le differenze in entrambe le pagine quando si modifica la larghezza della finestra.
+    *Individuazione della query supporti*
+4. Sostituire il valore dell'attributo max-width impostato in 850 px con **10px**, per disabilitare il rendering adattivo, quindi premere **CTRL + S** per salvare le modifiche. Tornare al browser e premere **CTRL + F5** per aggiornare la pagina con le modifiche apportate. Si notino le differenze in entrambe le pagine quando si modifica la larghezza della finestra.
 
-    ![A sinistra, consiste nell'applicare la pagina il @media stile, destra, lo stile viene omesso](whats-new-in-aspnet-mvc-4/_static/image17.png "a sinistra, consiste nell'applicare la pagina il @media stile, destra, lo stile viene omessa")
+    ![A sinistra, la pagina applica lo stile di @media, a destra, lo stile viene omesso](whats-new-in-aspnet-mvc-4/_static/image17.png "A sinistra, la pagina applica lo stile di @media, a destra, lo stile viene omesso")
 
-    *A sinistra, consiste nell'applicare la pagina di @media stile, destra, lo stile viene omessa*
+    *A sinistra, la pagina applica lo stile di @media, a destra, lo stile viene omesso*
 
-    A questo punto, è possibile controllare cosa accade nei dispositivi mobili:
+    Esaminiamo ora cosa accade sui dispositivi mobili:
 
-    ![A sinistra, consiste nell'applicare la pagina il @media stile, destra, lo stile viene omesso](whats-new-in-aspnet-mvc-4/_static/image18.png "a sinistra, consiste nell'applicare la pagina il @media stile, destra, lo stile viene omessa")
+    ![A sinistra, la pagina applica lo stile di @media, a destra, lo stile viene omesso](whats-new-in-aspnet-mvc-4/_static/image18.png "A sinistra, la pagina applica lo stile di @media, a destra, lo stile viene omesso")
 
-    *A sinistra, consiste nell'applicare la pagina di @media stile, destra, lo stile viene omessa*
+    *A sinistra, la pagina applica lo stile di @media, a destra, lo stile viene omesso*
 
-    Sebbene si noterà che le modifiche quando viene eseguito il rendering della pagina in un Web browser non sono molto importanti quando si usa un dispositivo mobile diventano più evidenti le differenze. Sul lato sinistro dell'immagine, possiamo vedere che lo stile personalizzato migliorato la leggibilità.
+    Sebbene si noti che le modifiche apportate al rendering della pagina in un Web browser non sono molto significative, quando si utilizza un dispositivo mobile le differenze diventano più evidenti. Sul lato sinistro dell'immagine è possibile vedere che lo stile personalizzato ha migliorato la leggibilità.
 
-    Rendering adattivo è utilizzabile in più scenari, rendendo più semplice applicare lo stile a un sito Web e la risoluzione dei problemi comuni di stile di un approccio chiaro condizionale.
+    Il rendering adattivo può essere usato in molti più scenari, rendendo più semplice l'applicazione di stili condizionali a un sito Web e la risoluzione di problemi di stile comuni con un approccio accurato.
 
-    Il tag meta Viewport e query sui supporti CSS non sono specifici di ASP.NET MVC 4, pertanto è possibile sfruttare queste funzionalità in qualsiasi applicazione web.
-5. In Visual Studio, premere **SHIFT** + **F5** per arrestare il debug dell'applicazione.
+    Il tag meta del viewport e le query multimediali CSS non sono specifici di ASP.NET MVC 4, pertanto è possibile sfruttare queste funzionalità in qualsiasi applicazione Web.
+5. In Visual Studio premere **maiusc** + **F5** per arrestare il debug dell'applicazione.
 
 <a id="Exercise2"></a>
 
 <a id="Exercise_2_Creating_the_Photo_Gallery_Web_Application"></a>
-### <a name="exercise-2-creating-the-photo-gallery-web-application"></a>Esercizio 2: Creazione dell'applicazione Web di raccolta foto
+### <a name="exercise-2-creating-the-photo-gallery-web-application"></a>Esercizio 2: creazione dell'applicazione Web raccolta foto
 
-In questo esercizio, verrà utilizzata in un'applicazione Raccolta foto per visualizzare le foto. Inizierà con il modello di progetto ASP.NET MVC 4 e quindi si aggiungerà una funzionalità per recuperare le foto da un servizio e li visualizzano nella home page.
+In questo esercizio verrà utilizzata un'applicazione raccolta foto per visualizzare le foto. Si inizierà con il modello di progetto ASP.NET MVC 4, quindi si aggiungerà una funzionalità per recuperare le foto da un servizio e visualizzarle nel home page.
 
-Nel seguente esercizio, si aggiornerà questa soluzione per migliorare il modo in cui che viene visualizzato nei dispositivi mobili.
+Nell'esercizio seguente verrà aggiornata questa soluzione per migliorare la modalità di visualizzazione sui dispositivi mobili.
 
 <a id="Task_1_-_Creating_a_Mock_Photo_Service"></a>
-#### <a name="task-1---creating-a-mock-photo-service"></a>Attività 1: creazione di un servizio di simulazione foto
+#### <a name="task-1---creating-a-mock-photo-service"></a>Attività 1: creazione di un servizio foto fittizio
 
-In questa attività si creerà una simulazione del servizio per recuperare il contenuto che verrà visualizzato nella raccolta di foto. A tale scopo, si aggiungerà un nuovo controller che restituirà semplicemente un file JSON con i dati di ciascuna foto.
+In questa attività verrà creata una simulazione del servizio foto per recuperare il contenuto che verrà visualizzato nella raccolta. A tale scopo, verrà aggiunto un nuovo controller che restituirà semplicemente un file JSON con i dati di ogni foto.
 
 1. Aprire **Visual Studio** se non è già aperto.
-2. Selezionare il **File | New | Progetto** comando di menu. Nel **nuovo progetto** finestra di dialogo, seleziona il **Visual c# | Web** modello nel riquadro sinistro della struttura ad albero e scegliere **applicazione Web ASP.NET MVC 4.** Denominare il progetto **PhotoGallery**, selezionare una località (o lasciare il valore predefinito) e fare clic su **OK**. In alternativa, è possibile continuare a lavorare da esistente ASP.NET MVC 4 **applicazione Internet** soluzione dal **esercizio 1** e ignorare il passaggio successivo.
-3. Nel **nuovo progetto ASP.NET MVC 4** finestra di dialogo, seleziona la **applicazione Internet** modello di progetto e fare clic su **OK**. Assicurarsi che sia selezionato come il motore di visualizzazione Razor.
-4. Nel **Esplora soluzioni**, fare doppio clic il **App\_dati** cartella del progetto e selezionare **Add | Elemento esistente**. Individuare il **Source\Assets\App\_dati** cartella di questa esercitazione e aggiungere il **Photos.json** file.
-5. Creare un nuovo controller con il nome **PhotoController**. A tale scopo, fare clic sul **controller** cartella, passa alla **Add** e selezionare **Controller.** Completare il nome del controller, lasciare il **controller MVC vuoto** modello, quindi scegliere **Add**.
+2. Selezionare il **file | Nuovo |** Comando di menu Project. Nella finestra di dialogo **nuovo progetto** selezionare l' **oggetto C# visivo | Modello Web** nell'albero del riquadro a sinistra e scegliere **applicazione Web ASP.NET MVC 4.** Denominare la **Photogallery**del progetto, selezionare un percorso (oppure lasciare l'impostazione predefinita) e fare clic su **OK**. In alternativa, è possibile continuare a lavorare dalla soluzione di **applicazione Internet** MVC 4 ASP.NET esistente dall' **esercizio 1** e ignorare il passaggio successivo.
+3. Nella finestra di dialogo **nuovo progetto MVC 4 ASP.NET** selezionare il modello di progetto **applicazione Internet** e fare clic su **OK**. Assicurarsi di aver selezionato Razor come motore di visualizzazione.
+4. Nella **Esplora soluzioni**fare clic con il pulsante destro del mouse sulla cartella **app\_data** del progetto e scegliere **Aggiungi | Elemento esistente**. Passare alla cartella **Source\Assets\App\_data** del Lab e aggiungere il file **Photos. JSON** .
+5. Creare un nuovo controller con il nome **fotocontroller**. A tale scopo, fare clic con il pulsante destro del mouse sulla cartella **controller** , passare a **Aggiungi** e selezionare **controller.** Completare il nome del controller, lasciare il modello di **controller MVC vuoto** e fare clic su **Aggiungi**.
 
-    ![Aggiunta di PhotoController](whats-new-in-aspnet-mvc-4/_static/image19.png "aggiungendo il PhotoController")
+    ![Aggiunta del controller](whats-new-in-aspnet-mvc-4/_static/image19.png "Aggiunta del controller")
 
-    *Aggiunta di PhotoController*
-6. Sostituire il **indice** metodo con il codice seguente **Gallery** azione e restituire il contenuto dal file JSON è stato aggiunto recentemente al progetto.
+    *Aggiunta del controller*
+6. Sostituire il metodo **index** con l'azione della **raccolta** seguente e restituire il contenuto dal file JSON aggiunto di recente al progetto.
 
-    (Code - Snippet *azione di ASP.NET MVC 4 Lab - Ex02 - raccolta*)
+    (Frammento di codice- *ASP.NET MVC 4 Lab-azione Ex02-Gallery*)
 
     [!code-csharp[Main](whats-new-in-aspnet-mvc-4/samples/sample4.cs)]
-7. Premere **F5** per eseguire la soluzione e quindi passare all'URL seguente per testare il servizio di foto fittizie: `http://localhost:[port]/photo/gallery` (il valore [porta] dipende da porta corrente in cui è stata avviata l'applicazione). La richiesta a questo URL deve recuperare il contenuto di **Photos.json** file.
+7. Premere **F5** per eseguire la soluzione, quindi passare all'URL seguente per testare il servizio foto fittizio: `http://localhost:[port]/photo/gallery` (il valore [porta] dipende dalla porta corrente in cui è stata avviata l'applicazione). La richiesta a questo URL deve recuperare il contenuto del file **Photos. JSON** .
 
-    ![Test del servizio di foto fittizie](whats-new-in-aspnet-mvc-4/_static/image20.png "test del servizio di foto fittizia")
+    ![Test del servizio foto fittizio](whats-new-in-aspnet-mvc-4/_static/image20.png "Test del servizio foto fittizio")
 
-    *Test del servizio di foto fittizia*
+    *Test del servizio foto fittizio*
 
-In un'implementazione reale è possibile usare [API Web ASP.NET](../../../../web-api/index.md) per implementare il servizio di raccolta foto. API Web ASP.NET è un framework che rende più semplice compilare servizi HTTP che soddisfano una vasta gamma di client, inclusi browser e dispositivi mobili. API Web ASP.NET è la piattaforma ideale per compilare applicazioni RESTful in .NET Framework.
+In un'implementazione reale è possibile usare [API Web ASP.NET](../../../../web-api/index.md) per implementare il servizio raccolta foto. API Web ASP.NET è un Framework che consente di creare facilmente servizi HTTP che raggiungono un'ampia gamma di client, inclusi browser e dispositivi mobili. API Web ASP.NET è la piattaforma ideale per compilare applicazioni RESTful in .NET Framework.
 
 <a id="Task_2_-_Displaying_the_Photo_Gallery"></a>
-#### <a name="task-2---displaying-the-photo-gallery"></a>Attività 2 - visualizzazione di raccolta foto
+#### <a name="task-2---displaying-the-photo-gallery"></a>Attività 2-visualizzazione della raccolta foto
 
-In questa attività si aggiornerà la Home page per visualizzare la raccolta di foto usando il servizio fittizia creata nella prima attività di questo esercizio. Si aggiungerà i file di modello e aggiornare le visualizzazioni di raccolta.
+In questa attività verrà aggiornata la Home page per visualizzare la raccolta foto usando il servizio fittizio creato nella prima attività di questo esercizio. Si aggiungeranno i file del modello e si aggiorneranno le visualizzazioni della raccolta.
 
-1. In Visual Studio, premere **SHIFT** + **F5** per arrestare il debug dell'applicazione.
-2. Creare il **foto** classe la **modelli** cartella. A tale scopo, fare clic sui **modelli** cartella e selezionare **Add** e fare clic su **classe**. Quindi, impostare il nome su **Photo.cs** e fare clic su **Add**.
-3. Aggiungere i membri seguenti per il **foto** classe.
+1. In Visual Studio premere **maiusc** + **F5** per arrestare il debug dell'applicazione.
+2. Creare la classe **Photo** nella cartella **Models** . A tale scopo, fare clic con il pulsante destro del mouse sulla cartella **modelli** , scegliere **Aggiungi** e fare clic su **classe**. Quindi, impostare il nome su **Photo.cs** e fare clic su **Aggiungi**.
+3. Aggiungere i membri seguenti alla classe **Photo** .
 
-    (Code - Snippet *modello di ASP.NET MVC 4 Lab - Ex02 - foto*)
+    (Frammento di codice- *ASP.NET MVC 4 Lab-Ex02-Photo Model*)
 
     [!code-csharp[Main](whats-new-in-aspnet-mvc-4/samples/sample5.cs)]
 4. Aprire il file **HomeController.cs** dalla cartella **Controller**.
 5. Aggiungere le istruzioni using seguenti.
 
-    (Code - Snippet *ASP.NET MVC 4 Lab - Ex02 - HomeController using*)
+    (Frammento di codice- *ASP.NET MVC 4 Lab-Ex02-HomeController using*)
 
     [!code-csharp[Main](whats-new-in-aspnet-mvc-4/samples/sample6.cs)]
-6. Aggiornamento di **indice** azione da utilizzare **HttpClient** per recuperare i dati di raccolta e quindi usare il **JavaScriptSerializer** a deserializzarlo al modello di visualizzazione.
+6. Aggiornare l'azione **index** in modo da usare **HttpClient** per recuperare i dati della raccolta e quindi usare **JavaScriptSerializer** per deserializzarli nel modello di visualizzazione.
 
-    (Code - Snippet *ASP.NET MVC 4 Lab - Ex02 - indice azione*)
+    (Frammento di codice- *ASP.NET MVC 4 Lab-Ex02-index Action*)
 
     [!code-csharp[Main](whats-new-in-aspnet-mvc-4/samples/sample7.cs)]
-7. Aprire il **index. cshtml** file che si trova sotto il **Views\Home** cartella e sostituire tutto il contenuto con il codice seguente.
+7. Aprire il file **index. cshtml** che si trova nella cartella **Views\Home** e sostituire tutto il contenuto con il codice seguente.
 
-    Il codice scorre in ciclo tutte le foto recuperate dal servizio e li visualizza in un elenco non ordinato.
+    Questo codice scorre tutte le foto recuperate dal servizio e le Visualizza in un elenco non ordinato.
 
-    (Code - Snippet *elenco di foto di ASP.NET MVC 4 Lab - Ex02 -*)
+    (Frammento di codice- *ASP.NET MVC 4 Lab-Ex02-Photo list*)
 
     [!code-cshtml[Main](whats-new-in-aspnet-mvc-4/samples/sample8.cshtml)]
-8. Nel **Esplora soluzioni**, fare doppio clic il **contenuto** cartella del progetto e selezionare **Add | Elemento esistente**. Individuare il **Source\Assets\Content** cartella di questa esercitazione e aggiungere il **CSS** file. Devi confermare relativa sostituzione. Se si dispone di **CSS** il file è aperto, sarà necessario confermare che si vuole per ricaricare il file anche.
-9. Aprire Esplora File e copiare l'intera **foto** cartella si trova sotto il **Source\Assets** cartella di questo laboratorio nella cartella radice del progetto in Esplora soluzioni.
-10. Eseguire l'applicazione. Si dovrebbe visualizzare le foto nella raccolta la home page.
+8. Nella **Esplora soluzioni**fare clic con il pulsante destro del mouse sulla cartella **contenuto** del progetto e scegliere **Aggiungi | Elemento esistente**. Passare alla cartella **Source\Assets\Content** del Lab e aggiungere il file **site. CSS** . Sarà necessario confermare la sostituzione. Se il file **site. CSS** è aperto, sarà necessario confermare anche per ricaricare il file.
+9. Aprire Esplora file e copiare l'intera cartella **Photos** situata sotto la cartella **Source\Assets** del Lab nella cartella radice del progetto in Esplora soluzioni.
+10. Eseguire l'applicazione. A questo punto dovrebbe essere visualizzato il home page visualizzare le foto nella raccolta.
 
-    ![Raccolta foto](whats-new-in-aspnet-mvc-4/_static/image21.png "raccolta foto")
+    ![Raccolta foto](whats-new-in-aspnet-mvc-4/_static/image21.png "Raccolta foto")
 
     *Raccolta foto*
-11. In Visual Studio, premere **SHIFT** + **F5** per arrestare il debug dell'applicazione.
+11. In Visual Studio premere **maiusc** + **F5** per arrestare il debug dell'applicazione.
 
 <a id="Exercise3"></a>
 
 <a id="Exercise_3_Adding_support_for_mobile_devices"></a>
-### <a name="exercise-3-adding-support-for-mobile-devices"></a>Esercizio 3: Aggiunta del supporto per i dispositivi mobili
+### <a name="exercise-3-adding-support-for-mobile-devices"></a>Esercizio 3: aggiunta del supporto per i dispositivi mobili
 
-Uno degli aggiornamenti della chiave in ASP.NET MVC 4 è il supporto per lo sviluppo per dispositivi mobili. In questo esercizio verranno esplorati nuove funzionalità di ASP.NET MVC 4 per applicazioni per dispositivi mobili estendendo la soluzione PhotoGallery creata nell'esercizio precedente.
+Uno degli aggiornamenti principali in ASP.NET MVC 4 è il supporto per lo sviluppo di applicazioni per dispositivi mobili. In questo esercizio si esamineranno le nuove funzionalità di ASP.NET MVC 4 per le applicazioni per dispositivi mobili estendendo la soluzione PhotoGallery creata nell'esercizio precedente.
 
 <a id="Task_1_-_Installing_jQuery_Mobile_in_an_ASPNET_MVC_4_Application"></a>
-#### <a name="task-1---installing-jquery-mobile-in-an-aspnet-mvc-4-application"></a>Attività 1: installazione jQuery Mobile in un'applicazione ASP.NET MVC 4
+#### <a name="task-1---installing-jquery-mobile-in-an-aspnet-mvc-4-application"></a>Attività 1-installazione di jQuery Mobile in un'applicazione ASP.NET MVC 4
 
-1. Aprire il **Begin** soluzione disponibile all'indirizzo **origine/Ex3-MobileSupport/inizio/** cartella. In caso contrario, è possibile continuare a usare il **End** soluzione ottenuta completando l'esercizio precedente.
+1. Aprire la soluzione **Begin** disponibile nella cartella **source/EX3-MobileSupport/Begin/** . In caso contrario, è possibile continuare a usare la soluzione **finale** ottenuta completando l'esercizio precedente.
 
-   1. Se è stato aperto l'oggetto fornito **iniziare** soluzione, è necessario scaricare alcuni pacchetti NuGet mancanti prima di continuare. A questo scopo, scegliere il **Project** menu e selezionare **Gestisci pacchetti NuGet**.
-   2. Nel **Gestisci pacchetti NuGet** finestra di dialogo, fare clic su **ripristinare** per scaricare i pacchetti mancanti.
-   3. Infine, compilare la soluzione facendo **compilare** | **Compila soluzione**.
+   1. Se è stata aperta la soluzione **iniziale** fornita, sarà necessario scaricare alcuni pacchetti NuGet mancanti prima di continuare. A tale scopo, fare clic sul menu **progetto** e selezionare **Gestisci pacchetti NuGet**.
+   2. Nella finestra di dialogo **Gestisci pacchetti NuGet** fare clic su **Ripristina** per scaricare i pacchetti mancanti.
+   3. Infine, compilare la soluzione facendo clic su **compila** | **Compila soluzione**.
 
       > [!NOTE]
-      > Uno dei vantaggi dell'uso di NuGet è che non è necessario per la spedizione di tutte le librerie nel progetto, ridurre le dimensioni del progetto. Con gli strumenti avanzati di NuGet, specificando le versioni del pacchetto nel file Packages. config, sarà possibile scaricare tutte le librerie necessarie alla prima che esecuzione del progetto. Ecco perché è necessario eseguire questi passaggi dopo l'apertura di una soluzione esistente da questa esercitazione.
-2. Aprire il **Console di gestione pacchetti** facendo clic la **strumenti** > **Gestione pacchetti NuGet** > **Console di gestione pacchetti**  l'opzione di menu.
+      > Uno dei vantaggi dell'uso di NuGet è che non è necessario distribuire tutte le librerie nel progetto, riducendo le dimensioni del progetto. Con NuGet Power Tools, specificando le versioni del pacchetto nel file Packages. config, sarà possibile scaricare tutte le librerie necessarie la prima volta che si esegue il progetto. Questo è il motivo per cui sarà necessario eseguire questi passaggi dopo aver aperto una soluzione esistente da questo Lab.
+2. Aprire la **console di gestione pacchetti** facendo clic sull'opzione di menu **strumenti** > **Gestione pacchetti NuGet** > **console di gestione pacchetti** .
 
-    ![Apertura della Console di gestione pacchetti NuGet](whats-new-in-aspnet-mvc-4/_static/image22.png "aprendo la Console di gestione pacchetti NuGet")
+    ![Apertura della console di gestione pacchetti NuGet](whats-new-in-aspnet-mvc-4/_static/image22.png "Apertura della console di gestione pacchetti NuGet")
 
-    *Aprire la Console di gestione pacchetti NuGet*
-3. Nella Console di gestione pacchetti eseguire il comando seguente per installare il **jQuery.Mobile.MVC** pacchetto.
+    *Apertura della console di gestione pacchetti NuGet*
+3. Nella console di gestione pacchetti eseguire il comando seguente per installare il pacchetto **jQuery. mobile. Mvc** .
 
-    jQuery Mobile è una libreria open source per la creazione di interfaccia utente web ottimizzato per il tocco. Il pacchetto NuGet jQuery.Mobile.MVC include gli helper per l'uso di jQuery Mobile con un'applicazione ASP.NET MVC 4.
+    jQuery Mobile è una libreria open source per la creazione di un'interfaccia utente Web ottimizzata per il tocco. Il pacchetto NuGet jQuery. mobile. MVC include helper per l'uso di jQuery Mobile con un'applicazione ASP.NET MVC 4.
 
     > [!NOTE]
-    > Eseguendo il comando seguente, si scaricherà la libreria jQuery.Mobile.MVC da Nuget.
+    > Eseguendo il comando seguente, si Scarica la libreria jQuery. mobile. MVC da NuGet.
 
     PM
 
     [!code-powershell[Main](whats-new-in-aspnet-mvc-4/samples/sample9.ps1)]
 
-    Questo comando Installa jQuery Mobile e alcuni file di supporto, inclusi i seguenti:
+    Questo comando installa jQuery Mobile e alcuni file helper, inclusi i seguenti:
 
-    - **Views/Shared/\_cshtml**: è un jQuery Mobile layout ottimizzato per uno schermo piccolo. Quando il sito Web riceve una richiesta da un browser per dispositivi mobili, che sostituirà il layout originale (\_layout. cshtml) con questo.
-    - Un componente di cambio di visualizzazione: costituito il **Views/Shared/\_ViewSwitcher.cshtml** visualizzazione parziale e il **ViewSwitcherController.cs** controller. Questo componente visualizzerà un collegamento nel browser per dispositivi mobili per consentire agli utenti di passare alla versione desktop della pagina.  
-        ![Progetto di raccolta foto con supporto per dispositivi mobili](whats-new-in-aspnet-mvc-4/_static/image23.png "progetto raccolta foto con supporto per dispositivi mobili")
+    - **Views/Shared/\_layout. mobile. cshtml**: è un layout basato su jQuery per dispositivi mobili ottimizzato per una schermata più piccola. Quando il sito Web riceve una richiesta da un browser per dispositivi mobili, sostituirà il layout originale (\_layout. cshtml) con questo.
+    - Un componente di visualizzazione-selezione: è costituito dalle **visualizzazioni/condivise/\_ViewSwitcher. cshtml** in visualizzazione parziale e dal controller **ViewSwitcherController.cs** . In questo componente verrà visualizzato un collegamento nei browser per dispositivi mobili per consentire agli utenti di passare alla versione desktop della pagina.  
+        ![Progetto raccolta foto con supporto per dispositivi mobili](whats-new-in-aspnet-mvc-4/_static/image23.png "Phprogetto Oto Gallery con supporto mobile ")
 
-        *Progetto di raccolta foto con supporto per dispositivi mobili*
-4. Registrare i dispositivi mobili bundle. A tale scopo, aprire il **Global.asax.cs** file e aggiungere la riga seguente.
+        *Progetto raccolta foto con supporto per dispositivi mobili*
+4. Registrare i bundle per dispositivi mobili. A tale scopo, aprire il file **Global.asax.cs** e aggiungere la riga seguente.
 
-    (Code - Snippet *bundle per dispositivi mobili ASP.NET MVC 4 Lab - Ex03 - Register*)
+    (Frammento di codice- *ASP.NET MVC 4 Lab-Ex03-registra bundle mobili*)
 
     [!code-csharp[Main](whats-new-in-aspnet-mvc-4/samples/sample10.cs)]
-5. Eseguire l'applicazione usando un web browser desktop.
-6. Aprire il **emulatore Windows Phone 7** che si trova **Menu Start | Tutti i programmi | Windows Phone SDK 7.1 | Emulatore Windows Phone.**
-7. Nella schermata start phone, aprire Internet Explorer. Estrarre l'URL in cui avviare l'applicazione e passare a tale URL con il browser del telefono (ad esempio `http://localhost:[PortNumber]/`).
+5. Eseguire l'applicazione tramite un Web browser desktop.
+6. Aprire l' **emulatore Windows Phone 7,** disponibile nel **menu Start | Tutti i programmi | SDK di Windows Phone 7,1 | Emulatore Windows Phone.**
+7. Nella schermata Start del telefono aprire Internet Explorer. Controllare l'URL in cui è stata avviata l'applicazione e passare a tale URL con il browser del telefono (ad esempio `http://localhost:[PortNumber]/`).
 
-    Si noterà che l'applicazione avrà un aspetto diverso nell'emulatore Windows Phone, come il jQuery.Mobile.MVC ha creato nuovi asset nel progetto che mostrano viste ottimizzate per i dispositivi mobili.
+    Si noterà che l'applicazione avrà un aspetto diverso nell'emulatore di Windows Phone, perché jQuery. mobile. MVC ha creato nuovi asset nel progetto che mostrano le visualizzazioni ottimizzate per i dispositivi mobili.
 
-    Si noti che il messaggio nella parte superiore del telefono, che mostra il collegamento che consente di passare alla visualizzazione Desktop. Inoltre, il  **\_cshtml** layout in cui è stato creato dal pacchetto è stato installato, incluso un altro layout nell'applicazione.
+    Si noti il messaggio nella parte superiore del telefono, che mostra il collegamento che passa alla visualizzazione desktop. Inoltre, il layout **\_layout. mobile. cshtml** creato dal pacchetto installato include un layout diverso nell'applicazione.
 
     > [!NOTE]
-    > Finora, non vi è alcun collegamento per tornare alla visualizzazione per dispositivi mobili. Verrà incluso nelle versioni successive.
+    > Fino a questo punto non è disponibile alcun collegamento per tornare alla visualizzazione per dispositivi mobili. Verrà incluso nelle versioni successive.
 
-    ![Visualizzazione per dispositivi mobili della pagina Home page raccolta foto](whats-new-in-aspnet-mvc-4/_static/image24.png "Mobile visualizzazione della pagina Home page raccolta foto")
+    ![Visualizzazione mobile della Home page della raccolta foto](whats-new-in-aspnet-mvc-4/_static/image24.png "Visualizzazione mobile della Home page della raccolta foto")
 
-    *Visualizzazione per dispositivi mobili della pagina Home page raccolta foto*
-8. In Visual Studio, premere **SHIFT** + **F5** per arrestare il debug dell'applicazione.
+    *Visualizzazione mobile della Home page della raccolta foto*
+8. In Visual Studio premere **maiusc** + **F5** per arrestare il debug dell'applicazione.
 
 <a id="Task_2_-_Creating_Mobile_Views"></a>
 #### <a name="task-2---creating-mobile-views"></a>Attività 2: creazione di visualizzazioni per dispositivi mobili
 
-In questa attività si creerà una versione mobile della visualizzazione index con contenuto adattato per l'aspetto migliore nei dispositivi mobili.
+In questa attività verrà creata una versione per dispositivi mobili della visualizzazione indice con contenuto adattato per un aspetto migliore nei dispositivi mobili.
 
-1. Copia il **Views\Home\Index.cshtml** consente di visualizzare e incollarlo per creare una copia, rinominare il nuovo file **cshtml**.
-2. Aprire il nuovo creato **cshtml** consente di visualizzare e sostituire le funzioni &lt;ul&gt; tag con questo codice. In questo modo, aggiornerà il &lt;ul&gt; tag con le annotazioni dei dati per dispositivi mobili di jQuery per usare i temi di jQuery mobili.
+1. Copiare la vista **Views\Home\Index.cshtml** e incollarla per creare una copia, rinominare il nuovo file in **index. mobile. cshtml**.
+2. Aprire la nuova visualizzazione **index. mobile. cshtml** creata e sostituire il tag &lt;UL&gt; esistente con questo codice. In questo modo si aggiornerà il tag &lt;UL&gt; con le annotazioni dei dati di jQuery Mobile per usare i temi per dispositivi mobili di jQuery.
 
     [!code-html[Main](whats-new-in-aspnet-mvc-4/samples/sample11.html)]
 
@@ -435,341 +435,341 @@ In questa attività si creerà una versione mobile della visualizzazione index c
     > 
     > Si noti che:
     > 
-    > - Il **data-role** attributo impostato su **listview** verrà eseguito il rendering nell'elenco tramite gli stili di listview.
+    > - L'attributo **Data-Role** impostato su **ListView** eseguirà il rendering dell'elenco utilizzando gli stili di ListView.
     > 
-    > - Il **dati inset** attributo impostato su true sarà visualizzato l'elenco con bordi arrotondati e i margini.
+    > - L'attributo di inserimento **dati** impostato su true indicherà l'elenco con bordo arrotondato e margine.
     > 
-    > - Il **filtro di dati** attributo impostato su **true** genererà una casella di ricerca.
+    > - L'attributo di **filtro dei dati** impostato su **true** genererà una casella di ricerca.
     > 
-    > Altre informazioni sulle convenzioni per jQuery Mobile nella documentazione di progetto: [[http://jquerymobile.com/demos/1.1.1/](http://jquerymobile.com/demos/1.1.1/)](http://jquerymobile.com/demos/1.1.1/)
+    > Per ulteriori informazioni sulle convenzioni jQuery per dispositivi mobili, vedere la documentazione del progetto: [ [http://jquerymobile.com/demos/1.1.1/](http://jquerymobile.com/demos/1.1.1/)](http://jquerymobile.com/demos/1.1.1/)
 3. Premere **CTRL + S** per salvare le modifiche.
-4. Passare al **emulatore Windows Phone** e aggiornare il sito. Si noti che il nuovo aspetto dell'elenco della raccolta, nonché la nuova casella di ricerca nella parte superiore. Quindi, digitare una parola nella casella di ricerca (ad esempio, **Tulips**) per avviare la ricerca nella raccolta di foto.
+4. Passare all' **emulatore Windows Phone** e aggiornare il sito. Si noti il nuovo aspetto dell'elenco della raccolta, nonché la nuova casella di ricerca nella parte superiore. Quindi, digitare una parola nella casella di ricerca (ad esempio, **Tulipani**) per avviare una ricerca nella raccolta foto.
 
-    ![Raccolta con lo stile di listview con i filtri](whats-new-in-aspnet-mvc-4/_static/image25.png "raccolta usando lo stile di listview con i filtri")
+    ![Raccolta con stile ListView con filtro](whats-new-in-aspnet-mvc-4/_static/image25.png "Raccolta con stile ListView con filtro")
 
-    *Raccolta con lo stile di listview con i filtri*
+    *Raccolta con stile ListView con filtro*
 
-    Per riepilogare, si usa il file recipe Mobilizer vista per creare una copia della visualizzazione Index con la &quot;mobile&quot; suffisso. Questo suffisso indica ad ASP.NET MVC 4 che ogni richiesta generata da un dispositivo mobile userà questa copia dell'indice. Inoltre, è stato aggiornato la versione della visualizzazione Index usare jQuery Mobile per migliorare l'aspetto del sito nei dispositivi mobili per dispositivi mobili.
-5. Tornare a Visual Studio e aprire **Site.Mobile.css** sotto il **contenuto** cartella.
-6. Correggere il posizionamento del titolo della foto per renderla Mostra sul lato destro dell'immagine. A tale scopo, aggiungere il codice seguente per il **Site.Mobile.css** file.
+    Per riepilogare, è stata usata la ricetta per la visualizzazione del mobilitatore per creare una copia della visualizzazione dell'indice con il suffisso &quot;mobile&quot;. Questo suffisso indica a ASP.NET MVC 4 che ogni richiesta generata da un dispositivo mobile utilizzerà questa copia dell'indice. È stata inoltre aggiornata la versione per dispositivi mobili della visualizzazione index per utilizzare jQuery Mobile per migliorare l'aspetto del sito nei dispositivi mobili.
+5. Tornare a Visual Studio e aprire **site. mobile. CSS** che si trova nella cartella **contenuto** .
+6. Correggere il posizionamento del titolo della foto per visualizzarlo sul lato destro dell'immagine. A tale scopo, aggiungere il codice seguente al file **site. mobile. CSS** .
 
     CSS
 
     [!code-css[Main](whats-new-in-aspnet-mvc-4/samples/sample12.css)]
 7. Premere **CTRL + S** per salvare le modifiche.
-8. Tornare alla **emulatore Windows Phone** e aggiornare il sito. Si noti che il titolo di foto è correttamente posizionato a questo punto.
+8. Tornare all' **emulatore Windows Phone** e aggiornare il sito. Si noti che il titolo della foto è ora posizionato correttamente.
 
-    ![Titolo posizionato sul lato destro dell'immagine](whats-new-in-aspnet-mvc-4/_static/image26.png "titolo posizionato sul lato destro dell'immagine")
+    ![Titolo posizionato sul lato destro dell'immagine](whats-new-in-aspnet-mvc-4/_static/image26.png "Titolo posizionato sul lato destro dell'immagine")
 
     *Titolo posizionato sul lato destro dell'immagine*
 
 <a id="Task_3_-_jQuery_Mobile_Themes"></a>
-#### <a name="task-3---jquery-mobile-themes"></a>Attività 3: temi di jQuery Mobile
+#### <a name="task-3---jquery-mobile-themes"></a>Attività 3-temi per dispositivi mobili jQuery
 
-Ogni layout e widget in jQuery Mobile viene progettato attorno a un nuovo framework di CSS orientate a oggetti che consente di applicare un tema completo di progettazione visiva unificato per siti e applicazioni.
+Ogni layout e widget in jQuery Mobile è progettato per un nuovo Framework CSS orientato agli oggetti che consente di applicare un tema completo della progettazione visiva unificata ai siti e alle applicazioni.
 
-Per impostazione predefinita del dispositivo Mobile di jQuery tema include i 5 campioni vengono assegnati a lettere (a, b, c, d e) di riferimento rapido.
+il tema predefinito di jQuery Mobile include 5 campioni a cui vengono assegnate lettere (a, b, c, d, e) per riferimento rapido.
 
-In questa attività si aggiornerà il layout per dispositivi mobili per l'uso di un tema diverso da quello predefinito.
+In questa attività verrà aggiornato il layout per dispositivi mobili in modo da usare un tema diverso da quello predefinito.
 
 1. Tornare a Visual Studio.
-2. Aprire il  **\_cshtml** che si trova nel file **Views\Shared**.
-3. Trovare l'elemento div con il ruolo dati impostato su &quot;pagina&quot; e aggiornare il **data-theme** a &quot; **elettronica**&quot;.
+2. Aprire il file **\_layout. mobile. cshtml** che si trova in **Views\Shared**.
+3. Trovare l'elemento div con il ruolo dati impostato su &quot;pagina&quot; e aggiornare il **tema dati** per &quot;**e**&quot;.
 
     [!code-html[Main](whats-new-in-aspnet-mvc-4/samples/sample13.html)]
 4. Premere **CTRL + S** per salvare le modifiche.
-5. Aggiornare il sito nel **emulatore Windows Phone** e notare che il nuovo schema di colori.
+5. Aggiornare il sito nell' **emulatore Windows Phone** e notare la nuova combinazione colori.
 
-    ![Layout per dispositivi mobili con una combinazione di colori diversi](whats-new-in-aspnet-mvc-4/_static/image27.png "layout per dispositivi mobili con una combinazione di colori diversi")
+    ![Layout per dispositivi mobili con una combinazione di colori diversa](whats-new-in-aspnet-mvc-4/_static/image27.png "Layout per dispositivi mobili con una combinazione di colori diversa")
 
-    *Layout per dispositivi mobili con una combinazione di colori diversi*
+    *Layout per dispositivi mobili con una combinazione di colori diversa*
 
 <a id="Task_4_-_Using_the_View-Switcher_Component_and_the_Browser_Overriding_Features"></a>
-#### <a name="task-4---using-the-view-switcher-component-and-the-browser-overriding-features"></a>Attività 4: tramite il componente di cambio di visualizzazione e il Browser si esegue l'override di funzionalità
+#### <a name="task-4---using-the-view-switcher-component-and-the-browser-overriding-features"></a>Attività 4: utilizzo del componente Switcher di visualizzazione e delle funzionalità di override del browser
 
-Una convenzione per le pagine web ottimizzata per dispositivi mobili consiste nell'aggiungere un collegamento il cui testo è qualcosa di simile a visualizzazione Desktop o in modalità completa del sito che consente agli utenti di passare a una versione desktop della pagina. Il pacchetto jQuery.Mobile.MVC include un esempio **commutatore della visualizzazione** componente per questo scopo usato nel  **\_cshtml** visualizzazione.
+Una convenzione per le pagine Web ottimizzate per dispositivi mobili consiste nell'aggiungere un collegamento il cui testo è simile a visualizzazione desktop o alla modalità sito completo che consente agli utenti di passare a una versione desktop della pagina. Il pacchetto jQuery. mobile. MVC include un componente **Switcher di visualizzazione** di esempio per questo scopo usato nella vista **\_layout. mobile. cshtml** .
 
-![Collegamento per passare alla visualizzazione Desktop](whats-new-in-aspnet-mvc-4/_static/image28.png "collegamento per passare alla visualizzazione Desktop")
+![Collegamento per passare alla visualizzazione desktop](whats-new-in-aspnet-mvc-4/_static/image28.png "Collegamento per passare alla visualizzazione desktop")
 
-*Collegamento per passare alla visualizzazione Desktop*
+*Collegamento per passare alla visualizzazione desktop*
 
-Il cambio di visualizzazione viene utilizzata una nuova funzionalità denominata **eseguendo l'override del Browser**. Questa funzionalità consente all'applicazione considerare le richieste come provenienti da un browser (agente utente) diverso da quello da che effettivamente provengano.
+Lo switcher di visualizzazione usa una nuova funzionalità denominata **override del browser**. Questa funzionalità consente all'applicazione di gestire le richieste come se provenissero da un browser diverso (agente utente) rispetto a quello da cui provengono effettivamente.
 
-In questa attività si esploreranno l'implementazione di esempio di una selezione di vista aggiunta da jQuery.Mobile.MVC e il nuovo browser si esegue l'override di funzionalità in ASP.NET MVC 4.
+In questa attività verrà illustrata l'implementazione di esempio di un Switcher di visualizzazione Aggiunto da jQuery. mobile. MVC e le nuove funzionalità di override del browser in ASP.NET MVC 4.
 
 1. Tornare a Visual Studio.
-2. Aprire il  **\_cshtml** vista che si trova sotto il **Views\Shared** cartella e notare che il componente di cambio di visualizzazione cui viene fatto riferimento come visualizzazione parziale.
+2. Aprire la vista **\_layout. mobile. cshtml** che si trova nella cartella **Views\Shared** e osservare che il componente Switcher di visualizzazione viene usato come visualizzazione parziale.
 
-    ![Layout per dispositivi mobili utilizzando il componente di cambio di visualizzazione](whats-new-in-aspnet-mvc-4/_static/image29.png "layout per dispositivi mobili utilizzando il componente di cambio di visualizzazione")
+    ![Layout per dispositivi mobili con il componente View-Switcher](whats-new-in-aspnet-mvc-4/_static/image29.png "Layout per dispositivi mobili con il componente View-Switcher")
 
-    *Layout per dispositivi mobili utilizzando il componente di cambio di visualizzazione*
-3. Aprire il  **\_ViewSwitcher.cshtml** visualizzazione parziale.
+    *Layout per dispositivi mobili con il componente View-Switcher*
+3. Aprire la visualizzazione parziale **\_ViewSwitcher. cshtml** .
 
-    La visualizzazione parziale viene utilizzato il nuovo metodo **ViewContext.HttpContext.GetOverriddenBrowser()** per determinare l'origine della richiesta web e visualizzare il collegamento corrispondente per passare alle visualizzazioni per dispositivi mobili o Desktop.
+    La visualizzazione parziale usa il nuovo metodo **ViewContext. HttpContext. GetOverriddenBrowser ()** per determinare l'origine della richiesta Web e visualizzare il collegamento corrispondente per passare alle visualizzazioni desktop o per dispositivi mobili.
 
-    Il **GetOverriddenBrowser** metodo restituisce un' **HttpBrowserCapabilitiesBase** istanza che corrisponde all'agente utente attualmente impostato per la richiesta (effettivo o sottoposto a override). È possibile utilizzare questo valore per ottenere le proprietà, ad esempio **IsMobileDevice**.
+    Il metodo **GetOverriddenBrowser** restituisce un'istanza di **HttpBrowserCapabilitiesBase** che corrisponde all'agente utente attualmente impostato per la richiesta (effettivo o sottoposto a override). È possibile utilizzare questo valore per ottenere proprietà quali **IsMobileDevice**.
 
-    ![Visualizzazione parziale ViewSwitcher](whats-new-in-aspnet-mvc-4/_static/image30.png "ViewSwitcher visualizzazione parziale")
+    ![Visualizzazione parziale ViewSwitcher](whats-new-in-aspnet-mvc-4/_static/image30.png "Visualizzazione parziale ViewSwitcher")
 
     *Visualizzazione parziale ViewSwitcher*
-4. Aprire il **ViewSwitcherController.cs** classe si trova nel **controller** cartella. Tale azione SwitchView check-out viene chiamato dal collegamento sotto il componente ViewSwitcher e notare i nuovi metodi HttpContext.
+4. Aprire la classe **ViewSwitcherController.cs** che si trova nella cartella **Controllers** . Verificare che l'azione SwitchView venga chiamata dal collegamento nel componente ViewSwitcher e osservare i nuovi metodi HttpContext.
 
-    - Il **HttpContext.ClearOverriddenBrowser()** metodo rimuove qualsiasi agente utente sottoposto a override per la richiesta corrente.
-    - Il **HttpContext.SetOverriddenBrowser()** metodo esegue l'override del valore della richiesta degli utenti effettivi dell'agente tramite l'agente utente specificato.  
-        ![ViewSwitcher Controller](whats-new-in-aspnet-mvc-4/_static/image31.png "ViewSwitcher Controller")  
-*ViewSwitcher Controller*
+    - Il metodo **HttpContext. ClearOverriddenBrowser ()** rimuove tutti gli agenti utente sottoposti a override per la richiesta corrente.
+    - Il metodo **HttpContext. SetOverriddenBrowser ()** esegue l'override del valore dell'agente utente effettivo della richiesta utilizzando l'agente utente specificato.  
+        ![Controller ViewSwitcher](whats-new-in-aspnet-mvc-4/_static/image31.png "ViController ewSwitcher ")  
+*Controller ViewSwitcher*
 
-        Override del browser è una funzionalità fondamentale di ASP.NET MVC 4, anch ' esso disponibile anche se non si installa il pacchetto jQuery.Mobile.MVC. Tuttavia, questa funzionalità interessa solo visualizzazione, layout e visualizzazione parziale e non influenza le funzionalità che dipendono dall'oggetto Request.
+        L'override del browser è una funzionalità di base di ASP.NET MVC 4, disponibile anche se non si installa il pacchetto jQuery. mobile. MVC. Tuttavia, questa funzionalità influisce solo sulla visualizzazione, sul layout e sulla visualizzazione parziale e non influisce sulle funzionalità che dipendono dall'oggetto Request. browser.
 
 <a id="Task_5_-_Adding_the_View-Switcher_in_the_Desktop_View"></a>
-#### <a name="task-5---adding-the-view-switcher-in-the-desktop-view"></a>Attività 5: aggiunta al commutatore della visualizzazione nella vista del Desktop
+#### <a name="task-5---adding-the-view-switcher-in-the-desktop-view"></a>Attività 5: aggiunta del commutatore di visualizzazione nella visualizzazione desktop
 
-In questa attività si aggiornerà il layout desktop per includere il cambio di visualizzazione. Ciò consentirà agli utenti di dispositivi mobili tornare alla visualizzazione per dispositivi mobili quando si esplorano la visualizzazione desktop.
+In questa attività verrà aggiornato il layout del desktop per includere lo switcher di visualizzazione. Ciò consentirà agli utenti mobili di tornare alla visualizzazione per dispositivi mobili quando si Esplora la visualizzazione desktop.
 
-1. Aggiornare il sito nel **emulatore Windows Phone**.
-2. Fare clic sui **visualizzazione Desktop** collegamento all'inizio della raccolta. Si noti che non vi è alcun commutatore della visualizzazione nella vista del desktop per consentire che tornare alla visualizzazione per dispositivi mobili.
-3. Tornare a Visual Studio e aprire il  **\_layout. cshtml** visualizzazione.
-4. Trovare la sezione di accesso e inserire una chiamata per eseguire il rendering di  **\_ViewSwitcher** visualizzazione parziale riportato di seguito il  **\_LogOnPartial** visualizzazione parziale. Quindi, premere **CTRL + S** per salvare le modifiche.
+1. Aggiornare il sito nell' **emulatore Windows Phone**.
+2. Fare clic sul collegamento **visualizzazione desktop** nella parte superiore della raccolta. Si noti che non è presente alcun Switcher di visualizzazione nella visualizzazione desktop per consentire di tornare alla visualizzazione per dispositivi mobili.
+3. Tornare a Visual Studio e aprire la vista **\_layout. cshtml** .
+4. Trovare la sezione login e inserire una chiamata per eseguire il rendering della visualizzazione parziale **\_ViewSwitcher** sotto la visualizzazione parziale **\_LogOnPartial** . Quindi premere **CTRL + S** per salvare le modifiche.
 
     [!code-cshtml[Main](whats-new-in-aspnet-mvc-4/samples/sample14.cshtml)]
 5. Premere **CTRL + S** per salvare le modifiche.
-6. Aggiornare la pagina nell'emulatore Windows Phone e fare doppio clic sulla schermata per fare zoom avanti. Si noti che la home page viene ora illustrato il **visualizzazione per dispositivi mobili** collegamento che passa da dispositivi mobili per la visualizzazione desktop.
+6. Aggiornare la pagina nell'emulatore Windows Phone e fare doppio clic sulla schermata per eseguire lo zoom avanti. Si noti che il home page ora Visualizza il collegamento di **visualizzazione per dispositivi mobili** che passa da mobile a visualizzazione desktop.
 
-    ![Visualizzazione della selezione viene eseguito il rendering nella visualizzazione desktop](whats-new-in-aspnet-mvc-4/_static/image32.png "cambio di visualizzazione viene eseguito il rendering nella visualizzazione desktop")
+    ![Visualizzazione del commutatore visualizzazione nella visualizzazione desktop](whats-new-in-aspnet-mvc-4/_static/image32.png "Visualizzazione del commutatore visualizzazione nella visualizzazione desktop")
 
-    *Cambio di visualizzazione viene eseguito il rendering nella visualizzazione desktop*
-7. Passare nuovamente alla visualizzazione per dispositivi mobili e passare a **sulle** pagina (http://localhost[porta] / Home/su). Si noti che, anche se è stata creata una vista About.Mobile.cshtml, la pagina di informazioni viene visualizzata utilizzando il layout per dispositivi mobili (\_cshtml).
+    *Visualizzazione del commutatore visualizzazione nella visualizzazione desktop*
+7. Passare di nuovo alla visualizzazione per dispositivi mobili e passare alla pagina **About** (http://localhost [porta]/Home/About). Si noti che, anche se non è stata creata una vista About. mobile. cshtml, viene visualizzata la pagina about usando il layout mobile (\_layout. mobile. cshtml).
 
-    ![Informazioni sulla pagina](whats-new-in-aspnet-mvc-4/_static/image33.png "sulla pagina")
+    ![Pagina informazioni](whats-new-in-aspnet-mvc-4/_static/image33.png "Pagina About (Informazioni)")
 
-    *Informazioni sulla pagina*
-8. Infine, aprire il sito in un browser desktop. Si noti che nessuno degli aggiornamenti precedenti ha modificato la visualizzazione desktop.
+    *Pagina informazioni*
+8. Infine, aprire il sito in un Web browser desktop. Si noti che nessuno degli aggiornamenti precedenti ha influito sulla visualizzazione desktop.
 
-    ![Visualizzazione desktop PhotoGallery](whats-new-in-aspnet-mvc-4/_static/image34.png "visualizzazione desktop PhotoGallery")
+    ![Visualizzazione desktop PhotoGallery](whats-new-in-aspnet-mvc-4/_static/image34.png "Visualizzazione desktop PhotoGallery")
 
     *Visualizzazione desktop PhotoGallery*
 
 <a id="Task_6_-_Creating_New_Display_Modes"></a>
-#### <a name="task-6---creating-new-display-modes"></a>Attività 6: creazione di nuove modalità di visualizzazione
+#### <a name="task-6---creating-new-display-modes"></a>Attività 6-Creazione di nuove modalità di visualizzazione
 
-La nuova funzionalità di modalità di visualizzazione consente a un'applicazione di selezionare le viste in base al browser che genera la richiesta. Ad esempio, se un browser desktop richiede la Home page, l'applicazione verrà restituito il **Views\Home\Index.cshtml** modello. Quindi, se un browser per dispositivi mobili richiede la Home page, l'applicazione verrà restituito il **Views\Home\Index.mobile.cshtml** modello.
+La nuova funzionalità modalità di visualizzazione consente a un'applicazione di selezionare le visualizzazioni a seconda del browser che sta generando la richiesta. Se ad esempio un browser desktop richiede la Home page, l'applicazione restituirà il modello **Views\Home\Index.cshtml** . Quindi, se un browser per dispositivi mobili richiede la Home page, l'applicazione restituirà il modello **Views\Home\Index.mobile.cshtml** .
 
-In questa attività si creerà un layout personalizzato per i dispositivi iPhone e si dovrà simulare le richieste provenienti da dispositivi iPhone. A tale scopo, è possibile usare entrambi un emulatore o simulatore iPhone (ad esempio [Electric simulatore di dispositivi mobili](http://www.electricplum.com/)) o un browser con i componenti aggiuntivi che modificano l'agente utente. Per istruzioni su come impostare la stringa agente utente in un browser Safari per emulare un iPhone, vedere [come consentire Safari fingono è IE](http://www.davidalison.com/2008/05/how-to-let-safari-pretend-its-ie.html) nel blog di David Alison.
+In questa attività verrà creato un layout personalizzato per i dispositivi iPhone e sarà necessario simulare le richieste provenienti da dispositivi iPhone. A tale scopo, è possibile usare un emulatore o un simulatore di iPhone, ad esempio un [simulatore per dispositivi mobili elettrici](http://www.electricplum.com/), oppure un browser con componenti aggiuntivi che modificano l'agente utente. Per istruzioni su come impostare la stringa agente utente in un browser Safari per emulare un iPhone, vedere la pagina relativa [a come consentire a Safari di fare finta che](http://www.davidalison.com/2008/05/how-to-let-safari-pretend-its-ie.html) sia nel Blog di David Alison.
 
-**Si noti che questa attività è facoltativa ed è possibile continuare nell'intero laboratorio senza eseguirla.**
+**Si noti che questa attività è facoltativa ed è possibile continuare nel lab senza eseguirla.**
 
-1. In Visual Studio, premere **SHIFT** + **F5** per arrestare il debug dell'applicazione.
-2. Aprire **Global.asax.cs** e aggiungere la seguente istruzione using.
+1. In Visual Studio premere **maiusc** + **F5** per arrestare il debug dell'applicazione.
+2. Aprire **Global.asax.cs** e aggiungere l'istruzione using seguente.
 
     [!code-csharp[Main](whats-new-in-aspnet-mvc-4/samples/sample15.cs)]
-3. Aggiungere il codice evidenziato seguente all'applicazione\_Start (metodo).
+3. Aggiungere il codice evidenziato seguente nell'applicazione\_metodo Start.
 
-    (Code - Snippet *ASP.NET MVC 4 Lab - Ex03 - iPhone DisplayMode*)
+    (Frammento di codice- *ASP.NET MVC 4 Lab-Ex03-iPhone DisplayMode*)
 
     [!code-csharp[Main](whats-new-in-aspnet-mvc-4/samples/sample16.cs)]
 
-È stato registrato un nuovo **DefaultDisplayMode denominato &quot;iPhone&quot;**, all'interno statico **DisplayModeProvider.Instance.Modes** elenco statico, che verrà confrontata con ogni richiesta in ingresso. Se la richiesta in ingresso contiene la stringa &quot;iPhone&quot;, ASP.NET MVC troverà le visualizzazioni il cui nome contiene la &quot;iPhone&quot; suffisso. Il parametro 0 indica la modalità specifica è la nuova modalità; ad esempio, questa vista è più specifica generali &quot;. Mobile&quot; regola corrispondente le richieste provenienti da dispositivi mobili.
+È stato registrato un nuovo **DefaultDisplayMode denominato &quot;iPhone&quot;** , all'interno dell'elenco statico **DisplayModeProvider. Instance. modes** , che verrà associato a ogni richiesta in ingresso. Se la richiesta in ingresso contiene la stringa &quot;iPhone&quot;, ASP.NET MVC troverà le visualizzazioni il cui nome contiene il suffisso&quot; &quot;iPhone. Il parametro 0 indica il modo specifico per la nuova modalità. ad esempio, questa vista è più specifica della regola generale &quot;. mobile&quot; che corrisponde alle richieste provenienti dai dispositivi mobili.
 
-Quando si esegue questo codice, quando si genera una richiesta di un browser di iPhone, l'applicazione userà il **Views\Shared\\_Layout.iPhone.cshtml** layout creerai nei passaggi successivi.
+Dopo l'esecuzione di questo codice, quando un browser iPhone genera una richiesta, l'applicazione userà il layout **Views\Shared\\_Layout. iPhone. cshtml** che verrà creato nei passaggi successivi.
 
 > [!NOTE]
-> In questo modo, la richiesta di test per iPhone è stato semplificato a scopo dimostrativo e potrebbe non funzionare come previsto per ogni stringa di agente utente iPhone (per il test di esempio è distinzione maiuscole / minuscole).
+> Questo modo di testare la richiesta per iPhone è stato semplificato a scopo dimostrativo e potrebbe non funzionare come previsto per ogni stringa agente utente iPhone. ad esempio, il test fa distinzione tra maiuscole e minuscole.
 
-4. Creare una copia del  **\_cshtml** del file nei **Views\Shared** cartella e rinominare la copia &quot; **\_cshtml**&quot;.
-5. Aprire  **\_cshtml** creato nel passaggio precedente.
-6. Trovare l'elemento div con l'attributo data-role impostato **pagina** e modificare le **data-theme** dell'attributo &quot; **un**&quot;.
+4. Creare una copia del file **\_layout. mobile. cshtml** nella cartella **Views\Shared** e rinominare la copia in &quot; **\_Layout. iPhone. cshtml**&quot;.
+5. Aprire **\_layout. iPhone. cshtml** creato nel passaggio precedente.
+6. Trovare l'elemento div con l'attributo data-Role impostato su **Page** e modificare l'attributo **Data-Theme** in &quot;**un**&quot;.
 
 [!code-cshtml[Main](whats-new-in-aspnet-mvc-4/samples/sample17.cshtml)]
 
-Ora si dispone di 3 layout nell'applicazione ASP.NET MVC 4:
+Sono ora disponibili 3 layout nell'applicazione ASP.NET MVC 4:
 
-1. **\_Layout. cshtml**: layout predefinito utilizzato per i browser desktop.
-2. **\_Cshtml**: layout predefinito utilizzato per i dispositivi mobili.
-3. **\_Cshtml**: un layout specifico per i dispositivi iPhone, usando una combinazione di colori diversi per differenziare da \_cshtml.
-7. Premere **F5** per eseguire l'applicazione ed esplorare il sito nel **emulatore Windows Phone**.
-8. Aprire una **simulatore iPhone** (vedere [appendice C](#AppendixC) per istruzioni su come installare e configurare un simulatore di iPhone) e passare al sito troppo. Si noti che ogni telefono utilizza il modello specifico.
+1. **\_layout. cshtml**: layout predefinito usato per i browser desktop.
+2. **\_layout. mobile. cshtml**: layout predefinito usato per i dispositivi mobili.
+3. **\_layout. iPhone. cshtml**: layout specifico per i dispositivi iPhone, usando una combinazione di colori diversa per distinguere da \_layout. mobile. cshtml.
+7. Premere **F5** per eseguire l'applicazione ed esplorare il sito nell' **emulatore Windows Phone**.
+8. Aprire un **simulatore iPhone** (vedere l' [Appendice C](#AppendixC) per istruzioni su come installare e configurare un simulatore iPhone) e passare al sito. Si noti che ogni telefono usa il modello specifico.
 
-    ![Using-different-views-for-each-mobile-device2](whats-new-in-aspnet-mvc-4/_static/image35.png)
+    ![Using-different-views-for-each-mobile-dispositivo2)](whats-new-in-aspnet-mvc-4/_static/image35.png)
 
-    *Utilizzo di visualizzazioni diverse per ogni dispositivo mobile*
+    *Uso di visualizzazioni diverse per ogni dispositivo mobile*
 
 <a id="Exercise4"></a>
 
 <a id="Exercise_4_Using_Asynchronous_Controllers"></a>
-### <a name="exercise-4-using-asynchronous-controllers"></a>Esercizio 4: Utilizzo di controller asincroni
+### <a name="exercise-4-using-asynchronous-controllers"></a>Esercizio 4: uso di controller asincroni
 
-Microsoft .NET Framework 4.5 introduce nuove funzionalità del linguaggio in c# e Visual Basic per fornire una nuova base per la modalità asincrona nella programmazione .NET. Questa nuova base rende la programmazione asincrona simile a - e circa semplice come - programmazione sincrona. Questo punto si è in grado di scrivere metodi di azione asincroni in ASP.NET MVC 4 usando il **AsyncController** classe. È possibile usare metodi di azione asincroni per a esecuzione prolungata, le richieste associate alla CPU non. Questo evita il server Web di esecuzione del lavoro mentre viene elaborata la richiesta di blocco. La classe AsyncController è in genere usata per le chiamate al servizio Web con esecuzione prolungata.
+Microsoft .NET Framework 4,5 introduce nuove funzionalità del linguaggio C# in e Visual Basic per offrire una nuova base per modalità asincrona nella programmazione .NET. Questa nuova base rende la programmazione asincrona simile a-e alla programmazione semplice come sincrona. A questo punto è possibile scrivere metodi di azione asincroni in ASP.NET MVC 4 usando la classe **AsyncController** . È possibile utilizzare i metodi di azione asincroni per richieste con esecuzione prolungata e non CPU. In questo modo si evita di impedire al server Web di eseguire il lavoro mentre è in corso l'elaborazione della richiesta. La classe AsyncController viene in genere utilizzata per le chiamate ai servizi Web con esecuzione prolungata.
 
-Questo esercizio illustra i concetti di base dell'operazione asincrona in ASP.NET MVC 4. Se si desiderano ulteriori approfondimenti, è possibile consultare l'articolo seguente: [[https://msdn.microsoft.com/library/ee728598%28v=vs.100%29.aspx](https://msdn.microsoft.com/library/ee728598%28v=vs.100%29.aspx)](https://msdn.microsoft.com/library/ee728598%28v=vs.100%29.aspx)
+Questo esercizio illustra le nozioni di base dell'operazione asincrona in ASP.NET MVC 4. Per un'analisi più approfondita, è possibile vedere l'articolo seguente: [ [https://msdn.microsoft.com/library/ee728598%28v=vs.100%29.aspx](https://msdn.microsoft.com/library/ee728598%28v=vs.100%29.aspx)](https://msdn.microsoft.com/library/ee728598%28v=vs.100%29.aspx)
 
 <a id="Task_1_-_Implementing_an_Asynchronous_Controller"></a>
-#### <a name="task-1---implementing-an-asynchronous-controller"></a>Attività 1: implementazione di un Controller asincrono
+#### <a name="task-1---implementing-an-asynchronous-controller"></a>Attività 1: implementazione di un controller asincrono
 
-1. Aprire il **Begin** soluzione disponibile all'indirizzo **origine/Ex4-Async/inizio/** cartella. In caso contrario, è possibile continuare a usare il **End** soluzione ottenuta completando l'esercizio precedente.
+1. Aprire la soluzione **Begin** disponibile in **source/EX4-Async/Begin/** Folder. In caso contrario, è possibile continuare a usare la soluzione **finale** ottenuta completando l'esercizio precedente.
 
-   1. Se è stato aperto l'oggetto fornito **iniziare** soluzione, è necessario scaricare alcuni pacchetti NuGet mancanti prima di continuare. A questo scopo, scegliere il **Project** menu e selezionare **Gestisci pacchetti NuGet**.
-   2. Nel **Gestisci pacchetti NuGet** finestra di dialogo, fare clic su **ripristinare** per scaricare i pacchetti mancanti.
-   3. Infine, compilare la soluzione facendo **compilare** | **Compila soluzione**.
+   1. Se è stata aperta la soluzione **iniziale** fornita, sarà necessario scaricare alcuni pacchetti NuGet mancanti prima di continuare. A tale scopo, fare clic sul menu **progetto** e selezionare **Gestisci pacchetti NuGet**.
+   2. Nella finestra di dialogo **Gestisci pacchetti NuGet** fare clic su **Ripristina** per scaricare i pacchetti mancanti.
+   3. Infine, compilare la soluzione facendo clic su **compila** | **Compila soluzione**.
 
       > [!NOTE]
-      > Uno dei vantaggi dell'uso di NuGet è che non è necessario per la spedizione di tutte le librerie nel progetto, ridurre le dimensioni del progetto. Con gli strumenti avanzati di NuGet, specificando le versioni del pacchetto nel file Packages. config, sarà possibile scaricare tutte le librerie necessarie alla prima che esecuzione del progetto. Ecco perché è necessario eseguire questi passaggi dopo l'apertura di una soluzione esistente da questa esercitazione.
-2. Aprire il **HomeController.cs** classe la **controller** cartella.
+      > Uno dei vantaggi dell'uso di NuGet è che non è necessario distribuire tutte le librerie nel progetto, riducendo le dimensioni del progetto. Con NuGet Power Tools, specificando le versioni del pacchetto nel file Packages. config, sarà possibile scaricare tutte le librerie necessarie la prima volta che si esegue il progetto. Questo è il motivo per cui sarà necessario eseguire questi passaggi dopo aver aperto una soluzione esistente da questo Lab.
+2. Aprire la classe **HomeController.cs** dalla cartella **Controllers** .
 3. Aggiungere la seguente istruzione using.
 
     [!code-csharp[Main](whats-new-in-aspnet-mvc-4/samples/sample18.cs)]
-4. Aggiorna il **HomeController** classe da cui ereditare **AsyncController**. Controller che derivano da AsyncController abilitare ASP.NET elaborare le richieste asincrone e possono comunque i metodi di azione sincrono di servizio.
+4. Aggiornare la classe **HomeController** in modo che erediti da **AsyncController**. I controller che derivano da AsyncController consentono a ASP.NET di elaborare richieste asincrone e possono comunque eseguire il servizio di metodi di azione sincroni.
 
     [!code-csharp[Main](whats-new-in-aspnet-mvc-4/samples/sample19.cs)]
-5. Aggiungere il **async** parola chiave per il **indice** (metodo) e impostarlo come il tipo restituito **attività&lt;ActionResult&gt;**.
+5. Aggiungere la parola chiave **Async** al metodo **index** e fare in modo che restituisca l' **attività Type&lt;&gt;ActionResult** .
 
     [!code-csharp[Main](whats-new-in-aspnet-mvc-4/samples/sample20.cs)]
 
     > [!NOTE]
-    > Il **async** (parola chiave) è uno delle nuove parole chiave fornisce .NET Framework 4.5, indica al compilatore che questo metodo contiene codice asincrono. Oggetto **attività** oggetto rappresenta un'operazione asincrona che può essere completato in un determinato momento nel futuro.
-6. Sostituire il **client. GetAsync()** chiamata con la versione asincrona completo usando parola chiave await come illustrato di seguito.
+    > La parola chiave **Async** è una delle nuove parole chiave fornite dal .NET Framework 4,5; indica al compilatore che questo metodo contiene codice asincrono. Un oggetto **attività** rappresenta un'operazione asincrona che può essere completata in un determinato momento in futuro.
+6. Sostituire il **client. Chiamata a GetAsync ()** con la versione asincrona completa usando la parola chiave await, come illustrato di seguito.
 
-    (Code Snippet - *ASP.NET MVC 4 Lab - Ex04 - GetAsync*)
+    (Frammento di codice- *ASP.NET MVC 4 Lab-Ex04-GetAsync*)
 
     [!code-csharp[Main](whats-new-in-aspnet-mvc-4/samples/sample21.cs)]
 
     > [!NOTE]
-    > Nella versione precedente, si usava la **risultato** proprietà dalle **attività** oggetto da bloccare il thread fino a quando non viene restituito il risultato (versione di sincronizzazione).
+    > Nella versione precedente si stava usando la proprietà **result** dell'oggetto **Task** per bloccare il thread fino a quando non viene restituito il risultato (versione di sincronizzazione).
     > 
-    > Aggiungere il **await** parola chiave indica al compilatore di attendere in modo asincrono l'attività restituita dalla chiamata al metodo. Ciò significa che il resto del codice verrà eseguito come una richiamata solo dopo che il metodo di atteso viene completata. Un'altra cosa da notare è che non è necessario modificare il blocco try-catch per ottenere questo risultato: le eccezioni che si verificano in background o in primo piano continuano a essere intercettate senza operazioni aggiuntive utilizzando un gestore fornito dal framework.
-7. Modificare il codice per continuare con l'implementazione asincrona, sostituendo le righe con il nuovo codice, come illustrato di seguito
+    > L'aggiunta della parola chiave **await** indica al compilatore di attendere in modo asincrono l'attività restituita dalla chiamata al metodo. Ciò significa che il resto del codice verrà eseguito come callback solo dopo il completamento del metodo atteso. Un altro aspetto da notare è che non è necessario modificare il blocco try-catch per poter eseguire questa operazione: le eccezioni che si verificano in background o in primo piano verranno comunque intercettate senza alcun lavoro aggiuntivo utilizzando un gestore fornito dal Framework.
+7. Modificare il codice per continuare con l'implementazione asincrona sostituendo le righe con il nuovo codice come illustrato di seguito.
 
-    (Code Snippet - *ASP.NET MVC 4 Lab - Ex04 - ReadAsStringAsync*)
+    (Frammento di codice- *ASP.NET MVC 4 Lab-Ex04-ReadAsStringAsync*)
 
     [!code-csharp[Main](whats-new-in-aspnet-mvc-4/samples/sample22.cs)]
-8. Eseguire l'applicazione. Non si noterà alcuna modifica significativa, ma il codice non bloccherà un thread dal pool di thread, rendendo un migliore utilizzo delle risorse del server e migliorando le prestazioni.
+8. Eseguire l'applicazione. Si noterà che non vengono apportate modifiche sostanziali, ma il codice non bloccherà un thread dal pool di thread per un utilizzo migliore delle risorse del server e il miglioramento delle prestazioni.
 
     > [!NOTE]
-    > Altre informazioni sulle nuove funzionalità di programmazione asincrona nel laboratorio &quot; **programmazione asincrona in .NET 4.5 con c# e Visual Basic** &quot; incluse nel Training Kit di Visual Studio.
+    > È possibile ottenere altre informazioni sulle nuove funzionalità di programmazione asincrona nel Lab &quot;la **programmazione asincrona in .net 4,5 C# con e Visual Basic**&quot; incluse nel kit di formazione di Visual Studio.
 
 <a id="Task_2_-_Handling_Time-Outs_with_Cancellation_Tokens"></a>
-#### <a name="task-2---handling-time-outs-with-cancellation-tokens"></a>Attività 2: la gestione dei timeout con i token di annullamento
+#### <a name="task-2---handling-time-outs-with-cancellation-tokens"></a>Attività 2-gestione dei timeout con i token di annullamento
 
-Metodi di azione asincroni che restituiscono istanze delle attività possono supportare anche valori di timeout. In questa attività si aggiornerà il codice del metodo dell'indice per gestire uno scenario di timeout usando un token di annullamento.
+I metodi di azione asincroni che restituiscono istanze di attività possono supportare anche i timeout. In questa attività verrà aggiornato il codice del metodo index per gestire uno scenario di timeout utilizzando un token di annullamento.
 
-1. Tornare a Visual Studio e premere **MAIUSC+F5** per arrestare il debug.
-2. Aggiungere la seguente istruzione using il **HomeController.cs** file.
+1. Tornare a Visual Studio e premere **MAIUSC + F5** per arrestare il debug.
+2. Aggiungere la seguente istruzione using al file **HomeController.cs** .
 
     [!code-csharp[Main](whats-new-in-aspnet-mvc-4/samples/sample23.cs)]
-3. Aggiornare l'azione di indice per ricevere una **CancellationToken** argomento.
+3. Aggiornare l'azione index per ricevere un argomento **CancellationToken** .
 
     [!code-csharp[Main](whats-new-in-aspnet-mvc-4/samples/sample24.cs)]
-4. Aggiorna il **GetAsync** chiamata per passare il token di annullamento.
+4. Aggiornare la chiamata **GetAsync** per passare il token di annullamento.
 
-    (Code - Snippet *SendAsync Lab - Ex04 - ASP.NET MVC 4 con CancellationToken*)
+    (Frammento di codice- *ASP.NET MVC 4 Lab-Ex04-SendAsync con CancellationToken*)
 
     [!code-csharp[Main](whats-new-in-aspnet-mvc-4/samples/sample25.cs)]
-5. Decorare il *indice* metodo con un **AsyncTimeout** attributo impostato su 500 millisecondi e un **HandleError** attributo è configurato per gestire  **TaskCanceledException** mediante il reindirizzamento a un **TimedOut** visualizzazione.
+5. Decorare il metodo di *Indice* con un attributo **AsyncTimeout** impostato su 500 millisecondi e un attributo **HandleError** configurato per gestire **TaskCanceledException** mediante reindirizzamento a una visualizzazione a **timeout** .
 
-    (Code - Snippet *ASP.NET MVC 4 Lab - Ex04 - attributi*)
+    (Frammento di codice- *ASP.NET MVC 4 Lab-Ex04-Attributes*)
 
     [!code-csharp[Main](whats-new-in-aspnet-mvc-4/samples/sample26.cs)]
-6. Aprire il **PhotoController** classe e l'aggiornamento di **raccolta** metodo per ritardare i millisecondi esecuzione 1000 (1 secondo) per simulare un'attività a esecuzione prolungata.
+6. Aprire la classe **datacontroller** e aggiornare il metodo della **raccolta** per ritardare l'esecuzione di 1000 millisecondi (1 secondo) per simulare un'attività a esecuzione prolungata.
 
     [!code-csharp[Main](whats-new-in-aspnet-mvc-4/samples/sample27.cs)]
-7. Aprire il **Web. config** file e abilitare gli errori personalizzati, aggiungere l'elemento seguente.
+7. Aprire il file **Web. config** e abilitare gli errori personalizzati aggiungendo l'elemento seguente.
 
     [!code-xml[Main](whats-new-in-aspnet-mvc-4/samples/sample28.xml)]
-8. Creare una nuova visualizzazione nel **Views\Shared** denominate **TimedOut** e usare il layout predefinito. In Esplora soluzioni fare doppio clic il **Views\Shared** cartella e selezionare **Add | Visualizzazione**.
+8. Creare una nuova vista in **Views\Shared** denominata **timeout** e usare il layout predefinito. Nella Esplora soluzioni fare clic con il pulsante destro del mouse sulla cartella **Views\Shared** e scegliere **Aggiungi | Visualizzazione**.
 
-    ![Utilizzo di visualizzazioni diverse per ogni dispositivo mobile](whats-new-in-aspnet-mvc-4/_static/image36.png "con visualizzazioni diverse per ogni dispositivo mobile")
+    ![Uso di visualizzazioni diverse per ogni dispositivo mobile](whats-new-in-aspnet-mvc-4/_static/image36.png "Uso di visualizzazioni diverse per ogni dispositivo mobile")
 
-    *Utilizzo di visualizzazioni diverse per ogni dispositivo mobile*
-9. Aggiorna il **TimedOut** visualizzare il contenuto come illustrato di seguito.
+    *Uso di visualizzazioni diverse per ogni dispositivo mobile*
+9. Aggiornare il contenuto della vista di **timeout** , come illustrato di seguito.
 
     [!code-cshtml[Main](whats-new-in-aspnet-mvc-4/samples/sample29.cshtml)]
-10. Eseguire l'applicazione e passare all'URL radice. Come è stato aggiunto un **thread. Sleep** di 1000 millisecondi, si otterrà un errore di timeout, generato dal **AsyncTimeout** attributo e intercettare per il **HandleError** attributo.
+10. Eseguire l'applicazione e passare all'URL radice. Poiché è stato aggiunto un **thread. sospensione** di 1000 millisecondi, si otterrà un errore di timeout, generato dall'attributo **AsyncTimeout** , che verrà intercettato dall'attributo **HandleError** .
 
-    ![Eccezione di timeout gestita](whats-new-in-aspnet-mvc-4/_static/image37.png "gestita l'eccezione di timeout")
+    ![Eccezione di timeout gestita](whats-new-in-aspnet-mvc-4/_static/image37.png "Eccezione di timeout gestita")
 
     *Eccezione di timeout gestita*
 
 > [!NOTE]
-> Inoltre, è possibile distribuire questa applicazione per siti Web di Azure seguenti [appendice d: Pubblicazione di un'applicazione ASP.NET MVC 4 con distribuzione Web](#AppendixD).
+> Inoltre, è possibile distribuire l'applicazione in siti Web di Microsoft Azure dopo [l'Appendice D: pubblicazione di un'applicazione ASP.NET MVC 4 con distribuzione Web](#AppendixD).
 
 <a id="Summary"></a>
 
 <a id="Summary"></a>
 ## <a name="summary"></a>Riepilogo
 
-In questo-pratica, è stato osservato alcune delle nuove funzionalità residenti in ASP.NET MVC 4. Sono stati trattati i concetti seguenti:
+In questo laboratorio pratico sono state osservate alcune delle nuove funzionalità che risiedono in ASP.NET MVC 4. Sono stati discussi i concetti seguenti:
 
-- Sfruttare i vantaggi dei miglioramenti apportati a di ASP.NET MVC progetto modelli, che comprende il nuovo modello di progetto di applicazione per dispositivi mobili
-- Utilizzare l'attributo viewport HTML5 e query sui supporti CSS per migliorare la visualizzazione su dispositivi mobili
-- Usare jQuery Mobile per i miglioramenti progressivi e la creazione di web touchscreen ottimizzata dell'interfaccia utente
-- Creazione di visualizzazioni specifiche per dispositivi mobili
-- Utilizzare il componente di cambio di visualizzazione per passare tra le visualizzazioni per dispositivi mobili e desktop nell'applicazione
-- Creare controller asincrono usando il supporto di attività
+- Sfruttare i miglioramenti apportati ai modelli di progetto MVC ASP.NET, incluso il nuovo modello di progetto di applicazione per dispositivi mobili
+- Usare l'attributo viewport HTML5 e le query multimediali CSS per migliorare la visualizzazione sui dispositivi mobili
+- Usare jQuery Mobile per miglioramenti progressivi e per creare un'interfaccia utente Web ottimizzata per il tocco
+- Creare visualizzazioni specifiche per dispositivi mobili
+- Usare il componente View-Switcher per passare tra le visualizzazioni per dispositivi mobili e desktop nell'applicazione
+- Creazione di controller asincroni mediante supporto attività
 
 <a id="AppendixA"></a>
 
 <a id="Appendix_A_Using_Code_Snippets"></a>
-## <a name="appendix-a-using-code-snippets"></a>Appendice a: Uso dei frammenti di codice
+## <a name="appendix-a-using-code-snippets"></a>Appendice A: utilizzo di frammenti di codice
 
-Con i frammenti di codice, hai tutto il codice che necessario a tua disposizione. Il documento lab indicherà esattamente quando usarli, come illustrato nella figura seguente.
+Con i frammenti di codice, tutto il codice necessario è a portata di mano. Il documento Lab indica esattamente quando è possibile usarli, come illustrato nella figura seguente.
 
-![Uso di frammenti di codice di Visual Studio per inserire codice nel progetto](whats-new-in-aspnet-mvc-4/_static/image38.png "frammenti di codice con Visual Studio per inserire codice nel progetto")
+![Uso dei frammenti di codice di Visual Studio per inserire codice nel progetto](whats-new-in-aspnet-mvc-4/_static/image38.png "Uso dei frammenti di codice di Visual Studio per inserire codice nel progetto")
 
-*Uso di frammenti di codice di Visual Studio per inserire codice nel progetto*
+*Uso dei frammenti di codice di Visual Studio per inserire codice nel progetto*
 
-***Per aggiungere un frammento di codice utilizzando la tastiera (solo c#)***
+***Per aggiungere un frammento di codice usando laC# tastiera (solo)***
 
-1. Posizionare il cursore in cui si vuole inserire il codice.
-2. Iniziare a digitare il nome del frammento di codice (senza spazi o trattini).
-3. Guarda come IntelliSense consente di visualizzare i nomi dei frammenti di codice corrispondenti.
-4. Selezionare il frammento di codice corretto (o continuare a digitare fino a quando non viene selezionato il nome del frammento intero).
-5. Premere il tasto Tab due volte per inserire il frammento di codice nella posizione del cursore.
+1. Posizionare il cursore nel punto in cui si desidera inserire il codice.
+2. Iniziare a digitare il nome del frammento (senza spazi o trattini).
+3. Osservare come IntelliSense Visualizza i nomi dei frammenti di codice corrispondenti.
+4. Selezionare il frammento di codice corretto (oppure continua a digitare fino a quando non viene selezionato il nome dell'intero frammento).
+5. Premere il tasto TAB due volte per inserire il frammento nella posizione del cursore.
 
-![Iniziare a digitare il nome di frammento](whats-new-in-aspnet-mvc-4/_static/image39.png "inizia a digitare il nome del frammento di codice")
+![Inizia a digitare il nome del frammento](whats-new-in-aspnet-mvc-4/_static/image39.png "Inizia a digitare il nome del frammento")
 
-*Iniziare a digitare il nome del frammento di codice*
+*Inizia a digitare il nome del frammento*
 
-![Premere Tab per selezionare il frammento di codice evidenziata](whats-new-in-aspnet-mvc-4/_static/image40.png "premere Tab per selezionare il frammento di codice evidenziata")
+![Premere TAB per selezionare il frammento evidenziato](whats-new-in-aspnet-mvc-4/_static/image40.png "Premere TAB per selezionare il frammento evidenziato")
 
-*Premere Tab per selezionare il frammento di codice evidenziata*
+*Premere TAB per selezionare il frammento evidenziato*
 
-![Il frammento di codice e premere nuovamente Tab espanderà](whats-new-in-aspnet-mvc-4/_static/image41.png "si espanderà il frammento di codice e premere nuovamente Tab")
+![Premere nuovamente TAB per espandere il frammento di codice](whats-new-in-aspnet-mvc-4/_static/image41.png "Premere nuovamente TAB per espandere il frammento di codice")
 
-*Il frammento di codice e premere nuovamente Tab espanderà*
+*Premere nuovamente TAB per espandere il frammento di codice*
 
-***Per aggiungere un frammento di codice usando il mouse (c#, Visual Basic e XML)***
+***Per aggiungere un frammento di codice utilizzando ilC#mouse (, Visual Basic e XML)***
 
-1. Pulsante destro del mouse in cui si desidera inserire il frammento di codice.
-2. Selezionare **Inserisci frammento** aggiungendo **frammenti di codice**.
-3. Selezionare il frammento di codice rilevante dall'elenco, facendo clic su di esso.
+1. Fare clic con il pulsante destro del mouse su dove si vuole inserire il frammento di codice.
+2. Selezionare **Inserisci frammento** seguito da **frammenti di codice**.
+3. Selezionare il frammento pertinente nell'elenco facendo clic su di esso.
 
-![Pulsante destro del mouse in cui si desidera inserire il frammento di codice e scegliere Inserisci frammento](whats-new-in-aspnet-mvc-4/_static/image42.png "rapida in cui si desidera inserire il frammento di codice e scegliere Inserisci frammento di codice")
+![Fare clic con il pulsante destro del mouse su dove si vuole inserire il frammento di codice e selezionare Inserisci frammento](whats-new-in-aspnet-mvc-4/_static/image42.png "Fare clic con il pulsante destro del mouse su dove si vuole inserire il frammento di codice e selezionare Inserisci frammento")
 
-*Pulsante destro del mouse in cui si desidera inserire il frammento di codice e scegliere Inserisci frammento di codice*
+*Fare clic con il pulsante destro del mouse su dove si vuole inserire il frammento di codice e selezionare Inserisci frammento*
 
-![Selezionare il frammento di codice rilevante dall'elenco, facendo clic su di esso](whats-new-in-aspnet-mvc-4/_static/image43.png "selezionare il frammento di codice rilevante dall'elenco, facendo clic su di essa")
+![Selezionare il frammento pertinente dall'elenco, facendo clic su di esso](whats-new-in-aspnet-mvc-4/_static/image43.png "Selezionare il frammento pertinente dall'elenco, facendo clic su di esso")
 
-*Selezionare il frammento di codice rilevante dall'elenco, facendo clic su di essa*
+*Selezionare il frammento pertinente dall'elenco, facendo clic su di esso*
 
 <a id="AppendixB"></a>
 
 <a id="Appendix_B_Installing_Visual_Studio_Express_2012_for_Web"></a>
-## <a name="appendix-b-installing-visual-studio-express-2012-for-web"></a>Appendice b: Installazione di Visual Studio Express 2012 per Web
+## <a name="appendix-b-installing-visual-studio-express-2012-for-web"></a>Appendice B: installazione di Visual Studio Express 2012 per il Web
 
-È possibile installare **Microsoft Visual Studio Express 2012 per Web** o da un'altra &quot;Express&quot; versione utilizzando il **[Microsoft Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx)**. Le istruzioni seguenti consentono di eseguire i passaggi necessari per installare *Visual studio Express 2012 per Web* utilizzando *installazione guidata piattaforma Web Microsoft*.
+È possibile installare **Microsoft Visual Studio Express 2012 per il Web** o un'altra versione &quot;Express&quot; usando il **[installazione guidata piattaforma Web Microsoft](https://www.microsoft.com/web/downloads/platform.aspx)** . Le istruzioni seguenti illustrano i passaggi necessari per installare *Visual Studio Express 2012 per il Web* con *installazione guidata piattaforma Web Microsoft*.
 
-1. Passare a [ [ https://go.microsoft.com/?linkid=9810169 ](https://go.microsoft.com/?linkid=9810169) ](https://go.microsoft.com/?linkid=9810169). In alternativa, se è già stato installato installazione guidata piattaforma Web, è possibile aprire e cercare il prodotto &quot; *Visual Studio Express 2012 per Web con Windows Azure SDK*&quot;.
-2. Fare clic su **Installa ora**. Se non hai **instalace Webové Platformy** si verrà reindirizzati per scaricarlo e installarlo prima di tutto.
-3. Una volta **instalace Webové Platformy** è aperto, fare clic su **installare** per avviare il programma di installazione.
+1. Passare a [[https://go.microsoft.com/?linkid=9810169](https://go.microsoft.com/?linkid=9810169)](https://go.microsoft.com/?linkid=9810169). In alternativa, se è già stata installata l'installazione guidata piattaforma Web, è possibile aprirla e cercare il prodotto &quot;*Visual Studio Express 2012 per il Web con Windows Azure SDK*&quot;.
+2. Fare clic su **Installa ora**. Se non si dispone dell' **installazione guidata piattaforma Web** , si verrà reindirizzati per il download e l'installazione iniziale.
+3. Quando l'installazione **guidata piattaforma Web** è aperta, fare clic su **Installa** per avviare l'installazione.
 
-    ![Installa Visual Studio Express](whats-new-in-aspnet-mvc-4/_static/image44.png "installa Visual Studio Express")
+    ![Installa Visual Studio Express](whats-new-in-aspnet-mvc-4/_static/image44.png "Installa Visual Studio Express")
 
     *Installa Visual Studio Express*
-4. Leggere i termini e le licenze di tutti i prodotti e fare clic su **accetto** per continuare.
+4. Leggere tutti i termini e le licenze dei prodotti e fare clic su **Accetto** per continuare.
 
-    ![Accettare le condizioni di licenza](whats-new-in-aspnet-mvc-4/_static/image45.png)
+    ![Accettazione delle condizioni di licenza](whats-new-in-aspnet-mvc-4/_static/image45.png)
 
-    *Accettare le condizioni di licenza*
-5. Attendere finché non viene completato il processo di download e l'installazione.
+    *Accettazione delle condizioni di licenza*
+5. Attendere il completamento del processo di download e installazione.
 
     ![Stato dell'installazione](whats-new-in-aspnet-mvc-4/_static/image46.png)
 
@@ -779,249 +779,249 @@ Con i frammenti di codice, hai tutto il codice che necessario a tua disposizione
     ![Installazione completata](whats-new-in-aspnet-mvc-4/_static/image47.png)
 
     *Installazione completata*
-7. Fare clic su **Exit** per chiudere l'installazione guidata piattaforma Web.
-8. Per aprire Visual Studio Express per Web, fare clic per il **avviare** schermata e iniziare la scrittura &quot; **Visual Studio Express**&quot;, quindi fare clic sul **Visual Studio Express per Web** il riquadro.
+7. Fare clic su **Esci** per chiudere l'installazione guidata piattaforma Web.
+8. Per aprire Visual Studio Express per il Web, passare alla schermata **Start** e iniziare a scrivere &quot;**visual Studio Express**&quot;, quindi fare clic sul riquadro **vs Express per il Web** .
 
-    ![Visual Studio Express per il riquadro Web](whats-new-in-aspnet-mvc-4/_static/image48.png)
+    ![Riquadro VS Express per il Web](whats-new-in-aspnet-mvc-4/_static/image48.png)
 
-    *Visual Studio Express per il riquadro Web*
+    *Riquadro VS Express per il Web*
 
 <a id="AppendixC"></a>
 
 <a id="Appendix_C_Installing_WebMatrix_2_and_iPhone_Simulator"></a>
-## <a name="appendix-c-installing-webmatrix-2-and-iphone-simulator"></a>Appendice c: Installazione di WebMatrix 2 e simulatore iPhone
+## <a name="appendix-c-installing-webmatrix-2-and-iphone-simulator"></a>Appendice C: installazione di WebMatrix 2 e simulatore iPhone
 
-Per eseguire il sito in un dispositivo simulato iPhone è possibile usare l'estensione di WebMatrix &quot;Electric simulatore di dispositivi mobili per iPhone&quot;. Inoltre, è possibile configurare la stessa estensione per eseguire il simulatore di Visual Studio 2012.
+Per eseguire il sito in un dispositivo iPhone simulato, è possibile usare l'estensione WebMatrix &quot;Electric mobile Simulator per il&quot;iPhone. Inoltre, è possibile configurare la stessa estensione per eseguire il simulatore da Visual Studio 2012.
 
 <a id="ApxCTask1"></a>
 
 <a id="Task_1_-_Installing_WebMatrix_2"></a>
-#### <a name="task-1---installing-webmatrix-2"></a>Attività 1: installazione di WebMatrix 2
+#### <a name="task-1---installing-webmatrix-2"></a>Attività 1-installazione di WebMatrix 2
 
-1. Passare a [ [ https://go.microsoft.com/?linkid=9809776 ](https://go.microsoft.com/?linkid=9809776) ](https://go.microsoft.com/?linkid=9810169). In alternativa, se è già stato installato installazione guidata piattaforma Web, è possibile aprire e cercare il prodotto &quot; *WebMatrix 2*&quot;.
-2. Fare clic su **Installa ora**. Se non hai **instalace Webové Platformy** si verrà reindirizzati per scaricarlo e installarlo prima di tutto.
-3. Una volta **instalace Webové Platformy** è aperto, fare clic su **installare** per avviare il programma di installazione.
+1. Passare a [[https://go.microsoft.com/?linkid=9809776](https://go.microsoft.com/?linkid=9809776)](https://go.microsoft.com/?linkid=9810169). In alternativa, se è già stata installata l'installazione guidata piattaforma Web, è possibile aprirla e cercare il prodotto &quot;*WebMatrix 2*&quot;.
+2. Fare clic su **Installa ora**. Se non si dispone dell' **installazione guidata piattaforma Web** , si verrà reindirizzati per il download e l'installazione iniziale.
+3. Quando l'installazione **guidata piattaforma Web** è aperta, fare clic su **Installa** per avviare l'installazione.
 
-    ![Installare WebMatrix 2](whats-new-in-aspnet-mvc-4/_static/image49.png "installare WebMatrix 2")
+    ![Installare WebMatrix 2](whats-new-in-aspnet-mvc-4/_static/image49.png "Installare WebMatrix 2")
 
     *Installare WebMatrix 2*
-4. Leggere i termini e le licenze di tutti i prodotti e fare clic su **accetto** per continuare.
+4. Leggere tutti i termini e le licenze dei prodotti e fare clic su **Accetto** per continuare.
 
-    ![Accettare le condizioni di licenza](whats-new-in-aspnet-mvc-4/_static/image50.png "accettando le condizioni di licenza")
+    ![Accettazione delle condizioni di licenza](whats-new-in-aspnet-mvc-4/_static/image50.png "Accettazione delle condizioni di licenza")
 
-    *Accettare le condizioni di licenza*
-5. Attendere finché non viene completato il processo di download e l'installazione.
+    *Accettazione delle condizioni di licenza*
+5. Attendere il completamento del processo di download e installazione.
 
-    ![Lo stato dell'installazione](whats-new-in-aspnet-mvc-4/_static/image51.png "lo stato dell'installazione")
+    ![Stato dell'installazione](whats-new-in-aspnet-mvc-4/_static/image51.png "Stato dell'installazione")
 
     *Stato dell'installazione*
 6. Al termine dell'installazione, fare clic su **fine**.
 
-    ![Installazione completata](whats-new-in-aspnet-mvc-4/_static/image52.png "installazione è stata completata")
+    ![Installazione completata](whats-new-in-aspnet-mvc-4/_static/image52.png "Installazione completata")
 
     *Installazione completata*
-7. Fare clic su **Exit** per chiudere l'installazione guidata piattaforma Web.
+7. Fare clic su **Esci** per chiudere l'installazione guidata piattaforma Web.
 
 <a id="ApxCTask2"></a>
 
 <a id="Task_2_-_Installing_the_iPhone_Simulator_Extension"></a>
-#### <a name="task-2---installing-the-iphone-simulator-extension"></a>Attività 2: installare l'estensione di simulatore iPhone
+#### <a name="task-2---installing-the-iphone-simulator-extension"></a>Attività 2: installazione dell'estensione del simulatore iPhone
 
-1. Eseguire **WebMatrix** e aprire qualsiasi sito Web esistente o crearne uno nuovo.
-2. Fare clic sul **eseguiti** pulsante la **Home** della barra multifunzione e selezionare **Aggiungi nuovo**.
+1. Eseguire **WebMatrix** e aprire un sito Web esistente o crearne uno nuovo.
+2. Fare clic sul pulsante **Esegui** nella scheda **Home** della barra multifunzione e selezionare **Aggiungi nuovo**.
 
-    ![Aggiunta nuova estensione di WebMatrix](whats-new-in-aspnet-mvc-4/_static/image53.png "aggiunta nuova estensione di WebMatrix")
+    ![Aggiunta di una nuova estensione di WebMatrix](whats-new-in-aspnet-mvc-4/_static/image53.png "Aggiunta di una nuova estensione di WebMatrix")
 
-    *Aggiunta nuova estensione di WebMatrix*
-3. Selezionare **simulatore iPhone** e fare clic su **installare**.
+    *Aggiunta di una nuova estensione di WebMatrix*
+3. Selezionare **simulatore iPhone** e fare clic su **Installa**.
 
-    ![Esplorazione delle estensioni di WebMatrix](whats-new-in-aspnet-mvc-4/_static/image54.png "estensioni esplorazione WebMatrix")
+    ![Esplorazione di estensioni WebMatrix](whats-new-in-aspnet-mvc-4/_static/image54.png "Esplorazione di estensioni WebMatrix")
 
-    *Esplorazione delle estensioni di WebMatrix*
-4. Nei dettagli del pacchetto, fare clic su **installare** per continuare con l'installazione dell'estensione.
+    *Esplorazione di estensioni WebMatrix*
+4. Nei dettagli del pacchetto fare clic su **Installa** per continuare con l'installazione dell'estensione.
 
-    ![estensione di simulatore iPhone](whats-new-in-aspnet-mvc-4/_static/image55.png "estensione simulatore iPhone")
+    ![estensione simulatore iPhone](whats-new-in-aspnet-mvc-4/_static/image55.png "estensione simulatore iPhone")
 
-    *estensione di simulatore iPhone*
-5. Leggere e accettare le condizioni di licenza di estensione.
+    *estensione simulatore iPhone*
+5. Leggere e accettare il contratto di licenza con l'estensione.
 
-    ![Estensione di WebMatrix EULA](whats-new-in-aspnet-mvc-4/_static/image56.png "con l'estensione di WebMatrix")
+    ![EULA estensione WebMatrix](whats-new-in-aspnet-mvc-4/_static/image56.png "EULA estensione WebMatrix")
 
-    *Con l'estensione di WebMatrix*
-6. A questo punto, è possibile eseguire il sito Web da WebMatrix utilizzando l'opzione simulatore iPhone.
+    *EULA estensione WebMatrix*
+6. A questo punto, è possibile eseguire il sito Web da WebMatrix usando l'opzione simulatore iPhone.
 
-    ![Esecuzione con un iPhone](whats-new-in-aspnet-mvc-4/_static/image57.png "eseguiti usando iPhone")
+    ![Esegui con iPhone](whats-new-in-aspnet-mvc-4/_static/image57.png "Esegui con iPhone")
 
-    *Esecuzione con un iPhone*
+    *Esegui con iPhone*
 
 <a id="ApxCTask3"></a>
 
 <a id="Task_3_-_Configuring_Visual_Studio_2012_to_run_iPhone_Simulator"></a>
-#### <a name="task-3---configuring-visual-studio-2012-to-run-iphone-simulator"></a>Attività 3: configurazione di Visual Studio 2012 per l'esecuzione di simulatore iPhone
+#### <a name="task-3---configuring-visual-studio-2012-to-run-iphone-simulator"></a>Attività 3-configurazione di Visual Studio 2012 per l'esecuzione del simulatore iPhone
 
 1. Aprire **Visual Studio 2012** e aprire qualsiasi sito Web o creare un nuovo progetto.
-2. Fare clic sulla freccia verso il basso sul pulsante di esecuzione e selezionare **esplorare con**.
+2. Fare clic sulla freccia in giù del pulsante Esegui e selezionare **Sfoglia con**.
 
-    ![Esplora con](whats-new-in-aspnet-mvc-4/_static/image58.png "Esplora con")
+    ![Sfoglia con](whats-new-in-aspnet-mvc-4/_static/image58.png "Sfoglia con")
 
-    *Esplora con*
-3. Nel &quot;Esplora con&quot; finestra di dialogo, fare clic su **Add**.
-4. Nel &quot;Aggiungi programma&quot; finestra di dialogo, usare i valori seguenti:
+    *Sfoglia con*
+3. Nella finestra di dialogo &quot;Sfoglia con&quot; fare clic su **Aggiungi**.
+4. Nella finestra di dialogo &quot;Aggiungi&quot; di programma usare i valori seguenti:
 
-   - **Programma**: C:\Users\*{CurrentUser}*\AppData\Local\Microsoft\WebMatrix\Extensions\20\iPhoneSimulator\ElectricMobileSim\ElectricMobileSim.exe *(aggiornare di conseguenza il percorso)*
+   - **Programma**: C:\Users\*{CurrentUser} * \AppData\Local\Microsoft\WebMatrix\Extensions\20\iPhoneSimulator\ElectricMobileSim\ElectricMobileSim.exe *(aggiornare il percorso di conseguenza)*
    - **Argomenti**: &quot;1&quot;
    - **Nome descrittivo**: simulatore iPhone
 
      ![Aggiungi programma](whats-new-in-aspnet-mvc-4/_static/image59.png "Aggiungi programma")
 
-     *Aggiungi programma di esplorare con*
+     *Aggiungi programma per la ricerca*
 5. Fare clic su **OK** e chiudere le finestre di dialogo.
-6. A questo punto si è in grado di eseguire le applicazioni Web nel simulatore iPhone da Visual Studio 2012.
+6. A questo punto è possibile eseguire le applicazioni Web nel simulatore iPhone da Visual Studio 2012.
 
-    ![Esplora con simulatore iPhone](whats-new-in-aspnet-mvc-4/_static/image60.png "Sfoglia con simulatore iPhone")
+    ![Sfoglia con simulatore iPhone](whats-new-in-aspnet-mvc-4/_static/image60.png "Sfoglia con simulatore iPhone")
 
-    *Esplora con simulatore iPhone*
+    *Sfoglia con simulatore iPhone*
 
 <a id="AppendixD"></a>
 
 <a id="Appendix_D_Publishing_an_ASPNET_MVC_4_Application_using_Web_Deploy"></a>
-## <a name="appendix-d-publishing-an-aspnet-mvc-4-application-using-web-deploy"></a>Appendice d: Pubblicazione di un'applicazione ASP.NET MVC 4 con distribuzione Web
+## <a name="appendix-d-publishing-an-aspnet-mvc-4-application-using-web-deploy"></a>Appendice D: pubblicazione di un'applicazione ASP.NET MVC 4 con Distribuzione Web
 
-In questa appendice spiega come creare un nuovo sito web dal portale di gestione di Azure e pubblicare l'applicazione che è stato ottenuto seguendo il lab, sfruttando la funzionalità di pubblicazione di distribuzione Web fornita da Azure.
+In questa appendice verrà illustrato come creare un nuovo sito Web dalla portale di gestione di Windows Azure e come pubblicare l'applicazione ottenuta seguendo il Lab, sfruttando la funzionalità di pubblicazione Distribuzione Web fornita da Windows Azure.
 
 <a id="ApxDTask1"></a>
 
 <a id="Task_1_-_Creating_a_New_Web_Site_from_the_Windows_Azure_Portal"></a>
-#### <a name="task-1---creating-a-new-web-site-from-the-windows-azure-portal"></a>Attività 1: creazione di un nuovo sito Web di Windows portale di Azure
+#### <a name="task-1---creating-a-new-web-site-from-the-windows-azure-portal"></a>Attività 1: creazione di un nuovo sito Web dal portale di Windows Azure
 
-1. Andare alla [portale di gestione di Windows Azure](https://manage.windowsazure.com/) e accedere usando le credenziali di Microsoft associate alla sottoscrizione.
+1. Accedere al [portale di gestione di Windows Azure](https://manage.windowsazure.com/) e accedere con le credenziali Microsoft associate alla sottoscrizione.
 
     > [!NOTE]
-    > Con Windows Azure Puoi ospitare gratuitamente 10 siti Web ASP.NET e la scalabilità orizzontale man mano che aumenta il traffico. È possibile effettuare l'iscrizione [qui](https://aka.ms/aspnet-hol-azure).
+    > Con Windows Azure è possibile ospitare gratuitamente 10 siti Web ASP.NET e quindi ridimensionarli in base alla crescita del traffico. È possibile iscriversi [qui](https://aka.ms/aspnet-hol-azure).
 
-    ![Accedere al portale di Azure](whats-new-in-aspnet-mvc-4/_static/image61.png "accedere al portale di Azure")
+    ![Accedere a Windows portale di Azure](whats-new-in-aspnet-mvc-4/_static/image61.png "Accedere a Windows portale di Azure")
 
-    *Accedere al portale di gestione di Azure*
-2. Fare clic su **New** sulla barra dei comandi.
+    *Accedere a portale di gestione di Windows Azure*
+2. Fare clic su **nuovo** sulla barra dei comandi.
 
-    ![Creazione di un nuovo sito Web](whats-new-in-aspnet-mvc-4/_static/image62.png "creando un nuovo sito Web")
+    ![Creazione di un nuovo sito Web](whats-new-in-aspnet-mvc-4/_static/image62.png "Creazione di un nuovo sito Web")
 
     *Creazione di un nuovo sito Web*
-3. Fare clic su **Compute** | **sito Web**. Quindi selezionare **creazione rapida** opzione. Specificare un URL disponibile per il nuovo sito web e fare clic su **Crea sito Web**.
+3. Fare clic su **calcolo** | **sito Web**. Quindi selezionare opzione **creazione rapida** . Fornire un URL disponibile per il nuovo sito Web e fare clic su **Crea sito Web**.
 
     > [!NOTE]
-    > Un sito Web di Microsoft Azure è l'host per un'applicazione web in esecuzione nel cloud che è possibile controllare e gestire. L'opzione Creazione rapida consente di distribuire un'applicazione web completa per il sito Web Microsoft Azure all'esterno del portale. Non include i passaggi per la configurazione di un database.
+    > Un sito Web di Microsoft Azure è l'host di un'applicazione Web in esecuzione nel cloud che è possibile controllare e gestire. L'opzione Creazione rapida consente di distribuire un'applicazione Web completata nel sito Web di Windows Azure dall'esterno del portale. Non sono inclusi i passaggi per la configurazione di un database.
 
-    ![Creazione di un nuovo sito Web utilizzando Creazione rapida](whats-new-in-aspnet-mvc-4/_static/image63.png "creando un nuovo sito Web mediante Creazione rapida")
+    ![Creazione di un nuovo sito Web mediante creazione rapida](whats-new-in-aspnet-mvc-4/_static/image63.png "Creazione di un nuovo sito Web mediante creazione rapida")
 
-    *Creazione di un nuovo sito Web utilizzando Creazione rapida*
-4. Attendere finché il nuovo **sito Web** viene creato.
-5. Dopo aver creato il sito Web fare clic sul collegamento sotto i **URL** colonna. Verificare che il nuovo sito Web sia in funzione.
+    *Creazione di un nuovo sito Web mediante creazione rapida*
+4. Attendere la creazione del nuovo **sito Web** .
+5. Una volta creato il sito Web, fare clic sul collegamento nella colonna **URL** . Verificare che il nuovo sito Web sia funzionante.
 
-    ![Passare al nuovo sito web](whats-new-in-aspnet-mvc-4/_static/image64.png "passare al nuovo sito web")
+    ![Esplorazione del nuovo sito Web](whats-new-in-aspnet-mvc-4/_static/image64.png "Esplorazione del nuovo sito Web")
 
-    *Passare al nuovo sito web*
+    *Esplorazione del nuovo sito Web*
 
-    ![Sito Web in esecuzione](whats-new-in-aspnet-mvc-4/_static/image65.png "sito Web in esecuzione")
+    ![Sito Web in esecuzione](whats-new-in-aspnet-mvc-4/_static/image65.png "Sito Web in esecuzione")
 
     *Sito Web in esecuzione*
-6. Tornare al portale e fare clic sul nome del sito web con il **nome** colonna per visualizzare le pagine di gestione.
+6. Tornare al portale e fare clic sul nome del sito Web nella colonna **nome** per visualizzare le pagine di gestione.
 
-    ![Aprire le pagine di gestione sito web](whats-new-in-aspnet-mvc-4/_static/image66.png "aprire le pagine di gestione sito web")
+    ![Apertura delle pagine di gestione del sito Web](whats-new-in-aspnet-mvc-4/_static/image66.png "Apertura delle pagine di gestione del sito Web")
 
-    *Aprire le pagine di gestione sito Web*
-7. Nel **Dashboard** nella pagina il **riepilogo rapido** fare clic sui **Scarica profilo di pubblicazione** collegamento.
+    *Apertura delle pagine di gestione del sito Web*
+7. Nella sezione **Riepilogo rapido** della pagina **Dashboard** fare clic sul collegamento **Scarica profilo di pubblicazione** .
 
     > [!NOTE]
-    > Il *profilo di pubblicazione* contiene tutte le informazioni necessarie per pubblicare un'applicazione web in un sito Web di Azure per ogni metodo di pubblicazione abilitato. Il profilo di pubblicazione contiene l'URL, le credenziali dell'utente e stringhe di database necessarie per connettersi a e l'autenticazione in ognuno degli endpoint per cui è abilitato un metodo di pubblicazione. **Microsoft WebMatrix 2**, **Microsoft Visual Studio Express per Web** e **Microsoft Visual Studio 2012** supportano la lettura dei profili di pubblicazione per automatizzare la configurazione di questi programmi per pubblicazione di applicazioni web in siti Web di Windows Azure.
+    > Il *profilo di pubblicazione* contiene tutte le informazioni necessarie per pubblicare un'applicazione Web in un sito Web di Windows Azure per ogni metodo di pubblicazione abilitato. Nel profilo di pubblicazione sono contenuti gli URL, le credenziali utente e le stringhe di database necessari per la connessione e l'autenticazione in ognuno degli endpoint per cui è abilitato un metodo di pubblicazione. **Microsoft WebMatrix 2**, **Microsoft Visual Studio Express per il Web** e **Microsoft Visual Studio 2012** supportano la lettura di profili di pubblicazione per automatizzare la configurazione di questi programmi per la pubblicazione di applicazioni Web in siti Web di Windows Azure.
 
-    ![Download del sito web di profilo di pubblicazione](whats-new-in-aspnet-mvc-4/_static/image67.png "scaricando il sito web di profilo di pubblicazione")
+    ![Download del profilo di pubblicazione del sito Web](whats-new-in-aspnet-mvc-4/_static/image67.png "Download del profilo di pubblicazione del sito Web")
 
-    *Profilo di pubblicazione scaricato il sito Web*
-8. Scaricare il file di profilo di pubblicazione in una posizione nota. In questo esercizio ulteriormente si vedrà come usare questo file per pubblicare un'applicazione web a un siti Web di Windows Azure da Visual Studio.
+    *Download del profilo di pubblicazione del sito Web*
+8. Scaricare il file del profilo di pubblicazione in un percorso noto. Più avanti in questo esercizio verrà illustrato come utilizzare questo file per pubblicare un'applicazione Web in siti Web di Windows Azure da Visual Studio.
 
-    ![Salvare il file di profilo di pubblicazione](whats-new-in-aspnet-mvc-4/_static/image68.png "salvataggio del profilo di pubblicazione")
+    ![Salvataggio del file del profilo di pubblicazione](whats-new-in-aspnet-mvc-4/_static/image68.png "Salvataggio del profilo di pubblicazione")
 
-    *Salvare il file di profilo di pubblicazione*
+    *Salvataggio del file del profilo di pubblicazione*
 
 <a id="ApxDTask2"></a>
 
 <a id="Task_2_-_Configuring_the_Database_Server"></a>
-#### <a name="task-2---configuring-the-database-server"></a>Attività 2: configurare il Server di Database
+#### <a name="task-2---configuring-the-database-server"></a>Attività 2: configurazione del server di database
 
-Se l'applicazione Usa SQL Server database è necessario creare un Database di SQL server. Se si vuole distribuire una semplice applicazione che non Usa SQL Server è possibile ignorare questa attività.
+Se l'applicazione usa i database di SQL Server sarà necessario creare un server di database SQL. Se si desidera distribuire una semplice applicazione che non utilizza SQL Server è possibile ignorare questa attività.
 
-1. È necessario un server di Database SQL per archiviare il database dell'applicazione. È possibile visualizzare i server di Database SQL dalla sottoscrizione nel portale di gestione di Microsoft Azure all'indirizzo **database Sql** | **server** | **del Server Dashboard**. Se non si dispone di un server creato, è possibile crearne una usando il **Add** pulsante sulla barra dei comandi. Annotare il **nome server e URL, nome dell'account di accesso amministratore e la password**, come verranno usati nelle attività successiva. Non creare il database, come verrà creato in una fase successiva.
+1. Per archiviare il database dell'applicazione, sarà necessario un server di database SQL. È possibile visualizzare i server del database SQL dalla sottoscrizione nel portale di gestione di Microsoft Azure in **database sql** | **Server** | **Dashboard del server**. Se non è stato creato un server, è possibile crearne uno usando il pulsante **Aggiungi** sulla barra dei comandi. Annotare il **nome e l'URL del server, il nome e la password dell'account di accesso dell'amministratore**, che verranno usati nelle attività successive. Non creare ancora il database, perché verrà creato in una fase successiva.
 
-    ![Dashboard di Server di Database SQL](whats-new-in-aspnet-mvc-4/_static/image69.png "Dashboard di Server di Database SQL")
+    ![Dashboard del server di database SQL](whats-new-in-aspnet-mvc-4/_static/image69.png "Dashboard del server di database SQL")
 
-    *Dashboard di Server di Database SQL*
-2. Nell'attività successiva si testerà la connessione al database da Visual Studio, per questo motivo è necessario includere l'indirizzo IP locale nell'elenco del server del **indirizzi IP consentiti**. A tale scopo, fare clic su **configura**, selezionare l'indirizzo IP dal **indirizzo IP Client corrente** e incollarlo nel **indirizzo IP iniziale** e **l'indirizzoIPfinale** caselle di testo e scegliere il ![add-client-ip-address-ok-button](whats-new-in-aspnet-mvc-4/_static/image70.png) pulsante.
+    *Dashboard del server di database SQL*
+2. Nell'attività successiva verrà testato la connessione al database da Visual Studio. per questo motivo, è necessario includere l'indirizzo IP locale nell'elenco di **indirizzi IP consentiti**del server. A tale scopo, fare clic su **Configura**, selezionare l'indirizzo IP da **indirizzo IP client corrente** e incollarlo nelle caselle di testo indirizzo IP **iniziale** e **indirizzo IP finale** , quindi fare clic sul pulsante ![Aggiungi-client-IP-address-OK-pulsante](whats-new-in-aspnet-mvc-4/_static/image70.png).
 
-    ![Aggiunta indirizzo IP del Client](whats-new-in-aspnet-mvc-4/_static/image71.png)
+    ![Aggiunta dell'indirizzo IP del client](whats-new-in-aspnet-mvc-4/_static/image71.png)
 
-    *Aggiunta indirizzo IP del Client*
-3. Una volta il **indirizzo IP del Client** viene aggiunto a indirizzi IP consentiti elenco, fare clic su **salvare** per confermare le modifiche.
+    *Aggiunta dell'indirizzo IP del client*
+3. Una volta aggiunto l' **indirizzo IP del client** all'elenco indirizzi IP consentiti, fare clic su **Salva** per confermare le modifiche.
 
-    ![Confermare le modifiche](whats-new-in-aspnet-mvc-4/_static/image72.png)
+    ![Conferma modifiche](whats-new-in-aspnet-mvc-4/_static/image72.png)
 
-    *Confermare le modifiche*
+    *Conferma modifiche*
 
 <a id="ApxDTask3"></a>
 
 <a id="Task_3_-_Publishing_an_ASPNET_MVC_4_Application_using_Web_Deploy"></a>
-#### <a name="task-3---publishing-an-aspnet-mvc-4-application-using-web-deploy"></a>Attività 3: pubblicare un'applicazione ASP.NET MVC 4 con distribuzione Web
+#### <a name="task-3---publishing-an-aspnet-mvc-4-application-using-web-deploy"></a>Attività 3: pubblicazione di un'applicazione ASP.NET MVC 4 con Distribuzione Web
 
-1. Tornare alla soluzione ASP.NET MVC 4. Nel **Esplora soluzioni**, fare clic sul progetto sito web e selezionare **Publish**.
+1. Tornare alla soluzione ASP.NET MVC 4. Nella **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto di sito Web e scegliere **pubblica**.
 
-    ![Pubblicazione dell'applicazione](whats-new-in-aspnet-mvc-4/_static/image73.png "pubblicazione dell'applicazione")
+    ![Pubblicazione dell'applicazione](whats-new-in-aspnet-mvc-4/_static/image73.png "Pubblicazione dell'applicazione")
 
-    *Pubblicazione del sito web*
-2. Importare il profilo di pubblicazione che è stato salvato nella prima attività.
+    *Pubblicazione del sito Web*
+2. Importare il profilo di pubblicazione salvato nella prima attività.
 
-    ![L'importazione del profilo di pubblicazione](whats-new-in-aspnet-mvc-4/_static/image74.png "l'importazione del profilo di pubblicazione")
+    ![Importazione del profilo di pubblicazione](whats-new-in-aspnet-mvc-4/_static/image74.png "Importazione del profilo di pubblicazione")
 
     *Importazione del profilo di pubblicazione*
-3. Fare clic su **convalidare la connessione**. Dopo aver completata la convalida fare clic su **successivo**.
+3. Fare clic su **convalida connessione**. Al termine della convalida, fare clic su **Avanti**.
 
     > [!NOTE]
-    > La convalida è stata completata una volta che visualizzato un segno di spunta verde accanto al pulsante convalida connessione.
+    > La convalida è completa quando viene visualizzato un segno di spunta verde accanto al pulsante Convalida connessione.
 
-    ![La convalida connessione](whats-new-in-aspnet-mvc-4/_static/image75.png "convalida della connessione")
+    ![Convalida della connessione](whats-new-in-aspnet-mvc-4/_static/image75.png "Convalida della connessione")
 
     *Convalida della connessione*
-4. Nel **impostazioni** nella pagina il **database** sezione, fare clic sul pulsante accanto alla casella di testo della connessione di database (vale a dire **DefaultConnection**).
+4. Nella pagina **Impostazioni** , nella sezione **database** , fare clic sul pulsante accanto alla casella di testo della connessione del database, ad esempio **DefaultConnection**.
 
-    ![Configurazione della distribuzione Web](whats-new-in-aspnet-mvc-4/_static/image76.png "configurazione della distribuzione Web")
+    ![Configurazione distribuzione Web](whats-new-in-aspnet-mvc-4/_static/image76.png "Configurazione distribuzione Web")
 
-    *Configurazione della distribuzione Web*
+    *Configurazione distribuzione Web*
 5. Configurare la connessione al database come segue:
 
-   - Nel **nome Server** digitare l'URL server di Database SQL tramite il *tcp:* prefisso.
-   - Nelle **nome utente** digitare il nome dell'account di accesso amministratore server.
-   - Nelle **Password** digitare la password dell'account di accesso amministratore server.
+   - In **nome server** Digitare l'URL del server di database SQL utilizzando il prefisso *TCP:* .
+   - In **nome utente** Digitare il nome di accesso dell'amministratore del server.
+   - In **password** Digitare la password di accesso dell'amministratore del server.
    - Digitare un nuovo nome di database, ad esempio: *MVC4SampleDB*.
 
-     ![Configurazione di stringa di connessione di destinazione](whats-new-in-aspnet-mvc-4/_static/image77.png "configurazione stringa di connessione di destinazione")
+     ![Configurazione della stringa di connessione di destinazione](whats-new-in-aspnet-mvc-4/_static/image77.png "Configurazione della stringa di connessione di destinazione")
 
-     *Configurazione di stringa di connessione di destinazione*
+     *Configurazione della stringa di connessione di destinazione*
 6. Fare quindi clic su **OK**. Quando viene richiesto di creare il database, fare clic su **Sì**.
 
-    ![Creazione del database](whats-new-in-aspnet-mvc-4/_static/image78.png "creazione della stringa di database")
+    ![Creazione del database](whats-new-in-aspnet-mvc-4/_static/image78.png "Creazione della stringa di database")
 
     *Creazione del database*
-7. La stringa di connessione che si userà per connettersi al Database SQL di Windows Azure viene visualizzata all'interno di connessione predefinita nella casella di testo. Scegliere quindi **Avanti**.
+7. La stringa di connessione che verrà utilizzata per connettersi al database SQL in Windows Azure viene visualizzata nella casella di testo default Connection (connessione predefinita). Fare quindi clic su **Avanti**.
 
-    ![Stringa di connessione che punta al Database SQL](whats-new-in-aspnet-mvc-4/_static/image79.png "stringa di connessione che punta al Database SQL")
+    ![Stringa di connessione che punta al database SQL](whats-new-in-aspnet-mvc-4/_static/image79.png "Stringa di connessione che punta al database SQL")
 
-    *Stringa di connessione che punta al Database SQL*
-8. Nel **Preview** pagina, fare clic su **Publish**.
+    *Stringa di connessione che punta al database SQL*
+8. Nella pagina **Anteprima** fare clic su **pubblica**.
 
-    ![Pubblicazione dell'applicazione web](whats-new-in-aspnet-mvc-4/_static/image80.png "pubblicazione dell'applicazione web")
+    ![Pubblicazione dell'applicazione Web](whats-new-in-aspnet-mvc-4/_static/image80.png "Pubblicazione dell'applicazione Web")
 
-    *Pubblicazione dell'applicazione web*
-9. Al termine del processo di pubblicazione, il browser predefinito verrà aperto il sito web pubblicato.
+    *Pubblicazione dell'applicazione Web*
+9. Al termine del processo di pubblicazione, nel browser predefinito viene aperto il sito Web pubblicato.
 
-    ![Applicazione pubblicata in Azure](whats-new-in-aspnet-mvc-4/_static/image81.png "applicazione pubblicata in Windows Azure")
+    ![Applicazione pubblicata in Windows Azure](whats-new-in-aspnet-mvc-4/_static/image81.png "Applicazione pubblicata in Windows Azure")
 
-    *Pubblicata dell'applicazione in Windows Azure*
+    *Applicazione pubblicata in Windows Azure*
