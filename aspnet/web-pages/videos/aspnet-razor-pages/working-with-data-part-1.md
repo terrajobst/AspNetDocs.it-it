@@ -15,15 +15,15 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/02/2019
 ms.locfileid: "73445723"
 ---
-# <a name="working-with-data-part-1"></a><span data-ttu-id="ded6c-103">Uso dei dati (parte 1)</span><span class="sxs-lookup"><span data-stu-id="ded6c-103">Working with Data (Part 1)</span></span>
+# <a name="working-with-data-part-1"></a><span data-ttu-id="9292f-103">Uso dei dati (parte 1)</span><span class="sxs-lookup"><span data-stu-id="9292f-103">Working with Data (Part 1)</span></span>
 
-<span data-ttu-id="ded6c-104">di [Joe Stagner spiega](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="ded6c-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
+<span data-ttu-id="9292f-104">di [Joe Stagner spiega](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="9292f-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
 
-<span data-ttu-id="ded6c-105">Accompagnamento video all'esercitazione utilizzo di dati (parte 1)</span><span class="sxs-lookup"><span data-stu-id="ded6c-105">Video accompaniment to the Working with Data tutorial (Part 1)</span></span>
+<span data-ttu-id="9292f-105">Accompagnamento video all'esercitazione utilizzo di dati (parte 1)</span><span class="sxs-lookup"><span data-stu-id="9292f-105">Video accompaniment to the Working with Data tutorial (Part 1)</span></span>
 
-<span data-ttu-id="ded6c-106">[&#9654;Guarda il video (8 minuti)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/working-with-data-(part-1))</span><span class="sxs-lookup"><span data-stu-id="ded6c-106">[&#9654; Watch video (8 minutes)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/working-with-data-(part-1))</span></span>
+<span data-ttu-id="9292f-106">[&#9654;Guarda il video (8 minuti)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/working-with-data-(part-1))</span><span class="sxs-lookup"><span data-stu-id="9292f-106">[&#9654; Watch video (8 minutes)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/working-with-data-(part-1))</span></span>
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="ded6c-107">[Precedente](working-with-forms-part-2.md)
-> [Successivo](working-with-data-part-2.md)</span><span class="sxs-lookup"><span data-stu-id="ded6c-107">[Previous](working-with-forms-part-2.md)
+> <span data-ttu-id="9292f-107">[Precedente](working-with-forms-part-2.md)
+> [Successivo](working-with-data-part-2.md)</span><span class="sxs-lookup"><span data-stu-id="9292f-107">[Previous](working-with-forms-part-2.md)
 [Next](working-with-data-part-2.md)</span></span>
