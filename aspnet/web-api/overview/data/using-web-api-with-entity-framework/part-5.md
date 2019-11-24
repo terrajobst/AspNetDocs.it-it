@@ -21,7 +21,7 @@ di [Mike Wasson](https://github.com/MikeWasson)
 
 [Scarica progetto completato](https://github.com/MikeWasson/BookService)
 
-A questo punto, l'API Web espone le entità di database al client. Il client riceve i dati di cui viene eseguito il mapping direttamente alle tabelle del database. Tuttavia, non è sempre una scelta ideale. In alcuni casi si desidera modificare la forma dei dati inviati al client. Può, ad esempio, essere necessario:
+A questo punto, l'API Web espone le entità di database al client. Il client riceve i dati di cui viene eseguito il mapping direttamente alle tabelle del database. Tuttavia, non è sempre una scelta ideale. In alcuni casi si desidera modificare la forma dei dati inviati al client. Potresti, ad esempio:
 
 - Rimuovere i riferimenti circolari (vedere la sezione precedente).
 - Nascondere determinate proprietà che i client non devono visualizzare.

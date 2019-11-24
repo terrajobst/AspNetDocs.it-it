@@ -117,7 +117,7 @@ Specificando più elementi **Item** con lo stesso nome, si crea effettivamente u
 
 [!code-xml[Main](understanding-the-project-file/samples/sample7.xml)]
 
-In questo modo, il file di progetto indica a MSBuild di costruire elenchi di file che devono essere elaborati nello stesso modo&#x2014;in cui l'elenco di **riferimenti** include gli assembly che devono essere disponibili per una compilazione corretta, l'elenco di **compilazione** include il codice i file che devono essere compilati e l'elenco di **contenuto** includono risorse che devono essere copiate invariate. Si esaminerà il modo in cui il processo di compilazione fa riferimento a questi elementi e li usa più avanti in questo argomento.
+In questo&#x2014;modo, il file di progetto indica a MSBuild di costruire elenchi di file che devono essere elaborati nello stesso modo in cui l'elenco di **riferimenti** include gli assembly che devono essere presenti per una compilazione corretta, l'elenco di **compilazione** include i file di codice che devono essere compilati e l'elenco di **contenuto** include le risorse che devono essere copiate senza modifiche. Si esaminerà il modo in cui il processo di compilazione fa riferimento a questi elementi e li usa più avanti in questo argomento.
 
 Gli elementi elemento possono includere anche elementi figlio [ItemMetadata](https://msdn.microsoft.com/library/ms164284.aspx) . Si tratta di coppie chiave-valore definite dall'utente e rappresentano essenzialmente proprietà specifiche di tale elemento. Ad esempio, una gran parte degli elementi di **compilazione** nel file di progetto include gli elementi figlio **DependentUpon** .
 
@@ -130,7 +130,7 @@ Gli elementi elemento possono includere anche elementi figlio [ItemMetadata](htt
 
 ### <a name="targets-and-tasks"></a>Destinazioni e attività
 
-Nello schema MSBuild, un elemento [Task](https://msdn.microsoft.com/library/77f2hx1s.aspx) rappresenta una singola istruzione di compilazione (o attività). MSBuild include numerose attività predefinite. Esempio:
+Nello schema MSBuild, un elemento [Task](https://msdn.microsoft.com/library/77f2hx1s.aspx) rappresenta una singola istruzione di compilazione (o attività). MSBuild include numerose attività predefinite. Ad esempio:
 
 - L'attività **Copy** copia i file in un nuovo percorso.
 - L'attività **CSC** richiama il compilatore visivo C# .

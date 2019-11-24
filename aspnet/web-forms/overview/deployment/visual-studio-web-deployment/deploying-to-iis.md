@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/deployment/visual-studio-web-deployment/deploying-to-iis
-title: 'Distribuzione Web ASP.NET con Visual Studio: Distribuzione in test | Microsoft Docs'
+title: 'Distribuzione Web ASP.NET con Visual Studio: distribuzione in test | Microsoft Docs'
 author: tdykstra
 description: Questa serie di esercitazioni illustra come distribuire (pubblicare) un'applicazione Web ASP.NET per app Azure servizio app Web o un provider di hosting di terze parti, da usin...
 ms.author: riande
@@ -15,9 +15,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 09/13/2019
 ms.locfileid: "70985849"
 ---
-# <a name="aspnet-web-deployment-using-visual-studio-deploying-to-test"></a>Distribuzione Web ASP.NET con Visual Studio: Distribuzione per il test
+# <a name="aspnet-web-deployment-using-visual-studio-deploying-to-test"></a>Distribuzione Web ASP.NET con Visual Studio: distribuzione in test
 
-Di [Tom Dykstra](https://github.com/tdykstra)
+di [Tom Dykstra](https://github.com/tdykstra)
 
 Questa serie di esercitazioni illustra come distribuire (pubblicare) un'applicazione Web ASP.NET per app Azure servizio app Web o un provider di hosting di terze parti con Visual Studio 2017. Per informazioni sulla serie, vedere [la prima esercitazione della serie](introduction.md).
 
@@ -43,7 +43,7 @@ L'opzione 2 è il modo più affidabile per eseguire il test. Se si usa l'opzione
 
 Per altre informazioni sull'uso di server Web in Visual Studio, vedere [server Web in Visual Studio per progetti web ASP.NET](https://msdn.microsoft.com/library/58wxa9w5.aspx).
 
-Promemoria Se viene visualizzato un messaggio di errore o un elemento non funziona durante l'esercitazione, assicurarsi di controllare la pagina relativa alla [risoluzione dei problemi](troubleshooting.md).
+Promemoria: se viene visualizzato un messaggio di errore o un elemento non funziona durante l'esercitazione, assicurarsi di controllare la pagina relativa alla [risoluzione dei problemi](troubleshooting.md).
 
 ## <a name="download-the-contoso-university-starter-project"></a>Scaricare il progetto iniziale di Contoso University
 
@@ -67,7 +67,7 @@ Per eseguire la distribuzione in IIS nel computer di sviluppo, verificare che si
 
      Verranno visualizzati i messaggi che indicano che IIS 7 verrà installato. Il collegamento funziona per IIS 8 in Windows 8. per Windows 8 e versioni successive, seguire questa procedura per assicurarsi che sia installato ASP.NET 4,7:
 
-   * Aprire **il pannello** > di controllo**programmi** > **e funzionalità** > **attiva o disattiva le funzionalità di Windows**.
+   * Aprire **il pannello di controllo** > **programmi** > **programmi e funzionalità** > **attivare o disattivare le funzionalità di Windows**.
 
    * Espandere **Internet Information Services**, **Servizi World Wide Web**e **funzionalità di sviluppo di applicazioni**.
    
@@ -91,11 +91,11 @@ Dopo l'installazione di IIS, eseguire **Gestione IIS** per assicurarsi che il .N
 
 3. Nel riquadro **connessioni** espandere il nodo del server e selezionare **pool di applicazioni**. Nel riquadro **pool di applicazioni** se **DefaultAppPool** è assegnato a .NET Framework versione 4 come illustrato nella figura seguente, passare alla sezione successiva.
 
-   ![Inetmgr_showing_ 4.0 _app_pools](deploying-to-iis/_static/image5a.png)
+   ![Inetmgr_showing_4.0_app_pools](deploying-to-iis/_static/image5a.png)
 
 4. Se vengono visualizzati solo due pool di applicazioni ed entrambi sono impostati su .NET Framework 2,0, installare ASP.NET 4 in IIS.
 
-   Per Windows 8 o versioni successive, vedere le istruzioni della sezione precedente per verificare che sia installato ASP.NET 4,7 o vedere [come installare ASP.NET 4,5 in Windows 8 e Windows Server 2012](https://support.microsoft.com/kb/2736284). Per Windows 7, aprire una finestra del prompt dei comandi facendo clic con il pulsante destro del mouse su **prompt dei comandi** nel menu **Start** di Windows e selezionando **Esegui come amministratore**. Eseguire [ASPNET\_regiis. exe](https://msdn.microsoft.com/library/k6h9cz8h.aspx) per installare ASP.NET 4 in IIS usando i comandi seguenti. (Nei sistemi a 32 bit sostituire "Framework64" con "Framework").
+   Per Windows 8 o versioni successive, vedere le istruzioni della sezione precedente per verificare che sia installato ASP.NET 4,7 o vedere [come installare ASP.NET 4,5 in Windows 8 e Windows Server 2012](https://support.microsoft.com/kb/2736284). Per Windows 7, aprire una finestra del prompt dei comandi facendo clic con il pulsante destro del mouse su **prompt dei comandi** nel menu **Start** di Windows e selezionando **Esegui come amministratore**. Eseguire [aspnet\_regiis. exe](https://msdn.microsoft.com/library/k6h9cz8h.aspx) per installare ASP.NET 4 in IIS usando i comandi seguenti. (Nei sistemi a 32 bit sostituire "Framework64" con "Framework").
 
    [!code-console[Main](deploying-to-iis/samples/sample1.cmd)]
 
@@ -119,7 +119,7 @@ A questo punto si è pronti per pubblicare un'applicazione Web in IIS. Prima di 
 
 Il database locale non è progettato per funzionare in IIS, quindi è necessario che nell'ambiente di test sia installato SQL Server Express. Se si usa Visual Studio 2010 SQL Server Express, è già installato per impostazione predefinita. Se si usa Visual Studio 2012 o versione successiva, installare SQL Server Express.
 
-Per installare SQL Server Express, scaricarlo e installarlo [dall'area download: Microsoft SQL Server 2017 Express Edition](https://www.microsoft.com/sql-server/sql-server-editions-express). 
+Per installare SQL Server Express, scaricarlo e installarlo dall' [area download: Microsoft SQL Server 2017 Express Edition](https://www.microsoft.com/sql-server/sql-server-editions-express). 
 
 Nella prima pagina del centro installazione SQL Server selezionare **nuova SQL Server installazione autonoma o aggiunta di funzionalità a un'installazione esistente** e seguire le istruzioni che accettano le scelte predefinite. Nell'installazione guidata, accettare le impostazioni predefinite. Per ulteriori informazioni sulle opzioni di installazione, vedere [Install SQL Server dall'installazione guidata (programma](https://msdn.microsoft.com/library/ms143219.aspx)di installazione).
 
@@ -144,7 +144,7 @@ Nella finestra di dialogo **Crea nuovo database di SQL Server** immettere ".\SQL
 
 ![Creazione di ASPNET-ContosoUniversity](deploying-to-iis/_static/image9.png)
 
-Seguire la stessa procedura per creare un nuovo database di SQL Server Express School `ContosoUniversity`denominato.
+Seguire la stessa procedura per creare un nuovo database SQL Server Express School denominato `ContosoUniversity`.
 
 **Esplora server** Mostra i due nuovi database.
 
@@ -164,7 +164,7 @@ In Visual Studio aprire la soluzione Contoso University. Fare clic con il pulsan
 > Questo script è progettato per funzionare con SQL Server Express 2012 o versioni successive e con le impostazioni IIS in Windows 10, Windows 8 o Windows 7, come specificato in questa esercitazione. Se si usa una versione diversa di SQL Server o Windows o se si configura IIS nel computer in modo diverso, potrebbe essere necessario apportare modifiche a questo script. Per ulteriori informazioni sugli script di SQL Server, vedere [documentazione online di SQL Server](https://go.microsoft.com/fwlink/?LinkId=132511).
 
 > [!NOTE] 
-> **Nota sulla sicurezza** Questo script fornisce `db_owner` le autorizzazioni all'utente che accede al database in fase di esecuzione, ovvero ciò che si avrà nell'ambiente di produzione. In alcuni scenari potrebbe essere necessario specificare un utente che disponga di autorizzazioni complete per l'aggiornamento dello schema del database solo per la distribuzione e specificare per la fase di esecuzione un utente diverso che disponga di autorizzazioni solo per la lettura e la scrittura dei dati. Per ulteriori informazioni, vedere [la pagina relativa alla revisione delle modifiche automatiche di Web. config per migrazioni Code First](#reviewingmigrations) più avanti in questa esercitazione.
+> **Nota sulla sicurezza** Questo script consente di `db_owner` le autorizzazioni all'utente che accede al database in fase di esecuzione, ovvero ciò che si avrà nell'ambiente di produzione. In alcuni scenari potrebbe essere necessario specificare un utente che disponga di autorizzazioni complete per l'aggiornamento dello schema del database solo per la distribuzione e specificare per la fase di esecuzione un utente diverso che disponga di autorizzazioni solo per la lettura e la scrittura dei dati. Per ulteriori informazioni, vedere [la pagina relativa alla revisione delle modifiche automatiche di Web. config per migrazioni Code First](#reviewingmigrations) più avanti in questa esercitazione.
 
 <a id="publish"></a>
 
@@ -174,11 +174,11 @@ In Visual Studio aprire la soluzione Contoso University. Fare clic con il pulsan
 
 1. In Visual Studio aprire il file *Grant. SQL* creato in precedenza.
 
-2. Selezionare **Connessione**. 
+2. Selezionare **Connetti**. 
 
     ![Pulsante Connetti](deploying-to-iis/_static/image11.png)
 
-3. Nella finestra di dialogo **Connetti al server** immettere *.\SQLEXPRESS* come nome del **server**. Selezionare **Connessione**.
+3. Nella finestra di dialogo **Connetti al server** immettere *.\SQLEXPRESS* come nome del **server**. Selezionare **Connetti**.
 
 4. Nell'elenco a discesa database selezionare **ContosoUniversity**. Selezionare **Esegui**. 
 
@@ -215,7 +215,7 @@ Prima della pubblicazione, assicurarsi che Visual Studio sia in esecuzione in mo
 
 6. Per **nome sito**immettere *Default Web site/ContosoUniversity*.
 
-7. In **URL destinazione**immettere *http://localhost/ContosoUniversity* .
+7. Per **URL destinazione**immettere *http://localhost/ContosoUniversity* .
 
    L'impostazione dell' **URL di destinazione** non è obbligatoria. Al termine della distribuzione dell'applicazione, Visual Studio apre automaticamente il browser predefinito a questo URL. Se non si desidera che il browser venga aperto automaticamente dopo la distribuzione, lasciare vuota questa casella.
 
@@ -229,9 +229,9 @@ Prima della pubblicazione, assicurarsi che Visual Studio sia in esecuzione in mo
 
 10. Nella casella di riepilogo a discesa **configurazione** è specificata la configurazione della build da distribuire. Lasciare impostato sul valore predefinito di **Release**. In questa esercitazione non verranno distribuite le compilazioni di debug.
 
-11. Espandere **Opzioni di pubblicazione file**. Selezionare **Escludi file dalla cartella\_dati app**.
+11. Espandere **Opzioni di pubblicazione file**. Selezionare **Escludi file dalla cartella App\_data**.
 
-    Nell'ambiente di test, l'applicazione accede ai database creati nell'istanza di SQL Server Express locale e non nei file con estensione mdf nella cartella dati dell' *app\_* .
+    Nell'ambiente di test, l'applicazione accede ai database creati nell'istanza di SQL Server Express locale e non nei file con estensione mdf nella cartella *App\_data* .
 
 12. Lasciare deselezionata la casella di controllo **PreCompile durante la pubblicazione** e **rimuovere i file aggiuntivi nella destinazione** .
 
@@ -246,7 +246,7 @@ Prima della pubblicazione, assicurarsi che Visual Studio sia in esecuzione in mo
     > 
     > Se, ad esempio, si dispone di un'applicazione Web in una sottocartella del server quando si distribuisce un progetto nella cartella radice, la sottocartella verrà eliminata. Potrebbe essere presente un progetto per il sito principale in contoso.com e un altro progetto per un Blog in contoso.com/blog. L'applicazione Blog si trova in una sottocartella. Se si seleziona **Rimuovi file aggiuntivi nella destinazione** quando si distribuisce il sito principale, l'applicazione blog verrà eliminata.
     > 
-    > Per un altro esempio, la\_cartella di dati dell'app potrebbe essere eliminata in modo imprevisto. Alcuni database, ad esempio SQL Server Compact archiviare i file di database\_nella cartella app data. Dopo la distribuzione iniziale, non è necessario copiare i file di database nelle distribuzioni successive, quindi è necessario selezionare **Escludi\_dati app** nella scheda pacchetto/pubblica sito Web. Una volta completata la **rimozione dei file aggiuntivi nella destinazione** selezionata, i file di database e la cartella di\_dati dell'app verranno eliminati alla successiva pubblicazione.
+    > Per un altro esempio, l'app\_cartella dati potrebbe essere eliminata in modo imprevisto. Alcuni database, ad esempio SQL Server Compact archiviare i file di database nella cartella app\_data. Dopo la distribuzione iniziale, non è necessario copiare i file di database nelle distribuzioni successive, quindi selezionare **Escludi App\_dati** nella scheda pacchetto/pubblica sito Web. Una volta completata la **rimozione dei file aggiuntivi nella destinazione** selezionata, i file di database e la cartella di dati dell'app\_verranno eliminati alla successiva pubblicazione.
 
 ### <a name="configure-deployment-for-the-membership-database"></a>Configurare la distribuzione per il database delle appartenenze
 
@@ -258,7 +258,7 @@ I passaggi seguenti si applicano al database **DefaultConnection** nella sezione
 
    Il processo di distribuzione inserisce questa stringa di connessione nel file Web. config distribuito, perché è selezionata l'opzione **Usa questa stringa di connessione in fase di esecuzione** .
 
-    È anche possibile ottenere la stringa di connessione da **Esplora server**. In **Esplora server**espandere **connessioni dati** e selezionare il  **&lt;database MachineName&gt;\SQLEXPRESS.AspNet-ContosoUniversity** , quindi nella finestra **Proprietà** copiare la stringa di **connessione** valore. Tale stringa di connessione includerà un'impostazione aggiuntiva che è possibile `Pooling=False`eliminare:.
+    È anche possibile ottenere la stringa di connessione da **Esplora server**. In **Esplora server**espandere **connessioni dati** e selezionare il database **&lt;MachineName&gt;\Sqlexpress.AspNet-ContosoUniversity** , quindi nella finestra **Proprietà** copiare il valore della **stringa di connessione** . Tale stringa di connessione includerà un'impostazione aggiuntiva che è possibile eliminare: `Pooling=False`.
 
 2. Selezionare **Aggiorna database**.
 
@@ -276,9 +276,9 @@ I passaggi seguenti si applicano al database **DefaultConnection** nella sezione
 
 ### <a name="configure-deployment-for-the-application-database"></a>Configurare la distribuzione per il database dell'applicazione
 
-Quando Visual Studio rileva una classe `DbContext` Entity Framework, viene creata una voce nella sezione **database** con una casella di controllo **Esegui migrazioni Code First** anziché una casella di controllo **Aggiorna database** . Per questa esercitazione si userà questa casella di controllo per specificare Migrazioni Code First distribuzione.
+Quando Visual Studio rileva un Entity Framework classe `DbContext`, viene creata una voce nella sezione **database** con una casella di controllo **Esegui migrazioni Code First** anziché una casella di controllo **Aggiorna database** . Per questa esercitazione si userà questa casella di controllo per specificare Migrazioni Code First distribuzione.
 
-In alcuni scenari è possibile che si utilizzi un `DbContext` database, ma si desidera utilizzare il provider dbDacFx anziché le migrazioni per distribuire il database. In tal caso, vedere [ricerca per categorie distribuire un database Code First senza migrazioni?](https://msdn.microsoft.com/library/ee942158.aspx#deploy_code_first_without_migrations) nella pagina relativa alle domande frequenti sulla distribuzione Web di ASP.NET su MSDN.
+In alcuni scenari è possibile che si stia utilizzando un database `DbContext` ma si desidera utilizzare il provider dbDacFx anziché le migrazioni per distribuire il database. In tal caso, vedere [ricerca per categorie distribuire un database Code First senza migrazioni?](https://msdn.microsoft.com/library/ee942158.aspx#deploy_code_first_without_migrations) nella pagina relativa alle domande frequenti sulla distribuzione Web di ASP.NET su MSDN.
 
 I passaggi seguenti si applicano al database **schoolContext** nella sezione **database** della finestra di dialogo.
 
@@ -292,7 +292,7 @@ I passaggi seguenti si applicano al database **schoolContext** nella sezione **d
 
 2. Selezionare **esegui migrazioni Code First (eseguito all'avvio dell'applicazione)** .
 
-   Questa opzione fa sì che il processo di distribuzione configuri il file Web. config `MigrateDatabaseToLatestVersion` distribuito per specificare l'inizializzatore. Questo inizializzatore aggiorna automaticamente il database alla versione più recente quando l'applicazione accede al database per la prima volta dopo la distribuzione.
+   Questa opzione fa in modo che il processo di distribuzione configuri il file Web. config distribuito per specificare l'inizializzatore `MigrateDatabaseToLatestVersion`. Questo inizializzatore aggiorna automaticamente il database alla versione più recente quando l'applicazione accede al database per la prima volta dopo la distribuzione.
 
 ### <a name="configure-publish-profile-transforms"></a>Configurare le trasformazioni del profilo di pubblicazione
 
@@ -344,7 +344,7 @@ I passaggi seguenti si applicano al database **schoolContext** nella sezione **d
 
 Si noti che l'indicatore di ambiente Mostra "(test)" anziché "(dev)", che indica che la trasformazione *Web. config* per l'indicatore di ambiente è stata completata correttamente.
 
-Eseguire la pagina **insegnanti** per verificare che Code First il seeding del database con i dati dell'insegnante. Quando si seleziona questa pagina, potrebbero essere necessari alcuni minuti per il caricamento, in quanto Code First crea il database e quindi `Seed` esegue il metodo. Questa operazione non è stata eseguita nel home page perché l'applicazione non ha ancora tentato di accedere al database.
+Eseguire la pagina **insegnanti** per verificare che Code First il seeding del database con i dati dell'insegnante. Quando si seleziona questa pagina, potrebbero essere necessari alcuni minuti per il caricamento, in quanto Code First crea il database e quindi esegue il `Seed` metodo. Questa operazione non è stata eseguita nel home page perché l'applicazione non ha ancora tentato di accedere al database.
 
 Selezionare la scheda **students (studenti** ) per verificare che il database distribuito non disponga di studenti.
 
@@ -366,9 +366,9 @@ Il processo di distribuzione ha creato anche una nuova stringa di connessione pe
 
 ![Stringa di connessione Database_Publish](deploying-to-iis/_static/image22.png)
 
-Questa stringa di connessione aggiuntiva consente di specificare un account utente per gli aggiornamenti dello schema del database e un account utente diverso per l'accesso ai dati dell'applicazione. Ad esempio, è possibile assegnare il ruolo di **proprietario del database\_** a migrazioni Code First e al **database\_DataReader** con **\_** i ruoli di DataWriter del database all'applicazione. Si tratta di un modello di difesa in profondità comune che impedisce al codice potenzialmente dannoso nell'applicazione di modificare lo schema del database. Ad esempio, questo potrebbe verificarsi in un attacco SQL injection riuscito. Queste esercitazioni non usano questo modello. Per implementare questo modello nello scenario, seguire questa procedura:
+Questa stringa di connessione aggiuntiva consente di specificare un account utente per gli aggiornamenti dello schema del database e un account utente diverso per l'accesso ai dati dell'applicazione. Ad esempio, è possibile assegnare il ruolo di **proprietario del\_di database** a migrazioni Code First e **DB\_DataReader** con i ruoli di **database\_DataWriter** nell'applicazione. Si tratta di un modello di difesa in profondità comune che impedisce al codice potenzialmente dannoso nell'applicazione di modificare lo schema del database. Ad esempio, questo potrebbe verificarsi in un attacco SQL injection riuscito. Queste esercitazioni non usano questo modello. Per implementare questo modello nello scenario, seguire questa procedura:
 
-1. Nella procedura guidata **Pubblica sito Web** , nella scheda **Impostazioni** , immettere la stringa di connessione che specifica un utente con autorizzazioni complete per l'aggiornamento dello schema del database. Deselezionare la casella **di controllo Usa questa stringa di connessione in fase di esecuzione** . Il file Web. config distribuito diventa la `DatabasePublish` stringa di connessione.
+1. Nella procedura guidata **Pubblica sito Web** , nella scheda **Impostazioni** , immettere la stringa di connessione che specifica un utente con autorizzazioni complete per l'aggiornamento dello schema del database. Deselezionare la casella **di controllo Usa questa stringa di connessione in fase di esecuzione** . Il file Web. config distribuito diventa la stringa di connessione `DatabasePublish`.
 
 2. Creare una trasformazione del file Web. config per la stringa di connessione che si desidera venga utilizzata dall'applicazione in fase di esecuzione.
 
