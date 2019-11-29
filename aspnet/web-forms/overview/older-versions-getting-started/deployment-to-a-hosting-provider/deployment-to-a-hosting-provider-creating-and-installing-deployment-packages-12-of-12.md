@@ -1,320 +1,320 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12
-title: "Distribuzione di un'applicazione Web ASP.NET con SQL Server Compact tramite Visual Studio o Visual Web Developer: Risoluzione dei problemi (12 pari a 12) | Microsoft Docs"
+title: "Distribuzione di un'applicazione Web ASP.NET con SQL Server Compact mediante Visual Studio o Visual Web Developer: risoluzione dei problemi (12 di 12) | Microsoft Docs"
 author: tdykstra
-description: Questa serie di esercitazioni illustra come distribuire un ASP.NET (pubblicazione) progetto di applicazione web che include un database di SQL Server Compact tramite Visual s...
+description: Questa serie di esercitazioni illustra come distribuire (pubblicare) un progetto di applicazione Web ASP.NET che include un database di SQL Server Compact usando Visual Stu...
 ms.author: riande
 ms.date: 11/17/2011
 ms.assetid: 3fc23eed-921d-4d46-a610-a2d156e4bd03
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12
 msc.type: authoredcontent
-ms.openlocfilehash: 5ed3533003718d13248d68efacb7655656ec7dc1
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: db8f58e3679e6dea865dadb6f64916032dd9f38c
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65134196"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74639868"
 ---
-# <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-troubleshooting-12-of-12"></a>Distribuzione di un'applicazione Web ASP.NET con SQL Server Compact tramite Visual Studio o Visual Web Developer: Risoluzione dei problemi (12 pari a 12)
+# <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-troubleshooting-12-of-12"></a>Distribuzione di un'applicazione Web ASP.NET con SQL Server Compact mediante Visual Studio o Visual Web Developer: risoluzione dei problemi (12 di 12)
 
-da [Tom Dykstra](https://github.com/tdykstra)
+di [Tom Dykstra](https://github.com/tdykstra)
 
-[Download progetto iniziale](http://code.msdn.microsoft.com/Deploying-an-ASPNET-Web-4e31366b)
+[Scarica progetto Starter](https://code.msdn.microsoft.com/Deploying-an-ASPNET-Web-4e31366b)
 
-> Questa serie di esercitazioni illustra come distribuire un ASP.NET (pubblicazione) progetto di applicazione web che include un database di SQL Server Compact tramite Visual Studio 2012 RC o Visual Studio Express 2012 RC per Web. Se si installa l'aggiornamento della pubblicazione sul Web, è anche possibile usare Visual Studio 2010. Per un'introduzione alla serie, vedere [la prima esercitazione della serie](deployment-to-a-hosting-provider-introduction-1-of-12.md).
+> Questa serie di esercitazioni illustra come distribuire (pubblicare) un progetto di applicazione Web ASP.NET che include un database di SQL Server Compact usando Visual Studio 2012 RC o Visual Studio Express 2012 RC per il Web. È anche possibile usare Visual Studio 2010 se si installa l'aggiornamento pubblicazione sul Web. Per un'introduzione alla serie, vedere [la prima esercitazione della serie](deployment-to-a-hosting-provider-introduction-1-of-12.md).
 > 
-> Per un'esercitazione che illustra le funzionalità di distribuzione introdotte dopo la versione di Visual Studio 2012 RC, illustra come distribuire le edizioni di SQL Server diverse da SQL Server Compact e illustra come distribuire siti Web di Windows Azure, vedere [distribuzione Web ASP.NET con Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
+> Per un'esercitazione in cui vengono illustrate le funzionalità di distribuzione introdotte dopo la versione RC di Visual Studio 2012, viene illustrato come distribuire SQL Server edizioni diverse da SQL Server Compact e viene illustrato come eseguire la distribuzione in siti Web di Microsoft Azure, vedere [distribuzione web ASP.NET con Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
 
-Questa pagina descrive alcuni problemi comuni che possono verificarsi quando si distribuisce un'applicazione web ASP.NET tramite Visual Studio. Per ognuno di essi, vengono fornite uno o più possibili cause e soluzioni corrispondenti.
+Questa pagina descrive alcuni problemi comuni che possono verificarsi quando si distribuisce un'applicazione Web ASP.NET con Visual Studio. Per ognuna di esse sono disponibili una o più possibili cause e le soluzioni corrispondenti.
 
-## <a name="server-error-in--application---current-custom-error-settings-prevent-details-of-the-error-from-being-viewed-remotely"></a>Errore server nell'applicazione: '/' attuali impostazioni personalizzate errori impediscono di dettagli dell'errore di visualizzare in modalità remota
+## <a name="server-error-in--application---current-custom-error-settings-prevent-details-of-the-error-from-being-viewed-remotely"></a>Errore del server nell'applicazione '/'-le impostazioni degli errori personalizzati correnti impediscono la visualizzazione remota dei dettagli dell'errore
 
 ### <a name="scenario"></a>Scenario
 
-Dopo aver distribuito un sito in un host remoto, viene visualizzato un messaggio di errore che indica l'impostazione customErrors nel file Web. config, ma non indica qual è la causa effettiva dell'errore:
+Dopo la distribuzione di un sito in un host remoto, viene ricevuto un messaggio di errore che indica l'impostazione customErrors nel file Web. config, ma non indica la vera e propria origine dell'errore:
 
 [!code-console[Main](deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12/samples/sample1.cmd)]
 
-### <a name="possible-cause-and-solution"></a>Possibile causa e soluzione
+### <a name="possible-cause-and-solution"></a>Possibili cause e soluzioni
 
-Per impostazione predefinita, ASP.NET Mostra informazioni dettagliate sull'errore solo quando l'applicazione web è in esecuzione nel computer locale. In genere non si desidera visualizzare informazioni dettagliate sull'errore quando l'applicazione web è disponibile pubblicamente su Internet, in quanto hacker potrebbe essere in grado di usare queste informazioni per individuare le vulnerabilità dell'applicazione. Tuttavia, quando si distribuisce un sito o a un sito, a volte un elemento è inevitabili ed è necessario ottenere il messaggio di errore effettivo.
+Per impostazione predefinita, ASP.NET Visualizza informazioni dettagliate sugli errori solo quando l'applicazione Web è in esecuzione nel computer locale. In genere non si vogliono visualizzare informazioni dettagliate sugli errori quando l'applicazione Web è disponibile pubblicamente su Internet, perché gli hacker potrebbero essere in grado di usare queste informazioni per individuare le vulnerabilità nell'applicazione. Tuttavia, quando si distribuisce un sito o gli aggiornamenti in un sito, a volte si verifica un errore ed è necessario ottenere il messaggio di errore effettivo.
 
-Per abilitare l'applicazione visualizzare i messaggi di errore dettagliati quando è in esecuzione nell'host remoto, modificare il file Web. config per impostare `customErrors` modalità disattivato, ridistribuire l'applicazione ed eseguire nuovamente l'applicazione:
+Per consentire all'applicazione di visualizzare messaggi di errore dettagliati durante l'esecuzione nell'host remoto, modificare il file Web. config per impostare la modalità di `customErrors` disattivata, ridistribuire l'applicazione ed eseguire di nuovo l'applicazione:
 
-1. Se il file Web. config dell'applicazione ha un `customErrors` elemento il `system.web` elemento, modificare il `mode` attributo su "off". In caso contrario aggiungere un `customErrors` elemento il `system.web` elemento con la `mode` attributo impostato su "off", come illustrato nell'esempio seguente:
+1. Se il file Web. config dell'applicazione contiene un elemento `customErrors` nell'elemento `system.web`, impostare l'attributo `mode` su "off". In caso contrario, aggiungere un elemento `customErrors` nell'elemento `system.web` con l'attributo `mode` impostato su "off", come illustrato nell'esempio seguente:
 
     [!code-xml[Main](deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12/samples/sample2.xml?highlight=3)]
-2. Distribuire l'applicazione.
-3. Eseguire l'applicazione e ripetere indipendentemente dal fatto in precedenza che ha causato l'errore si verificherà. Ora si può vedere che cos'è il messaggio di errore effettivo.
-4. Dopo aver risolto l'errore, ripristino del file originale `customErrors` impostando e ridistribuire l'applicazione.
+2. distribuire l'applicazione.
+3. Eseguire l'applicazione e ripetere qualsiasi operazione eseguita in precedenza che ha causato l'errore. A questo punto è possibile visualizzare il messaggio di errore effettivo.
+4. Dopo aver risolto l'errore, ripristinare l'impostazione `customErrors` originale e ridistribuire l'applicazione.
 
-## <a name="access-is-denied-in-a-web-page-that-uses-sql-server-compact"></a>Accesso negato in una pagina Web che Usa SQL Server Compact
+## <a name="access-is-denied-in-a-web-page-that-uses-sql-server-compact"></a>Accesso negato in una pagina Web che usa SQL Server Compact
 
 ### <a name="scenario"></a>Scenario
 
-Quando si distribuisce un sito che Usa SQL Server Compact e si esegue una pagina nel sito distribuito che accede al database, è visualizzato il messaggio di errore seguente:
+Quando si distribuisce un sito che utilizza SQL Server Compact e si esegue una pagina nel sito distribuito che accede al database, viene visualizzato il messaggio di errore seguente:
 
 [!code-console[Main](deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12/samples/sample3.cmd)]
 
-### <a name="possible-cause-and-solution"></a>Possibile causa e soluzione
+### <a name="possible-cause-and-solution"></a>Possibili cause e soluzioni
 
-L'account del servizio di rete nel server deve essere in grado di leggere i servizi di SQL Compact file binari nativi nel *bin\amd64* oppure *bin\x86* cartella, ma non dispone delle autorizzazioni di lettura per tali cartelle. Set di autorizzazione di lettura per il servizio di rete di *bin* cartella, assicurandosi di estendere le autorizzazioni per le sottocartelle.
+L'account servizio di rete nel server deve essere in grado di leggere i file binari nativi di SQL Service Compact presenti nella cartella *bin\amd64* o *bin\x86* , ma non dispone delle autorizzazioni di lettura per tali cartelle. Impostare l'autorizzazione di lettura per servizio di rete nella cartella *bin* , assicurandosi di estendere le autorizzazioni alle sottocartelle.
 
-## <a name="cannot-read-configuration-file-due-to-insufficient-permissions"></a>Impossibile leggere il File di configurazione a causa di autorizzazioni insufficienti
+## <a name="cannot-read-configuration-file-due-to-insufficient-permissions"></a>Impossibile leggere il file di configurazione a causa di autorizzazioni insufficienti
 
 ### <a name="scenario"></a>Scenario
 
-Quando si fa clic di Visual Studio pulsante pubblica per distribuire un'applicazione in IIS nel computer locale, la pubblicazione ha esito negativo e il **Output** finestra Mostra un messaggio di errore simile al seguente:
+Quando si fa clic sul pulsante pubblica di Visual Studio per distribuire un'applicazione in IIS nel computer locale, la pubblicazione non riesce e nella finestra di **output** viene visualizzato un messaggio di errore simile al seguente:
 
 [!code-console[Main](deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12/samples/sample4.cmd)]
 
-### <a name="possible-cause-and-solution"></a>Possibile causa e soluzione
+### <a name="possible-cause-and-solution"></a>Possibili cause e soluzioni
 
-Usare un solo clic di pubblicazione in IIS nel computer locale, è necessario eseguire Visual Studio con autorizzazioni di amministratore. Chiudere Visual Studio e riavviarlo con autorizzazioni di amministratore.
+Per usare la pubblicazione con un clic in IIS nel computer locale, è necessario eseguire Visual Studio con le autorizzazioni di amministratore. Chiudere Visual Studio e riavviarlo con le autorizzazioni di amministratore.
 
-## <a name="could-not-connect-to-the-destination-computer--using-the-specified-process"></a>Impossibile connettersi al Computer di destinazione... Tramite il processo specificato
+## <a name="could-not-connect-to-the-destination-computer--using-the-specified-process"></a>Impossibile connettersi al computer di destinazione... Uso del processo specificato
 
 ### <a name="scenario"></a>Scenario
 
-Quando si fa clic di Visual Studio pulsante pubblica per distribuire un'applicazione, la pubblicazione ha esito negativo e il **Output** finestra Mostra un messaggio di errore simile al seguente:
+Quando si fa clic sul pulsante pubblica di Visual Studio per distribuire un'applicazione, la pubblicazione non riesce e nella finestra di **output** viene visualizzato un messaggio di errore simile al seguente:
 
 [!code-console[Main](deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12/samples/sample5.cmd)]
 
-### <a name="possible-cause-and-solution"></a>Possibile causa e soluzione
+### <a name="possible-cause-and-solution"></a>Possibili cause e soluzioni
 
-Un server proxy è interrompere la comunicazione con il server di destinazione. Dal Pannello di controllo di Windows o in Internet Explorer, selezionare **Opzioni Internet** e selezionare il **connessioni** scheda. Nel **proprietà Internet** finestra di dialogo, fare clic su **impostazioni LAN**. Nel **le impostazioni di rete locale (LAN)** della finestra di dialogo deseleziona le **rileva automaticamente impostazioni** casella di controllo. Fare clic sul pulsante Pubblica nuovamente.
+Un server proxy interrompe la comunicazione con il server di destinazione. Nel pannello di controllo di Windows o in Internet Explorer selezionare **Opzioni Internet** e selezionare la scheda **connessioni** . Nella finestra di dialogo **Proprietà Internet** fare clic su **Impostazioni LAN**. Nella finestra di dialogo **Impostazioni rete locale (LAN)** deselezionare la casella di controllo **rileva automaticamente impostazioni** . Quindi fare di nuovo clic sul pulsante pubblica.
 
-Se il problema persiste, contattare l'amministratore di sistema per determinare cosa può essere eseguita con le impostazioni di proxy o firewall. Il problema si verifica perché la distribuzione Web utilizza una porta non standard per la distribuzione di servizio di gestione Web (8172); per altre connessioni, distribuzione Web Usa la porta 80. Quando si distribuisce in un provider di hosting di terze parti, in genere si usa il servizio di gestione Web.
+Se il problema persiste, contattare l'amministratore di sistema per determinare le operazioni che possono essere eseguite con le impostazioni del proxy o del firewall. Il problema si verifica perché Distribuzione Web usa una porta non standard per la distribuzione del servizio di gestione Web (8172); per altre connessioni, Distribuzione Web usa la porta 80. Quando si esegue la distribuzione in un provider di hosting di terze parti, si utilizza in genere il servizio gestione Web.
 
-## <a name="default-net-40-application-pool-does-not-exist"></a>Pool di applicazioni 4.0 di .NET predefinito non esiste
+## <a name="default-net-40-application-pool-does-not-exist"></a>Il pool di applicazioni .NET 4,0 predefinito non esiste
 
 ### <a name="scenario"></a>Scenario
 
-Quando si distribuisce un'applicazione che richiede .NET Framework 4, è visualizzato il messaggio di errore seguente:
+Quando si distribuisce un'applicazione che richiede il .NET Framework 4, viene visualizzato il messaggio di errore seguente:
 
 [!code-console[Main](deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12/samples/sample6.cmd)]
 
-### <a name="possible-cause-and-solution"></a>Possibile causa e soluzione
+### <a name="possible-cause-and-solution"></a>Possibili cause e soluzioni
 
-ASP.NET 4 non è installato in IIS. Se il server che viene eseguita la distribuzione è il computer di sviluppo e Visual Studio 2010 è installato su di esso, ASP.NET 4 è installato nel computer ma potrebbero non essere installato in IIS. Nel server in cui viene eseguita la distribuzione, aprire un prompt dei comandi con privilegi elevati e installare ASP.NET 4 in IIS eseguendo i comandi seguenti:
+ASP.NET 4 non è installato in IIS. Se il server in cui si esegue la distribuzione è il computer di sviluppo in cui è installato Visual Studio 2010, ASP.NET 4 è installato nel computer, ma potrebbe non essere installato in IIS. Nel server in cui si esegue la distribuzione, aprire un prompt dei comandi con privilegi elevati e installare ASP.NET 4 in IIS eseguendo i comandi seguenti:
 
 [!code-console[Main](deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12/samples/sample7.cmd)]
 
-È anche necessario impostare manualmente la versione di .NET Framework del pool di applicazioni predefinito. Per altre informazioni, vedere la [distribuzione in IIS come ambiente di Test](deployment-to-a-hosting-provider-deploying-to-iis-as-a-test-environment-5-of-12.md) esercitazione.
+Potrebbe anche essere necessario impostare manualmente la versione .NET Framework del pool di applicazioni predefinito. Per ulteriori informazioni, vedere l'esercitazione [distribuzione in IIS come ambiente di testing](deployment-to-a-hosting-provider-deploying-to-iis-as-a-test-environment-5-of-12.md) .
 
-## <a name="format-of-the-initialization-string-does-not-conform-to-specification-starting-at-index-0"></a>Formato della stringa di inizializzazione non è conforme alla specifica che inizia in corrispondenza dell'indice 0.
+## <a name="format-of-the-initialization-string-does-not-conform-to-specification-starting-at-index-0"></a>Il formato della stringa di inizializzazione non è conforme alla specifica a partire dall'indice 0.
 
 ### <a name="scenario"></a>Scenario
 
-Dopo aver distribuito un'applicazione che usa un solo clic pubblicare, quando si esegue una pagina di accesso al database viene visualizzato il messaggio di errore seguente:
+Dopo aver distribuito un'applicazione utilizzando la pubblicazione con un clic, quando si esegue una pagina che accede al database viene ricevuto il messaggio di errore seguente:
 
 [!code-console[Main](deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12/samples/sample8.cmd)]
 
-### <a name="possible-cause-and-solution"></a>Possibile causa e soluzione
+### <a name="possible-cause-and-solution"></a>Possibili cause e soluzioni
 
-Aprire il *Web. config* file nel sito distribuito e controllo per verificare se i valori di stringa di connessione iniziano con `$(ReplaceableToken_`, come illustrato nell'esempio seguente:
+Aprire il file *Web. config* nel sito distribuito e verificare se i valori della stringa di connessione iniziano con `$(ReplaceableToken_`, come nell'esempio seguente:
 
 [!code-xml[Main](deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12/samples/sample9.xml)]
 
-Se le stringhe di connessione simile a questo esempio, modificare il file di progetto e aggiungere la proprietà seguente al `PropertyGroup` elemento che si trova per tutte le configurazioni di compilazione:
+Se le stringhe di connessione hanno un aspetto simile a questo esempio, modificare il file di progetto e aggiungere la proprietà seguente all'elemento `PropertyGroup` per tutte le configurazioni di compilazione:
 
 [!code-xml[Main](deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12/samples/sample10.xml)]
 
 Quindi ridistribuire l'applicazione.
 
-## <a name="http-500-internal-server-error"></a>HTTP 500 Internal Server Error
+## <a name="http-500-internal-server-error"></a>Errore interno del server HTTP 500
 
 ### <a name="scenario"></a>Scenario
 
-Quando si esegue il sito distribuito, viene visualizzato il messaggio di errore seguenti senza informazioni specifiche che indica la causa dell'errore:
+Quando si esegue il sito distribuito, viene visualizzato il messaggio di errore seguente senza informazioni specifiche che indicano la provocazione dell'errore:
 
 [!code-console[Main](deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12/samples/sample11.cmd)]
 
-### <a name="possible-cause-and-solution"></a>Possibile causa e soluzione
+### <a name="possible-cause-and-solution"></a>Possibili cause e soluzioni
 
-Esistono molte cause di errori di tipo 500, ma una delle possibili cause se si siano seguendo queste esercitazioni è sufficiente inserire un elemento XML in una posizione errata in uno dei file di trasformazione XML. Questo errore, ad esempio, si otterrebbe se si inserisce la trasformazione che inserisce un `<location>` nell'elemento `<system.web>` invece che direttamente sotto `<configuration>`. La soluzione è in questo caso per correggere il file di trasformazione XML e ridistribuire.
+Ci sono molte cause di 500 errori, ma una possibile causa se si seguono queste esercitazioni è che si inserisce un elemento XML nella posizione sbagliata in uno dei file di trasformazione XML. Se, ad esempio, si inserisce una trasformazione che inserisce un elemento `<location>` in `<system.web>` invece che direttamente sotto `<configuration>`. In tal caso, la soluzione consiste nel correggere il file di trasformazione XML e ridistribuirlo.
 
-## <a name="http-50021-internal-server-error"></a>HTTP 500.21 Internal Server Error
+## <a name="http-50021-internal-server-error"></a>Errore interno del server HTTP 500,21
 
 ### <a name="scenario"></a>Scenario
 
-Quando si esegue il sito distribuito, è visualizzato il messaggio di errore seguente:
+Quando si esegue il sito distribuito, viene visualizzato il messaggio di errore seguente:
 
 [!code-console[Main](deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12/samples/sample12.cmd)]
 
-### <a name="possible-cause-and-solution"></a>Possibile causa e soluzione
+### <a name="possible-cause-and-solution"></a>Possibili cause e soluzioni
 
-Il sito è stato distribuito destinazioni ASP.NET 4, ma ASP.NET 4 non è registrato in IIS sul server. Nel server aprire un prompt dei comandi con privilegi elevati e registrare ASP.NET 4 eseguendo i comandi seguenti:
+Il sito distribuito è destinato a ASP.NET 4, ma ASP.NET 4 non è registrato in IIS nel server. Sul server aprire un prompt dei comandi con privilegi elevati e registrare ASP.NET 4 eseguendo i comandi seguenti:
 
 [!code-console[Main](deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12/samples/sample13.cmd)]
 
-È anche necessario impostare manualmente la versione di .NET Framework del pool di applicazioni predefinito. Per altre informazioni, vedere la [distribuzione in IIS come ambiente di Test](deployment-to-a-hosting-provider-deploying-to-iis-as-a-test-environment-5-of-12.md) esercitazione.
+Potrebbe anche essere necessario impostare manualmente la versione .NET Framework del pool di applicazioni predefinito. Per ulteriori informazioni, vedere l'esercitazione [distribuzione in IIS come ambiente di testing](deployment-to-a-hosting-provider-deploying-to-iis-as-a-test-environment-5-of-12.md) .
 
-## <a name="login-failed-opening-sql-server-express-database-in-appdata"></a>Accesso non riuscito di apertura Database SQL Server Express nell'App\_dati
+## <a name="login-failed-opening-sql-server-express-database-in-app_data"></a>Accesso non riuscito durante l'apertura del database SQL Server Express nei dati dell'app\_
 
 ### <a name="scenario"></a>Scenario
 
-Aggiornato il *Web. config* stringa di connessione in modo che punti a un database di SQL Server Express come file un' *mdf* del file nei *App\_dati* cartella e il primo ora che si esegue l'applicazione che viene visualizzato il messaggio di errore seguente:
+La stringa di connessione al file *Web. config* è stata aggiornata in modo da puntare a un database SQL Server Express come file con *estensione mdf* nell' *app\_cartella dati* e la prima volta che si esegue l'applicazione viene visualizzato il messaggio di errore seguente:
 
 [!code-console[Main](deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12/samples/sample14.cmd)]
 
-### <a name="possible-cause-and-solution"></a>Possibile causa e soluzione
+### <a name="possible-cause-and-solution"></a>Possibili cause e soluzioni
 
-Il nome del *mdf* file non può corrispondere al nome di qualsiasi database di SQL Server Express che è stata presente nel computer, anche se è stato eliminato il *mdf* file del database già esistente. Modificare il nome del *mdf* file a un nome che non sia mai stato utilizzato come un nome di database e modificare le *Web. config* file usare il nuovo nome. In alternativa, è possibile usare [SQL Server Management Studio Express](https://www.microsoft.com/download/details.aspx?displaylang=en&amp;id=7593) per eliminare in precedenza esistenti SQL Server Express i database.
+Il nome del file con *estensione MDF* non può corrispondere al nome di un database SQL Server Express esistente nel computer, anche se è stato eliminato il file con *estensione MDF* del database precedentemente esistente. Modificare il nome del file con *estensione MDF* in un nome che non sia mai stato utilizzato come nome di database e modificare il file *Web. config* in modo da utilizzare il nuovo nome. In alternativa, è possibile utilizzare [SQL Server Management Studio Express](https://www.microsoft.com/download/details.aspx?displaylang=en&amp;id=7593) per eliminare i database di SQL Server Express esistenti in precedenza.
 
-## <a name="model-compatibility-cannot-be-checked"></a>Modello compatibilità non può essere estratto
+## <a name="model-compatibility-cannot-be-checked"></a>Impossibile controllare la compatibilità del modello
 
 ### <a name="scenario"></a>Scenario
 
-Aggiornato il *Web. config* file la stringa di connessione in modo che punti a un nuovo database di SQL Server Express e la prima volta che si esegue l'applicazione è visualizzato il messaggio di errore seguente:
+È stata aggiornata la stringa di connessione al file *Web. config* in modo che punti a un nuovo database di SQL Server Express e la prima volta che si esegue l'applicazione viene visualizzato il messaggio di errore seguente:
 
 [!code-console[Main](deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12/samples/sample15.cmd)]
 
-### <a name="possible-cause-and-solution"></a>Possibile causa e soluzione
+### <a name="possible-cause-and-solution"></a>Possibili cause e soluzioni
 
-Se il nome del database viene inserito nel file Web. config è stato mai usato prima che il computer, un database potrebbe già esistere con alcune tabelle in esso. Selezionare un nuovo nome che non è stato usato nel computer prima e modifica il *Web. config* file in modo che punti per usare questo nuovo nome del database. In alternativa, è possibile usare [SQL Server Express Utility](https://www.microsoft.com/download/details.aspx?DisplayLang=en&amp;id=3990) oppure [SQL Server Management Studio Express](https://www.microsoft.com/download/details.aspx?displaylang=en&amp;id=7593) per eliminare il database esistente.
+Se il nome del database inserito nel file Web. config era mai stato utilizzato prima nel computer, è possibile che esista già un database con alcune tabelle. Selezionare un nuovo nome che non sia stato usato nel computer prima e modificare il file *Web. config* in modo che punti a usare il nuovo nome del database. In alternativa, è possibile usare [SQL Server Express Utility](https://www.microsoft.com/download/details.aspx?DisplayLang=en&amp;id=3990) o [SQL Server Management Studio Express](https://www.microsoft.com/download/details.aspx?displaylang=en&amp;id=7593) per eliminare il database esistente.
 
-## <a name="sql-error-when-a-script-attempts-to-create-users-or-roles"></a>Errore SQL quando si tenta di uno Script creare utenti o ruoli
+## <a name="sql-error-when-a-script-attempts-to-create-users-or-roles"></a>Errore SQL quando uno script tenta di creare utenti o ruoli
 
 ### <a name="scenario"></a>Scenario
 
-Si usa una distribuzione configurata nel database di **pubblicazione/creazione pacchetto SQL** scheda script SQL che vengono eseguiti durante la distribuzione includono comandi Create Role o Create User e ha esito negativo l'esecuzione di script quando vengono eseguiti tali comandi. È possibile visualizzare che ulteriori messaggi, ad esempio il seguente:
+Si sta usando la distribuzione del database configurata nella scheda **Pubblicazione/creazione pacchetto SQL** , gli script SQL che vengono eseguiti durante la distribuzione includono i comandi Crea utente o Crea ruolo e l'esecuzione dello script non riesce quando vengono eseguiti questi comandi. È possibile che vengano visualizzati messaggi più dettagliati, come i seguenti:
 
 [!code-console[Main](deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12/samples/sample16.cmd)]
 
-Se questo errore si verifica dopo la configurazione di distribuzione del database nel **pubblica sul Web** guidata anziché **pubblicazione/creazione pacchetto SQL** scheda, creare un thread nel [configurazione e Distribuzione](https://forums.asp.net/26.aspx/1?Configuration+and+Deployment) forum e la soluzione verrà aggiunto a questa pagina sulla risoluzione dei problemi.
+Se questo errore si verifica quando si configura la distribuzione del database nella procedura guidata **Pubblica sito Web** anziché nella scheda **Pubblicazione/creazione pacchetto SQL** , creare un thread nel forum di [configurazione e distribuzione](https://forums.asp.net/26.aspx/1?Configuration+and+Deployment) e la soluzione verrà aggiunta a questa pagina di risoluzione dei problemi.
 
-### <a name="possible-cause-and-solution"></a>Possibile causa e soluzione
+### <a name="possible-cause-and-solution"></a>Possibili cause e soluzioni
 
-L'account utente utilizzato per eseguire una distribuzione non dispone dell'autorizzazione per creare utenti o ruoli. Ad esempio, la società di hosting potrebbe assegnare il `db_datareader`, `db_datawriter`, e `db_ddladmin` ruoli per l'account utente che viene impostata automaticamente. Questi sono sufficienti per creare la maggior parte degli oggetti di database, ma non per la creazione di utenti o ruoli. Un modo per evitare l'errore è l'esclusione di ruoli e utenti dalla distribuzione del database. È possibile farlo modificando il `PreSource` (elemento) per il database del generato automaticamente uno script in modo che includa gli attributi seguenti:
+L'account utente utilizzato per eseguire la distribuzione non dispone dell'autorizzazione per la creazione di utenti o ruoli. Ad esempio, la società di hosting potrebbe assegnare i ruoli `db_datareader`, `db_datawriter`e `db_ddladmin` all'account utente configurato. Sono sufficienti per la creazione della maggior parte degli oggetti di database, ma non per la creazione di utenti o ruoli. Un modo per evitare l'errore è escludere gli utenti e i ruoli dalla distribuzione del database. Questa operazione può essere eseguita modificando l'elemento `PreSource` per lo script generato automaticamente dal database in modo che includa gli attributi seguenti:
 
 [!code-console[Main](deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12/samples/sample17.cmd)]
 
-Per informazioni su come modificare la `PreSource` elemento nel file di progetto, vedere [come: Modificare le impostazioni di distribuzione nel File di progetto](https://msdn.microsoft.com/library/ff398069(v=vs.100).aspx). Se gli utenti o ruoli del database di sviluppo necessario che nel database di destinazione, contattare il provider di hosting per assistenza.
+Per informazioni su come modificare l'elemento `PreSource` nel file di progetto, vedere [procedura: modificare le impostazioni di distribuzione nel file di progetto](https://msdn.microsoft.com/library/ff398069(v=vs.100).aspx). Se gli utenti o i ruoli nel database di sviluppo devono trovarsi nel database di destinazione, rivolgersi al provider di hosting per assistenza.
 
-## <a name="sql-server-timeout-error-when-running-custom-scripts-during-deployment"></a>Errore di Timeout SQL Server durante l'esecuzione di script personalizzate durante la distribuzione
-
-### <a name="scenario"></a>Scenario
-
-Si sono specificati gli script SQL personalizzati per l'esecuzione durante la distribuzione e quando la distribuzione Web in esecuzione tali, sono un timeout.
-
-### <a name="possible-cause-and-solution"></a>Possibile causa e soluzione
-
-Esecuzione di più script con le modalità di transazione diversi può causare errori di timeout. Per impostazione predefinita, gli script generati automaticamente eseguiti in una transazione, ma non gli script personalizzati. Se si seleziona il **eseguire il Pull dei dati e/o schema da un database esistente** opzione il **pubblicazione/creazione pacchetto SQL** scheda, e se si aggiunge uno script SQL personalizzato, è necessario modificare le impostazioni delle transazioni su alcuni script in modo che tutti gli script usano le stesse impostazioni delle transazioni. Per altre informazioni, vedere [Procedura: Distribuire un Database con un progetto di applicazione Web](https://msdn.microsoft.com/library/dd465343.aspx).
-
-Se si hanno configurato le impostazioni delle transazioni in modo che tutti sono uguali ma ancora visualizzato questo errore, una possibile soluzione alternativa consiste nell'eseguire gli script separatamente. Nel **script di Database** griglia nel **pubblicazione/creazione pacchetto** scheda SQL, deseleziona il **Includi** casella di controllo per lo script che provoca l'errore di timeout, quindi pubblicare il progetto. Passare quindi al **script del Database** griglia, selezionare tale script **inclusione** casella di controllo e deselezionare il **Include** caselle di controllo per gli altri script. Quindi, pubblicare nuovamente il progetto. Questo tempo quando si pubblica, solo le esecuzioni di script personalizzato selezionato.
-
-## <a name="stream-data-of-site-manifest-is-not-yet-available"></a>Stream dati del manifesto di sito non sono ancora disponibili
+## <a name="sql-server-timeout-error-when-running-custom-scripts-during-deployment"></a>Errore SQL Server timeout durante l'esecuzione di script personalizzati durante la distribuzione
 
 ### <a name="scenario"></a>Scenario
 
-Quando si installa un pacchetto tramite il *deploy. cmd* file con il `t` opzione (test), viene visualizzato il messaggio di errore seguente:
+Sono stati specificati script SQL personalizzati da eseguire durante la distribuzione e quando Distribuzione Web li esegue, si verifica il timeout.
+
+### <a name="possible-cause-and-solution"></a>Possibili cause e soluzioni
+
+L'esecuzione di più script con modalità di transazione diverse può causare errori di timeout. Per impostazione predefinita, gli script generati automaticamente vengono eseguiti in una transazione, ma non negli script personalizzati. Se si seleziona l'opzione **Estrai dati e/o schema da un database esistente** nella scheda **Pubblicazione/creazione pacchetto SQL** e si aggiunge uno script SQL personalizzato, è necessario modificare le impostazioni delle transazioni in alcuni script in modo che tutti gli script usino le stesse impostazioni di transazione. Per altre informazioni, vedere [procedura: distribuire un database con un progetto di applicazione Web](https://msdn.microsoft.com/library/dd465343.aspx).
+
+Se sono state configurate le impostazioni delle transazioni in modo che tutte siano uguali ma si ottengano comunque questo errore, una possibile soluzione alternativa consiste nell'eseguire gli script separatamente. Nella griglia **script di database** della scheda **Pubblicazione/creazione pacchetto** SQL deselezionare la casella di controllo **Includi** per lo script che causa l'errore di timeout, quindi pubblicare il progetto. Tornare quindi alla griglia degli **script di database** , selezionare la casella di controllo **Includi** script e deselezionare le caselle di controllo **Includi** per gli altri script. Quindi pubblicare nuovamente il progetto. Questa volta, quando si pubblica, viene eseguito solo lo script personalizzato selezionato.
+
+## <a name="stream-data-of-site-manifest-is-not-yet-available"></a>I dati del flusso del manifesto del sito non sono ancora disponibili
+
+### <a name="scenario"></a>Scenario
+
+Quando si installa un pacchetto mediante il file *deploy. cmd* con l'opzione `t` (test), viene visualizzato il messaggio di errore seguente:
 
 [!code-console[Main](deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12/samples/sample18.cmd)]
 
-### <a name="possible-cause-and-solution"></a>Possibile causa e soluzione
+### <a name="possible-cause-and-solution"></a>Possibili cause e soluzioni
 
-Il messaggio di errore indica che il comando non è possibile generare un report di test. Tuttavia, potrebbe essere eseguito il comando se si usa il `y` opzione (installazione effettivo). Il messaggio indica solo che si è verificato un problema con l'esecuzione del comando in modalità di test.
+Il messaggio di errore indica che il comando non può produrre un report di test. Tuttavia, il comando può essere eseguito se si usa l'opzione `y` (installazione effettiva). Il messaggio indica solo che si è verificato un problema durante l'esecuzione del comando in modalità test.
 
-## <a name="this-application-requires-managedruntimeversion-v40"></a>Questa applicazione richiede ManagedRuntimeVersion v4.0
+## <a name="this-application-requires-managedruntimeversion-v40"></a>Questa applicazione richiede ManagedRuntimeVersion v 4.0
 
 ### <a name="scenario"></a>Scenario
 
-Quando si tenta di distribuire, è visualizzato il messaggio di errore seguente:
+Quando si tenta di distribuire, viene visualizzato il messaggio di errore seguente:
 
- Errore: I dati del flusso di ' sitemanifest/dbFullSql [@path= 'C:\TEMP\AdventureWorksGrant.sql']/sqlScript' non è ancora disponibile. Il pool di applicazioni che si sta tentando di usare è la proprietà 'managedRuntimeVersion' impostato su '2.0'. Questa applicazione richiede "v4.0". 
+ Errore: i dati del flusso di ' sitemanifest/dbFullSql [@path=' C:\TEMP\AdventureWorksGrant.sql ']/sqlScript ' non sono ancora disponibili. Il pool di applicazioni che si sta tentando di usare ha la proprietà' managedRuntimeVersion ' impostata su' v 2.0'. Questa applicazione richiede "v 4.0". 
 
-### <a name="possible-cause-and-solution"></a>Possibile causa e soluzione
+### <a name="possible-cause-and-solution"></a>Possibili cause e soluzioni
 
-ASP.NET 4 non è installato in IIS. Se il server che viene eseguita la distribuzione è il computer di sviluppo e Visual Studio 2010 è installato su di esso, ASP.NET 4 è installato nel computer ma potrebbero non essere installato in IIS. Nel server in cui viene eseguita la distribuzione, aprire un prompt dei comandi con privilegi elevati e installare ASP.NET 4 in IIS eseguendo i comandi seguenti:
+ASP.NET 4 non è installato in IIS. Se il server in cui si esegue la distribuzione è il computer di sviluppo in cui è installato Visual Studio 2010, ASP.NET 4 è installato nel computer, ma potrebbe non essere installato in IIS. Nel server in cui si esegue la distribuzione, aprire un prompt dei comandi con privilegi elevati e installare ASP.NET 4 in IIS eseguendo i comandi seguenti:
 
 [!code-console[Main](deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12/samples/sample19.cmd)]
 
-## <a name="unable-to-cast-microsoftwebdeploymentdeploymentprovideroptions"></a>Impossibile eseguire il cast Microsoft.Web.Deployment.DeploymentProviderOptions
+## <a name="unable-to-cast-microsoftwebdeploymentdeploymentprovideroptions"></a>Non è possibile eseguire il cast di Microsoft. Web. Deployment. DeploymentProviderOptions
 
 ### <a name="scenario"></a>Scenario
 
-Quando si distribuisce un pacchetto, è visualizzato il messaggio di errore seguente:
+Quando si distribuisce un pacchetto, viene visualizzato il messaggio di errore seguente:
 
 [!code-console[Main](deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12/samples/sample20.cmd)]
 
-### <a name="possible-cause-and-solution"></a>Possibile causa e soluzione
+### <a name="possible-cause-and-solution"></a>Possibili cause e soluzioni
 
-Si tenta di distribuire da Gestione IIS usando l'interfaccia 1.1 distribuzione Web a un server con distribuzione Web 2.0 installato. Se si usa lo strumento di amministrazione remota di IIS per la distribuzione tramite l'importazione di un pacchetto, verificare i **nuove funzionalità disponibili in** finestra di dialogo quando si stabilisce la connessione. (Questa finestra di dialogo potrebbe essere visualizzata solo una volta quando innanzitutto viene stabilita la connessione. Per cancellare la connessione e ricominciare da capo, chiudere Gestione IIS e avviarlo nuovo immettendo `inetmgr /reset` al prompt dei comandi.) Se una delle funzionalità elencate **interfaccia utente Web di distribuire**e ha un numero di versione inferiore a 8, il server viene eseguita la distribuzione potrebbe avere versioni sia 1.1 e 2.0 di distribuzione Web installati. Per distribuire da un client che ha installato 2.0, il server deve avere solo distribuzione Web 2.0 installato. È necessario contattare il provider di hosting per risolvere il problema.
+Si sta tentando di eseguire la distribuzione da Gestione IIS usando l'interfaccia utente di Distribuzione Web 1,1 in un server in cui è installato Distribuzione Web 2,0. Se si utilizza lo strumento di amministrazione remota IIS per eseguire la distribuzione importando un pacchetto, selezionare la finestra di dialogo **nuove funzionalità disponibili** quando si stabilisce la connessione. Questa finestra di dialogo può essere visualizzata una sola volta quando la connessione viene stabilita per la prima volta. Per cancellare la connessione e ricominciare, chiudere Gestione IIS e riavviarlo immettendo `inetmgr /reset` al prompt dei comandi. Se una delle funzionalità elencate è **distribuzione Web interfaccia utente**e il numero di versione è inferiore a 8, nel server in cui si esegue la distribuzione potrebbero essere installate entrambe le versioni 1,1 e 2,0 di distribuzione Web. Per eseguire la distribuzione da un client in cui è installato 2,0, è necessario che nel server sia installato solo Distribuzione Web 2,0. Per risolvere il problema, sarà necessario contattare il provider di hosting.
 
-## <a name="unable-to-load-the-native-components-of-sql-server-compact"></a>Non è possibile caricare i componenti nativi di SQL Server Compact
+## <a name="unable-to-load-the-native-components-of-sql-server-compact"></a>Impossibile caricare i componenti nativi di SQL Server Compact
 
 ### <a name="scenario"></a>Scenario
 
-Quando si esegue il sito distribuito, è visualizzato il messaggio di errore seguente:
+Quando si esegue il sito distribuito, viene visualizzato il messaggio di errore seguente:
 
 [!code-console[Main](deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12/samples/sample21.cmd)]
 
-### <a name="possible-cause-and-solution"></a>Possibile causa e soluzione
+### <a name="possible-cause-and-solution"></a>Possibili cause e soluzioni
 
-Il sito distribuito non dispone *amd64* e *x86* sottocartelle con gli assembly nativi in essi contenuti sotto l'applicazione *bin* cartella. In un computer dotato di SQL Server Compact è installato, si trovano gli assembly nativi nella *C:\Program Files\Microsoft SQL Server Compact Edition\v4.0\Private*. Il modo migliore per ottenere i file corretti nelle cartelle corrette in un progetto di Visual Studio consiste nell'installare il pacchetto NuGet SqlServerCompact. Installazione del pacchetto aggiunge uno script di post-compilazione per copiare gli assembly nativi nella *amd64* e *x86*. Affinché queste per la distribuzione, tuttavia, è necessario includerlo manualmente nel progetto. Per altre informazioni, vedere la [distribuzione di SQL Server Compact](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12.md) esercitazione.
+Il sito distribuito non dispone di sottocartelle *amd64* e *x86* con gli assembly nativi presenti nella cartella *bin* dell'applicazione. In un computer in cui è installato SQL Server Compact, gli assembly nativi si trovano in *c:\programmi\microsoft SQL Server Compact Edition\v4.0\Private*. Il modo migliore per ottenere i file corretti nelle cartelle corrette in un progetto di Visual Studio consiste nell'installare il pacchetto NuGet SqlServerCompact. L'installazione del pacchetto aggiunge uno script di post-compilazione per copiare gli assembly nativi in *amd64* e *x86*. Per poter distribuire questi elementi, è tuttavia necessario includerli manualmente nel progetto. Per ulteriori informazioni, vedere l'esercitazione sulla [distribuzione di SQL Server Compact](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12.md) .
 
-## <a name="path-is-not-valid-error-after-deploying-an-entity-framework-code-first-application"></a>Errore di "Percorso non valido" dopo la distribuzione di un'applicazione Entity Framework Code First
+## <a name="path-is-not-valid-error-after-deploying-an-entity-framework-code-first-application"></a>Errore "percorso non valido" dopo la distribuzione di un'applicazione Code First Entity Framework
 
 ### <a name="scenario"></a>Scenario
 
-Si distribuisce un'applicazione che usa le migrazioni di Entity Framework Code First e un DBMS, ad esempio SQL Server Compact che archivia il relativo database in un file nell'App\_cartella dati. Si dispone di migrazioni Code First configurato per la creazione del database dopo la prima distribuzione. Quando si esegue l'applicazione viene visualizzato un messaggio di errore simile al seguente:
+Si distribuisce un'applicazione che usa Migrazioni Code First di Entity Framework e un sistema DBMS, ad esempio SQL Server Compact che archivia il proprio database in un file nella cartella app\_data. È Migrazioni Code First configurato per creare il database dopo la prima distribuzione. Quando si esegue l'applicazione, viene ricevuto un messaggio di errore simile all'esempio seguente:
 
 [!code-console[Main](deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12/samples/sample22.cmd)]
 
-### <a name="possible-cause-and-solution"></a>Possibile causa e soluzione
+### <a name="possible-cause-and-solution"></a>Possibili cause e soluzioni
 
-Prima di tutto è tentato di creare il database, ma l'App\_cartella dati non esiste. È non è presente qualsiasi file *App\_dati* cartella quando è stato distribuito o è stata selezionata **escludere App\_dati** nel **pubblicazione/creazione pacchetto Web** scheda della finestra di **le proprietà del progetto** finestra. Il processo di distribuzione non creerà una cartella sul server se non sono presenti file nella cartella da copiare nel server. Se è già presente al database configurato nel sito, il processo di distribuzione verrà eliminati i file e il *App\_Data* cartella se è stata selezionata **Rimuovi file aggiuntivi nella destinazione** in il profilo di pubblicazione. Per risolvere il problema, inserire un file segnaposto, ad esempio un file con estensione txt nel *App\_Data* cartella, assicurarsi che non è **escludere App\_dati** selezionata e ridistribuire. 
+Code First sta tentando di creare il database ma la cartella app\_data non esiste. Non sono presenti file nella cartella *app\_data* durante la distribuzione oppure è stata selezionata l'opzione **Escludi i dati dell'app\_** nella scheda **pacchetto/pubblica Web** della finestra **Proprietà progetto** . Il processo di distribuzione non creerà una cartella nel server se non sono presenti file nella cartella da copiare nel server. Se il database è già stato configurato nel sito, il processo di distribuzione eliminerà i file e la cartella di *dati dell'App\_* se è stata selezionata l'opzione **Rimuovi file aggiuntivi nella destinazione** nel profilo di pubblicazione. Per risolvere il problema, inserire un file segnaposto, ad esempio un file con estensione txt, nella cartella *app\_data* , assicurarsi che non siano stati selezionati i **dati di esclusione\_app** e ridistribuire. 
 
-## <a name="com-object-that-has-been-separated-from-its-underlying-rcw-cannot-be-used"></a>"Oggetto COM di cui è stato separato dalla relativa RCW sottostante non è possibile usare".
+## <a name="com-object-that-has-been-separated-from-its-underlying-rcw-cannot-be-used"></a>Impossibile utilizzare "oggetto COM separato dall'RCW sottostante".
 
 ### <a name="scenario"></a>Scenario
 
-È stata completata con un solo clic pubblica per distribuire l'applicazione e quindi si iniziano a questo errore:
+La pubblicazione con un clic è stata eseguita correttamente per distribuire l'applicazione e quindi si inizia a ricevere questo errore:
 
 [!code-console[Main](deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12/samples/sample23.cmd)]
 
-### <a name="possible-cause-and-solution"></a>Possibile causa e soluzione
+### <a name="possible-cause-and-solution"></a>Possibili cause e soluzioni
 
-Chiudere e riavviare Visual Studio è in genere tutto ciò che serve per risolvere l'errore.
+La chiusura e il riavvio di Visual Studio sono in genere tutti necessari per risolvere l'errore.
 
-## <a name="deployment-fails-because-user-credentials-used-for-publishing-dont-have-setacl-authority"></a>La distribuzione ha esito negativo in quanto utente credenziali utilizzate per setACL pubblicazione non dispone dell'autorità
+## <a name="deployment-fails-because-user-credentials-used-for-publishing-dont-have-setacl-authority"></a>La distribuzione non riesce perché le credenziali utente usate per la pubblicazione non hanno l'autorità setACL
 
 ### <a name="scenario"></a>Scenario
 
-Pubblicazione ha esito negativo generando un errore che indica che non dispone dell'autorità per impostare le autorizzazioni di cartella (l'account utente in uso non ha autorità setACL).
+La pubblicazione ha esito negativo con un errore che indica che non si dispone dell'autorizzazione per impostare le autorizzazioni per le cartelle (l'account utente in uso non dispone dell'autorità setACL).
 
-### <a name="possible-cause-and-solution"></a>Possibile causa e soluzione
+### <a name="possible-cause-and-solution"></a>Possibili cause e soluzioni
 
-Per impostazione predefinita, Visual Studio imposta autorizzazioni sulla cartella radice del sito di autorizzazioni lettura e scrittura per l'App\_cartella dati. Se si sa che le autorizzazioni predefinite per le cartelle sito siano corrette e non sono necessario impostare, è possibile disattivare questo comportamento aggiungendo **&lt;destinazione IncludeSetACLProviderOn&gt;False&lt;/ IncludeSetACLProviderOnDestination&gt;** per il file del profilo di pubblicazione (da assegnare un singolo profilo) o al file WPP (per influiscono su tutti i profili). Per informazioni su come modificare questi file, vedere [come: Modificare le impostazioni di distribuzione nel file di profilo (con estensione pubxml)](https://msdn.microsoft.com/library/ff398069.aspx). 
+Per impostazione predefinita, Visual Studio imposta le autorizzazioni di lettura per la cartella radice del sito e le autorizzazioni di scrittura nella cartella app\_data. Se è noto che le autorizzazioni predefinite per le cartelle del sito sono corrette e non è necessario impostarle, disabilitare questo comportamento aggiungendo **&lt;destinazione IncludeSetACLProviderOn&gt;False&lt;/IncludeSetACLProviderOnDestination&gt;** al file del profilo di pubblicazione (per influire su un solo profilo) o al file WPP. targets (per influire su tutti i profili). Per informazioni su come modificare questi file, vedere [procedura: modificare le impostazioni di distribuzione nei file di profilo (con estensione pubxml)](https://msdn.microsoft.com/library/ff398069.aspx). 
 
 ## <a name="access-denied-errors-when-the-application-tries-to-write-to-an-application-folder"></a>Errori di accesso negato quando l'applicazione tenta di scrivere in una cartella dell'applicazione
 
 ### <a name="scenario"></a>Scenario
 
-Gli errori dell'applicazione quando prova a creare o modificare un file in una delle cartelle dell'applicazione, perché non dispone dell'autorità di scrittura per la cartella.
+Si verificano errori dell'applicazione quando si tenta di creare o modificare un file in una delle cartelle dell'applicazione, perché non dispone dell'autorità di scrittura per la cartella.
 
-### <a name="possible-cause-and-solution"></a>Possibile causa e soluzione
+### <a name="possible-cause-and-solution"></a>Possibili cause e soluzioni
 
-Per impostazione predefinita, Visual Studio imposta autorizzazioni sulla cartella radice del sito di autorizzazioni lettura e scrittura per l'App\_cartella dati. Se l'applicazione necessita di accesso in scrittura a una sottocartella, è possibile impostare le autorizzazioni per la cartella come illustrato nella [impostazione delle autorizzazioni di cartelle](deployment-to-a-hosting-provider-setting-folder-permissions-6-of-12.md) e [distribuzione nell'ambiente di produzione](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12.md) esercitazioni. Se l'applicazione necessita di accesso in scrittura alla cartella radice del sito, è necessario impedirne l'impostazione di accesso in sola lettura nella cartella radice aggiungendo **&lt;destinazione IncludeSetACLProviderOn&gt;False&lt;/ IncludeSetACLProviderOnDestination&gt;** per il file del profilo di pubblicazione (da assegnare un singolo profilo) o al file WPP (per influiscono su tutti i profili). Per informazioni su come modificare questi file, vedere [come: Modificare le impostazioni di distribuzione nel file di profilo (con estensione pubxml)](https://msdn.microsoft.com/library/ff398069.aspx). <a id="aspnet45error"></a>
+Per impostazione predefinita, Visual Studio imposta le autorizzazioni di lettura per la cartella radice del sito e le autorizzazioni di scrittura nella cartella app\_data. Se l'applicazione richiede l'accesso in scrittura a una sottocartella, è possibile impostare le autorizzazioni per tale cartella, come illustrato nelle esercitazioni [impostazione autorizzazioni cartella](deployment-to-a-hosting-provider-setting-folder-permissions-6-of-12.md) e [distribuzione in ambiente di produzione](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12.md) . Se l'applicazione richiede l'accesso in scrittura alla cartella radice del sito, è necessario impedirne l'impostazione dell'accesso in sola lettura nella cartella radice aggiungendo **&lt;destinazione IncludeSetACLProviderOn&gt;False&lt;/IncludeSetACLProviderOnDestination&gt;** al file del profilo di pubblicazione (per influire su un solo profilo) o al file WPP. targets (per influire su tutti i profili). Per informazioni su come modificare questi file, vedere [procedura: modificare le impostazioni di distribuzione nei file di profilo (con estensione pubxml)](https://msdn.microsoft.com/library/ff398069.aspx). <a id="aspnet45error"></a>
 
-## <a name="configuration-error---targetframework-attribute-references-a-version-that-is-later-than-the-installed-version-of-the-net-framework"></a>Errore di configurazione - attributo targetFramework fa riferimento a una versione successiva a quella installata di .NET Framework
+## <a name="configuration-error---targetframework-attribute-references-a-version-that-is-later-than-the-installed-version-of-the-net-framework"></a>Errore di configurazione-l'attributo targetFramework fa riferimento a una versione successiva alla versione installata del .NET Framework
 
 ### <a name="scenario"></a>Scenario
 
-È stato pubblicato correttamente un progetto web destinato a ASP.NET 4.5, ma quando si esegue l'applicazione (con il `customErrors` modalità è impostata su "off" nel file Web. config) viene visualizzato l'errore seguente:
+È stato pubblicato un progetto Web destinato a ASP.NET 4,5, ma quando si esegue l'applicazione (con la modalità `customErrors` impostata su "off" nel file Web. config) si verifica l'errore seguente:
 
 [!code-console[Main](deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12/samples/sample24.cmd)]
 
-La finestra di errore dell'origine della pagina di errore evidenzia la riga seguente da Web. config come la causa dell'errore:
+Nella casella errore di origine della pagina di errore viene evidenziata la seguente riga da Web. config come causa dell'errore:
 
 [!code-console[Main](deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12/samples/sample25.cmd)]
 
-### <a name="possible-cause-and-solution"></a>Possibile causa e soluzione
+### <a name="possible-cause-and-solution"></a>Possibili cause e soluzioni
 
-Il server non supporta ASP.NET 4.5. Contattare il provider di hosting per determinare quando e se può essere aggiunto il supporto per ASP.NET 4.5. Se l'aggiornamento del server non è un'opzione, è necessario distribuire un progetto web destinata a 4 o versioni precedenti di ASP.NET invece. Se si distribuisce un ASP.NET 4 o versioni precedenti progetto web alla stessa destinazione, selezionare la **Rimuovi file aggiuntivi nella destinazione** casella di controllo la **impostazioni** scheda della finestra di **pubblica sul Web**procedura guidata. Se non si seleziona **Rimuovi file aggiuntivi nella destinazione**, continuerà a essere visualizzata la pagina di errore di configurazione.
+Il server non supporta ASP.NET 4,5. Contattare il provider di hosting per determinare quando e se è possibile aggiungere il supporto per ASP.NET 4,5. Se l'aggiornamento del server non è un'opzione, è necessario distribuire un progetto Web destinato a ASP.NET 4 o versioni precedenti. Se si distribuisce un progetto Web ASP.NET 4 o versione precedente nella stessa destinazione, selezionare la casella di controllo **Rimuovi file aggiuntivi nella destinazione** nella scheda **Impostazioni** della procedura guidata **Pubblica sito Web** . Se non si seleziona **Rimuovi file aggiuntivi nella destinazione**, si continuerà a ottenere la pagina di errore di configurazione.
 
-Il progetto **delle proprietà** windows include un elenco di riepilogo a discesa dei framework di destinazione, ma è possibile risolvere questo problema semplicemente modificando queste informazioni dal **.NET Framework 4.5** a **di.NETFramework4**. Se si modifica il framework di destinazione a una versione precedente di framework, il progetto sarà ancora disponibili riferimenti agli assembly della versione framework successiva e non verrà eseguito. È necessario modificare tali riferimenti manualmente o creare un nuovo progetto destinato a .NET Framework 4 o versioni precedenti. Per altre informazioni, vedere [.NET Framework come destinazione per i siti Web](https://msdn.microsoft.com/library/bb398791(v=vs.100).aspx).
+Nelle finestre delle **Proprietà** del progetto è incluso un elenco a discesa Framework di destinazione, ma non è possibile risolvere il problema modificando il valore da **.NET Framework 4,5** al **.NET Framework 4**. Se si modifica il Framework di destinazione in una versione precedente del Framework, il progetto avrà ancora riferimenti agli assembly della versione del Framework successiva e non sarà eseguito. È necessario modificare manualmente i riferimenti o creare un nuovo progetto destinato a .NET Framework 4 o versioni precedenti. Per ulteriori informazioni, vedere [.NET Framework destinazione per i siti Web](https://msdn.microsoft.com/library/bb398791(v=vs.100).aspx).
 
 > [!div class="step-by-step"]
 > [Precedente](deployment-to-a-hosting-provider-deploying-a-sql-server-database-update-11-of-12.md)

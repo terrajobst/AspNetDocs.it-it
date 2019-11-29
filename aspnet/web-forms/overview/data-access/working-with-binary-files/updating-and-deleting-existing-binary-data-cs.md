@@ -1,318 +1,318 @@
 ---
 uid: web-forms/overview/data-access/working-with-binary-files/updating-and-deleting-existing-binary-data-cs
-title: Aggiornamento ed eliminazione di dati binari esistenti (c#) | Microsoft Docs
+title: Aggiornamento ed eliminazione di dati binari esistentiC#() | Microsoft Docs
 author: rick-anderson
-description: Nelle esercitazioni precedenti abbiamo visto come il controllo GridView rende più semplice modificare ed eliminare i dati di testo. In questa esercitazione viene illustrato come il controllo GridView inoltre rendere...
+description: Nelle esercitazioni precedenti è stato illustrato il modo in cui il controllo GridView semplifica la modifica e l'eliminazione dei dati di testo. In questa esercitazione viene illustrato il modo in cui il controllo GridView crea anche...
 ms.author: riande
 ms.date: 03/27/2007
 ms.assetid: 35798f21-1606-434b-83f8-30166906ef49
 msc.legacyurl: /web-forms/overview/data-access/working-with-binary-files/updating-and-deleting-existing-binary-data-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 882da1a321584cf97f826bb08c272ece348679cb
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 3e37381ee48fcda8e0e10374aa7a6ae53c3cc77c
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65132820"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74587412"
 ---
 # <a name="updating-and-deleting-existing-binary-data-c"></a>Aggiornamento ed eliminazione di dati binari esistenti (C#)
 
-da [Scott Mitchell](https://twitter.com/ScottOnWriting)
+di [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Scaricare l'App di esempio](http://download.microsoft.com/download/4/a/7/4a7a3b18-d80e-4014-8e53-a6a2427f0d93/ASPNET_Data_Tutorial_57_CS.exe) o [Scarica il PDF](updating-and-deleting-existing-binary-data-cs/_static/datatutorial57cs1.pdf)
+[Scaricare l'app di esempio](https://download.microsoft.com/download/4/a/7/4a7a3b18-d80e-4014-8e53-a6a2427f0d93/ASPNET_Data_Tutorial_57_CS.exe) o [scaricare il file PDF](updating-and-deleting-existing-binary-data-cs/_static/datatutorial57cs1.pdf)
 
-> Nelle esercitazioni precedenti abbiamo visto come il controllo GridView rende più semplice modificare ed eliminare i dati di testo. In questa esercitazione viene illustrato come il controllo GridView inoltre rende possibile modificare ed eliminare i dati binari, se tali dati binari viene salvati nel database o archiviati nel file system.
+> Nelle esercitazioni precedenti è stato illustrato il modo in cui il controllo GridView semplifica la modifica e l'eliminazione dei dati di testo. In questa esercitazione viene illustrato il modo in cui il controllo GridView consente inoltre di modificare ed eliminare i dati binari, indipendentemente dal fatto che siano salvati nel database o archiviati nel file system.
 
 ## <a name="introduction"></a>Introduzione
 
-Failover di tre esercitazioni precedenti è stato aggiunto un bel di funzionalità per l'utilizzo di dati binari. È stato avviato mediante l'aggiunta di un `BrochurePath` colonna il `Categories` di tabella e aggiornati di conseguenza l'architettura. Sono stati aggiunti anche i metodi di livello di accesso ai dati e Business Logic Layer per lavorare con la tabella s categorie esistenti `Picture` colonna che contiene gli oggetti contenuto binario di un file di immagine. È stato creato le pagine web per presentare i dati binari in un controllo GridView a un collegamento di download per brochure, immagine categoria s mostrata un `<img>` elemento e aver aggiunto un controllo DetailsView per consentire agli utenti di aggiungere una nuova categoria e caricare i dati di brochure e immagine.
+Nelle ultime tre esercitazioni sono state aggiunte alcune funzionalità per l'utilizzo di dati binari. È stata avviata aggiungendo una colonna `BrochurePath` alla tabella `Categories` e l'architettura è stata aggiornata di conseguenza. Sono stati anche aggiunti i metodi livello di accesso ai dati e livello di logica di business per lavorare con la colonna della tabella delle categorie s `Picture` esistente, che include il contenuto binario di un file di immagine. Sono state create pagine Web per presentare i dati binari in un collegamento GridView a download per la brochure, con l'immagine della categoria mostrata in un elemento `<img>` e è stato aggiunto un DetailsView per consentire agli utenti di aggiungere una nuova categoria e caricare la relativa brochure e i dati immagine.
 
-Per essere implementata resta che la possibilità di modificare ed eliminare le categorie esistenti, che verrà eseguito in questa esercitazione usando i GridView s incorporati di modifica ed eliminazione di funzionalità. Quando si modifica una categoria, l'utente sarà in grado di caricare una nuova immagine o facoltativamente dispongono della categoria di continuare a usare quello esistente. Per brochure, è possibile scegliere di usare brochure esistente, per caricare una nuovo brochure o per indicare che la categoria non ha più una brochure associata. Introduzione a ti permettono di s.
+Tutto ciò che rimane da implementare è la possibilità di modificare ed eliminare le categorie esistenti, che verranno eseguite in questa esercitazione usando le funzionalità di modifica e eliminazione predefinite di GridView. Quando si modifica una categoria, l'utente potrà caricare facoltativamente una nuova immagine o fare in modo che la categoria continui a usare quella esistente. Per la brochure, è possibile scegliere di usare la brochure esistente, caricare una nuova brochure o indicare che alla categoria non è più associata una brochure. Inizia subito.
 
-## <a name="step-1-updating-the-data-access-layer"></a>Passaggio 1: Aggiornare il livello di accesso ai dati
+## <a name="step-1-updating-the-data-access-layer"></a>Passaggio 1: aggiornamento del livello di accesso ai dati
 
-DAL ha generato automaticamente `Insert`, `Update`, e `Delete` metodi, ma questi metodi sono stati generati in base il `CategoriesTableAdapter` query principale s, che non include il `Picture` colonna. Pertanto, il `Insert` e `Update` metodi non includono i parametri per specificare i dati binari per l'immagine di categoria s. Come abbiamo fatto il [esercitazione precedente](including-a-file-upload-option-when-adding-a-new-record-cs.md), è necessario creare un nuovo metodo TableAdapter per l'aggiornamento di `Categories` tabella quando si specificano i dati binari.
+Il DAL ha generato automaticamente i metodi `Insert`, `Update`e `Delete`, ma questi metodi sono stati generati in base alla query principale `CategoriesTableAdapter` s, che non include la colonna `Picture`. Pertanto, i metodi `Insert` e `Update` non includono parametri per specificare i dati binari per l'immagine di categoria. Come nell' [esercitazione precedente](including-a-file-upload-option-when-adding-a-new-record-cs.md), è necessario creare un nuovo metodo TableAdapter per aggiornare la tabella `Categories` quando si specificano dati binari.
 
-Aprire il DataSet tipizzato e, dalla finestra di progettazione, fare clic su di `CategoriesTableAdapter` intestazione s e scegliere Aggiungi Query dal menu di scelta rapida per avviare la configurazione guidata Query TableAdapter. Questa procedura guidata viene avviata da richiede la modalità della query TableAdapter di accesso del database. Scegliere Usa istruzioni SQL e fare clic su Avanti. Il passaggio successivo richiede il tipo di query da generare. Poiché abbiamo nuovamente la creazione di una query per aggiungere un nuovo record per il `Categories` di tabella, scegliere l'aggiornamento e fare clic su Avanti.
+Aprire il DataSet tipizzato e, dalla finestra di progettazione, fare clic con il pulsante destro del mouse sull'intestazione `CategoriesTableAdapter` s e scegliere Aggiungi query dal menu di scelta rapida per avviare la configurazione guidata query TableAdapter. Questa procedura guidata inizia chiedendo come la query TableAdapter deve accedere al database. Scegliere Usa istruzioni SQL e fare clic su Avanti. Il passaggio successivo richiede la generazione del tipo di query. Poiché viene ricreata una query per aggiungere un nuovo record alla tabella `Categories`, scegliere Aggiorna, quindi fare clic su Avanti.
 
-[![Selezionare l'opzione di aggiornamento](updating-and-deleting-existing-binary-data-cs/_static/image1.gif)](updating-and-deleting-existing-binary-data-cs/_static/image1.png)
+[![selezionare l'opzione di aggiornamento](updating-and-deleting-existing-binary-data-cs/_static/image1.gif)](updating-and-deleting-existing-binary-data-cs/_static/image1.png)
 
-**Figura 1**: Selezionare l'opzione di aggiornamento ([fare clic per visualizzare l'immagine con dimensioni normali](updating-and-deleting-existing-binary-data-cs/_static/image2.png))
+**Figura 1**: selezionare l'opzione di aggiornamento ([fare clic per visualizzare l'immagine con dimensioni complete](updating-and-deleting-existing-binary-data-cs/_static/image2.png))
 
-È ora necessario specificare il `UPDATE` istruzione SQL. La procedura guidata suggerisce automaticamente un `UPDATE` istruzione corrisponde alla query principale s TableAdapter (uno che aggiorna il `CategoryName`, `Description`, e `BrochurePath` valori). Modificare l'istruzione in modo che il `Picture` colonna è incluso con un `@Picture` parametro, come illustrato di seguito:
+A questo punto è necessario specificare l'istruzione SQL `UPDATE`. La procedura guidata suggerisce automaticamente un'istruzione `UPDATE` corrispondente alla query principale di TableAdapter (uno che aggiorna i valori `CategoryName`, `Description`e `BrochurePath`). Modificare l'istruzione in modo che la colonna `Picture` venga inclusa insieme a un parametro di `@Picture`, come indicato di seguito:
 
 [!code-sql[Main](updating-and-deleting-existing-binary-data-cs/samples/sample1.sql)]
 
-Schermata finale della procedura guidata viene chiesto di specificare un nome al nuovo metodo di TableAdapter. Immettere `UpdateWithPicture` e fare clic su Fine.
+Nella schermata finale della procedura guidata viene chiesto di assegnare un nome al nuovo metodo TableAdapter. Immettere `UpdateWithPicture` e fare clic su fine.
 
-[![Denominare il nuovo UpdateWithPicture TableAdapter (metodo)](updating-and-deleting-existing-binary-data-cs/_static/image2.gif)](updating-and-deleting-existing-binary-data-cs/_static/image3.png)
+[![nome del nuovo metodo TableAdapter UpdateWithPicture](updating-and-deleting-existing-binary-data-cs/_static/image2.gif)](updating-and-deleting-existing-binary-data-cs/_static/image3.png)
 
-**Figura 2**: Denominare il nuovo metodo TableAdapter `UpdateWithPicture` ([fare clic per visualizzare l'immagine con dimensioni normali](updating-and-deleting-existing-binary-data-cs/_static/image4.png))
+**Figura 2**: assegnare un nome al nuovo metodo TableAdapter `UpdateWithPicture` ([fare clic per visualizzare l'immagine con dimensioni complete](updating-and-deleting-existing-binary-data-cs/_static/image4.png))
 
-## <a name="step-2-adding-the-business-logic-layer-methods"></a>Passaggio 2: Aggiungendo i metodi di livello per la logica di Business
+## <a name="step-2-adding-the-business-logic-layer-methods"></a>Passaggio 2: aggiunta dei metodi del livello di logica di business
 
-Oltre all'aggiornamento DAL, è necessario aggiornare il livello BLL in modo da includere metodi per l'aggiornamento ed eliminazione di una categoria. Questi sono i metodi che verranno richiamati dal livello di presentazione.
+Oltre ad aggiornare il DAL, è necessario aggiornare il livello BLL per includere i metodi per l'aggiornamento e l'eliminazione di una categoria. Questi sono i metodi che verranno richiamati dal livello di presentazione.
 
-Per eliminare una categoria, è possibile usare la `CategoriesTableAdapter` s autogenerato `Delete` (metodo). Aggiungere il metodo seguente per il `CategoriesBLL` classe:
+Per eliminare una categoria, è possibile usare il metodo di `Delete` generato automaticamente `CategoriesTableAdapter` s. Aggiungere il metodo seguente alla classe `CategoriesBLL`:
 
 [!code-csharp[Main](updating-and-deleting-existing-binary-data-cs/samples/sample2.cs)]
 
-Per questa esercitazione, s ti permettono di creare due metodi per l'aggiornamento di una categoria - che prevede che i dati immagine binari e richiama il `UpdateWithPicture` metodo appena aggiunto per il `CategoriesTableAdapter` e un altro che accetta solo la `CategoryName`, `Description`e `BrochurePath`i valori e viene utilizzato `CategoriesTableAdapter` classe s autogenerato `Update` istruzione. La logica alla base usando due metodi è che in alcuni casi, un utente potrebbe essere necessario aggiornare l'immagine di s categoria insieme ai relativi altri campi, in cui i casi l'utente saranno necessario caricare la nuova immagine. I dati binari dell'immagine caricata s sono quindi utilizzabile nel `UPDATE` istruzione. In altri casi, l'utente potrebbe essere interessata solo l'aggiornamento, ad esempio, il nome e una descrizione. Ma se il `UPDATE` istruzione prevede che i dati binari per il `Picture` anche colonna, quindi abbiamo d necessario fornire tali informazioni. Ciò richiede un ulteriore percorso per il database per riportare i dati dell'immagine per il record da modificare. Pertanto, intendiamo due `UPDATE` metodi. Il livello di logica di Business è determineranno quello da usare è basata sul fatto che i dati immagine viene forniti durante l'aggiornamento della categoria.
+Per questa esercitazione, è possibile creare due metodi per l'aggiornamento di una categoria che prevede i dati dell'immagine binaria e richiama il metodo di `UpdateWithPicture` appena aggiunto al `CategoriesTableAdapter` e un altro che accetta solo i valori `CategoryName`, `Description`e `BrochurePath` e USA `CategoriesTableAdapter` istruzione `Update` della classe generata automaticamente. La logica alla base dell'utilizzo di due metodi è che, in alcune circostanze, un utente potrebbe voler aggiornare l'immagine della categoria insieme agli altri campi, nel qual caso l'utente dovrà caricare la nuova immagine. È quindi possibile usare i dati binari dell'immagine caricata nell'istruzione `UPDATE`. In altri casi, è possibile che l'utente sia interessato solo all'aggiornamento, ad Say, al nome e alla descrizione. Tuttavia, se l'istruzione `UPDATE` prevede anche i dati binari per la colonna `Picture`, è necessario fornire anche tali informazioni. Questa operazione richiederebbe un ulteriore viaggio al database per ripristinare i dati dell'immagine per il record in corso di modifica. Pertanto, si desiderano due metodi `UPDATE`. Il livello della logica di business determinerà quello da utilizzare a seconda che i dati dell'immagine vengano forniti quando si aggiorna la categoria.
 
-A tale scopo, aggiungere due metodi per la `CategoriesBLL` classe, entrambi denominati `UpdateCategory`. Il primo deve accettare tre `string` s, una `byte` array e un `int` come input parametri; il secondo, solo tre `string` s e un `int`. Il `string` sono parametri di input per il nome della categoria s, descrizione e percorso del file brochure, il `byte` array sia per il contenuto binario di immagine, la categoria s e il `int` identifica il `CategoryID` del record da aggiornare. Si noti che il primo overload richiama il secondo se passato `byte` matrice è `null`:
+Per semplificare questa operazione, aggiungere due metodi alla classe `CategoriesBLL`, entrambi denominati `UpdateCategory`. Il primo deve accettare tre `string` s, una matrice di `byte` e un `int` come parametri di input; il secondo, solo tre `string` s e una `int`. I parametri di input `string` sono per il nome, la descrizione e il percorso del file della brochure della categoria, la matrice di `byte` è per il contenuto binario dell'immagine della categoria e il `int` identifica il `CategoryID` del record da aggiornare. Si noti che il primo overload richiama il secondo se la matrice `byte` passata è `null`:
 
 [!code-csharp[Main](updating-and-deleting-existing-binary-data-cs/samples/sample3.cs)]
 
-## <a name="step-3-copying-over-the-insert-and-view-functionality"></a>Passaggio 3: Copiare tramite l'inserimento e la funzionalità di visualizzazione
+## <a name="step-3-copying-over-the-insert-and-view-functionality"></a>Passaggio 3: copia sulle funzionalità di inserimento e visualizzazione
 
-Nel [esercitazione precedente](including-a-file-upload-option-when-adding-a-new-record-cs.md) abbiamo creato una pagina denominata `UploadInDetailsView.aspx` che elencate tutte le categorie in un controllo GridView e fornito un DetailsView per aggiungere nuove categorie al sistema. In questa esercitazione si estenderà GridView per includere la modifica ed eliminazione di supporto. Invece di continuare a lavorare da `UploadInDetailsView.aspx`, ti permettono di s invece inserire questo cambia esercitazione s nel `UpdatingAndDeleting.aspx` pagina dalla stessa cartella, `~/BinaryData`. Copiare e incollare il markup dichiarativo e codice dal `UploadInDetailsView.aspx` a `UpdatingAndDeleting.aspx`.
+Nell' [esercitazione precedente](including-a-file-upload-option-when-adding-a-new-record-cs.md) è stata creata una pagina denominata `UploadInDetailsView.aspx` in cui sono elencate tutte le categorie di un controllo GridView e viene fornito un oggetto DetailsView per aggiungere nuove categorie al sistema. In questa esercitazione si estenderà GridView per includere la modifica e l'eliminazione del supporto. Anziché continuare a lavorare da `UploadInDetailsView.aspx`, è possibile inserire le modifiche dell'esercitazione nella pagina `UpdatingAndDeleting.aspx` dalla stessa cartella `~/BinaryData`. Copiare e incollare il markup dichiarativo e il codice da `UploadInDetailsView.aspx` a `UpdatingAndDeleting.aspx`.
 
-Iniziare aprendo il `UploadInDetailsView.aspx` pagina. Copiare tutta la sintassi dichiarativa all'interno di `<asp:Content>` elemento, come illustrato nella figura 3. Successivamente, aprire `UpdatingAndDeleting.aspx` e incollare questo markup all'interno di relativo `<asp:Content>` elemento. Analogamente, copiare il codice dal `UploadInDetailsView.aspx` pagina classe code-behind s a `UpdatingAndDeleting.aspx`.
+Per iniziare, aprire la pagina `UploadInDetailsView.aspx`. Copiare tutta la sintassi dichiarativa all'interno dell'elemento `<asp:Content>`, come illustrato nella figura 3. Successivamente, aprire `UpdatingAndDeleting.aspx` e incollare il markup all'interno dell'elemento `<asp:Content>`. Analogamente, copiare il codice dalla classe code-behind della pagina `UploadInDetailsView.aspx` in `UpdatingAndDeleting.aspx`.
 
-[![Copiare il codice dichiarativo da UploadInDetailsView.aspx](updating-and-deleting-existing-binary-data-cs/_static/image3.gif)](updating-and-deleting-existing-binary-data-cs/_static/image5.png)
+[![copiare il markup dichiarativo da UploadInDetailsView. aspx](updating-and-deleting-existing-binary-data-cs/_static/image3.gif)](updating-and-deleting-existing-binary-data-cs/_static/image5.png)
 
-**Figura 3**: Copiare il Markup dichiarativo dal `UploadInDetailsView.aspx` ([fare clic per visualizzare l'immagine con dimensioni normali](updating-and-deleting-existing-binary-data-cs/_static/image6.png))
+**Figura 3**: copiare il markup dichiarativo da `UploadInDetailsView.aspx` ([fare clic per visualizzare l'immagine con dimensioni complete](updating-and-deleting-existing-binary-data-cs/_static/image6.png))
 
-Dopo aver copiato il markup dichiarativo e codice, visitare `UpdatingAndDeleting.aspx`. Dovrebbe essere lo stesso output e avere la stessa esperienza utente come con `UploadInDetailsView.aspx` pagina dall'esercitazione precedente.
+Dopo aver copiato il markup dichiarativo e il codice, visitare `UpdatingAndDeleting.aspx`. Si dovrebbe visualizzare lo stesso output e avere la stessa esperienza utente di `UploadInDetailsView.aspx` pagina dell'esercitazione precedente.
 
-## <a name="step-4-adding-deleting-support-to-the-objectdatasource-and-gridview"></a>Passaggio 4: Aggiunta l'eliminazione di supporto per l'oggetto ObjectDataSource e GridView
+## <a name="step-4-adding-deleting-support-to-the-objectdatasource-and-gridview"></a>Passaggio 4: aggiunta del supporto per l'eliminazione di ObjectDataSource e GridView
 
-Come illustrato nel [una panoramica di inserimento, aggiornamento ed eliminazione di dati](../editing-inserting-and-deleting-data/an-overview-of-inserting-updating-and-deleting-data-cs.md) esercitazione, il controllo GridView offre funzionalità di eliminazione incorporate e queste funzionalità possono essere abilitate al segno di graduazione di una casella di controllo se s griglia sottostante origine dati supporta l'eliminazione. Attualmente ObjectDataSource di GridView è associato a (`CategoriesDataSource`) non supporta l'eliminazione.
+Come è stato illustrato nella [Panoramica dell'esercitazione sull'inserimento, l'aggiornamento e l'eliminazione dei dati](../editing-inserting-and-deleting-data/an-overview-of-inserting-updating-and-deleting-data-cs.md) , GridView fornisce funzionalità di eliminazione predefinite e queste funzionalità possono essere abilitate quando si esegue il segno di spunta di una casella di controllo se l'origine dati sottostante della griglia supporta l'eliminazione. Attualmente l'oggetto ObjectDataSource a cui è associato GridView (`CategoriesDataSource`) non supporta l'eliminazione.
 
-Per risolvere questo problema, fare clic sull'opzione Configura origine dati nello smart tag s ObjectDataSource per avviare la procedura guidata. La prima schermata mostra che ObjectDataSource è configurato per funzionare con il `CategoriesBLL` classe. Scegliere "Avanti". Attualmente, solo l'oggetto ObjectDataSource s `InsertMethod` e `SelectMethod` sono specificate proprietà. Tuttavia, la procedura guidata popolati automaticamente gli elenchi a discesa nelle schede UPDATE e DELETE con la `UpdateCategory` e `DeleteCategory` metodi, rispettivamente. Infatti nel `CategoriesBLL` classe è contrassegnata come questi metodi usando la `DataObjectMethodAttribute` come i metodi predefiniti per l'aggiornamento e l'eliminazione.
+Per risolvere il problema, fare clic sull'opzione Configura origine dati dallo smart tag di ObjectDataSource per avviare la procedura guidata. La prima schermata mostra che ObjectDataSource è configurato per funzionare con la classe `CategoriesBLL`. Fare clic su Avanti. Attualmente sono specificate solo le proprietà `InsertMethod` e `SelectMethod` di ObjectDataSource. Tuttavia, la procedura guidata ha automaticamente popolato gli elenchi a discesa nelle schede Aggiorna ed Elimina con i metodi `UpdateCategory` e `DeleteCategory`, rispettivamente. Questo è dovuto al fatto che nella classe `CategoriesBLL` abbiamo contrassegnato questi metodi usando il `DataObjectMethodAttribute` come metodi predefiniti per l'aggiornamento e l'eliminazione.
 
-Per ora, impostare l'elenco di riepilogo aggiornamento scheda s su (nessuno), ma lasciare l'elenco a discesa scheda s eliminazione impostato su `DeleteCategory`. È necessario tornare a questa procedura guidata nel passaggio 6 per aggiungere il supporto ad aggiornamento.
+Per il momento, impostare l'elenco a discesa scheda aggiornamento su (nessuno), ma lasciare l'elenco a discesa Elimina scheda s impostato su `DeleteCategory`. Questa procedura guidata verrà visualizzata nel passaggio 6 per aggiungere il supporto per l'aggiornamento.
 
-[![Configurare ObjectDataSource per usare il metodo DeleteCategory](updating-and-deleting-existing-binary-data-cs/_static/image4.gif)](updating-and-deleting-existing-binary-data-cs/_static/image7.png)
+[![configurare ObjectDataSource per l'utilizzo del metodo DeleteCategory](updating-and-deleting-existing-binary-data-cs/_static/image4.gif)](updating-and-deleting-existing-binary-data-cs/_static/image7.png)
 
-**Figura 4**: Configurare ObjectDataSource per usare la `DeleteCategory` metodo ([fare clic per visualizzare l'immagine con dimensioni normali](updating-and-deleting-existing-binary-data-cs/_static/image8.png))
+**Figura 4**: configurare ObjectDataSource per l'uso del metodo `DeleteCategory` ([fare clic per visualizzare l'immagine con dimensioni complete](updating-and-deleting-existing-binary-data-cs/_static/image8.png))
 
 > [!NOTE]
-> Dopo aver completato la procedura guidata, Visual Studio potrebbe chiedere se si desidera aggiornare i campi e le chiavi, che rigenera i dati Web controlla i campi. Scegliere No, perché se si sceglie Sì sovrascriverà le personalizzazioni qualsiasi campo per avviare l'applicazione.
+> Al termine della procedura guidata, è possibile che in Visual Studio venga chiesto se si desidera aggiornare i campi e le chiavi, in modo da rigenerare i campi dei controlli Web. Scegliere No, perché se si sceglie Sì, eventuali personalizzazioni dei campi che potrebbero essere state apportate vengono sovrascritte.
 
-ObjectDataSource include ora un valore per la relativa `DeleteMethod` proprietà, nonché un `DeleteParameter`. È importante ricordare che quando si usa la procedura guidata per specificare i metodi, Visual Studio imposta la s ObjectDataSource `OldValuesParameterFormatString` proprietà `original_{0}`, che può causare problemi con l'aggiornamento ed eliminazione chiamate al metodo. Pertanto, cancellare completamente questa proprietà o ripristinare le impostazioni per l'impostazione predefinita, `{0}`. Se è necessario aggiornare la memoria su questa proprietà di ObjectDataSource, vedere la [una panoramica di inserimento, aggiornamento ed eliminazione di dati](../editing-inserting-and-deleting-data/an-overview-of-inserting-updating-and-deleting-data-cs.md) esercitazione.
+In ObjectDataSource verrà ora incluso un valore per la proprietà `DeleteMethod`, oltre a una `DeleteParameter`. Tenere presente che quando si usa la procedura guidata per specificare i metodi, Visual Studio imposta la proprietà `OldValuesParameterFormatString` di ObjectDataSource su `original_{0}`, che causa problemi con le chiamate al metodo Update e DELETE. Quindi, cancellare completamente questa proprietà o reimpostarla sul valore predefinito `{0}`. Se è necessario aggiornare la memoria in questa proprietà ObjectDataSource, vedere l'esercitazione [Panoramica sull'inserimento, l'aggiornamento e l'eliminazione dei dati](../editing-inserting-and-deleting-data/an-overview-of-inserting-updating-and-deleting-data-cs.md) .
 
-Dopo aver completato la procedura guidata e correggere il `OldValuesParameterFormatString`, markup dichiarativo s ObjectDataSource dovrebbe essere simile al seguente:
+Dopo aver completato la procedura guidata e aver corretto la `OldValuesParameterFormatString`, il markup dichiarativo di ObjectDataSource sarà simile al seguente:
 
 [!code-aspx[Main](updating-and-deleting-existing-binary-data-cs/samples/sample4.aspx)]
 
-Dopo la configurazione di ObjectDataSource, aggiungere funzionalità di eliminazione a GridView selezionando la casella di controllo Abilita eliminazione nello smart tag s GridView. Verrà aggiunto un CommandField a GridView cui `ShowDeleteButton` è impostata su `true`.
+Dopo aver configurato ObjectDataSource, aggiungere le funzionalità di eliminazione a GridView selezionando la casella di controllo Abilita eliminazione dallo smart tag di GridView. Verrà aggiunto un oggetto CommandField al controllo GridView la cui proprietà `ShowDeleteButton` è impostata su `true`.
 
-[![Abilitare il supporto per l'eliminazione in GridView](updating-and-deleting-existing-binary-data-cs/_static/image5.gif)](updating-and-deleting-existing-binary-data-cs/_static/image9.png)
+[![Abilita il supporto per l'eliminazione in GridView](updating-and-deleting-existing-binary-data-cs/_static/image5.gif)](updating-and-deleting-existing-binary-data-cs/_static/image9.png)
 
-**Figura 5**: Abilitare il supporto per l'eliminazione in GridView ([fare clic per visualizzare l'immagine con dimensioni normali](updating-and-deleting-existing-binary-data-cs/_static/image10.png))
+**Figura 5**: abilitare il supporto per l'eliminazione in GridView ([fare clic per visualizzare l'immagine con dimensioni complete](updating-and-deleting-existing-binary-data-cs/_static/image10.png))
 
-Si consiglia di testare la funzionalità di eliminazione. È presente una chiave esterna tra le `Products` tabella s `CategoryID` e il `Categories` la tabella s `CategoryID`, pertanto si otterrà un'eccezione di violazione di vincolo di chiave esterna se si tenta di eliminare una delle prime otto categorie. Per testare questa funzionalità orizzontale, aggiungere una nuova categoria, fornendo brochure sia un'immagine. La categoria di test, illustrata nella figura 6, include un file brochure di test denominato `Test.pdf` e un'immagine di test. Figura 7 mostra il controllo GridView dopo aver aggiunto la categoria di test.
+Esaminare la funzionalità di eliminazione. Esiste una chiave esterna tra la tabella `Products` s `CategoryID` e la `CategoryID`della tabella `Categories`, quindi si otterrà un'eccezione di violazione di vincolo di chiave esterna se si tenta di eliminare le prime otto categorie. Per testare questa funzionalità, aggiungere una nuova categoria, fornendo una brochure e un'immagine. La categoria di test, illustrata nella figura 6, include un file della brochure di test denominato `Test.pdf` e un'immagine di test. Nella figura 7 viene illustrato GridView dopo che è stata aggiunta la categoria di test.
 
-[![Aggiungere una categoria di Test con un'immagine e Brochure](updating-and-deleting-existing-binary-data-cs/_static/image6.gif)](updating-and-deleting-existing-binary-data-cs/_static/image11.png)
+[![aggiungere una categoria di test con una brochure e un'immagine](updating-and-deleting-existing-binary-data-cs/_static/image6.gif)](updating-and-deleting-existing-binary-data-cs/_static/image11.png)
 
-**Figura 6**: Aggiungere una categoria di Test con un'immagine e Brochure ([fare clic per visualizzare l'immagine con dimensioni normali](updating-and-deleting-existing-binary-data-cs/_static/image12.png))
+**Figura 6**: aggiungere una categoria di test con una brochure e un'immagine ([fare clic per visualizzare l'immagine con dimensioni complete](updating-and-deleting-existing-binary-data-cs/_static/image12.png))
 
-[![Dopo aver inserito la categoria di Test, viene visualizzato nel controllo GridView.](updating-and-deleting-existing-binary-data-cs/_static/image7.gif)](updating-and-deleting-existing-binary-data-cs/_static/image13.png)
+[![dopo aver inserito la categoria di test, questa viene visualizzata in GridView](updating-and-deleting-existing-binary-data-cs/_static/image7.gif)](updating-and-deleting-existing-binary-data-cs/_static/image13.png)
 
-**Figura 7**: Dopo aver inserito la categoria di Test, viene visualizzato in GridView ([fare clic per visualizzare l'immagine con dimensioni normali](updating-and-deleting-existing-binary-data-cs/_static/image14.png))
+**Figura 7**: dopo aver inserito la categoria di test, questa viene visualizzata nel GridView ([fare clic per visualizzare l'immagine con dimensioni complete](updating-and-deleting-existing-binary-data-cs/_static/image14.png))
 
-In Visual Studio, aggiornare Esplora soluzioni. Si noterà ora un nuovo file nei `~/Brochures` cartella `Test.pdf` (vedere la figura 8).
+In Visual Studio aggiornare il Esplora soluzioni. A questo punto dovrebbe essere visualizzato un nuovo file nella cartella `~/Brochures` `Test.pdf` (vedere la figura 8).
 
-Successivamente, fare clic sul collegamento Elimina nella riga relativa alla categoria di Test, causando il postback della pagina e il `CategoriesBLL` classe s `DeleteCategory` metodo da attivare. Questa operazione richiamerà la s DAL `Delete` metodo causando appropriato `DELETE` istruzione da inviare al database. I dati vengano quindi riassociati a GridView e il markup viene inviato al client con la categoria di Test non è più presente.
+Quindi, fare clic sul collegamento Elimina nella riga categoria di test, causando il postback della pagina e il metodo di `CategoriesBLL` classe `DeleteCategory` da attivare. Verrà richiamato il metodo DAL `Delete`, causando l'invio dell'istruzione `DELETE` appropriata al database. I dati vengono quindi riassociati al GridView e il markup viene restituito al client con la categoria di test non più presente.
 
-Mentre il flusso di lavoro di eliminazione è stato rimosso il record di categoria di Test dal `Categories` tabella, non è stato rimosso il relativo file brochure dal file system s server web. Aggiornare Esplora soluzioni e si noterà che `Test.pdf` restano `~/Brochures` cartella.
+Mentre il flusso di lavoro DELETE ha rimosso correttamente il record della categoria di test dalla tabella `Categories`, non ha rimosso il file della brochure dal file system del server Web. Aggiornare il Esplora soluzioni e si noterà che `Test.pdf` si trova ancora nella cartella `~/Brochures`.
 
-![Il File Test.pdf non è stato eliminato dal File System s Server Web](updating-and-deleting-existing-binary-data-cs/_static/image8.gif)
+![Il file test. pdf non è stato eliminato dal file System del server Web](updating-and-deleting-existing-binary-data-cs/_static/image8.gif)
 
-**Figura 8**: Il `Test.pdf` File non è stato eliminato dal File System s Server Web
+**Figura 8**: il file di `Test.pdf` non è stato eliminato dal file System del server Web
 
-## <a name="step-5-removing-the-deleted-category-s-brochure-file"></a>Passaggio 5: La rimozione del File di Brochure eliminazione categoria s
+## <a name="step-5-removing-the-deleted-category-s-brochure-file"></a>Passaggio 5: rimozione del file della brochure della categoria eliminato
 
-Uno degli svantaggi dell'archiviazione di dati binari esterni al database è che è necessario effettuare passaggi aggiuntivi per pulire questi file quando viene eliminato il record del database associato. Il controllo GridView e ObjectDataSource fornire eventi che vengono generati prima e dopo aver eseguito il comando delete. È effettivamente necessario creare i gestori eventi per entrambi gli eventi di pre-elaborazione e post-azioni. Prima di `Categories` record viene eliminato è necessario determinare il percorso del file s PDF, ma non vogliamo t desidera eliminare il file PDF, prima che la categoria viene eliminata nel caso in cui è presente un'eccezione e la categoria non viene eliminata.
+Uno degli svantaggi dell'archiviazione dei dati binari esterni al database consiste nel fatto che è necessario eseguire passaggi aggiuntivi per pulire questi file quando il record del database associato viene eliminato. GridView e ObjectDataSource forniscono eventi che vengono generati sia prima che dopo l'esecuzione del comando Delete. In realtà è necessario creare gestori eventi per gli eventi pre-e post-azione. Prima che il record `Categories` venga eliminato, è necessario determinare il percorso del file PDF, ma non si vuole eliminare il file PDF prima che la categoria venga eliminata in caso di eccezione e la categoria non viene eliminata.
 
-S GridView [ `RowDeleting` evento](https://msdn.microsoft.com/library/system.web.ui.webcontrols.gridview.rowdeleting.aspx) viene attivato prima di aver chiamato il comando di eliminazione ObjectDataSource s, mentre le [ `RowDeleted` evento](https://msdn.microsoft.com/library/system.web.ui.webcontrols.gridview.rowdeleted.aspx) viene attivato dopo. Creare i gestori eventi per questi due eventi usando il codice seguente:
+L'evento GridView s [`RowDeleting`](https://msdn.microsoft.com/library/system.web.ui.webcontrols.gridview.rowdeleting.aspx) viene attivato prima che venga richiamato il comando di eliminazione di ObjectDataSource, mentre il relativo [evento`RowDeleted`](https://msdn.microsoft.com/library/system.web.ui.webcontrols.gridview.rowdeleted.aspx) generato dopo. Creare gestori eventi per questi due eventi usando il codice seguente:
 
 [!code-csharp[Main](updating-and-deleting-existing-binary-data-cs/samples/sample5.cs)]
 
-Nel `RowDeleting` gestore dell'evento, il `CategoryID` della riga in corso l'eliminazione viene catturato da s GridView `DataKeys` raccolta, che è accessibile in questo gestore dell'evento tramite la `e.Keys` raccolta. Successivamente, il `CategoriesBLL` classe s `GetCategoryByCategoryID(categoryID)` viene richiamata per restituire le informazioni del record da eliminare. Se l'oggetto restituito `CategoriesDataRow` oggetto dispone di un non -`NULL``BrochurePath` valore viene archiviato nella variabile di pagina `deletedCategorysPdfPath` in modo che i file può essere eliminato nel `RowDeleted` gestore dell'evento.
+Nel gestore dell'evento `RowDeleting` il `CategoryID` della riga da eliminare viene preso dalla raccolta di `DataKeys` di GridView, a cui è possibile accedere in questo gestore eventi tramite la raccolta `e.Keys`. Viene quindi richiamato il `GetCategoryByCategoryID(categoryID)` della classe `CategoriesBLL` per restituire informazioni sul record da eliminare. Se l'oggetto `CategoriesDataRow` restituito ha un valore non`NULL``BrochurePath`, viene archiviato nella variabile di pagina `deletedCategorysPdfPath` in modo che il file possa essere eliminato nel gestore eventi `RowDeleted`.
 
 > [!NOTE]
-> Invece di recuperare il la `BrochurePath` illustra in dettaglio per il `Categories` registrare in corso l'eliminazione nel `RowDeleting` gestore eventi, avremmo potuto in alternativa aggiungere il `BrochurePath` al s GridView `DataKeyNames` proprietà e accessibile il valore di record s tramite il `e.Keys` raccolta. In questo modo sarebbe leggermente aumentare le dimensioni dello stato visualizzazione s GridView, ma potrebbe ridurre la quantità di codice necessario e salvare una corsa nel database.
+> Anziché recuperare i dettagli di `BrochurePath` per il record `Categories` da eliminare nel gestore dell'evento `RowDeleting`, è possibile che sia stata aggiunta la `BrochurePath` alla proprietà GridView s `DataKeyNames` e che sia stato eseguito l'accesso al valore del record tramite la raccolta di `e.Keys`. In questo modo si aumentano leggermente le dimensioni dello stato di visualizzazione di GridView, ma si riduce la quantità di codice necessario e si salva una corsa nel database.
 
-Dopo aver ObjectDataSource è stato richiamato il comando di eliminazione sottostante s, la s GridView `RowDeleted` attivazione gestore dell'evento. Se sono presenti eccezioni in grado di eliminare i dati ed è presente un valore per `deletedCategorysPdfPath`, quindi il file PDF viene eliminato dal file system. Si noti che questo codice aggiuntivo non è necessaria per pulire i dati binari s categoria associati con la relativa immagine. Che s poiché i dati dell'immagine vengono archiviati direttamente nel database, pertanto, l'eliminazione di `Categories` riga Elimina anche i dati di immagine che la categoria di s.
+Dopo che è stato richiamato il comando di eliminazione sottostante di ObjectDataSource, il gestore dell'evento GridView s `RowDeleted` viene attivato. Se non si sono verificate eccezioni durante l'eliminazione dei dati ed è presente un valore per `deletedCategorysPdfPath`, il file PDF viene eliminato dall'file system. Si noti che questo codice aggiuntivo non è necessario per pulire i dati binari della categoria associati alla relativa immagine. Poiché i dati dell'immagine vengono archiviati direttamente nel database, eliminando la `Categories` riga vengono eliminati anche i dati dell'immagine della categoria.
 
-Dopo aver aggiunto i due gestori di eventi, eseguire di nuovo questo test case. Quando si elimina la categoria, viene eliminato anche il file PDF associato.
+Dopo aver aggiunto i due gestori eventi, eseguire nuovamente questo test case. Quando si elimina la categoria, viene eliminato anche il file PDF associato.
 
-L'aggiornamento di un dati binari s record associato esistente fornisce alcune problematiche interessanti. Nella parte restante di questa esercitazione approfondisce l'aggiunta di funzionalità di aggiornamento brochure le immagini. Passaggio 6 analizza le tecniche per l'aggiornamento di informazioni brochure mentre il Step 7 esamina l'aggiornamento dell'immagine.
+L'aggiornamento di un record esistente associato ai dati binari fornisce alcune interessanti problemi. Il resto di questa esercitazione approfondisce l'aggiunta di funzionalità di aggiornamento alla brochure e all'immagine. Nel passaggio 6 vengono esaminate le tecniche per aggiornare le informazioni della brochure mentre il passaggio 7 esamina l'aggiornamento dell'immagine.
 
-## <a name="step-6-updating-a-category-s-brochure"></a>Passaggio 6: L'aggiornamento di una categoria s Brochure
+## <a name="step-6-updating-a-category-s-brochure"></a>Passaggio 6: aggiornamento della brochure di una categoria
 
-Come descritto nel [una panoramica di inserimento, aggiornamento ed eliminazione di dati](../editing-inserting-and-deleting-data/an-overview-of-inserting-updating-and-deleting-data-cs.md) esercitazione, il controllo GridView offre supporto modifica predefinito a livello di riga che può essere implementato dal segno di graduazione di una casella di controllo relativa origine dati sottostante è configurato in modo appropriato. Attualmente, il `CategoriesDataSource` ObjectDataSource non è ancora configurato per includere l'aggiornamento del supporto, che in questo modo consentono s che in.
+Come illustrato in [un'esercitazione introduttiva sull'inserimento, l'aggiornamento e l'eliminazione dei dati](../editing-inserting-and-deleting-data/an-overview-of-inserting-updating-and-deleting-data-cs.md) , GridView offre un supporto predefinito per la modifica a livello di riga che può essere implementato tramite il segno di spunta di una casella di controllo se l'origine dati sottostante è configurata in modo appropriato. Attualmente, il `CategoriesDataSource` ObjectDataSource non è ancora configurato per includere il supporto per l'aggiornamento, quindi è possibile aggiungerlo in.
 
-Fare clic sul collegamento Configura origine dati dalla procedura guidata ObjectDataSource s e procedere al secondo passaggio. Perché il `DataObjectMethodAttribute` usato in `CategoriesBLL`, l'elenco di riepilogo a discesa di aggiornamento deve essere popolato automaticamente con il `UpdateCategory` overload che accetta quattro parametri di input (per tutte le colonne ma `Picture`). Modificare questa impostazione in modo che utilizzi l'overload con cinque parametri.
+Fare clic sul collegamento Configura origine dati dalla procedura guidata di ObjectDataSource e procedere con il secondo passaggio. A causa della `DataObjectMethodAttribute` utilizzata in `CategoriesBLL`, l'elenco a discesa Aggiorna deve essere popolato automaticamente con l'overload `UpdateCategory` che accetta quattro parametri di input (per tutte le colonne, ma `Picture`). Modificare questa operazione in modo che usi l'overload con cinque parametri.
 
-[![Configurare ObjectDataSource per usare il metodo UpdateCategory che includa un parametro per immagine](updating-and-deleting-existing-binary-data-cs/_static/image9.gif)](updating-and-deleting-existing-binary-data-cs/_static/image15.png)
+[![configurare ObjectDataSource per l'utilizzo del metodo UpdateCategory che include un parametro per l'immagine](updating-and-deleting-existing-binary-data-cs/_static/image9.gif)](updating-and-deleting-existing-binary-data-cs/_static/image15.png)
 
-**Figura 9**: Configurare ObjectDataSource per usare la `UpdateCategory` che includa un parametro di metodo `Picture` ([fare clic per visualizzare l'immagine con dimensioni normali](updating-and-deleting-existing-binary-data-cs/_static/image16.png))
+**Figura 9**: configurare ObjectDataSource per l'uso del metodo `UpdateCategory` che include un parametro per `Picture` ([fare clic per visualizzare l'immagine con dimensioni complete](updating-and-deleting-existing-binary-data-cs/_static/image16.png))
 
-ObjectDataSource include ora un valore per la relativa `UpdateMethod` proprietà, nonché corrispondente `UpdateParameter` s. Come indicato nel passaggio 4, Visual Studio imposta la s ObjectDataSource `OldValuesParameterFormatString` proprietà `original_{0}` quando si usa la procedura guidata Configura origine dati. Verrà causare problemi con l'aggiornamento e le chiamate ai metodi di eliminazione. Pertanto, cancellare completamente questa proprietà o ripristinare le impostazioni per l'impostazione predefinita, `{0}`.
+In ObjectDataSource verrà ora incluso un valore per la proprietà `UpdateMethod`, oltre ai `UpdateParameter` s corrispondenti. Come indicato nel passaggio 4, Visual Studio imposta la proprietà `OldValuesParameterFormatString` di ObjectDataSource su `original_{0}` quando si utilizza la configurazione guidata origine dati. Ciò causerà problemi con le chiamate al metodo Update e DELETE. Quindi, cancellare completamente questa proprietà o reimpostarla sul valore predefinito `{0}`.
 
-Dopo aver completato la procedura guidata e correggere il `OldValuesParameterFormatString`, markup dichiarativo s ObjectDataSource dovrebbe essere simile al seguente:
+Dopo aver completato la procedura guidata e aver corretto la `OldValuesParameterFormatString`, il markup dichiarativo di ObjectDataSource sarà simile al seguente:
 
 [!code-aspx[Main](updating-and-deleting-existing-binary-data-cs/samples/sample6.aspx)]
 
-Per abilitare le funzionalità di modifica predefinite di GridView s, selezionare l'opzione Abilita modifica dallo smart tag s GridView. Questa operazione verrà impostata la s CommandField `ShowEditButton` proprietà `true`, ottenendo l'aggiunta di un pulsante Modifica (e i pulsanti di aggiornamento e annullamento per la riga da modificare).
+Per attivare le funzionalità di modifica predefinite di GridView, selezionare l'opzione Abilita modifica dallo smart tag di GridView. In questo modo verrà impostata la proprietà `ShowEditButton` di CommandField s su `true`, ottenendo l'aggiunta di un pulsante modifica (e i pulsanti Aggiorna e Annulla per la riga in corso di modifica).
 
-[![Configurare il controllo GridView alla modifica del supporto](updating-and-deleting-existing-binary-data-cs/_static/image10.gif)](updating-and-deleting-existing-binary-data-cs/_static/image17.png)
+[![configurare GridView per supportare la modifica](updating-and-deleting-existing-binary-data-cs/_static/image10.gif)](updating-and-deleting-existing-binary-data-cs/_static/image17.png)
 
-**Figura 10**: Configurare il controllo GridView alla modifica del supporto ([fare clic per visualizzare l'immagine con dimensioni normali](updating-and-deleting-existing-binary-data-cs/_static/image18.png))
+**Figura 10**: configurare GridView per supportare la modifica ([fare clic per visualizzare l'immagine con dimensioni complete](updating-and-deleting-existing-binary-data-cs/_static/image18.png))
 
-Visita la pagina tramite un browser e fare clic su uno dei pulsanti di modifica s della riga. Il `CategoryName` e `Description` BoundField vengono visualizzati come caselle di testo. Il `BrochurePath` TemplateField manca un' `EditItemTemplate`, quindi continua a mostrare relativo `ItemTemplate` un collegamento a brochure. Il `Picture` ImageField esegue il rendering come una casella di testo la cui proprietà `Text` proprietà viene assegnato il valore di istanze della classe ImageField `DataImageUrlField` valore, in questo caso `CategoryID`.
+Visitare la pagina tramite un browser e fare clic su uno dei pulsanti Modifica riga. I BoundField `CategoryName` e `Description` vengono visualizzati come caselle di testo. Il `BrochurePath` TemplateField non dispone di un `EditItemTemplate`, quindi continua a visualizzare il `ItemTemplate` un collegamento alla brochure. Il `Picture` ImageField viene visualizzato come casella di testo la cui proprietà `Text` viene assegnata al valore del valore `DataImageUrlField` di ImageField, in questo caso `CategoryID`.
 
-[![Il controllo GridView non ha un'interfaccia di modifica per BrochurePath](updating-and-deleting-existing-binary-data-cs/_static/image11.gif)](updating-and-deleting-existing-binary-data-cs/_static/image19.png)
+[![GridView non dispone di un'interfaccia di modifica per BrochurePath](updating-and-deleting-existing-binary-data-cs/_static/image11.gif)](updating-and-deleting-existing-binary-data-cs/_static/image19.png)
 
-**Figura 11**: Il controllo GridView non dispone di un'interfaccia di modifica `BrochurePath` ([fare clic per visualizzare l'immagine con dimensioni normali](updating-and-deleting-existing-binary-data-cs/_static/image20.png))
+**Figura 11**: GridView non dispone di un'interfaccia di modifica per `BrochurePath` ([fare clic per visualizzare l'immagine con dimensioni complete](updating-and-deleting-existing-binary-data-cs/_static/image20.png))
 
-## <a name="customizing-thebrochurepaths-editing-interface"></a>Personalizzazione di`BrochurePath`s interfaccia di modifica
+## <a name="customizing-thebrochurepaths-editing-interface"></a>Personalizzazione dell'interfaccia di modifica di`BrochurePath`s
 
-È necessario creare un'interfaccia di modifica per il `BrochurePath` TemplateField, che consente all'utente uno:
+È necessario creare un'interfaccia di modifica per il `BrochurePath` TemplateField, che consente all'utente di effettuare una delle operazioni seguenti:
 
-- Lasciare la brochure categoria s come-è,
-- Aggiornare la brochure categoria s caricando una brochure di nuovo, o
-- Rimuovere completamente la brochure categoria s (nel caso che la categoria non ha più una brochure associato).
+- Lasciare invariata la brochure della categoria,
+- Aggiornare la brochure della categoria caricando una nuova brochure o
+- Rimuovere completamente la brochure della categoria (nel caso in cui alla categoria non sia più associato un opuscolo).
 
-È anche necessario aggiornare il `Picture` interfaccia per la modifica di ImageField s, ma si otterrà a questa nel passaggio 7.
+È anche necessario aggiornare l'interfaccia di modifica di `Picture` ImageField s, ma verrà illustrata nel passaggio 7.
 
-GridView s nello smart tag, fare clic sul collegamento di modifica modelli e selezionare il `BrochurePath` TemplateField s `EditItemTemplate` nell'elenco a discesa. Aggiungere un controllo RadioButtonList Web a questo modello, l'impostazione relativa `ID` proprietà `BrochureOptions` e il relativo `AutoPostBack` proprietà `true`. Dalla finestra delle proprietà, fare clic sui puntini di sospensione il `Items` proprietà, che attiverà il `ListItem` Editor della raccolta. Aggiungere le tre opzioni seguenti con `Value` s 1, 2 e 3, rispettivamente:
+Dallo smart tag di GridView, fare clic sul collegamento modifica modelli e selezionare il `BrochurePath` TemplateField s `EditItemTemplate` dall'elenco a discesa. Aggiungere un controllo Web RadioButtonList a questo modello, impostando la relativa proprietà `ID` su `BrochureOptions` e la relativa proprietà `AutoPostBack` su `true`. Dal Finestra Proprietà fare clic sui puntini di sospensione nella proprietà `Items`, che consente di visualizzare l'editor della raccolta `ListItem`. Aggiungere le tre opzioni seguenti con `Value` s 1, 2 e 3 rispettivamente:
 
-- Usare brochure corrente
-- Rimuovere brochure corrente
-- Carica nuovo brochure
+- Usa la brochure corrente
+- Rimuovi la brochure corrente
+- Carica nuova brochure
 
-Imposta i primi `ListItem` s `Selected` proprietà `true`.
+Impostare la prima proprietà `Selected` `ListItem` s su `true`.
 
-![Aggiungere tre ListItems RadioButtonList](updating-and-deleting-existing-binary-data-cs/_static/image12.gif)
+![Aggiungere tre ListItem a RadioButtonList](updating-and-deleting-existing-binary-data-cs/_static/image12.gif)
 
-**Figura 12**: Aggiungere tre `ListItem` s per RadioButtonList
+**Figura 12**: aggiungere tre `ListItem` s a RadioButtonList
 
-Di sotto di RadioButtonList, aggiungere un controllo FileUpload denominato `BrochureUpload`. Impostare relativi `Visible` proprietà `false`.
+Sotto l'oggetto RadioButtonList aggiungere un controllo FileUpload denominato `BrochureUpload`. Impostarne la proprietà `Visible` su `false`.
 
-[![Aggiungere un RadioButtonList e controllo FileUpload EditItemTemplate](updating-and-deleting-existing-binary-data-cs/_static/image13.gif)](updating-and-deleting-existing-binary-data-cs/_static/image21.png)
+[![aggiungere un controllo RadioButtonList e FileUpload a EditItemTemplate](updating-and-deleting-existing-binary-data-cs/_static/image13.gif)](updating-and-deleting-existing-binary-data-cs/_static/image21.png)
 
-**Figura 13**: Aggiungere un RadioButtonList e FileUpload controllo per il `EditItemTemplate` ([fare clic per visualizzare l'immagine con dimensioni normali](updating-and-deleting-existing-binary-data-cs/_static/image22.png))
+**Figura 13**: aggiungere un controllo RadioButtonList e FileUpload al `EditItemTemplate` ([fare clic per visualizzare l'immagine con dimensioni complete](updating-and-deleting-existing-binary-data-cs/_static/image22.png))
 
-Questo RadioButtonList fornisce le tre opzioni per l'utente. L'idea è che il controllo FileUpload verrà visualizzato solo se l'ultima opzione, brochure nuovo caricamento, è selezionato. A tale scopo, creare un gestore eventi per s RadioButtonList `SelectedIndexChanged` eventi e aggiungere il codice seguente:
+Questo RadioButtonList fornisce le tre opzioni per l'utente. Il concetto è che il controllo FileUpload verrà visualizzato solo se è selezionata l'ultima opzione, carica nuova brochure. A tale scopo, creare un gestore eventi per l'evento `SelectedIndexChanged` di RadioButtonList e aggiungere il codice seguente:
 
 [!code-csharp[Main](updating-and-deleting-existing-binary-data-cs/samples/sample7.cs)]
 
-Poiché i controlli RadioButtonList e FileUpload sono all'interno di un modello, è necessario scrivere un po' di codice per questi controlli di accesso a livello di codice. Il `SelectedIndexChanged` gestore dell'evento viene passato un riferimento di RadioButtonList nel `sender` parametro di input. Per ottenere il controllo FileUpload, è necessario ottenere l'elemento padre s RadioButtonList controllo e usare il `FindControl("controlID")` metodo da tale posizione. Dopo aver ottenuto un riferimento a controlli RadioButtonList sia FileUpload, il FileUpload controllare 1!s `Visible` è impostata su `true` solo se s RadioButtonList `SelectedValue` è uguale a 3, ovvero il `Value` per brochure di nuovo il caricamento `ListItem`.
+Poiché i controlli RadioButtonList e FileUpload sono all'interno di un modello, è necessario scrivere un po' di codice per accedere a questi controlli a livello di codice. Al gestore dell'evento `SelectedIndexChanged` viene passato un riferimento a RadioButtonList nell'`sender` parametro di input. Per ottenere il controllo FileUpload, è necessario ottenere il controllo padre di RadioButtonList e usare il metodo `FindControl("controlID")`. Una volta ottenuto un riferimento ai controlli RadioButtonList e FileUpload, la proprietà `Visible` del controllo FileUpload è impostata su `true` solo se l'oggetto RadioButtonList s `SelectedValue` è uguale a 3, che è il `Value` per il caricamento di una nuova brochure `ListItem`.
 
-Con questo codice, si consiglia di testare l'interfaccia di modifica. Fare clic sul pulsante Modifica per una riga. Inizialmente, l'opzione brochure corrente Usa debba essere selezionato. Modifica l'indice selezionato determina un postback. Se la terza opzione è selezionata, viene visualizzato il controllo FileUpload, in caso contrario è nascosto. Figura 14 viene illustrata l'interfaccia di modifica quando il pulsante di modifica prima di tutto è selezionato; Figura 15 viene illustrata l'interfaccia dopo aver selezionata l'opzione brochure nuovo caricamento.
+Con questo codice, dedicare un po' di tempo a testare l'interfaccia di modifica. Fare clic sul pulsante modifica per una riga. Inizialmente, è necessario selezionare l'opzione Usa brochure corrente. La modifica dell'indice selezionato causa un postback. Se la terza opzione è selezionata, viene visualizzato il controllo FileUpload, in caso contrario è nascosto. Nella figura 14 viene illustrata l'interfaccia di modifica quando viene prima fatto clic sul pulsante modifica; Nella figura 15 viene illustrata l'interfaccia dopo aver selezionato l'opzione Carica nuova brochure.
 
-[![Inizialmente, uso corrente brochure che opzione è selezionata](updating-and-deleting-existing-binary-data-cs/_static/image14.gif)](updating-and-deleting-existing-binary-data-cs/_static/image23.png)
+[![inizialmente è selezionata l'opzione Usa brochure corrente](updating-and-deleting-existing-binary-data-cs/_static/image14.gif)](updating-and-deleting-existing-binary-data-cs/_static/image23.png)
 
-**Figura 14**: Inizialmente, uso corrente brochure opzione è selezionata ([fare clic per visualizzare l'immagine con dimensioni normali](updating-and-deleting-existing-binary-data-cs/_static/image24.png))
+**Figura 14**: inizialmente è selezionata l'opzione Usa brochure corrente ([fare clic per visualizzare l'immagine con dimensioni complete](updating-and-deleting-existing-binary-data-cs/_static/image24.png))
 
-[![Scelta di caricamento nuovo brochure opzione Visualizza il controllo FileUpload](updating-and-deleting-existing-binary-data-cs/_static/image15.gif)](updating-and-deleting-existing-binary-data-cs/_static/image25.png)
+[![la scelta dell'opzione Carica nuova brochure Visualizza il controllo FileUpload](updating-and-deleting-existing-binary-data-cs/_static/image15.gif)](updating-and-deleting-existing-binary-data-cs/_static/image25.png)
 
-**Figura 15**: Scelta di caricamento nuovo brochure opzione Visualizza il controllo FileUpload ([fare clic per visualizzare l'immagine con dimensioni normali](updating-and-deleting-existing-binary-data-cs/_static/image26.png))
+**Figura 15**: se si sceglie l'opzione Carica nuova brochure, viene visualizzato il controllo FileUpload ([fare clic per visualizzare l'immagine con dimensioni complete](updating-and-deleting-existing-binary-data-cs/_static/image26.png))
 
-## <a name="saving-the-brochure-file-and-updating-thebrochurepathcolumn"></a>Brochure di salvataggio File, aggiornare il`BrochurePath`colonna
+## <a name="saving-the-brochure-file-and-updating-thebrochurepathcolumn"></a>Salvataggio del file della brochure e aggiornamento della colonna`BrochurePath`
 
-Quando si fa clic sul pulsante di aggiornamento s GridView, relativo `RowUpdating` viene generato l'evento. ObjectDataSource viene richiamato il comando di aggiornamento s e quindi s GridView `RowUpdated` viene generato l'evento. Ad esempio con l'eliminazione del flusso di lavoro, è necessario creare gestori eventi per entrambi questi eventi. Nel `RowUpdating` gestore eventi, è necessario determinare l'azione da eseguire in base il `SelectedValue` del `BrochureOptions` RadioButtonList:
+Quando si fa clic sul pulsante di aggiornamento di GridView, viene generato l'evento `RowUpdating`. Viene richiamato il comando ObjectDataSource s Update, quindi viene generato l'evento GridView s `RowUpdated`. Come per il flusso di lavoro di eliminazione, è necessario creare gestori eventi per entrambi gli eventi. Nel gestore dell'evento `RowUpdating` è necessario determinare l'azione da eseguire in base alla `SelectedValue` del `BrochureOptions` RadioButtonList:
 
-- Se il `SelectedValue` è 1, si vuole continuare a usare lo stesso `BrochurePath` impostazione. Pertanto, è necessario impostare la s ObjectDataSource `brochurePath` parametro per l'oggetto esistente `BrochurePath` valore del record da aggiornare. Gli oggetti ObjectDataSource `brochurePath` parametro può essere impostato utilizzando `e.NewValues["brochurePath"] = value`.
-- Se il `SelectedValue` è 2, allora sarà necessario impostare il record s `BrochurePath` valore `NULL`. Questa operazione può essere eseguita impostando s ObjectDataSource `brochurePath` parametro per `Nothing`, che comporta un database `NULL` usate nei `UPDATE` istruzione. Se è presente un file brochure esistente che viene rimosso, è necessario eliminare il file esistente. Tuttavia, si vuole solo eseguire questa operazione se il completamento dell'aggiornamento senza generare un'eccezione.
-- Se il `SelectedValue` è 3, è necessario assicurarsi che l'utente ha caricato un file con estensione PDF e quindi salvarla nel file System e aggiornare il record s `BrochurePath` valore della colonna. Inoltre, se è presente un file brochure esistente che viene sostituito, è necessario eliminare il file precedente. Tuttavia, si vuole solo eseguire questa operazione se il completamento dell'aggiornamento senza generare un'eccezione.
+- Se il `SelectedValue` è 1, è necessario usare la stessa impostazione di `BrochurePath`. Pertanto, è necessario impostare il parametro ObjectDataSource s `brochurePath` sul valore `BrochurePath` esistente del record da aggiornare. È possibile impostare il parametro `brochurePath` di ObjectDataSource utilizzando `e.NewValues["brochurePath"] = value`.
+- Se il `SelectedValue` è 2, è necessario impostare il valore di `BrochurePath` del record su `NULL`. Questa operazione può essere eseguita impostando il parametro ObjectDataSource s `brochurePath` su `Nothing`, il che comporta l'utilizzo di un database `NULL` nell'istruzione `UPDATE`. Se è presente un file di brochure esistente da rimuovere, è necessario eliminare il file esistente. Tuttavia, si desidera eseguire questa operazione solo se l'aggiornamento viene completato senza generare un'eccezione.
+- Se il `SelectedValue` è 3, è necessario assicurarsi che l'utente abbia caricato un file PDF e quindi salvarlo nella file system e aggiornare il valore della colonna del record s `BrochurePath`. Inoltre, se è presente un file di opuscolo esistente che viene sostituito, è necessario eliminare il file precedente. Tuttavia, si desidera eseguire questa operazione solo se l'aggiornamento viene completato senza generare un'eccezione.
 
-I passaggi necessari per essere completata quando s RadioButtonList `SelectedValue` è 3 sono praticamente identici a quelli utilizzati da s DetailsView `ItemInserting` gestore dell'evento. Questo gestore eventi viene eseguito quando viene aggiunto un nuovo record di categoria dal controllo DetailsView è stato aggiunto nel [esercitazione precedente](including-a-file-upload-option-when-adding-a-new-record-cs.md). Pertanto, behooves per effettuare il refactoring di questa funzionalità out in metodi separati. In particolare, è stata spostata la funzionalità comuni in due metodi:
+I passaggi necessari per il completamento quando il `SelectedValue` di RadioButtonList è 3 sono praticamente identici a quelli utilizzati dal gestore dell'evento DetailsView s `ItemInserting`. Questo gestore eventi viene eseguito quando viene aggiunto un nuovo record di categoria dal controllo DetailsView aggiunto nell' [esercitazione precedente](including-a-file-upload-option-when-adding-a-new-record-cs.md). Pertanto, è necessario eseguire il refactoring di questa funzionalità in metodi distinti. In particolare, ho spostato le funzionalità comuni in due metodi:
 
-- `ProcessBrochureUpload(FileUpload, out bool)` accetta come input un'istanza del controllo FileUpload e un valore di output booleano che specifica se l'operazione di eliminazione o modifica procedere o se deve essere annullata a causa di errori di convalida. Questo metodo restituisce il percorso del file salvato o `null` se è stato salvato alcun file.
+- `ProcessBrochureUpload(FileUpload, out bool)` accetta come input un'istanza del controllo FileUpload e un valore booleano di output che specifica se l'operazione di eliminazione o modifica deve continuare o se deve essere annullata a causa di un errore di convalida. Questo metodo restituisce il percorso del file salvato o `null` se non è stato salvato alcun file.
 - `DeleteRememberedBrochurePath` Elimina il file specificato dal percorso nella variabile di pagina `deletedCategorysPdfPath` se `deletedCategorysPdfPath` non è `null`.
 
-Il codice per questi due metodi segue. Notare la somiglianza tra `ProcessBrochureUpload` e il controllo DetailsView s `ItemInserting` gestore dell'evento dall'esercitazione precedente. In questa esercitazione hai aggiornato i gestori di eventi s DetailsView per usare questi nuovi metodi. Scaricare il codice associato a questa esercitazione per vedere le modifiche ai gestori eventi s DetailsView.
+Di seguito è riportato il codice per questi due metodi. Si noti la somiglianza tra `ProcessBrochureUpload` e il gestore dell'evento DetailsView s `ItemInserting` dell'esercitazione precedente. In questa esercitazione sono stati aggiornati i gestori di eventi DetailsView s per usare questi nuovi metodi. Scaricare il codice associato a questa esercitazione per visualizzare le modifiche ai gestori di eventi di DetailsView.
 
 [!code-csharp[Main](updating-and-deleting-existing-binary-data-cs/samples/sample8.cs)]
 
-Le s GridView `RowUpdating` e `RowUpdated` gestori eventi usano la `ProcessBrochureUpload` e `DeleteRememberedBrochurePath` metodi, come illustrato nel codice seguente:
+I gestori di eventi `RowUpdating` e `RowUpdated` di GridView utilizzano i metodi `ProcessBrochureUpload` e `DeleteRememberedBrochurePath`, come illustrato nel codice seguente:
 
 [!code-csharp[Main](updating-and-deleting-existing-binary-data-cs/samples/sample9.cs)]
 
-Si noti come il `RowUpdating` gestore dell'evento utilizza una serie di istruzioni condizionali per eseguire l'azione appropriata in base il `BrochureOptions` RadioButtonList s `SelectedValue` valore della proprietà.
+Si noti il modo in cui il gestore dell'evento `RowUpdating` usa una serie di istruzioni condizionali per eseguire l'azione appropriata in base al valore della proprietà `SelectedValue` della `BrochureOptions` RadioButtonList.
 
-Con questo codice, è possibile modificare una categoria e averlo usare relativo brochure corrente, non usare Nessun brochure o caricarne uno nuovo. Proseguire e provarlo subito. Impostare punti di interruzione `RowUpdating` e `RowUpdated` gestori eventi per farsi un'idea del flusso di lavoro.
+Con questo codice, è possibile modificare una categoria e fare in uso la brochure corrente, non usare brochure o caricarne una nuova. Procediamo e proviamo. Impostare i punti di interruzione nei gestori eventi `RowUpdating` e `RowUpdated` per ottenere un'idea del flusso di lavoro.
 
-## <a name="step-7-uploading-a-new-picture"></a>Passaggio 7: Caricamento di una nuova immagine
+## <a name="step-7-uploading-a-new-picture"></a>Passaggio 7: caricamento di una nuova immagine
 
-Il `Picture` ImageField s esegue il rendering dell'interfaccia di modifica come una casella di testo popolato con il valore dal relativo `DataImageUrlField` proprietà. Durante la modifica del flusso di lavoro, il controllo GridView passa un parametro a ObjectDataSource con il nome del parametro s il valore di istanze della classe ImageField `DataImageUrlField` proprietà e il parametro s valore il valore immesso nella casella di testo nell'interfaccia di modifica. Questo comportamento è appropriato quando l'immagine viene salvata come file nel file system e `DataImageUrlField` contiene l'URL completo dell'immagine. Con tali circostanze, l'interfaccia di modifica consente di visualizzare l'URL dell'immagine s nella casella di testo, quale l'utente può modificare e sono salvati nel database. Concesso, t interfaccia predefinito consentono all'utente di caricare una nuova immagine, ma permettono di modificare l'URL dell'immagine dal valore corrente in un altro. Per questa esercitazione, tuttavia, il valore predefinito s ImageField modifica interfaccia non è sufficiente perché il `Picture` vengono archiviati i dati binari direttamente nel database e il `DataImageUrlField` proprietà contiene solo il `CategoryID`.
+L'interfaccia di modifica di `Picture` ImageField s viene visualizzata come casella di testo popolata con il valore della relativa proprietà `DataImageUrlField`. Durante il flusso di lavoro di modifica, GridView passa un parametro a ObjectDataSource con il nome del parametro, il valore della proprietà `DataImageUrlField` ImageField e il valore del parametro del valore immesso nella casella di testo nell'interfaccia di modifica. Questo comportamento è adatto quando l'immagine viene salvata come file nella file system e il `DataImageUrlField` contiene l'URL completo dell'immagine. In tali circostanze, l'interfaccia di modifica Visualizza l'URL dell'immagine nella casella di testo, che può essere modificata dall'utente e salvato nuovamente nel database. Questa interfaccia predefinita non consente all'utente di caricare una nuova immagine, ma consente loro di modificare l'URL dell'immagine dal valore corrente a un altro. Per questa esercitazione, tuttavia, l'interfaccia di modifica predefinita ImageField non è sufficiente perché i dati binari `Picture` vengono archiviati direttamente nel database e la proprietà `DataImageUrlField` include solo il `CategoryID`.
 
-Per comprendere meglio cosa accade nel corso di questa esercitazione, quando un utente modifica una riga con un ImageField, si consideri l'esempio seguente: un utente modifica una riga con `CategoryID` 10, causando la `Picture` ImageField per eseguire il rendering come una casella di testo con il valore 10. Si supponga che l'utente modifica il valore nella casella di testo su 50 e fa clic sul pulsante di aggiornamento. Si verifica un postback e GridView crea inizialmente un parametro denominato `CategoryID` con il valore 50. Tuttavia, prima che il controllo GridView invia questo parametro (e il `CategoryName` e `Description` parametri), aggiunge i valori dal `DataKeys` raccolta. Pertanto, questa sovrascriverà la `CategoryID` parametro con il sottostante oggetto riga s corrente `CategoryID` valore, 10. In breve, la s ImageField modifica interfaccia non ha alcun effetto sul flusso di lavoro modifica per questa esercitazione perché i nomi di istanze della classe ImageField `DataImageUrlField` proprietà e la griglia s `DataKey` valore sono equivalenti.
+Per comprendere meglio ciò che accade nell'esercitazione quando un utente modifica una riga con un ImageField, si consideri l'esempio seguente: un utente modifica una riga con `CategoryID` 10, causando il rendering del `Picture` ImageField come casella di testo con il valore 10. Si supponga che l'utente modifichi il valore in questa casella di testo su 50 e fa clic sul pulsante Aggiorna. Si verifica un postback e GridView crea inizialmente un parametro denominato `CategoryID` con il valore 50. Tuttavia, prima che GridView invii questo parametro (e i parametri `CategoryName` e `Description`), aggiunge i valori della raccolta `DataKeys`. Pertanto, sovrascrive il parametro `CategoryID` con il valore `CategoryID` sottostante della riga corrente, 10. In breve, l'interfaccia di modifica di ImageField non ha alcun effetto sul flusso di lavoro di modifica per questa esercitazione, perché i nomi della proprietà `DataImageUrlField` ImageField e il valore `DataKey` della griglia sono uno nello stesso.
 
-Mentre ImageField rende più semplice visualizzare un'immagine basata sui dati del database, non abbiamo t desidera fornire una casella di testo nell'interfaccia di modifica. Piuttosto, si vuole offrire un controllo FileUpload che l'utente finale può usare per cambiare l'immagine di s categoria. A differenza di `BrochurePath` valore, per queste esercitazioni è ve deciso in modo da richiedere che ciascuna categoria deve avere un'immagine. Pertanto, non abbiamo t necessità di consentire all'utente di indicare che è presente alcuna immagine associata l'utente non può caricare una nuova immagine o lasciare l'immagine corrente come-è.
+Sebbene il ImageField renda più semplice la visualizzazione di un'immagine in base ai dati del database, non è necessario fornire una casella di testo nell'interfaccia di modifica. Si vuole invece offrire un controllo FileUpload che l'utente finale può usare per modificare l'immagine di categoria. A differenza del valore `BrochurePath`, per queste esercitazioni si è deciso di richiedere che ogni categoria disponga di un'immagine. Non è quindi necessario consentire all'utente di indicare che non sono presenti immagini associate. l'utente può caricare una nuova immagine o lasciare l'immagine corrente così com'è.
 
-Per personalizzare l'interfaccia di modifica s ImageField, è necessario convertirlo in un TemplateField. GridView s nello smart tag, fare clic sul collegamento Modifica colonne e fare clic su Converti il campo in un collegamento TemplateField selezionare ImageField.
+Per personalizzare l'interfaccia di modifica di ImageField, è necessario convertirla in un TemplateField. Dallo smart tag di GridView, fare clic sul collegamento Modifica colonne, selezionare il ImageField, quindi fare clic sul collegamento Converti questo campo in un TemplateField.
 
-![Convertire ImageField in un TemplateField](updating-and-deleting-existing-binary-data-cs/_static/image16.gif)
+![Convertire il ImageField in un TemplateField](updating-and-deleting-existing-binary-data-cs/_static/image16.gif)
 
-**Figura 16**: Convertire ImageField in un TemplateField
+**Figura 16**: convertire il ImageField in un TemplateField
 
-La conversione di ImageField in un TemplateField in questo modo viene generato un TemplateField con due modelli. Come la seguente sintassi dichiarativa, la `ItemTemplate` contiene un'immagine Web controllo la cui `ImageUrl` proprietà viene assegnato usando la sintassi di associazione dati basata su dispositivi ImageField `DataImageUrlField` e `DataImageUrlFormatString` proprietà. Il `EditItemTemplate` contiene una casella di testo la cui `Text` è associata la proprietà sul valore specificato per il `DataImageUrlField` proprietà.
+La conversione di ImageField in un TemplateField in questo modo genera un TemplateField con due modelli. Come illustrato nella sintassi dichiarativa seguente, il `ItemTemplate` contiene un controllo Web Image la cui proprietà `ImageUrl` viene assegnata usando la sintassi DataBinding basata sulle proprietà `DataImageUrlField` e `DataImageUrlFormatString` di ImageField. Il `EditItemTemplate` contiene una casella di testo la cui proprietà `Text` è associata al valore specificato dalla proprietà `DataImageUrlField`.
 
 [!code-aspx[Main](updating-and-deleting-existing-binary-data-cs/samples/sample10.aspx)]
 
-È necessario aggiornare il `EditItemTemplate` usare un controllo FileUpload. Da GridView tag smart s fare clic su Modifica modelli collegarsi e quindi selezionare il `Picture` TemplateField s `EditItemTemplate` nell'elenco a discesa. Il modello dovrebbe essere una casella di testo rimuovere questo. Successivamente, trascinare un controllo FileUpload dalla casella degli strumenti nel modello, l'impostazione relativa `ID` a `PictureUpload`. Aggiungere anche il testo per modificare l'immagine di categoria s, specificare una nuova immagine. Per mantenere lo stesso dell'immagine di categoria s, lasciare vuoto il campo al modello, nonché.
+È necessario aggiornare il `EditItemTemplate` per usare un controllo FileUpload. Dallo smart tag GridView s fare clic sul collegamento modifica modelli, quindi selezionare l'`Picture` TemplateField s `EditItemTemplate` dall'elenco a discesa. Nel modello dovrebbe essere visualizzata una casella di testo Remove this. Trascinare quindi un controllo FileUpload dalla casella degli strumenti nel modello, impostando la relativa `ID` su `PictureUpload`. Aggiungere anche il testo per modificare l'immagine della categoria, quindi specificare una nuova immagine. Per mantenere la stessa immagine della categoria, lasciare il campo vuoto anche per il modello.
 
-[![Aggiungere un controllo FileUpload a EditItemTemplate](updating-and-deleting-existing-binary-data-cs/_static/image17.gif)](updating-and-deleting-existing-binary-data-cs/_static/image27.png)
+[![aggiungere un controllo FileUpload a EditItemTemplate](updating-and-deleting-existing-binary-data-cs/_static/image17.gif)](updating-and-deleting-existing-binary-data-cs/_static/image27.png)
 
-**Figura 17**: Aggiungere un controllo FileUpload per il `EditItemTemplate` ([fare clic per visualizzare l'immagine con dimensioni normali](updating-and-deleting-existing-binary-data-cs/_static/image28.png))
+**Figura 17**: aggiungere un controllo FileUpload al `EditItemTemplate` ([fare clic per visualizzare l'immagine con dimensioni complete](updating-and-deleting-existing-binary-data-cs/_static/image28.png))
 
-Dopo la personalizzazione dell'interfaccia di modifica, visualizzare lo stato di avanzamento in un browser. Quando si visualizza una riga in modalità di sola lettura, viene visualizzata l'immagine di s categoria come prima, ma facendo clic sul pulsante Modifica viene eseguito il rendering della colonna immagine come testo con un controllo FileUpload.
+Dopo la personalizzazione dell'interfaccia di modifica, visualizzare lo stato di avanzamento in un browser. Quando si visualizza una riga in modalità di sola lettura, l'immagine della categoria viene visualizzata come prima, ma facendo clic sul pulsante modifica viene eseguito il rendering della colonna immagine come testo con un controllo FileUpload.
 
-[![L'interfaccia di modifica include un controllo FileUpload](updating-and-deleting-existing-binary-data-cs/_static/image18.gif)](updating-and-deleting-existing-binary-data-cs/_static/image29.png)
+[![l'interfaccia di modifica include un controllo FileUpload](updating-and-deleting-existing-binary-data-cs/_static/image18.gif)](updating-and-deleting-existing-binary-data-cs/_static/image29.png)
 
-**Figura 18**: L'interfaccia di modifica include un controllo FileUpload ([fare clic per visualizzare l'immagine con dimensioni normali](updating-and-deleting-existing-binary-data-cs/_static/image30.png))
+**Figura 18**: l'interfaccia di modifica include un controllo FileUpload ([fare clic per visualizzare l'immagine con dimensioni complete](updating-and-deleting-existing-binary-data-cs/_static/image30.png))
 
-È importante ricordare che ObjectDataSource è configurato per richiamare il `CategoriesBLL` classe s `UpdateCategory` metodo che accetta come input i dati binari per l'immagine come un `byte` matrice. Se questa matrice ha un `null` valore, tuttavia, l'alternativa `UpdateCategory` overload viene chiamato, quali problemi le `UPDATE` istruzione SQL che non modifica il `Picture` intatta dell'immagine di colonna, lasciando la categoria s corrente. Pertanto, in s GridView `RowUpdating` gestore dell'evento è necessario fare riferimento a livello di codice il `PictureUpload` FileUpload controllano e determinare se è stato caricato un file. Se uno non è stato caricato, allora lo facciamo *non* per specificare un valore per il `picture` parametro. D'altra parte, se è stato caricato un file di `PictureUpload` controllo FileUpload, è opportuno assicurarsi che sia un file JPG. Se si tratta, quindi è possibile inviare il contenuto binario a ObjectDataSource mediante le `picture` parametro.
+Tenere presente che ObjectDataSource è configurato per chiamare il metodo `CategoriesBLL` Class s `UpdateCategory` che accetta come input i dati binari per l'immagine come matrice `byte`. Se questa matrice ha un valore `null`, tuttavia, viene chiamato l'overload di `UpdateCategory` alternativo, che rilascia l'istruzione SQL `UPDATE` che non modifica la colonna `Picture`, lasciando intatta la categoria s immagine corrente. Pertanto, nel gestore eventi `RowUpdating` GridView è necessario fare riferimento a livello di codice al controllo `PictureUpload` FileUpload e determinare se un file è stato caricato. Se non è stato caricato un valore, *non* è necessario specificare un valore per il parametro `picture`. D'altra parte, se un file è stato caricato nel controllo `PictureUpload` FileUpload, è necessario assicurarsi che sia un file JPG. In tal caso, è possibile inviare il contenuto binario a ObjectDataSource tramite il parametro `picture`.
 
-Come con il codice usato nel passaggio 6, gran parte del codice necessario già esiste in s DetailsView `ItemInserting` gestore dell'evento. Pertanto, ho va effettuato il refactoring della funzionalità comune in un nuovo metodo, `ValidPictureUpload`e aggiornato il `ItemInserting` gestore eventi per utilizzare questo metodo.
+Come nel caso del codice usato nel passaggio 6, gran parte del codice necessario qui esiste già nel gestore dell'evento DetailsView s `ItemInserting`. Quindi, ho sottoposto a refactoring le funzionalità comuni in un nuovo metodo, `ValidPictureUpload`e aggiornato il gestore dell'evento `ItemInserting` per usare questo metodo.
 
-Aggiungere il codice seguente all'inizio di istanze della classe GridView `RowUpdating` gestore dell'evento. È importante che questo codice vengono prima il codice che consente di salvare il file brochure poiché non abbiamo t s desidera salvare brochure nel file System s server web se è caricato un file di immagine non valido.
+Aggiungere il codice seguente all'inizio del gestore dell'evento GridView s `RowUpdating`. È importante che il codice venga prima del codice che salva il file della brochure, dal momento che non si vuole salvare la brochure nel server Web file system se viene caricato un file di immagine non valido.
 
 [!code-csharp[Main](updating-and-deleting-existing-binary-data-cs/samples/sample11.cs)]
 
-Il `ValidPictureUpload(FileUpload)` metodo accetta un controllo FileUpload come unico parametro input e controlla l'estensione di file caricato s per assicurarsi che il file caricato non è in formato JPG; viene chiamato solo se viene caricato un file di immagine. Se è caricato alcun file, quindi non è impostata, il parametro di immagine e pertanto utilizza il valore predefinito di `null`. Se è stata caricata un'immagine e `ValidPictureUpload` restituisce `true`, il `picture` parametro assegnato i dati binari dell'immagine caricata; se il metodo restituisce `false`, il flusso di lavoro di aggiornamento viene annullato e terminato il gestore dell'evento.
+Il metodo `ValidPictureUpload(FileUpload)` accetta un controllo FileUpload come unico parametro di input e controlla l'estensione del file caricato per verificare che il file caricato sia un file JPG; viene chiamato solo se viene caricato un file di immagine. Se non viene caricato alcun file, il parametro Picture non è impostato e pertanto usa il valore predefinito `null`. Se un'immagine è stata caricata e `ValidPictureUpload` restituisce `true`, al parametro `picture` vengono assegnati i dati binari dell'immagine caricata. Se il metodo restituisce `false`, il flusso di lavoro di aggiornamento viene annullato e il gestore eventi è stato terminato.
 
-Il `ValidPictureUpload(FileUpload)` codice del metodo, che è stata sottoposta a refactoring da s DetailsView `ItemInserting` gestore eventi seguente:
+Il codice del metodo `ValidPictureUpload(FileUpload)`, che è stato sottoposto a refactoring dal gestore dell'evento DetailsView s `ItemInserting`, segue:
 
 [!code-csharp[Main](updating-and-deleting-existing-binary-data-cs/samples/sample12.cs)]
 
-## <a name="step-8-replacing-the-original-categories-pictures-with-jpgs"></a>Passaggio 8: Sostituendo le immagini originali categorie con file. jpg
+## <a name="step-8-replacing-the-original-categories-pictures-with-jpgs"></a>Passaggio 8: sostituzione delle immagini delle categorie originali con jpg
 
-Tenere presente che le immagini di otto categorie originali sono i file bitmap sottoposta a wrapping in un'intestazione OLE. Ora che è stata aggiunta la possibilità di modificare un'immagine di record s esistente, si consiglia di sostituire tali bitmap con file. jpg. Se si desidera continuare a usare le immagini di categoria corrente, è possibile convertirli in file. jpg attenendosi alla procedura seguente:
+Si ricordi che le immagini originali di otto categorie sono file bitmap racchiusi in un'intestazione OLE. Ora che è stata aggiunta la funzionalità per modificare un'immagine di record esistente, è necessario sostituire le bitmap con jpg. Se si desidera continuare a utilizzare le immagini della categoria corrente, è possibile convertirle in jpg attenendosi alla procedura seguente:
 
-1. Salvare le immagini bitmap nell'unità disco rigido. Visita il `UpdatingAndDeleting.aspx` pagina nel browser e per ognuna delle prime otto categorie, fare doppio clic sull'immagine e scegliere di salvare l'immagine.
-2. Aprire l'immagine nell'editor di immagini di scelta. È possibile usare Microsoft Paint, ad esempio.
-3. Salvare la mappa di bit come un'immagine JPG.
-4. Aggiornare l'immagine di categoria s tramite l'interfaccia di modifica, usando il file JPG.
+1. Salvare le immagini bitmap sul disco rigido. Visitare la pagina `UpdatingAndDeleting.aspx` nel browser e per ognuna delle prime otto categorie, fare clic con il pulsante destro del mouse sull'immagine e scegliere di salvare l'immagine.
+2. Aprire l'immagine nell'editor di immagini desiderato. È possibile usare Microsoft Paint, ad esempio.
+3. Salvare la bitmap come immagine JPG.
+4. Aggiornare l'immagine della categoria tramite l'interfaccia di modifica, usando il file JPG.
 
-Dopo la modifica di una categoria e caricare l'immagine JPG, l'immagine non eseguirà il rendering nel browser in quanto il `DisplayCategoryPicture.aspx` pagina è la rimozione dei primi 78 byte dalle immagini delle prime otto categorie. Risolvere il problema rimuovendo il codice che esegue la rimozione di intestazione OLE. Dopo questa operazione, il `DisplayCategoryPicture.aspx``Page_Load` gestore eventi deve avere solo il codice seguente:
+Dopo la modifica di una categoria e il caricamento dell'immagine JPG, non verrà eseguito il rendering dell'immagine nel browser perché la pagina `DisplayCategoryPicture.aspx` estrae i primi 78 byte dalle immagini delle prime otto categorie. Per risolvere il problema, rimuovere il codice che esegue la rimozione dell'intestazione OLE. Al termine di questa operazione, il gestore dell'evento `DisplayCategoryPicture.aspx``Page_Load` deve avere solo il codice seguente:
 
 [!code-vb[Main](updating-and-deleting-existing-binary-data-cs/samples/sample13.vb)]
 
 > [!NOTE]
-> Il `UpdatingAndDeleting.aspx` pagina inserimento e la modifica di interfacce potrebbe usare più consistenti. Il `CategoryName` e `Description` BoundField in GridView e DetailsView deve essere convertito in TemplateFields. Poiché `CategoryName` nepovoluje hodnotu `NULL` valori, RequiredFieldValidator deve essere aggiunto. E `Description` casella probabilmente deve essere convertito in una casella di testo su più righe. Posso lasciare questi ultimi ritocchi come esercizio per l'utente.
+> Le interfacce di inserimento e modifica della pagina `UpdatingAndDeleting.aspx` possono usare un po' più di lavoro. I BoundField `CategoryName` e `Description` in DetailsView e GridView devono essere convertiti in TemplateFields. Poiché `CategoryName` non consente valori `NULL`, è necessario aggiungere un RequiredFieldValidator. E la casella di testo `Description` deve probabilmente essere convertita in una casella di testo a più righe. Lascio questi ultimi ritocchi come esercizio.
 
 ## <a name="summary"></a>Riepilogo
 
-Questa esercitazione si completa l'esaminare l'uso con dati binari. In questa esercitazione e i tre precedenti, abbiamo visto i dati come binari possono essere archiviati nel file system o direttamente all'interno del database. Un utente fornisce i dati binari al sistema selezionando un file dal disco rigido locale e caricarlo per il server web, in cui può essere archiviato nel file system o inserito nel database. ASP.NET 2.0 include un controllo FileUpload che rende tale interfaccia semplice come trascinamento della selezione. Tuttavia, come indicato nel [caricare file](uploading-files-cs.md) è solo di esercitazione, il controllo FileUpload particolarmente adatto per i caricamenti di file relativamente piccola, idealmente non supera un megabyte. Abbiamo anche analizzato come associare i dati caricati con il modello di dati sottostanti, nonché come modificare ed eliminare i dati binari dal record esistenti.
+Questa esercitazione completa l'uso di dati binari. In questa esercitazione e nelle tre precedenti è stato illustrato il modo in cui i dati binari possono essere archiviati nel file system o direttamente nel database. Un utente fornisce dati binari al sistema selezionando un file dal relativo disco rigido e caricando il file nel server Web, dove può essere archiviato nel file system o inserito nel database. ASP.NET 2,0 include un controllo FileUpload che consente di fornire un'interfaccia di questo tipo semplice come il trascinamento della selezione. Tuttavia, come indicato nell'esercitazione sul [caricamento di file](uploading-files-cs.md) , il controllo FileUpload è particolarmente adatto per i caricamenti di file relativamente piccoli, idealmente senza superare un megabyte. Si è inoltre esplorato come associare dati caricati al modello di dati sottostante, nonché come modificare ed eliminare i dati binari da record esistenti.
 
-Il set successivo di esercitazioni illustra diverse tecniche di memorizzazione nella cache. La memorizzazione nella cache fornisce un mezzo per migliorare una s applicazione prestazioni complessive prendendo i risultati di operazioni complesse e archiviandoli in un percorso che è possibile accedere più rapidamente.
+Il prossimo set di esercitazioni Esplora varie tecniche di Caching. La memorizzazione nella cache consente di migliorare le prestazioni complessive di un'applicazione eseguendo i risultati delle operazioni dispendiose e archiviarle in una posizione a cui è possibile accedere più rapidamente.
 
 Buona programmazione!
 
 ## <a name="about-the-author"></a>Informazioni sull'autore
 
-[Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), autore di sette libri e fondatore di [4GuysFromRolla.com](http://www.4guysfromrolla.com), ha collaborato con tecnologie Web di Microsoft dal 1998. Lavora come un consulente, formatore e autore. Il suo ultimo libro si intitola [ *Sams Teach Yourself ASP.NET 2.0 in 24 ore*](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco). È possibile contattarlo al [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com) o sul suo blog, che è reperibile in [ http://ScottOnWriting.NET ](http://ScottOnWriting.NET).
+[Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), autore di sette ASP/ASP. NET Books e fondatore di [4GuysFromRolla.com](http://www.4guysfromrolla.com), collabora con le tecnologie Web Microsoft a partire da 1998. Scott lavora come consulente, trainer e writer indipendenti. Il suo ultimo libro è [*Sams Teach Yourself ASP.NET 2,0 in 24 ore*](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco). Può essere raggiunto in [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com) o tramite il suo Blog, disponibile in [http://ScottOnWriting.NET](http://ScottOnWriting.NET).
 
-## <a name="special-thanks-to"></a>Ringraziamenti speciali
+## <a name="special-thanks-to"></a>Grazie speciale
 
-Questa serie di esercitazioni è stata esaminata da diversi validi revisori. Il revisore capo di questa esercitazione è stata Teresa Murphy. Se si è interessati prossimi articoli MSDN dello? In questo caso, Inviami una riga in corrispondenza [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
+Questa serie di esercitazioni è stata esaminata da molti revisori utili. Il revisore principale di questa esercitazione era Teresa Murphy. Sei interessato a esaminare i miei prossimi articoli MSDN? In tal caso, rilasciare una riga in [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
 > [Precedente](including-a-file-upload-option-when-adding-a-new-record-cs.md)

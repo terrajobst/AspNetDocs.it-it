@@ -1,50 +1,50 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/passwordstrength/testing-the-strength-of-a-password-vb
-title: Test della complessità di una Password (VB) | Microsoft Docs
+title: Verifica della complessità di una password (VB) | Microsoft Docs
 author: wenz
-description: Le password sono necessarie, praticamente ovunque, in modo che gli utenti lazy tendono a sceglie le password semplici, facili da interrompere. Il controllo PasswordStrength nella pagina ASP. N....
+description: Le password sono obbligatorie praticamente ovunque, in modo che gli utenti Lazy tendano a scegliere semplici password facili da interrompere. Controllo PasswordStrength in ASP. N...
 ms.author: riande
 ms.date: 06/02/2008
 ms.assetid: 9215a37f-3133-4887-8ed2-3689f3a53551
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/passwordstrength/testing-the-strength-of-a-password-vb
 msc.type: authoredcontent
-ms.openlocfilehash: e64b79b1ce477fca439dd0db519371ed11446c52
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: b614e1788eeafc175dd792ec6d3e4619f9ea2b7a
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65115256"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74606268"
 ---
 # <a name="testing-the-strength-of-a-password-vb"></a>Test della complessità di una password (VB)
 
-da [Christian Wenz](https://github.com/wenz)
+di [Christian Wenz](https://github.com/wenz)
 
-[Scaricare il codice](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/PasswordStrength0.vb.zip) o [Scarica il PDF](http://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/passwordstrength0VB.pdf)
+[Scarica codice](https://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/PasswordStrength0.vb.zip) o [Scarica PDF](https://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/passwordstrength0VB.pdf)
 
-> Le password sono necessarie, praticamente ovunque, in modo che gli utenti lazy tendono a sceglie le password semplici, facili da interrompere. Il controllo PasswordStrength di ASP.NET AJAX Control Toolkit può controllare è davvero una password.
+> Le password sono obbligatorie praticamente ovunque, in modo che gli utenti Lazy tendano a scegliere semplici password facili da interrompere. Il controllo PasswordStrength in ASP.NET AJAX Control Toolkit può verificare l'efficacia di una password.
 
-## <a name="overview"></a>Panoramica
+## <a name="overview"></a>Panoramica di
 
-Le password sono necessarie, praticamente ovunque, in modo che gli utenti lazy tendono a sceglie le password semplici, facili da interrompere. Il `PasswordStrength` controllo in ASP.NET AJAX Control Toolkit possibile verificare la qualità una password.
+Le password sono obbligatorie praticamente ovunque, in modo che gli utenti Lazy tendano a scegliere semplici password facili da interrompere. Il controllo `PasswordStrength` in ASP.NET AJAX Control Toolkit può verificare l'efficacia di una password.
 
 ## <a name="steps"></a>Passaggi
 
-Il `PasswordStrength` controllo si estende una casella di testo e verifica se la password è sufficiente. Offre un'ampia gamma di opzioni tramite gli attributi. Ecco solo alcuni di essi:
+Il controllo `PasswordStrength` estende una casella di testo e controlla se la password è sufficientemente adeguata. Offre un'ampia gamma di opzioni tramite gli attributi. Ecco solo alcuni di essi:
 
 - `MinimumNumericCharacters` numero minimo di caratteri numerici richiesti nella password
-- `MinimumSymbolCharacters` numero minimo di simboli (non lettere e cifre) necessario includere nella password
+- `MinimumSymbolCharacters` numero minimo di caratteri simbolici (non lettere e cifre) richiesti nella password
 - `PreferredPasswordLength` lunghezza minima della password
-- `RequiresUpperAndLowerCaseCharacters` Se la password deve usare caratteri maiuscoli e minuscoli
+- `RequiresUpperAndLowerCaseCharacters` se la password deve usare caratteri sia maiuscoli che minuscoli
 
-Il `StrengthIndicatorType` vengono fornite le informazioni come presentare la complessità della password, come testo (valore `"Text"`) o come un tipo di indicatore di stato (valore `"BarIndicator"`). Nel `DisplayPosition` attributo, si configura in cui vengono visualizzate le informazioni. Ecco un esempio completo, tra cui ASP.NET AJAX `ScriptManager` (controllo), il `PasswordStrength` controllo e ovviamente una casella di testo in cui l'utente può immettere una password. Per fini dimostrativi, il campo del form quest'ultimo è un campo di testo normale e non un campo della password in modo che durante lo sviluppo è possibile visualizzare ciò che si sta digitando.
+Il `StrengthIndicatorType` fornisce le informazioni su come presentare il livello di attendibilità della password, come testo (valore `"Text"`) o come indicatore di stato (valore `"BarIndicator"`). Nell'attributo `DisplayPosition` è possibile configurare la posizione in cui vengono visualizzate le informazioni. Di seguito è riportato un esempio completo, tra cui il controllo `ScriptManager` AJAX ASP.NET, il controllo `PasswordStrength` e ovviamente una casella di testo in cui l'utente può immettere una password. Ai fini della dimostrazione, il campo del secondo form è un campo di testo normale e non un campo password, in modo che sia possibile visualizzare durante lo sviluppo ciò che si sta digitando.
 
 [!code-aspx[Main](testing-the-strength-of-a-password-vb/samples/sample1.aspx)]
 
-Eseguire la pagina e digitare da subito: Solo dopo aver immesso le lettere minuscole, lettere maiuscole, cifre e simboli, la password viene considerata come non interrompibile.
+Esegui la pagina e digita il testo: solo dopo aver immesso lettere minuscole, lettere maiuscole, cifre e simboli, la password viene considerata inviolabile.
 
-[![A questo punto la password non è valida (ancora)](testing-the-strength-of-a-password-vb/_static/image2.png)](testing-the-strength-of-a-password-vb/_static/image1.png)
+[![ora la password è (piuttosto) corretta](testing-the-strength-of-a-password-vb/_static/image2.png)](testing-the-strength-of-a-password-vb/_static/image1.png)
 
-A questo punto la password non è valida (ancora) ([fare clic per visualizzare l'immagine con dimensioni normali](testing-the-strength-of-a-password-vb/_static/image3.png))
+A questo punto la password è (piuttosto) corretta ([fare clic per visualizzare l'immagine con dimensioni complete](testing-the-strength-of-a-password-vb/_static/image3.png))
 
 > [!div class="step-by-step"]
 > [Precedente](testing-the-strength-of-a-password-cs.md)

@@ -1,96 +1,96 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/cascadingdropdown/using-cascadingdropdown-with-a-database-vb
-title: Uso di CascadingDropDown con un Database (VB) | Microsoft Docs
+title: Uso di CascadingDropDown con un database (VB) | Microsoft Docs
 author: wenz
-description: Il controllo CascadingDropDown in AJAX Control Toolkit estende un controllo DropDownList in modo che le modifiche in un controllo DropDownList carichi associati i valori in anoth...
+description: Il controllo CascadingDropDown in AJAX Control Toolkit estende un controllo DropDownList in modo che le modifiche in un controllo DropDownList carichino i valori associati in un altr...
 ms.author: riande
 ms.date: 06/02/2008
 ms.assetid: 97a3d33c-c856-43f3-8acb-f1ccbc48221a
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/cascadingdropdown/using-cascadingdropdown-with-a-database-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 9e3f842faea2ec04225d779c1b8d71c62d4c1f35
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 4482aa18c4446ec8f5f160c423008398ea2e1d0d
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65108176"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74599507"
 ---
 # <a name="using-cascadingdropdown-with-a-database-vb"></a>Uso di CascadingDropDown con un database (VB)
 
-da [Christian Wenz](https://github.com/wenz)
+di [Christian Wenz](https://github.com/wenz)
 
-[Scaricare il codice](http://download.microsoft.com/download/9/0/7/907760b1-2c60-4f81-aeb6-ca416a573b0d/cascadingdropdown1.vb.zip) o [Scarica il PDF](http://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/cascadingdropdown1VB.pdf)
+[Scarica codice](https://download.microsoft.com/download/9/0/7/907760b1-2c60-4f81-aeb6-ca416a573b0d/cascadingdropdown1.vb.zip) o [Scarica PDF](https://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/cascadingdropdown1VB.pdf)
 
-> Il controllo CascadingDropDown in AJAX Control Toolkit estende un controllo DropDownList in modo che le modifiche in un controllo DropDownList Carica valori in un altro controllo DropDownList associati. Affinché il corretto funzionamento, è necessario creare un servizio web speciale.
+> Il controllo CascadingDropDown in AJAX Control Toolkit estende un controllo DropDownList in modo che le modifiche in un controllo DropDownList carichino i valori associati in un altro DropDownList. Per consentire il funzionamento di questo, è necessario creare un servizio Web speciale.
 
-## <a name="overview"></a>Panoramica
+## <a name="overview"></a>Panoramica di
 
-Il controllo CascadingDropDown in AJAX Control Toolkit estende un controllo DropDownList in modo che le modifiche in un controllo DropDownList Carica valori in un altro controllo DropDownList associati. (Ad esempio, un unico elenco fornisce un elenco di stati degli Stati Uniti e il successivo elenco viene riempito con città più importanti di tale stato.) Affinché il corretto funzionamento, è necessario creare un servizio web speciale.
+Il controllo CascadingDropDown in AJAX Control Toolkit estende un controllo DropDownList in modo che le modifiche in un controllo DropDownList carichino i valori associati in un altro DropDownList. Ad esempio, un elenco include un elenco di stati degli Stati Uniti e l'elenco successivo viene quindi riempito con le città principali in tale stato. Per consentire il funzionamento di questo, è necessario creare un servizio Web speciale.
 
 ## <a name="steps"></a>Passaggi
 
-Prima di tutto, è richiesta un'origine dati. Questo esempio Usa il database AdventureWorks e Microsoft SQL Server 2005 Express Edition. Il database è una parte facoltativa di un'installazione di Visual Studio (inclusa l'edizione express) ed è anche disponibile come download separato in [ https://go.microsoft.com/fwlink/?LinkId=64064 ](https://go.microsoft.com/fwlink/?LinkId=64064). Il database AdventureWorks è parte di SQL Server 2005 Samples and Sample Databases (download all'indirizzo [ https://www.microsoft.com/downloads/details.aspx?FamilyID=e719ecf7-9f46-4312-af89-6ad8702e4e6e&amp; DisplayLang = en](https://www.microsoft.com/downloads/details.aspx?FamilyID=e719ecf7-9f46-4312-af89-6ad8702e4e6e&amp;DisplayLang=en)). Il modo più semplice per configurare il database è di utilizzare Microsoft SQL Server Management Studio Express ([https://www.microsoft.com/downloads/details.aspx?FamilyID=c243a5ae-4bd1-4e3d-94b8-5a0f62bf7796&amp; DisplayLang = en](https://www.microsoft.com/downloads/details.aspx?FamilyID=c243a5ae-4bd1-4e3d-94b8-5a0f62bf7796&amp;DisplayLang=en)) e collegare il `AdventureWorks.mdf` file di database.
+Prima di tutto, è necessaria un'origine dati. In questo esempio vengono utilizzati il database AdventureWorks e il Microsoft SQL Server 2005 Express Edition. Il database è una parte facoltativa di un'installazione di Visual Studio (inclusa l'edizione Express) ed è disponibile anche come download separato in [https://go.microsoft.com/fwlink/?LinkId=64064](https://go.microsoft.com/fwlink/?LinkId=64064). Il database AdventureWorks fa parte degli esempi SQL Server 2005 e dei database di esempio (scaricare [https://www.microsoft.com/downloads/details.aspx?FamilyID=e719ecf7-9f46-4312-af89-6ad8702e4e6e&amp;D isplaylang = en](https://www.microsoft.com/downloads/details.aspx?FamilyID=e719ecf7-9f46-4312-af89-6ad8702e4e6e&amp;DisplayLang=en)). Il modo più semplice per impostare il database consiste nell'usare il Microsoft SQL Server Management Studio Express ([https://www.microsoft.com/downloads/details.aspx?FamilyID=c243a5ae-4bd1-4e3d-94b8-5a0f62bf7796&amp;D isplaylang = en](https://www.microsoft.com/downloads/details.aspx?FamilyID=c243a5ae-4bd1-4e3d-94b8-5a0f62bf7796&amp;DisplayLang=en)) e alleghi il file di database `AdventureWorks.mdf`.
 
-In questo esempio, si presuppone che l'istanza di SQL Server 2005 Express Edition è chiamato `SQLEXPRESS` e si trova nello stesso computer come server web; questo è anche l'impostazione predefinita. Se il programma di installazione diverso, è necessario adattare le informazioni di connessione per il database.
+Per questo esempio si presuppone che l'istanza del SQL Server 2005 Express Edition venga chiamata `SQLEXPRESS` e che risiede nello stesso computer del server Web. si tratta anche della configurazione predefinita. Se la configurazione è diversa, è necessario adattare le informazioni di connessione per il database.
 
-Per attivare la funzionalità di ASP.NET AJAX e il Toolkit di controllo, il `ScriptManager` controllo deve essere inserito in un punto qualsiasi della pagina (ma entro la &lt; `form` &gt; elemento):
+Per attivare la funzionalità di ASP.NET AJAX e di Control Toolkit, il controllo `ScriptManager` deve essere inserito in un punto qualsiasi della pagina, ma all'interno dell'elemento &lt;`form`&gt;:
 
 [!code-aspx[Main](using-cascadingdropdown-with-a-database-vb/samples/sample1.aspx)]
 
-Nel passaggio successivo, sono necessari due controlli DropDownList. In questo esempio, utilizziamo il fornitore e informazioni di contatto da AdventureWorks, pertanto creiamo un unico elenco per i fornitori disponibili e uno per i contatti disponibili:
+Nel passaggio successivo sono necessari due controlli DropDownList. In questo esempio vengono usate le informazioni relative al fornitore e al contatto da AdventureWorks, quindi viene creato un elenco per i fornitori disponibili e uno per i contatti disponibili:
 
 [!code-aspx[Main](using-cascadingdropdown-with-a-database-vb/samples/sample2.aspx)]
 
-Quindi, è necessario aggiungere due dispositivi Extender CascadingDropDown alla pagina. Uno compilato automaticamente nel primo elenco (fornitori), e un' nel secondo elenco (contatti). È necessario impostare gli attributi seguenti:
+Quindi, è necessario aggiungere due Extender CascadingDropDown alla pagina. Una riempie il primo elenco (fornitori) e l'altra riempie il secondo elenco (contatti). È necessario impostare i seguenti attributi:
 
-- `ServicePath`: URL di un servizio web distribuisce le voci dell'elenco
-- `ServiceMethod`: Metodo Web le voci dell'elenco di distribuzione
+- `ServicePath`: URL di un servizio Web che fornisce le voci dell'elenco
+- `ServiceMethod`: metodo Web che fornisce le voci dell'elenco
 - `TargetControlID`: ID dell'elenco a discesa
-- `Category`: Informazioni sulle categorie in cui viene inviati al metodo web quando viene chiamato
-- `PromptText`: Testo visualizzato quando si caricano in modo asincrono i dati dell'elenco dal server
-- `ParentControlID`: (facoltativo) che il caricamento di trigger dell'elenco corrente nell'elenco a discesa padre
+- `Category`: informazioni sulla categoria inviate al metodo Web quando viene chiamata
+- `PromptText`: testo visualizzato quando si caricano in modo asincrono i dati dell'elenco dal server
+- `ParentControlID`: (facoltativo) elenco a discesa padre che attiva il caricamento dell'elenco corrente
 
-A seconda del linguaggio di programmazione utilizzato, il nome del servizio web in questione viene modificato, ma tutti gli altri valori di attributo sono lo stesso. Ecco l'elemento CascadingDropDown per il primo elenco a discesa:
+A seconda del linguaggio di programmazione utilizzato, il nome del servizio Web in questione cambia, ma tutti gli altri valori di attributo sono gli stessi. Ecco l'elemento CascadingDropDown per il primo elenco a discesa:
 
 [!code-aspx[Main](using-cascadingdropdown-with-a-database-vb/samples/sample3.aspx)]
 
-È necessario impostare i controlli Extender per l'elenco secondo il `ParentControlID` attributo in modo che se si seleziona una voce nei trigger elenco fornitori caricamento associati elementi nell'elenco di contatti.
+Gli Extender del controllo per il secondo elenco devono impostare l'attributo `ParentControlID` in modo che la selezione di una voce nell'elenco dei fornitori attivi il caricamento degli elementi associati nell'elenco contatti.
 
 [!code-aspx[Main](using-cascadingdropdown-with-a-database-vb/samples/sample4.aspx)]
 
-Le operazioni effettive vengono quindi eseguite nel servizio web, che è configurato come indicato di seguito. Si noti che il `[ScriptService]` attributo viene utilizzato, in caso contrario, ASP.NET AJAX non è possibile creare il proxy di JavaScript per accedere ai metodi web dal codice di script lato client.
+Il lavoro effettivo viene quindi eseguito nel servizio Web, configurato come indicato di seguito. Si noti che viene usato l'attributo `[ScriptService]`, in caso contrario ASP.NET AJAX non è in grado di creare il proxy JavaScript per accedere ai metodi Web dal codice di script sul lato client.
 
 [!code-aspx[Main](using-cascadingdropdown-with-a-database-vb/samples/sample5.aspx)]
 
-La firma dei metodi web chiamato da CascadingDropDown è come segue:
+La firma dei metodi Web chiamati da CascadingDropDown è la seguente:
 
 [!code-vb[Main](using-cascadingdropdown-with-a-database-vb/samples/sample6.vb)]
 
-In modo che il valore restituito deve essere una matrice di tipo `CascadingDropDownNameValue` definito dal Toolkit di controllo. Il `GetVendors()` metodo è piuttosto semplice da implementare: Il codice si connette al database AdventureWorks e i primi 25 fornitori una query. Il primo parametro nel `CascadingDropDownNameValue` costruttore è la didascalia della voce di elenco, il secondo il relativo valore (attributo value del linguaggio HTML &lt; `option` &gt; elemento). Ecco il codice:
+Il valore restituito deve quindi essere una matrice di tipo `CascadingDropDownNameValue` definita da Control Toolkit. Il metodo `GetVendors()` è piuttosto semplice da implementare: il codice si connette al database AdventureWorks ed esegue una query sui primi 25 fornitori. Il primo parametro nel costruttore `CascadingDropDownNameValue` è la didascalia della voce dell'elenco, il secondo valore (attributo value nell'elemento &lt;`option`&gt; di HTML). Ecco il codice:
 
 [!code-vb[Main](using-cascadingdropdown-with-a-database-vb/samples/sample7.vb)]
 
-Come ottenere i contatti associati per un fornitore (nome del metodo: `GetContactsForVendor()`) è un po' più complicato. Prima di tutto, è necessario determinare il fornitore che è stato selezionato nel primo elenco a discesa. Il Toolkit di controllo definisce un metodo di supporto per tale attività: Il `ParseKnownCategoryValuesString()` metodo restituisce un `StringDictionary` elemento con i dati di elenco a discesa:
+Il recupero dei contatti associati per un fornitore (nome metodo: `GetContactsForVendor()`) è un po' più complicato. Prima di tutto, è necessario determinare il fornitore selezionato nel primo elenco a discesa. Il Toolkit di controllo definisce un metodo helper per l'attività: il metodo `ParseKnownCategoryValuesString()` restituisce un elemento `StringDictionary` con i dati dell'elenco a discesa:
 
 [!code-vb[Main](using-cascadingdropdown-with-a-database-vb/samples/sample8.vb)]
 
-Per motivi di sicurezza, questi dati devono essere convalidati prima di tutto. Pertanto, se è presente una voce del fornitore (perché il `Category` del primo elemento CascadingDropDown è impostata su `"Vendor"`), può essere recuperato l'ID del fornitore selezionato:
+Per motivi di sicurezza, questi dati devono essere convalidati per primi. Quindi, se è presente una voce del fornitore, perché la proprietà `Category` del primo elemento CascadingDropDown è impostata su `"Vendor"`), è possibile che venga recuperato l'ID del fornitore selezionato:
 
 [!code-vb[Main](using-cascadingdropdown-with-a-database-vb/samples/sample9.vb)]
 
-Il resto del metodo è piuttosto semplice, quindi. ID del fornitore viene utilizzato come parametro per una query SQL che recupera tutti i contatti associati per fornitore. Ancora una volta, il metodo restituisce una matrice di tipo `CascadingDropDownNameValue`.
+Il resto del metodo è piuttosto semplice, quindi. L'ID del fornitore viene utilizzato come parametro per una query SQL che recupera tutti i contatti associati per tale fornitore. Ancora una volta, il metodo restituisce una matrice di tipo `CascadingDropDownNameValue`.
 
 [!code-vb[Main](using-cascadingdropdown-with-a-database-vb/samples/sample10.vb)]
 
-Caricare la pagina ASP.NET e dopo un breve periodo di tempo viene inserito nell'elenco di fornitori con le voci di 25. Selezionare una voce e notare come il secondo elenco a discesa viene riempita con i dati.
+Caricare la pagina ASP.NET e, dopo un breve periodo di tempo, l'elenco dei fornitori viene riempito con 25 voci. Selezionare una voce e notare il modo in cui il secondo elenco a discesa viene riempito con i dati.
 
-[![Nel primo elenco viene compilato automaticamente](using-cascadingdropdown-with-a-database-vb/_static/image2.png)](using-cascadingdropdown-with-a-database-vb/_static/image1.png)
+[![il primo elenco viene compilato automaticamente](using-cascadingdropdown-with-a-database-vb/_static/image2.png)](using-cascadingdropdown-with-a-database-vb/_static/image1.png)
 
-Nel primo elenco viene compilato automaticamente ([fare clic per visualizzare l'immagine con dimensioni normali](using-cascadingdropdown-with-a-database-vb/_static/image3.png))
+Il primo elenco viene compilato automaticamente ([fare clic per visualizzare l'immagine con dimensioni complete](using-cascadingdropdown-with-a-database-vb/_static/image3.png))
 
-[![Nel secondo elenco viene compilato in base della selezione nel primo elenco](using-cascadingdropdown-with-a-database-vb/_static/image5.png)](using-cascadingdropdown-with-a-database-vb/_static/image4.png)
+[![il secondo elenco viene compilato in base alla selezione nel primo elenco](using-cascadingdropdown-with-a-database-vb/_static/image5.png)](using-cascadingdropdown-with-a-database-vb/_static/image4.png)
 
-Nel secondo elenco viene compilato in base della selezione nel primo elenco ([fare clic per visualizzare l'immagine con dimensioni normali](using-cascadingdropdown-with-a-database-vb/_static/image6.png))
+Il secondo elenco viene compilato in base alla selezione nel primo elenco ([fare clic per visualizzare l'immagine con dimensioni complete](using-cascadingdropdown-with-a-database-vb/_static/image6.png))
 
 > [!div class="step-by-step"]
 > [Precedente](filling-a-list-using-cascadingdropdown-vb.md)

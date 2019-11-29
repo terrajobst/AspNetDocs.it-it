@@ -1,61 +1,61 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/accordion/dynamically-adding-an-accordion-pane-cs
-title: Aggiunta dinamica di un riquadro Accordion (c#) | Microsoft Docs
+title: Aggiunta dinamica di un riquadro Accordion (C#) | Microsoft Docs
 author: wenz
-description: Il controllo Accordion in AJAX Control Toolkit fornisce più riquadri e consente all'utente di visualizzare uno di essi alla volta. I pannelli vengono dichiarati in genere w...
+description: Il controllo di Accordion in AJAX Control Toolkit offre più riquadri e consente all'utente di visualizzarne uno alla volta. I pannelli vengono in genere dichiarati w...
 ms.author: riande
 ms.date: 06/02/2008
 ms.assetid: 66d88cfa-f26f-46b1-ad52-1c9e03c04a48
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/accordion/dynamically-adding-an-accordion-pane-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 7134c95845ec7f22b5216e10b50ab8f81cd24806
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 2834f56bd77c412923f4a8f382e670727f70eae4
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65131244"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74607235"
 ---
-# <a name="dynamically-adding-an-accordion-pane-c"></a>Aggiunta dinamica di un riquadro Accordion (c#)
+# <a name="dynamically-adding-an-accordion-pane-c"></a>Aggiunta dinamica di un riquadro Accordion (C#)
 
-da [Christian Wenz](https://github.com/wenz)
+di [Christian Wenz](https://github.com/wenz)
 
-[Scaricare il codice](http://download.microsoft.com/download/5/6/d/56d50cef-2011-4c8f-9891-7edc6dc57df9/Accordion2.cs.zip) o [Scarica il PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/accordion2CS.pdf)
+[Scarica codice](https://download.microsoft.com/download/5/6/d/56d50cef-2011-4c8f-9891-7edc6dc57df9/Accordion2.cs.zip) o [Scarica PDF](https://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/accordion2CS.pdf)
 
-> Il controllo Accordion in AJAX Control Toolkit fornisce più riquadri e consente all'utente di visualizzare uno di essi alla volta. I pannelli in genere vengono dichiarati all'interno della pagina stessa, ma il codice lato server può essere usato per ottenere lo stesso risultato.
+> Il controllo di Accordion in AJAX Control Toolkit offre più riquadri e consente all'utente di visualizzarne uno alla volta. I pannelli vengono in genere dichiarati all'interno della pagina stessa, ma il codice lato server può essere usato per ottenere lo stesso risultato.
 
-## <a name="overview"></a>Panoramica
+## <a name="overview"></a>Panoramica di
 
-Il controllo Accordion in AJAX Control Toolkit fornisce più riquadri e consente all'utente di visualizzare uno di essi alla volta. I pannelli in genere vengono dichiarati all'interno della pagina stessa, ma il codice lato server può essere usato per ottenere lo stesso risultato.
+Il controllo di Accordion in AJAX Control Toolkit offre più riquadri e consente all'utente di visualizzarne uno alla volta. I pannelli vengono in genere dichiarati all'interno della pagina stessa, ma il codice lato server può essere usato per ottenere lo stesso risultato.
 
 ## <a name="steps"></a>Passaggi
 
-Il controllo Accordion espone tutte le proprietà importanti al codice lato server. Tra le altre cose, i `Panes` proprietà concede l'accesso alla raccolta di riquadri che costituiscono il controllo Accordion. Ogni riquadro è di tipo `AccordionPane`. È pertanto semplice per creare un riquadro di questo tipo:
+Il controllo Accordion espone tutte le proprietà importanti al codice lato server. Tra le altre cose, la proprietà `Panes` concede l'accesso alla raccolta di riquadri che costituiscono la fisarmonica. Ogni riquadro è di tipo `AccordionPane`. È pertanto semplice creare un riquadro di questo tipo:
 
 [!code-csharp[Main](dynamically-adding-an-accordion-pane-cs/samples/sample1.cs)]
 
-Il `HeaderContainer` proprietà di `AccordionPane` fornisce l'accesso ai controlli ASP.NET all'interno della sezione di intestazione del riquadro; le `ContentContainer` proprietà della `AccordionPane` esegue la stessa operazione per la sezione contenuta del riquadro. In questo modo il codice ASP.NET aggiungere contenuto nei riquadri di:
+La proprietà `HeaderContainer` di `AccordionPane` fornisce l'accesso ai controlli ASP.NET all'interno della sezione di intestazione del riquadro. la proprietà `ContentContainer` di `AccordionPane` esegue la stessa operazione per la sezione del contenuto del riquadro. Ciò consente al codice ASP.NET di aggiungere contenuto ai riquadri:
 
 [!code-csharp[Main](dynamically-adding-an-accordion-pane-cs/samples/sample2.cs)]
 
-Infine, è necessario aggiungere il riquadro per il `Panes` raccolta del controllo Accordion:
+Infine, i riquadri devono essere aggiunti alla raccolta `Panes` della fisarmonica:
 
 [!code-csharp[Main](dynamically-adding-an-accordion-pane-cs/samples/sample3.cs)]
 
-Ecco un codice lato server completo che consente di aggiungere due riquadri a un controllo Accordion:
+Di seguito è riportato un codice completo sul lato server che aggiunge due riquadri a un controllo di Accordion:
 
 [!code-aspx[Main](dynamically-adding-an-accordion-pane-cs/samples/sample4.aspx)]
 
-L'unico elemento manca è il controllo Accordion stesso, che dipende dalla presenza di ASP.NET `ScriptManager` controllo:
+L'unico elemento mancante è la fisarmonica, che dipende dalla presenza del controllo `ScriptManager` ASP.NET:
 
 [!code-aspx[Main](dynamically-adding-an-accordion-pane-cs/samples/sample5.aspx)]
 
-Per completare l'esempio, le due classi CSS a cui fa riferimento il controllo Accordion forniscono informazioni sullo stile per il browser:
+Per completare l'esempio, le due classi CSS a cui viene fatto riferimento nel controllo di Accordion forniscono informazioni sullo stile per il browser:
 
 [!code-css[Main](dynamically-adding-an-accordion-pane-cs/samples/sample6.css)]
 
-[![I dati di controllo accordion è stato aggiunto in modo dinamico da codice lato server](dynamically-adding-an-accordion-pane-cs/_static/image2.png)](dynamically-adding-an-accordion-pane-cs/_static/image1.png)
+[![i dati della fisarmonica sono stati aggiunti dinamicamente dal codice lato server](dynamically-adding-an-accordion-pane-cs/_static/image2.png)](dynamically-adding-an-accordion-pane-cs/_static/image1.png)
 
-I dati di controllo accordion è stato aggiunto in modo dinamico da codice lato server ([fare clic per visualizzare l'immagine con dimensioni normali](dynamically-adding-an-accordion-pane-cs/_static/image3.png))
+I dati della fisarmonica sono stati aggiunti dinamicamente dal codice sul lato server ([fare clic per visualizzare l'immagine con dimensioni complete](dynamically-adding-an-accordion-pane-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
 > [Precedente](databinding-to-an-accordion-cs.md)

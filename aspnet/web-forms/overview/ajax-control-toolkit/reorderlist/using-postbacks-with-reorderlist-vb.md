@@ -1,68 +1,68 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/reorderlist/using-postbacks-with-reorderlist-vb
-title: Uso di postback con ReorderList (VB) | Microsoft Docs
+title: Uso dei postback con Reorder (VB) | Microsoft Docs
 author: wenz
-description: Il controllo ReorderList in AJAX Control Toolkit fornisce un elenco che possa essere riordinato in base all'utente tramite trascinamento della selezione. Ogni volta che l'elenco viene riordinato, un ordine di acquisto...
+description: Il controllo Reorder list in AJAX Control Toolkit fornisce un elenco che può essere riordinato dall'utente tramite il trascinamento della selezione. Ogni volta che l'elenco viene riordinato, un ordine di acquisto...
 ms.author: riande
 ms.date: 06/02/2008
 ms.assetid: e5b6ed70-19ed-4024-ba4f-6d78e8acdc0f
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/reorderlist/using-postbacks-with-reorderlist-vb
 msc.type: authoredcontent
-ms.openlocfilehash: e2ab485d276d62518b6e7317bd76121f18d27ba8
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 5d6075e40df2c32df6c0d801243eff98fa7790b2
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65124719"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74611352"
 ---
 # <a name="using-postbacks-with-reorderlist-vb"></a>Uso di postback con ReorderList (VB)
 
-da [Christian Wenz](https://github.com/wenz)
+di [Christian Wenz](https://github.com/wenz)
 
-[Scaricare il codice](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/ReorderList4.vb.zip) o [Scarica il PDF](http://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/reorderlist4VB.pdf)
+[Scarica codice](https://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/ReorderList4.vb.zip) o [Scarica PDF](https://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/reorderlist4VB.pdf)
 
-> Il controllo ReorderList in AJAX Control Toolkit fornisce un elenco che possa essere riordinato in base all'utente tramite trascinamento della selezione. Ogni volta che l'elenco viene riordinato, un postback informa il server della modifica.
+> Il controllo Reorder list in AJAX Control Toolkit fornisce un elenco che può essere riordinato dall'utente tramite il trascinamento della selezione. Ogni volta che l'elenco viene riordinato, un postback informa il server della modifica.
 
-## <a name="overview"></a>Panoramica
+## <a name="overview"></a>Panoramica di
 
-Il `ReorderList` controllo in AJAX Control Toolkit fornisce un elenco che possa essere riordinato in base all'utente tramite trascinamento della selezione. Ogni volta che l'elenco viene riordinato, un postback informa il server della modifica.
+Il controllo `ReorderList` in AJAX Control Toolkit fornisce un elenco che può essere riordinato dall'utente tramite il trascinamento della selezione. Ogni volta che l'elenco viene riordinato, un postback informa il server della modifica.
 
 ## <a name="steps"></a>Passaggi
 
-Esistono varie fonti di dati possibili per il `ReorderList` controllo. Uno consiste nell'usare un `XmlDataSource` controllo:
+Esistono diverse origini dati possibili per il controllo `ReorderList`. Uno consiste nell'utilizzare un controllo `XmlDataSource`:
 
 [!code-aspx[Main](using-postbacks-with-reorderlist-vb/samples/sample1.aspx)]
 
-Per associare il codice XML per un `ReorderList` devono essere impostati controllo e abilitare i postback, gli attributi seguenti:
+Per associare il codice XML a un controllo `ReorderList` e abilitare i postback, è necessario impostare i seguenti attributi:
 
-- `DataSourceID`: L'ID dell'origine dati
-- `SortOrderField`: La proprietà da ordinare
-- `AllowReorder`: Se si desidera consentire all'utente di riordinare gli elementi dell'elenco
-- `PostBackOnReorder`: Se si desidera creare un postback ogni volta che l'elenco viene ridisposto
+- `DataSourceID`: l'ID dell'origine dati
+- `SortOrderField`: Proprietà in base alla quale eseguire l'ordinamento
+- `AllowReorder`: indica se consentire all'utente di riordinare gli elementi dell'elenco
+- `PostBackOnReorder`: indica se creare un postback ogni volta che l'elenco viene ridisposto
 
-Ecco il markup per il controllo appropriato:
+Ecco il markup appropriato per il controllo:
 
 [!code-aspx[Main](using-postbacks-with-reorderlist-vb/samples/sample2.aspx)]
 
-All'interno di `ReorderList` controllo, i dati specifici dell'origine dati può essere associato usando la `Eval()` metodo:
+All'interno del controllo `ReorderList`, i dati specifici dell'origine dati possono essere associati tramite il metodo `Eval()`:
 
 [!code-aspx[Main](using-postbacks-with-reorderlist-vb/samples/sample3.aspx)]
 
-In una posizione arbitraria nella pagina, un'etichetta conterrà le informazioni quando si è verificato il riordinamento ultimo:
+In una posizione arbitraria della pagina, un'etichetta conterrà le informazioni quando si è verificato l'ultimo riordino:
 
 [!code-aspx[Main](using-postbacks-with-reorderlist-vb/samples/sample4.aspx)]
 
-Questa etichetta viene riempita con il testo nel codice lato server, la gestione del postback:
+Questa etichetta viene riempita con testo nel codice sul lato server, gestendo il postback:
 
 [!code-aspx[Main](using-postbacks-with-reorderlist-vb/samples/sample5.aspx)]
 
-Infine, in modo da attivare la funzionalità di ASP.NET AJAX e il Toolkit di controllo, il `ScriptManager` controllo deve essere inserito nella pagina:
+Infine, per attivare la funzionalità di ASP.NET AJAX e di Control Toolkit, è necessario inserire il controllo `ScriptManager` nella pagina:
 
 [!code-aspx[Main](using-postbacks-with-reorderlist-vb/samples/sample6.aspx)]
 
-[![Ogni riordinamento attiva un postback](using-postbacks-with-reorderlist-vb/_static/image2.png)](using-postbacks-with-reorderlist-vb/_static/image1.png)
+[![ogni riordino attiva un postback](using-postbacks-with-reorderlist-vb/_static/image2.png)](using-postbacks-with-reorderlist-vb/_static/image1.png)
 
-Ogni riordinamento attiva un postback ([fare clic per visualizzare l'immagine con dimensioni normali](using-postbacks-with-reorderlist-vb/_static/image3.png))
+Ogni riordino attiva un postback ([fare clic per visualizzare l'immagine con dimensioni complete](using-postbacks-with-reorderlist-vb/_static/image3.png))
 
 > [!div class="step-by-step"]
 > [Precedente](drag-and-drop-via-reorderlist-cs.md)

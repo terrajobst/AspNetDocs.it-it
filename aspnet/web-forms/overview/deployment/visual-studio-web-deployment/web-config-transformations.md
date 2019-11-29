@@ -1,150 +1,150 @@
 ---
 uid: web-forms/overview/deployment/visual-studio-web-deployment/web-config-transformations
-title: 'Distribuzione Web ASP.NET tramite Visual Studio: Trasformazioni di Web. config | Microsoft Docs'
+title: 'Distribuzione Web ASP.NET con Visual Studio: trasformazioni di file Web. config | Microsoft Docs'
 author: tdykstra
-description: Questa serie di esercitazioni illustra come distribuire, pubblicare, ASP.NET per App Web di servizio App di Azure o per un provider di hosting di terze parti, di applicazioni web da utilizza...
+description: Questa serie di esercitazioni illustra come distribuire (pubblicare) un'applicazione Web ASP.NET per app Azure servizio app Web o un provider di hosting di terze parti, da usin...
 ms.author: riande
 ms.date: 02/15/2013
 ms.assetid: 5a2a927b-14cb-40bc-867a-f0680f9febd7
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/web-config-transformations
 msc.type: authoredcontent
-ms.openlocfilehash: 595723d9c6ea9cc40bb0ae896524ee828c4ebce2
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: a9d39547c94a63003442ba6fe1257693dde24b05
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65128436"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74621782"
 ---
-# <a name="aspnet-web-deployment-using-visual-studio-webconfig-file-transformations"></a>Distribuzione Web ASP.NET tramite Visual Studio: Trasformazioni del file Web.config
+# <a name="aspnet-web-deployment-using-visual-studio-webconfig-file-transformations"></a>Distribuzione Web ASP.NET con Visual Studio: trasformazioni di file Web. config
 
-da [Tom Dykstra](https://github.com/tdykstra)
+di [Tom Dykstra](https://github.com/tdykstra)
 
-[Download progetto iniziale](http://go.microsoft.com/fwlink/p/?LinkId=282627)
+[Scarica progetto Starter](https://go.microsoft.com/fwlink/p/?LinkId=282627)
 
-> Questa serie di esercitazioni illustra come distribuire, pubblicare, ASP.NET per App Web di servizio App di Azure o per un provider di hosting di terze parti, di applicazioni web usando Visual Studio 2012 o Visual Studio 2010. Per informazioni sulla serie, vedere [la prima esercitazione della serie](introduction.md).
+> Questa serie di esercitazioni illustra come distribuire (pubblicare) un'applicazione Web ASP.NET in app Web di servizio app Azure o in un provider di hosting di terze parti, usando Visual Studio 2012 o Visual Studio 2010. Per informazioni sulla serie, vedere [la prima esercitazione della serie](introduction.md).
 
-## <a name="overview"></a>Panoramica
+## <a name="overview"></a>Panoramica di
 
-Questa esercitazione illustra come automatizzare il processo di modifica il *Web. config* file quando viene distribuito in ambienti di destinazione diversi. La maggior parte delle applicazioni hanno impostazioni *Web. config* file che deve essere diversi quando l'applicazione viene distribuita. Automatizzazione del processo di queste modifiche non è necessario completarli manualmente ogni volta che si distribuisce, che potrebbe essere noiosa e soggetta a errori.
+In questa esercitazione viene illustrato come automatizzare il processo di modifica del file *Web. config* quando lo si distribuisce in ambienti di destinazione diversi. Per la maggior parte delle applicazioni sono presenti impostazioni nel file *Web. config* che devono essere diverse quando si distribuisce l'applicazione. L'automazione del processo di modifica di queste modifiche impedisce di eseguire manualmente le modifiche ogni volta che si distribuisce, il che sarebbe noioso e soggetto a errori.
 
-Promemoria: Se viene visualizzato un messaggio di errore o qualcosa non funziona durante l'esecuzione dell'esercitazione, assicurarsi di controllare la [risoluzione dei problemi pagina](troubleshooting.md).
+Promemoria: se si riceve un messaggio di errore o un elemento non funziona durante l'esercitazione, assicurarsi di controllare la pagina relativa alla [risoluzione dei problemi](troubleshooting.md).
 
-## <a name="webconfig-transformations-versus-web-deploy-parameters"></a>Trasformazioni di Web. config e i parametri di distribuzione Web
+## <a name="webconfig-transformations-versus-web-deploy-parameters"></a>Trasformazioni di Web. config rispetto ai parametri di Distribuzione Web
 
-Esistono due modi per automatizzare il processo di modifica *Web. config* le impostazioni del file: [Trasformazioni di Web. config](https://msdn.microsoft.com/library/dd465326.aspx) e [i parametri di distribuzione Web](https://msdn.microsoft.com/library/ff398068.aspx). Oggetto *Web. config* file di trasformazione contiene markup XML che specifica come modificare le *Web. config* file quando viene distribuito. È possibile specificare diverse modifiche per specifiche le configurazioni della build e per specifici profili di pubblicazione. Le configurazioni di compilazione predefinite sono di Debug e rilascio ed è possibile creare configurazioni di compilazione personalizzata. Un profilo di pubblicazione è in genere corrisponde a un ambiente di destinazione. (Si apprenderà a ulteriori informazioni su pubblicare profili nel [distribuzione in IIS come ambiente di Test](deploying-to-iis.md) esercitazione.)
+Esistono due modi per automatizzare il processo di modifica delle impostazioni del file *Web. config* : le [trasformazioni di Web. config](https://msdn.microsoft.com/library/dd465326.aspx) e i [parametri del distribuzione Web](https://msdn.microsoft.com/library/ff398068.aspx). Un file di trasformazione *Web. config* contiene markup XML che specifica come modificare il file *Web. config* quando viene distribuito. È possibile specificare modifiche diverse per configurazioni di compilazione specifiche e per profili di pubblicazione specifici. Le configurazioni di compilazione predefinite sono debug e release ed è possibile creare configurazioni di compilazione personalizzate. Un profilo di pubblicazione corrisponde in genere a un ambiente di destinazione. Per ulteriori informazioni sui profili di pubblicazione, vedere l'esercitazione [distribuzione in IIS come ambiente di test](deploying-to-iis.md) .
 
-Parametri di distribuzione Web possono essere utilizzati per specificare molti tipi diversi di impostazioni che devono essere configurati durante la distribuzione, incluse le impostazioni che si trovano nella *Web. config* file. Quando viene utilizzata per specificare *Web. config* le modifiche ai file, i parametri di distribuzione Web sono più complessi da configurare, ma sono utili quando non si conosce il valore da impostare fino a quando non si distribuisce. Ad esempio, in un ambiente aziendale, è possibile creare un *pacchetto di distribuzione* e assegnare a un utente nel reparto IT per l'installazione nell'ambiente di produzione e tale persona deve essere in grado di immettere le stringhe di connessione o le password non necessari conoscere.
+È possibile utilizzare i parametri Distribuzione Web per specificare molti tipi diversi di impostazioni che devono essere configurate durante la distribuzione, incluse le impostazioni presenti nei file *Web. config* . Quando viene utilizzato per specificare le modifiche al file *Web. config* , i parametri distribuzione Web sono più complessi da configurare, ma sono utili quando non si conosce il valore da impostare fino a quando non si esegue la distribuzione. In un ambiente aziendale, ad esempio, è possibile creare un *pacchetto di distribuzione* e assegnarlo a una persona del reparto IT per l'installazione in produzione e tale utente deve essere in grado di immettere le stringhe di connessione o le password che non si conoscono.
 
-Per lo scenario che descrive questa serie di esercitazioni, si conoscono in anticipo tutto ciò che deve essere eseguita per il *Web. config* file, in modo che non è necessario usare i parametri di distribuzione Web. Si configurerà alcune trasformazioni che differiscono a seconda della configurazione di compilazione utilizzata e altre che variano a seconda del profilo di pubblicazione usato.
+Per lo scenario descritto in questa serie di esercitazioni, si sa in anticipo tutto ciò che è necessario eseguire nel file *Web. config* , pertanto non è necessario usare distribuzione Web parametri. Verranno configurate alcune trasformazioni che variano a seconda della configurazione di compilazione utilizzata e altre che variano a seconda del profilo di pubblicazione usato.
 
 <a id="watransforms"></a>
 
-## <a name="specifying-webconfig-settings-in-azure"></a>Specifica le impostazioni di Web. config in Azure
+## <a name="specifying-webconfig-settings-in-azure"></a>Specifica delle impostazioni di Web. config in Azure
 
-Se il *Web. config* inclusi tra le impostazioni di file che si desidera modificare le `<connectionStrings>` o il `<appSettings>` elemento, e se si distribuisce per le app Web nel servizio App di Azure, si dispone di un'altra opzione per automatizzare le modifiche apportate durante distribuzione. È possibile immettere le impostazioni che si desidera rendere effettiva in Azure nel **configura** della scheda della pagina del portale di gestione per l'app web (scorrere verso il basso il **le impostazioni dell'app** e **le stringhe di connessione**  sezioni). Quando si distribuisce il progetto, Azure applica automaticamente le modifiche. Per altre informazioni, vedere [siti Web di Azure: How Application Strings and Connection Strings Work](https://blogs.msdn.com/b/windowsazure/archive/2013/07/17/windows-azure-web-sites-how-application-strings-and-connection-strings-work.aspx) (App Web di Azure: come funzionano le stringhe di applicazione e le stringhe di connessione).
+Se le impostazioni del file *Web. config* che si desidera modificare si trovano nell'elemento `<connectionStrings>` o `<appSettings>` e se si esegue la distribuzione in app Web nel servizio app Azure, è possibile automatizzare le modifiche durante la distribuzione. È possibile immettere le impostazioni che si desidera rendere effettive in Azure nella scheda **Configura** della pagina del portale di gestione per l'app Web (scorrere verso il basso fino alle sezioni **impostazioni app** e **stringhe di connessione** ). Quando si distribuisce il progetto, Azure applica automaticamente le modifiche. Per ulteriori informazioni, vedere [siti Web di Microsoft Azure: funzionamento delle stringhe delle applicazioni e delle stringhe di connessione](https://blogs.msdn.com/b/windowsazure/archive/2013/07/17/windows-azure-web-sites-how-application-strings-and-connection-strings-work.aspx).
 
-## <a name="default-transformation-files"></a>File di trasformazione predefinito
+## <a name="default-transformation-files"></a>File di trasformazione predefiniti
 
-Nelle **Esplora soluzioni**, espandere *Web. config* per visualizzare il *debug* e *Release* i file di trasformazione vengono creati per impostazione predefinita per le configurazioni della build due predefinita.
+In **Esplora soluzioni**espandere *Web. config* per visualizzare i file di trasformazione *Web. debug. config* e *Web. Release. config* che vengono creati per impostazione predefinita per le due configurazioni di compilazione predefinite.
 
-![Web.config_transform_files](web-config-transformations/_static/image1.png)
+![Web. config_transform_files](web-config-transformations/_static/image1.png)
 
-È possibile creare i file di trasformazione per configurazioni della build personalizzata facendo clic il file Web. config e scegliendo **Aggiungi trasformazioni di configurazione** dal menu di scelta rapida. Per questa esercitazione non è necessario eseguire questa operazione e l'opzione di menu è disabilitata, perché si sono mai sono create tutte le configurazioni di compilazione personalizzata.
+È possibile creare file di trasformazione per le configurazioni di compilazione personalizzate facendo clic con il pulsante destro del mouse sul file Web. config e scegliendo **Aggiungi trasformazioni di configurazione** dal menu di scelta rapida. Per questa esercitazione non è necessario eseguire questa operazione e l'opzione di menu è disabilitata perché non sono state create configurazioni di compilazione personalizzate.
 
-In seguito si creerà tre file di trasformazione altre, una per ogni test, staging e produzione di profili di pubblicazione. Un esempio tipico di un'impostazione che è necessario gestire in un file di trasformazione del profilo di pubblicazione perché dipende da ambiente di destinazione è un endpoint WCF è diverso per test o produzione. Si creerà pubblica file di trasformazione del profilo in esercitazioni successive dopo aver creato i profili di pubblicazione che escono con.
+Successivamente verranno creati altri tre file di trasformazione, uno per i profili di pubblicazione di test, di staging e di produzione. Un esempio tipico di un'impostazione che è possibile gestire in un file di trasformazione del profilo di pubblicazione perché dipende dall'ambiente di destinazione è un endpoint WCF diverso per i test e la produzione. Verranno creati file di trasformazione del profilo di pubblicazione nelle esercitazioni successive dopo aver creato i profili di pubblicazione con cui vengono creati.
 
 ## <a name="disable-debug-mode"></a>Disabilitare la modalità di debug
 
-Un esempio di un'impostazione che dipende dalla configurazione di compilazione anziché l'ambiente di destinazione è il `debug` attributo. Per una build di rilascio in genere consigliabile debug disabilitato indipendentemente dall'ambiente viene eseguita la distribuzione. Pertanto, per impostazione predefinita di Visual Studio creano modelli di progetto *Release* trasformare file con il codice che rimuove le `debug` dell'attributo dal `compilation` elemento. Ecco il valore predefinito *Release*: oltre a un codice di trasformazione di esempio che viene impostata come commento, include il codice nelle `compilation` elemento che rimuove il `debug` attributo:
+Un esempio di impostazione che dipende dalla configurazione della build anziché dall'ambiente di destinazione è l'attributo `debug`. Per una build di rilascio, in genere si vuole disabilitare il debug indipendentemente dall'ambiente in cui si esegue la distribuzione. Per impostazione predefinita, i modelli di progetto di Visual Studio creano quindi i file di trasformazione *Web. Release. config* con il codice che rimuove l'attributo `debug` dall'elemento `compilation`. Di seguito è riportato il *file Web. Release. config*predefinito: oltre ad alcuni esempi di codice di trasformazione impostati come commento, include il codice nell'elemento `compilation` che rimuove l'attributo `debug`:
 
 [!code-xml[Main](web-config-transformations/samples/sample1.xml?highlight=18)]
 
-Il `xdt:Transform="RemoveAttributes(debug)"` attributo specifica che il `debug` attributo da rimuovere dal `system.web/compilation` elemento distribuito *Web. config* file. Questa operazione verrà eseguita ogni volta che si distribuisce una build di rilascio.
+L'attributo `xdt:Transform="RemoveAttributes(debug)"` specifica che si desidera che l'attributo `debug` venga rimosso dall'elemento `system.web/compilation` nel file *Web. config* distribuito. Questa operazione verrà eseguita ogni volta che si distribuisce una build di rilascio.
 
-## <a name="limit-error-log-access-to-administrators"></a>Limitare l'accesso ai registri di errore per gli amministratori
+## <a name="limit-error-log-access-to-administrators"></a>Limita l'accesso ai log degli errori agli amministratori
 
-Se si verifica un errore durante l'esecuzione dell'applicazione, l'applicazione viene visualizzata una pagina di errore generico anziché la pagina di errore generati dal sistema e Usa il [pacchetto Elmah NuGet](http://www.hanselman.com/blog/NuGetPackageOfTheWeek7ELMAHErrorLoggingModulesAndHandlersWithSQLServerCompact.aspx) per la registrazione e segnalazione errori. Il `customErrors` elemento dell'applicazione *Web. config* file specifica la pagina di errore:
+Se si verifica un errore durante l'esecuzione dell'applicazione, l'applicazione visualizza una pagina di errore generica al posto della pagina di errore generata dal sistema e usa il [pacchetto NuGet ELMAH](http://www.hanselman.com/blog/NuGetPackageOfTheWeek7ELMAHErrorLoggingModulesAndHandlersWithSQLServerCompact.aspx) per la registrazione e la creazione di report degli errori. L'elemento `customErrors` nel file *Web. config* dell'applicazione specifica la pagina di errore:
 
 [!code-xml[Main](web-config-transformations/samples/sample2.xml)]
 
-Per visualizzare la pagina di errore, modificare temporaneamente il `mode` attributo del `customErrors` elemento da "RemoteOnly" su "Sì" ed eseguire l'applicazione da Visual Studio. Causa un errore richiedendo un URL non valido, ad esempio *Studentsxxx.aspx*. Invece di un errore generato IIS "della risorsa non è stata trovata" pagina, viene visualizzato il *GenericErrorPage* pagina.
+Per visualizzare la pagina di errore, modificare temporaneamente l'attributo `mode` dell'elemento `customErrors` da "RemoteOnly" a "on" ed eseguire l'applicazione da Visual Studio. Generare un errore richiedendo un URL non valido, ad esempio *Studentsxxx. aspx*. Anziché una pagina di errore "Impossibile trovare la risorsa", viene visualizzata la pagina *pagina GenericErrorPage. aspx* .
 
 ![Pagina di errore](web-config-transformations/_static/image2.png)
 
-Per visualizzare il log degli errori, sostituire tutto il contenuto nell'URL dopo il numero di porta *elmah.axd* (ad esempio, `http://localhost:51130/elmah.axd`) e premere INVIO:
+Per visualizzare il log degli errori, sostituire tutti gli elementi nell'URL dopo il numero di porta con *ELMAH. axd* (ad esempio, `http://localhost:51130/elmah.axd`) e premere INVIO:
 
 ![Pagina ELMAH](web-config-transformations/_static/image3.png)
 
-Non dimenticare di impostare il `customErrors` elemento torna alla modalità "RemoteOnly" al termine.
+Al termine, non dimenticare di impostare nuovamente l'elemento `customErrors` sulla modalità "RemoteOnly".
 
-Nel computer di sviluppo è consigliabile consentire l'accesso gratuito alla pagina log di errore, ma nell'ambiente di produzione che sarebbe un rischio per la sicurezza. Per il sito di produzione, si desidera aggiungere una regola di autorizzazione che limita l'accesso ai registri di errore per gli amministratori e assicurarsi che la limitazione funziona si desidera che nei test e gestione temporanea anche. Pertanto si tratta di un'altra modifica che si desidera implementare ogni volta che si distribuisce una build di rilascio e, in modo che fa parte di *Release* file.
+Nel computer di sviluppo è consigliabile consentire l'accesso gratuito alla pagina log degli errori, ma in produzione si tratta di un rischio per la sicurezza. Per il sito di produzione, è necessario aggiungere una regola di autorizzazione che limita l'accesso ai log degli errori agli amministratori e per assicurarsi che la restrizione funzioni anche in test e staging. Si tratta quindi di un'altra modifica che si desidera implementare ogni volta che si distribuisce una build di rilascio e che quindi appartiene al file *Web. Release. config* .
 
-Aprire *Release* e aggiungere un nuovo `location` elemento immediatamente prima della chiusura `configuration` tag, come illustrato di seguito.
+Aprire *Web. Release. config* e aggiungere un nuovo elemento `location` immediatamente prima del tag di chiusura `configuration`, come illustrato di seguito.
 
 [!code-xml[Main](web-config-transformations/samples/sample3.xml?highlight=27-34)]
 
-Il `Transform` valore di attributo di "Insert", ciò `location` elemento da aggiungere come elemento di pari livello a tutte le classi esistenti `location` elementi nel *Web. config* file. (È già presente uno `location` regole di elemento che specifica l'autorizzazione per il **crediti Update** pagina.)
+Il valore dell'attributo `Transform` "Insert" comporta l'aggiunta di questo elemento `location` come elemento di pari livello a tutti gli elementi `location` esistenti nel file *Web. config* . Esiste già un elemento `location` che specifica le regole di autorizzazione per la pagina di **aggiornamento crediti** .
 
-A questo punto è possibile visualizzare in anteprima la trasformazione per assicurarsi che codificato viene correttamente.
+A questo punto è possibile visualizzare in anteprima la trasformazione per assicurarsi che sia stata codificata correttamente.
 
-Nelle **Esplora soluzioni**, fare doppio clic su *Release* e fare clic su **anteprima trasformare**.
+In **Esplora soluzioni**fare clic con il pulsante destro del mouse su *Web. Release. config* e scegliere **Anteprima trasformazione**.
 
-![Menu Anteprima di trasformazione](web-config-transformations/_static/image4.png)
+![Menu trasforma anteprima](web-config-transformations/_static/image4.png)
 
-Verrà visualizzata una pagina che illustra lo sviluppo *Web. config* sulla sinistra e quali file distribuito *Web. config* file sarà simile a destra, con evidenziate le modifiche.
+Verrà visualizzata una pagina che mostra il file *Web. config* di sviluppo a sinistra e il file *Web. config* distribuito, con le modifiche evidenziate.
 
-![Anteprima della trasformazione di debug](web-config-transformations/_static/image5.png)
+![Anteprima della trasformazione debug](web-config-transformations/_static/image5.png)
 
-![Anteprima della trasformazione di posizione](web-config-transformations/_static/image6.png)
+![Anteprima della trasformazione percorso](web-config-transformations/_static/image6.png)
 
-(In anteprima, è possibile notare alcune modifiche aggiuntive che non scritto dallo sviluppatore Trasforma per: in genere che implicano la rimozione di spazi vuoti che non influisce sulla funzionalità.)
+(Nell'anteprima è possibile notare alcune modifiche aggiuntive per le quali non sono state scritte le trasformazioni): questi comportano in genere la rimozione di spazi vuoti che non influiscono sulla funzionalità.
 
-Quando si testa il sito dopo la distribuzione, è possibile anche testare per verificare che la regola di autorizzazione è valida.
+Quando si esegue il test del sito dopo la distribuzione, verrà testato anche per verificare che la regola di autorizzazione sia valida.
 
 > [!NOTE] 
 > 
-> **Nota sulla sicurezza** mai visualizzare i dettagli dell'errore per il pubblico in un'applicazione di produzione o memorizzare tali informazioni in una posizione pubblica. Gli utenti malintenzionati possono usare le informazioni sugli errori per individuare le vulnerabilità in un sito. Se si usa ELMAH nella propria applicazione, configurare ELMAH per ridurre al minimo i rischi di sicurezza. L'esempio ELMAH in questa esercitazione non deve essere considerato una configurazione consigliata. È un esempio in cui è stato scelto per illustrare come gestire una cartella che l'applicazione deve essere in grado di creare i file. Per altre informazioni, vedere [proteggere l'endpoint ELMAH](https://code.google.com/p/elmah/wiki/SecuringErrorLogPages).
+> **Nota sulla sicurezza** Non visualizzare mai i dettagli dell'errore al pubblico in un'applicazione di produzione oppure archiviare le informazioni in un percorso pubblico. Gli utenti malintenzionati possono usare le informazioni sugli errori per individuare le vulnerabilità in un sito. Se si usa ELMAH nella propria applicazione, configurare ELMAH per ridurre al minimo i rischi per la sicurezza. L'esempio ELMAH in questa esercitazione non deve essere considerato una configurazione consigliata. Si tratta di un esempio che è stato scelto per illustrare come gestire una cartella in cui l'applicazione deve essere in grado di creare file. Per ulteriori informazioni, vedere [protezione dell'endpoint ELMAH](https://code.google.com/p/elmah/wiki/SecuringErrorLogPages).
 
-## <a name="a-setting-that-youll-handle-in-publish-profile-transformation-files"></a>Un'impostazione che è possibile gestire in file di trasformazione del profilo di pubblicazione
+## <a name="a-setting-that-youll-handle-in-publish-profile-transformation-files"></a>Impostazione che verrà gestita nei file di trasformazione del profilo di pubblicazione
 
-Uno scenario comune consiste nel disporre *Web. config* impostazioni che devono essere diverse in ogni ambiente in cui si distribuisce in file. Ad esempio, un'applicazione che chiama un servizio WCF potrebbe essere necessario un diverso endpoint in ambienti di test e produzione. L'applicazione di Contoso University include anche un'impostazione di questo tipo. Questa impostazione controlla un indicatore visibile nelle pagine di un sito indicante che l'ambiente in uso, ad esempio sviluppo, test o produzione. Il valore dell'impostazione determina se l'applicazione verrà aggiunto "(Dev)" o "(Test)" al titolo principale nel *Site. master* pagina master:
+Uno scenario comune consiste nel disporre di impostazioni del file *Web. config* che devono essere diverse in ogni ambiente in cui si esegue la distribuzione. Ad esempio, un'applicazione che chiama un servizio WCF potrebbe avere bisogno di un endpoint diverso negli ambienti di test e di produzione. L'applicazione Contoso University include anche un'impostazione di questo tipo. Questa impostazione controlla un indicatore visibile sulle pagine di un sito che indica l'ambiente in cui si trova, ad esempio sviluppo, test o produzione. Il valore dell'impostazione determina se l'applicazione aggiungerà "(dev)" o "(test)" all'intestazione principale della pagina master del *sito. master* :
 
-![Indicatore di ambiente](web-config-transformations/_static/image7.png)
+![Indicatore ambiente](web-config-transformations/_static/image7.png)
 
-L'indicatore di ambiente viene omessa quando l'applicazione è in esecuzione in gestione temporanea o produzione.
+L'indicatore di ambiente viene omesso quando l'applicazione è in esecuzione in gestione temporanea o in produzione.
 
-Le pagine web di Contoso University leggere un valore che viene impostato in `appSettings` nella *Web. config* file per determinare qual è l'ambiente in cui viene eseguita l'applicazione:
+Le pagine Web di Contoso University leggono un valore impostato in `appSettings` nel file *Web. config* per determinare l'ambiente in cui l'applicazione è in esecuzione:
 
 [!code-xml[Main](web-config-transformations/samples/sample4.xml)]
 
-Il valore deve essere "Test" nell'ambiente di test e "Produzione" per lo staging e produzione.
+Il valore deve essere "test" nell'ambiente di test e "prod" per la gestione temporanea e la produzione.
 
-Il codice seguente in un file di trasformazione verrà implementata questa trasformazione:
+Il codice seguente in un file di trasformazione implementerà questa trasformazione:
 
 [!code-xml[Main](web-config-transformations/samples/sample5.xml)]
 
-Il `xdt:Transform` "SetAttributes" indica che lo scopo di questa trasformazione per modificare i valori di attributo di un elemento esistente nel valore dell'attributo di *Web. config* file. Il `xdt:Locator` "Match(key)" indica che l'elemento da modificare è quella di valore dell'attributo la cui `key` corrispondenze dell'attributo di `key` attributo specificato qui. Il solo altro attributo del `add` elemento viene `value`, e questo è ciò che verrà modificato in distribuito *Web. config* file. Il codice riportato di seguito le cause di `value` attributo del `Environment` `appSettings` elemento da impostare su "Test" nel *Web. config* file che viene distribuito.
+Il valore dell'attributo `xdt:Transform` "SetAttributes" indica che lo scopo di questa trasformazione è modificare i valori di attributo di un elemento esistente nel file *Web. config* . Il valore dell'attributo `xdt:Locator` "Match (Key)" indica che l'elemento da modificare è quello il cui attributo `key` corrisponde all'attributo `key` specificato qui. L'unico altro attributo dell'elemento `add` è `value`ed è ciò che verrà modificato nel file *Web. config* distribuito. Il codice riportato di seguito fa in modo che l'attributo `value` dell'elemento `Environment` `appSettings` sia impostato su "test" nel file *Web. config* distribuito.
 
-Questa trasformazione fa parte i file di trasformazione del profilo di pubblicazione, non è stata creata. Si verrà creato e aggiornare i file di trasformazione che implementano questa modifica, quando si creano i profili di pubblicazione per gli ambienti di test, staging e produzione. È necessario usare il [distribuzione in IIS](deploying-to-iis.md) e [distribuire nell'ambiente di produzione](deploying-to-production.md) esercitazioni.
+Questa trasformazione appartiene ai file di trasformazione del profilo di pubblicazione, che non sono stati ancora creati. Verranno creati e aggiornati i file di trasformazione che implementano questa modifica quando si creano i profili di pubblicazione per gli ambienti di test, di gestione temporanea e di produzione. Questa operazione verrà eseguita nelle esercitazioni [per la distribuzione in IIS](deploying-to-iis.md) e la [distribuzione in produzione](deploying-to-production.md) .
 
 > [!NOTE]
-> Poiché questa impostazione si trova nel `<appSettings>` elemento, si dispone di un'altra alternativa per specificare la trasformazione quando si esegue la distribuzione delle App Web in Azure App Service, vedere [Web. config che specifica le impostazioni in Azure](#watransforms) nelle sezioni precedenti di In questo argomento.
+> Poiché questa impostazione si trova nell'elemento `<appSettings>`, è possibile specificare un'altra alternativa per specificare la trasformazione durante la distribuzione in app Web nel servizio app Azure vedere [specifica delle impostazioni di Web. config in Azure](#watransforms) in precedenza in questo argomento.
 
 ## <a name="setting-connection-strings"></a>Impostazione delle stringhe di connessione
 
-Anche se il file di trasformazione predefinito contiene un esempio che illustra come aggiornare una stringa di connessione, nella maggior parte dei casi non occorre configurare le trasformazioni di stringa di connessione, perché è possibile specificare le stringhe di connessione nel profilo di pubblicazione. È necessario usare il [distribuzione in IIS](deploying-to-iis.md) e [distribuire nell'ambiente di produzione](deploying-to-production.md) esercitazioni.
+Sebbene il file di trasformazione predefinito contenga un esempio in cui viene illustrato come aggiornare una stringa di connessione, nella maggior parte dei casi non è necessario impostare le trasformazioni delle stringhe di connessione, in quanto è possibile specificare le stringhe di connessione nel profilo di pubblicazione. Questa operazione verrà eseguita nelle esercitazioni [per la distribuzione in IIS](deploying-to-iis.md) e la [distribuzione in produzione](deploying-to-production.md) .
 
 ## <a name="summary"></a>Riepilogo
 
-È ora ancora come puoi fare con *Web. config* trasformazioni prima creare i profili di pubblicazione e si è visto un'anteprima del quale sarà il file Web. config distribuito.
+A questo punto, è possibile eseguire le operazioni necessarie per le trasformazioni di *Web. config* prima di creare i profili di pubblicazione e si è verificata un'anteprima di ciò che verrà visualizzato nel file Web. config distribuito.
 
-![Anteprima della trasformazione di posizione](web-config-transformations/_static/image8.png)
+![Anteprima della trasformazione percorso](web-config-transformations/_static/image8.png)
 
-Nell'esercitazione seguente, sarà occuparsi delle attività di configurazione di distribuzione che richiedono l'impostazione di proprietà del progetto.
+Nell'esercitazione seguente verranno gestite le attività di configurazione della distribuzione che richiedono l'impostazione delle proprietà del progetto.
 
 ## <a name="more-information"></a>Altre informazioni
 
-Per ulteriori informazioni sugli argomenti trattati in questa esercitazione, vedere [trasformazioni tramite Web. config per modificare le impostazioni nel file Web. config di destinazione o nel file app. config durante la distribuzione](https://go.microsoft.com/fwlink/p/?LinkId=282413#transforms) nella mappa del contenuto di distribuzione Web per Visual Studio e ASP.NET.
+Per ulteriori informazioni sugli argomenti trattati in questa esercitazione, vedere [utilizzo delle trasformazioni di Web. config per modificare le impostazioni nel file Web. config o nel file app. config di destinazione durante la distribuzione](https://go.microsoft.com/fwlink/p/?LinkId=282413#transforms) nella mappa del contenuto della distribuzione Web per Visual Studio e ASP.NET.
 
 > [!div class="step-by-step"]
 > [Precedente](preparing-databases.md)

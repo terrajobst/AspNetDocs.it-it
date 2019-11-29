@@ -1,165 +1,165 @@
 ---
 uid: aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/web-development-best-practices
-title: Web consigliate per lo sviluppo (creazione di App Cloud funzionanti con Azure) | Microsoft Docs
+title: Procedure consigliate per lo sviluppo Web (compilazione di app Cloud reali con Azure) | Microsoft Docs
 author: MikeWasson
-description: La creazione Real World di App Cloud con e-book Azure si basa su una presentazione sviluppata da Scott Guthrie. Viene spiegato 13 modelli e procedure consigliate che egli può...
+description: La creazione di app cloud del mondo reale con l'e-book di Azure si basa su una presentazione sviluppata da Scott Guthrie. Vengono illustrati 13 modelli e procedure che possono essere...
 ms.author: riande
 ms.date: 06/12/2014
 ms.assetid: 52d6c941-2cd9-442f-9872-2c798d6d90cd
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/web-development-best-practices
 msc.type: authoredcontent
-ms.openlocfilehash: e64e41bfc600811cecb8d20a67fb397ff9dc9a45
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 0956aaaf1f6a1a0d2f5d93f98cb6959cec98dbaf
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65118372"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74582711"
 ---
-# <a name="web-development-best-practices-building-real-world-cloud-apps-with-azure"></a>Procedure guidate di sviluppo Web (creazione di App Cloud funzionanti con Azure)
+# <a name="web-development-best-practices-building-real-world-cloud-apps-with-azure"></a>Procedure consigliate per lo sviluppo Web (compilazione di app Cloud reali con Azure)
 
-dal [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+di [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
 
-[Download risolverlo Project](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [Scarica l'E-book](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
+[Scarica il progetto di correzione it](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [Scarica l'E-Book](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
-> Il **creazione Real World di App Cloud con Azure** eBook si basa su una presentazione sviluppata da Scott Guthrie. Viene illustrato 13 modelli e procedure consigliate che consentono di avere esito positivo lo sviluppo di App web per il cloud. Per informazioni sull'e-book, vedere [capitolo prima](introduction.md).
+> La **creazione di app cloud del mondo reale con** l'e-book di Azure si basa su una presentazione sviluppata da Scott Guthrie. Vengono illustrati 13 modelli e procedure che consentono di sviluppare correttamente app Web per il cloud. Per informazioni sull'e-book, vedere [il primo capitolo](introduction.md).
 
-I primi tre modelli sono stati sulla configurazione di un processo di sviluppo agile. gli altri sono sull'architettura e codice. Questa è una raccolta di procedure consigliate per lo sviluppo web:
+I primi tre modelli erano la configurazione di un processo di sviluppo agile. il resto riguarda l'architettura e il codice. Questo è un insieme di procedure consigliate per lo sviluppo Web:
 
-- [Server web senza stato](#stateless) dietro un bilanciamento del carico intelligente.
-- [Evitare lo stato della sessione](#sessionstate) (o se non strettamente necessario, utilizzare cache distribuita, anziché un database).
-- [Usare una rete CDN](#cdn) agli asset di file statici di cache perimetrale (immagini, script).
+- [Server Web](#stateless) senza stato protetti da un servizio di bilanciamento del carico intelligente.
+- [Evitare lo stato della sessione](#sessionstate) o, se non è possibile evitarlo, utilizzare la cache distribuita anziché un database.
+- [Usare una rete CDN](#cdn) per asset di file statici con cache perimetrale (immagini, script).
 - [Usare il supporto asincrono di .NET 4.5](#async) per evitare di bloccare le chiamate.
 
-Queste procedure sono valide per tutto lo sviluppo web, non solo per le app cloud, ma sono particolarmente importante per le app cloud. Interagiscono per garantire un uso ottimale della scalabilità altamente flessibile offerto da parte dell'ambiente cloud. Se non si seguono queste procedure consigliate, verranno generati limitazioni quando si prova a ridimensionare l'applicazione.
+Queste procedure sono valide per tutti gli sviluppatori Web, non solo per le app Cloud, ma sono particolarmente importanti per le app cloud. Collaborano per consentire un uso ottimale della scalabilità altamente flessibile offerta dall'ambiente cloud. Se non si seguono queste procedure, si verificano limitazioni quando si tenta di ridimensionare l'applicazione.
 
 <a id="stateless"></a>
-## <a name="stateless-web-tier-behind-a-smart-load-balancer"></a>Livello web senza stato dietro un bilanciamento del carico intelligente
+## <a name="stateless-web-tier-behind-a-smart-load-balancer"></a>Livello Web senza stato dietro un servizio di bilanciamento del carico intelligente
 
-*Livello web senza stato* significa che è non archiviare i dati dell'applicazione nel sistema web server file o della memoria. Mantenere il livello web senza stato consente di offrire un'esperienza cliente migliore sia risparmiare denaro:
+Il *livello Web* senza stato significa che non vengono archiviati dati dell'applicazione nella memoria del server web o file System. Mantenere il livello Web senza stato consente di offrire un'esperienza utente migliore e risparmiare denaro:
 
-- Se il livello web è senza stato e si trova dietro un bilanciamento del carico, è possibile rispondere rapidamente ai cambiamenti del traffico delle applicazioni in modo dinamico aggiungendo o rimuovendo i server. Nell'ambiente cloud in cui si paga solo per le risorse del server, purché è effettivamente utilizzare, la possibilità di rispondere alle modifiche della domanda può tradurre in risparmio enorme.
-- Un livello web senza stato è a livello di architettura molto più semplice scalare orizzontalmente l'applicazione. Troppo, che consente di rispondere alle esigenze di ridimensionamento più rapidamente e risparmiare sui sviluppo e test nel processo.
-- Server del cloud, come i server in locale, è necessario installare patch e riavviati occasionalmente; e se il livello web è senza stato, il reindirizzamento del traffico quando si arresta temporaneamente un server non provocheranno errori o comportamenti imprevisti.
+- Se il livello Web è senza stato e si trova dietro un servizio di bilanciamento del carico, è possibile rispondere rapidamente alle modifiche nel traffico dell'applicazione, aggiungendo o rimuovendo in modo dinamico i server. Nell'ambiente cloud in cui si pagano solo le risorse del server per tutto il tempo in cui vengono effettivamente usati, la possibilità di rispondere alle modifiche nella domanda può tradursi in un notevole risparmio.
+- Un livello Web senza stato è molto più semplice per la scalabilità orizzontale dell'applicazione. Questo consente anche di rispondere più rapidamente alle esigenze di scalabilità e di spendere meno denaro per lo sviluppo e il test nel processo.
+- I server cloud, come i server locali, devono essere corretti e riavviati occasionalmente. Se il livello Web è senza stato, il routing del traffico quando un server diventa temporaneamente inattivo non provoca errori o comportamenti imprevisti.
 
-La maggior parte delle applicazioni reali è necessario archiviare lo stato per una sessione web. Ecco l'aspetto principale consiste nel non archiviarli nel server web. È possibile archiviare lo stato in altri modi, ad esempio nel client nei cookie o all'esterno di processo server-side nello stato della sessione ASP.NET usando un provider di cache. È possibile archiviare i file in [archiviazione Blob di Windows Azure](unstructured-blob-storage.md) anziché nel file system locale.
+Per la maggior parte delle applicazioni reali è necessario archiviare lo stato per una sessione Web. il punto principale è quello di non archiviarlo sul server Web. È possibile archiviare lo stato in altri modi, ad esempio nel client in cookie o sul lato server out-of-process nello stato della sessione ASP.NET usando un provider di cache. È possibile archiviare i file nell'archivio [BLOB di Windows Azure](unstructured-blob-storage.md) invece che nel file system locale.
 
-Un esempio di come è facile ridimensionare un'applicazione in siti Web di Microsoft Azure, se il livello web è senza stato, vedere la **scalabilità** scheda per un sito Microsoft Azure Web nel portale di gestione:
+Come esempio di come è possibile ridimensionare un'applicazione in siti Web di Windows Azure se il livello Web è senza stato, vedere la scheda **scala** per un sito Web di Microsoft Azure nel portale di gestione:
 
 ![Scheda scalabilità](web-development-best-practices/_static/image1.png)
 
-Se si desidera aggiungere i server web, è possibile semplicemente trascinare il dispositivo di scorrimento di conteggio di istanza a destra. Impostarla su 5 e fare clic su **salvare**, e in pochi secondi si dispone di 5 server web in Windows Azure la gestione del traffico del sito web.
+Se si desidera aggiungere server Web, è sufficiente trascinare il dispositivo di scorrimento conteggio istanze a destra. Impostarla su 5 e fare clic su **Save (Salva**) e, in pochi secondi, si dispone di 5 server Web in Windows Azure che gestiscono il traffico del sito Web.
 
 ![Cinque istanze](web-development-best-practices/_static/image2.png)
 
-È possibile impostare semplicemente il numero di istanze fino a 3 o torni a 1. Quando si passa indietro, il risparmio inizia immediatamente perché Windows Azure addebita al minuto, non per l'ora.
+È possibile impostare il numero di istanze su 3 o su 1 in modo semplice. Quando si esegue la scalabilità, si inizia subito a risparmiare denaro perché Windows Azure viene addebitato al minuto, non all'ora.
 
-È anche possibile invitare Windows Azure per aumentare o ridurre il numero di server web in base all'utilizzo della CPU automaticamente. Nell'esempio seguente, quando l'utilizzo della CPU scende sotto il 60%, il numero di server web verrà ridotti al minimo di 2 e in caso di utilizzo della CPU superiore all'80%, aumenterà il numero di server web con un massimo di 4.
+È inoltre possibile indicare a Windows Azure di aumentare o diminuire automaticamente il numero di server Web in base all'utilizzo della CPU. Nell'esempio seguente, quando l'utilizzo della CPU scende al di sotto del 60%, il numero di server Web verrà ridotto a un minimo di 2 e se l'utilizzo della CPU supera il 80%, il numero di server Web verrà aumentato fino a un massimo di 4.
 
-![Ridimensionare mediante l'utilizzo della CPU](web-development-best-practices/_static/image3.png)
+![Ridimensiona in base all'utilizzo della CPU](web-development-best-practices/_static/image3.png)
 
-Oppure cosa accade se si sa che il sito solo sarà occupato durante l'orario di lavoro? È possibile indicare a Windows Azure per eseguire più server durante le ore del giorno e diminuire a un singolo server validità, lunghe notti e fine settimana. La serie di catture di schermata seguenti viene illustrato come configurare il sito web per eseguire un server in ore non lavorative e 4 i server durante le ore lavorative dalle 8 alle 17.
+O se si è certi che il sito sarà occupato solo durante le ore lavorative? È possibile fare in modo che Windows Azure esegua più server durante il giorno e Riduci a un singolo server serate, notti e fine settimana. La serie seguente di schermate Mostra come configurare il sito Web per l'esecuzione di un server in ore non lavorative e 4 server durante le ore lavorative dalle 8.00 alle 17.00.
 
-![Ridimensiona di pianificazione](web-development-best-practices/_static/image4.png)
+![Ridimensiona in base alla pianificazione](web-development-best-practices/_static/image4.png)
 
-![Impostare i tempi di pianificazione](web-development-best-practices/_static/image5.png)
+![Imposta ore di pianificazione](web-development-best-practices/_static/image5.png)
 
-![Pianificazione diurno](web-development-best-practices/_static/image6.png)
+![Pianificazione diurna](web-development-best-practices/_static/image6.png)
 
-![Pianificazione weeknight](web-development-best-practices/_static/image7.png)
+![Pianificazione di weeknight](web-development-best-practices/_static/image7.png)
 
-![Pianificazione del fine settimana](web-development-best-practices/_static/image8.png)
+![Pianificazione fine settimana](web-development-best-practices/_static/image8.png)
 
-E naturalmente tutto questo può essere eseguita negli script anche come nel portale.
+Naturalmente tutto questo può essere eseguito anche negli script e nel portale.
 
-La capacità dell'applicazione per la scalabilità orizzontale è quasi illimitata come in Windows Azure, purché si evitare le difficoltà a in modo dinamico aggiungendo o rimuovendo le macchine virtuali server, mantenendo il livello web senza stato.
+La capacità di scalabilità orizzontale dell'applicazione è quasi illimitata in Windows Azure, purché si evitino gli ostacoli per aggiungere o rimuovere in modo dinamico le macchine virtuali del server, mantenendo lo stato del livello Web.
 
 <a id="sessionstate"></a>
 ## <a name="avoid-session-state"></a>Evitare lo stato della sessione
 
-È spesso poco pratico in un'app cloud reale per evitare di archiviare qualche forma di stato per una sessione utente, ma alcuni approcci influire sulle prestazioni e scalabilità rispetto ad altri. Se è necessario archiviare lo stato, la soluzione migliore è mantenere piccola la quantità di stato e archiviarla nei cookie. Se non è fattibile, la seconda miglior soluzione consiste nell'utilizzare lo stato della sessione ASP.NET con un provider per [cache in memoria distribuita](distributed-caching.md#sessionstate). La soluzione peggiore da un punto di vista della scalabilità e prestazioni è utilizzare un database eseguito il provider di stato della sessione.
+Spesso non è pratico in un'app cloud reale per evitare di archiviare un tipo di stato per una sessione utente, ma alcuni approcci influiscano sulle prestazioni e sulla scalabilità più di altre. Se è necessario archiviare lo stato, la soluzione migliore consiste nel limitare la quantità di stato e archiviarla nei cookie. Se ciò non è fattibile, la soluzione migliore successiva consiste nell'usare lo stato della sessione ASP.NET con un provider per la [cache distribuita in memoria](distributed-caching.md#sessionstate). La soluzione peggiore dal punto di vista delle prestazioni e della scalabilità consiste nell'usare un provider di stato della sessione supportato dal database.
 
 <a id="cdn"></a>
-## <a name="use-a-cdn-to-cache-static-file-assets"></a>Usare una rete CDN per memorizzare nella cache gli asset di file statici
+## <a name="use-a-cdn-to-cache-static-file-assets"></a>Usare una rete CDN per memorizzare nella cache asset di file statici
 
-Rete CDN è l'acronimo di rete CDN. Vengono fornite risorse file statiche quali immagini e i file di script a un provider della rete CDN e il provider memorizza nella cache di questi file nei data center in tutto il mondo, in modo che ogni volta che gli utenti accedono all'applicazione, ricevono risposta relativamente rapido e a bassa latenza per memorizzato nella cache Asset. Ciò consente di velocizzare il tempo di caricamento complessiva del sito e riduce il carico sui server web. Le reti CDN sono importanti specialmente se sono destinati a un gruppo di destinatari ampiamente distribuita geograficamente.
+La rete CDN è un acronimo della rete per la distribuzione di contenuti. Si forniscono asset di file statici, ad esempio immagini e file di script, a un provider della rete CDN e il provider memorizza nella cache i file nei data center in tutto il mondo, in modo che ogni volta che gli utenti accedano all'applicazione, ottengano una risposta relativamente rapida e bassa latenza per la cache Asset. In questo modo si accelera il tempo di caricamento complessivo del sito e il carico sui server Web viene ridotto. CDNs sono particolarmente importanti se si sta raggiungendo un pubblico ampiamente distribuito geograficamente.
 
-Windows Azure ha una rete CDN, è possibile usare altre reti CDN in un'applicazione che viene eseguito in Windows Azure o in qualsiasi ambiente di hosting web.
+Windows Azure dispone di una rete CDN ed è possibile utilizzare altri CDNs in un'applicazione eseguita in Windows Azure o in un qualsiasi ambiente di hosting Web.
 
 <a id="async"></a>
-## <a name="use-net-45s-async-support-to-avoid-blocking-calls"></a>Usare il supporto asincrono di .NET 4.5 per evitare di bloccare le chiamate
+## <a name="use-net-45s-async-support-to-avoid-blocking-calls"></a>Usare il supporto asincrono di .NET 4.5 per evitare il blocco delle chiamate
 
-.NET 4.5 migliorati i linguaggi di programmazione c# e VB per poter rendere molto più semplice gestire le attività in modo asincrono. Il vantaggio della programmazione asincrona non è disponibile solo per le situazioni di elaborazione parallela, ad esempio quando si desidera avviare contemporaneamente più chiamate al servizio web. Consente inoltre al server web di eseguire in modo più efficiente e affidabile in condizioni di carico elevato. Un server web ha solo un numero limitato di thread disponibili e condizioni di carico elevato quando tutti i thread sono in uso, le richieste in ingresso sono necessario attendere che i thread vengono liberati. Se il codice dell'applicazione non gestisce attività, ad esempio le query e chiamate al servizio web di database in modo asincrono, numero di thread venga inutilmente vincolati mentre il server è in attesa di una risposta dei / o. Questo limita la quantità di traffico che in condizioni di carico elevato grado di gestire il server. Con la programmazione asincrona, i thread in attesa di un servizio web o un database per restituire i dati vengono liberate fino a soddisfare nuove richieste finché i dati di ricezione. In un server web occupato, centinaia o migliaia di richieste può quindi essere elaborata immediatamente che verrebbe in attesa del thread da liberare.
+.NET 4,5 ha migliorato C# i linguaggi di programmazione e VB per semplificare la gestione delle attività in modo asincrono. Il vantaggio della programmazione asincrona non riguarda solo le situazioni di elaborazione parallela, ad esempio quando si vuole avviare più chiamate al servizio Web simultaneamente. Consente inoltre al server Web di eseguire in modo più efficiente e affidabile in condizioni di carico elevato. Un server Web dispone solo di un numero limitato di thread disponibili e, in condizioni di carico elevato, quando tutti i thread sono in uso, le richieste in ingresso devono attendere fino a quando i thread non vengono liberati. Se il codice dell'applicazione non gestisce attività come le query del database e le chiamate del servizio Web in modo asincrono, molti thread sono inutilmente vincolati mentre il server è in attesa di una risposta di I/O. Questo limita la quantità di traffico che il server è in grado di gestire in condizioni di carico elevato. Con la programmazione asincrona, i thread in attesa che un servizio Web o un database restituiscano dati vengono liberati fino a soddisfare nuove richieste fino a quando non vengono ricevuti i dati. In un server Web occupato, centinaia o migliaia di richieste possono essere elaborate tempestivamente, che altrimenti sarebbero in attesa della liberazione dei thread.
 
-Come illustrato in precedenza, è sufficiente per ridurre il numero di server web che gestiscono il sito web come succede per aumentarle. Pertanto, se un server può ottenere maggiore velocità effettiva, non è necessario perché molti di essi e non è possibile ridurre i costi perché è necessario meno server per un volume di traffico dato quanto accadrebbe in caso contrario.
+Come si è visto in precedenza, è facile ridurre il numero di server Web che gestiscono il sito Web in modo da aumentarli. Quindi, se un server è in grado di ottenere una maggiore velocità effettiva, non è necessario il maggior numero di questi ed è possibile ridurre i costi in quanto è necessario un minor numero di server per un determinato volume di traffico rispetto a quanto altrimenti.
 
-Supporto per il modello di programmazione asincrono .NET 4.5 è incluso in ASP.NET 4.5 per Web Form, MVC e API Web. in Entity Framework 6 e nel [API di archiviazione di Azure Windows](https://blogs.msdn.com/b/windowsazurestorage/archive/2013/07/12/introducing-storage-client-library-2-1-rc-for-net-and-windows-phone-8.aspx).
+Il supporto per il modello di programmazione asincrona di .NET 4,5 è incluso in ASP.NET 4,5 per Web Form, MVC e l'API Web. in Entity Framework 6 e nell'API di [archiviazione di Microsoft Azure](https://blogs.msdn.com/b/windowsazurestorage/archive/2013/07/12/introducing-storage-client-library-2-1-rc-for-net-and-windows-phone-8.aspx).
 
-### <a name="async-support-in-aspnet-45"></a>Supporto asincrono in ASP.NET 4.5
+### <a name="async-support-in-aspnet-45"></a>Supporto asincrono in ASP.NET 4,5
 
-In ASP.NET 4.5, il supporto per la programmazione asincrona è stato aggiunto non solo per la lingua, ma anche per i framework MVC, Web Form e Web API. Ad esempio, un metodo di azione del controller ASP.NET MVC riceve dati da una richiesta web e passa i dati a una visualizzazione che crea quindi il codice HTML da inviare al browser. Il metodo di azione deve spesso ottenere dati da un database o un servizio web per visualizzarla in una pagina web o per salvare i dati immessi in una pagina web. In questi scenari è facile rendere asincrono il metodo di azione: invece di restituire un *ActionResult* dell'oggetto, restituito *Task&lt;ActionResult&gt;*  e contrassegnare il metodo con il *async* (parola chiave). All'interno del metodo, quando una riga di codice avvia un'operazione che comporta il tempo di attesa, viene contrassegnato con la parola chiave await.
+In ASP.NET 4,5 è stato aggiunto il supporto per la programmazione asincrona non solo per il linguaggio, ma anche per i framework MVC, Web Form e API Web. Ad esempio, un metodo di azione del controller MVC ASP.NET riceve i dati da una richiesta Web e passa i dati a una visualizzazione che quindi crea il codice HTML da inviare al browser. Spesso il metodo di azione deve recuperare i dati da un database o da un servizio Web per visualizzarli in una pagina Web o per salvare i dati immessi in una pagina Web. In questi scenari è facile rendere asincrono il metodo di azione: anziché restituire un oggetto *ActionResult* , si restituisce *Task&lt;ActionResult&gt;* e si contrassegna il metodo con la parola chiave *Async* . All'interno del metodo, quando una riga di codice avvia un'operazione che implica il tempo di attesa, contrassegnarla con la parola chiave await.
 
-Ecco un metodo di azione semplice che chiama un metodo di repository per una query sul database:
+Di seguito è riportato un semplice metodo di azione che chiama un metodo del repository per una query di database:
 
 [!code-csharp[Main](web-development-best-practices/samples/sample1.cs)]
 
-Ed ecco lo stesso metodo che gestisce in modo asincrono la chiamata del database:
+E questo è lo stesso metodo che gestisce la chiamata al database in modo asincrono:
 
 [!code-csharp[Main](web-development-best-practices/samples/sample2.cs?highlight=1,4)]
 
-Dietro le quinte il compilatore genera il codice asincrono appropriato. Quando l'applicazione effettua la chiamata a `FindTaskByIdAsync`, ASP.NET rende la `FindTask` richiesta e quindi viene rimosso il thread di lavoro e rende disponibili per l'elaborazione di un'altra richiesta. Quando il `FindTask` richiesta viene eseguita, per continuare a elaborare il codice che segue tale chiamata viene riavviato un thread. Nel frattempo tra quando i `FindTask` richiesta viene avviata e quando vengono restituiti i dati, si dispone di un thread disponibile per eseguire operazioni utili che in caso contrario potrebbero essere associato in attesa di risposta.
+In viene illustrata la generazione del codice asincrono appropriato da parte del compilatore. Quando l'applicazione effettua la chiamata a `FindTaskByIdAsync`, ASP.NET esegue la richiesta di `FindTask` e quindi rimuove il thread di lavoro e lo rende disponibile per l'elaborazione di un'altra richiesta. Quando viene eseguita la richiesta di `FindTask`, viene riavviato un thread per continuare l'elaborazione del codice che viene eseguito dopo la chiamata. Durante l'intervallo tra il momento in cui viene avviata la richiesta di `FindTask` e il momento in cui vengono restituiti i dati, è disponibile un thread per eseguire operazioni utili che altrimenti verrebbero vincolate in attesa della risposta.
 
-Comporta un sovraccarico per il codice asincrono, ma in condizioni di carico basso, il sovraccarico non è irrilevante, mentre in condizioni di carico elevato in grado di elaborare le richieste in caso contrario, saranno contenute in attesa di thread disponibili.
+Si verifica un sovraccarico per il codice asincrono, ma in condizioni di basso carico l'overhead è trascurabile, mentre in condizioni di carico elevato è possibile elaborare le richieste che altrimenti verrebbero mantenute in attesa dei thread disponibili.
 
-È stato possibile eseguire questo tipo di programmazione asincrona a partire da ASP.NET 1.1, ma è difficile eseguire il debug, difficili da scrivere e soggetta a errori. Ora che è stata semplificata la scrittura di codice per tale in ASP.NET 4.5, non c'è nessun motivo per non più.
+È possibile eseguire questo tipo di programmazione asincrona a partire da ASP.NET 1,1, ma è difficile scrivere, soggette a errori e difficili da eseguire il debug. Ora che il codice è stato semplificato in ASP.NET 4,5, non c'è niente di più.
 
 ### <a name="async-support-in-entity-framework-6"></a>Supporto asincrono in Entity Framework 6
 
-Come parte del supporto di async in 4.5 abbiamo fornito supporto asincrono per chiamate al servizio web socket e il sistema di file i/o, ma il modello più comune per le applicazioni web consiste nel raggiungere un database e le librerie di dati non supportava asincrono. Entity Framework 6 ora aggiunge il supporto di async per l'accesso al database.
+Come parte del supporto asincrono in 4,5 è stato fornito il supporto asincrono per le chiamate ai servizi Web, I socket e l'I/O file system, ma il modello più comune per le applicazioni Web è quello di raggiungere un database e le librerie di dati non supportano Async. A questo punto Entity Framework 6 aggiunge il supporto asincrono per l'accesso al database.
 
-In Entity Framework 6 tutti i metodi che causano una query o comandi da inviare al database hanno versioni asincrone. In questo esempio mostra la versione asincrona del *trovare* (metodo).
+In Entity Framework 6 tutti i metodi che determinano l'invio di una query o di un comando al database hanno versioni asincrone. Nell'esempio riportato di seguito viene illustrata la versione asincrona del metodo *Find* .
 
 [!code-csharp[Main](web-development-best-practices/samples/sample3.cs?highlight=8)]
 
-E questo supporto di async funziona non solo per gli inserimenti, eliminazioni, gli aggiornamenti e trova semplice, funziona anche con le query LINQ:
+Questo supporto asincrono funziona non solo per gli inserimenti, le eliminazioni, gli aggiornamenti e le ricerche semplici. funziona anche con le query LINQ:
 
 [!code-csharp[Main](web-development-best-practices/samples/sample4.cs?highlight=7,10)]
 
-È presente un' `Async` versione del `ToList` metodo perché in questo codice è il metodo che genera una query da inviare al database. Il `Where` e `OrderByDescending` metodi solo configurare la query, mentre le `ToListAsync` metodo esegue la query e archivia la risposta nel `result` variabile.
+Esiste una versione `Async` del metodo `ToList` perché in questo codice è il metodo che causa l'invio di una query al database. I metodi `Where` e `OrderByDescending` configurano solo la query, mentre il metodo `ToListAsync` esegue la query e archivia la risposta nella variabile `result`.
 
 ## <a name="summary"></a>Riepilogo
 
-È possibile implementare le procedure guidate di sviluppo web illustrate nell'articolo in tutte qualsiasi ambiente cloud e framework di programmazione web, ma sono disponibili strumenti di ASP.NET e Windows Azure per semplificare. Se si seguono questi modelli, è possibile scalare orizzontalmente il livello web e si saranno ridurre al minimo le spese, poiché ogni server sarà in grado di gestire più traffico.
+È possibile implementare le procedure consigliate per lo sviluppo Web descritte qui in qualsiasi framework di programmazione Web e in qualsiasi ambiente cloud, ma sono disponibili strumenti in ASP.NET e Windows Azure per semplificare l'operazione. Se si seguono questi modelli, è possibile scalare facilmente il livello Web e ridurre al minimo le spese perché ogni server sarà in grado di gestire più traffico.
 
-Il [capitolo successivo](single-sign-on.md) esamina come il cloud consente scenari single sign-on.
+Il [capitolo successivo](single-sign-on.md) analizza il modo in cui il cloud abilita Single Sign-on scenari.
 
 ## <a name="resources"></a>Risorse
 
-Per altre informazioni vedere le risorse seguenti.
+Per ulteriori informazioni, vedere le risorse seguenti.
 
-Server web senza stato:
+Server Web senza stato:
 
-- [Microsoft Patterns and Practices - indicazioni sulla scalabilità automatica](https://msdn.microsoft.com/library/dn589774.aspx).
-- [La disabilitazione della ARR affinità nei siti Web di Azure di Windows dell'istanza](https://azure.microsoft.com/blog/2013/11/18/disabling-arrs-instance-affinity-in-windows-azure-web-sites/). Post di blog di Erez Benari, spiega l'affinità di sessione in siti Web di Microsoft Azure.
+- [Modelli e procedure Microsoft: linee guida per la scalabilità](https://msdn.microsoft.com/library/dn589774.aspx)automatica.
+- [Disabilitazione dell'affinità di istanze di Arr nei siti Web di Microsoft Azure](https://azure.microsoft.com/blog/2013/11/18/disabling-arrs-instance-affinity-in-windows-azure-web-sites/). Il post di Blog di Erez BenAri, illustra l'affinità di sessione in siti Web di Microsoft Azure.
 
-CDN:
+CDN
 
-- [Operatore alternativo: Creazione di servizi Cloud scalabili, resilienti](https://channel9.msdn.com/Series/FailSafe). Serie video in nove parti Marc Mercuri, Ulrich Homann e Mark Simms. Vedere la discussione della rete CDN nell'episodio 3 iniziando in corrispondenza di 1:34:00.
-- [Modello di Microsoft Patterns and Practices Hosting di contenuto statico](https://msdn.microsoft.com/library/dn589776.aspx)
-- [Le verifiche della rete CDN](http://www.cdnreviews.com/). Panoramica di molte reti CDN.
+- [Failsafe: compilazione di servizi cloud scalabili e resilienti](https://channel9.msdn.com/Series/FailSafe). Serie di video in nove parti di Ulrich Homann, Marc Mercuri e Mark Simms. Vedere la discussione sulla rete CDN nell'episodio 3 a partire da 1:34:00.
+- [Modello di hosting del contenuto statico di Microsoft Patterns and Practices](https://msdn.microsoft.com/library/dn589776.aspx)
+- [Revisioni](http://www.cdnreviews.com/)della rete CDN. Panoramica di molti CDNs.
 
 Programmazione asincrona:
 
 - [Uso di metodi asincroni in ASP.NET MVC 4](../../../../mvc/overview/performance/using-asynchronous-methods-in-aspnet-mvc-4.md). Esercitazione di Rick Anderson.
-- [Programmazione asincrona con Async e Await (c# e Visual Basic)](https://msdn.microsoft.com/library/vstudio/hh191443.aspx). White paper MSDN che spiega i motivi per la programmazione asincrona, come funziona in ASP.NET 4.5 e come scrivere codice per la sua implementazione.
-- [Query asincrone di Entity Framework e salvataggio](https://msdn.microsoft.com/data/jj819165)
-- [Come creare applicazioni Web ASP.NET usando Async](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B337#fbid=tgkT4SR_DK7). Presentazione video di Rowan Miller. Include una dimostrazione di grafici di programmazione asincrona può facilitare un notevole aumento della velocità effettiva del server web in condizioni di carico elevato.
-- [Operatore alternativo: Creazione di servizi Cloud scalabili, resilienti](https://channel9.msdn.com/Series/FailSafe). Serie video in nove parti Marc Mercuri, Ulrich Homann e Mark Simms. Per le discussioni relative all'impatto della programmazione asincrona sulla scalabilità, vedere episodio 4 e 8 episodio.
-- [La magia di uso di metodi asincroni in ASP.NET 4.5 oltre un importante trabocchetto](http://www.hanselman.com/blog/TheMagicOfUsingAsynchronousMethodsInASPNET45PlusAnImportantGotcha.aspx). Post di blog di Scott Hanselman, principalmente sull'uso della funzionalità async in applicazioni Web Form ASP.NET.
+- [Programmazione asincrona con Async e await (C# e Visual Basic)](https://msdn.microsoft.com/library/vstudio/hh191443.aspx). MSDN white paper che spiega la logica per la programmazione asincrona, il funzionamento in ASP.NET 4,5 e come scrivere codice per implementarlo.
+- [Entity Framework query asincrona e Salva](https://msdn.microsoft.com/data/jj819165)
+- [Come compilare applicazioni Web ASP.NET con Async](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B337#fbid=tgkT4SR_DK7). Presentazione video di Rowan Miller. Include una dimostrazione grafica del modo in cui la programmazione asincrona può facilitare gli aumenti significativi della velocità effettiva del server Web in condizioni di carico elevato.
+- [Failsafe: compilazione di servizi cloud scalabili e resilienti](https://channel9.msdn.com/Series/FailSafe). Serie di video in nove parti di Ulrich Homann, Marc Mercuri e Mark Simms. Per le discussioni sull'effetto della programmazione asincrona sulla scalabilità, vedere Episode 4 e Episode 8.
+- [La magia di usare i metodi asincroni in ASP.NET 4,5, più un punto di errore importante](http://www.hanselman.com/blog/TheMagicOfUsingAsynchronousMethodsInASPNET45PlusAnImportantGotcha.aspx). Post di Blog di Scott Hanselt, principalmente sull'uso di async nelle applicazioni Web Form ASP.NET.
 
-Per procedure guidate di sviluppo web aggiuntivi, vedere le risorse seguenti:
+Per altre procedure consigliate per lo sviluppo Web, vedere le risorse seguenti:
 
-- [La correzione applicazione - procedure consigliate di esempio](the-fix-it-sample-application.md#bestpractices). Appendice di questo e-book elencata una serie di procedure consigliate che sono state implementate nell'applicazione Fix It.
-- [Elenco di controllo per gli sviluppatori Web](http://webdevchecklist.com/asp.net)
+- [Procedure consigliate per la correzione dell'applicazione di esempio](the-fix-it-sample-application.md#bestpractices). L'appendice di questo e-book elenca una serie di procedure consigliate implementate nell'applicazione Correggi it.
+- [Elenco di controllo per sviluppatori Web](http://webdevchecklist.com/asp.net)
 
 > [!div class="step-by-step"]
 > [Precedente](continuous-integration-and-continuous-delivery.md)

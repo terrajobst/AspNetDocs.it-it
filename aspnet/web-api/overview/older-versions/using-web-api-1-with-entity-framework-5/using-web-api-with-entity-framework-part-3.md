@@ -1,6 +1,6 @@
 ---
 uid: web-api/overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-3
-title: 'Parte 3: Creazione di un Controller di amministrazione | Microsoft Docs'
+title: 'Parte 3: creazione di un controller di amministrazione | Microsoft Docs'
 author: MikeWasson
 description: ''
 ms.author: riande
@@ -8,49 +8,49 @@ ms.date: 07/04/2012
 ms.assetid: 6b9ae3c4-0274-4170-a1bb-9df9c546b2a9
 msc.legacyurl: /web-api/overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-3
 msc.type: authoredcontent
-ms.openlocfilehash: bb9c234f541308c2165c32de29c97663e4d76f50
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: f39be7a84e85db93487d246e9f8cb59c401fe5ce
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65134741"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74600035"
 ---
-# <a name="part-3-creating-an-admin-controller"></a>Parte 3: Creazione di un controller di amministrazione
+# <a name="part-3-creating-an-admin-controller"></a>Parte 3: creazione di un controller di amministrazione
 
-da [Mike Wasson](https://github.com/MikeWasson)
+di [Mike Wasson](https://github.com/MikeWasson)
 
-[Download progetto completato](http://code.msdn.microsoft.com/ASP-NET-Web-API-with-afa30545)
+[Scarica progetto completato](https://code.msdn.microsoft.com/ASP-NET-Web-API-with-afa30545)
 
-## <a name="add-an-admin-controller"></a>Aggiungere un Controller di amministrazione
+## <a name="add-an-admin-controller"></a>Aggiungere un controller di amministrazione
 
-In questa sezione si aggiungerà un controller API Web che supporta CRUD (creare, leggere, aggiornare ed eliminare) le operazioni sui prodotti. Il controller userà Entity Framework per comunicare con il livello di database. Solo gli amministratori saranno in grado di utilizzare il controller. I clienti potranno accedere i prodotti tramite un altro controller.
+In questa sezione si aggiungerà un controller API Web che supporta operazioni CRUD (creazione, lettura, aggiornamento ed eliminazione) sui prodotti. Il controller utilizzerà Entity Framework per comunicare con il livello di database. Solo gli amministratori saranno in grado di utilizzare questo controller. I clienti potranno accedere ai prodotti tramite un altro controller.
 
-In Esplora soluzioni fare clic sulla cartella Controllers. Selezionare **aggiungere** e quindi **Controller**.
+In Esplora soluzioni fare clic con il pulsante destro del mouse sulla cartella Controllers. Selezionare **Aggiungi** e quindi **controller**.
 
 ![](using-web-api-with-entity-framework-part-3/_static/image1.png)
 
-Nel **Aggiungi Controller** finestra di dialogo nome al controller `AdminController`. Sotto **modello**, selezionare &quot;controller API con azioni di lettura/scrittura, che usa Entity Framework&quot;. Sotto **classe modello**, selezionare "Prodotto (ProductStore.Models)". Sotto **DataContext**, selezionare "&lt;nuovo contesto dati&gt;".
+Nella finestra di dialogo **Aggiungi controller** assegnare un nome al controller `AdminController`. In **modello**selezionare &quot;controller API con azioni di lettura/scrittura, usando Entity Framework&quot;. In **classe modello**selezionare "Product (ProductStore. Models)". In **contesto dati**selezionare "&lt;nuovo contesto dati&gt;".
 
 ![](using-web-api-with-entity-framework-part-3/_static/image2.png)
 
 > [!NOTE]
-> Se il **classe modello** elenco a discesa non include tutte le classi modello, assicurarsi che è stato compilato il progetto. Entity Framework Usa la reflection, pertanto è necessario l'assembly compilato.
+> Se l'elenco a discesa **classe modello** non mostra alcuna classe del modello, assicurarsi di aver compilato il progetto. Entity Framework usa la reflection, quindi richiede l'assembly compilato.
 
-Selezione di "&lt;nuovo contesto dati&gt;" verrà aperta la **nuovo contesto dati** finestra di dialogo. Nome del contesto dati `ProductStore.Models.OrdersContext`.
+Se si seleziona "&lt;nuovo contesto dati&gt;", viene aperta la finestra di dialogo **nuovo contesto dati** . Denominare il contesto dati `ProductStore.Models.OrdersContext`.
 
 ![](using-web-api-with-entity-framework-part-3/_static/image3.png)
 
-Fare clic su **OK** per chiudere la **nuovo contesto dati** finestra di dialogo. Nel **Aggiungi Controller** finestra di dialogo, fare clic su **Add**.
+Fare clic su **OK** per chiudere la finestra di dialogo **nuovo contesto dati** . Nella finestra di dialogo **Aggiungi controller** fare clic su **Aggiungi**.
 
 Ecco cosa è stato aggiunto al progetto:
 
-- Una classe denominata `OrdersContext` che deriva da **DbContext**. Questa classe fornisce l'associazione tra i modelli POCO e il database.
-- Controller Web API denominato `AdminController`. Questo controller supporta operazioni CRUD su `Product` istanze. Usa il `OrdersContext` classi per comunicare con Entity Framework.
-- Una nuova stringa di connessione del database nel file Web. config.
+- Classe denominata `OrdersContext` che deriva da **DbContext**. Questa classe fornisce l'associazione tra i modelli POCO e il database.
+- Un controller API Web denominato `AdminController`. Questo controller supporta le operazioni CRUD sulle istanze `Product`. Usa la classe `OrdersContext` per comunicare con Entity Framework.
+- Nuova stringa di connessione del database nel file Web. config.
 
 ![](using-web-api-with-entity-framework-part-3/_static/image4.png)
 
-Aprire il file OrdersContext.cs. Si noti che il costruttore viene specificato il nome della stringa di connessione al database. Questo nome fa riferimento alla stringa di connessione che è stato aggiunto al file Web. config.
+Aprire il file OrdersContext.cs. Si noti che il costruttore specifica il nome della stringa di connessione del database. Questo nome fa riferimento alla stringa di connessione aggiunta al file Web. config.
 
 [!code-csharp[Main](using-web-api-with-entity-framework-part-3/samples/sample1.cs)]
 
@@ -58,43 +58,43 @@ Aggiungere le proprietà seguenti alla classe `OrdersContext`:
 
 [!code-csharp[Main](using-web-api-with-entity-framework-part-3/samples/sample2.cs)]
 
-Oggetto **DbSet** rappresenta un set di entità che è possibile eseguire query. Di seguito è riportato il listato completo per il `OrdersContext` classe:
+Un **DbSet** rappresenta un set di entità su cui è possibile eseguire una query. Di seguito è riportato l'elenco completo per la classe `OrdersContext`:
 
 [!code-csharp[Main](using-web-api-with-entity-framework-part-3/samples/sample3.cs)]
 
-Il `AdminController` classe definisce cinque metodi che implementano la funzionalità CRUD di base. Ogni metodo corrisponde a un URI che il client può richiamare:
+La classe `AdminController` definisce cinque metodi che implementano la funzionalità CRUD di base. Ogni metodo corrisponde a un URI che il client può richiamare:
 
-| Metodo del controller | Descrizione | URI | Metodo HTTP |
+| Controller (metodo) | Descrizione | URI | Metodo HTTP |
 | --- | --- | --- | --- |
 | GetProducts | Ottiene tutti i prodotti. | API/prodotti | GET |
-| GetProduct | Trova un prodotto base all'ID. | api/products/*id* | GET |
-| PutProduct | Consente di aggiornare un prodotto. | api/products/*id* | PUT |
-| PostProduct | Crea un nuovo prodotto. | API/prodotti | INSERISCI |
-| DeleteProduct | Elimina un prodotto. | api/products/*id* | DELETE |
+| GetProduct | Trova un prodotto in base all'ID. | API/prodotti/*ID* | GET |
+| PutProduct | Aggiorna un prodotto. | API/prodotti/*ID* | PUT |
+| Postprodotto | Crea un nuovo prodotto. | API/prodotti | Inserisci |
+| DeleteProduct | Elimina un prodotto. | API/prodotti/*ID* | DELETE |
 
-Chiama ogni metodo `OrdersContext` eseguire query sul database. Chiamano i metodi che modificano la raccolta (PUT, POST e DELETE) `db.SaveChanges` per rendere permanenti le modifiche al database. I controller sono creati per ogni richiesta HTTP e quindi eliminati, pertanto è necessario rendere persistenti le modifiche prima che restituisca un metodo.
+Ogni metodo chiama `OrdersContext` per eseguire una query sul database. I metodi che modificano la chiamata della raccolta (PUT, POST e DELETE) `db.SaveChanges` per rendere permanente le modifiche al database. I controller vengono creati per ogni richiesta HTTP e quindi eliminati, quindi è necessario salvare le modifiche prima che un metodo venga restituito.
 
-## <a name="add-a-database-initializer"></a>Aggiungere un inizializzatore di Database
+## <a name="add-a-database-initializer"></a>Aggiungere un inizializzatore di database
 
-Entity Framework è una funzionalità interessante che consente di popolare il database all'avvio, quindi di nuovo automaticamente il database ogni volta che i modelli di modifica. Questa funzionalità è utile durante lo sviluppo, perché hai sempre alcuni dati di test, anche se si modificano i modelli.
+Entity Framework dispone di una funzionalità interessante che consente di popolare il database all'avvio e di ricreare automaticamente il database ogni volta che i modelli cambiano. Questa funzionalità è utile durante lo sviluppo, perché sono sempre presenti dati di test, anche se si modificano i modelli.
 
-In Esplora soluzioni fare doppio clic su cartella Models e creare una nuova classe denominata `OrdersContextInitializer`. Incollare l'implementazione seguente:
+In Esplora soluzioni fare clic con il pulsante destro del mouse sulla cartella Models e creare una nuova classe denominata `OrdersContextInitializer`. Incollare l'implementazione seguente:
 
 [!code-csharp[Main](using-web-api-with-entity-framework-part-3/samples/sample4.cs)]
 
-Ereditando dal **DropCreateDatabaseIfModelChanges** (classe), si definiranno Entity Framework per eliminare il database ogni volta che si modifica classi del modello. Quando Entity Framework consente di creare o ricrea il database, chiama il **Seed** metodo per popolare le tabelle. Usiamo il **Seed** metodo per aggiungere alcuni prodotti di esempio oltre a un ordine di esempio.
+Ereditando dalla classe **DropCreateDatabaseIfModelChanges** , viene indicato Entity Framework eliminare il database ogni volta che si modificano le classi del modello. Quando Entity Framework crea (o ricrea) il database, chiama il metodo **Seed** per popolare le tabelle. Viene usato il metodo **Seed** per aggiungere alcuni prodotti di esempio e un ordine di esempio.
 
-Questa funzionalità è molto utile per i test, ma non usare la **DropCreateDatabaseIfModelChanges** classe nell'ambiente di produzione, perché si potrebbero perdere i dati se vengono apportate modifiche a una classe di modello.
+Questa funzionalità è ideale per i test, ma non usa la classe **DropCreateDatabaseIfModelChanges** nell'ambiente di produzione, perché è possibile perdere i dati se un utente modifica una classe di modello.
 
-Successivamente, aprire Global. asax e aggiungere il codice seguente per il **Application\_avviare** metodo:
+Aprire quindi Global. asax e aggiungere il codice seguente al metodo di **avvio dell'applicazione\_** :
 
 [!code-csharp[Main](using-web-api-with-entity-framework-part-3/samples/sample5.cs)]
 
-## <a name="send-a-request-to-the-controller"></a>Inviare una richiesta al Controller
+## <a name="send-a-request-to-the-controller"></a>Inviare una richiesta al controller
 
-A questo punto, è ancora stato scritto alcun codice client, ma è possibile richiamare API usando un web browser o un debug HTTP strumento, ad esempio web [Fiddler](http://www.fiddler2.com/fiddler2/). In Visual Studio, premere F5 per avviare il debug. Web browser aprirà `http://localhost:*portnum*/`, dove *portnum* è un numero di porta.
+A questo punto, non è stato scritto alcun codice client, ma è possibile richiamare l'API Web usando un Web browser o uno strumento di debug HTTP come [Fiddler](http://www.fiddler2.com/fiddler2/). In Visual Studio premere F5 per avviare il debug. Il Web browser si aprirà `http://localhost:*portnum*/`, dove *portNum* è un numero di porta.
 
-Inviare una richiesta HTTP per "`http://localhost:*portnum*/api/admin`. La prima richiesta potrebbe essere lenta per il completamento, poiché serve a Entity Framework creare ed effettuare il seeding del database. La risposta deve eseguire un'operazione simile al seguente:
+Inviare una richiesta HTTP a "`http://localhost:*portnum*/api/admin`. Il completamento della prima richiesta può risultare lento, perché Entity Framework necessario creare ed eseguire il seeding del database. La risposta dovrebbe essere simile alla seguente:
 
 [!code-console[Main](using-web-api-with-entity-framework-part-3/samples/sample6.cmd)]
 

@@ -1,55 +1,55 @@
 ---
 uid: mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/building-the-ef5-mvc4-chapter-downloads
-title: Compilazione il capitolo download per Entity Framework 5 MVC 4 esercitazioni | Microsoft Docs
+title: Creazione del capitolo Download per le esercitazioni di EF 5 MVC 4 | Microsoft Docs
 author: Rick-Anderson
-description: L'applicazione web di esempio Contoso University illustra come creare applicazioni ASP.NET MVC 4 con Code First di Entity Framework 5 e Visual Studio...
+description: L'applicazione Web di esempio di Contoso University illustra come creare applicazioni ASP.NET MVC 4 usando il Entity Framework 5 Code First e Visual Studio...
 ms.author: riande
 ms.date: 07/30/2013
 ms.assetid: d0a89089-eed8-4f61-a478-c5ffa30186f5
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/building-the-ef5-mvc4-chapter-downloads
 msc.type: authoredcontent
-ms.openlocfilehash: 1138f1512690e01a09c73623c0d8db4a31eb921b
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 0e720b3e4c5d3b8f779afe3a6e2b47baa86eec4c
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65129851"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74592712"
 ---
-# <a name="building-the-chapter-downloads-for-the-ef-5-mvc-4-tutorials"></a>Compilazione il capitolo download per Entity Framework 5 MVC 4 esercitazioni
+# <a name="building-the-chapter-downloads-for-the-ef-5-mvc-4-tutorials"></a>Creazione del capitolo Download per le esercitazioni di EF 5 MVC 4
 
-da [Rick Anderson]((https://twitter.com/RickAndMSFT))
+di [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
-[Download progetto completato](http://code.msdn.microsoft.com/Getting-Started-with-dd0e2ed8)
+[Scarica progetto completato](https://code.msdn.microsoft.com/Getting-Started-with-dd0e2ed8)
 
-> L'applicazione web di esempio Contoso University illustra come creare applicazioni ASP.NET MVC 4 con Code First di Entity Framework 5 e Visual Studio 2012. Per informazioni sulla serie di esercitazioni, vedere la [prima esercitazione della serie](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md).
+> L'applicazione Web di esempio di Contoso University illustra come creare applicazioni ASP.NET MVC 4 usando i Entity Framework 5 Code First e Visual Studio 2012. Per informazioni sulla serie di esercitazioni, vedere la [prima esercitazione della serie](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md).
 
 ## <a name="building-the-chapter-downloads"></a>Creazione dei download dei capitoli
 
-1. Scaricare e decomprimere il file con estensione zip di esempio progetto. Nel pacchetto di download decompresso, si noterà il file zip aggiuntivi, uno per il completamento di ogni capitolo.
-2. Fare clic con il pulsante destro sul file zip desiderata, fare clic su **delle proprietà**, fare clic sui **Unblock** pulsante.  
+1. Scaricare e decomprimere il file zip di esempio del progetto. Nel pacchetto di download decompresso sono disponibili file zip aggiuntivi, uno per il completamento di ogni capitolo.
+2. Fare clic con il pulsante destro del mouse sul file zip desiderato, scegliere **Proprietà**e fare clic sul pulsante **Sblocca** .  
   
     ![](building-the-ef5-mvc4-chapter-downloads/_static/image1.png)
 3. Decomprimere il file.
-4. Fare doppio clic il *CUx.sln* file per avviare Visual Studio.
-5. Dal **strumenti** menu, fare clic su **Gestione pacchetti NuGet**, quindi **Console di Gestione pacchetti**.  
+4. Fare doppio clic sul file *CUx. sln* per avviare Visual Studio.
+5. Dal menu **strumenti** fare clic su **Gestione pacchetti NuGet**e quindi su **console di gestione pacchetti**.  
   
     ![](building-the-ef5-mvc4-chapter-downloads/_static/image2.png)
-6. In Package Manager Console (PMC), fare clic su **ripristinare**.  
+6. Nella console di gestione pacchetti (PMC) fare clic su **Ripristina**.  
   
     ![](building-the-ef5-mvc4-chapter-downloads/_static/image3.png)
 7. Uscire da Visual Studio.
-8. Riavviare Visual Studio, aprire il file della soluzione che è stata chiusa nel passaggio precedente.
-9. In Package Manager Console (PMC), immettere il `Update-Database` comando:  
+8. Riavviare Visual Studio, aprendo il file della soluzione chiuso nel passaggio precedente.
+9. Nella console di gestione pacchetti (PMC) immettere il comando `Update-Database`:  
   
     ![](building-the-ef5-mvc4-chapter-downloads/_static/image4.png)  
 
     > [!NOTE]
-    > Se viene visualizzato l'errore seguente:  
+    > Se viene ricevuto il seguente errore:  
     >   
-    >  *Il termine "Update-Database" non è riconosciuto come il nome di un cmdlet, funzione, file di script o programma eseguibile. Controllare l'ortografia del nome, o se è stato incluso un percorso, verificare che il percorso sia corretto e riprovare.*  
+    >  *Il termine "Update-database" non è riconosciuto come nome di un cmdlet, di una funzione, di un file di script o di un programma eseguibile. Controllare l'ortografia del nome o, se è stato incluso un percorso, verificare che il percorso sia corretto e riprovare.*  
     > Chiudere e riavviare Visual Studio.
 
-    Verrà eseguita ogni migrazione, quindi verrà eseguito il metodo di inizializzazione. È ora possibile eseguire l'app.
+    Ogni migrazione verrà eseguita, quindi verrà eseguito il metodo di inizializzazione. È ora possibile eseguire l'app.
 
     ![](building-the-ef5-mvc4-chapter-downloads/_static/image5.png)
 

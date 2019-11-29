@@ -1,59 +1,59 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/popup/handling-postbacks-from-a-popup-control-with-an-updatepanel-vb
-title: Gestione dei postback da un controllo Popup con UpdatePanel (VB) | Microsoft Docs
+title: Gestione dei postback da un controllo popup con UpdatePanel (VB) | Microsoft Docs
 author: wenz
-description: Il dispositivo extender PopupControl in AJAX Control Toolkit offre un modo semplice per attivare una finestra popup quando viene attivato un qualsiasi altro controllo. Deve essere adottata particolare attenzione...
+description: Il dispositivo Extender PopupControl in AJAX Control Toolkit offre un modo semplice per attivare un popup quando viene attivato qualsiasi altro controllo. È necessario prestare particolare attenzione...
 ms.author: riande
 ms.date: 06/02/2008
 ms.assetid: ec9db57c-9f68-402a-bf4c-0d63d5f6908e
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/popup/handling-postbacks-from-a-popup-control-with-an-updatepanel-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 7f7d35035e70c04a1a14213e79bb140c5476bf60
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: dd045ae56696c7944df98cf805ba812fde1bb4ff
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65115280"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74598797"
 ---
 # <a name="handling-postbacks-from-a-popup-control-with-an-updatepanel-vb"></a>Gestione dei postback da un controllo Popup con UpdatePanel (VB)
 
-da [Christian Wenz](https://github.com/wenz)
+di [Christian Wenz](https://github.com/wenz)
 
-[Scaricare il codice](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/PopupControl2.vb.zip) o [Scarica il PDF](http://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/popupcontrol2VB.pdf)
+[Scarica codice](https://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/PopupControl2.vb.zip) o [Scarica PDF](https://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/popupcontrol2VB.pdf)
 
-> Il dispositivo extender PopupControl in AJAX Control Toolkit offre un modo semplice per attivare una finestra popup quando viene attivato un qualsiasi altro controllo. Particolare attenzione è da eseguire quando si verifica un postback all'interno di questo tipo una finestra popup.
+> Il dispositivo Extender PopupControl in AJAX Control Toolkit offre un modo semplice per attivare un popup quando viene attivato qualsiasi altro controllo. Quando si verifica un postback all'interno di un popup di questo tipo, è necessario prestare particolare attenzione.
 
-## <a name="overview"></a>Panoramica
+## <a name="overview"></a>Panoramica di
 
-Il dispositivo extender PopupControl in AJAX Control Toolkit offre un modo semplice per attivare una finestra popup quando viene attivato un qualsiasi altro controllo. Particolare attenzione è da eseguire quando si verifica un postback all'interno di questo tipo una finestra popup.
+Il dispositivo Extender PopupControl in AJAX Control Toolkit offre un modo semplice per attivare un popup quando viene attivato qualsiasi altro controllo. Quando si verifica un postback all'interno di un popup di questo tipo, è necessario prestare particolare attenzione.
 
 ## <a name="steps"></a>Passaggi
 
-Quando si usa un' `PopupControl` con un postback, un `UpdatePanel` può impedire l'aggiornamento di pagina causato dal postback. Il markup seguente definisce un paio di aspetti importanti:
+Quando si usa un `PopupControl` con un postback, un `UpdatePanel` può impedire l'aggiornamento della pagina causato dal postback. Il markup seguente definisce un paio di elementi importanti:
 
-- Oggetto `ScriptManager` controllare in modo che funzioni ASP.NET AJAX Control Toolkit
-- Due `TextBox` controlli che verranno attivata una finestra popup
-- Oggetto `Panel` controllo che servirà come il controllo popup
-- All'interno del pannello, una `Calendar` controllo incorporato all'interno di un `UpdatePanel` controllo
-- Due `PopupControlExtender` controlli che assegnano il pannello per le caselle di testo
+- Un controllo `ScriptManager` in modo che ASP.NET AJAX Control Toolkit funzioni
+- Due controlli `TextBox` che attiveranno un popup
+- Controllo `Panel` che fungerà da popup
+- All'interno del pannello, un controllo `Calendar` viene incorporato all'interno di un controllo `UpdatePanel`
+- Due controlli `PopupControlExtender` che assegnano il pannello alle caselle di testo
 
 [!code-aspx[Main](handling-postbacks-from-a-popup-control-with-an-updatepanel-vb/samples/sample1.aspx)]
 
-Si noti che il `OnSelectionChanged` attributo del `Calendar` NFS è impostata. In modo che quando l'utente seleziona una data all'interno del calendario, si verifica un postback e il metodo lato server `c1_SelectionChanged()` viene eseguita. All'interno di tale metodo, la data corrente deve essere recuperata e il writeback per la casella di testo.
+Si noti che viene impostato l'attributo `OnSelectionChanged` del controllo `Calendar`. Quindi, quando l'utente seleziona una data nel calendario, viene eseguito un postback e viene eseguito il metodo sul lato server `c1_SelectionChanged()`. All'interno di tale metodo, la data corrente deve essere recuperata e scritta nuovamente nella casella di testo.
 
-La sintassi necessaria è come segue: Prima di tutto, un proxy dell'oggetto per il `PopupControlExtender` nella pagina deve essere generato. ASP.NET AJAX Control Toolkit offre il `GetProxyForCurrentPopup()` (metodo). L'oggetto restituisce questo metodo supporta il `Commit()` metodo che restituisce un valore al controllo che ha attivato il controllo popup (non il controllo che ha attivato la chiamata al metodo!). Il codice seguente fornisce la data selezionata come argomento per il `Commit()` metodo causando il codice da scrivere nuovamente la data selezionata nella casella di testo:
+La sintassi per è la seguente: prima di tutto, è necessario generare un oggetto proxy per il `PopupControlExtender` nella pagina. ASP.NET AJAX Control Toolkit offre il metodo `GetProxyForCurrentPopup()`. L'oggetto restituito da questo metodo supporta il `Commit()` metodo che invia un valore al controllo che ha attivato il popup (non il controllo che ha attivato la chiamata al metodo). Il codice seguente fornisce la data selezionata come argomento per il metodo `Commit()`, causando il codice per la scrittura della data selezionata nella casella di testo:
 
 [!code-aspx[Main](handling-postbacks-from-a-popup-control-with-an-updatepanel-vb/samples/sample2.aspx)]
 
-Ora ogni volta che si fa clic su una data del calendario, la data selezionata viene visualizzato nella casella di testo associato, la creazione di un controllo selezione data che può attualmente disponibili in molti siti Web.
+A questo punto, ogni volta che si fa clic su una data del calendario, la data selezionata viene visualizzata nella casella di testo associata, creando un controllo selezione data che attualmente è possibile trovare in molti siti Web.
 
-[![Quando l'utente fa clic nella casella di testo viene visualizzato il calendario](handling-postbacks-from-a-popup-control-with-an-updatepanel-vb/_static/image2.png)](handling-postbacks-from-a-popup-control-with-an-updatepanel-vb/_static/image1.png)
+[![il calendario viene visualizzato quando l'utente fa clic nella casella di testo](handling-postbacks-from-a-popup-control-with-an-updatepanel-vb/_static/image2.png)](handling-postbacks-from-a-popup-control-with-an-updatepanel-vb/_static/image1.png)
 
-Il calendario viene visualizzato quando l'utente fa clic nella casella di testo ([fare clic per visualizzare l'immagine con dimensioni normali](handling-postbacks-from-a-popup-control-with-an-updatepanel-vb/_static/image3.png))
+Il calendario viene visualizzato quando l'utente fa clic nella casella[di testo (fare clic per visualizzare l'immagine con dimensioni complete](handling-postbacks-from-a-popup-control-with-an-updatepanel-vb/_static/image3.png))
 
-[![Facendo clic su una data lo inserisce nella casella di testo](handling-postbacks-from-a-popup-control-with-an-updatepanel-vb/_static/image5.png)](handling-postbacks-from-a-popup-control-with-an-updatepanel-vb/_static/image4.png)
+[![facendo clic su una data la inserisce nella casella di testo](handling-postbacks-from-a-popup-control-with-an-updatepanel-vb/_static/image5.png)](handling-postbacks-from-a-popup-control-with-an-updatepanel-vb/_static/image4.png)
 
-Facendo clic su una data lo inserisce nella casella di testo ([fare clic per visualizzare l'immagine con dimensioni normali](handling-postbacks-from-a-popup-control-with-an-updatepanel-vb/_static/image6.png))
+Se si fa clic su una data, la si inserisce nella casella di testo ([fare clic per visualizzare l'immagine con dimensioni complete](handling-postbacks-from-a-popup-control-with-an-updatepanel-vb/_static/image6.png))
 
 > [!div class="step-by-step"]
 > [Precedente](using-multiple-popup-controls-vb.md)

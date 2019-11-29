@@ -1,85 +1,85 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/reorderlist/drag-and-drop-via-reorderlist-cs
-title: Trascinamento della selezione tramite ReorderList (c#) | Microsoft Docs
+title: Trascinamento della selezione tramite Riordina (C#) | Microsoft Docs
 author: wenz
-description: Il controllo ReorderList in AJAX Control Toolkit fornisce un elenco che possa essere riordinato in base all'utente tramite trascinamento della selezione. L'ordine di elenco è...
+description: Il controllo Reorder list in AJAX Control Toolkit fornisce un elenco che può essere riordinato dall'utente tramite il trascinamento della selezione. L'ordine corrente dell'elenco deve essere...
 ms.author: riande
 ms.date: 06/02/2008
 ms.assetid: 6350ee8e-11d6-4aff-b51c-942878014835
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/reorderlist/drag-and-drop-via-reorderlist-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 8adeceba0d43d6baf1af944a910750ca0682b097
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 2fc6d55a290cbb58bea36d8145d814e337bbd931
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65124936"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74611432"
 ---
 # <a name="drag-and-drop-via-reorderlist-c"></a>Trascinamento della selezione tramite ReorderList (C#)
 
-da [Christian Wenz](https://github.com/wenz)
+di [Christian Wenz](https://github.com/wenz)
 
-[Scaricare il codice](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/ReorderList5.cs.zip) o [Scarica il PDF](http://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/reorderlist5CS.pdf)
+[Scarica codice](https://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/ReorderList5.cs.zip) o [Scarica PDF](https://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/reorderlist5CS.pdf)
 
-> Il controllo ReorderList in AJAX Control Toolkit fornisce un elenco che possa essere riordinato in base all'utente tramite trascinamento della selezione. L'ordine corrente dell'elenco dovrà essere resi persistenti nel server.
+> Il controllo Reorder list in AJAX Control Toolkit fornisce un elenco che può essere riordinato dall'utente tramite il trascinamento della selezione. L'ordine corrente dell'elenco deve essere reso permanente nel server.
 
-## <a name="overview"></a>Panoramica
+## <a name="overview"></a>Panoramica di
 
-Il `ReorderList` controllo in AJAX Control Toolkit fornisce un elenco che possa essere riordinato in base all'utente tramite trascinamento della selezione. L'ordine corrente dell'elenco dovrà essere resi persistenti nel server.
+Il controllo `ReorderList` in AJAX Control Toolkit fornisce un elenco che può essere riordinato dall'utente tramite il trascinamento della selezione. L'ordine corrente dell'elenco deve essere reso permanente nel server.
 
 ## <a name="steps"></a>Passaggi
 
-Il `ReorderList` controllo supporta il data binding da un database all'elenco. Soprattutto, supporta anche la scrittura delle modifiche all'ordine l'elemento di elenco nuovamente all'archivio dati.
+Il controllo `ReorderList` supporta l'associazione di dati da un database all'elenco. Soprattutto, supporta anche la scrittura delle modifiche apportate all'ordine dell'elemento elenco nell'archivio dati.
 
-In questo esempio Usa Microsoft SQL Server 2005 Express Edition come archivio dati. Il database è una parte facoltativa (e gratuita) di un'installazione di Visual Studio, compresa la express edition. È anche disponibile come download separato sotto [ https://go.microsoft.com/fwlink/?LinkId=64064 ](https://go.microsoft.com/fwlink/?LinkId=64064). In questo esempio, si presuppone che l'istanza di SQL Server 2005 Express Edition è chiamato `SQLEXPRESS` e si trova nello stesso computer come server web; questo è anche l'impostazione predefinita. Se il programma di installazione diverso, è necessario adattare le informazioni di connessione per il database.
+Questo esempio usa Microsoft SQL Server 2005 Express Edition come archivio dati. Il database è una parte facoltativa (e gratuita) di un'installazione di Visual Studio, inclusa la versione Express Edition. È disponibile anche come download separato in [https://go.microsoft.com/fwlink/?LinkId=64064](https://go.microsoft.com/fwlink/?LinkId=64064). Per questo esempio si presuppone che l'istanza del SQL Server 2005 Express Edition venga chiamata `SQLEXPRESS` e che risiede nello stesso computer del server Web. si tratta anche della configurazione predefinita. Se la configurazione è diversa, è necessario adattare le informazioni di connessione per il database.
 
-Il modo più semplice per configurare il database è di utilizzare Microsoft SQL Server Management Studio Express ([https://www.microsoft.com/downloads/details.aspx?FamilyID=c243a5ae-4bd1-4e3d-94b8-5a0f62bf7796&amp; DisplayLang = en](https://www.microsoft.com/downloads/details.aspx?FamilyID=c243a5ae-4bd1-4e3d-94b8-5a0f62bf7796&amp;DisplayLang=en) ). Connettersi al server, fare doppio clic su `Databases` e creare un nuovo database (pulsante destro del mouse e scegliere `New Database`) denominato `Tutorials`.
+Il modo più semplice per configurare il database consiste nell'usare il Microsoft SQL Server Management Studio Express ([https://www.microsoft.com/downloads/details.aspx?FamilyID=c243a5ae-4bd1-4e3d-94b8-5a0f62bf7796&amp;D isplaylang = en](https://www.microsoft.com/downloads/details.aspx?FamilyID=c243a5ae-4bd1-4e3d-94b8-5a0f62bf7796&amp;DisplayLang=en) ). Connettersi al server, fare doppio clic su `Databases` e creare un nuovo database (fare clic con il pulsante destro del mouse e scegliere `New Database`) chiamato `Tutorials`.
 
-In questo database, creare una nuova tabella denominata `AJAX` con le quattro colonne seguenti:
+In questo database creare una nuova tabella denominata `AJAX` con le quattro colonne seguenti:
 
-- `id` (integer chiave, primario, identità, non NULL)
-- `char` (char(1), NULL)
-- `description` (varchar(50), NULL)
-- `position` (int, valore NULL)
+- `id` (chiave primaria, numero intero, identità, NOT NULL)
+- `char` (Char (1), NULL)
+- `description` (varchar (50), NULL)
+- `position` (int, NULL)
 
-[![Il layout della tabella di AJAX](drag-and-drop-via-reorderlist-cs/_static/image2.png)](drag-and-drop-via-reorderlist-cs/_static/image1.png)
+[![il layout della tabella AJAX](drag-and-drop-via-reorderlist-cs/_static/image2.png)](drag-and-drop-via-reorderlist-cs/_static/image1.png)
 
-Il layout della tabella AJAX ([fare clic per visualizzare l'immagine con dimensioni normali](drag-and-drop-via-reorderlist-cs/_static/image3.png))
+Il layout della tabella AJAX ([fare clic per visualizzare l'immagine con dimensioni complete](drag-and-drop-via-reorderlist-cs/_static/image3.png))
 
-Successivamente, compilare la tabella con un paio di valori. Si noti che il `position` colonna contiene l'ordinamento degli elementi.
+Successivamente, compilare la tabella con due valori. Si noti che la colonna `position` include l'ordinamento degli elementi.
 
-[![I dati iniziali della tabella di AJAX](drag-and-drop-via-reorderlist-cs/_static/image5.png)](drag-and-drop-via-reorderlist-cs/_static/image4.png)
+[![i dati iniziali nella tabella AJAX](drag-and-drop-via-reorderlist-cs/_static/image5.png)](drag-and-drop-via-reorderlist-cs/_static/image4.png)
 
-I dati iniziali della tabella di AJAX ([fare clic per visualizzare l'immagine con dimensioni normali](drag-and-drop-via-reorderlist-cs/_static/image6.png))
+I dati iniziali nella tabella AJAX ([fare clic per visualizzare l'immagine con dimensioni complete](drag-and-drop-via-reorderlist-cs/_static/image6.png))
 
-Il passaggio successivo è necessario per generare un `SqlDataSource` controllo per comunicare con il nuovo database e la relativa tabella. L'origine dati deve supportare le `SELECT` e `UPDATE` comandi SQL. Quando viene modificata in seguito l'ordine degli elementi dell'elenco, il `ReorderList` controllo Invia automaticamente i due valori dell'origine dati `Update` comando: la nuova posizione e l'ID dell'elemento. Pertanto, l'origine dati esigenze un `<UpdateParameters>` sezione per questi due valori:
+Il passaggio successivo richiede la generazione di un controllo `SqlDataSource` per comunicare con il nuovo database e la relativa tabella. L'origine dati deve supportare i comandi SQL `SELECT` e `UPDATE`. Quando l'ordine degli elementi dell'elenco viene modificato in un secondo momento, il controllo `ReorderList` invia automaticamente due valori al comando `Update` dell'origine dati: la nuova posizione e l'ID dell'elemento. L'origine dati necessita pertanto di una sezione `<UpdateParameters>` per questi due valori:
 
 [!code-aspx[Main](drag-and-drop-via-reorderlist-cs/samples/sample1.aspx)]
 
-Il `ReorderList` controllo deve impostare gli attributi seguenti:
+Il controllo `ReorderList` deve impostare gli attributi seguenti:
 
-- `AllowReorder`: Indica se gli elementi dell'elenco possono essere riorganizzati
-- `DataSourceID`: L'ID dell'origine dati
-- `DataKeyField`: Il nome della colonna chiave primaria nell'origine dati
-- `SortOrderField`: La colonna di origine dati che fornisce l'ordinamento per gli elementi dell'elenco
+- `AllowReorder`: indica se gli elementi dell'elenco possono essere ridisposti
+- `DataSourceID`: l'ID dell'origine dati
+- `DataKeyField`: il nome della colonna chiave primaria nell'origine dati
+- `SortOrderField`: colonna dell'origine dati che fornisce il tipo di ordinamento per gli elementi dell'elenco.
 
-Nel `<DragHandleTemplate>` e `<ItemTemplate>` sezioni, il layout dell'elenco è possibile ottimizzare. Inoltre, l'associazione dati è possibile utilizzando il `Eval()` metodo, come illustrato di seguito:
+Nelle sezioni `<DragHandleTemplate>` e `<ItemTemplate>` è possibile ottimizzare il layout dell'elenco. Inoltre, l'associazione dati è possibile utilizzando il metodo `Eval()`, come illustrato di seguito:
 
 [!code-aspx[Main](drag-and-drop-via-reorderlist-cs/samples/sample2.aspx)]
 
-Le informazioni di stile CSS riportato di seguito (indicate nel `<DragHandleTemplate>` sezione del `ReorderList` controllo) garantisce che il puntatore del mouse cambia in modo appropriato quando posiziona il mouse sul quadratino di trascinamento:
+Le seguenti informazioni sullo stile CSS (a cui viene fatto riferimento nella sezione `<DragHandleTemplate>` del controllo `ReorderList`) verificano che il puntatore del mouse venga modificato correttamente quando si posiziona il puntatore del mouse sul quadratino di trascinamento:
 
 [!code-css[Main](drag-and-drop-via-reorderlist-cs/samples/sample3.css)]
 
-Infine, un `ScriptManager` controllo Inizializza ASP.NET AJAX per la pagina:
+Infine, un controllo `ScriptManager` Inizializza ASP.NET AJAX per la pagina:
 
 [!code-aspx[Main](drag-and-drop-via-reorderlist-cs/samples/sample4.aspx)]
 
-Eseguire questo esempio nel browser e ridisporre un po' gli elementi dell'elenco. Quindi, ricaricare la pagina e/o esaminare il database. Le posizioni modificate sono state mantenute e si riflettono anche in base ai valori di `position` colonna nel database e che tutto senza alcun codice, con un semplice utilizzo dei markup.
+Eseguire questo esempio nel browser e ridisporre le voci dell'elenco in un bit. Quindi, ricaricare la pagina e/o esaminare il database. Le posizioni modificate sono state mantenute e vengono riflesse anche dai valori della colonna `position` nel database e che tutti senza codice, solo utilizzando markup.
 
-[![I dati delle modifiche del database in base al nuovo ordine di elemento di elenco](drag-and-drop-via-reorderlist-cs/_static/image8.png)](drag-and-drop-via-reorderlist-cs/_static/image7.png)
+[![i dati nel database cambiano in base al nuovo ordine degli elementi elenco](drag-and-drop-via-reorderlist-cs/_static/image8.png)](drag-and-drop-via-reorderlist-cs/_static/image7.png)
 
-I dati delle modifiche del database in base al nuovo elenco di elementi ordine ([fare clic per visualizzare l'immagine con dimensioni normali](drag-and-drop-via-reorderlist-cs/_static/image9.png))
+I dati nel database cambiano in base al nuovo ordine degli elementi dell'elenco ([fare clic per visualizzare l'immagine con dimensioni complete](drag-and-drop-via-reorderlist-cs/_static/image9.png))
 
 > [!div class="step-by-step"]
 > [Precedente](using-postbacks-with-reorderlist-cs.md)

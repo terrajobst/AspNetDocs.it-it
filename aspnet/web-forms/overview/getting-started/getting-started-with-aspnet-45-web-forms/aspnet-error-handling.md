@@ -8,18 +8,18 @@ ms.date: 09/08/2014
 ms.assetid: 423498f7-1a4b-44a1-b342-5f39d0bcf94f
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/aspnet-error-handling
 msc.type: authoredcontent
-ms.openlocfilehash: f420be369801208fa875d9a60e6e154afbe84aa7
-ms.sourcegitcommit: b67ffd5b2c5cff01ec4c8eb12a21f693f2e11887
+ms.openlocfilehash: 9514142ca50b33470a3f4c033e4f8e319a9ee09b
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69995313"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74636462"
 ---
 # <a name="aspnet-error-handling"></a>Gestione degli errori di ASP.NET
 
 di [Erik Reitan](https://github.com/Erikre)
 
-[Scaricare il progetto di esempio WingtipC#Toys ()](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) o [scaricare l'E-Book (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
+[Scaricare il progetto di esempio WingtipC#Toys ()](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) o [scaricare l'E-Book (PDF)](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
 
 > Questa serie di esercitazioni illustra le nozioni di base per la creazione di un'applicazione Web Form ASP.NET con ASP.NET 4,5 e Microsoft Visual Studio Express 2013 per il Web. Per accompagnare questa serie di esercitazioni è disponibile un [progetto Visual Studio 2013 C# con codice sorgente](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) .
 
@@ -33,21 +33,21 @@ In questa esercitazione verrà modificata l'applicazione di esempio Wingtip Toys
 - Come visualizzare i messaggi di errore che non compromettono la sicurezza.
 - Come implementare la registrazione degli errori di registrazione e di gestione errori (ELMAH).
 
-## <a name="overview"></a>Panoramica
+## <a name="overview"></a>Panoramica di
 
 Le applicazioni ASP.NET devono essere in grado di gestire in modo coerente gli errori che si verificano durante l'esecuzione. ASP.NET usa il Common Language Runtime (CLR), che fornisce un modo per notificare le applicazioni degli errori in modo uniforme. Quando si verifica un errore, viene generata un'eccezione. Un'eccezione è rappresentata da qualsiasi errore, condizione o comportamento imprevisto rilevato da un'applicazione.
 
 In .NET Framework, un'eccezione è un oggetto che eredita dalla classe `System.Exception`. Le eccezioni vengono generate dalle aree di codice in cui si è verificato un problema. L'eccezione viene passata allo stack di chiamate in una posizione in cui l'applicazione fornisce il codice per gestire l'eccezione. Se l'applicazione non gestisce l'eccezione, il browser verrà forzato a visualizzare i dettagli dell'errore.
 
-Come procedura consigliata, gestire gli errori in a livello di codice `Try` nei / / `Catch` `Finally` blocchi all'interno del codice. Provare a collocare questi blocchi in modo che l'utente possa correggere i problemi nel contesto in cui si verificano. Se i blocchi di gestione degli errori sono troppo lontani da dove si è verificato l'errore, diventa più difficile fornire agli utenti le informazioni necessarie per risolvere il problema.
+Come procedura consigliata, gestire gli errori in a livello di codice in `Try`/`Catch`/blocchi `Finally` all'interno del codice. Provare a collocare questi blocchi in modo che l'utente possa correggere i problemi nel contesto in cui si verificano. Se i blocchi di gestione degli errori sono troppo lontani da dove si è verificato l'errore, diventa più difficile fornire agli utenti le informazioni necessarie per risolvere il problema.
 
 ### <a name="exception-class"></a>Classe Exception
 
-La classe Exception è la classe di base da cui ereditano le eccezioni. La maggior parte degli oggetti eccezione sono istanze di una classe derivata della classe Exception, ad `SystemException` esempio la classe `IndexOutOfRangeException` , la classe o `ArgumentNullException` la classe. La classe Exception dispone di proprietà, ad esempio `StackTrace` la proprietà, `InnerException` la proprietà e la `Message` proprietà, che forniscono informazioni specifiche sull'errore che si è verificato.
+La classe Exception è la classe di base da cui ereditano le eccezioni. La maggior parte degli oggetti eccezione sono istanze di una classe derivata della classe Exception, ad esempio la classe `SystemException`, la classe `IndexOutOfRangeException` o la classe `ArgumentNullException`. La classe Exception dispone di proprietà, ad esempio la proprietà `StackTrace`, la proprietà `InnerException` e la proprietà `Message`, che forniscono informazioni specifiche sull'errore che si è verificato.
 
 ### <a name="exception-inheritance-hierarchy"></a>Gerarchia di ereditarietà delle eccezioni
 
-Il runtime dispone di un set di base di eccezioni che derivano dalla `SystemException` classe generata dal runtime quando viene rilevata un'eccezione. La maggior parte delle classi che ereditano dalla classe Exception, ad esempio `IndexOutOfRangeException` la classe e `ArgumentNullException` la classe, non implementano membri aggiuntivi. Pertanto, le informazioni più importanti per un'eccezione si trovano nella gerarchia delle eccezioni, nel nome dell'eccezione e nelle informazioni contenute nell'eccezione.
+Il runtime dispone di un set di base di eccezioni derivanti dalla classe `SystemException` generata dal runtime quando viene rilevata un'eccezione. La maggior parte delle classi che ereditano dalla classe Exception, ad esempio la classe `IndexOutOfRangeException` e la classe `ArgumentNullException`, non implementano membri aggiuntivi. Pertanto, le informazioni più importanti per un'eccezione si trovano nella gerarchia delle eccezioni, nel nome dell'eccezione e nelle informazioni contenute nell'eccezione.
 
 ### <a name="exception-handling-hierarchy"></a>Gerarchia di gestione delle eccezioni
 
@@ -61,15 +61,15 @@ Quando un'applicazione gestisce le eccezioni, è spesso possibile recuperare e v
 
 ### <a name="application-level-error-handling"></a>Gestione degli errori a livello di applicazione
 
-È possibile gestire gli errori predefiniti a livello di applicazione modificando la configurazione dell'applicazione o aggiungendo un `Application_Error` gestore nel file *Global. asax* dell'applicazione.
+È possibile gestire gli errori predefiniti a livello di applicazione modificando la configurazione dell'applicazione o aggiungendo un gestore `Application_Error` nel file *Global. asax* dell'applicazione.
 
-È possibile gestire errori predefiniti ed errori HTTP aggiungendo una `customErrors` sezione al file *Web. config* . La `customErrors` sezione consente di specificare una pagina predefinita a cui gli utenti verranno reindirizzati quando si verifica un errore. Consente inoltre di specificare singole pagine per errori specifici del codice di stato.
+È possibile gestire gli errori predefiniti e gli errori HTTP aggiungendo una sezione `customErrors` al file *Web. config* . La sezione `customErrors` consente di specificare una pagina predefinita a cui gli utenti verranno reindirizzati quando si verifica un errore. Consente inoltre di specificare singole pagine per errori specifici del codice di stato.
 
 [!code-xml[Main](aspnet-error-handling/samples/sample1.xml?highlight=3-5)]
 
 Sfortunatamente, quando si usa la configurazione per reindirizzare l'utente a una pagina diversa, non sono disponibili i dettagli dell'errore che si è verificato.
 
-È tuttavia possibile intercettare gli errori che si verificano in qualsiasi punto dell'applicazione aggiungendo `Application_Error` codice al gestore nel file *Global. asax* .
+È tuttavia possibile intercettare gli errori che si verificano in qualsiasi punto dell'applicazione aggiungendo il codice al gestore `Application_Error` nel file *Global. asax* .
 
 [!code-csharp[Main](aspnet-error-handling/samples/sample2.cs)]
 
@@ -79,43 +79,43 @@ Un gestore a livello di pagina restituisce all'utente la pagina in cui si è ver
 
 Si usa in genere un gestore degli errori a livello di pagina per registrare gli errori non gestiti o per portare l'utente a una pagina in grado di visualizzare informazioni utili.
 
-Questo esempio di codice mostra un gestore per l'evento di errore in una pagina Web ASP.NET. Questo gestore intercetta tutte le eccezioni che non sono già gestite `try` / `catch` nei blocchi nella pagina.
+Questo esempio di codice mostra un gestore per l'evento di errore in una pagina Web ASP.NET. Questo gestore intercetta tutte le eccezioni che non sono già gestite entro `try`/blocchi `catch` nella pagina.
 
 [!code-csharp[Main](aspnet-error-handling/samples/sample3.cs)]
 
-Dopo aver gestito un errore, è necessario cancellarlo chiamando il `ClearError` metodo dell'oggetto server (`HttpServerUtility` classe). in caso contrario, verrà visualizzato un errore che si è verificato in precedenza.
+Dopo aver gestito un errore, è necessario cancellarlo chiamando il metodo di `ClearError` dell'oggetto server (classe`HttpServerUtility`). in caso contrario, verrà visualizzato un errore che si è verificato in precedenza.
 
 ### <a name="code-level-error-handling"></a>Gestione degli errori a livello di codice
 
 L'istruzione try-catch è costituita da un blocco try seguito da una o più clausole catch, che specificano i gestori per eccezioni diverse. Quando viene generata un'eccezione, il Common Language Runtime (CLR) Cerca l'istruzione catch che gestisce questa eccezione. Se il metodo attualmente in esecuzione non contiene un blocco catch, CLR analizza il metodo che ha chiamato il metodo corrente e così via lo stack di chiamate. Se non viene trovato alcun blocco catch, CLR Visualizza un messaggio di eccezione non gestita per l'utente e interrompe l'esecuzione del programma.
 
-Nell'esempio di codice seguente viene illustrato un modo comune `try` di utilizzare / / `catch` `finally` per gestire gli errori.
+Nell'esempio di codice riportato di seguito viene illustrato un modo comune per utilizzare `try`/`catch`/`finally` per gestire gli errori.
 
 [!code-csharp[Main](aspnet-error-handling/samples/sample4.cs)]
 
-Nel codice precedente il blocco try contiene il codice che deve essere sorvegliato da una possibile eccezione. Il blocco viene eseguito fino a quando non viene generata un'eccezione o il blocco viene completato correttamente. Se si verifica `FileNotFoundException` un'eccezione o `IOException` un'eccezione, l'esecuzione viene trasferita a una pagina diversa. Il codice contenuto nel blocco finally viene quindi eseguito, indipendentemente dal fatto che si sia verificato o meno un errore.
+Nel codice precedente il blocco try contiene il codice che deve essere sorvegliato da una possibile eccezione. Il blocco viene eseguito fino a quando non viene generata un'eccezione o il blocco viene completato correttamente. Se si verifica un'eccezione `FileNotFoundException` o un'eccezione `IOException`, l'esecuzione viene trasferita a una pagina diversa. Il codice contenuto nel blocco finally viene quindi eseguito, indipendentemente dal fatto che si sia verificato o meno un errore.
 
 ## <a name="adding-error-logging-support"></a>Aggiunta del supporto per la registrazione degli errori
 
-Prima di aggiungere la gestione degli errori all'applicazione di esempio Wingtip Toys, verrà aggiunto il supporto per la `ExceptionUtility` registrazione degli errori aggiungendo una classe alla cartella *logica* . In questo modo, ogni volta che l'applicazione gestisce un errore, i dettagli dell'errore verranno aggiunti al file di log degli errori.
+Prima di aggiungere la gestione degli errori all'applicazione di esempio Wingtip Toys, verrà aggiunto il supporto per la registrazione degli errori aggiungendo una classe `ExceptionUtility` alla cartella *logica* . In questo modo, ogni volta che l'applicazione gestisce un errore, i dettagli dell'errore verranno aggiunti al file di log degli errori.
 
-1. Fare clic con il pulsante destro del mouse sulla cartella *logica* , quindi scegliere **Aggiungi**  - &gt; **nuovo elemento**.   
+1. Fare clic con il pulsante destro del mouse sulla cartella *logica* , quindi scegliere **Aggiungi** -&gt; **nuovo elemento**.   
    Verrà visualizzata la finestra di dialogo **Aggiungi nuovo elemento**.
-2. Selezionare il **gruppo C# Visual** code Templates (modelli di **codice** visuale  - &gt; ) a sinistra. Quindi, selezionare **classe**nell'elenco centrale e denominarla **ExceptionUtility.cs**.
+2. Selezionare il **gruppo C# Visual** -&gt; modelli di **codice** a sinistra. Quindi, selezionare **classe**nell'elenco centrale e denominarla **ExceptionUtility.cs**.
 3. Scegliere **Aggiungi**. Viene visualizzato il nuovo file di classe.
 4. Sostituire il codice esistente con quello seguente:  
 
     [!code-csharp[Main](aspnet-error-handling/samples/sample5.cs)]
 
-Quando si verifica un'eccezione, l'eccezione può essere scritta in un file di log delle eccezioni `LogException` chiamando il metodo. Questo metodo accetta due parametri, l'oggetto eccezione e una stringa contenente i dettagli sull'origine dell'eccezione. Il log delle eccezioni viene scritto nel file log degli *errori* nella cartella *dei\_dati dell'app* .
+Quando si verifica un'eccezione, l'eccezione può essere scritta in un file di log delle eccezioni chiamando il metodo `LogException`. Questo metodo accetta due parametri, l'oggetto eccezione e una stringa contenente i dettagli sull'origine dell'eccezione. Il log delle eccezioni viene scritto nel file *log degli errori* nella cartella *app\_data* .
 
 ### <a name="adding-an-error-page"></a>Aggiunta di una pagina di errore
 
 Nell'applicazione di esempio Wingtip Toys verrà usata una pagina per visualizzare gli errori. La pagina di errore è progettata per mostrare un messaggio di errore protetto agli utenti del sito. Tuttavia, se l'utente è uno sviluppatore che effettua una richiesta HTTP che viene servita localmente nel computer in cui si trova il codice, nella pagina di errore verranno visualizzati ulteriori dettagli sull'errore.
 
-1. Fare clic con il pulsante destro del mouse sul nome del progetto (**Wingtip Toys**) in **Esplora soluzioni** e scegliere **Aggiungi**  - &gt; **nuovo elemento**.   
+1. Fare clic con il pulsante destro del mouse sul nome del progetto (**Wingtip Toys**) in **Esplora soluzioni** e scegliere **Aggiungi** -&gt; **nuovo elemento**.   
    Verrà visualizzata la finestra di dialogo **Aggiungi nuovo elemento**.
-2. Selezionare il **gruppo C# Visual**  -WebTemplates a sinistra. &gt; Dall'elenco centrale selezionare **Web Form con la pagina master**e denominarlo **ErrorPage. aspx**.
+2. Selezionare il **gruppo C# Visual** -&gt; modelli **Web** a sinistra. Dall'elenco centrale selezionare **Web Form con la pagina master**e denominarlo **ErrorPage. aspx**.
 3. Fare clic su **Aggiungi**.
 4. Selezionare il file *site. master* come pagina master, quindi scegliere **OK**.
 5. Sostituire il markup esistente con il codice seguente:   
@@ -125,23 +125,23 @@ Nell'applicazione di esempio Wingtip Toys verrà usata una pagina per visualizza
 
     [!code-csharp[Main](aspnet-error-handling/samples/sample7.cs)]
 
-Quando viene visualizzata la pagina di errore, `Page_Load` viene eseguito il gestore eventi. `Page_Load` Nel gestore viene determinata la posizione in cui è stato inizialmente gestito l'errore. Quindi, l'ultimo errore che si è verificato è determinato dalla `GetLastError` chiamata al metodo dell'oggetto server. Se l'eccezione non esiste più, viene creata un'eccezione generica. Quindi, se la richiesta HTTP è stata effettuata localmente, vengono visualizzati tutti i dettagli dell'errore. In questo caso, solo il computer locale che esegue l'applicazione Web visualizzerà i dettagli dell'errore. Una volta visualizzate le informazioni sull'errore, l'errore viene aggiunto al file di log e l'errore viene cancellato dal server.
+Quando viene visualizzata la pagina di errore, viene eseguito il gestore dell'evento `Page_Load`. Nel gestore `Page_Load` viene determinata la posizione in cui è stato gestito il primo errore. Quindi, l'ultimo errore che si è verificato è determinato dalla chiamata al metodo `GetLastError` dell'oggetto server. Se l'eccezione non esiste più, viene creata un'eccezione generica. Quindi, se la richiesta HTTP è stata effettuata localmente, vengono visualizzati tutti i dettagli dell'errore. In questo caso, solo il computer locale che esegue l'applicazione Web visualizzerà i dettagli dell'errore. Una volta visualizzate le informazioni sull'errore, l'errore viene aggiunto al file di log e l'errore viene cancellato dal server.
 
 ### <a name="displaying-unhandled-error-messages-for-the-application"></a>Visualizzazione di messaggi di errore non gestiti per l'applicazione
 
-Aggiungendo una `customErrors` sezione al file *Web. config* , è possibile gestire rapidamente gli errori semplici che si verificano in tutta l'applicazione. È anche possibile specificare come gestire gli errori in base al relativo valore del codice di stato, ad esempio 404-file non trovato.
+Aggiungendo una sezione `customErrors` al file *Web. config* , è possibile gestire rapidamente gli errori semplici che si verificano in tutta l'applicazione. È anche possibile specificare come gestire gli errori in base al relativo valore del codice di stato, ad esempio 404-file non trovato.
 
 #### <a name="update-the-configuration"></a>Aggiornare la configurazione
 
-Aggiornare la configurazione aggiungendo una `customErrors` sezione al file *Web. config* .
+Aggiornare la configurazione aggiungendo una sezione `customErrors` al file *Web. config* .
 
 1. In **Esplora soluzioni**individuare e aprire il file *Web. config* nella radice dell'applicazione di esempio Wingtip Toys.
-2. Aggiungere la `customErrors` sezione al file *Web. config* all'interno del `<system.web>` nodo come indicato di seguito:   
+2. Aggiungere la sezione `customErrors` al file *Web. config* all'interno del nodo `<system.web>`, come indicato di seguito:   
 
     [!code-xml[Main](aspnet-error-handling/samples/sample8.xml?highlight=3-5)]
 3. Salvare il file *Web. config* .
 
-La `customErrors` sezione specifica la modalità, impostata su "on". Specifica `defaultRedirect`inoltre, che indica all'applicazione la pagina a cui spostarsi quando si verifica un errore. È stato inoltre aggiunto un elemento Error specifico che specifica come gestire un errore 404 quando non viene trovata una pagina. Più avanti in questa esercitazione verrà aggiunta la gestione degli errori aggiuntiva che acquisirà i dettagli di un errore a livello di applicazione.
+La sezione `customErrors` specifica la modalità, impostata su "on". Specifica inoltre la `defaultRedirect`, che indica all'applicazione la pagina a cui passare quando si verifica un errore. È stato inoltre aggiunto un elemento Error specifico che specifica come gestire un errore 404 quando non viene trovata una pagina. Più avanti in questa esercitazione verrà aggiunta la gestione degli errori aggiuntiva che acquisirà i dettagli di un errore a livello di applicazione.
 
 #### <a name="running-the-application"></a>Esecuzione dell'applicazione
 
@@ -149,7 +149,7 @@ La `customErrors` sezione specifica la modalità, impostata su "on". Specifica `
 
 1. Premere **F5** per eseguire l'applicazione di esempio Wingtip Toys.  
  Verrà aperto il browser e verrà visualizzata la pagina *default. aspx* .
-2. Immettere l'URL seguente nel browser (assicurarsi di usare il numero di porta):  
+2. Immettere l'URL seguente nel browser (assicurarsi **di usare il** numero di porta):  
     `https://localhost:44300/NoPage.aspx`
 3. Esaminare *ErrorPage. aspx* visualizzato nel browser. 
 
@@ -163,11 +163,11 @@ Per verificare il funzionamento dell'applicazione quando si verifica un errore, 
 
 1. Aprire il code-behind della pagina *default. aspx* in Visual Studio.   
    Verrà visualizzata la pagina code-behind *default.aspx.cs* .
-2. `Page_Load` Nel gestore aggiungere il codice in modo che il gestore appaia come segue:   
+2. Nel gestore `Page_Load` aggiungere il codice in modo che il gestore appaia come segue:   
 
     [!code-csharp[Main](aspnet-error-handling/samples/sample9.cs?highlight=3-4)]
 
-È possibile creare diversi tipi di eccezioni. Nel codice precedente viene creato un oggetto `InvalidOperationException` quando viene caricata la pagina *default. aspx* .
+È possibile creare diversi tipi di eccezioni. Nel codice precedente si sta creando una `InvalidOperationException` quando viene caricata la pagina *default. aspx* .
 
 #### <a name="running-the-application"></a>Esecuzione dell'applicazione
 
@@ -183,46 +183,46 @@ Per verificare il funzionamento dell'applicazione quando si verifica un errore, 
 
     ![Gestione degli errori di ASP.NET-pagina errore](aspnet-error-handling/_static/image2.png)
 
-Come si può notare nei dettagli dell'errore, l'eccezione è stata intercettata `customError` dalla sezione nel file *Web. config* .
+Come si può notare nei dettagli dell'errore, l'eccezione è stata intercettata dalla sezione `customError` nel file *Web. config* .
 
 ### <a name="adding-application-level-error-handling"></a>Aggiunta della gestione degli errori a livello di applicazione
 
-Anziché intercettare l'eccezione utilizzando la `customErrors` sezione nel file *Web. config* , in cui si ottengono poche informazioni sull'eccezione, è possibile intercettare l'errore a livello di applicazione e recuperare i dettagli dell'errore.
+Anziché intercettare l'eccezione utilizzando la sezione `customErrors` nel file *Web. config* , in cui si ottengono poche informazioni sull'eccezione, è possibile intercettare l'errore a livello di applicazione e recuperare i dettagli dell'errore.
 
 1. In **Esplora soluzioni**individuare e aprire il file *Global.asax.cs* .
-2. Aggiungere un gestore degli **errori dell'applicazione\_** in modo che venga visualizzato come segue:   
+2. Aggiungere un gestore degli **errori di\_dell'applicazione** in modo che venga visualizzato come segue:   
 
     [!code-csharp[Main](aspnet-error-handling/samples/sample10.cs)]
 
-Quando si verifica un errore nell'applicazione, viene `Application_Error` chiamato il gestore. In questo gestore, l'ultima eccezione viene recuperata e esaminata. Se l'eccezione non è stata gestita e l'eccezione contiene dettagli dell'eccezione interna ( `InnerException` ovvero non è null), l'applicazione trasferisce l'esecuzione alla pagina di errore in cui vengono visualizzati i dettagli dell'eccezione.
+Quando si verifica un errore nell'applicazione, viene chiamato il gestore `Application_Error`. In questo gestore, l'ultima eccezione viene recuperata e esaminata. Se l'eccezione non è stata gestita e l'eccezione contiene dettagli dell'eccezione interna (ovvero `InnerException` non è null), l'applicazione trasferisce l'esecuzione alla pagina di errore in cui vengono visualizzati i dettagli dell'eccezione.
 
 #### <a name="running-the-application"></a>Esecuzione dell'applicazione
 
 È possibile eseguire l'applicazione per visualizzare i dettagli dell'errore aggiuntivi forniti gestendo l'eccezione a livello di applicazione.
 
 1. Premere **CTRL + F5** per eseguire l'applicazione di esempio Wingtip Toys.  
- L'applicazione genera l' `InvalidOperationException` eccezione.
+ L'applicazione genera l'`InvalidOperationException`.
 2. Esaminare *ErrorPage. aspx* visualizzato nel browser. 
 
     ![Gestione degli errori di ASP.NET-errore a livello di applicazione](aspnet-error-handling/_static/image3.png)
 
 ### <a name="adding-page-level-error-handling"></a>Aggiunta della gestione degli errori a livello di pagina
 
-È possibile aggiungere la gestione degli errori a livello di pagina a una pagina usando l' `ErrorPage` `@Page` aggiunta di un attributo alla direttiva della pagina o aggiungendo un `Page_Error` gestore eventi al code-behind di una pagina. In questa sezione verrà aggiunto un `Page_Error` gestore eventi che trasferirà l'esecuzione alla pagina *ErrorPage. aspx* .
+È possibile aggiungere la gestione degli errori a livello di pagina a una pagina usando l'aggiunta di un attributo `ErrorPage` alla direttiva `@Page` della pagina o aggiungendo un gestore eventi `Page_Error` al code-behind di una pagina. In questa sezione verrà aggiunto un gestore dell'evento `Page_Error` che trasferirà l'esecuzione alla pagina *ErrorPage. aspx* .
 
 1. In **Esplora soluzioni**individuare e aprire il file *default.aspx.cs* .
-2. Aggiungere un `Page_Error` gestore in modo che il code-behind venga visualizzato come segue:   
+2. Aggiungere un gestore `Page_Error` in modo che il code-behind venga visualizzato come segue:   
 
     [!code-csharp[Main](aspnet-error-handling/samples/sample11.cs?highlight=18-30)]
 
-Quando si verifica un errore nella pagina, viene `Page_Error` chiamato il gestore eventi. In questo gestore, l'ultima eccezione viene recuperata e esaminata. Se si `InvalidOperationException` verifica un errore `Page_Error` , il gestore eventi trasferisce l'esecuzione alla pagina di errore in cui vengono visualizzati i dettagli dell'eccezione.
+Quando si verifica un errore nella pagina, viene chiamato il gestore dell'evento `Page_Error`. In questo gestore, l'ultima eccezione viene recuperata e esaminata. Se si verifica un `InvalidOperationException`, il gestore dell'evento `Page_Error` trasferisce l'esecuzione alla pagina di errore in cui vengono visualizzati i dettagli dell'eccezione.
 
 #### <a name="running-the-application"></a>Esecuzione dell'applicazione
 
 È possibile eseguire ora l'applicazione per visualizzare le route aggiornate.
 
 1. Premere **CTRL + F5** per eseguire l'applicazione di esempio Wingtip Toys.  
- L'applicazione genera l' `InvalidOperationException` eccezione.
+ L'applicazione genera l'`InvalidOperationException`.
 2. Esaminare *ErrorPage. aspx* visualizzato nel browser. 
 
     ![Gestione degli errori di ASP.NET-errore a livello di pagina](aspnet-error-handling/_static/image4.png)
@@ -233,7 +233,7 @@ Quando si verifica un errore nella pagina, viene `Page_Error` chiamato il gestor
 Per consentire il funzionamento dell'applicazione di esempio Wingtip Toys senza generare l'eccezione aggiunta in precedenza in questa esercitazione, rimuovere l'eccezione.
 
 1. Aprire il code-behind della pagina *default. aspx* .
-2. `Page_Load` Nel gestore rimuovere il codice che genera l'eccezione in modo che il gestore appaia come segue:   
+2. Nel gestore `Page_Load` rimuovere il codice che genera l'eccezione in modo che il gestore appaia come segue:   
 
     [!code-csharp[Main](aspnet-error-handling/samples/sample12.cs)]
 
@@ -242,17 +242,17 @@ Per consentire il funzionamento dell'applicazione di esempio Wingtip Toys senza 
 Come indicato in precedenza in questa esercitazione, è possibile aggiungere istruzioni try/catch per tentare di eseguire una sezione di codice e gestire il primo errore che si verifica. In questo esempio, i dettagli dell'errore verranno scritti nel file di log degli errori in modo che l'errore possa essere esaminato in un secondo momento.
 
 1. In **Esplora soluzioni**, nella cartella *logica* , trovare e aprire il file *PayPalFunctions.cs* .
-2. Aggiornare il `HttpCall` metodo in modo che il codice venga visualizzato come segue:   
+2. Aggiornare il metodo `HttpCall` in modo che il codice venga visualizzato come segue:   
 
     [!code-csharp[Main](aspnet-error-handling/samples/sample13.cs?highlight=20,22-23)]
 
-Il codice precedente chiama il `LogException` metodo contenuto `ExceptionUtility` nella classe. Il file della classe *ExceptionUtility.cs* è stato aggiunto alla cartella *logica* in precedenza in questa esercitazione. Il metodo `LogException` accetta due parametri. Il primo parametro è l'oggetto Exception. Il secondo parametro è una stringa utilizzata per identificare l'origine dell'errore.
+Il codice precedente chiama il metodo `LogException` contenuto nella classe `ExceptionUtility`. Il file della classe *ExceptionUtility.cs* è stato aggiunto alla cartella *logica* in precedenza in questa esercitazione. Il metodo `LogException` accetta due parametri. Il primo parametro è l'oggetto Exception. Il secondo parametro è una stringa utilizzata per identificare l'origine dell'errore.
 
 ### <a name="inspecting-the-error-logging-information"></a>Esaminare le informazioni di registrazione degli errori
 
 Come indicato in precedenza, è possibile usare il log degli errori per determinare quali errori nell'applicazione devono essere corretti per primi. Naturalmente, verranno registrati solo gli errori che sono stati intercettati e scritti nel log degli errori di.
 
-1. In **Esplora soluzioni**individuare e aprire il file *log degli errori. txt* nella *cartella\_dati dell'app* .   
+1. In **Esplora soluzioni**individuare e aprire il file *log degli errori. txt* nella cartella *app\_data* .   
  Potrebbe essere necessario selezionare l'opzione "**Mostra tutti i file**" o "**Aggiorna**" nella parte superiore di **Esplora soluzioni** per visualizzare il file *log degli errori. txt* .
 2. Esaminare il log degli errori visualizzato in Visual Studio: 
 
@@ -274,7 +274,7 @@ ELMAH (Error Logging Modules and Handlers) è una funzionalità di registrazione
 
 Prima di poter usare ELMAH, è necessario installarlo. Questa operazione è semplice usando il programma di installazione del pacchetto *NuGet* . Come indicato in precedenza in questa serie di esercitazioni, NuGet è un'estensione di Visual Studio che semplifica l'installazione e l'aggiornamento di librerie e strumenti open source in Visual Studio.
 
-1. Nel menu **strumenti** di Visual Studio selezionare **gestione** > pacchetti NuGet**Gestisci pacchetti NuGet per la soluzione**. 
+1. In Visual Studio scegliere **Gestione pacchetti NuGet** dal menu **strumenti** > **Gestisci pacchetti NuGet per la soluzione**. 
 
     ![Gestione degli errori di ASP.NET-Gestisci pacchetti NuGet per la soluzione](aspnet-error-handling/_static/image6.png)
 2. La finestra di dialogo **Gestisci pacchetti NuGet** viene visualizzata in Visual Studio.
@@ -297,7 +297,7 @@ La visualizzazione del log ELMAH è facile, ma prima verrà creata un'eccezione 
 
 1. Premere **CTRL + F5** per eseguire l'applicazione di esempio Wingtip Toys.
 2. Per scrivere un'eccezione non gestita nel registro ELMAH, navigare nel browser sull'URL seguente (usando il numero di porta):  
-    `https://localhost:44300/NoPage.aspx`Verrà visualizzata la pagina di errore.
+    `https://localhost:44300/NoPage.aspx` verrà visualizzata la pagina di errore.
 3. Per visualizzare il log di ELMAH, passare all'URL seguente (usando il numero di porta) nel browser:  
     `https://localhost:44300/elmah.axd`
 
@@ -324,7 +324,7 @@ Per altre informazioni sulla distribuzione dell'applicazione Web in Microsoft Az
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-[Registrazione dei dettagli degli errori con il monitoraggio dello stato di ASP.NET](../../older-versions-getting-started/deploying-web-site-projects/logging-error-details-with-asp-net-health-monitoring-cs.md)   
+[Registrazione dei dettagli degli errori con ASP.NET Health monitoring](../../older-versions-getting-started/deploying-web-site-projects/logging-error-details-with-asp-net-health-monitoring-cs.md)   
 [ELMAH](https://code.google.com/p/elmah/)
 
 ## <a name="acknowledgements"></a>Riconoscimenti
@@ -332,31 +332,31 @@ Per altre informazioni sulla distribuzione dell'applicazione Web in Microsoft Az
 Desidero ringraziare i seguenti utenti che hanno apportato contributi significativi al contenuto di questa serie di esercitazioni:
 
 - [Alberto Poblacion, MVP &amp; MCT, Spagna](https://mvp.microsoft.com/mvp/Alberto%20Poblacion%20Bolano-36772)
-- [Alex Thissen, Paesi Bassi](http://blog.alexthissen.nl/) (Twitter: [@alexthissen](http://twitter.com/alexthissen))
+- [Alex Thissen, Paesi Bassi](http://blog.alexthissen.nl/) (twitter: [@alexthissen](http://twitter.com/alexthissen))
 - [Andre Tournier, Stati Uniti](http://andret503.wordpress.com/)
-- Apurva Joshi, Microsoft
+- Il mio Joshi, Microsoft
 - [Bojan Vrhovnik, Slovenia](http://twitter.com/bvrhovnik)
-- [Bruno Sonnino, Brasile](http://msmvps.com/blogs/bsonnino) (Twitter: [@bsonnino](http://twitter.com/bsonnino))
+- [Bruno Sonnino, Brasile](http://msmvps.com/blogs/bsonnino) (twitter: [@bsonnino](http://twitter.com/bsonnino))
 - [Carlos Dos Santos, Brasile](http://www.carloscds.net/)
-- [Dave Campbell, Stati Uniti](http://www.wynapse.com/) (Twitter: [@windowsdevnews](http://twitter.com/windowsdevnews))
-- [Jon Galloway, Microsoft](https://weblogs.asp.net/jgalloway) (Twitter: [@jongalloway](http://twitter.com/jongalloway))
-- [Michael Sharps, Stati Uniti](http://www.930solutions.com/) (Twitter: [@mrsharps](http://twitter.com/mrsharps))
+- [Dave Campbell, USA](http://www.wynapse.com/) (twitter: [@windowsdevnews](http://twitter.com/windowsdevnews))
+- [Jon Galloway, Microsoft](https://weblogs.asp.net/jgalloway) (twitter: [@jongalloway](http://twitter.com/jongalloway))
+- [Michael Sharps, USA](http://www.930solutions.com/) (twitter: [@mrsharps](http://twitter.com/mrsharps))
 - Mike Pope
-- [Venditori, Stati Uniti](http://www.mitchelsellers.com/) (Twitter: [@MitchelSellers](http://twitter.com/MitchelSellers))
+- [Venditori, USA](http://www.mitchelsellers.com/) (twitter: [@MitchelSellers](http://twitter.com/MitchelSellers))
 - [Paul Cociuba, Microsoft](http://linqto.me/Links/pcociuba)
 - [Paulo Morgado, Portogallo](http://paulomorgado.net/)
-- [Pranav Rastogi, Microsoft](https://blogs.msdn.com/b/pranav_rastogi)
+- [Rastogi, Microsoft](https://blogs.msdn.com/b/pranav_rastogi)
 - [Tim Ammann, Microsoft](https://blogs.iis.net/timamm/default.aspx)
 - [Tom Dykstra, Microsoft](https://blogs.msdn.com/aspnetue)
 
 ## <a name="community-contributions"></a>Contributi della community
 
 - Graham Mendick ([@grahammendick](http://twitter.com/grahammendick))  
-  Esempio di codice correlato di Visual Studio 2012 su MSDN: [Esplorazione di Wingtip Toys](https://code.msdn.microsoft.com/Navigation-Wingtip-Toys-5f0daba2)
+  Esempio di codice correlato di Visual Studio 2012 su MSDN: [navigazione Wingtip Toys](https://code.msdn.microsoft.com/Navigation-Wingtip-Toys-5f0daba2)
 - James Chaney ([jchaney@agvance.net](mailto:jchaney@agvance.net))  
-  Esempio di codice correlato di Visual Studio 2012 su MSDN: [Serie di esercitazioni su Web Form ASP.NET 4,5 in Visual Basic](https://code.msdn.microsoft.com/ASPNET-45-Web-Forms-f37f0f63)
-- Andrielle Azevedo-collaboratore di pubblico tecnico Microsoft ( @driazevedoTwitter:)  
-  Visual Studio 2012 Translation: [Iniciando com ASP.NET Web Forms 4,5-parte 1-Introdução e Visão geral](https://andrielleazevedo.wordpress.com/2013/01/24/iniciando-com-asp-net-web-forms-4-5-introducao-e-visao-geral/)
+  Esempio di codice correlato di Visual Studio 2012 su MSDN: [serie di esercitazioni su Web form ASP.NET 4,5 in Visual Basic](https://code.msdn.microsoft.com/ASPNET-45-Web-Forms-f37f0f63)
+- Andrielle Azevedo-collaboratore di pubblico tecnico Microsoft (Twitter: @driazevedo)  
+  Visual Studio 2012 Translation: [iniciando com ASP.NET Web forms 4,5-parte 1-Introdução e Visão geral](https://andrielleazevedo.wordpress.com/2013/01/24/iniciando-com-asp-net-web-forms-4-5-introducao-e-visao-geral/)
 
 > [!div class="step-by-step"]
 > [Precedente](url-routing.md)

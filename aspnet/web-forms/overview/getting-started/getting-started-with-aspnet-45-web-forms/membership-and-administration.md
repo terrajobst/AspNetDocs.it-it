@@ -2,277 +2,277 @@
 uid: web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/membership-and-administration
 title: Appartenenza e amministrazione | Microsoft Docs
 author: Erikre
-description: Questa serie di esercitazioni insegnerà le nozioni di base della creazione di un'applicazione Web Form ASP.NET con ASP.NET 4.5 e Microsoft Visual Studio Express 2013 per Microsoft...
+description: Questa serie di esercitazioni illustra le nozioni di base per la creazione di un'applicazione Web Form ASP.NET con ASP.NET 4,5 e Microsoft Visual Studio Express 2013...
 ms.author: riande
 ms.date: 09/08/2014
 ms.assetid: 732a2316-e49f-4f72-becd-0cd72f14457e
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/membership-and-administration
 msc.type: authoredcontent
-ms.openlocfilehash: 59f859ea30572fbe66184f29555ac2c5c2f22f82
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: ab00bc90bfc767d06e747be6dfb973245b5aae88
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65132123"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74615464"
 ---
 # <a name="membership-and-administration"></a>Appartenenza e amministrazione
 
-da [Erik Reitan](https://github.com/Erikre)
+di [Erik Reitan](https://github.com/Erikre)
 
-[Scaricare progetto di esempio Wingtip Toys (c#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) o [Scarica l'E-book (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
+[Scaricare il progetto di esempio WingtipC#Toys ()](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) o [scaricare l'E-Book (PDF)](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
 
-> Questa serie di esercitazioni insegnerà le nozioni di base della creazione di un'applicazione Web Form ASP.NET con ASP.NET 4.5 e Microsoft Visual Studio Express 2013 per Web. Un Visual Studio 2013 [progetto con codice sorgente c#](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) complemento a questa serie di esercitazioni è disponibile.
+> Questa serie di esercitazioni illustra le nozioni di base per la creazione di un'applicazione Web Form ASP.NET con ASP.NET 4,5 e Microsoft Visual Studio Express 2013 per il Web. Per accompagnare questa serie di esercitazioni è disponibile un [progetto Visual Studio 2013 C# con codice sorgente](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) .
 
-Questa esercitazione illustra come aggiornare l'applicazione di esempio Wingtip Toys per aggiungere un ruolo personalizzato e usare ASP.NET Identity. Viene inoltre illustrato come implementare una pagina di amministrazione da cui l'utente con un ruolo personalizzato è possibile aggiungere e rimuovere i prodotti dal sito Web.
+Questa esercitazione illustra come aggiornare l'applicazione di esempio Wingtip Toys per aggiungere un ruolo personalizzato e usare ASP.NET Identity. Viene inoltre illustrato come implementare una pagina di amministrazione dalla quale l'utente con un ruolo personalizzato può aggiungere e rimuovere prodotti dal sito Web.
 
-[ASP.NET Identity](../../../../identity/overview/getting-started/introduction-to-aspnet-identity.md) è il sistema di appartenenze utilizzato per compilare un'applicazione web ASP.NET ed è disponibile in ASP.NET 4.5. ASP.NET Identity viene usato il modello di progetto Web Form di Visual Studio 2013, nonché i modelli per [ASP.NET MVC](../../../../mvc/index.md), [API Web ASP.NET](../../../../web-api/index.md), e [applicazione a pagina singola ASP.NET](../../../../single-page-application/index.md). Anche in particolare, è possibile installare il sistema di identità di ASP.NET con NuGet quando si inizia con un'applicazione Web vuota. Tuttavia, in questa serie di esercitazioni usano i **Web Form**projecttemplate, che include il sistema di identità di ASP.NET. ASP.NET Identity rende più facile l'integrazione dei dati di profili specifici dell'utente con i dati dell'applicazione. ASP.NET Identity consente, inoltre, è possibile scegliere il modello di persistenza per i profili utente nell'applicazione. È possibile archiviare i dati in un database di SQL Server o un altro archivio dati, inclusi *NoSQL* gli archivi dati, ad esempio tabelle di archiviazione Windows Azure.
+[ASP.NET Identity](../../../../identity/overview/getting-started/introduction-to-aspnet-identity.md) è il sistema di appartenenze usato per compilare l'applicazione Web ASP.NET ed è disponibile in ASP.NET 4,5. ASP.NET Identity viene utilizzato nel modello di progetto Web Form Visual Studio 2013, nonché nei modelli per l' [applicazione a pagina singola](../../../../single-page-application/index.md) [ASP.NET MVC](../../../../mvc/index.md), [API Web ASP.NET](../../../../web-api/index.md)e ASP.NET. È anche possibile installare in modo specifico il sistema di ASP.NET Identity usando NuGet quando si inizia con un'applicazione Web vuota. Tuttavia, in questa serie di esercitazioni viene usato il ProjectTemplate **Web Form**, che include il sistema di ASP.NET Identity. ASP.NET Identity semplifica l'integrazione dei dati di profilo specifici dell'utente con i dati dell'applicazione. Inoltre, ASP.NET Identity consente di scegliere il modello di persistenza per i profili utente nell'applicazione. È possibile archiviare i dati in un database SQL Server o in un altro archivio dati, inclusi gli archivi dati *NoSQL* , ad esempio le tabelle di archiviazione di Microsoft Azure.
 
-Questa esercitazione si basa sull'esercitazione precedente denominata "Completamento della transazione e pagamento con PayPal" della serie di esercitazioni di Wingtip Toys.
+Questa esercitazione si basa sull'esercitazione precedente intitolata "Checkout e pagamento con PayPal" nella serie di esercitazioni su Wingtip Toys.
 
-## <a name="what-youll-learn"></a>Che cosa si apprenderà come:
+## <a name="what-youll-learn"></a>Cosa si apprenderà:
 
 - Come usare il codice per aggiungere un ruolo personalizzato e un utente all'applicazione.
-- Come limitare l'accesso alla cartella di amministrazione, pagina.
-- Come per la navigazione per l'utente a cui appartiene il ruolo personalizzato.
-- Come usare l'associazione di modelli per popolare una [DropDownList](https://msdn.microsoft.com/library/system.web.ui.webcontrols.dropdownlist(v=vs.110).aspx) controllo con le categorie di prodotti.
-- Come caricare un file per l'applicazione web usando il [FileUpload](https://msdn.microsoft.com/library/system.web.ui.webcontrols.fileupload(v=vs.110).aspx) controllo.
+- Come limitare l'accesso alla cartella e alla pagina di amministrazione.
+- Come fornire la navigazione per l'utente che appartiene al ruolo personalizzato.
+- Come utilizzare l'associazione di modelli per popolare un controllo [DropDownList](https://msdn.microsoft.com/library/system.web.ui.webcontrols.dropdownlist(v=vs.110).aspx) con categorie di prodotti.
+- Come caricare un file nell'applicazione Web usando il controllo [FileUpload](https://msdn.microsoft.com/library/system.web.ui.webcontrols.fileupload(v=vs.110).aspx) .
 - Come usare i controlli di convalida per implementare la convalida dell'input.
-- Come aggiungere e rimuovere i prodotti dall'applicazione.
+- Come aggiungere e rimuovere prodotti dall'applicazione.
 
-## <a name="these-features-are-included-in-the-tutorial"></a>Queste funzionalità sono inclusi nell'esercitazione:
+## <a name="these-features-are-included-in-the-tutorial"></a>Queste funzionalità sono incluse nell'esercitazione:
 
 - Identità ASP.NET
-- Configurazione e l'autorizzazione
+- Configurazione e autorizzazione
 - Associazione di modelli
-- Convalida discreta
+- Convalida non intrusiva
 
-Web Form ASP.NET offre funzionalità di appartenenza. Usando il modello predefinito, si ottengono funzionalità di appartenenza incorporata che è possibile utilizzare immediatamente quando viene eseguita l'applicazione. Questa esercitazione illustra come usare ASP.NET Identity per aggiungere un ruolo personalizzato e assegnare un utente a tale ruolo. Si apprenderà come limitare l'accesso alla cartella administration. Si aggiungerà una pagina della cartella amministrazione che consente a un utente con un ruolo personalizzato per aggiungere e rimuovere i prodotti e visualizzare in anteprima un prodotto dopo che è stato aggiunto.
+ASP.NET Web Form fornisce funzionalità di appartenenza. Utilizzando il modello predefinito, sono disponibili funzionalità di appartenenza predefinite che è possibile utilizzare immediatamente durante l'esecuzione dell'applicazione. Questa esercitazione illustra come usare ASP.NET Identity per aggiungere un ruolo personalizzato e assegnare un utente a tale ruolo. Si apprenderà come limitare l'accesso alla cartella di amministrazione. Si aggiungerà una pagina alla cartella di amministrazione che consente a un utente con un ruolo personalizzato di aggiungere e rimuovere prodotti e di visualizzare in anteprima un prodotto dopo che è stato aggiunto.
 
 ## <a name="adding-a-custom-role"></a>Aggiunta di un ruolo personalizzato
 
-Uso di ASP.NET Identity, è possibile aggiungere un ruolo personalizzato e assegnare un utente a tale ruolo tramite il codice.
+Utilizzando ASP.NET Identity, è possibile aggiungere un ruolo personalizzato e assegnare un utente a tale ruolo utilizzando il codice.
 
-1. Nella **Esplora soluzioni**, fare clic sui *logica* cartella e creare una nuova classe.
-2. Denominare la nuova classe *RoleActions.cs*.
+1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sulla cartella della *logica* e creare una nuova classe.
+2. Assegnare alla nuova classe il nome *RoleActions.cs*.
 3. Modificare il codice in modo che venga visualizzato come segue:  
 
     [!code-csharp[Main](membership-and-administration/samples/sample1.cs?highlight=8)]
-4. Nelle **Esplora soluzioni**, aprire il *Global.asax.cs* file.
-5. Modificare il *Global.asax.cs* file aggiungendo il codice evidenziato in giallo in modo che venga visualizzato come segue:  
+4. In **Esplora soluzioni**aprire il file *Global.asax.cs* .
+5. Modificare il file *Global.asax.cs* aggiungendo il codice evidenziato in giallo, in modo che venga visualizzato come segue:  
 
     [!code-csharp[Main](membership-and-administration/samples/sample2.cs?highlight=11,26-28)]
-6. Si noti che `AddUserAndRole` è sottolineato in rosso. Fare doppio clic il codice AddUserAndRole.  
-   La lettera "A" all'inizio del metodo evidenziato verrà sottolineata.
-7. La lettera "A" del mouse e scegliere l'interfaccia utente che consente di generare uno stub di metodo per la `AddUserAndRole` (metodo). 
+6. Si noti che `AddUserAndRole` è sottolineato in rosso. Fare doppio clic sul codice AddUserAndRole.  
+   La lettera "A" all'inizio del metodo evidenziato sarà sottolineata.
+7. Passare il puntatore sulla lettera "A" e fare clic sull'interfaccia utente che consente di generare uno stub del metodo per il metodo `AddUserAndRole`. 
 
-    ![Appartenenza e amministrazione - genera Stub metodo](membership-and-administration/_static/image1.png)
-8. Fare clic sull'opzione intitolato:  
+    ![Appartenenza e amministrazione-genera stub metodo](membership-and-administration/_static/image1.png)
+8. Fare clic sull'opzione denominata:  
     `Generate method stub for "AddUserAndRole" in "WingtipToys.Logic.RoleActions"`
-9. Aprire il *RoleActions.cs* del file dalle *per la logica* cartella.  
-   Il `AddUserAndRole` metodo è stato aggiunto al file della classe.
-10. Modificare il *RoleActions.cs* file rimuovendo il `NotImplementedException` e aggiungendo il codice evidenziato in giallo, in modo che venga visualizzato come segue:  
+9. Aprire il file *RoleActions.cs* dalla cartella *logica* .  
+   Il metodo `AddUserAndRole` è stato aggiunto al file di classe.
+10. Modificare il file *RoleActions.cs* rimuovendo il `NotImplementedException` e aggiungendo il codice evidenziato in giallo, in modo che venga visualizzato come segue:  
 
     [!code-csharp[Main](membership-and-administration/samples/sample3.cs?highlight=5-7,15-51)]
 
-Il codice sopra riportato innanzitutto stabilisce un contesto di database per il database di appartenenza. Il database di appartenenza viene archiviato anche un *mdf* del file nei *App\_dati* cartella. Sarà in grado di visualizzare il database dopo il primo utente ha effettuato l'accesso a questa applicazione web. 
+Il codice precedente stabilisce innanzitutto un contesto di database per il database delle appartenenze. Il database delle appartenenze viene inoltre archiviato come file con *estensione MDF* nella cartella *app\_data* . Sarà possibile visualizzare il database dopo che il primo utente ha eseguito l'accesso a questa applicazione Web. 
 
 > [!NOTE] 
 > 
-> Se si desidera archiviare i dati di appartenenza con i dati del prodotto, è possibile utilizzare lo stesso **DbContext** usato per archiviare i dati del prodotto nel codice precedente.
+> Se si desidera archiviare i dati di appartenenza insieme ai dati del prodotto, è possibile utilizzare lo stesso **DbContext** utilizzato per archiviare i dati del prodotto nel codice riportato in precedenza.
 
- Il *interne* (parola chiave) è un modificatore di accesso per tipi (ad esempio le classi) e i membri dei tipi (ad esempio metodi o proprietà). Tipi interni o i membri sono accessibili solo all'interno dei file contenuti nell'assembly stesso *(con estensione dll* file). Quando si compila l'applicazione, un file di assembly *(con estensione dll*) viene creato che contiene il codice che viene eseguito quando si esegue l'applicazione. 
+ La parola chiave *Internal* è un modificatore di accesso per i tipi, ad esempio le classi, e i membri del tipo (ad esempio metodi o proprietà). I tipi o i membri interni sono accessibili solo all'interno di file contenuti nello stesso assembly (file con *estensione dll* ). Quando si compila l'applicazione, viene creato un file di assembly *(con estensione dll*) che contiene il codice che viene eseguito quando si esegue l'applicazione. 
 
-Oggetto `RoleStore` oggetto, che fornisce la gestione dei ruoli, viene creato in base al contesto di database.
-
-> [!NOTE] 
-> 
-> Si noti che durante la `RoleStore` viene creato l'oggetto utilizza un oggetto generico `IdentityRole` tipo. Ciò significa che il `RoleStore` può solo contenere `IdentityRole` oggetti. Anche con i Generics, le risorse in memoria vengono gestite meglio.
-
-Successivamente, il `RoleManager` dell'oggetto, viene creato in base il `RoleStore` oggetto appena creato. il `RoleManager` API che consente di salvare automaticamente le modifiche a correlate al ruolo di oggetto espone il `RoleStore`. Il `RoleManager` può solo contenere `IdentityRole` oggetti perché il codice Usa il `<IdentityRole>` tipo generico.
-
-Si chiama il `RoleExists` metodo per determinare se il ruolo "canEdit" è presente nel database delle appartenenze. In caso contrario, si creerà il ruolo.
-
-Creazione di `UserManager` oggetto sembra essere più complessi del `RoleManager` controllare, tuttavia è quasi identica a quella. È sufficiente codificata in una riga invece di più versioni. In questo caso, il parametro che si sta passando viene creata l'istanza come un nuovo oggetto contenuto in parentesi.
-
-Successivamente viene creato l'utente "canEditUser" creando un nuovo `ApplicationUser` oggetto. Quindi, se crei correttamente l'utente, aggiungere l'utente al nuovo ruolo.
+Un oggetto `RoleStore`, che fornisce la gestione dei ruoli, viene creato in base al contesto del database.
 
 > [!NOTE] 
 > 
-> La gestione degli errori verrà aggiornato durante l'esercitazione "ASP.NET Error Handling" più avanti in questa serie di esercitazioni.
+> Si noti che quando viene creato l'oggetto `RoleStore`, viene usato un tipo di `IdentityRole` generico. Ciò significa che l'`RoleStore` è consentita solo per contenere `IdentityRole` oggetti. Inoltre, utilizzando i generics, le risorse in memoria sono gestite meglio.
 
-Al successivo avvio dell'applicazione, l'utente denominato "canEditUser" verrà aggiunto come il ruolo "canEdit" dell'applicazione denominato. Più avanti in questa esercitazione, sarà l'accesso come utente "canEditUser" per visualizzare le funzionalità aggiuntive che si verranno aggiunti durante questa esercitazione. Per informazioni dettagliate API su ASP.NET Identity, vedere la [ASPNET Namespace](https://msdn.microsoft.com/library/microsoft.aspnet.identity(v=vs.111).aspx). Per altre informazioni sull'inizializzazione il sistema di identità di ASP.NET, vedere la [AspnetIdentitySample](https://github.com/rustd/AspnetIdentitySample/blob/master/AspnetIdentitySample/App_Start/IdentityConfig.cs).
+Successivamente, l'oggetto `RoleManager` viene creato in base all'oggetto `RoleStore` appena creato. l'oggetto `RoleManager` espone l'API relativa ai ruoli che può essere usata per salvare automaticamente le modifiche apportate al `RoleStore`. Il `RoleManager` può contenere solo oggetti `IdentityRole` perché il codice usa il tipo generico `<IdentityRole>`.
 
-### <a name="restricting-access-to-the-administration-page"></a>Limitare l'accesso alla pagina di amministrazione
+Chiamare il metodo `RoleExists` per determinare se il ruolo "canEdit" è presente nel database delle appartenenze. In caso contrario, è necessario creare il ruolo.
 
-L'applicazione di esempio Wingtip Toys consente agli utenti anonimi e agli utenti registrati visualizzare e acquistare i prodotti. Tuttavia, l'utente ha eseguito l'accesso con il ruolo "canEdit" personalizzato può accedere a una pagina con restrizioni per poter aggiungere e rimuovere i prodotti.
+La creazione dell'oggetto `UserManager` sembra essere più complessa rispetto al controllo `RoleManager`, ma è quasi uguale. Viene appena codificata in una riga anziché in più. In questo caso, il parametro passato sta creando un'istanza come nuovo oggetto contenuto nella parentesi.
 
-#### <a name="add-an-administration-folder-and-page"></a>Aggiungere una cartella di amministrazione e pagina
+Successivamente, creare l'utente "canEditUser" creando un nuovo oggetto `ApplicationUser`. Quindi, se l'utente è stato creato correttamente, l'utente viene aggiunto al nuovo ruolo.
 
-Successivamente, si creerà una cartella denominata *Admin* applicazione di esempio per l'utente "canEditUser" che appartiene al ruolo personalizzato di Wingtip Toys.
+> [!NOTE] 
+> 
+> La gestione degli errori verrà aggiornata durante l'esercitazione "gestione degli errori ASP.NET" più avanti in questa serie di esercitazioni.
 
-1. Fare clic sul nome del progetto (**Wingtip Toys**) nel **Esplora soluzioni** e selezionare **Add**  - &gt; **nuova cartella**.
-2. Denominare la nuova cartella *Admin*.
-3. Fare doppio clic il *Admin* cartella e quindi selezionare **Add**  - &gt; **nuovo elemento**.   
+Al successivo avvio dell'applicazione, l'utente denominato "canEditUser" verrà aggiunto come ruolo denominato "canEdit" dell'applicazione. Più avanti in questa esercitazione si effettuerà l'accesso come utente "canEditUser" per visualizzare le funzionalità aggiuntive che si aggiungeranno durante questa esercitazione. Per informazioni dettagliate sull'API ASP.NET Identity, vedere lo [spazio dei nomi Microsoft. AspNet. Identity](https://msdn.microsoft.com/library/microsoft.aspnet.identity(v=vs.111).aspx). Per ulteriori informazioni sull'inizializzazione del sistema di ASP.NET Identity, vedere [AspnetIdentitySample](https://github.com/rustd/AspnetIdentitySample/blob/master/AspnetIdentitySample/App_Start/IdentityConfig.cs).
+
+### <a name="restricting-access-to-the-administration-page"></a>Limitazione dell'accesso alla pagina di amministrazione
+
+L'applicazione di esempio Wingtip Toys consente a utenti anonimi e utenti connessi di visualizzare e acquistare i prodotti. Tuttavia, l'utente che ha eseguito l'accesso con il ruolo "canEdit" personalizzato può accedere a una pagina con restrizioni per aggiungere e rimuovere i prodotti.
+
+#### <a name="add-an-administration-folder-and-page"></a>Aggiungere una cartella di amministrazione e una pagina
+
+Si creerà quindi una cartella denominata *admin* per l'utente "canEditUser" appartenente al ruolo personalizzato dell'applicazione di esempio Wingtip Toys.
+
+1. Fare clic con il pulsante destro del mouse sul nome del progetto (**Wingtip Toys**) in **Esplora soluzioni** e scegliere **Aggiungi** -&gt; **nuova cartella**.
+2. Assegnare un nome alla nuova cartella *admin*.
+3. Fare clic con il pulsante destro del mouse sulla cartella *Amministrazione* , quindi scegliere **Aggiungi** -&gt; **nuovo elemento**.   
    Verrà visualizzata la finestra di dialogo **Aggiungi nuovo elemento**.
-4. Selezionare il <strong>Visual c#</strong> - &gt; <strong>Web</strong> gruppo di modelli a sinistra. Nell'elenco al centro, selezionare <strong>Web Form con pagina Master</strong>, denominarlo <em>AdminPage.aspx</em><strong>,</strong> e quindi selezionare <strong>Aggiungi</strong>.
-5. Selezionare il *Site. master* del file della pagina master e quindi scegliere **OK**.
+4. Selezionare il <strong>gruppo C# Visual</strong>-&gt; modelli <strong>Web</strong> a sinistra. Dall'elenco centrale selezionare <strong>Web Form con la pagina master</strong>, denominarlo <em>AdminPage. aspx</em><strong>e quindi</strong> selezionare <strong>Aggiungi</strong>.
+5. Selezionare il file *site. master* come pagina master, quindi scegliere **OK**.
 
-#### <a name="add-a-webconfig-file"></a>Aggiungere un File Web. config
+#### <a name="add-a-webconfig-file"></a>Aggiungere un file Web. config
 
-Aggiungendo un *Web. config* del file per il *Admin* cartella, è possibile limitare l'accesso alla pagina contenuta nella cartella.
+Aggiungendo un file *Web. config* alla cartella *amministratore* , è possibile limitare l'accesso alla pagina contenuta nella cartella.
 
-1. Fare doppio clic il *Admin* cartella e selezionare **Add**  - &gt; **nuovo elemento**.  
+1. Fare clic con il pulsante destro del mouse sulla cartella *Amministrazione* e scegliere **Aggiungi** -&gt; **nuovo elemento**.  
    Verrà visualizzata la finestra di dialogo **Aggiungi nuovo elemento**.
-2. Nell'elenco di modelli web di Visual c#, selezionare <strong>Web. config</strong>dall'elenco al centro, accettare il nome predefinito della <em>Web. config</em><strong>,</strong> e quindi selezionare <strong>Aggiungere</strong>.
-3. Sostituire il contenuto nel codice XML esistente di *Web. config* file con il codice seguente:  
+2. Dall'elenco di modelli Web C# visivi, selezionare <strong>file di configurazione Web</strong>dall'elenco centrale, accettare il nome predefinito di <em>Web. config</em><strong>,</strong> quindi selezionare <strong>Aggiungi</strong>.
+3. Sostituire il contenuto XML esistente nel file *Web. config* con il codice seguente:  
 
     [!code-xml[Main](membership-and-administration/samples/sample4.xml)]
 
-Salvare il *Web. config* file. Il *Web. config* file specifica che soltanto l'utente che appartengono al ruolo "canEdit" dell'applicazione può accedere alla pagina contenuta nel *Admin* cartella.
+Salvare il file *Web. config* . Il file *Web. config* specifica che solo l'utente che appartiene al ruolo "canEdit" dell'applicazione può accedere alla pagina contenuta nella cartella *admin* .
 
-### <a name="including-custom-role-navigation"></a>Inclusi lo spostamento di un ruolo personalizzato
+### <a name="including-custom-role-navigation"></a>Inclusione dell'esplorazione del ruolo personalizzato
 
-Per consentire all'utente del ruolo "canEdit" personalizzato passare alla sezione Amministrazione dell'applicazione, è necessario aggiungere un collegamento per il *Site. master* pagina. Solo gli utenti che appartengono al ruolo "canEdit" saranno in grado di vedere le **Admin** collegare e accedere alla sezione di amministrazione.
+Per consentire all'utente del ruolo "canEdit" personalizzato di passare alla sezione amministrazione dell'applicazione, è necessario aggiungere un collegamento alla pagina *site. master* . Solo gli utenti che appartengono al ruolo "canEdit" saranno in grado di visualizzare il collegamento **amministratore** e accedere alla sezione amministrazione.
 
-1. In Esplora soluzioni, trovare e aprire il *Site. master* pagina.
-2. Per creare un collegamento per l'utente del ruolo "canEdit", aggiungere il markup evidenziato in giallo nell'elenco non ordinato seguente `<ul>` elemento in modo che l'elenco viene visualizzato come segue:  
+1. In Esplora soluzioni individuare e aprire la pagina *site. master* .
+2. Per creare un collegamento per l'utente del ruolo "canEdit", aggiungere il markup evidenziato in giallo all'elenco non ordinato seguente `<ul>` elemento in modo che l'elenco venga visualizzato come segue:  
 
     [!code-html[Main](membership-and-administration/samples/sample5.html?highlight=2-3)]
-3. Aprire il *Site.Master.cs* file. Rendere la **Admin** collegamento visibile solo all'utente "canEditUser" aggiungendo il codice evidenziato in giallo per il `Page_Load` gestore. Il `Page_Load` gestore apparirà come segue:   
+3. Aprire il file *site.master.cs* . Rendere il collegamento **amministratore** visibile solo all'utente "canEditUser" aggiungendo il codice evidenziato in giallo al gestore `Page_Load`. Il gestore `Page_Load` verrà visualizzato come segue:   
 
     [!code-csharp[Main](membership-and-administration/samples/sample6.cs?highlight=3-6)]
 
-Quando la pagina viene caricata, il codice controlla se l'utente ha eseguito l'accesso dispone del ruolo di "canEdit". Se l'utente appartiene al ruolo "canEdit", l'elemento span contenente il collegamento per il *AdminPage.aspx* pagina (e, di conseguenza, il collegamento all'interno dell'estensione) viene reso visibile.
+Quando la pagina viene caricata, il codice controlla se l'utente connesso ha il ruolo di "canEdit". Se l'utente appartiene al ruolo "canEdit", l'elemento Span contenente il collegamento alla pagina *AdminPage. aspx* (e di conseguenza il collegamento nell'intervallo) viene reso visibile.
 
 ### <a name="enabling-product-administration"></a>Abilitazione dell'amministrazione del prodotto
 
-Finora, aver creato il ruolo "canEdit" e aggiungere un utente di "canEditUser", una cartella di amministrazione e da una pagina di amministrazione. Si dispongano di impostare i diritti di accesso per la cartella di amministrazione e la pagina e avrà aggiunto un collegamento di navigazione per l'utente del ruolo "canEdit" all'applicazione. Successivamente, verrà aggiunto il markup per il *AdminPage.aspx* pagina e scrivere il codice per il *AdminPage.aspx.cs* file code-behind che consentirà all'utente con il ruolo "canEdit" aggiungere e rimuovere i prodotti.
+Fino a questo punto, è stato creato il ruolo "canEdit" e sono stati aggiunti un utente "canEditUser", una cartella di amministrazione e una pagina di amministrazione. Sono stati impostati i diritti di accesso per la cartella e la pagina di amministrazione e è stato aggiunto un collegamento di navigazione per l'utente del ruolo "canEdit" all'applicazione. Successivamente, si aggiungerà il markup alla pagina *AdminPage. aspx* e al codice al file code-behind *AdminPage.aspx.cs* che consentirà all'utente con il ruolo "canEdit" di aggiungere e rimuovere i prodotti.
 
-1. Nella **Esplora soluzioni**, aprire il *AdminPage.aspx* del file dal *Admin* cartella.
+1. In **Esplora soluzioni**aprire il file *AdminPage. aspx* dalla cartella *admin* .
 2. Sostituire il markup esistente con il codice seguente:  
 
     [!code-aspx[Main](membership-and-administration/samples/sample7.aspx)]
-3. Successivamente, aprire il *AdminPage.aspx.cs* file code-behind facendo clic con il *AdminPage.aspx* e scegliendo **Visualizza codice**.
-4. Sostituire il codice esistente nel *AdminPage.aspx.cs* file code-behind con il codice seguente:  
+3. Successivamente, aprire il file code-behind *AdminPage.aspx.cs* facendo clic con il pulsante destro del mouse su *AdminPage. aspx* e scegliendo **Visualizza codice**.
+4. Sostituire il codice esistente nel file code-behind *AdminPage.aspx.cs* con il codice seguente:  
 
     [!code-csharp[Main](membership-and-administration/samples/sample8.cs)]
 
-Il codice immesso per il *AdminPage.aspx.cs* file code-behind, una classe denominata `AddProducts` esegue il lavoro effettivo dell'aggiunta di prodotti nel database. Questa classe non esiste ancora, in modo che si creerà ora.
+Nel codice immesso per il file code-behind *AdminPage.aspx.cs* , una classe denominata `AddProducts` esegue le operazioni effettive di aggiunta di prodotti al database. Questa classe non esiste ancora, quindi verrà creata ora.
 
-1. Nella **Esplora soluzioni**, fare doppio clic il *per la logica* cartella e quindi selezionare **Add**  - &gt; **nuovo elemento**.   
+1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sulla cartella *logica* , quindi scegliere **Aggiungi** -&gt; **nuovo elemento**.   
    Verrà visualizzata la finestra di dialogo **Aggiungi nuovo elemento**.
-2. Selezionare il **Visual c#**  - &gt; **codice** gruppo di modelli a sinistra. Quindi, selezionare **classe**dalla parte centrale elencare e denominarlo *AddProducts.cs*.   
+2. Selezionare il **gruppo C# Visual** -&gt; modelli di **codice** a sinistra. Quindi, selezionare **classe**nell'elenco centrale e denominarla *AddProducts.cs*.   
    Viene visualizzato il nuovo file di classe.
 3. Sostituire il codice esistente con quello seguente:  
 
     [!code-csharp[Main](membership-and-administration/samples/sample9.cs)]
 
-Il *AdminPage.aspx* pagina consente all'utente che appartengono al ruolo "canEdit" aggiungere e rimuovere i prodotti. Quando viene aggiunto un nuovo prodotto, i dettagli sul prodotto vengono convalidati e quindi immessi nel database. Il nuovo prodotto è immediatamente disponibile per tutti gli utenti dell'applicazione web.
+La pagina *AdminPage. aspx* consente all'utente che appartiene al ruolo "canEdit" di aggiungere e rimuovere i prodotti. Quando viene aggiunto un nuovo prodotto, i dettagli relativi al prodotto vengono convalidati e quindi immessi nel database. Il nuovo prodotto è immediatamente disponibile per tutti gli utenti dell'applicazione Web.
 
-#### <a name="unobtrusive-validation"></a>Convalida discreta
+#### <a name="unobtrusive-validation"></a>Convalida non intrusiva
 
-I dettagli del prodotto fornito dall'utente sul *AdminPage.aspx* pagina vengono convalidati mediante i controlli di convalida (`RequiredFieldValidator` e `RegularExpressionValidator`). Questi controlli usano automaticamente la convalida discreta. La convalida discreta consente i controlli di convalida da usare JavaScript per la logica di convalida lato client, ovvero che la pagina non richiede una corsa al server da convalidare. Per impostazione predefinita, la convalida discreta è incluso nel *Web. config* file basato sull'impostazione di configurazione seguenti:
+I dettagli del prodotto forniti dall'utente nella pagina *AdminPage. aspx* vengono convalidati utilizzando i controlli di convalida (`RequiredFieldValidator` e `RegularExpressionValidator`). Questi controlli utilizzano automaticamente la convalida non intrusiva. La convalida non intrusiva consente ai controlli di convalida di utilizzare JavaScript per la logica di convalida lato client, il che significa che la pagina non richiede un viaggio al server per la convalida. Per impostazione predefinita, la convalida non intrusiva è inclusa nel file *Web. config* in base all'impostazione di configurazione seguente:
 
 [!code-xml[Main](membership-and-administration/samples/sample10.xml)]
 
 #### <a name="regular-expressions"></a>Espressioni regolari
 
-Il prezzo del prodotto sul *AdminPage.aspx* pagina viene convalidata utilizzando un **RegularExpressionValidator** controllo. Questo controllo verifica che il valore di controllo di input associato (la casella di testo "AddProductPrice") corrisponde al pattern specificato dall'espressione regolare. Un'espressione regolare è una notazione di criteri di ricerca che consente di individuare rapidamente e corrispondono a modelli di caratteri specifica. Il **RegularExpressionValidator** controllo include una proprietà denominata `ValidationExpression` che contiene l'espressione regolare utilizzata per convalidare l'input di prezzo, come illustrato di seguito:
+Il prezzo del prodotto nella pagina *AdminPage. aspx* viene convalidato tramite un controllo **RegularExpressionValidator** . Questo controllo consente di verificare se il valore del controllo di input associato (la casella di testo "AddProductPrice") corrisponde al modello specificato dall'espressione regolare. Un'espressione regolare è una notazione corrispondente che consente di trovare e confrontare rapidamente modelli di caratteri specifici. Il controllo **RegularExpressionValidator** include una proprietà denominata `ValidationExpression` che contiene l'espressione regolare usata per convalidare l'input del prezzo, come illustrato di seguito:
 
 [!code-aspx[Main](membership-and-administration/samples/sample11.aspx)]
 
-#### <a name="fileupload-control"></a>Controllo fileUpload
+#### <a name="fileupload-control"></a>Controllo FileUpload
 
-Oltre ai controlli di input e convalida, è stato aggiunto il **FileUpload** controllare per il *AdminPage.aspx* pagina. Questo controllo offre la possibilità di caricare i file. In questo caso, si consente solo i file di immagine da caricare. Nel file code-behind (*AdminPage.aspx.cs*), quando il `AddProductButton` fa, il codice controlla il `HasFile` proprietà del **FileUpload** controllo. Se il controllo dispone di un file e se il tipo di file (in base all'estensione) è consentito, l'immagine viene salvata per il *immagini* cartella e il *immagini/Thumbs* cartella dell'applicazione.
+Oltre ai controlli di input e di convalida, il controllo **FileUpload** è stato aggiunto alla pagina *AdminPage. aspx* . Questo controllo fornisce la possibilità di caricare file. In questo caso, si consente il caricamento solo dei file di immagine. Nel file code-behind (*AdminPage.aspx.cs*), quando si fa clic sul `AddProductButton`, il codice controlla la proprietà `HasFile` del controllo **FileUpload** . Se il controllo contiene un file e il tipo di file (basato sull'estensione di file) è consentito, l'immagine viene salvata nella cartella *Immagini* e nella cartella *Immagini/thumbs* dell'applicazione.
 
 #### <a name="model-binding"></a>Associazione di modelli
 
-In precedenza in questa serie di esercitazioni è stato usato l'associazione di modelli per popolare una **ListView** (controllo), un **FormsView** (controllo), una **GridView** (controllo) e un  **Un controllo DetailView** controllo. In questa esercitazione, si usa l'associazione di modelli per popolare una **DropDownList** controllo con un elenco delle categorie di prodotti.
+In precedenza in questa serie di esercitazioni è stata usata l'associazione di modelli per popolare un controllo **ListView** , un controllo **FormsView** , un controllo **GridView** e un controllo **controllo DetailView per** . In questa esercitazione si usa l'associazione di modelli per popolare un controllo **DropDownList** con un elenco di categorie di prodotti.
 
-Il markup che è stato aggiunto per il *AdminPage.aspx* file contiene una **DropDownList** controllo denominato `DropDownAddCategory`:
+Il markup aggiunto al file *AdminPage. aspx* contiene un controllo **DropDownList** denominato `DropDownAddCategory`:
 
 [!code-aspx[Main](membership-and-administration/samples/sample12.aspx)]
 
-Si usa l'associazione di modelli per popolare questo **DropDownList** impostando il `ItemType` attributo e il `SelectMethod` attributo. Il `ItemType` attributo specifica l'uso di `WingtipToys.Models.Category` digitare durante il popolamento del controllo. È definito questo tipo all'inizio di questa serie di esercitazioni creando il `Category` classe (mostrato sotto). Il `Category` classe si trova nel *modelli* cartella all'interno di *Category.cs* file.
+È possibile utilizzare l'associazione di modelli per popolare questo **DropDownList** impostando l'attributo `ItemType` e l'attributo `SelectMethod`. L'attributo `ItemType` specifica di usare il tipo di `WingtipToys.Models.Category` quando si compila il controllo. Questo tipo è stato definito all'inizio di questa serie di esercitazioni creando la classe `Category` (mostrata di seguito). La classe `Category` si trova nella cartella *Models* all'interno del file *Category.cs* .
 
 [!code-csharp[Main](membership-and-administration/samples/sample13.cs)]
 
-Il `SelectMethod` attributo del **DropDownList** controllo specifica l'uso di `GetCategories` metodo (mostrato sotto) che è incluso nel file code-behind (*AdminPage.aspx.cs*).
+L'attributo `SelectMethod` del controllo **DropDownList** specifica che si usa il metodo `GetCategories` (illustrato di seguito) incluso nel file code-behind (*AdminPage.aspx.cs*).
 
 [!code-csharp[Main](membership-and-administration/samples/sample14.cs)]
 
-Questo metodo specifica che un `IQueryable` interfaccia viene utilizzata per valutare una query su un `Category` tipo. Il valore restituito viene utilizzato per popolare la **DropDownList** nel markup della pagina (*AdminPage.aspx*).
+Questo metodo specifica che un'interfaccia `IQueryable` viene utilizzata per valutare una query in base a un tipo di `Category`. Il valore restituito viene utilizzato per popolare l'oggetto **DropDownList** nel markup della pagina (*AdminPage. aspx*).
 
-Il testo visualizzato per ogni elemento nell'elenco viene specificato impostando il `DataTextField` attributo. Il `DataTextField` attributo viene utilizzato il `CategoryName` delle `Category` classe (illustrato in precedenza) per visualizzare ogni categoria nel **DropDownList** controllo. Il valore effettivo che viene passato quando viene selezionato un elemento nel **DropDownList** controllo basato sul `DataValueField` attributo. Il `DataValueField` attributo è impostato il `CategoryID` come definire nel `Category` classe (illustrato in precedenza).
+Il testo visualizzato per ogni elemento nell'elenco viene specificato impostando l'attributo `DataTextField`. L'attributo `DataTextField` utilizza la `CategoryName` della classe `Category` (illustrata in precedenza) per visualizzare ogni categoria nel controllo **DropDownList** . Il valore effettivo che viene passato quando si seleziona un elemento nel controllo **DropDownList** è basato sull'attributo `DataValueField`. L'attributo `DataValueField` viene impostato sul `CategoryID` come definito nella classe `Category` (illustrata in precedenza).
 
-### <a name="how-the-application-will-work"></a>Il funzionamento dell'applicazione
+### <a name="how-the-application-will-work"></a>Funzionamento dell'applicazione
 
-Quando l'utente che appartengono al ruolo "canEdit" passa alla pagina per la prima volta, il `DropDownAddCategory` **DropDownList** controllo venga popolato come descritto in precedenza. Il `DropDownRemoveProduct` **DropDownList** controllo viene anche popolato con i prodotti con lo stesso approccio. L'utente che appartengono al ruolo "canEdit" seleziona il tipo di categoria e aggiunge i dettagli del prodotto (**Name**, **descrizione**, **prezzo**, e **Filediimmagine**). Quando l'utente che appartengono al ruolo "canEdit" Seleziona le **Aggiungi prodotto** pulsante, il `AddProductButton_Click` gestore dell'evento viene attivato. Il `AddProductButton_Click` gestore dell'evento che si trova nel file code-behind (*AdminPage.aspx.cs*) controlla il file di immagine per assicurarsi che corrispondano ai tipi di file consentiti *(con estensione gif*, *PNG*, *JPEG*, o *jpg*). Quindi, viene salvato il file di immagine in una cartella dell'applicazione di esempio Wingtip Toys. Successivamente, il nuovo prodotto viene aggiunto al database. Per eseguire l'aggiunta di un nuovo prodotto, una nuova istanza di `AddProducts` classe viene creata e denominata products. Il `AddProducts` classe dispone di un metodo denominato `AddProduct`, e l'oggetto prodotti chiama questo metodo per aggiungere prodotti al database.
+Quando l'utente che appartiene al ruolo "canEdit" passa alla pagina per la prima volta, il `DropDownAddCategory`controllo **DropDownList** viene popolato come descritto in precedenza. Il `DropDownRemoveProduct`controllo **DropDownList** viene inoltre popolato con i prodotti che utilizzano lo stesso approccio. L'utente che appartiene al ruolo "canEdit" Seleziona il tipo di categoria e aggiunge i dettagli del prodotto, ovvero**nome**, **Descrizione**, **Prezzo**e **file di immagine**. Quando l'utente che appartiene al ruolo "canEdit" fa clic sul pulsante **Aggiungi prodotto** , viene attivato il gestore dell'evento `AddProductButton_Click`. Il gestore dell'evento `AddProductButton_Click` che si trova nel file code-behind (*AdminPage.aspx.cs*) controlla il file di immagine per assicurarsi che corrisponda ai tipi di file consentiti *(. gif*, *. png*, *. jpeg*o *. jpg*). Il file di immagine viene quindi salvato in una cartella dell'applicazione di esempio Wingtip Toys. Il nuovo prodotto verrà quindi aggiunto al database. Per completare l'aggiunta di un nuovo prodotto, viene creata una nuova istanza della classe `AddProducts` e vengono denominati i prodotti. La classe `AddProducts` dispone di un metodo denominato `AddProduct`e l'oggetto Products chiama questo metodo per aggiungere prodotti al database.
 
 [!code-csharp[Main](membership-and-administration/samples/sample15.cs)]
 
-Se il codice viene aggiunto correttamente il nuovo prodotto al database, la pagina viene ricaricata con il valore di stringa di query `ProductAction=add`.
+Se il codice aggiunge correttamente il nuovo prodotto al database, la pagina viene ricaricata con il valore della stringa di query `ProductAction=add`.
 
 [!code-csharp[Main](membership-and-administration/samples/sample16.cs)]
 
-Quando si ricarica la pagina, la stringa di query è incluso nell'URL. Per ricaricare la pagina, l'utente che appartengono al ruolo "canEdit" è possibile visualizzare immediatamente gli aggiornamenti nel **DropDownList** ai controlli le *AdminPage.aspx* pagina. Inoltre, includendo la stringa di query con l'URL, la pagina può visualizzare un messaggio di conferma all'utente che appartengono al ruolo "canEdit".
+Quando la pagina viene ricaricata, la stringa di query viene inclusa nell'URL. Ricaricando la pagina, l'utente che appartiene al ruolo "canEdit" può visualizzare immediatamente gli aggiornamenti nei controlli **DropDownList** nella pagina *AdminPage. aspx* . Inoltre, includendo la stringa di query con l'URL, nella pagina è possibile visualizzare un messaggio di operazione riuscita per l'utente che appartiene al ruolo "canEdit".
 
-Quando la *AdminPage.aspx* pagina ricaricamenti, il `Page_Load` eventi viene chiamato.
+Quando la pagina *AdminPage. aspx* viene ricaricata, viene chiamato l'evento `Page_Load`.
 
 [!code-csharp[Main](membership-and-administration/samples/sample17.cs)]
 
-Il `Page_Load` gestore eventi controlla il valore di stringa di query e determina se visualizzare un messaggio di conferma.
+Il gestore dell'evento `Page_Load` controlla il valore della stringa di query e determina se visualizzare un messaggio di operazione riuscita.
 
 ## <a name="running-the-application"></a>Esecuzione dell'applicazione
 
-È possibile eseguire l'applicazione ora per vedere come è possibile aggiungere, delete e update elementi nel carrello acquisti. Il totale del carrello riporterà il costo totale di tutti gli elementi nel carrello acquisti.
+È possibile eseguire ora l'applicazione per vedere come è possibile aggiungere, eliminare e aggiornare gli elementi nel carrello acquisti. Il totale del carrello acquisti riflette il costo totale di tutti gli elementi nel carrello acquisti.
 
-1. In Esplora soluzioni, premere **F5** per eseguire l'applicazione di esempio Wingtip Toys.  
-   Il browser si apre e Mostra le *default. aspx* pagina.
-2. Scegliere il **Accedi** collegamento nella parte superiore della pagina. 
+1. In Esplora soluzioni premere **F5** per eseguire l'applicazione di esempio Wingtip Toys.  
+   Verrà aperto il browser e verrà visualizzata la pagina *default. aspx* .
+2. Fare clic sul collegamento **Accedi nella** parte superiore della pagina. 
 
-    ![L'appartenenza e amministrazione - Log nel collegamento](membership-and-administration/_static/image2.png)
+    ![Appartenenza e amministrazione-collegamento accedi](membership-and-administration/_static/image2.png)
 
-   Il *aspx* viene visualizzata la pagina.
-3. Usare il seguente nome utente e la password:  
+   Verrà visualizzata la pagina *login. aspx* .
+3. Usare il nome utente e la password seguenti:  
    Nome utente: canEditUser@wingtiptoys.com  
-   Password: Pa$$word1 
+   Password: PA $ $word 1 
 
-    ![Appartenenza e amministrazione - pagina di accesso](membership-and-administration/_static/image3.png)
-4. Scegliere il **Accedi** pulsante nella parte inferiore della pagina.
-5. Nella parte superiore della pagina successiva, selezionare la **Admin** collegamento per passare alle *AdminPage.aspx* pagina. 
+    ![Appartenenza e amministrazione-pagina di accesso](membership-and-administration/_static/image3.png)
+4. Fare clic sul pulsante **Accedi nella** parte inferiore della pagina.
+5. Nella parte superiore della pagina successiva selezionare il collegamento **amministratore** per passare alla pagina *AdminPage. aspx* . 
 
-    ![L'appartenenza e amministrazione: collegamento di amministrazione](membership-and-administration/_static/image4.png)
-6. Per testare la convalida dell'input, selezionare la **Aggiungi prodotto** pulsante senza aggiungere i dettagli del prodotto. 
+    ![Appartenenza e amministrazione-collegamento amministratore](membership-and-administration/_static/image4.png)
+6. Per testare la convalida dell'input, fare clic sul pulsante **Aggiungi prodotto** senza aggiungere i dettagli del prodotto. 
 
-    ![Appartenenza e amministrazione - pagina di amministrazione](membership-and-administration/_static/image5.png)
+    ![Appartenenza e amministrazione-pagina amministratore](membership-and-administration/_static/image5.png)
 
-   Si noti che vengono visualizzati i messaggi di campo obbligatorio.
-7. Aggiungere i dettagli per un nuovo prodotto e quindi scegliere il **Aggiungi prodotto** pulsante. 
+   Si noti che vengono visualizzati i messaggi di campo obbligatori.
+7. Aggiungere i dettagli per un nuovo prodotto, quindi fare clic sul pulsante **Aggiungi prodotto** . 
 
-    ![Appartenenza e amministrazione - Aggiungi prodotto](membership-and-administration/_static/image6.png)
-8. Selezionare **prodotti** dal menu di spostamento superiore per visualizzare il nuovo prodotto è stato aggiunto. 
+    ![Appartenenza e amministrazione-Aggiungi prodotto](membership-and-administration/_static/image6.png)
+8. Selezionare **prodotti** dal menu di spostamento superiore per visualizzare il nuovo prodotto aggiunto. 
 
-    ![Appartenenza e amministrazione - prodotto nuovo Show](membership-and-administration/_static/image7.png)
-9. Scegliere il **Admin** collegamento per tornare alla pagina di amministrazione.
-10. Nel **rimuovere prodotto** sezione della pagina, selezionare il nuovo prodotto aggiunto nel **DropDownListBox**.
-11. Scegliere il **rimuovere prodotto** pulsante per rimuovere il nuovo prodotto dall'applicazione. 
+    ![Appartenenza e amministrazione-Mostra nuovo prodotto](membership-and-administration/_static/image7.png)
+9. Fare clic sul collegamento **amministratore** per tornare alla pagina di amministrazione.
+10. Nella sezione **Rimuovi prodotto** della pagina selezionare il nuovo prodotto aggiunto in **DropDownListBox**.
+11. Fare clic sul pulsante **Rimuovi prodotto** per rimuovere il nuovo prodotto dall'applicazione. 
 
-    ![Appartenenza e amministrazione - Rimuovi prodotto](membership-and-administration/_static/image8.png)
-12. Selezionare **prodotti** dal menu di spostamento superiore per confermare che il prodotto è stata rimossa.
-13. Fare clic su **disconnettersi** esista la modalità di amministrazione.   
-    Si noti che il riquadro di spostamento in alto non viene più visualizzato il **Admin** voce di menu.
+    ![Appartenenza e amministrazione-Rimuovi prodotto](membership-and-administration/_static/image8.png)
+12. Selezionare **prodotti** dal menu di spostamento superiore per confermare che il prodotto è stato rimosso.
+13. Fare clic su **Disconnetti** per esistere in modalità di amministrazione.   
+    Si noti che nel riquadro di spostamento superiore non viene più visualizzata la voce di menu **admin** .
 
 ## <a name="summary"></a>Riepilogo
 
-In questa esercitazione aggiunto un ruolo personalizzato e un utente appartenente al ruolo personalizzato, accesso limitato alla cartella di amministrazione, pagina e forniti navigazione per l'utente che appartengono al ruolo personalizzato. Associazione di modelli è utilizzato per popolare una **DropDownList** controllo con i dati. È stato implementato il **FileUpload** controllo e i controlli di convalida. Inoltre, si è appreso come aggiungere e rimuovere i prodotti da un database. Nella prossima esercitazione, verrà illustrato come implementare il routing di ASP.NET.
+In questa esercitazione sono stati aggiunti un ruolo personalizzato e un utente appartenente al ruolo personalizzato, l'accesso limitato alla cartella e alla pagina di amministrazione e la navigazione per l'utente appartenente al ruolo personalizzato. È stata utilizzata l'associazione di modelli per popolare un controllo **DropDownList** con dati. Sono stati implementati il controllo **FileUpload** e i controlli di convalida. Si è inoltre appreso come aggiungere e rimuovere prodotti da un database. Nell'esercitazione successiva si apprenderà come implementare il routing ASP.NET.
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-[Web. config - elemento authorization](https://msdn.microsoft.com/library/8d82143t(v=vs.100).aspx)  
+[Web. config-elemento authorization](https://msdn.microsoft.com/library/8d82143t(v=vs.100).aspx)  
 [ASP.NET Identity](../../../../identity/overview/getting-started/introduction-to-aspnet-identity.md)  
-[Distribuire un'App di moduli Web ASP.NET sicura con appartenenza, OAuth e Database SQL in un sito Web Azure](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-deploy-aspnet-webforms-app-membership-oauth-sql-database/)  
-[Microsoft Azure - versione di valutazione gratuita](https://azure.microsoft.com/pricing/free-trial/)
+[Distribuire un'app Web Form ASP.NET sicura con appartenenza, OAuth e database SQL in un sito Web di Azure](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-deploy-aspnet-webforms-app-membership-oauth-sql-database/)  
+[Versione di valutazione gratuita di Microsoft Azure](https://azure.microsoft.com/pricing/free-trial/)
 
 > [!div class="step-by-step"]
 > [Precedente](checkout-and-payment-with-paypal.md)

@@ -1,214 +1,214 @@
 ---
 uid: aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/source-control
-title: Controllo (creazione di App Cloud funzionanti con Azure) del codice sorgente | Microsoft Docs
+title: Controllo del codice sorgente (compilazione di app Cloud reali con Azure) | Microsoft Docs
 author: MikeWasson
-description: La creazione Real World di App Cloud con e-book Azure si basa su una presentazione sviluppata da Scott Guthrie. Viene spiegato 13 modelli e procedure consigliate che egli può...
+description: La creazione di app cloud del mondo reale con l'e-book di Azure si basa su una presentazione sviluppata da Scott Guthrie. Vengono illustrati 13 modelli e procedure che possono essere...
 ms.author: riande
 ms.date: 06/23/2015
 ms.assetid: 2a0370d3-c2fb-4bf3-88b8-aad5a736c793
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/source-control
 msc.type: authoredcontent
-ms.openlocfilehash: 7effc0194541afe766a6202f527d36d96f3007f2
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: a6f445e46d41b646cf6c25af2e65bc73e831d5ed
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59381367"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74583703"
 ---
-# <a name="source-control-building-real-world-cloud-apps-with-azure"></a>Controllo del codice sorgente (creazione di App Cloud funzionanti con Azure)
+# <a name="source-control-building-real-world-cloud-apps-with-azure"></a>Controllo del codice sorgente (compilazione di app Cloud reali con Azure)
 
-dal [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+di [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
 
-[Download risolverlo Project](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [Scarica l'E-book](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
+[Scarica il progetto di correzione it](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [Scarica l'E-Book](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
-> Il **creazione Real World di App Cloud con Azure** eBook si basa su una presentazione sviluppata da Scott Guthrie. Viene illustrato 13 modelli e procedure consigliate che consentono di avere esito positivo lo sviluppo di App web per il cloud. Per informazioni sull'e-book, vedere [capitolo prima](introduction.md).
+> La **creazione di app cloud del mondo reale con** l'e-book di Azure si basa su una presentazione sviluppata da Scott Guthrie. Vengono illustrati 13 modelli e procedure che consentono di sviluppare correttamente app Web per il cloud. Per informazioni sull'e-book, vedere [il primo capitolo](introduction.md).
 
-Controllo del codice sorgente è essenziale per tutti i progetti di sviluppo cloud, non solo gli ambienti di team. Non sarebbe pensi di modifica del codice sorgente o di un documento di Word senza una funzione di annullamento e i backup automatici e controllo del codice sorgente ti offre le funzioni a un livello di progetto in cui è possibile risparmiare ancora più tempo quando si verifica un problema. Con servizi cloud di controllo origine, non è più necessario preoccuparsi di configurazione complesse ed è possibile usare il codice sorgente repository di Azure gratuiti per un massimo di 5 utenti.
+Il controllo del codice sorgente è essenziale per tutti i progetti di sviluppo cloud, non solo per gli ambienti team. Non è possibile modificare il codice sorgente o persino un documento di Word senza una funzione di annullamento e backup automatici e il controllo del codice sorgente offre tali funzioni a livello di progetto, in cui è possibile risparmiare ancora più tempo quando si verifica un errore. Con i servizi di controllo del codice sorgente cloud, non è più necessario preoccuparsi della configurazione complicata ed è possibile usare Azure Repos controllo del codice sorgente gratuitamente per un massimo di 5 utenti.
 
-La prima parte di questo capitolo illustra tre principali procedure consigliate da tenere presenti:
+La prima parte di questo capitolo illustra tre procedure consigliate principali da tenere presente:
 
-- [Considerare gli script di automazione come codice sorgente](#scripts) e versione essi con il codice dell'applicazione.
-- [Non controllare mai nei segreti](#secrets) (dati sensibili, ad esempio le credenziali) in un repository del codice sorgente.
-- [Impostare i rami di origine](#devops) per abilitare il flusso di lavoro DevOps.
+- [Considerare gli script di automazione come codice sorgente](#scripts) e la relativa versione insieme al codice dell'applicazione.
+- [Non archiviare mai i segreti](#secrets) (dati sensibili, ad esempio le credenziali) in un repository del codice sorgente.
+- [Configurare i rami di origine](#devops) per abilitare il flusso di lavoro DevOps.
 
-Il resto del capitolo offre alcuni esempi di implementazione di questi modelli in Visual Studio, Azure e archivi di Azure:
+Il resto del capitolo fornisce alcune implementazioni di esempio di questi modelli in Visual Studio, Azure e Azure Repos:
 
 - [Aggiungere script al controllo del codice sorgente in Visual Studio](#vsscripts)
-- [Dati sensibili di Store in Azure](#appsettings)
-- [Uso di Git in Visual Studio e archivi di Azure](#gittfs)
+- [Archiviare dati sensibili in Azure](#appsettings)
+- [Usare git in Visual Studio e Azure Repos](#gittfs)
 
 <a id="scripts"></a>
-## <a name="treat-automation-scripts-as-source-code"></a>Considerare gli script di automazione come codice sorgente
+## <a name="treat-automation-scripts-as-source-code"></a>Considera gli script di automazione come codice sorgente
 
-Quando si lavora in un progetto cloud che si desidera modificare frequentemente le cose e si desidera essere in grado di reagire rapidamente ai problemi segnalati dai clienti. Rispondere rapidamente prevede l'uso di script di automazione, come spiegato nel [automatizzare tutto](automate-everything.md) capitolo. Tutti gli script utilizzabili per creare l'ambiente, distribuirvi, scalabilità e così via, devono essere sincronizzati con il codice sorgente dell'applicazione.
+Quando si lavora su un progetto cloud, si modificano spesso le cose e si vuole essere in grado di reagire rapidamente ai problemi segnalati dai clienti. Rispondere rapidamente comporta l'uso di script di automazione, come illustrato nel capitolo [automatizzare tutti gli elementi](automate-everything.md) . Tutti gli script usati per creare l'ambiente, distribuirli, ridimensionarli e così via, devono essere sincronizzati con il codice sorgente dell'applicazione.
 
-Per mantenere sincronizzati con codice di script, archiviarle nel sistema di controllo sorgente. Quindi quando si avvia il rollback delle modifiche o rendere una correzione rapida per il codice di produzione è diverso dal codice di sviluppo, non devi perdere tempo al tentativo di rilevare le impostazioni che sono stati modificati o i membri del team dispongono di copie della versione che necessaria. Si è certi che gli script che necessari vengono sincronizzati con la base di codice che ti servono per, e si è certi che tutti i membri del team lavora con gli stessi script. Se si desidera automatizzare il test e la distribuzione di un aggiornamento rapido in produzione o sviluppo delle nuove funzionalità, sarà necessario lo script giusto per il codice che deve essere aggiornato.
+Per conservare gli script sincronizzati con il codice, archiviarli nel sistema di controllo del codice sorgente. Quindi, se è necessario eseguire il rollback delle modifiche o apportare una correzione rapida al codice di produzione, che è diverso dal codice di sviluppo, non è necessario sprecare tempo per individuare le impostazioni modificate o i membri del team che hanno copie della versione necessaria. Si ha la certezza che gli script necessari siano sincronizzati con la codebase necessaria per e si ha la certezza che tutti i membri del team stiano lavorando con gli stessi script. Se è necessario automatizzare i test e la distribuzione di una correzione a caldo per la produzione o per lo sviluppo di nuove funzionalità, sarà necessario lo script corretto per il codice che deve essere aggiornato.
 
 <a id="secrets"></a>
-## <a name="dont-check-in-secrets"></a>Non si collegano i segreti
+## <a name="dont-check-in-secrets"></a>Non archiviare segreti
 
-Un repository del codice sorgente è in genere accessibili alle persone troppi appositamente da un luogo sicuro in modo appropriato per i dati sensibili, ad esempio le password. Se gli script si basano su segreti, ad esempio password, tali impostazioni vengono parametrizzati in modo che non vengono salvati nel codice sorgente e archiviare i segreti in un'altra posizione.
+Un repository di codice sorgente è generalmente accessibile a un numero eccessivo di persone affinché sia un luogo protetto in modo appropriato per i dati sensibili, ad esempio le password. Se gli script si basano su segreti come le password, parametrizzare tali impostazioni in modo che non vengano salvate nel codice sorgente e memorizzino i segreti altrove.
 
-Ad esempio, Azure consente che scaricare i file che contengono impostazioni di pubblicazione per automatizzare la creazione di profili di pubblicazione. Questi file contengono nomi utente e password autorizzati a gestire i servizi di Azure. Se si usa questo metodo per creare profili di pubblicazione e se si archivia questi file al controllo del codice sorgente, chiunque abbia accesso al repository può visualizzare i nomi utente e password. È possibile archiviare in modo sicuro la password nel profilo di pubblicazione stesso perché è crittografato e si trova in una *. pubxml* file che, per impostazione predefinita, non è incluso nel controllo del codice sorgente.
+Azure, ad esempio, consente di scaricare i file che contengono le impostazioni di pubblicazione per automatizzare la creazione dei profili di pubblicazione. Questi file includono i nomi utente e le password autorizzati a gestire i servizi di Azure. Se si usa questo metodo per creare profili di pubblicazione e se si archiviano questi file nel controllo del codice sorgente, chiunque abbia accesso al repository potrà visualizzare tali nomi utente e password. È possibile archiviare in modo sicuro la password nel profilo di pubblicazione perché è crittografata e si trova in un file con *estensione pubxml. User* che, per impostazione predefinita, non è incluso nel controllo del codice sorgente.
 
 <a id="devops"></a>
-## <a name="structure-source-branches-to-facilitate-devops-workflow"></a>Rami di origine di struttura per facilitare del flusso di lavoro di DevOps
+## <a name="structure-source-branches-to-facilitate-devops-workflow"></a>Strutturare rami di origine per semplificare il flusso di lavoro DevOps
 
-Modalità di implementazione di rami nel repository influisce sulla capacità sia sviluppare nuove funzionalità e risolvere i problemi nell'ambiente di produzione. Ecco un modello ridimensionati i team utilizzano i numerosi Media:
+La modalità di implementazione dei rami nel repository influiscono sulla possibilità di sviluppare nuove funzionalità e risolvere i problemi nell'ambiente di produzione. Di seguito è riportato un modello utilizzato da numerosi team di medie dimensioni:
 
-![Struttura di rami di origine](source-control/_static/image1.png)
+![Struttura del ramo di origine](source-control/_static/image1.png)
 
-Il ramo master corrisponde sempre al codice in produzione. I rami sotto master corrispondono a varie fasi nel ciclo di vita di sviluppo. Il ramo di sviluppo è in cui si implementano nuove funzionalità. Per un team di piccole dimensioni potrebbe semplicemente essere master e lo sviluppo, ma è spesso consigliabile che gli utenti dispongono di un ramo di staging tra sviluppo e master. È possibile utilizzare gestione temporanea per il test di integrazione finale prima che un aggiornamento viene spostato nell'ambiente di produzione.
+Il ramo master corrisponde sempre al codice in produzione. I rami al di sotto del Master corrispondono a fasi diverse del ciclo di vita dello sviluppo. Il ramo Development è il punto in cui vengono implementate nuove funzionalità. Per un piccolo team è possibile avere solo master e sviluppo, ma spesso è consigliabile che gli utenti abbiano un ramo di staging tra sviluppo e master. È possibile usare la gestione temporanea per i test di integrazione finali prima che un aggiornamento venga spostato in produzione.
 
-Per i team di grandi dimensioni possono esistere rami separati per ogni nuova funzionalità; per un team più piccolo potrebbe essere everyone archiviando al ramo development.
+Per i Big team possono essere presenti rami separati per ogni nuova funzionalità. per un team più piccolo, è possibile che tutti gli utenti possano archiviare il ramo di sviluppo.
 
-Se si dispone di un ramo per ogni funzionalità, quando la funzionalità A è pronto è merge le modifiche del codice sorgente backup nello sviluppo ramo e verso il basso in altri rami funzionalità. Questo codice sorgente unione processo può richiedere molto tempo e per evitare tale lavoro garantendo nel contempo le funzionalità separata, alcuni team implementare alternativa denominata *[feature Toggle](http://en.wikipedia.org/wiki/Feature_toggle)* (noto anche come *flag funzionalità*). Ciò significa tutto il codice per tutte le funzionalità nel ramo stesso, ma è abilitare o disabilitare ogni funzionalità tramite gli switch nel codice. Si supponga, ad esempio, di funzionalità A un nuovo campo per Fix It attività delle app e funzionalità B aggiunge funzionalità di memorizzazione nella cache. Il codice per entrambe le funzionalità può essere nel ramo di sviluppo, ma la visualizzazione dell'app verranno solo il nuovo campo quando una variabile è impostata su true che userà solo la memorizzazione nella cache quando una variabile diversa è impostata su true. Se una funzionalità non è pronto da alzare di livello, ma la funzione B è pronto, è possibile alzare di livello tutto il codice nell'ambiente di produzione con l'opzione della funzionalità A disattivare e attivare la funzione B. Sarà possibile completare una funzionalità e alzato di livello in un secondo momento, tutto senza alcuna unione di codice sorgente.
+Se si dispone di un ramo per ogni funzionalità, quando la funzionalità A è pronta, le modifiche al codice sorgente vengono unite nel ramo di sviluppo e negli altri rami della funzionalità. Questo processo di Unione del codice sorgente può richiedere molto tempo e, per evitare tale problema, mantenendo le funzionalità separate, alcuni team implementano un'alternativa denominata funzioni di *[alternanza](http://en.wikipedia.org/wiki/Feature_toggle)* (note anche come *flag funzionalità*). Ciò significa che tutto il codice per tutte le funzionalità si trova nello stesso ramo, ma si Abilita o disabilita ogni funzionalità usando le opzioni nel codice. Si supponga, ad esempio, che la funzionalità A sia un nuovo campo per la correzione delle attività dell'app e che la funzionalità B aggiunga la funzionalità di memorizzazione nella cache. Il codice per entrambe le funzionalità può essere nel ramo di sviluppo, ma l'app visualizzerà il nuovo campo solo quando una variabile è impostata su true e utilizzerà la memorizzazione nella cache solo quando una variabile diversa è impostata su true. Se la funzionalità A non è pronta per essere innalzata di livello, ma la funzionalità B è pronta, è possibile alzare di livello tutto il codice nell'ambiente di produzione con la funzionalità A disattivazione e funzionalità B attivata. È quindi possibile completare la funzionalità A e innalzarla di livello in un secondo momento, senza unire codice sorgente.
 
-Se si utilizza rami o gli elementi Toggle per le funzionalità, una struttura ramificata simile al seguente consente di far passare il codice dallo sviluppo alla produzione in modo agile e ripetibile.
+Indipendentemente dal fatto che si usino o meno rami per le funzionalità, una struttura di branching come questa consente di passare il codice dallo sviluppo alla produzione in modo agile e ripetibile.
 
-Questa struttura consente inoltre di reagire rapidamente ai commenti dei clienti. Se è necessario rendere una correzione rapida nell'ambiente di produzione, è possibile anche farlo in modo efficiente in modo agile. È possibile creare un ramo master o di gestione temporanea e quando sarà pronto unirlo backup master e verso il basso in rami di sviluppo e delle funzionalità.
+Questa struttura consente inoltre di reagire rapidamente ai commenti dei clienti. Se è necessario eseguire una correzione rapida per la produzione, è anche possibile eseguire questa operazione in modo efficiente in modo agile. È possibile creare un ramo fuori dal master o dalla gestione temporanea e, quando è pronto, eseguirne il merge nel database master e nei rami di sviluppo e funzionalità.
 
-![Branch hotfix](source-control/_static/image2.png)
+![ramo hotfix](source-control/_static/image2.png)
 
-Senza una struttura ramificata simile al seguente con la separazione dei rami di sviluppo e produzione, un problema di produzione è stato possibile inserire è nella posizione di dover promuovere nuovo codice di funzionalità con la correzione di produzione. Il nuovo codice di funzionalità potrebbe non essere completamente testato e pronto per l'ambiente di produzione e potrebbe essere necessario eseguire numerose operazioni di backup le modifiche non pronte. Oppure è possibile ritardare la correzione per testare le modifiche e prepararli per la distribuzione.
+Senza una struttura di branching come questa, con la separazione dei rami di produzione e di sviluppo, un problema di produzione può comportare la necessità di innalzare di livello il nuovo codice della funzionalità insieme alla correzione di produzione. Il nuovo codice della funzionalità potrebbe non essere completamente testato e pronto per la produzione e potrebbe essere necessario eseguire numerose operazioni di backup delle modifiche che non sono pronte. In alternativa, potrebbe essere necessario ritardare la correzione per testare le modifiche e prepararle per la distribuzione.
 
-Quindi sono riportati esempi di come implementare i tre modelli in Visual Studio, Azure e archivi di Azure. Questi sono esempi anziché how-to--it istruzioni dettagliate; Per istruzioni dettagliate che forniscono tutte il contesto necessario, vedere la [risorse](#resources) sezione alla fine del capitolo.
+Verranno ora illustrati alcuni esempi di come implementare questi tre modelli in Visual Studio, Azure e Azure Repos. Si tratta di esempi piuttosto che istruzioni dettagliate per la procedura da eseguire. per istruzioni dettagliate che forniscono tutto il contesto necessario, vedere la sezione relativa alle [risorse](#resources) alla fine del capitolo.
 
 <a id="vsscripts"></a>
 ## <a name="add-scripts-to-source-control-in-visual-studio"></a>Aggiungere script al controllo del codice sorgente in Visual Studio
 
-È possibile aggiungere gli script di controllo del codice sorgente in Visual Studio includendoli in una cartella della soluzione Visual Studio (presupponendo che il progetto sia nel controllo del codice sorgente). Ecco un modo per eseguire questa operazione.
+È possibile aggiungere script al controllo del codice sorgente in Visual Studio, inserendoli in una cartella della soluzione di Visual Studio (presupponendo che il progetto sia nel controllo del codice sorgente). Ecco un modo per eseguire questa operazione.
 
-Creare una cartella per gli script nella cartella della soluzione (la stessa cartella che contiene il *sln* file).
+Creare una cartella per gli script nella cartella della soluzione (la stessa cartella che contiene il file con *estensione sln* ).
 
 ![Cartella di automazione](source-control/_static/image3.png)
 
 Copiare i file di script nella cartella.
 
-![Contenuto della cartella automazione](source-control/_static/image4.png)
+![Contenuto della cartella di automazione](source-control/_static/image4.png)
 
-In Visual Studio, aggiungere una cartella della soluzione per il progetto.
+In Visual Studio aggiungere una cartella della soluzione al progetto.
 
-![Selezione dei menu nuova cartella soluzione](source-control/_static/image5.png)
+![Selezione menu nuova cartella soluzione](source-control/_static/image5.png)
 
 E aggiungere i file di script alla cartella della soluzione.
 
-![Aggiungere la selezione di menu elemento esistente](source-control/_static/image6.png)
+![Aggiungi selezione menu elemento esistente](source-control/_static/image6.png)
 
-![Finestra di dialogo Aggiungi elemento esistente](source-control/_static/image7.png)
+![Aggiungi elemento esistente - finestra di dialogo](source-control/_static/image7.png)
 
-I file di script sono ora inclusi nel progetto e controllo del codice sorgente tiene traccia delle modifiche di versione insieme alle modifiche del codice sorgente corrispondente.
+I file script sono ora inclusi nel progetto e il controllo del codice sorgente tiene traccia delle modifiche della versione insieme alle modifiche del codice sorgente corrispondenti.
 
 <a id="appsettings"></a>
-## <a name="store-sensitive-data-in-azure"></a>Dati sensibili di Store in Azure
+## <a name="store-sensitive-data-in-azure"></a>Archiviare dati sensibili in Azure
 
-Se si esegue l'applicazione in un sito Web di Azure, archiviarli in Azure è un modo per evitare di archiviare le credenziali nel controllo del codice sorgente.
+Se si esegue l'applicazione in un sito Web di Azure, un modo per evitare di archiviare le credenziali nel controllo del codice sorgente consiste nell'archiviarli in Azure.
 
-Ad esempio, l'applicazione Fix It archivia nel relativo file Web. config file due stringhe di connessione che avranno le password nell'ambiente di produzione e una chiave che fornisce l'accesso all'account di archiviazione di Azure.
+Ad esempio, l'applicazione Fix it archivia nel file Web. config due stringhe di connessione che avranno password in produzione e una chiave che consente l'accesso all'account di archiviazione di Azure.
 
 [!code-xml[Main](source-control/samples/sample1.xml?highlight=2-3,11)]
 
-Se si inserisce i valori di produzione effettivo per queste impostazioni nella finestra di *Web. config* file, o se li si inserisce *Release* file per configurare una trasformazione Web. config per inserirli durante la distribuzione, che sarà essere archiviate nel repository di origine. Se si sottoscrivono le stringhe di connessione di database di produzione profilo di pubblicazione, la password verrà incluso il *pubxml* file. (È possibile escludere le *pubxml* file dal controllo del codice sorgente, ma così si perderanno i vantaggi della condivisione di tutte le altre impostazioni di distribuzione.)
+Se si inseriscono i valori di produzione effettivi per queste impostazioni nel file *Web. config* o si inseriscono tali valori nel file *Web. Release. config* per configurare una trasformazione Web. config in modo da inserirli durante la distribuzione, questi verranno archiviati nel repository di origine. Se si immettono le stringhe di connessione al database nel profilo di pubblicazione di produzione, la password sarà presente nel file con *estensione pubxml* . È possibile escludere il file con *estensione pubxml* dal controllo del codice sorgente, ma si perde il vantaggio di condividere tutte le altre impostazioni di distribuzione.
 
-Azure ti offre un'alternativa per il **appSettings** e sezioni di stringhe di connessione il *Web. config* file. Ecco la parte interessata il **configurazione** scheda per un sito web nel portale di gestione di Azure:
+Azure offre un'alternativa per le sezioni **appSettings** e stringhe di connessione del file *Web. config* . Di seguito è illustrata la parte pertinente della scheda **configurazione** per un sito Web nel portale di gestione di Azure:
 
-![nel portale connectionStrings e appSettings](source-control/_static/image8.png)
+![appSettings e connectionStrings nel portale](source-control/_static/image8.png)
 
-Quando si distribuisce un progetto a questo sito web e l'esecuzione dell'applicazione, indipendentemente dai valori archiviati in Azure eseguire l'override indipendentemente dai valori sono nel file Web. config.
+Quando si distribuisce un progetto in questo sito Web e l'applicazione viene eseguita, tutti i valori archiviati in Azure sostituiscono tutti i valori presenti nel file Web. config.
 
-È possibile impostare questi valori in Azure usando il portale di gestione o gli script. Lo script di automazione di creazione ambiente si è visto nella [automatizzare tutto](automate-everything.md) capitolo viene creato un Database SQL di Azure, ottiene l'archiviazione e le stringhe di connessione di Database SQL e archivia questi segreti nelle impostazioni per il sito web.
+È possibile impostare questi valori in Azure usando il portale di gestione o gli script. Lo script di automazione per la creazione dell'ambiente visualizzato nel capitolo [automatizzare tutto](automate-everything.md) crea un database SQL di Azure, ottiene le stringhe di connessione del database SQL e di archiviazione e archivia questi segreti nelle impostazioni per il sito Web.
 
 [!code-powershell[Main](source-control/samples/sample2.ps1)]
 
 [!code-powershell[Main](source-control/samples/sample3.ps1)]
 
-Si noti che gli script vengono parametrizzati in modo che i valori effettivi non vengono mantenuti al repository di origine.
+Si noti che gli script sono parametrizzati in modo che i valori effettivi non vengano salvati in modo permanente nel repository di origine.
 
-Quando si esegue in locale nell'ambiente di sviluppo, l'app legge il file Web. config locale e la connessione di punti di stringa a un database LocalDB di SQL Server nel *App\_dati* cartella del progetto web. Quando si esegue l'app in Azure e l'app prova a leggere questi valori dal file Web. config, le operazioni che riceve e Usa sono i valori archiviati per il sito Web, non che cos'è effettivamente nel file Web. config.
+Quando si esegue in locale nell'ambiente di sviluppo, l'app legge il file Web. config locale e la stringa di connessione fa riferimento a un database SQL Server database locale nella cartella *app\_data* del progetto Web. Quando si esegue l'app in Azure e l'app tenta di leggere questi valori dal file Web. config, cosa si ottiene e USA sono i valori archiviati per il sito Web, non il file Web. config.
 
 <a id="gittfs"></a>
-## <a name="use-git-in-visual-studio-and-azure-devops"></a>Uso di Git in Visual Studio e Azure DevOps
+## <a name="use-git-in-visual-studio-and-azure-devops"></a>Usare git in Visual Studio e Azure DevOps
 
-È possibile usare qualsiasi ambiente di controllo di origine per implementare la struttura con rami DevOps presentata in precedenza. Per i team distribuiti un [sistema di controllo della versione distribuito](http://en.wikipedia.org/wiki/Distributed_revision_control) potrebbe funzionare meglio (molto DIFFUSO); per gli altri team un [sistema centralizzato](http://en.wikipedia.org/wiki/Revision_control) potrebbero funzionare meglio.
+È possibile usare qualsiasi ambiente del controllo del codice sorgente per implementare la struttura di diramazione DevOps presentata in precedenza. Per i team distribuiti, un [sistema di controllo della versione distribuito](http://en.wikipedia.org/wiki/Distributed_revision_control) (DVCS) potrebbe funzionare meglio; per gli altri team un [sistema centralizzato](http://en.wikipedia.org/wiki/Revision_control) potrebbe funzionare meglio.
 
-[GIT](http://git-scm.com/) è un sistema di controllo della versione distribuita più diffusi. Quando si usa Git per controllo del codice sorgente, si ha una copia completa del repository con tutta la relativa cronologia nel computer locale. Molte persone preferiscono che perché è più facile continuare a lavorare quando non si è connessi alla rete, è possibile continuare a eseguire operazioni esegue il commit e rollback, creare e cambiare ramo e così via. Anche quando si è connessi alla rete, è più semplice e rapido creare rami e cambiare rami quando tutto è locale. È anche possibile eseguire i rollback e commit locali senza impatto sugli altri sviluppatori. Ed è possibile creare batch commit prima di inviarli al server.
+[Git](http://git-scm.com/) è un sistema di controllo della versione distribuito diffuso. Quando si usa Git per il controllo del codice sorgente, si ha una copia completa del repository con tutta la relativa cronologia nel computer locale. Molti utenti preferiscono questo perché è più semplice continuare a lavorare quando non si è connessi alla rete: è possibile continuare a eseguire commit e rollback, creare e cambiare rami e così via. Anche quando si è connessi alla rete, è più facile e veloce creare rami e cambiare ramo quando tutto è locale. È anche possibile eseguire commit e rollback locali senza avere un effetto su altri sviluppatori. È possibile eseguire il commit in batch prima di inviarli al server.
 
-[Repository di Azure](/azure/devops/repos/index?view=vsts) offre entrambi [Git](/azure/devops/repos/git/?view=vsts) e [Team Foundation Version Control](/azure/devops/repos/tfvc/index?view=vsts) (TFVC; centralizzato di controllo del codice sorgente). Introduzione a Azure DevOps [qui](https://app.vsaex.visualstudio.com/signup).
+[Azure Repos](/azure/devops/repos/index?view=vsts) offre sia [git](/azure/devops/repos/git/?view=vsts) che [controllo della versione di Team Foundation](/azure/devops/repos/tfvc/index?view=vsts) (TFVC; controllo del codice sorgente centralizzato). Per iniziare a usare Azure DevOps, vedere [qui](https://app.vsaex.visualstudio.com/signup).
 
-Visual Studio 2017 include incorporata, eccellente [supporto per Git](https://msdn.microsoft.com/library/hh850437.aspx). Ecco una rapida dimostrazione del funzionamento.
+Visual Studio 2017 include il [supporto Git](https://msdn.microsoft.com/library/hh850437.aspx)integrato di prima classe. Ecco una rapida dimostrazione del funzionamento.
 
-Con un progetto aperto in Visual Studio, fare doppio clic la soluzione in **Esplora soluzioni**, quindi scegliere **Aggiungi soluzione al controllo del codice sorgente**.
+Con un progetto aperto in Visual Studio, fare clic con il pulsante destro del mouse sulla soluzione in **Esplora soluzioni**, quindi scegliere **Aggiungi soluzione al controllo del codice sorgente**.
 
 ![Aggiungi soluzione al controllo del codice sorgente](source-control/_static/image9.png)
 
-Visual Studio chiede se si desidera usare Git o TFVC (controllo della versione centralizzato).
+Visual Studio chiede se si vuole usare TFVC (controllo della versione centralizzato) o Git.
 
-![Scegli controllo del codice sorgente](source-control/_static/image10.png)
+![Scegliere il controllo del codice sorgente](source-control/_static/image10.png)
 
-Quando si seleziona Git e fare clic su **OK**, Visual Studio crea un nuovo repository Git locale nella cartella della soluzione. Il nuovo repository non sono presenti file ancora; è necessario aggiungerli al repository eseguendo un'operazione di commit di Git. Fare doppio clic la soluzione in **Esplora soluzioni**, quindi fare clic su **Commit**.
+Quando si seleziona git e si fa clic su **OK**, in Visual Studio viene creato un nuovo repository git locale nella cartella della soluzione. Il nuovo repository non contiene ancora file; è necessario aggiungerli al repository eseguendo un commit Git. Fare clic con il pulsante destro del mouse sulla soluzione in **Esplora soluzioni**, quindi scegliere Esegui **commit**.
 
 ![Commit](source-control/_static/image11.png)
 
-Visual Studio automaticamente delle fasi di tutti i file di progetto per il commit e li elenca nel **Team Explorer** nel **modifiche incluse** riquadro. (Se si sono verificati alcuni non si desidera includere nel commit, è possibile selezionare, pulsante destro del mouse e scegliere **escludere**.)
+Visual Studio crea automaticamente il commit di tutti i file di progetto per il commit e li elenca in **Team Explorer** nel riquadro **modifiche incluse** . Se sono presenti alcuni elementi che non si desidera includere nel commit, è possibile selezionarli, fare clic con il pulsante destro del mouse e fare clic su **Escludi**.
 
 ![Team Explorer](source-control/_static/image12.png)
 
-Immettere un commento di commit e fare clic su **Commit**, Visual Studio e viene eseguito il commit viene visualizzato l'ID commit.
+Immettere un commento di commit e fare clic su **commit**. in Visual Studio viene eseguito il commit e viene visualizzato l'ID commit.
 
-![Modifiche di Team Explorer](source-control/_static/image13.png)
+![Team Explorer modifiche](source-control/_static/image13.png)
 
-Ora se si modifica un codice in modo che sia diverso rispetto a quanto nel repository, è possibile visualizzare facilmente le differenze. Un file che è stato modificato, selezionare pulsante destro del mouse **confronta con Unmodified**, e si otterrà una visualizzazione di confronto che illustra le modifiche non sottoposte a commit.
+A questo punto, se si modifica il codice in modo che sia diverso da quello presente nel repository, è possibile visualizzare facilmente le differenze. Fare clic con il pulsante destro del mouse su un file che è stato modificato, scegliere **Confronta con non modificato**e ottenere una visualizzazione del confronto che mostra la modifica di cui non è stato eseguito il commit.
 
-![Confronta con versione non modificata](source-control/_static/image14.png)
+![Confronta con non modificato](source-control/_static/image14.png)
 
-![Modifiche che Mostra differenze](source-control/_static/image15.png)
+![Differenze nella visualizzazione delle modifiche](source-control/_static/image15.png)
 
-È possibile visualizzare facilmente le modifiche si apportano e archiviarle nella.
+È possibile visualizzare facilmente le modifiche che vengono apportate e archiviarle.
 
-Si supponga che è necessario rendere un ramo – è possibile farlo in Visual Studio troppo. Nelle **Team Explorer**, fare clic su **nuovo ramo**.
+Si supponga di dover creare un ramo: è possibile farlo anche in Visual Studio. In **Team Explorer**fare clic su **nuovo ramo**.
 
-![Nuovo ramo di Team Explorer](source-control/_static/image16.png)
+![Team Explorer nuovo ramo](source-control/_static/image16.png)
 
-Immettere un nome di ramo, fare clic su **Crea ramo**, e se è stato selezionato **Esegui Checkout del ramo**, Visual Studio estrae automaticamente il nuovo ramo.
+Immettere un nome di ramo, fare clic su **Crea ramo**. se è stato selezionato **Estrai ramo**, Visual Studio estrae automaticamente il nuovo ramo.
 
-![Nuovo ramo di Team Explorer](source-control/_static/image17.png)
+![Team Explorer nuovo ramo](source-control/_static/image17.png)
 
-È ora possibile apportare modifiche ai file e archiviarle questo ramo. Ed è possibile passare facilmente tra i rami e Visual Studio automaticamente estratto i file in qualsiasi ramo si esegue la sincronizzazione. In questo esempio la pagina web del titolo  *\_layout. cshtml* è stato modificato in "Correzione 1" in HotFix1 ramo.
+È ora possibile apportare modifiche ai file e archiviarli in questo branch. È possibile passare facilmente tra i rami e Visual Studio sincronizza automaticamente i file in qualsiasi ramo Estratto. In questo esempio il titolo della pagina Web in *\_layout. cshtml* è stato modificato in "Hot Fix 1" nel ramo Hotfix1.
 
 ![Ramo Hotfix1](source-control/_static/image18.png)
 
-Se si passa nuovamente al master ramo, il contenuto del  *\_layout. cshtml* file ripristinato automaticamente quali operazioni sono nel ramo master.
+Se si passa di nuovo al ramo master, il contenuto del file *\_layout. cshtml* ripristina automaticamente il contenuto del ramo master.
 
 ![Ramo master](source-control/_static/image19.png)
 
-Questo un semplice esempio di come può rapidamente creare un ramo e passa alternativamente tra rami. Questa funzionalità consente un flusso di lavoro altamente agile usando la struttura di branch e gli script di automazione presentati nel [automatizzare tutto](automate-everything.md) capitolo. Ad esempio, è possibile essere lavora nel ramo di sviluppo, creare un correzione rapida ramo master, passare al nuovo ramo, apportare le modifiche non esiste e, eseguirne il commit e quindi passare al ramo Development e continuare a quello che stavi.
+Questo è un semplice esempio di come è possibile creare rapidamente un ramo e capovolgersi tra i rami. Questa funzionalità consente un flusso di lavoro altamente agile usando la struttura del ramo e gli script di automazione presentati nel capitolo [automatizzare tutti gli elementi](automate-everything.md) . È possibile, ad esempio, lavorare nel ramo di sviluppo, creare un ramo di correzione a caldo fuori dal master, passare al nuovo ramo, apportare le modifiche ed eseguirne il commit, quindi tornare al ramo di sviluppo e continuare l'operazione.
 
-Ho illustrato di seguito è l'utilizzo di un repository Git locale in Visual Studio. In un ambiente di team in genere anche push delle modifiche un repository comune. Gli strumenti di Visual Studio consentono, inoltre, in modo che punti a un repository Git remoto. È possibile usare GitHub.com a tale scopo oppure è possibile usare [Git e repository di Azure](/azure/devops/repos/git/overview?view=vsts) integrato con tutte le altre funzionalità DevOps di Azure, ad esempio l'elemento di lavoro e rilevamento dei bug.
+In questo articolo viene illustrato come usare un repository git locale in Visual Studio. In un ambiente team si esegue in genere anche il push delle modifiche in un repository comune. Gli strumenti di Visual Studio consentono inoltre di puntare a un repository GIT remoto. È possibile usare GitHub.com a tale scopo oppure è possibile usare [git e Azure Repos](/azure/devops/repos/git/overview?view=vsts) integrati con tutte le altre funzionalità di DevOps di Azure, ad esempio il rilevamento di elementi di lavoro e bug.
 
-Non è l'unico modo è possibile implementare una strategia di creazione rami agile, ovviamente. È possibile abilitare il flusso di lavoro agile stesso usando un repository di controllo del codice sorgente centralizzato.
+Questo non è l'unico modo per implementare una strategia di branching agile, ovviamente. È possibile abilitare lo stesso flusso di lavoro Agile usando un repository centralizzato del controllo del codice sorgente.
 
 ## <a name="summary"></a>Riepilogo
 
-Valutare il successo del sistema del controllo codice sorgente basato su rapidità con cui è possibile apportare una modifica e ottenerlo in tempo reale in modo sicuro e prevedibile. Se ci si ritrova mischiare apportare una modifica perché è necessario eseguire un giorno o due dei test manuali su di esso, si potrebbe chiedersi che cosa è necessario eseguire process-wise o test-wise in modo da poter apportare tale modifica in minuti o a non più peggiore rispetto a un'ora. Una strategia per farlo consiste nell'implementare l'integrazione continua e recapito continuo, che verranno trattati nel [capitolo successivo](continuous-integration-and-continuous-delivery.md).
+Misurare il successo del sistema di controllo del codice sorgente in base alla velocità con cui è possibile apportare una modifica e renderla disponibile in modo sicuro e prevedibile. Se ci si accorge di aver apportato una modifica perché è necessario eseguire un giorno o due di test manuali, è possibile chiedersi quali siano i requisiti necessari per eseguire il processo o il testing in modo che sia possibile apportare la modifica in pochi minuti o non più di un'ora. Una strategia per eseguire questa operazione consiste nell'implementare l'integrazione continua e il recapito continuo, che verranno illustrati nel [capitolo successivo](continuous-integration-and-continuous-delivery.md).
 
 <a id="resources"></a>
 ## <a name="resources"></a>Risorse
 
-Per altre informazioni sulle strategie di diramazione, vedere le risorse seguenti:
+Per ulteriori informazioni sulle strategie di diramazione, vedere le risorse seguenti:
 
-- [Creazione di una Pipeline di rilascio con Team Foundation Server 2012](https://msdn.microsoft.com/library/dn449957.aspx). Documentazione di Microsoft Patterns and Practices. Vedere il capitolo 6 per informazioni sulle strategie di diramazione. Funzione di rappresentanti del attiva/disattiva su rami delle funzionalità e se vengono utilizzati i rami per le funzionalità, rappresentanti del servizio mantenendoli breve durata (ore o giorni al massimo).
-- [Guida di controllo di versione](https://aka.ms/vsarsolutions). Guida alle strategie di diramazione da ALM Rangers. Nella scheda download, vedere Strategies.pdf diramazione.
-- [Sviluppo di software con i Feature Toggle](https://msdn.microsoft.com/magazine/dn683796.aspx). Articolo di MSDN Magazine.
-- [Attivazione/disattivazione delle funzionalità](http://martinfowler.com/bliki/FeatureToggle.html). Introduzione alla funzionalità attivata e disattivata / flag delle funzionalità nel blog di Fowler.
-- [Funzionalità di Visual Studio attiva o Disattiva funzionalità rami](http://geekswithblogs.net/Optikal/archive/2013/02/10/152069.aspx). Un altro post di blog sui feature Toggle, Dylan Smith.
+- [Compilazione di una pipeline di versione con Team Foundation Server 2012](https://msdn.microsoft.com/library/dn449957.aspx). Documentazione di Microsoft Patterns and Practices. Vedere il capitolo 6 per una discussione sulle strategie di branching. La funzionalità Advocates Visualizza i rami delle funzionalità e, in caso di utilizzo di rami per le funzionalità, sostiene di mantenerli di breve durata (ore o giorni al massimo).
+- [Guida al controllo della versione](https://aka.ms/vsarsolutions). Guida alle strategie di diramazione da ALM Rangers. Vedere branching Strategies. pdf nella scheda Downloads.
+- [Funzionalità per lo sviluppo di software con funzionalità](https://msdn.microsoft.com/magazine/dn683796.aspx). Articolo di MSDN Magazine.
+- [Interruttore della funzionalità](http://martinfowler.com/bliki/FeatureToggle.html). Introduzione ai flag di funzionalità/Attiva/disattivazione nel Blog di Martin Fowler.
+- [Funzionalità](http://geekswithblogs.net/Optikal/archive/2013/02/10/152069.aspx)consente di disabilitare i rami delle funzionalità di Visual Studio. Un altro post di Blog sugli interruttori delle funzionalità, di Dylan Smith.
 
-Per altre informazioni su come gestire le informazioni riservate che non devono essere conservate nei repository di controllo codice sorgente, vedere le risorse seguenti:
+Per ulteriori informazioni sulla gestione di informazioni riservate che non devono essere mantenute nei repository del controllo del codice sorgente, vedere le risorse seguenti:
 
-- [Procedure consigliate per la distribuzione delle password e altri dati sensibili in ASP.NET e servizio App di Azure](../../../../identity/overview/features-api/best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure.md).
-- [Siti Web di Azure: How Application Strings and Connection Strings Work](https://azure.microsoft.com/blog/2013/07/17/windows-azure-web-sites-how-application-strings-and-connection-strings-work/) (App Web di Azure: come funzionano le stringhe di applicazione e le stringhe di connessione). Viene illustrata la funzionalità di Azure che esegue l'override `appSettings` e `connectionStrings` i dati nel *Web. config* file.
-- [Personalizzato le impostazioni di configurazione e dell'applicazione in Azure Web Sites - con Stefan Schackow](https://azure.microsoft.com/documentation/videos/configuration-and-app-settings-of-azure-web-sites/).
+- [Procedure consigliate per la distribuzione di password e altri dati sensibili a ASP.NET e al servizio app Azure](../../../../identity/overview/features-api/best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure.md).
+- [Siti Web di Azure: funzionamento delle stringhe delle applicazioni e delle stringhe di connessione](https://azure.microsoft.com/blog/2013/07/17/windows-azure-web-sites-how-application-strings-and-connection-strings-work/). Viene illustrata la funzionalità di Azure che sostituisce `appSettings` e `connectionStrings` i dati nel file *Web. config* .
+- [Impostazioni di configurazione e applicazione personalizzate in siti Web di Azure-con Stefan Schackow](https://azure.microsoft.com/documentation/videos/configuration-and-app-settings-of-azure-web-sites/).
 
-Per informazioni sugli altri metodi per mantenere informazioni sensibili all'esterno di controllo del codice sorgente, vedere [ASP.NET MVC: Mantenere le impostazioni Private fuori controllo del codice sorgente](http://typecastexception.com/post/2014/04/06/ASPNET-MVC-Keep-Private-Settings-Out-of-Source-Control.aspx).
+Per informazioni su altri metodi per mantenere le informazioni riservate fuori dal controllo del codice sorgente, vedere [ASP.NET MVC: Mantieni le impostazioni private dal controllo del codice sorgente](http://typecastexception.com/post/2014/04/06/ASPNET-MVC-Keep-Private-Settings-Out-of-Source-Control.aspx).
 
 > [!div class="step-by-step"]
 > [Precedente](automate-everything.md)

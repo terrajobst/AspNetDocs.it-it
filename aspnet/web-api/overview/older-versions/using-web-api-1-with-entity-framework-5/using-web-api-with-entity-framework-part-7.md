@@ -1,6 +1,6 @@
 ---
 uid: web-api/overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-7
-title: 'Parte 7: Creazione principale pagina | Microsoft Docs'
+title: 'Parte 7: creazione della pagina principale | Microsoft Docs'
 author: MikeWasson
 description: ''
 ms.author: riande
@@ -8,112 +8,112 @@ ms.date: 07/04/2012
 ms.assetid: eb32a17b-626c-4373-9a7d-3387992f3c04
 msc.legacyurl: /web-api/overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-7
 msc.type: authoredcontent
-ms.openlocfilehash: aaffcecccd138d30355ac0e7ce6c86a67246cc08
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: fe4074c701159a137be3644d65ca844f160c2399
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65108931"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74599981"
 ---
-# <a name="part-7-creating-the-main-page"></a>Parte 7: Creazione della pagina principale
+# <a name="part-7-creating-the-main-page"></a>Parte 7: creazione della pagina principale
 
-da [Mike Wasson](https://github.com/MikeWasson)
+di [Mike Wasson](https://github.com/MikeWasson)
 
-[Download progetto completato](http://code.msdn.microsoft.com/ASP-NET-Web-API-with-afa30545)
+[Scarica progetto completato](https://code.msdn.microsoft.com/ASP-NET-Web-API-with-afa30545)
 
 ## <a name="creating-the-main-page"></a>Creazione della pagina principale
 
-In questa sezione si creerà la pagina principale dell'applicazione. Questa pagina sarà più complessa rispetto alla pagina di amministrazione, in modo che abbiamo si avvicinerà in diversi passaggi. Lungo il percorso, si noterà alcune tecniche più avanzate Knockout. js. Ecco il layout di base della pagina:
+In questa sezione verrà creata la pagina principale dell'applicazione. Questa pagina sarà più complessa della pagina di amministrazione, quindi verrà affrontata in diversi passaggi. Verranno visualizzate alcune tecniche più avanzate di Knockout. js. Ecco il layout di base della pagina:
 
 ![](using-web-api-with-entity-framework-part-7/_static/image1.png)
 
-- "Prodotti" contiene una matrice di prodotti.
-- "Carrello" contiene una matrice di prodotti con quantità. Facendo clic su "Aggiungi al carrello" Aggiorna il carrello della spesa.
-- "Orders" contiene una matrice di ID degli ordini.
-- "Dettagli" contiene un dettaglio ordine, ovvero una matrice di elementi (i prodotti con quantità)
+- "Products" include una matrice di prodotti.
+- "Cart" include una matrice di prodotti con quantità. Se si fa clic su "Aggiungi al carrello", il carrello viene aggiornato.
+- "Orders" include una matrice di ID degli ordini.
+- "Details" include un dettaglio dell'ordine, ovvero una matrice di elementi (prodotti con quantità)
 
-Si inizierà con la definizione di alcuni layout di base in formato HTML, senza l'associazione dati o dello script. Aprire il file Views/Home/Index.cshtml e sostituire tutto il contenuto con quanto segue:
+Si inizierà definendo un layout di base in HTML, senza data binding o script. Aprire il file views/Home/index. cshtml e sostituire tutto il contenuto con il codice seguente:
 
 [!code-html[Main](using-web-api-with-entity-framework-part-7/samples/sample1.html)]
 
-Successivamente, aggiungere una sezione di script e creare un modello di visualizzazione vuoto:
+Successivamente, aggiungere una sezione script e creare un modello di visualizzazione vuoto:
 
 [!code-cshtml[Main](using-web-api-with-entity-framework-part-7/samples/sample2.cshtml)]
 
-In base alla struttura descritto in precedenza, il nostro modello di visualizzazione deve oggetti osservabili per i prodotti, carrello, ordini e dettagli. Aggiungere le variabili seguenti per il `AppViewModel` oggetto:
+In base alla progettazione disegnata in precedenza, il modello di visualizzazione necessita di osservabili per prodotti, carrello, ordini e dettagli. Aggiungere le variabili seguenti all'oggetto `AppViewModel`:
 
 [!code-javascript[Main](using-web-api-with-entity-framework-part-7/samples/sample3.js)]
 
-Gli utenti possono aggiungere elementi dall'elenco dei prodotti nel carrello e rimuovere elementi del carrello. Per incapsulare queste funzioni, si creerà un'altra classe di modello di visualizzazione che rappresenta un prodotto. Aggiungi il seguente codice a `AppViewModel`.
+Gli utenti possono aggiungere elementi dall'elenco dei prodotti al carrello e rimuovere gli elementi dal carrello. Per incapsulare queste funzioni, verrà creata un'altra classe del modello di visualizzazione che rappresenta un prodotto. Aggiungi il seguente codice a `AppViewModel`.
 
 [!code-javascript[Main](using-web-api-with-entity-framework-part-7/samples/sample4.js?highlight=4)]
 
-Il `ProductViewModel` classe contiene due funzioni che consentono di spostare il prodotto da e verso il carrello: `addItemToCart` aggiunge un'unità del prodotto al carrello e `removeAllFromCart` rimuove tutte le quantità del prodotto.
+La classe `ProductViewModel` contiene due funzioni utilizzate per spostare il prodotto da e verso il carrello: `addItemToCart` aggiunge un'unità del prodotto al carrello e `removeAllFromCart` rimuove tutte le quantità del prodotto.
 
-Gli utenti possono selezionare un ordine esistente e ottenere i dettagli dell'ordine. Si sarà incapsulare questa funzionalità in un altro modello di visualizzazione:
+Gli utenti possono selezionare un ordine esistente e ottenere i dettagli dell'ordine. Questa funzionalità verrà incapsulata in un altro modello di visualizzazione:
 
 [!code-javascript[Main](using-web-api-with-entity-framework-part-7/samples/sample5.js?highlight=4)]
 
-Il `OrderDetailsViewModel` viene inizializzata con un ordine, e recupera i dettagli dell'ordine inviando una richiesta AJAX al server.
+Il `OrderDetailsViewModel` viene inizializzato con un ordine e recupera i dettagli dell'ordine inviando una richiesta AJAX al server.
 
-Si noti anche il `total` proprietà di `OrderDetailsViewModel`. Questa proprietà è un tipo speciale di oggetto osservabile chiamato un' [calcolato observable](http://knockoutjs.com/documentation/computedObservables.html). Come suggerisce il nome, un oggetto osservabile calcolata consente di associare i dati a un valore calcolato&#8212;in questo caso, il costo totale dell'ordine.
+Si noti inoltre la proprietà `total` nel `OrderDetailsViewModel`. Questa proprietà è un tipo speciale di osservabile definito [osservabile calcolato](http://knockoutjs.com/documentation/computedObservables.html). Come suggerisce il nome, un oggetto osservabile calcolato consente di eseguire il binding dei dati a&#8212;un valore calcolato, in questo caso, il costo totale dell'ordine.
 
-Successivamente, aggiungere queste funzioni per `AppViewModel`:
+Aggiungere quindi queste funzioni a `AppViewModel`:
 
-- `resetCart` Rimuove tutti gli elementi del carrello.
-- `getDetails` Ottiene i dettagli per un ordine (eseguendo il push di una nuova `OrderDetailsViewModel` nella `details` elenco).
-- `createOrder` Crea un nuovo ordine e lo svuota il carrello della spesa.
+- `resetCart` rimuove tutti gli elementi dal carrello.
+- `getDetails` ottiene i dettagli per un ordine (eseguendo il push di un nuovo `OrderDetailsViewModel` nell'elenco `details`).
+- `createOrder` crea un nuovo ordine e svuota il carrello.
 
 [!code-javascript[Main](using-web-api-with-entity-framework-part-7/samples/sample6.js?highlight=4)]
 
-Infine, inizializzare il modello di visualizzazione da creare richieste AJAX per i prodotti e ordini:
+Infine, inizializzare il modello di visualizzazione eseguendo richieste AJAX per i prodotti e gli ordini:
 
 [!code-javascript[Main](using-web-api-with-entity-framework-part-7/samples/sample7.js)]
 
-OK, che è una grande quantità di codice, ma è progettata in backup dettagliata, ci auguriamo che la progettazione è chiara. A questo punto possiamo aggiungere alcune associazioni Knockout. js al codice HTML.
+OK, si tratta di una grande quantità di codice, ma abbiamo creato una procedura dettagliata, quindi speriamo che la progettazione sia chiara. A questo punto è possibile aggiungere alcune associazioni knockout. js al codice HTML.
 
 **Prodotti**
 
-Ecco i binding per l'elenco dei prodotti:
+Ecco le associazioni per l'elenco di prodotti:
 
 [!code-html[Main](using-web-api-with-entity-framework-part-7/samples/sample8.html)]
 
-Si scorre la matrice di prodotti e visualizza il nome e il prezzo. Il pulsante "Aggiungi a Order" è visibile solo quando l'utente è connesso.
+Viene eseguita l'iterazione della matrice Products e vengono visualizzati il nome e il prezzo. Il pulsante "Aggiungi a ordine" è visibile solo quando l'utente è connesso.
 
-Pulsante "Aggiungi a Order" chiama `addItemToCart` nella `ProductViewModel` istanza per il prodotto. Ciò dimostra una funzionalità interessante di Knockout. js: Quando un modello di visualizzazione contiene altri modelli di visualizzazione, è possibile applicare i binding per il modello interno. In questo esempio, le associazioni all'interno di `foreach` vengono applicati a ogni il `ProductViewModel` istanze. Questo approccio è molto più chiaro rispetto a tutte le funzionalità di inserimento in un singolo modello di visualizzazione.
+Il pulsante "Aggiungi all'ordine" chiama `addItemToCart` nell'istanza `ProductViewModel` per il prodotto. Viene illustrata una funzionalità interessante di Knockout. js: quando un modello di visualizzazione contiene altri modelli di visualizzazione, è possibile applicare le associazioni al modello interno. In questo esempio, le associazioni all'interno del `foreach` vengono applicate a ognuna delle istanze di `ProductViewModel`. Questo approccio è molto più pulito rispetto all'inserimento di tutte le funzionalità in un unico modello di visualizzazione.
 
-**Carrello della spesa**
+**Carrello**
 
-Di seguito sono le associazioni per il carrello della spesa:
+Ecco i binding per il carrello:
 
 [!code-html[Main](using-web-api-with-entity-framework-part-7/samples/sample9.html)]
 
-Si scorre la matrice carrello della spesa e visualizza il nome, prezzo e quantità. Si noti che il collegamento "Remove" e il pulsante di "Creazione dell'ordine" sono associati alle funzioni di modello di visualizzazione.
+Viene eseguita l'iterazione sull'array del carrello e vengono visualizzati il nome, il prezzo e la quantità. Si noti che il collegamento "Rimuovi" e il pulsante "Crea ordine" sono associati alle funzioni di visualizzazione del modello.
 
 **Ordini**
 
-Ecco i binding per l'elenco di ordini:
+Ecco i binding per l'elenco ordini:
 
 [!code-html[Main](using-web-api-with-entity-framework-part-7/samples/sample10.html)]
 
-Si scorre gli ordini e l'ID dell'ordine. L'evento clic sul collegamento associato ai `getDetails` (funzione).
+Viene eseguita l'iterazione degli ordini e viene visualizzato l'ID dell'ordine. L'evento click sul collegamento è associato alla funzione `getDetails`.
 
-**Dettagli dell'ordine**
+**Dettagli ordine**
 
-Di seguito sono le associazioni per i dettagli dell'ordine:
+Ecco le associazioni per i dettagli dell'ordine:
 
 [!code-html[Main](using-web-api-with-entity-framework-part-7/samples/sample11.html)]
 
-Questo scorre gli elementi nell'ordine e consente di visualizzare il prodotto, prezzo e quantità. Il tag div circostante è visibile solo se la matrice di dettagli contiene uno o più elementi.
+Scorre gli elementi nell'ordine e visualizza il prodotto, il prezzo e la quantità. Il div circostante è visibile solo se la matrice di dettagli contiene uno o più elementi.
 
 ## <a name="conclusion"></a>Conclusione
 
-In questa esercitazione è creata un'applicazione che usa Entity Framework per comunicare con il database e API Web ASP.NET per fornire un'interfaccia rivolte al pubblico nella parte superiore del livello dati. Si usa ASP.NET MVC 4 per il rendering delle pagine HTML e Knockout. js più jQuery per offrire le interazioni dinamiche senza Ricarica pagina.
+In questa esercitazione è stata creata un'applicazione che usa Entity Framework per comunicare con il database e API Web ASP.NET per fornire un'interfaccia pubblica sul livello dati. ASP.NET MVC 4 viene usato per eseguire il rendering delle pagine HTML ed knockout. js più jQuery per fornire interazioni dinamiche senza ricaricamenti di pagina.
 
 Risorse aggiuntive:
 
-- [Mappa del contenuto per l'accesso dei dati di ASP.NET](https://msdn.microsoft.com/library/6759sth4.aspx)
-- [Centro per sviluppatori di Entity Framework](https://msdn.microsoft.com/data/ef)
+- [Mappa del contenuto di accesso ai dati di ASP.NET](https://msdn.microsoft.com/library/6759sth4.aspx)
+- [Centro per sviluppatori Entity Framework](https://msdn.microsoft.com/data/ef)
 
 > [!div class="step-by-step"]
 > [Precedente](using-web-api-with-entity-framework-part-6.md)

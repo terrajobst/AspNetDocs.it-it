@@ -8,12 +8,12 @@ ms.date: 03/14/2013
 ms.assetid: aadc5fa4-8215-4fc7-afd5-bcd2ef879728
 msc.legacyurl: /mvc/overview/security/xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages
 msc.type: authoredcontent
-ms.openlocfilehash: 6fcfcda5b95e5844f7d357ac0cbb6d1fd2e215ac
-ms.sourcegitcommit: 84b1681d4e6253e30468c8df8a09fe03beea9309
+ms.openlocfilehash: fb7e76101cbe6a874ddf5b3429ca2dc6d474334b
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73445773"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74595756"
 ---
 # <a name="xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages"></a>Prevenzione di XSRF/CSRF in ASP.NET MVC e pagine Web
 
@@ -128,7 +128,7 @@ L'autenticazione basata sulle attestazioni, d'altra parte, non richiede necessar
 
 Molte distribuzioni che usano l'autenticazione basata sulle attestazioni usano il [servizio di controllo di accesso di Azure](https://msdn.microsoft.com/library/windowsazure/gg429786.aspx) (ACS) in particolare. ACS consente allo sviluppatore di configurare i singoli *provider di identità* , ad esempio ADFS, il provider di account Microsoft, i provider OpenID come Yahoo! e così via, e i provider di identità restituiscono *identificatori di nome*. Questi identificatori di nome possono contenere informazioni personali, ad esempio un indirizzo di posta elettronica, oppure possono essere resi anonimi come un identificatore personale privato (PPID). Indipendentemente dalla tupla, ovvero il provider di identità, l'identificatore del nome, funge sufficientemente da token di rilevamento appropriato per un determinato utente mentre Esplora il sito, in modo che il runtime di ASP.NET Web stack possa usare la tupla al posto del nome utente durante la generazione di e convalida di token di campo anti-XSRF. Gli URI specifici per il provider di identità e l'identificatore del nome sono:
 
-- `http://schemas.microsoft.com/accesscontrolservice/2010/07/claims/identityprovider`
+- `https://schemas.microsoft.com/accesscontrolservice/2010/07/claims/identityprovider`
 - `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier`
 
 (per altre informazioni, vedere la [pagina del documento ACS](https://msdn.microsoft.com/library/windowsazure/gg185971.aspx) ).

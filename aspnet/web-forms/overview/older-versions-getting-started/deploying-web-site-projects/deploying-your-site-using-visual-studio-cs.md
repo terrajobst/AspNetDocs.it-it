@@ -1,137 +1,137 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/deploying-your-site-using-visual-studio-cs
-title: Distribuzione del sito tramite Visual Studio (c#) | Microsoft Docs
+title: Distribuzione del sito tramite Visual Studio (C#) | Microsoft Docs
 author: rick-anderson
-description: Visual Studio include strumenti per la distribuzione di un sito Web. Altre informazioni su questi strumenti in questa esercitazione.
+description: Visual Studio include strumenti per la distribuzione di un sito Web. Altre informazioni su questi strumenti sono disponibili in questa esercitazione.
 ms.author: riande
 ms.date: 04/01/2009
 ms.assetid: cde4ee53-a5d0-4937-a54b-67877e8266c3
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/deploying-your-site-using-visual-studio-cs
 msc.type: authoredcontent
-ms.openlocfilehash: f669e86ceeb53469f99fa3ea4619b4666c4019a0
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 4259e51f5a3e6a97bae2aa27b76cbd56ca3449d6
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65133466"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74636341"
 ---
 # <a name="deploying-your-site-using-visual-studio-c"></a>Distribuzione del sito tramite Visual Studio (C#)
 
-da [Scott Mitchell](https://twitter.com/ScottOnWriting)
+di [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Scaricare il codice](http://download.microsoft.com/download/4/5/F/45F815EC-8B0E-46D3-9FB8-2DC015CCA306/ASPNET_Hosting_Tutorial_04_CS.zip) o [Scarica il PDF](http://download.microsoft.com/download/E/8/9/E8920AE6-D441-41A7-8A77-9EF8FF970D8B/aspnet_tutorial04_DeployingViaVS_cs.pdf)
+[Scarica codice](https://download.microsoft.com/download/4/5/F/45F815EC-8B0E-46D3-9FB8-2DC015CCA306/ASPNET_Hosting_Tutorial_04_CS.zip) o [Scarica PDF](https://download.microsoft.com/download/E/8/9/E8920AE6-D441-41A7-8A77-9EF8FF970D8B/aspnet_tutorial04_DeployingViaVS_cs.pdf)
 
-> Visual Studio include strumenti per la distribuzione di un sito Web. Altre informazioni su questi strumenti in questa esercitazione.
+> Visual Studio include strumenti per la distribuzione di un sito Web. Altre informazioni su questi strumenti sono disponibili in questa esercitazione.
 
 ## <a name="introduction"></a>Introduzione
 
-L'esercitazione precedente ha illustrato come distribuire una semplice applicazione web ASP.NET a un provider di hosting web. In particolare, l'esercitazione ha illustrato come usare un client FTP, ad esempio FileZilla per trasferire i file necessari dall'ambiente di sviluppo all'ambiente di produzione. Visual Studio offre anche strumenti incorporati per facilitare la distribuzione di un provider di hosting web. Questa esercitazione esamina due di questi strumenti: lo strumento Copia sito Web, in cui è possibile spostare file da e verso un server web remoto tramite FTP o le estensioni di Server di FrontPage. e lo strumento di pubblicazione, che consente di copiare l'intero sito Web in una posizione specificata.
+L'esercitazione precedente ha esaminato come distribuire una semplice applicazione Web ASP.NET in un provider di host Web. In particolare, l'esercitazione ha illustrato come usare un client FTP come FileZilla per trasferire i file necessari dall'ambiente di sviluppo all'ambiente di produzione. Visual Studio offre anche strumenti predefiniti per facilitare la distribuzione a un provider di host Web. In questa esercitazione vengono esaminati due di questi strumenti: lo strumento Copia sito Web, in cui è possibile spostare i file da e verso un server Web remoto utilizzando FTP o Estensioni del server di FrontPage; e lo strumento di pubblicazione, che copia l'intero sito Web in un percorso specificato.
 
 > [!NOTE]
-> Altri strumenti correlati alla distribuzione offerte da Visual Studio includono [i progetti di installazione Web](https://msdn.microsoft.com/library/wx3b589t.aspx) e [progetti di distribuzione Web](https://www.microsoft.com/downloads/details.aspx?FamilyId=0AA30AE8-C73B-4BDD-BB1B-FE697256C459&amp;displaylang=en) aggiuntivo. I progetti di installazione Web pacchetto di contenuto di un sito Web e le informazioni di configurazione in un unico file MSI. Questa opzione è particolarmente utile per i siti Web distribuiti all'interno di una rete intranet o per le aziende che vendono un'applicazione web preconfezionato che i clienti installano nei propri server web. Il componente aggiuntivo In progetti di distribuzione Web è che un Visual Studio componente aggiuntivo che facilita specificando le differenze di configurazione tra le compilazioni di ambienti di sviluppo e ambienti di produzione. I progetti di installazione Web non vengono trattati in questa serie di esercitazioni; Progetti di distribuzione Web sono riepilogati nella [ *differenze di configurazione comuni tra sviluppo e produzione* ](common-configuration-differences-between-development-and-production-cs.md) esercitazione.
+> Altri strumenti relativi alla distribuzione offerti da Visual Studio includono i [progetti di installazione Web](https://msdn.microsoft.com/library/wx3b589t.aspx) e i [progetti di distribuzione Web](https://www.microsoft.com/downloads/details.aspx?FamilyId=0AA30AE8-C73B-4BDD-BB1B-FE697256C459&amp;displaylang=en) . I progetti di installazione Web impacchettano il contenuto e le informazioni di configurazione di un sito Web in un unico file MSI. Questa opzione è particolarmente utile per i siti Web distribuiti in una rete Intranet o per le aziende che vendono un'applicazione Web preconfezionata che i clienti installano nei propri server Web. Il componente aggiuntivo dei progetti di distribuzione Web è un componente aggiuntivo di Visual Studio che facilita la definizione delle differenze di configurazione tra le compilazioni per ambienti di sviluppo e ambienti di produzione. I progetti di installazione Web non vengono discussi in questa serie di esercitazioni. I progetti di distribuzione Web sono riepilogati nelle [*differenze di configurazione comuni tra l'esercitazione sviluppo e produzione*](common-configuration-differences-between-development-and-production-cs.md) .
 
 ## <a name="deploying-your-site-using-the-copy-web-site-tool"></a>Distribuzione del sito tramite lo strumento Copia sito Web
 
-Strumento Copia sito Web di Visual Studio è simile a un client FTP autonomo. In breve, lo strumento Copia sito Web consente di connettersi a un sito web remoto tramite FTP o estensioni del Server di FrontPage. Simile all'interfaccia utente di FileZilla, l'interfaccia utente Copia sito Web è costituito da due riquadri: nel riquadro a sinistra sono elencati i file locali mentre nel riquadro a destra sono elencati i file nel server di destinazione.
+Lo strumento Copia sito Web di Visual Studio è analogo alla funzionalità di un client FTP autonomo. In breve, lo strumento Copia sito Web consente di connettersi a un sito Web remoto tramite FTP o Estensioni del server di FrontPage. Analogamente all'interfaccia utente di FileZilla, l'interfaccia utente di copia sito Web è costituita da due riquadri: il riquadro sinistro elenca i file locali mentre nel riquadro destro sono elencati i file nel server di destinazione.
 
 > [!NOTE]
-> Lo strumento Copia sito Web è disponibile solo per progetti di siti Web. Visual Studio offre questo strumento quando si lavora con un progetto di applicazione Web.
+> Lo strumento Copia sito Web è disponibile solo per i progetti di siti Web. Visual Studio offre questo strumento quando si lavora con un progetto di applicazione Web.
 
-Diamo un'occhiata a utilizzando lo strumento Copia sito Web per pubblicare l'applicazione di recensione nell'ambiente di produzione. Poiché lo strumento Copia sito Web funziona solo con i progetti che usano il modello di progetto di sito Web è possibile esaminare solo usando questo strumento con il progetto BookReviewsWSP. Aprire tale progetto.
+Verrà ora esaminato l'utilizzo dello strumento Copia sito Web per pubblicare l'applicazione di revisione del libro nell'ambiente di produzione. Poiché lo strumento Copia sito Web funziona solo con i progetti che utilizzano il modello di progetto di sito Web, è possibile esaminare solo utilizzando questo strumento con il progetto BookReviewsWSP. Aprire il progetto.
 
-Avviare il progetto dello strumento Copia sito Web facendo clic sull'icona Copia sito Web in Esplora soluzioni (questa icona viene visualizzato un cerchio nella figura 1). In alternativa, è possibile selezionare l'opzione di Copia sito Web dal menu sito Web. Entrambi gli approcci avvia l'interfaccia utente di Copia sito Web mostrato nella figura 1; solo il riquadro a sinistra nella figura 1 viene popolato perché abbiamo ancora a connettersi a un server remoto.
+Avviare il progetto copia strumento sito Web facendo clic sull'icona Copia sito Web nella Esplora soluzioni (questa icona è racchiusa tra i cerchi nella figura 1); in alternativa, è possibile selezionare l'opzione Copia sito Web dal menu sito Web. Entrambi gli approcci avviano l'interfaccia utente copia sito Web illustrata nella figura 1. solo il riquadro sinistro della figura 1 viene popolato perché è ancora necessario connettersi a un server remoto.
 
-[![L'interfaccia utente dello strumento Copia sito Web è suddivisa in due riquadri](deploying-your-site-using-visual-studio-cs/_static/image2.png)](deploying-your-site-using-visual-studio-cs/_static/image1.png)
+[![l'interfaccia utente dello strumento Copia sito Web è divisa in due riquadri](deploying-your-site-using-visual-studio-cs/_static/image2.png)](deploying-your-site-using-visual-studio-cs/_static/image1.png)
 
-**Figura 1**: L'interfaccia utente dello strumento Copia sito Web è suddivisa in due riquadri ([fare clic per visualizzare l'immagine con dimensioni normali](deploying-your-site-using-visual-studio-cs/_static/image3.png))
+**Figura 1**: l'interfaccia utente dello strumento Copia sito Web è divisa in due riquadri ([fare clic per visualizzare l'immagine con dimensioni complete](deploying-your-site-using-visual-studio-cs/_static/image3.png))
 
-Per distribuire il sito è necessario innanzitutto connettersi al provider di hosting web. Fare clic sul pulsante Connetti nella parte superiore dell'interfaccia utente Copia sito Web. Verrà visualizzata la finestra di dialogo Apri sito Web, illustrato nella figura 2.
+Per distribuire il sito, è necessario prima connettersi al provider dell'host Web. Fare clic sul pulsante Connetti nella parte superiore dell'interfaccia utente copia sito Web. Verrà visualizzata la finestra di dialogo Apri sito Web illustrato nella figura 2.
 
-È possibile connettersi al sito Web destinazione selezionando una delle quattro opzioni a sinistra:
+È possibile connettersi al sito Web di destinazione selezionando una delle quattro opzioni da sinistra:
 
-- **File System** -selezionare questa opzione per distribuire il sito in una cartella o condivisione di rete accessibile dal computer.
-- **IIS locale** -usare questa opzione per distribuire il sito al server web IIS installato nel computer.
-- **Sito FTP** -connettersi a un sito web remoto tramite FTP.
-- **Sito remoto** -connettersi a un sito Web remoto tramite estensioni del Server di FrontPage.
+- **File System** : selezionare questa operazione per distribuire il sito in una cartella o in una condivisione di rete accessibile dal computer.
+- **IIS locale** : usare questa opzione per distribuire il sito nel server Web IIS installato nel computer.
+- **Sito FTP** : connettersi a un sito Web remoto mediante FTP.
+- **Sito remoto** : connettersi a un sito Web remoto usando estensioni del server di FrontPage.
 
-La maggior parte dei provider di host web supporto FTP, ma meno offre il supporto di estensione del Server di FrontPage. Per questo motivo, ho selezionato l'opzione sito FTP e quindi immettere le informazioni di connessione come illustrato nella figura 2.
+La maggior parte dei provider host Web supporta FTP, ma meno il supporto per l'estensione del server di FrontPage. Per questo motivo, è stata selezionata l'opzione sito FTP, quindi sono state immesse le informazioni di connessione, come illustrato nella figura 2.
 
-[![Specificare il sito Web destinazione](deploying-your-site-using-visual-studio-cs/_static/image5.png)](deploying-your-site-using-visual-studio-cs/_static/image4.png)
+[![specificare il sito Web di destinazione](deploying-your-site-using-visual-studio-cs/_static/image5.png)](deploying-your-site-using-visual-studio-cs/_static/image4.png)
 
-**Figura 2**: Specificare il sito Web di destinazione ([fare clic per visualizzare l'immagine con dimensioni normali](deploying-your-site-using-visual-studio-cs/_static/image6.png))
+**Figura 2**: specificare il sito Web di destinazione ([fare clic per visualizzare l'immagine con dimensioni complete](deploying-your-site-using-visual-studio-cs/_static/image6.png))
 
-Dopo la connessione, lo strumento Copia sito Web carica i file nel sito remoto nel riquadro di destra e indica lo stato di ogni file: Nuove, eliminate, modificate o non modificato. È possibile copiare un file dal sito locale per il sito remoto, e viceversa a.
+Dopo la connessione, lo strumento Copia sito Web carica i file nel sito remoto nel riquadro di destra e indica lo stato di ogni file: nuovo, eliminato, modificato o non modificato. È possibile copiare un file dal sito locale al sito remoto, o viceversa.
 
-È possibile aggiungere una nuova pagina al progetto BookReviewsWSP e distribuirlo in modo che possiamo vedere lo strumento Copia sito Web in azione. Creare una nuova pagina ASP.NET in Visual Studio nella directory radice denominata `Privacy.aspx`. Hanno la pagina utilizzare la pagina master `Site.master` e aggiungere informativa sulla privacy del sito in questa pagina. Figura 3 mostra Visual Studio dopo aver creata questa pagina.
+Aggiungere una nuova pagina al progetto BookReviewsWSP e distribuirla in modo da poter visualizzare lo strumento Copia sito Web in azione. Creare una nuova pagina ASP.NET in Visual Studio nella directory radice denominata `Privacy.aspx`. Fare in modo che la pagina usi la pagina master `Site.master` e aggiungere l'informativa sulla privacy del sito a questa pagina. La figura 3 Mostra Visual Studio dopo la creazione di questa pagina.
 
-[![Aggiungere una nuova pagina denominata &lt;codice&gt;Privacy.aspx&lt;/code&gt; alla cartella radice del sito Web](deploying-your-site-using-visual-studio-cs/_static/image8.png)](deploying-your-site-using-visual-studio-cs/_static/image7.png)
+[![aggiungere una nuova pagina denominata &lt;code&gt;privacy. aspx&lt;/codice&gt; alla cartella radice del sito Web](deploying-your-site-using-visual-studio-cs/_static/image8.png)](deploying-your-site-using-visual-studio-cs/_static/image7.png)
 
-**Figura 3**: Aggiungere una nuova pagina denominata `Privacy.aspx` alla cartella radice del sito Web ([fare clic per visualizzare l'immagine con dimensioni normali](deploying-your-site-using-visual-studio-cs/_static/image9.png))
+**Figura 3**: aggiungere una nuova pagina denominata `Privacy.aspx` alla cartella radice del sito Web ([fare clic per visualizzare l'immagine con dimensioni complete](deploying-your-site-using-visual-studio-cs/_static/image9.png))
 
-Successivamente, tornare all'interfaccia utente Copia sito Web. Come illustrato nella figura 4, il riquadro sinistro include ora i nuovi file - `Policy.aspx` e `Policy.aspx.cs`. Inoltre, questi file sono contrassegnati con un'icona di freccia e un stato di nuovo, che indica che essi esistano nel sito locale, ma non sul sito remoto.
+Tornare quindi all'interfaccia utente copia sito Web. Come illustrato nella figura 4, il riquadro sinistro include ora i nuovi file: `Policy.aspx` e `Policy.aspx.cs`. I file sono contrassegnati con un'icona a freccia e uno stato nuovo, a indicare che sono presenti nel sito locale ma non nel sito remoto.
 
-[![Lo strumento Copia sito Web include il nuovo &lt;codice&gt;Privacy.aspx&lt;/code&gt; pagina nel relativo riquadro a sinistra](deploying-your-site-using-visual-studio-cs/_static/image11.png)](deploying-your-site-using-visual-studio-cs/_static/image10.png)
+[![lo strumento Copia sito Web include il nuovo codice &lt;&gt;privacy. aspx&lt;pagina&gt;/codice nel riquadro a sinistra](deploying-your-site-using-visual-studio-cs/_static/image11.png)](deploying-your-site-using-visual-studio-cs/_static/image10.png)
 
-**Figura 4**: Lo strumento Copia sito Web include il nuovo `Privacy.aspx` pagina nel relativo riquadro di sinistra ([fare clic per visualizzare l'immagine con dimensioni normali](deploying-your-site-using-visual-studio-cs/_static/image12.png))
+**Figura 4**: lo strumento Copia sito Web include la nuova pagina `Privacy.aspx` nel riquadro sinistro ([fare clic per visualizzare l'immagine con dimensioni complete](deploying-your-site-using-visual-studio-cs/_static/image12.png))
 
-Per distribuire il nuovo file, selezionarli e quindi fare clic sull'icona di freccia per li trasferiscono al sito remoto. Dopo il trasferimento viene completato il `Policy.aspx` e `Policy.aspx.cs` file presenti in entrambi i siti locali e remoti con lo stato Unchanged.
+Per distribuire i nuovi file, selezionarli e quindi fare clic sull'icona della freccia per trasferirli al sito remoto. Al termine del trasferimento, il `Policy.aspx` e i file `Policy.aspx.cs` sono presenti nei siti locali e remoti con lo stato non modificato.
 
-Insieme a elencano i nuovi file, lo strumento Copia sito Web evidenzia tutti i file che differiscono tra i siti locali e remoti. Per visualizzare questa azione, tornare al `Privacy.aspx` pagina e aggiungere alcune altre parole l'informativa sulla privacy. Salvare la pagina e quindi tornare allo strumento Copia sito Web. Come illustrato nella figura 5, il `Privacy.aspx` pagina nel riquadro di sinistra lo stato di modifica che indica che è sincronizzato con il sito remoto.
+Oltre a elencare nuovi file, lo strumento Copia sito Web evidenzia tutti i file che differiscono tra i siti locali e remoti. Per verificarne il funzionamento, tornare alla pagina `Privacy.aspx` e aggiungere altre parole all'informativa sulla privacy. Salvare la pagina e tornare allo strumento Copia sito Web. Come illustrato nella figura 5, il `Privacy.aspx` pagina nel riquadro sinistro presenta lo stato modificato indicante che non è sincronizzato con il sito remoto.
 
-[![Lo strumento Copia sito Web indica che il &lt;codice&gt;Privacy.aspx&lt;/code&gt; pagina è stata modificata](deploying-your-site-using-visual-studio-cs/_static/image14.png)](deploying-your-site-using-visual-studio-cs/_static/image13.png)
+[![lo strumento Copia sito Web indica che la pagina del codice &lt;&gt;privacy. aspx&lt;/codice&gt; è stata modificata](deploying-your-site-using-visual-studio-cs/_static/image14.png)](deploying-your-site-using-visual-studio-cs/_static/image13.png)
 
-**Figura 5**: Lo strumento Copia sito Web indica che il `Privacy.aspx` pagina è stata modificata ([fare clic per visualizzare l'immagine con dimensioni normali](deploying-your-site-using-visual-studio-cs/_static/image15.png))
+**Figura 5**: lo strumento Copia sito Web indica che la pagina `Privacy.aspx` è stata modificata ([fare clic per visualizzare l'immagine con dimensioni complete](deploying-your-site-using-visual-studio-cs/_static/image15.png))
 
-Lo strumento Copia sito Web indica anche se un file è stato eliminato dall'ultima operazione di copia. Eliminare il `Privacy.aspx` dal progetto locale e aggiorna lo strumento Copia sito Web. Il `Privacy.aspx` e `Privacy.aspx.cs` file rimangono elencati nel riquadro sinistro, ma con stato Deleted che indica che essi sono stati rimossi dall'ultima operazione di copia.
+Lo strumento Copia sito Web indica inoltre se un file è stato eliminato dall'ultima operazione di copia. Eliminare il `Privacy.aspx` dal progetto locale e aggiornare lo strumento Copia sito Web. I file `Privacy.aspx` e `Privacy.aspx.cs` rimangono elencati nel riquadro sinistro, ma hanno uno stato eliminato che indica che sono stati rimossi dall'ultima operazione di copia.
 
-## <a name="publishing-a-web-application"></a>Pubblicare un'applicazione Web
+## <a name="publishing-a-web-application"></a>Pubblicazione di un'applicazione Web
 
-Un altro modo per distribuire l'applicazione web dall'interno di Visual Studio consiste nell'utilizzare l'opzione pubblica, che è accessibile tramite il menu Compila. L'opzione pubblica l'applicazione viene compilata in modo esplicito e copia quindi tutti i file necessari fino a sito remoto specificato. Come vedremo tra breve, l'opzione pubblica è più d'impatto, rispetto allo strumento Copia sito Web. Mentre lo strumento Copia sito Web consente di esaminare i file nei siti locali e remoti e consente di caricare o scaricare i singoli file in base alle necessità, l'opzione pubblica consente di distribuire l'applicazione web intera.
+Un altro modo per distribuire l'applicazione Web dall'interno di Visual Studio consiste nell'usare l'opzione pubblica, accessibile tramite il menu Compila. L'opzione pubblica compila in modo esplicito l'applicazione, quindi copia tutti i file necessari fino al sito remoto specificato. Come si vedrà a breve, l'opzione di pubblicazione è più smussata rispetto allo strumento Copia sito Web. Mentre lo strumento Copia sito Web consente di esaminare i file presenti nei siti locali e remoti e consente di caricare o scaricare singoli file in base alle esigenze, l'opzione pubblica distribuisce l'intera applicazione Web.
 
-Oltre a copiare tutti i file necessari per il sito remoto specificato, l'opzione pubblica compila anche in modo esplicito l'applicazione. Dato che i progetti applicazione Web devono essere compilati in modo esplicito deve disporre come non è una sorpresa che l'opzione pubblica è disponibile per i progetti applicazione Web. Ciò che può essere un po' sorprendente è che l'opzione pubblica è anche disponibile per i progetti di sito Web. Come indicato nella [ *determinare quali file devono essere distribuiti* ](determining-what-files-need-to-be-deployed-cs.md) esercitazione, i progetti di siti Web può essere compilate in modo esplicito tramite un processo detto *precompilazione*. Questa esercitazione è incentrata sull'utilizzo dell'opzione di pubblicazione con i progetti applicazione Web. un'esercitazione futura illustrerà la precompilazione, momento in cui verrà restituita per spiega come usare l'opzione pubblica con progetti di siti Web.
+Oltre a copiare tutti i file necessari nel sito remoto specificato, l'opzione Publish compila anche in modo esplicito l'applicazione. Dato che i progetti di applicazioni Web devono essere compilati in modo esplicito, non dovrebbe sorprendere che l'opzione pubblica sia disponibile per i progetti di applicazioni Web. Un po' sorprendente è che l'opzione pubblica è disponibile anche per i progetti di siti Web. Come indicato nell'esercitazione [*determinazione dei file da distribuire*](determining-what-files-need-to-be-deployed-cs.md) , i progetti di siti Web possono essere compilati in modo esplicito tramite un processo definito *pre-compilazione*. Questa esercitazione è incentrata sull'uso dell'opzione Publish con i progetti di applicazione Web. un'esercitazione futura esplorerà la pre-compilazione e a questo punto si tornerà a esaminare l'utilizzo dell'opzione di pubblicazione con i progetti di siti Web.
 
 > [!NOTE]
-> Anche se l'opzione pubblica è disponibile in Visual Studio per progetti di siti Web e progetti di applicazione Web, Visual Web Developer offre solo l'opzione di pubblicazione per i progetti applicazione Web.
+> Sebbene l'opzione pubblica sia disponibile in Visual Studio per i progetti di siti Web e per i progetti di applicazioni Web, Visual Web Developer offre solo l'opzione di pubblicazione per i progetti di applicazioni Web.
 
-Diamo un'occhiata distribuzione dell'applicazione le recensioni dei libri usando l'opzione pubblica. Iniziare aprendo BookReviewsWAP (il progetto di applicazione Web) in Visual Studio. Dal menu di pubblicazione scegliere il progetto di compilazione BookReviewsWAP. Verrà visualizzata una finestra di dialogo che richiede il percorso di destinazione, tra le altre opzioni di configurazione (vedere la figura 6). Molto simile con lo strumento Copia sito Web è possibile immettere un percorso che punta a una cartella locale, un sito Web IIS locale, un sito Web remoto che supporta le estensioni del Server di FrontPage, o un indirizzo del server FTP. È possibile scegliere se si desidera sostituire i file nel server web remoto con i file distribuiti o eliminare tutto il contenuto dal sito remoto prima della pubblicazione. È anche possibile specificare se copiare:
+Si esaminerà ora la distribuzione dell'applicazione Book revisioni utilizzando l'opzione Publish. Per iniziare, aprire BookReviewsWAP (progetto applicazione Web) in Visual Studio. Scegliere Compila progetto BookReviewsWAP dal menu pubblica. Viene visualizzata una finestra di dialogo in cui viene richiesto il percorso di destinazione, tra le altre opzioni di configurazione (vedere la figura 6). Analogamente a quanto avviene con lo strumento Copia sito Web, è possibile immettere un percorso che punta a una cartella locale, a un sito Web locale in IIS, a un sito Web remoto che supporta Estensioni del server di FrontPage o a un indirizzo server FTP. È possibile scegliere se sostituire i file nel server Web remoto con i file distribuiti o eliminare tutto il contenuto nel sito remoto prima della pubblicazione. È inoltre possibile specificare se copiare:
 
-- Solo i file di progetto necessari per eseguire l'applicazione, che consente di omettere il codice sorgente non necessari e i file correlati al progetto.
-- Tutti i file di progetto, che include i file del codice sorgente e file di progetto di Visual Studio, ad esempio il file della soluzione.
-- Tutti i file nella cartella di progetto di origine, che consente di copiare tutti i file nella cartella di progetto di origine indipendentemente dal fatto che sono stati inclusi nel progetto.
+- Solo i file del progetto necessari per eseguire l'applicazione, che omette il codice sorgente e i file correlati al progetto non necessari.
+- Tutti i file di progetto, inclusi i file di codice sorgente e i file di progetto di Visual Studio, come il file di soluzione.
+- Tutti i file nella cartella del progetto di origine, che copia tutti i file nella cartella del progetto di origine, indipendentemente dal fatto che siano inclusi nel progetto.
 
-È inoltre disponibile un'opzione per caricare il contenuto del `App_Data` cartella.
+È anche possibile caricare il contenuto della cartella `App_Data`.
 
-[![Specificare il sito Web destinazione](deploying-your-site-using-visual-studio-cs/_static/image17.png)](deploying-your-site-using-visual-studio-cs/_static/image16.png)
+[![specificare il sito Web di destinazione](deploying-your-site-using-visual-studio-cs/_static/image17.png)](deploying-your-site-using-visual-studio-cs/_static/image16.png)
 
-**Figura 6**: Specificare il sito Web di destinazione ([fare clic per visualizzare l'immagine con dimensioni normali](deploying-your-site-using-visual-studio-cs/_static/image18.png))
+**Figura 6**: specificare il sito Web di destinazione ([fare clic per visualizzare l'immagine con dimensioni complete](deploying-your-site-using-visual-studio-cs/_static/image18.png))
 
-Per l'applicazione di recensione sito remoto contiene i file vengano distribuiti durante la copia del progetto BookReviewsWSP tramite lo strumento Copia sito Web. Pertanto, è possibile avere l'opzione pubblica provare innanzitutto a eliminare tutto il contenuto esistente. Inoltre, è possibile semplicemente copiare i file necessari, anziché ingombrare l'ambiente di produzione con file di progetto e codice sorgente non necessari. Dopo aver specificato queste opzioni, fare clic sul pulsante pubblica. Per i secondi diversi successivi Visual Studio distribuirà i file necessari al sito di destinazione, la visualizzazione dello stato di avanzamento nella finestra di Output.
+Per l'applicazione Book Review il sito remoto contiene i file distribuiti durante la copia del progetto BookReviewsWSP tramite lo strumento Copia sito Web. Per questo motivo, è necessario che l'opzione di pubblicazione venga avviata eliminando tutto il contenuto esistente. Inoltre, è sufficiente copiare i file necessari piuttosto che ingombrare l'ambiente di produzione con il codice sorgente e i file di progetto non necessari. Dopo aver specificato queste opzioni, fare clic sul pulsante pubblica. Nei prossimi secondi, Visual Studio distribuirà i file necessari nel sito di destinazione, visualizzandone lo stato di avanzamento nella finestra di output.
 
-Figura 7 mostra i file sul sito FTP dopo l'operazione di pubblicazione è stata completata. Si noti che solo le pagine di codice e i file di supporto necessari sever-client-side e sono stati caricati.
+La figura 7 Mostra i file sul sito FTP dopo il completamento dell'operazione di pubblicazione. Si noti che sono state caricate solo le pagine di markup e i file di supporto del lato client e del server necessari.
 
-[![Solo i file necessari sono stati pubblicati nell'ambiente di produzione](deploying-your-site-using-visual-studio-cs/_static/image20.png)](deploying-your-site-using-visual-studio-cs/_static/image19.png)
+[![solo i file necessari sono stati pubblicati nell'ambiente di produzione](deploying-your-site-using-visual-studio-cs/_static/image20.png)](deploying-your-site-using-visual-studio-cs/_static/image19.png)
 
-**Figura 7**: Solo i necessari file sono stati pubblicati nell'ambiente di produzione ([fare clic per visualizzare l'immagine con dimensioni normali](deploying-your-site-using-visual-studio-cs/_static/image21.png))
+**Figura 7**: solo i file necessari sono stati pubblicati nell'ambiente di produzione ([fare clic per visualizzare l'immagine con dimensioni complete](deploying-your-site-using-visual-studio-cs/_static/image21.png))
 
-L'opzione pubblica è uno strumento meno maggior numero di sfumature rispetto allo strumento Copia sito Web. Mentre lo strumento Copia sito Web consente di esaminare i file nei siti locali e remoti e notare le differenze, l'opzione pubblica non fornisce alcuna interfaccia di questo tipo. Inoltre, lo strumento Copia sito Web consente di apportare modifiche occasionali, caricamento o l'eliminazione di singoli file. L'opzione pubblica non supporta tale controllo con granularità fine. al contrario, pubblica i *intera* dell'applicazione. Questo comportamento presenta vantaggi e svantaggi. D'altra parte, sa quando si usa l'opzione pubblica che è non possibile se si dimentica di caricare un file importante. Si consideri che cosa accade che se sono state apportate una piccola modifica per un sito Web di dimensioni molto grandi, con l'opzione pubblica non è possibile aggiornare la pagina o due che è stata modificata, ma è invece necessario attendere mentre Visual Studio distribuisce l'intero sito.
+L'opzione Publish è uno strumento meno sfumato rispetto allo strumento Copia sito Web. Mentre lo strumento Copia sito Web consente di ispezionare i file nei siti locali e remoti e di verificarne le differenze, l'opzione pubblica non fornisce tale interfaccia. Inoltre, lo strumento Copia sito Web consente di apportare modifiche individuali, caricare o eliminare singoli file. L'opzione Publish non consente un controllo con granularità fine. viene invece pubblicata l' *intera* applicazione. Questo comportamento presenta vantaggi e svantaggi. Sul lato più, si sa quando si usa l'opzione pubblica non si dimentica di caricare un file importante. Tuttavia, si consideri cosa accade se è stata apportata una piccola modifica a un sito Web di grandi dimensioni, con l'opzione pubblica non è possibile aggiornare la pagina o due che è stata modificata, ma è invece necessario attendere mentre Visual Studio distribuisce l'intero sito.
 
-Non è insolito per essere determinati file il cui contenuto è diverso tra gli ambienti di sviluppo e produzione. Un esempio fondamentale è il file di configurazione dell'applicazione, `Web.config`. Poiché l'opzione pubblica alla cieca copia i file dell'applicazione web sovrascrive i file di configurazione personalizzato dell'ambiente di produzione con la versione nell'ambiente di sviluppo. L'esercitazione successiva illustra ulteriormente in questo argomento e offre suggerimenti per la distribuzione di un'applicazione web quando sono presenti differenze di questo tipo.
+Non è insolito che ci siano determinati file il cui contenuto è diverso tra gli ambienti di produzione e di sviluppo. Un esempio chiave è il file di configurazione dell'applicazione, `Web.config`. Poiché l'opzione Pubblica copia ciecamente i file dell'applicazione Web, sovrascrive i file di configurazione personalizzati dell'ambiente di produzione con la versione nell'ambiente di sviluppo. L'esercitazione successiva esamina ulteriormente questo argomento e offre suggerimenti per la distribuzione di un'applicazione Web quando tali differenze sono disponibili.
 
 ## <a name="summary"></a>Riepilogo
 
-La distribuzione di un sito Web richiede la copia dei file necessari dall'ambiente di sviluppo all'ambiente di produzione. L'esercitazione precedente è stato illustrato come trasferire file usando un client FTP, ad esempio FileZilla. Questa esercitazione esaminati due strumenti di distribuzione in Visual Studio: lo strumento Copia sito Web e l'opzione pubblica. Lo strumento Copia sito Web è simile a un client FTP poiché dispone di un'interfaccia due riquadri elenco dei file nel computer locale e un computer remoto specificato che rende più semplice caricare o scaricare i file tra i due computer. L'opzione pubblica è uno strumento d'impatto, più che il progetto viene compilato in modo esplicito e quindi distribuisce l'intera applicazione nella destinazione specificata.
+La distribuzione di un sito Web implica la copia dei file necessari dall'ambiente di sviluppo all'ambiente di produzione. L'esercitazione precedente ha illustrato come trasferire file usando un client FTP come FileZilla. Questa esercitazione ha esaminato due strumenti di distribuzione in Visual Studio: lo strumento Copia sito Web e l'opzione pubblica. Lo strumento Copia sito Web è simile a un client FTP in quanto dispone di un'interfaccia a due riquadri elencando i file nel computer locale e un computer remoto specificato che semplifica il caricamento o il download di file tra i due computer. L'opzione Publish è uno strumento più smussato che compila in modo esplicito il progetto e quindi distribuisce l'intera applicazione nella destinazione specificata.
 
 Buona programmazione!
 
 ### <a name="further-reading"></a>Ulteriori informazioni
 
-Per altre informazioni sugli argomenti trattati in questa esercitazione, vedere le risorse seguenti:
+Per ulteriori informazioni sugli argomenti trattati in questa esercitazione, fare riferimento alle risorse seguenti:
 
-- [Copia sito Web con lo strumento Copia sito Web](https://msdn.microsoft.com/library/1cc82atw.aspx)
-- [Procedura: Distribuire un sito Web mediante lo strumento Copia sito Web](../../../videos/how-do-i/how-do-i-deploy-a-web-site-using-the-copy-web-site-tool.md) (Video)
-- [Procedura: Pubblicare progetti di applicazione Web](https://msdn.microsoft.com/library/aa983453.aspx)
-- [Procedura: Pubblicazione di siti Web](https://msdn.microsoft.com/library/20yh9f1b.aspx)
-- [Il programma di installazione e distribuzione di progetti in Visual Studio](https://msdn.microsoft.com/library/wx3b589t.aspx)
+- [Copia di un sito Web con lo strumento Copia sito Web](https://msdn.microsoft.com/library/1cc82atw.aspx)
+- [Procedura: distribuzione di un sito Web mediante lo strumento Copia sito Web](../../../videos/how-do-i/how-do-i-deploy-a-web-site-using-the-copy-web-site-tool.md) (video)
+- [Procedura: pubblicare progetti di applicazione Web](https://msdn.microsoft.com/library/aa983453.aspx)
+- [Procedura: pubblicare siti Web](https://msdn.microsoft.com/library/20yh9f1b.aspx)
+- [Progetti di installazione e distribuzione in Visual Studio](https://msdn.microsoft.com/library/wx3b589t.aspx)
 
 > [!div class="step-by-step"]
 > [Precedente](deploying-your-site-using-an-ftp-client-cs.md)

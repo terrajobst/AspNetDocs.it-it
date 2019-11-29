@@ -1,65 +1,65 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/accordion/databinding-to-an-accordion-vb
-title: Data Binding a un controllo Accordion (VB) | Microsoft Docs
+title: Associazione dati a una fisarmonica (VB) | Microsoft Docs
 author: wenz
-description: Il controllo Accordion in AJAX Control Toolkit fornisce più riquadri e consente all'utente di visualizzare uno di essi alla volta. I pannelli vengono dichiarati in genere w...
+description: Il controllo di Accordion in AJAX Control Toolkit offre più riquadri e consente all'utente di visualizzarne uno alla volta. I pannelli vengono in genere dichiarati w...
 ms.author: riande
 ms.date: 06/02/2008
 ms.assetid: b19f0875-7d3e-4ecf-baa1-a0c693c765b3
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/accordion/databinding-to-an-accordion-vb
 msc.type: authoredcontent
-ms.openlocfilehash: a5032fa1438594796ea774776f13f4909f24f2fe
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: bfb31940c0395c7ed1d5d471fb8fb686b66c59ad
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65108399"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74599967"
 ---
 # <a name="databinding-to-an-accordion-vb"></a>Data binding a un controllo Accordion (VB)
 
-da [Christian Wenz](https://github.com/wenz)
+di [Christian Wenz](https://github.com/wenz)
 
-[Scaricare il codice](http://download.microsoft.com/download/5/6/d/56d50cef-2011-4c8f-9891-7edc6dc57df9/Accordion1.vb.zip) o [Scarica il PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/accordion1VB.pdf)
+[Scarica codice](https://download.microsoft.com/download/5/6/d/56d50cef-2011-4c8f-9891-7edc6dc57df9/Accordion1.vb.zip) o [Scarica PDF](https://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/accordion1VB.pdf)
 
-> Il controllo Accordion in AJAX Control Toolkit fornisce più riquadri e consente all'utente di visualizzare uno di essi alla volta. I pannelli in genere vengono dichiarati all'interno della pagina, ma l'associazione a un'origine dati offre una maggiore flessibilità.
+> Il controllo di Accordion in AJAX Control Toolkit offre più riquadri e consente all'utente di visualizzarne uno alla volta. I pannelli vengono in genere dichiarati all'interno della pagina stessa, ma il binding a un'origine dati offre maggiore flessibilità.
 
-## <a name="overview"></a>Panoramica
+## <a name="overview"></a>Panoramica di
 
-Il controllo Accordion in AJAX Control Toolkit fornisce più riquadri e consente all'utente di visualizzare uno di essi alla volta. I pannelli in genere vengono dichiarati all'interno della pagina, ma l'associazione a un'origine dati offre una maggiore flessibilità.
+Il controllo di Accordion in AJAX Control Toolkit offre più riquadri e consente all'utente di visualizzarne uno alla volta. I pannelli vengono in genere dichiarati all'interno della pagina stessa, ma il binding a un'origine dati offre maggiore flessibilità.
 
 ## <a name="steps"></a>Passaggi
 
-Prima di tutto, è richiesta un'origine dati. Questo esempio Usa il database AdventureWorks e Microsoft SQL Server 2005 Express Edition. Il database è una parte facoltativa di un'installazione di Visual Studio (inclusa l'edizione express) ed è anche disponibile come download separato in [ https://go.microsoft.com/fwlink/?LinkId=64064 ](https://go.microsoft.com/fwlink/?LinkId=64064). Il database AdventureWorks è parte di SQL Server 2005 Samples and Sample Databases (download all'indirizzo [ https://www.microsoft.com/downloads/details.aspx?FamilyID=e719ecf7-9f46-4312-af89-6ad8702e4e6e&amp; DisplayLang = en](https://www.microsoft.com/downloads/details.aspx?FamilyID=e719ecf7-9f46-4312-af89-6ad8702e4e6e&amp;DisplayLang=en)). Il modo più semplice per configurare il database è di utilizzare Microsoft SQL Server Management Studio Express ([https://www.microsoft.com/downloads/details.aspx?FamilyID=c243a5ae-4bd1-4e3d-94b8-5a0f62bf7796&amp; DisplayLang = en](https://www.microsoft.com/downloads/details.aspx?FamilyID=c243a5ae-4bd1-4e3d-94b8-5a0f62bf7796&amp;DisplayLang=en)) e collegare il `AdventureWorks.mdf` file di database.
+Prima di tutto, è necessaria un'origine dati. In questo esempio vengono utilizzati il database AdventureWorks e il Microsoft SQL Server 2005 Express Edition. Il database è una parte facoltativa di un'installazione di Visual Studio (inclusa l'edizione Express) ed è disponibile anche come download separato in [https://go.microsoft.com/fwlink/?LinkId=64064](https://go.microsoft.com/fwlink/?LinkId=64064). Il database AdventureWorks fa parte degli esempi SQL Server 2005 e dei database di esempio (scaricare [https://www.microsoft.com/downloads/details.aspx?FamilyID=e719ecf7-9f46-4312-af89-6ad8702e4e6e&amp;D isplaylang = en](https://www.microsoft.com/downloads/details.aspx?FamilyID=e719ecf7-9f46-4312-af89-6ad8702e4e6e&amp;DisplayLang=en)). Il modo più semplice per impostare il database consiste nell'usare il Microsoft SQL Server Management Studio Express ([https://www.microsoft.com/downloads/details.aspx?FamilyID=c243a5ae-4bd1-4e3d-94b8-5a0f62bf7796&amp;D isplaylang = en](https://www.microsoft.com/downloads/details.aspx?FamilyID=c243a5ae-4bd1-4e3d-94b8-5a0f62bf7796&amp;DisplayLang=en)) e alleghi il file di database `AdventureWorks.mdf`.
 
-In questo esempio, si presuppone che l'istanza di SQL Server 2005 Express Edition è chiamato `SQLEXPRESS` e si trova nello stesso computer come server web; questo è anche l'impostazione predefinita. Se il programma di installazione diverso, è necessario adattare le informazioni di connessione per il database.
+Per questo esempio si presuppone che l'istanza del SQL Server 2005 Express Edition venga chiamata `SQLEXPRESS` e che risiede nello stesso computer del server Web. si tratta anche della configurazione predefinita. Se la configurazione è diversa, è necessario adattare le informazioni di connessione per il database.
 
-Per attivare la funzionalità di ASP.NET AJAX e il Toolkit di controllo, il `ScriptManager` controllo deve essere inserito in un punto qualsiasi della pagina (ma entro la `<form>` elemento):
+Per attivare la funzionalità di ASP.NET AJAX e di Control Toolkit, il controllo `ScriptManager` deve essere inserito in un punto qualsiasi della pagina (ma all'interno dell'elemento `<form>`):
 
 [!code-aspx[Main](databinding-to-an-accordion-vb/samples/sample1.aspx)]
 
-Quindi, aggiungere un'origine dati alla pagina. Per usare una quantità limitata di dati, selezionare solo le prime cinque voci della tabella Vendor del database AdventureWorks. Se si usa l'Assistente per Visual Studio per creare l'origine dati, è importante che un bug nella versione corrente non prefisso il nome della tabella (`Vendor`) con `Purchasing`. Il markup seguente mostra la sintassi corretta:
+Quindi, aggiungere un'origine dati alla pagina. Per utilizzare una quantità limitata di dati, è possibile selezionare solo le prime cinque voci della tabella Vendor del database AdventureWorks. Se si utilizza l'Assistente di Visual Studio per creare l'origine dati, tenere presente che un bug nella versione corrente non prevede il prefisso del nome della tabella (`Vendor`) con `Purchasing`. Il markup seguente mostra la sintassi corretta:
 
 [!code-aspx[Main](databinding-to-an-accordion-vb/samples/sample2.aspx)]
 
-Ricordare il nome (ID) dell'origine dati. Questa identificazione molto deve quindi essere usata nel `DataSourceID` proprietà del controllo Accordion:
+Ricordare il nome (ID) dell'origine dati. Questa identificazione deve quindi essere usata nella proprietà `DataSourceID` del controllo di Accordion:
 
 [!code-aspx[Main](databinding-to-an-accordion-vb/samples/sample3.aspx)]
 
-All'interno del controllo Accordion, è possibile fornire modelli per varie parti del controllo, compresa l'intestazione (`<HeaderTemplate>`) e il contenuto (`<ContentTemplate>`). All'interno di questi elementi, restituire solo i dati dai dati di origine, utilizzando il `DataBinder.Eval()` metodo:
+All'interno del controllo di Accordion è possibile fornire modelli per varie parti del controllo, tra cui l'intestazione (`<HeaderTemplate>`) e il contenuto (`<ContentTemplate>`). All'interno di questi elementi, è sufficiente restituire i dati dall'origine dati, usando il metodo `DataBinder.Eval()`:
 
 [!code-aspx[Main](databinding-to-an-accordion-vb/samples/sample4.aspx)]
 
-Quando la pagina viene caricata, l'origine dati deve essere associato ai accordion con questo codice lato server:
+Quando la pagina viene caricata, l'origine dati deve essere associata alla fisarmonica con il codice sul lato server:
 
 [!code-aspx[Main](databinding-to-an-accordion-vb/samples/sample5.aspx)]
 
-Per concludere questo esempio, è necessario definire le due classi CSS a cui fanno riferimento nel controllo Accordion (nelle relative proprietà `HeaderCssClass` e `ContentCssClass`). Inserire il seguente markup nel `<head>` sezione della pagina:
+Per concludere questo esempio, è necessario definire le due classi CSS a cui viene fatto riferimento nel controllo della fisarmonica (nelle proprietà `HeaderCssClass` e `ContentCssClass`). Inserire il markup seguente nella sezione `<head>` della pagina:
 
 [!code-css[Main](databinding-to-an-accordion-vb/samples/sample6.css)]
 
-[![I dati di controllo accordion provengono direttamente dall'origine dati](databinding-to-an-accordion-vb/_static/image2.png)](databinding-to-an-accordion-vb/_static/image1.png)
+[![i dati della fisarmonica provengono direttamente dall'origine dati](databinding-to-an-accordion-vb/_static/image2.png)](databinding-to-an-accordion-vb/_static/image1.png)
 
-I dati di controllo accordion provengono direttamente dall'origine dati ([fare clic per visualizzare l'immagine con dimensioni normali](databinding-to-an-accordion-vb/_static/image3.png))
+I dati della fisarmonica provengono direttamente dall'origine dati ([fare clic per visualizzare l'immagine con dimensioni complete](databinding-to-an-accordion-vb/_static/image3.png))
 
 > [!div class="step-by-step"]
 > [Precedente](dynamically-adding-an-accordion-pane-cs.md)

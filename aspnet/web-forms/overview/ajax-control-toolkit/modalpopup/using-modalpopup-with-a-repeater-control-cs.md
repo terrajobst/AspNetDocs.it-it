@@ -1,55 +1,55 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/modalpopup/using-modalpopup-with-a-repeater-control-cs
-title: Uso di ModalPopup con un controllo Repeater (c#) | Microsoft Docs
+title: Uso di ModalPopup con un controllo RepeaterC#() | Microsoft Docs
 author: wenz
-description: Il controllo ModalPopup in AJAX Control Toolkit offre un modo semplice per creare un popup modale utilizzano i canali lato client. È anche possibile usare questo Contr....
+description: Il controllo ModalPopup in AJAX Control Toolkit offre un modo semplice per creare un popup modale usando i mezzi lato client. È anche possibile usare questo contr...
 ms.author: riande
 ms.date: 06/02/2008
 ms.assetid: d686d84a-1c58-492e-8a77-3eb5a0cfe918
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/modalpopup/using-modalpopup-with-a-repeater-control-cs
 msc.type: authoredcontent
-ms.openlocfilehash: f6d17fb9c09a9b0a7dda7335491c10e136a91170
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 980f023c9e8256ad5323aaa6cbb6918b04e18974
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65115393"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74598917"
 ---
 # <a name="using-modalpopup-with-a-repeater-control-c"></a>Uso di ModalPopup con un controllo Repeater (C#)
 
-da [Christian Wenz](https://github.com/wenz)
+di [Christian Wenz](https://github.com/wenz)
 
-[Scaricare il codice](http://download.microsoft.com/download/2/4/0/24052038-f942-4336-905b-b60ae56f0dd5/ModalPopup2.cs.zip) o [Scarica il PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/modalpopup2CS.pdf)
+[Scarica codice](https://download.microsoft.com/download/2/4/0/24052038-f942-4336-905b-b60ae56f0dd5/ModalPopup2.cs.zip) o [Scarica PDF](https://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/modalpopup2CS.pdf)
 
-> Il controllo ModalPopup in AJAX Control Toolkit offre un modo semplice per creare un popup modale utilizzano i canali lato client. È anche possibile usare questo controllo all'interno di un controllo repeater.
+> Il controllo ModalPopup in AJAX Control Toolkit offre un modo semplice per creare un popup modale usando i mezzi lato client. È anche possibile usare questo controllo all'interno di un Repeater.
 
-## <a name="overview"></a>Panoramica
+## <a name="overview"></a>Panoramica di
 
-Il controllo ModalPopup in AJAX Control Toolkit offre un modo semplice per creare un popup modale utilizzano i canali lato client. È anche possibile usare questo controllo all'interno di un controllo repeater.
+Il controllo ModalPopup in AJAX Control Toolkit offre un modo semplice per creare un popup modale usando i mezzi lato client. È anche possibile usare questo controllo all'interno di un Repeater.
 
 ## <a name="steps"></a>Passaggi
 
-Prima di tutto, è richiesta un'origine dati. Questo esempio Usa il database AdventureWorks e Microsoft SQL Server 2005 Express Edition. Il database è una parte facoltativa di un'installazione di Visual Studio (inclusa l'edizione express) ed è anche disponibile come download separato in [ https://go.microsoft.com/fwlink/?LinkId=64064 ](https://go.microsoft.com/fwlink/?LinkId=64064). Il database AdventureWorks è parte di SQL Server 2005 Samples and Sample Databases (download all'indirizzo [ https://www.microsoft.com/downloads/details.aspx?FamilyID=e719ecf7-9f46-4312-af89-6ad8702e4e6e&amp; DisplayLang = en](https://www.microsoft.com/downloads/details.aspx?FamilyID=e719ecf7-9f46-4312-af89-6ad8702e4e6e&amp;DisplayLang=en)). Il modo più semplice per configurare il database è di utilizzare Microsoft SQL Server Management Studio Express ([https://www.microsoft.com/downloads/details.aspx?FamilyID=c243a5ae-4bd1-4e3d-94b8-5a0f62bf7796&amp; DisplayLang = en](https://www.microsoft.com/downloads/details.aspx?FamilyID=c243a5ae-4bd1-4e3d-94b8-5a0f62bf7796&amp;DisplayLang=en)) e collegare il `AdventureWorks.mdf` file di database. In questo esempio, si presuppone che l'istanza di SQL Server 2005 Express Edition è chiamato `SQLEXPRESS` e si trova nello stesso computer come server web; questo è anche l'impostazione predefinita. Se il programma di installazione diverso, è necessario adattare le informazioni di connessione per il database. Per attivare la funzionalità di ASP.NET AJAX e il Toolkit di controllo, il `ScriptManager` controllo deve essere inserito in un punto qualsiasi della pagina (ma entro la `<form>` elemento):
+Prima di tutto, è necessaria un'origine dati. In questo esempio vengono utilizzati il database AdventureWorks e il Microsoft SQL Server 2005 Express Edition. Il database è una parte facoltativa di un'installazione di Visual Studio (inclusa l'edizione Express) ed è disponibile anche come download separato in [https://go.microsoft.com/fwlink/?LinkId=64064](https://go.microsoft.com/fwlink/?LinkId=64064). Il database AdventureWorks fa parte degli esempi SQL Server 2005 e dei database di esempio (scaricare [https://www.microsoft.com/downloads/details.aspx?FamilyID=e719ecf7-9f46-4312-af89-6ad8702e4e6e&amp;D isplaylang = en](https://www.microsoft.com/downloads/details.aspx?FamilyID=e719ecf7-9f46-4312-af89-6ad8702e4e6e&amp;DisplayLang=en)). Il modo più semplice per impostare il database consiste nell'usare il Microsoft SQL Server Management Studio Express ([https://www.microsoft.com/downloads/details.aspx?FamilyID=c243a5ae-4bd1-4e3d-94b8-5a0f62bf7796&amp;D isplaylang = en](https://www.microsoft.com/downloads/details.aspx?FamilyID=c243a5ae-4bd1-4e3d-94b8-5a0f62bf7796&amp;DisplayLang=en)) e alleghi il file di database `AdventureWorks.mdf`. Per questo esempio si presuppone che l'istanza del SQL Server 2005 Express Edition venga chiamata `SQLEXPRESS` e che risiede nello stesso computer del server Web. si tratta anche della configurazione predefinita. Se la configurazione è diversa, è necessario adattare le informazioni di connessione per il database. Per attivare la funzionalità di ASP.NET AJAX e di Control Toolkit, il controllo `ScriptManager` deve essere inserito in un punto qualsiasi della pagina (ma all'interno dell'elemento `<form>`):
 
 [!code-aspx[Main](using-modalpopup-with-a-repeater-control-cs/samples/sample1.aspx)]
 
-Quindi, aggiungere un'origine dati alla pagina. Per usare una quantità limitata di dati, selezionare solo le prime cinque voci della tabella Vendor del database AdventureWorks. Se si usa l'Assistente per Visual Studio per creare l'origine dati, è importante che un bug nella versione corrente non prefisso il nome della tabella (`Vendor`) con `Purchasing`. Il markup seguente mostra la sintassi corretta:
+Quindi, aggiungere un'origine dati alla pagina. Per utilizzare una quantità limitata di dati, è possibile selezionare solo le prime cinque voci della tabella Vendor del database AdventureWorks. Se si utilizza l'Assistente di Visual Studio per creare l'origine dati, tenere presente che un bug nella versione corrente non prevede il prefisso del nome della tabella (`Vendor`) con `Purchasing`. Il markup seguente mostra la sintassi corretta:
 
 [!code-aspx[Main](using-modalpopup-with-a-repeater-control-cs/samples/sample2.aspx)]
 
-Successivamente, aggiungere un pannello che funge da finestra popup modale. Contiene un `Button` controllo a chiudere la finestra popup:
+Aggiungere quindi un pannello che funge da popup modale. Contiene un controllo `Button` per chiudere nuovamente il popup:
 
 [!code-aspx[Main](using-modalpopup-with-a-repeater-control-cs/samples/sample3.aspx)]
 
-Per rendere il popup di lavorare all'interno di repeater, il `ModalPopupExtender` controllo deve essere inserito all'interno di `<ItemTemplate>` sezione del ripetitore. Il pannello non è compreso il repeater, ma il dispositivo extender si trova all'interno. Ecco il markup per il controllo repeater:
+Per far funzionare il popup all'interno del Repeater, è necessario inserire il controllo `ModalPopupExtender` all'interno della sezione `<ItemTemplate>` del ripetitore. Il pannello è quindi esterno al Repeater, ma il dispositivo Extender si trova all'interno. Ecco il markup per il ripetitore:
 
 [!code-aspx[Main](using-modalpopup-with-a-repeater-control-cs/samples/sample4.aspx)]
 
-Quindi, ogni elemento nell'origine dati viene visualizzato con un pulsante accanto a esso che attiva la finestra popup modale.
+Quindi, ogni elemento nell'origine dati viene visualizzato con un pulsante accanto al quale viene attivato il popup modale.
 
-[![La finestra popup modale può essere attivato per ogni voce di origine dati](using-modalpopup-with-a-repeater-control-cs/_static/image2.png)](using-modalpopup-with-a-repeater-control-cs/_static/image1.png)
+[![il popup modale può essere attivato per ogni immissione di un'origine dati](using-modalpopup-with-a-repeater-control-cs/_static/image2.png)](using-modalpopup-with-a-repeater-control-cs/_static/image1.png)
 
-La finestra popup modale può essere attivato per ogni voce di origine dati ([fare clic per visualizzare l'immagine con dimensioni normali](using-modalpopup-with-a-repeater-control-cs/_static/image3.png))
+Il popup modale può essere attivato per ogni voce dell'origine dati ([fare clic per visualizzare l'immagine con dimensioni complete](using-modalpopup-with-a-repeater-control-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
 > [Precedente](launching-a-modal-popup-window-from-server-code-cs.md)

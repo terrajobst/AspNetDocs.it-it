@@ -1,86 +1,86 @@
 ---
 uid: aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/single-sign-on
-title: L'accesso Single Sign-On (creazione di App Cloud funzionanti con Azure) | Microsoft Docs
+title: Single Sign-on (creazione di app Cloud reali con Azure) | Microsoft Docs
 author: MikeWasson
-description: La creazione Real World di App Cloud con e-book Azure si basa su una presentazione sviluppata da Scott Guthrie. Viene spiegato 13 modelli e procedure consigliate che egli può...
+description: La creazione di app cloud del mondo reale con l'e-book di Azure si basa su una presentazione sviluppata da Scott Guthrie. Vengono illustrati 13 modelli e procedure che possono essere...
 ms.author: riande
 ms.date: 06/12/2014
 ms.assetid: 7d82d5e9-0619-4f22-9e03-32a6d52940a5
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/single-sign-on
 msc.type: authoredcontent
-ms.openlocfilehash: 8f6c23eb71ea323b6ab06943097f927f717a8099
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 7e32f444dc38132296cffd45ac658f5abf51f314
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65118738"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74585275"
 ---
-# <a name="single-sign-on-building-real-world-cloud-apps-with-azure"></a>Single Sign-On (creazione di App Cloud funzionanti con Azure)
+# <a name="single-sign-on-building-real-world-cloud-apps-with-azure"></a>Single Sign-on (creazione di app Cloud reali con Azure)
 
-dal [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+di [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
 
-[Download risolverlo Project](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [Scarica l'E-book](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
+[Scarica il progetto di correzione it](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [Scarica l'E-Book](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
-> Il **creazione Real World di App Cloud con Azure** eBook si basa su una presentazione sviluppata da Scott Guthrie. Viene illustrato 13 modelli e procedure consigliate che consentono di avere esito positivo lo sviluppo di App web per il cloud. Per informazioni sull'e-book, vedere [capitolo prima](introduction.md).
+> La **creazione di app cloud del mondo reale con** l'e-book di Azure si basa su una presentazione sviluppata da Scott Guthrie. Vengono illustrati 13 modelli e procedure che consentono di sviluppare correttamente app Web per il cloud. Per informazioni sull'e-book, vedere [il primo capitolo](introduction.md).
 
-Esistono molti problemi di protezione da considerare quando si sviluppa un'app cloud, ma per questa serie ci concentreremo solo su uno: l'accesso single sign-on. Una domanda gente chiede spesso è la seguente: "Io stia principalmente creando App per i dipendenti della mia azienda; come ospitare le app nel cloud e comunque consentire loro di usare lo stesso modello di sicurezza dipendenti conosceranno e usano nell'ambiente locale quando si eseguono le app che sono ospitati all'interno del firewall?" Azure Active Directory (Azure AD) viene chiamato uno dei modi che è abilitare questo scenario. Azure AD consente di rendere enterprise line-of-business (LOB) disponibili le applicazioni su Internet e consente di rendere disponibili ai partner commerciali anche queste app.
+Ci sono molti problemi di sicurezza da considerare quando si sviluppa un'app Cloud, ma per questa serie ci si concentrerà solo su uno di essi: Single Sign-On. Una domanda frequente è la seguente: "Sto creando principalmente app per i dipendenti della mia azienda; in che modo è possibile ospitare queste app nel cloud e continuare a usare lo stesso modello di sicurezza che i dipendenti conoscono e usano nell'ambiente locale quando eseguono App ospitate all'interno del firewall? " Uno dei modi in cui si Abilita questo scenario è denominato Azure Active Directory (Azure AD). Azure AD consente di rendere disponibili app LOB (line-of-business) aziendali tramite Internet e di renderle disponibili anche ai partner commerciali.
 
-## <a name="introduction-to-azure-ad"></a>Introduzione ad Azure AD
+## <a name="introduction-to-azure-ad"></a>Introduzione a Azure AD
 
-[Azure AD](https://docs.microsoft.com/azure/active-directory/) fornisce [Active Directory](https://msdn.microsoft.com/library/windows/desktop/aa746492.aspx) nel cloud. Le funzionalità chiave includono quanto segue:
+[Azure ad](https://docs.microsoft.com/azure/active-directory/) fornisce [Active Directory](https://msdn.microsoft.com/library/windows/desktop/aa746492.aspx) nel cloud. Di seguito sono riportate alcune funzionalità principali:
 
-- Si integra con Active Directory locale.
-- Abilita single sign-on con le tue app.
-- Supporta standard aperti, ad esempio [SAML](http://en.wikipedia.org/wiki/SAML_2.0), [WS-Fed](http://en.wikipedia.org/wiki/WS-Federation), e [OAuth 2.0](http://oauth.net/2/).
-- Enterprise supporta [API REST Graph](https://msdn.microsoft.com/library/hh974476.aspx).
+- Si integra con Active Directory locali.
+- Consente Single Sign-On con le app.
+- Supporta standard aperti, ad esempio [SAML](http://en.wikipedia.org/wiki/SAML_2.0), [WS-Fed](http://en.wikipedia.org/wiki/WS-Federation)e [OAuth 2,0](http://oauth.net/2/).
+- Supporta l' [API REST](https://msdn.microsoft.com/library/hh974476.aspx)di Enterprise Graph.
 
-Si supponga di che avere un ambiente di Windows Server Active Directory in locale che consente di abilitare i dipendenti accedano alle app di Intranet:
+Si supponga di avere un ambiente Windows Server Active Directory locale da usare per consentire ai dipendenti di accedere alle app Intranet:
 
 ![](single-sign-on/_static/image1.png)
 
-Azure AD consente di eseguire operazioni quali è possibile creare una directory nel cloud. È una funzionalità gratuita e semplice da configurare.
+La Azure AD consente di creare una directory nel cloud. Si tratta di una funzionalità gratuita e facile da configurare.
 
-Può essere completamente indipendente da Active Directory locale; è possibile inserire tutti gli utenti desiderati in esso e autenticarli in applicazioni da Internet.
+Può essere completamente indipendente dalla Active Directory locale; è possibile inserire tutti gli elementi desiderati e autenticarli nelle app Internet.
 
-![Windows Azure Active Directory](single-sign-on/_static/image2.png)
+![Active Directory di Windows Azure](single-sign-on/_static/image2.png)
 
-Oppure è possibile integrarlo con on-premises AD.
+In alternativa, è possibile integrarlo con Active Directory locale.
 
-![AD e l'integrazione di WAAD](single-sign-on/_static/image3.png)
+![Integrazione di AD e WAAD](single-sign-on/_static/image3.png)
 
-Ora tutti i dipendenti possono eseguire l'autenticazione in locale possono anche eseguire l'autenticazione tramite Internet, senza dover aprire un firewall o distribuire nuovi server nel data center. È possibile continuare a sfruttare tutti l'ambiente Active Directory esistente che si conosce e utilizzare oggi stesso per fornire le applicazioni interne accesso single sign-on funzionalità.
+Ora tutti i dipendenti che possono autenticarsi in locale possono anche eseguire l'autenticazione su Internet, senza dover aprire un firewall o distribuire nuovi server nel data center. È possibile continuare a sfruttare tutto l'ambiente di Active Directory esistente che si conosce e si utilizza oggi per fornire alle app interne funzionalità Single Sign-on.
 
-Dopo aver apportato questa connessione tra Active Directory e Azure AD, è anche possibile abilitare le app web e i dispositivi mobili per autenticare i dipendenti nel cloud ed è possibile abilitare le app di terze parti, ad esempio Office 365, SalesForce.com o Google apps, per accettare le credenziali dei dipendenti. Se si usa Office 365, sta già configurare con Azure AD perché Office 365 Usa Azure AD per l'autenticazione e autorizzazione.
+Una volta stabilita la connessione tra AD e Azure AD, è anche possibile abilitare le app Web e i dispositivi mobili per autenticare i dipendenti nel cloud ed è possibile abilitare app di terze parti, ad esempio Office 365, SalesForce.com o Google Apps, per accettare il credenziali dei dipendenti. Se si usa Office 365, si è già configurati con Azure AD perché Office 365 USA Azure AD per l'autenticazione e l'autorizzazione.
 
-![app di terze parti 3rd](single-sign-on/_static/image4.png)
+![app di terze parti](single-sign-on/_static/image4.png)
 
-Il vantaggio di questo approccio è che ogni volta che l'organizzazione aggiunge o elimina un utente, o un utente modifica una password, è utilizzare lo stesso processo già usate in locale nell'ambiente in uso. Tutti di on-premises AD modifiche vengono automaticamente propagate nell'ambiente cloud.
+La bellezza di questo approccio è che ogni volta che l'organizzazione aggiunge o Elimina un utente o un utente modifica una password, si usa lo stesso processo usato oggi nell'ambiente locale. Tutte le modifiche AD locali vengono propagate automaticamente nell'ambiente cloud.
 
-Se l'azienda Usa o lo spostamento in Office 365, la buona notizia è che è possibile configurare automaticamente poiché Office 365 Usa Azure AD per l'autenticazione di Azure AD. Pertanto, è possibile facilmente usare nelle proprie applicazioni la stessa autenticazione che usa Office 365.
+Se la società USA o passa a Office 365, è opportuno che la Azure AD configurata automaticamente perché Office 365 USA Azure AD per l'autenticazione. Quindi, è possibile usare facilmente nelle proprie app la stessa autenticazione utilizzata da Office 365.
 
 ## <a name="set-up-an-azure-ad-tenant"></a>Configurare un tenant di Azure AD
 
-Azure Active directory viene chiamata un Azure AD [tenant](https://technet.microsoft.com/library/jj573650.aspx), e la configurazione di un tenant è piuttosto semplice. Vi mostreremo come farlo nel portale di gestione di Azure per illustrare i concetti, ma naturalmente, come le altre funzioni del portale è possibile anche farlo usando uno script o API di gestione.
+una directory Azure AD viene chiamata [tenant](https://technet.microsoft.com/library/jj573650.aspx)Azure ad e la configurazione di un tenant è piuttosto semplice. Verranno illustrate le modalità di esecuzione nel portale di gestione di Azure per illustrare i concetti, ma naturalmente, come le altre funzioni del portale, è possibile eseguire questa operazione anche usando uno script o un'API di gestione.
 
 Nel portale di gestione fare clic sulla scheda Active Directory.
 
 ![WAAD nel portale](single-sign-on/_static/image5.png)
 
-È automaticamente un tenant di Azure AD per l'account di Azure che è possibile fare clic il **Add** nella parte inferiore della pagina per creare directory aggiuntive. È possibile uno per un ambiente di test e uno per la produzione, ad esempio. Si pensi attentamente cosa si denominare una nuova directory. Se si usa il nome della directory e quindi si utilizza il nome del nuovo ad uno degli utenti, che può generare confusione.
+Si dispone automaticamente di un tenant Azure AD per l'account Azure ed è possibile fare clic sul pulsante **Aggiungi** nella parte inferiore della pagina per creare directory aggiuntive. Potrebbe essere necessario un ambiente di testing e uno per la produzione, ad esempio. Valutare con attenzione il nome di una nuova directory. Se si usa il nome per la directory e si usa di nuovo il nome per uno degli utenti, questa operazione può generare confusione.
 
-![Aggiungi directory](single-sign-on/_static/image6.png)
+![Aggiungere un'istanza di Active Directory](single-sign-on/_static/image6.png)
 
-Il portale offre supporto completo per la creazione, eliminazione e la gestione degli utenti all'interno di questo ambiente. Ad esempio, per aggiungere un utente, visitare il **gli utenti** scheda e fare clic sul **Aggiungi utente** pulsante.
+Il portale offre supporto completo per la creazione, l'eliminazione e la gestione di utenti in questo ambiente. Per aggiungere un utente, ad esempio, passare alla scheda **utenti** e fare clic sul pulsante **Aggiungi utente** .
 
 ![Pulsante Aggiungi utente](single-sign-on/_static/image7.png)
 
-![Aggiungi finestra di dialogo utente](single-sign-on/_static/image8.png)
+![Finestra di dialogo Aggiungi utente](single-sign-on/_static/image8.png)
 
-È possibile creare un nuovo utente che esiste solo in questa directory oppure è possibile registrare un Account Microsoft come un utente in questa directory, o registrazione o un utente da un'altra directory di Azure AD come utente in questa directory. (In una directory reale, il dominio predefinito sarebbe ContosoTest.onmicrosoft.com. È anche possibile usare un dominio di propria scelta, ad esempio contoso.com.)
+È possibile creare un nuovo utente che esiste solo in questa directory oppure è possibile registrare un account Microsoft come utente in questa directory oppure eseguire la registrazione o un utente da un'altra Azure AD directory come utente in questa directory. In una directory reale, il dominio predefinito è ContosoTest.onmicrosoft.com. È anche possibile usare un dominio di propria scelta, ad esempio contoso.com.
 
-![Tipi utente](single-sign-on/_static/image9.png)
+![Tipi di utente](single-sign-on/_static/image9.png)
 
-![Aggiungi finestra di dialogo utente](single-sign-on/_static/image10.png)
+![Finestra di dialogo Aggiungi utente](single-sign-on/_static/image10.png)
 
 È possibile assegnare l'utente a un ruolo.
 
@@ -90,104 +90,104 @@ E l'account viene creato con una password temporanea.
 
 ![Password temporanea](single-sign-on/_static/image12.png)
 
-Create in questo modo gli utenti possono accedere immediatamente alle App web usando questa directory cloud.
+Gli utenti creati in questo modo possono accedere immediatamente alle app Web usando questa directory cloud.
 
-Che cos'è ottimo per enterprise single sign-on, tuttavia, è il **integrazione di Directory** scheda:
+La soluzione ideale per Single Sign-On aziendali, tuttavia, è la scheda **integrazione directory** :
 
-![Nella scheda Integrazione directory](single-sign-on/_static/image13.png)
+![Scheda integrazione directory](single-sign-on/_static/image13.png)
 
-Se si abilita l'integrazione di directory, e [scaricare uno strumento](https://social.technet.microsoft.com/wiki/contents/articles/19098.howto-install-the-windows-azure-active-directory-sync-tool-now-with-pictures.aspx), è possibile sincronizzare questa directory cloud con esistente locale Active Directory che è già in uso all'interno dell'organizzazione. Quindi tutti gli utenti archiviati nella directory verrà visualizzata in questa directory cloud. Le app cloud possono ora eseguire l'autenticazione tutti i dipendenti con le credenziali di Active Directory esistente. E tutto ciò è gratuito: sia lo strumento di sincronizzazione e Azure AD.
+Se si Abilita l'integrazione della directory e si [Scarica uno strumento](https://social.technet.microsoft.com/wiki/contents/articles/19098.howto-install-the-windows-azure-active-directory-sync-tool-now-with-pictures.aspx), è possibile sincronizzare questa directory cloud con la Active Directory locale esistente già in uso all'interno dell'organizzazione. Tutti gli utenti archiviati nella directory vengono quindi visualizzati in questa directory cloud. Le app Cloud possono ora autenticare tutti i dipendenti usando le credenziali di Active Directory esistenti. Tutto questo è gratuito, sia lo strumento di sincronizzazione che Azure AD stesso.
 
-Lo strumento è una procedura guidata che è facile da usare, come si può notare da queste schermate. Non sono istruzioni complete, solo un esempio che illustra il processo di base. Per informazioni dettagliate how-to--it, vedere i collegamenti nella [risorse](#resources) sezione alla fine del capitolo.
+Lo strumento è una procedura guidata che è facile da usare, come si può notare da queste schermate. Queste istruzioni non sono complete, ma solo un esempio che illustra il processo di base. Per informazioni dettagliate sulle procedure, vedere i collegamenti nella sezione [Resources](#resources) alla fine del capitolo.
 
-![Configurazione guidata dello strumento di sincronizzazione di WAAD](single-sign-on/_static/image14.png)
+![Configurazione guidata dello strumento di sincronizzazione WAAD](single-sign-on/_static/image14.png)
 
-Fare clic su **successivo**e quindi immettere le credenziali di Azure Active Directory.
+Fare clic su **Avanti**, quindi immettere le credenziali Azure Active Directory.
 
-![Configurazione guidata dello strumento di sincronizzazione di WAAD](single-sign-on/_static/image15.png)
+![Configurazione guidata dello strumento di sincronizzazione WAAD](single-sign-on/_static/image15.png)
 
-Fare clic su **successivo**e quindi immettere in locale le credenziali di Active Directory.
+Fare clic su **Avanti**, quindi immettere le credenziali di ad locali.
 
-![Configurazione guidata dello strumento di sincronizzazione di WAAD](single-sign-on/_static/image16.png)
+![Configurazione guidata dello strumento di sincronizzazione WAAD](single-sign-on/_static/image16.png)
 
-Fare clic su **successivo**e quindi indicare se si desidera archiviare un hash della password Active Directory nel cloud.
+Fare clic su **Avanti**e indicare se si desidera archiviare un hash delle password di Active Directory nel cloud.
 
-![Configurazione guidata dello strumento di sincronizzazione di WAAD](single-sign-on/_static/image17.png)
+![Configurazione guidata dello strumento di sincronizzazione WAAD](single-sign-on/_static/image17.png)
 
-L'hash della password che è possibile archiviare nel cloud è un hash unidirezionale; le password effettive non vengono mai archiviate in Azure AD. Se si decide di archiviare hash nel cloud, è possibile usare [Active Directory Federation Services](https://technet.microsoft.com/library/hh831502.aspx) (ad FS). Sono inoltre disponibili [altri fattori da considerare quando si sceglie di usare ad FS o meno](https://technet.microsoft.com/library/jj573653.aspx). L'opzione di ad FS richiede alcuni ulteriori passaggi di configurazione.
+L'hash della password che è possibile archiviare nel cloud è un hash unidirezionale. le password effettive non vengono mai archiviate in Azure AD. Se si decide di non archiviare gli hash nel cloud, sarà necessario utilizzare [Active Directory Federation Services](https://technet.microsoft.com/library/hh831502.aspx) (ADFS). Esistono anche [altri fattori da considerare quando si sceglie di usare ADFS](https://technet.microsoft.com/library/jj573653.aspx). L'opzione ADFS richiede alcuni passaggi di configurazione aggiuntivi.
 
-Se si sceglie di archiviare hash nel cloud e aver completato lo strumento si avvia la sincronizzazione delle directory quando si fa clic **successivo**.
+Se si sceglie di archiviare gli hash nel cloud, l'operazione viene eseguita e lo strumento avvia la sincronizzazione delle directory quando si fa clic su **Avanti**.
 
-![Configurazione guidata dello strumento di sincronizzazione di WAAD](single-sign-on/_static/image18.png)
+![Configurazione guidata dello strumento di sincronizzazione WAAD](single-sign-on/_static/image18.png)
 
-E in pochi minuti termine.
+E in pochi minuti.
 
-![Configurazione guidata dello strumento di sincronizzazione di WAAD](single-sign-on/_static/image19.png)
+![Configurazione guidata dello strumento di sincronizzazione WAAD](single-sign-on/_static/image19.png)
 
-Sufficiente eseguire questo strumento in un controller di dominio nell'organizzazione, in Windows 2003 o versione successiva. E non è necessario riavviare. Quando è terminato, tutti gli utenti sono nel cloud ed è possibile eseguire single sign-on da qualsiasi applicazione web o per dispositivi mobili, tramite SAML, OAuth e WS-Fed.
+È necessario eseguire questa operazione solo in un controller di dominio dell'organizzazione, in Windows 2003 o versione successiva. E non è necessario riavviare il computer. Al termine, tutti gli utenti si trovano nel cloud ed è possibile eseguire Single Sign-On da qualsiasi applicazione Web o per dispositivi mobili, usando SAML, OAuth o WS-Fed.
 
-In alcuni casi domanda su come proteggere si tratta, vengono utilizzate da Microsoft, per i propri dati aziendali sensibili? E la risposta è affermativa che facciamo. Ad esempio, se si passa al sito di SharePoint di Microsoft interno al [ https://microsoft.sharepoint.com/ ](https://microsoft.sharepoint.com/), viene richiesto di accedere.
+A volte viene chiesto come proteggerlo: Microsoft lo usa per i propri dati aziendali riservati? E la risposta è sì. Ad esempio, se si passa al sito di Microsoft SharePoint interno in [https://microsoft.sharepoint.com/](https://microsoft.sharepoint.com/), viene richiesto di effettuare l'accesso.
 
-![Accesso aggiuntivo per Office 365](single-sign-on/_static/image20.png)
+![Accesso a Office 365](single-sign-on/_static/image20.png)
 
-Microsoft ha abilitato ad FS, in modo che quando si immette un ID Microsoft, ottiene reindirizzate a una pagina di accesso di ad FS.
+Microsoft ha abilitato ADFS. Pertanto, quando si immette un ID Microsoft, si viene reindirizzati a una pagina di accesso ad ADFS.
 
-![Accedi ad FS](single-sign-on/_static/image21.png)
+![Accesso ad ADFS](single-sign-on/_static/image21.png)
 
-E dopo aver immesso le credenziali archiviate in un account Microsoft AD interno, si ha accesso a questa applicazione interna.
+Dopo aver immesso le credenziali archiviate in un account Microsoft AD interno, è possibile accedere a questa applicazione interna.
 
-![Sito di SharePoint MS](single-sign-on/_static/image22.png)
+![Sito di MS SharePoint](single-sign-on/_static/image22.png)
 
-Si intende usare un server di accesso AD principalmente perché abbiamo già avuto ADFS configurato prima di Azure AD è diventato disponibile, ma il processo di log è in corso una directory di Azure AD nel cloud. È inserire i documenti importanti, controllo del codice sorgente, file di gestione delle prestazioni, analisi delle vendite e altro ancora, nel cloud e si usa questa soluzione stesso esatta per proteggerle.
+Si sta usando un server di accesso AD principalmente perché ADFS è già stato configurato prima che Azure AD diventi disponibile, ma il processo di accesso passa attraverso una directory Azure AD nel cloud. Microsoft ha inserito i documenti, il controllo del codice sorgente, i file di gestione delle prestazioni, i report sulle vendite e altro ancora nel cloud e sta usando questa identica soluzione per proteggerli.
 
-## <a name="create-an-aspnet-app-that-uses-azure-ad-for-single-sign-on"></a>Creare un'app ASP.NET che usa Azure AD per single sign-on
+## <a name="create-an-aspnet-app-that-uses-azure-ad-for-single-sign-on"></a>Creare un'app ASP.NET che usa Azure AD per Single Sign-On
 
-Visual Studio rende molto semplice creare un'app che usa Azure AD per single sign-on, come si può notare da alcune schermate.
+Visual Studio semplifica la creazione di un'app che usa Azure AD per Single Sign-On, come si può notare da alcune schermate.
 
-Quando si crea una nuova applicazione ASP.NET, MVC o Web Form, il metodo di autenticazione predefinito è ASP.NET Identity. Per modificare che Azure ad, si fa clic su un **Modifica autenticazione** pulsante.
+Quando si crea una nuova applicazione ASP.NET, ovvero MVC o Web Form, il metodo di autenticazione predefinito è ASP.NET Identity. Per modificare tale valore in Azure AD, fare clic sul pulsante **Modifica autenticazione** .
 
 ![Modifica autenticazione](single-sign-on/_static/image23.png)
 
-Selezionare gli account dell'organizzazione, immettere il nome di dominio e quindi selezionare Single Sign-On.
+Selezionare account aziendali, immettere il nome di dominio e quindi selezionare Single Sign-on.
 
-![Finestra di dialogo di autenticazione Configura](single-sign-on/_static/image24.png)
+![Finestra di dialogo Configura autenticazione](single-sign-on/_static/image24.png)
 
-È possibile anche assegnare le app di lettura o lettura/scrittura l'autorizzazione per i dati della directory. Se tale scopo, è possibile utilizzare il [API REST Graph di Azure](https://msdn.microsoft.com/library/windowsazure/hh974476.aspx) per cercare il numero di telefono degli utenti, scoprire se sono in ufficio, sono ora dell'ultimo accesso via e così via.
+È anche possibile concedere all'app l'autorizzazione di lettura o di lettura/scrittura per i dati di directory. In tal caso, è possibile usare l' [API REST di Azure Graph](https://msdn.microsoft.com/library/windowsazure/hh974476.aspx) per cercare il numero di telefono degli utenti, scoprire se sono in ufficio, quando hanno eseguito l'ultimo accesso e così via.
 
-Questo è tutto che è necessario eseguire - Visual Studio chiede le credenziali di amministratore per il tenant di Azure AD e quindi Configura il progetto sia il tenant di Azure AD per la nuova applicazione.
+A questo punto, Visual Studio richiede le credenziali di un amministratore per il tenant di Azure AD e quindi configura sia il progetto sia il tenant Azure AD per la nuova applicazione.
 
-Quando si esegue il progetto, si vedrà una pagina di accesso ed è possibile accedere con le credenziali di un utente nel tenant di Azure ad.
+Quando si esegue il progetto, viene visualizzata una pagina di accesso ed è possibile accedere con le credenziali di un utente nella directory Azure AD.
 
-![L'organizzazione accesso all'account](single-sign-on/_static/image25.png)
+![Accesso all'account dell'organizzazione](single-sign-on/_static/image25.png)
 
-![Eseguito l'accesso](single-sign-on/_static/image26.png)
+![Accesso eseguito](single-sign-on/_static/image26.png)
 
-Quando si distribuisce l'app in Azure, tutto ciò che devi fare è selezionare una **Abilita autenticazione aziendale** casella di controllo e ancora una volta Visual Studio si occupa di tutto la configurazione per l'utente.
+Quando si distribuisce l'app in Azure, è sufficiente selezionare una casella di controllo **Abilita autenticazione dell'organizzazione** e, ancora una volta, Visual Studio gestisce automaticamente tutta la configurazione.
 
-![Pubblica sito Web](single-sign-on/_static/image27.png)
+![Pubblicazione del sito Web](single-sign-on/_static/image27.png)
 
-Questi screenshot provengono da un'esercitazione dettagliata completa che illustra come compilare un'app che usa l'autenticazione di Azure AD: [Sviluppo di App ASP.NET con Azure Active Directory](../../../../identity/overview/getting-started/developing-aspnet-apps-with-windows-azure-active-directory.md).
+Queste schermate provengono da un'esercitazione dettagliata completa che illustra come compilare un'app che usa l'autenticazione Azure AD: [sviluppo di app ASP.NET con Azure Active Directory](../../../../identity/overview/getting-started/developing-aspnet-apps-with-windows-azure-active-directory.md).
 
 ## <a name="summary"></a>Riepilogo
 
-In questo capitolo si è visto che Azure Active Directory, Visual Studio e ASP.NET, renderlo semplice da configurare single sign-on in applicazioni di Internet per gli utenti dell'organizzazione. Gli utenti possono accedere applicazioni da Internet usando le stesse credenziali che usano per accedere utilizzando Active Directory nella rete interna.
+In questo capitolo si è visto che Azure Active Directory, Visual Studio e ASP.NET, semplificano la configurazione Single Sign-On nelle applicazioni Internet per gli utenti dell'organizzazione. Gli utenti possono accedere alle app Internet usando le stesse credenziali usate per accedere usando Active Directory nella rete interna.
 
-Il [capitolo successivo](data-storage-options.md) esamina le opzioni di archiviazione di dati disponibili per un'app cloud.
+Il [capitolo successivo](data-storage-options.md) esamina le opzioni di archiviazione dei dati disponibili per un'app cloud.
 
 <a id="resources"></a>
 ## <a name="resources"></a>Risorse
 
-Per altre informazioni, vedere le seguenti risorse:
+Per ulteriori informazioni, vedere le seguenti risorse:
 
-- [Documentazione di Azure Active Directory](https://docs.microsoft.com/azure/active-directory/). Pagina del portale per la documentazione di Azure AD nel sito Web windowsazure.com. Per esercitazioni dettagliate, vedere la **sviluppare** sezione.
-- [Azure multi-Factor Authentication](https://docs.microsoft.com/azure/multi-factor-authentication/). Pagina del portale per la documentazione sull'autenticazione a più fattori in Azure.
-- [Le opzioni di autenticazione di account dell'organizzazione](../../../../visual-studio/overview/2013/creating-web-projects-in-visual-studio.md#orgauthoptions). Spiegazione delle opzioni di autenticazione Azure AD nella finestra di dialogo Nuovo progetto Visual Studio 2013.
-- [Microsoft Patterns and Practices - modello di identità federativa](https://msdn.microsoft.com/library/dn589790.aspx).
-- [Procedura: Installare lo strumento Azure Active Directory Sync](https://social.technet.microsoft.com/wiki/contents/articles/19098.howto-install-the-windows-azure-active-directory-sync-tool-now-with-pictures.aspx).
-- [Active Directory Federation Services 2.0 mappa del contenuto](https://social.technet.microsoft.com/wiki/contents/articles/2735.ad-fs-2-0-content-map.aspx). Collegamenti alla documentazione su ad FS 2.0.
-- [Autorizzazione basata sui ruoli e su ACL in un'applicazione di Microsoft Azure AD](https://code.msdn.microsoft.com/Role-Based-and-ACL-Based-86ad71a1). Applicazione di esempio.
-- [Blog di Azure Active Directory Graph API](https://blogs.msdn.com/b/aadgraphteam/).
-- [Controllo di accesso di BYOD e integrazione di Directory in un'infrastruttura di identità ibrida](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2014/PCIT-B213#fbid=). Tech Ed 2014 sessione video da Gayana Bagdasaryan.
+- [Azure Active Directory documentazione](https://docs.microsoft.com/azure/active-directory/). Pagina del portale per Azure AD documentazione nel sito di windowsazure.com. Per esercitazioni dettagliate, vedere la sezione **sviluppare** .
+- [Multi-factor authentication di Azure](https://docs.microsoft.com/azure/multi-factor-authentication/). Pagina del portale per la documentazione sull'autenticazione a più fattori in Azure.
+- [Opzioni di autenticazione dell'account aziendale](../../../../visual-studio/overview/2013/creating-web-projects-in-visual-studio.md#orgauthoptions). Spiegazione delle opzioni di autenticazione Azure AD nella finestra di dialogo Visual Studio 2013 nuovo progetto.
+- [Modelli e procedure Microsoft-modello di identità federata](https://msdn.microsoft.com/library/dn589790.aspx).
+- [HOWTO: installare lo strumento di sincronizzazione Azure Active Directory](https://social.technet.microsoft.com/wiki/contents/articles/19098.howto-install-the-windows-azure-active-directory-sync-tool-now-with-pictures.aspx).
+- [Mappa del contenuto Active Directory Federation Services 2,0](https://social.technet.microsoft.com/wiki/contents/articles/2735.ad-fs-2-0-content-map.aspx). Collegamenti alla documentazione relativa ad ADFS 2,0.
+- [Autorizzazione basata su ruoli e ACL in un'applicazione Windows Azure ad](https://code.msdn.microsoft.com/Role-Based-and-ACL-Based-86ad71a1). Applicazione di esempio.
+- [Azure Active Directory API Graph Blog](https://blogs.msdn.com/b/aadgraphteam/).
+- [Controllo degli accessi in BYOD e integrazione di directory in un'infrastruttura di identità ibrida](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2014/PCIT-B213#fbid=). Video della sessione tech ed 2014 di Gayana benivegna.
 
 > [!div class="step-by-step"]
 > [Precedente](web-development-best-practices.md)

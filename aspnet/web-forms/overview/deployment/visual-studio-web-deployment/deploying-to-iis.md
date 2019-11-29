@@ -8,12 +8,12 @@ ms.date: 01/16/2019
 ms.assetid: 8bf2c4fb-4ee5-4841-bfc2-03462c1f7a7a
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/deploying-to-iis
 msc.type: authoredcontent
-ms.openlocfilehash: c45003325832258466a787bc589bf40e844248a2
-ms.sourcegitcommit: 4b324a11131e38f920126066b94ff478aa9927f8
+ms.openlocfilehash: 738318cce442fdc5d58dd1e4c992d4941be2487e
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70985849"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74591246"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-deploying-to-test"></a>Distribuzione Web ASP.NET con Visual Studio: distribuzione in test
 
@@ -23,7 +23,7 @@ Questa serie di esercitazioni illustra come distribuire (pubblicare) un'applicaz
 
 Per una versione corrente della distribuzione in Azure, vedere [creare un'app web ASP.NET Core in Azure](/azure/app-service/app-service-web-get-started-dotnet).
 
-## <a name="overview"></a>Panoramica
+## <a name="overview"></a>Panoramica di
 
 In questa esercitazione verrà distribuita un'applicazione Web ASP.NET a Internet Information Server (IIS) nel computer locale.
 
@@ -49,7 +49,7 @@ Promemoria: se viene visualizzato un messaggio di errore o un elemento non funzi
 
 Scaricare e installare la soluzione e il progetto di avvio di Contoso University per Visual Studio. Questa soluzione contiene l'esercitazione completata. 
 
-[Scarica progetto Starter](http://go.microsoft.com/fwlink/p/?LinkId=282627)
+[Scarica progetto Starter](https://go.microsoft.com/fwlink/p/?LinkId=282627)
 
 ## <a name="install-iis"></a>Installare IIS
 
@@ -79,7 +79,7 @@ Per eseguire la distribuzione in IIS nel computer di sviluppo, verificare che si
     
      ![Selezionare Servizi World Wide Web](deploying-to-iis/_static/image24.png)    
   
-   * Selezionare **OK**. Vengono visualizzati i messaggi della finestra di dialogo che indicano che è in corso l'installazione.
+   * Scegliere **OK**. Vengono visualizzati i messaggi della finestra di dialogo che indicano che è in corso l'installazione.
 
 Dopo l'installazione di IIS, eseguire **Gestione IIS** per assicurarsi che il .NET Framework versione 4 venga assegnato al pool di applicazioni predefinito.
 
@@ -107,9 +107,9 @@ Dopo l'installazione di IIS, eseguire **Gestione IIS** per assicurarsi che il .N
 
    ![Inetmgr_selecting_Basic_Settings_for_app_pool](deploying-to-iis/_static/image25.png)
 
-7. Nella finestra di dialogo **Modifica pool di applicazioni** modificare la **versione CLR .NET** in **.NET CLR v 4.0.30319**. Selezionare **OK**.
+7. Nella finestra di dialogo **Modifica pool di applicazioni** modificare la **versione CLR .NET** in **.NET CLR v 4.0.30319**. Scegliere **OK**.
 
-   ![Selecting_.NET_4_for_DefaultAppPool](deploying-to-iis/_static/image6a.png)
+   ![Selecting_. NET_4_for_DefaultAppPool](deploying-to-iis/_static/image6a.png)
 
 A questo punto si è pronti per pubblicare un'applicazione Web in IIS. Prima di tutto, tuttavia, creare database per i test.
 
@@ -140,7 +140,7 @@ Dal menu **Visualizza** in Visual Studio selezionare **Esplora server** (**Esplo
 
 ![Selecting_Create_New_SQL_Server_Database](deploying-to-iis/_static/image8.png)
 
-Nella finestra di dialogo **Crea nuovo database di SQL Server** immettere ".\SQLEXPRESS" nella casella **nome server** e "ASPNET-ContosoUniversity" nella casella **nuovo nome database** . Selezionare **OK**.
+Nella finestra di dialogo **Crea nuovo database di SQL Server** immettere ".\SQLEXPRESS" nella casella **nome server** e "ASPNET-ContosoUniversity" nella casella **nuovo nome database** . Scegliere **OK**.
 
 ![Creazione di ASPNET-ContosoUniversity](deploying-to-iis/_static/image9.png)
 

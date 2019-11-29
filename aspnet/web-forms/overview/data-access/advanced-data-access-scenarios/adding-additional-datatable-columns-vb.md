@@ -2,187 +2,187 @@
 uid: web-forms/overview/data-access/advanced-data-access-scenarios/adding-additional-datatable-columns-vb
 title: Aggiunta di colonne DataTable aggiuntive (VB) | Microsoft Docs
 author: rick-anderson
-description: Quando si usa la configurazione guidata TableAdapter per creare un set di dati tipizzato, l'oggetto DataTable corrispondente contiene le colonne restituite dalla query sul database principale. Ma questa posizione...
+description: Quando si utilizza la procedura guidata TableAdapter per creare un DataSet tipizzato, l'oggetto DataTable corrispondente contiene le colonne restituite dalla query del database principale. Ma...
 ms.author: riande
 ms.date: 07/18/2007
 ms.assetid: 1e8e65f9-fe3e-4250-810b-c90227786bed
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/adding-additional-datatable-columns-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 969dd42295530396eca4195a8897a5ee93a61bf2
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 3a55f8bc4d3508387927ca81674073a001867de7
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65133419"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74608468"
 ---
 # <a name="adding-additional-datatable-columns-vb"></a>Aggiunta di colonne DataTable aggiuntive (VB)
 
-da [Scott Mitchell](https://twitter.com/ScottOnWriting)
+di [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Scaricare il codice](http://download.microsoft.com/download/3/9/f/39f92b37-e92e-4ab3-909e-b4ef23d01aa3/ASPNET_Data_Tutorial_70_VB.zip) o [Scarica il PDF](adding-additional-datatable-columns-vb/_static/datatutorial70vb1.pdf)
+[Scarica codice](https://download.microsoft.com/download/3/9/f/39f92b37-e92e-4ab3-909e-b4ef23d01aa3/ASPNET_Data_Tutorial_70_VB.zip) o [Scarica PDF](adding-additional-datatable-columns-vb/_static/datatutorial70vb1.pdf)
 
-> Quando si usa la configurazione guidata TableAdapter per creare un set di dati tipizzato, l'oggetto DataTable corrispondente contiene le colonne restituite dalla query sul database principale. Ma esistono alcuni casi quando l'oggetto DataTable deve includere colonne aggiuntive. In questa esercitazione viene illustrato il motivo per cui le stored procedure sono consigliate al momento del bisogno colonne DataTable aggiuntive.
+> Quando si utilizza la procedura guidata TableAdapter per creare un DataSet tipizzato, l'oggetto DataTable corrispondente contiene le colonne restituite dalla query del database principale. In alcuni casi, tuttavia, è necessario che la DataTable includa colonne aggiuntive. In questa esercitazione viene illustrato il motivo per cui le stored procedure sono consigliate quando sono necessarie colonne DataTable aggiuntive.
 
 ## <a name="introduction"></a>Introduzione
 
-Quando si aggiunge un oggetto TableAdapter a un DataSet tipizzato, lo schema s DataTable corrispondente è determinato dalla query principale s TableAdapter. Ad esempio, se la query principale restituisce i campi dati *un'*, *B*, e *C*, DataTable sarà presenti tre colonne corrispondente denominate *oggetto*, *B*, e *C*. Oltre alle relative query principale, un oggetto TableAdapter può includere altre query che restituiscono, ad esempio, un subset dei dati in base a un parametro. Ad esempio, oltre al `ProductsTableAdapter` query principale s, che restituisce informazioni su tutti i prodotti, contiene anche metodi quali `GetProductsByCategoryID(categoryID)` e `GetProductByProductID(productID)`, quale restituire le informazioni di prodotto specifico basate su un parametro fornito.
+Quando si aggiunge un TableAdapter a un DataSet tipizzato, lo schema di DataTable corrispondente è determinato dalla query principale di TableAdapter. Se, ad esempio, la query principale restituisce i campi dati *A*, *b*e *c*, la DataTable avrà tre colonne corrispondenti denominate *a*, *b*e *c*. Oltre alla query principale, un TableAdapter può includere query aggiuntive che restituiscono, forse, un subset di dati in base a un parametro. Ad esempio, oltre alla query principale `ProductsTableAdapter` s, che restituisce informazioni su tutti i prodotti, contiene anche metodi quali `GetProductsByCategoryID(categoryID)` e `GetProductByProductID(productID)`che restituiscono informazioni specifiche sul prodotto basate su un parametro fornito.
 
-Il modello che lo schema di DataTable s riflettono la query principale s TableAdapter funziona bene se tutti i metodi TableAdapter s restituiscono lo stesso o campi di dati inferiore rispetto a quelle specificate nella query principali. Se un metodo TableAdapter deve restituire i campi dati aggiuntivi, è necessario espandere lo schema di s DataTable di conseguenza. Nel [Master/dettaglio mediante un elenco puntato di record Master e un controllo DataList di dettagli](../filtering-scenarios-with-the-datalist-and-repeater/master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb.md) esercitazione è stato aggiunto un metodo per il `CategoriesTableAdapter` che ha restituito il `CategoryID`, `CategoryName`, e `Description` campi dati definiti in la query principale più `NumberOfProducts`, un campo di dati aggiuntivi che ha segnalato il numero di prodotti associati a ogni categoria. Abbiamo aggiunto manualmente una nuova colonna per il `CategoriesDataTable` per acquisire il `NumberOfProducts` dal metodo di questo nuovo valore del campo dati.
+Il modello di cui lo schema di DataTable riflette la query principale di TableAdapter è adatto se tutti i metodi di TableAdapter restituiscono lo stesso o un minor numero di campi dati rispetto a quelli specificati nella query principale. Se un metodo TableAdapter deve restituire campi dati aggiuntivi, è necessario espandere di conseguenza lo schema di DataTable. In [Master/Detail usando un elenco puntato di record master con un'esercitazione DataList dettagli](../filtering-scenarios-with-the-datalist-and-repeater/master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb.md) è stato aggiunto un metodo al `CategoriesTableAdapter` che ha restituito i campi dati `CategoryID`, `CategoryName`e `Description` definiti nella query principale più `NumberOfProducts`, un campo dati aggiuntivo che ha riportato il numero di prodotti associati a ogni categoria. È stata aggiunta manualmente una nuova colonna al `CategoriesDataTable` per acquisire il valore del campo dati `NumberOfProducts` da questo nuovo metodo.
 
-Come descritto nel [caricamento di file](../working-with-binary-files/uploading-files-vb.md) tutorial, benissimo necessario prestare attenzione con la classe TableAdapter che usano istruzioni SQL ad hoc e dispongono di metodi i cui campi di dati non corrispondono esattamente la query principale. Se si esegue nuovamente la configurazione guidata TableAdapter, aggiornerà tutti i metodi di s TableAdapter in modo che proprio elenco di campi di dati corrisponde alla query principale. Di conseguenza, tutti i metodi con elenchi di colonne personalizzate verranno tornare all'elenco delle colonne query principale s e restituisce i dati previsti. Questo problema non si verifica quando si utilizzano le stored procedure.
+Come illustrato nell'esercitazione sul [caricamento di file](../working-with-binary-files/uploading-files-vb.md) , è necessario prestare particolare attenzione agli oggetti TableAdapter che usano istruzioni SQL ad hoc e che dispongono di metodi i cui campi dati non corrispondono esattamente alla query principale. Se la configurazione guidata TableAdapter viene eseguita di nuovo, aggiornerà tutti i metodi di TableAdapter in modo che l'elenco dei campi dati corrisponda alla query principale. Di conseguenza, qualsiasi metodo con elenchi di colonne personalizzati verrà ripristinato nell'elenco delle colonne della query principale e non restituirà i dati previsti. Questo problema non si verifica quando si utilizzano stored procedure.
 
-In questa esercitazione si esaminerà come estendere lo schema s una DataTable per includere colonne aggiuntive. A causa di inconvenienti dell'oggetto TableAdapter quando si usano istruzioni SQL ad hoc, in questa esercitazione si userà le stored procedure. Fare riferimento al [creazione di nuove Stored procedure per DataSet tipizzata s TableAdapter](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb.md) e [usando Stored procedure esistenti per DataSet tipizzata s TableAdapter](using-existing-stored-procedures-for-the-typed-dataset-s-tableadapters-vb.md) esercitazioni per altre informazioni su configurazione di un oggetto TableAdapter per utilizzare le stored procedure.
+In questa esercitazione verrà esaminato come estendere uno schema di DataTable per includere colonne aggiuntive. A causa della fragilità del TableAdapter quando si usano istruzioni SQL ad hoc, in questa esercitazione si useranno le stored procedure. Per ulteriori informazioni sulla configurazione di un TableAdapter per l'utilizzo di stored procedure, vedere la pagina relativa alla [creazione di nuove stored procedure per i TableAdapter del set di dati tipizzati](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb.md) e all' [utilizzo di stored procedure esistenti per le esercitazioni di TableAdapter tipizzati del DataSet](using-existing-stored-procedures-for-the-typed-dataset-s-tableadapters-vb.md) .
 
-## <a name="step-1-adding-apricequartilecolumn-to-theproductsdatatable"></a>Passaggio 1: Aggiunta di un`PriceQuartile`colonna per il`ProductsDataTable`
+## <a name="step-1-adding-apricequartilecolumn-to-theproductsdatatable"></a>Passaggio 1: aggiunta di una colonna`PriceQuartile`al`ProductsDataTable`
 
-Nel *creazione di nuove Stored procedure per DataSet tipizzata s TableAdapter* esercitazione è stato creato un set di dati tipizzato denominato `NorthwindWithSprocs`. Questo set di dati attualmente contiene due oggetti DataTable: `ProductsDataTable` e `EmployeesDataTable`. Il `ProductsTableAdapter` ha tre metodi seguenti:
+Nell'esercitazione *creazione di nuove stored procedure per set di dati tipizzati s TableAdapters* è stato creato un set di dati tipizzato denominato `NorthwindWithSprocs`. Questo set di dati contiene attualmente due DataTable: `ProductsDataTable` e `EmployeesDataTable`. Il `ProductsTableAdapter` dispone dei tre metodi seguenti:
 
-- `GetProducts` -la query principale, che restituisce tutti i record di `Products` tabella
-- `GetProductsByCategoryID(categoryID)` : restituisce tutti i prodotti con l'oggetto specificato *categoryID*.
-- `GetProductByProductID(productID)` -Restituisce il prodotto specifico con l'oggetto specificato *productID*.
+- `GetProducts`: la query principale, che restituisce tutti i record della tabella `Products`
+- `GetProductsByCategoryID(categoryID)`: restituisce tutti i prodotti con il parametro *CategoryID*specificato.
+- `GetProductByProductID(productID)`: restituisce il prodotto specifico con il *ProductID*specificato.
 
-La query principale e altri due metodi restituiscono lo stesso set di campi di dati, vale a dire tutte le colonne dai `Products` tabella. Non sono presenti sottoquery correlate o `JOIN` s il pull di dati correlati tratti dal `Categories` o `Suppliers` tabelle. Pertanto, il `ProductsDataTable` include una colonna corrispondente per ogni campo nel `Products` tabella.
+La query principale e i due metodi aggiuntivi restituiscono tutti lo stesso set di campi dati, vale a dire tutte le colonne della tabella `Products`. Non sono presenti sottoquery correlate o `JOIN` s che effettua il pull dei dati correlati dalle tabelle `Categories` o `Suppliers`. Pertanto, il `ProductsDataTable` dispone di una colonna corrispondente per ogni campo nella tabella `Products`.
 
-Per questa esercitazione, ti permettono di s aggiungere un metodo per la `ProductsTableAdapter` denominato `GetProductsWithPriceQuartile` che restituisce tutti i prodotti. Oltre ai campi di dati del prodotto standard, `GetProductsWithPriceQuartile` includerà anche un `PriceQuartile` campo data che indica in quale quartile cade il prezzo del prodotto s. Ad esempio, i prodotti il cui prezzo più dispendiose % 25 avranno un `PriceQuartile` pari a 1, mentre quelle il cui prezzo è compreso nell'ultimo 25% avrà un valore pari a 4. Prima ci preoccupiamo creazione della stored procedure per restituire tali informazioni, tuttavia, è innanzitutto necessario aggiornare il `ProductsDataTable` per includere una colonna per contenere le `PriceQuartile` risultati quando la `GetProductsWithPriceQuartile` viene usato il metodo.
+Per questa esercitazione, è possibile aggiungere un metodo al `ProductsTableAdapter` denominato `GetProductsWithPriceQuartile` che restituisce tutti i prodotti. Oltre ai campi di dati di prodotto standard, `GetProductsWithPriceQuartile` includerà anche un campo dati `PriceQuartile` che indica in quale quartile il prezzo del prodotto è inferiore. Ad esempio, i prodotti il cui prezzo è il 25% più costoso avranno un valore di `PriceQuartile` pari a 1, mentre quelli i cui prezzi rientrano nel 25% in basso avranno un valore pari a 4. Prima di preoccuparsi di creare il stored procedure per restituire queste informazioni, è necessario prima di tutto aggiornare i `ProductsDataTable` per includere una colonna che contenga i risultati del `PriceQuartile` quando viene usato il metodo `GetProductsWithPriceQuartile`.
 
-Aprire il `NorthwindWithSprocs` set di dati e fare clic su di `ProductsDataTable`. Scegliere Aggiungi dal menu di scelta rapida e quindi selezionare colonne.
+Aprire il set di dati `NorthwindWithSprocs` e fare clic con il pulsante destro del mouse sulla `ProductsDataTable`. Scegliere Aggiungi dal menu di scelta rapida e quindi selezionare colonna.
 
-[![Aggiungere una nuova colonna per il ProductsDataTable](adding-additional-datatable-columns-vb/_static/image2.png)](adding-additional-datatable-columns-vb/_static/image1.png)
+[![aggiungere una nuova colonna a ProductsDataTable](adding-additional-datatable-columns-vb/_static/image2.png)](adding-additional-datatable-columns-vb/_static/image1.png)
 
-**Figura 1**: Aggiungere una nuova colonna per il `ProductsDataTable` ([fare clic per visualizzare l'immagine con dimensioni normali](adding-additional-datatable-columns-vb/_static/image3.png))
+**Figura 1**: aggiungere una nuova colonna al `ProductsDataTable` ([fare clic per visualizzare l'immagine con dimensioni complete](adding-additional-datatable-columns-vb/_static/image3.png))
 
-Verrà aggiunto una nuova colonna alla DataTable denominato Column1 typu `System.String`. È necessario aggiornare il nome della colonna s PriceQuartile e relativo tipo su `System.Int32` perché che verrà usato per contenere un numero compreso tra 1 e 4. Selezionare la colonna appena aggiunto nel `ProductsDataTable` e, dalla finestra delle proprietà, impostare il `Name` proprietà PriceQuartile e il `DataType` proprietà `System.Int32`.
+Verrà aggiunta una nuova colonna alla DataTable denominata Column1 di tipo `System.String`. È necessario aggiornare il nome della colonna in PriceQuartile e il tipo in `System.Int32` perché verrà usato per contenere un numero compreso tra 1 e 4. Selezionare la colonna appena aggiunta nel `ProductsDataTable` e, dal Finestra Proprietà, impostare la proprietà `Name` su PriceQuartile e la proprietà `DataType` su `System.Int32`.
 
-[![Impostare le proprietà di tipo di dati e il nome della nuova colonna s](adding-additional-datatable-columns-vb/_static/image5.png)](adding-additional-datatable-columns-vb/_static/image4.png)
+[![impostare il nome e le proprietà del tipo di dati della nuova colonna](adding-additional-datatable-columns-vb/_static/image5.png)](adding-additional-datatable-columns-vb/_static/image4.png)
 
-**Figura 2**: Impostare la nuova colonna s `Name` e `DataType` delle proprietà ([fare clic per visualizzare l'immagine con dimensioni normali](adding-additional-datatable-columns-vb/_static/image6.png))
+**Figura 2**: impostare la nuova colonna s `Name` e `DataType` proprietà ([fare clic per visualizzare l'immagine con dimensioni complete](adding-additional-datatable-columns-vb/_static/image6.png))
 
-Come illustrato nella figura 2, sono disponibili proprietà aggiuntive che è possibile impostare, ad esempio se i valori nella colonna devono essere univoci, se la colonna è una colonna a incremento automatico, o meno database `NULL` sono consentiti valori e così via. Lasciare questi valori impostati sui valori predefiniti.
+Come illustrato nella figura 2, sono disponibili proprietà aggiuntive che possono essere impostate, ad esempio se i valori nella colonna devono essere univoci, se la colonna è una colonna a incremento automatico, indipendentemente dal fatto che i valori `NULL` database siano consentiti e così via. Lasciare questi valori impostati sulle impostazioni predefinite.
 
-## <a name="step-2-creating-thegetproductswithpricequartilemethod"></a>Passaggio 2: Creazione di`GetProductsWithPriceQuartile`(metodo)
+## <a name="step-2-creating-thegetproductswithpricequartilemethod"></a>Passaggio 2: creazione del metodo`GetProductsWithPriceQuartile`
 
-Ora che il `ProductsDataTable` è stata aggiornata per includere il `PriceQuartile` colonna, siamo pronti creare il `GetProductsWithPriceQuartile` (metodo). Avviare facendo clic sull'oggetto TableAdapter e scegliendo Aggiungi Query dal menu di scelta rapida. Verrà visualizzata la configurazione guidata Query TableAdapter, che richiede prima di tutto per quanto riguarda se si desidera utilizzare istruzioni SQL ad hoc o una stored procedure nuova o esistente. Poiché abbiamo desidero ancora privo di una stored procedure che restituisce i dati di quartile prezzo, consentire s consentire TableAdapter creare questa stored procedure per noi. Selezionare l'opzione di creazione nuova stored procedure e fare clic su Avanti.
+Ora che il `ProductsDataTable` è stato aggiornato in modo da includere la colonna `PriceQuartile`, è possibile creare il metodo di `GetProductsWithPriceQuartile`. Per iniziare, fare clic con il pulsante destro del mouse sul TableAdapter e scegliere Aggiungi query dal menu di scelta rapida. Viene visualizzata la configurazione guidata query TableAdapter, che richiede prima di tutto se si desidera utilizzare istruzioni SQL ad hoc o una stored procedure nuova o esistente. Poiché non è ancora presente un stored procedure che restituisce i dati dei quartili del prezzo, consentire al TableAdapter di creare questo stored procedure per Microsoft. Selezionare l'opzione Crea nuovo stored procedure e fare clic su Avanti.
 
-[![Indicare la procedura guidata TableAdapter per creare la Stored Procedure per noi](adding-additional-datatable-columns-vb/_static/image8.png)](adding-additional-datatable-columns-vb/_static/image7.png)
+[![indicare alla procedura guidata TableAdapter di creare la stored procedure per gli Stati Uniti](adding-additional-datatable-columns-vb/_static/image8.png)](adding-additional-datatable-columns-vb/_static/image7.png)
 
-**Figura 3**: Indicare la procedura guidata TableAdapter per creare la Stored Procedure per Stati Uniti ([fare clic per visualizzare l'immagine con dimensioni normali](adding-additional-datatable-columns-vb/_static/image9.png))
+**Figura 3**: istruzioni per la creazione della stored procedure da parte della procedura guidata TableAdapter ([fare clic per visualizzare l'immagine con dimensioni complete](adding-additional-datatable-columns-vb/_static/image9.png))
 
-Nella schermata successiva, illustrata nella figura 4, la procedura guidata viene chiesto di specificare il tipo di query da aggiungere. Poiché il `GetProductsWithPriceQuartile` metodo restituirà tutte le colonne e i record dal `Products` di tabella, selezionare il SELECT che restituisce righe opzione e fare clic su Avanti.
+Nella schermata successiva, illustrata nella figura 4, la procedura guidata richiede il tipo di query da aggiungere. Poiché il metodo `GetProductsWithPriceQuartile` restituirà tutte le colonne e i record della tabella `Products`, selezionare l'opzione SELECT that returns Rows e fare clic su Next.
 
-[![La Query sarà un'istruzione SELECT che restituisce più righe](adding-additional-datatable-columns-vb/_static/image11.png)](adding-additional-datatable-columns-vb/_static/image10.png)
+[![la query sarà un'istruzione SELECT che restituisce più righe](adding-additional-datatable-columns-vb/_static/image11.png)](adding-additional-datatable-columns-vb/_static/image10.png)
 
-**Figura 4**: La Query sarà un `SELECT` istruzione che restituisce più righe ([fare clic per visualizzare l'immagine con dimensioni normali](adding-additional-datatable-columns-vb/_static/image12.png))
+**Figura 4**: la query sarà un'istruzione `SELECT` che restituisce più righe ([fare clic per visualizzare l'immagine con dimensioni complete](adding-additional-datatable-columns-vb/_static/image12.png))
 
-Successivamente vengono richieste per il `SELECT` query. Nella procedura guidata, immettere la query seguente:
+Viene quindi richiesto di `SELECT` query. Immettere la query seguente nella procedura guidata:
 
 [!code-sql[Main](adding-additional-datatable-columns-vb/samples/sample1.sql)]
 
-La query precedente Usa SQL Server 2005 s nuove [ `NTILE` funzione](https://msdn.microsoft.com/library/ms175126.aspx) per dividere i risultati in quattro gruppi in cui i gruppi sono determinati dal `UnitPrice` valori ordinati in ordine decrescente.
+La query precedente usa SQL Server 2005 s nuova [funzione`NTILE`](https://msdn.microsoft.com/library/ms175126.aspx) per dividere i risultati in quattro gruppi in cui i gruppi sono determinati dai valori di `UnitPrice` ordinati in ordine decrescente.
 
-Sfortunatamente, il generatore delle Query non sa come analizzare il `OVER` (parola chiave) e verrà visualizzato un errore durante l'analisi della query precedente. Pertanto, immettere la query precedente direttamente nella casella di testo della procedura guidata senza usare il generatore delle Query.
-
-> [!NOTE]
-> Per altre informazioni su SQL Server 2005 e NTILE s altre funzioni di rango, vedere [restituzione di risultati con classificazione più con Microsoft SQL Server 2005](http://www.4guysfromrolla.com/webtech/010406-1.shtml) e il [sezione funzioni di rango](https://msdn.microsoft.com/library/ms189798.aspx) dal [SQL Documentazione Online di Server 2005](https://msdn.microsoft.com/library/ms189798.aspx).
-
-Dopo aver immesso il `SELECT` query e facendo clic su Avanti, la procedura guidata chiede di specificare un nome per la stored procedure viene creato. Denominare la nuova stored procedure `Products_SelectWithPriceQuartile` e fare clic su Avanti.
-
-[![Nome Products_SelectWithPriceQuartile la Stored Procedure](adding-additional-datatable-columns-vb/_static/image14.png)](adding-additional-datatable-columns-vb/_static/image13.png)
-
-**Figura 5**: Nome della Stored Procedure `Products_SelectWithPriceQuartile` ([fare clic per visualizzare l'immagine con dimensioni normali](adding-additional-datatable-columns-vb/_static/image15.png))
-
-Infine, vengono richieste per denominare metodi dell'oggetto TableAdapter. Lasciare entrambi il riempimento di un oggetto DataTable e restituire un oggetto DataTable caselle di controllo selezionata e il nome dei metodi `FillWithPriceQuartile` e `GetProductsWithPriceQuartile`.
-
-[![I metodi di nomi ai TableAdapter e fare clic su Fine](adding-additional-datatable-columns-vb/_static/image17.png)](adding-additional-datatable-columns-vb/_static/image16.png)
-
-**Figura 6**: Nomi dei metodi s TableAdapter e fare clic su Fine ([fare clic per visualizzare l'immagine con dimensioni normali](adding-additional-datatable-columns-vb/_static/image18.png))
-
-Con la `SELECT` query specificata e la stored procedure e i metodi TableAdapter denominati, fare clic su Fine per completare la procedura guidata. A questo punto è possibile che venga visualizzato un avviso o due dalla procedura guidata che informa che il `OVER` istruzione o costrutto SQL non è supportato. Questi avvisi possono essere ignorati.
-
-Dopo aver completato la procedura guidata, l'oggetto TableAdapter deve includere il `FillWithPriceQuartile` e `GetProductsWithPriceQuartile` metodi e il database deve includere una stored procedure denominata `Products_SelectWithPriceQuartile`. Si consiglia di verificare che l'oggetto TableAdapter contenga effettivamente questo nuovo metodo e che la stored procedure è stato aggiunto correttamente al database. Durante il controllo del database, se non è possibile visualizzare la stored procedure try pulsante destro del mouse sulla cartella Stored procedure e scegliere Aggiorna.
-
-![Verificare che sia stato aggiunto un nuovo metodo all'oggetto TableAdapter](adding-additional-datatable-columns-vb/_static/image19.png)
-
-**Figura 7**: Verificare che sia stato aggiunto un nuovo metodo all'oggetto TableAdapter
-
-[![Verificare che il Database contenga il Products_SelectWithPriceQuartile Stored Procedure](adding-additional-datatable-columns-vb/_static/image21.png)](adding-additional-datatable-columns-vb/_static/image20.png)
-
-**Figura 8**: Verificare che il Database contiene le `Products_SelectWithPriceQuartile` Stored Procedure ([fare clic per visualizzare l'immagine con dimensioni normali](adding-additional-datatable-columns-vb/_static/image22.png))
+Sfortunatamente, l'Generatore di query non sa come analizzare la parola chiave `OVER` e verrà visualizzato un errore durante l'analisi della query precedente. Quindi, immettere la query precedente direttamente nella casella di testo della procedura guidata senza usare il Generatore di query.
 
 > [!NOTE]
-> Uno dei vantaggi dell'utilizzo delle stored procedure anziché le istruzioni SQL ad hoc è che eseguire di nuovo la configurazione guidata TableAdapter non modifica gli elenchi di colonne di stored procedure. Effettuare questa verifica facendo clic sul TableAdapter, scegliendo l'opzione Configura il menu di scelta rapida per avviare la procedura guidata e quindi fare clic su Fine per completare l'operazione. Passare quindi al database e visualizzare il `Products_SelectWithPriceQuartile` stored procedure. Si noti che l'elenco di colonne non è stato modificato. Se avessimo si Usa istruzioni SQL ad hoc, eseguire di nuovo la configurazione guidata TableAdapter verrebbe ripristinato attivo questo elenco di colonne query s in modo da corrispondere l'elenco di colonne query principale, eliminando l'istruzione NTILE dalla query utilizzata dal `GetProductsWithPriceQuartile` (metodo).
+> Per ulteriori informazioni su NTILE e SQL Server 2005 s altre funzioni di rango, vedere [restituzione di risultati classificati con Microsoft SQL Server 2005](http://www.4guysfromrolla.com/webtech/010406-1.shtml) e la [sezione funzioni di rango](https://msdn.microsoft.com/library/ms189798.aspx) dalla [documentazione online di SQL Server 2005](https://msdn.microsoft.com/library/ms189798.aspx).
 
-Quando il livello di accesso ai dati di s `GetProductsWithPriceQuartile` metodo viene richiamato, viene eseguito il TableAdapter il `Products_SelectWithPriceQuartile` stored procedure e aggiunge una riga per il `ProductsDataTable` per ciascun record restituito. Vengono eseguito il mapping ai campi di dati restituiti dalla stored procedure per la `ProductsDataTable` colonne s. Poiché non esiste un `PriceQuartile` campo di dati restituito dalla stored procedure, il relativo valore viene assegnato per il `ProductsDataTable` s `PriceQuartile` colonna.
+Dopo aver immesso la query `SELECT` e aver fatto clic su Avanti, nella procedura guidata viene richiesto di specificare un nome per il stored procedure che verrà creato. Denominare il nuovo stored procedure `Products_SelectWithPriceQuartile` e fare clic su Avanti.
 
-Per i metodi TableAdapter con query non restituiscono un `PriceQuartile` campo di dati, il `PriceQuartile` valore colonna s è il valore specificato dal relativo `DefaultValue` proprietà. Come illustrato nella figura 2, questo valore è impostato su `DBNull`, il valore predefinito. Se si preferisce un valore predefinito differente, è sufficiente impostare il `DefaultValue` proprietà conseguenza. Assicurarsi che il `DefaultValue` valore è valido assegnato colonna s `DataType` (ad esempio, `System.Int32` per il `PriceQuartile` colonna).
+[![nome della stored procedure Products_SelectWithPriceQuartile](adding-additional-datatable-columns-vb/_static/image14.png)](adding-additional-datatable-columns-vb/_static/image13.png)
 
-A questo punto sono stati eseguiti i passaggi necessari per l'aggiunta di una colonna aggiuntiva a un oggetto DataTable. Per verificare che questa colonna aggiuntiva funzioni come previsto, consentire s di creare una pagina ASP.NET che consente di visualizzare ogni s nome prodotto, prezzo e quartile prezzo. Prima di procedere, tuttavia, è innanzitutto necessario aggiornare il livello di logica di Business in modo da includere un metodo che chiama verso il basso per i dispositivi DAL `GetProductsWithPriceQuartile` (metodo). Si aggiorna il livello BLL successivamente, nel passaggio 3 e quindi creare la pagina ASP.NET nel passaggio 4.
+**Figura 5**: assegnare un nome alla stored procedure `Products_SelectWithPriceQuartile` ([fare clic per visualizzare l'immagine con dimensioni complete](adding-additional-datatable-columns-vb/_static/image15.png))
 
-## <a name="step-3-augmenting-the-business-logic-layer"></a>Passaggio 3: Aumentando il livello di logica di Business
+Infine, viene richiesto di assegnare un nome ai metodi TableAdapter. Lasciare selezionate le caselle di controllo Fill a DataTable e return a DataTable e assegnare un nome ai metodi `FillWithPriceQuartile` e `GetProductsWithPriceQuartile`.
 
-Prima che si usa il nuovo `GetProductsWithPriceQuartile` metodo dal livello di presentazione, si dovrebbe innanzitutto aggiungere un metodo corrispondente per il livello BLL. Aprire il `ProductsBLLWithSprocs` file di classe e aggiungere il codice seguente:
+[![assegnare un nome ai metodi TableAdapter e fare clic su fine](adding-additional-datatable-columns-vb/_static/image17.png)](adding-additional-datatable-columns-vb/_static/image16.png)
+
+**Figura 6**: assegnare un nome ai metodi di TableAdapter e fare clic su Finish ([fare clic per visualizzare l'immagine con dimensioni complete](adding-additional-datatable-columns-vb/_static/image18.png))
+
+Con la query `SELECT` specificata e i metodi stored procedure e TableAdapter denominati, fare clic su fine per completare la procedura guidata. A questo punto, è possibile che venga visualizzato un avviso o due dalla procedura guidata che informa che l'`OVER` costrutto o l'istruzione SQL non è supportata. Questi avvisi possono essere ignorati.
+
+Al termine della procedura guidata, il TableAdapter deve includere i metodi `FillWithPriceQuartile` e `GetProductsWithPriceQuartile` e il database deve includere un stored procedure denominato `Products_SelectWithPriceQuartile`. È necessario verificare che il TableAdapter contenga effettivamente questo nuovo metodo e che il stored procedure sia stato aggiunto correttamente al database. Quando si esegue il controllo del database, se non viene visualizzato il stored procedure provare a fare clic con il pulsante destro del mouse sulla cartella stored procedure e scegliere Aggiorna.
+
+![Verificare che sia stato aggiunto un nuovo metodo al TableAdapter](adding-additional-datatable-columns-vb/_static/image19.png)
+
+**Figura 7**: verificare che sia stato aggiunto un nuovo metodo al TableAdapter
+
+[![verificare che il database contenga la stored procedure Products_SelectWithPriceQuartile](adding-additional-datatable-columns-vb/_static/image21.png)](adding-additional-datatable-columns-vb/_static/image20.png)
+
+**Figura 8**: verificare che il database contenga la stored procedure `Products_SelectWithPriceQuartile` ([fare clic per visualizzare l'immagine con dimensioni complete](adding-additional-datatable-columns-vb/_static/image22.png))
+
+> [!NOTE]
+> Uno dei vantaggi dell'utilizzo di stored procedure anziché di istruzioni SQL ad hoc è che la riesecuzione della configurazione guidata TableAdapter non modificherà gli elenchi di colonne delle stored procedure. Per verificarlo, fare clic con il pulsante destro del mouse sul TableAdapter, scegliere l'opzione Configura dal menu di scelta rapida per avviare la procedura guidata e quindi fare clic su fine per completare l'operazione. Passare quindi al database e visualizzare il `Products_SelectWithPriceQuartile` stored procedure. Si noti che il relativo elenco di colonne non è stato modificato. Se venivano utilizzate istruzioni SQL ad hoc, la nuova esecuzione della configurazione guidata TableAdapter avrebbe ripristinato l'elenco delle colonne della query in modo che corrisponda all'elenco di colonne di query principale, rimuovendo quindi l'istruzione NTILE dalla query utilizzata dal metodo `GetProductsWithPriceQuartile`.
+
+Quando viene richiamato il metodo di accesso ai dati `GetProductsWithPriceQuartile`, il TableAdapter esegue il stored procedure di `Products_SelectWithPriceQuartile` e aggiunge una riga al `ProductsDataTable` per ogni record restituito. Viene eseguito il mapping dei campi dati restituiti dal stored procedure alle colonne `ProductsDataTable` s. Poiché è presente un `PriceQuartile` campo dati restituito dalla stored procedure, il relativo valore viene assegnato alla colonna `PriceQuartile` `ProductsDataTable` s.
+
+Per i metodi TableAdapter le cui query non restituiscono un campo dati `PriceQuartile`, il valore della colonna `PriceQuartile` è il valore specificato dalla relativa proprietà `DefaultValue`. Come illustrato nella figura 2, questo valore è impostato su `DBNull`, il valore predefinito. Se si preferisce un valore predefinito diverso, è sufficiente impostare di conseguenza la proprietà `DefaultValue`. È sufficiente assicurarsi che il valore `DefaultValue` sia valido in base alle `DataType` della colonna (ad esempio, `System.Int32` per la colonna `PriceQuartile`).
+
+A questo punto sono stati eseguiti i passaggi necessari per aggiungere una colonna aggiuntiva a una DataTable. Per verificare che la colonna aggiuntiva funzioni come previsto, è necessario creare una pagina ASP.NET che visualizzi il nome, il prezzo e il quartile del prezzo di ogni prodotto. Prima di procedere, tuttavia, è necessario prima aggiornare il livello della logica di business per includere un metodo che chiama il metodo DAL `GetProductsWithPriceQuartile`. Il livello BLL verrà aggiornato successivamente, nel passaggio 3, quindi si creerà la pagina ASP.NET nel passaggio 4.
+
+## <a name="step-3-augmenting-the-business-logic-layer"></a>Passaggio 3: incremento del livello della logica di business
+
+Prima di usare il nuovo metodo `GetProductsWithPriceQuartile` dal livello di presentazione, è necessario innanzitutto aggiungere un metodo corrispondente a BLL. Aprire il file di classe `ProductsBLLWithSprocs` e aggiungere il codice seguente:
 
 [!code-vb[Main](adding-additional-datatable-columns-vb/samples/sample2.vb)]
 
-Come gli altri metodi di recupero dei dati in `ProductsBLLWithSprocs`, il `GetProductsWithPriceQuartile` metodo chiama semplicemente DAL corrispondente s `GetProductsWithPriceQuartile` (metodo) e restituisce i relativi risultati.
+Analogamente agli altri metodi di recupero dei dati in `ProductsBLLWithSprocs`, il metodo `GetProductsWithPriceQuartile` chiama semplicemente il metodo del `GetProductsWithPriceQuartile` corrispondente e ne restituisce i risultati.
 
-## <a name="step-4-displaying-the-price-quartile-information-in-an-aspnet-web-page"></a>Passaggio 4: Visualizzando le informazioni di Quartile prezzo in una pagina Web ASP.NET
+## <a name="step-4-displaying-the-price-quartile-information-in-an-aspnet-web-page"></a>Passaggio 4: visualizzazione delle informazioni sui quartili del prezzo in una pagina Web di ASP.NET
 
-Con l'aggiunta di BLL completare sono pronti per creare una pagina ASP.NET che illustra il quartile prezzo per ogni prodotto. Aprire il `AddingColumns.aspx` nella pagina la `AdvancedDAL` cartelle e trascinare un controllo GridView dalla casella degli strumenti nella finestra di progettazione, l'impostazione relativo `ID` proprietà `Products`. GridView s nello smart tag, associarlo a un nuovo oggetto ObjectDataSource denominato `ProductsDataSource`. Configurare ObjectDataSource per usare la `ProductsBLLWithSprocs` classe s `GetProductsWithPriceQuartile` (metodo). Poiché questa sarà una griglia di sola lettura, impostare gli elenchi a discesa nell'aggiornamento, inserimento ed eliminare schede su (nessuno).
+Con il completamento dell'aggiunta di BLL, è possibile creare una pagina ASP.NET che mostri il prezzo quartile per ogni prodotto. Aprire la pagina `AddingColumns.aspx` nella cartella `AdvancedDAL` e trascinare un controllo GridView dalla casella degli strumenti nella finestra di progettazione, impostando la relativa proprietà `ID` su `Products`. Dallo smart tag GridView s, associarlo a un nuovo ObjectDataSource denominato `ProductsDataSource`. Configurare ObjectDataSource per l'uso del metodo `ProductsBLLWithSprocs` Class s `GetProductsWithPriceQuartile`. Poiché si tratta di una griglia di sola lettura, impostare gli elenchi a discesa nelle schede UPDATE, INSERT e DELETE su (nessuno).
 
-[![Configurare ObjectDataSource per usare la classe ProductsBLLWithSprocs](adding-additional-datatable-columns-vb/_static/image24.png)](adding-additional-datatable-columns-vb/_static/image23.png)
+[![configurare ObjectDataSource per l'utilizzo della classe ProductsBLLWithSprocs](adding-additional-datatable-columns-vb/_static/image24.png)](adding-additional-datatable-columns-vb/_static/image23.png)
 
-**Figura 9**: Configurare ObjectDataSource per usare la `ProductsBLLWithSprocs` classe ([fare clic per visualizzare l'immagine con dimensioni normali](adding-additional-datatable-columns-vb/_static/image25.png))
+**Figura 9**: configurare ObjectDataSource per l'uso della classe `ProductsBLLWithSprocs` ([fare clic per visualizzare l'immagine con dimensioni complete](adding-additional-datatable-columns-vb/_static/image25.png))
 
-[![Recuperare le informazioni sul prodotto dal metodo GetProductsWithPriceQuartile](adding-additional-datatable-columns-vb/_static/image27.png)](adding-additional-datatable-columns-vb/_static/image26.png)
+[![recuperare informazioni sul prodotto dal metodo GetProductsWithPriceQuartile](adding-additional-datatable-columns-vb/_static/image27.png)](adding-additional-datatable-columns-vb/_static/image26.png)
 
-**Figura 10**: Recuperare informazioni sui prodotti dal `GetProductsWithPriceQuartile` metodo ([fare clic per visualizzare l'immagine con dimensioni normali](adding-additional-datatable-columns-vb/_static/image28.png))
+**Figura 10**: recuperare informazioni sul prodotto dal metodo `GetProductsWithPriceQuartile` ([fare clic per visualizzare l'immagine con dimensioni complete](adding-additional-datatable-columns-vb/_static/image28.png))
 
-Dopo aver completato la procedura guidata Configura origine dati, Visual Studio aggiungerà automaticamente un BoundField o CampoCasellaDiControllo a GridView per ognuno dei campi di dati restituiti dal metodo. Uno di questi campi di dati viene `PriceQuartile`, ovvero la colonna viene aggiunta al `ProductsDataTable` nel passaggio 1.
+Dopo aver completato la configurazione guidata origine dati, in Visual Studio verrà automaticamente aggiunto un BoundField o CheckBoxField a GridView per ognuno dei campi dati restituiti dal metodo. Uno di questi campi dati è `PriceQuartile`, ovvero la colonna aggiunta al `ProductsDataTable` nel passaggio 1.
 
-Modificare i campi s GridView, rimuovendo tutto tranne le `ProductName`, `UnitPrice`, e `PriceQuartile` BoundField. Configurare il `UnitPrice` BoundField per formattare il valore come valuta e il `UnitPrice` e `PriceQuartile` BoundField e center allineato a destra, rispettivamente. Aggiornare infine restanti BoundField `HeaderText` le proprietà del prodotto, prezzo e prezzo Quartile, rispettivamente. Inoltre, controllare la casella di controllo Abilita ordinamento dallo smart tag s GridView.
+Modificare i campi di GridView, rimuovendo tutti i BoundField tranne i `ProductName`, `UnitPrice`e `PriceQuartile`. Configurare il BoundField `UnitPrice` per formattare il valore come valuta e avere rispettivamente i BoundField `UnitPrice` e `PriceQuartile` a destra e allineati al centro. Aggiornare infine i BoundField rimanenti `HeaderText` proprietà rispettivamente a Product, Price e Price quartil. Inoltre, selezionare la casella di controllo Abilita ordinamento dallo smart tag di GridView.
 
-Dopo queste modifiche, il markup dichiarativo s GridView e ObjectDataSource dovrebbe essere simile al seguente:
+Dopo queste modifiche, il markup dichiarativo GridView e ObjectDataSource dovrebbe essere simile al seguente:
 
 [!code-aspx[Main](adding-additional-datatable-columns-vb/samples/sample3.aspx)]
 
-Figura 11 Mostra questa pagina quando visitati tramite un browser. Si noti che, inizialmente, i prodotti vengono ordinati in base i prezzi in ordine decrescente con ogni prodotto assegnato appropriata `PriceQuartile` valore. Ovviamente questi dati possono essere ordinati in base ad altri criteri con il valore della colonna prezzo Quartile ancora che riflette la classificazione prodotto s rispetto al prezzo (vedere la figura 12).
+La figura 11 Mostra questa pagina quando viene visitata attraverso un browser. Si noti che, inizialmente, i prodotti sono ordinati in base al prezzo in ordine decrescente, a ogni prodotto viene assegnato un valore `PriceQuartile` appropriato. Naturalmente questi dati possono essere ordinati in base ad altri criteri con il valore di colonna price quartil che riflette ancora la classificazione dei prodotti rispetto al prezzo (vedere la figura 12).
 
-[![I prodotti vengono ordinati in base i prezzi](adding-additional-datatable-columns-vb/_static/image30.png)](adding-additional-datatable-columns-vb/_static/image29.png)
+[![i prodotti sono ordinati in base ai prezzi](adding-additional-datatable-columns-vb/_static/image30.png)](adding-additional-datatable-columns-vb/_static/image29.png)
 
-**Figura 11**: I prodotti vengono ordinati in base i relativi prezzi ([fare clic per visualizzare l'immagine con dimensioni normali](adding-additional-datatable-columns-vb/_static/image31.png))
+**Figura 11**: i prodotti sono ordinati in base ai prezzi ([fare clic per visualizzare l'immagine con dimensioni complete](adding-additional-datatable-columns-vb/_static/image31.png))
 
-[![I prodotti vengono ordinati in base i relativi nomi](adding-additional-datatable-columns-vb/_static/image33.png)](adding-additional-datatable-columns-vb/_static/image32.png)
+[![i prodotti sono ordinati in base ai rispettivi nomi](adding-additional-datatable-columns-vb/_static/image33.png)](adding-additional-datatable-columns-vb/_static/image32.png)
 
-**Figura 12**: I prodotti vengono ordinati in base i relativi nomi ([fare clic per visualizzare l'immagine con dimensioni normali](adding-additional-datatable-columns-vb/_static/image34.png))
+**Figura 12**: i prodotti sono ordinati in base ai rispettivi nomi ([fare clic per visualizzare l'immagine con dimensioni complete](adding-additional-datatable-columns-vb/_static/image34.png))
 
 > [!NOTE]
-> Con poche righe di codice potremmo forniamo GridView in modo che colorato le righe di prodotti in base i `PriceQuartile` valore. Si potrebbe essere il primo quartile una luce verde, quelli di quartile secondo un giallo chiaro, tali prodotti di colore e così via. Ti invitiamo a si consiglia di aggiungere questa funzionalità. Se è necessario un aggiornamento sulla formattazione di un controllo GridView, consultare il [formattazione basata su dati personalizzati](../custom-formatting/custom-formatting-based-upon-data-vb.md) esercitazione.
+> Con poche righe di codice è possibile aumentare il controllo GridView in modo che abbia colorato le righe del prodotto in base al valore `PriceQuartile`. Potremmo colorare questi prodotti nel primo quartile un verde chiaro, quelli nel secondo quartile un giallo chiaro e così via. Si consiglia di richiedere qualche istante per aggiungere questa funzionalità. Se è necessario un aggiornamento per la formattazione di GridView, vedere l'esercitazione [sulla formattazione personalizzata basata sui dati](../custom-formatting/custom-formatting-based-upon-data-vb.md) .
 
-## <a name="an-alternative-approach---creating-another-tableadapter"></a>Un approccio alternativo: creazione di un altro oggetto TableAdapter
+## <a name="an-alternative-approach---creating-another-tableadapter"></a>Un approccio alternativo-creazione di un altro TableAdapter
 
-Come abbiamo visto in questa esercitazione, durante l'aggiunta di un metodo a un oggetto TableAdapter che restituisce i campi dati diverso da quelli venga specificata dalla query principale, è possibile aggiungere colonne corrispondenti al DataTable. Questo approccio, tuttavia, funziona bene solo se sono presenti un numero limitato di metodi in TableAdapter che restituiscono campi di dati diversi e se tali campi di dati alternativi non variabile troppo dalla query principale.
+Come illustrato in questa esercitazione, quando si aggiunge un metodo a un TableAdapter che restituisce campi dati diversi da quelli digitati dalla query principale, è possibile aggiungere colonne corrispondenti alla DataTable. Questo approccio, tuttavia, funziona correttamente solo se è presente un numero ridotto di metodi nell'oggetto TableAdapter che restituiscono campi dati diversi e se i campi dati alternativi non variano troppo dalla query principale.
 
-Invece di aggiungere colonne alla tabella di dati, è invece possibile aggiungere un altro oggetto TableAdapter al set di dati che contiene i metodi che restituiscono campi di dati diversi dal primo oggetto TableAdapter. Per questa esercitazione, anziché aggiungere il `PriceQuartile` colonna per il `ProductsDataTable` (in cui viene usato solo per il `GetProductsWithPriceQuartile` (metodo)), avremmo potuto aggiungere un TableAdapter aggiuntive per il set di dati denominato `ProductsWithPriceQuartileTableAdapter` che utilizzato il `Products_SelectWithPriceQuartile` archiviati procedure relative query principale. Usano le pagine ASP.NET che devono ottenere informazioni sui prodotti con quartile il prezzo di `ProductsWithPriceQuartileTableAdapter`, mentre quelle che non è stato possibile continuare a usare il `ProductsTableAdapter`.
+Anziché aggiungere colonne alla DataTable, è possibile aggiungere un altro TableAdapter al set di dati che contiene i metodi del primo TableAdapter che restituiscono campi dati diversi. Per questa esercitazione, anziché aggiungere la colonna `PriceQuartile` al `ProductsDataTable` (dove viene usata solo dal metodo di `GetProductsWithPriceQuartile`), è possibile che sia stato aggiunto un TableAdapter aggiuntivo al set di dati denominato `ProductsWithPriceQuartileTableAdapter` che usava `Products_SelectWithPriceQuartile` stored procedure come query principale. Le pagine ASP.NET per le quali è necessario ottenere informazioni sui prodotti con il prezzo quartile utilizzeranno il `ProductsWithPriceQuartileTableAdapter`, mentre quelle che non potevano continuare a usare il `ProductsTableAdapter`.
 
-Aggiungendo un nuovo TableAdapter, oggetti DataTable rimangono untarnished e le relative colonne rispecchiano esattamente ai campi di dati restituiti dai relativi metodi s TableAdapter. Tuttavia, altri oggetti TableAdapter possono introdurre funzionalità e le attività ripetitive. Ad esempio, se tali delle pagine ASP.NET che visualizzata la `PriceQuartile` colonna anche necessari per fornire l'inserimento, aggiornamento ed eliminazione supporto, il `ProductsWithPriceQuartileTableAdapter` deve avere relativo `InsertCommand`, `UpdateCommand`, e `DeleteCommand` proprietà correttamente configurato. Anche se queste proprietà rispecchierebbe il `ProductsTableAdapter` s, questa configurazione viene introdotto un passaggio aggiuntivo. Inoltre, sono ora presenti due modi per aggiornare, eliminare o aggiungere un prodotto del database - tramite il `ProductsTableAdapter` e `ProductsWithPriceQuartileTableAdapter` classi.
+Con l'aggiunta di un nuovo TableAdapter, le DataTable rimangono inalterate e le rispettive colonne riflettono esattamente i campi dati restituiti dai relativi metodi TableAdapter. Tuttavia, gli oggetti TableAdapter aggiuntivi possono introdurre attività e funzionalità ripetitive. Se, ad esempio, le pagine di ASP.NET che hanno visualizzato la colonna `PriceQuartile` necessario fornire il supporto per l'inserimento, l'aggiornamento e l'eliminazione, è necessario che le proprietà `InsertCommand`, `UpdateCommand`e `DeleteCommand` del `ProductsWithPriceQuartileTableAdapter` siano configurate correttamente. Sebbene queste proprietà rispecchino il `ProductsTableAdapter` s, questa configurazione introduce un passaggio aggiuntivo. Sono inoltre disponibili due modi per aggiornare, eliminare o aggiungere un prodotto al database, tramite le classi `ProductsTableAdapter` e `ProductsWithPriceQuartileTableAdapter`.
 
-Il download per questa esercitazione include un' `ProductsWithPriceQuartileTableAdapter` classe la `NorthwindWithSprocs` set di dati che illustra questo approccio alternativo.
+Il download di questa esercitazione include una classe `ProductsWithPriceQuartileTableAdapter` nel set di dati `NorthwindWithSprocs` che illustra questo approccio alternativo.
 
 ## <a name="summary"></a>Riepilogo
 
-Nella maggior parte degli scenari, tutti i metodi in un oggetto TableAdapter verrà restituito lo stesso set di campi di dati, ma vi sono casi quando un metodo particolare o due potrebbe essere necessario restituire un campo aggiuntivo. Ad esempio, nelle [Master/dettaglio mediante un elenco puntato di record Master e un controllo DataList di dettagli](../filtering-scenarios-with-the-datalist-and-repeater/master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb.md) esercitazione è stato aggiunto un metodo per il `CategoriesTableAdapter` che, oltre ai campi dati, query principale s ha restituiti un `NumberOfProducts` campo che segnalato il numero di prodotti associati a ogni categoria. In questa esercitazione è stato aggiunta di un metodo nel `ProductsTableAdapter` che ha restituito un `PriceQuartile` campo oltre ai campi di dati della query principale s. Per acquisire dati aggiuntivi campi restituiti dai metodi TableAdapter s che è necessario aggiungere le colonne corrispondenti al DataTable.
+Nella maggior parte degli scenari, tutti i metodi in un oggetto TableAdapter restituiranno lo stesso set di campi dati, ma in alcuni casi è possibile che un metodo o due metodi particolari debbano restituire un campo aggiuntivo. Ad esempio, nel [master/dettagli utilizzando un elenco puntato di record master con un'esercitazione DataList dettagli](../filtering-scenarios-with-the-datalist-and-repeater/master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb.md) è stato aggiunto un metodo al `CategoriesTableAdapter` che, oltre ai campi dati della query principale, ha restituito un `NumberOfProducts` campo che riporta il numero di prodotti associati a ogni categoria. In questa esercitazione è stato esaminato l'aggiunta di un metodo nella `ProductsTableAdapter` che ha restituito un campo di `PriceQuartile` oltre ai campi dati della query principale. Per acquisire campi dati aggiuntivi restituiti dai metodi TableAdapter è necessario aggiungere le colonne corrispondenti alla DataTable.
 
-Se si prevede di aggiungere manualmente le colonne alla tabella di dati, è consigliabile che l'oggetto TableAdapter utilizzare le stored procedure. Se l'oggetto TableAdapter Usa istruzioni SQL ad hoc, la configurazione guidata TableAdapter è eseguire tutti i metodi negli elenchi dei campi dati ripristino i campi di dati restituiti dalla query principale. Questo problema non si estende alle stored procedure, motivo per cui essi sono consigliati e sono stati usati in questa esercitazione.
+Se si prevede di aggiungere manualmente colonne alla DataTable, è consigliabile usare le stored procedure per il TableAdapter. Se il TableAdapter usa istruzioni SQL ad hoc, ogni volta che viene eseguita la configurazione guidata TableAdapter, tutti gli elenchi di campi dei dati dei metodi ripristinano i campi dati restituiti dalla query principale. Questo problema non si estende alle stored procedure, motivo per cui sono consigliate e sono state usate in questa esercitazione.
 
 Buona programmazione!
 
 ## <a name="about-the-author"></a>Informazioni sull'autore
 
-[Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), autore di sette libri e fondatore di [4GuysFromRolla.com](http://www.4guysfromrolla.com), ha collaborato con tecnologie Web di Microsoft dal 1998. Lavora come un consulente, formatore e autore. Il suo ultimo libro si intitola [ *Sams Teach Yourself ASP.NET 2.0 in 24 ore*](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco). È possibile contattarlo al [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com) o sul suo blog, che è reperibile in [ http://ScottOnWriting.NET ](http://ScottOnWriting.NET).
+[Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), autore di sette ASP/ASP. NET Books e fondatore di [4GuysFromRolla.com](http://www.4guysfromrolla.com), collabora con le tecnologie Web Microsoft a partire da 1998. Scott lavora come consulente, trainer e writer indipendenti. Il suo ultimo libro è [*Sams Teach Yourself ASP.NET 2,0 in 24 ore*](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco). Può essere raggiunto in [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com) o tramite il suo Blog, disponibile in [http://ScottOnWriting.NET](http://ScottOnWriting.NET).
 
-## <a name="special-thanks-to"></a>Ringraziamenti speciali
+## <a name="special-thanks-to"></a>Grazie speciale
 
-Questa serie di esercitazioni è stata esaminata da diversi validi revisori. I revisori per questa esercitazione sono state Randy Schmidt, Goor Jacky, Bernadette Leigh e Hilton Giesenow. Se si è interessati prossimi articoli MSDN dello? In questo caso, Inviami una riga in corrispondenza [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
+Questa serie di esercitazioni è stata esaminata da molti revisori utili. I revisori del lead per questa esercitazione erano Randy Schmidt, Jacky Goor, Bernadette Leigh e Hilton Giesenow. Sei interessato a esaminare i miei prossimi articoli MSDN? In tal caso, rilasciare una riga in [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
 > [Precedente](updating-the-tableadapter-to-use-joins-vb.md)

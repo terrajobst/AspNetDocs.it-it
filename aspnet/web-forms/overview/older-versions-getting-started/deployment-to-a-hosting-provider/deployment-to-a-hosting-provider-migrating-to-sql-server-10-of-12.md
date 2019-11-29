@@ -1,448 +1,448 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12
-title: "Distribuzione di un'applicazione Web ASP.NET con SQL Server Compact tramite Visual Studio o Visual Web Developer: Migrazione a SQL Server - 10 pari a 12 | Microsoft Docs"
+title: "Distribuzione di un'applicazione Web ASP.NET con SQL Server Compact con Visual Studio o Visual Web Developer: migrazione a SQL Server-10 di 12 | Microsoft Docs"
 author: tdykstra
-description: Questa serie di esercitazioni illustra come distribuire un ASP.NET (pubblicazione) progetto di applicazione web che include un database di SQL Server Compact tramite Visual s...
+description: Questa serie di esercitazioni illustra come distribuire (pubblicare) un progetto di applicazione Web ASP.NET che include un database di SQL Server Compact usando Visual Stu...
 ms.author: riande
 ms.date: 11/17/2011
 ms.assetid: a89d6f32-b71b-4036-8ff7-5f8ac2a6eca8
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12
 msc.type: authoredcontent
-ms.openlocfilehash: cc4db5b1fcedca675a18f1b78e28f65e51b6cf09
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: c5281a42596d95e725b32e652c75785abe0fd64e
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65132760"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74640601"
 ---
-# <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-migrating-to-sql-server---10-of-12"></a>Distribuzione di un'applicazione Web ASP.NET con SQL Server Compact tramite Visual Studio o Visual Web Developer: Migrazione a SQL Server - 10 pari a 12
+# <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-migrating-to-sql-server---10-of-12"></a>Distribuzione di un'applicazione Web ASP.NET con SQL Server Compact con Visual Studio o Visual Web Developer: migrazione a SQL Server-10 di 12
 
-da [Tom Dykstra](https://github.com/tdykstra)
+di [Tom Dykstra](https://github.com/tdykstra)
 
-[Download progetto iniziale](http://code.msdn.microsoft.com/Deploying-an-ASPNET-Web-4e31366b)
+[Scarica progetto Starter](https://code.msdn.microsoft.com/Deploying-an-ASPNET-Web-4e31366b)
 
-> Questa serie di esercitazioni illustra come distribuire un ASP.NET (pubblicazione) progetto di applicazione web che include un database di SQL Server Compact tramite Visual Studio 2012 RC o Visual Studio Express 2012 RC per Web. Se si installa l'aggiornamento della pubblicazione sul Web, è anche possibile usare Visual Studio 2010. Per un'introduzione alla serie, vedere [la prima esercitazione della serie](deployment-to-a-hosting-provider-introduction-1-of-12.md).
+> Questa serie di esercitazioni illustra come distribuire (pubblicare) un progetto di applicazione Web ASP.NET che include un database di SQL Server Compact usando Visual Studio 2012 RC o Visual Studio Express 2012 RC per il Web. È anche possibile usare Visual Studio 2010 se si installa l'aggiornamento pubblicazione sul Web. Per un'introduzione alla serie, vedere [la prima esercitazione della serie](deployment-to-a-hosting-provider-introduction-1-of-12.md).
 > 
-> Per un'esercitazione che illustra le funzionalità di distribuzione introdotte dopo la versione di Visual Studio 2012 RC, illustra come distribuire le edizioni di SQL Server diverse da SQL Server Compact e Mostra come distribuire in App Web di servizio App di Azure, vedere [distribuzione Web ASP.NET con Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
+> Per un'esercitazione in cui vengono illustrate le funzionalità di distribuzione introdotte dopo la versione RC di Visual Studio 2012, viene illustrato come distribuire SQL Server edizioni diverse da SQL Server Compact e viene illustrato come eseguire la distribuzione in app Azure app Web del servizio, vedere [distribuzione web ASP.NET con Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
 
-## <a name="overview"></a>Panoramica
+## <a name="overview"></a>Panoramica di
 
-Questa esercitazione illustra come eseguire la migrazione da SQL Server Compact a SQL Server. Un motivo per cui che si potrebbe voler eseguire questa operazione è possa sfruttare i vantaggi delle funzionalità di SQL Server che SQL Server Compact non supporta, ad esempio le stored procedure, trigger, viste o replica. Per altre informazioni sulle differenze tra SQL Server Compact e SQL Server, vedere la [distribuzione di SQL Server Compact](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12.md) esercitazione.
+Questa esercitazione illustra come eseguire la migrazione da SQL Server Compact a SQL Server. Questo può essere utile per sfruttare le funzionalità di SQL Server che SQL Server Compact non supporta, ad esempio stored procedure, trigger, viste o replica. Per ulteriori informazioni sulle differenze tra SQL Server Compact e SQL Server, vedere l'esercitazione sulla [distribuzione di SQL Server Compact](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12.md) .
 
-### <a name="sql-server-express-versus-full-sql-server-for-development"></a>SQL Server Express e completa di SQL Server per lo sviluppo
+### <a name="sql-server-express-versus-full-sql-server-for-development"></a>SQL Server Express rispetto alla SQL Server completa per lo sviluppo
 
-Una volta che si è deciso di eseguire l'aggiornamento a SQL Server, si potrebbe voler usare SQL Server o SQL Server Express negli ambienti di sviluppo e test. Oltre alle differenze nel supporto di strumenti e funzionalità del motore di database, esistono differenze nelle implementazioni del provider SQL Server Compact e altre versioni di SQL Server. Queste differenze possono causare lo stesso codice generare risultati diversi. Pertanto, se si decide di mantenere il database di sviluppo di SQL Server Compact, è necessario testarne il sito in SQL Server o SQL Server Express in un ambiente di test prima di ogni distribuzione nell'ambiente di produzione.
+Dopo aver deciso di eseguire l'aggiornamento a SQL Server, potrebbe essere necessario usare SQL Server o SQL Server Express negli ambienti di sviluppo e test. Oltre alle differenze nel supporto degli strumenti e nelle caratteristiche del motore di database, esistono differenze nelle implementazioni del provider tra SQL Server Compact e altre versioni di SQL Server. Queste differenze possono causare lo stesso codice per generare risultati diversi. Se pertanto si decide di tenere SQL Server Compact come database di sviluppo, è necessario testare accuratamente il sito in SQL Server o SQL Server Express in un ambiente di test prima di ogni distribuzione in produzione.
 
-A differenza di SQL Server Compact, SQL Server Express è essenzialmente lo stesso motore di database e Usa lo stesso provider .NET come completa di SQL Server. Quando esegue il test con SQL Server Express, è possibile essere certi di ottenere gli stessi risultati così come con SQL Server. È possibile usare la maggior parte degli stessi strumenti di database con SQL Server Express, è possibile usare con SQL Server (da un'eccezione rilevante [SQL Server Profiler](https://msdn.microsoft.com/library/ms181091.aspx)), e supporta altre funzionalità di SQL Server, ad esempio stored procedure, viste, trigger, e la replica. (In genere è necessario tuttavia utilizzare completa di SQL Server in un sito Web di produzione. SQL Server Express è possibile eseguire in un ambiente di hosting condiviso, ma non è stato progettato per tale e non è supportato da molti provider di hosting.)
+A differenza di SQL Server Compact, SQL Server Express è essenzialmente lo stesso motore di database e usa lo stesso provider .NET come SQL Server completo. Quando si esegue il test con SQL Server Express, è possibile avere la certezza di ottenere gli stessi risultati che si otterranno con SQL Server. È possibile utilizzare la maggior parte degli strumenti di database con SQL Server Express che è possibile utilizzare con SQL Server (un'eccezione significativa [SQL Server Profiler](https://msdn.microsoft.com/library/ms181091.aspx)) e supporta altre funzionalità di SQL Server come stored procedure, viste, trigger e replica. Tuttavia, in genere è necessario utilizzare la SQL Server completa in un sito Web di produzione. SQL Server Express può essere eseguito in un ambiente host condiviso, ma non è stato progettato per questo e molti provider di hosting non lo supportano.
 
-Se si usa Visual Studio 2012, in genere è scegliere LocalDB di SQL Server Express per l'ambiente di sviluppo perché questo è ciò che viene installato per impostazione predefinita con Visual Studio. Tuttavia, Local DB non funziona in IIS, quindi per l'ambiente di test è necessario utilizzare SQL Server o SQL Server Express.
+Se si usa Visual Studio 2012, in genere si sceglie SQL Server Express database locale per l'ambiente di sviluppo, perché questo è quello che viene installato per impostazione predefinita con Visual Studio. Tuttavia, il database locale non funziona in IIS, pertanto per l'ambiente di test è necessario utilizzare SQL Server o SQL Server Express.
 
-### <a name="combining-databases-versus-keeping-them-separate"></a>Combinare i database rispetto a mantenendoli separati
+### <a name="combining-databases-versus-keeping-them-separate"></a>Combinare i database e mantenerli separati
 
-L'applicazione Contoso University è disponibili due database di SQL Server Compact: il database delle appartenenze (*aspnet.sdf*) e il database dell'applicazione (*School.sdf*). Quando esegue la migrazione, è possibile migrare i database a due distinti database o a un singolo database. È possibile combinarli per facilitare il join di database tra il database dell'applicazione e il database di appartenenza. Il piano di hosting può anche fornire un motivo per combinarle. Ad esempio, il provider di hosting può addebitare informazioni per più database oppure potrebbe non consentire anche di più di un database. Che avviene con l'account utilizzato per questa esercitazione, che consente solo un singolo database di SQL Server di hosting Cytanium Lite.
+L'applicazione Contoso University dispone di due database SQL Server Compact: il database delle appartenenze (*ASPNET. sdf*) e il database dell'applicazione (*School. sdf*). Quando si esegue la migrazione, è possibile eseguire la migrazione di questi database a due database distinti o a un singolo database. Potrebbe essere necessario combinarli per facilitare i join del database tra il database dell'applicazione e il database di appartenenza. Il piano di hosting potrebbe anche fornire un motivo per combinarli. Ad esempio, il provider di hosting potrebbe addebitare più database per più database o addirittura non consentire più di un database. Questo è il caso dell'account di hosting Cytanium Lite usato per questa esercitazione, che consente un solo database SQL Server.
 
-In questa esercitazione, si saranno la migrazione dei due database in questo modo:
+In questa esercitazione si eseguirà la migrazione dei due database in questo modo:
 
-- Eseguire la migrazione a due database LocalDB nell'ambiente di sviluppo.
-- Eseguire la migrazione a due database di SQL Server Express nell'ambiente di test.
-- Eseguire la migrazione a un database SQL Server completo combinato nell'ambiente di produzione.
+- Eseguire la migrazione a due database del database locale nell'ambiente di sviluppo.
+- Eseguire la migrazione a due database SQL Server Express nell'ambiente di testing.
+- Eseguire la migrazione a un database completo SQL Server combinato nell'ambiente di produzione.
 
-Promemoria: Se viene visualizzato un messaggio di errore o qualcosa non funziona durante l'esecuzione dell'esercitazione, assicurarsi di controllare la [risoluzione dei problemi pagina](deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12.md).
+Promemoria: se si riceve un messaggio di errore o un elemento non funziona durante l'esercitazione, assicurarsi di controllare la pagina relativa alla [risoluzione dei problemi](deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12.md).
 
 ## <a name="installing-sql-server-express"></a>Installazione di SQL Server Express
 
-SQL Server Express viene installato automaticamente per impostazione predefinita con Visual Studio 2010, ma per impostazione predefinita non è installato con Visual Studio 2012. Per installare SQL Server 2012 Express, fare clic sul collegamento seguente
+SQL Server Express viene installato automaticamente per impostazione predefinita con Visual Studio 2010, ma per impostazione predefinita non viene installato con Visual Studio 2012. Per installare SQL Server 2012 Express, fare clic sul collegamento seguente
 
 - [SQL Server Express 2012](https://www.microsoft.com/download/details.aspx?id=29062)
 
-Scegli *ita/x64/SQLEXPR\_x64\_ENU.exe* oppure *ita/x86/SQLEXPR\_x86\_ENU.exe*e nell'installazione guidata accettare l'impostazione predefinita Impostazioni. Per altre informazioni sulle opzioni di installazione, vedere [installare SQL Server 2012 dall'installazione guidata (programma di installazione)](https://msdn.microsoft.com/library/ms143219.aspx).
+Scegliere *ita/x64/SQLEXPR\_x64\_ita. exe* o *enu/x86/SQLEXPR\_x86\_ENU. exe*e nell'installazione guidata accettare le impostazioni predefinite. Per ulteriori informazioni sulle opzioni di installazione, vedere [installare SQL Server 2012 dall'installazione guidata (programma](https://msdn.microsoft.com/library/ms143219.aspx)di installazione).
 
-## <a name="creating-sql-server-express-databases-for-the-test-environment"></a>Creazione di database SQL Server Express per l'ambiente di Test
+## <a name="creating-sql-server-express-databases-for-the-test-environment"></a>Creazione di SQL Server Express database per l'ambiente di test
 
-Il passaggio successivo consiste nel creare i database dell'istituto di istruzione e il sistema di appartenenze ASP.NET.
+Il passaggio successivo consiste nel creare i database di appartenenza e dell'Istituto di istruzione di ASP.NET.
 
-Dal **View** dal menu **Esplora Server** (**Esplora Database** in Visual Web Developer) e quindi fare doppio clic su **connessioni dati**e selezionare **Crea nuovo Database di SQL Server**.
+Dal menu **Visualizza** selezionare **Esplora server** (**Esplora database** in Visual Web Developer), quindi fare clic con il pulsante destro del mouse su **connessioni dati** e scegliere **Crea nuovo SQL Server database**.
 
 ![Selecting_Create_New_SQL_Server_Database](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/_static/image1.png)
 
-Nel **Crea nuovo Database di SQL Server** finestra di dialogo immettere ". \SQLExpress" nel **nome Server** casella e "aspnet-Test" nel **nuovo nome del database** casella, quindi fare clic su **OK**.
+Nella finestra di dialogo **Crea nuovo database di SQL Server** , immettere ".\SQLEXPRESS" nella **casella nome server** e "ASPNET-test" nella casella **nuovo nome database** , quindi fare clic su **OK**.
 
 ![Create_New_SQL_Server_Database_aspnet](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/_static/image2.png)
 
-Seguire la stessa procedura per creare un nuovo database dell'istituto di istruzione di SQL Server Express denominato "Test dell'istituto di istruzione".
+Seguire la stessa procedura per creare un nuovo database di SQL Server Express School denominato "School-test".
 
-(Che si sta accodando "Test" per questi nomi di database perché è necessario essere in grado di differenziare i due set di database e in seguito si creerà un'istanza aggiuntiva di ogni database per l'ambiente di sviluppo.)
+Si sta aggiungendo "test" a questi nomi di database perché in un secondo momento si creerà un'istanza aggiuntiva di ogni database per l'ambiente di sviluppo ed è necessario essere in grado di distinguere i due set di database.
 
-**Esplora server** ora mostra i due nuovi database.
+**Esplora server** ora Visualizza i due nuovi database.
 
 ![New_databases_in_Server_Explorer](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/_static/image3.png)
 
-## <a name="creating-a-grant-script-for-the-new-databases"></a>Creazione di uno Script di concessione per i nuovi database
+## <a name="creating-a-grant-script-for-the-new-databases"></a>Creazione di uno script di concessione per i nuovi database
 
-Quando l'applicazione viene eseguita in IIS nel computer di sviluppo, l'applicazione accede al database usando le credenziali del pool di applicazioni predefinito. Tuttavia, per impostazione predefinita, l'identità del pool di applicazioni non dispone dell'autorizzazione per aprire i database. Pertanto, è necessario eseguire uno script per concedere tale autorizzazione. In questa sezione si crea lo script che verrà eseguito successivamente per assicurarsi che l'applicazione può aprire i database quando è in esecuzione in IIS.
+Quando l'applicazione viene eseguita in IIS nel computer di sviluppo, l'applicazione accede al database usando le credenziali del pool di applicazioni predefinito. Tuttavia, per impostazione predefinita, l'identità del pool di applicazioni non dispone dell'autorizzazione per aprire i database. Quindi, è necessario eseguire uno script per concedere tale autorizzazione. In questa sezione viene creato lo script che verrà eseguito in un secondo momento per assicurarsi che l'applicazione possa aprire i database durante l'esecuzione in IIS.
 
-Della soluzione *SolutionFiles* creato nella cartella la [distribuzione nell'ambiente di produzione](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12.md) esercitazione, creare un nuovo file SQL denominato *Grant.sql*. Copiare i comandi SQL seguenti nel file, quindi salvare e chiudere il file:
+Nella cartella *SolutionFiles* della soluzione creata nell'esercitazione [distribuzione in ambiente di produzione](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12.md) creare un nuovo file SQL denominato *Grant. SQL*. Copiare i seguenti comandi SQL nel file, quindi salvare e chiudere il file:
 
 [!code-sql[Main](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/samples/sample1.sql)]
 
 > [!NOTE]
-> Questo script è progettato per funzionare con SQL Server 2008 e le impostazioni di IIS in Windows 7, secondo quanto specificato in questa esercitazione. Se si usa una versione diversa di SQL Server o di Windows, o se si configura IIS nel computer in modo diverso, le modifiche apportate allo script potrebbero essere necessari. Per altre informazioni sugli script di SQL Server, vedere [documentazione Online di SQL Server](https://go.microsoft.com/fwlink/?LinkId=132511).
+> Questo script è progettato per funzionare con SQL Server 2008 e con le impostazioni di IIS in Windows 7, così come sono specificate in questa esercitazione. Se si usa una versione diversa di SQL Server o di Windows o se si configura IIS nel computer in modo diverso, potrebbe essere necessario apportare modifiche a questo script. Per ulteriori informazioni sugli script di SQL Server, vedere [documentazione online di SQL Server](https://go.microsoft.com/fwlink/?LinkId=132511).
 
 > [!NOTE] 
 > 
-> **Nota sulla sicurezza** nello script viene db\_autorizzazioni di proprietario per l'utente che accede al database in fase di esecuzione, che è ciò che è possibile nell'ambiente di produzione. In alcuni scenari è possibile specificare un utente che contiene lo schema completo del database, aggiornare le autorizzazioni solo per la distribuzione e specificare in fase di esecuzione di un utente diverso che disponga delle autorizzazioni solo per leggere e scrivere dati. Per altre informazioni, vedere **rivedono le modifiche automatiche di Web. config per le migrazioni Code First** nelle [distribuzione in IIS come ambiente di Test](deployment-to-a-hosting-provider-deploying-to-iis-as-a-test-environment-5-of-12.md).
+> **Nota sulla sicurezza** Questo script fornisce le autorizzazioni di database\_proprietario all'utente che accede al database in fase di esecuzione, che è ciò che si avrà nell'ambiente di produzione. In alcuni scenari potrebbe essere necessario specificare un utente che disponga di autorizzazioni complete per l'aggiornamento dello schema del database solo per la distribuzione e specificare per la fase di esecuzione un utente diverso che disponga di autorizzazioni solo per la lettura e la scrittura dei dati. Per ulteriori informazioni, vedere **la pagina relativa alla revisione delle modifiche automatiche di Web. config per migrazioni Code First** nella [distribuzione in IIS come ambiente di test](deployment-to-a-hosting-provider-deploying-to-iis-as-a-test-environment-5-of-12.md).
 
-## <a name="configuring-database-deployment-for-the-test-environment"></a>Configurazione della distribuzione di Database per l'ambiente di Test
+## <a name="configuring-database-deployment-for-the-test-environment"></a>Configurazione della distribuzione di database per l'ambiente di test
 
-Si configurerà quindi Visual Studio in modo che eseguiranno le attività seguenti per ogni database:
+Successivamente, verrà configurato Visual Studio in modo che esegua le attività seguenti per ogni database:
 
-- Generare uno script SQL che crea una struttura del database di origine (tabelle, colonne, vincoli e così via) nel database di destinazione.
-- Generare uno script SQL che inserisce i dati del database di origine nelle tabelle nel database di destinazione.
-- Eseguire gli script generati e lo script di concessione che è stato creato, nel database di destinazione.
+- Generare uno script SQL per la creazione della struttura del database di origine (tabelle, colonne, vincoli e così via) nel database di destinazione.
+- Genera uno script SQL che inserisce i dati del database di origine nelle tabelle del database di destinazione.
+- Eseguire gli script generati e lo script di concessione creato nel database di destinazione.
 
-Aprire il **proprietà progetto** finestra e selezionare il **pubblicazione/creazione pacchetto SQL** scheda.
+Aprire la finestra delle **proprietà del progetto** e selezionare la scheda **pacchetto/pubblica SQL** .
 
-Assicurarsi che **attiva (rilascio)** o **Release** sia selezionato nel **configurazione** elenco a discesa.
+Verificare che nell'elenco a discesa **configurazione** sia selezionato **attivo (versione)** o **versione** .
 
-Fare clic su **abilita questa pagina**.
+Fare clic su **Abilita questa pagina**.
 
 ![Package_Publish_SQL_tab_Enable_This_page](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/_static/image4.png)
 
-Il **pubblicazione/creazione pacchetto SQL** scheda è generalmente disabilitata perché specifica un metodo di distribuzione legacy. Per la maggior parte degli scenari, è necessario configurare la distribuzione di database nel **pubblica sul Web** procedura guidata. La migrazione da SQL Server Compact a SQL Server o SQL Server Express è un caso speciale per il quale questo metodo è una buona scelta.
+La scheda **pacchetto/pubblica SQL** è generalmente disabilitata perché specifica un metodo di distribuzione legacy. Per la maggior parte degli scenari, è necessario configurare la distribuzione del database nella procedura guidata **Pubblica sito Web** . La migrazione da SQL Server Compact a SQL Server o SQL Server Express è un caso speciale per cui questo metodo è una scelta ottimale.
 
 Fare clic su **Importa da Web. config**.
 
-![Selecting_Import_from_Web.config](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/_static/image5.png)
+![Selecting_Import_from_Web. config](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/_static/image5.png)
 
-Visual Studio cerca le stringhe di connessione nel *Web. config* file, non viene trovata una per il database di appartenenza e uno per il database School e aggiunge una riga corrispondente a ogni stringa di connessione nel **voci di Database**  tabella. Trova le stringhe di connessione sono per i database di SQL Server Compact esistenti e il passaggio successivo sarà possibile configurare come e dove distribuire questi database.
+Visual Studio cerca le stringhe di connessione nel file *Web. config* , ne trova uno per il database di appartenenza e uno per il database School e aggiunge una riga corrispondente a ogni stringa di connessione nella tabella delle **voci del database** . Le stringhe di connessione trovate per i database di SQL Server Compact esistenti e il passaggio successivo consiste nel configurare come e dove distribuire questi database.
 
-È possibile immettere impostazioni di distribuzione di database nel **dettagli voci Database** sezione riportata di seguito il **voci di Database** tabella. Le impostazioni riportate nella **dettagli voci Database** sezione si riferiscono a nella seconda riga il **voci di Database** tabella è selezionata, come illustrato nella figura seguente.
+Immettere le impostazioni di distribuzione del database nella sezione **Dettagli voce database** sotto la tabella **voci di database** . Le impostazioni visualizzate nella sezione **Dettagli immissione database** riguardano la riga selezionata nella tabella **voci di database** , come illustrato nella figura seguente.
 
 ![Database_Entry_Details_section_of_Package_Publish_SQL_tab](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/_static/image6.png)
 
-### <a name="configuring-deployment-settings-for-the-membership-database"></a>Configurazione delle impostazioni di distribuzione per il Database di appartenenza
+### <a name="configuring-deployment-settings-for-the-membership-database"></a>Configurazione delle impostazioni di distribuzione per il database delle appartenenze
 
-Selezionare il **DefaultConnection-Deployment** nella riga il **voci di Database** tabella per configurare le impostazioni che si applicano al database di appartenenza.
+Selezionare la riga **DefaultConnection-Deployment** nella tabella **voci di database** per configurare le impostazioni che si applicano al database delle appartenenze.
 
-Nelle **stringa di connessione per il database di destinazione**, immettere una stringa di connessione che punti al nuovo database di appartenenze di SQL Server Express. È possibile ottenere la stringa di connessione è necessario richiedere al **Esplora Server**. Nella **Esplora Server**, espandere **connessioni dati** e selezionare il **aspnetTest** database, quindi dal **proprietà** copia finestra il **Stringa di connessione** valore.
+In **stringa di connessione per database di destinazione**immettere una stringa di connessione che punta al nuovo database di appartenenza SQL Server Express. È possibile ottenere la stringa di connessione necessaria dall' **Esplora server**. In **Esplora server**espandere **connessioni dati** e selezionare il database **AspnetTest** , quindi nella finestra **Proprietà** copiare il valore della **stringa di connessione** .
 
 ![aspnet_connection_string_in_Server_Explorer](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/_static/image7.png)
 
-Stessa stringa di connessione viene riprodotto di seguito:
+La stessa stringa di connessione viene riprodotta qui:
 
 [!code-console[Main](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/samples/sample2.cmd)]
 
-Copiare e incollare questa stringa di connessione nel **stringa di connessione per il database di destinazione** nel **pubblicazione/creazione pacchetto SQL** scheda.
+Copiare e incollare la stringa di connessione nella **stringa di connessione per il database di destinazione** nella scheda **pacchetto/pubblica SQL** .
 
-Verificare che l'opzione **eseguire il Pull dei dati e/o schema da un database esistente** sia selezionata. Questo è ciò che fa in modo che gli script SQL essere automaticamente generato ed eseguito nel database di destinazione.
+Assicurarsi che sia selezionata l'opzione **Estrai dati e/o schema da un database esistente** . Questo è ciò che fa in modo che gli script SQL vengano generati e eseguiti automaticamente nel database di destinazione.
 
-Il **stringa di connessione per il database di origine** estrazione del valore dalle *Web. config* file e i punti al database di SQL Server Compact di sviluppo. Si tratta del database di origine che verrà usato per generare gli script che verranno eseguito in un secondo momento nel database di destinazione. Poiché si vuole distribuire la versione di produzione del database, modificare "aspnet-Dev.sdf" in "aspnet-Prod.sdf".
+La **stringa di connessione per il valore del database di origine** viene estratta dal file *Web. config* e punta al database di sviluppo SQL Server Compact. Si tratta del database di origine che verrà usato per generare gli script che verranno eseguiti in un secondo momento nel database di destinazione. Poiché si desidera distribuire la versione di produzione del database, modificare "aspnet-Dev. sdf" in "aspnet-Prod. sdf".
 
-Change **opzioni di scripting del Database** dalla **solo Schema** a **schemi e dati**, dal momento che si desidera copiare i dati (account utente e ruoli), nonché la struttura del database.
+Modificare le **Opzioni di scripting del database** dallo **schema solo** a **schemi e dati**, dal momento che si desidera copiare i dati (account utente e ruoli), nonché la struttura del database.
 
-Per configurare la distribuzione per eseguire gli script di concessione creato in precedenza, è necessario aggiungerli al **script di Database** sezione. Fare clic su **Aggiungi Script**e nel **aggiungere gli script SQL** finestra di dialogo passare alla cartella in cui è archiviato lo script di concessione (questa è la cartella che contiene i file di soluzione). Selezionare il file denominato *Grant.sql*, fare clic su **Open**.
+Per configurare la distribuzione per l'esecuzione degli script di concessione creati in precedenza, è necessario aggiungerli alla sezione **script di database** . Fare clic su **Aggiungi script**e nella finestra di dialogo **Aggiungi script SQL** passare alla cartella in cui è stato archiviato lo script di concessione (si tratta della cartella che contiene il file della soluzione). Selezionare il file denominato *Grant. SQL*e fare clic su **Apri**.
 
 [![Select_File_dialog_box_grant_script](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/_static/image9.png)](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/_static/image8.png)
 
-Le impostazioni per il **DefaultConnection-Deployment** nella riga **voci di Database** ora simile al seguente:
+Le impostazioni per la riga **DefaultConnection-Deployment** nelle **voci del database** hanno ora un aspetto simile a quello illustrato nella figura seguente:
 
 ![Database_Entry_Details_for_DefaultConnection_Test](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/_static/image10.png)
 
-### <a name="configuring-deployment-settings-for-the-school-database"></a>Configurazione delle impostazioni di distribuzione per il Database School
+### <a name="configuring-deployment-settings-for-the-school-database"></a>Configurazione delle impostazioni di distribuzione per il database School
 
-Selezionare quindi il **SchoolContext-Deployment** nella riga il **voci di Database** tabella per configurare le impostazioni di distribuzione per il database School.
+Selezionare quindi la riga **schoolContext-Deployment** nella tabella delle **voci del database** per configurare le impostazioni di distribuzione per il database School.
 
-È possibile usare lo stesso metodo usato in precedenza per ottenere la stringa di connessione per il nuovo database di SQL Server Express. Copiare questa stringa di connessione in **stringa di connessione per il database di destinazione** nel **pubblicazione/creazione pacchetto SQL** scheda.
+È possibile usare lo stesso metodo usato in precedenza per ottenere la stringa di connessione per il nuovo database di SQL Server Express. Copiare questa stringa di connessione nella **stringa di connessione per il database di destinazione** nella scheda **pacchetto/pubblica SQL** .
 
 [!code-console[Main](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/samples/sample3.cmd)]
 
-Verificare che l'opzione **eseguire il Pull dei dati e/o schema da un database esistente** sia selezionata.
+Assicurarsi che sia selezionata l'opzione **Estrai dati e/o schema da un database esistente** .
 
-Il **stringa di connessione per il database di origine** estrazione del valore dalle *Web. config* file e i punti al database di SQL Server Compact di sviluppo. Modificare "Dev.sdf dell'istituto di istruzione" in "School-Prod.sdf" per distribuire la versione di produzione del database. (Mai creato un file dell'istituto di istruzione Prod.sdf nell'App\_cartella di dati, pertanto è possibile copiare tale file dall'ambiente di testing all'App\_cartella di dati nella cartella del progetto di ContosoUniversity in un secondo momento.)
+La **stringa di connessione per il valore del database di origine** viene estratta dal file *Web. config* e punta al database di sviluppo SQL Server Compact. Modificare "School-Dev. sdf" in "School-Prod. sdf" per distribuire la versione di produzione del database. Non è mai stato creato un file School-Prod. sdf nella cartella app\_data, quindi copiare il file dall'ambiente di test alla cartella app\_data nella cartella del progetto ContosoUniversity in un secondo momento.
 
-Change **opzioni di scripting del Database** al **dello Schema e dati**.
+Modificare le **Opzioni di scripting del database per lo** **schema e i dati**.
 
-Si desidera eseguire lo script per concedono autorizzazioni di lettura e scrittura l'autorizzazione per questo database per l'identità del pool, aggiungere il *Grant.sql* file di script come fatto in precedenza per il database di appartenenza.
+Si vuole anche eseguire lo script per concedere l'autorizzazione di lettura e scrittura per il database all'identità del pool di applicazioni, quindi aggiungere il file di script *Grant. SQL* come è stato fatto per il database delle appartenenze.
 
-Al termine, le impostazioni il **SchoolContext-Deployment** nella riga **voci di Database** simile al seguente:
+Al termine, le impostazioni per la riga **schoolContext-Deployment** nelle voci del **database** sono simili a quelle illustrate nella figura seguente:
 
 ![Database_Entry_Details_for_SchoolContext_Test](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/_static/image11.png)
 
-Salvare le modifiche per il **pubblicazione/creazione pacchetto SQL** scheda.
+Salvare le modifiche apportate alla scheda **pubblicazione/pubblicazione pacchetto SQL** .
 
-Copia il *School-Prod.sdf* del file dal *c:\inetpub\wwwroot\ContosoUniversity\App\_Data* cartella in cui il *App\_dati* cartella in il progetto ContosoUniversity.
+Copiare il file *School-prod. sdf* dalla cartella *c:\inetpub\wwwroot\ContosoUniversity\App\_data* alla cartella *app\_data* nel progetto ContosoUniversity.
 
-### <a name="specifying-transacted-mode-for-the-grant-script"></a>Specifica della modalità transazionale per lo Script di concessione
+### <a name="specifying-transacted-mode-for-the-grant-script"></a>Specifica della modalità transazionale per lo script Grant
 
-Il processo di distribuzione che genera l'errore di script che distribuisce lo schema di database e i dati. Per impostazione predefinita, questi script vengono eseguiti in una transazione. Tuttavia, gli script personalizzati (ad esempio, gli script di concessione) per impostazione predefinita non vengono eseguiti in una transazione. Se il processo di distribuzione sono presenti le modalità di transazione, si verifichi un errore di timeout quando gli script eseguiti durante la distribuzione. In questa sezione si modifica il file di progetto per configurare gli script personalizzati per l'esecuzione in una transazione.
+Il processo di distribuzione genera script che distribuiscono lo schema e i dati del database. Per impostazione predefinita, questi script vengono eseguiti in una transazione. Tuttavia, per impostazione predefinita, gli script personalizzati, come gli script di concessione, non vengono eseguiti in una transazione. Se il processo di distribuzione combina le modalità di transazione, è possibile che si ottenga un errore di timeout quando gli script vengono eseguiti durante la distribuzione. In questa sezione si modifica il file di progetto per configurare gli script personalizzati da eseguire in una transazione.
 
-Nelle **Esplora soluzioni**, fare doppio clic il **ContosoUniversity** del progetto e selezionare **Scarica progetto**.
+In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto **ContosoUniversity** e scegliere **Scarica progetto**.
 
 ![Unload_Project_in_Solution_Explorer](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/_static/image12.png)
 
-Quindi fare nuovamente clic sul progetto e selezionare **modifica Contosouniversity**.
+Quindi fare di nuovo clic con il pulsante destro del mouse sul progetto e scegliere **modifica ContosoUniversity. csproj**.
 
 ![Edit_Project_in_Solution_Explorer](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/_static/image13.png)
 
-Editor di Visual Studio Mostra il contenuto XML del file di progetto. Si noti che esistono diversi `PropertyGroup` elementi. (Nell'immagine, il contenuto del `PropertyGroup` gli elementi sono stati omessi.)
+Nell'editor di Visual Studio viene visualizzato il contenuto XML del file di progetto. Si noti che sono presenti diversi elementi `PropertyGroup`. Nell'immagine il contenuto degli elementi `PropertyGroup` è stato omesso.
 
-![Finestra dell'editor di file progetto](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/_static/image15.png)
+![Finestra Editor file di progetto](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/_static/image15.png)
 
-Il primo webhook che non ha alcun `Condition` dell'attributo, sia per le impostazioni che si applicano indipendentemente dalla configurazione di compilazione. Uno `PropertyGroup` elemento si applica solo alla configurazione della build di Debug (nota di `Condition` attributo), si applica solo alla configurazione della build di rilascio e si applica solo alla configurazione della build di Test. All'interno di `PropertyGroup` (elemento) per la configurazione della build di rilascio, si noterà una `PublishDatabaseSettings` elemento che contiene le impostazioni immesse nella **pubblicazione/creazione pacchetto SQL** scheda. È presente un `Object` elemento che corrisponde a ognuno degli script di concessione è (si noti che le due istanze specificate dell'oggetto "Grant.sql"). Per impostazione predefinita, il `Transacted` attributo del `Source` (elemento) per ogni script di concessione è `False`.
+Il primo, che non ha un attributo `Condition`, è per le impostazioni che si applicano indipendentemente dalla configurazione della build. Un `PropertyGroup` elemento si applica solo alla configurazione della build di debug (si noti l'attributo `Condition`), uno si applica solo alla configurazione della build di rilascio e uno si applica solo alla configurazione della build di test. All'interno dell'elemento `PropertyGroup` per la configurazione della build di rilascio, verrà visualizzato un elemento `PublishDatabaseSettings` che contiene le impostazioni immesse nella scheda **Pubblicazione/creazione pacchetto SQL** . È presente un elemento `Object` che corrisponde a tutti gli script di concessione specificati (si notino le due istanze di "Grant. SQL"). Per impostazione predefinita, l'attributo `Transacted` dell'elemento `Source` per ogni script di concessione è `False`.
 
 ![Transacted_false](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/_static/image16.png)
 
-Modificare il valore della `Transacted` attributo del `Source` elemento `True`.
+Modificare il valore dell'attributo `Transacted` dell'elemento `Source` in `True`.
 
 ![Transacted_true](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/_static/image17.png)
 
-Salvare e chiudere il file di progetto e quindi fare clic sul progetto in **Esplora soluzioni** e selezionare **Ricarica progetto**.
+Salvare e chiudere il file di progetto, quindi fare clic con il pulsante destro del mouse sul progetto in **Esplora soluzioni** e selezionare **Ricarica progetto**.
 
 ![Reload_project](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/_static/image18.png)
 
-## <a name="setting-up-webconfig-transformations-for-the-connection-strings"></a>Configurazione di trasformazioni di Web. config per le stringhe di connessione
+## <a name="setting-up-webconfig-transformations-for-the-connection-strings"></a>Impostazione delle trasformazioni di Web. config per le stringhe di connessione
 
-Le stringhe di connessione per la versione SQL Express nuovi database che sono stati immessi **pubblicazione/creazione pacchetto SQL** scheda vengono utilizzati da distribuzione Web solo per l'aggiornamento del database di destinazione durante la distribuzione. Comunque necessario configurare *Web. config* trasformazioni in modo che le stringhe di connessione nella distribuito *Web. config* file punto con i nuovi database di SQL Server Express. (Quando si usa la **pubblicazione/creazione pacchetto SQL** scheda, è possibile configurare le stringhe di connessione nel profilo di pubblicazione.)
+Le stringhe di connessione per i nuovi database di SQL Express immessi nella scheda **Pubblicazione/creazione pacchetto SQL** vengono utilizzate da distribuzione Web solo per l'aggiornamento del database di destinazione durante la distribuzione. È comunque necessario configurare le trasformazioni di *Web. config* in modo che le stringhe di connessione nel file *Web. config* distribuito puntino ai nuovi database di SQL Server Express. Quando si utilizza la scheda **pacchetto/pubblica SQL** , non è possibile configurare le stringhe di connessione nel profilo di pubblicazione.
 
-Aprire *Web.Test.config* e sostituire il `connectionStrings` elemento con la `connectionStrings` elemento nell'esempio seguente. (Assicurarsi di copiare solo l'elemento connectionStrings, non il codice circostante riportato di seguito per fornire contesto).
+Aprire *Web. test. config* e sostituire l'elemento `connectionStrings` con l'elemento `connectionStrings` nell'esempio seguente. Assicurarsi di copiare solo l'elemento connectionStrings, non il codice circostante riportato qui per fornire il contesto.
 
 [!code-xml[Main](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/samples/sample4.xml?highlight=2-11)]
 
-Questo codice fa in modo che il `connectionString` e `providerName` attributi della ognuno `add` elemento da sostituire in distribuito *Web. config* file. Queste stringhe di connessione non sono identici a quelli immessi nella **pubblicazione/creazione pacchetto SQL** scheda. L'impostazione "MultipleActiveResultSets = True" è stato aggiunto ad essi, perché è necessaria per Entity Framework e i provider universali.
+Questo codice fa in modo che gli attributi `connectionString` e `providerName` di ogni elemento `add` vengano sostituiti nel file *Web. config* distribuito. Queste stringhe di connessione non sono identiche a quelle immesse nella scheda **pubblicazione/pubblicazione pacchetto SQL** . È stata aggiunta l'impostazione "MultipleActiveResultSets = true" perché è necessaria per il Entity Framework e il provider universali.
 
 ## <a name="installing-sql-server-compact"></a>Installazione di SQL Server Compact
 
-Il pacchetto SqlServerCompact NuGet fornisce database di SQL Server Compact assembly motore per l'applicazione Contoso University. Ma ora non è l'applicazione, ma che devono essere in grado di leggere i database di SQL Server Compact, per poter creare gli script da eseguire nel database di SQL Server di distribuzione Web. Per abilitare distribuzione Web leggere il database SQL Server Compact, installare SQL Server Compact nel computer di sviluppo usando il collegamento seguente: [Microsoft SQL Server Compact 4.0](https://www.microsoft.com/downloads/details.aspx?FamilyID=15F7C9B3-A150-4AD2-823E-E4E0DCF85DF6).
+Il pacchetto NuGet SqlServerCompact fornisce gli assembly del motore di database SQL Server Compact per l'applicazione Contoso University. Tuttavia, non si tratta dell'applicazione, ma Distribuzione Web che deve essere in grado di leggere i database SQL Server Compact per creare gli script da eseguire nei database SQL Server. Per consentire Distribuzione Web di leggere SQL Server Compact database, installare SQL Server Compact nel computer di sviluppo usando il collegamento seguente: [Microsoft SQL Server Compact 4,0](https://www.microsoft.com/downloads/details.aspx?FamilyID=15F7C9B3-A150-4AD2-823E-E4E0DCF85DF6).
 
-## <a name="deploying-to-the-test-environment"></a>Distribuzione nell'ambiente di Test
+## <a name="deploying-to-the-test-environment"></a>Distribuzione nell'ambiente di test
 
-Per pubblicare l'ambiente di Test, è necessario creare un profilo di pubblicazione che è configurato per usare la **pubblicazione/creazione pacchetto SQL** scheda per il database di pubblicazione anziché le impostazioni del database di profilo di pubblicazione.
+Per eseguire la pubblicazione nell'ambiente di test, è necessario creare un profilo di pubblicazione configurato per utilizzare la scheda pubblicazione **/creazione pacchetto SQL** per la pubblicazione del database anziché le impostazioni del database del profilo di pubblicazione.
 
-In primo luogo, eliminare il profilo di Test esistente.
+Prima di tutto, eliminare il profilo di test esistente.
 
-Nelle **Esplora soluzioni**, fare clic sul progetto ContosoUniversity e fare clic su **Publish**.
+In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto ContosoUniversity e scegliere **pubblica**.
 
-Selezionare il **profilo** scheda.
+Selezionare la scheda **profilo** .
 
-Fare clic su **gestire i profili**.
+Fare clic su **Gestisci profili**.
 
-Selezionare **Test**, fare clic su **rimuovere**, quindi fare clic su **Chiudi**.
+Selezionare **test**, fare clic su **Rimuovi**e quindi su **Chiudi**.
 
-Chiudi il **pubblica sul Web** guidata consente di salvare questa modifica.
+Chiudere la procedura guidata **Pubblica sito Web** per salvare la modifica.
 
-Successivamente, creare un nuovo profilo di Test e usarlo per pubblicare il progetto.
+Successivamente, creare un nuovo profilo di test e utilizzarlo per pubblicare il progetto.
 
-Nelle **Esplora soluzioni**, fare clic sul progetto ContosoUniversity e fare clic su **Publish**.
+In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto ContosoUniversity e scegliere **pubblica**.
 
-Selezionare il **profilo** scheda.
+Selezionare la scheda **profilo** .
 
-Selezionare **&lt;New... &gt;** dall'elenco a discesa elenco e immettere "Test" come nome del profilo.
+Selezionare **&lt;nuova&gt;** dall'elenco a discesa e immettere "test" come nome del profilo.
 
-Nel **URL del servizio** casella, immettere *localhost*.
+Nella casella **URL servizio** immettere *localhost*.
 
-Nel **sito/applicazione** casella, immettere *Default Web Site/ContosoUniversity*.
+Nella casella **sito/applicazione** immettere *Default Web site/ContosoUniversity*.
 
-Nel **URL di destinazione** immettere `http://localhost/ContosoUniversity/`.
+Nella casella **URL di destinazione** immettere `http://localhost/ContosoUniversity/`.
 
 Scegliere **Avanti**.
 
-Il **le impostazioni** scheda avvisa l'utente che la **pubblicazione/creazione pacchetto SQL** scheda è stata configurata e offre la possibilità di eseguirne l'override scegliendo Abilita il nuovo database ottimizzazioni per la pubblicazione. Per questa distribuzione non si vuole eseguire l'override di **pubblicazione/creazione pacchetto SQL** impostazioni della scheda, quindi è sufficiente fare clic su **successivo**.
+Nella scheda **Impostazioni** viene visualizzato un avviso indicante che la scheda **Pubblicazione/creazione pacchetto SQL** è stata configurata ed è possibile eseguirne l'override facendo clic su Abilita nuovi miglioramenti alla pubblicazione del database. Per questa distribuzione non si desidera ignorare le impostazioni della scheda **pubblicazione/pubblicazione pacchetto SQL** , quindi è sufficiente fare clic su **Avanti**.
 
 ![Publish_Web_wizard_Settings_tab_Migrate](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/_static/image19.png)
 
-Un messaggio sulla **Preview** scheda indica che **Nessun database selezionato per la pubblicazione**, ma questo significa semplicemente che la pubblicazione di database non è configurata nel profilo di pubblicazione.
+Un messaggio nella scheda **Anteprima** indica che non è stato **selezionato alcun database per la pubblicazione**, ma ciò significa solo che la pubblicazione del database non è configurata nel profilo di pubblicazione.
 
 Fare clic su **Pubblica**.
 
 ![Publish_Web_wizard_Preview_tab_Migrate](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/_static/image20.png)
 
-Visual Studio distribuisce l'applicazione e apre il browser alla home page del sito nell'ambiente di test. Eseguire la pagina instructors (insegnanti) per verificare che l'it consente di visualizzare gli stessi dati che hai visto in precedenza. Eseguire la **aggiungere gli studenti** pagina, aggiungere un nuovo studente e quindi visualizzare il nuovo studente nella **studenti** pagina. In questo modo si verifica che è possibile aggiornare il database. Selezionare il **crediti Update** pagina (è necessario per l'accesso) per verificare che il database di appartenenza è stato distribuito e si ha accesso a esso.
+Visual Studio distribuisce l'applicazione e apre il browser all'home page del sito nell'ambiente di test. Eseguire la pagina insegnanti per vedere che visualizza gli stessi dati visualizzati in precedenza. Eseguire la pagina **Aggiungi studenti** , aggiungere un nuovo studente e visualizzare il nuovo studente nella pagina **students (studenti** ). Ciò consente di verificare che sia possibile aggiornare il database. Selezionare la pagina **Update Credits** (è necessario accedere) per verificare che il database delle appartenenze sia stato distribuito e che sia possibile accedervi.
 
-## <a name="creating-a-sql-server-database-for-the-production-environment"></a>Creazione di un Database di SQL Server per l'ambiente di produzione
+## <a name="creating-a-sql-server-database-for-the-production-environment"></a>Creazione di un database di SQL Server per l'ambiente di produzione
 
-Ora che è stato distribuito nell'ambiente di test, si è pronti a configurare la distribuzione nell'ambiente di produzione. Si inizia come fatto in precedenza per l'ambiente di test, mediante la creazione di un database da distribuire per. Come si ricorderà da una panoramica di, il piano di hosting Cytanium Lite consente solo un singolo database di SQL Server, in modo che si desidera impostare un solo database, non due. Tutte le tabelle e i dati di appartenenza e dell'istituto di istruzione SQL Server Compact database verranno distribuite in un unico database di SQL Server nell'ambiente di produzione.
+Ora che è stata eseguita la distribuzione nell'ambiente di test, si è pronti per configurare la distribuzione nell'ambiente di produzione. Si inizia come per l'ambiente di testing creando un database in cui eseguire la distribuzione. Come è possibile ricordare dalla panoramica, il piano di hosting di Cytanium Lite consente un solo database di SQL Server, quindi è necessario configurare un solo database, non due. Tutte le tabelle e i dati dei database di appartenenza e dell'Istituto di istruzione SQL Server Compact verranno distribuiti in un database SQL Server in produzione.
 
-Passare al pannello di controllo Cytanium all'indirizzo [ http://panel.cytanium.com ](http://panel.cytanium.com). Posiziona il puntatore del mouse su **database** e quindi fare clic su **SQL Server 2008**.
+Passare al pannello di controllo di Cytanium in [http://panel.cytanium.com](http://panel.cytanium.com). Mantenere il puntatore del mouse su **database** , quindi fare clic su **SQL Server 2008**.
 
 [![Selecting_Databases_in_Control_Panel](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/_static/image22.png)](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/_static/image21.png)
 
-Nel **SQL Server 2008** pagina, fare clic su **Create Database**.
+Nella pagina **SQL Server 2008** fare clic su **Crea database**.
 
 [![Selecting_Create_Database](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/_static/image24.png)](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/_static/image23.png)
 
-Nome del database "School", quindi scegliere **salvare**. (La pagina aggiunge automaticamente il prefisso "contosou", in modo che il nome effettivo sarà "contosouSchool".)
+Assegnare un nome al database "School" e fare clic su **Save**. La pagina aggiunge automaticamente il prefisso "contoso", quindi il nome effettivo sarà "contosouSchool".
 
 [![Naming_the_database](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/_static/image26.png)](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/_static/image25.png)
 
-Nella stessa pagina, fare clic su **Create User**. Nei server del Cytanium, piuttosto che usa la sicurezza integrata di Windows e lasciare che l'identità del pool di aprire il database, si creerà un utente che dispone delle autorizzazioni per aprire il database. Si aggiungerà le credenziali dell'utente per le stringhe di connessione che passano in produzione *Web. config* file. In questo passaggio viene creato tali credenziali.
+Nella stessa pagina fare clic su **Crea utente**. Nei server di Cytanium, invece di usare la sicurezza integrata di Windows e consentire all'identità del pool di applicazioni di aprire il database, verrà creato un utente con l'autorità per aprire il database. Le credenziali dell'utente verranno aggiunte alle stringhe di connessione che vengono inserite nel file *Web. config* di produzione. In questo passaggio vengono create le credenziali.
 
 [![Creating_a_database_user](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/_static/image28.png)](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/_static/image27.png)
 
-Compilare i campi obbligatori nella **le proprietà utente SQL** pagina:
+Compilare i campi obbligatori nella pagina **proprietà utente SQL** :
 
 - Immettere "ContosoUniversityUser" come nome.
 - Immettere una password.
 - Selezionare **contosouSchool** come database predefinito.
-- Selezionare il **contosouSchool** casella di controllo.
+- Selezionare la casella di controllo **contosouSchool** .
 
 [![SQL_User_Properties_page](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/_static/image30.png)](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/_static/image29.png)
 
-## <a name="configuring-database-deployment-for-the-production-environment"></a>Configurazione della distribuzione di Database per l'ambiente di produzione
+## <a name="configuring-database-deployment-for-the-production-environment"></a>Configurazione della distribuzione di database per l'ambiente di produzione
 
-A questo punto è possibile configurare le impostazioni di distribuzione di database nel **pubblicazione/creazione pacchetto SQL** scheda, come in precedenza per l'ambiente di test.
+A questo punto si è pronti per configurare le impostazioni di distribuzione del database nella scheda **pubblicazione/pubblicazione pacchetto SQL** , come in precedenza per l'ambiente di test.
 
-Aprire il **le proprietà del progetto** finestra, seleziona la **pubblicazione/creazione pacchetto SQL** scheda e verificare che **attivo (versione)** o **versione** è selezionato nel **configurazione** elenco a discesa.
+Aprire la finestra delle **proprietà del progetto** , selezionare la scheda **pacchetto/pubblica SQL** e assicurarsi che sia selezionata l'opzione **attiva (versione)** o **versione** nell'elenco a discesa **configurazione** .
 
-Quando si configurano le impostazioni di distribuzione per ogni database, la differenza principale tra operazioni per gli ambienti di produzione e di test è in modalità di configurazione le stringhe di connessione. Per l'ambiente di prova immesso le stringhe di connessione di database di destinazione diverso, ma per l'ambiente di produzione la stringa di connessione di destinazione sarà lo stesso per entrambi i database. Questo avviene perché si siano distribuendo entrambi i database in un database nell'ambiente di produzione.
+Quando si configurano le impostazioni di distribuzione per ogni database, la differenza principale tra le operazioni eseguite per gli ambienti di produzione e di test è la modalità di configurazione delle stringhe di connessione. Per l'ambiente di test sono state immesse diverse stringhe di connessione al database di destinazione, ma per l'ambiente di produzione la stringa di connessione di destinazione sarà la stessa per entrambi i database. Questo perché si distribuiscono entrambi i database in un database di produzione.
 
-### <a name="configuring-deployment-settings-for-the-membership-database"></a>Configurazione delle impostazioni di distribuzione per il Database di appartenenza
+### <a name="configuring-deployment-settings-for-the-membership-database"></a>Configurazione delle impostazioni di distribuzione per il database delle appartenenze
 
-Per configurare le impostazioni che si applicano al database di appartenenza, selezionare la **DefaultConnection-Deployment** nella riga il **voci di Database** tabella.
+Per configurare le impostazioni che si applicano al database di appartenenza, selezionare la riga **DefaultConnection-Deployment** nella tabella **voci di database** .
 
-Nelle **stringa di connessione per il database di destinazione**, immettere una stringa di connessione che punti al nuovo database SQL Server di produzione appena creato. È possibile ottenere la stringa di connessione dal messaggio di benvenuto. La parte pertinente del messaggio di posta elettronica contiene la stringa di connessione di esempio seguente:
+In **stringa di connessione per database di destinazione**immettere una stringa di connessione che punta al nuovo database di produzione SQL Server appena creato. È possibile ottenere la stringa di connessione dal messaggio di posta elettronica di benvenuto. La parte pertinente del messaggio di posta elettronica contiene la stringa di connessione di esempio seguente:
 
 [!code-console[Main](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/samples/sample5.cmd)]
 
-Dopo aver sostituito le tre variabili, la stringa di connessione che è necessario simile all'esempio:
+Dopo aver sostituito le tre variabili, la stringa di connessione necessaria è simile a questo esempio:
 
 [!code-console[Main](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/samples/sample6.cmd)]
 
-Copiare e incollare questa stringa di connessione nel **stringa di connessione per il database di destinazione** nel **pubblicazione/creazione pacchetto SQL** scheda.
+Copiare e incollare la stringa di connessione nella **stringa di connessione per il database di destinazione** nella scheda **pacchetto/pubblica SQL** .
 
-Assicurarsi che **effettuare il Pull dei dati e/o schema da un database esistente** è ancora selezionato e che **opzioni di scripting del Database** resta **schemi e dati**.
+Assicurarsi che **i dati di pull e/o lo schema da un database esistente** siano ancora selezionati e che le **Opzioni di scripting del database** siano ancora **schema e dati**.
 
-Nel **script di Database** finestra, deselezionare la casella di controllo accanto a script Grant.sql.
+Nella casella **script di database** deselezionare la casella di controllo accanto allo script Grant. SQL.
 
 ![Disable_Grant_script](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/_static/image31.png)
 
-### <a name="configuring-deployment-settings-for-the-school-database"></a>Configurazione delle impostazioni di distribuzione per il Database School
+### <a name="configuring-deployment-settings-for-the-school-database"></a>Configurazione delle impostazioni di distribuzione per il database School
 
-Selezionare quindi il **SchoolContext-Deployment** nella riga il **voci di Database** tabella per configurare le impostazioni del database School.
+Selezionare quindi la riga **schoolContext-Deployment** nella tabella delle **voci del database** per configurare le impostazioni del database School.
 
-Copiare la stessa stringa di connessione in **stringa di connessione per il database di destinazione** copiato in tale campo per il database di appartenenza.
+Copiare la stessa stringa di connessione nella **stringa di connessione per il database di destinazione** copiato nel campo per il database delle appartenenze.
 
-Assicurarsi che **effettuare il Pull dei dati e/o schema da un database esistente** è ancora selezionato e che **opzioni di scripting del Database** resta **schemi e dati**.
+Assicurarsi che **i dati di pull e/o lo schema da un database esistente** siano ancora selezionati e che le **Opzioni di scripting del database** siano ancora **schema e dati**.
 
-Nel **script di Database** finestra, deselezionare la casella di controllo accanto a script Grant.sql.
+Nella casella **script di database** deselezionare la casella di controllo accanto allo script Grant. SQL.
 
-Salvare le modifiche per il **pubblicazione/creazione pacchetto SQL** scheda.
+Salvare le modifiche apportate alla scheda **pubblicazione/pubblicazione pacchetto SQL** .
 
-## <a name="setting-up-webconfig-transforms-for-the-connection-strings-to-production-databases"></a>Trasformazioni di configurazione Web. config per le stringhe di connessione al database di produzione
+## <a name="setting-up-webconfig-transforms-for-the-connection-strings-to-production-databases"></a>Impostazione delle trasformazioni di Web. config per le stringhe di connessione nei database di produzione
 
-Successivamente, si configurerà *Web. config* trasformazioni in modo che le stringhe di connessione nella distribuito *Web. config* file in modo che punti al nuovo database di produzione. La stringa di connessione che è stato immesso il **pubblicazione/creazione pacchetto SQL** scheda per distribuzione Web da utilizzare è identico a quello dell'applicazione deve usare, fatta eccezione per l'aggiunta del `MultipleResultSets` opzione.
+Successivamente, si configureranno le trasformazioni di *Web. config* in modo che le stringhe di connessione nel file *Web. config* distribuito facciano riferimento al nuovo database di produzione. La stringa di connessione immessa nella scheda **pacchetto/pubblica SQL** per distribuzione Web da usare corrisponde a quella usata dall'applicazione, ad eccezione dell'aggiunta dell'opzione `MultipleResultSets`.
 
-Aprire *Web.Production.config* e sostituire il `connectionStrings` elemento con un `connectionStrings` elemento simile al seguente. (Copia solo il `connectionStrings` elemento, non i tag forniti per mostrare il contesto.)
+Aprire *Web. Production. config* e sostituire l'elemento `connectionStrings` con un elemento `connectionStrings` simile all'esempio seguente. (Copiare solo l'elemento `connectionStrings`, non i tag circostanti forniti per mostrare il contesto).
 
 [!code-xml[Main](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/samples/sample7.xml?highlight=2-11)]
 
-Talvolta riscontrare indicazioni, che consente di crittografare sempre stringhe di connessione nel *Web. config* file. Ciò potrebbe essere appropriata se si distribuisse ai server nella rete dell'azienda. Quando distribuisce in un ambiente di hosting condiviso, tuttavia, vengono considerati attendibili le procedure di sicurezza del provider di hosting, e non è necessario o consigliabile crittografare le stringhe di connessione.
+A volte viene visualizzato un Consiglio che indica di crittografare sempre le stringhe di connessione nel file *Web. config* . Questo potrebbe essere appropriato se si stava distribuendo ai server nella rete aziendale. Quando si esegue la distribuzione in un ambiente host condiviso, tuttavia, le procedure di sicurezza del provider di hosting sono attendibili e non è necessario o pratico crittografare le stringhe di connessione.
 
 ## <a name="deploying-to-the-production-environment"></a>Distribuzione nell'ambiente di produzione
 
-È ora possibile distribuire nell'ambiente di produzione. La funzionalità distribuzione Web leggerà i database di SQL Server Compact del progetto *App\_dati* cartella e ricreare tutte le tabelle e i dati nel database di SQL Server di produzione. Per eseguire la pubblicazione usando il **pubblicazione/creazione pacchetto Web** le impostazioni di tabulazione, è necessario creare un nuovo profilo di pubblicazione per la produzione.
+A questo punto si è pronti per la distribuzione nell'ambiente di produzione. Distribuzione Web leggerà i database SQL Server Compact nella cartella *App\_data* del progetto e creerà di nuovo tutte le tabelle e i dati nel database di SQL Server di produzione. Per eseguire la pubblicazione utilizzando le impostazioni della scheda **Pubblicazione/creazione pacchetto Web** , è necessario creare un nuovo profilo di pubblicazione per la produzione.
 
-In primo luogo, eliminare il profilo di produzione esistente come il profilo di Test in precedenza.
+Prima di tutto, eliminare il profilo di produzione esistente come il profilo di test precedente.
 
-Nelle **Esplora soluzioni**, fare clic sul progetto ContosoUniversity e fare clic su **Publish**.
+In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto ContosoUniversity e scegliere **pubblica**.
 
-Selezionare il **profilo** scheda.
+Selezionare la scheda **profilo** .
 
-Fare clic su **gestire i profili**.
+Fare clic su **Gestisci profili**.
 
-Selezionare **produzione**, fare clic su **rimuovere**, quindi fare clic su **Chiudi**.
+Selezionare **produzione**, fare clic su **Rimuovi**e quindi su **Chiudi**.
 
-Chiudi il **pubblica sul Web** guidata consente di salvare questa modifica.
+Chiudere la procedura guidata **Pubblica sito Web** per salvare la modifica.
 
-Successivamente, creare un nuovo profilo di produzione e usarlo per pubblicare il progetto.
+Successivamente, creare un nuovo profilo di produzione e utilizzarlo per pubblicare il progetto.
 
-Nelle **Esplora soluzioni**, fare clic sul progetto ContosoUniversity e fare clic su **Publish**.
+In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto ContosoUniversity e scegliere **pubblica**.
 
-Selezionare il **profilo** scheda.
+Selezionare la scheda **profilo** .
 
-Fare clic su **importazione**e selezionare il file con estensione publishsettings scaricato in precedenza.
+Fare clic su **Importa**e selezionare il file con estensione publishsettings scaricato in precedenza.
 
-Nel **Connection** scheda, modificare il **URL di destinazione** all'URL corretto temporaneo, che in questo esempio è http://contosouniversity.com.vserver01.cytanium.com.
+Nella scheda **connessione** modificare l'URL di **destinazione** con l'URL temporaneo corretto, che in questo esempio è http://contosouniversity.com.vserver01.cytanium.com.
 
-Rinomina il profilo nell'ambiente di produzione. (Selezionare il **profilo** scheda e fare clic su **Gestione profili** a tale scopo).
+Rinominare il profilo in produzione. Selezionare la scheda **profilo** e fare clic su **Gestisci profili** a tale scopo.
 
-Chiudi il **pubblica sul Web** guidata consente di salvare le modifiche.
+Chiudere la procedura guidata **Pubblica sito Web** per salvare le modifiche.
 
-In un'applicazione reale in cui è stato viene aggiornato il database nell'ambiente di produzione, è necessario effettuare ora i due passaggi aggiuntivi prima di pubblicare:
+In un'applicazione reale in cui il database è stato aggiornato in produzione, è necessario eseguire due passaggi aggiuntivi prima di pubblicare:
 
-1. Caricare *app\_offline.htm*, come illustrato nella [distribuzione nell'ambiente di produzione](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12.md) esercitazione.
-2. Usare la **gestione File** funzionalità del Pannello di controllo Cytanium per copiare la *aspnet-Prod.sdf* e *School-Prod.sdf* file dal sito di produzione per il *App\_dati* cartella del progetto ContosoUniversity. Ciò garantisce che i dati che si distribuisce il nuovo database di SQL Server includano gli aggiornamenti più recenti apportati da siti Web di produzione.
+1. Caricare l' *app\_offline. htm*, come illustrato nell'esercitazione [Deploying to the production environment](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12.md) .
+2. Usare la funzionalità **file Manager** del pannello di controllo Cytanium per copiare i file *ASPNET-prod. sdf* e *School-prod. sdf* dal sito di produzione alla cartella *app\_data* del progetto ContosoUniversity. Ciò garantisce che i dati distribuiti nel nuovo database di SQL Server includano gli ultimi aggiornamenti effettuati dal sito Web di produzione.
 
-Nel **Web-pubblicazione con un clic** sulla barra degli strumenti, assicurarsi che le **produzione** profilo sia selezionata e quindi fare clic su **Publish**.
+Nella barra degli strumenti **pubblica sul Web fare clic su pubblica** , verificare che il profilo di **produzione** sia selezionato, quindi fare clic su **pubblica**.
 
-Se è stato caricato <em>app\_offline.htm</em> prima della pubblicazione, è necessario usare i <strong>gestione File</strong> utilità nel Pannello di controllo Cytanium eliminare <em>app\_offline.</em> htm prima di testare. È anche possibile allo stesso tempo eliminare il <em>sdf</em> dei file dalle <em>App\_dati</em> cartella.
+Se l'app è stata caricata <em>\_offline. htm</em> prima della pubblicazione, è necessario usare l'utilità <strong>file Manager</strong> nel pannello di controllo Cytanium per eliminare l' <em>app\_offline.</em> htm prima di eseguire il test. È anche possibile eliminare contemporaneamente i file <em>SDF</em> dalla cartella <em>app\_data</em> .
 
-È ora possibile aprire un browser e passare all'URL del sito pubblico per testare l'applicazione allo stesso modo che è stato eseguito dopo la distribuzione nell'ambiente di test.
+È ora possibile aprire un browser e passare all'URL del sito pubblico per testare l'applicazione nello stesso modo in cui è stato eseguito dopo la distribuzione nell'ambiente di test.
 
-## <a name="switching-to-sql-server-express-localdb-in-development"></a>Il passaggio a SQL Server Express LocalDB in fase di sviluppo
+## <a name="switching-to-sql-server-express-localdb-in-development"></a>Passare a SQL Server Express database locale nello sviluppo
 
-Come descritto nella panoramica, è preferibile usare lo stesso motore di database in fase di sviluppo in uso in produzione e test. (Tenere presente che il vantaggio dell'uso di SQL Server Express in fase di sviluppo è che il database funzionerà lo stesso nei propri ambienti di sviluppo, test e produzione). In questa sezione verrà configuri il progetto ContosoUniversity usare SQL Server Express LocalDB quando si esegue l'applicazione da Visual Studio.
+Come illustrato nella panoramica, in genere è preferibile usare lo stesso motore di database in fase di sviluppo da usare per il test e la produzione. Tenere presente che il vantaggio dell'utilizzo di SQL Server Express in fase di sviluppo è che il database funziona nello stesso modo negli ambienti di sviluppo, test e produzione. In questa sezione verrà configurato il progetto ContosoUniversity per l'uso di SQL Server Express database locale quando si esegue l'applicazione da Visual Studio.
 
-Il modo più semplice per eseguire la migrazione è in Code First e il sistema di appartenenze creare entrambi i nuovi database lo sviluppo per l'utente. Con questo metodo per eseguire la migrazione richiede tre passaggi:
+Il modo più semplice per eseguire questa migrazione è consentire a Code First e al sistema di appartenenza di creare i nuovi database di sviluppo. L'utilizzo di questo metodo per eseguire la migrazione richiede tre passaggi:
 
-1. Modificare le stringhe di connessione per specificare i nuovi database LocalDB di SQL Express.
-2. Eseguire lo strumento Amministrazione sito Web per creare un utente amministratore. Verrà creato il database di appartenenza.
-3. Usare il comando update-database migrazioni Code First per creare ed eseguire il seeding del database dell'applicazione.
+1. Modificare le stringhe di connessione per specificare nuovi database del database locale di SQL Express.
+2. Eseguire lo strumento Amministrazione sito Web per creare un utente amministratore. Verrà creato il database delle appartenenze.
+3. Usare il comando Migrazioni Code First Update-database per creare e inizializzare il database dell'applicazione.
 
 ### <a name="updating-connection-strings-in-the-webconfig-file"></a>Aggiornamento delle stringhe di connessione nel file Web. config
 
-Aprire il *Web. config* del file e sostituire il `connectionStrings` elemento con il codice seguente:
+Aprire il file *Web. config* e sostituire l'elemento `connectionStrings` con il codice seguente:
 
 [!code-xml[Main](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/samples/sample8.xml)]
 
-### <a name="creating-the-membership-database"></a>Creazione del Database di appartenenza
+### <a name="creating-the-membership-database"></a>Creazione del database di appartenenza
 
-Nelle **Esplora soluzioni**, selezionare il progetto ContosoUniversity e quindi fare clic su **configurazione di ASP.NET** nel **progetto** menu.
+In **Esplora soluzioni**selezionare il progetto ContosoUniversity e quindi fare clic su **configurazione ASP.NET** nel menu **progetto** .
 
-Selezionare la scheda sicurezza.
+Fare clic sulla scheda Sicurezza.
 
-Fare clic su **crea o Gestisci ruoli**, quindi creare un **amministratore** ruolo.
+Fare clic su **Crea o Gestisci ruoli**, quindi creare un ruolo di **amministratore** .
 
 Tornare alla scheda sicurezza.
 
-Fare clic su **Create user**, quindi selezionare la **amministratore** casella di controllo e creare un utente denominato amministratore.
+Fare clic su **Crea utente**, quindi selezionare la casella di controllo **amministratore** e creare un utente denominato admin.
 
-Chiudi il **strumento Amministrazione sito Web**.
+Chiudere lo **strumento Amministrazione sito Web**.
 
-### <a name="creating-the-school-database"></a>Creazione del Database School
+### <a name="creating-the-school-database"></a>Creazione del database School
 
-Aprire la finestra della Console di gestione pacchetti.
+Aprire la finestra console di gestione pacchetti.
 
-Nel **progetto predefinito** elenco a discesa selezionare il progetto ContosoUniversity.DAL.
+Nell'elenco a discesa **progetto predefinito** selezionare il progetto CONTOSOUNIVERSITY. dal.
 
 Immettere il comando seguente:
 
 [!code-powershell[Main](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/samples/sample9.ps1)]
 
-Migrazioni Code First si applica la migrazione iniziale che crea il database e quindi applica la migrazione AddBirthDate, quindi viene eseguito il metodo di inizializzazione.
+Migrazioni Code First applica la migrazione iniziale che crea il database e quindi applica la migrazione AddBirthDate, quindi esegue il metodo Seed.
 
-Eseguire il sito premendo CTRL+F5. Come per gli ambienti di test e produzione, eseguire la **aggiungere gli studenti** pagina, aggiungere un nuovo studente e quindi visualizzare il nuovo studente nella **studenti** pagina. Verifica che il database School è stato creato e inizializzato e che si sono letti e l'accesso in scrittura a esso.
+Eseguire il sito premendo CTRL-F5. Come per gli ambienti di test e di produzione, eseguire la pagina **Aggiungi studenti** , aggiungere un nuovo studente, quindi visualizzare il nuovo studente nella pagina **students (studenti** ). In questo modo si verifica che il database School sia stato creato e inizializzato e che l'utente disponga dell'accesso in lettura e scrittura.
 
-Selezionare il **crediti Update** pagina ed eseguire l'accesso per verificare che il database di appartenenza è stato distribuito e di avere accesso a esso. Se non sono stati migrati gli account utente, creare un account amministratore e quindi selezionare il **crediti Update** pagina per verificarne il funzionamento.
+Selezionare la pagina di **aggiornamento crediti** e accedere per verificare che il database di appartenenza sia stato distribuito e che sia possibile accedervi. Se non è stata eseguita la migrazione degli account utente, creare un account amministratore e quindi selezionare la pagina **crediti di aggiornamento** per verificarne il funzionamento.
 
-## <a name="cleaning-up-sql-server-compact-files"></a>Pulizia dei file SQL Server Compact
+## <a name="cleaning-up-sql-server-compact-files"></a>Pulizia dei file di SQL Server Compact
 
-Non è più necessario file e pacchetti NuGet che sono stati inclusi per supportare SQL Server Compact. Se si desidera (in questo passaggio non è obbligatorio), è possibile pulire i file non necessari e i riferimenti.
+Non sono più necessari i file e i pacchetti NuGet inclusi per supportare SQL Server Compact. Se si desidera (questo passaggio non è obbligatorio), è possibile eliminare i file e i riferimenti non necessari.
 
-Nella **Esplora soluzioni**, eliminare il *sdf* dei file dal *App\_dati* cartella e il *amd64* e*x86* le cartelle dal *bin* cartella.
+In **Esplora soluzioni**eliminare i file *con estensione sdf* dalla cartella *app\_data* e dalle cartelle *amd64* e *x86* dalla cartella *bin* .
 
-Nelle **Esplora soluzioni**, fare doppio clic su della soluzione (non uno dei progetti) e quindi fare clic su **Gestisci pacchetti NuGet per la soluzione**.
+In **Esplora soluzioni**fare clic con il pulsante destro del mouse sulla soluzione, non su uno dei progetti, quindi fare clic su **Gestisci pacchetti NuGet per la soluzione**.
 
-Nel riquadro sinistro della finestra di **Gestisci pacchetti NuGet** finestra di dialogo **i pacchetti installati**.
+Nel riquadro sinistro della finestra di dialogo **Gestisci pacchetti NuGet** selezionare **pacchetti installati**.
 
-Selezionare il **EntityFramework.SqlServerCompact** del pacchetto e fare clic su **Gestisci**.
+Selezionare il pacchetto **EntityFramework. SqlServerCompact** e fare clic su **Gestisci**.
 
-Nel **Seleziona progetti** finestra di dialogo, entrambi i progetti sono selezionati. Per disinstallare il pacchetto in entrambi i progetti, entrambe le caselle di controllo, quindi fare clic su **OK**.
+Nella finestra di dialogo **Seleziona progetti** è selezionato entrambi i progetti. Per disinstallare il pacchetto in entrambi i progetti, deselezionare entrambe le caselle di controllo, quindi fare clic su **OK**.
 
-Nella finestra di dialogo che chiede se si desidera disinstallare anche i pacchetti dipendenti, fare clic su No. Uno di questi è il pacchetto di Entity Framework che è necessario conservare.
+Nella finestra di dialogo in cui viene chiesto se si desidera disinstallare anche i pacchetti dipendenti, fare clic su No. Uno di questi è il pacchetto di Entity Framework che è necessario gestire.
 
-Seguire la stessa procedura per disinstallare il **SqlServerCompact** pacchetto. (Necessario disinstallare i pacchetti in quest'ordine perché la **EntityFramework.SqlServerCompact** dipende dal pacchetto i **SqlServerCompact** package.)
+Seguire la stessa procedura per disinstallare il pacchetto **SqlServerCompact** . I pacchetti devono essere disinstallati in questo ordine perché il pacchetto **EntityFramework. SqlServerCompact** dipende dal pacchetto **SqlServerCompact** .
 
-A questo punto è stata la migrazione a SQL Server Express e completa di SQL Server. Nella prossima esercitazione si apporteranno un'altra modifica del database e si verrà illustrato come distribuire le modifiche del database se i database di test e produzione usano SQL Server Express e completa di SQL Server.
+La migrazione a SQL Server Express e SQL Server completa è stata completata. Nell'esercitazione successiva verrà apportata una modifica a un altro database e verrà illustrato come distribuire le modifiche al database quando i database di test e produzione utilizzano SQL Server Express e SQL Server completi.
 
 > [!div class="step-by-step"]
 > [Precedente](deployment-to-a-hosting-provider-deploying-a-database-update-9-of-12.md)

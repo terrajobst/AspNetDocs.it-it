@@ -1,77 +1,77 @@
 ---
 uid: web-forms/overview/deployment/visual-studio-web-deployment/setting-folder-permissions
-title: 'Distribuzione Web ASP.NET tramite Visual Studio: Impostazione delle autorizzazioni di cartella | Microsoft Docs'
+title: 'Distribuzione Web ASP.NET con Visual Studio: impostazione delle autorizzazioni per le cartelle | Microsoft Docs'
 author: tdykstra
-description: Questa serie di esercitazioni illustra come distribuire, pubblicare, ASP.NET per App Web di servizio App di Azure o per un provider di hosting di terze parti, di applicazioni web da utilizza...
+description: Questa serie di esercitazioni illustra come distribuire (pubblicare) un'applicazione Web ASP.NET per app Azure servizio app Web o un provider di hosting di terze parti, da usin...
 ms.author: riande
 ms.date: 02/15/2013
 ms.assetid: 9715a121-fa55-4f1b-a5d2-fb3f6cd8be8f
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/setting-folder-permissions
 msc.type: authoredcontent
-ms.openlocfilehash: f25182f3f841c963866319dd934c0c28b4eb95b0
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 410525bb2e3f6e5a0be6d7d6b33fb3a40509041a
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65112887"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74614930"
 ---
-# <a name="aspnet-web-deployment-using-visual-studio-setting-folder-permissions"></a>Distribuzione Web ASP.NET tramite Visual Studio: Impostazione delle autorizzazioni delle cartelle
+# <a name="aspnet-web-deployment-using-visual-studio-setting-folder-permissions"></a>Distribuzione Web ASP.NET con Visual Studio: impostazione delle autorizzazioni per le cartelle
 
-da [Tom Dykstra](https://github.com/tdykstra)
+di [Tom Dykstra](https://github.com/tdykstra)
 
-[Download progetto iniziale](http://go.microsoft.com/fwlink/p/?LinkId=282627)
+[Scarica progetto Starter](https://go.microsoft.com/fwlink/p/?LinkId=282627)
 
-> Questa serie di esercitazioni illustra come distribuire, pubblicare, ASP.NET per App Web di servizio App di Azure o per un provider di hosting di terze parti, di applicazioni web usando Visual Studio 2012 o Visual Studio 2010. Per informazioni sulla serie, vedere [la prima esercitazione della serie](introduction.md).
+> Questa serie di esercitazioni illustra come distribuire (pubblicare) un'applicazione Web ASP.NET in app Web di servizio app Azure o in un provider di hosting di terze parti, usando Visual Studio 2012 o Visual Studio 2010. Per informazioni sulla serie, vedere [la prima esercitazione della serie](introduction.md).
 
-## <a name="overview"></a>Panoramica
+## <a name="overview"></a>Panoramica di
 
-In questa esercitazione, impostare le autorizzazioni per il *Elmah* cartella web distribuito in modo che l'applicazione può creare i file di log nella cartella del sito.
+In questa esercitazione si impostano le autorizzazioni per la cartella *ELMAH* nel sito Web distribuito in modo che l'applicazione possa creare file di log in tale cartella.
 
-Quando si testa un'applicazione web in Visual Studio usando il Visual Studio Development Server (Cassini) o IIS Express, l'applicazione viene eseguita con la tua identità. Si è molto probabile che un amministratore nel computer di sviluppo e disporre di autorità completa eseguire alcuna azione per qualsiasi file in una cartella specifica. Ma quando si esegue un'applicazione in IIS, può essere eseguito con l'identità definita per il pool di applicazioni assegnato al sito. Si tratta in genere di un account definito dal sistema che dispone di autorizzazioni limitate. Per impostazione predefinita dispone di autorizzazioni read ed execute sul file e cartelle dell'applicazione web, ma non ha accesso in scrittura.
+Quando si esegue il test di un'applicazione Web in Visual Studio usando il Server di sviluppo Visual Studio (Cassini) o IIS Express, l'applicazione viene eseguita con l'identità. È molto probabile che un amministratore del computer di sviluppo disponga di un'autorità completa per eseguire qualsiasi operazione su qualsiasi file in qualsiasi cartella. Tuttavia, quando un'applicazione viene eseguita in IIS, viene eseguita con l'identità definita per il pool di applicazioni a cui è assegnato il sito. Si tratta in genere di un account definito dal sistema che dispone di autorizzazioni limitate. Per impostazione predefinita, dispone delle autorizzazioni di lettura ed esecuzione per i file e le cartelle dell'applicazione Web, ma non dispone dell'accesso in scrittura.
 
-Questo diventa un problema se l'applicazione crea o aggiorna i file, che è un comune necessarie nelle applicazioni web. Nell'applicazione di Contoso University, Elmah crea i file XML nel *Elmah* cartella per salvare i dettagli sugli errori. Anche se non si usa un elemento, ad esempio Elmah, il sito potrebbe consentire agli utenti di caricare i file o eseguire altre attività di scrittura dei dati in una cartella nel sito.
+Questo diventa un problema se l'applicazione crea o aggiorna i file, una necessità comune nelle applicazioni Web. Nell'applicazione Contoso University, ELMAH crea file XML nella cartella *ELMAH* per salvare i dettagli sugli errori. Anche se non si usa un elemento come ELMAH, il sito potrebbe consentire agli utenti di caricare i file o eseguire altre attività che scrivono i dati in una cartella nel sito.
 
-Promemoria: Se viene visualizzato un messaggio di errore o qualcosa non funziona durante l'esecuzione dell'esercitazione, assicurarsi di controllare la [risoluzione dei problemi pagina](troubleshooting.md).
+Promemoria: se si riceve un messaggio di errore o un elemento non funziona durante l'esercitazione, assicurarsi di controllare la pagina relativa alla [risoluzione dei problemi](troubleshooting.md).
 
-## <a name="test-error-logging-and-reporting"></a>Segnalazione e registrazione degli errori di test
+## <a name="test-error-logging-and-reporting"></a>Verifica della registrazione degli errori e della creazione di report
 
-Per vedere come l'applicazione non funziona correttamente in IIS (anche se ha quando è stata testata in Visual Studio), si può causare un errore che viene in genere registrato da Elmah e quindi aprirla il log degli errori Elmah per visualizzare i dettagli. Se Elmah non è riuscito a creare un file XML e archiviare i dettagli dell'errore, viene visualizzato un report degli errori vuoto.
+Per verificare il funzionamento corretto dell'applicazione in IIS (anche se è stato testato in Visual Studio), è possibile che venga generato un errore che in genere verrebbe registrato da ELMAH, quindi aprire il log degli errori di ELMAH per visualizzare i dettagli. Se ELMAH non è stato in grado di creare un file XML e archivia i dettagli dell'errore, viene visualizzata una segnalazione di errore vuota.
 
-Aprire un browser e passare a `http://localhost/ContosoUniversity`, e quindi richiedere un URL non valido, ad esempio *Studentsxxx.aspx*. Verrà visualizzata una pagina di errore generati dal sistema anziché il *GenericErrorPage* pagina perché il `customErrors` impostazione nel file Web. config è "RemoteOnly" ed è in esecuzione IIS in locale:
+Aprire un browser e passare a `http://localhost/ContosoUniversity`e quindi richiedere un URL non valido, ad esempio *Studentsxxx. aspx*. Viene visualizzata una pagina di errore generata dal sistema anziché la pagina *pagina GenericErrorPage. aspx* perché l'impostazione `customErrors` nel file Web. config è "RemoteOnly" e si esegue IIS in locale:
 
-![Pagina di errore 404 HTTP](setting-folder-permissions/_static/image1.png)
+![Pagina di errore HTTP 404](setting-folder-permissions/_static/image1.png)
 
-A questo punto eseguire *Elmah.axd* per visualizzare il report di errore. Dopo l'accesso con le credenziali dell'account amministratore (&quot;admin&quot; e &quot;devpwd&quot;), è possibile visualizzare una pagina di log degli errori vuoto perché non è riuscito a creare un file XML in Elmah il *Elmah*cartella:
+Eseguire quindi *ELMAH. axd* per visualizzare il report degli errori. Dopo aver eseguito l'accesso con le credenziali dell'account amministratore (&quot;amministratore&quot; e &quot;devpwd&quot;), viene visualizzata una pagina di log degli errori vuota perché ELMAH non è stato in grado di creare un file XML nella cartella *ELMAH* :
 
-![Errore del log vuoto](setting-folder-permissions/_static/image2.png)
+![Log degli errori vuoto](setting-folder-permissions/_static/image2.png)
 
-## <a name="set-write-permission-on-the-elmah-folder"></a>Impostare le autorizzazioni di scrittura sulla cartella Elmah
+## <a name="set-write-permission-on-the-elmah-folder"></a>Impostare l'autorizzazione di scrittura per la cartella ELMAH
 
-È possibile impostare manualmente le autorizzazioni della cartella oppure è possibile renderlo una parte del processo di distribuzione automatica. Rendendo automatica richiede codice MSBuild complesso e poiché è sufficiente eseguire questa operazione la prima volta che si distribuisce, i passaggi seguenti illustrano come eseguire l'operazione manualmente. (Per informazioni su come effettuare questa parte del processo di distribuzione, vedere [impostazione delle autorizzazioni di cartella nel sito Web-pubblicazione](http://sedodream.com/2011/11/08/SettingFolderPermissionsOnWebPublish.aspx) sul blog di Sayed Hashimi.)
+È possibile impostare le autorizzazioni della cartella manualmente oppure è possibile renderla automaticamente parte del processo di distribuzione. Per renderlo automatico è necessario un codice MSBuild complesso e, dal momento che è necessario eseguire questa operazione solo la prima volta che si distribuisce, la procedura seguente illustra come eseguire questa operazione manualmente. Per informazioni su come eseguire questa parte del processo di distribuzione, vedere [impostazione delle autorizzazioni per le cartelle sul Web Publish](http://sedodream.com/2011/11/08/SettingFolderPermissionsOnWebPublish.aspx) nel Blog di Sayed Hashimi.
 
-1. Nelle **Esplora File**, passare alla *C:\inetpub\wwwroot\ContosoUniversity*. Fare doppio clic sui *Elmah* cartella, selezionare **delle proprietà**e quindi selezionare il **sicurezza** scheda.
+1. In **Esplora file**passare a *C:\inetpub\wwwroot\ContosoUniversity*. Fare clic con il pulsante destro del mouse sulla cartella *ELMAH* , scegliere **Proprietà**, quindi selezionare la scheda **sicurezza** .
 2. Fare clic su **Modifica**.
-3. Nel **le autorizzazioni per Elmah** finestra di dialogo **DefaultAppPool**e quindi selezionare il **scrivere** casella di controllo la **Consenti** colonna.
+3. Nella finestra di dialogo **autorizzazioni per ELMAH** selezionare **DefaultAppPool**, quindi selezionare la casella di controllo **Scrivi** nella colonna **Consenti** .
 
     ![Autorizzazioni per la cartella ELMAH](setting-folder-permissions/_static/image3.png)
 
-    (Se non viene visualizzata **DefaultAppPool** nel **nomi utente o gruppo** elenco, probabilmente utilizzato un altro metodo rispetto a quello specificato in questa esercitazione per configurare IIS e ASP.NET 4 nel computer. In tal caso, scoprire quali identità viene usata dal pool di applicazioni assegnato all'applicazione Contoso University e concedere l'autorizzazione di scrittura per tale identità. Vedere i collegamenti relativi a identità del pool di applicazioni alla fine di questa esercitazione). Fare clic su **OK** in entrambe le finestre di dialogo.
+    Se non viene visualizzato **DefaultAppPool** nell'elenco di **utenti o gruppi** , è probabile che sia stato usato un altro metodo rispetto a quello specificato in questa esercitazione per configurare IIS e ASP.NET 4 nel computer. In tal caso, scoprire quale identità viene usata dal pool di applicazioni assegnato all'applicazione Contoso University e concedere l'autorizzazione di scrittura per tale identità. Vedere i collegamenti sulle identità del pool di applicazioni alla fine di questa esercitazione. Fare clic su **OK** in entrambe le finestre di dialogo.
 
-## <a name="retest-error-logging-and-reporting"></a>Testare nuovamente la registrazione degli errori e creazione di report
+## <a name="retest-error-logging-and-reporting"></a>Testare nuovamente la registrazione degli errori e la creazione di report
 
-Per testare questo causa un errore nuovamente nello stesso modo (richiesta di un URL non valido) ed eseguire la **Log degli errori** pagina. Questa volta l'errore viene visualizzato nella pagina.
+Eseguire un test causando un errore nello stesso modo (richiedere un URL non valido) ed eseguire la pagina **log degli errori** . Questa volta l'errore viene visualizzato nella pagina.
 
-![Pagina di Log degli errori ELMAH](setting-folder-permissions/_static/image4.png)
+![Pagina log degli errori di ELMAH](setting-folder-permissions/_static/image4.png)
 
 ## <a name="summary"></a>Riepilogo
 
-È stata ora completata tutte le attività necessarie per ottenere Contoso University funziona correttamente in IIS nel computer locale. Nella prossima esercitazione, si apporterà del sito disponibili pubblicamente per distribuirla in Azure.
+Sono state completate tutte le attività necessarie per far funzionare correttamente Contoso University in IIS nel computer locale. Nell'esercitazione successiva il sito sarà reso disponibile pubblicamente tramite la distribuzione in Azure.
 
 ## <a name="more-information"></a>Altre informazioni
 
-In questo esempio, il motivo per cui non è riuscito a salvare file di log Elmah è abbastanza ovvio. È possibile utilizzare la traccia di IIS nei casi in cui non è così ovvia; la causa del problema visualizzare [risoluzione dei problemi Failed Requests Using Tracing in IIS 7](https://www.iis.net/learn/troubleshoot/using-failed-request-tracing/troubleshooting-failed-requests-using-tracing-in-iis) sul sito IIS.net.
+In questo esempio, il motivo per cui ELMAH non è stato in grado di salvare i file di log era abbastanza ovvio. È possibile utilizzare la traccia IIS nei casi in cui la causa del problema non è così ovvia; vedere [risoluzione dei problemi relativi alle richieste non riuscite tramite la traccia in IIS 7](https://www.iis.net/learn/troubleshoot/using-failed-request-tracing/troubleshooting-failed-requests-using-tracing-in-iis) nel sito di IIS.NET.
 
-Per altre informazioni su come concedere le autorizzazioni per le identità del pool di applicazioni, vedere [Application Pool Identities](https://www.iis.net/learn/manage/configuring-security/application-pool-identities) e [proteggere contenuti in IIS tramite ACL del File System](https://www.iis.net/learn/get-started/planning-for-security/secure-content-in-iis-through-file-system-acls) sul sito IIS.net.
+Per altre informazioni su come concedere le autorizzazioni alle identità del pool di applicazioni, vedere [identità del pool di applicazioni](https://www.iis.net/learn/manage/configuring-security/application-pool-identities) e [contenuto sicuro in IIS tramite ACL del file System](https://www.iis.net/learn/get-started/planning-for-security/secure-content-in-iis-through-file-system-acls) nel sito di IIS.NET.
 
 > [!div class="step-by-step"]
 > [Precedente](deploying-to-iis.md)

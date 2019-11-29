@@ -1,35 +1,35 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/cascadingdropdown/using-auto-postback-with-cascadingdropdown-cs
-title: Uso del Postback automatico con CascadingDropDown (c#) | Microsoft Docs
+title: Uso del postback automatico con CascadingDropDown (C#) | Microsoft Docs
 author: wenz
-description: Il controllo CascadingDropDown in AJAX Control Toolkit estende un controllo DropDownList in modo che le modifiche in un controllo DropDownList carichi associati i valori in anoth...
+description: Il controllo CascadingDropDown in AJAX Control Toolkit estende un controllo DropDownList in modo che le modifiche in un controllo DropDownList carichino i valori associati in un altr...
 ms.author: riande
 ms.date: 06/02/2008
 ms.assetid: 6755d8d9-14be-4a1d-86e5-1a6110f3dea8
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/cascadingdropdown/using-auto-postback-with-cascadingdropdown-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 44133164d1c852fefc84a89614d306e39378ed97
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 8bccd716814e7de544798010cecbc148ec50b5cd
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65133592"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74574512"
 ---
 # <a name="using-auto-postback-with-cascadingdropdown-c"></a>Uso del postback automatico con CascadingDropDown (C#)
 
-da [Christian Wenz](https://github.com/wenz)
+di [Christian Wenz](https://github.com/wenz)
 
-[Scaricare il codice](http://download.microsoft.com/download/9/0/7/907760b1-2c60-4f81-aeb6-ca416a573b0d/cascadingdropdown3.cs.zip) o [Scarica il PDF](http://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/cascadingdropdown3CS.pdf)
+[Scarica codice](https://download.microsoft.com/download/9/0/7/907760b1-2c60-4f81-aeb6-ca416a573b0d/cascadingdropdown3.cs.zip) o [Scarica PDF](https://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/cascadingdropdown3CS.pdf)
 
-> Il controllo CascadingDropDown in AJAX Control Toolkit estende un controllo DropDownList in modo che le modifiche in un controllo DropDownList Carica valori in un altro controllo DropDownList associati. Tuttavia quando si usa il controllo CascadingDropDown, ASP. Funzionalità di un postback automatico del controllo DropDownList di NET non funziona, poiché in modo asincrono il caricamento dei dati nell'elenco genera un postback (non necessario) a se stesso. Con oltre a codice JavaScript, è possibile evitare questo effetto.
+> Il controllo CascadingDropDown in AJAX Control Toolkit estende un controllo DropDownList in modo che le modifiche in un controllo DropDownList carichino i valori associati in un altro DropDownList. Tuttavia, quando si usa il controllo CascadingDropDown, ASP. La funzionalità di PostBack automatico del controllo DropDownList di NET non funziona, poiché il caricamento asincrono dei dati nell'elenco genera un postback (non necessario). Con alcuni codici JavaScript, questo effetto può essere evitato.
 
-## <a name="overview"></a>Panoramica
+## <a name="overview"></a>Panoramica di
 
-Il controllo CascadingDropDown in AJAX Control Toolkit estende un controllo DropDownList in modo che le modifiche in un controllo DropDownList Carica valori in un altro controllo DropDownList associati. (Ad esempio, un unico elenco fornisce un elenco di stati degli Stati Uniti e il successivo elenco viene riempito con città più importanti di tale stato.) Tuttavia quando si usa il controllo CascadingDropDown, ASP. Funzionalità di un postback automatico del controllo DropDownList di NET non funziona, poiché in modo asincrono il caricamento dei dati nell'elenco genera un postback (non necessario) a se stesso. Con oltre a codice JavaScript, è possibile evitare questo effetto.
+Il controllo CascadingDropDown in AJAX Control Toolkit estende un controllo DropDownList in modo che le modifiche in un controllo DropDownList carichino i valori associati in un altro DropDownList. Ad esempio, un elenco include un elenco di stati degli Stati Uniti e l'elenco successivo viene quindi riempito con le città principali in tale stato. Tuttavia, quando si usa il controllo CascadingDropDown, ASP. La funzionalità di PostBack automatico del controllo DropDownList di NET non funziona, poiché il caricamento asincrono dei dati nell'elenco genera un postback (non necessario). Con alcuni codici JavaScript, questo effetto può essere evitato.
 
 ## <a name="steps"></a>Passaggi
 
-Per attivare la funzionalità di ASP.NET AJAX e il Toolkit di controllo, il `ScriptManager` controllo deve essere inserito in un punto qualsiasi della pagina (ma entro la &lt; `form` &gt; elemento):
+Per attivare la funzionalità di ASP.NET AJAX e di Control Toolkit, il controllo `ScriptManager` deve essere inserito in un punto qualsiasi della pagina, ma all'interno dell'elemento &lt;`form`&gt;:
 
 [!code-aspx[Main](using-auto-postback-with-cascadingdropdown-cs/samples/sample1.aspx)]
 
@@ -37,27 +37,27 @@ Quindi, è necessario un controllo DropDownList:
 
 [!code-aspx[Main](using-auto-postback-with-cascadingdropdown-cs/samples/sample2.aspx)]
 
-Per questo elenco, viene aggiunto un controllo extender CascadingDropDown, che fornisce informazioni di URL e il metodo di servizio web:
+Per questo elenco viene aggiunto un dispositivo Extender CascadingDropDown, che fornisce l'URL del servizio Web e le informazioni sul metodo:
 
 [!code-aspx[Main](using-auto-postback-with-cascadingdropdown-cs/samples/sample3.aspx)]
 
-Il dispositivo extender CascadingDropDown chiama quindi in modo asincrono un servizio web con la firma del metodo seguente:
+Il dispositivo Extender CascadingDropDown chiama quindi in modo asincrono un servizio Web con la firma del metodo seguente:
 
 [!code-csharp[Main](using-auto-postback-with-cascadingdropdown-cs/samples/sample4.cs)]
 
-Il metodo restituisce una matrice di tipo valore CascadingDropDown. Il costruttore del tipo prevede innanzitutto la didascalia della voce di elenco e quindi il valore (HTML `value` attributo).
+Il metodo restituisce una matrice di tipo valore CascadingDropDown. Il costruttore del tipo prevede prima la didascalia della voce dell'elenco e quindi il valore (attributo `value` HTML).
 
 [!code-aspx[Main](using-auto-postback-with-cascadingdropdown-cs/samples/sample5.aspx)]
 
-Il caricamento della pagina nel browser riempirà l'elenco a discesa con i fornitori di tre, il secondo viene preselezionato. Inoltre, ASP.NET definisce il `__doPostBack()` metodo JavaScript. Dopo la pagina è stata caricata, questa chiamata JavaScript viene aggiunto all'elenco a discesa, ma solo se esistono elementi in esso. Se non sono presenti elementi nell'elenco, il Toolkit di controllo sta caricando, in modo che il codice JavaScript Usa un timeout e tenta nuovamente di mezzo secondo.
+Il caricamento della pagina nel browser compilerà l'elenco a discesa con tre fornitori, il secondo preselezionato. Inoltre, ASP.NET definisce il metodo JavaScript `__doPostBack()`. Una volta caricata la pagina, questa chiamata JavaScript viene aggiunta all'elenco a discesa, ma solo se sono presenti elementi. Se nell'elenco non sono presenti elementi, il Toolkit di controllo li sta caricando, in modo che il codice JavaScript usi un timeout e tenti di nuovo tra mezzo secondo.
 
 [!code-html[Main](using-auto-postback-with-cascadingdropdown-cs/samples/sample6.html)]
 
-In questo modo, un postback viene eseguito solo quando vi sono effettivamente gli elementi nell'elenco e l'utente seleziona una voce.
+In questo modo, viene eseguito un postback solo quando sono effettivamente presenti elementi nell'elenco e l'utente seleziona una voce.
 
-[![Se si seleziona un elemento di elenco, un postback](using-auto-postback-with-cascadingdropdown-cs/_static/image2.png)](using-auto-postback-with-cascadingdropdown-cs/_static/image1.png)
+[![la selezione di un elemento elenco causa un postback](using-auto-postback-with-cascadingdropdown-cs/_static/image2.png)](using-auto-postback-with-cascadingdropdown-cs/_static/image1.png)
 
-Se si seleziona un elemento di elenco, un postback ([fare clic per visualizzare l'immagine con dimensioni normali](using-auto-postback-with-cascadingdropdown-cs/_static/image3.png))
+La selezione di un elemento di elenco causa un postback ([fare clic per visualizzare l'immagine con dimensioni complete](using-auto-postback-with-cascadingdropdown-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
 > [Precedente](presetting-list-entries-with-cascadingdropdown-cs.md)
