@@ -1,6 +1,6 @@
 ---
 uid: web-api/overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-1
-title: Parte 1. Panoramica e creazione del progetto | Microsoft Docs
+title: 'Parte 1: panoramica e creazione del progetto | Microsoft Docs'
 author: MikeWasson
 description: ''
 ms.author: riande
@@ -8,88 +8,88 @@ ms.date: 07/03/2012
 ms.assetid: 94421d86-68c4-4471-bf5f-82d654a17252
 msc.legacyurl: /web-api/overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-1
 msc.type: authoredcontent
-ms.openlocfilehash: d5a72dbfe1530e457ec16df5c7d50b03b5f63502
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: a76a18f2bd95969358452085ef342fdca8a386e2
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59384214"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74600318"
 ---
-# <a name="part-1-overview-and-creating-the-project"></a><span data-ttu-id="d4a91-102">Parte 1. Panoramica e creazione del progetto</span><span class="sxs-lookup"><span data-stu-id="d4a91-102">Part 1: Overview and Creating the Project</span></span>
+# <a name="part-1-overview-and-creating-the-project"></a><span data-ttu-id="e30ae-102">Parte 1: panoramica e creazione del progetto</span><span class="sxs-lookup"><span data-stu-id="e30ae-102">Part 1: Overview and Creating the Project</span></span>
 
-<span data-ttu-id="d4a91-103">da [Mike Wasson](https://github.com/MikeWasson)</span><span class="sxs-lookup"><span data-stu-id="d4a91-103">by [Mike Wasson](https://github.com/MikeWasson)</span></span>
+<span data-ttu-id="e30ae-103">di [Mike Wasson](https://github.com/MikeWasson)</span><span class="sxs-lookup"><span data-stu-id="e30ae-103">by [Mike Wasson](https://github.com/MikeWasson)</span></span>
 
-[<span data-ttu-id="d4a91-104">Download progetto completato</span><span class="sxs-lookup"><span data-stu-id="d4a91-104">Download Completed Project</span></span>](http://code.msdn.microsoft.com/ASP-NET-Web-API-with-afa30545)
+[<span data-ttu-id="e30ae-104">Scarica progetto completato</span><span class="sxs-lookup"><span data-stu-id="e30ae-104">Download Completed Project</span></span>](https://code.msdn.microsoft.com/ASP-NET-Web-API-with-afa30545)
 
-<span data-ttu-id="d4a91-105">Entity Framework è un framework di mapping relazionale a oggetti /.</span><span class="sxs-lookup"><span data-stu-id="d4a91-105">Entity Framework is an object/relational mapping framework.</span></span> <span data-ttu-id="d4a91-106">Viene eseguito il mapping di oggetti di dominio nel codice le entità in un database relazionale.</span><span class="sxs-lookup"><span data-stu-id="d4a91-106">It maps the domain objects in your code to entities in a relational database.</span></span> <span data-ttu-id="d4a91-107">Nella maggior parte, non è necessario preoccuparsi che il livello di database, perché Entity Framework si occupa di esso per te.</span><span class="sxs-lookup"><span data-stu-id="d4a91-107">For the most part, you do not have to worry about the database layer, because Entity Framework takes care of it for you.</span></span> <span data-ttu-id="d4a91-108">Il codice lo modifica gli oggetti e le modifiche vengono mantenute per un database.</span><span class="sxs-lookup"><span data-stu-id="d4a91-108">Your code manipulates the objects, and changes are persisted to a database.</span></span>
+<span data-ttu-id="e30ae-105">Entity Framework è un Framework di mapping relazionale a oggetti.</span><span class="sxs-lookup"><span data-stu-id="e30ae-105">Entity Framework is an object/relational mapping framework.</span></span> <span data-ttu-id="e30ae-106">Esegue il mapping degli oggetti di dominio nel codice alle entità in un database relazionale.</span><span class="sxs-lookup"><span data-stu-id="e30ae-106">It maps the domain objects in your code to entities in a relational database.</span></span> <span data-ttu-id="e30ae-107">Nella maggior parte dei casi, non è necessario preoccuparsi del livello di database, perché Entity Framework lo gestisce automaticamente.</span><span class="sxs-lookup"><span data-stu-id="e30ae-107">For the most part, you do not have to worry about the database layer, because Entity Framework takes care of it for you.</span></span> <span data-ttu-id="e30ae-108">Il codice manipola gli oggetti e le modifiche vengono salvate in modo permanente in un database.</span><span class="sxs-lookup"><span data-stu-id="e30ae-108">Your code manipulates the objects, and changes are persisted to a database.</span></span>
 
-## <a name="about-the-tutorial"></a><span data-ttu-id="d4a91-109">In merito all'esercitazione</span><span class="sxs-lookup"><span data-stu-id="d4a91-109">About the Tutorial</span></span>
+## <a name="about-the-tutorial"></a><span data-ttu-id="e30ae-109">Informazioni sull'esercitazione</span><span class="sxs-lookup"><span data-stu-id="e30ae-109">About the Tutorial</span></span>
 
-<span data-ttu-id="d4a91-110">In questa esercitazione si creerà un'applicazione semplice archivio.</span><span class="sxs-lookup"><span data-stu-id="d4a91-110">In this tutorial, you will create a simple store application.</span></span> <span data-ttu-id="d4a91-111">Esistono due parti principali per l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="d4a91-111">There are two main parts to the application.</span></span> <span data-ttu-id="d4a91-112">Gli utenti normali possono visualizzare i prodotti e creano gli ordini:</span><span class="sxs-lookup"><span data-stu-id="d4a91-112">Normal users can view products and create orders:</span></span>
+<span data-ttu-id="e30ae-110">In questa esercitazione verrà creata una semplice applicazione di archiviazione.</span><span class="sxs-lookup"><span data-stu-id="e30ae-110">In this tutorial, you will create a simple store application.</span></span> <span data-ttu-id="e30ae-111">Sono presenti due parti principali per l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="e30ae-111">There are two main parts to the application.</span></span> <span data-ttu-id="e30ae-112">Gli utenti normali possono visualizzare i prodotti e creare gli ordini:</span><span class="sxs-lookup"><span data-stu-id="e30ae-112">Normal users can view products and create orders:</span></span>
 
 ![](using-web-api-with-entity-framework-part-1/_static/image1.png)
 
-<span data-ttu-id="d4a91-113">Gli amministratori possono creare, eliminare o modificare i prodotti:</span><span class="sxs-lookup"><span data-stu-id="d4a91-113">Administrators can create, delete, or edit products:</span></span>
+<span data-ttu-id="e30ae-113">Gli amministratori possono creare, eliminare o modificare i prodotti:</span><span class="sxs-lookup"><span data-stu-id="e30ae-113">Administrators can create, delete, or edit products:</span></span>
 
 ![](using-web-api-with-entity-framework-part-1/_static/image2.png)
 
-## <a name="skills-youll-learn"></a><span data-ttu-id="d4a91-114">Competenze</span><span class="sxs-lookup"><span data-stu-id="d4a91-114">Skills You'll Learn</span></span>
+## <a name="skills-youll-learn"></a><span data-ttu-id="e30ae-114">Competenze apprese</span><span class="sxs-lookup"><span data-stu-id="e30ae-114">Skills You'll Learn</span></span>
 
-<span data-ttu-id="d4a91-115">Ecco cosa si apprenderà:</span><span class="sxs-lookup"><span data-stu-id="d4a91-115">Here's what you'll learn:</span></span>
+<span data-ttu-id="e30ae-115">Ecco cosa si apprenderà:</span><span class="sxs-lookup"><span data-stu-id="e30ae-115">Here's what you'll learn:</span></span>
 
-- <span data-ttu-id="d4a91-116">Come usare Entity Framework con ASP.NET Web API.</span><span class="sxs-lookup"><span data-stu-id="d4a91-116">How to use Entity Framework with ASP.NET Web API.</span></span>
-- <span data-ttu-id="d4a91-117">Come usare Knockout. js per creare un client dell'interfaccia utente dinamico.</span><span class="sxs-lookup"><span data-stu-id="d4a91-117">How to use knockout.js to create a dynamic client UI.</span></span>
-- <span data-ttu-id="d4a91-118">Come usare l'autenticazione basata su form con l'API Web per autenticare gli utenti.</span><span class="sxs-lookup"><span data-stu-id="d4a91-118">How to use forms authentication with Web API to authenticate users.</span></span>
+- <span data-ttu-id="e30ae-116">Come usare Entity Framework con API Web ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="e30ae-116">How to use Entity Framework with ASP.NET Web API.</span></span>
+- <span data-ttu-id="e30ae-117">Come usare knockout. js per creare un'interfaccia utente client dinamica.</span><span class="sxs-lookup"><span data-stu-id="e30ae-117">How to use knockout.js to create a dynamic client UI.</span></span>
+- <span data-ttu-id="e30ae-118">Come usare l'autenticazione basata su form con l'API Web per autenticare gli utenti.</span><span class="sxs-lookup"><span data-stu-id="e30ae-118">How to use forms authentication with Web API to authenticate users.</span></span>
 
-<span data-ttu-id="d4a91-119">Sebbene in questa esercitazione è autonoma, è possibile leggere prima di tutto le esercitazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="d4a91-119">Although this tutorial is self-contained, you might want to read the following tutorials first:</span></span>
+<span data-ttu-id="e30ae-119">Sebbene questa esercitazione sia autonoma, è consigliabile leggere prima le esercitazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="e30ae-119">Although this tutorial is self-contained, you might want to read the following tutorials first:</span></span>
 
-- [<span data-ttu-id="d4a91-120">Prima API Web ASP.NET</span><span class="sxs-lookup"><span data-stu-id="d4a91-120">Your First ASP.NET Web API</span></span>](../../getting-started-with-aspnet-web-api/tutorial-your-first-web-api.md)
-- [<span data-ttu-id="d4a91-121">Creazione di un'API Web che supporta operazioni CRUD</span><span class="sxs-lookup"><span data-stu-id="d4a91-121">Creating a Web API that Supports CRUD Operations</span></span>](../creating-a-web-api-that-supports-crud-operations.md)
+- [<span data-ttu-id="e30ae-120">Il primo API Web ASP.NET</span><span class="sxs-lookup"><span data-stu-id="e30ae-120">Your First ASP.NET Web API</span></span>](../../getting-started-with-aspnet-web-api/tutorial-your-first-web-api.md)
+- [<span data-ttu-id="e30ae-121">Creazione di un'API Web che supporta operazioni CRUD</span><span class="sxs-lookup"><span data-stu-id="e30ae-121">Creating a Web API that Supports CRUD Operations</span></span>](../creating-a-web-api-that-supports-crud-operations.md)
 
-<span data-ttu-id="d4a91-122">Conoscenza degli [ASP.NET MVC](../../../../mvc/index.md) è inoltre utile.</span><span class="sxs-lookup"><span data-stu-id="d4a91-122">Some knowledge of [ASP.NET MVC](../../../../mvc/index.md) is also helpful.</span></span>
+<span data-ttu-id="e30ae-122">È inoltre utile una certa conoscenza di [ASP.NET MVC](../../../../mvc/index.md) .</span><span class="sxs-lookup"><span data-stu-id="e30ae-122">Some knowledge of [ASP.NET MVC](../../../../mvc/index.md) is also helpful.</span></span>
 
-## <a name="overview"></a><span data-ttu-id="d4a91-123">Panoramica</span><span class="sxs-lookup"><span data-stu-id="d4a91-123">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="e30ae-123">Panoramica di</span><span class="sxs-lookup"><span data-stu-id="e30ae-123">Overview</span></span>
 
-<span data-ttu-id="d4a91-124">A livello generale, ecco l'architettura dell'applicazione:</span><span class="sxs-lookup"><span data-stu-id="d4a91-124">At a high level, here is the architecture of the application:</span></span>
+<span data-ttu-id="e30ae-124">A livello generale, di seguito è illustrata l'architettura dell'applicazione:</span><span class="sxs-lookup"><span data-stu-id="e30ae-124">At a high level, here is the architecture of the application:</span></span>
 
-- <span data-ttu-id="d4a91-125">ASP.NET MVC genera le pagine HTML per il client.</span><span class="sxs-lookup"><span data-stu-id="d4a91-125">ASP.NET MVC generates the HTML pages for the client.</span></span>
-- <span data-ttu-id="d4a91-126">API Web ASP.NET espone le operazioni CRUD sui dati (i prodotti e ordini).</span><span class="sxs-lookup"><span data-stu-id="d4a91-126">ASP.NET Web API exposes CRUD operations on the data (products and orders).</span></span>
-- <span data-ttu-id="d4a91-127">Entity Framework traduce i modelli c# usati dalle API Web nelle entità di database.</span><span class="sxs-lookup"><span data-stu-id="d4a91-127">Entity Framework translates the C# models used by Web API into database entities.</span></span>
+- <span data-ttu-id="e30ae-125">ASP.NET MVC genera le pagine HTML per il client.</span><span class="sxs-lookup"><span data-stu-id="e30ae-125">ASP.NET MVC generates the HTML pages for the client.</span></span>
+- <span data-ttu-id="e30ae-126">API Web ASP.NET espone le operazioni CRUD sui dati (prodotti e ordini).</span><span class="sxs-lookup"><span data-stu-id="e30ae-126">ASP.NET Web API exposes CRUD operations on the data (products and orders).</span></span>
+- <span data-ttu-id="e30ae-127">Entity Framework converte i C# modelli utilizzati dall'API Web in entità di database.</span><span class="sxs-lookup"><span data-stu-id="e30ae-127">Entity Framework translates the C# models used by Web API into database entities.</span></span>
 
 ![](using-web-api-with-entity-framework-part-1/_static/image3.png)
 
-<span data-ttu-id="d4a91-128">Il diagramma seguente illustra come gli oggetti di dominio sono rappresentati a vari livelli dell'applicazione: Il livello di database, il modello a oggetti e infine il formato wire, che consente di trasmettere i dati al client tramite HTTP.</span><span class="sxs-lookup"><span data-stu-id="d4a91-128">The following diagram shows how the domain objects are represented at various layers of the application: The database layer, the object model, and finally the wire format, which is used to transmit data to the client via HTTP.</span></span>
+<span data-ttu-id="e30ae-128">Il diagramma seguente illustra il modo in cui gli oggetti di dominio sono rappresentati a diversi livelli dell'applicazione, ovvero il livello del database, il modello a oggetti e infine il formato wire, usato per trasmettere i dati al client tramite HTTP.</span><span class="sxs-lookup"><span data-stu-id="e30ae-128">The following diagram shows how the domain objects are represented at various layers of the application: The database layer, the object model, and finally the wire format, which is used to transmit data to the client via HTTP.</span></span>
 
 ![](using-web-api-with-entity-framework-part-1/_static/image4.png)
 
-## <a name="create-the-visual-studio-project"></a><span data-ttu-id="d4a91-129">Creare il progetto di Visual Studio</span><span class="sxs-lookup"><span data-stu-id="d4a91-129">Create the Visual Studio Project</span></span>
+## <a name="create-the-visual-studio-project"></a><span data-ttu-id="e30ae-129">Creare il progetto di Visual Studio</span><span class="sxs-lookup"><span data-stu-id="e30ae-129">Create the Visual Studio Project</span></span>
 
-<span data-ttu-id="d4a91-130">È possibile creare il progetto esercitazione utilizzando la versione completa di Visual Studio o Visual Web Developer Express.</span><span class="sxs-lookup"><span data-stu-id="d4a91-130">You can create the tutorial project using either Visual Web Developer Express or the full version of Visual Studio.</span></span>
+<span data-ttu-id="e30ae-130">È possibile creare il progetto Tutorial utilizzando Visual Web Developer Express o la versione completa di Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="e30ae-130">You can create the tutorial project using either Visual Web Developer Express or the full version of Visual Studio.</span></span>
 
-<span data-ttu-id="d4a91-131">Dal **avviare** pagina, fare clic su **nuovo progetto**.</span><span class="sxs-lookup"><span data-stu-id="d4a91-131">From the **Start** page, click **New Project**.</span></span>
+<span data-ttu-id="e30ae-131">Nella pagina **iniziale** fare clic su **nuovo progetto**.</span><span class="sxs-lookup"><span data-stu-id="e30ae-131">From the **Start** page, click **New Project**.</span></span>
 
-<span data-ttu-id="d4a91-132">Nel **modelli** riquadro, selezionare **modelli installati** ed espandere le **Visual c#** nodo.</span><span class="sxs-lookup"><span data-stu-id="d4a91-132">In the **Templates** pane, select **Installed Templates** and expand the **Visual C#** node.</span></span> <span data-ttu-id="d4a91-133">Sotto **Visual c#**, selezionare **Web**.</span><span class="sxs-lookup"><span data-stu-id="d4a91-133">Under **Visual C#**, select **Web**.</span></span> <span data-ttu-id="d4a91-134">Nell'elenco dei modelli di progetto, selezionare **applicazione Web ASP.NET MVC 4**.</span><span class="sxs-lookup"><span data-stu-id="d4a91-134">In the list of project templates, select **ASP.NET MVC 4 Web Application**.</span></span> <span data-ttu-id="d4a91-135">Denominare il progetto "ProductStore" e fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="d4a91-135">Name the project "ProductStore" and click **OK**.</span></span>
+<span data-ttu-id="e30ae-132">Nel riquadro **modelli** selezionare **modelli installati** ed espandere il nodo  **C# visivo** .</span><span class="sxs-lookup"><span data-stu-id="e30ae-132">In the **Templates** pane, select **Installed Templates** and expand the **Visual C#** node.</span></span> <span data-ttu-id="e30ae-133">In **Visual C#** Selezionare **Web**.</span><span class="sxs-lookup"><span data-stu-id="e30ae-133">Under **Visual C#**, select **Web**.</span></span> <span data-ttu-id="e30ae-134">Nell'elenco dei modelli di progetto selezionare **applicazione Web ASP.NET MVC 4**.</span><span class="sxs-lookup"><span data-stu-id="e30ae-134">In the list of project templates, select **ASP.NET MVC 4 Web Application**.</span></span> <span data-ttu-id="e30ae-135">Denominare il progetto "ProductStore" e fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="e30ae-135">Name the project "ProductStore" and click **OK**.</span></span>
 
 ![](using-web-api-with-entity-framework-part-1/_static/image5.png)
 
-<span data-ttu-id="d4a91-136">Nel **nuovo progetto ASP.NET MVC 4** finestra di dialogo, seleziona **applicazione Internet** e fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="d4a91-136">In the **New ASP.NET MVC 4 Project** dialog, select **Internet Application** and click **OK**.</span></span>
+<span data-ttu-id="e30ae-136">Nella finestra di dialogo **New ASP.NET MVC 4 Project** selezionare **applicazione Internet** e fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="e30ae-136">In the **New ASP.NET MVC 4 Project** dialog, select **Internet Application** and click **OK**.</span></span>
 
 ![](using-web-api-with-entity-framework-part-1/_static/image6.png)
 
-<span data-ttu-id="d4a91-137">Il modello "Applicazione Internet" consente di creare un'applicazione MVC ASP.NET che supporta l'autenticazione basata su form.</span><span class="sxs-lookup"><span data-stu-id="d4a91-137">The "Internet Application" template creates an ASP.NET MVC application that supports forms authentication.</span></span> <span data-ttu-id="d4a91-138">Se si esegue l'applicazione a questo punto, ha già alcune funzionalità:</span><span class="sxs-lookup"><span data-stu-id="d4a91-138">If you run the application now, it already has some features:</span></span>
+<span data-ttu-id="e30ae-137">Il modello "applicazione Internet" crea un'applicazione MVC ASP.NET che supporta l'autenticazione basata su form.</span><span class="sxs-lookup"><span data-stu-id="e30ae-137">The "Internet Application" template creates an ASP.NET MVC application that supports forms authentication.</span></span> <span data-ttu-id="e30ae-138">Se l'applicazione viene eseguita adesso, dispone già di alcune funzionalità:</span><span class="sxs-lookup"><span data-stu-id="e30ae-138">If you run the application now, it already has some features:</span></span>
 
-- <span data-ttu-id="d4a91-139">Nuovi utenti possono registrare facendo clic sul collegamento "Register" nell'angolo superiore destro.</span><span class="sxs-lookup"><span data-stu-id="d4a91-139">New users can register by clicking the "Register" link in the upper right corner.</span></span>
-- <span data-ttu-id="d4a91-140">Gli utenti registrati possono accedere facendo clic sul collegamento "Accedi".</span><span class="sxs-lookup"><span data-stu-id="d4a91-140">Registered users can log in by clicking the "Log in" link.</span></span>
+- <span data-ttu-id="e30ae-139">I nuovi utenti possono registrarsi facendo clic sul collegamento "Register" nell'angolo superiore destro.</span><span class="sxs-lookup"><span data-stu-id="e30ae-139">New users can register by clicking the "Register" link in the upper right corner.</span></span>
+- <span data-ttu-id="e30ae-140">Gli utenti registrati possono eseguire l'accesso facendo clic sul collegamento "Accedi".</span><span class="sxs-lookup"><span data-stu-id="e30ae-140">Registered users can log in by clicking the "Log in" link.</span></span>
 
-<span data-ttu-id="d4a91-141">Le informazioni di appartenenza sono persistente in un database che viene creato automaticamente.</span><span class="sxs-lookup"><span data-stu-id="d4a91-141">Membership information is persisted in a database that gets created automatically.</span></span> <span data-ttu-id="d4a91-142">Per altre informazioni sull'autenticazione basata su form in ASP.NET MVC, vedere [procedura dettagliata: Con autenticazione basata su form di ASP.NET MVC](https://msdn.microsoft.com/library/ff398049(VS.98).aspx).</span><span class="sxs-lookup"><span data-stu-id="d4a91-142">For more information about forms authentication in ASP.NET MVC, see [Walkthrough: Using Forms Authentication in ASP.NET MVC](https://msdn.microsoft.com/library/ff398049(VS.98).aspx).</span></span>
+<span data-ttu-id="e30ae-141">Le informazioni di appartenenza vengono rese permanente in un database che viene creato automaticamente.</span><span class="sxs-lookup"><span data-stu-id="e30ae-141">Membership information is persisted in a database that gets created automatically.</span></span> <span data-ttu-id="e30ae-142">Per ulteriori informazioni sull'autenticazione basata su form in ASP.NET MVC, vedere [procedura dettagliata: uso dell'autenticazione basata su form in ASP.NET MVC](https://msdn.microsoft.com/library/ff398049(VS.98).aspx).</span><span class="sxs-lookup"><span data-stu-id="e30ae-142">For more information about forms authentication in ASP.NET MVC, see [Walkthrough: Using Forms Authentication in ASP.NET MVC](https://msdn.microsoft.com/library/ff398049(VS.98).aspx).</span></span>
 
-## <a name="update-the-css-file"></a><span data-ttu-id="d4a91-143">Aggiornare il File CSS</span><span class="sxs-lookup"><span data-stu-id="d4a91-143">Update the CSS File</span></span>
+## <a name="update-the-css-file"></a><span data-ttu-id="e30ae-143">Aggiornare il file CSS</span><span class="sxs-lookup"><span data-stu-id="e30ae-143">Update the CSS File</span></span>
 
-<span data-ttu-id="d4a91-144">Questo passaggio è generico; serve, ma verranno effettuate le pagine di eseguire il rendering, come le schermate precedenti.</span><span class="sxs-lookup"><span data-stu-id="d4a91-144">This step is cosmetic, but it will make the pages render like the earlier screen shots.</span></span>
+<span data-ttu-id="e30ae-144">Questo passaggio è cosmetico, ma renderà il rendering delle pagine come le schermate precedenti.</span><span class="sxs-lookup"><span data-stu-id="e30ae-144">This step is cosmetic, but it will make the pages render like the earlier screen shots.</span></span>
 
-<span data-ttu-id="d4a91-145">In Esplora soluzioni espandere la cartella del contenuto e aprire il file denominato CSS.</span><span class="sxs-lookup"><span data-stu-id="d4a91-145">In Solution Explorer, expand the Content folder and open the file named Site.css.</span></span> <span data-ttu-id="d4a91-146">Aggiungere gli stili CSS seguenti:</span><span class="sxs-lookup"><span data-stu-id="d4a91-146">Add the following CSS styles:</span></span>
+<span data-ttu-id="e30ae-145">In Esplora soluzioni espandere la cartella contenuto e aprire il file denominato site. CSS.</span><span class="sxs-lookup"><span data-stu-id="e30ae-145">In Solution Explorer, expand the Content folder and open the file named Site.css.</span></span> <span data-ttu-id="e30ae-146">Aggiungere gli stili CSS seguenti:</span><span class="sxs-lookup"><span data-stu-id="e30ae-146">Add the following CSS styles:</span></span>
 
 [!code-css[Main](using-web-api-with-entity-framework-part-1/samples/sample1.css)]
 
 > [!div class="step-by-step"]
-> [<span data-ttu-id="d4a91-147">avanti</span><span class="sxs-lookup"><span data-stu-id="d4a91-147">Next</span></span>](using-web-api-with-entity-framework-part-2.md)
+> [<span data-ttu-id="e30ae-147">avanti</span><span class="sxs-lookup"><span data-stu-id="e30ae-147">Next</span></span>](using-web-api-with-entity-framework-part-2.md)
