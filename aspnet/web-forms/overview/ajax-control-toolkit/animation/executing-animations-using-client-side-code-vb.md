@@ -1,69 +1,69 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/animation/executing-animations-using-client-side-code-vb
-title: Esecuzione di animazioni tramite codice lato Client (VB) | Microsoft Docs
+title: Esecuzione di animazioni tramite codice lato client (VB) | Microsoft Docs
 author: wenz
-description: Il controllo di animazione in ASP.NET AJAX Control Toolkit non è semplicemente un controllo, ma un intero framework aggiungere animazioni a un controllo. L'esecuzione di animazione...
+description: Il controllo dell'animazione in ASP.NET AJAX Control Toolkit non è solo un controllo, ma un intero Framework per aggiungere animazioni a un controllo. Esecuzione dell'animazione...
 ms.author: riande
 ms.date: 06/02/2008
 ms.assetid: f7073f50-d765-456d-9957-926ce60f35f6
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/executing-animations-using-client-side-code-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 123ce48a203a69b9a2d50b8bb09c290a84afdac7
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 7ef36900d20d8d07c3c6f3b63ce96568a377a0ed
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65127502"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74575502"
 ---
 # <a name="executing-animations-using-client-side-code-vb"></a>Esecuzione di animazioni tramite codice lato client (VB)
 
-da [Christian Wenz](https://github.com/wenz)
+di [Christian Wenz](https://github.com/wenz)
 
-[Scaricare il codice](http://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation10.vb.zip) o [Scarica il PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation10VB.pdf)
+[Scarica codice](https://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation10.vb.zip) o [Scarica PDF](https://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation10VB.pdf)
 
-> Il controllo di animazione in ASP.NET AJAX Control Toolkit non è semplicemente un controllo, ma un intero framework aggiungere animazioni a un controllo. L'esecuzione di animazione può essere attivato utilizzando codice JavaScript lato client personalizzato.
+> Il controllo dell'animazione in ASP.NET AJAX Control Toolkit non è solo un controllo, ma un intero Framework per aggiungere animazioni a un controllo. L'esecuzione dell'animazione può anche essere attivata utilizzando codice JavaScript lato client personalizzato.
 
-## <a name="overview"></a>Panoramica
+## <a name="overview"></a>Panoramica di
 
-Il controllo di animazione in ASP.NET AJAX Control Toolkit non è semplicemente un controllo, ma un intero framework aggiungere animazioni a un controllo. L'esecuzione di animazione può essere attivato utilizzando codice JavaScript lato client personalizzato.
+Il controllo dell'animazione in ASP.NET AJAX Control Toolkit non è solo un controllo, ma un intero Framework per aggiungere animazioni a un controllo. L'esecuzione dell'animazione può anche essere attivata utilizzando codice JavaScript lato client personalizzato.
 
 ## <a name="steps"></a>Passaggi
 
-Prima di tutto, includere il `ScriptManager` nella pagina; quindi, la libreria ASP.NET AJAX viene caricata, rendendo possibile usare il Toolkit di controllo:
+Per prima cosa, includere il `ScriptManager` nella pagina; quindi, viene caricata la libreria ASP.NET AJAX, che consente di usare il Toolkit di controllo:
 
 [!code-aspx[Main](executing-animations-using-client-side-code-vb/samples/sample1.aspx)]
 
-Verrà applicata l'animazione a un pannello del testo che presenta un aspetto simile al seguente:
+L'animazione verrà applicata a un pannello di testo simile al seguente:
 
 [!code-aspx[Main](executing-animations-using-client-side-code-vb/samples/sample2.aspx)]
 
-Nella classe CSS associata per il pannello, definire un colore di sfondo interessante e anche impostare una larghezza fissa per il pannello:
+Nella classe CSS associata per il pannello definire un colore di sfondo gradevole e impostare anche una larghezza fissa per il pannello:
 
 [!code-css[Main](executing-animations-using-client-side-code-vb/samples/sample3.css)]
 
-Quindi, aggiungere il `AnimationExtender` alla pagina, fornendo un' `ID`, il `TargetControlID` attributo e l'obbligatoria `runat="server"`:
+Aggiungere quindi il `AnimationExtender` alla pagina, fornendo un `ID`, l'attributo `TargetControlID` e il `runat="server"`obbligatorio:
 
 [!code-aspx[Main](executing-animations-using-client-side-code-vb/samples/sample4.aspx)]
 
-All'interno di `<Animations>` nodo, usare `<OnClick>` per eseguire le animazioni una volta l'utente fa clic sul pannello. Aggiungere due animazioni deve essere eseguito in parallelo:
+All'interno del nodo `<Animations>` usare `<OnClick>` per eseguire le animazioni quando l'utente fa clic sul pannello. Aggiungere due animazioni da eseguire in parallelo:
 
 [!code-xml[Main](executing-animations-using-client-side-code-vb/samples/sample5.xml)]
 
-Per fini dimostrativi, questa animazione (e qualsiasi altra animazione creato usando il Toolkit di controllo) viene eseguite tramite il codice JavaScript, una volta che viene eseguita la pagina. Prima di tutto è necessario accedere al `AnimationExtender` controllo. La libreria ASP.NET AJAX fornisce il `$find()` funzione per questa attività:
+Ai fini della dimostrazione, questa animazione (e qualsiasi altra animazione creata utilizzando il Toolkit di controllo) viene eseguita utilizzando il codice JavaScript, dopo l'esecuzione della pagina. Prima di tutto è necessario accedere al controllo `AnimationExtender`. ASP.NET AJAX Library fornisce la funzione `$find()` per questa attività:
 
 [!code-csharp[Main](executing-animations-using-client-side-code-vb/samples/sample6.cs)]
 
-Il `AnimationExtender` controllo espone un'API completa, inclusi i metodi con nomi identici per i gestori eventi utilizzati nel markup XML: `OnClick()`, `OnLoad()`e così via. Ad esempio, una chiamata del `OnClick()` l'animazione in esecuzione del metodo il `<OnClick>` elemento del `AnimationExtender` controllo:
+Il controllo `AnimationExtender` espone un'API avanzata, inclusi i metodi con nomi identici ai gestori di eventi utilizzati nel markup XML: `OnClick()`, `OnLoad()`e così via. Ad esempio, una chiamata del metodo `OnClick()` esegue l'animazione all'interno dell'elemento `<OnClick>` del controllo `AnimationExtender`:
 
 [!code-javascript[Main](executing-animations-using-client-side-code-vb/samples/sample7.js)]
 
-Di seguito è riportato il codice completo di JavaScript lato client che emula il clic sul pannello dopo la pagina è stata caricata completamente si noti che il `pageLoad()` nome della funzione viene utilizzato il quale viene chiamato da ASP.NET AJAX una volta la pagina e incluse tutte le librerie sono state JavaScript caricato.
+Ecco il codice JavaScript lato client completo che emula il clic sul pannello dopo che la pagina è stata caricata completamente. si noti che viene usato il nome della funzione `pageLoad()`, che viene chiamato da ASP.NET AJAX una volta che la pagina e tutte le librerie JavaScript incluse sono state caricate.
 
 [!code-html[Main](executing-animations-using-client-side-code-vb/samples/sample8.html)]
 
-[![L'animazione viene eseguita immediatamente, senza un clic del mouse](executing-animations-using-client-side-code-vb/_static/image2.png)](executing-animations-using-client-side-code-vb/_static/image1.png)
+[![l'animazione viene eseguita immediatamente, senza un clic del mouse](executing-animations-using-client-side-code-vb/_static/image2.png)](executing-animations-using-client-side-code-vb/_static/image1.png)
 
-L'animazione viene eseguito immediatamente, senza un clic del mouse ([fare clic per visualizzare l'immagine con dimensioni normali](executing-animations-using-client-side-code-vb/_static/image3.png))
+L'animazione viene eseguita immediatamente, senza un clic del mouse ([fare clic per visualizzare l'immagine con dimensioni complete](executing-animations-using-client-side-code-vb/_static/image3.png))
 
 > [!div class="step-by-step"]
 > [Precedente](modifying-animations-from-the-server-side-vb.md)

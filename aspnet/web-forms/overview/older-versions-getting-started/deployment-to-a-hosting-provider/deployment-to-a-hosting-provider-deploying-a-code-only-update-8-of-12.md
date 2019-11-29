@@ -1,47 +1,47 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-a-code-only-update-8-of-12
-title: "Distribuzione di un'applicazione Web ASP.NET con SQL Server Compact tramite Visual Studio o Visual Web Developer: Distribuzione di un aggiornamento di solo codice - 8 pari a 12 | Microsoft Docs"
+title: "Distribuzione di un'applicazione Web ASP.NET con SQL Server Compact mediante Visual Studio o Visual Web Developer: distribuzione di un aggiornamento solo codice-8 di 12 | Microsoft Docs"
 author: tdykstra
-description: Questa serie di esercitazioni illustra come distribuire un ASP.NET (pubblicazione) progetto di applicazione web che include un database di SQL Server Compact tramite Visual s...
+description: Questa serie di esercitazioni illustra come distribuire (pubblicare) un progetto di applicazione Web ASP.NET che include un database di SQL Server Compact usando Visual Stu...
 ms.author: riande
 ms.date: 11/17/2011
 ms.assetid: ddf6252f-9413-4c0c-a360-2cef8d231717
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-a-code-only-update-8-of-12
 msc.type: authoredcontent
-ms.openlocfilehash: df6fd11485836345707ac74ec9e97c769e60ac82
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: e4d094ef84a747c36ce05ddb0e3d1ce0391d5605
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65132345"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74572726"
 ---
-# <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-deploying-a-code-only-update---8-of-12"></a>Distribuzione di un'applicazione Web ASP.NET con SQL Server Compact tramite Visual Studio o Visual Web Developer: Distribuzione di un aggiornamento di solo codice - 8 pari a 12
+# <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-deploying-a-code-only-update---8-of-12"></a>Distribuzione di un'applicazione Web ASP.NET con SQL Server Compact con Visual Studio o Visual Web Developer: distribuzione di un aggiornamento di solo codice-8 di 12
 
-da [Tom Dykstra](https://github.com/tdykstra)
+di [Tom Dykstra](https://github.com/tdykstra)
 
-[Download progetto iniziale](http://code.msdn.microsoft.com/Deploying-an-ASPNET-Web-4e31366b)
+[Scarica progetto Starter](https://code.msdn.microsoft.com/Deploying-an-ASPNET-Web-4e31366b)
 
-> Questa serie di esercitazioni illustra come distribuire un ASP.NET (pubblicazione) progetto di applicazione web che include un database di SQL Server Compact tramite Visual Studio 2012 RC o Visual Studio Express 2012 RC per Web. Se si installa l'aggiornamento della pubblicazione sul Web, è anche possibile usare Visual Studio 2010. Per un'introduzione alla serie, vedere [la prima esercitazione della serie](deployment-to-a-hosting-provider-introduction-1-of-12.md).
+> Questa serie di esercitazioni illustra come distribuire (pubblicare) un progetto di applicazione Web ASP.NET che include un database di SQL Server Compact usando Visual Studio 2012 RC o Visual Studio Express 2012 RC per il Web. È anche possibile usare Visual Studio 2010 se si installa l'aggiornamento pubblicazione sul Web. Per un'introduzione alla serie, vedere [la prima esercitazione della serie](deployment-to-a-hosting-provider-introduction-1-of-12.md).
 > 
-> Per un'esercitazione che illustra le funzionalità di distribuzione introdotte dopo la versione di Visual Studio 2012 RC, illustra come distribuire le edizioni di SQL Server diverse da SQL Server Compact e Mostra come distribuire in App Web di servizio App di Azure, vedere [distribuzione Web ASP.NET con Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
+> Per un'esercitazione in cui vengono illustrate le funzionalità di distribuzione introdotte dopo la versione RC di Visual Studio 2012, viene illustrato come distribuire SQL Server edizioni diverse da SQL Server Compact e viene illustrato come eseguire la distribuzione in app Azure app Web del servizio, vedere [distribuzione web ASP.NET con Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
 
-## <a name="overview"></a>Panoramica
+## <a name="overview"></a>Panoramica di
 
-Dopo la distribuzione iniziale, continua il lavoro della manutenzione e il sito web di sviluppo e prima di prolungata è opportuno distribuire un aggiornamento. Questa esercitazione illustra il processo di distribuzione di aggiornamenti al codice dell'applicazione. Questo aggiornamento non comporta una modifica del database; scoprirai che cos'è diversi sulla distribuzione di una modifica al database nella prossima esercitazione.
+Dopo la distribuzione iniziale, il lavoro di manutenzione e sviluppo del sito Web continua e, prima di lungo, sarà necessario distribuire un aggiornamento. Questa esercitazione illustra il processo di distribuzione di un aggiornamento nel codice dell'applicazione. Questo aggiornamento non implica una modifica del database. verranno visualizzate le differenze relative alla distribuzione di una modifica del database nell'esercitazione successiva.
 
-Promemoria: Se viene visualizzato un messaggio di errore o qualcosa non funziona durante l'esecuzione dell'esercitazione, assicurarsi di controllare la [risoluzione dei problemi pagina](deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12.md).
+Promemoria: se si riceve un messaggio di errore o un elemento non funziona durante l'esercitazione, assicurarsi di controllare la pagina relativa alla [risoluzione dei problemi](deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12.md).
 
-## <a name="making-a-code-change"></a>Apportare una modifica del codice
+## <a name="making-a-code-change"></a>Apportare una modifica al codice
 
-Un esempio semplice di un aggiornamento all'applicazione, si aggiungeranno al **instructors (insegnanti)** pagina un elenco dei corsi tenuti dall'insegnante selezionato.
+Come semplice esempio di aggiornamento dell'applicazione, si aggiungerà alla pagina degli **insegnanti** un elenco di corsi insegnato dall'insegnante selezionato.
 
-Se si esegue la **instructors (insegnanti)** pagina, si noterà che esistono **selezionare** collegamenti nella griglia, ma non esegue alcuna operazione oltre marca il grigio turni di riga in background.
+Se si esegue la pagina **Instructors (insegnanti** ), si noterà che nella griglia sono presenti collegamenti **selezionati** , ma che non eseguono alcuna operazione oltre a rendere grigio lo sfondo della riga.
 
 [![Instructors_page](deployment-to-a-hosting-provider-deploying-a-code-only-update-8-of-12/_static/image2.png)](deployment-to-a-hosting-provider-deploying-a-code-only-update-8-of-12/_static/image1.png)
 
-A questo punto si aggiungerà codice che viene eseguito quando il **seleziona** collegamento fa e visualizza un elenco dei corsi tenuti dall'insegnante selezionato.
+A questo punto si aggiungerà il codice che viene eseguito quando si fa clic sul collegamento **Seleziona** e viene visualizzato un elenco dei corsi insegnati dall'insegnante selezionato.
 
-Nelle *Instructors.aspx*, aggiungere il markup seguente immediatamente dopo il **ErrorMessageLabel** `Label` controllo:
+In *Instructors. aspx*aggiungere il markup seguente subito dopo il controllo `Label` **ErrorMessageLabel** :
 
 [!code-aspx[Main](deployment-to-a-hosting-provider-deploying-a-code-only-update-8-of-12/samples/sample1.aspx)]
 
@@ -49,88 +49,88 @@ Eseguire la pagina e selezionare un insegnante. Viene visualizzato un elenco dei
 
 [![Instructors_page_with_courses](deployment-to-a-hosting-provider-deploying-a-code-only-update-8-of-12/_static/image4.png)](deployment-to-a-hosting-provider-deploying-a-code-only-update-8-of-12/_static/image3.png)
 
-## <a name="deploying-the-code-update-to-the-test-environment"></a>Distribuire l'aggiornamento del codice nell'ambiente di Test
+## <a name="deploying-the-code-update-to-the-test-environment"></a>Distribuzione dell'aggiornamento del codice nell'ambiente di test
 
-La distribuzione nell'ambiente di test è davvero semplicissimo dell'esecuzione con un clic pubblicare di nuovo. Per rendere più veloce il processo, è possibile usare la **Web-pubblicazione con un clic** sulla barra degli strumenti.
+La distribuzione nell'ambiente di test è una semplice operazione di esecuzione di un solo clic di pubblicazione. Per rendere più rapido questo processo, è possibile usare la barra degli strumenti **pubblica con un clic** .
 
-Nel **View** menu, scegliere **barre degli strumenti** e quindi selezionare **Web-pubblicazione con un clic**.
+Scegliere **barre degli strumenti** dal menu **Visualizza** e quindi **fare clic sul pulsante pubblica**.
 
 ![Selecting_One_Click_Publish_toolbar](deployment-to-a-hosting-provider-deploying-a-code-only-update-8-of-12/_static/image5.png)
 
-Nelle **Esplora soluzioni**, selezionare il progetto ContosoUniversity.
+In **Esplora soluzioni**selezionare il progetto ContosoUniversity.
 
-il **Web-pubblicazione con un clic** sulla barra degli strumenti, scegliere il **Test** profilo di pubblicazione e quindi fare clic su **pubblica sul Web** (l'icona con frecce che puntano a sinistra e destra).
+sul **Web fare clic su pubblica** barra degli strumenti, scegliere il profilo di pubblicazione del **test** , quindi fare clic su **Pubblica Web** (icona con frecce che puntano a sinistra e a destra).
 
 ![Web_One_Click_Publish_toolbar](deployment-to-a-hosting-provider-deploying-a-code-only-update-8-of-12/_static/image6.png)
 
-Visual Studio distribuisce l'applicazione aggiornata e il browser viene aperta automaticamente alla home page. Eseguire la pagina instructors (insegnanti) e selezionare un insegnante per verificare che l'aggiornamento è stato distribuito correttamente.
+Visual Studio distribuisce l'applicazione aggiornata e il browser si apre automaticamente al home page. Eseguire la pagina insegnanti e selezionare un insegnante per verificare che l'aggiornamento sia stato distribuito correttamente.
 
 [![Instructors_page_with_courses_Test](deployment-to-a-hosting-provider-deploying-a-code-only-update-8-of-12/_static/image8.png)](deployment-to-a-hosting-provider-deploying-a-code-only-update-8-of-12/_static/image7.png)
 
-In genere viene usato anche eseguire test di regressione (vale a dire, il resto del sito per assicurarsi che la nuova modifica non interrompe con le funzionalità esistenti di test). Ma per questa esercitazione è possibile ignorare il passaggio e andare al distribuire l'aggiornamento nell'ambiente di produzione.
+Normalmente si eseguono anche test di regressione, ovvero si testa il resto del sito per assicurarsi che la nuova modifica non interrompa le funzionalità esistenti. Tuttavia, per questa esercitazione si ignorerà questo passaggio e si procederà con la distribuzione dell'aggiornamento nell'ambiente di produzione.
 
-## <a name="preventing-redeployment-of-the-initial-database-state-to-production"></a>Impedisce la ridistribuzione dello stato del Database iniziale nell'ambiente di produzione
+## <a name="preventing-redeployment-of-the-initial-database-state-to-production"></a>Prevenzione della ridistribuzione dello stato iniziale del database nell'ambiente di produzione
 
-In un'applicazione reale, gli utenti interagiscono con il sito di produzione dopo la distribuzione iniziale e i database vengono popolati con dati in tempo reale. Pertanto, non si vuole ridistribuire il database di appartenenza nello stato iniziale, si cancellazione tutti i dati in tempo reale. Poiché i database di SQL Server Compact sono file nei *App\_dati* cartella, è necessario evitare questo problema, modificare le impostazioni di distribuzione in modo che i file nei *App\_dati* cartella non sono distribuiti.
+In un'applicazione reale, gli utenti interagiscono con il sito di produzione dopo la distribuzione iniziale e i database vengono popolati con dati dinamici. Pertanto, non si vuole ridistribuire il database delle appartenenze nello stato iniziale, eliminando tutti i dati attivi. Poiché i database SQL Server Compact sono file nella cartella *app\_data* , è necessario evitare questo problema cambiando le impostazioni di distribuzione in modo che i file nella cartella *app\_data* non vengano distribuiti.
 
-Aprire il **proprietà progetto** finestra per il progetto ContosoUniversity e selezionare il **pubblicazione/creazione pacchetto Web** scheda. Assicurarsi che il **Configuration** casella di riepilogo è stata **attivo (versione)** o **rilascio** selezionato, selezionare **escludere i file dall'App\_Cartella data**.
+Aprire la finestra delle **proprietà del progetto** per il progetto ContosoUniversity e selezionare la scheda **pacchetto/pubblica Web** . Assicurarsi che nella casella di riepilogo a discesa **configurazione** sia selezionata l'opzione **attiva (versione)** o **versione** selezionare **Escludi file dalla cartella app\_data**.
 
 ![Exclude_files_from_the_App_Data_folder](deployment-to-a-hosting-provider-deploying-a-code-only-update-8-of-12/_static/image9.png)
 
-Nel caso in cui si decide di distribuire una build di debug in futuro, è consigliabile apportare la stessa modifica per la configurazione di build di Debug: cambiare **Configuration** al **Debug** e quindi selezionare **escludere i file dall'App\_cartella dati**.
+Se si decide di distribuire una build di debug in futuro, è consigliabile apportare la stessa modifica per la configurazione della build di debug: modificare la **configurazione** per eseguire il **debug** e quindi selezionare **Escludi file dalla cartella app\_data**.
 
-Salvare e chiudere il **pubblicazione/creazione pacchetto Web** scheda.
+Salvare e chiudere la scheda **pubblicazione/pubblicazione del pacchetto Web** .
 
 > [!NOTE] 
 > 
 > [!IMPORTANT]
-> Assicurarsi che non hai **Rimuovi file aggiuntivi nella destinazione** selezionato nei profili di pubblicazione. Se si seleziona questa opzione, il processo di distribuzione verrà eliminati i database presenti nell'App\_l'App verranno eliminata dati nel sito distribuito e\_cartella dati stesso.
+> Assicurarsi di non avere **rimosso i file aggiuntivi nella destinazione** selezionata nei profili di pubblicazione. Se si seleziona questa opzione, il processo di distribuzione eliminerà i database presenti nei dati dell'app\_nel sito distribuito e eliminerà l'app\_cartella dati.
 
-## <a name="preventing-user-access-to-the-production-site-during-update"></a>Impedire l'accesso utente al sito di produzione durante l'aggiornamento
+## <a name="preventing-user-access-to-the-production-site-during-update"></a>Impedire l'accesso degli utenti al sito di produzione durante l'aggiornamento
 
-La modifica che si esegue la distribuzione è ora una semplice modifica a una singola pagina. Ma in alcuni casi si distribuiscono le modifiche più significative, e in tal caso il sito può si comportano in modo se un utente richiede una pagina prima del completamento della distribuzione. Per evitare questo problema, è possibile usare un *app\_offline.htm* file. Quando si inserisce un file denominato *app\_offline.htm* nella cartella radice dell'applicazione, IIS consente di visualizzare automaticamente tale file invece di eseguire l'applicazione. Per impedire l'accesso durante la distribuzione, per l'inserimento *app\_offline.htm* nella cartella radice, eseguire il processo di distribuzione e quindi rimuovere *app\_offline.htm*.
+La modifica che si sta distribuendo ora è una semplice modifica a una singola pagina. Tuttavia, a volte si distribuiscono modifiche di dimensioni maggiori e, in tal caso, il sito può comportarsi in modo anomalo se un utente richiede una pagina prima del completamento della distribuzione. Per evitare questo problema, è possibile usare un' *app\_file offline. htm* . Quando si inserisce un file denominato *app\_offline. htm* nella cartella radice dell'applicazione, in IIS viene visualizzato automaticamente tale file anziché eseguire l'applicazione. Per impedire l'accesso durante la distribuzione, inserire l' *app\_offline. htm* nella cartella radice, eseguire il processo di distribuzione e quindi rimuovere l' *app\_offline. htm*.
 
-Nelle **Esplora soluzioni**, fare doppio clic la soluzione (non uno dei progetti) e selezionare **nuova cartella soluzione**.
+In **Esplora soluzioni**fare clic con il pulsante destro del mouse sulla soluzione, non su uno dei progetti, e selezionare **nuova cartella soluzione**.
 
 ![Creating_a_solution_folder](deployment-to-a-hosting-provider-deploying-a-code-only-update-8-of-12/_static/image10.png)
 
 Denominare la cartella *SolutionFiles*.
 
-Nella nuova cartella creare una pagina HTML denominata *app\_offline.htm*. Sostituire il contenuto esistente con il markup seguente:
+Nella nuova cartella creare una pagina HTML denominata *app\_offline. htm*. Sostituire il contenuto esistente con il markup seguente:
 
 [!code-html[Main](deployment-to-a-hosting-provider-deploying-a-code-only-update-8-of-12/samples/sample2.html)]
 
-È possibile copiare il *app\_offline.htm* file al sito tramite una connessione FTP o il **gestione File** utilità nel Pannello di controllo del provider di hosting. Per questa esercitazione si userà il **gestione File**.
+È possibile copiare l' *app\_file offline. htm* nel sito usando una connessione FTP o l'utilità **file Manager** nel pannello di controllo del provider di hosting. Per questa esercitazione si userà **Gestione file**.
 
-Aprire il pannello di controllo e selezionare **gestione File** seguendo la [distribuzione nell'ambiente di produzione](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12.md) esercitazione. Selezionare **contosouniversity.com** e quindi **wwwroot** per accedere alla cartella radice dell'applicazione e quindi fare clic su **caricare**.
+Aprire il pannello di controllo e selezionare **file Manager** come nell'esercitazione [distribuzione in ambiente di produzione](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12.md) . Selezionare **contosouniversity.com** e quindi **wwwroot** per ottenere la cartella radice dell'applicazione e quindi fare clic su **carica**.
 
 [![Upload_button_in_File_Manager](deployment-to-a-hosting-provider-deploying-a-code-only-update-8-of-12/_static/image12.png)](deployment-to-a-hosting-provider-deploying-a-code-only-update-8-of-12/_static/image11.png)
 
-Nel **carica File** finestra di dialogo, seleziona la *app\_offline.htm* file e quindi fare clic su **caricare**.
+Nella finestra di dialogo **Carica file** selezionare l' *app\_file offline. htm* , quindi fare clic su **carica**.
 
 [![Upload_dialog_box_in_File_Manager](deployment-to-a-hosting-provider-deploying-a-code-only-update-8-of-12/_static/image14.png)](deployment-to-a-hosting-provider-deploying-a-code-only-update-8-of-12/_static/image13.png)
 
-Passare all'URL del sito. Si può osservare che il *app\_offline.htm* viene visualizzata la pagina anziché la home page.
+Individuare l'URL del sito. Si noterà che viene visualizzata la pagina *app\_offline. htm* invece della Home page.
 
-[![App_offline.htm_page_in_production](deployment-to-a-hosting-provider-deploying-a-code-only-update-8-of-12/_static/image16.png)](deployment-to-a-hosting-provider-deploying-a-code-only-update-8-of-12/_static/image15.png)
+[![App_offline. htm_page_in_production](deployment-to-a-hosting-provider-deploying-a-code-only-update-8-of-12/_static/image16.png)](deployment-to-a-hosting-provider-deploying-a-code-only-update-8-of-12/_static/image15.png)
 
 A questo punto si è pronti per la distribuzione nell'ambiente di produzione.
 
-## <a name="deploying-the-code-update-to-the-production-environment"></a>Distribuire l'aggiornamento del codice nell'ambiente di produzione
+## <a name="deploying-the-code-update-to-the-production-environment"></a>Distribuzione dell'aggiornamento del codice nell'ambiente di produzione
 
-Nel **Web-pubblicazione con un clic** sulla barra degli strumenti, scegliere il **produzione** profilo di pubblicazione e quindi fare clic su **pubblica sul Web**.
+Nella barra degli strumenti **pubblica sul Web fare clic** sul profilo di pubblicazione di **produzione** , quindi scegliere **Pubblica sito Web**.
 
-Visual Studio distribuisce l'applicazione aggiornata e verrà aperto il browser alla pagina iniziale del sito. Il *app\_offline.htm* file viene visualizzato. Prima di testare per verificare la corretta distribuzione, è necessario rimuovere il *app\_offline.htm* file.
+Visual Studio distribuisce l'applicazione aggiornata e apre il browser all'home page del sito. Viene visualizzata l' *app\_file offline. htm* . Prima di poter eseguire il test per verificare la corretta distribuzione, è necessario rimuovere l' *app\_file offline. htm* .
 
-Tornare al **gestione File** applicazioni nel Pannello di controllo. Selezionare **contosouniversity.com** e **wwwroot**, selezionare **app\_offline.htm**, quindi fare clic su **Elimina**.
+Tornare all'applicazione **file Manager** nel pannello di controllo. Selezionare **contosouniversity.com** e **wwwroot**, selezionare **app\_offline. htm**, quindi fare clic su **Elimina**.
 
-[![Deleting_app_offline.htm](deployment-to-a-hosting-provider-deploying-a-code-only-update-8-of-12/_static/image18.png)](deployment-to-a-hosting-provider-deploying-a-code-only-update-8-of-12/_static/image17.png)
+[![Deleting_app_offline. htm](deployment-to-a-hosting-provider-deploying-a-code-only-update-8-of-12/_static/image18.png)](deployment-to-a-hosting-provider-deploying-a-code-only-update-8-of-12/_static/image17.png)
 
-Nel browser, aprire la pagina instructors (insegnanti) nel sito pubblico e selezionare un insegnante per verificare che l'aggiornamento è stato distribuito correttamente.
+Nel browser aprire la pagina insegnanti nel sito pubblico e selezionare un insegnante per verificare che l'aggiornamento sia stato distribuito correttamente.
 
 [![Instructors_page_with_courses_Prod](deployment-to-a-hosting-provider-deploying-a-code-only-update-8-of-12/_static/image20.png)](deployment-to-a-hosting-provider-deploying-a-code-only-update-8-of-12/_static/image19.png)
 
-È stato distribuito un aggiornamento dell'applicazione che non ha comportato una modifica al database. L'esercitazione successiva illustra come distribuire una modifica al database.
+A questo punto è stato distribuito un aggiornamento dell'applicazione che non implicava una modifica del database. L'esercitazione successiva illustra come distribuire una modifica del database.
 
 > [!div class="step-by-step"]
 > [Precedente](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12.md)

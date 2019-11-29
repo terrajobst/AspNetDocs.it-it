@@ -1,130 +1,130 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/common-configuration-differences-between-development-and-production-vb
-title: Differenze di configurazione più comuni tra sviluppo e produzione (VB) | Microsoft Docs
+title: Differenze di configurazione comuni tra sviluppo e produzione (VB) | Microsoft Docs
 author: rick-anderson
-description: Nelle esercitazioni precedenti è stato distribuito il nostro sito Web tramite la copia di tutti i file pertinenti dall'ambiente di sviluppo all'ambiente di produzione. Tuttavia, ho...
+description: Nelle esercitazioni precedenti è stato distribuito il sito Web copiando tutti i file pertinenti dall'ambiente di sviluppo all'ambiente di produzione. Tuttavia...
 ms.author: riande
 ms.date: 04/01/2009
 ms.assetid: 548e75f6-4d6c-4cb4-8da8-417915eb8393
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/common-configuration-differences-between-development-and-production-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 5ff344bdff379a72a5fc3d26ab66afb095cd2e0d
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: cc65af6eb4fca8b3b805e11e26da468a958a4221
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65125746"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74619948"
 ---
 # <a name="common-configuration-differences-between-development-and-production-vb"></a>Differenze di configurazione più comuni tra sviluppo e produzione (VB)
 
-da [Scott Mitchell](https://twitter.com/ScottOnWriting)
+di [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Scaricare PDF](http://download.microsoft.com/download/E/8/9/E8920AE6-D441-41A7-8A77-9EF8FF970D8B/aspnet_tutorial05_ConfigDifferences_vb.pdf)
+[Scaricare PDF](https://download.microsoft.com/download/E/8/9/E8920AE6-D441-41A7-8A77-9EF8FF970D8B/aspnet_tutorial05_ConfigDifferences_vb.pdf)
 
-> Nelle esercitazioni precedenti è stato distribuito il nostro sito Web tramite la copia di tutti i file pertinenti dall'ambiente di sviluppo all'ambiente di produzione. Non è, tuttavia, non comune per essere differenze di configurazione tra gli ambienti, che richiede che ogni ambiente dispone di un file Web. config univoco. Questa esercitazione esamina le differenze di configurazione tipici ed esamina le strategie per la gestione delle informazioni di configurazione separato.
+> Nelle esercitazioni precedenti è stato distribuito il sito Web copiando tutti i file pertinenti dall'ambiente di sviluppo all'ambiente di produzione. Tuttavia, non è insolito che siano presenti differenze di configurazione tra gli ambienti, per cui è necessario che ogni ambiente disponga di un file Web. config univoco. In questa esercitazione vengono esaminate le differenze di configurazione tipiche e vengono esaminate le strategie per la gestione di informazioni di configurazione separate.
 
 ## <a name="introduction"></a>Introduzione
 
-Le ultime due esercitazioni esaminato la distribuzione di una semplice applicazione web. Il [ *distribuzione del sito tramite un FTP Client* ](deploying-your-site-using-an-ftp-client-vb.md) esercitazione ha illustrato come usare un client FTP autonoma per copiare i file necessari dall'ambiente di sviluppo fino a ambiente di produzione. L'esercitazione precedente [ *distribuzione del sito tramite Visual Studio*](deploying-your-site-using-visual-studio-vb.md), cercare in fase di distribuzione usando l'opzione di pubblicazione e lo strumento Copia sito Web di Visual Studio. In entrambe le esercitazioni ogni file nell'ambiente di produzione è una copia di un file nell'ambiente di sviluppo. Non è, tuttavia, non comune per i file di configurazione nell'ambiente di produzione in modo diverso rispetto a quelli nell'ambiente di sviluppo. Configurazione di un'applicazione web viene archiviata nel `Web.config` file e in genere sono incluse informazioni sulle risorse esterne, ad esempio database, web e server di posta elettronica. Inoltre illustra in dettaglio il comportamento dell'applicazione in determinate situazioni, ad esempio la linea di azione da intraprendere quando si verifica un'eccezione non gestita.
+Le ultime due esercitazioni hanno illustrato come distribuire una semplice applicazione Web. Nell'esercitazione [*distribuzione del sito tramite un client FTP*](deploying-your-site-using-an-ftp-client-vb.md) è stato illustrato come utilizzare un client FTP autonomo per copiare i file necessari dall'ambiente di sviluppo fino alla produzione. Nell'esercitazione precedente, [*distribuzione del sito con Visual Studio*](deploying-your-site-using-visual-studio-vb.md), è stata esaminata la distribuzione usando lo strumento Copia sito Web di Visual Studio e l'opzione pubblica. In entrambe le esercitazioni ogni file nell'ambiente di produzione era una copia di un file nell'ambiente di sviluppo. Tuttavia, non è insolito che i file di configurazione nell'ambiente di produzione siano diversi da quelli nell'ambiente di sviluppo. La configurazione di un'applicazione Web viene archiviata nel file di `Web.config` e in genere include informazioni sulle risorse esterne, ad esempio i server di database, Web e di posta elettronica. Viene inoltre digitato il comportamento dell'applicazione in determinate situazioni, ad esempio il corso di azione da intraprendere quando si verifica un'eccezione non gestita.
 
-Quando si distribuisce un'applicazione web è importante che le informazioni di configurazione corretto finire nell'ambiente di produzione. Nella maggior parte dei casi il `Web.config` non è possibile copiare file nell'ambiente di sviluppo all'ambiente di produzione come-è. Al contrario, una versione personalizzata di `Web.config` dovrà essere caricato nell'ambiente di produzione. Questa esercitazione esamina brevemente alcune delle differenze di configurazione più comuni; Inoltre, riepiloga alcune tecniche per la gestione delle informazioni di configurazione diverso tra gli ambienti.
+Quando si distribuisce un'applicazione Web, è importante che le informazioni di configurazione corrette finiscano nell'ambiente di produzione. Nella maggior parte dei casi il file di `Web.config` nell'ambiente di sviluppo non può essere copiato nell'ambiente di produzione così com'è. Al contrario, una versione personalizzata di `Web.config` deve essere caricata nell'ambiente di produzione. Questa esercitazione esamina brevemente alcune delle differenze di configurazione più comuni; riepiloga inoltre alcune tecniche per la gestione di informazioni di configurazione diverse tra gli ambienti.
 
-## <a name="typical-configuration-differences-between-the-development-and-production-environments"></a>Configurazione tipica differenze tra lo sviluppo e ambienti di produzione
+## <a name="typical-configuration-differences-between-the-development-and-production-environments"></a>Differenze di configurazione tipiche tra gli ambienti di sviluppo e di produzione
 
-Il `Web.config` file include un'ampia gamma di informazioni di configurazione per un'applicazione ASP.NET. Alcune di queste informazioni di configurazione è lo stesso indipendentemente dall'ambiente. Ad esempio, le impostazioni di autenticazione e regole di autorizzazione URL esplicitate il `Web.config` del file `<authentication>` e `<authorization>` elementi sono in genere gli stessi indipendentemente dall'ambiente. Ma altre informazioni di configurazione - ad esempio informazioni sulle risorse esterne, in genere variano a seconda dell'ambiente.
+Il file `Web.config` include un'ampia gamma di informazioni di configurazione per un'applicazione ASP.NET. Alcune di queste informazioni di configurazione sono le stesse indipendentemente dall'ambiente. Ad esempio, le impostazioni di autenticazione e le regole di autorizzazione URL digitate negli elementi `<authentication>` e `<authorization>` del file `Web.config` sono in genere le stesse indipendentemente dall'ambiente. Tuttavia, altre informazioni di configurazione, ad esempio le informazioni sulle risorse esterne, variano in genere a seconda dell'ambiente.
 
-Stringhe di connessione del database sono un ottimo esempio delle informazioni di configurazione diverso in base all'ambiente. Quando un'applicazione web comunica con un server di database prima di tutto è necessario stabilire una connessione e questa operazione viene eseguita tramite un [stringa di connessione](http://www.connectionstrings.com/Articles/Show/what-is-a-connection-string). Sebbene sia possibile codificare la stringa di connessione di database direttamente in pagine web o il codice che si connette al database, è consigliabile inserirlo `Web.config`del [ `<connectionStrings>` elemento](https://msdn.microsoft.com/library/bf7sd233.aspx) in modo che la stringa di connessione informazioni sono in un'unica posizione centralizzata. Spesso durante lo sviluppo viene utilizzato un database diverso rispetto a quello utilizzato nell'ambiente di produzione; di conseguenza, le informazioni sulla stringa di connessione deve essere univoci per ogni ambiente.
-
-> [!NOTE]
-> Nelle esercitazioni successive esplorare la distribuzione di applicazioni guidate dai dati, a questo punto verranno esaminate le specifiche come stringhe di connessione di database vengono archiviati nel file di configurazione.
-
-Il comportamento previsto di ambienti di sviluppo e produzione differisce notevolmente. Un'applicazione web nell'ambiente di sviluppo viene creata, testati e sottoposto a debug da un piccolo gruppo di sviluppatori. Nell'ambiente di produzione stessa applicazione viene visitato da numerosi utenti simultanei. ASP.NET include numerose funzionalità che consentono agli sviluppatori di test e debug di un'applicazione, ma queste funzionalità devono essere disabilitate per motivi di prestazioni e sicurezza quando nell'ambiente di produzione. Esaminiamo alcuni tali impostazioni di configurazione.
-
-### <a name="configuration-settings-that-impact-performance"></a>Impostazioni di configurazione che influiscono sulle prestazioni
-
-Quando viene visitata una pagina ASP.NET per la prima volta (o la prima volta dopo la modifica), il relativo markup dichiarativo devono essere convertite in una classe e questa classe deve essere compilata. Se l'applicazione web Usa la compilazione automatica classe code-behind della pagina deve quindi essere compilato, troppo. È possibile configurare un'ampia gamma di opzioni di compilazione tramite il `Web.config` del file [ `<compilation>` elemento](https://msdn.microsoft.com/library/s10awwz0.aspx).
-
-L'attributo di debug è uno degli attributi più importanti nel `<compilation>` elemento. Se il `debug` attributo è impostato su "true", assembly compilati includono i simboli di debug, che sono necessari durante il debug di un'applicazione in Visual Studio. Tuttavia, i simboli di debug aumentare le dimensioni dell'assembly e impongano requisiti di memoria aggiuntiva durante l'esecuzione di codice. Inoltre, quando la `debug` attributo è impostato su "true" qualsiasi contenuto restituito da `WebResource.axd` non viene memorizzato nella cache, di vale a dire che ogni volta che un utente visita una pagina dovranno scaricare nuovamente il contenuto statico restituito da `WebResource.axd`.
+Le stringhe di connessione al database sono un ottimo esempio di informazioni di configurazione che variano in base all'ambiente. Quando un'applicazione Web comunica con un server di database, deve prima stabilire una connessione e tale risultato viene eseguito tramite una [stringa di connessione](http://www.connectionstrings.com/Articles/Show/what-is-a-connection-string). Sebbene sia possibile impostare come hardcoded la stringa di connessione al database direttamente nelle pagine Web o nel codice che si connette al database, è preferibile posizionarlo `Web.config`[elemento`<connectionStrings>`](https://msdn.microsoft.com/library/bf7sd233.aspx) in modo che le informazioni della stringa di connessione si trovino in un'unica posizione centralizzata. Spesso un database diverso viene usato durante lo sviluppo rispetto a quello usato nell'ambiente di produzione; di conseguenza, le informazioni della stringa di connessione devono essere univoche per ogni ambiente.
 
 > [!NOTE]
-> `WebResource.axd` è un gestore HTTP predefinito introdotto in ASP.NET 2.0 utilizzato dai controlli server per recuperare le risorse incorporate, ad esempio i file di script, immagini, file CSS e altro contenuto. Per altre informazioni su come `WebResource.axd` funziona e come è possibile usarlo per accedere alle risorse incorporate dai controlli server personalizzati, vedere [l'accesso a incorporate risorse tramite un URL usando `WebResource.axd` ](http://aspnet.4guysfromrolla.com/articles/080906-1.aspx).
+> Esercitazioni future esplorare la distribuzione di applicazioni basate sui dati. a questo punto verranno illustrate le specifiche relative alla modalità di archiviazione delle stringhe di connessione del database nel file di configurazione.
 
-Il `<compilation>` dell'elemento `debug` attributo viene in genere impostato su "true" nell'ambiente di sviluppo. In effetti, questo attributo deve essere impostato su "true" per eseguire il debug di un'applicazione web. Se si prova a eseguire il debug di un'applicazione ASP.NET da Visual Studio e il `debug` attributo è impostato su "false", Visual Studio verrà visualizzato un messaggio che spiega che l'applicazione non è possibile eseguire il debug finché il `debug` attributo è impostato su "true" e verrà l'offerta per apportare questa modifica per l'utente.
+Il comportamento previsto degli ambienti di sviluppo e produzione è sostanzialmente diverso. Un'applicazione Web nell'ambiente di sviluppo viene creata, testata e sottoposta a debug da un piccolo gruppo di sviluppatori. Nell'ambiente di produzione la stessa applicazione viene visitata da molti utenti simultanei diversi. ASP.NET include una serie di funzionalità che consentono agli sviluppatori di eseguire il test e il debug di un'applicazione, ma queste funzionalità devono essere disabilitate per motivi di sicurezza e prestazioni nell'ambiente di produzione. Esaminiamo alcune impostazioni di configurazione.
 
-È consigliabile **mai** dispone i `debug` attributo impostato su "true" in un ambiente di produzione a causa dell'impatto relativo sulle prestazioni. Per una discussione più approfondita su questo argomento, consultare [Scott Guthrie](https://weblogs.asp.net/scottgu/)del post di blog [non eseguire produzione ASP.NET le applicazioni con `debug="true"` Enabled](https://weblogs.asp.net/scottgu/442448).
+### <a name="configuration-settings-that-impact-performance"></a>Impostazioni di configurazione che influiscano sulle prestazioni
 
-### <a name="custom-errors-and-tracing"></a>Traccia e gli errori personalizzati
+Quando una pagina ASP.NET viene visitata per la prima volta (o la prima volta dopo che è stata modificata), il markup dichiarativo deve essere convertito in una classe e la classe deve essere compilata. Se l'applicazione Web usa la compilazione automatica, è necessario compilare anche la classe code-behind della pagina. È possibile configurare un assortimento di opzioni di compilazione tramite l' [elemento`<compilation>`](https://msdn.microsoft.com/library/s10awwz0.aspx)del file `Web.config`.
 
-Quando si verifica un'eccezione non gestita in un'applicazione ASP.NET propagato al runtime a questo punto si verifica una delle tre operazioni:
-
-- Viene visualizzato un messaggio di errore di runtime generico. Questa pagina informa l'utente che si è verificato un errore di runtime, ma non fornisce i dettagli sull'errore.
-- Viene visualizzato un messaggio di dettagli di eccezione, che include informazioni sull'eccezione appena generata.
-- Viene visualizzata una pagina di errore personalizzato, ovvero una pagina ASP.NET creato che consente di visualizzare tutti i messaggi desiderati.
-
-Ciò che accade in caso di un'eccezione non gestita dipende il `Web.config` del file [ `<customErrors>` sezione](https://msdn.microsoft.com/library/h0hfz6fc.aspx).
-
-Durante lo sviluppo e test di un'applicazione che è possibile per visualizzare i dettagli di qualsiasi eccezione nel browser. Tuttavia, che mostra i dettagli dell'eccezione in un'applicazione in produzione è un potenziale rischio di sicurezza. Inoltre, è unflattering e conferisce un aspetto poco professionale il sito Web. Idealmente, in caso di un'eccezione non gestita un'applicazione web nell'ambiente di sviluppo per visualizzare i dettagli dell'eccezione durante la stessa applicazione nell'ambiente di produzione mostrerà una pagina di errore personalizzato.
+L'attributo debug è uno degli attributi più importanti nell'elemento `<compilation>`. Se l'attributo `debug` è impostato su "true", gli assembly compilati includono i simboli di debug, necessari per il debug di un'applicazione in Visual Studio. Tuttavia, i simboli di debug aumentano le dimensioni dell'assembly e impongono requisiti di memoria aggiuntivi durante l'esecuzione del codice. Inoltre, quando l'attributo `debug` è impostato su "true", tutti i contenuti restituiti da `WebResource.axd` non vengono memorizzati nella cache, ovvero ogni volta che un utente visita una pagina, sarà necessario scaricare di nuovo il contenuto statico restituito da `WebResource.axd`.
 
 > [!NOTE]
-> Il valore predefinito `<customErrors>` impostazione sezione mostra i dettagli dell'eccezione dei messaggi solo quando la pagina viene visitata tramite localhost e viene illustrata la pagina di errore di runtime generico in caso contrario. Questo comportamento non è ideale, ma è in modo da assicurare per sapere che il comportamento predefinito non rivela i dettagli dell'eccezione per i visitatori non locali. Un'esercitazione futura esamina il `<customErrors>` sezione in modo più dettagliato e viene mostrato come configurare una pagina di errore personalizzati visualizzata quando si verifica un errore nell'ambiente di produzione.
+> `WebResource.axd` è un gestore HTTP incorporato introdotto in ASP.NET 2,0 che i controlli server usano per recuperare le risorse incorporate, ad esempio file di script, immagini, file CSS e altro contenuto. Per altre informazioni sul funzionamento di `WebResource.axd` e su come usarlo per accedere alle risorse incorporate dai controlli server personalizzati, vedere [accesso alle risorse incorporate tramite un URL con `WebResource.axd`](http://aspnet.4guysfromrolla.com/articles/080906-1.aspx).
 
-Un'altra funzionalità ASP.NET che risulta utile durante lo sviluppo è la traccia. Traccia, se abilitata, registra le informazioni relative a ogni richiesta in ingresso e fornisce una pagina web speciale, `Trace.axd`, per la visualizzazione dei dettagli delle richieste recenti. È possibile attivare e configurare la traccia tramite il [ `<trace>` elemento](https://msdn.microsoft.com/library/6915t83k.aspx) in `Web.config`.
+L'attributo `debug` dell'elemento `<compilation>` viene in genere impostato su "true" nell'ambiente di sviluppo. Infatti, questo attributo deve essere impostato su "true" per eseguire il debug di un'applicazione Web; Se si tenta di eseguire il debug di un'applicazione ASP.NET da Visual Studio e l'attributo `debug` è impostato su "false", in Visual Studio verrà visualizzato un messaggio che informa che non è possibile eseguire il debug dell'applicazione finché l'attributo `debug` non è impostato su "true" e offrirà per apportare questa modifica.
 
-Se si abilita traccia assicurarsi che l'it è disabilitato nell'ambiente di produzione. Poiché le informazioni di traccia sono inclusi i cookie, i dati della sessione e altre informazioni potenzialmente riservate, è importante disabilitare la traccia nell'ambiente di produzione. La buona notizia è che, per impostazione predefinita, viene disabilitata la traccia e il `Trace.axd` file è accessibile solo tramite localhost. Se si modificano queste impostazioni predefinite in fase di sviluppo assicurarsi che sono spenti nuovamente nell'ambiente di produzione.
+L'attributo `debug` **non deve mai** essere impostato su "true" in un ambiente di produzione a causa dell'impatto sulle prestazioni. Per una discussione più approfondita su questo argomento, vedere il post di Blog di [Scott Guthrie](https://weblogs.asp.net/scottgu/), [non eseguire applicazioni ASP.NET di produzione con `debug="true"` abilitata](https://weblogs.asp.net/scottgu/442448).
 
-## <a name="techniques-for-maintaining-separate-configuration-information"></a>Tecniche per la gestione delle informazioni di configurazione separato
+### <a name="custom-errors-and-tracing"></a>Errori e traccia personalizzati
 
-La presenza di impostazioni di configurazione diverse in ambienti di sviluppo e produzione complica il processo di distribuzione. Nelle due esercitazioni precedenti il processo di distribuzione coinvolta la copia di tutti i file necessari dallo sviluppo alla produzione, ma tale approccio funziona solo se le informazioni di configurazione sono lo stesso in entrambi gli ambienti. Esistono varie tecniche per la distribuzione di un'applicazione con informazioni di configurazione diverse. Verrà ora catalogo alcune di queste opzioni per le applicazioni web ospitate.
+Quando si verifica un'eccezione non gestita in un'applicazione ASP.NET, si esegue il bubbling fino al runtime, in cui si verifica una delle tre situazioni seguenti:
 
-### <a name="manually-deploying-the-production-environment-configuration-file"></a>Distribuzione manuale di File di configurazione dell'ambiente di produzione
+- Viene visualizzato un messaggio di errore di runtime generico. Questa pagina informa l'utente che si è verificato un errore di runtime, ma non fornisce informazioni dettagliate sull'errore.
+- Viene visualizzato un messaggio Dettagli eccezione, che include informazioni sull'eccezione appena generata.
+- Viene visualizzata una pagina di errore personalizzata, ovvero una pagina ASP.NET creata che Visualizza tutti i messaggi desiderati.
 
-L'approccio più semplice consiste nel mantenere due versioni del `Web.config` file: uno per l'ambiente di sviluppo e uno per l'ambiente di produzione. Distribuire un sito di produzione vengono copiati tutti i file al server di produzione nell'ambiente di sviluppo *eccetto* per il `Web.config` file. Al contrario, le specifiche dell'ambiente produzione `Web.config` file verrà copiato nell'ambiente di produzione.
+Ciò che accade in caso di eccezione non gestita dipende dalla [sezione`<customErrors>`](https://msdn.microsoft.com/library/h0hfz6fc.aspx)del file di `Web.config`.
 
-Questo approccio non sia molto sofisticato, ma è facile da implementare poiché le informazioni di configurazione non vengono modificati spesso. Funziona al meglio per le applicazioni con un team di sviluppo di piccole dimensioni che sono ospitati in un singolo server web e le cui informazioni di configurazione viene modificati raramente. È più tenable quando si distribuisce manualmente i file dell'applicazione tramite un client FTP autonome. Quando si usa l'opzione pubblica o lo strumento Copia sito Web di Visual Studio, devi innanzitutto lo swapping delle specifiche della distribuzione `Web.config` con quello specifico ambiente di produzione prima della distribuzione di file e quindi sostituirli nuovamente dopo aver completato la distribuzione.
-
-### <a name="change-the-configuration-during-the-build-or-deployment-process"></a>Modificare la configurazione durante la compilazione o di un processo di distribuzione
-
-Le discussioni finora hanno si presuppone che un processo di compilazione e distribuzione ad hoc. Molti progetti software di grandi dimensioni sono formalizzati più processi che fanno uso di open source, personalizzati o gli strumenti di terze parti. Per questi progetti è probabilmente possibile personalizzare il processo di compilazione o di distribuzione per modificare in modo appropriato le informazioni di configurazione prima di essere inviato all'ambiente di produzione. Se si compila l'applicazione web usando [MSBuild](http://en.wikipedia.org/wiki/MSBuild), [NAnt](http://nant.sourceforge.net/), o un altro strumento di compilazione, probabilmente è possibile aggiungere un passaggio di compilazione per modificare il `Web.config` file da includere le impostazioni specifiche dell'ambiente di produzione. O il flusso di lavoro di distribuzione a livello di codice è stato possibile connettersi al server di controllo di origine e recuperare appropriato `Web.config` file.
-
-L'approccio per ottenere le informazioni di configurazione appropriato nell'ambiente di produzione effettivo dipende ampiamente i tuoi strumenti e flusso di lavoro. Di conseguenza, saranno non affrontare ulteriormente in questo argomento. Se si usa uno strumento di compilazione più diffusi come MSBuild o NAnt è possibile trovare le esercitazioni e articoli sulla distribuzione specifiche per questi strumenti tramite una ricerca sul web.
-
-### <a name="managing-configuration-differences-via-the-web-deployment-project-add-in"></a>La gestione delle differenze di configurazione tramite la distribuzione Web del progetto componente aggiuntivo
-
-Nel 2006 Microsoft ha rilasciato lo sviluppo progetto di componente aggiuntivo Web per Visual Studio 2005. Un componente aggiuntivo per Visual Studio 2008 è stato rilasciato nel 2008. Questo componente aggiuntivo consente agli sviluppatori ASP.NET per creare un progetto di distribuzione Web separato insieme il progetto di applicazione web che, quando compilato, in modo esplicito viene compilato l'applicazione web e copia i file da distribuire in una directory di output locale. Il progetto di applicazione Web Usa MSBuild dietro le quinte.
-
-Per del impostazione predefinita, l'ambiente di sviluppo `Web.config` file viene copiato nella directory di output, ma è possibile configurare il progetto di distribuzione Web per personalizzare il
-
-informazioni di configurazione che viene copiate in questa directory nei modi seguenti:
-
-- Tramite `Web.config` file un file XML che contiene il testo di sostituzione e sostituzione di sezione, in cui si specifica la sezione da sostituire.
-- Fornendo un percorso di un file di origine di configurazione esterno. Questa opzione è selezionata, il progetto di distribuzione Web consente di copiare un determinato `Web.config` file nella directory di output (anziché la `Web.config` file usato nell'ambiente di sviluppo).
-- Tramite l'aggiunta di regole personalizzate per il file di MSBuild usato dal progetto di distribuzione Web.
-
-Per distribuire la compilazione dell'applicazione web il progetto di distribuzione Web e quindi copiare i file dalla cartella di output del progetto nell'ambiente di produzione.
-
-Per altre informazioni sull'uso di progetto di distribuzione Web estrarre [questo articolo di progetti di distribuzione Web](https://msdn.microsoft.com/magazine/cc163448.aspx) il numero di aprile 2007 di [MSDN Magazine](https://msdn.microsoft.com/magazine/default.aspx), o consultare i collegamenti nella sezione delle letture di approfondimento di termine di questa esercitazione.
+Durante lo sviluppo e il test di un'applicazione, consente di visualizzare i dettagli di qualsiasi eccezione nel browser. Tuttavia, la visualizzazione dei dettagli delle eccezioni in un'applicazione in produzione costituisce un potenziale rischio per la sicurezza. Inoltre, non è più lusinghiero e rende l'aspetto non professionale del tuo sito Web. Idealmente, in caso di eccezione non gestita, un'applicazione Web nell'ambiente di sviluppo visualizzerà i dettagli dell'eccezione mentre nella stessa applicazione in produzione verrà visualizzata una pagina di errore personalizzata.
 
 > [!NOTE]
-> È possibile usare il progetto di distribuzione Web con Visual Web Developer perché il progetto di distribuzione Web viene implementato come un Visual Studio componente aggiuntivo e le edizioni Visual Studio Express (incluso in Visual Web Developer) non supportano l'Add-Ins.
+> L'impostazione predefinita `<customErrors>` sezione Mostra il messaggio Dettagli eccezione solo quando la pagina viene visitata tramite localhost e Mostra la pagina di errore di runtime generica in caso contrario. Questo non è ideale, ma garantisce che il comportamento predefinito non riveli i dettagli dell'eccezione a visitatori non locali. Un'esercitazione futura esamina la sezione `<customErrors>` in modo più dettagliato e Mostra come avere una pagina di errore personalizzata visualizzata quando si verifica un errore nell'ambiente di produzione.
+
+Un'altra funzionalità di ASP.NET utile durante lo sviluppo è la traccia. La traccia, se abilitata, registra le informazioni relative a ogni richiesta in ingresso e fornisce una pagina Web speciale, `Trace.axd`, per visualizzare i dettagli delle richieste recenti. È possibile attivare e configurare la traccia tramite l' [elemento`<trace>`](https://msdn.microsoft.com/library/6915t83k.aspx) in `Web.config`.
+
+Se si Abilita la traccia, verificare che sia disabilitata nell'ambiente di produzione. Poiché le informazioni di traccia includono cookie, dati della sessione e altre informazioni potenzialmente riservate, è importante disabilitare la traccia nell'ambiente di produzione. L'aspetto positivo è che, per impostazione predefinita, la traccia è disabilitata e il file `Trace.axd` è accessibile solo tramite localhost. Se si modificano queste impostazioni predefinite in fase di sviluppo, assicurarsi che siano riattivate nell'ambiente di produzione.
+
+## <a name="techniques-for-maintaining-separate-configuration-information"></a>Tecniche per la gestione di informazioni di configurazione separate
+
+La presenza di impostazioni di configurazione diverse negli ambienti di sviluppo e di produzione complica il processo di distribuzione. Nelle due esercitazioni precedenti il processo di distribuzione ha comportato la copia di tutti i file necessari dallo sviluppo alla produzione, ma questo approccio funziona solo se le informazioni di configurazione sono le stesse in entrambi gli ambienti. Sono disponibili diverse tecniche per la distribuzione di un'applicazione con informazioni di configurazione diverse. Di seguito sono riportate alcune opzioni per le applicazioni Web ospitate.
+
+### <a name="manually-deploying-the-production-environment-configuration-file"></a>Distribuzione manuale del file di configurazione dell'ambiente di produzione
+
+L'approccio più semplice consiste nel mantenere due versioni del file di `Web.config`: una per l'ambiente di sviluppo e una per l'ambiente di produzione. La distribuzione di un sito in produzione comporta la copia di tutti i file nel server di produzione nell'ambiente di sviluppo, *ad eccezione* del file di `Web.config`. Al contrario, il file di `Web.config` specifico dell'ambiente di produzione verrà copiato in produzione.
+
+Questo approccio non è molto sofisticato, ma è facile da implementare perché le informazioni di configurazione cambiano raramente. Funziona meglio per le applicazioni con un team di sviluppo di piccole dimensioni ospitato in un singolo server Web e le cui informazioni di configurazione non vengono modificate di frequente. È più sostenibile quando si distribuiscono manualmente i file dell'applicazione usando un client FTP autonomo. Quando si usa lo strumento Copia sito Web di Visual Studio o l'opzione pubblica è necessario prima di tutto scambiare il file di `Web.config` specifico della distribuzione con quello specifico per la produzione prima della distribuzione e quindi scambiarli nuovamente al termine della distribuzione.
+
+### <a name="change-the-configuration-during-the-build-or-deployment-process"></a>Modificare la configurazione durante il processo di compilazione o distribuzione
+
+Le discussioni finora hanno assunto un processo di compilazione e distribuzione ad hoc. Molti progetti software di grandi dimensioni hanno processi più formalizzati che usano strumenti open source, a casa o di terze parti. Per i progetti di questo tipo è possibile personalizzare il processo di compilazione o distribuzione per modificare in modo appropriato le informazioni di configurazione prima di effettuarne il push in produzione. Se si compila l'applicazione Web utilizzando [MSBuild](http://en.wikipedia.org/wiki/MSBuild), [Nant](http://nant.sourceforge.net/)o un altro strumento di compilazione, è possibile aggiungere un'istruzione di compilazione per modificare il file di `Web.config` in modo da includere le impostazioni specifiche per la produzione. In alternativa, il flusso di lavoro di distribuzione potrebbe connettersi a livello di codice al server del controllo del codice sorgente e recuperare il file di `Web.config` appropriato.
+
+L'approccio effettivo per ottenere le informazioni di configurazione appropriate per la produzione varia notevolmente a seconda degli strumenti e del flusso di lavoro. Di conseguenza, non verrà approfondito questo argomento. Se si usa uno strumento di compilazione comune come MSBuild o NAnt, è possibile trovare articoli ed esercitazioni sulla distribuzione specifici di questi strumenti tramite una ricerca Web.
+
+### <a name="managing-configuration-differences-via-the-web-deployment-project-add-in"></a>Gestione delle differenze di configurazione tramite il componente aggiuntivo del progetto di distribuzione Web
+
+In 2006 Microsoft ha rilasciato il componente aggiuntivo progetto di sviluppo Web per Visual Studio 2005. Un componente aggiuntivo per Visual Studio 2008 è stato rilasciato in 2008. Questo componente aggiuntivo consente agli sviluppatori ASP.NET di creare un progetto di distribuzione Web separato insieme al progetto di applicazione Web che, quando compilato, compila in modo esplicito l'applicazione Web e copia i file per la distribuzione in una directory di output locale. Il progetto di applicazione Web utilizza MSBuild dietro le quinte.
+
+Per impostazione predefinita, il file di `Web.config` dell'ambiente di sviluppo viene copiato nella directory di output, ma è possibile configurare il progetto di distribuzione Web per personalizzare il
+
+informazioni di configurazione che vengono copiate in questa directory nei modi seguenti:
+
+- Tramite `Web.config` sostituzione della sezione del file, in cui si specifica la sezione da sostituire e un file XML che contiene il testo di sostituzione.
+- Specificando un percorso a un file di origine della configurazione esterna. Se questa opzione è selezionata, il progetto di distribuzione Web copia un file di `Web.config` specifico nella directory di output (piuttosto che nel file di `Web.config` utilizzato nell'ambiente di sviluppo).
+- Aggiungendo regole personalizzate al file MSBuild utilizzato dal progetto di distribuzione Web.
+
+Per distribuire l'applicazione Web, compilare il progetto di distribuzione Web, quindi copiare i file dalla cartella di output del progetto nell'ambiente di produzione.
+
+Per ulteriori informazioni sull'utilizzo del progetto di distribuzione Web, vedere l'articolo relativo ai [progetti di distribuzione Web](https://msdn.microsoft.com/magazine/cc163448.aspx) dalla pagina di aprile 2007 relativa a [MSDN Magazine](https://msdn.microsoft.com/magazine/default.aspx)oppure consultare i collegamenti nella sezione ulteriori informazioni alla fine di questa esercitazione.
+
+> [!NOTE]
+> Non è possibile utilizzare il progetto di distribuzione Web con Visual Web Developer perché il progetto di distribuzione Web viene implementato come componente aggiuntivo di Visual Studio e le edizioni Visual Studio Express (incluso Visual Web Developer) non supportano i componenti aggiuntivi.
 
 ## <a name="summary"></a>Riepilogo
 
-Il comportamento di un'applicazione web in fase di sviluppo e alle risorse esterne sono in genere diversi rispetto a quando la stessa applicazione è in fase di produzione. Ad esempio, le stringhe di connessione di database, le opzioni di compilazione e il comportamento quando si verifica un'eccezione non gestita in genere differiscono tra ambienti. Il processo di distribuzione deve supportare queste differenze. Come descritto in questa esercitazione, l'approccio più semplice consiste nel copiare manualmente un file di configurazione alternativa nell'ambiente di produzione. Sono possibili soluzioni più efficaci quando si usa la distribuzione di progetto di componente aggiuntivo Web o con un processo di compilazione o distribuzione formalizzato più in grado di soddisfare tali personalizzazioni.
+Le risorse esterne e il comportamento di un'applicazione Web in fase di sviluppo sono in genere diversi rispetto a quando la stessa applicazione è in produzione. Ad esempio, le stringhe di connessione del database, le opzioni di compilazione e il comportamento quando si verifica un'eccezione non gestita si differenziano generalmente tra gli ambienti. Il processo di distribuzione deve soddisfare queste differenze. Come illustrato in questa esercitazione, l'approccio più semplice consiste nel copiare manualmente un file di configurazione alternativo nell'ambiente di produzione. Quando si usa il componente aggiuntivo progetto di distribuzione Web o con un processo di compilazione o distribuzione più formale che può supportare tali personalizzazioni, sono possibili soluzioni più eleganti.
 
 Buona programmazione!
 
 ### <a name="further-reading"></a>Ulteriori informazioni
 
-Per altre informazioni sugli argomenti trattati in questa esercitazione, vedere le risorse seguenti:
+Per ulteriori informazioni sugli argomenti trattati in questa esercitazione, fare riferimento alle risorse seguenti:
 
-- [Stringhe di connessione illustrate](http://www.connectionstrings.com/Articles/Show/what-is-a-connection-string)
-- [@ ConnectionStrings.com le stringhe di connessione al database](http://www.connectionstrings.com/)
-- [Non eseguire le applicazioni ASP.NET di produzione con `debug="true"` abilitata](https://weblogs.asp.net/scottgu/Don_1920_t-run-production-ASP.NET-Applications-with-debug_3D001D20_true_1D20_-enabled)
-- [Risponde correttamente alle eccezioni non gestite - visualizzazione di pagine di errore descrittivo](http://aspnet.4guysfromrolla.com/articles/090606-1.aspx)
-- [Procedura: Usare un progetto di distribuzione Web di Visual Studio 2008?](../../../videos/how-do-i/how-do-i-use-a-visual-studio-2008-web-deployment-project.md)
-- [Impostazioni di configurazione della chiave durante la distribuzione di un Database](http://aspnet.4guysfromrolla.com/articles/121008-1.aspx)
-- [Download di progetti di Visual Studio 2008 Web Deployment](https://www.microsoft.com/downloads/details.aspx?FamilyId=0AA30AE8-C73B-4BDD-BB1B-FE697256C459&amp;displaylang=en) | [Download di progetti di Visual Studio 2005 Web distribuzione](https://download.microsoft.com/download/9/4/9/9496adc4-574e-4043-bb70-bc841e27f13c/WebDeploymentSetup.msi)
-- [Progetti di distribuzione Web di Visual Studio 2008](https://weblogs.asp.net/scottgu/archive/2005/11/06/429723.aspx) | [rilasciato Visual Studio 2008 Web distribuzione progetto supporto](https://weblogs.asp.net/scottgu/archive/2008/01/28/vs-2008-web-deployment-project-support-released.aspx)
+- [Descrizione delle stringhe di connessione](http://www.connectionstrings.com/Articles/Show/what-is-a-connection-string)
+- [Stringhe di connessione al database @ ConnectionStrings.com](http://www.connectionstrings.com/)
+- [Non eseguire applicazioni ASP.NET di produzione con `debug="true"` abilitato](https://weblogs.asp.net/scottgu/Don_1920_t-run-production-ASP.NET-Applications-with-debug_3D001D20_true_1D20_-enabled)
+- [Risposta normale a eccezioni non gestite-visualizzazione di pagine di errore semplici da usare](http://aspnet.4guysfromrolla.com/articles/090606-1.aspx)
+- [Procedura: utilizzo di un progetto di distribuzione Web di Visual Studio 2008](../../../videos/how-do-i/how-do-i-use-a-visual-studio-2008-web-deployment-project.md)
+- [Impostazioni di configurazione delle chiavi durante la distribuzione di un database](http://aspnet.4guysfromrolla.com/articles/121008-1.aspx)
+- Scarica i [progetti di distribuzione Web di Visual studio 2008](https://www.microsoft.com/downloads/details.aspx?FamilyId=0AA30AE8-C73B-4BDD-BB1B-FE697256C459&amp;displaylang=en) | [scaricare i progetti di distribuzione Web di Visual Studio 2005](https://download.microsoft.com/download/9/4/9/9496adc4-574e-4043-bb70-bc841e27f13c/WebDeploymentSetup.msi)
+- [Progetti di distribuzione Web di Visual studio 2008](https://weblogs.asp.net/scottgu/archive/2005/11/06/429723.aspx) | [supporto del progetto di distribuzione web di vs 2008 rilasciato](https://weblogs.asp.net/scottgu/archive/2008/01/28/vs-2008-web-deployment-project-support-released.aspx)
 - [Progetti di distribuzione Web](https://msdn.microsoft.com/magazine/cc163448.aspx)
 
 > [!div class="step-by-step"]

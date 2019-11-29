@@ -2,160 +2,160 @@
 uid: signalr/overview/getting-started/introduction-to-signalr
 title: Introduzione a SignalR | Microsoft Docs
 author: bradygaster
-description: Questo articolo descrive che cos'è SignalR e alcune delle soluzioni che è stato progettato per creare.
+description: Questo articolo descrive il SignalR e alcune delle soluzioni progettate per la creazione.
 ms.author: bradyg
 ms.date: 06/10/2014
 ms.assetid: 0fab5e35-8c1f-43d4-8635-b8aba8766a71
 msc.legacyurl: /signalr/overview/getting-started/introduction-to-signalr
 msc.type: authoredcontent
-ms.openlocfilehash: 3598ac3d16a2065d1fb76d1637f0ae84797f630c
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 11b494b4839c646b018098c76a8a9ae0a2169757
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65120069"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74600495"
 ---
 # <a name="introduction-to-signalr"></a>Introduzione a SignalR
 
-da [Patrick Fletcher](https://github.com/pfletcher)
+di [Patrick Fletcher](https://github.com/pfletcher)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
 
-> Questo articolo descrive che cos'è SignalR e alcune delle soluzioni che è stato progettato per creare. 
+> Questo articolo descrive il SignalR e alcune delle soluzioni progettate per la creazione. 
 > 
 > ## <a name="questions-and-comments"></a>Domande e commenti
 > 
-> Inviaci un feedback sul modo in cui è stato apprezzato questa esercitazione e cosa possiamo migliorare nei commenti nella parte inferiore della pagina. Se hai domande che non sono direttamente correlate con l'esercitazione, è possibile pubblicarli per i [forum ASP.NET SignalR](https://forums.asp.net/1254.aspx/1?ASP+NET+SignalR) oppure [StackOverflow.com](https://stackoverflow.com/questions/tagged/signalr).
+> Inviare commenti e suggerimenti su come questa esercitazione è stata apprezzata e su cosa è possibile migliorare nei commenti nella parte inferiore della pagina. In caso di domande non direttamente correlate all'esercitazione, è possibile pubblicarle nel [Forum di ASP.NET SignalR](https://forums.asp.net/1254.aspx/1?ASP+NET+SignalR) o in [StackOverflow.com](https://stackoverflow.com/questions/tagged/signalr).
 
 ## <a name="what-is-signalr"></a>Che cos'è SignalR?
 
-ASP.NET SignalR è una libreria per sviluppatori ASP.NET che semplifica il processo di aggiunta di funzionalità web in tempo reale alle applicazioni. La funzionalità web in tempo reale è la possibilità di push del codice server contenuto ai client connessi immediatamente appena sarà disponibile, anziché il server di attendere che un client richieda nuovi dati.
+ASP.NET SignalR è una libreria per sviluppatori ASP.NET che semplifica il processo di aggiunta di funzionalità Web in tempo reale alle applicazioni. La funzionalità Web in tempo reale è la possibilità di fare in modo che il codice server spinga il contenuto ai client connessi immediatamente quando diventa disponibile, anziché fare in modo che il server attenda che un client richieda nuovi dati.
 
-SignalR è utilizzabile per aggiungere una sorta di funzionalità web "in tempo reale" per l'applicazione ASP.NET. Mentre chat viene spesso usata come esempio, è possibile eseguire molto di più. Ogni volta che un utente consente di aggiornare una pagina web per visualizzare i nuovi dati o la pagina implementa [polling lungo](http://en.wikipedia.org/wiki/Push_technology#Long_polling) per recuperare nuovi dati, è un candidato per l'uso di SignalR. Gli esempi includono i dashboard e monitoraggio delle applicazioni, dei processi applicazioni collaborative (ad esempio, la modifica simultanea di documenti), gli aggiornamenti di stato di avanzamento e forme in tempo reale.
+SignalR può essere usato per aggiungere qualsiasi tipo di funzionalità Web in tempo reale all'applicazione ASP.NET. Sebbene la chat venga spesso utilizzata come esempio, è possibile eseguire molte altre operazioni. Ogni volta che un utente aggiorna una pagina Web per visualizzare nuovi dati o la pagina implementa il [polling lungo](http://en.wikipedia.org/wiki/Push_technology#Long_polling) per recuperare i nuovi dati, è un candidato per l'uso di SignalR. Alcuni esempi sono i dashboard e le applicazioni di monitoraggio, le applicazioni collaborative (ad esempio la modifica simultanea dei documenti), gli aggiornamenti dello stato di avanzamento del processo e i moduli in tempo reale.
 
-SignalR consente inoltre completamente nuovi tipi di applicazioni web che richiedono aggiornamenti ad alta frequenza dal server, ad esempio, i giochi in tempo reale.
+SignalR Abilita anche tipi completamente nuovi di applicazioni Web che richiedono aggiornamenti ad alta frequenza dal server, ad esempio giochi in tempo reale.
 
-SignalR fornisce un'API semplice per la creazione di server a client remote procedure call (RPC) che chiamano le funzioni di JavaScript nel client browser (e altre piattaforme client) dal codice .NET sul lato server. SignalR include API per la gestione della connessione (ad esempio, connettere e disconnettere gli eventi) e il raggruppamento delle connessioni.
+SignalR fornisce un'API semplice per la creazione di chiamate a procedure remote (RPC) da server a client che chiamano funzioni JavaScript nei browser client (e altre piattaforme client) dal codice .NET lato server. SignalR include anche l'API per la gestione della connessione (ad esempio, eventi di connessione e disconnessione) e il raggruppamento delle connessioni.
 
-![Richiamare metodi con SignalR](introduction-to-signalr/_static/image1.png)
+![Richiamo di metodi con SignalR](introduction-to-signalr/_static/image1.png)
 
-SignalR gestisce automaticamente la gestione della connessione e consente di trasmettere messaggi a tutti i client connessi contemporaneamente, ad esempio una chat room. È anche possibile inviare messaggi a client specifici. La connessione tra il client e server è permanente, a differenza di una connessione HTTP classica, che sarà stata ristabilita per tutte le comunicazioni.
+SignalR gestisce automaticamente la gestione delle connessioni e consente di trasmettere messaggi contemporaneamente a tutti i client connessi, ad esempio una chat room. È anche possibile inviare messaggi a client specifici. La connessione tra il client e il server è permanente, a differenza di una connessione HTTP classica, che viene ristabilita per ogni comunicazione.
 
-SignalR supporta le funzionalità di "push del server", in cui è possibile chiamare codice server out al codice client nel browser tramite le chiamate RPC (Remote Procedure), anziché il modello di richiesta-risposta comune nel web oggi stesso.
+SignalR supporta la funzionalità di "push server", in cui il codice del server può chiamare il codice client nel browser usando le remote procedure call (RPC), anziché il modello di richiesta-risposta comune attualmente sul Web.
 
-Applicazioni SignalR possono aumentare fino a migliaia di client tramite il Bus di servizio, SQL Server o [Redis](http://redis.io).
+Le applicazioni SignalR possono scalare in orizzontale a migliaia di client usando il bus di servizio, SQL Server o [Redis](http://redis.io).
 
-SignalR è open source, accessibile attraverso [GitHub](https://github.com/signalr).
+SignalR è open source, accessibile tramite [GitHub](https://github.com/signalr).
 
 ## <a name="signalr-and-websocket"></a>SignalR e WebSocket
 
-SignalR utilizza il trasporto WebSocket nuova in cui è disponibile e il fallback ai trasporti precedenti dove necessario. È certamente possibile scrivere l'app usando WebSocket direttamente, tramite SignalR significa che molte delle funzionalità aggiuntive da implementare sono già stata eseguita automaticamente. In particolare, ciò significa che è possibile codificare l'app affinché sfrutti WebSocket senza doversi preoccupare di creazione di un percorso di codice separato per i client meno recenti. SignalR anche ci consente di nascondere doversi preoccupare degli aggiornamenti per WebSocket, poiché SignalR viene aggiornato per supportare le modifiche nel trasporto sottostante, che fornisce all'applicazione un'interfaccia coerente in tutte le versioni di WebSocket.
+SignalR usa il nuovo trasporto WebSocket, se disponibile, e esegue il fallback a trasporti meno recenti laddove necessario. Sebbene sia certamente possibile scrivere l'app usando WebSocket direttamente, l'uso di SignalR significa che è già stata eseguita una grande quantità di funzionalità aggiuntive che è necessario implementare. In particolare, ciò significa che è possibile codificare l'app per sfruttare i vantaggi di WebSocket senza doversi preoccupare della creazione di un percorso di codice separato per i client meno recenti. SignalR protegge inoltre l'utente dalla necessità di preoccuparsi degli aggiornamenti di WebSocket, perché SignalR viene aggiornato per supportare le modifiche nel trasporto sottostante, offrendo all'applicazione un'interfaccia coerente tra le versioni di WebSocket.
 
 <a id="transports"></a>
 
-## <a name="transports-and-fallbacks"></a>Trasporti e i fallback
+## <a name="transports-and-fallbacks"></a>Trasporti e fallback
 
-SignalR è un'astrazione su alcuni dei trasporti che sono necessari per svolgere il lavoro in tempo reale tra client e server. Una connessione SignalR inizia come HTTP e viene quindi promossa a una connessione WebSocket, se disponibile. WebSocket è il trasporto ideale per SignalR, poiché consente di ottimizzare l'uso della memoria del server, con la latenza più bassa e presenta le funzionalità più sottostante (ad esempio comunicazione full duplex tra client e server), ma include anche i più rigorosi requisiti: WebSocket richiede il server di usare Windows Server 2012 o Windows 8 e .NET Framework 4.5. Se questi requisiti non vengono soddisfatti, verrà effettuato un tentativo di utilizzare altri tipi di trasporto per rendere le connessioni SignalR.
+SignalR è un'astrazione di alcuni dei trasporti necessari per eseguire operazioni in tempo reale tra client e server. Una connessione SignalR viene avviata come HTTP e viene quindi promossa a una connessione WebSocket, se disponibile. WebSocket è il trasporto ideale per SignalR, dal momento che rende più efficiente l'uso della memoria del server, presenta la latenza più bassa e presenta le funzionalità più sottostanti (ad esempio, la comunicazione duplex completa tra client e server), ma ha anche il più rigoroso requisiti: WebSocket richiede che il server usi Windows Server 2012 o Windows 8 e .NET Framework 4,5. Se questi requisiti non vengono soddisfatti, SignalR tenterà di usare altri trasporti per stabilire le connessioni.
 
-### <a name="html-5-transports"></a>HTML 5 trasporta
+### <a name="html-5-transports"></a>Trasporti HTML 5
 
-Supporto per dipendono da questi trasporti [HTML 5](http://en.wikipedia.org/wiki/HTML5). Se il browser client non supporta lo standard HTML 5, verranno utilizzati trasporti meno recenti.
+Questi trasporti dipendono dal supporto per [HTML 5](http://en.wikipedia.org/wiki/HTML5). Se il browser client non supporta lo standard HTML 5, verranno utilizzati i trasporti precedenti.
 
-- **WebSocket** (se il browser sia nel server indicano possono supportare Websocket). WebSocket è il trasporto solo che stabilisce una connessione permanente, bidirezionale true tra client e server. Tuttavia, WebSocket presenta anche i più rigorosi requisiti; si è completamente supportato solo nelle versioni più recenti di Microsoft Internet Explorer, Google Chrome e Mozilla Firefox e offre solo un'implementazione parziale negli altri browser, ad esempio Opera e Safari.
-- **Eventi del server inviati**, noto anche come EventSource (se il browser supporta inviati eventi del Server, che è in pratica tutti i browser, ad eccezione di Internet Explorer).
+- **WebSocket** (se il server e il browser indicano che possono supportare WebSocket). WebSocket è l'unico trasporto che stabilisce una vera connessione bidirezionale persistente tra client e server. Tuttavia, WebSocket presenta anche i requisiti più rigorosi; è completamente supportato solo nelle versioni più recenti di Microsoft Internet Explorer, Google Chrome e Mozilla Firefox e dispone solo di un'implementazione parziale in altri browser, ad esempio opera e Safari.
+- **Eventi inviati dal server**, noti anche come EventSource (se il browser supporta eventi inviati dal server, che sono fondamentalmente tutti i browser ad eccezione di Internet Explorer).
 
 ### <a name="comet-transports"></a>Trasporti Comet
 
-Trasporti seguenti si basano le [Comet](http://en.wikipedia.org/wiki/Comet_(programming)) modello di applicazione web, in cui un browser o da altri client gestisce una richiesta HTTP mantenuto prolungata, che il server può usare per effettuare il push dei dati al client senza il client in modo specifico con la richiesta.
+I trasporti seguenti sono basati sul modello di applicazione Web [Comet](http://en.wikipedia.org/wiki/Comet_(programming)) , in cui un browser o un altro client gestisce una richiesta HTTP di lunga durata, che il server può utilizzare per eseguire il push dei dati al client senza che il client la richieda in modo specifico.
 
-- **Forever Frame** (per Internet Explorer solo). Forever Frame consente di creare un IFrame nascosto che effettua una richiesta a un endpoint nel server che non viene completata. Il server invia continuamente script al client che viene eseguito immediatamente, fornendo una connessione in tempo reale unidirezionale dal server al client. La connessione da client a server utilizza una connessione separata dal server di connessione client, ad esempio una richiesta HTTP standard, viene creata una nuova connessione per ogni porzione di dati che devono essere inviate.
-- **AJAX polling prolungato**. Polling prolungato non crea una connessione permanente, ma invece esegue il polling del server con una richiesta che rimane aperto fino a quando il server risponde, a questo punto la connessione verrà chiusa e viene richiesto immediatamente una nuova connessione. Questo può comportare una certa latenza durante la connessione viene reimpostato.
+- **Frame Forever** (solo per Internet Explorer). Forever frame crea un IFrame nascosto che effettua una richiesta a un endpoint nel server che non viene completato. Il server invia continuamente script al client, che viene immediatamente eseguito, fornendo una connessione in tempo reale unidirezionale da server a client. La connessione dal client al server utilizza una connessione separata dalla connessione da server a client e, analogamente a una richiesta HTTP standard, viene creata una nuova connessione per ogni elemento di dati che deve essere inviato.
+- **Polling lungo Ajax**. Il polling prolungato non crea una connessione permanente, ma esegue il polling del server con una richiesta che rimane aperta fino a quando il server non risponde, a quel punto la connessione viene chiusa e viene richiesta immediatamente una nuova connessione. Questo può comportare una latenza durante la reimpostazione della connessione.
 
-Per altre informazioni su quali trasporti sono supportati con le configurazioni, vedere [piattaforme supportate](supported-platforms.md).
+Per ulteriori informazioni sui trasporti supportati con le configurazioni, vedere [piattaforme supportate](supported-platforms.md).
 
 ### <a name="transport-selection-process"></a>Processo di selezione del trasporto
 
-Nell'elenco seguente vengono illustrati i passaggi che usa SignalR per decidere quale trasporto per utilizzare.
+Nell'elenco seguente vengono illustrati i passaggi utilizzati da SignalR per decidere quale trasporto utilizzare.
 
-1. Se il browser Internet Explorer 8 o versioni precedenti, viene usato di Polling lungo.
-2. Se JSONP è configurato (vale a dire il `jsonp` parametro è impostato su `true` quando viene avviata la connessione), Long Polling viene usato.
-3. Se viene effettuata una connessione cross-domain (vale a dire, se l'endpoint di SignalR non è presente nello stesso dominio della pagina di hosting), quindi WebSocket verrà utilizzato se vengono soddisfatti i criteri seguenti:
+1. Se il browser è Internet Explorer 8 o versione precedente, viene utilizzato il polling prolungato.
+2. Se JSONP è configurato, ovvero se il parametro `jsonp` è impostato su `true` all'avvio della connessione, viene utilizzato il polling prolungato.
+3. Se viene eseguita una connessione tra domini, ovvero se l'endpoint SignalR non si trova nello stesso dominio della pagina di hosting, verrà usato WebSocket se vengono soddisfatti i criteri seguenti:
 
-   - Il client supporta la condivisione CORS (Cross-Origin Resource Sharing). Per informazioni dettagliate in cui i client supportano CORS, vedere [CORS in caniuse.com](http://www.caniuse.com/CORS).
-   - Il client supporta i WebSocket
-   - Il server supporta i WebSocket
+   - Il client supporta la condivisione di risorse tra le origini (CORS). Per informazioni dettagliate sui client che supportano CORS, vedere [CORS in caniuse.com](http://www.caniuse.com/CORS).
+   - Il client supporta WebSocket
+   - Il server supporta WebSocket
 
-     Se i criteri seguenti non vengono soddisfatti, verrà utilizzato di Polling lungo. Per altre informazioni sulle connessioni tra domini, vedere [come stabilire una connessione cross-domain](../guide-to-the-api/hubs-api-guide-javascript-client.md#crossdomain).
-4. Se JSONP non è configurata e la connessione non è tra domini, WebSocket verrà utilizzato se il client e server lo supportano.
-5. Se il client o il server non supportano WebSocket, inviati gli eventi del Server viene utilizzato se è disponibile.
-6. Se gli eventi del Server inviato non è disponibili, viene tentata Forever Frame.
-7. Se Forever Frame non riesce, viene usato di Polling lungo.
+     Se uno di questi criteri non è soddisfatto, verrà usato il polling prolungato. Per ulteriori informazioni sulle connessioni tra domini, vedere [come stabilire una connessione tra](../guide-to-the-api/hubs-api-guide-javascript-client.md#crossdomain)domini.
+4. Se JSONP non è configurato e la connessione non è tra domini, verrà usato WebSocket se il client e il server lo supportano.
+5. Se il client o il server non supportano WebSocket, vengono usati eventi inviati dal server, se disponibili.
+6. Se gli eventi inviati dal server non sono disponibili, viene eseguito un tentativo di frame sempre.
+7. Se si verifica un errore in Forever frame, viene usato il polling prolungato.
 
 <a id="MonitoringTransports"></a>
-### <a name="monitoring-transports"></a>I trasporti di monitoraggio
+### <a name="monitoring-transports"></a>Monitoraggio di trasporti
 
-È possibile determinare quali il trasporto utilizzato dall'applicazione, consentendo l'accesso all'hub e l'apertura della finestra console del browser.
+È possibile determinare il trasporto usato dall'applicazione abilitando la registrazione nell'hub e aprendo la finestra della console nel browser.
 
-Per abilitare la registrazione per gli eventi dell'hub in un browser, aggiungere il seguente comando per l'applicazione client:
+Per abilitare la registrazione per gli eventi dell'hub in un browser, aggiungere il comando seguente all'applicazione client:
 
 `$.connection.hub.logging = true;`
 
-- Aprire gli strumenti di sviluppo premendo F12 in Internet Explorer e fare clic sulla scheda della Console.
+- In Internet Explorer aprire gli strumenti di sviluppo premendo F12, quindi fare clic sulla scheda console.
 
-    ![Console di Microsoft Internet Explorer](introduction-to-signalr/_static/image2.png)
-- In Chrome, aprire la console, premere Ctrl + MAIUSC + J.
+    ![Console in Microsoft Internet Explorer](introduction-to-signalr/_static/image2.png)
+- In Chrome aprire la console premendo CTRL + MAIUSC + J.
 
-    ![Console di Google Chrome](introduction-to-signalr/_static/image3.png)
+    ![Console in Google Chrome](introduction-to-signalr/_static/image3.png)
 
-Apri console e la registrazione attivata, sarà possibile visualizzare quale trasporto è utilizzato da SignalR.
+Con la console aperta e la registrazione abilitata, sarà possibile vedere quale trasporto viene usato da SignalR.
 
-![Console di Internet Explorer che mostra che il trasporto WebSocket](introduction-to-signalr/_static/image4.png)
+![Console in Internet Explorer che mostra il trasporto WebSocket](introduction-to-signalr/_static/image4.png)
 
-### <a name="specifying-a-transport"></a>Specifica un trasporto
+### <a name="specifying-a-transport"></a>Specifica di un trasporto
 
-La negoziazione di un trasporto richiede una certa quantità di tempo e il client/server delle risorse. Se le funzionalità client sono note, quindi un trasporto è possibile specificare quando viene avviata la connessione client. Il frammento di codice seguente viene illustrato come avviare una connessione usando il trasporto di Polling lungo Ajax, come verrebbero utilizzati qualora si era noto che il client non supporta tutti gli altri protocolli:
+La negoziazione di un trasporto richiede una certa quantità di tempo e risorse client/server. Se le funzionalità client sono note, è possibile specificare un trasporto al momento dell'avvio della connessione client. Nel frammento di codice seguente viene illustrata l'avvio di una connessione utilizzando il trasporto di polling lungo Ajax, come verrebbe utilizzato se fosse noto che il client non supporta altri protocolli:
 
 `connection.start({ transport: 'longPolling' });`
 
-Se si desidera che un client di provare a specifici trasporti in ordine, è possibile specificare un ordine di fallback. Il frammento di codice seguente viene illustrato tentativo WebSocket e in mancanza di questo, passare direttamente al Polling lungo.
+È possibile specificare un ordine di fallback se si desidera che un client provi trasporti specifici in ordine. Nel frammento di codice seguente viene illustrato il tentativo di WebSocket e l'esito negativo, direttamente al polling prolungato.
 
 `connection.start({ transport: ['webSockets','longPolling'] });`
 
-Le costanti stringa che specificano i trasporti sono definite come segue:
+Le costanti di stringa per specificare i trasporti sono definite come segue:
 
 - `webSockets`
 - `foreverFrame`
 - `serverSentEvents`
 - `longPolling`
 
-## <a name="connections-and-hubs"></a>Le connessioni e hub
+## <a name="connections-and-hubs"></a>Connessioni e hub
 
-L'API SignalR contiene due modelli per la comunicazione tra client e server: Le connessioni persistenti e gli hub.
+L'API SignalR contiene due modelli per la comunicazione tra client e server: connessioni e hub permanenti.
 
-Una connessione rappresenta un endpoint semplice per l'invio di messaggi raggruppato, trasmissione o singolo destinatario. Consente di API di connessione permanente (rappresentato nel codice .NET dalla classe PersistentConnection) accedere al protocollo di comunicazione di basso livello che SignalR espone direttamente allo sviluppatore. Usando il modello di comunicazione connessioni saranno nota agli sviluppatori che hanno usato le API basate su connessione, ad esempio Windows Communication Foundation.
+Una connessione rappresenta un semplice endpoint per l'invio di messaggi a destinatario singolo, raggruppati o trasmessi. L'API di connessione permanente, rappresentata nel codice .NET dalla classe PersistentConnection, consente allo sviluppatore di accedere direttamente al protocollo di comunicazione di basso livello esposto da SignalR. L'uso del modello di comunicazione delle connessioni sarà familiare per gli sviluppatori che hanno usato API basate sulla connessione, ad esempio Windows Communication Foundation.
 
-Un Hub è una pipeline più alto livello basata sull'API di connessione che consente il client e server di chiamare direttamente i metodi a vicenda. SignalR gestisce l'invio attraverso i limiti della macchina come se fosse magic, consentendo ai client di chiamare metodi sul server come facilmente come metodi locali e viceversa. Usando il modello di comunicazione hub risulteranno familiare agli sviluppatori che hanno usato la chiamata remota, API, ad esempio servizi remoti .NET. Usando un Hub consente inoltre di passare parametri fortemente tipizzati a metodi per consentire l'associazione di modelli.
+Un hub è una pipeline più elevata basata sull'API di connessione che consente al client e al server di chiamare direttamente i metodi tra loro. SignalR gestisce l'invio tra i limiti del computer come se fosse per magia, consentendo ai client di chiamare i metodi sul server con la stessa facilità dei metodi locali e viceversa. L'uso del modello di comunicazione hub sarà familiare per gli sviluppatori che hanno usato API di chiamata remota, ad esempio .NET Remoting. L'uso di un hub consente inoltre di passare parametri fortemente tipizzati ai metodi, abilitando l'associazione di modelli.
 
 ### <a name="architecture-diagram"></a>Diagramma dell'architettura
 
-Il diagramma seguente mostra la relazione tra hub, le connessioni persistenti e delle tecnologie sottostanti usate per i trasporti.
+Nel diagramma seguente viene illustrata la relazione tra hub, connessioni permanenti e le tecnologie sottostanti utilizzate per i trasporti.
 
-![Diagramma dell'architettura SignalR con le API, trasporti e i client](introduction-to-signalr/_static/image5.png)
+![Diagramma dell'architettura SignalR che mostra API, trasporti e client](introduction-to-signalr/_static/image5.png)
 
-### <a name="how-hubs-work"></a>Funzionamento di hub
+### <a name="how-hubs-work"></a>Funzionamento degli hub
 
-Quando il codice lato server chiama un metodo sul client, viene inviato un pacchetto attraverso il trasporto attivo che contiene il nome e parametri del metodo da chiamare (quando un oggetto viene inviato come parametro di metodo, viene serializzato usando JSON). Il client quindi corrisponde al nome di metodo ai metodi definiti nel codice lato client. Se non esiste una corrispondenza, verrà eseguito il metodo client usando i dati del parametro deserializzato.
+Quando il codice sul lato server chiama un metodo sul client, viene inviato un pacchetto all'interno del trasporto attivo che contiene il nome e i parametri del metodo da chiamare (quando un oggetto viene inviato come parametro del metodo, viene serializzato tramite JSON). Il client corrisponde quindi al nome del metodo ai metodi definiti nel codice lato client. Se esiste una corrispondenza, il metodo client verrà eseguito utilizzando i dati dei parametri deserializzati.
 
-La chiamata al metodo può essere monitorata mediante strumenti come [Fiddler.](http://fiddler2.com/) L'immagine seguente illustra una chiamata di metodo inviata da un server di SignalR per un client browser web nel riquadro dei log di Fiddler. La chiamata al metodo inviata da un hub chiamato `MoveShapeHub`, e viene chiamato il metodo richiamato `updateShape`.
+La chiamata al metodo può essere monitorata usando strumenti come [Fiddler.](http://fiddler2.com/) Nell'immagine seguente viene illustrata una chiamata al metodo inviata da un server SignalR a un client del browser Web nel riquadro log di Fiddler. La chiamata al metodo viene inviata da un Hub denominato `MoveShapeHub`e il metodo richiamato viene chiamato `updateShape`.
 
-![Visualizzazione dei log di Fiddler che mostra il traffico di SignalR](introduction-to-signalr/_static/image6.png)
+![Visualizzazione del log di Fiddler che mostra il traffico di SignalR](introduction-to-signalr/_static/image6.png)
 
-In questo esempio, il nome dell'hub viene identificato con il `H` parametro; il metodo nome viene identificato con il `M` parametro e i dati inviati al metodo viene identificato con il `A` parametro. L'applicazione che ha generato questo messaggio viene creato nel [in tempo reale ad alta frequenza](tutorial-high-frequency-realtime-with-signalr.md) esercitazione.
+In questo esempio, il nome dell'hub viene identificato con il parametro `H`; il nome del metodo viene identificato con il parametro `M` e i dati inviati al metodo vengono identificati con il parametro `A`. L'applicazione che ha generato questo messaggio viene creata nell'esercitazione in [tempo reale ad alta frequenza](tutorial-high-frequency-realtime-with-signalr.md) .
 
 ### <a name="choosing-a-communication-model"></a>Scelta di un modello di comunicazione
 
-La maggior parte delle applicazioni deve usare l'API di hub. L'API di connessioni può essere usata nelle circostanze seguenti:
+La maggior parte delle applicazioni deve usare l'API Hub. L'API Connections può essere usata nelle circostanze seguenti:
 
-- Il formato di deve essere specificato il messaggio effettivo inviato.
-- Lo sviluppatore si preferisce usare un modello di messaggistica e dispatching anziché a un modello di chiamata remota.
-- Un'applicazione esistente che usa un modello di messaggistica è in corso trasferita per usare SignalR.
+- È necessario specificare il formato del messaggio effettivo inviato.
+- Lo sviluppatore preferisce usare un modello di messaggistica e di invio anziché un modello di chiamata remota.
+- È in corso il trasferimento di un'applicazione esistente che usa un modello di messaggistica per l'uso di SignalR.

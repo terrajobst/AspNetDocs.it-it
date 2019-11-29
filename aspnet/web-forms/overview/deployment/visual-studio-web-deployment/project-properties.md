@@ -1,68 +1,68 @@
 ---
 uid: web-forms/overview/deployment/visual-studio-web-deployment/project-properties
-title: 'Distribuzione Web ASP.NET tramite Visual Studio: Proprietà del progetto | Microsoft Docs'
+title: 'Distribuzione Web ASP.NET con Visual Studio: Proprietà progetto | Microsoft Docs'
 author: tdykstra
-description: Questa serie di esercitazioni illustra come distribuire, pubblicare, ASP.NET per App Web di servizio App di Azure o per un provider di hosting di terze parti, di applicazioni web da utilizza...
+description: Questa serie di esercitazioni illustra come distribuire (pubblicare) un'applicazione Web ASP.NET per app Azure servizio app Web o un provider di hosting di terze parti, da usin...
 ms.author: riande
 ms.date: 02/15/2013
 ms.assetid: ec1cec4c-a75f-47af-a2ba-b1e2f971d24b
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/project-properties
 msc.type: authoredcontent
-ms.openlocfilehash: e17155317e484c8efdf87a1598fb2795b1619587
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: b2811791a897c9166f6222c23dddc6921e5267ab
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65109640"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74614951"
 ---
-# <a name="aspnet-web-deployment-using-visual-studio-project-properties"></a>Distribuzione Web ASP.NET tramite Visual Studio: Proprietà progetto
+# <a name="aspnet-web-deployment-using-visual-studio-project-properties"></a>Distribuzione Web ASP.NET con Visual Studio: proprietà del progetto
 
-da [Tom Dykstra](https://github.com/tdykstra)
+di [Tom Dykstra](https://github.com/tdykstra)
 
-[Download progetto iniziale](http://go.microsoft.com/fwlink/p/?LinkId=282627)
+[Scarica progetto Starter](https://go.microsoft.com/fwlink/p/?LinkId=282627)
 
-> Questa serie di esercitazioni illustra come distribuire, pubblicare, ASP.NET per App Web di servizio App di Azure o per un provider di hosting di terze parti, di applicazioni web usando Visual Studio 2012 o Visual Studio 2010. Per informazioni sulla serie, vedere [la prima esercitazione della serie](introduction.md).
+> Questa serie di esercitazioni illustra come distribuire (pubblicare) un'applicazione Web ASP.NET in app Web di servizio app Azure o in un provider di hosting di terze parti, usando Visual Studio 2012 o Visual Studio 2010. Per informazioni sulla serie, vedere [la prima esercitazione della serie](introduction.md).
 
-## <a name="overview"></a>Panoramica
+## <a name="overview"></a>Panoramica di
 
-Alcune opzioni di distribuzione configurate nelle proprietà di progetto che vengono archiviate nel file di progetto (il *file con estensione csproj* oppure *vbproj* file). Nella maggior parte dei casi, i valori predefiniti di queste impostazioni siano quelle corrette, ma è possibile usare la **proprietà del progetto** dell'interfaccia utente incorporati in Visual Studio per lavorare con queste impostazioni se è necessario modificarle. In questa esercitazione esaminare le impostazioni di distribuzione nel **proprietà del progetto**. È anche possibile creare un file segnaposto che fa sì che una cartella vuota per la distribuzione.
+Alcune opzioni di distribuzione vengono configurate nelle proprietà del progetto archiviate nel file di progetto (file con *estensione csproj* o *VBPROJ* ). Nella maggior parte dei casi, i valori predefiniti di queste impostazioni sono quelli desiderati, ma è possibile usare l'interfaccia utente delle **proprietà del progetto** incorporata in Visual Studio per usare queste impostazioni se è necessario modificarle. In questa esercitazione vengono esaminate le impostazioni di distribuzione nelle **proprietà del progetto**. Si crea anche un file segnaposto che causa la distribuzione di una cartella vuota.
 
 ## <a name="configure-deployment-settings-in-the-project-properties-window"></a>Configurare le impostazioni di distribuzione nella finestra delle proprietà del progetto
 
-La maggior parte delle impostazioni che influiscono sulle operazioni eseguite durante la distribuzione sono inclusi nel profilo di pubblicazione, come verrà illustrato nelle esercitazioni seguenti. Alcune impostazioni che è necessario essere consapevoli di si trovano nel **pubblicazione/creazione pacchetto** schede della finestra di **le proprietà del progetto** finestra. Queste impostazioni vengono specificate per ogni configurazione della build, vale a dire, è possibile avere impostazioni diverse per una build di rilascio è superiore al numero di build di Debug.
+La maggior parte delle impostazioni che interessano cosa accade durante la distribuzione è inclusa nel profilo di pubblicazione, come si vedrà nelle esercitazioni seguenti. Alcune impostazioni che è necessario tenere presenti si trovano nelle schede **pubblicazione/pacchetto** della finestra **Proprietà progetto** . Queste impostazioni vengono specificate per ogni configurazione della build, ovvero è possibile avere impostazioni diverse per una build di rilascio rispetto a una build di debug.
 
-In **Esplora soluzioni**, fare doppio clic il **ContosoUniversity** progetto, selezionare **proprietà**e quindi selezionare il **pubblicazione/creazione pacchetto Web**scheda.
+In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto **ContosoUniversity** , scegliere **Proprietà**, quindi selezionare la scheda **pacchetto/pubblica sito Web** .
 
 ![Scheda Pubblicazione/creazione pacchetto Web](project-properties/_static/image1.png)
 
-Quando viene visualizzata la finestra, per impostazione predefinita che mostra le impostazioni per qualsiasi configurazione della build è attualmente attivo per la soluzione. Se il **Configuration** casella non è segnalato **attivo (versione)**, selezionare **versione** per visualizzare le impostazioni per la configurazione della build di rilascio. Si distribuirà le build di rilascio per gli ambienti di test e di produzione.
+Quando la finestra viene visualizzata, per impostazione predefinita vengono visualizzate le impostazioni per qualsiasi configurazione di compilazione attualmente attiva per la soluzione. Se la casella di **configurazione** non indica **Active (Release)** , selezionare **Release** per visualizzare le impostazioni per la configurazione della build di rilascio. Verranno distribuite le build di rilascio negli ambienti di test e di produzione.
 
-![Selezione configurazione di build di rilascio](project-properties/_static/image2.png)
+![Selezione della configurazione della build di rilascio](project-properties/_static/image2.png)
 
-Con **attiva (rilascio)** oppure **rilascio** selezionata, vengono visualizzati i valori che hanno effetto quando si distribuisce tramite la configurazione della build di rilascio:
+Con la versione **attiva (rilascio)** o la **versione** selezionata, vengono visualizzati i valori effettivi quando si esegue la distribuzione usando la configurazione della build di rilascio:
 
-- Nel **gli elementi da distribuire** finestra **solo i file necessari per eseguire l'applicazione** sia selezionata. Altre opzioni sono **tutti i file del progetto** oppure **tutti i file nella cartella di progetto**. Se si lascia invariata la selezione predefinita è evitare la distribuzione di file del codice sorgente, ad esempio. Questa impostazione è il motivo per cui le cartelle che contengono i file binari di SQL Server Compact dovevano essere incluso nel progetto. Per altre informazioni su questa impostazione, vedere **perché non tutti i file nella cartella del progetto vengono distribuiti?** nelle [domande frequenti sulla distribuzione di ASP.NET Web Application progetto](https://msdn.microsoft.com/library/ee942158.aspx).
-- **I simboli di debug generate Exclude** sia selezionata. È non verrà eseguito il debug quando si usa questa configurazione della build.
-- **Includere tutti i database configurati nella scheda Pubblicazione/creazione pacchetto SQL** sia selezionata. Specifica se Visual Studio distribuirà i database, nonché i file. Anche se la casella di controllo etichetta menziona solo il **pubblicazione/creazione pacchetto SQL** scheda deselezionando questa casella di controllo Disattiva anche la distribuzione di database che è configurata nel profilo di pubblicazione. La procedura è che in un secondo momento, in modo che la casella di controllo deve rimanere selezionata. Il **pubblicazione/creazione pacchetto SQL** scheda viene usata per un database legacy, la pubblicazione di metodo che non è possibile utilizzare queste esercitazioni.
-- Il **impostazioni del pacchetto di distribuzione Web** sezione non è valido perché si usa un solo clic pubblicare in queste esercitazioni.
+- Nella casella **elementi da distribuire** sono selezionati **solo i file necessari per eseguire l'applicazione** . Altre opzioni sono **tutti i file in questo progetto** o **tutti i file in questa cartella del progetto**. Lasciando invariata la selezione predefinita, è possibile evitare di distribuire i file del codice sorgente, ad esempio. Questa impostazione è il motivo per cui le cartelle che contengono i file binari di SQL Server Compact devono essere incluse nel progetto. Per altre informazioni su questa impostazione, vedere **perché non tutti i file nella cartella del progetto vengono distribuiti?** in [domande frequenti sulla distribuzione del progetto di applicazione Web ASP.NET](https://msdn.microsoft.com/library/ee942158.aspx).
+- **Escludi simboli di debug generati** è selezionata. Non verrà eseguito il debug quando si usa questa configurazione di compilazione.
+- È selezionata l'opzione **Includi tutti i database configurati nella scheda pubblicazione/pacchetto SQL** . Specifica se in Visual Studio vengono distribuiti i database e i file. Sebbene l'etichetta della casella di controllo menzioni solo la scheda **pubblicazione/pubblicazione pacchetto SQL** , deselezionare questa casella di controllo per disabilitare anche la distribuzione del database configurata nel profilo di pubblicazione. Questa operazione verrà apportata in un secondo momento, quindi la casella di controllo deve rimanere selezionata. La scheda **pacchetto/pubblica SQL** viene usata per un metodo di pubblicazione del database legacy che non verrà usato in queste esercitazioni.
+- La sezione **delle impostazioni del pacchetto di distribuzione Web** non è applicabile perché si sta usando la pubblicazione con un clic in queste esercitazioni.
 
-Modifica il **configurazione** casella a discesa di Debug per visualizzare le impostazioni predefinite per le compilazioni di Debug. I valori sono uguali, tranne **Escludi simboli di debug generati** è deselezionata, in modo che è possibile eseguire il debug quando si distribuisce una build di Debug.
+Modificare la casella di riepilogo a discesa **configurazione** in debug per visualizzare le impostazioni predefinite per le compilazioni di debug. I valori sono uguali, ad eccezione del fatto che **Escludi i simboli di debug generati** vengono cancellati in modo da poter eseguire il debug quando si distribuisce una compilazione di debug.
 
-## <a name="make-sure-that-the-elmah-folder-gets-deployed"></a>Assicurarsi che la cartella Elmah Ottiene distribuita
+## <a name="make-sure-that-the-elmah-folder-gets-deployed"></a>Assicurarsi che la cartella ELMAH venga distribuita
 
-Come illustrato nell'esercitazione precedente, il [pacchetto Elmah NuGet](http://www.hanselman.com/blog/NuGetPackageOfTheWeek7ELMAHErrorLoggingModulesAndHandlersWithSQLServerCompact.aspx) fornisce funzionalità per la registrazione e segnalazione errori. Nell'applicazione di Contoso University Elmah è stato configurato per archiviare i dettagli dell'errore in una cartella denominata *Elmah*:
+Come illustrato nell'esercitazione precedente, il [pacchetto NuGet ELMAH](http://www.hanselman.com/blog/NuGetPackageOfTheWeek7ELMAHErrorLoggingModulesAndHandlersWithSQLServerCompact.aspx) fornisce funzionalità per la registrazione e la creazione di report degli errori. Nell'applicazione Contoso University ELMAH è stato configurato per archiviare i dettagli degli errori in una cartella denominata *ELMAH*:
 
-![Cartella Elmah](project-properties/_static/image3.png)
+![Cartella ELMAH](project-properties/_static/image3.png)
 
-Esclusione di specifici file o cartelle dalla distribuzione è un requisito comune; un altro esempio sarebbe una cartella in cui gli utenti possono caricare i file. Non desidera che i file di log o caricato i file creati nell'ambiente di sviluppo per la distribuzione nell'ambiente di produzione. E se si distribuisce un aggiornamento nell'ambiente di produzione non è auspicabile il processo di distribuzione per eliminare i file esistenti nell'ambiente di produzione. (A seconda del modo in cui si imposta un'opzione di distribuzione, se esiste un file nel sito di destinazione ma non dal sito di origine durante la distribuzione, distribuzione Web lo elimina dalla destinazione.)
+L'esclusione di specifici file o cartelle dalla distribuzione è un requisito comune. un altro esempio è costituito da una cartella in cui gli utenti possono caricare file. Non si vuole che i file di log o i file caricati creati nell'ambiente di sviluppo siano distribuiti nell'ambiente di produzione. Se si distribuisce un aggiornamento in un ambiente di produzione, non si vuole che il processo di distribuzione elimini i file presenti nell'ambiente di produzione. A seconda della modalità di impostazione di un'opzione di distribuzione, se un file esiste nel sito di destinazione ma non nel sito di origine quando si distribuisce, Distribuzione Web lo elimina dalla destinazione.
 
-Come si è visto in precedenza in questa esercitazione, il **gli elementi da distribuire** opzione il **pubblicazione/creazione pacchetto Web** scheda è impostata su **solo file necessari per eseguire questa applicazione**. Di conseguenza, i file di log creati da Elmah in fase di sviluppo non verranno distribuiti, che è ciò che si desidera ottenere. (Per essere distribuita, dovranno essere inclusi nel progetto e i relativi **Build Action** proprietà dovrà essere impostata su **contenuto**. Per altre informazioni, vedere **perché non tutti i file nella cartella del progetto vengono distribuiti?** nelle [domande frequenti sulla distribuzione di ASP.NET Web Application progetto](https://msdn.microsoft.com/library/ee942158.aspx)). Tuttavia, distribuzione Web non verrà creata una cartella nel sito di destinazione a meno che non è presente almeno un file da copiare ad esso. Pertanto, si aggiungerà un *txt* file nella cartella che funga da segnaposto in modo che verrà copiata nella cartella.
+Come illustrato in precedenza in questa esercitazione, l'opzione **elementi da distribuire** nella scheda **pubblicazione/pubblicazione pacchetto Web** è impostata su **solo i file necessari per eseguire l'applicazione**. Di conseguenza, i file di log creati da ELMAH in fase di sviluppo non verranno distribuiti, ovvero ciò che si desidera eseguire. (Per essere distribuite, devono essere incluse nel progetto e la relativa proprietà dell' **azione di compilazione** deve essere impostata sul **contenuto**. Per altre informazioni, vedere **perché non tutti i file nella cartella del progetto vengono distribuiti?** in [domande frequenti sulla distribuzione del progetto di applicazione Web ASP.NET](https://msdn.microsoft.com/library/ee942158.aspx)). Tuttavia, Distribuzione Web non creerà una cartella nel sito di destinazione a meno che non vi sia almeno un file in cui eseguire la copia. Pertanto, si aggiungerà un file con *estensione txt* alla cartella per fungere da segnaposto, in modo che la cartella venga copiata.
 
-Nelle **Esplora soluzioni**, fare doppio clic il *Elmah* cartella, selezionare **Aggiungi nuovo elemento**e creare un file di testo denominato *assegnategli*. Inserire il testo seguente: "Si tratta di un file segnaposto per garantire che la cartella viene distribuita". e salvare il file. Questo è tutto è necessario eseguire per fare in modo che Visual Studio distribuisce il file e la cartella è, in quanto il **Build Action** proprietà di *. txt* file è impostato su **contenuto**per impostazione predefinita.
+In **Esplora soluzioni**fare clic con il pulsante destro del mouse sulla cartella *ELMAH* , scegliere **Aggiungi nuovo elemento**e creare un file di testo denominato *segnaposto. txt*. Inserire il testo seguente: "si tratta di un file segnaposto per assicurarsi che la cartella venga distribuita". e salvare il file. Questo è tutto ciò che è necessario fare per assicurarsi che Visual Studio distribuisca questo file e la cartella in cui si trova, perché la proprietà **azione di compilazione** dei file con *estensione txt* è impostata su **contenuto** per impostazione predefinita.
 
 ## <a name="summary"></a>Riepilogo
 
-A questo punto è stata completata a tutte le attività di configurazione di distribuzione. Nella prossima esercitazione, verrà distribuire il sito Contoso University all'ambiente di prova e testarlo.
+A questo punto sono state completate tutte le attività di configurazione della distribuzione. Nell'esercitazione successiva il sito Contoso University verrà distribuito nell'ambiente di test e testato.
 
 > [!div class="step-by-step"]
 > [Precedente](web-config-transformations.md)

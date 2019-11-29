@@ -1,55 +1,55 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/popup/using-multiple-popup-controls-vb
-title: Uso di più controlli Popup (VB) | Microsoft Docs
+title: Uso di più controlli popup (VB) | Microsoft Docs
 author: wenz
-description: Il dispositivo extender PopupControl in AJAX Control Toolkit offre un modo semplice per attivare una finestra popup quando viene attivato un qualsiasi altro controllo. È anche possibile usare m...
+description: Il dispositivo Extender PopupControl in AJAX Control Toolkit offre un modo semplice per attivare un popup quando viene attivato qualsiasi altro controllo. È anche possibile usare m...
 ms.author: riande
 ms.date: 06/02/2008
 ms.assetid: 4da43d77-f6c4-43a8-9124-f1e8e1c8f0a2
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/popup/using-multiple-popup-controls-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 6f8097ed64f81d8ad9de27e19195d9a4572a0ae7
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: e1f4ff64e9fdf48ea63b75c97acd53a64b5ab5ce
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65115085"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74611618"
 ---
 # <a name="using-multiple-popup-controls-vb"></a>Uso di più controlli Popup (VB)
 
-da [Christian Wenz](https://github.com/wenz)
+di [Christian Wenz](https://github.com/wenz)
 
-[Scaricare il codice](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/PopupControl1.vb.zip) o [Scarica il PDF](http://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/popupcontrol1VB.pdf)
+[Scarica codice](https://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/PopupControl1.vb.zip) o [Scarica PDF](https://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/popupcontrol1VB.pdf)
 
-> Il dispositivo extender PopupControl in AJAX Control Toolkit offre un modo semplice per attivare una finestra popup quando viene attivato un qualsiasi altro controllo. È anche possibile usare più di un controllo popup in un'unica pagina.
+> Il dispositivo Extender PopupControl in AJAX Control Toolkit offre un modo semplice per attivare un popup quando viene attivato qualsiasi altro controllo. È anche possibile usare più di un controllo popup in una sola pagina.
 
-## <a name="overview"></a>Panoramica
+## <a name="overview"></a>Panoramica di
 
-Il dispositivo extender PopupControl in AJAX Control Toolkit offre un modo semplice per attivare una finestra popup quando viene attivato un qualsiasi altro controllo. È anche possibile usare più di un controllo popup in un'unica pagina.
+Il dispositivo Extender PopupControl in AJAX Control Toolkit offre un modo semplice per attivare un popup quando viene attivato qualsiasi altro controllo. È anche possibile usare più di un controllo popup in una sola pagina.
 
 ## <a name="steps"></a>Passaggi
 
-Per attivare la funzionalità di ASP.NET AJAX e il Toolkit di controllo, il `ScriptManager` controllo deve essere inserito in un punto qualsiasi della pagina (ma entro la `<form>` elemento):
+Per attivare la funzionalità di ASP.NET AJAX e di Control Toolkit, il controllo `ScriptManager` deve essere inserito in un punto qualsiasi della pagina (ma all'interno dell'elemento `<form>`):
 
 [!code-aspx[Main](using-multiple-popup-controls-vb/samples/sample1.aspx)]
 
-Successivamente, aggiungere un pannello che funge da finestra popup. Nello scenario corrente, il pannello contiene un `Calendar` controllo. Per evitare la pagina viene aggiornata causata dai postback del calendario, il pannello viene inserito all'interno di un `UpdatePanel` controllo:
+Aggiungere quindi un pannello che funge da popup. Nello scenario corrente, il pannello contiene un controllo `Calendar`. Per evitare gli aggiornamenti della pagina causati dai postback del calendario, il pannello viene inserito in un controllo `UpdatePanel`:
 
 [!code-aspx[Main](using-multiple-popup-controls-vb/samples/sample2.aspx)]
 
-La pagina contiene inoltre due caselle di testo. Per ogni casella di testo, il calendario popup verranno visualizzati dopo aver attivata la casella di testo.
+La pagina contiene anche due caselle di testo. Per ogni casella di testo, il popup del calendario verrà visualizzato dopo l'attivazione della casella di testo.
 
 [!code-aspx[Main](using-multiple-popup-controls-vb/samples/sample3.aspx)]
 
-A questo punto estendere ciascuna delle due caselle di testo con un `PopupControlExtender`. Il `TargetControlID` attributo fornisce l'ID del controllo associato all'oggetto extender. Il `PopupControlID` attributo contiene l'ID del pannello popup. In questo caso, entrambe le estensioni di visualizzare il pannello stesso, ma sono anche possibili, diversi pannelli.
+Estendere ora ognuna delle due caselle di testo con un `PopupControlExtender`. L'attributo `TargetControlID` fornisce l'ID del controllo associato al dispositivo Extender. L'attributo `PopupControlID` contiene l'ID del pannello popup. In questo caso, entrambi i dispositivi Extender mostrano lo stesso pannello, ma sono anche disponibili pannelli diversi.
 
 [!code-aspx[Main](using-multiple-popup-controls-vb/samples/sample4.aspx)]
 
-Ora ogni volta che si fa clic all'interno di un campo di testo, viene visualizzato un calendario sotto il campo, è possibile selezionare una data. (Ricevendo la data selezionata nelle caselle di testo verrà trattato in un'esercitazione diversa.)
+A questo punto, quando si fa clic all'interno di un campo di testo, viene visualizzato un calendario sotto il campo, che consente di selezionare una data. (Il recupero della data selezionata nelle caselle di testo sarà trattato in un'esercitazione diversa).
 
-[![Quando l'utente fa clic nella casella di testo viene visualizzato il calendario](using-multiple-popup-controls-vb/_static/image2.png)](using-multiple-popup-controls-vb/_static/image1.png)
+[![il calendario viene visualizzato quando l'utente fa clic nella casella di testo](using-multiple-popup-controls-vb/_static/image2.png)](using-multiple-popup-controls-vb/_static/image1.png)
 
-Il calendario viene visualizzato quando l'utente fa clic nella casella di testo ([fare clic per visualizzare l'immagine con dimensioni normali](using-multiple-popup-controls-vb/_static/image3.png))
+Il calendario viene visualizzato quando l'utente fa clic nella casella[di testo (fare clic per visualizzare l'immagine con dimensioni complete](using-multiple-popup-controls-vb/_static/image3.png))
 
 > [!div class="step-by-step"]
 > [Precedente](handling-postbacks-from-a-popup-control-without-an-updatepanel-cs.md)
