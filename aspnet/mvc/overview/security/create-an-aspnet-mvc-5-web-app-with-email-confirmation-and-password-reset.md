@@ -1,195 +1,195 @@
 ---
 uid: mvc/overview/security/create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset
-title: Creare un'app web ASP.NET MVC 5 sicura con accesso, inviare tramite posta elettronica di conferma e reimpostazione della password (c#) | Microsoft Docs
+title: Creare un'app Web ASP.NET MVC 5 sicura con accesso, conferma tramite posta elettronica e reimpostazioneC#della password () | Microsoft Docs
 author: Rick-Anderson
-description: Questa esercitazione illustra come compilare un'app web ASP.NET MVC 5 con conferma tramite posta elettronica e reimpostazione della password usando il sistema di appartenenze ASP.NET Identity. È ca...
+description: Questa esercitazione illustra come creare un'app Web ASP.NET MVC 5 con la conferma della posta elettronica e la reimpostazione della password usando il sistema di appartenenze ASP.NET Identity. CA...
 ms.author: riande
 ms.date: 03/26/2015
 ms.assetid: d4911cb3-1afb-4805-b860-10818c4b1280
 msc.legacyurl: /mvc/overview/security/create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset
 msc.type: authoredcontent
-ms.openlocfilehash: ebdae3f4d1261407feecd50ec81b3f329b2a3c0c
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 07f5b290b73f75000e6f29fe09e4dc25e144452f
+ms.sourcegitcommit: 969e7db924ebad3cc0f0cb0d65d148e8b9221b9a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65117137"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74899702"
 ---
 # <a name="create-a-secure-aspnet-mvc-5-web-app-with-log-in-email-confirmation-and-password-reset-c"></a>Creare un'app Web ASP.NET MVC 5 sicura con accesso, messaggi di posta elettronica di conferma e reimpostazione della password (C#)
 
-da [Rick Anderson]((https://twitter.com/RickAndMSFT))
+di [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
-> Questa esercitazione illustra come compilare un'app web ASP.NET MVC 5 con conferma tramite posta elettronica e reimpostazione della password usando il sistema di appartenenze ASP.NET Identity. È possibile scaricare l'applicazione completata [qui](https://code.msdn.microsoft.com/MVC-5-with-2FA-email-8f26d952). Il download contiene gli helper di debug che consentono di testare conferma tramite posta elettronica e SMS senza dover configurare un indirizzo di posta elettronica o il provider SMS.
-> 
-> Questa esercitazione è stato scritto dal [Rick Anderson](https://blogs.msdn.com/rickAndy) (Twitter: [ @RickAndMSFT ](https://twitter.com/RickAndMSFT) ).
+Questa esercitazione illustra come creare un'app Web ASP.NET MVC 5 con la conferma della posta elettronica e la reimpostazione della password usando il sistema di appartenenze ASP.NET Identity.
+
+Per una versione aggiornata di questa esercitazione che usa .NET Core, vedere la pagina relativa alla conferma dell'account e al ripristino della password in ASP.NET Core [/ASPNET/Core/Security/Authentication/accconfirm).
 
 <a id="createMvc"></a>
-## <a name="create-an-aspnet-mvc-app"></a>Creare un'app ASP.NET MVC
+## <a name="create-an-aspnet-mvc-app"></a>Creare un'app MVC ASP.NET
 
-Per iniziare, installare ed eseguire [Visual Studio Express 2013 per il Web](https://go.microsoft.com/fwlink/?LinkId=299058) oppure [Visual Studio 2013](https://go.microsoft.com/fwlink/?LinkId=306566). Installare [Visual Studio 2013 Update 3](https://go.microsoft.com/fwlink/?LinkId=390465) o versione successiva.
+Per iniziare, installare ed eseguire [Visual Studio Express 2013 per il Web](https://go.microsoft.com/fwlink/?LinkId=299058) o [Visual Studio 2013](https://go.microsoft.com/fwlink/?LinkId=306566). Installare [Visual Studio 2013 aggiornamento 3](https://go.microsoft.com/fwlink/?LinkId=390465) o versione successiva.
 
 > [!NOTE]
-> Avviso: È necessario installare [Visual Studio 2013 Update 3](https://go.microsoft.com/fwlink/?LinkId=390465) o versione successiva per completare questa esercitazione.
+> Avviso: per completare questa esercitazione, è necessario installare [Visual Studio 2013 aggiornamento 3](https://go.microsoft.com/fwlink/?LinkId=390465) o versione successiva.
 
-1. Creare un nuovo progetto Web ASP.NET e selezionare il modello MVC. Web Form supporta inoltre ASP.NET Identity, pertanto è possibile seguire la procedura in un'applicazione web form.  
+1. Creare un nuovo progetto Web ASP.NET e selezionare il modello MVC. Web Forms supporta anche ASP.NET Identity, quindi è possibile seguire una procedura simile in un'app Web Form.  
     ![](create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset/_static/image1.png)
-2. Lasciare l'autenticazione predefinita come **singoli account utente di**. Se vuoi ospitare l'app in Azure, lasciare selezionata la casella di controllo. Più avanti nell'esercitazione verrà distribuita in Azure. È possibile [aprire un account Azure gratuito](https://azure.microsoft.com/pricing/free-trial/?WT.mc_id=A261C142F).
-3. Impostare il [progetto per l'uso di SSL](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on.md).
-4. Eseguire l'app, scegliere il **registrare** collegare e registrare un utente. A questo punto, l'unica convalida il messaggio di posta elettronica è con il [[EmailAddress]](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.emailaddressattribute(v=vs.110).aspx) attributo.
-5. In Esplora Server, passare a **dati Connections\DefaultConnection\Tables\AspNetUsers**, fare clic e selezionare **Apri definizione tabella**.
+2. Lasciare l'autenticazione predefinita come **account utente singoli**. Se si vuole ospitare l'app in Azure, lasciare selezionata la casella di controllo. Più avanti nell'esercitazione si distribuirà in Azure. È possibile [aprire un account Azure](https://azure.microsoft.com/pricing/free-trial/?WT.mc_id=A261C142F)gratuitamente.
+3. Impostare il [progetto per l'utilizzo di SSL](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on.md).
+4. Eseguire l'app, fare clic sul collegamento **Register** e registrare un utente. A questo punto, l'unica convalida sul messaggio di posta elettronica è l'attributo [[EmailAddress]](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.emailaddressattribute(v=vs.110).aspx) .
+5. In Esplora server passare a **Data Connections\DefaultConnection\Tables\AspNetUsers**, fare clic con il pulsante destro del mouse e selezionare **Apri definizione tabella**.
 
-    La figura seguente mostra la `AspNetUsers` dello schema:
+    Nella figura seguente viene illustrato lo schema `AspNetUsers`:
 
     ![](create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset/_static/image2.png)
-6. Fare clic con il pulsante destro sul **AspNetUsers** tabelle e selezionare **Mostra dati tabella**.  
+6. Fare clic con il pulsante destro del mouse sulla tabella **AspNetUsers** e scegliere **Mostra dati tabella**.  
     ![](create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset/_static/image3.png)  
- A questo punto non è stato confermato l'indirizzo di posta elettronica.
-7. Fare clic sulla riga e selezionare Elimina. Si sarà aggiungere di nuovo questo messaggio di posta elettronica nel passaggio successivo e inviare un messaggio di posta elettronica di conferma.
+ A questo punto, il messaggio di posta elettronica non è stato confermato.
+7. Fare clic sulla riga e selezionare Elimina. Questo messaggio di posta elettronica verrà aggiunto di nuovo nel passaggio successivo e verrà inviato un messaggio di posta elettronica di conferma.
 
 ## <a name="email-confirmation"></a>Conferma tramite posta elettronica
 
-È consigliabile verificare che il messaggio di posta elettronica di una nuova registrazione utente per verificare che non rappresentano un altro utente (vale a dire non hanno registrato con un altro messaggio di posta elettronica). Si supponga di un forum di discussione, si desidera impedire `"bob@example.com"` tramite la registrazione come `"joe@contoso.com"`. Senza conferma tramite posta elettronica, `"joe@contoso.com"` è stato possibile ottenere l'indirizzo di posta elettronica indesiderato dalla propria app. Si supponga che Bob accidentalmente registrato come `"bib@example.com"` e non l'aveste notato, egli non sarebbe in grado di utilizzare ripristino password perché l'app non ha il suo indirizzo di posta elettronica corretto. Conferma tramite posta elettronica fornisce solo una protezione limitata dai Bot e non fornisce protezione da spammer determinato, hanno molti alias di posta elettronica di lavoro che possono usare per registrare.
+Una procedura consigliata consiste nel confermare l'indirizzo di posta elettronica di una nuova registrazione utente per verificare che non stiano rappresentando un altro utente, ovvero che non sono stati registrati con la posta elettronica di un altro utente. Si supponga di avere un forum di discussione che si vuole impedire che `"bob@example.com"` venga registrato come `"joe@contoso.com"`. Senza la conferma della posta elettronica, `"joe@contoso.com"` possibile ricevere messaggi di posta elettronica indesiderati dall'app. Supponiamo che Bob sia stato accidentalmente registrato come `"bib@example.com"` e non sia stato notato, non sarebbe in grado di usare il ripristino della password perché l'app non ha la posta elettronica corretta. La conferma tramite posta elettronica offre solo una protezione limitata dai bot e non fornisce protezione da spammer determinati, ma ha molti alias di posta elettronica di lavoro che possono usare per la registrazione.
 
-In genere si desidera impedire ai nuovi utenti dalla registrazione di tutti i dati al sito web prima che sono state confermate tramite posta elettronica, un messaggio SMS o un altro meccanismo. <a id="build"></a>Nelle sezioni seguenti, verrà Abilita conferma tramite posta elettronica e modificare il codice per impedire l'accesso fino a quando non è stata confermata la posta elettronica gli utenti appena registrati.
+In genere si desidera impedire ai nuovi utenti di inviare dati al sito Web prima che siano stati confermati tramite posta elettronica, un SMS o un altro meccanismo. <a id="build"></a>Nelle sezioni riportate di seguito verrà abilitata la conferma tramite posta elettronica e verrà modificato il codice per impedire l'accesso degli utenti appena registrati fino alla conferma della posta elettronica.
 
 <a id="SG"></a>
 ## <a name="hook-up-sendgrid"></a>Associare SendGrid
 
-Le istruzioni riportate in questa sezione non sono aggiornate. Visualizzare [provider di posta elettronica SendGrid configurare](/aspnet/core/security/authentication/accconfirm#configure-email-provider) per aggiornare le istruzioni.
+Le istruzioni riportate in questa sezione non sono aggiornate. Per istruzioni aggiornate, vedere [configurare il provider di posta elettronica SendGrid](/aspnet/core/security/authentication/accconfirm#configure-email-provider) .
 
-Sebbene in questa esercitazione illustra solo come aggiungere notifica tramite posta elettronica tramite [SendGrid](http://sendgrid.com/), è possibile inviare tramite posta elettronica tramite SMTP e altri meccanismi (vedere [risorse aggiuntive](#addRes)).
+Sebbene questa esercitazione mostri solo come aggiungere notifiche tramite posta elettronica tramite [SendGrid](http://sendgrid.com/), è possibile inviare messaggi di posta elettronica usando SMTP e altri meccanismi (vedere [risorse aggiuntive](#addRes)).
 
-1. Nella Console di gestione pacchetti immettere il comando seguente: 
+1. Nella Console di Gestione pacchetti immettere il comando seguente: 
 
     [!code-console[Main](create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset/samples/sample1.cmd)]
-2. Andare alla [pagina di iscrizione Azure SendGrid](https://go.microsoft.com/fwlink/?linkid=271033&clcid=0x409) e registrare un account SendGrid gratuito. Configurare SendGrid aggiungendo codice analogo al seguente nella *App_Start/IdentityConfig.cs*:
+2. Passare alla [pagina di iscrizione di Azure SendGrid](https://go.microsoft.com/fwlink/?linkid=271033&clcid=0x409) e registrarsi per ottenere un account SendGrid gratuito. Configurare SendGrid aggiungendo codice simile al seguente in *app_start/identityconfig.cs*:
 
     [!code-csharp[Main](create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset/samples/sample2.cs?highlight=3,5)]
 
-È necessario aggiungere che include quanto segue:
+È necessario aggiungere quanto segue:
 
 [!code-csharp[Main](create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset/samples/sample3.cs)]
 
-Per semplificare questo esempio, le impostazioni dell'app in verrà archiviato il *Web. config* file:
+Per semplificare questo esempio, verranno archiviate le impostazioni dell'app nel file *Web. config* :
 
 [!code-xml[Main](create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset/samples/sample4.xml)]
 
 > [!WARNING]
-> Security - store mai i dati sensibili nel codice sorgente. L'account e le credenziali vengono archiviate in appSetting. In Azure, è possibile archiviare in modo sicuro questi valori sul **[Configure](https://blogs.msdn.com/b/webdev/archive/2014/06/04/queuebackgroundworkitem-to-reliably-schedule-and-run-long-background-process-in-asp-net.aspx)** scheda nel portale di Azure. Visualizzare [procedure consigliate per la distribuzione di password e altri dati sensibili in ASP.NET e Azure](../../../identity/overview/features-api/best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure.md).
+> Sicurezza: non archiviare mai dati sensibili nel codice sorgente. L'account e le credenziali vengono archiviati in appSetting. In Azure è possibile archiviare in modo sicuro questi valori nella scheda **[Configura](https://blogs.msdn.com/b/webdev/archive/2014/06/04/queuebackgroundworkitem-to-reliably-schedule-and-run-long-background-process-in-asp-net.aspx)** della portale di Azure. Vedere [le procedure consigliate per la distribuzione di password e altri dati sensibili in ASP.NET e Azure](../../../identity/overview/features-api/best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure.md).
 
-### <a name="enable-email-confirmation-in-the-account-controller"></a>Abilitare la conferma tramite posta elettronica nel controller Account
+### <a name="enable-email-confirmation-in-the-account-controller"></a>Abilitare la conferma della posta elettronica nel controller account
 
 [!code-csharp[Main](create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset/samples/sample5.cs?highlight=16-21)]
 
-Verificare i *Views\Account\ConfirmEmail.cshtml* file ha la sintassi razor corretto. (Il @ carattere nella prima riga potrebbe essere manca. )
+Verificare che il file *Views\Account\ConfirmEmail.cshtml* abbia la sintassi Razor corretta. Il carattere @ nella prima riga potrebbe essere mancante. )
 
 [!code-cshtml[Main](create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset/samples/sample6.cshtml?highlight=1)]
 
-Eseguire l'app e fare clic sul collegamento di registrazione. Dopo aver inviato il modulo di registrazione, si è connessi.
+Eseguire l'app e fare clic sul collegamento Register (registra). Una volta inviato il modulo di registrazione, si è connessi.
 
 ![](create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset/_static/image4.png)
 
-Verificare l'account di posta elettronica e fare clic sul collegamento per confermare l'indirizzo di posta elettronica.
+Controllare l'account di posta elettronica e fare clic sul collegamento per confermare la posta elettronica.
 
 <a id="require"></a>
-## <a name="require-email-confirmation-before-log-in"></a>Richiedere conferma tramite posta elettronica prima dell'accesso in
+## <a name="require-email-confirmation-before-log-in"></a>Richiedi conferma posta elettronica prima dell'accesso
 
-Attualmente una volta che un utente ha completato il modulo di registrazione, vengono registrate. In genere si vuole verificare la posta elettronica prima archiviandoli. Nella sezione seguente, si modificherà il codice per richiedere agli utenti di nuovo per disporre di un messaggio di posta elettronica confermato prima vengono registrate nel (autenticato). Aggiornamento di `HttpPost Register` metodo con le modifiche evidenziate di seguito:
+Al momento del completamento del modulo di registrazione, l'utente ha eseguito l'accesso. In genere si vuole confermare la posta elettronica prima di registrarli in. Nella sezione seguente il codice verrà modificato in modo da richiedere che i nuovi utenti dispongano di un messaggio di posta elettronica confermato prima dell'accesso (autenticato). Aggiornare il metodo `HttpPost Register` con le modifiche evidenziate di seguito:
 
 [!code-csharp[Main](create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset/samples/sample7.cs?highlight=14-15,23-30)]
 
-Impostando come commento il `SignInAsync` metodo, l'utente non essere firmata in per la registrazione. Il `TempData["ViewBagLink"] = callbackUrl;` riga può essere usata per [il debug dell'app](#dbg) e registrazione di test senza l'invio di posta elettronica. `ViewBag.Message` Consente di visualizzare le istruzioni di conferma. Il [Scarica esempio](https://code.msdn.microsoft.com/MVC-5-with-2FA-email-8f26d952) contiene il codice per test conferma tramite posta elettronica senza configurare posta elettronica e consente inoltre il debug dell'applicazione.
+Impostando come commento il metodo `SignInAsync`, l'utente non verrà connesso mediante la registrazione. La riga di `TempData["ViewBagLink"] = callbackUrl;` può essere usata per [eseguire il debug dell'app](#dbg) e verificare la registrazione senza inviare messaggi di posta elettronica. `ViewBag.Message` viene utilizzato per visualizzare le istruzioni di conferma. L' [esempio di download](https://code.msdn.microsoft.com/MVC-5-with-2FA-email-8f26d952) contiene codice per testare la conferma della posta elettronica senza configurare la posta elettronica e può essere usato anche per eseguire il debug dell'applicazione.
 
-Creare un `Views\Shared\Info.cshtml` file e aggiungere il markup razor seguente:
+Creare un file di `Views\Shared\Info.cshtml` e aggiungere il markup Razor seguente:
 
 [!code-cshtml[Main](create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset/samples/sample8.cshtml)]
 
-Aggiungere il [attributo Authorize](https://msdn.microsoft.com/library/system.web.mvc.authorizeattribute(v=vs.118).aspx) per il `Contact` metodo di azione del controller Home. È possibile fare clic sui **contatto** collegamento per verificare gli utenti anonimi non hanno accesso e si dispongono dell'accesso agli utenti autenticati.
+Aggiungere l' [attributo autorizzi](https://msdn.microsoft.com/library/system.web.mvc.authorizeattribute(v=vs.118).aspx) al metodo di azione `Contact` del controller Home. È possibile fare clic sul collegamento **contatto** per verificare che gli utenti anonimi non dispongano dell'accesso e che gli utenti autenticati dispongano dell'accesso.
 
 [!code-csharp[Main](create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset/samples/sample9.cs?highlight=1)]
 
-È necessario aggiornare anche il `HttpPost Login` metodo di azione:
+È necessario aggiornare anche il metodo di azione `HttpPost Login`:
 
 [!code-csharp[Main](create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset/samples/sample10.cs?highlight=13-22)]
 
-Aggiorna il *Views\Shared\Error.cshtml* visualizzazione per visualizzare il messaggio di errore:
+Aggiornare la visualizzazione *Views\Shared\Error.cshtml* per visualizzare il messaggio di errore:
 
 [!code-cshtml[Main](create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset/samples/sample11.cshtml?highlight=8-17)]
 
-Eliminare gli account nel **AspNetUsers** tabella che contiene l'alias di posta elettronica si desidera eseguire il test. Eseguire l'app e verificare che non è possibile accedere fino a quando non si è verificato l'indirizzo di posta elettronica. Dopo aver verificato l'indirizzo di posta elettronica, scegliere il **contatto** collegamento.
+Eliminare tutti gli account nella tabella **AspNetUsers** che contengono l'alias di posta elettronica con cui si vuole eseguire il test. Eseguire l'app e verificare che non sia possibile accedere fino a quando non è stato confermato l'indirizzo di posta elettronica. Dopo aver verificato l'indirizzo di posta elettronica, fare clic sul collegamento **contatto** .
 
 <a id="reset"></a>
 ## <a name="password-recoveryreset"></a>Ripristino/reimpostazione della password
 
-Rimuovere i caratteri di commento dal `HttpPost ForgotPassword` metodo di azione nel controller account:
+Rimuovere i caratteri di commento dal metodo di azione `HttpPost ForgotPassword` nel controller dell'account:
 
 [!code-csharp[Main](create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset/samples/sample12.cs?highlight=17-20)]
 
-Rimuovere i caratteri di commento dal `ForgotPassword` [ActionLink](https://msdn.microsoft.com/library/system.web.mvc.html.linkextensions.actionlink(v=vs.118).aspx) nel *Views\Account\Login.cshtml* file di visualizzazione razor:
+Rimuovere i caratteri di commento dal `ForgotPassword` [ActionLink](https://msdn.microsoft.com/library/system.web.mvc.html.linkextensions.actionlink(v=vs.118).aspx) nel file di visualizzazione Razor *Views\Account\Login.cshtml* :
 
 [!code-cshtml[Main](create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset/samples/sample13.cshtml?highlight=47-50)]
 
-Nella pagina di accesso mostrerà ora un link per reimpostare la password.
+Nella pagina di accesso verrà ora visualizzato un collegamento per reimpostare la password.
 
 <a id="rsend"></a>
-## <a name="resend-email-confirmation-link"></a>Inviare di nuovo collegamento di conferma tramite posta elettronica
+## <a name="resend-email-confirmation-link"></a>Invia nuovamente il collegamento di conferma tramite posta elettronica
 
-Una volta che un utente crea un nuovo account locale, essi vengono inviati tramite posta elettronica un collegamento di conferma che viene richiesto di usare prima di poter accedere. Se l'utente elimina accidentalmente il messaggio di posta elettronica di conferma o non arrivi mai il messaggio di posta elettronica, è necessario il collegamento di conferma inviato nuovamente. Le modifiche al codice seguente viene illustrato come abilitare questa opzione.
+Quando un utente crea un nuovo account locale, riceve un messaggio di posta elettronica con un collegamento di conferma che è necessario usare per poter accedere. Se l'utente elimina accidentalmente il messaggio di posta elettronica di conferma o il messaggio di posta elettronica non arriva mai, sarà necessario inviare nuovamente il collegamento di conferma. Le modifiche al codice seguenti illustrano come abilitare questa operazione.
 
-Aggiungere il seguente metodo helper a fondo le *Controllers\AccountController.cs* file:
+Aggiungere il seguente metodo helper alla fine del file *Controllers\AccountController.cs* :
 
 [!code-csharp[Main](create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset/samples/sample14.cs)]
 
-Aggiornare il metodo Register per usare il nuovo helper:
+Aggiornare il metodo Register per l'uso del nuovo Helper:
 
 [!code-csharp[Main](create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset/samples/sample15.cs?highlight=17)]
 
-Aggiornare il metodo di accesso per inviare di nuovo la password se non è stato confermato l'account utente:
+Aggiornare il metodo login per inviare di nuovo la password se l'account utente non è stato confermato:
 
 [!code-csharp[Main](create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset/samples/sample16.cs?highlight=20)]
 
 <a id="combine"></a>
-## <a name="combine-social-and-local-login-accounts"></a>Combinare gli account di accesso social e locali
+## <a name="combine-social-and-local-login-accounts"></a>Combinare account di accesso di social networking e locali
 
-È possibile combinare account locali e basati su social network, fare clic sul collegamento nel messaggio. Nella sequenza seguente **RickAndMSFT@gmail.com** viene innanzitutto creato un account di accesso locale, ma è possibile creare l'account come log basati su social network in prima, quindi aggiungere un account di accesso locale.
+È possibile combinare account locali e di social networking facendo clic sul collegamento di posta elettronica. Nella sequenza seguente **RickAndMSFT@gmail.com** viene creato inizialmente come account di accesso locale, ma è possibile creare prima l'account come log di social networking, quindi aggiungere un account di accesso locale.
 
 ![](create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset/_static/image5.png)
 
-Fare clic sui **Gestisci** collegamento. Si noti il **account di accesso esterni: 0** associate all'account.
+Fare clic sul collegamento **Gestisci** . Si notino gli **account di accesso esterni: 0** associati a questo account.
 
 ![](create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset/_static/image6.png)
 
-Fare clic sul collegamento a un altro registro nel servizio e accettare le richieste di app. I due account sono stati combinati, sarà in grado di accedere con uno di questi account. È possibile che gli utenti per aggiungere gli account locali nel caso in cui i log basati su social network in servizio di autenticazione è inattivo oppure più probabile che si è perso l'accesso al proprio account di social networking.
+Fai clic sul collegamento a un altro servizio di accesso e accetta le richieste dell'app. I due account sono stati combinati e sarà possibile accedere con entrambi gli account. Potrebbe essere necessario che gli utenti aggiungano gli account locali nel caso in cui il servizio di autenticazione dei log sociali sia inattivo o più probabilmente abbiano perso l'accesso al proprio account di social networking.
 
-Nell'immagine seguente, Tom è una procedura di accesso basati su social network (che è possibile visualizzare dal **account di accesso esterni: 1** visualizzato sulla pagina).
+Nella figura seguente Tom è un log di social networking, che è possibile visualizzare dagli account di **accesso esterni: 1** visualizzati nella pagina.
 
 ![](create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset/_static/image7.png)
 
-Facendo clic su **Scegli una password** consente di aggiungere un registro locale in associati con lo stesso account.
+Quando si fa clic su **Seleziona una password** è possibile aggiungere un log locale associato allo stesso account.
 
 ![](create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset/_static/image8.png)
 
-## <a name="email-confirmation-in-more-depth"></a>Conferma tramite posta elettronica in modo più approfondito
+## <a name="email-confirmation-in-more-depth"></a>Conferma tramite posta elettronica più dettagliata
 
-L'esercitazione [conferma Account e recupero della Password con ASP.NET Identity](../../../identity/overview/features-api/account-confirmation-and-password-recovery-with-aspnet-identity.md) entra in questo argomento con altri dettagli.
+La conferma dell'account dell'esercitazione [e il ripristino della password con ASP.NET Identity](../../../identity/overview/features-api/account-confirmation-and-password-recovery-with-aspnet-identity.md) passano a questo argomento con ulteriori dettagli.
 
 <a id="dbg"></a>
 ## <a name="debugging-the-app"></a>Debug dell'app
 
-Se non si riceve un messaggio di posta elettronica che contiene il collegamento:
+Se non si riceve un messaggio di posta elettronica contenente il collegamento:
 
-- Controllare la cartella della posta indesiderata o antispam.
-- Accedere all'account SendGrid e fare clic sui [collegamento di attività di posta elettronica](https://sendgrid.com/logs/index).
+- Controllare la cartella della posta indesiderata.
+- Accedere all'account SendGrid e fare clic sul [collegamento attività posta elettronica](https://sendgrid.com/logs/index).
 
-Per testare il collegamento per la verifica senza messaggio di posta elettronica, scaricare il [esempio completato](https://code.msdn.microsoft.com/MVC-5-with-2FA-email-8f26d952). Nella pagina verranno visualizzati il collegamento di conferma e codici di conferma.
+Per testare il collegamento di verifica senza posta elettronica, scaricare l' [esempio completato](https://code.msdn.microsoft.com/MVC-5-with-2FA-email-8f26d952). Nella pagina verrà visualizzato il collegamento di conferma e i codici di conferma.
 
 <a id="addRes"></a>
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-- [Risorse consigliate su collegamenti ad ASP.NET Identity](../../../identity/overview/getting-started/aspnet-identity-recommended-resources.md)
-- [Conferma dell'account e recupero della Password con ASP.NET Identity](../../../identity/overview/features-api/account-confirmation-and-password-recovery-with-aspnet-identity.md) descrivono in maggiore dettaglio nella conferma account e di ripristino della password.
-- [App MVC 5 con Facebook, Twitter, LinkedIn e Google OAuth2 Sign-on](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on.md) questa esercitazione illustra come scrivere un'app ASP.NET MVC 5 con Facebook e Google OAuth 2 l'autorizzazione. Viene inoltre illustrato come aggiungere dati aggiuntivi al database di identità.
-- [Distribuire un'app ASP.NET MVC sicura con appartenenza, OAuth e Database SQL in Azure](https://docs.microsoft.com/aspnet/core/security/authorization/secure-data). Questa esercitazione aggiunge una distribuzione di Azure, come proteggere l'app con i ruoli, come usare l'API di appartenenza per aggiungere utenti e ruoli e funzionalità di sicurezza aggiuntive.
-- [Creazione di un'app Google per OAuth 2 e ci si connette l'app al progetto](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on.md#goog)
-- [Creazione dell'app in Facebook e ci si connette l'app al progetto](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on.md#fb)
-- [Configurare SSL nel progetto](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on.md#ssl)
+- [Collegamenti a ASP.NET Identity risorse consigliate](../../../identity/overview/getting-started/aspnet-identity-recommended-resources.md)
+- [Conferma dell'account e recupero della password con ASP.NET Identity](../../../identity/overview/features-api/account-confirmation-and-password-recovery-with-aspnet-identity.md) Esamina più dettagliatamente il recupero delle password e la conferma dell'account.
+- [App MVC 5 con accesso a Facebook, Twitter, LinkedIn e Google OAuth2](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on.md) Questa esercitazione illustra come scrivere un'app ASP.NET MVC 5 con l'autorizzazione Facebook e Google OAuth 2. Viene inoltre illustrato come aggiungere altri dati al database di identità.
+- [Distribuire un'app ASP.NET MVC sicura con appartenenza, OAuth e database SQL in Azure](https://docs.microsoft.com/aspnet/core/security/authorization/secure-data). Questa esercitazione aggiunge la distribuzione di Azure, come proteggere l'app con i ruoli, come usare l'API di appartenenza per aggiungere utenti e ruoli e funzionalità di sicurezza aggiuntive.
+- [Creazione di un'app Google per OAuth 2 e connessione dell'app al progetto](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on.md#goog)
+- [Creazione dell'app in Facebook e connessione dell'app al progetto](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on.md#fb)
+- [Configurazione di SSL nel progetto](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on.md#ssl)
