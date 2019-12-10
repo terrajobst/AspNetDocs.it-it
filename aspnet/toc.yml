@@ -1405,7 +1405,7 @@
               href: web-forms/videos/building-35-applications/validation.md
             - name: Controlli di accesso
               href: web-forms/videos/building-35-applications/login-controls.md
-        - name: Autenticazione
+        - name: Authentication
           href: web-forms/videos/authentication/index.md
           items:
             - name: Uso dell'autenticazione basata su form di base in ASP.NET
@@ -2483,7 +2483,7 @@
                   href: mvc/overview/older-versions-1/deployment/using-asp-net-mvc-with-different-versions-of-iis-cs.md
                 - name: Uso di ASP.NET MVC con versioni diverse di IIS (VB)
                   href: mvc/overview/older-versions-1/deployment/using-asp-net-mvc-with-different-versions-of-iis-vb.md
-            - name: Sicurezza
+            - name: Security
               href: mvc/overview/older-versions-1/security/index.md
               items:
                 - name: 'Autenticazione degli utenti con l''autenticazione basata su form (C#)'
@@ -3082,7 +3082,7 @@
               href: web-pages/overview/testing-and-debugging/introduction-to-debugging.md
             - name: Guida alla risoluzione dei problemi delle pagine Web ASP.NET (Razor)
               href: web-pages/overview/testing-and-debugging/aspnet-web-pages-razor-troubleshooting-guide.md
-        - name: Sicurezza
+        - name: Security
           href: web-pages/overview/security/index.md
           items:
             - name: Aggiunta di sicurezza e appartenenza
@@ -3241,7 +3241,7 @@
               href: signalr/overview/testing-and-debugging/unit-testing-signalr-applications.md
             - name: Abilitazione della traccia di SignalR
               href: signalr/overview/testing-and-debugging/enabling-signalr-tracing.md
-        - name: Sicurezza
+        - name: Security
           href: signalr/overview/security/index.md
           items:
             - name: Introduzione alla sicurezza di SignalR
@@ -3768,6 +3768,8 @@
   items:
     - name: Whitepaper
       href: whitepapers/overview.md
+    - name: SameSite per ASP.NET
+      href: SameSite/system-web-samesite.md
     - name: Panoramica sullo sviluppo Web con ASP.NET 4 e Visual Studio 2010
       href: whitepapers/aspnet4/index.md
       items:
