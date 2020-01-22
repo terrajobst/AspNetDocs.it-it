@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/getting-started/introduction/accessing-your-models-data-from-a-controller
-title: Accesso ai dati del modello da un Controller | Microsoft Docs
+title: Accesso ai dati del modello da un controller | Microsoft Docs
 author: Rick-Anderson
 description: ''
 ms.author: riande
@@ -8,149 +8,149 @@ ms.date: 10/17/2013
 ms.assetid: caa1ba4a-f9f0-4181-ba21-042e3997861d
 msc.legacyurl: /mvc/overview/getting-started/introduction/accessing-your-models-data-from-a-controller
 msc.type: authoredcontent
-ms.openlocfilehash: 17a176b8bf3b1de8a0ff9145ab6f5f26cf210503
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: e01953dcfb2abf2db53a8aa869aa75b40485daca
+ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65120868"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76519089"
 ---
 # <a name="accessing-your-models-data-from-a-controller"></a>Accesso ai dati del modello da un controller
 
-da [Rick Anderson]((https://twitter.com/RickAndMSFT))
+di [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
-[!INCLUDE [Tutorial Note](sample/code-location.md)]
+[!INCLUDE [Tutorial Note](index.md)]
 
-In questa sezione si creerà un nuovo `MoviesController` classe e scrivere il codice che recupera i dati dei film e lo visualizza nel browser usando un modello di vista.
+In questa sezione si creerà una nuova classe `MoviesController` e si scriverà il codice che recupera i dati dei film e li Visualizza nel browser usando un modello di visualizzazione.
 
-**Compilare l'applicazione** prima di procedere al passaggio successivo. Se si non compila l'applicazione, si otterrà un errore durante l'aggiunta di un controller.
+**Compilare l'applicazione** prima di andare al passaggio successivo. Se non si compila l'applicazione, si otterrà un errore durante l'aggiunta di un controller.
 
-In Esplora soluzioni fare doppio clic il *controller* cartella e quindi fare clic su **Add**, quindi **Controller**.
+In Esplora soluzioni fare clic con il pulsante destro del mouse sulla cartella *controller* , quindi scegliere **Aggiungi**, quindi **controller**.
 
 ![](accessing-your-models-data-from-a-controller/_static/image1.png)
 
-Nel **Add Scaffold** della finestra di dialogo fare clic su **Controller MVC 5 con visualizzazioni, mediante Entity Framework**, quindi fare clic su **Aggiungi**.
+Nella finestra di dialogo **Aggiungi impalcatura** fare clic su **controller MVC 5 con visualizzazioni, usando Entity Framework**e quindi fare clic su **Aggiungi**.
 
 ![](accessing-your-models-data-from-a-controller/_static/image2.png)
 
-- Selezionare **Movie (mvcmovie. Models)** per la classe di modello.
-- Selezionare **MovieDBContext (mvcmovie. Models)** per la classe del contesto dati.
-- Immettere il nome Controller **MoviesController**.
+- Selezionare **Movie (MvcMovie. Models)** per la classe del modello.
+- Selezionare **MovieDBContext (MvcMovie. Models)** per la classe del contesto dati.
+- Per il nome del controller immettere **MoviesController**.
 
-  L'immagine seguente mostra la finestra di dialogo completato.  
+  L'immagine seguente mostra la finestra di dialogo completata.  
   
 ![](accessing-your-models-data-from-a-controller/_static/image3.png)   
 
-Fare clic su **Aggiungi**. (Se si verifica un errore, probabilmente non è stata creata l'applicazione prima di avviare l'aggiunta del controller.) Visual Studio crea il file e cartelle seguenti:
+Fare clic su **Aggiungi**. Se viene restituito un errore, è probabile che l'applicazione non sia stata compilata prima di iniziare ad aggiungere il controller. In Visual Studio vengono creati i file e le cartelle seguenti:
 
-- *Un MoviesController.cs* del file nei *controller* cartella.
-- Oggetto *viste\filmati* cartella.
-- *Create. cshtml, cshtml, Details. cshtml, Edit. cshtml*, e *index. cshtml* nella nuova *viste\filmati* cartella.
+- *Un file MoviesController.cs* nella cartella *Controllers* .
+- Una cartella *Views\Movies* .
+- *Create. cshtml, DELETE. cshtml, details. cshtml, Edit. cshtml*e *index. cshtml* nella nuova cartella *Views\Movies* .
 
-Visual Studio creato automaticamente il [CRUD](http://en.wikipedia.org/wiki/Create,_read,_update_and_delete) (creare, leggere, aggiornare ed eliminare) i metodi di azione e visualizzazioni per l'utente (la creazione automatica di metodi di azione CRUD e le visualizzazioni è nota come scaffolding). Ora disponibile un'applicazione web completamente funzionali che consente di creare, elencare, modificare ed eliminare le voci di filmato.
+Visual Studio ha creato automaticamente i metodi di azione [CRUD](http://en.wikipedia.org/wiki/Create,_read,_update_and_delete) (creazione, lettura, aggiornamento ed eliminazione) e le visualizzazioni (la creazione automatica di metodi di azione CRUD e visualizzazioni è nota come impalcatura). A questo punto si dispone di un'applicazione Web completamente funzionante che consente di creare, elencare, modificare ed eliminare voci di film.
 
-Eseguire l'applicazione e fare clic sulla **MVC Movie** collegamento (o selezionare il `Movies` controller mediante l'aggiunta */Movies* all'URL nella barra degli indirizzi del browser). Poiché l'applicazione si basa il routing predefinito (definito nel *App\_Start\RouteConfig.cs* file), la richiesta del browser `http://localhost:xxxxx/Movies` viene instradato sul valore predefinito `Index` metodo di azione del `Movies` controller. In altre parole, la richiesta del browser `http://localhost:xxxxx/Movies` corrisponde effettivamente alla richiesta del browser `http://localhost:xxxxx/Movies/Index`. Il risultato è un elenco vuoto di film, perché ancora stato aggiunto uno.
+Eseguire l'applicazione e fare clic sul collegamento **MVC Movie** (oppure selezionare il controller di `Movies` aggiungendo */Movies* all'URL nella barra degli indirizzi del browser). Poiché l'applicazione si basa sul routing predefinito (definito nel file *App\_Start\RouteConfig.cs* ), la richiesta del browser `http://localhost:xxxxx/Movies` viene indirizzata al metodo di azione `Index` predefinito del controller `Movies`. In altre parole, la richiesta del browser `http://localhost:xxxxx/Movies` è effettivamente identica a quella della richiesta del browser `http://localhost:xxxxx/Movies/Index`. Il risultato è un elenco vuoto di filmati, perché non sono stati ancora aggiunti.
 
 ![](accessing-your-models-data-from-a-controller/_static/image4.png)
 
 ### <a name="creating-a-movie"></a>Creazione di un film
 
-Selezionare il collegamento **Crea nuovo**. Immettere alcuni dettagli sui filmati, quindi scegliere il **Create** pulsante.
+Selezionare il collegamento **Crea nuovo**. Immettere alcuni dettagli su un film, quindi fare clic sul pulsante **Crea** .
 
 ![](accessing-your-models-data-from-a-controller/_static/image5.png)
 
 > [!NOTE]
-> Potrebbe non essere in grado di immettere i separatori decimali o virgole nel campo di prezzo. Per supportare la convalida di jQuery per impostazioni locali di lingua diversa dall'inglese che usano la virgola (&quot;,&quot;) per un separatore decimale e formati di data non in lingua inglese Stati Uniti, è necessario includere *globalize.js* specifiche e  *Cultures/globalize.Cultures.js* file (da [ https://github.com/jquery/globalize ](https://github.com/jquery/globalize) ) e JavaScript usare `Globalize.parseFloat`. Verrà illustrato come eseguire questa operazione nella prossima esercitazione. Per il momento, immettere solo numeri interi come 10.
+> Potrebbe non essere possibile immettere punti decimali o virgole nel campo price. per supportare la convalida jQuery per le impostazioni locali diverse dall'inglese che usano una virgola (&quot;,&quot;) per un separatore decimale e formati di data non in inglese (Stati Uniti), è necessario includere *globalizzate. js* e il file *Cultures/globalizzate. culture. js* specifico (da [https://github.com/jquery/globalize](https://github.com/jquery/globalize) ) e JavaScript per usare `Globalize.parseFloat`. Verrà illustrato come eseguire questa operazione nell'esercitazione successiva. Per il momento, immettere solo numeri interi come 10.
 
-Facendo clic sui **Create** pulsante fa sì che il modulo viene inviato al server, in cui le informazioni sui film viene salvati nel database. Si verrà quindi reindirizzati per il */Movies* URL, in cui è possibile visualizzare i film appena creato nell'elenco.
+Se si fa clic sul pulsante **Crea** , il form viene inviato al server, dove le informazioni sul film vengono salvate nel database. Si viene quindi reindirizzati all'URL */Movies* , in cui è possibile visualizzare il film appena creato nell'elenco.
 
 ![](accessing-your-models-data-from-a-controller/_static/image6.png)
 
 Creare altre due voci di filmato. Provare i collegamenti **Modifica**, **Dettagli** e **Elimina**, che sono tutti funzionali.
 
-## <a name="examining-the-generated-code"></a>Analisi del codice generato
+## <a name="examining-the-generated-code"></a>Esame del codice generato
 
-Aprire il *Controllers\MoviesController.cs* del file ed esaminare il generato `Index` (metodo). Una parte del controller di film con la `Index` metodo è illustrato di seguito.
+Aprire il file *Controllers\MoviesController.cs* ed esaminare il metodo `Index` generato. Di seguito è riportata una parte del controller di film con il metodo `Index`.
 
 [!code-csharp[Main](accessing-your-models-data-from-a-controller/samples/sample1.cs)]
 
-Una richiesta per il `Movies` controller restituisce tutte le voci la `Movies` tabella e quindi passa i risultati per il `Index` visualizzazione. La riga seguente dal `MoviesController` classe crea un'istanza di un contesto di database di film, come descritto in precedenza. È possibile utilizzare il contesto di database di film per eseguire una query, modificare ed eliminare i film.
+Una richiesta al controller di `Movies` restituisce tutte le voci della tabella `Movies` e quindi passa i risultati alla visualizzazione `Index`. La riga seguente dalla classe `MoviesController` crea un'istanza di un contesto di database di film, come descritto in precedenza. È possibile usare il contesto del database dei film per eseguire query, modificare ed eliminare i film.
 
 [!code-csharp[Main](accessing-your-models-data-from-a-controller/samples/sample2.cs)]
 
-## <a name="strongly-typed-models-and-the-model-keyword"></a>Modelli fortemente tipizzati e @model (parola chiave)
+## <a name="strongly-typed-models-and-the-model-keyword"></a>Modelli fortemente tipizzati e parola chiave @model
 
-In precedenza in questa esercitazione si è visto come un controller può passare oggetti o dati a un modello di visualizzazione usando la `ViewBag` oggetto. Il `ViewBag` è un oggetto dinamico che fornisce un modo pratico con associazione tardiva per passare informazioni a una vista.
+In precedenza in questa esercitazione è stato illustrato come un controller può passare dati o oggetti a un modello di visualizzazione utilizzando l'oggetto `ViewBag`. Il `ViewBag` è un oggetto dinamico che fornisce un modo pratico di associazione tardiva per passare informazioni a una visualizzazione.
 
-MVC offre anche la possibilità di passare *fortemente* tipizzata di oggetti da un modello di vista. Questo approccio fortemente tipizzato consente una migliore in fase di compilazione più ricco e controllo del codice [IntelliSense](https://msdn.microsoft.com/library/hcw1s69b(v=vs.120).aspx) nell'editor di Visual Studio. Questo approccio utilizzato il meccanismo di scaffolding in Visual Studio (vale a dire, passando un *fortemente* modello tipizzato) con il `MoviesController` i modelli di classe e visualizzazione della creazione di metodi e visualizzazioni.
+MVC offre inoltre la possibilità di passare oggetti *fortemente* tipizzati a un modello di visualizzazione. Questo approccio fortemente tipizzato consente un migliore controllo della fase di compilazione del codice e [IntelliSense](https://msdn.microsoft.com/library/hcw1s69b(v=vs.120).aspx) più completo nell'editor di Visual Studio. Il meccanismo di impalcatura in Visual Studio usava questo approccio (ovvero passando un modello *fortemente* tipizzato) con la classe `MoviesController` e i modelli di visualizzazione quando creava i metodi e le visualizzazioni.
 
-Nel *Controllers\MoviesController.cs* file esaminare generato `Details` (metodo). Il `Details` metodo è illustrato di seguito.
+Nel file *Controllers\MoviesController.cs* esaminare il metodo `Details` generato. Di seguito è illustrato il metodo `Details`.
 
 [!code-csharp[Main](accessing-your-models-data-from-a-controller/samples/sample3.cs)]
 
-Il `id` parametro viene in genere passato come dati della route, ad esempio `http://localhost:1234/movies/details/1` imposterà il controller al controller di film, l'azione che deve `details` e il `id` su 1. È inoltre possibile passare l'id con una stringa di query come indicato di seguito:
+Il parametro `id` viene in genere passato come dati di route, ad esempio `http://localhost:1234/movies/details/1` imposta il controller sul controller di film, l'azione da `details` e la `id` su 1. È anche possibile passare l'ID con una stringa di query come indicato di seguito:
 
 `http://localhost:1234/movies/details?id=1`
 
-Se un `Movie` viene trovato, un'istanza del `Movie` modello viene passato al `Details` Vista:
+Se viene rilevata una `Movie`, viene passata un'istanza del modello di `Movie` alla visualizzazione `Details`:
 
 [!code-csharp[Main](accessing-your-models-data-from-a-controller/samples/sample4.cs)]
 
-Esaminare il contenuto del *Views\Movies\Details.cshtml* file:
+Esaminare il contenuto del file *Views\Movies\Details.cshtml* :
 
 [!code-cshtml[Main](accessing-your-models-data-from-a-controller/samples/sample5.cshtml?highlight=1-2)]
 
-Includendo un `@model` informativa nella parte superiore del file di modello della vista, è possibile specificare il tipo di oggetto previsto dalla vista. Al momento della creazione del controller di film, l'istruzione `@model` è stata inclusa automaticamente in Visual Studio all'inizio del file *Details.cshtml*:
+Includendo un'istruzione `@model` nella parte superiore del file di modello di visualizzazione, è possibile specificare il tipo di oggetto previsto dalla visualizzazione. Al momento della creazione del controller di film, l'istruzione `@model` è stata inclusa automaticamente in Visual Studio all'inizio del file *Details.cshtml*:
 
 [!code-cshtml[Main](accessing-your-models-data-from-a-controller/samples/sample6.cshtml)]
 
-Questa direttiva `@model` consente di accedere al film passato dal controller alla vista usando un oggetto `Model` fortemente tipizzato. Ad esempio, nelle *Details. cshtml* modello, il codice passa ogni campo di film per il `DisplayNameFor` e [DisplayFor](https://msdn.microsoft.com/library/system.web.mvc.html.displayextensions.displayfor(VS.98).aspx) helper HTML con l'oggetto fortemente tipizzato `Model` oggetto. Il `Create` e `Edit` metodi e modelli di visualizzazione anche passano un oggetto modello di film.
+Questa direttiva `@model` consente di accedere al film passato dal controller alla vista usando un oggetto `Model` fortemente tipizzato. Nel modello *Details. cshtml* , ad esempio, il codice passa ogni campo film agli helper HTML `DisplayNameFor` e [DisplayFor](https://msdn.microsoft.com/library/system.web.mvc.html.displayextensions.displayfor(VS.98).aspx) con l'oggetto `Model` fortemente tipizzato. I metodi `Create` e `Edit` e i modelli di visualizzazione passano anche un oggetto modello di film.
 
-Esaminare i *index. cshtml* modello di visualizzazione e il `Index` metodo nel *MoviesController.cs* file. Si noti che il codice crea un [ `List` ](https://msdn.microsoft.com/library/6sh2ey19.aspx) dell'oggetto quando viene chiamato il `View` metodo helper nel `Index` metodo di azione. Il codice passa quindi questo `Movies` dall'elenco il `Index` metodo di azione per la visualizzazione:
+Esaminare il modello di vista *index. cshtml* e il metodo `Index` nel file *MoviesController.cs* . Si noti che il codice crea un oggetto [`List`](https://msdn.microsoft.com/library/6sh2ey19.aspx) quando chiama il metodo helper `View` nel metodo di azione `Index`. Il codice passa quindi questo elenco `Movies` dal metodo di azione `Index` alla visualizzazione:
 
 [!code-csharp[Main](accessing-your-models-data-from-a-controller/samples/sample7.cs?highlight=3)]
 
-Quando si crea il controller di film, Visual Studio inclusa automaticamente quanto segue `@model` istruzione all'inizio del *index. cshtml* file:
+Quando è stato creato il controller di film, Visual Studio ha automaticamente incluso l'istruzione `@model` seguente all'inizio del file *index. cshtml* :
 
 [!code-cshtml[Main](accessing-your-models-data-from-a-controller/samples/sample8.cshtml)]
 
-Ciò `@model` direttiva consente di accedere all'elenco di film che il controller ha passato alla vista usando un `Model` oggetto fortemente tipizzato. Ad esempio, nelle *index. cshtml* modello, il codice scorre i film in questo modo un `foreach` istruzione sull'oggetto fortemente tipizzato `Model` oggetto:
+Questa `@model` direttiva consente di accedere all'elenco di filmati che il controller ha passato alla visualizzazione usando un oggetto `Model` fortemente tipizzato. Nel modello *index. cshtml* , ad esempio, il codice scorre i film eseguendo un'istruzione `foreach` sull'oggetto `Model` fortemente tipizzato:
 
 [!code-cshtml[Main](accessing-your-models-data-from-a-controller/samples/sample9.cshtml?highlight=1,4,7,10,13,16,19-21)]
 
-Poiché il `Model` oggetto è fortemente tipizzato (come un `IEnumerable<Movie>` oggetto), ognuno `item` oggetto nel ciclo viene tipizzato come `Movie`. Tra gli altri vantaggi, ciò significa che si ottiene controllo in fase di compilazione del codice e supporto di IntelliSense nell'editor di codice completo:
+Poiché l'oggetto `Model` è fortemente tipizzato (come oggetto `IEnumerable<Movie>`), ogni oggetto `item` nel ciclo viene tipizzato come `Movie`. Tra gli altri vantaggi, questo significa che si ottiene il controllo in fase di compilazione del codice e il supporto completo di IntelliSense nell'editor di codice:
 
 ![ModelIntelliSense](accessing-your-models-data-from-a-controller/_static/image8.png)
 
 ## <a name="working-with-sql-server-localdb"></a>Utilizzo di SQL Server Local DB
 
-Code First di Entity Framework ha rilevato che la stringa di connessione di database che è stata fornita puntata un `Movies` database che non esiste ancora, in modo da Code First ha creato il database automaticamente. È possibile verificare che sia stata creata, eseguire una ricerca nel *App\_dati* cartella. Se non viene visualizzato il *Movies.mdf* file, fare clic sul **Mostra tutti i file** pulsante il **Esplora soluzioni** sulla barra degli strumenti, fare clic sul **Aggiorna** pulsante e quindi espandere la *App\_dati* cartella.
+Entity Framework Code First rilevato che la stringa di connessione del database fornita fa riferimento a un database di `Movies` che non esisteva ancora, quindi Code First creato automaticamente il database. È possibile verificare che sia stato creato cercando nella cartella *App\_data* . Se il file *Movies. MDF* non viene visualizzato, fare clic sul pulsante **Mostra tutti i file** nella barra degli strumenti **Esplora soluzioni** , fare clic sul pulsante **aggiorna** , quindi espandere la cartella *app\_data* .
 
 ![](accessing-your-models-data-from-a-controller/_static/image9.png)
 
-Fare doppio clic su *Movies.mdf* per aprire **Esplora SERVER**, quindi espandere il **tabelle** cartella per visualizzare la tabella di film. Si noti l'icona della chiave accanto a ID. Per impostazione predefinita, Entity Framework userà una proprietà denominata ID della chiave primaria. Per altre informazioni su Entity Framework e MVC, vedere ottima esercitazione di Tom Dykstra sul [MVC ed Entity Framework](../getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md).
+Fare doppio clic su *Movies. MDF* per aprire **Esplora server**, quindi espandere la cartella **tabelle** per visualizzare la tabella Movies. Si noti l'icona a forma di chiave accanto a ID. Per impostazione predefinita, EF renderà una proprietà denominata ID la chiave primaria. Per ulteriori informazioni su Entity Framework e MVC, vedere la pagina relativa all'eccellente esercitazione su [MVC e EF](../getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md)di Tom Dykstra.
 
 ![DB_explorer](accessing-your-models-data-from-a-controller/_static/image10.png "DB_explorer")
 
-Fare doppio clic il `Movies` tabella e selezionare **Mostra dati tabella** per visualizzare i dati è stato creato.
+Fare clic con il pulsante destro del mouse sulla tabella `Movies` e scegliere **Mostra dati tabella** per visualizzare i dati creati.
 
 ![](accessing-your-models-data-from-a-controller/_static/image11.png) 
 
 ![](accessing-your-models-data-from-a-controller/_static/image12.png)
 
-Fare doppio clic il `Movies` tabella e selezionare **Apri definizione tabella** per vedere la tabella di struttura che Entity Framework Code First creato automaticamente.
+Fare clic con il pulsante destro del mouse sulla tabella `Movies` e selezionare **Apri definizione tabella** per visualizzare la struttura della tabella che Entity Framework Code First creata.
 
 ![](accessing-your-models-data-from-a-controller/_static/image13.png)
 
 ![](accessing-your-models-data-from-a-controller/_static/image14.png)
 
-Si noti come lo schema del `Movies` esegue il mapping alla tabella il `Movie` classe creata in precedenza. Code First di Entity Framework creato automaticamente questo schema di base di `Movie` classe.
+Si noti come viene eseguito il mapping dello schema della tabella `Movies` alla classe `Movie` creata in precedenza. Entity Framework Code First creato automaticamente questo schema in base alla classe di `Movie`.
 
-Al termine, chiudere la connessione facendo clic con il pulsante destro *MovieDBContext* e selezionando **Chiudi connessione**. (Se si non chiude la connessione, è possibile ottenere un errore alla successiva che esecuzione del progetto).
+Al termine, chiudere la connessione facendo clic con il pulsante destro del mouse su *MovieDBContext* e scegliendo **Chiudi connessione**. Se non si chiude la connessione, è possibile che venga ricevuto un errore alla successiva esecuzione del progetto.
 
 ![](accessing-your-models-data-from-a-controller/_static/image15.png "CloseConnection")
 
-È ora disponibile un database e alcune pagine per visualizzare, modificare, aggiornare ed eliminare dati. Nella prossima esercitazione, verrà esaminare il resto del codice con scaffolding e aggiunta una `SearchIndex` metodo e un `SearchIndex` vista che consente di eseguire la ricerca di film nel database. Per altre informazioni sull'uso di Entity Framework con MVC, vedere [creazione di un modello di dati di Entity Framework per un'applicazione ASP.NET MVC](../getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md).
+È ora disponibile un database e alcune pagine per visualizzare, modificare, aggiornare ed eliminare dati. Nell'esercitazione successiva si esaminerà il resto del codice con impalcature e si aggiungerà un metodo di `SearchIndex` e una visualizzazione `SearchIndex` che consente di cercare i film in questo database. Per altre informazioni sull'uso di Entity Framework con MVC, vedere [creazione di un modello di dati Entity Framework per un'applicazione mvc ASP.NET](../getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md).
 
 > [!div class="step-by-step"]
 > [Precedente](creating-a-connection-string.md)

@@ -1,27 +1,27 @@
 ---
 uid: mvc/overview/getting-started/introduction/index
-title: Introduzione ad ASP.NET MVC 5 | Microsoft Docs
+title: Introduzione con ASP.NET MVC 5 | Microsoft Docs
 author: rick-anderson
-description: Introduzione ad ASP.NET MVC 5
+description: Introduzione a ASP.NET MVC 5
 ms.author: riande
 ms.date: 06/10/2013
 ms.assetid: 9afe7454-f1bd-4e81-8ecf-12fe54d080c1
 msc.legacyurl: /mvc/overview/getting-started/introduction
 msc.type: chapter
 ms.openlocfilehash: 055142be60257f0917eb22bc08471c0bec54ca2e
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59387178"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518745"
 ---
 # <a name="getting-started-with-aspnet-mvc-5"></a>Introduzione ad ASP.NET MVC 5
 
-> Introduzione ad ASP.NET MVC 5
+> Introduzione a ASP.NET MVC 5
 
 [!INCLUDE [consider RP](../../../../includes/razor.md)]
 
-Questa serie di esercitazioni seguente vengono illustrati ASP.NET MVC: Origine che si trova su [GitHub](https://github.com/aspnet/AspNetDocs/tree/master/aspnet/mvc/overview/getting-started/introduction/sample/MvcMovie/MvcMovie)
+La serie di esercitazioni seguente illustra ASP.NET MVC: origine disponibile in [GitHub](https://github.com/aspnet/AspNetDocs/tree/master/aspnet/mvc/overview/getting-started/introduction/sample/MvcMovie/MvcMovie)
 
 - [Introduzione](getting-started.md)
 - [Aggiunta di un controller](adding-a-controller.md)

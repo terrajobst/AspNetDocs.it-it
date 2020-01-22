@@ -8,12 +8,12 @@ ms.date: 06/12/2014
 ms.assetid: 513837a7-cfea-4568-a4e9-1f5901245d24
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/data-partitioning-strategies
 msc.type: authoredcontent
-ms.openlocfilehash: 2f79b1f459aff3e81dab7ea7eb4ebf3f71084463
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: b8c901ec30b6d37237f80100a2978350ac389b7a
+ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74585810"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76519167"
 ---
 # <a name="data-partitioning-strategies-building-real-world-cloud-apps-with-azure"></a>Strategie di partizionamento dei dati (compilazione di app Cloud reali con Azure)
 
@@ -39,17 +39,17 @@ Se si ritiene di avere una grande quantità di volume, velocità o varietà, è 
 
 Esistono fondamentalmente tre approcci al partizionamento:
 
-- Partizionamento verticale
+- Il partizionamento verticale
 - Partizionamento orizzontale
 - Partizionamento ibrido
 
-## <a name="vertical-partitioning"></a>Partizionamento verticale
+## <a name="vertical-partitioning"></a>Il partizionamento verticale
 
 Le porzioni verticali sono come la suddivisione di una tabella in base alle colonne: un set di colonne passa in un archivio dati e un altro set di colonne entra in un archivio dati diverso.
 
 Si supponga, ad esempio, che l'app memorizzi i dati sulle persone, incluse le immagini:
 
-![Tabella dati](data-partitioning-strategies/_static/image1.png)
+![Tabella di dati](data-partitioning-strategies/_static/image1.png)
 
 Quando si rappresentano questi dati come una tabella e si esaminano le diverse varietà di dati, è possibile notare che le tre colonne a sinistra contengono dati di stringa che possono essere archiviati in modo efficiente da un database relazionale, mentre le due colonne a destra sono essenzialmente matrici di byte che c ome dai file di immagine. È possibile archiviare i dati dei file di immagine in un database relazionale e molte persone lo eseguono perché non desiderano salvare i dati nel file system. È possibile che non dispongano di un file system in grado di archiviare i volumi di dati necessari o che non vogliono gestire un sistema di backup e ripristino separato. Questo approccio funziona bene per i database locali e per piccole quantità di dati nei database cloud. Nell'ambiente locale, potrebbe essere più semplice consentire all'amministratore di database di occuparsi di tutto.
 
@@ -61,7 +61,7 @@ L'archiviazione di immagini nell'archiviazione BLOB anziché in un database è p
 
 Questo è l'approccio di partizionamento implementato nell'app Correggi it, che verrà esaminato nel [capitolo archiviazione BLOB](unstructured-blob-storage.md). Senza questo schema di partizionamento e supponendo una dimensione media dell'immagine di 3 megabyte, l'app Correggi it sarà in grado di archiviare solo circa 40.000 attività prima di raggiungere le dimensioni massime del database di 150 gigabyte. Dopo aver rimosso le immagini, il database può archiviare 10 volte il numero di attività. è possibile passare molto più tempo prima che sia necessario considerare l'implementazione di uno schema di partizionamento orizzontale. E quando l'app viene ridimensionata, le spese crescono più lentamente, perché la maggior parte delle esigenze di archiviazione entra in un archivio BLOB molto economico.
 
-## <a name="horizontal-partitioning-sharding"></a>Partizionamento orizzontale (partizionamento orizzontale)
+## <a name="horizontal-partitioning-sharding"></a>Partizionamento orizzontale (sharding)
 
 La suddivisione orizzontale è come la suddivisione di una tabella in base alle righe: un set di righe viene inserito in un archivio dati e un altro set di righe entra in un archivio dati diverso.
 

@@ -1,32 +1,32 @@
 ---
 uid: identity/overview/extensibility/overview-of-custom-storage-providers-for-aspnet-identity
-title: Panoramica del provider di archiviazione personalizzati per ASP.NET Identity - ASP.NET 4.x
+title: Panoramica dei provider di archiviazione personalizzati per ASP.NET Identity-ASP.NET 4. x
 author: Rick-Anderson
-description: ASP.NET Identity è un sistema estendibile che consente di creare un proprio provider di archiviazione e di inserirli direttamente nell'applicazione senza utilizzare nuovamente il appli...
+description: ASP.NET Identity è un sistema estensibile che consente di creare un provider di archiviazione personalizzato e di inserirlo nell'applicazione senza rielaborare l'applicazione...
 ms.author: riande
 ms.date: 10/13/2014
 ms.assetid: 681a9204-462e-4260-9a0b-19f0644d6ad7
 ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/extensibility/overview-of-custom-storage-providers-for-aspnet-identity
 msc.type: authoredcontent
-ms.openlocfilehash: 4158939da036ee126eb649f31e5d8eaf504920be
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 21baedf6285b411f89627df9ca25d47a2a42e387
+ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65118068"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76519102"
 ---
 # <a name="overview-of-custom-storage-providers-for-aspnet-identity"></a>Panoramica dei provider di archiviazione personalizzati per ASP.NET Identity
 
 da [Tom FitzMacken](https://github.com/tfitzmac)
 
-> ASP.NET Identity è un sistema estendibile che consente di creare un proprio provider di archiviazione e di inserirli direttamente nell'applicazione senza utilizzare nuovamente l'applicazione. Questo argomento descrive come creare un provider di archiviazione personalizzati per ASP.NET Identity. Viene descritto come i concetti importanti per la creazione di un proprio provider di archiviazione, ma non è una procedura dettagliata dell'implementazione di un provider di archiviazione personalizzati.
+> ASP.NET Identity è un sistema estensibile che consente di creare un provider di archiviazione personalizzato e di inserirlo nell'applicazione senza riutilizzare l'applicazione. In questo argomento viene descritto come creare un provider di archiviazione personalizzato per ASP.NET Identity. Vengono illustrati i concetti importanti per la creazione di un provider di archiviazione personalizzato, ma non si tratta di una procedura dettagliata per l'implementazione di un provider di archiviazione personalizzato.
 > 
-> Per un esempio di implementazione di un provider di archiviazione personalizzati, vedere [implementazione di un Provider di archiviazione identità di ASP.NET MySQL personalizzato](implementing-a-custom-mysql-aspnet-identity-storage-provider.md).
+> Per un esempio di implementazione di un provider di archiviazione personalizzato, vedere [implementazione di un provider di archiviazione MySQL ASP.NET Identity personalizzato](implementing-a-custom-mysql-aspnet-identity-storage-provider.md).
 > 
-> In questo argomento è stato aggiornato per identità di ASP.NET 2.0.
+> Questo argomento è stato aggiornato per ASP.NET Identity 2,0.
 > 
-> ## <a name="software-versions-used-in-the-tutorial"></a>Versioni del software utilizzate nell'esercitazione
+> ## <a name="software-versions-used-in-the-tutorial"></a>Versioni del software usate nell'esercitazione
 > 
 > 
 > - Visual Studio 2013 con Update 2
@@ -34,234 +34,234 @@ da [Tom FitzMacken](https://github.com/tfitzmac)
 
 ## <a name="introduction"></a>Introduzione
 
-Per impostazione predefinita, il sistema di ASP.NET Identity archivia informazioni utente in un database di SQL Server e utilizza Code First di Entity Framework per creare il database. Per molte applicazioni, questo approccio funziona bene. Tuttavia, è preferibile utilizzare un diverso tipo di meccanismo di persistenza, ad esempio archiviazione tabelle di Azure, o tabelle di database con una struttura molto diversa da quella predefinita è già presente. In entrambi i casi, è possibile scrivere un provider personalizzato per il meccanismo di archiviazione e collegarsi all'applicazione che il provider.
+Per impostazione predefinita, il sistema ASP.NET Identity archivia le informazioni sugli utenti in un database SQL Server e USA Entity Framework Code First per creare il database. Per molte applicazioni, questo approccio funziona correttamente. Tuttavia, è preferibile usare un tipo diverso di meccanismo di persistenza, ad esempio l'archiviazione tabelle di Azure, oppure è possibile che si disponga già di tabelle di database con una struttura molto diversa rispetto all'implementazione predefinita. In entrambi i casi, è possibile scrivere un provider personalizzato per il meccanismo di archiviazione e collegare tale provider nell'applicazione.
 
-ASP.NET Identity è incluso per impostazione predefinita in molti dei modelli di Visual Studio 2013. È possibile ottenere gli aggiornamenti ad ASP.NET Identity attraverso [pacchetto EntityFramework NuGet identità di Microsoft AspNet](http://www.nuget.org/packages/Microsoft.AspNet.Identity.EntityFramework/).
+ASP.NET Identity è incluso per impostazione predefinita in molti dei modelli di Visual Studio 2013. È possibile ottenere gli aggiornamenti ASP.NET Identity tramite il [pacchetto NuGet Microsoft ASPNET Identity EntityFramework](http://www.nuget.org/packages/Microsoft.AspNet.Identity.EntityFramework/).
 
-Questo argomento include le sezioni seguenti:
+In questo argomento sono incluse le sezioni seguenti:
 
-- [Comprendere l'architettura](#architecture)
-- [Comprendere i dati archiviati](#data)
+- [Informazioni sull'architettura](#architecture)
+- [Informazioni sui dati archiviati](#data)
 - [Creare il livello di accesso ai dati](#dal)
 - [Personalizzare la classe utente](#user)
-- [Personalizzare l'archivio dell'utente](#userstore)
-- [Personalizzare la classe di ruoli](#role)
-- [Personalizzare l'archivio di ruolo](#rolestore)
-- [Riconfigurare l'applicazione per l'uso di nuovi provider di archiviazione](#reconfigure)
-- [Altre implementazioni del provider di archiviazione personalizzati](#other)
+- [Personalizzare l'archivio utenti](#userstore)
+- [Personalizzare la classe Role](#role)
+- [Personalizzare l'archivio dei ruoli](#rolestore)
+- [Riconfigurare l'applicazione per l'uso di un nuovo provider di archiviazione](#reconfigure)
+- [Altre implementazioni dei provider di archiviazione personalizzati](#other)
 
 <a id="architecture"></a>
-## <a name="understand-the-architecture"></a>Comprendere l'architettura
+## <a name="understand-the-architecture"></a>Informazioni sull'architettura
 
-ASP.NET Identity è costituito da classi responsabili e gli archivi. I responsabili sono classi ad alto livello che uno sviluppatore di applicazioni viene utilizzato per eseguire operazioni, ad esempio la creazione di un utente, nel sistema di identità di ASP.NET. Gli archivi sono classi di basso livello che specificano come entità, ad esempio utenti e ruoli, vengono resi persistenti. Gli archivi sono strettamente associati con il meccanismo di persistenza, ma i responsabili sono separati dagli archivi che significa che è possibile sostituire il meccanismo di persistenza senza interrompere l'intera applicazione.
+ASP.NET Identity è costituito da classi denominate Manager e archivi. I responsabili sono classi generali che uno sviluppatore di applicazioni usa per eseguire operazioni, ad esempio la creazione di un utente, nel sistema di ASP.NET Identity. Gli archivi sono classi di livello inferiore che specificano il modo in cui le entità, ad esempio utenti e ruoli, vengono rese permanente. Gli archivi sono strettamente collegati al meccanismo di persistenza, ma i responsabili sono separati dai negozi, il che significa che è possibile sostituire il meccanismo di persistenza senza compromettere l'intera applicazione.
 
-Il diagramma seguente mostra come l'applicazione web interagisce con i gestori e archivi di interagiscono con il livello di accesso ai dati.
+Il diagramma seguente illustra il modo in cui l'applicazione Web interagisce con i Manager e gli archivi interagiscono con il livello di accesso ai dati.
 
 ![](overview-of-custom-storage-providers-for-aspnet-identity/_static/image1.png)
 
-Per creare un provider di archiviazione personalizzati per ASP.NET Identity, è necessario creare l'origine dati, il livello di accesso ai dati e le classi di archiviazione che interagiscono con questo livello di accesso ai dati. È possibile continuare con la stessa API di gestione per eseguire operazioni sui dati per l'utente, ma ora che i dati vengono salvati in un sistema di archiviazione diverso.
+Per creare un provider di archiviazione personalizzato per ASP.NET Identity, è necessario creare l'origine dati, il livello di accesso ai dati e le classi di archivio che interagiscono con questo livello di accesso ai dati. È possibile continuare a utilizzare le stesse API di gestione per eseguire operazioni sui dati dell'utente, ma ora i dati vengono salvati in un sistema di archiviazione diverso.
 
-Non è necessario personalizzare le classi di gestione perché quando si crea una nuova istanza della classe UserManager o RoleManager è specificare il tipo della classe utente e passare un'istanza della classe store come argomento. Questo approccio consente di inserire le classi personalizzate nella struttura esistente. Si vedrà come creare un'istanza della classe UserManager e RoleManager con le classi di archivio personalizzato nella sezione [riconfigurare l'applicazione di usare provider di archiviazione nuovo](#reconfigure).
+Non è necessario personalizzare le classi Manager perché quando si crea una nuova istanza di UserManager o RoleManager si fornisce il tipo della classe utente e si passa un'istanza della classe Store come argomento. Questo approccio consente di collegare le classi personalizzate alla struttura esistente. Si vedrà come creare un'istanza di UserManager e RoleManager con le classi di archivio personalizzate nella sezione [riconfigurare l'applicazione per usare il nuovo provider di archiviazione](#reconfigure).
 
 <a id="data"></a>
-## <a name="understand-the-data-that-is-stored"></a>Comprendere i dati archiviati
+## <a name="understand-the-data-that-is-stored"></a>Informazioni sui dati archiviati
 
-Per implementare un provider di archiviazione personalizzati, è necessario conoscere i tipi di dati usati con ASP.NET Identity e decidere quali funzionalità sono rilevanti per l'applicazione.
+Per implementare un provider di archiviazione personalizzato, è necessario comprendere i tipi di dati utilizzati con ASP.NET Identity e decidere quali funzionalità sono rilevanti per l'applicazione.
 
-| Dati | Descrizione |
+| Data | Descrizione |
 | --- | --- |
-| Utenti | Utenti registrati del sito web. Include il nome utente e Id utente. Potrebbe includere una password con hash se gli utenti accedono con le credenziali specifiche per il sito, anziché con le credenziali di un sito esterno, ad esempio Facebook, e indicatore di sicurezza per indicare se qualsiasi elemento è stato modificato nelle credenziali dell'utente. Potrebbe anche includere indirizzo di posta elettronica, numero di telefono, se è abilitata l'autenticazione a due fattori, il numero corrente di accessi, non riusciti e indica se un account è stato bloccato. |
-| Attestazioni utente | Un set di istruzioni (o attestazioni) sull'utente che rappresentano l'identità dell'utente. Possibile abilitare l'espressione più grande dell'identità dell'utente rispetto a quello ottenibile tramite i ruoli. |
-| Account di accesso utente | Informazioni sul provider di autenticazione esterni (come Facebook) da usare durante la registrazione di un utente. |
-| Ruoli | Gruppi di autorizzazione per il sito. Include il nome di Id e il ruolo del ruolo (ad esempio, "Admin" o "Employee"). |
+| Utenti di | Utenti registrati del sito Web. Include l'ID utente e il nome utente. Potrebbe includere una password con hash se gli utenti eseguono l'accesso con credenziali specifiche per il sito (invece di usare le credenziali di un sito esterno come Facebook) e l'indicatore di sicurezza per indicare se sono state apportate modifiche alle credenziali utente. Potrebbe includere anche l'indirizzo di posta elettronica, il numero di telefono, se è abilitata l'autenticazione a due fattori, il numero corrente di accessi non riusciti e se un account è stato bloccato. |
+| Attestazioni utente | Set di istruzioni (o attestazioni) sull'utente che rappresenta l'identità dell'utente. Consente di abilitare un'espressione maggiore dell'identità dell'utente che può essere eseguita tramite i ruoli. |
+| Account di accesso utente | Informazioni sul provider di autenticazione esterno, ad esempio Facebook, da usare per la registrazione in un utente. |
+| Ruoli di | Gruppi di autorizzazione per il sito. Include l'ID del ruolo e il nome del ruolo (ad esempio, "admin" o "Employee"). |
 
 <a id="dal"></a>
 ## <a name="create-the-data-access-layer"></a>Creare il livello di accesso ai dati
 
-In questo argomento si presuppone che si ha familiarità con il meccanismo di persistenza che si intende usare e come creare le entità per questo meccanismo. In questo argomento non fornisce informazioni dettagliate su come creare il repository o classi di accesso ai dati; al contrario, vengono forniti alcuni suggerimenti sulle decisioni di progettazione da prendere quando si lavora con ASP.NET Identity.
+In questo argomento si presuppone che l'utente abbia familiarità con il meccanismo di persistenza che si intende usare e come creare entità per tale meccanismo. In questo argomento non vengono fornite informazioni dettagliate su come creare i repository o le classi di accesso ai dati. al contrario, vengono forniti alcuni suggerimenti sulle decisioni di progettazione che è necessario apportare quando si lavora con ASP.NET Identity.
 
-Si dispone di molta libertà quando si progetta il repository di codice per un oggetto personalizzato provider dell'archivio. È sufficiente creare i repository per le funzionalità che si intendono utilizzare nell'applicazione. Ad esempio, se non si usa i ruoli dell'applicazione, è necessario creare l'archivio per i ruoli o i ruoli utente. L'infrastruttura esistente e la tecnologia può richiedere una struttura che è molto diversa da un'implementazione predefinita di ASP.NET Identity. Nel livello di accesso ai dati, è fornire la logica da utilizzare con la struttura del repository.
+Quando si progettano i repository per un provider di archiviazione personalizzato, è possibile avere una grande libertà. È sufficiente creare repository per le funzionalità che si intende usare nell'applicazione. Se, ad esempio, non si utilizzano ruoli nell'applicazione, non è necessario creare spazio di archiviazione per ruoli o ruoli utente. La tecnologia e l'infrastruttura esistente possono richiedere una struttura molto diversa dall'implementazione predefinita di ASP.NET Identity. Nel livello di accesso ai dati fornire la logica per lavorare con la struttura dei repository.
 
-Per un'implementazione di MySQL di repository dei dati per ASP.NET Identity 2.0, vedere [MySQLIdentity.sql](https://aspnet.codeplex.com/SourceControl/latest#Samples/Identity/AspNet.Identity.MySQL/MySQLIdentity.sql).
+Per un'implementazione MySQL di repository di dati per ASP.NET Identity 2,0, vedere [MySQLIdentity. SQL](https://github.com/aspnet/samples/blob/master/samples/aspnet/Identity/AspNet.Identity.MySQL/MySQLIdentity.sql).
 
-Nel livello di accesso ai dati, è fornire la logica per salvare i dati di ASP.NET Identity all'origine dati. Il livello di accesso ai dati per il provider di archiviazione personalizzato potrebbe includere le classi seguenti per archiviare le informazioni utente e il ruolo.
+Nel livello di accesso ai dati fornire la logica per salvare i dati da ASP.NET Identity all'origine dati. Il livello di accesso ai dati per il provider di archiviazione personalizzato potrebbe includere le classi seguenti per archiviare le informazioni relative a utenti e ruoli.
 
 | Classe | Descrizione | Esempio |
 | --- | --- | --- |
-| Contesto | Incapsula le informazioni per connettersi al meccanismo di persistenza ed eseguire query. Questa classe è fondamentale per il livello di accesso ai dati. Le altre classi di dati richiederà un'istanza di questa classe per eseguire le relative operazioni. Le classi di archivio con un'istanza di questa classe verrà inoltre inizializzato. | [MySQLDatabase](https://aspnet.codeplex.com/SourceControl/latest#Samples/Identity/AspNet.Identity.MySQL/MySQLDatabase.cs) |
-| Archiviazione utente | Archivia e recupera le informazioni utente (ad esempio hash della password e nome utente). | [UserTable (MySQL)](https://aspnet.codeplex.com/SourceControl/latest#Samples/Identity/AspNet.Identity.MySQL/UserTable.cs) |
-| Archiviazione di ruolo | Archivia e recupera le informazioni sui ruoli (ad esempio, il nome del ruolo). | [RoleTable (MySQL)](https://aspnet.codeplex.com/SourceControl/latest#Samples/Identity/AspNet.Identity.MySQL/RoleTable.cs) |
-| Archiviazione UserClaims | Archivia e recupera informazioni sulle attestazioni di utente (ad esempio il tipo di attestazione e il valore). | [UserClaimsTable (MySQL)](https://aspnet.codeplex.com/SourceControl/latest#Samples/Identity/AspNet.Identity.MySQL/UserClaimsTable.cs) |
-| Accessi utente archiviazione | Archivia e recupera le informazioni di accesso utente (ad esempio un provider di autenticazione esterni). | [UserLoginsTable (MySQL)](https://aspnet.codeplex.com/SourceControl/latest#Samples/Identity/AspNet.Identity.MySQL/UserLoginsTable.cs) |
-| Archiviazione UserRole | Archivia e recupera i ruoli che un utente è assegnato a. | [UserRoleTable (MySQL)](https://aspnet.codeplex.com/SourceControl/latest#Samples/Identity/AspNet.Identity.MySQL/UserRoleTable.cs) |
+| Contesto | Incapsula le informazioni per la connessione al meccanismo di persistenza e l'esecuzione di query. Questa classe è fondamentale per il livello di accesso ai dati. Per le altre classi di dati è necessaria un'istanza di questa classe per eseguire le operazioni. Si inizializzano inoltre le classi dell'archivio con un'istanza di questa classe. | [MySQLDatabase](https://github.com/aspnet/samples/blob/master/samples/aspnet/Identity/AspNet.Identity.MySQL/MySQLDatabase.cs) |
+| Archiviazione utente | Archivia e recupera le informazioni utente, ad esempio il nome utente e l'hash della password. | [UserTable (MySQL)](https://github.com/aspnet/samples/blob/master/samples/aspnet/Identity/AspNet.Identity.MySQL/UserTable.cs) |
+| Archiviazione del ruolo | Archivia e recupera le informazioni sui ruoli, ad esempio il nome del ruolo. | [RoleTable (MySQL)](https://github.com/aspnet/samples/blob/master/samples/aspnet/Identity/AspNet.Identity.MySQL/RoleTable.cs) |
+| Archiviazione UserClaims | Archivia e recupera le informazioni sull'attestazione utente, ad esempio il tipo di attestazione e il valore. | [UserClaimsTable (MySQL)](https://github.com/aspnet/samples/blob/master/samples/aspnet/Identity/AspNet.Identity.MySQL/UserClaimsTable.cs) |
+| Archiviazione UserLogins | Archivia e recupera le informazioni di accesso dell'utente, ad esempio un provider di autenticazione esterno. | [UserLoginsTable (MySQL)](https://github.com/aspnet/samples/blob/master/samples/aspnet/Identity/AspNet.Identity.MySQL/UserLoginsTable.cs) |
+| Archiviazione UserRole | Archivia e recupera i ruoli assegnati a un utente. | [UserRoleTable (MySQL)](https://github.com/aspnet/samples/blob/master/samples/aspnet/Identity/AspNet.Identity.MySQL/UserRoleTable.cs) |
 
-Anche in questo caso, è sufficiente implementare le classi che si intendono utilizzare nell'applicazione.
+Anche in questo caso, è necessario implementare solo le classi che si intende usare nell'applicazione.
 
-Nelle classi di accesso dati, è fornire codice per eseguire operazioni di dati per il meccanismo di persistenza specifico. Ad esempio, all'interno dell'implementazione di MySQL, la classe UserTable contiene un metodo per inserire un nuovo record nella tabella di database agli utenti. La variabile denominata `_database` è un'istanza della classe MySQLDatabase.
+Nelle classi di accesso ai dati si fornisce il codice per eseguire operazioni sui dati per il meccanismo di persistenza specifico. All'interno dell'implementazione di MySQL, ad esempio, la classe UserTable contiene un metodo per inserire un nuovo record nella tabella di database users. La variabile denominata `_database` è un'istanza della classe MySQLDatabase.
 
 [!code-csharp[Main](overview-of-custom-storage-providers-for-aspnet-identity/samples/sample1.cs)]
 
-Dopo aver creato le classi di accesso ai dati, è necessario creare classi di archivio che chiamano i metodi specifici del livello di accesso dati.
+Dopo aver creato le classi di accesso ai dati, è necessario creare classi di archivio che chiamano i metodi specifici nel livello di accesso ai dati.
 
 <a id="user"></a>
 ## <a name="customize-the-user-class"></a>Personalizzare la classe utente
 
-Quando si implementa un proprio provider di archiviazione, è necessario creare una classe di utenti che corrispondono al [IdentityUser](https://msdn.microsoft.com/library/microsoft.aspnet.identity.entityframework.identityuser(v=vs.108).aspx) classe la [Microsoft.ASP.NET.Identity.EntityFramework](https://msdn.microsoft.com/library/microsoft.aspnet.identity.entityframework(v=vs.108).aspx) dello spazio dei nomi:
+Quando si implementa un provider di archiviazione personalizzato, è necessario creare una classe utente equivalente alla classe [IdentityUser](https://msdn.microsoft.com/library/microsoft.aspnet.identity.entityframework.identityuser(v=vs.108).aspx) nello spazio dei nomi [Microsoft. ASP. NET. Identity. EntityFramework](https://msdn.microsoft.com/library/microsoft.aspnet.identity.entityframework(v=vs.108).aspx) :
 
 Il diagramma seguente illustra la classe IdentityUser che è necessario creare e l'interfaccia da implementare in questa classe.
 
 ![](overview-of-custom-storage-providers-for-aspnet-identity/_static/image2.png)
 
-Il [IUser&lt;TKey&gt; ](https://msdn.microsoft.com/library/dn613291(v=vs.108).aspx) interfaccia definisce le proprietà che la classe UserManager tenta di chiamare quando l'esecuzione di operazioni richieste. L'interfaccia contiene due proprietà - Id e nome utente. Il [IUser&lt;TKey&gt; ](https://msdn.microsoft.com/library/dn613291(v=vs.108).aspx) interfaccia consente di specificare il tipo della chiave per l'utente tramite il modello generico **TKey** parametro. Il tipo della proprietà Id corrisponde al valore del parametro TKey.
+L'interfaccia [IUser&lt;TKey&gt;](https://msdn.microsoft.com/library/dn613291(v=vs.108).aspx) definisce le proprietà che il usermanager tenta di chiamare durante l'esecuzione delle operazioni richieste. L'interfaccia contiene due proprietà-ID e UserName. L'interfaccia [IUser&lt;TKey&gt;](https://msdn.microsoft.com/library/dn613291(v=vs.108).aspx) consente di specificare il tipo di chiave per l'utente tramite il parametro generico **TKey** . Il tipo della proprietà ID corrisponde al valore del parametro TKey.
 
-Il framework di identità fornisce anche il [IUser](https://msdn.microsoft.com/library/microsoft.aspnet.identity.iuser(v=vs.108).aspx) interfaccia (senza il parametro generico) quando si desidera utilizzare un valore stringa per la chiave.
+Il Framework di identità fornisce anche l'interfaccia [IUser](https://msdn.microsoft.com/library/microsoft.aspnet.identity.iuser(v=vs.108).aspx) (senza il parametro generico) quando si vuole usare un valore stringa per la chiave.
 
-La classe IdentityUser implementa IUser e contiene proprietà aggiuntive o i costruttori per gli utenti nel proprio sito web. Nell'esempio seguente viene illustrata una classe di IdentityUser che usa un numero intero per la chiave. Il campo Id viene impostato su **int** in base al valore del parametro generico. 
+La classe IdentityUser implementa IUser e contiene proprietà o costruttori aggiuntivi per gli utenti sul sito Web. Nell'esempio seguente viene illustrata una classe IdentityUser che usa un numero intero per la chiave. Il campo ID è impostato su **int** in modo che corrisponda al valore del parametro generico. 
 
 [!code-csharp[Main](overview-of-custom-storage-providers-for-aspnet-identity/samples/sample2.cs)]
 
- Per un'implementazione completa, vedere [IdentityUser (MySQL)](https://aspnet.codeplex.com/SourceControl/latest#Samples/Identity/AspNet.Identity.MySQL/IdentityUser.cs). 
+ Per un'implementazione completa, vedere [IdentityUser (MySQL)](https://github.com/aspnet/samples/blob/master/samples/aspnet/Identity/AspNet.Identity.MySQL/IdentityUser.cs). 
 
 <a id="userstore"></a>
-## <a name="customize-the-user-store"></a>Personalizzare l'archivio dell'utente
+## <a name="customize-the-user-store"></a>Personalizzare l'archivio utenti
 
-È anche possibile creare una classe nello UserStore che fornisce i metodi per tutte le operazioni di dati per l'utente. Questa classe è equivalente al [nello UserStore&lt;TUser&gt; ](https://msdn.microsoft.com/library/dn315446(v=vs.108).aspx) classe la [Microsoft.ASP.NET.Identity.EntityFramework](https://msdn.microsoft.com/library/microsoft.aspnet.identity.entityframework(v=vs.108).aspx) dello spazio dei nomi. Nella classe nello UserStore, si implementa il [IUserStore&lt;TKey, TUser&gt; ](https://msdn.microsoft.com/library/dn613276(v=vs.108).aspx) e in tutte le interfacce facoltative. Si seleziona quali interfacce facoltative per implementare basati sulle funzionalità che si desidera fornire nell'applicazione.
+Si crea anche una classe userStore ambito che fornisce i metodi per tutte le operazioni sui dati dell'utente. Questa classe è equivalente alla classe [userstore ambito&lt;TUser&gt;](https://msdn.microsoft.com/library/dn315446(v=vs.108).aspx) nello spazio dei nomi [Microsoft. ASP. NET. Identity. EntityFramework](https://msdn.microsoft.com/library/microsoft.aspnet.identity.entityframework(v=vs.108).aspx) . Nella classe userStore ambito si implementa il [IUserStore&lt;TUser, TKey&gt;](https://msdn.microsoft.com/library/dn613276(v=vs.108).aspx) e una qualsiasi delle interfacce facoltative. È possibile selezionare le interfacce facoltative da implementare in base alle funzionalità che si desidera fornire nell'applicazione.
 
-L'immagine seguente illustra la classe oggetto UserStore che è necessario creare e le relative interfacce.
+Nell'immagine seguente viene illustrata la classe userStore ambito che è necessario creare e le interfacce pertinenti.
 
 ![](overview-of-custom-storage-providers-for-aspnet-identity/_static/image3.png)
 
-Il modello di progetto predefinito in Visual Studio contiene codice che presuppone che molte delle interfacce facoltative sono state implementate nell'archivio dell'utente. Se si usa il modello predefinito con un archivio utente personalizzato, è necessario implementare interfacce facoltative nell'archivio utenti o modificare il codice del modello per non chiamare metodi nelle interfacce che non è stato implementato.
+Il modello di progetto predefinito in Visual Studio contiene codice che presuppone che molte delle interfacce opzionali siano state implementate nell'archivio utente. Se si usa il modello predefinito con un archivio utente personalizzato, è necessario implementare le interfacce facoltative nell'archivio utente o modificare il codice del modello in modo che non chiami più metodi nelle interfacce non implementate.
 
- Nell'esempio seguente viene illustrata una classe di archivio utente semplice. Il **TUser** parametro generico accetta il tipo della classe utente che in genere è la classe IdentityUser è definita. Il **TKey** parametro generico accetta il tipo della chiave utente. 
+ Nell'esempio seguente viene illustrata una semplice classe di archivio utenti. Il parametro generico **TUser** accetta il tipo della classe utente che in genere è la classe IdentityUser definita. Il parametro generico **TKey** accetta il tipo della chiave utente. 
 
 [!code-csharp[Main](overview-of-custom-storage-providers-for-aspnet-identity/samples/sample3.cs)]
 
- In questo esempio, il costruttore che accetta un parametro denominato *database* typu ExampleDatabase è solo un'illustrazione di come passare nella classe accesso dati. Ad esempio, nell'implementazione di MySQL, il costruttore accetta un parametro di tipo MySQLDatabase. 
+ In questo esempio, il costruttore che accetta un parametro denominato *database* di tipo ExampleDatabase è solo un esempio di come passare la classe di accesso ai dati. Ad esempio, nell'implementazione di MySQL, questo costruttore accetta un parametro di tipo MySQLDatabase. 
 
-All'interno della classe, nello UserStore è usare le classi di accesso di dati creato per eseguire operazioni. Ad esempio, nell'implementazione di MySQL, la classe oggetto UserStore include il metodo CreateAsync che usa un'istanza di UserTable per inserire un nuovo record. Il **inserire** metodo sulle **userTable** oggetti sono lo stesso metodo descritto nella sezione precedente. 
+All'interno della classe userStore ambito, è possibile usare le classi di accesso ai dati create per eseguire operazioni. Nell'implementazione di MySQL, ad esempio, la classe userStore ambito ha il Metodo CreateAsync che usa un'istanza di UserTable per inserire un nuovo record. Il metodo **Insert** sull'oggetto **userTable** è lo stesso metodo illustrato nella sezione precedente. 
 
 [!code-csharp[Main](overview-of-custom-storage-providers-for-aspnet-identity/samples/sample4.cs)]
 
-### <a name="interfaces-to-implement-when-customizing-user-store"></a>Interfacce da implementare quando si personalizza l'archivio dell'utente
+### <a name="interfaces-to-implement-when-customizing-user-store"></a>Interfacce da implementare quando si Personalizza l'archivio utenti
 
-L'immagine successiva Mostra altri dettagli sulle funzionalità definite in ogni interfaccia. Tutte le interfacce facoltative ereditare IUserStore.
+L'immagine successiva Mostra ulteriori dettagli sulle funzionalità definite in ogni interfaccia. Tutte le interfacce opzionali ereditano da IUserStore.
 
 ![](overview-of-custom-storage-providers-for-aspnet-identity/_static/image4.png)
 
 - **IUserStore**  
-  Il [IUserStore&lt;TKey, TUser&gt; ](https://msdn.microsoft.com/library/dn613278(v=vs.108).aspx) è l'unica interfaccia è necessario implementare nell'archivio utente. Definisce i metodi per la creazione, aggiornamento, eliminazione e recupero degli utenti.
+  L'interfaccia [IUserStore&lt;TUser, TKey&gt;](https://msdn.microsoft.com/library/dn613278(v=vs.108).aspx) è l'unica interfaccia che è necessario implementare nell'archivio utente. Definisce i metodi per la creazione, l'aggiornamento, l'eliminazione e il recupero degli utenti.
 - **IUserClaimStore**  
-  Il [IUserClaimStore&lt;TKey, TUser&gt; ](https://msdn.microsoft.com/library/dn613265(v=vs.108).aspx) interfaccia definisce i metodi è necessario implementare nell'archivio utente per abilitare attestazioni utente. Contiene metodi o l'aggiunta, rimozione e recupera le attestazioni utente.
+  L'interfaccia [IUserClaimStore&lt;TUser, TKey&gt;](https://msdn.microsoft.com/library/dn613265(v=vs.108).aspx) definisce i metodi che è necessario implementare nell'archivio utente per abilitare le attestazioni utente. Contiene metodi o aggiunta, rimozione e recupero di attestazioni utente.
 - **IUserLoginStore**  
-  Il [IUserLoginStore&lt;TKey, TUser&gt; ](https://msdn.microsoft.com/library/dn613272(v=vs.108).aspx) definisce i metodi è necessario implementare nell'archivio utente per consentire ai provider di autenticazione esterni. Contiene i metodi per l'aggiunta, rimozione e il recupero di account di accesso utente e un metodo per il recupero di un utente in base a informazioni di accesso.
+  Il [IUserLoginStore&lt;TUser, TKey&gt;](https://msdn.microsoft.com/library/dn613272(v=vs.108).aspx) definisce i metodi che è necessario implementare nell'archivio utente per abilitare i provider di autenticazione esterni. Contiene i metodi per l'aggiunta, la rimozione e il recupero degli account di accesso utente e un metodo per il recupero di un utente in base alle informazioni di accesso.
 - **IUserRoleStore**  
-  Il [IUserRoleStore&lt;TKey, TUser&gt; ](https://msdn.microsoft.com/library/dn613276(v=vs.108).aspx) interfaccia definisce i metodi è necessario implementare nell'archivio utenti di eseguire il mapping di un utente a un ruolo. Contiene i metodi per aggiungere, rimuovere e recuperare i ruoli dell'utente e un metodo per verificare se un utente è assegnato a un ruolo.
+  L'interfaccia [IUserRoleStore&lt;TKey, TUser&gt;](https://msdn.microsoft.com/library/dn613276(v=vs.108).aspx) definisce i metodi che è necessario implementare nell'archivio utente per eseguire il mapping di un utente a un ruolo. Contiene i metodi per aggiungere, rimuovere e recuperare i ruoli di un utente e un metodo per verificare se un utente è assegnato a un ruolo.
 - **IUserPasswordStore**  
-  Il [IUserPasswordStore&lt;TKey, TUser&gt; ](https://msdn.microsoft.com/library/dn613273(v=vs.108).aspx) interfaccia definisce i metodi è necessario implementare nell'archivio utente in modo permanente l'hashing delle password. Contiene i metodi per ottenere e impostare la password con hash e un metodo che indica se l'utente ha impostato una password.
+  L'interfaccia [IUserPasswordStore&lt;TUser, TKey&gt;](https://msdn.microsoft.com/library/dn613273(v=vs.108).aspx) definisce i metodi che è necessario implementare nell'archivio utente per rendere permanente le password con hash. Contiene i metodi per ottenere e impostare la password con hash e un metodo che indica se l'utente ha impostato una password.
 - **IUserSecurityStampStore**  
-  Il [IUserSecurityStampStore&lt;TKey, TUser&gt; ](https://msdn.microsoft.com/library/dn613277(v=vs.108).aspx) interfaccia definisce i metodi è necessario implementare nell'archivio utenti di utilizzare un indicatore di sicurezza per indicare se le informazioni dell'utente account sono stato modificato . Questo indicatore viene aggiornato quando un utente modifica la password, o aggiunge o rimuove gli account di accesso. Contiene i metodi per ottenere e impostare l'indicatore di sicurezza.
+  L'interfaccia [IUserSecurityStampStore&lt;TUser, TKey&gt;](https://msdn.microsoft.com/library/dn613277(v=vs.108).aspx) definisce i metodi che è necessario implementare nell'archivio utente per usare un indicatore di sicurezza per indicare se le informazioni sull'account dell'utente sono state modificate. Questo timbro viene aggiornato quando un utente modifica la password o aggiunge o rimuove gli account di accesso. Contiene i metodi per ottenere e impostare l'indicatore di sicurezza.
 - **IUserTwoFactorStore**  
-  Il [IUserTwoFactorStore&lt;TKey, TUser&gt; ](https://msdn.microsoft.com/library/dn613279(v=vs.108).aspx) interfaccia definisce i metodi è necessario implementare per implementare autenticazione a due fattori. Contiene i metodi per ottenere e impostare se per un utente è abilitata l'autenticazione a due fattori.
+  L'interfaccia [IUserTwoFactorStore&lt;TUser, TKey&gt;](https://msdn.microsoft.com/library/dn613279(v=vs.108).aspx) definisce i metodi che è necessario implementare per implementare l'autenticazione a due fattori. Contiene i metodi per ottenere e impostare se per un utente è abilitata l'autenticazione a due fattori.
 - **IUserPhoneNumberStore**  
-  Il [IUserPhoneNumberStore&lt;TKey, TUser&gt; ](https://msdn.microsoft.com/library/dn613275(v=vs.108).aspx) interfaccia definisce i metodi è necessario implementare per archiviare i numeri di telefono degli utenti. Contiene i metodi per ottenere e impostare il numero di telefono e indica se il numero di telefono è confermato.
+  L'interfaccia [IUserPhoneNumberStore&lt;TUser, TKey&gt;](https://msdn.microsoft.com/library/dn613275(v=vs.108).aspx) definisce i metodi che è necessario implementare per archiviare i numeri di telefono dell'utente. Contiene i metodi per ottenere e impostare il numero di telefono e se il numero di telefono è confermato.
 - **IUserEmailStore**  
-  Il [IUserEmailStore&lt;TKey, TUser&gt; ](https://msdn.microsoft.com/library/dn613143(v=vs.108).aspx) interfaccia definisce i metodi è necessario implementare per archiviare gli indirizzi di posta elettronica utente. Contiene i metodi per ottenere e impostare l'indirizzo di posta elettronica e indica se il messaggio di posta elettronica è confermato.
+  L'interfaccia [IUserEmailStore&lt;TUser, TKey&gt;](https://msdn.microsoft.com/library/dn613143(v=vs.108).aspx) definisce i metodi che è necessario implementare per archiviare gli indirizzi di posta elettronica dell'utente. Contiene i metodi per ottenere e impostare l'indirizzo di posta elettronica e verificare se il messaggio di posta elettronica è confermato.
 - **IUserLockoutStore**  
-  Il [IUserLockoutStore&lt;TKey, TUser&gt; ](https://msdn.microsoft.com/library/dn613271(v=vs.108).aspx) interfaccia definisce i metodi è necessario implementare per archiviare le informazioni sul blocco di un account. Contiene i metodi per ottenere il numero corrente di tentativi di accesso non riuscito, recupero e impostazione se l'account può essere bloccato, ottenere e impostare la data di fine del blocco, incrementare il numero di tentativi non riusciti e reimpostazione del numero di tentativi non riusciti.
+  L'interfaccia [IUserLockoutStore&lt;TUser, TKey&gt;](https://msdn.microsoft.com/library/dn613271(v=vs.108).aspx) definisce i metodi che è necessario implementare per archiviare informazioni sul blocco di un account. Contiene i metodi per ottenere il numero corrente di tentativi di accesso non riusciti, ottenere e impostare se è possibile bloccare l'account, ottenere e impostare la data di fine blocco, incrementare il numero di tentativi non riusciti e reimpostare il numero di tentativi non riusciti.
 - **IQueryableUserStore**  
-  Il [IQueryableUserStore&lt;TKey, TUser&gt; ](https://msdn.microsoft.com/library/dn613267(v=vs.108).aspx) interfaccia definisce i membri è necessario implementare per fornire un archivio utente disponibile per query. Contiene una proprietà che contiene gli utenti di essere sottoposta a query.
+  L'interfaccia [IQueryableUserStore&lt;TUser, TKey&gt;](https://msdn.microsoft.com/library/dn613267(v=vs.108).aspx) definisce i membri che è necessario implementare per fornire un archivio utenti Queryable. Contiene una proprietà che contiene gli utenti che eseguono query.
 
-  Implementare le interfacce che sono necessari nell'applicazione; ad esempio, di tipo IUserClaimStore, IUserLoginStore, IUserRoleStore, IUserPasswordStore e IUserSecurityStampStore interfacce come illustrato di seguito. 
+  Implementare le interfacce necessarie nell'applicazione. ad esempio, le interfacce IUserClaimStore, IUserLoginStore, IUserRoleStore, IUserPasswordStore e IUserSecurityStampStore, come illustrato di seguito. 
 
 [!code-csharp[Main](overview-of-custom-storage-providers-for-aspnet-identity/samples/sample5.cs)]
 
-Per un'implementazione completa (incluse tutte le interfacce), vedere [nello UserStore (MySQL)](https://aspnet.codeplex.com/SourceControl/latest#Samples/Identity/AspNet.Identity.MySQL/UserStore.cs).
+Per un'implementazione completa (incluse tutte le interfacce), vedere [userStore ambito (MySQL)](https://github.com/aspnet/samples/blob/master/samples/aspnet/Identity/AspNet.Identity.MySQL/UserStore.cs).
 
-### <a name="identityuserclaim-identityuserlogin-and-identityuserrole"></a>IdentityUserClaim IdentityUserLogin e IdentityUserRole
+### <a name="identityuserclaim-identityuserlogin-and-identityuserrole"></a>IdentityUserClaim, IdentityUserLogin e IdentityUserRole
 
-Lo spazio dei nomi EntityFramework contiene le implementazioni del [IdentityUserClaim](https://msdn.microsoft.com/library/dn613250(v=vs.108).aspx), [IdentityUserLogin](https://msdn.microsoft.com/library/dn613251(v=vs.108).aspx), e [IdentityUserRole](https://msdn.microsoft.com/library/dn613252(v=vs.108).aspx) classi. Se si usano queste funzionalità, è possibile creare le versioni personalizzate di queste classi e definire le proprietà per l'applicazione. Tuttavia, a volte è più efficiente carica tali entità in memoria durante l'esecuzione di operazioni di base (ad esempio aggiungendo o rimuovendo l'attestazione dell'utente). Al contrario, le classi di archiviazione back-end possono eseguire queste operazioni direttamente sull'origine dati. Ad esempio, il metodo UserStore.GetClaimsAsync() può chiamare il userClaimTable.FindByUserId(user. Metodo di ID) per eseguire una query su tabella direttamente e restituiscono un elenco di attestazioni.
+Lo spazio dei nomi Microsoft. AspNet. Identity. EntityFramework contiene le implementazioni delle classi [IdentityUserClaim](https://msdn.microsoft.com/library/dn613250(v=vs.108).aspx), [IdentityUserLogin](https://msdn.microsoft.com/library/dn613251(v=vs.108).aspx)e [IdentityUserRole](https://msdn.microsoft.com/library/dn613252(v=vs.108).aspx) . Se si usano queste funzionalità, è possibile creare versioni personalizzate di queste classi e definire le proprietà per l'applicazione. Tuttavia, a volte è più efficiente non caricare queste entità in memoria durante l'esecuzione di operazioni di base, ad esempio l'aggiunta o la rimozione di un'attestazione dell'utente. Al contrario, le classi dell'archivio back-end possono eseguire queste operazioni direttamente sull'origine dati. Ad esempio, il metodo userStore ambito. GetClaimsAsync () può chiamare userClaimTable. FindByUserId (User. ID) per eseguire direttamente una query sulla tabella e restituire un elenco di attestazioni.
 
 [!code-csharp[Main](overview-of-custom-storage-providers-for-aspnet-identity/samples/sample6.cs)]
 
 <a id="role"></a>
-## <a name="customize-the-role-class"></a>Personalizzare la classe di ruoli
+## <a name="customize-the-role-class"></a>Personalizzare la classe Role
 
-Quando si implementa un proprio provider di archiviazione, è necessario creare una classe role che equivale al [IdentityRole](https://msdn.microsoft.com/library/microsoft.aspnet.identity.entityframework.identityrole(v=vs.108).aspx) classe la [Microsoft.ASP.NET.Identity.EntityFramework](https://msdn.microsoft.com/library/microsoft.aspnet.identity.entityframework(v=vs.108).aspx) dello spazio dei nomi:
+Quando si implementa un provider di archiviazione personalizzato, è necessario creare una classe Role equivalente alla classe [IdentityRole](https://msdn.microsoft.com/library/microsoft.aspnet.identity.entityframework.identityrole(v=vs.108).aspx) nello spazio dei nomi [Microsoft. ASP. NET. Identity. EntityFramework](https://msdn.microsoft.com/library/microsoft.aspnet.identity.entityframework(v=vs.108).aspx) :
 
 Il diagramma seguente illustra la classe IdentityRole che è necessario creare e l'interfaccia da implementare in questa classe.
 
 ![](overview-of-custom-storage-providers-for-aspnet-identity/_static/image5.png)
 
-Il [IRole&lt;TKey&gt; ](https://msdn.microsoft.com/library/dn613268(v=vs.108).aspx) interfaccia definisce le proprietà che RoleManager tenta di chiamare quando l'esecuzione di operazioni richieste. L'interfaccia contiene due proprietà - Id e nome. Il [IRole&lt;TKey&gt; ](https://msdn.microsoft.com/library/dn613268(v=vs.108).aspx) interfaccia consente di specificare il tipo della chiave per il ruolo tramite il modello generico **TKey** parametro. Il tipo della proprietà Id corrisponde al valore del parametro TKey.
+L'interfaccia [IRole&lt;TKey&gt;](https://msdn.microsoft.com/library/dn613268(v=vs.108).aspx) definisce le proprietà che il roleManager tenta di chiamare durante l'esecuzione delle operazioni richieste. L'interfaccia contiene due proprietà-ID e nome. L'interfaccia [IRole&lt;TKey&gt;](https://msdn.microsoft.com/library/dn613268(v=vs.108).aspx) consente di specificare il tipo di chiave per il ruolo tramite il parametro generico **TKey** . Il tipo della proprietà ID corrisponde al valore del parametro TKey.
 
-Il framework di identità fornisce anche il [IRole](https://msdn.microsoft.com/library/microsoft.aspnet.identity.irole(v=vs.108).aspx) interfaccia (senza il parametro generico) quando si desidera utilizzare un valore stringa per la chiave.
+Il Framework di identità fornisce anche l'interfaccia [IRole](https://msdn.microsoft.com/library/microsoft.aspnet.identity.irole(v=vs.108).aspx) (senza il parametro generico) quando si vuole usare un valore stringa per la chiave.
 
-Nell'esempio seguente viene illustrata una classe di IdentityRole che usa un numero intero per la chiave. Il campo Id viene impostato a int in base al valore del parametro generico. 
+Nell'esempio seguente viene illustrata una classe IdentityRole che usa un numero intero per la chiave. Il campo ID è impostato su int in modo che corrisponda al valore del parametro generico. 
 
 [!code-csharp[Main](overview-of-custom-storage-providers-for-aspnet-identity/samples/sample7.cs)]
 
- Per un'implementazione completa, vedere [IdentityRole (MySQL)](https://aspnet.codeplex.com/SourceControl/latest#Samples/Identity/AspNet.Identity.MySQL/IdentityRole.cs). 
+ Per un'implementazione completa, vedere [IdentityRole (MySQL)](https://github.com/aspnet/samples/blob/master/samples/aspnet/Identity/AspNet.Identity.MySQL/IdentityRole.cs). 
 
 <a id="rolestore"></a>
-## <a name="customize-the-role-store"></a>Personalizzare l'archivio di ruolo
+## <a name="customize-the-role-store"></a>Personalizzare l'archivio dei ruoli
 
-È anche possibile creare una classe di oggetto RoleStore che fornisce i metodi per tutte le operazioni di dati sui ruoli. Questa classe è equivalente al [oggetto RoleStore&lt;TRole&gt; ](https://msdn.microsoft.com/library/dn468181(v=vs.108).aspx) classe nello spazio dei nomi Microsoft.ASP.NET.Identity.EntityFramework. Nella classe oggetto RoleStore, si implementa il [IRoleStore&lt;TKey, TRole&gt; ](https://msdn.microsoft.com/library/dn613266(v=vs.108).aspx) e, facoltativamente, il [IQueryableRoleStore&lt;TRole, TKey&gt; ](https://msdn.microsoft.com/library/dn613262(v=vs.108).aspx) interfaccia.
+Si crea anche una classe nell'rolestore che fornisce i metodi per tutte le operazioni di dati sui ruoli. Questa classe è equivalente alla classe [nell'rolestore&lt;TRole&gt;](https://msdn.microsoft.com/library/dn468181(v=vs.108).aspx) nello spazio dei nomi Microsoft. ASP. NET. Identity. EntityFramework. Nella classe nell'rolestore si implementa [IRoleStore&lt;TRole, tkey&gt;](https://msdn.microsoft.com/library/dn613266(v=vs.108).aspx) e, facoltativamente, l'interfaccia [IQueryableRoleStore&lt;TRole, TKey&gt;](https://msdn.microsoft.com/library/dn613262(v=vs.108).aspx) .
 
 ![](overview-of-custom-storage-providers-for-aspnet-identity/_static/image6.png)
 
-Nell'esempio seguente viene illustrata una classe di archivio ruoli. Il parametro generico TRole accetta il tipo della classe del ruolo che in genere è la classe IdentityRole che è definita. Il parametro generico TKey accetta il tipo della chiave del ruolo. 
+Nell'esempio seguente viene illustrata una classe di archivio ruoli. Il parametro generico TRole accetta il tipo della classe Role che in genere è la classe IdentityRole definita. Il parametro generico TKey accetta il tipo della chiave Role. 
 
 [!code-csharp[Main](overview-of-custom-storage-providers-for-aspnet-identity/samples/sample8.cs)]
 
 - **IRoleStore&lt;TRole&gt;**  
-  Il [IRoleStore](https://msdn.microsoft.com/library/dn468195.aspx) interfaccia definisce i metodi da implementare nella classe archivio ruoli. Contiene i metodi per la creazione, aggiornamento, eliminazione e recupero dei ruoli.
+  L'interfaccia [IRoleStore](https://msdn.microsoft.com/library/dn468195.aspx) definisce i metodi da implementare nella classe dell'archivio dei ruoli. Contiene i metodi per la creazione, l'aggiornamento, l'eliminazione e il recupero di ruoli.
 - **RoleStore&lt;TRole&gt;**  
-  Per personalizzare l'oggetto RoleStore, creare una classe che implementa l'interfaccia IRoleStore. È sufficiente implementare questa classe se desidera utilizzare i ruoli del sistema. Il costruttore che accetta un parametro denominato *database* typu ExampleDatabase è solo un'illustrazione di come passare nella classe accesso dati. Ad esempio, nell'implementazione di MySQL, il costruttore accetta un parametro di tipo MySQLDatabase.  
+  Per personalizzare nell'rolestore, creare una classe che implementi l'interfaccia IRoleStore. È necessario implementare questa classe solo se si desidera utilizzare i ruoli nel sistema. Il costruttore che accetta un parametro denominato *database* di tipo ExampleDatabase è solo un esempio di come passare la classe di accesso ai dati. Ad esempio, nell'implementazione di MySQL, questo costruttore accetta un parametro di tipo MySQLDatabase.  
   
-  Per un'implementazione completa, vedere [oggetto RoleStore (MySQL)](https://aspnet.codeplex.com/SourceControl/latest#Samples/Identity/AspNet.Identity.MySQL/RoleStore.cs) .
+  Per un'implementazione completa, vedere [nell'rolestore (MySQL)](https://github.com/aspnet/samples/blob/master/samples/aspnet/Identity/AspNet.Identity.MySQL/RoleStore.cs) .
 
 <a id="reconfigure"></a>
-## <a name="reconfigure-application-to-use-new-storage-provider"></a>Riconfigurare l'applicazione per l'uso di nuovi provider di archiviazione
+## <a name="reconfigure-application-to-use-new-storage-provider"></a>Riconfigurare l'applicazione per l'uso di un nuovo provider di archiviazione
 
-È stato implementato il nuovo provider di archiviazione. A questo punto, è necessario configurare l'applicazione per usare questo provider di archiviazione. Se il provider di archiviazione predefinito è stato incluso nel progetto, è necessario rimuovere il provider predefinito e sostituirlo con il provider.
+È stato implementato il nuovo provider di archiviazione. A questo punto, è necessario configurare l'applicazione per l'uso di questo provider di archiviazione. Se il provider di archiviazione predefinito è stato incluso nel progetto, è necessario rimuovere il provider predefinito e sostituirlo con il provider.
 
-### <a name="replace-default-storage-provider-in-mvc-project"></a>Sostituire il provider di archiviazione predefinito nel progetto MVC
+### <a name="replace-default-storage-provider-in-mvc-project"></a>Sostituisci provider di archiviazione predefinito nel progetto MVC
 
-1. Nel **Gestisci pacchetti NuGet** finestra, disinstallare le **Microsoft ASP.NET Identity EntityFramework** pacchetto. È possibile trovare il pacchetto eseguendo una ricerca nei pacchetti installati per Identity.EntityFramework.  
-    ![](overview-of-custom-storage-providers-for-aspnet-identity/_static/image7.png) Verrà richiesto se si desidera disinstallare anche Entity Framework. Se non è necessario in altre parti dell'applicazione, è possibile disinstallarlo.
-2. Nel file IdentityModels.cs nella cartella Models, eliminare o impostare come commento il **ApplicationUser** e **ApplicationDbContext** classi. In un'applicazione MVC, è possibile eliminare l'intero file IdentityModels.cs. In un'applicazione Web Form, eliminare le due classi, ma accertarsi di che mantenere la classe helper che si trova anche nel file IdentityModels.cs.
-3. Se il provider di archiviazione si trova in un progetto separato, aggiungere un riferimento a esso nell'applicazione web.
-4. Sostituire tutti i riferimenti a `using Microsoft.AspNet.Identity.EntityFramework;` con un'istruzione per lo spazio dei nomi del provider di archiviazione.
-5. Nel **Startup.Auth.cs** classe, modificare il **ConfigureAuth** metodo da usare una singola istanza di contesto appropriata. 
+1. Nella finestra **Gestisci pacchetti NuGet** disinstallare il pacchetto **Microsoft ASP.NET Identity EntityFramework** . È possibile trovare questo pacchetto eseguendo una ricerca nei pacchetti installati per Identity. EntityFramework.  
+    ![](overview-of-custom-storage-providers-for-aspnet-identity/_static/image7.png) verrà chiesto se si desidera disinstallare anche Entity Framework. Se non è necessario in altre parti dell'applicazione, è possibile disinstallarla.
+2. Nel file IdentityModels.cs nella cartella Models eliminare o impostare come commento le classi **ApplicationUser** e **ApplicationDbContext** . In un'applicazione MVC è possibile eliminare l'intero file IdentityModels.cs. In un'applicazione Web Form, eliminare le due classi, ma assicurarsi di lasciare la classe helper che si trova anche nel file IdentityModels.cs.
+3. Se il provider di archiviazione si trova in un progetto separato, aggiungervi un riferimento nell'applicazione Web.
+4. Sostituire tutti i riferimenti a `using Microsoft.AspNet.Identity.EntityFramework;` con un'istruzione using per lo spazio dei nomi del provider di archiviazione.
+5. Nella classe **Startup.auth.cs** modificare il metodo **ConfigureAuth** in modo da usare una singola istanza del contesto appropriato. 
 
     [!code-csharp[Main](overview-of-custom-storage-providers-for-aspnet-identity/samples/sample9.cs?highlight=3)]
-6. Nell'App\_cartella di avvio, aprire **IdentityConfig.cs**. Nella classe ApplicationUserManager, modificare il **Create** per restituire una gestione utente che usa l'archivio utente personalizzato. 
+6. Nella cartella di avvio dell'app\_aprire **IdentityConfig.cs**. Nella classe ApplicationUserManager modificare il metodo **create** per restituire un gestore utenti che usa l'archivio utente personalizzato. 
 
     [!code-csharp[Main](overview-of-custom-storage-providers-for-aspnet-identity/samples/sample10.cs?highlight=3)]
 7. Sostituire tutti i riferimenti a **ApplicationUser** con **IdentityUser**.
-8. Il progetto predefinito include alcuni membri nella classe utente che non sono definiti nell'interfaccia IUser. ad esempio indirizzo di posta elettronica, PasswordHash e GenerateUserIdentityAsync. Se la classe utente non dispone di questi membri, è necessario implementarle o modificare il codice che usa questi membri.
-9. Se è stato creato tutte le istanze di RoleManager, modificare il codice per usare la nuova classe di oggetto RoleStore.  
+8. Il progetto predefinito include alcuni membri della classe User che non sono definiti nell'Interfaccia IUser; ad esempio posta elettronica, PasswordHash e GenerateUserIdentityAsync. Se la classe utente non dispone di questi membri, sarà necessario implementarli o modificare il codice che utilizza tali membri.
+9. Se sono state create istanze di RoleManager, modificare il codice in modo da usare la nuova classe nell'rolestore.  
 
     [!code-csharp[Main](overview-of-custom-storage-providers-for-aspnet-identity/samples/sample11.cs)]
-10. Il progetto predefinito è progettato per una classe utente che ha un valore stringa per la chiave. Se la classe utente presenta un tipo diverso per la chiave (ad esempio, un numero intero), è necessario modificare il progetto per l'uso con il tipo. Visualizzare [modificare la chiave primaria per gli utenti in ASP.NET Identity](change-primary-key-for-users-in-aspnet-identity.md).
-11. Se necessario, aggiungere la stringa di connessione nel file Web. config.
+10. Il progetto predefinito è progettato per una classe utente che dispone di un valore stringa per la chiave. Se la classe utente ha un tipo diverso per la chiave, ad esempio un numero intero, è necessario modificare il progetto in modo che funzioni con il tipo. Vedere [modificare la chiave primaria per gli utenti in ASP.NET Identity](change-primary-key-for-users-in-aspnet-identity.md).
+11. Se necessario, aggiungere la stringa di connessione al file Web. config.
 
 <a id="other"></a>
 ## <a name="other-resources"></a>Altre risorse
 
-- Blog: [Implementazione di ASP.NET Identity](http://odetocode.com/blogs/scott/archive/2014/01/20/implementing-asp-net-identity.aspx)
-- Codice di esercitazione e GIT: [Provider di identità Simple.Data Asp.Net](http://designcoderelease.blogspot.co.uk/2015/03/simpledata-aspnet-identity-provider.html)
-- Esercitazione:[configurare gli account di identità di base e che punta a un database esterno](http://typecastexception.com/post/2013/10/27/Configuring-Db-Connection-and-Code-First-Migration-for-Identity-Accounts-in-ASPNET-MVC-5-and-Visual-Studio-2013.aspx). Dal [ @xivSolutions ](https://twitter.com/xivSolutions).
-- Esercitazione[: Implementazione di un Provider di archiviazione MySQL personalizzato ASP.NET Identity](implementing-a-custom-mysql-aspnet-identity-storage-provider.md)
-- [Le entità CodeFluent](http://blog.codefluententities.com/2014/04/30/asp-net-identity-v2-and-codefluent-entities/) da [SoftFluent](http://www.softfluent.com/)
-- [Archiviazione tabelle di Azure](https://www.nuget.org/packages/accidentalfish.aspnet.identity.azure/) Randall James.
-- Archiviazione tabelle di Azure: [AspNet.Identity.TableStorage](https://github.com/stuartleeks/leeksnet.AspNet.Identity.TableStorage) dal [ @stuartleeks ](https://twitter.com/stuartleeks).
-- [CouchDB / Cloudant da Daniel Wertheim.](https://github.com/danielwertheim/mycouch.aspnet.identity)
-- Elastico Uire[h: Identità elastico](https://github.com/bmbsqd/elastic-identity) da Bombsquad AB.
-- [MongoDB](http://www.nuget.org/packages/MongoDB.AspNet.Identity/) da Jonathan Sheely Jonathan Sheely.
-- [NHibernate.AspNet.Identity](https://github.com/milesibastos/NHibernate.AspNet.Identity) da Antônio Milesi Bastos.
-- [RavenDB](http://www.nuget.org/packages/AspNet.Identity.RavenDB/1.0.0) dal [ @tourismgeek ](https://twitter.com/tourismgeek).
-- [RavenDB.AspNet.Identity](https://github.com/ILMServices/RavenDB.AspNet.Identity) dal [ILMServices](http://www.ilmservice.com/).
-- Redis: [Redis.AspNet.Identity](https://github.com/aminjam/Redis.AspNet.Identity)
-- Modelli T4 per generare il codice di Entity Framework per un archivio utente "del database prima di tutto": [AspNet.Identity.EntityFramework](https://github.com/cbfrank/AspNet.Identity.EntityFramework)
+- Blog: [implementazione di ASP.NET Identity](http://odetocode.com/blogs/scott/archive/2014/01/20/implementing-asp-net-identity.aspx)
+- Esercitazione e codice GIT: [Simple. Data ASP.NET Identity Provider](http://designcoderelease.blogspot.co.uk/2015/03/simpledata-aspnet-identity-provider.html)
+- Esercitazione:[configurazione degli account Identity di base e puntando a un database esterno](http://typecastexception.com/post/2013/10/27/Configuring-Db-Connection-and-Code-First-Migration-for-Identity-Accounts-in-ASPNET-MVC-5-and-Visual-Studio-2013.aspx). Per [@xivSolutions](https://twitter.com/xivSolutions).
+- Esercitazione[: implementazione di un provider di archiviazione ASP.NET Identity MySQL personalizzato](implementing-a-custom-mysql-aspnet-identity-storage-provider.md)
+- [Entità codefluent](http://blog.codefluententities.com/2014/04/30/asp-net-identity-v2-and-codefluent-entities/) per [SoftFluent](http://www.softfluent.com/)
+- [Archiviazione tabelle di Azure](https://www.nuget.org/packages/accidentalfish.aspnet.identity.azure/) di James Randall.
+- Archiviazione tabelle di Azure: [ASPNET. Identity. TableStorage](https://github.com/stuartleeks/leeksnet.AspNet.Identity.TableStorage) by [@stuartleeks](https://twitter.com/stuartleeks).
+- [CouchDB/Cloudy di Daniel Wertheim.](https://github.com/danielwertheim/mycouch.aspnet.identity)
+- Elastic eseg[h: identità elastica](https://github.com/bmbsqd/elastic-identity) di Bombsquad ab.
+- [MongoDB](http://www.nuget.org/packages/MongoDB.AspNet.Identity/) di Jonathan Sheely Jonathan Sheely.
+- [NHibernate. AspNet. Identity](https://github.com/milesibastos/NHibernate.AspNet.Identity) di Antônio Milesi Bastos.
+- [RavenDB](http://www.nuget.org/packages/AspNet.Identity.RavenDB/1.0.0) per [@tourismgeek](https://twitter.com/tourismgeek).
+- [RavenDB. AspNet. Identity](https://github.com/ILMServices/RavenDB.AspNet.Identity) di [ILMServices](http://www.ilmservice.com/).
+- Redis: [Redis. AspNet. Identity](https://github.com/aminjam/Redis.AspNet.Identity)
+- Modelli T4 per generare il codice EF per un archivio utente "database First": [ASPNET. Identity. EntityFramework](https://github.com/cbfrank/AspNet.Identity.EntityFramework)

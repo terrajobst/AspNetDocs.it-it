@@ -8,12 +8,12 @@ ms.date: 09/08/2014
 ms.assetid: 6898c601-6c31-432f-8388-e6843f8a17cb
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/shopping-cart
 msc.type: authoredcontent
-ms.openlocfilehash: 46264a0ab2244cff24761ce94b41722e61e3f426
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: d3b619ebd9448d30857ffbaf17fd245b1d54a662
+ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74614919"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76519297"
 ---
 # <a name="shopping-cart"></a>Carrello acquisti
 
@@ -25,7 +25,7 @@ di [Erik Reitan](https://github.com/Erikre)
 
 Questa esercitazione descrive la logica di business necessaria per aggiungere un carrello acquisti all'applicazione Web Forms di esempio Wingtip Toys ASP.NET. Questa esercitazione si basa sull'esercitazione precedente "visualizzare gli elementi di dati e i dettagli" e fa parte della serie di esercitazioni su Wingtip Toy Store. Al termine di questa esercitazione, gli utenti dell'app di esempio saranno in grado di aggiungere, rimuovere e modificare i prodotti nel carrello della spesa.
 
-## <a name="what-youll-learn"></a>Cosa si apprenderà:
+## <a name="what-youll-learn"></a>Contenuto dell'esercitazione:
 
 1. Come creare un carrello acquisti per l'applicazione Web.
 2. Come consentire agli utenti di aggiungere elementi al carrello acquisti.
@@ -229,7 +229,7 @@ Quando viene caricata la pagina *ShoppingCart. aspx* , carica l'oggetto carrello
 Eseguire ora l'applicazione per vedere come non solo aggiungere un prodotto al carrello acquisti, ma è possibile vedere il totale del carrello acquisti.
 
 1. Premere **F5** per eseguire l'applicazione.  
- Il browser si aprirà e visualizzerà la pagina *default. aspx* .
+ Si aprirà il browser e verrà visualizzata la pagina *Default.aspx* .
 2. Selezionare **automobili** dal menu di spostamento categoria.
 3. Fare clic sul collegamento **Aggiungi al carrello** accanto al primo prodotto.   
  La pagina *ShoppingCart. aspx* viene visualizzata con il totale dell'ordine. 
@@ -312,9 +312,11 @@ In questa esercitazione è stato creato un carrello acquisti per l'applicazione 
 
 Il carrello acquisti supporta l'aggiunta, l'eliminazione e l'aggiornamento degli elementi selezionati dall'utente per l'acquisto. Oltre a implementare la funzionalità del carrello acquisti, si è appreso come visualizzare gli elementi del carrello acquisti in un controllo **GridView** e calcolare il totale dell'ordine.
 
+Per comprendere il funzionamento della funzionalità descritta in un'applicazione aziendale reale, è possibile visualizzare l'esempio del carrello degli acquisti di eCommerce open source basato su [nopCommerce](https://github.com/nopSolutions/nopCommerce) -ASP.NET. Originariamente, era basata su Web Forms e negli anni passati a MVC e ora a ASP.NET Core.
+
 ## <a name="addition-information"></a>Informazioni aggiuntive
 
-[Panoramica dello stato della sessione ASP.NET](https://msdn.microsoft.com/library/ms178581.aspx)
+[Cenni preliminari sullo stato della sessione ASP.NET](https://msdn.microsoft.com/library/ms178581.aspx)
 
 > [!div class="step-by-step"]
 > [Precedente](display_data_items_and_details.md)
