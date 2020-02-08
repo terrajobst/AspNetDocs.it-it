@@ -8,12 +8,12 @@ ms.date: 10/14/2017
 ms.assetid: 8935bf14-ca6d-4a4e-9dbe-b96ce74cef49
 msc.legacyurl: /ajax/cdn
 msc.type: content
-ms.openlocfilehash: 51cb8d672139aaebd77bcdbe80bb579d4b3776aa
-ms.sourcegitcommit: 969e7db924ebad3cc0f0cb0d65d148e8b9221b9a
+ms.openlocfilehash: 228194a7b35e116cabae6d819e7a3a8060a3ef6a
+ms.sourcegitcommit: e365196c75ce93cd8967412b1cfdc27121816110
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74899565"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074917"
 ---
 # <a name="microsoft-ajax-content-delivery-network"></a>Rete per la distribuzione di contenuti Microsoft Ajax
 
@@ -64,7 +64,7 @@ La rete CDN ospita le seguenti librerie di script di terze parti che sono state 
 - jQuery (www.jquery.com)
 - interfaccia utente di jQuery (www.jqueryui.com)
 - jQuery Mobile (www.jquerymobile.com)
-- Convalida di jQuery (www.jquery.com)
+- Convalida jQuery (https://jqueryvalidation.org/)
 - Ciclo jQuery (www.malsup.com/jquery/cycle/)
 - DataTable jQuery (http://datatables.net/)
 
@@ -148,7 +148,7 @@ Si noti che è necessario includere tre file dalla rete CDN nel codice precedent
 - La libreria dell'interfaccia utente di jQuery &mdash; la libreria dell'interfaccia utente jQuery contiene tutti gli effetti dell'interfaccia utente jQuery e i widget come il widget DatePicker usato nella pagina precedente.
 - Tema dell'interfaccia utente di jQuery &mdash; l'interfaccia utente di jQuery supporta temi diversi. La pagina precedente include un collegamento a un file CSS per importare il tema Redmond.
 
-Tutti i temi standard dell'interfaccia utente jQuery sono ospitati nella rete CDN. [Visitare questa pagina](jquery-ui/cdnjqueryui1910.md "jInterfaccia utente di query 1.8.10 sulla rete CDN Microsoft Ajax ") per visualizzare le anteprime per ogni tema.
+Tutti i temi standard dell'interfaccia utente jQuery sono ospitati nella rete CDN. [Visitare questa pagina](jquery-ui/cdnjqueryui1910.md "Interfaccia utente di jQuery 1.8.10 sulla rete CDN Microsoft Ajax") per visualizzare le anteprime per ogni tema.
 
 Per ulteriori informazioni sulla libreria dell'interfaccia utente di jQuery, visitare il [sito Web dell'interfaccia utente di jQuery](http://jQueryUI.com "sito Web dell'interfaccia utente jQuery")ufficiale.
 
@@ -617,7 +617,7 @@ Le versioni seguenti della libreria dell'interfaccia utente jQuery sono ospitate
 
 ### <a name="jquery-validation-releases-on-the-cdn"></a>Versioni di convalida jQuery sulla rete CDN
 
-Nella rete CDN sono ospitate le versioni seguenti della libreria di convalida jQuery. Fare clic su ogni collegamento per visualizzare l'elenco di file effettivo.
+Nella rete CDN sono ospitate le versioni seguenti del plug-in di [convalida jQuery](https://jqueryvalidation.org/ "Plug-in di convalida jQuery") . Fare clic su ogni collegamento per visualizzare l'elenco di file effettivo.
 
 - [Convalida 1.19.1 jQuery](jquery-validate/cdnjqueryvalidate1191.md "1\.19.1 di convalida jQuery")
 - [Convalida 1.19.0 jQuery](jquery-validate/cdnjqueryvalidate1190.md "1\.19.0 di convalida jQuery")
@@ -1180,7 +1180,7 @@ Le versioni seguenti di [http://hammerjs.github.io/](http://hammerjs.github.io/ 
 Le versioni seguenti di ASP.NET AJAX Library sono ospitate nella rete CDN. Fare clic su ogni collegamento per visualizzare l'elenco di file effettivo.
 
 - [ASP.NET Web Forms e AJAX Version 4.5.2](cdnajax452.md "Web Forms ASP.NET e Ajax 4.5.2")
-- [ASP.NET Web Forms e AJAX versione 4](cdnajax4.md "Web Forms ASP.NET e Ajax 4")
+- [ASP.NET Web Forms e AJAX versione 4](cdnajax4.md "Web Form ASP.NET e Ajax 4")
 - [ASP.NET AJAX versione 3,5](cdnajax35.md "ASP.NET Ajax 3.5")
 
 <a id="ASPNET_MVC_Releases_on_the_CDN_16"></a>

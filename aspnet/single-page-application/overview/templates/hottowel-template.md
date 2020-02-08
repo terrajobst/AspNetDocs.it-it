@@ -1,6 +1,6 @@
 ---
 uid: single-page-application/overview/templates/hottowel-template
-title: Modello di hot Towel | Microsoft Docs
+title: Modello di asciugamano caldo | Microsoft Docs
 author: madskristensen
 description: Modello HotTowel
 ms.author: riande
@@ -8,54 +8,54 @@ ms.date: 02/09/2013
 ms.assetid: 75af2e17-6ed3-4d24-8ea1-bc340027c318
 msc.legacyurl: /single-page-application/overview/templates/hottowel-template
 msc.type: authoredcontent
-ms.openlocfilehash: f3457840d1597d06c1a1b1ec2a865dd70726446c
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: eeab69e75546791978bb09d7823d95caf9dca1a0
+ms.sourcegitcommit: e365196c75ce93cd8967412b1cfdc27121816110
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65113335"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77075060"
 ---
 # <a name="hot-towel-template"></a>Modello Hot Towel
 
-by [Mads Kristensen](https://github.com/madskristensen)
+di [Mads Kristensen](https://github.com/madskristensen)
 
-> Il modello di MVC Hot Towel è scritto da John Papa
+> Il modello MVC Hot asciugamano è scritto da John Papa
 > 
 > Scegliere la versione da scaricare:
 > 
-> [Hot Towel modello MVC per Visual Studio 2012](https://visualstudiogallery.msdn.microsoft.com/1f68fbe8-b4e9-4968-9fd3-ddc7cbc52dca)
+> [Modello MVC Hot asciugamano per Visual Studio 2012](https://visualstudiogallery.msdn.microsoft.com/1f68fbe8-b4e9-4968-9fd3-ddc7cbc52dca)
 > 
-> [Hot Towel modello MVC per Visual Studio 2013](https://visualstudiogallery.msdn.microsoft.com/1eb8780d-d522-4dcf-bf56-56f0eab305c2)
+> [Modello MVC Hot asciugamano per Visual Studio 2013](https://visualstudiogallery.msdn.microsoft.com/1eb8780d-d522-4dcf-bf56-56f0eab305c2)
 > 
 > 
-> Hot Towel: Perché non si vuole passare per l'applicazione a singola pagina senza uno!
+> Asciugamano caldo: perché non si vuole passare alla SPA senza una sola!
 
-Per compilare un'applicazione a singola pagina, ma non è possibile decidere dove iniziare? Usare Hot Towel e in pochi secondi si otterrà un'applicazione a singola pagina e tutti gli strumenti che necessari per creare su di esso.
+Si vuole creare un'applicazione a singola pagina, ma non è possibile decidere dove iniziare? Usa l'asciugamano caldo e in pochi secondi avrai a disposizione una SPA e tutti gli strumenti che ti servono per compilarli!
 
-Hot Towel crea un ottimo punto di partenza per la creazione di un applicazione a pagina singola (SPA) con ASP.NET. Impostazione predefinita si fornisce una struttura modulare per codice, navigazione nella visualizzazione, l'associazione dati, gestione avanzata dei dati e lo stile semplice ma elegante. Hot Towel fornisce tutto ciò che occorre per compilare un'applicazione a singola pagina, è possibile concentrarsi sull'app, non le operazioni di base.
+Hot asciugaman crea un ottimo punto di partenza per la creazione di un'applicazione a pagina singola (SPA) con ASP.NET. Che fornisce una struttura modulare per il codice, Visualizza la navigazione, data binding, la gestione avanzata dei dati e lo stile semplice ed elegante. L'asciugamano caldo offre tutto ciò che ti serve per creare un'applicazione a singola pagina, per consentirti di concentrarti sull'app, non sul plumbing.
 
-> Altre informazioni sulla creazione di un'applicazione a singola pagina dalla [John Papa video, esercitazioni e i corsi Pluralsight](http://johnpapa.net/spa?vsix).
+> Scopri di più sulla creazione di un'applicazione SPA da [video, esercitazioni e corsi Pluralsight di John Papa](http://johnpapa.net/spa?vsix).
 
 ## <a name="application-structure"></a>Struttura dell'applicazione
 
-Hot Towel SPA fornisce una cartella dell'App che contiene i file JavaScript e HTML che definiscono l'applicazione.
+Hot asciugamani SPA fornisce una cartella dell'app che contiene i file HTML e JavaScript che definiscono l'applicazione.
 
-All'interno della cartella di App:
+All'interno della cartella dell'app:
 
 - Durandal
 - servizi
-- ViewModel
-- visualizzazioni
+- ViewModels
+- viste
 
-La cartella dell'App contiene una raccolta di moduli. Questi moduli includono funzionalità e dichiarano le dipendenze su altri moduli. La cartella views conterrà il codice HTML per l'applicazione e la cartella ViewModel contiene la logica di presentazione per le viste (un pattern MVVM comune). La cartella services è ideale per l'inserimento di tutti i servizi comuni, ad esempio il recupero dei dati HTTP o l'interazione dell'archiviazione locale potrebbe essere necessario all'applicazione. È comune per più ViewModel per riutilizzare il codice dei moduli del servizio.
+La cartella dell'app contiene una raccolta di moduli. Questi moduli incapsulano la funzionalità e dichiarano le dipendenze da altri moduli. La cartella Views contiene il codice HTML per l'applicazione e la cartella ViewModels contiene la logica di presentazione per le visualizzazioni (un modello MVVM comune). La cartella Services è la soluzione ideale per ospitare i servizi comuni che potrebbero essere necessari per l'applicazione, ad esempio il recupero dei dati HTTP o l'interazione di archiviazione locale. È comune che più ViewModel riutilizzino il codice dei moduli del servizio.
 
-## <a name="aspnet-mvc-server-side-application-structure"></a>Struttura delle applicazioni lato Server ASP.NET MVC
+## <a name="aspnet-mvc-server-side-application-structure"></a>Struttura dell'applicazione lato server MVC ASP.NET
 
-Hot Towel si basa sulla struttura di ASP.NET MVC potente e familiare.
+Hot asciugaman si basa sulla struttura di MVC ASP.NET familiare e potente.
 
-- App\_Start
-- Content
-- Controllers
+- Avvio\_app
+- Contenuto
+- Controller
 - Modelli
 - Script
 - Visualizzazioni
@@ -63,97 +63,97 @@ Hot Towel si basa sulla struttura di ASP.NET MVC potente e familiare.
 ## <a name="featured-libraries"></a>Librerie in primo piano
 
 - ASP.NET MVC
-- API Web ASP.NET
-- Ottimizzazione Web ASP.NET - creazione di bundle e minimizzazione
-- [Breeze.js](http://Breezejs.com) -gestione avanzata dei dati
-- [Durandal](http://Durandaljs.com) -navigazione e composizione della vista
+- ASP.NET Web API
+- Ottimizzazione Web ASP.NET-aggregazione e minification
+- Gestione avanzata dei dati di [Breeze. js](http://Breezejs.com)
+- [Durandal. js](http://Durandaljs.com) -spostamento e composizione visualizzazione
 - [Knockout. js](http://Knockoutjs.com) -associazioni dati
-- [Require](http://requirejs.org) -modularità con processori AMD e ottimizzazione
-- [Toastr.js](http://jpapa.me/c7toastr) -messaggi popup
-- [Twitter Bootstrap](http://twitter.github.com/bootstrap/) : applicazione di stili CSS affidabile
+- [Require. js](http://requirejs.org) -modularità con AMD e ottimizzazione
+- Popup [. js](http://jpapa.me/c7toastr) -messaggi popup
+- [Bootstrap di Twitter](https://twitter.github.com/bootstrap/) -stile CSS affidabile
 
-## <a name="installing-via-the-visual-studio-2012-hot-towel-spa-template"></a>Installazione tramite il modello di applicazione a singola pagina di Visual Studio 2012 Hot Towel
+## <a name="installing-via-the-visual-studio-2012-hot-towel-spa-template"></a>Installazione tramite il modello Hot asciugamano SPA di Visual Studio 2012
 
-Hot Towel può essere installato come un modello di Visual Studio 2012. Fare semplicemente clic `File`  |  `New Project` e scegliere `ASP.NET MVC 4 Web Application`. Quindi selezionare il ' applicazione a pagina singola Towel Hot "modello ed eseguire.
+Il tovagliolo caldo può essere installato come modello di Visual Studio 2012. È sufficiente fare clic su `File` | `New Project` e scegliere `ASP.NET MVC 4 Web Application`. Selezionare quindi il modello "applicazione a pagina singola Hot asciugamano" ed eseguire.
 
 ## <a name="installing-via-the-nuget-package"></a>Installazione tramite il pacchetto NuGet
 
-Hot Towel è anche un pacchetto NuGet che aggiunge un progetto MVC ASP.NET vuoto esistente. È sufficiente installare tramite Nuget e quindi eseguire.
+Hot tovagliol è anche un pacchetto NuGet che aumenta un progetto MVC ASP.NET vuoto esistente. Basta installare usando NuGet, quindi eseguire.
 
 [!code-powershell[Main](hottowel-template/samples/sample1.ps1)]
 
-## <a name="how-do-i-build-on-hot-towel"></a>Come creare in Hot Towel?
+## <a name="how-do-i-build-on-hot-towel"></a>Come posso creare su un asciugamano caldo?
 
-È sufficiente iniziare ad aggiungere codice!
+È sufficiente iniziare ad aggiungere codice.
 
-1. Aggiungere il codice del lato server, preferibilmente Entity Framework e API Web (che caratterizzano realmente con Breeze.js)
-2. Aggiungere visualizzazioni al `App/views` cartella
-3. Aggiungere ViewModel di `App/viewmodels` cartella
-4. Aggiungere HTML e Knockout associazioni dati per le nuove viste
+1. Aggiungere il proprio codice sul lato server, preferibilmente Entity Framework e WebAPI (che davvero brilla con Breeze. js)
+2. Aggiungere visualizzazioni alla cartella `App/views`
+3. Aggiungere ViewModels alla cartella `App/viewmodels`
+4. Aggiungere le associazioni dati HTML e Knockout alle nuove visualizzazioni
 5. Aggiornare le route di navigazione in `shell.js`
 
 ## <a name="walkthrough-of-the-htmljavascript"></a>Procedura dettagliata di HTML/JavaScript
 
 ### <a name="viewshottowelindexcshtml"></a>Views/HotTowel/index.cshtml
 
-index. cshtml è la route e visualizzazione per l'applicazione MVC inizio. Contiene tutte le tag meta standard, css i collegamenti e riferimenti di JavaScript che ci si aspetta. Il corpo contiene un singolo `<div>` che è in tutto il contenuto (visualizzazioni) di cui verrà inserito quando vengono richiesti. Il `@Scripts.Render` Usa Require. js per eseguire il punto di ingresso per il codice dell'applicazione, contenuta nel `main.js` file. La schermata iniziale viene fornita per illustrare come creare una schermata mentre caricate dall'app.
+index. cshtml è la route iniziale e la visualizzazione per l'applicazione MVC. Contiene tutti i tag meta standard, i collegamenti CSS e i riferimenti JavaScript che ci si aspetterebbe. Il corpo contiene un solo `<div>`, dove tutto il contenuto (le visualizzazioni) verrà inserito quando richiesto. Il `@Scripts.Render` USA require. js per eseguire il punto di ingresso per il codice dell'applicazione, contenuto nel file di `main.js`. Viene fornita una schermata iniziale per dimostrare come creare una schermata iniziale durante il caricamento dell'app.
 
 [!code-cshtml[Main](hottowel-template/samples/sample2.cshtml)]
 
-### <a name="appmainjs"></a>App/Main.js
+### <a name="appmainjs"></a>App/Main. js
 
-Il `main.js` file contiene il codice che verrà eseguito non appena viene caricato l'app. Si tratta in cui si desidera definire le route di navigazione, impostare l'avvio di visualizzazioni ed eseguire qualsiasi programma di installazione/di avvio automatico, ad esempio l'inizializzazione dei dati dell'applicazione.
+Il file di `main.js` contiene il codice che verrà eseguito non appena l'app viene caricata. Questo è il punto in cui si desidera definire le route di navigazione, impostare le visualizzazioni di avvio ed eseguire tutte le operazioni di installazione e bootstrap, ad esempio il priming dei dati dell'applicazione.
 
-Il `main.js` file definiti diversi attributi dei moduli del durandal per avviare l'inizio dell'applicazione. L'istruzione di definizione consente di risolvere le dipendenze di moduli in modo che siano disponibili per la funzione. Prima di tutto i messaggi di debug sono abilitati, quali invio di messaggi sui quali eventi eseguite dall'applicazione alla finestra della console. Il codice di App indica durandal framework per avviare l'applicazione. Le convenzioni vengono impostate in modo che durandal conosce tutte le visualizzazioni e ViewModel sono contenuti nelle stesse cartelle denominate, rispettivamente. Infine, il `app.setRoot` dà il via a carichi le `shell` usando un oggetto predefinito `entrance` animazione.
+Il file di `main.js` definisce diversi moduli di Durandal che consentono di avviare l'applicazione. L'istruzione define consente di risolvere le dipendenze dei moduli in modo che siano disponibili per la funzione. Prima sono abilitati i messaggi di debug, che inviano messaggi sugli eventi che l'applicazione sta eseguendo alla finestra della console. Il codice dell'app. Start indica a Durandal Framework di avviare l'applicazione. Le convenzioni sono impostate in modo che Durandal sappia che tutte le visualizzazioni e gli ViewModel sono contenuti nelle stesse cartelle denominate, rispettivamente. Infine, il `app.setRoot` avvia il caricamento della `shell` mediante un'animazione `entrance` predefinita.
 
 [!code-javascript[Main](hottowel-template/samples/sample3.js)]
 
 ## <a name="views"></a>Visualizzazioni
 
-Le visualizzazioni si trovano nella `App/views` cartella.
+Le visualizzazioni si trovano nella cartella `App/views`.
 
-### <a name="shellhtml"></a>Shell.HTML
+### <a name="shellhtml"></a>Shell. html
 
-Il `shell.html` contiene layout master per il codice HTML. Tutte le altre visualizzazioni verranno combinate in una posizione sul lato del `shell` visualizzazione. Hot Towel fornisce un `shell` con queste tre aree: un'intestazione, un'area di contenuto e un piè di pagina. Ognuna di queste aree è dotata di contenuto formare altre viste quando richiesto.
+Il `shell.html` contiene il layout master per il codice HTML. Tutte le altre visualizzazioni verranno composte in un punto qualsiasi all'interno della vista `shell`. L'asciugamano caldo fornisce un `shell` con tre aree di questo tipo: un'intestazione, un'area di contenuto e un piè di pagina. Ognuna di queste aree viene caricata con il contenuto da altre visualizzazioni quando richiesto.
 
-Il `compose` associazioni per l'intestazione e piè di pagina sono hardcoded in Hot Towel in modo che punti la `nav` e `footer` Visualizza, rispettivamente. L'associazione di compose per la sezione `#content` è associato il `router` elemento attivo del modulo. In altre parole, quando si fa clic su un collegamento di navigazione è visualizzazione corrispondente viene caricato in questa area.
+Le associazioni `compose` per l'intestazione e il piè di pagina sono hardcoded nell'asciugamano a caldo per puntare rispettivamente alle visualizzazioni `nav` e `footer`. Il binding compose per la sezione `#content` è associato all'elemento attivo del modulo di `router`. In altre parole, quando si fa clic su un collegamento di navigazione, viene caricata in quest'area la visualizzazione corrispondente.
 
 [!code-html[Main](hottowel-template/samples/sample4.html)]
 
-### <a name="navhtml"></a>nav.html
+### <a name="navhtml"></a>NAV. html
 
-Il `nav.html` contiene i collegamenti di navigazione per l'applicazione a singola pagina. Si tratta in cui può essere inserita nella struttura di menu, ad esempio. Spesso si tratta di dati associati (usando Knockout) per il `router` modulo per visualizzare la navigazione è definito nel `shell.js`. Knockout Azure cerca di associare i dati degli attributi e associa quelli per il `shell` viewmodel per visualizzare le route di navigazione e per mostrare un progressbar (tramite Twitter Bootstrap) se il `router` modulo è in corso lo spostamento da una visualizzazione a un altro (vedere `router.isNavigating`).
+Il `nav.html` contiene i collegamenti di navigazione per la SPA. Questo è il punto in cui è possibile inserire la struttura dei menu, ad esempio. Spesso si tratta di un binding dati (che usa Knockout) al modulo `router` per visualizzare la navigazione definita nell'`shell.js`. Knockout cerca gli attributi di associazione dei dati e li associa a `shell` ViewModel per visualizzare le route di navigazione e per visualizzare una ProgressBar (usando il bootstrap di Twitter) se il modulo di `router` sta passando da una visualizzazione all'altra (vedere `router.isNavigating`).
 
 [!code-html[Main](hottowel-template/samples/sample5.html)]
 
-### <a name="homehtml-and-detailshtml"></a>Home. HTML e details.html
+### <a name="homehtml-and-detailshtml"></a>Home. html e Details. html
 
-Queste viste contengono HTML per le visualizzazioni personalizzate. Quando il `home` clic sul collegamento nella `nav` si fa clic sul menu della visualizzazione, il `home` verrà inserita nell'area del contenuto della visualizzazione il `shell` visualizzazione. Queste viste possono essere aumentate o sostituite con visualizzazioni personalizzate.
+Queste visualizzazioni contengono codice HTML per le visualizzazioni personalizzate. Quando si fa clic sul collegamento `home` nel menu della vista `nav`, la visualizzazione `home` verrà inserita nell'area del contenuto della visualizzazione `shell`. Queste visualizzazioni possono essere ampliate o sostituite con visualizzazioni personalizzate.
 
-### <a name="footerhtml"></a>footer.html
+### <a name="footerhtml"></a>footer. html
 
-Il `footer.html` contiene codice HTML visualizzato nel piè di pagina, in fondo il `shell` visualizzazione.
+Il `footer.html` contiene il codice HTML visualizzato nel piè di pagina, nella parte inferiore della visualizzazione `shell`.
 
 ## <a name="viewmodels"></a>ViewModel
 
-ViewModel vengono trovati nel `App/viewmodels` cartella.
+I ViewModel si trovano nella cartella `App/viewmodels`.
 
-### <a name="shelljs"></a>shell.js
+### <a name="shelljs"></a>Shell. js
 
-Il `shell` viewmodel contiene le proprietà e funzioni che sono associate ai `shell` visualizzazione. Spesso si tratta di dove si trovano le associazioni di navigazione di menu (vedere il `router.mapNav` per la logica).
+Il ViewModel `shell` contiene le proprietà e le funzioni associate alla visualizzazione `shell`. Spesso è il punto in cui vengono trovate le associazioni di navigazione dei menu (vedere la logica di `router.mapNav`).
 
 [!code-javascript[Main](hottowel-template/samples/sample6.js)]
 
-### <a name="homejs-and-detailsjs"></a>details.js e js
+### <a name="homejs-and-detailsjs"></a>Home. js e Details. js
 
-Tali ViewModel contengono le proprietà e funzioni che sono associate ai `home` visualizzazione. inoltre contiene la logica di presentazione per la visualizzazione ed è l'associazione tra i dati e la visualizzazione.
+Questi ViewModel contengono le proprietà e le funzioni associate alla visualizzazione `home`. contiene inoltre la logica di presentazione per la visualizzazione e rappresenta la collazione tra i dati e la visualizzazione.
 
 [!code-javascript[Main](hottowel-template/samples/sample7.js)]
 
 ## <a name="services"></a>Servizi
 
-I servizi sono disponibili nella cartella/servizi App. In teoria i servizi futuri, ad esempio un modulo dataservice, che è responsabile per il recupero e la registrazione dei dati remota, è possibile attivare.
+I servizi si trovano nella cartella app/Services. Idealmente, è possibile collocare i servizi futuri, ad esempio un modulo DataService, responsabile dell'acquisizione e della pubblicazione di dati remoti.
 
 ### <a name="loggerjs"></a>logger.js
 
-Hot Towel fornisce un `logger` modulo nella cartella dei servizi. Il `logger` modulo è ideale per i messaggi di registrazione nella console e per l'utente nella finestra popup gli avvisi popup.
+L'asciugamano caldo fornisce un modulo `logger` nella cartella servizi. Il modulo `logger` è ideale per la registrazione dei messaggi nella console e per l'utente nei popup popup.

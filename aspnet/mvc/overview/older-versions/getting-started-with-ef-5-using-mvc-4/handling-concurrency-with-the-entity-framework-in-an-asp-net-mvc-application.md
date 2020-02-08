@@ -8,12 +8,12 @@ ms.date: 07/30/2013
 ms.assetid: b83f47c4-8521-4d0a-8644-e8f77e39733e
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/handling-concurrency-with-the-entity-framework-in-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: 0383974baa16bb0d5fc588f9303290bdb0fd979c
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: 9800a313879477f36a730e6a70c79bc06d403ae3
+ms.sourcegitcommit: e365196c75ce93cd8967412b1cfdc27121816110
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74595339"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074956"
 ---
 # <a name="handling-concurrency-with-the-entity-framework-in-an-aspnet-mvc-application-7-of-10"></a>Gestione della concorrenza con il Entity Framework in un'applicazione MVC ASP.NET (7 di 10)
 
@@ -85,6 +85,8 @@ In *Models\Department.cs*aggiungere una proprietà di rilevamento denominata `Ro
 L'attributo [timestamp](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.timestampattribute.aspx) specifica che questa colonna verrà inclusa nella clausola `Where` di `Update` e `Delete` comandi inviati al database. L'attributo è denominato [timestamp](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.timestampattribute.aspx) perché le versioni precedenti di SQL Server usavano un tipo di dati [timestamp](https://msdn.microsoft.com/library/ms182776(v=SQL.90).aspx) SQL prima che il [rowversion](https://msdn.microsoft.com/library/ms182776(v=sql.110).aspx) SQL la sostituisse. Il tipo .NET per `rowversion` è una matrice di byte. Se si preferisce usare l'API Fluent, è possibile usare il metodo [IsConcurrencyToken](https://msdn.microsoft.com/library/gg679501(v=VS.103).aspx) per specificare la proprietà di rilevamento, come illustrato nell'esempio seguente:
 
 [!code-csharp[Main](handling-concurrency-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample2.cs)]
+
+Vedere il problema [di GitHub Replace IsConcurrencyToken by IsRowVersion](https://github.com/aspnet/AspNetDocs/issues/302).
 
 In seguito all'aggiunta di una proprietà il modello di database è stato modificato, pertanto è necessario eseguire una nuova migrazione. Nella console di Gestione pacchetti immettere i comandi seguenti:
 
@@ -158,7 +160,7 @@ Fare clic su **Salva** nella seconda finestra del browser. Viene visualizzato un
 
 ![Department_Edit_page_2_after_clicking_Save](handling-concurrency-with-the-entity-framework-in-an-asp-net-mvc-application/_static/image10.png)
 
-Fare di nuovo clic su **Salva**. Il valore immesso nel secondo browser viene salvato insieme al valore originale dei dati modificati nel primo browser. I valori salvati vengono visualizzati nella pagina Index.
+Fare clic su **Salva**. Il valore immesso nel secondo browser viene salvato insieme al valore originale dei dati modificati nel primo browser. I valori salvati vengono visualizzati nella pagina Index.
 
 ![Department_Index_page_with_change_from_second_browser](handling-concurrency-with-the-entity-framework-in-an-asp-net-mvc-application/_static/image11.png)
 

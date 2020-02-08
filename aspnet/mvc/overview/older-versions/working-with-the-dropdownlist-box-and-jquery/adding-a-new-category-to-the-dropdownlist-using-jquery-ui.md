@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions/working-with-the-dropdownlist-box-and-jquery/adding-a-new-category-to-the-dropdownlist-using-jquery-ui
-title: Aggiunta di una nuova categoria a DropDownList tramite l'interfaccia utente di jQuery | Microsoft Docs
+title: Aggiunta di una nuova categoria a DropDownList mediante l'interfaccia utente di jQuery | Microsoft Docs
 author: Rick-Anderson
 description: ''
 ms.author: riande
@@ -8,126 +8,126 @@ ms.date: 01/12/2012
 ms.assetid: 44aa1ac4-6ea2-48a2-972d-52710c48eae5
 msc.legacyurl: /mvc/overview/older-versions/working-with-the-dropdownlist-box-and-jquery/adding-a-new-category-to-the-dropdownlist-using-jquery-ui
 msc.type: authoredcontent
-ms.openlocfilehash: 99bb37f95ddbad775c9c50ff5faf985b631473d0
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: cb9053593e2ea788638aec063c845cb91121861b
+ms.sourcegitcommit: e365196c75ce93cd8967412b1cfdc27121816110
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59386749"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77075112"
 ---
 # <a name="adding-a-new-category-to-the-dropdownlist-using-jquery-ui"></a>Aggiunta di una nuova categoria a DropDownList tramite l'interfaccia utente di jQuery
 
-da [Rick Anderson]((https://twitter.com/RickAndMSFT))
+di [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
-Il codice HTML `Select` tag è ideale per presentare un elenco di dati della categoria fisso, ma spesso è necessario aggiungere una nuova categoria. Si supponga che si vuole aggiungere il genere "Opera" per le categorie nel nostro database? In questa sezione, useremo l'indirizzo dell'interfaccia utente di jQuery per aggiungere una finestra di dialogo che è possibile usare per aggiungere una nuova categoria. L'immagine seguente mostra come l'interfaccia utente verrà visualizzate nel browser.
+Il tag HTML `Select` è ideale per presentare un elenco di dati di categoria fissi, ma spesso è necessario aggiungere una nuova categoria. Si supponga di voler aggiungere il genere "opera" alle categorie nel database? In questa sezione verrà usata l'interfaccia utente di jQuery per aggiungere una finestra di dialogo che è possibile usare per aggiungere una nuova categoria. Nell'immagine seguente viene illustrato il modo in cui l'interfaccia utente verrà visualizzata nel browser.
 
 ![](adding-a-new-category-to-the-dropdownlist-using-jquery-ui/_static/image1.png)
 
-Quando un utente seleziona il **Aggiungi nuovo Genre** collegamento, una finestra di dialogo popup richiede l'immissione di un nuovo nome di genere (e facoltativamente una descrizione). L'immagine seguente mostra le **Genre aggiungere** finestra di dialogo popup.
+Quando un utente seleziona il collegamento **Aggiungi nuovo genere** , viene visualizzata una finestra di dialogo popup in cui viene richiesto all'utente un nuovo nome del genere (e, facoltativamente, una descrizione). Nell'immagine seguente viene mostrata la finestra di dialogo **Aggiungi genere** .
 
 ![](adding-a-new-category-to-the-dropdownlist-using-jquery-ui/_static/image2.png)
 
-Quando viene immesso un nuovo nome al genere e il **salvare** pulsante è premuto, si verifica quanto segue:
+Quando viene immesso un nuovo nome di genere e viene effettuato il push del pulsante **Salva** , si verifica quanto segue:
 
-1. Una chiamata AJAX invia i dati per il metodo di creazione del Controller Genre, che salva il genere di nuovo il database e restituisce le nuove informazioni di genere (genere nome e ID) in formato JSON.
-2. JavaScript aggiunge i nuovi dati genre all'elenco di selezione.
-3. JavaScript rende il genere di nuovo l'elemento selezionato.
+1. Una chiamata AJAX invia i dati al metodo create del controller di genere, che salva il nuovo genere nel database e restituisce le nuove informazioni sul genere (nome e ID del genere) come JSON.
+2. JavaScript aggiunge i nuovi dati di genere all'elenco di selezione.
+3. JavaScript rende il nuovo genere l'elemento selezionato.
 
-   Nell'immagine seguente, **Opera** è stato aggiunto al database e selezionato nella **Genre** nell'elenco a discesa. 
+   Nell'immagine seguente, **opera** è stato aggiunto al database e selezionato nell'elenco a discesa **genere** . 
 
 ![](adding-a-new-category-to-the-dropdownlist-using-jquery-ui/_static/image3.png)
 
-Aprire il *Views\StoreManager\Create.cshtml* file e sostituire il markup del genere con il codice seguente il codice seguente:
+Aprire il file *Views\StoreManager\Create.cshtml* e sostituire il markup del genere con il codice seguente:
 
 [!code-cshtml[Main](adding-a-new-category-to-the-dropdownlist-using-jquery-ui/samples/sample1.cshtml)]
 
-Il `_ChooseGenre` contiene tutta la logica per associare il JavaScript e jQuery utilizzata per implementare la funzionalità di genere Aggiungi nuova visualizzazione parziale. Dopo che è stata completata il codice sarà semplice eseguire la stessa operazione con l'interfaccia utente di artista.
+Il `_ChooseGenre` visualizzazione parziale conterrà tutta la logica per collegare JavaScript e jQuery usati per implementare la funzionalità Aggiungi nuovo genere. Una volta completato il codice, sarà semplice eseguire la stessa operazione con l'interfaccia utente dell'artista.
 
-In Esplora soluzioni fare clic con il pulsante destro il *Views\StoreManager* cartella e selezionare **Add**, quindi **visualizzazione**. Nel **nome della vista** di input, immettere `_ChooseGenre` quindi selezionare **Add**. Sostituire il markup nel *Views\StoreManager\\_ChooseGenre.cshtml* file con il codice seguente:
+In Esplora soluzioni, fare clic con il pulsante destro del mouse sulla cartella *Views\StoreManager* e selezionare **Aggiungi**, quindi **Visualizza**. Nell'input **nome visualizzazione** immettere `_ChooseGenre` quindi selezionare **Aggiungi**. Sostituire il markup nel file *Views\StoreManager\\_ChooseGenre. cshtml* con il codice seguente:
 
 [!code-cshtml[Main](adding-a-new-category-to-the-dropdownlist-using-jquery-ui/samples/sample2.cshtml)]
 
-La prima riga dichiara che si sta passando un `Album` come il nostro modello, esattamente allo stesso modo del modello istruzione trovata nella visualizzazione di creazione. Le righe successive sono le **etichetta** markup dell'helper. La riga successiva è la **DropDownList** helper chiama, esattamente come in visualizzazione di creazione originale. La riga successiva viene aggiunto un collegamento con il nome `Add New Genre`, e consente di disegnare come un pulsante. La riga contenente `ValidationMessageFor` viene copiato direttamente dalla visualizzazione di creazione. Le righe seguenti:
+La prima riga dichiara che viene passato un `Album` come modello, esattamente la stessa istruzione del modello trovata nella visualizzazione create. Le righe successive sono il markup dell'helper **Label** . La riga successiva è la chiamata di helper **DropDownList** , esattamente come nella visualizzazione di creazione originale. La riga successiva aggiunge un collegamento con il nome `Add New Genre`e lo stili come un pulsante. La riga contenente `ValidationMessageFor` viene copiata direttamente dalla vista Create. Le righe seguenti:
 
 [!code-html[Main](adding-a-new-category-to-the-dropdownlist-using-jquery-ui/samples/sample3.html)]
 
-Crea un elemento div nascosto, con l'ID di `genreDialog`. Si userà jQuery collegherà nostro **Genre aggiungere** finestra di dialogo con l'ID `genreDialog` in questo elemento DIV. Le ultime due tag di script contengono collegamenti per i file JavaScript che verrà usato per implementare la funzionalità genre nuovo componente. Il */Scripts/chooseGenre.js* file viene fornito per l'utente nel progetto, verranno esaminate, più avanti nell'esercitazione.
+Crea un div nascosto, con l'ID del `genreDialog`. Verrà usato jQuery per collegare la finestra di dialogo **Aggiungi genere** con l'ID `genreDialog` in questo div. Gli ultimi due tag script contengono i collegamenti ai file JavaScript che si utilizzeranno per implementare la funzionalità Aggiungi nuovo genere. Il file */Scripts/chooseGenre.js* viene fornito nel progetto, che verrà esaminato più avanti nell'esercitazione.
 
-Eseguire l'applicazione e fare clic sui **Aggiungi nuovo Genre** pulsante. Nel **aggiungere Genre** finestra di dialogo immettere **Opera** nel **nome** casella di input.
+Eseguire l'applicazione e fare clic sul pulsante **Aggiungi nuovo genere** . Nella finestra di dialogo **Aggiungi genere** immettere **opera** nella casella **nome** input.
 
 ![](adding-a-new-category-to-the-dropdownlist-using-jquery-ui/_static/image4.png)
 
-Fare clic sul pulsante **Salva**. Una chiamata AJAX consente di creare la categoria Opera e quindi popola l'elenco a discesa con Opera e imposta Opera come il genere selezionato.
+Fare clic su **Salva**. Una chiamata AJAX crea la categoria opera e quindi compila l'elenco a discesa con opera e imposta opera come genere selezionato.
 
 ![](adding-a-new-category-to-the-dropdownlist-using-jquery-ui/_static/image5.png)
 
-Immettere un artista, title e prezzo e quindi selezionare il **Create** pulsante. Se si immette un prezzo minore di $8.99, il nuovo album verranno visualizzati nella parte superiore della visualizzazione Index. Verificare che la nuova voce di album è stata salvata nel database.
+Immettere un artista, un titolo e un prezzo, quindi selezionare il pulsante **Crea** . Se si immette un prezzo inferiore a $8,99, il nuovo album verrà visualizzato nella parte superiore della visualizzazione dell'indice. Verificare che la voce del nuovo album sia stata salvata nel database.
 
 ![](adding-a-new-category-to-the-dropdownlist-using-jquery-ui/_static/image6.png)
 
-Provare a creare un nuovo genre con solo una lettera. Il codice seguente il *Models\Genre.cs* file imposta la lunghezza minima e massima del nome del genere.
+Provare a creare un nuovo genere con una sola lettera. Il codice seguente nel file *Models\Genre.cs* imposta la lunghezza minima e massima del nome del genere.
 
 [!code-csharp[Main](adding-a-new-category-to-the-dropdownlist-using-jquery-ui/samples/sample4.cs)]
 
-La convalida lato client segnala che è necessario immettere una stringa compresa tra 2 e 20 caratteri.
+Report di convalida lato client è necessario immettere una stringa di lunghezza compresa tra 2 e 20 caratteri.
 
 ![](adding-a-new-category-to-the-dropdownlist-using-jquery-ui/_static/image7.png)
 
-### <a name="examining-how-a-new-genre-is-added-to-the-database-and-the-select-list"></a>Esaminando come un genere nuova viene aggiunto al Database e l'elenco Select.
+### <a name="examining-how-a-new-genre-is-added-to-the-database-and-the-select-list"></a>Esame del modo in cui un nuovo genere viene aggiunto al database e all'elenco di selezione.
 
-Aprire il *Scripts\chooseGenre.js* file ed esaminare il codice.
+Aprire il file *Scripts\chooseGenre.js* ed esaminare il codice.
 
 [!code-javascript[Main](adding-a-new-category-to-the-dropdownlist-using-jquery-ui/samples/sample5.js)]
 
-La seconda riga Usa l'ID `genreDialog` per creare una finestra di dialogo nel tag div nel *Views\StoreManager\\_ChooseGenre.cshtml* file. La maggior parte dei parametri denominati sono necessita di spiegazione. Il `autoOpen` parametro è impostato su false, selezionando il **Genre creare** pulsante verrà aperta la finestra di dialogo in modo esplicito (illustrato quest'ultimo su). La finestra di dialogo ha due pulsanti, **salvare** e **Annulla**. Il **annullare** pulsante chiude la finestra di dialogo. Il codice seguente illustra il **salvare** pulsante (funzione).
+La seconda riga usa l'ID `genreDialog` per creare una finestra di dialogo nel tag div nel file *Views\StoreManager\\_ChooseGenre. cshtml* . La maggior parte dei parametri denominati è intuitiva. Il parametro `autoOpen` è impostato su false. Se si seleziona il pulsante **Crea genere** , il dialogo verrà aperto in modo esplicito (come descritto in questo secondo caso). Nella finestra di dialogo sono presenti due pulsanti, **Save** e **Cancel**. Il pulsante **Annulla** chiude la finestra di dialogo. Nel codice seguente viene illustrata la funzione del pulsante **Salva** .
 
 [!code-javascript[Main](adding-a-new-category-to-the-dropdownlist-using-jquery-ui/samples/sample6.js)]
 
-Il `var createGenreForm` viene selezionato il `createGenreForm` ID. Il `createGenreForm` ID è stato impostato nel seguente codice trovato nel *Views\Genre\\_CreateGenre.cshtml* file.
+Il `var createGenreForm` viene selezionato dall'ID del `createGenreForm`. L'ID `createGenreForm` è stato impostato nel codice seguente trovato nel file *Views\Genre\\_CreateGenre. cshtml* .
 
 [!code-cshtml[Main](adding-a-new-category-to-the-dropdownlist-using-jquery-ui/samples/sample7.cshtml)]
 
-Il [Html.BeginForm](https://msdn.microsoft.com/library/dd492714.aspx) overload helper utilizzato nel *Views\Genre\\_CreateGenre.cshtml* file genera codice HTML con un attributo di azione che contiene l'URL per inviare il modulo. È possibile verificarlo visualizzando la pagina di album create in un browser e selezionando origine Mostra nel Visualizzatore. Il markup seguente mostra il codice HTML generato che contiene il tag form.
+L'overload dell'helper [HTML. BeginForm](https://msdn.microsoft.com/library/dd492714.aspx) usato nel file *Views\Genre\\_CreateGenre. cshtml* genera il codice HTML con un attributo di azione contenente l'URL per l'invio del modulo. Per visualizzarlo, è possibile visualizzare la pagina Crea album in un browser e selezionare Mostra origine nel browser. Il markup seguente illustra il codice HTML generato contenente il tag form.
 
 [!code-html[Main](adding-a-new-category-to-the-dropdownlist-using-jquery-ui/samples/sample8.html)]
 
-Il componente aggiuntivo jQuery `$.post` riga effettua una chiamata AJAX all'attributo dell'azione (`/StoreManager/Create`) e passa i dati dalle **Genre creare** nella finestra di dialogo. I dati sono costituiti da nome per il genere di nuovo e una descrizione facoltativa. Se la chiamata AJAX ha esito positivo, il nuovo nome al genere e il valore vengono aggiunti al markup Select e il genere nuova è impostato sul valore selezionato. Poiché si tratta di markup generata in modo dinamico, è possibile visualizzare la nuova opzione Seleziona per visualizzare il codice sorgente nel browser. È possibile visualizzare il nuova pagina HTML con strumenti di sviluppo F12 di Internet Explorer 9. Per visualizzare la nuova opzione select, in Internet Explorer 9, premere il tasto F12 per avviare gli strumenti di sviluppo F12. Passare alla pagina Create e aggiungere un nuovo genre in modo che il genere nuovo è selezionato nell'elenco di selezione genre. In strumenti di sviluppo F12:
+La riga di `$.post` jQuery esegue una chiamata AJAX all'attributo Action (`/StoreManager/Create`) e passa i dati dalla finestra di dialogo **Crea genere** . I dati sono costituiti dal nome del nuovo genere e da una descrizione facoltativa. Se la chiamata AJAX ha esito positivo, il nuovo nome e il valore del genere vengono aggiunti al markup Select e il nuovo genere viene impostato sul valore selezionato. Poiché si tratta di un markup generato in modo dinamico, non è possibile visualizzare la nuova opzione Select visualizzando l'origine nel browser. È possibile visualizzare il nuovo codice HTML con gli strumenti di sviluppo F12 di IE 9. Per visualizzare la nuova opzione Seleziona, in Internet Explorer 9 Premere il tasto F12 per avviare gli strumenti di sviluppo F12. Passare alla pagina Create (Crea) e aggiungere un nuovo genere, in modo che il nuovo genere sia selezionato nell'elenco di selezione di genere. Negli strumenti di sviluppo F12:
 
 1. Selezionare la scheda HTML.
 2. Premere l'icona di aggiornamento.  
     ![](adding-a-new-category-to-the-dropdownlist-using-jquery-ui/_static/image8.png)
 3. Nella casella di ricerca immettere GenreID.
-4. Usando l'icona Avanti,   
+4. Utilizzando l'icona avanti,   
     ![](adding-a-new-category-to-the-dropdownlist-using-jquery-ui/_static/image9.png)  
-   individuare il tag di selezione seguente:
+   passare al tag SELECT seguente:
 
     [!code-html[Main](adding-a-new-category-to-the-dropdownlist-using-jquery-ui/samples/sample9.html)]
-5. Espandere l'ultimo valore di opzione.
+5. Espandere l'ultimo valore dell'opzione.
 
 ![](adding-a-new-category-to-the-dropdownlist-using-jquery-ui/_static/image10.png)
 
-Il seguente codice nel *Scripts\chooseGenre.js* file illustra la procedura il **aggiungere nuovo Genre** pulsante ottiene connesso per l'evento click e il comportamento della **aggiungere nuovo Genre** è la finestra di dialogo creato.
+Il codice seguente nel file *Scripts\chooseGenre.js* Mostra come il pulsante **Aggiungi nuovo genere** viene connesso all'evento click e come viene creata la finestra di dialogo **Aggiungi nuovo tipo** .
 
 [!code-javascript[Main](adding-a-new-category-to-the-dropdownlist-using-jquery-ui/samples/sample10.js)]
 
-La prima riga crea una funzione di fare clic su collegato per il **aggiungere nuovo Genre** pulsante. Il markup seguente dal Views\StoreManager\\_ChooseGenre.cshtml file Mostra come il **Aggiungi nuovo Genre** pulsante viene creato:
+La prima riga crea una funzione click collegata al pulsante **Aggiungi nuovo genere** . Il markup seguente dal file Views\StoreManager\\_ChooseGenre. cshtml Mostra come viene creato il pulsante **Aggiungi nuovo genere** :
 
 [!code-cshtml[Main](adding-a-new-category-to-the-dropdownlist-using-jquery-ui/samples/sample11.cshtml)]
 
-Il metodo load crea e apre la finestra di dialogo Aggiungi Genre e chiama il componente aggiuntivo jQuery `parse` metodo in modo che la convalida del client si verifica nei dati immessi nella finestra di dialogo.
+Il metodo Load crea e apre la finestra di dialogo Aggiungi genere e chiama il metodo jQuery `parse` in modo che la convalida del client venga eseguita sui dati immessi nella finestra di dialogo.
 
-In questa sezione si è appreso come creare una finestra di dialogo che consente di aggiungere nuovi dati di categoria a un elenco di selezione. È possibile seguire la stessa procedura per creare l'interfaccia utente per aggiungere un nuovo artista all'elenco di selezione artista. Questa esercitazione ha presentato una panoramica dell'utilizzo con l'helper HTML di ASP.NET MVC **DropDownList**. Per altre informazioni sull'uso con il **DropDownList**, vedere la sezione riferimenti di addizione riportato di seguito. È possibile comunicarlo se in questa esercitazione è stato utile.
+In questa sezione si è appreso come creare una finestra di dialogo che può essere usata per aggiungere nuovi dati di categoria a un elenco di selezione. È possibile seguire la stessa procedura per creare un'interfaccia utente per aggiungere un nuovo artista all'elenco di selezione dell'artista. In questa esercitazione è stata fornita una panoramica dell'uso del **DropDownList**helper HTML ASP.NET MVC. Per ulteriori informazioni sull'utilizzo del **DropDownList**, vedere la sezione relativa ai riferimenti di addizione riportata di seguito. Indica se questa esercitazione è stata utile.
 
 Rick.Anderson[at]Microsoft.com
 
-### <a name="additional-references"></a>Riferimenti aggiuntivi
+### <a name="additional-references"></a>Altre informazioni di riferimento
 
-- [ASP.NET MVC: Cascading gli elenchi a discesa esercitazione](https://weblogs.asp.net/raduenuca/archive/2011/03/06/asp-net-mvc-cascading-dropdown-lists-tutorial-part-1-defining-the-problem-and-the-context.aspx) da [Radu Enuca](https://weblogs.asp.net/raduenuca/default.aspx)
-- [Scelta](http://harvesthq.github.com/chosen/) plug-in A JavaScript che supportano la selezione multipla e filtro.
+- [ASP.NET MVC – elenco a discesa a cascata-esercitazione](https://weblogs.asp.net/raduenuca/archive/2011/03/06/asp-net-mvc-cascading-dropdown-lists-tutorial-part-1-defining-the-problem-and-the-context.aspx) di [Radu Enuca](https://weblogs.asp.net/raduenuca/default.aspx)
+- [Scelta](https://harvesthq.github.com/chosen/) Un plug-in JavaScript che supporta la selezione e il filtraggio.
 
-### <a name="contributors"></a>Contributors
+### <a name="contributors"></a>Collaboratori
 
-- [Radu Enuca](https://weblogs.asp.net/raduenuca/default.aspx)
+- [Enuca Radu](https://weblogs.asp.net/raduenuca/default.aspx)
 - Jean-Sébastien Goupil
 - [Brad Wilson](http://bradwilson.typepad.com/)
 
@@ -139,4 +139,4 @@ Rick.Anderson[at]Microsoft.com
 - Tom Dykstra
 
 > [!div class="step-by-step"]
-> [Precedente](examining-how-aspnet-mvc-scaffolds-the-dropdownlist-helper.md)
+> [Indietro](examining-how-aspnet-mvc-scaffolds-the-dropdownlist-helper.md)

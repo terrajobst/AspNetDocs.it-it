@@ -8,12 +8,12 @@ ms.date: 04/10/2014
 ms.assetid: 7958d725-e958-4566-a85b-535eeb985f94
 msc.legacyurl: /mvc/overview/getting-started/recommended-resources-for-mvc
 msc.type: authoredcontent
-ms.openlocfilehash: 98089df48550216b50330d9b354168f570d857cd
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: daccaedae0b0e60f5086f270f214f87da564a85d
+ms.sourcegitcommit: e365196c75ce93cd8967412b1cfdc27121816110
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74583180"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074930"
 ---
 # <a name="mvc-recommended-resources"></a>Risorse consigliate su MVC
 
@@ -26,7 +26,7 @@ di [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 ## <a name="getting-started-with-aspnet-mvc"></a>Getting Started with ASP.NET MVC
 
-- [Introduzione a ASP.NET MVC 5](introduction/getting-started.md)
+- [Introduzione ad ASP.NET MVC 5](introduction/getting-started.md)
 - [Introduzione a ASP.NET MVC](https://pluralsight.com/training/Player?author=scott-allen&amp;name=mvc4-building-m1-intro&amp;mode=live&amp;clip=0&amp;course=mvc4-building) (video di Pluralsight)
 - [Informazioni sul controller di visualizzazione modelli in ASP.NET MVC](http://www.dotnet-tricks.com/Tutorial/mvc/DIYG060113-Understanding-Model-View-Controller-in-Asp.Net-MVC.html) (breve introduzione al Blog).
 - [Panoramica di ASP.NET MVC](../older-versions-1/overview/asp-net-mvc-overview.md)
@@ -80,7 +80,7 @@ di [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 <a id="security"></a>
 
-## <a name="security"></a>Sicurezza -
+## <a name="security"></a>Sicurezza
 
 - [Creare un'app ASP.NET MVC 5 con Facebook e Google OAuth2 Sign-on](../security/create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on.md)
 - [Operazioni da eseguire e da evitare in ASP.NET](../../../aspnet/overview/web-development-best-practices/what-not-to-do-in-aspnet-and-what-to-do-instead.md)
@@ -99,7 +99,7 @@ di [Rick Anderson]((https://twitter.com/RickAndMSFT))
 - [Sicurezza in ASP.NET MVC](http://www.codeproject.com/Articles/654846/Security-In-ASP-NET-MVC)
 - [Sicurezza dell'app ASP.NET MVC 4](https://blogs.msdn.com/b/rickandy/archive/2012/03/23/securing-your-asp-net-mvc-4-app-and-the-new-allowanonymous-attribute.aspx)
 - [Panoramica di Pluralsight video sulle procedure di sicurezza](http://www.pluralsight-training.net/microsoft/players/PSODPlayer?author=scott-allen&amp;name=mvc3-building-security&amp;mode=live&amp;clip=0&amp;course=aspdotnet-mvc3-intro)
-- [Prevenzione di XSRF/CSRF in ASP.NET MVC e pagine Web](../security/xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages.md)
+- [XSRF/CSRF Prevention in ASP.NET MVC and Web Pages](../security/xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages.md) (Prevenzione delle richieste intersito false in ASP.NET MVC e nelle pagine Web ASP.NET)
 - [OWASP primi 10 per sviluppatori .NET](http://www.troyhunt.com/2010/05/owasp-top-10-for-net-developers-part-1.html)
 - [Uso di provider OAuth con MVC 4](../older-versions/using-oauth-providers-with-mvc.md)
 - [Correzione delle applicazioni ASP.NET](https://msdn.microsoft.com/magazine/hh580736.aspx) Dicembre 2011 MSDN Magazine articolo di Adam Tuliper
@@ -123,7 +123,7 @@ di [Rick Anderson]((https://twitter.com/RickAndMSFT))
 - [L'appartenenza non corrisponde all'autenticazione basata su form](http://brockallen.com/2012/06/04/membership-is-not-the-same-as-forms-authentication/)
 - [Pensa due volte sull'uso di MembershipProvider (e SimpleMembership)](http://brockallen.com/2012/09/02/think-twice-about-using-membershipprovider-and-simplemembership/)
 - [Implementazione dell'autenticazione a due fattori MVC con Google Authenticator](http://www.codeproject.com/Articles/403355/Implementing-MVC-Two-Factor-Authentication-with-Go)
-- new
+- Nuovo
 - [ASP.NET Identity e archiviazione tabelle di Azure](https://blogs.msdn.com/b/stuartleeks/archive/2014/01/15/asp-net-identity-and-windows-azure-table-storage.aspx)
 
 <a id="OWIN"></a>
@@ -189,7 +189,7 @@ di [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 <a id="KO"></a>
 
-## <a name="angularjs-knockout-knockoutjs"></a>AngularJS, Knockout, Knockout
+## <a name="angularjs-knockout-knockoutjs"></a>AngularJS, Knockout, KnockoutJS
 
 - [Knockout](http://knockoutjs.com/)
 - [Introduzione con knockout in ASP.NET MVC](http://www.dotnetcurry.com/ShowArticle.aspx?ID=933)
@@ -238,7 +238,7 @@ di [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 <a id="Routing"></a>
 
-## <a name="routing"></a>Routing
+## <a name="routing"></a>Routing.
 
 - [Routing degli attributi in ASP.NET MVC 5](https://blogs.msdn.com/b/webdev/archive/2013/10/17/attribute-routing-in-asp-net-mvc-5.aspx)
 - [Ciclo di vita di un'applicazione ASP.NET MVC 5](lifecycle-of-an-aspnet-mvc-5-application.md) (PDF)
@@ -274,7 +274,7 @@ di [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 <a id="mobile"></a>
 
-## <a name="mobile"></a>Cellulare
+## <a name="mobile"></a>Dispositivi mobili
 
 - [Esercitazione su ASP.NET MVC 4 per dispositivi mobili](../older-versions/aspnet-mvc-4-mobile-features.md)
 - [Video Creazione di siti Web intuitivi per dispositivi mobili con MVC 4](https://www.bitcast.io/v/building-mobile-friendly-websites-with-mvc-4)
@@ -291,7 +291,7 @@ di [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 <a id="spa"></a>
 
-## <a name="single-page-application-spa"></a>Applicazione a pagina singola (SPA)
+## <a name="single-page-application-spa"></a>Applicazione a singola pagina (SPA)
 
 - [Nozioni di fondo per sviluppatori .NET per applicazioni a pagina singola](https://msdn.microsoft.com/magazine/dn605877.aspx) MSDN Magazine
 - [App a singola pagina con AngularJS e ASP.NET MVC 4](http://tarkus.me/post/32121691785/angularjs-with-asp-net-mvc-4)
@@ -315,7 +315,7 @@ di [Rick Anderson]((https://twitter.com/RickAndMSFT))
 - [Creazione di applicazioni di unità testabili in ASP.NET MVC-esercitazione per principianti](http://www.codeproject.com/Articles/579035/Creating-Unit-Testable-Applications-in-ASP-NET-MVC)
 - [Inserimento delle dipendenze del controller MVC ASP.NET per principianti](http://www.codeproject.com/Articles/560798/ASP-NET-MVC-controller-dependency-injection-for-be)
 - [Scrittura di unit test per un metodo di azione MVC ASP.NET che gestisce la richiesta AJAX e la richiesta normale](https://weblogs.asp.net/shijuvarghese/archive/2012/12/09/writing-unit-tests-for-an-asp-net-mvc-action-method-that-handles-ajax-request-and-normal-request.aspx)
-- [Oak: offri la bontà dinamica e lo sviluppo di applicazioni a ASP.NET MVC](http://amirrajan.github.com/Oak/)
+- [Oak: offri la bontà dinamica e lo sviluppo di applicazioni a ASP.NET MVC](https://amirrajan.github.com/Oak/)
 - [Sviluppo di un'applicazione ASP.NET MVC 4 per TDD con xUnit e MOQ](http://www.dotnetcurry.com/ShowArticle.aspx?ID=836)
 - [Test delle visualizzazioni MVC ASP.NET, dal nuovo progetto al server di compilazione](https://channel9.msdn.com/Events/aspConf/aspConf/Testing-ASP-NET-MVC-Views-from-New-Project-to-the-Build-Server) (video)
 - [Avvio rapido: sviluppo basato su test](https://channel9.msdn.com/Events/aspConf/aspConf/Quick-Start-Test-Driven-Development)(video)
@@ -327,7 +327,7 @@ di [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 <a id="best"></a>
 
-## <a name="best-practices"></a>Suggerimenti
+## <a name="best-practices"></a>Procedure consigliate
 
 - [Operazioni da eseguire e da evitare in ASP.NET](../../../aspnet/overview/web-development-best-practices/what-not-to-do-in-aspnet-and-what-to-do-instead.md)
 - [Elenco di controllo per sviluppatori Web](http://webdevchecklist.com/aspnet)
@@ -380,7 +380,7 @@ di [Rick Anderson]((https://twitter.com/RickAndMSFT))
 - [ASP.NET MVC dietro le quinte della parte 5](http://www.pieterg.com/2013/4/aspnet-mvc-under-the-hood-part-5) [ActionInvoker](https://msdn.microsoft.com/library/system.web.mvc.controller.actioninvoker(v=vs.108).aspx)
 - [ASP.NET MVC con cappuccio parte 6](http://www.pieterg.com/2013/5/aspnet-mvc-under-the-hood-part-6) Modalità di individuazione e modalità di applicazione di ActionFilters
 - [Creare ViewWebPage personalizzati per ASP.NET MVC](http://www.love2dev.com/#!article/Create-Your-Own-Custom-ViewWebPage-for-ASPNET-MVC)
-- [Traccia nelle visualizzazioni Razor di ASP.NET MVC](https://blogs.msdn.com/b/webdev/archive/2013/07/16/tracing-in-asp-net-mvc-razor-views.aspx)
+- [Traccia nelle visualizzazioni Razor ASP.NET MVC](https://blogs.msdn.com/b/webdev/archive/2013/07/16/tracing-in-asp-net-mvc-razor-views.aspx)
 - [Rendering delle visualizzazioni Razor di ASP.NET MVC al di fuori di MVC rivisitato](http://www.west-wind.com/weblog/posts/2013/Jul/15/Rendering-ASPNET-MVC-Razor-Views-outside-of-MVC-revisited)
 - [Cinque strumenti front-end essenziali da usare con i progetti MVC moderni](http://www.adamtibi.net/06-2013/five-essential-front-end-tools-that-should-be-used-with-modern-mvc-projects)
 - [Caratteristiche e debolezze dell'associazione di modelli MVC ASP.NET](https://msdn.microsoft.com/magazine/hh781022.aspx)

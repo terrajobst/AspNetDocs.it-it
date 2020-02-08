@@ -9,12 +9,12 @@ ms.custom: seoapril2019
 ms.assetid: e42c8388-04ed-4341-9fdb-41b1b4c06320
 msc.legacyurl: /web-api/overview/formats-and-model-binding/parameter-binding-in-aspnet-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: 032368f94ce32cf6231458649e8fdd42bee685e9
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.openlocfilehash: 464cb9b45dc0b62c4da38b7cf612934808854d32
+ms.sourcegitcommit: e365196c75ce93cd8967412b1cfdc27121816110
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519258"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074904"
 ---
 # <a name="parameter-binding-in-aspnet-web-api"></a>Associazione di parametri in API Web ASP.NET
 
@@ -45,7 +45,7 @@ Per forzare l'API Web a leggere un tipo complesso dall'URI, aggiungere l'attribu
 
 [!code-csharp[Main](parameter-binding-in-aspnet-web-api/samples/sample2.cs)]
 
-Il client può inserire i valori di latitudine e longitudine nella stringa di query e l'API Web li userà per costruire un `GeoPoint`. Ad esempio:
+Il client può inserire i valori di latitudine e longitudine nella stringa di query e l'API Web li userà per costruire un `GeoPoint`. Ad esempio,
 
 `http://localhost/api/values/?Latitude=47.678558&Longitude=-122.130989`
 
@@ -102,7 +102,7 @@ Uno strumento di associazione di modelli ottiene valori di input non elaborati d
 
 Il provider di valori predefinito nell'API Web ottiene i valori dai dati della route e dalla stringa di query. Se, ad esempio, l'URI è `http://localhost/api/values/1?location=48,-122`, il provider di valori crea le coppie chiave-valore seguenti:
 
-- id = &quot;1&quot;
+- ID = &quot;1&quot;
 - località = &quot;48.122&quot;
 
 Si presuppone che il modello di route predefinito, ovvero &quot;API/{controller}/{ID}&quot;.
@@ -205,7 +205,7 @@ Se lo si desidera, è possibile sostituire l'intero servizio **IActionValueBinde
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-[Esempio di associazione di parametri personalizzati](http://github.com/aspnet/samples/tree/master/samples/aspnet/WebApi/CustomParameterBinding)
+[Esempio di associazione di parametri personalizzati](https://github.com/aspnet/samples/tree/master/samples/aspnet/WebApi/CustomParameterBinding)
 
 Mike Stall ha scritto una serie di post di Blog sull'associazione dei parametri dell'API Web:
 
