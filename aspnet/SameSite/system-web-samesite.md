@@ -5,12 +5,12 @@ description: Informazioni su come usare per navigava sullostesso sito i cookie i
 ms.author: riande
 ms.date: 1/22/2019
 uid: samesite/system-web-samesite
-ms.openlocfilehash: c81ca38648609aa5347d2a8cc11889fc85d81711
-ms.sourcegitcommit: 4d439e01c82c7c95b19216fedaf5b1a11a1deb06
+ms.openlocfilehash: c262e300361f33621e8bd126a34b251c23f56e1a
+ms.sourcegitcommit: 6bd0d7581ec36dc32cb85d0d5fc0e51068dd4423
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76826614"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77234762"
 ---
 # <a name="work-with-samesite-cookies-in-aspnet"></a>Usare i cookie navigava sullostesso sito in ASP.NET
 
@@ -55,7 +55,7 @@ ASP.Net emette anche quattro cookie specifici per queste funzionalità: autentic
    <forms cookieSameSite="Lax" requireSSL="false" />
   </authentication>
   <sessionState cookieSameSite="Lax" /> <!-- No config attribute for Secure -->
-  <roleManager cookieRequiresSSL="false" /> <!-- No config attribute for SameSite -->
+  <roleManager cookieRequireSSL="false" /> <!-- No config attribute for SameSite -->
  <system.web>
 <configuration>
 ```  
@@ -66,7 +66,7 @@ ASP.Net emette anche quattro cookie specifici per queste funzionalità: autentic
 
 Il supporto di navigava sullostesso sito è stato implementato per la prima volta in .NET 4.7.2 usando lo [standard draft 2016](https://tools.ietf.org/html/draft-west-first-party-cookies-07#section-4.1).
 
-Il 19 novembre 2019 aggiornamenti per Windows aggiornamento di .NET 4.7.2 + dallo standard 2016 allo standard 2019. Ulteriori aggiornamenti sono imminenti per le altre versioni di Windows. Per ulteriori informazioni, vedere <xref:samesite/kbs-samesite>.
+Il 19 novembre 2019 aggiornamenti per Windows aggiornamento di .NET 4.7.2 + dallo standard 2016 allo standard 2019. Ulteriori aggiornamenti sono imminenti per le altre versioni di Windows. Per altre informazioni, vedere <xref:samesite/kbs-samesite>.
 
  Bozza 2019 della specifica navigava sullostesso sito:
 
@@ -137,9 +137,9 @@ Il supporto di Firefox per il nuovo standard può essere testato nella versione 
 
 ### <a name="test-with-edge-browser"></a>Eseguire test con il browser Microsoft Edge
 
-Microsoft Edge supporta lo standard navigava sullostesso sito precedente. La versione perimetrale 44 non presenta problemi di compatibilità noti con il nuovo standard.
+Edge supporta lo standard navigava sullostesso sito precedente. La versione perimetrale 44 non presenta problemi di compatibilità noti con il nuovo standard.
 
-### <a name="test-with-edge-chromium"></a>Test con Microsoft Edge (Chromium)
+### <a name="test-with-edge-chromium"></a>Test con Edge (cromo)
 
 I flag navigava sullostesso sito sono impostati nella pagina `edge://flags/#same-site-by-default-cookies`. Nessun problema di compatibilità rilevato con cromo perimetrale.
 
