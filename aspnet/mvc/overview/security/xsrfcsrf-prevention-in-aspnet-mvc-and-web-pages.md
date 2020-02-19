@@ -8,20 +8,20 @@ ms.date: 03/14/2013
 ms.assetid: aadc5fa4-8215-4fc7-afd5-bcd2ef879728
 msc.legacyurl: /mvc/overview/security/xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages
 msc.type: authoredcontent
-ms.openlocfilehash: fb7e76101cbe6a874ddf5b3429ca2dc6d474334b
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: 1965063a9b613d0e2857cddcc2165f5fda64ec0c
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74595756"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77455529"
 ---
 # <a name="xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages"></a>Prevenzione di XSRF/CSRF in ASP.NET MVC e pagine Web
 
-di [Rick Anderson]((https://twitter.com/RickAndMSFT))
+di [Rick Anderson](https://twitter.com/RickAndMSFT)
 
-> La richiesta tra siti falsificata (nota anche come XSRF o CSRF) è un attacco contro le applicazioni ospitate sul Web, in cui un sito Web dannoso può influenzare l'interazione tra un browser client e un sito web considerato attendibile da tale browser. Questi attacchi sono possibili perché i Web browser invieranno automaticamente i token di autenticazione con ogni richiesta a un sito Web. L'esempio canonico è un cookie di autenticazione, ad esempio ASP. Ticket di autenticazione basata su form di NET. Tuttavia, i siti Web che utilizzano qualsiasi meccanismo di autenticazione permanente, ad esempio l'autenticazione di Windows, di base e così via, possono essere assegnati a tali attacchi.
+> La richiesta tra siti falsificata (nota anche come XSRF o CSRF) è un attacco contro le applicazioni ospitate sul Web, in cui un sito Web dannoso può influenzare l'interazione tra un browser client e un sito web considerato attendibile da tale browser. Questi attacchi sono possibili perché i Web browser invieranno automaticamente i token di autenticazione con ogni richiesta a un sito Web. Un classico esempio è un cookie di autenticazione, ad esempio un ticket di autenticazione basata su form di ASP.NET. Tuttavia, i siti Web che utilizzano qualsiasi meccanismo di autenticazione permanente, ad esempio l'autenticazione di Windows, di base e così via, possono essere assegnati a tali attacchi.
 > 
-> Un attacco XSRF è diverso da un attacco di phishing. Gli attacchi di phishing richiedono interazione da parte della vittima. In un attacco di phishing, un sito Web dannoso simula il sito Web di destinazione e la vittima è ingannata a fornire informazioni riservate all'autore dell'attacco. In un attacco XSRF, spesso non è necessaria alcuna interazione da parte della vittima. Piuttosto, l'autore dell'attacco si basa sul browser che invia automaticamente tutti i cookie pertinenti al sito Web di destinazione.
+> Un attacco XSRF è diverso da un attacco di phishing. Gli attacchi di phishing richiedono un'interazione da parte della vittima. In un attacco di phishing, un sito Web dannoso simula il sito Web di destinazione e la vittima è ingannata a fornire informazioni riservate all'autore dell'attacco. In un attacco XSRF spesso non è necessaria alcuna interazione da parte della vittima. Piuttosto, l'autore dell'attacco si basa sul browser che invia automaticamente tutti i cookie pertinenti al sito Web di destinazione.
 > 
 > Per ulteriori informazioni, vedere [Open Web Application Security Project](https://www.owasp.org/index.php/Main_Page)(OWASP) [XSRF](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)).
 
@@ -163,9 +163,9 @@ Lo sviluppatore può configurare il sistema anti-XSRF dall'avvio dell'applicazio
 | --- | --- |
 | **AdditionalDataProvider** | Un [IAntiForgeryAdditionalDataProvider](https://msdn.microsoft.com/library/system.web.helpers.iantiforgeryadditionaldataprovider(v=vs.111).aspx) che fornisce dati aggiuntivi durante la generazione di token e utilizza dati aggiuntivi durante la convalida del token. Il valore predefinito è *null*. Per ulteriori informazioni, vedere la sezione [IAntiForgeryAdditionalDataProvider](https://msdn.microsoft.com/library/system.web.helpers.iantiforgeryadditionaldataprovider(v=vs.111).aspx) . |
 | **CookieName** | Stringa che fornisce il nome del cookie HTTP usato per archiviare il token di sessione anti-XSRF. Se questo valore non è impostato, verrà generato automaticamente un nome in base al percorso virtuale distribuito dell'applicazione. Il valore predefinito è *null*. |
-| **RequireSsl** | Valore booleano che determina se è necessario inviare i token anti-XSRF su un canale protetto da SSL. Se questo valore è *true*, tutti i cookie generati automaticamente avranno il flag "Secure" impostato e le API anti-XSRF generano se vengono chiamate dall'interno di una richiesta non inviata tramite SSL. Il valore predefinito è *false*. |
-| **SuppressIdentityHeuristicChecks** | Valore booleano che determina se il sistema anti-XSRF deve disattivare il supporto per le identità basate sulle attestazioni. Se questo valore è *true*, il sistema presuppone che *IIdentity.Name* sia appropriato per l'uso come identificatore univoco per singolo utente e non tenterà di *IClaimsIdentity* o *CLCLAIMSIDENTITY* speciale come descritto in [WIF/ACS/ sezione autenticazione basata sulle attestazioni](#_WIF_ACS) . Il valore predefinito è `false`. |
-| **UniqueClaimTypeIdentifier** | Stringa che indica il tipo di attestazione appropriato per l'utilizzo come identificatore univoco per utente. Se questo valore è impostato e l'oggetto *IIdentity* corrente è basato sulle attestazioni, il sistema tenterà di estrarre un'attestazione del tipo specificato da *UniqueClaimTypeIdentifier*e verrà usato il valore corrispondente al posto del nome utente quando generazione del token di campo. Se il tipo di attestazione non viene trovato, il sistema non riuscirà a eseguire la richiesta. Il valore predefinito è *null*, che indica che il sistema deve usare la tupla (provider di identità, identificatore nome) come descritto in precedenza al posto del nome utente dell'utente. |
+| **RequireSsl** | Valore booleano che determina se è necessario inviare i token anti-XSRF su un canale protetto da SSL. Se questo valore è *true*, tutti i cookie generati automaticamente avranno il flag "Secure" impostato e le API anti-XSRF generano se vengono chiamate dall'interno di una richiesta non inviata tramite SSL. Il valore predefinito *false*. |
+| **SuppressIdentityHeuristicChecks** | Valore booleano che determina se il sistema anti-XSRF deve disattivare il supporto per le identità basate sulle attestazioni. Se questo valore è *true*, il sistema presuppone che *IIdentity.Name* sia appropriato per l'uso come identificatore univoco per singolo utente e non tenterà un *IClaimsIdentity* o *ClClaimsIdentity* speciale, come descritto nella sezione [autenticazione basata su WIF/ACS/attestazioni](#_WIF_ACS) . Il valore predefinito è `false`. |
+| **UniqueClaimTypeIdentifier** | Stringa che indica il tipo di attestazione appropriato per l'utilizzo come identificatore univoco per utente. Se questo valore è impostato e l'oggetto *IIdentity* corrente è basato sulle attestazioni, il sistema tenterà di estrarre un'attestazione del tipo specificato da *UniqueClaimTypeIdentifier*e il valore corrispondente verrà usato al posto del nome utente dell'utente durante la generazione del token del campo. Se il tipo di attestazione non viene trovato, il sistema non riuscirà a eseguire la richiesta. Il valore predefinito è *null*, che indica che il sistema deve usare la tupla (provider di identità, identificatore nome) come descritto in precedenza al posto del nome utente dell'utente. |
 
 <a id="_IAntiForgeryAdditionalDataProvider"></a>
 
@@ -185,6 +185,6 @@ Le routine anti-XSRF attualmente non difendono i [clickjacking](https://www.owas
 
 Gli sviluppatori Web devono continuare a garantire che il sito non sia vulnerabile agli attacchi XSS. Gli attacchi XSS sono molto potenti e un exploit efficace comporta anche la violazione delle difese di runtime di ASP.NET Web stack contro gli attacchi XSRF.
 
-## <a name="acknowledgment"></a>Riconoscimento
+## <a name="acknowledgment"></a>Acknowledgment (Riconoscimento)
 
 [@LeviBroderick](https://twitter.com/LeviBroderick), che ha scritto gran parte del codice di sicurezza di ASP.NET, la maggior parte di queste informazioni.

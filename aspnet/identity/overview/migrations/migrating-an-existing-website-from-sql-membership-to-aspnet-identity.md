@@ -9,16 +9,16 @@ ms.custom: seoapril2019
 ms.assetid: 220d3d75-16b2-4240-beae-a5b534f06419
 msc.legacyurl: /identity/overview/migrations/migrating-an-existing-website-from-sql-membership-to-aspnet-identity
 msc.type: authoredcontent
-ms.openlocfilehash: eacfbb8a5b2d1aa3678892bc2077a56185fdebbc
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.openlocfilehash: 633229cc4311d151121bf6a91b9fa8aeecca1197
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519154"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77456153"
 ---
 # <a name="migrating-an-existing-website-from-sql-membership-to-aspnet-identity"></a>Migrazione di un sito Web esistente dall'appartenenza SQL ad ASP.NET Identity
 
-di [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Suhas Joshi](https://github.com/suhasj)
+di [Rick Anderson](https://twitter.com/RickAndMSFT), [Suhas Joshi](https://github.com/suhasj)
 
 > Questa esercitazione illustra i passaggi per eseguire la migrazione di un'applicazione Web esistente con i dati utente e ruolo creati usando l'appartenenza a SQL al nuovo sistema di ASP.NET Identity. Questo approccio comporta la modifica dello schema del database esistente in quello necessario per il ASP.NET Identity e l'hook nelle classi precedenti/nuove. Dopo aver adottato questo approccio, una volta eseguita la migrazione del database, gli aggiornamenti futuri dell'identità verranno gestiti senza intoppi.
 
@@ -83,13 +83,13 @@ Questo file di script è specifico di questo esempio. Se lo schema per le tabell
 
 Per ASP.NET Identity classi da utilizzare con i dati degli utenti esistenti, è necessario eseguire la migrazione dello schema del database a quello necessario per ASP.NET Identity. A tale scopo, è possibile aggiungere nuove tabelle e copiare le informazioni esistenti in tali tabelle. Per impostazione predefinita ASP.NET Identity utilizza EntityFramework per eseguire il mapping delle classi del modello di identità al database per archiviare/recuperare le informazioni. Queste classi modello implementano le interfacce di identità principali che definiscono gli oggetti utente e ruolo. Le tabelle e le colonne del database sono basate su queste classi di modelli. Le classi del modello EntityFramework in Identity v 2.1.0 e le relative proprietà sono definite di seguito
 
-| **IdentityUser** | **Type** | **IdentityRole** | **IdentityUserRole** | **IdentityUserLogin** | **IdentityUserClaim** |
+| **IdentityUser** | **Tipo** | **IdentityRole** | **IdentityUserRole** | **IdentityUserLogin** | **IdentityUserClaim** |
 | --- | --- | --- | --- | --- | --- |
 | Id | string | Id | RoleId | Provider | Id |
 | Nome utente | string | Name | UserId | UserId | ClaimType |
 | PasswordHash | string |  |  | LoginProvider | ClaimValue |
 | SecurityStamp | string |  |  |  | ID\_utente |
-| Posta elettronica | string |  |  |  |  |
+| Email | string |  |  |  |  |
 | EmailConfirmed | bool |  |  |  |  |
 | PhoneNumber | string |  |  |  |  |
 | PhoneNumberConfirmed | bool |  |  |  |  |
@@ -105,7 +105,7 @@ Per ASP.NET Identity classi da utilizzare con i dati degli utenti esistenti, è 
 | IdentityRole | AspnetRoles | Id |  |
 | IdentityUserRole | AspnetUserRole | UserId + RoleId | ID\_utente-&gt;AspnetUsers RoleId-&gt;AspnetRoles |
 | IdentityUserLogin | AspnetUserLogins | Provider + UserId + LoginProvider | UserId-&gt;AspnetUsers |
-| IdentityUserClaim | AspnetUserClaims | Id | User\_Id-&gt;AspnetUsers |
+| IdentityUserClaim | AspnetUserClaims | Id | ID\_utente-&gt;AspnetUsers |
 
 Con queste informazioni è possibile creare istruzioni SQL per la creazione di nuove tabelle. È possibile scrivere ogni singola istruzione o generare l'intero script usando i comandi di PowerShell di EntityFramework, che possono essere modificati in base alle esigenze. A tale scopo, in Visual Studio aprire la **console di gestione pacchetti** dal menu **Visualizza** o **strumenti** .
 
