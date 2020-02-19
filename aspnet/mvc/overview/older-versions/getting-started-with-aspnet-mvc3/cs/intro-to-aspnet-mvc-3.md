@@ -1,77 +1,77 @@
 ---
 uid: mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3
-title: Introduzione ad ASP.NET MVC 3 (c#) | Microsoft Docs
+title: Introduzione a ASP.NET MVC 3 (C#) | Microsoft Docs
 author: Rick-Anderson
-description: Questa esercitazione insegnerà le nozioni di base della creazione di un'applicazione Web MVC ASP.NET utilizzando Microsoft Visual Web Developer 2010 Express Service Pack 1, ovvero...
+description: In questa esercitazione vengono illustrate le nozioni di base della creazione di un'applicazione Web MVC ASP.NET utilizzando Microsoft Visual Web Developer 2010 Express Service Pack 1, ovvero...
 ms.author: riande
 ms.date: 01/12/2011
 ms.assetid: 86a80b35-88bd-4b7c-bd58-f6e7997197d4
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3
 msc.type: authoredcontent
-ms.openlocfilehash: a8611be058fedd9d4a77e3949faf3dff63de39e3
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: e71275c93558c0b6ca087a145786e8c846b69721
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65130103"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457532"
 ---
 # <a name="intro-to-aspnet-mvc-3-c"></a>Introduzione ad ASP.NET MVC 3 (C#)
 
-da [Rick Anderson]((https://twitter.com/RickAndMSFT))
+di [Rick Anderson](https://twitter.com/RickAndMSFT)
 
 > > [!NOTE]
-> > È disponibile una versione aggiornata di questa esercitazione [qui](../../../getting-started/introduction/getting-started.md) che usa ASP.NET MVC 5 e Visual Studio 2013. È più sicuro, molto più semplice da seguire e vengono illustrate altre funzionalità.
+> > Una versione aggiornata di questa esercitazione è disponibile [qui](../../../getting-started/introduction/getting-started.md) che usa ASP.NET MVC 5 e Visual Studio 2013. È più sicuro, molto più semplice da seguire e illustra altre funzionalità.
 > 
 > 
-> Questa esercitazione insegnerà le nozioni di base della creazione di un'applicazione Web MVC ASP.NET utilizzando Microsoft Visual Web Developer 2010 Express Service Pack 1, che è una versione gratuita di Microsoft Visual Studio. Prima di iniziare, assicurarsi di che aver installato i prerequisiti elencati di seguito. È possibile installare tutti gli elementi facendo clic sul collegamento seguente: [Installazione guidata piattaforma Web](https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack). In alternativa, è possibile installare singolarmente i prerequisiti usando i collegamenti seguenti:
+> In questa esercitazione vengono illustrate le nozioni di base della creazione di un'applicazione Web MVC ASP.NET utilizzando Microsoft Visual Web Developer 2010 Express Service Pack 1, una versione gratuita di Microsoft Visual Studio. Prima di iniziare, verificare di aver installato i prerequisiti elencati di seguito. È possibile installarli tutti facendo clic sul collegamento seguente: [installazione guidata piattaforma Web](https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack). In alternativa, è possibile installare singolarmente i prerequisiti usando i collegamenti seguenti:
 > 
 > - [Prerequisiti di Visual Studio Web Developer Express SP1](https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack)
-> - [ASP.NET MVC 3 Tools Update](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=MVC3)
-> - [SQL Server Compact 4.0](https://www.microsoft.com/web/gallery/install.aspx?appid=SQLCE;SQLCEVSTools_4_0)(runtime e strumenti di supportano)
+> - [Aggiornamento degli strumenti di ASP.NET MVC 3](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=MVC3)
+> - [SQL Server Compact 4,0](https://www.microsoft.com/web/gallery/install.aspx?appid=SQLCE;SQLCEVSTools_4_0)(supporto di runtime + Tools)
 > 
-> Se si usa Visual Studio 2010 anziché Visual Web Developer 2010, installare i prerequisiti, fare clic sul collegamento seguente: [Prerequisiti di Visual Studio 2010](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=VS2010SP1Pack).
+> Se si usa Visual Studio 2010 anziché Visual Web Developer 2010, installare i prerequisiti facendo clic sul collegamento seguente: [prerequisiti di Visual studio 2010](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=VS2010SP1Pack).
 > 
-> Un progetto di Visual Web Developer con codice sorgente c# è disponibile a complemento di questo argomento. [Scaricare la versione c#](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098). Se si preferisce Visual Basic, passare al [versione Visual Basic](../vb/intro-to-aspnet-mvc-3.md) di questa esercitazione.
+> Per accompagnare questo argomento, C# è disponibile un progetto Visual Web Developer con codice sorgente. [Scaricare la C# versione](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098). Se si preferisce Visual Basic, passare alla [versione Visual Basic](../vb/intro-to-aspnet-mvc-3.md) di questa esercitazione.
 
 ## <a name="what-youll-build"></a>Scopo dell'esercitazione
 
-Si sarà implementare una semplice applicazione di elenco di film che supporta la creazione, modifica e l'elenco di film da un database. Di seguito sono riportate due schermate dell'applicazione che verrà compilata. Include una pagina che visualizza un elenco di film da un database:
+Verrà implementata una semplice applicazione per la visualizzazione di filmati che supporta la creazione, la modifica e l'inserimento di filmati da un database. Di seguito sono riportate due schermate dell'applicazione da compilare. Include una pagina in cui viene visualizzato un elenco di filmati da un database:
 
 ![MoviesWithVariousSm](intro-to-aspnet-mvc-3/_static/image1.png)
 
-L'applicazione consente anche di aggiungere, modificare ed eliminare filmati, nonché le informazioni relative a quelli singoli. Tutti gli scenari di immissione di dati includono la convalida per garantire che i dati archiviati nel database siano corretti.
+L'applicazione consente inoltre di aggiungere, modificare ed eliminare filmati, nonché di visualizzare i dettagli relativi a singoli utenti. Tutti gli scenari di immissione dei dati includono la convalida per garantire la correttezza dei dati archiviati nel database.
 
 ![](intro-to-aspnet-mvc-3/_static/image2.png)
 
-## <a name="skills-youll-learn"></a>Competenze
+## <a name="skills-youll-learn"></a>Acquisizione di competenze
 
-Ecco cosa si apprenderà:
+In questa esercitazione si apprenderà:
 
-- Come creare un nuovo progetto ASP.NET MVC.
-- Come creare ASP.NET MVC controller e visualizzazioni.
-- Come creare un nuovo database usando il paradigma Code First di Entity Framework.
+- Come creare un nuovo progetto MVC ASP.NET.
+- Come creare controller e visualizzazioni MVC ASP.NET.
+- Come creare un nuovo database usando il paradigma Entity Framework Code First.
 - Come recuperare e visualizzare i dati.
 - Come modificare i dati e abilitare la convalida dei dati.
 
-## <a name="getting-started"></a>Introduzione
+## <a name="getting-started"></a>Guida introduttiva
 
-Iniziare eseguendo Visual Web Developer 2010 Express ("Visual Web Developer" breve) e selezionare **nuovo progetto** dalle **avviare** pagina.
+Per iniziare, eseguire Visual Web Developer 2010 Express ("Visual Web Developer" per brevità) e selezionare **nuovo progetto** nella pagina **iniziale** .
 
-Visual Web Developer è un IDE, o ambiente di sviluppo integrato. Come si usa Microsoft Word per scrivere documenti, si userà un IDE per creare applicazioni. In Visual Web Developer è presente una barra degli strumenti nella parte superiore che mostra le diverse opzioni disponibili per l'utente. È inoltre disponibile un menu che fornisce un altro modo per eseguire attività nell'IDE. (Ad esempio, invece di selezionare **nuovo progetto** dal **avviare** pagina, è possibile usare il menu e selezionare **File** &gt; **nuovo progetto**.)
+Visual Web Developer è un IDE o Integrated Development Environment. Proprio come si usa Microsoft Word per scrivere documenti, si userà un IDE per creare applicazioni. In Visual Web Developer è presente una barra degli strumenti nella parte superiore che mostra le varie opzioni disponibili. È anche disponibile un menu che fornisce un altro modo per eseguire attività nell'IDE. Ad esempio, invece di selezionare **nuovo progetto** dalla pagina **iniziale** , è possibile usare il menu e selezionare **file** &gt; **nuovo progetto**.
 
 [![](intro-to-aspnet-mvc-3/_static/image4.png)](intro-to-aspnet-mvc-3/_static/image3.png)
 
 ## <a name="creating-your-first-application"></a>Creazione della prima applicazione
 
-È possibile creare applicazioni che usano Visual Basic o Visual c# come linguaggio di programmazione. Selezionare Visual c# a sinistra e quindi selezionare **applicazione Web ASP.NET MVC 3**. Denominare il progetto "MvcMovie" e quindi fare clic su **OK**. (Se si preferisce Visual Basic, passare al [versione Visual Basic](../vb/intro-to-aspnet-mvc-3.md) di questa esercitazione.)
+È possibile creare applicazioni utilizzando Visual Basic o Visual C# come linguaggio di programmazione. Selezionare oggetto C# visivo a sinistra e quindi selezionare **ASP.NET MVC 3 Web Application**. Assegnare al progetto il nome "MvcMovie" e quindi fare clic su **OK**. Se si preferisce Visual Basic, passare alla [versione Visual Basic](../vb/intro-to-aspnet-mvc-3.md) di questa esercitazione.
 
 ![](intro-to-aspnet-mvc-3/_static/image5.png)
 
-Nel **nuovo progetto ASP.NET MVC 3** finestra di dialogo **applicazione Internet**. Controllare **markup usare HTML5** lasciando **Razor** come motore di visualizzazione predefinito.
+Nella finestra di dialogo **nuovo progetto MVC 3 ASP.NET** selezionare **applicazione Internet**. Selezionare **Usa markup HTML5** e lascia **Razor** come motore di visualizzazione predefinito.
 
 ![](intro-to-aspnet-mvc-3/_static/image6.png)
 
-Fare clic su **OK**. Visual Web Developer usato un modello predefinito per il progetto ASP.NET MVC che appena creato, in modo che sia subito un'applicazione funzionante non esegue alcuna operazione. Si tratta di un semplice "Hello World!" progetto che 's un buon punto di partenza dell'applicazione.
+Fare clic su **OK**. In Visual Web Developer è stato usato un modello predefinito per il progetto MVC ASP.NET appena creato, quindi è disponibile un'applicazione funzionante senza eseguire alcuna operazione. Si tratta di una semplice "Hello World!" il progetto è una soluzione ideale per avviare l'applicazione.
 
 [![](intro-to-aspnet-mvc-3/_static/image8.png)](intro-to-aspnet-mvc-3/_static/image7.png)
 
@@ -79,13 +79,13 @@ Scegliere **Avvia debug** dal menu **Debug**.
 
 ![](intro-to-aspnet-mvc-3/_static/image9.png)
 
-Si noti che il tasto di scelta rapida per avviare il debug F5.
+Si noti che il tasto di scelta rapida per avviare il debug è F5.
 
-F5 fa in modo che Visual Web Developer avviare un server web di sviluppo ed eseguire l'applicazione web. Quindi, Visual Web Developer viene avviato un browser e verrà visualizzata la home page dell'applicazione. Si noti che la barra degli indirizzi del browser afferma `localhost` e non o simili `example.com`. Infatti, `localhost` fa sempre riferimento al proprio computer locale, consentendo in questo caso è in esecuzione l'applicazione appena compilato. Quando Visual Web Developer viene eseguito un progetto web, viene usata una porta casuale per il server web. Nell'immagine seguente, il numero di porta casuale è 43246. Quando si esegue l'applicazione, si noterà probabilmente un numero di porta diverso.
+F5 fa in modo che Visual Web Developer avvii un server Web di sviluppo ed esegua l'applicazione Web. Visual Web Developer avvia quindi un browser e apre la home page dell'applicazione. Si noti che la barra degli indirizzi del browser indica `localhost` e non un elemento come `example.com`. Questo perché `localhost` fa sempre riferimento al computer locale, che in questo caso esegue l'applicazione appena creata. Quando Visual Web Developer esegue un progetto Web, viene utilizzata una porta casuale per il server Web. Nell'immagine seguente il numero di porta casuale è 43246. Quando si esegue l'applicazione, è probabile che venga visualizzato un numero di porta diverso.
 
 ![](intro-to-aspnet-mvc-3/_static/image10.png)
 
-Impostazione predefinita questo modello predefinito offre due pagine di visitare e una pagina di accesso basic. Il passaggio successivo è modificare il comportamento dell'applicazione e imparare un po' su ASP.NET MVC nel processo. Chiudere il browser e modificare codice.
+Il modello predefinito fornisce due pagine da visitare e una pagina di accesso di base. Il passaggio successivo consiste nel modificare il funzionamento di questa applicazione e apprendere un po' di ASP.NET MVC nel processo. Chiudere il browser e modificare il codice.
 
 > [!div class="step-by-step"]
 > [avanti](adding-a-controller.md)

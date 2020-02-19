@@ -9,22 +9,22 @@ ms.assetid: 053e23c4-13c9-40fa-87cb-3e9b0823b31e
 ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/features-api/two-factor-authentication-using-sms-and-email-with-aspnet-identity
 msc.type: authoredcontent
-ms.openlocfilehash: 5f5218ca6c65ed3a2cd39d4e100349efa35d14cd
-ms.sourcegitcommit: 6f0e10e4ca61a1e5534b09c655fd35cdc6886c8a
+ms.openlocfilehash: 527b4392846e60dae0b216fdeabf21fd6618e4d7
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74115093"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77456738"
 ---
 # <a name="two-factorauthentication-using-sms-and-email-with-aspnet-identity"></a>Autenticazione a due fattori tramite SMS e posta elettronica con ASP.NET Identity
 
-di [Hao Kung](https://github.com/HaoK), Manuel [Rastogi](https://github.com/rustd), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Suhas Joshi](https://github.com/suhasj)
+di [Hao Kung](https://github.com/HaoK), Manuel [Rastogi](https://github.com/rustd), [Rick Anderson](https://twitter.com/RickAndMSFT), [Suhas Joshi](https://github.com/suhasj)
 
 > In questa esercitazione verrà illustrato come configurare l'autenticazione a due fattori (2FA) tramite SMS e posta elettronica.
 > 
 > Questo articolo è stato scritto da Rick Anderson ([@RickAndMSFT](https://twitter.com/#!/RickAndMSFT)), Rastogi ([@rustd](https://twitter.com/rustd)), Hao Kung e Suhas Joshi. L'esempio NuGet è stato scritto principalmente da Hao Kung.
 
-In questo argomento vengono illustrate le operazioni seguenti:
+Questo argomento illustra quanto segue:
 
 - [Compilazione dell'esempio di identità](#build)
 - [Configurare SMS per l'autenticazione a due fattori](#SMS)
@@ -68,8 +68,8 @@ Questa esercitazione fornisce istruzioni per l'uso di Twilio o ASPSMS, ma è pos
    Creare un account [Twilio](https://www.twilio.com/try-twilio) o [ASPSMS](https://www.aspsms.com/asp.net/identity/testcredits/) .
 2. **Installazione di pacchetti aggiuntivi o aggiunta di riferimenti al servizio**  
   
-   Twilio  
-   Nella console di gestione pacchetti immettere il comando seguente:  
+   Twilio:  
+   Nella Console di Gestione pacchetti immettere il comando seguente:  
     `Install-Package Twilio`  
   
    ASPSMS:  
@@ -84,7 +84,7 @@ Questa esercitazione fornisce istruzioni per l'uso di Twilio o ASPSMS, ma è pos
     `ASPSMSX2`
 3. **Individuazione delle credenziali utente del provider SMS**  
   
-   Twilio  
+   Twilio:  
    Dalla scheda **Dashboard** dell'account Twilio copiare il **SID dell'account** e il **token di autenticazione**.  
   
    ASPSMS:  
@@ -93,7 +93,7 @@ Questa esercitazione fornisce istruzioni per l'uso di Twilio o ASPSMS, ma è pos
    Questi valori vengono archiviati in un secondo momento nelle variabili `SMSAccountIdentification` e `SMSAccountPassword`.
 4. **Specifica di SenderID/originator**  
   
-   Twilio  
+   Twilio:  
    Dalla scheda **numeri** copiare il numero di telefono Twilio.  
   
    ASPSMS:  
@@ -119,7 +119,7 @@ Questa esercitazione fornisce istruzioni per l'uso di Twilio o ASPSMS, ma è pos
 8. Fare clic sull'ID utente, che attiva il metodo di azione `Index` in `Manage` controller.  
   
     ![](two-factor-authentication-using-sms-and-email-with-aspnet-identity/_static/image2.png)
-9. Fare clic su Aggiungi.  
+9. Scegli Aggiungi.  
   
     ![](two-factor-authentication-using-sms-and-email-with-aspnet-identity/_static/image3.png)
 10. In pochi secondi si riceverà un messaggio di testo con il codice di verifica. Immetterla e premere **invio**.  

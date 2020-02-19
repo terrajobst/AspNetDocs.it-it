@@ -8,16 +8,16 @@ ms.date: 04/10/2014
 ms.assetid: 7958d725-e958-4566-a85b-535eeb985f94
 msc.legacyurl: /mvc/overview/getting-started/recommended-resources-for-mvc
 msc.type: authoredcontent
-ms.openlocfilehash: daccaedae0b0e60f5086f270f214f87da564a85d
-ms.sourcegitcommit: e365196c75ce93cd8967412b1cfdc27121816110
+ms.openlocfilehash: 11f4a7cae8d425873b1828a9e5f51471def954fb
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77074930"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457154"
 ---
 # <a name="mvc-recommended-resources"></a>Risorse consigliate su MVC
 
-di [Rick Anderson]((https://twitter.com/RickAndMSFT))
+di [Rick Anderson](https://twitter.com/RickAndMSFT)
 
 > In questo argomento vengono forniti i collegamenti alle risorse della documentazione su ASP.NET MVC 5. Se si conosce un post di Blog straordinario, un thread [StackOverflow](http://stackoverflow.com/) o qualsiasi altro collegamento utile [, inviare un](mailto:aspnetue@microsoft.com?subject=Great ASP.NET MVC link) messaggio di posta elettronica con il collegamento. I collegamenti riportati di seguito vengono aggiornati periodicamente. È possibile trovare i collegamenti a ASP.NET MVC precedenti, ma in molti casi ancora pertinenti, sulla [mappa dei contenuti MSDN](https://msdn.microsoft.com/library/gg416514(v=vs.108).aspx).
 >
@@ -99,7 +99,7 @@ di [Rick Anderson]((https://twitter.com/RickAndMSFT))
 - [Sicurezza in ASP.NET MVC](http://www.codeproject.com/Articles/654846/Security-In-ASP-NET-MVC)
 - [Sicurezza dell'app ASP.NET MVC 4](https://blogs.msdn.com/b/rickandy/archive/2012/03/23/securing-your-asp-net-mvc-4-app-and-the-new-allowanonymous-attribute.aspx)
 - [Panoramica di Pluralsight video sulle procedure di sicurezza](http://www.pluralsight-training.net/microsoft/players/PSODPlayer?author=scott-allen&amp;name=mvc3-building-security&amp;mode=live&amp;clip=0&amp;course=aspdotnet-mvc3-intro)
-- [XSRF/CSRF Prevention in ASP.NET MVC and Web Pages](../security/xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages.md) (Prevenzione delle richieste intersito false in ASP.NET MVC e nelle pagine Web ASP.NET)
+- [Prevenzione di XSRF/CSRF in ASP.NET MVC e pagine Web](../security/xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages.md)
 - [OWASP primi 10 per sviluppatori .NET](http://www.troyhunt.com/2010/05/owasp-top-10-for-net-developers-part-1.html)
 - [Uso di provider OAuth con MVC 4](../older-versions/using-oauth-providers-with-mvc.md)
 - [Correzione delle applicazioni ASP.NET](https://msdn.microsoft.com/magazine/hh580736.aspx) Dicembre 2011 MSDN Magazine articolo di Adam Tuliper
@@ -123,7 +123,7 @@ di [Rick Anderson]((https://twitter.com/RickAndMSFT))
 - [L'appartenenza non corrisponde all'autenticazione basata su form](http://brockallen.com/2012/06/04/membership-is-not-the-same-as-forms-authentication/)
 - [Pensa due volte sull'uso di MembershipProvider (e SimpleMembership)](http://brockallen.com/2012/09/02/think-twice-about-using-membershipprovider-and-simplemembership/)
 - [Implementazione dell'autenticazione a due fattori MVC con Google Authenticator](http://www.codeproject.com/Articles/403355/Implementing-MVC-Two-Factor-Authentication-with-Go)
-- Nuovo
+- new
 - [ASP.NET Identity e archiviazione tabelle di Azure](https://blogs.msdn.com/b/stuartleeks/archive/2014/01/15/asp-net-identity-and-windows-azure-table-storage.aspx)
 
 <a id="OWIN"></a>
@@ -238,7 +238,7 @@ di [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 <a id="Routing"></a>
 
-## <a name="routing"></a>Routing.
+## <a name="routing"></a>Routing
 
 - [Routing degli attributi in ASP.NET MVC 5](https://blogs.msdn.com/b/webdev/archive/2013/10/17/attribute-routing-in-asp-net-mvc-5.aspx)
 - [Ciclo di vita di un'applicazione ASP.NET MVC 5](lifecycle-of-an-aspnet-mvc-5-application.md) (PDF)

@@ -8,16 +8,16 @@ ms.date: 10/17/2013
 ms.assetid: 4085de68-d243-4378-8a64-86236ea8d2da
 msc.legacyurl: /mvc/overview/getting-started/introduction/adding-a-new-field
 msc.type: authoredcontent
-ms.openlocfilehash: d79655bfadff83095bf4cb84445f5efaf44d6a89
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.openlocfilehash: 5974e53e4610dccc7812df261dc97a9b0327de85
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519076"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77456686"
 ---
 # <a name="adding-a-new-field"></a>Aggiunta di un nuovo campo
 
-di [Rick Anderson]((https://twitter.com/RickAndMSFT))
+di [Rick Anderson](https://twitter.com/RickAndMSFT)
 
 [!INCLUDE [Tutorial Note](index.md)]
 
@@ -173,7 +173,7 @@ Fare clic sul collegamento **Crea nuovo** per aggiungere un nuovo film. Si noti 
 
 ![7_CreateRioII](adding-a-new-field/_static/image13.png)
 
-Scegliere **Crea**. Il nuovo film, incluso il rating, viene ora visualizzato nell'elenco dei film:
+Fare clic su **Crea**. Il nuovo film, incluso il rating, viene ora visualizzato nell'elenco dei film:
 
 ![7_ourNewMovie_SM](adding-a-new-field/_static/image14.png)
 

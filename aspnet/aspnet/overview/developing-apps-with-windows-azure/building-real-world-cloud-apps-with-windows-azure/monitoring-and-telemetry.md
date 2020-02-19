@@ -8,16 +8,16 @@ ms.date: 07/09/2015
 ms.assetid: 7e986ab5-6615-4638-add7-4614ce7b51db
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/monitoring-and-telemetry
 msc.type: authoredcontent
-ms.openlocfilehash: 44941c9fd0dcd3223604fc4a4f2836f587578acb
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: f61810ea7b486b2fa0bbb234edea7541eedde835
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74585623"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457063"
 ---
 # <a name="monitoring-and-telemetry-building-real-world-cloud-apps-with-azure"></a>Monitoraggio e telemetria (creazione di app Cloud reali con Azure)
 
-di [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+di [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
 [Scarica il progetto di correzione it](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [Scarica l'E-Book](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
@@ -32,7 +32,7 @@ Molte persone si affidano ai clienti per comunicare quando l'applicazione è ina
 
 Uno degli aspetti più interessanti dell'ambiente cloud è che è molto facile acquistare o affittare la strada alla vittoria. La telemetria è un esempio. Senza molto impegno è possibile ottenere un sistema di telemetria molto efficace e funzionante, molto conveniente. Ci sono numerosi partner interessanti che si integrano con Azure e alcuni di essi hanno livelli gratuiti, per cui è possibile ottenere dati di telemetria di base per niente. Di seguito sono riportate alcune di quelle attualmente disponibili in Azure:
 
-- [Nuovo Relic](http://newrelic.com/)
+- [New Relic](http://newrelic.com/)
 - [AppDynamics](http://www.appdynamics.com/)
 - [DynaTrace](https://datamarket.azure.com/application/b4011de2-1212-4375-9211-e882766121ff)
 
@@ -58,7 +58,7 @@ Fare clic su **informazioni di connessione**e copiare il codice di licenza.
 
 ![Informazioni di connessione](monitoring-and-telemetry/_static/image5.png)
 
-Passare alla scheda **Configura** per l'app Web nel portale, impostare **monitoraggio delle prestazioni** su **componente**aggiuntivo e impostare l'elenco a discesa **Scegli componente aggiuntivo su** **nuovo Relic**. Quindi fare clic su **Salva**.
+Passare alla scheda **Configura** per l'app Web nel portale, impostare **monitoraggio delle prestazioni** su **componente**aggiuntivo e impostare l'elenco a discesa **Scegli componente aggiuntivo su** **nuovo Relic**. Fare quindi clic su **Salva**.
 
 ![Nuova reliquia nella scheda Configura](monitoring-and-telemetry/_static/image6.png)
 
@@ -102,7 +102,7 @@ Di seguito sono riportate solo alcune delle statistiche che è possibile visuali
 
 È inoltre possibile impostare report ed eventi. È possibile, ad esempio, che ogni volta che si inizia a visualizzare gli errori, inviare un messaggio di posta elettronica al personale del supporto per gli avvisi al problema.
 
-![Rapporti](monitoring-and-telemetry/_static/image19.png)
+![Report](monitoring-and-telemetry/_static/image19.png)
 
 New Relic è solo un esempio di sistema di telemetria. è possibile ottenere tutto questo anche da altri servizi. La bellezza del cloud consiste nel fatto che, senza dover scrivere codice e, per spese minime o no, è possibile ottenere un numero elevato di informazioni sull'utilizzo dell'applicazione e sui risultati effettivamente riscontrati dai clienti.
 
@@ -278,7 +278,7 @@ Documentazione principalmente sulla risoluzione dei problemi:
 - [AzureTools: utilità di diagnostica usata dal team di supporto tecnico Developer di Azure](https://blogs.msdn.com/b/kwill/archive/2013/08/26/azuretools-the-diagnostic-utility-used-by-the-windows-azure-developer-support-team.aspx?Redirected=true). Introduce e fornisce un collegamento di download per uno strumento che può essere usato in una macchina virtuale di Azure per scaricare ed eseguire un'ampia gamma di strumenti di diagnostica e monitoraggio. Utile quando è necessario diagnosticare un problema in una determinata macchina virtuale.
 - [Risolvere i problemi di un'app Web nel servizio app Azure usando Visual Studio](https://docs.microsoft.com/azure/app-service-web/web-sites-dotnet-troubleshoot-visual-studio). Un'esercitazione dettagliata per iniziare a usare la traccia di System. Diagnostics e il debug remoto.
 
-Video:
+Video
 
 - [Failsafe: compilazione di servizi cloud scalabili e resilienti](https://channel9.msdn.com/Series/FailSafe). Serie in nove parti di Ulrich Homann, Marc Mercuri e Mark Simms. Presenta concetti di alto livello e principi architetturali in modo molto accessibile e interessante, con storie tratte dall'esperienza del team di consulenza clienti Microsoft (CAT) con i clienti effettivi. Gli episodi 4 e 9 sono relativi al monitoraggio e alla telemetria. L'episodio 9 include una panoramica dei servizi di monitoraggio MetricsHub, AppDynamics, New Relic e PagerDuty.
 - [Creazione di grandi dimensioni: lezioni apprese dai clienti di Azure-parte II](https://channel9.msdn.com/Events/Build/2012/3-030). Mark Simms parla di progettazione per l'errore e la strumentazione di tutto. In modo analogo alla serie failsafe, ma passa ad altre procedure dettagliate.

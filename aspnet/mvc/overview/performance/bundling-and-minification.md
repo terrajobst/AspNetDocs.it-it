@@ -8,16 +8,16 @@ ms.date: 08/23/2012
 ms.assetid: 5894dc13-5d45-4dad-8096-136499120f1d
 msc.legacyurl: /mvc/overview/performance/bundling-and-minification
 msc.type: authoredcontent
-ms.openlocfilehash: 239980d747c6e0d6be1e9b4fe0371e276e37cf21
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.openlocfilehash: 61bfe5dbac04b57e1461183b66ead2f01fe0734c
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519284"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457765"
 ---
 # <a name="bundling-and-minification"></a>Bundling and Minification
 
-di [Rick Anderson]((https://twitter.com/RickAndMSFT))
+di [Rick Anderson](https://twitter.com/RickAndMSFT)
 
 > La creazione di bundle e minification sono due tecniche che è possibile usare in ASP.NET 4,5 per migliorare il tempo di caricamento della richiesta. La creazione di bundle e minification consente di migliorare il tempo di caricamento riducendo il numero di richieste al server e riducendo le dimensioni degli asset richiesti, ad esempio CSS e JavaScript.
 
@@ -39,7 +39,7 @@ Nell'immagine seguente viene illustrata la stessa visualizzazione temporizzata d
 
 ![](bundling-and-minification/_static/image3.png)
 
-## <a name="minification"></a>Minimizzazione
+## <a name="minification"></a>Minification
 
 Minification esegue diverse ottimizzazioni del codice per script o CSS, ad esempio la rimozione di spazi vuoti e commenti superflui e l'abbreviazione di nomi di variabili in un unico carattere. Si consideri la seguente funzione JavaScript.
 
@@ -54,7 +54,7 @@ Oltre a rimuovere i commenti e gli spazi vuoti non necessari, i parametri e i no
 | **Original** | **Rinominato** |
 | --- | --- |
 | imageTagAndImageID | n |
-| imageContext | u |
+| imageContext | t |
 | imageElement | i |
 
 ## <a name="impact-of-bundling-and-minification"></a>Effetti della creazione di bundle e minification
@@ -154,9 +154,9 @@ Il percorso virtuale specificato nel metodo `Include` e il criterio di ricerca n
 
 Si consideri un progetto con i seguenti file JavaScript:
 
-- *Scripts\\Common\\AddAltToImg.js*
+- *Script\\comuni\\AddAltToImg. js*
 - *Script\\comuni\\ToggleDiv. js*
-- *Scripts\\Common\\ToggleImg.js*
+- *Script\\comuni\\ToggleImg. js*
 - *Script\\Common\\Sub1\\ToggleLinks. js*
 
 ![dir imag](bundling-and-minification/_static/image7.png)
@@ -165,13 +165,13 @@ La tabella seguente illustra i file aggiunti a un bundle usando il carattere jol
 
 | **Call** | **Aggiunta di file o eccezione generata** |
 | --- | --- |
-| Include ("~/Scripts/Common/\*. js") | *AddAltToImg.js*, *ToggleDiv.js*, *ToggleImg.js* |
-| Include("~/Scripts/Common/T\*.js") | Eccezione di modello non valida. Il carattere jolly è consentito solo per il prefisso o il suffisso. |
+| Include ("~/Scripts/Common/\*. js") | *AddAltToImg. js*, *ToggleDiv. js*, *ToggleImg. js* |
+| Include ("~/Scripts/Common/T\*. js") | Eccezione di modello non valida. Il carattere jolly è consentito solo per il prefisso o il suffisso. |
 | Include ("~/Scripts/Common/\*og.\*") | Eccezione di modello non valida. È consentito un solo carattere jolly. |
-| Includi ("~/Scripts/Common/T\*") | *ToggleDiv.js*, *ToggleImg.js* |
+| Includi ("~/Scripts/Common/T\*") | *ToggleDiv. js*, *ToggleImg. js* |
 | Includi ("~/Scripts/Common/\*") | Eccezione di modello non valida. Un segmento con caratteri jolly puri non è valido. |
-| IncludeDirectory("~/Scripts/Common", "T\*") | *ToggleDiv.js*, *ToggleImg.js* |
-| IncludeDirectory ("~/Scripts/Common", "T\*", true) | *ToggleDiv.js*, *ToggleImg.js*, *ToggleLinks.js* |
+| IncludeDirectory ("~/Scripts/Common", "T\*") | *ToggleDiv. js*, *ToggleImg. js* |
+| IncludeDirectory ("~/Scripts/Common", "T\*", true) | *ToggleDiv. js*, *ToggleImg. js*, *ToggleLinks. js* |
 
 L'aggiunta esplicita di ogni file a un bundle è generalmente la scelta preferita rispetto al caricamento di file con caratteri jolly per i motivi seguenti:
 

@@ -8,16 +8,16 @@ ms.date: 07/20/2015
 ms.assetid: 406518e9-3817-49ce-8b90-e82bc461e2c0
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/distributed-caching
 msc.type: authoredcontent
-ms.openlocfilehash: c66187b990a828c53bd2f8115e3c9660fc6022ed
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: 87a7516415895e761d1589fd459b93e5c15c0f85
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74582803"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77456998"
 ---
 # <a name="distributed-caching-building-real-world-cloud-apps-with-azure"></a>Caching distribuito (compilazione di app Cloud reali con Azure)
 
-di [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+di [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
 [Scarica il progetto di correzione it](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [Scarica l'E-Book](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
@@ -90,7 +90,7 @@ Come indicato nel [capitolo procedure consigliate per lo sviluppo Web](web-devel
 
 Per ulteriori informazioni sulla memorizzazione nella cache, vedere le risorse seguenti.
 
-Documentation
+Documentazione
 
 - [Cache di Azure](https://msdn.microsoft.com/library/gg278356.aspx). Documentazione ufficiale di MSDN sulla memorizzazione nella cache in Azure.
 - [Modelli e procedure Microsoft: informazioni aggiuntive su Azure](https://msdn.microsoft.com/library/dn568099.aspx). Vedere informazioni aggiuntive sulla memorizzazione nella cache e modello cache-aside.

@@ -8,16 +8,16 @@ ms.date: 06/12/2014
 ms.assetid: 1bc333c5-f096-4ea7-b170-779accc21c1a
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/the-fix-it-sample-application
 msc.type: authoredcontent
-ms.openlocfilehash: e6fda47babd3c2505315f42667c45f09482218c2
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: 896196bdb6a6b0d12a6c798ead510e37dd38a9fc
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74583750"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77456881"
 ---
 # <a name="appendix-the-fix-it-sample-application-building-real-world-cloud-apps-with-azure"></a>Appendice: l'applicazione di esempio Fix it (compilazione di app Cloud reali con Azure)
 
-di [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+di [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
 [Scaricare il progetto Correggi it](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4)
 
@@ -39,7 +39,7 @@ L'app per la correzione è stata originariamente sviluppata per illustrare il pi
 
 Nell'elenco seguente sono inclusi i problemi che devono essere risolti in un'applicazione di produzione, ma per un motivo o un altro si è deciso di non risolvere nella versione iniziale dell'applicazione di esempio Fix it.
 
-### <a name="security"></a>Sicurezza -
+### <a name="security"></a>Sicurezza
 
 - Assicurarsi che non sia possibile assegnare un'attività a un proprietario inesistente.
 - Assicurarsi che sia possibile visualizzare e modificare solo le attività create o assegnate all'utente.
@@ -96,7 +96,7 @@ La classe `FixItTaskRepository` deve eliminare l'istanza di `DbContext` Entity F
 
 Si noti che AutoFac eliminerà automaticamente l'istanza `FixItTaskRepository`, quindi non è necessario eliminarla in modo esplicito.
 
-Un'altra opzione consiste nel rimuovere la variabile membro `DbContext` da `FixItTaskRepository`e creare invece una variabile `DbContext` locale all'interno di ogni metodo del repository, all'interno di un'istruzione `using`. Ad esempio:
+Un'altra opzione consiste nel rimuovere la variabile membro `DbContext` da `FixItTaskRepository`e creare invece una variabile `DbContext` locale all'interno di ogni metodo del repository, all'interno di un'istruzione `using`. Ad esempio,
 
 [!code-csharp[Main](the-fix-it-sample-application/samples/sample2.cs)]
 
@@ -263,7 +263,7 @@ Se si vuole eseguire in Azure senza usare le code e sono state apportate le modi
 
 Queste istruzioni presuppongono che sia già stato scaricato ed eseguito la soluzione Correggi it localmente e che si disponga di un account Azure o che si disponga di una sottoscrizione di Azure che si è autorizzati a gestire.
 
-1. Installare la console di **Azure PowerShell** . Per istruzioni, vedere [come installare e configurare Azure PowerShell](https://docs.microsoft.com/powershell/azure/overview?view=azurermps-4.3.1).
+1. Installare la console di **Azure PowerShell** . Per istruzioni, vedere [Come installare e configurare Azure PowerShell](https://docs.microsoft.com/powershell/azure/overview?view=azurermps-4.3.1).
 
     Questa console personalizzata è configurata per l'uso con la sottoscrizione di Azure. Il modulo Azure viene installato nella directory *programmi* e viene importato automaticamente a ogni uso della console di Azure PowerShell.
 
@@ -322,7 +322,7 @@ Queste istruzioni presuppongono che sia già stato scaricato ed eseguito la solu
     Se lo script ha esito negativo o genera errori, ad esempio "New-AzureWebsite: call set-AzureSubscription e Select-AzureSubscription First", è possibile che non sia stata completata la configurazione di Azure PowerShell.
 
     Al termine dello script, è possibile usare il portale di gestione di Azure per visualizzare le risorse create, come illustrato nel capitolo [automazione di tutti gli elementi](automate-everything.md) .
-10. Per distribuire il progetto FixIt nel nuovo ambiente Azure, usare lo script *AzureWebsite. ps1* . Ad esempio:
+10. Per distribuire il progetto FixIt nel nuovo ambiente Azure, usare lo script *AzureWebsite. ps1* . Ad esempio,
 
     [!code-console[Main](the-fix-it-sample-application/samples/sample28.cmd)]
 

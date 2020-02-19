@@ -8,16 +8,16 @@ ms.date: 06/12/2014
 ms.assetid: e51fcecb-cb33-4f9e-8428-6d2b3d0fe1bf
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/data-storage-options
 msc.type: authoredcontent
-ms.openlocfilehash: f97d973d87db895441f813376d757a8a2e94b255
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: 9357ed5aef39bed501cdac9ac26d46c884d4fae0
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74585935"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457180"
 ---
 # <a name="data-storage-options-building-real-world-cloud-apps-with-azure"></a>Opzioni di archiviazione dei dati (compilazione di app Cloud reali con Azure)
 
-di [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+di [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
 [Scarica il progetto di correzione it](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [Scarica l'E-Book](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
@@ -37,14 +37,14 @@ Il cloud rende relativamente semplice l'uso di un'ampia gamma di archivi dati re
 
 La tabella mostra quattro tipi di database NoSQL:
 
-- I [database chiave/valore](https://msdn.microsoft.com/library/dn313285.aspx#sec7) archiviano un singolo oggetto serializzato per ogni valore di chiave. Sono utili per l'archiviazione di grandi volumi di dati in cui si vuole ottenere un elemento per un determinato valore di chiave e non è necessario eseguire query in base ad altre proprietà dell'elemento.
+- I [database chiave/valore](https://msdn.microsoft.com/library/dn313285.aspx#sec7) archiviano un singolo oggetto serializzato per ogni valore di chiave. Sono utili per archiviare grossi volumi di dati quando si vuole ottenere un solo elemento per un determinato valore di chiave e non si devono eseguire query in base ad altre proprietà dell'elemento.
 
     [Archiviazione BLOB di Azure](https://azure.microsoft.com/documentation/articles/storage-dotnet-how-to-use-blobs/) è un database chiave/valore che funziona come l'archiviazione di file nel cloud, con valori di chiave corrispondenti ai nomi di file e cartelle. È possibile recuperare un file in base alla cartella e al nome file, non cercando i valori nel contenuto del file.
 
     L' [archiviazione tabelle di Azure](https://azure.microsoft.com/documentation/articles/storage-dotnet-how-to-use-tables/) è anche un database chiave/valore. Ogni valore viene chiamato *entità* (simile a una riga, identificata da una chiave di partizione e da una chiave di riga) e contiene più *Proprietà* (simili alle colonne, ma non tutte le entità di una tabella devono condividere le stesse colonne). L'esecuzione di query su colonne diverse dalla chiave è estremamente inefficiente e deve essere evitata. Ad esempio, è possibile archiviare i dati del profilo utente, con una partizione che archivia le informazioni relative a un singolo utente. È possibile archiviare i dati, ad esempio nome utente, hash password, data di nascita e così via, in proprietà separate di un'entità o in entità separate nella stessa partizione. Ma non si vuole eseguire una query per tutti gli utenti con un determinato intervallo di date di nascita e non è possibile eseguire una query di join tra la tabella del profilo e un'altra tabella. L'archiviazione tabelle è più scalabile e meno costosa rispetto a un database relazionale, ma non Abilita query o join complessi.
 - [Documentdatabases](https://msdn.microsoft.com/library/dn313285.aspx#sec8) sono database chiave/valore in cui i valori sono *documenti*. "Document" non viene usato nel senso di un documento di Word o di Excel, ma indica una raccolta di campi e valori denominati, ognuno dei quali può essere un documento figlio. Ad esempio, in una tabella di cronologia degli ordini un documento di ordine può includere i campi Numero ordine, Data ordine e cliente; e il campo Customer potrebbe avere campi nome e indirizzo. Il database codifica i dati del campo in un formato, ad esempio XML, YAML, JSON o BSON; oppure può utilizzare testo normale. Una funzionalità che imposta i database di documenti oltre ai database chiave/valore è la possibilità di eseguire query su campi non chiave e definire indici secondari per rendere più efficiente l'esecuzione di query. Questa possibilità rende un database di documenti più adatto per le applicazioni che devono recuperare i dati in base a criteri più complessi rispetto al valore della chiave del documento. Ad esempio, in un database di documenti di cronologia ordini di vendita è possibile eseguire una query su diversi campi, ad esempio ID prodotto, ID cliente, nome del cliente e così via. [MongoDB](http://www.mongodb.org/) è un database di documenti noto.
 - I [database a colonne](https://msdn.microsoft.com/library/dn313285.aspx#sec9) sono archivi dati chiave/valore che consentono di strutturare l'archiviazione dei dati in raccolte di colonne correlate denominate colonne di gruppo. Ad esempio, un database Census potrebbe avere un gruppo di colonne per il nome di una persona (First, Middle, Last), un gruppo per l'indirizzo della persona e un gruppo per le informazioni sul profilo della persona (DOB, Gender e così via). Il database può quindi archiviare ogni famiglia di colonne in una partizione separata mantenendo tutti i dati per una persona correlata alla stessa chiave. È quindi possibile leggere tutte le informazioni sul profilo senza dover leggere anche tutte le informazioni sul nome e sull'indirizzo. [Cassandra](http://cassandra.apache.org/) è un noto database a colonne.
-- I [database Graph](https://msdn.microsoft.com/library/dn313285.aspx#sec10) archiviano le informazioni come una raccolta di oggetti e relazioni. Lo scopo di un database Graph consiste nel consentire a un'applicazione di eseguire in modo efficiente le query che attraversano la rete di oggetti e le relazioni tra di essi. Ad esempio, gli oggetti potrebbero essere dipendenti in un database delle risorse umane e potrebbe essere necessario facilitare le query, ad esempio "Trova tutti i dipendenti che lavorano direttamente o indirettamente per Scott". [Neo4j](http://www.neo4j.org/) è un noto database Graph.
+- I [database Graph](https://msdn.microsoft.com/library/dn313285.aspx#sec10) archiviano le informazioni come una raccolta di oggetti e relazioni. Lo scopo di un database Graph consiste nel consentire a un'applicazione di eseguire in modo efficiente le query che attraversano la rete di oggetti e le relazioni tra di essi. Gli oggetti possono ad esempio essere costituiti da dipendenti all'interno di un database delle risorse umane e può essere necessario eseguire query rapide per cercare tutti i dipendenti che lavorano direttamente o indirettamente per un determinato responsabile. [Neo4j](http://www.neo4j.org/) è un noto database Graph.
 
 Rispetto ai database relazionali, le opzioni NoSQL offrono scalabilità e convenienza molto più elevate per l'archiviazione e l'analisi di dati non strutturati. Il compromesso è che non forniscono le funzionalità avanzate di query e di integrità dei dati dei database relazionali. NoSQL funziona bene per i dati di log di IIS, che includono un volume elevato senza necessità di eseguire query join. NoSQL non funzionerà così bene per le transazioni bancarie, che richiedono l'integrità assoluta dei dati e implicano molte relazioni con altri dati correlati agli account.
 
@@ -66,7 +66,7 @@ In Azure [HDInsight](https://azure.microsoft.com/services/hdinsight/) consente d
     ![Log nell'archivio BLOB](data-storage-options/_static/image2.png)
 - Quando l'app ottiene il traffico, i log IIS del server Web vengono scritti nell'archivio BLOB.
 
-    ![Log del server Web](data-storage-options/_static/image3.png)
+    ![Web Server Logs](data-storage-options/_static/image3.png)
 - Nel portale fare clic su **nuovo** - **servizi dati** - **HDInsight** - **creazione rapida**e specificare il nome del cluster HDInsight, le dimensioni del cluster (numero di nodi dati del cluster HDInsight) e un nome utente e una password per il cluster HDInsight.
 
     ![HDInsight](data-storage-options/_static/image4.png)
@@ -125,7 +125,7 @@ Azure rende le opzioni di archiviazione dei dati di IaaS più facili da usare po
 - Non è necessario creare macchine virtuali, ma è sufficiente usare il portale o uno script per configurare un archivio dati. Se si vuole un archivio dati da 200 terabyte, è possibile fare semplicemente clic su un pulsante o eseguire un comando e, in secondi, è pronto per l'uso.
 - Non è necessario gestire o applicare patch alle macchine virtuali usate dal servizio; Microsoft esegue questa operazione automaticamente.-non è necessario preoccuparsi della configurazione dell'infrastruttura per la scalabilità o la disponibilità elevata; Microsoft gestisce tutto automaticamente.
 - Non è necessario acquistare le licenze; i costi di licenza sono inclusi nei costi del servizio.
-- Paghi solo per ciò che usi.
+- Si paga solo per le risorse utilizzate.
 
 Le opzioni di archiviazione dei dati di PaaS in Azure includono offerte da provider di terze parti. Ad esempio, è possibile scegliere il [componente aggiuntivo MongoLab](https://azure.microsoft.com/documentation/articles/store-mongolab-web-sites-dotnet-store-data-mongodb/) da Azure Store per eseguire il provisioning di un database MongoDB come servizio.
 
@@ -147,11 +147,11 @@ Di seguito sono riportate alcune domande da considerare quando si sceglie un app
 | Supporto delle API | -È disponibile un'API che semplifica l'uso della piattaforma? Per il servizio tabelle di Azure è disponibile un SDK con un'API .NET che supporta il modello di programmazione asincrona di .NET 4,5. Se si sta scrivendo un'app .NET, sarà molto più semplice scrivere e testare il codice per il servizio tabelle di Azure rispetto a un'altra piattaforma di archivio dati di colonne chiave/valore senza API o con una meno completa. |
 | Integrità delle transazioni e coerenza dei dati | -È fondamentale che la piattaforma supporti le transazioni per garantire la coerenza dei dati? Per tenere traccia dei messaggi di posta elettronica in blocco inviati, le prestazioni e i costi di archiviazione dei dati bassi potrebbero essere più importanti del supporto automatico per le transazioni o l'integrità referenziale nella piattaforma dati, rendendo il servizio tabelle di Azure una scelta ottimale. Per tenere traccia dei saldi del conto bancario o degli ordini di acquisto, una piattaforma di database relazionale che fornisce garanzie transazionali complesse costituisce una scelta migliore. |
 | Continuità aziendale | -Quanto è facile eseguire backup, ripristino e ripristino di emergenza? I dati di produzione prima o dopo saranno danneggiati e sarà necessaria una funzione di annullamento. I database relazionali presentano spesso funzionalità di ripristino con granularità fine, ad esempio la possibilità di eseguire il ripristino a un momento specifico. Conoscere le funzionalità di ripristino disponibili in ogni piattaforma che si sta considerando è un fattore importante da considerare. |
-| Cost | -Se più piattaforme sono in grado di supportare il carico di lavoro dei dati, come si confrontano i costi? Se ad esempio si usa ASP.NET Identity, è possibile archiviare i dati del profilo utente nel servizio tabelle di Azure o nel database SQL di Azure. Se non sono necessarie le funzionalità di query avanzate del database SQL, è possibile scegliere le tabelle di Azure in parte perché il costo è molto inferiore per una determinata quantità di spazio di archiviazione. |
+| Costo | -Se più piattaforme sono in grado di supportare il carico di lavoro dei dati, come si confrontano i costi? Se ad esempio si usa ASP.NET Identity, è possibile archiviare i dati del profilo utente nel servizio tabelle di Azure o nel database SQL di Azure. Se non sono necessarie le funzionalità di query avanzate del database SQL, è possibile scegliere le tabelle di Azure in parte perché il costo è molto inferiore per una determinata quantità di spazio di archiviazione. |
 
 Ciò che in genere si consiglia è conoscere la risposta alle domande in ognuna di queste categorie prima di scegliere le soluzioni di archiviazione dati.
 
-Inoltre, il carico di lavoro potrebbe avere requisiti specifici che alcune piattaforme possono supportare meglio di altre. Ad esempio:
+Inoltre, il carico di lavoro potrebbe avere requisiti specifici che alcune piattaforme possono supportare meglio di altre. Ad esempio,
 
 - L'applicazione richiede funzionalità di controllo?
 - Quali sono i requisiti di longevità dei dati: sono necessarie funzionalità di archiviazione o eliminazione automatica?
@@ -282,7 +282,7 @@ Scelta tra SQL Server e il database SQL:
 Uso di Entity Framework e database SQL in un'app Web ASP.NET
 
 - [Introduzione con EF 6 con MVC 5](../../../../mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md). Serie di esercitazioni in nove parti che illustra la creazione di un'app MVC che usa EF e distribuisce il database in Azure e nel database SQL.
-- [Distribuzione Web ASP.NET con Visual Studio](../../../../web-forms/overview/deployment/visual-studio-web-deployment/introduction.md). Serie di esercitazioni in dodici parti che approfondisce la distribuzione di un database usando EF Code First.
+- [Distribuzione di Web ASP.NET con Visual Studio](../../../../web-forms/overview/deployment/visual-studio-web-deployment/introduction.md). Serie di esercitazioni in dodici parti che approfondisce la distribuzione di un database usando EF Code First.
 - [Distribuire un'app ASP.NET MVC 5 sicura con appartenenza, OAuth e database SQL in un sito Web di Azure](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database/). Esercitazione dettagliata che illustra la creazione di un'app Web che usa l'autenticazione, archivia le tabelle dell'applicazione nel database delle appartenenze, modifica lo schema del database e distribuisce l'app in Azure.
 - [Mappa del contenuto di accesso ai dati ASP.NET](https://go.microsoft.com/fwlink/p/?LinkId=282414). Collegamenti alle risorse per l'uso di EF e del database SQL.
 

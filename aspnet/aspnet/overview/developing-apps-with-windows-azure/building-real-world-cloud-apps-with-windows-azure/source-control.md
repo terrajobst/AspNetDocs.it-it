@@ -8,16 +8,16 @@ ms.date: 06/23/2015
 ms.assetid: 2a0370d3-c2fb-4bf3-88b8-aad5a736c793
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/source-control
 msc.type: authoredcontent
-ms.openlocfilehash: a6f445e46d41b646cf6c25af2e65bc73e831d5ed
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: 5a1e0d7cd3c396d4be79c8958422602055eb3db1
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74583703"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457102"
 ---
 # <a name="source-control-building-real-world-cloud-apps-with-azure"></a>Controllo del codice sorgente (compilazione di app Cloud reali con Azure)
 
-di [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+di [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
 [Scarica il progetto di correzione it](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [Scarica l'E-Book](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 

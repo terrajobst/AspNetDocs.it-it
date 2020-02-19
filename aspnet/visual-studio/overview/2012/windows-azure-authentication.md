@@ -8,16 +8,16 @@ ms.date: 02/20/2013
 ms.assetid: a3cef801-a54b-4ebd-93c3-55764e2e14b1
 msc.legacyurl: /visual-studio/overview/2012/windows-azure-authentication
 msc.type: authoredcontent
-ms.openlocfilehash: 41c4e6d02c965c10aa35b882964f4f04d9b8c44b
-ms.sourcegitcommit: e365196c75ce93cd8967412b1cfdc27121816110
+ms.openlocfilehash: ce98effe18dd739504fb0d5453bae8a46c3ba102
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77075151"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457479"
 ---
 # <a name="windows-azure-authentication"></a>Autenticazione di Windows Azure
 
-di [Rick Anderson]((https://twitter.com/RickAndMSFT))
+di [Rick Anderson](https://twitter.com/RickAndMSFT)
 
 > Microsoft ASP.NET Tools per Windows Azure Active Directory semplifica l'abilitazione dell'autenticazione per le applicazioni Web ospitate in [siti Web di Windows Azure](https://www.windowsazure.com/home/features/web-sites/). È possibile usare l'autenticazione di Windows Azure per autenticare gli utenti di Office 365 dall'organizzazione, gli account aziendali sincronizzati dal Active Directory locale o gli utenti creati nel dominio Windows Azure Active Directory personalizzato. L'abilitazione dell'autenticazione di Windows Azure consente di configurare l'applicazione per l'autenticazione degli utenti tramite un singolo tenant di [windows Azure Active Directory](https://docs.microsoft.com/azure/active-directory/) .
 >

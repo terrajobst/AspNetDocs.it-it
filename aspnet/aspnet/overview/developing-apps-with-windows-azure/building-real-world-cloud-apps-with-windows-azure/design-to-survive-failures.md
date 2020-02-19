@@ -8,16 +8,16 @@ ms.date: 06/12/2014
 ms.assetid: 364ce84e-5af8-4e08-afc9-75a512b01f84
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/design-to-survive-failures
 msc.type: authoredcontent
-ms.openlocfilehash: 9bf9acb8b4f8521d03c053c124c5fc4a07d6cb9a
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: 348232af531b5d53dc3cb46d6d2c7931d95a572d
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74585659"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457128"
 ---
 # <a name="design-to-survive-failures-building-real-world-cloud-apps-with-azure"></a>Progettazione per sopravvivere agli errori (creazione di app Cloud reali con Azure)
 
-di [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+di [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
 [Scarica il progetto di correzione it](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [Scarica l'E-Book](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
@@ -58,7 +58,7 @@ Le aree intere potrebbero non riuscire. Un'emergenza naturale potrebbe eliminare
 
 Uno degli obiettivi di Azure consiste nel rendere molto più semplice la gestione di tutti questi tipi di errori. verranno illustrati alcuni esempi del modo in cui si esegue questa operazione nei capitoli seguenti.
 
-## <a name="slas"></a>Contratti
+## <a name="slas"></a>Contratti di servizio
 
 Spesso i contratti di servizio (SLA) sono in ascolto nell'ambiente cloud. Fondamentalmente, queste sono le promesse che le aziende rendono affidabili per quanto riguarda il servizio. Un contratto di servizio del 99,9% indica che il servizio deve funzionare correttamente 99,9% del tempo. Si tratta di un valore piuttosto comune per un contratto di contratto e sembra un numero molto elevato, ma è possibile che non si renda conto della quantità di tempo di inattività del 1%. Di seguito è riportata una tabella che mostra il tempo di inattività di diverse percentuali di SLA rispetto a un anno, un mese e una settimana.
 
@@ -70,7 +70,7 @@ Una cosa che è necessario conoscere in merito a un contratto di contratto è la
 
 Naturalmente, aspiriamo sempre meglio rispetto al contratto di contratto; in genere si disporrà di un numero inferiore. Il suggerimento è che se il tempo di inattività è superiore al limite massimo consentito, è possibile richiedere denaro. La quantità di denaro che si ottiene probabilmente non comporterebbe in modo completo l'utente per l'effetto aziendale del tempo di inattività eccessivo, ma tale aspetto del contratto di lavoro funge da criterio di imposizione e informa che l'operazione viene eseguita molto seriamente.
 
-### <a name="composite-slas"></a>Contratti di Service compositi
+### <a name="composite-slas"></a>Contratti di servizio compositi
 
 Un aspetto importante da considerare quando si esaminano i contratti di servizio è l'effetto dell'uso di più servizi in un'app, con ogni servizio con un contratto di servizio separato. Ad esempio, l'app Correggi it usa app Azure app Web del servizio, archiviazione di Azure e il database SQL. Di seguito sono riportati i numeri di contratto di contratto alla data in cui questo e-book viene scritto nel dicembre 2013:
 
@@ -78,7 +78,7 @@ Un aspetto importante da considerare quando si esaminano i contratti di servizio
 
 Qual è il tempo di inattività massimo che ci si aspetta per l'app in base a questi contratti di servizio? Si potrebbe pensare che il tempo di inattività sarebbe uguale alla percentuale di SLA peggiore o al 99,9% in questo caso. Questo sarebbe vero se tutti e tre i servizi hanno sempre avuto esito negativo nello stesso momento, ma ciò non è necessariamente quello che accade effettivamente. Ogni servizio può non riuscire in modo indipendente in momenti diversi, quindi è necessario calcolare il contratto di servizio composito moltiplicando i singoli numeri di contratto di servizio.
 
-![SLA composito](design-to-survive-failures/_static/image4.png)
+![Contratto di servizio composito](design-to-survive-failures/_static/image4.png)
 
 Quindi, l'app potrebbe essere inattiva non solo 43,2 minuti al mese, ma 3 volte tale quantità, 108 minuti al mese e ancora entro i limiti del contratto di lavoro di Azure.
 
@@ -122,7 +122,7 @@ Documentazione:
 - [Continuità aziendale nel database SQL di Azure](https://msdn.microsoft.com/library/windowsazure/hh852669.aspx). Documentazione sulle funzionalità di disponibilità elevata e ripristino di emergenza del database SQL.
 - [Disponibilità elevata e ripristino di emergenza per SQL Server in macchine virtuali di Azure](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx).
 
-Video:
+Video
 
 - [Failsafe: compilazione di servizi cloud scalabili e resilienti](https://channel9.msdn.com/Series/FailSafe). Serie in nove parti di Ulrich Homann, Marc Mercuri e Mark Simms. Presenta concetti di alto livello e principi architetturali in modo molto accessibile e interessante, con storie tratte dall'esperienza del team di consulenza clienti Microsoft (CAT) con i clienti effettivi. Gli episodi 1 e 8 approfondiscono i motivi della progettazione delle app cloud per sopravvivere agli errori. Vedere anche la discussione successiva sulla limitazione nell'episodio 2 a partire da 49:57, la discussione dei punti di errore e delle modalità di errore nell'episodio 2 a partire da 56:05 e la discussione degli interruttori in Episode 3 a partire da 40:55.
 - [Creazione di grandi dimensioni: lezioni apprese dai clienti di Azure-parte II](https://channel9.msdn.com/Events/Build/2012/3-030). Mark Simms parla di progettazione per l'errore e la strumentazione di tutto. In modo analogo alla serie failsafe, ma passa ad altre procedure dettagliate.

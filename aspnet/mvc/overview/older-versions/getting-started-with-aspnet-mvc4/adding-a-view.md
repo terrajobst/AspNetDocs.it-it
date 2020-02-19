@@ -2,81 +2,81 @@
 uid: mvc/overview/older-versions/getting-started-with-aspnet-mvc4/adding-a-view
 title: Aggiunta di una vista | Microsoft Docs
 author: Rick-Anderson
-description: 'Nota: Una versione aggiornata di questa esercitazione è disponibile qui che usa ASP.NET MVC 5 e Visual Studio 2013. È più sicuro e molto più semplice da seguire e demo...'
+description: 'Nota: una versione aggiornata di questa esercitazione è disponibile qui che usa ASP.NET MVC 5 e Visual Studio 2013. È più sicuro, molto più semplice da seguire e demo...'
 ms.author: riande
 ms.date: 08/28/2012
 ms.assetid: dde851d7-882e-4d99-9b96-cf96daed81cc
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc4/adding-a-view
 msc.type: authoredcontent
-ms.openlocfilehash: 58dc8baf3f2e8e3cf412c0f9c7d9355f933c89d9
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 81c2e1f46b08cbc9b5aa5d6c1b36d9d8dc2ba581
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65129957"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457635"
 ---
 # <a name="adding-a-view"></a>Aggiunta di una visualizzazione
 
-da [Rick Anderson]((https://twitter.com/RickAndMSFT))
+di [Rick Anderson](https://twitter.com/RickAndMSFT)
 
 > > [!NOTE]
-> > È disponibile una versione aggiornata di questa esercitazione [qui](../../getting-started/introduction/getting-started.md) che usa ASP.NET MVC 5 e Visual Studio 2013. È più sicuro, molto più semplice da seguire e vengono illustrate altre funzionalità.
+> > Una versione aggiornata di questa esercitazione è disponibile [qui](../../getting-started/introduction/getting-started.md) che usa ASP.NET MVC 5 e Visual Studio 2013. È più sicuro, molto più semplice da seguire e illustra altre funzionalità.
 
-In questa sezione si intende modificare il `HelloWorldController` classe utilizzare file di modello per correttamente il processo di generazione di risposte HTML a un client di incapsulare la visualizzazione.
+In questa sezione si procederà alla modifica della classe `HelloWorldController` per l'uso dei file di modello di visualizzazione per incapsulare in modo semplice il processo di generazione di risposte HTML a un client.
 
-Si creerà un file modello di visualizzazione usando la [motore di visualizzazione Razor](https://weblogs.asp.net/scottgu/archive/2010/07/02/introducing-razor.aspx) introdotte con ASP.NET MVC 3. I modelli di vista basati su Razor hanno una *cshtml* estensione di file e fornire un modo elegante per creare HTML di output usando c#. Riduce al minimo il numero di caratteri e sequenze di tasti richieste durante la scrittura di un modello di vista Razor e consente a un veloce, fluido codifica del flusso di lavoro.
+Verrà creato un file di modello di visualizzazione usando il [motore di visualizzazione Razor](https://weblogs.asp.net/scottgu/archive/2010/07/02/introducing-razor.aspx) introdotto con ASP.NET MVC 3. I modelli di visualizzazione basati su Razor hanno un'estensione di file *cshtml* e forniscono un modo elegante per creare l'output C#HTML usando. Razor riduce al minimo il numero di caratteri e le sequenze di tasti richiesti durante la scrittura di un modello di visualizzazione e Abilita un flusso di lavoro di codifica veloce e fluido.
 
-Attualmente il metodo `Index` restituisce una stringa con un messaggio hardcoded nella classe controller. Modifica il `Index` per restituire un `View` dell'oggetto, come illustrato nel codice seguente:
+Attualmente il metodo `Index` restituisce una stringa con un messaggio hardcoded nella classe controller. Modificare il metodo `Index` per restituire un oggetto `View`, come illustrato nel codice seguente:
 
 [!code-csharp[Main](adding-a-view/samples/sample1.cs)]
 
-Il `Index` metodo precedente Usa un modello di vista per generare una risposta HTML al browser. I metodi del controller (noto anche come [metodi di azione](http://rachelappel.com/asp.net-mvc-actionresults-explained)), ad esempio il `Index` metodo precedente, restituiscono in genere un' [ActionResult](https://msdn.microsoft.com/library/system.web.mvc.actionresult.aspx) (o una classe derivata da [ActionResult](https://msdn.microsoft.com/library/system.web.mvc.actionresult.aspx)), i tipi non primitivi come stringa.
+Il `Index` metodo precedente usa un modello di visualizzazione per generare una risposta HTML al browser. I metodi del controller (noti anche come [metodi di azione](http://rachelappel.com/asp.net-mvc-actionresults-explained)), ad esempio il `Index` metodo precedente, restituiscono in genere un [ActionResult](https://msdn.microsoft.com/library/system.web.mvc.actionresult.aspx) (o una classe derivata da [ActionResult](https://msdn.microsoft.com/library/system.web.mvc.actionresult.aspx)), non tipi primitivi come String.
 
-Nel progetto, aggiungere un modello di visualizzazione che è possibile usare con il `Index` (metodo). A tale scopo, fare doppio clic all'interno di `Index` (metodo) e fare clic su **Aggiungi visualizzazione**.
+Nel progetto aggiungere un modello di vista che è possibile usare con il metodo `Index`. A tale scopo, fare clic con il pulsante destro del mouse all'interno del metodo `Index` e scegliere **Aggiungi visualizzazione**.
 
 ![](adding-a-view/_static/image1.png)
 
-Il **Aggiungi visualizzazione** verrà visualizzata la finestra di dialogo. Lasciare le impostazioni predefinite di quelle fornite sono e fare clic sui **Add** pulsante:
+Verrà visualizzata la finestra di dialogo **Aggiungi visualizzazione** . Lasciare le impostazioni predefinite e fare clic sul pulsante **Aggiungi** :
 
 ![](adding-a-view/_static/image2.png)
 
-Il *MvcMovie\Views\HelloWorld* cartella e il *MvcMovie\Views\HelloWorld\Index.cshtml* file vengono creati. È possibile visualizzarli nella **Esplora soluzioni**:
+Vengono creati la cartella *MvcMovie\Views\HelloWorld* e il file *MvcMovie\Views\HelloWorld\Index.cshtml* . È possibile visualizzarli nel **Esplora soluzioni**:
 
 ![](adding-a-view/_static/image3.png)
 
-Il seguente viene illustrato il *index. cshtml* file creato:
+Di seguito è illustrato il file *index. cshtml* creato:
 
 ![HelloWorldIndex](adding-a-view/_static/image4.png)
 
-Aggiungere il codice HTML seguente sotto il `<h2>` tag.
+Aggiungere il codice HTML seguente sotto il tag `<h2>`.
 
 [!code-html[Main](adding-a-view/samples/sample2.html)]
 
-L'intero *MvcMovie\Views\HelloWorld\Index.cshtml* file è illustrato di seguito.
+Di seguito è riportato il file *MvcMovie\Views\HelloWorld\Index.cshtml* completo.
 
 [!code-cshtml[Main](adding-a-view/samples/sample3.cshtml?highlight=7-8)]
 
-Se si usa Visual Studio 2012, in Esplora soluzioni, fare clic il *index. cshtml* del file e selezionare **Visualizza in controllo pagina**.
+Se si usa Visual Studio 2012, in Esplora soluzioni fare clic con il pulsante destro del mouse sul file *index. cshtml* e selezionare **Visualizza in controllo pagina**.
 
 ![PI](adding-a-view/_static/image5.png)
 
-Il [esercitazione di controllo pagina](../../views/using-page-inspector-in-aspnet-mvc.md) include altre informazioni su questo nuovo strumento.
+L' [esercitazione controllo pagina](../../views/using-page-inspector-in-aspnet-mvc.md) contiene altre informazioni su questo nuovo strumento.
 
-In alternativa, eseguire l'applicazione e selezionare il `HelloWorld` controller (`http://localhost:xxxx/HelloWorld`). Il `Index` metodo nel controller di non esegue la quantità di lavoro, sufficiente eseguita l'istruzione `return View()`, quale specificato che il metodo deve usare un file di modello di visualizzazione per il rendering di una risposta nel browser. Perché è stato specificato in modo esplicito il nome del file del modello di visualizzazione da usare, ASP.NET MVC impostato sul valore predefinito usando il *index. cshtml* file di visualizzazione nel *\Views\HelloWorld* cartella. L'immagine seguente mostra la stringa &quot;Hello from our View Template!&quot; hardcoded nella vista.
+In alternativa, eseguire l'applicazione e passare al controller di `HelloWorld` (`http://localhost:xxxx/HelloWorld`). Il metodo `Index` nel controller non ha fatto molto lavoro; è stata eseguita semplicemente l'istruzione `return View()`, che ha specificato che il metodo deve usare un file di modello di visualizzazione per eseguire il rendering di una risposta nel browser. Dal momento che non è stato specificato in modo esplicito il nome del file di modello di visualizzazione da usare, per impostazione predefinita ASP.NET MVC usa il file di visualizzazione *index. cshtml* nella cartella *\Views\HelloWorld* . L'immagine seguente mostra la stringa &quot;Hello dal modello di visualizzazione.&quot; hardcoded nella visualizzazione.
 
 ![](adding-a-view/_static/image6.png)
 
-Sembra abbastanza positivo. Si noti tuttavia che barra del titolo del browser mostra &quot;personali A ASP.NET di indice&quot; e il collegamento grande nella parte superiore della pagina indica &quot;inserire qui il logo.&quot; Di seguito il &quot;qui il logo.&quot; collegamento registrazione e log nei collegamenti e di seguito che si collega a casa, circa e contatto pagine. È possibile modificare alcune di queste.
+Sembra abbastanza valido. Si noti, tuttavia, che la barra del titolo del browser Mostra &quot;index My ASP.NET an&quot; e il collegamento Big nella parte superiore della pagina indica &quot;il logo qui.&quot; sotto l'&quot;il logo qui.&quot; collegamento sono collegamenti di registrazione e accesso e di seguito sono riportati collegamenti alle pagine Home, about e Contact. Modificare alcune di queste.
 
-## <a name="changing-views-and-layout-pages"></a>Modifica delle viste e le pagine di Layout
+## <a name="changing-views-and-layout-pages"></a>Modifica di visualizzazioni e pagine di layout
 
-In primo luogo, si desidera modificare il &quot;qui il logo.&quot; titolo nella parte superiore della pagina. Tale testo è comune a tutte le pagine. Viene effettivamente implementato in un'unica posizione nel progetto, anche se è presente in ogni pagina dell'applicazione. Passare al */viste/Shared* cartella **Esplora soluzioni** e aprire il  *\_layout. cshtml* file. Questo file viene chiamato un *pagina layout* ed è condiviso &quot;shell&quot; che utilizzano tutte le altre pagine.
+In primo luogo, si vuole modificare il &quot;logo qui.&quot; titolo nella parte superiore della pagina. Il testo è comune a ogni pagina. Viene effettivamente implementato in una sola posizione del progetto, anche se viene visualizzato in ogni pagina dell'applicazione. Passare alla cartella */Views/Shared.* in **Esplora soluzioni** e aprire il file *\_layout. cshtml* . Questo file è denominato *pagina layout* ed è la shell &quot;condivisa&quot; utilizzata da tutte le altre pagine.
 
 ![_LayoutCshtml](adding-a-view/_static/image7.png)
 
-Modelli di layout consentono di specificare il layout del contenitore HTML del sito in un'unica posizione e quindi applicarlo in più pagine del sito. Trovare la riga `@RenderBody()`. `RenderBody` è un segnaposto dove tutte le pagine specifiche della vista vengono presentate, &quot;incapsulate&quot; nella pagina di layout. Ad esempio, se si seleziona il collegamento About, il *Views\Home\About.cshtml* vista viene eseguita all'interno di `RenderBody` (metodo).
+I modelli di layout consentono di specificare il layout del contenitore HTML del sito in un'unica posizione e quindi di applicarlo in più pagine del sito. Trovare la riga `@RenderBody()`. `RenderBody` è un segnaposto dove tutte le pagine specifiche della vista vengono presentate, &quot;incapsulate&quot; nella pagina di layout. Se ad esempio si seleziona il collegamento about, viene eseguito il rendering della visualizzazione *Views\Home\About.cshtml* all'interno del metodo `RenderBody`.
 
-Modificare l'intestazione del titolo del sito nel modello di layout da &quot;inserire qui il logo&quot; al &quot;MVC Movie&quot;.
+Modificare l'intestazione del titolo del sito nel modello di layout da &quot;logo qui&quot; per &quot;&quot;di film MVC.
 
 [!code-cshtml[Main](adding-a-view/samples/sample4.cshtml)]
 
@@ -84,51 +84,51 @@ Sostituire il contenuto dell'elemento title con il markup seguente:
 
 [!code-cshtml[Main](adding-a-view/samples/sample5.cshtml)]
 
-Eseguire l'applicazione e si noti che ora dichiara &quot;MVC Movie &quot;. Fare clic sui **sulle** collegamento verrà visualizzato come pagina mostra &quot;MVC Movie&quot;anche. Abbiamo potuto apportare la modifica di una volta nel modello di layout e avere tutte le pagine nel sito riflettono il nuovo titolo.
+Eseguire l'applicazione e notare che ora &quot;&quot;film MVC. Fare clic sul collegamento **About (informazioni** ). si vedrà come la pagina mostra anche &quot;Movie MVC&quot;. È stato possibile apportare la modifica una volta nel modello di layout e fare in modo che tutte le pagine del sito riflettano il nuovo titolo.
 
 ![](adding-a-view/_static/image8.png)
 
-A questo punto, è possibile modificare il titolo della visualizzazione Index.
+A questo punto, modificare il titolo della visualizzazione index.
 
-Aprire *MvcMovie\Views\HelloWorld\Index.cshtml*. Esistono due modi per apportare una modifica: prima di tutto il testo che viene visualizzato nel titolo del browser, quindi nell'intestazione secondaria (la `<h2>` elemento). Renderli leggermente diversi in modo da poter esaminare la parte specifica di app modificata dal frammento specifico di codice.
+Aprire *MvcMovie\Views\HelloWorld\Index.cshtml*. Sono disponibili due posizioni per apportare una modifica: innanzitutto, il testo visualizzato nel titolo del browser e quindi nell'intestazione secondaria (elemento `<h2>`). Renderli leggermente diversi in modo da poter esaminare la parte specifica di app modificata dal frammento specifico di codice.
 
 [!code-cshtml[Main](adding-a-view/samples/sample6.cshtml)]
 
-Per indicare il titolo HTML da visualizzare, il codice precedente imposta una `Title` proprietà del `ViewBag` oggetto (che è nel *index. cshtml* modello di vista). Se si osserva nuovamente il codice sorgente del modello di layout, si noterà che il modello Usa questo valore nel `<title>` come parte dell'elemento di `<head>` sezione del codice HTML che è stata modificata in precedenza. Usando questo `ViewBag` approccio, è possibile facilmente passare altri parametri tra il modello di visualizzazione e il file di layout.
+Per indicare il titolo HTML da visualizzare, il codice precedente imposta una proprietà di `Title` dell'oggetto `ViewBag`, che si trova nel modello di vista *index. cshtml* . Se si esamina il codice sorgente del modello di layout, si noterà che il modello usa questo valore nell'elemento `<title>` come parte della sezione `<head>` del codice HTML modificato in precedenza. Utilizzando questo approccio `ViewBag`, è possibile passare facilmente altri parametri tra il modello di visualizzazione e il file di layout.
 
-Eseguire l'applicazione e passare a `http://localhost:xx/HelloWorld`. Si noti che il titolo del browser, l'intestazione primaria e le intestazioni secondarie sono cambiati. Se le modifiche non sono visibili nel browser, è possibile che si stia visualizzando il contenuto memorizzato nella cache. Premere CTRL + F5 nel browser per forzare il caricamento della risposta dal server. Il titolo del browser viene creato con il `ViewBag.Title` impostato nel *index. cshtml* visualizzare modelli e gli altri &quot;-Movie App&quot; aggiunto nel file di layout.
+Eseguire l'applicazione e passare a `http://localhost:xx/HelloWorld`. Si noti che il titolo del browser, l'intestazione primaria e le intestazioni secondarie sono cambiati. Se le modifiche non sono visibili nel browser, è possibile che si stia visualizzando il contenuto memorizzato nella cache. Premere CTRL + F5 nel browser per forzare il caricamento della risposta dal server. Il titolo del browser viene creato con i `ViewBag.Title` impostati nel modello di vista *index. cshtml* e l'app &quot;-Movie aggiuntiva&quot; aggiunta nel file di layout.
 
-Si noti inoltre come il contenuto nel *index. cshtml* modello di visualizzazione dopo il merge con il  *\_layout. cshtml* visualizzare il modello e una singola risposta HTML è stato inviato al browser. I modelli di layout rendono molto semplice apportare modifiche che si applicano a tutte le pagine dell'applicazione.
+Si noti anche che il contenuto del modello di vista *index. cshtml* è stato unito al modello di vista *\_layout. cshtml* ed è stata inviata una singola risposta HTML al browser. I modelli di layout rendono molto semplice apportare modifiche che si applicano a tutte le pagine dell'applicazione.
 
 ![](adding-a-view/_static/image9.png)
 
-La minima &quot;dati&quot; (in questo caso il &quot;Hello from our View Template!&quot; messaggio) è hardcoded, tuttavia. L'applicazione MVC ha un &quot;V&quot; (visualizzazione) e hai una &quot;C&quot; (controller), ma nessun &quot;M&quot; (model) ancora. A breve verrà illustrato come creare un database e recuperare i dati del modello da quest'ultimo.
+Il &quot;&quot; di dati (in questo caso il &quot;Hello dal modello di visualizzazione&quot; messaggio) è tuttavia hardcoded. L'applicazione MVC ha un &quot;V&quot; (visualizzazione) e si dispone di un &quot;C&quot; (controller), ma non è ancora &quot;M&quot; (modello). A breve verrà illustrato come creare un database e recuperare i dati del modello.
 
 ## <a name="passing-data-from-the-controller-to-the-view"></a>Passaggio di dati dal controller alla vista
 
-Prima di passare a un database e comunicare con informazioni sui modelli, tuttavia, esaminiamo innanzitutto il passaggio di informazioni dal controller a una visualizzazione. Le classi controller vengono richiamate in risposta a una richiesta URL in ingresso. Una classe controller è in cui viene scritto il codice che gestisce il browser in ingresso richieste, recupera i dati da un database e in definitiva determina il tipo di risposta da inviare al browser. I modelli di visualizzazione sono quindi utilizzabile per generare e formattare una risposta HTML al browser da un controller.
+Prima di passare a un database e a parlare dei modelli, tuttavia, parliamo prima di passare le informazioni dal controller a una visualizzazione. Le classi controller vengono richiamate in risposta a una richiesta URL in ingresso. Una classe controller è la posizione in cui si scrive il codice che gestisce le richieste del browser in ingresso, recupera i dati da un database e infine decide il tipo di risposta da restituire al browser. I modelli di visualizzazione possono quindi essere usati da un controller per generare e formattare una risposta HTML al browser.
 
-I controller sono responsabili di fornire i dati o oggetti sono necessari affinché un modello di vista eseguire il rendering di una risposta nel browser. Procedura consigliata: **Un modello di vista non deve mai eseguire logica di business o interagire direttamente con un database**. Al contrario, un modello di vista dovrebbe lavorare solo con i dati forniti dal controller. Mantenendo ciò &quot;la separazione dei compiti&quot; consente inoltre di mantenere il codice pulito, testabile e gestibile.
+I controller sono responsabili di fornire tutti i dati o gli oggetti necessari per consentire a un modello di visualizzazione di eseguire il rendering di una risposta al browser. Procedura consigliata: **un modello di vista non deve mai eseguire la logica di business o interagire direttamente con un database**. Al contrario, un modello di visualizzazione dovrebbe funzionare solo con i dati forniti dal controller. Il mantenimento di questo &quot;la separazione dei problemi&quot; consente di mantenere il codice pulito, testabile e più gestibile.
 
-Attualmente, il `Welcome` metodo di azione il `HelloWorldController` classe accetta un `name` e un `numTimes` parametro e quindi genera i valori direttamente al browser. Anziché ottenere il rendering di questa risposta come stringa, cambiare il controller per usare invece un modello di vista. Il modello di vista genererà una risposta dinamica, il che significa che è necessario passare i bit di dati appropriati dal controller alla vista per generare la risposta. È possibile farlo facendo in modo che il controller inserisca i dati dinamici (parametri) che il modello di vista necessita in un `ViewBag` oggetto che può quindi accedere il modello di visualizzazione.
+Attualmente, il metodo di azione `Welcome` nella classe `HelloWorldController` accetta un `name` e un parametro `numTimes` e quindi restituisce i valori direttamente al browser. Anziché fare in modo che il controller esegua il rendering di questa risposta come stringa, modificare il controller per usare un modello di visualizzazione. Il modello di vista genererà una risposta dinamica, il che significa che è necessario passare i bit di dati appropriati dal controller alla vista per generare la risposta. È possibile eseguire questa operazione facendo in modo che il controller inserisca i dati dinamici (parametri) necessari per il modello di visualizzazione in un oggetto `ViewBag` a cui il modello di visualizzazione può accedere.
 
-Tornare al *HelloWorldController.cs* di file e modificare le `Welcome` metodo per aggiungere un `Message` e `NumTimes` valore per il `ViewBag` oggetto. `ViewBag` è un oggetto dinamico, ovvero che è possibile inserire gli elementi desiderati da esso. il `ViewBag` oggetto non dispone di alcuna proprietà definite fino a quando non si inserisce un elemento al suo interno. Il [sistema di associazione di modelli ASP.NET MVC](http://odetocode.com/Blogs/scott/archive/2009/04/27/6-tips-for-asp-net-mvc-model-binding.aspx) automaticamente viene eseguito il mapping di parametri denominati (`name` e `numTimes`) dalla stringa di query nella barra degli indirizzi ai parametri nel metodo. Il file *HelloWorldController.cs* completo avrà un aspetto simile al seguente:
+Tornare al file *HelloWorldController.cs* e modificare il metodo `Welcome` per aggiungere un valore `Message` e `NumTimes` all'oggetto `ViewBag`. `ViewBag` è un oggetto dinamico, ovvero è possibile inserire qualsiasi valore desiderato. l'oggetto `ViewBag` non dispone di proprietà definite fino a quando non si inserisce un elemento al suo interno. Il [sistema di associazione di modelli MVC ASP.NET](http://odetocode.com/Blogs/scott/archive/2009/04/27/6-tips-for-asp-net-mvc-model-binding.aspx) esegue automaticamente il mapping dei parametri denominati (`name` e `numTimes`) dalla stringa di query nella barra degli indirizzi ai parametri nel metodo. Il file *HelloWorldController.cs* completo avrà un aspetto simile al seguente:
 
 [!code-csharp[Main](adding-a-view/samples/sample7.cs)]
 
-A questo punto il `ViewBag` oggetto contiene i dati che verranno passati automaticamente alla visualizzazione.
+A questo punto l'oggetto `ViewBag` contiene i dati che verranno passati automaticamente alla visualizzazione.
 
-Successivamente, è necessario un modello di vista Welcome! Nel **compilare** dal menu **compilazione MvcMovie** per assicurarsi che la compilazione del progetto.
+Quindi, è necessario un modello di visualizzazione introduttiva. Scegliere **Compila MvcMovie** dal menu **Compila** per verificare che il progetto sia compilato.
 
-Quindi fare doppio clic all'interno di `Welcome` (metodo) e fare clic su **Aggiungi visualizzazione**.
+Fare quindi clic con il pulsante destro del mouse all'interno del metodo `Welcome` e scegliere **Aggiungi visualizzazione**.
 
 ![](adding-a-view/_static/image10.png)
 
-Questa figura viene illustrata la **Aggiungi visualizzazione** nella finestra di dialogo è simile a:
+Ecco come appare la finestra di dialogo **Aggiungi visualizzazione** :
 
 ![](adding-a-view/_static/image11.png)
 
-Fare clic su **Add**e quindi aggiungere il codice seguente sotto il `<h2>` nuovo elemento *Welcome* file. Si creerà un ciclo con la dicitura &quot;Hello&quot; come tutte le volte che l'utente afferma quanto previsto. L'intero *Welcome* file è illustrato di seguito.
+Fare clic su **Aggiungi**e quindi aggiungere il codice seguente sotto l'elemento `<h2>` nel nuovo file *Welcome. cshtml* . Verrà creato un ciclo che indica &quot;Hello&quot; il numero di volte indicato dall'utente. Di seguito è riportato il file completo *Welcome. cshtml* .
 
 [!code-cshtml[Main](adding-a-view/samples/sample8.cshtml)]
 
@@ -136,13 +136,13 @@ Eseguire l'applicazione e passare all'URL seguente:
 
 `http://localhost:xx/HelloWorld/Welcome?name=Scott&numtimes=4`
 
-A questo punto i dati vengono prelevati dall'URL e passati al controller usando il [dello strumento di associazione del modello](http://odetocode.com/Blogs/scott/archive/2009/04/27/6-tips-for-asp-net-mvc-model-binding.aspx). Il controller inserisce i dati in un `ViewBag` oggetto e passa tale oggetto alla vista. La vista visualizza quindi i dati in formato HTML all'utente.
+Ora i dati vengono ricavati dall'URL e passati al controller usando lo strumento di [associazione di modelli](http://odetocode.com/Blogs/scott/archive/2009/04/27/6-tips-for-asp-net-mvc-model-binding.aspx). Il controller inserisce i dati in un oggetto `ViewBag` e passa tale oggetto alla visualizzazione. La vista Visualizza quindi i dati in formato HTML per l'utente.
 
 ![](adding-a-view/_static/image12.png)
 
-Nell'esempio precedente, abbiamo utilizzato un `ViewBag` oggetto per passare i dati dal controller a una visualizzazione. Se quest'ultimo, in questa esercitazione, si userà un modello di visualizzazione per passare i dati da un controller a una visualizzazione. L'approccio di modello di vista per passare i dati è generalmente molto preferito rispetto all'approccio di contenitore di visualizzazione. Vedere il post di blog [V fortemente tipizzate viste dinamiche](https://blogs.msdn.com/b/rickandy/archive/2011/01/28/dynamic-v-strongly-typed-views.aspx) per altre informazioni.
+Nell'esempio precedente è stato usato un oggetto `ViewBag` per passare i dati dal controller a una visualizzazione. Secondo nell'esercitazione, si userà un modello di visualizzazione per passare i dati da un controller a una vista. L'approccio al modello di visualizzazione per il passaggio dei dati è in genere preferibile rispetto all'approccio del contenitore di viste. Per ulteriori informazioni, vedere il post di Blog [Dynamic V](https://blogs.msdn.com/b/rickandy/archive/2011/01/28/dynamic-v-strongly-typed-views.aspx) con tipizzazione forte.
 
-Era un tipo di un' &quot;M&quot; per modello, ma non il tipo di database. Creare un database di film con i concetti appresi.
+Beh, era un tipo di &quot;M&quot; per il modello, ma non per il tipo di database. Creare un database di film con i concetti appresi.
 
 > [!div class="step-by-step"]
 > [Precedente](adding-a-controller.md)

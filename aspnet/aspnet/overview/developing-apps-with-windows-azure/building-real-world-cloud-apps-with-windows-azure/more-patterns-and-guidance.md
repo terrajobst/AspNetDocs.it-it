@@ -8,16 +8,16 @@ ms.date: 06/12/2014
 ms.assetid: 7e97cfc3-d830-4002-8ff7-5790d1ff49e6
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/more-patterns-and-guidance
 msc.type: authoredcontent
-ms.openlocfilehash: afade34477d1136883e7543d09e73dfbe435690e
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: 57e32bf7568ecb0eb22f0f2b585310dcab2d5d43
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74585352"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457076"
 ---
 # <a name="more-patterns-and-guidance-building-real-world-cloud-apps-with-azure"></a>Altri modelli e linee guida (creazione di app Cloud reali con Azure)
 
-di [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+di [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
 [Scarica il progetto di correzione it](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [Scarica l'E-Book](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
@@ -45,7 +45,7 @@ Vedere anche modelli di cloud computing aggiuntivi e linee guida in [Microsoft P
 
 Ognuno dei capitoli di questo e-book fornisce collegamenti alle risorse per ulteriori informazioni su tale argomento specifico. L'elenco seguente contiene i collegamenti alle panoramiche delle procedure consigliate e ai modelli consigliati per lo sviluppo nel cloud con Azure.
 
-Documentation
+Documentazione
 
 - [Procedure consigliate per la progettazione di servizi su larga scala nei servizi cloud di Azure](https://msdn.microsoft.com/library/windowsazure/jj717232.aspx). White paper di Mark Simms e Michael Thomassy.
 - [Failsafe: linee guida per architetture cloud resilienti](https://msdn.microsoft.com/library/windowsazure/jj853352.aspx). White paper di Marc Mercuri, Ulrich Homann e Andrew Townhill. Versione di pagina Web della serie di video FailSafe.
@@ -126,7 +126,7 @@ Altri membri di DGAC hanno esaminato e commentato il contorno preliminare:
 - Ryan Riley
 - Perez Jones Tsisah
 - Roger Whitehead
-- Wilkosz come animatore Pawel
+- Pawel Wilkosz
 
 > [!div class="step-by-step"]
 > [Precedente](queue-centric-work-pattern.md)

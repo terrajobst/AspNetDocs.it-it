@@ -1,178 +1,178 @@
 ---
 uid: mvc/overview/older-versions/using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc/using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-4
-title: Uso di HTML5 e jQuery UI Datepicker Popup Calendar con ASP.NET MVC - parte 4 | Microsoft Docs
+title: Uso del calendario popup per HTML5 e jQuery UI DatePicker con ASP.NET MVC-parte 4 | Microsoft Docs
 author: Rick-Anderson
-description: Questa esercitazione insegnerà le nozioni di base di come usare i modelli nell'editor di modelli di visualizzazione e il calendario jQuery UI datepicker popup in MV un ASP.NET...
+description: Questa esercitazione illustra le nozioni di base su come usare i modelli di editor, i modelli di visualizzazione e il calendario popup DatePicker dell'interfaccia utente di jQuery in un ASP.NET MV...
 ms.author: riande
 ms.date: 08/29/2011
 ms.assetid: 57666c69-2b0f-423a-a61d-be49547fa585
 msc.legacyurl: /mvc/overview/older-versions/using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc/using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-4
 msc.type: authoredcontent
-ms.openlocfilehash: d660fcbc561c84951c8376014e5c1902851a6caa
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 583e782641efea9a9517edb31f7718b28203d756
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65129567"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457492"
 ---
-# <a name="using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc---part-4"></a>Uso di HTML5 e jQuery UI Datepicker Popup Calendar con ASP.NET MVC - parte 4
+# <a name="using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc---part-4"></a>Uso del calendario popup per HTML5 e jQuery UI DatePicker con ASP.NET MVC-parte 4
 
-da [Rick Anderson]((https://twitter.com/RickAndMSFT))
+di [Rick Anderson](https://twitter.com/RickAndMSFT)
 
-> Questa esercitazione insegnerà le nozioni di base di come usare i modelli nell'editor di modelli di visualizzazione e il calendario di jQuery UI datepicker popup in un'applicazione Web ASP.NET MVC.
+> Questa esercitazione illustra le nozioni di base su come usare i modelli di editor, i modelli di visualizzazione e il calendario popup DatePicker dell'interfaccia utente di jQuery in un'applicazione Web MVC ASP.NET.
 
-### <a name="adding-a-template-for-editing-dates"></a>Aggiunta di un modello per la modifica di date
+### <a name="adding-a-template-for-editing-dates"></a>Aggiunta di un modello per la modifica delle date
 
-In questa sezione si creerà un modello per la modifica di date che verranno applicate quando ASP.NET MVC Visualizza l'interfaccia utente per la modifica delle proprietà del modello che sono contrassegnate con il **data** enumerazione del [DataType](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatype.aspx) attributo. Il modello verrà eseguito il rendering solo alla data. ora non verrà visualizzata. Nel modello si userà il [jQuery UI Datepicker](http://jqueryui.com/demos/datepicker/) calendario popup per fornire un modo per modificare le date.
+In questa sezione verrà creato un modello per modificare le date da applicare quando ASP.NET MVC Visualizza l'interfaccia utente per la modifica delle proprietà del modello contrassegnate con l'enumerazione **date** dell'attributo [DataType](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatype.aspx) . Il modello eseguirà il rendering solo della data; l'ora non verrà visualizzata. Nel modello verrà usato il calendario popup [DatePicker interfaccia utente jQuery](http://jqueryui.com/demos/datepicker/) per fornire un modo per modificare le date.
 
-Per iniziare, aprire il *Movie.cs* file e aggiungere il [DataType](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatypeattribute.aspx) attributo con il **data** enumerazione per il `ReleaseDate` proprietà, come illustrato nel codice seguente:
+Per iniziare, aprire il file *Movie.cs* e aggiungere l'attributo [DataType](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatypeattribute.aspx) con l'enumerazione **date** alla proprietà `ReleaseDate`, come illustrato nel codice seguente:
 
 [!code-csharp[Main](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-4/samples/sample1.cs)]
 
-Questo codice causa il `ReleaseDate` campo da visualizzare senza l'ora in entrambi visualizzare i modelli e modificare i modelli. Se l'applicazione contiene un *date.cshtml* modello nel *Views\Shared\EditorTemplates* cartella o nel *Views\Movies\EditorTemplates* cartella, tale modello verrà usato per il rendering di qualsiasi `DateTime` proprietà durante la modifica. In caso contrario, il sistema di creazione modello ASP.NET predefinito visualizzerà la proprietà come Data.
+Questo codice fa in modo che il campo `ReleaseDate` venga visualizzato senza l'ora sia nei modelli di visualizzazione che nei modelli di modifica. Se l'applicazione contiene un modello *date. cshtml* nella cartella *Views\Shared\EditorTemplates* o nella cartella *Views\Movies\EditorTemplates* , il modello verrà usato per eseguire il rendering di qualsiasi proprietà `DateTime` durante la modifica. In caso contrario, il sistema di modelli ASP.NET incorporato visualizzerà la proprietà come data.
 
-Premere CTRL+F5 per eseguire l'applicazione. Selezionare un collegamento di modifica per verificare che il campo di input per la data di rilascio viene visualizzata solo la data.
+Premere CTRL+F5 per eseguire l'applicazione. Selezionare un collegamento modifica per verificare che il campo di input per la data di rilascio mostri solo la data.
 
 ![](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-4/_static/image1.png)
 
-In **Esplora soluzioni**, espandere il *viste* cartella, espandere il *condiviso* cartella e quindi fare di *Views\Shared\EditorTemplates* cartella.
+In **Esplora soluzioni**espandere la cartella *views* , espandere la cartella *Shared* , quindi fare clic con il pulsante destro del mouse sulla cartella *Views\Shared\EditorTemplates* .
 
-Fare clic su **Add**, quindi fare clic su **visualizzazione**. Il **Aggiungi visualizzazione** verrà visualizzata la finestra di dialogo.
+Fare clic su **Aggiungi**e quindi su **Visualizza**. Verrà visualizzata la finestra di dialogo **Aggiungi visualizzazione** .
 
-Nel **nome della vista** , digitare &quot;data&quot;.
+Nella casella **nome visualizzazione** Digitare &quot;data&quot;.
 
-Selezionare il **Crea come visualizzazione parziale** casella di controllo. Assicurarsi che il **usano una pagina master o layout** e **creare una visualizzazione fortemente tipizzata** caselle di controllo non vengono selezionate.
+Selezionare la casella **di controllo Crea come visualizzazione parziale** . Verificare che le caselle di controllo **Usa un layout o una pagina master** e **Crea una visualizzazione fortemente tipizzata** non siano selezionate.
 
-Fare clic su **Aggiungi**. Il *Views\Shared\EditorTemplates\Date.cshtml* modello viene creato.
+Fare clic su **Add**. Viene creato il modello *Views\Shared\EditorTemplates\Date.cshtml* .
 
-Aggiungere il codice seguente per il *Views\Shared\EditorTemplates\Date.cshtml* modello.
+Aggiungere il codice seguente al modello *Views\Shared\EditorTemplates\Date.cshtml* .
 
 [!code-cshtml[Main](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-4/samples/sample2.cshtml)]
 
-La prima riga dichiara il modello sia un `DateTime` tipo. Anche se non è necessario dichiarare il tipo di modello in modalità di modifica e visualizzare i modelli, è consigliabile che in fase di compilazione di ottenere il controllo del modello passato alla visualizzazione. (Un altro vantaggio è che quindi di ottenere IntelliSense per il modello nella visualizzazione in Visual Studio). Se il tipo di modello non è dichiarato, ASP.NET MVC considera un [dinamica](https://msdn.microsoft.com/library/dd264741.aspx) digitare e non sono previsti tempi di compilazione il controllo dei tipi. Se si dichiara il modello sia un `DateTime` tipo, diventa fortemente tipizzato.
+La prima riga dichiara il modello come tipo di `DateTime`. Sebbene non sia necessario dichiarare il tipo di modello nei modelli di modifica e visualizzazione, è una procedura consigliata per ottenere il controllo in fase di compilazione del modello passato alla visualizzazione. Un altro vantaggio è la possibilità di ottenere IntelliSense per il modello nella visualizzazione in Visual Studio. Se il tipo di modello non è dichiarato, ASP.NET MVC lo considera un tipo [dinamico](https://msdn.microsoft.com/library/dd264741.aspx) e non esiste alcun controllo del tipo in fase di compilazione. Se si dichiara il modello come tipo di `DateTime`, diventa fortemente tipizzato.
 
-La seconda riga viene semplicemente letterale markup HTML che consente di visualizzare &quot;modello di data usando&quot; prima di un campo Data. Si userà questa riga temporaneamente per verificare che questo modello di data è in uso.
+La seconda riga è semplicemente markup HTML letterale che visualizza &quot;utilizzando il modello di data&quot; prima di un campo di data. Questa riga verrà utilizzata temporaneamente per verificare che sia in uso questo modello di data.
 
-La riga successiva è un' [Html.TextBox](https://msdn.microsoft.com/library/system.web.mvc.html.inputextensions.textbox.aspx) helper che esegue il rendering di un `input` campo che rappresenta una casella di testo. Il terzo parametro per l'helper utilizza un tipo anonimo per impostare la classe per la casella di testo `datefield` e il tipo su `date`. (Poiché `class` è una proprietà riservata in c#, è necessario usare il `@` carattere di escape di `class` attributo nel parser c#.)
+La riga successiva è un helper [HTML. TextBox](https://msdn.microsoft.com/library/system.web.mvc.html.inputextensions.textbox.aspx) che esegue il rendering di un campo `input` che è una casella di testo. Il terzo parametro per l'helper utilizza un tipo anonimo per impostare la classe per la casella di testo `datefield` e il tipo su `date`. Poiché `class` è un riservato in C#, è necessario utilizzare il carattere `@` per eseguire l'escape dell'attributo `class` nel C# parser.
 
-Il `date` tipo è un tipo di input HTML5 che consente ai browser compatibili con HTML5 per il rendering di un controllo di calendario HTML5. In seguito si aggiungerà codice JavaScript per associare il controllo datepicker jQuery per la `Html.TextBox` elemento usando il `datefield` classe.
+Il tipo di `date` è un tipo di input HTML5 che consente ai browser compatibili con HTML5 di eseguire il rendering di un controllo calendario HTML5. Successivamente, si aggiungerà un codice JavaScript per associare l'oggetto DatePicker di jQuery all'elemento `Html.TextBox` usando la classe `datefield`.
 
-Premere CTRL+F5 per eseguire l'applicazione. È possibile verificare che il `ReleaseDate` proprietà nella visualizzazione di modifica è usando il modello di modifica perché il modello consente di visualizzare &quot;con modello di data&quot; immediatamente prima di `ReleaseDate` testo di input casella, come illustrato in questa immagine:
+Premere CTRL+F5 per eseguire l'applicazione. È possibile verificare che la proprietà `ReleaseDate` nella visualizzazione di modifica usi il modello di modifica perché il modello Visualizza &quot;utilizzando il modello di data&quot; immediatamente prima della casella di input di testo `ReleaseDate`, come illustrato nell'immagine seguente:
 
 ![](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-4/_static/image2.png)
 
-Nel browser visualizzare l'origine della pagina. (Ad esempio, la pagina e scegliere **Visualizza origine**.) Il seguente esempio vengono illustrate alcune il markup della pagina, che illustra il `class` e `type` attributi nel codice HTML sottoposto a rendering.
+Nel browser visualizzare l'origine della pagina. Ad esempio, fare clic con il pulsante destro del mouse sulla pagina e scegliere **Visualizza origine**. Nell'esempio seguente viene illustrato il markup per la pagina, illustrando gli attributi `class` e `type` nel codice HTML sottoposto a rendering.
 
 [!code-html[Main](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-4/samples/sample3.html)]
 
-Tornare al *Views\Shared\EditorTemplates\Date.cshtml* modello e rimuovere le &quot;usando modelli di data&quot; markup. A questo punto il modello completato aspetto simile al seguente:
+Tornare al modello *Views\Shared\EditorTemplates\Date.cshtml* e rimuovere il &quot;usando il modello di data&quot; markup. Il modello completato è ora simile al seguente:
 
 [!code-cshtml[Main](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-4/samples/sample4.cshtml)]
 
-### <a name="adding-a-jquery-ui-datepicker-popup-calendar-using-nuget"></a>Aggiunta di un jQuery UI Datepicker Popup Calendar tramite NuGet
+### <a name="adding-a-jquery-ui-datepicker-popup-calendar-using-nuget"></a>Aggiunta di un calendario popup DatePicker interfaccia utente jQuery con NuGet
 
-In questa sezione si aggiungerà il [jQuery UI datepicker](http://jqueryui.com/demos/datepicker/) calendario popup per il modello di data-edit. Il [interfaccia utente di jQuery](http://jqueryui.com/) libreria fornisce il supporto per l'animazione, effetti e widget personalizzabili avanzate. Poiché è basato sulla libreria JavaScript jQuery. Il calendario popup per datepicker rende più semplice e naturale per immettere le date usando un calendario invece di immettere una stringa. Il calendario popup limita inoltre gli utenti a date legali, immissione di testo normale per una data consente di immettere un nome, ad esempio `2/33/1999` (febbraio 33rd, 1999), ma la [jQuery UI datepicker](http://jqueryui.com/demos/datepicker/) calendario popup per non consentirà l'associazione.
+In questa sezione verrà aggiunto il calendario popup dell' [interfaccia utente di jQuery](http://jqueryui.com/demos/datepicker/) al modello Data-modifica. La libreria [dell'interfaccia utente di jQuery](http://jqueryui.com/) fornisce supporto per animazioni, effetti avanzati e widget personalizzabili. Si basa sulla libreria JavaScript jQuery. Il calendario popup DatePicker rende semplice e naturale immettere le date usando un calendario anziché immettere una stringa. Il calendario popup limita anche gli utenti alle date legali. la voce di testo ordinaria per una data consente di immettere un valore come `2/33/1999` (il 33 febbraio 1999), ma il calendario popup dell' [interfaccia utente jQuery](http://jqueryui.com/demos/datepicker/) popup non lo consentirà.
 
-In primo luogo, è necessario installare le librerie dell'interfaccia utente di jQuery. A tale scopo, si userà NuGet, che è un pacchetto di gestione che è incluso nelle versioni SP1 di Visual Studio 2010 e Visual Web Developer.
+Prima di tutto, è necessario installare le librerie dell'interfaccia utente di jQuery. A tale scopo, si userà NuGet, ovvero una gestione pacchetti inclusa nelle versioni SP1 di Visual Studio 2010 e Visual Web Developer.
 
-In Visual Web Developer, dalla **strumenti** dal menu **Gestione pacchetti NuGet** , quindi selezionare **Gestisci pacchetti NuGet**.
+In Visual Web Developer scegliere **Gestione pacchetti NuGet** dal menu **strumenti** e quindi selezionare **Gestisci pacchetti NuGet**.
 
 ![](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-4/_static/image3.png)
 
-Nota: Se il **strumenti** menu non viene visualizzata la **Gestione pacchetti NuGet** comando, è necessario installare NuGet, seguendo le istruzioni [installazione di NuGet](http://docs.nuget.org/docs/start-here/installing-nuget) pagina del Sito Web di NuGet.   
+Nota: se il menu **strumenti** non Visualizza il comando **Gestione pacchetti NuGet** , è necessario installare NuGet seguendo le istruzioni disponibili nella pagina [installazione di NuGet](http://docs.nuget.org/docs/start-here/installing-nuget) del sito Web NuGet.   
   
-Se si utilizza Visual Studio anziché Visual Web Developer, dal **strumenti** dal menu **Gestione pacchetti NuGet** e quindi selezionare **aggiungere riferimenti alla libreria del pacchetto**.
+Se si usa Visual Studio anziché Visual Web Developer, scegliere **Gestione pacchetti NuGet** dal menu **strumenti** e quindi fare clic su **Aggiungi riferimento al pacchetto di librerie**.
 
 ![](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-4/_static/image4.png)
 
-Nel **MVCMovie - Gestisci pacchetti NuGet** finestra di dialogo, fare clic sui **Online** scheda a sinistra e quindi immettere &quot;jQuery.UI&quot; nella casella di ricerca. Selezionare j **widget dell'interfaccia utente di Query: Datepicker**, quindi selezionare la **installare** pulsante.
+Nella finestra di dialogo **MVCMovie-Gestisci pacchetti NuGet** fare clic sulla scheda **online** a sinistra e quindi immettere &quot;jQuery. UI&quot; nella casella di ricerca. Selezionare il **widget interfaccia utente query j: DatePicker**, quindi selezionare il pulsante **Installa** .
 
 ![](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-4/_static/image5.png)
 
 ![](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-4/_static/image6.png)
 
-NuGet aggiunge queste versioni di debug e minimizzati le versioni di jQuery Core dell'interfaccia utente e la selezione di data dell'interfaccia utente di jQuery al progetto:
+NuGet aggiunge le versioni di debug e le versioni minimizzati di jQuery UI Core e il selettore di data UI jQuery per il progetto:
 
-- *jquery.ui.core.js*
-- *jquery.ui.core.min.js*
-- *jquery.ui.datepicker.js*
-- *jquery.ui.datepicker.min.js*
+- *jQuery. UI. Core. js*
+- *jQuery. UI. Core. min. js*
+- *jQuery. UI. DatePicker. js*
+- *jQuery. UI. DatePicker. min. js*
 
-Nota: Le versioni di debug (i file senza il *. min.js* estensione) sono utili per eseguire il debug, ma in un sito di produzione, è necessario includere solo le versioni minimizzate.
+Nota: le versioni di debug (i file senza estensione *. min. js* ) sono utili per il debug, ma in un sito di produzione sono incluse solo le versioni minimizzati.
 
-Per utilizzare effettivamente la selezione della data jQuery, è necessario creare uno script jQuery che si collegherà il widget di calendario per il modello di modifica. In **Esplora soluzioni**, fare doppio clic il *script* cartella e selezionare **Add**, quindi **nuovo elemento**e quindi **JScript File**. Denominare il file *DatePickerReady.js*.
+Per usare effettivamente la selezione data di jQuery, è necessario creare uno script jQuery che collegherà il widget Calendar al modello di modifica. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sulla cartella *script* , scegliere **Aggiungi**, quindi **nuovo elemento**e quindi **file JScript**. Denominare il file *DatePickerReady. js*.
 
-Aggiungere il codice seguente per il *DatePickerReady.js* file:
+Aggiungere il codice seguente al file *DatePickerReady. js* :
 
 [!code-javascript[Main](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-4/samples/sample5.js)]
 
-Se non si ha familiarità con jQuery, ecco una breve spiegazione di questa operazione: la prima riga è il &quot;jQuery pronto&quot; funzione, che viene chiamato quando sono caricati tutti gli elementi DOM in una pagina. La seconda riga Seleziona tutti gli elementi DOM che hanno il nome della classe `datefield`, quindi richiama il `datepicker` funzione per ognuno di essi. (Tenere presente che è stato aggiunto il `datefield` classe per il *Views\Shared\EditorTemplates\Date.cshtml* modello in precedenza nell'esercitazione.)
+Se non si ha familiarità con jQuery, ecco una breve spiegazione di ciò che accade: la prima riga è la &quot;funzione jQuery Ready&quot;, che viene chiamata quando tutti gli elementi DOM in una pagina sono stati caricati. La seconda riga Seleziona tutti gli elementi DOM con il nome della classe `datefield`, quindi richiama la funzione `datepicker` per ognuno di essi. Tenere presente che è stata aggiunta la classe `datefield` al modello *Views\Shared\EditorTemplates\Date.cshtml* in precedenza nell'esercitazione.
 
-Successivamente, aprire il *Views\Shared\\layout. cshtml* file. È necessario aggiungere i riferimenti ai file seguenti, che sono tutti obbligatori in modo che è possibile usare il controllo selezione data:
+Aprire quindi il file *Views\Shared\\_Layout. cshtml* . È necessario aggiungere i riferimenti ai file seguenti, che sono tutti necessari per poter usare il selettore di data:
 
-- *Content/themes/base/jquery.ui.core.css*
-- *Content/themes/base/jquery.ui.datepicker.css*
-- *Content/themes/base/jquery.ui.theme.css*
-- *jquery.ui.core.min.js*
-- *jquery.ui.datepicker.min.js*
-- *DatePickerReady.js*
+- *Content/themes/base/jQuery. UI. Core. CSS*
+- *Content/themes/base/jQuery. UI. DatePicker. CSS*
+- *Content/themes/base/jQuery. UI. Theme. CSS*
+- *jQuery. UI. Core. min. js*
+- *jQuery. UI. DatePicker. min. js*
+- *DatePickerReady. js*
 
-L'esempio seguente illustra il codice effettivo che è necessario aggiungere nella parte inferiore della `head` elemento il *Views\Shared\\layout. cshtml* file.
+Nell'esempio seguente viene illustrato il codice effettivo che è necessario aggiungere nella parte inferiore dell'elemento `head` nel file *Views\Shared\\_Layout. cshtml* .
 
 [!code-cshtml[Main](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-4/samples/sample6.cshtml)]
 
-L'intero `head` sezione è illustrata di seguito:
+La sezione `head` completa è illustrata di seguito:
 
 [!code-cshtml[Main](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-4/samples/sample7.cshtml)]
 
-Il [helper dell'URL contenuto](https://msdn.microsoft.com/library/system.web.mvc.urlhelper.content.aspx) metodo converte il percorso della risorsa in un percorso assoluto. È necessario usare `@URL.Content` correttamente fare riferimento a queste risorse quando l'applicazione è in esecuzione in IIS.
+Il metodo di [supporto del contenuto dell'URL](https://msdn.microsoft.com/library/system.web.mvc.urlhelper.content.aspx) converte il percorso della risorsa in un percorso assoluto. È necessario utilizzare `@URL.Content` per fare riferimento a queste risorse quando l'applicazione è in esecuzione in IIS.
 
-Premere CTRL+F5 per eseguire l'applicazione. Selezionare un collegamento di modifica e quindi inserire il punto di inserimento di **ReleaseDate** campo. Viene visualizzato il calendario popup dell'interfaccia utente di jQuery.
+Premere CTRL+F5 per eseguire l'applicazione. Selezionare un collegamento modifica, quindi inserire il punto di inserimento nel campo **rilasciato** . Viene visualizzato il calendario popup dell'interfaccia utente di jQuery.
 
 ![](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-4/_static/image7.png)
 
-Come la maggior parte dei controlli di jQuery, il controllo datepicker consente di personalizzare in modo esteso. Per informazioni, vedere [Visual personalizzazione: Progettazione di un tema dell'interfaccia utente di jQuery](http://learn.jquery.com/jquery-ui/getting-started/#visual-customization-designing-a-jquery-ui-theme) nella [interfaccia utente di jQuery](http://learn.jquery.com/jquery-ui/getting-started/) sito.
+Come la maggior parte dei controlli jQuery, DatePicker consente di personalizzarlo in modo esteso. Per informazioni, vedere [personalizzazione visiva: progettazione di un tema dell'interfaccia utente jQuery](http://learn.jquery.com/jquery-ui/getting-started/#visual-customization-designing-a-jquery-ui-theme) sul sito dell' [interfaccia utente di jQuery](http://learn.jquery.com/jquery-ui/getting-started/) .
 
-### <a name="supporting-the-html5-date-input-control"></a>Che supportano il controllo di Input data HTML5
+### <a name="supporting-the-html5-date-input-control"></a>Supporto del controllo di input di data HTML5
 
-Come maggiore di browser supporta HTML5, è opportuno usare HTML5 nativo di input, ad esempio il `date` elemento di input e non usano il calendario dell'interfaccia utente di jQuery. È possibile aggiungere logica all'applicazione per usare automaticamente i controlli HTML5 se il browser li supporta. A tale scopo, sostituire il contenuto del *DatePickerReady.js* file con il codice seguente:
+Poiché più browser supportano HTML5, è opportuno usare l'input HTML5 nativo, ad esempio l'elemento `date` input, e non usare il calendario dell'interfaccia utente di jQuery. È possibile aggiungere la logica all'applicazione per usare automaticamente i controlli HTML5 se supportati dal browser. A tale scopo, sostituire il contenuto del file *DatePickerReady. js* con il codice seguente:
 
 [!code-javascript[Main](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-4/samples/sample8.js)]
 
-La prima riga di questo script Usa Modernizr per verificare che l'input data HTML5 è supportato. Se non è supportato, la selezione di data dell'interfaccia utente di jQuery è immune invece. ([Modernizr](http://www.modernizr.com/docs/) è una libreria JavaScript open source che consente di rilevare la disponibilità delle implementazioni native di HTML5 e CSS3. Modernizr è incluso in tutti i nuovi progetti ASP.NET MVC che si creano).
+La prima riga di questo script usa Modernizzator per verificare che l'input della data HTML5 sia supportato. Se non è supportato, il selettore di data dell'interfaccia utente jQuery viene invece collegato. [Modernizzator](http://www.modernizr.com/docs/) è una libreria JavaScript open source che rileva la disponibilità di implementazioni native di HTML5 e CSS3. Modernizzator è incluso in tutti i nuovi progetti MVC ASP.NET creati.
 
-Dopo aver apportato questa modifica, è possibile testarla usando un browser che supporta HTML5, ad esempio 11 Opera. Eseguire l'applicazione tramite un browser compatibili con HTML5 e modificare una voce di film. Viene usato il controllo Data HTML5 anziché il calendario popup dell'interfaccia utente di jQuery:
+Dopo aver apportato questa modifica, è possibile testarla usando un browser che supporta HTML5, ad esempio opera 11. Eseguire l'applicazione usando un browser compatibile con HTML5 e modificare una voce di film. Il controllo della data HTML5 viene usato al posto del calendario popup dell'interfaccia utente di jQuery:
 
 ![](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-4/_static/image8.png)
 
-Poiché le nuove versioni dei browser di implementazione di HTML5 in modo incrementale, un buon approccio per ora consiste nell'aggiungere codice al sito Web che supporta un'ampia gamma di supporto per HTML5. Ad esempio, una più solida *DatePickerReady.js* script è illustrato di seguito che consente i browser di supporto del sito che supportano solo parzialmente il controllo data e HTML5.
+Poiché le nuove versioni dei browser implementano HTML5 in modo incrementale, un approccio efficace per ora consiste nell'aggiungere codice al sito Web che include una vasta gamma di supporto per HTML5. Ad esempio, di seguito è riportato uno script *DatePickerReady. js* più solido che consente al sito di supportare i browser che supportano solo parzialmente il controllo della data HTML5.
 
 [!code-javascript[Main](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-4/samples/sample9.js)]
 
-Questo script consente di selezionare HTML5 `input` elementy typu `date` che non supportano completamente il controllo data e HTML5. Per tali elementi, collega il calendario popup dell'interfaccia utente di jQuery e quindi modificato il `type` dall'attributo `date` a `text`. Modificando la `type` dall'attributo `date` a `text`, è stato eliminato un supporto parziale della data HTML5. Un ancora più solida *DatePickerReady.js* script reperibili [JSFIDDLE](http://jsfiddle.net/XSTK8/15/).
+Questo script Seleziona gli elementi `input` HTML5 di tipo `date` che non supportano completamente il controllo della data HTML5. Per tali elementi, il calendario popup dell'interfaccia utente jQuery viene collegato e quindi l'attributo `type` viene modificato da `date` a `text`. Modificando l'attributo `type` da `date` a `text`, viene eliminato il supporto della data HTML5 parziale. Uno script *DatePickerReady. js* ancora più affidabile si trova in [JSFIDDLE](http://jsfiddle.net/XSTK8/15/).
 
-### <a name="adding-nullable-dates-to-the-templates"></a>Aggiunta di date che ammette valori null per i modelli
+### <a name="adding-nullable-dates-to-the-templates"></a>Aggiunta di date nullable ai modelli
 
-Se si usa uno dei modelli di data esistente e passa a una data null, si otterrà un errore di run-time. Per rendere più affidabile i modelli di data, sarà necessario modificare in modo da gestire valori null. Modificare il codice per supportare le date che ammette valori null, il *Views\Shared\DisplayTemplates\DateTime.cshtml* al seguente:
+Se si usa uno dei modelli di data esistenti e si passa una data null, si otterrà un errore di run-time. Per rendere più affidabili i modelli di data, è necessario modificarli per gestire i valori null. Per supportare le date nullable, modificare il codice in *Views\Shared\DisplayTemplates\DateTime.cshtml* nel modo seguente:
 
 [!code-cshtml[Main](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-4/samples/sample10.cshtml)]
 
 Il codice restituisce una stringa vuota quando il modello è **null**.
 
-Modificare il codice il *Views\Shared\EditorTemplates\Date.cshtml* file come segue:
+Modificare il codice nel file *Views\Shared\EditorTemplates\Date.cshtml* nel modo seguente:
 
 [!code-cshtml[Main](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-4/samples/sample11.cshtml)]
 
-Quando questo codice viene eseguito, se il modello non è null, il modello `DateTime` valore viene utilizzato. Se il modello è null, viene invece utilizzata la data corrente.
+Quando viene eseguito questo codice, se il modello non è null, viene utilizzato il valore `DateTime` del modello. Se il modello è null, viene invece utilizzata la data corrente.
 
-### <a name="wrapup"></a>Riepilogo
+### <a name="wrapup"></a>Wrapup
 
-Questa esercitazione ha illustrato le nozioni di base di helper basati su modelli di ASP.NET e illustra come usare il calendario di jQuery UI datepicker popup in un'applicazione ASP.NET MVC. Per altre informazioni, provare a eseguire queste risorse:
+Questa esercitazione ha illustrato le nozioni di base degli helper basati su modelli di ASP.NET e illustra come usare il calendario popup di DatePicker interfaccia utente jQuery in un'applicazione MVC ASP.NET. Per ulteriori informazioni, provare a usare le risorse seguenti:
 
-- Per informazioni sulla localizzazione, vedere il blog del Rajeesh [JQueryUI Datepicker in ASP.NET MVC](http://www.rajeeshcv.com/2010/02/jqueryui-datepicker-in-asp-net-mvc/).
+- Per informazioni sulla localizzazione, vedere il Blog di [jQueryUI DatePicker in ASP.NET MVC](http://www.rajeeshcv.com/2010/02/jqueryui-datepicker-in-asp-net-mvc/).
 - Per informazioni sull'interfaccia utente di jQuery, vedere [interfaccia utente di jQuery](http://docs.jquery.com/UI).
-- Per informazioni su come localizzare il controllo datepicker, vedere [dell'interfaccia utente/Datepicker/localizzazione](http://docs.jquery.com/UI/Datepicker/Localization).
-- Per altre informazioni sui modelli di ASP.NET MVC, vedere serie di blog di Brad Wilson sul [ASP.NET MVC 2 Templates](http://bradwilson.typepad.com/blog/2009/10/aspnet-mvc-2-templates-part-1-introduction.html). Anche se la serie è stato scritto per ASP.NET MVC 2, il materiale comunque valido per la versione corrente di ASP.NET MVC.
+- Per informazioni su come localizzare il controllo DatePicker, vedere [UI/DatePicker/Localization](http://docs.jquery.com/UI/Datepicker/Localization).
+- Per ulteriori informazioni sui modelli MVC ASP.NET, vedere la serie di Blog di Brad Wilson sui [modelli ASP.NET MVC 2](http://bradwilson.typepad.com/blog/2009/10/aspnet-mvc-2-templates-part-1-introduction.html). Sebbene la serie sia stata scritta per ASP.NET MVC 2, il materiale è ancora applicabile alla versione corrente di ASP.NET MVC.
 
 > [!div class="step-by-step"]
 > [Precedente](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-3.md)

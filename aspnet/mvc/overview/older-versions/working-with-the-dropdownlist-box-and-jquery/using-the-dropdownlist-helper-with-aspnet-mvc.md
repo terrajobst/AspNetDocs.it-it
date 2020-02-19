@@ -8,20 +8,20 @@ ms.date: 01/12/2012
 ms.assetid: 53767e05-c8ab-42e1-a94b-22d906195200
 msc.legacyurl: /mvc/overview/older-versions/working-with-the-dropdownlist-box-and-jquery/using-the-dropdownlist-helper-with-aspnet-mvc
 msc.type: authoredcontent
-ms.openlocfilehash: 0ded9fea8a77824645e87c37cdb3376e618a2f25
-ms.sourcegitcommit: e365196c75ce93cd8967412b1cfdc27121816110
+ms.openlocfilehash: 6375bb2be158cea18309ffa71c71ac3e67bc91ed
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77075125"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457869"
 ---
 # <a name="using-the-dropdownlist-helper-with-aspnet-mvc"></a>Uso dell'helper DropDownList con ASP.NET MVC
 
-di [Rick Anderson]((https://twitter.com/RickAndMSFT))
+di [Rick Anderson](https://twitter.com/RickAndMSFT)
 
 Questa esercitazione illustra le nozioni di base sull'uso dell'helper [DropDownList](https://msdn.microsoft.com/library/dd492948.aspx) e dell'helper [ListBox](https://msdn.microsoft.com/library/system.web.mvc.html.selectextensions.listbox.aspx) in un'applicazione Web MVC ASP.NET. È possibile utilizzare Microsoft Visual Web Developer 2010 Express Service Pack 1, una versione gratuita di Microsoft Visual Studio per seguire l'esercitazione. Prima di iniziare, verificare di aver installato i prerequisiti elencati di seguito. È possibile installarli tutti facendo clic sul collegamento seguente: [installazione guidata piattaforma Web](https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack). In alternativa, è possibile installare singolarmente i prerequisiti usando i collegamenti seguenti:
 
-- [Prerequisiti di Visual Studio Web Developer Express SP1](https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack) <a id="post"></a>
+- [Prerequisiti di Visual Studio Web Developer Express SP1](https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack)<a id="post"></a>
 - [Aggiornamento degli strumenti di ASP.NET MVC 3](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=MVC3)
 - [SQL Server Compact 4,0](https://www.microsoft.com/web/gallery/install.aspx?appid=SQLCE;SQLCEVSTools_4_0)(supporto di runtime + Tools)
 
@@ -215,4 +215,4 @@ Eseguire l'applicazione e passare alla visualizzazione `MultiSelectCountry`. Pro
 Nella sezione successiva si vedrà come funziona il meccanismo di impalcatura MVC ASP.NET con l'helper **DropDownList** .
 
 > [!div class="step-by-step"]
-> [Avanti](examining-how-aspnet-mvc-scaffolds-the-dropdownlist-helper.md)
+> [avanti](examining-how-aspnet-mvc-scaffolds-the-dropdownlist-helper.md)

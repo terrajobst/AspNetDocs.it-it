@@ -5,12 +5,12 @@ description: Usare i cookie navigava sullostesso sito e l'interfaccia Web aperta
 ms.author: riande
 ms.date: 12/6/2019
 uid: owin-samesite
-ms.openlocfilehash: ac5ae24eeb9e8e1cc6296667a4bebef72c3eb62c
-ms.sourcegitcommit: 7b1e1784213dd4c301635f9e181764f3e2f94162
+ms.openlocfilehash: a3353fd0f0332899aaba26b83aea0ff7c3a6d19b
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74993083"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77455737"
 ---
 # <a name="samesite-cookies-and-the-open-web-interface-for-net-owin"></a>Cookie navigava sullostesso sito e Open Web Interface for .NET (OWIN)
 
@@ -74,14 +74,14 @@ Bozza 2019 della specifica `SameSite`:
 * Specifica che i cookie vengono considerati come `SameSite=Lax` per impostazione predefinita.
 * Specifica i cookie che asseriscono in modo esplicito `SameSite=None` per consentire il recapito tra siti deve essere contrassegnato come `Secure`. `None` è una nuova voce da rifiutare esplicitamente.
 * Viene pianificata per essere abilitata per impostazione predefinita da [Chrome](https://chromestatus.com/feature/5088147346030592) in [feb 2020](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html). Il passaggio a questo standard nei browser è stato avviato in 2019.
-* È supportato dalle patch rilasciate come descritto negli articoli della Knowledge base. Per ulteriori informazioni, vedere <xref:samesite/kbs-samesite>.
+* È supportato dalle patch rilasciate come descritto negli articoli della Knowledge base. Per altre informazioni, vedere <xref:samesite/kbs-samesite>.
 
 <a name="sob"></a>
 
 ## <a name="supporting-older-browsers"></a>Supporto di browser meno recenti
 
 2016 `SameSite` standard imposto che i valori sconosciuti devono essere considerati come `SameSite=Strict` valori. Le app a cui è stato eseguito l'accesso da browser meno recenti che supportano lo standard 2016 `SameSite` possono interrompersi quando ottengono una proprietà `SameSite` con un valore di `None`. Le app Web devono implementare il rilevamento del browser se intendono supportare browser meno recenti. ASP.NET non implementa il rilevamento del browser perché i valori degli agenti utente sono altamente volatili e cambiano di frequente. Un punto di estensione in [ICookieManager](/previous-versions/aspnet/dn800238(v%3Dvs.113)) consente di collegare la logica specifica dell'agente utente.
-<!-- https://docs.microsoft.com/en-us/previous-versions/aspnet/dn800238(v%3Dvs.113) -->
+<!-- https://docs.microsoft.com/previous-versions/aspnet/dn800238(v%3Dvs.113) -->
 
 In `Startup.Configuration`aggiungere codice simile al seguente:
 
@@ -134,9 +134,9 @@ Il supporto di Firefox per il nuovo standard può essere testato nella versione 
 
 ### <a name="test-with-edge-browser"></a>Eseguire test con il browser Microsoft Edge
 
-Microsoft Edge supporta il vecchio `SameSite` standard. La versione perimetrale 44 non presenta problemi di compatibilità noti con il nuovo standard.
+Edge supporta il vecchio `SameSite` standard. La versione perimetrale 44 non presenta problemi di compatibilità noti con il nuovo standard.
 
-### <a name="test-with-edge-chromium"></a>Test con Microsoft Edge (cromo)
+### <a name="test-with-edge-chromium"></a>Test con Edge (cromo)
 
 i flag di `SameSite` vengono impostati nella pagina `edge://flags/#same-site-by-default-cookies`. Nessun problema di compatibilità rilevato con cromo perimetrale.
 

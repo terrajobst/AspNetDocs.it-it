@@ -1,123 +1,123 @@
 ---
 uid: identity/overview/features-api/best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure
-title: Distribuzione delle password e altri dati sensibili in ASP.NET e servizio App di Azure - ASP.NET 4.x
+title: Distribuzione di password e altri dati sensibili in ASP.NET e app Azure Service-ASP.NET 4. x
 author: Rick-Anderson
-description: Questa esercitazione illustra come il codice è possibile archiviare e accedere alle informazioni protette in modo sicuro. Il punto più importante è che evitare di archiviare le password o altri servizi...
+description: Questa esercitazione illustra come il codice può archiviare e accedere in modo sicuro alle informazioni protette. Il punto più importante è non archiviare mai le password o altri Sen...
 ms.author: riande
 ms.date: 05/21/2015
 ms.assetid: 97902c66-cb61-4d11-be52-73f962f2db0a
 ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/features-api/best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure
 msc.type: authoredcontent
-ms.openlocfilehash: 0e02df967df8acf346b9fcd1c75dbe304cc5407b
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 8356a90611f791779cc4ff4730038d82cd76242f
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65121551"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457050"
 ---
 # <a name="best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure-app-service"></a>Procedure consigliate per la distribuzione delle password e di altri dati sensibili in ASP.NET e in Servizio app di Azure
 
-da [Rick Anderson]((https://twitter.com/RickAndMSFT))
+di [Rick Anderson](https://twitter.com/RickAndMSFT)
 
-> Questa esercitazione illustra come il codice è possibile archiviare e accedere alle informazioni protette in modo sicuro. Il punto più importante è evitare di archiviare le password o altri dati sensibili nel codice sorgente e non è consigliabile utilizzare i segreti di produzione in modalità di sviluppo e test.
+> Questa esercitazione illustra come il codice può archiviare e accedere in modo sicuro alle informazioni protette. Il punto più importante è non archiviare mai le password o altri dati sensibili nel codice sorgente e non usare i segreti di produzione in modalità di sviluppo e test.
 > 
-> Il codice di esempio è una semplice app console processo Web e un'app ASP.NET MVC che deve accedere a un database connection string password, Twilio, Google e SendGrid le chiavi di sicurezza.
+> Il codice di esempio è una semplice app console processo Web e un'app ASP.NET MVC che richiede l'accesso a una stringa di connessione di database password, Twilio, Google e SendGrid chiavi sicure.
 > 
-> In locale le impostazioni e PHP viene menzionata anche.
+> Sono citate anche le impostazioni locali e PHP.
 
 - [Utilizzo delle password nell'ambiente di sviluppo](#pwd)
-- [Uso delle stringhe di connessione nell'ambiente di sviluppo](#con)
-- [App console di WebJobs](#wj)
-- [Distribuzione dei segreti in Azure](#da)
-- [Note per On-Premise e PHP](#not)
+- [Utilizzo delle stringhe di connessione nell'ambiente di sviluppo](#con)
+- [App console processi Web](#wj)
+- [Distribuzione di segreti in Azure](#da)
+- [Note per l'ambiente locale e PHP](#not)
 - [Risorse aggiuntive](#addRes)
 
 <a id="pwd"></a>
 ## <a name="working-with-passwords-in-the-development-environment"></a>Utilizzo delle password nell'ambiente di sviluppo
 
-Le esercitazioni illustrano spesso i dati sensibili nel codice sorgente, si spera con un'avvertenza che è non necessario archiviare mai dati sensibili nel codice sorgente. Ad esempio, my [app ASP.NET MVC 5 con SMS e posta elettronica 2FA](../../../mvc/overview/security/aspnet-mvc-5-app-with-sms-and-email-two-factor-authentication.md) esercitazione illustra le opzioni seguenti nella *Web. config* file:
+Le esercitazioni mostrano spesso dati sensibili nel codice sorgente, con la speranza che non vengano mai archiviati dati sensibili nel codice sorgente. Ad esempio, l'esercitazione sull' [app ASP.NET MVC 5 con SMS e posta elettronica 2FA](../../../mvc/overview/security/aspnet-mvc-5-app-with-sms-and-email-two-factor-authentication.md) Mostra quanto segue nel file *Web. config* :
 
 [!code-xml[Main](best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure/samples/sample1.xml)]
 
-Il *Web. config* file è il codice sorgente, in modo che questi segreti non devono mai essere archiviati in tale file. Per fortuna, il `<appSettings>` elemento ha un `file` attributo che consente di specificare un file esterno che contiene le impostazioni di configurazione app sensibili. È possibile spostare tutti i segreti in un file esterno, purché il file esterno non è selezionato nell'albero di origine. Ad esempio, nel markup seguente, il file *AppSettingsSecrets.config* contiene tutti i segreti dell'app:
+Il file *Web. config* è codice sorgente, quindi questi segreti non devono mai essere archiviati in tale file. Fortunatamente, l'elemento `<appSettings>` dispone di un attributo `file` che consente di specificare un file esterno che contiene le impostazioni di configurazione dell'app riservate. È possibile spostare tutti i segreti in un file esterno, purché il file esterno non venga archiviato nell'albero di origine. Nel markup seguente, ad esempio, il file *AppSettingsSecrets. config* contiene tutti i segreti dell'app:
 
 [!code-xml[Main](best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure/samples/sample2.xml)]
 
-Il markup nel file esterno (*AppSettingsSecrets.config* in questo esempio), lo stesso markup si trova nel *Web. config* file:
+Il markup nel file esterno (*AppSettingsSecrets. config* in questo esempio) corrisponde al markup trovato nel file *Web. config* :
 
 [!code-xml[Main](best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure/samples/sample3.xml)]
 
-Il runtime ASP.NET unisce il contenuto del file esterno con il markup nel &lt;appSettings&gt; elemento. Il runtime ignora l'attributo del file se non viene trovato il file specificato.
+Il runtime di ASP.NET unisce il contenuto del file esterno con il markup nell'elemento &lt;appSettings&gt;. Il runtime ignora l'attributo del file, se non è possibile trovare il file specificato.
 
 > [!WARNING]
-> Security - non aggiungere il *segreti con estensione config* file al progetto o archiviarlo nel controllo del codice sorgente. Per impostazione predefinita, Visual Studio imposta la `Build Action` a `Content`, ovvero il file viene distribuito. Per altre informazioni vedere [perché non tutti i file nella cartella del progetto vengono distribuiti?](https://msdn.microsoft.com/library/ee942158(v=vs.110).aspx#can_i_exclude_specific_files_or_folders_from_deployment) Sebbene sia possibile utilizzare qualsiasi estensione per il *segreti con estensione config* file, è consigliabile mantenere *config*, come i file di configurazione non vengono serviti da IIS. Si noti inoltre che il *AppSettingsSecrets.config* file sia due livelli di directory backup dalle *Web. config* file, in modo che rientra completamente la directory della soluzione. Spostando il file dalla directory della soluzione, &quot;git aggiungere \* &quot; non aggiungerlo al repository.
+> Sicurezza: non aggiungere il file *Secrets. config* al progetto o archiviarlo nel controllo del codice sorgente. Per impostazione predefinita, Visual Studio imposta il `Build Action` su `Content`, il che significa che il file viene distribuito. Per altre informazioni, vedere [perché non vengono distribuiti tutti i file nella cartella del progetto?](https://msdn.microsoft.com/library/ee942158(v=vs.110).aspx#can_i_exclude_specific_files_or_folders_from_deployment) Sebbene sia possibile usare qualsiasi estensione per il file *Secrets. config* , è preferibile mantenerla *. config*, perché i file di configurazione non vengono serviti da IIS. Si noti inoltre che il file *AppSettingsSecrets. config* è costituito da due livelli di directory fino al file *Web. config* , quindi è completamente fuori dalla directory della soluzione. Spostando il file fuori dalla directory della soluzione, &quot;git Aggiungi \*&quot; non lo aggiungerà al repository.
 
 <a id="con"></a>
-## <a name="working-with-connection-strings-in-the-development-environment"></a>Uso delle stringhe di connessione nell'ambiente di sviluppo
+## <a name="working-with-connection-strings-in-the-development-environment"></a>Utilizzo delle stringhe di connessione nell'ambiente di sviluppo
 
-Visual Studio crea nuovi progetti ASP.NET che utilizzano [LocalDB](https://blogs.msdn.com/b/sqlexpress/archive/2011/07/12/introducing-localdb-a-better-sql-express.aspx). Local DB è stato creato appositamente per l'ambiente di sviluppo. Non richiede una password, pertanto non è necessario eseguire alcuna operazione per evitare che i segreti controllato nel codice sorgente. Alcuni team di sviluppo utilizzare le versioni complete di SQL Server (o altri DBMS) che richiedono una password.
+Visual Studio crea nuovi progetti ASP.NET che usano il [database locale](https://blogs.msdn.com/b/sqlexpress/archive/2011/07/12/introducing-localdb-a-better-sql-express.aspx). Il database locale è stato creato in modo specifico per l'ambiente di sviluppo. Non richiede una password, pertanto non è necessario eseguire alcuna operazione per impedire che i segreti vengano archiviati nel codice sorgente. Alcuni team di sviluppo utilizzano le versioni complete di SQL Server (o di altri sistemi DBMS) che richiedono una password.
 
-È possibile usare la `configSource` attributo per sostituire l'intero `<connectionStrings>` markup. A differenza di `<appSettings>` `file` attributo che unisce il markup, il `configSource` attributo sostituisce il markup. Il markup seguente mostra le `configSource` attributo la *Web. config* file:
+Per sostituire l'intero markup di `<connectionStrings>`, è possibile usare l'attributo `configSource`. A differenza dell'attributo `<appSettings>` `file` che unisce il markup, l'attributo `configSource` sostituisce il markup. Il markup seguente mostra l'attributo `configSource` nel file *Web. config* :
 
 [!code-xml[Main](best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure/samples/sample4.xml?highlight=1)]
 
 > [!NOTE]
-> Se si usa il `configSource` attributo come illustrato in precedenza per spostare le stringhe di connessione a un file esterno e dispone di Visual Studio creare un nuovo sito web, non sarà in grado di rilevare si usa un database e non si otterrà l'opzione di configurazione del database quando si pu bblica su Azure da Visual Studio. Se si usa il `configSource` attributo, è possibile usare PowerShell per creare e distribuire il sito web e database, oppure è possibile creare il sito web e il database nel portale, prima della pubblicazione. Il [New-AzureWebsitewithDB.ps1](https://gallery.technet.microsoft.com/scriptcenter/Ultimate-Create-Web-SQL-DB-9e0fdfd3) script creerà un nuovo sito web e database.
+> Se si usa l'attributo `configSource`, come illustrato in precedenza, per spostare le stringhe di connessione in un file esterno e fare in modo che Visual Studio crei un nuovo sito Web, non sarà in grado di rilevare che si sta usando un database e non si avrà la possibilità di configurare il database durante la pubblicazione in Azure da Visual Studio. Se si usa l'attributo `configSource`, è possibile usare PowerShell per creare e distribuire il sito Web e il database oppure è possibile creare il sito Web e il database nel portale prima di pubblicare. Lo script [New-AzureWebsitewithDB. ps1](https://gallery.technet.microsoft.com/scriptcenter/Ultimate-Create-Web-SQL-DB-9e0fdfd3) creerà un nuovo sito Web e un nuovo database.
 
 > [!WARNING]
-> Security - a differenza di *AppSettingsSecrets.config* file, il file di stringhe di connessione esterna deve essere nella stessa directory radice *Web. config* file, in modo che è possibile adottare delle precauzioni per assicurarsi di non archiviarlo nel repository del codice sorgente.
+> Sicurezza: diversamente dal file *AppSettingsSecrets. config* , il file di stringhe di connessione esterno deve trovarsi nella stessa directory del file *Web. config* radice, quindi è necessario adottare le precauzioni per assicurarsi di non archiviarlo nel repository di origine.
 
 > [!NOTE]
-> **Avviso di sicurezza nel file dei segreti:** Una procedura consigliata è di non usare i segreti di produzione nel test e sviluppo. Utilizzo delle password di produzione in sviluppo o test di perdite di questi segreti.
+> **Avviso di sicurezza per il file Secrets:** Una procedura consigliata consiste nel non usare i segreti di produzione per test e sviluppo. L'uso di password di produzione in test o sviluppo perde tali segreti.
 
 <a id="wj"></a>
-## <a name="webjobs-console-apps"></a>App console di WebJobs
+## <a name="webjobs-console-apps"></a>App console processi Web
 
-Il *app. config* file utilizzato da un'app console non supporta i percorsi relativi, ma supporta percorsi assoluti. È possibile usare un percorso assoluto per spostare i segreti all'esterno delle directory del progetto. Il markup seguente mostra i segreti nel *C:\secrets\AppSettingsSecrets.config* file e i dati non sensibili nel *app. config* file.
+Il file *app. config* usato da un'app console non supporta percorsi relativi, ma supporta percorsi assoluti. È possibile usare un percorso assoluto per spostare i segreti dalla directory del progetto. Il markup seguente mostra i segreti nel file *C:\secrets\AppSettingsSecrets.config* e i dati non sensibili nel file *app. config* .
 
 [!code-xml[Main](best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure/samples/sample5.xml?highlight=2)]
 
 <a id="da"></a>
-## <a name="deploying-secrets-to-azure"></a>Distribuzione dei segreti in Azure
+## <a name="deploying-secrets-to-azure"></a>Distribuzione di segreti in Azure
 
-Quando si distribuisce l'app web in Azure, il *AppSettingsSecrets.config* file non verrà distribuito (che è risultato desiderato). È possibile seguire per il [portale di gestione di Azure](https://azure.microsoft.com/services/management-portal/) e impostarli manualmente, eseguire questa operazione:
+Quando si distribuisce l'app Web in Azure, il file *AppSettingsSecrets. config* non verrà distribuito (questo è quello che si vuole). È possibile passare al [portale di gestione di Azure](https://azure.microsoft.com/services/management-portal/) e impostarli manualmente, a tale scopo:
 
-1. Passare a [ https://portal.azure.com ](https://portal.azure.com)e accedere con le credenziali di Azure.
-2. Fare clic su **esplorare &gt; App Web**, quindi fare clic sul nome dell'app web.
-3. Fare clic su **tutte le impostazioni &gt; impostazioni applicazione**.
+1. Passare a [https://portal.azure.com](https://portal.azure.com)e accedere con le credenziali di Azure.
+2. Fare clic su **sfoglia &gt; app Web**, quindi fare clic sul nome dell'app Web.
+3. Fare clic su **tutte le impostazioni &gt; impostazioni dell'applicazione**.
 
-Il **le impostazioni dell'app** e **stringa di connessione** valori eseguono l'override le impostazioni del *Web. config* file. In questo esempio, Microsoft non sono stati distribuiti queste impostazioni in Azure, ma se queste chiavi sono state nel *Web. config* file, le impostazioni presenti nel portale del sarebbero hanno la precedenza.
+Le **impostazioni dell'app** e i valori della **stringa di connessione** sostituiscono le stesse impostazioni nel file *Web. config* . In questo esempio le impostazioni non sono state distribuite in Azure, ma se queste chiavi si trovavano nel file *Web. config* , le impostazioni visualizzate nel portale avrebbero la precedenza.
 
-Una procedura consigliata consiste nel seguire un [flusso di lavoro DevOps](../../../aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/automate-everything.md) e usare [Azure PowerShell](https://azure.microsoft.com/documentation/articles/install-configure-powershell/) (o un altro framework, ad esempio [Chef](http://www.opscode.com/chef/) oppure [Puppet](http://puppetlabs.com/puppet/what-is-puppet)) per automatizza l'impostazione di questi valori in Azure. Il seguente script di PowerShell Usa [Export-CliXml](http://www.powershellcookbook.com/recipe/PukO/securely-store-credentials-on-disk) per esportare i segreti crittografati su disco:
+Una procedura consigliata consiste nel seguire un [flusso di lavoro di DevOps](../../../aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/automate-everything.md) e usare [Azure PowerShell](https://azure.microsoft.com/documentation/articles/install-configure-powershell/) (o un altro Framework, ad esempio [chef](http://www.opscode.com/chef/) o [Puppet](http://puppetlabs.com/puppet/what-is-puppet)) per automatizzare l'impostazione di questi valori in Azure. Il seguente script di PowerShell usa [Export-CliXml](http://www.powershellcookbook.com/recipe/PukO/securely-store-credentials-on-disk) per esportare i segreti crittografati su disco:
 
 [!code-powershell[Main](best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure/samples/sample6.ps1)]
 
-Nello script precedente, 'Name' è il nome della chiave privata, ad esempio '&quot;FB\_AppSecret&quot; o "TwitterSecret". È possibile visualizzare il file ".credential" creato dallo script nel browser. Il frammento di codice seguente verifica ognuno dei file di credenziali e imposta i segreti per l'app web denominati:
+Nello script precedente,' name ' è il nome della chiave privata, ad esempio '&quot;FB\_AppSecret&quot; o "TwitterSecret". È possibile visualizzare il file ". Credential" creato dallo script nel browser. Il frammento di codice seguente verifica ogni file di credenziali e imposta i segreti per l'app Web denominata:
 
 [!code-powershell[Main](best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure/samples/sample7.ps1)]
 
 > [!WARNING]
-> Security - non includere le password o altri segreti nello script di PowerShell, eseguire in questo caso vanifica lo scopo dell'uso di uno script di PowerShell per distribuire i dati sensibili. Il [Get-Credential](https://technet.microsoft.com/library/hh849815.aspx) cmdlet offre un meccanismo protetto per ottenere una password. Usando un prompt dei comandi dell'interfaccia utente può impedire la perdita di una password.
+> Sicurezza: non includere password o altri segreti nello script di PowerShell. in questo modo si vanifica lo scopo dell'uso di uno script di PowerShell per distribuire dati riservati. Il cmdlet [Get-Credential](https://technet.microsoft.com/library/hh849815.aspx) fornisce un meccanismo sicuro per ottenere una password. L'uso di un prompt dell'interfaccia utente può impedire la perdita di password.
 
-### <a name="deploying-db-connection-strings"></a>Le stringhe di connessione di database di distribuzione
+### <a name="deploying-db-connection-strings"></a>Distribuzione delle stringhe di connessione del database
 
-Le stringhe di connessione di database vengono gestite in modo analogo alle impostazioni dell'app. Se si distribuisce l'app web da Visual Studio, la stringa di connessione verrà configurata automaticamente. È possibile verificarlo nel portale. È consigliabile impostare la stringa di connessione con PowerShell. Per un esempio di uno script di PowerShell di crea un sito Web e database e imposta la stringa di connessione nel sito Web di download [New-AzureWebsitewithDB.ps1](https://gallery.technet.microsoft.com/scriptcenter/Ultimate-Create-Web-SQL-DB-9e0fdfd3) dal [libreria di Script di Azure](https://gallery.technet.microsoft.com/scriptcenter/site/search?f%5B0%5D.Type=RootCategory&amp;f%5B0%5D.Value=WindowsAzure).
+Le stringhe di connessione del database vengono gestite in modo analogo alle impostazioni dell'app. Se si distribuisce l'app Web da Visual Studio, la stringa di connessione viene configurata per l'utente. È possibile verificarlo nel portale. Il metodo consigliato per impostare la stringa di connessione è con PowerShell. Per un esempio di script di PowerShell, viene creato un sito Web e un database e viene impostata la stringa di connessione nel sito Web, scaricare [New-AzureWebsitewithDB. ps1](https://gallery.technet.microsoft.com/scriptcenter/Ultimate-Create-Web-SQL-DB-9e0fdfd3) dalla [libreria di script di Azure](https://gallery.technet.microsoft.com/scriptcenter/site/search?f%5B0%5D.Type=RootCategory&amp;f%5B0%5D.Value=WindowsAzure).
 
 <a id="not"></a>
 ## <a name="notes-for-php"></a>Note per PHP
 
-Poiché le coppie chiave-valore per entrambi **le impostazioni dell'app** e **stringhe di connessione** vengono archiviati nelle variabili di ambiente nel servizio App di Azure, gli sviluppatori che usano qualsiasi can Framework (ad esempio PHP) di app web con facilità recuperare questi valori. Vedere di Stefan Schackow [siti Web di Azure: Come applicazione stringhe and Connection Strings Work](https://azure.microsoft.com/blog/2013/07/17/windows-azure-web-sites-how-application-strings-and-connection-strings-work/) post di blog che mostra un frammento di codice PHP a leggere le impostazioni dell'app e le stringhe di connessione.
+Poiché le coppie chiave-valore per **le impostazioni delle app** e le **stringhe di connessione** vengono archiviate in variabili di ambiente nel servizio app Azure, gli sviluppatori che usano qualsiasi framework di app Web (ad esempio php) possono recuperare facilmente questi valori. Vedere il post di Blog relativo al funzionamento delle [stringhe di connessione e](https://azure.microsoft.com/blog/2013/07/17/windows-azure-web-sites-how-application-strings-and-connection-strings-work/) delle stringhe di connessione di Stefan Schackow, che mostra un frammento di codice php per leggere le impostazioni dell'app e le stringhe di connessione.
 
 ## <a name="notes-for-on-premises-servers"></a>Note per i server locali
 
-Se si distribuiscono i server web in locale, è possibile consentire proteggere segreti dal [crittografare le sezioni di configurazione dei file di configurazione](https://msdn.microsoft.com/library/ff647398.aspx). In alternativa, è possibile usare lo stesso approccio consigliato per siti Web di Azure: mantenere le impostazioni di sviluppo nei file di configurazione e usare i valori di variabile di ambiente per le impostazioni di ambiente di produzione. In questo caso, tuttavia, è necessario scrivere il codice dell'applicazione per la funzionalità è automatica in siti Web di Azure: recuperare le impostazioni dalle variabili di ambiente e utilizzare tali valori al posto delle impostazioni del file di configurazione o utilizzare le impostazioni di file di configurazione quando le variabili di ambiente non vengono trovate.
+Se si esegue la distribuzione in server Web locali, è possibile proteggere [i segreti crittografando le sezioni di configurazione dei file di configurazione](https://msdn.microsoft.com/library/ff647398.aspx). In alternativa, è possibile usare lo stesso approccio consigliato per siti Web di Azure: Mantieni le impostazioni di sviluppo nei file di configurazione e usa i valori delle variabili di ambiente per le impostazioni di produzione. In questo caso, tuttavia, è necessario scrivere il codice dell'applicazione per le funzionalità automatiche in siti Web di Azure: recuperare le impostazioni dalle variabili di ambiente e usare tali valori al posto delle impostazioni del file di configurazione oppure usare le impostazioni del file di configurazione quando le variabili di ambiente non sono state trovate.
 
 <a id="addRes"></a>
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-Per un esempio di un PowerShell script che crea un'app web e database, imposta la stringa di connessione e le impostazioni dell'app, download [New-AzureWebsitewithDB.ps1](https://gallery.technet.microsoft.com/scriptcenter/Ultimate-Create-Web-SQL-DB-9e0fdfd3) dalle [libreria di Script di Azure](https://gallery.technet.microsoft.com/scriptcenter/site/search?f%5B0%5D.Type=RootCategory&amp;f%5B0%5D.Value=WindowsAzure). 
+Per un esempio di uno script di PowerShell che crea un'app Web e un database, imposta la stringa di connessione e le impostazioni dell'app, scaricare [New-AzureWebsitewithDB. ps1](https://gallery.technet.microsoft.com/scriptcenter/Ultimate-Create-Web-SQL-DB-9e0fdfd3) dalla [libreria di script di Azure](https://gallery.technet.microsoft.com/scriptcenter/site/search?f%5B0%5D.Type=RootCategory&amp;f%5B0%5D.Value=WindowsAzure). 
 
-Vedere di Stefan Schackow [siti Web di Azure: Come funzionano le stringhe applicazione e stringhe di connessione](https://azure.microsoft.com/blog/2013/07/17/windows-azure-web-sites-how-application-strings-and-connection-strings-work/)
+Vedere siti Web di Windows Azure di Stefan Schackow: funzionamento delle [stringhe di applicazione e delle stringhe di connessione](https://azure.microsoft.com/blog/2013/07/17/windows-azure-web-sites-how-application-strings-and-connection-strings-work/)
 
-Ringraziamenti Barry Dorrans speciali ( [ @blowdart ](https://twitter.com/blowdart) ) e Farre Carlos per la revisione.
+Grazie speciale a Barry Dorrans ( [@blowdart](https://twitter.com/blowdart) ) e Carlos Farre per la revisione.

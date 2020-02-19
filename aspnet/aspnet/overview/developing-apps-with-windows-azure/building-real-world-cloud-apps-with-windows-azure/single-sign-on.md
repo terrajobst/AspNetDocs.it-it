@@ -8,16 +8,16 @@ ms.date: 06/12/2014
 ms.assetid: 7d82d5e9-0619-4f22-9e03-32a6d52940a5
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/single-sign-on
 msc.type: authoredcontent
-ms.openlocfilehash: 7e32f444dc38132296cffd45ac658f5abf51f314
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: 1ca93cce22487295a24aae95437b3e69dfc5b504
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74585275"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457141"
 ---
 # <a name="single-sign-on-building-real-world-cloud-apps-with-azure"></a>Single Sign-on (creazione di app Cloud reali con Azure)
 
-di [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+di [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
 [Scarica il progetto di correzione it](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [Scarica l'E-Book](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
@@ -128,7 +128,7 @@ E in pochi minuti.
 
 A volte viene chiesto come proteggerlo: Microsoft lo usa per i propri dati aziendali riservati? E la risposta è sì. Ad esempio, se si passa al sito di Microsoft SharePoint interno in [https://microsoft.sharepoint.com/](https://microsoft.sharepoint.com/), viene richiesto di effettuare l'accesso.
 
-![Accesso a Office 365](single-sign-on/_static/image20.png)
+![Pagina di accesso di Office 365](single-sign-on/_static/image20.png)
 
 Microsoft ha abilitato ADFS. Pertanto, quando si immette un ID Microsoft, si viene reindirizzati a una pagina di accesso ad ADFS.
 
@@ -179,7 +179,7 @@ Il [capitolo successivo](data-storage-options.md) esamina le opzioni di archivia
 
 Per ulteriori informazioni, vedere le seguenti risorse:
 
-- [Azure Active Directory documentazione](https://docs.microsoft.com/azure/active-directory/). Pagina del portale per Azure AD documentazione nel sito di windowsazure.com. Per esercitazioni dettagliate, vedere la sezione **sviluppare** .
+- [Documentazione di Azure Active Directory](https://docs.microsoft.com/azure/active-directory/). Pagina del portale per Azure AD documentazione nel sito di windowsazure.com. Per esercitazioni dettagliate, vedere la sezione **sviluppare** .
 - [Multi-factor authentication di Azure](https://docs.microsoft.com/azure/multi-factor-authentication/). Pagina del portale per la documentazione sull'autenticazione a più fattori in Azure.
 - [Opzioni di autenticazione dell'account aziendale](../../../../visual-studio/overview/2013/creating-web-projects-in-visual-studio.md#orgauthoptions). Spiegazione delle opzioni di autenticazione Azure AD nella finestra di dialogo Visual Studio 2013 nuovo progetto.
 - [Modelli e procedure Microsoft-modello di identità federata](https://msdn.microsoft.com/library/dn589790.aspx).

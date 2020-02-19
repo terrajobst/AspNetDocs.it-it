@@ -8,16 +8,16 @@ ms.date: 06/12/2014
 ms.assetid: accfa16a-ab15-4c26-9ad4-babdc2a77d2e
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/introduction
 msc.type: authoredcontent
-ms.openlocfilehash: 8a4ef3aa37a9296e92fbeb513968e3abeee072d0
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: b88573b3702b755b155e8da35f5f8a67931bafc6
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74585529"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457115"
 ---
 # <a name="building-real-world-cloud-apps-with-azure"></a>Creazione di app Cloud reali con Azure
 
-di [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+di [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
 [Scarica il progetto di correzione it](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [Scarica l'E-Book](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
@@ -25,7 +25,7 @@ di [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitte
 > 
 > Il contenuto è basato su una presentazione sviluppata da Scott Guthrie e consegnata da lui presso la Norwegian Developers Conference (NDC) nel giugno del 2013 ([parte 1](http://vimeo.com/68215538), [parte 2](http://vimeo.com/68215602)) e presso Microsoft Tech ed Australia a settembre, 2013 ([parte 1](https://channel9.msdn.com/Events/TechEd/Australia/2013/AZR324), [parte 2](https://channel9.msdn.com/Events/TechEd/Australia/2013/AZR325)). [Molti altri](more-patterns-and-guidance.md#acknowledgments) hanno aggiornato e migliorato il contenuto durante la transizione dal video al formato scritto.
 
-## <a name="intended-audience"></a>Destinatari del documento
+## <a name="intended-audience"></a>Destinatari
 
 Gli sviluppatori che desiderano sviluppare per il cloud, considerando un passaggio al cloud o che non hanno familiarità con lo sviluppo nel cloud, troveranno qui una panoramica concisa dei concetti e delle procedure più importanti che è necessario conoscere. I concetti sono illustrati con esempi concreti e ogni capitolo è collegato ad altre risorse per ottenere informazioni più dettagliate. Gli esempi e i collegamenti a risorse aggiuntive sono per i Framework e i servizi Microsoft, ma i principi illustrati sono applicabili anche ad altri Framework di sviluppo Web e ad ambienti cloud.
 
@@ -102,7 +102,7 @@ Questo e-book illustra tredici modelli consigliati per lo sviluppo cloud. "Patte
 - [Appendice: applicazione di esempio Fix It](the-fix-it-sample-application.md)
 
     - Problemi noti
-    - Suggerimenti
+    - Procedure consigliate
     - Come scaricare, compilare, eseguire e distribuire.
 
 Questi modelli si applicano a tutti gli ambienti cloud, ma verranno illustrati usando esempi basati su tecnologie e servizi Microsoft, ad esempio Visual Studio, Team Foundation Service, ASP.NET e Azure.
@@ -167,7 +167,7 @@ Documentazione:
 - [App Web nel servizio app Azure](https://azure.microsoft.com/services/app-service/web/). Pagina del portale per la documentazione di Azure sulle app Web.
 - [App Web, servizi cloud e macchine virtuali: quando usare?](https://azure.microsoft.com/documentation/articles/choose-web-site-cloud-service-vm/) WAWS, come illustrato in questo capitolo, è solo uno dei tre modi in cui è possibile eseguire le app Web in Azure. In questo articolo vengono illustrate le differenze tra i tre modi e vengono fornite indicazioni su come scegliere quello più adatto al proprio scenario. Come i siti Web, servizi cloud è una funzionalità PaaS di Azure. Le macchine virtuali sono una funzionalità IaaS. Per una spiegazione di PaaS rispetto a IaaS, vedere il capitolo [Opzioni dati](data-storage-options.md#paasiaas) .
 
-Video:
+Video
 
 - [Scott Guthrie inizia al passaggio 0: che cos'è il Sistema operativo cloud di Azure?](https://azure.microsoft.com/documentation/videos/what-is-the-cloud-os-scottgu/)
 - [Architettura di siti Web-con Stefan Schackow](https://azure.microsoft.com/documentation/videos/why-azure-web-sites-plus-architecture/).

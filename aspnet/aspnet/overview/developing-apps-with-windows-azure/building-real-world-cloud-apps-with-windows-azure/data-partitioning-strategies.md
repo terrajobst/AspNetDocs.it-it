@@ -8,16 +8,16 @@ ms.date: 06/12/2014
 ms.assetid: 513837a7-cfea-4568-a4e9-1f5901245d24
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/data-partitioning-strategies
 msc.type: authoredcontent
-ms.openlocfilehash: b8c901ec30b6d37237f80100a2978350ac389b7a
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.openlocfilehash: efc3fa0255aa765e515412c5fa4098303a9d9234
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519167"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457024"
 ---
 # <a name="data-partitioning-strategies-building-real-world-cloud-apps-with-azure"></a>Strategie di partizionamento dei dati (compilazione di app Cloud reali con Azure)
 
-di [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+di [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
 [Scarica il progetto di correzione it](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [Scarica l'E-Book](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
@@ -49,7 +49,7 @@ Le porzioni verticali sono come la suddivisione di una tabella in base alle colo
 
 Si supponga, ad esempio, che l'app memorizzi i dati sulle persone, incluse le immagini:
 
-![Tabella di dati](data-partitioning-strategies/_static/image1.png)
+![Tabella dati](data-partitioning-strategies/_static/image1.png)
 
 Quando si rappresentano questi dati come una tabella e si esaminano le diverse varietà di dati, è possibile notare che le tre colonne a sinistra contengono dati di stringa che possono essere archiviati in modo efficiente da un database relazionale, mentre le due colonne a destra sono essenzialmente matrici di byte che c ome dai file di immagine. È possibile archiviare i dati dei file di immagine in un database relazionale e molte persone lo eseguono perché non desiderano salvare i dati nel file system. È possibile che non dispongano di un file system in grado di archiviare i volumi di dati necessari o che non vogliono gestire un sistema di backup e ripristino separato. Questo approccio funziona bene per i database locali e per piccole quantità di dati nei database cloud. Nell'ambiente locale, potrebbe essere più semplice consentire all'amministratore di database di occuparsi di tutto.
 
@@ -100,7 +100,7 @@ Documentazione:
 - [Procedure consigliate per la progettazione di servizi su larga scala nei servizi cloud di Microsoft Azure](https://msdn.microsoft.com/library/windowsazure/jj717232.aspx). White paper di Mark Simms e Michael Thomassy.
 - [Modelli e procedure Microsoft: modelli di progettazione cloud](https://msdn.microsoft.com/library/dn568099.aspx). Vedere linee guida per il partizionamento dei dati, modello di partizionamento orizzontale.
 
-Video:
+Video
 
 - [Failsafe: compilazione di servizi cloud scalabili e resilienti](https://channel9.msdn.com/Series/FailSafe). Serie in nove parti di Ulrich Homann, Marc Mercuri e Mark Simms. Presenta concetti di alto livello e principi architetturali in modo molto accessibile e interessante, con storie tratte dall'esperienza del team di consulenza clienti Microsoft (CAT) con i clienti effettivi. Vedere la discussione sul partizionamento nell'episodio 7.
 - [Creazione di grandi dimensioni: lezioni apprese dai clienti di Microsoft Azure-parte i](https://channel9.msdn.com/Events/Build/2012/3-029). Mark Simms illustra gli schemi di partizionamento, le strategie di partizionamento orizzontale, come implementare il partizionamento orizzontale e le federazioni del database SQL, a partire da 19:49. In modo analogo alla serie failsafe, ma passa ad altre procedure dettagliate.

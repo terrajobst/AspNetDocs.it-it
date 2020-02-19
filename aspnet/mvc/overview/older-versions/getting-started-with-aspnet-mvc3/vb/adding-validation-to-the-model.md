@@ -2,122 +2,122 @@
 uid: mvc/overview/older-versions/getting-started-with-aspnet-mvc3/vb/adding-validation-to-the-model
 title: Aggiunta della convalida al modello (VB) | Microsoft Docs
 author: Rick-Anderson
-description: Questa esercitazione insegnerà le nozioni di base della creazione di un'applicazione Web MVC ASP.NET utilizzando Microsoft Visual Web Developer 2010 Express Service Pack 1, ovvero...
+description: In questa esercitazione vengono illustrate le nozioni di base della creazione di un'applicazione Web MVC ASP.NET utilizzando Microsoft Visual Web Developer 2010 Express Service Pack 1, ovvero...
 ms.author: riande
 ms.date: 01/12/2011
 ms.assetid: 878f6c31-972d-45f4-8849-5c633b511409
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3/vb/adding-validation-to-the-model
 msc.type: authoredcontent
-ms.openlocfilehash: 0ed70876ed8c2eab450e0543874613bf34f75cb8
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 7f3f195bc30ed23a637b59f15e6fc8431e39e217
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65130008"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457200"
 ---
 # <a name="adding-validation-to-the-model-vb"></a>Aggiunta della convalida al modello (VB)
 
-da [Rick Anderson]((https://twitter.com/RickAndMSFT))
+di [Rick Anderson](https://twitter.com/RickAndMSFT)
 
-> Questa esercitazione insegnerà le nozioni di base della creazione di un'applicazione Web MVC ASP.NET utilizzando Microsoft Visual Web Developer 2010 Express Service Pack 1, che è una versione gratuita di Microsoft Visual Studio. Prima di iniziare, assicurarsi di che aver installato i prerequisiti elencati di seguito. È possibile installare tutti gli elementi facendo clic sul collegamento seguente: [Installazione guidata piattaforma Web](https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack). In alternativa, è possibile installare singolarmente i prerequisiti usando i collegamenti seguenti:
+> In questa esercitazione vengono illustrate le nozioni di base della creazione di un'applicazione Web MVC ASP.NET utilizzando Microsoft Visual Web Developer 2010 Express Service Pack 1, una versione gratuita di Microsoft Visual Studio. Prima di iniziare, verificare di aver installato i prerequisiti elencati di seguito. È possibile installarli tutti facendo clic sul collegamento seguente: [installazione guidata piattaforma Web](https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack). In alternativa, è possibile installare singolarmente i prerequisiti usando i collegamenti seguenti:
 > 
 > - [Prerequisiti di Visual Studio Web Developer Express SP1](https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack)
-> - [ASP.NET MVC 3 Tools Update](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=MVC3)
-> - [SQL Server Compact 4.0](https://www.microsoft.com/web/gallery/install.aspx?appid=SQLCE;SQLCEVSTools_4_0)(runtime e strumenti di supportano)
+> - [Aggiornamento degli strumenti di ASP.NET MVC 3](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=MVC3)
+> - [SQL Server Compact 4,0](https://www.microsoft.com/web/gallery/install.aspx?appid=SQLCE;SQLCEVSTools_4_0)(supporto di runtime + Tools)
 > 
-> Se si usa Visual Studio 2010 anziché Visual Web Developer 2010, installare i prerequisiti, fare clic sul collegamento seguente: [Prerequisiti di Visual Studio 2010](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=VS2010SP1Pack).
+> Se si usa Visual Studio 2010 anziché Visual Web Developer 2010, installare i prerequisiti facendo clic sul collegamento seguente: [prerequisiti di Visual studio 2010](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=VS2010SP1Pack).
 > 
-> Un progetto di Visual Web Developer con codice sorgente Visual Basic.NET è disponibile a complemento di questo argomento. [Scaricare la versione VB.NET](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098). Se si preferisce c#, passare al [c# versione](../cs/adding-validation-to-the-model.md) di questa esercitazione.
+> Per accompagnare questo argomento, è disponibile un progetto Visual Web Developer con codice sorgente VB.NET. [Scaricare la versione di VB.NET](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098). Se si preferisce C#, passare alla [ C# versione](../cs/adding-validation-to-the-model.md) di questa esercitazione.
 
-In questa sezione si aggiungerà la logica di convalida per il `Movie` modello e si farà in modo che le regole di convalida vengono applicate ogni volta che un utente prova a creare o modificare un film tramite l'applicazione.
+In questa sezione si aggiungerà la logica di convalida al modello di `Movie` e si verificherà che le regole di convalida vengono applicate ogni volta che un utente tenta di creare o modificare un film usando l'applicazione.
 
-## <a name="keeping-things-dry"></a>Mantenere la trattazione DRY
+## <a name="keeping-things-dry"></a>Conservazione degli elementi
 
-Uno dei principi di progettazione fondamentali di ASP.NET MVC è DRY ("t Repeat Yourself"). ASP.NET MVC consiglia di specificare la funzionalità o il comportamento una sola volta e quindi viene applicata ovunque in un'applicazione. Ciò riduce la quantità di codice che è necessario scrivere e il codice che scritto molto più semplice da gestire.
+Uno dei principi di base della progettazione di ASP.NET MVC è DRY ("Don't Repeat Yourself"). ASP.NET MVC consiglia di specificare la funzionalità o il comportamento solo una volta e quindi di rifletterla ovunque in un'applicazione. In questo modo si riduce la quantità di codice che è necessario scrivere e si rende molto più semplice la gestione del codice.
 
-Il supporto della convalida fornito da ASP.NET MVC ed Entity Framework Code First è un ottimo esempio del principio DRY in azione. È possibile specificare in modo dichiarativo le regole di convalida in un'unica posizione (nella classe del modello) e quindi tali regole vengono applicate ovunque nell'applicazione.
+Il supporto della convalida fornito da ASP.NET MVC e Entity Framework Code First è un ottimo esempio di principio secco in azione. È possibile specificare in modo dichiarativo le regole di convalida in un'unica posizione (nella classe del modello) e quindi tali regole vengono applicate ovunque nell'applicazione.
 
-Si esaminerà come è possibile sfruttare il supporto per la convalida nell'applicazione di film.
+Verrà ora esaminato come sfruttare questo supporto per la convalida nell'applicazione Movie.
 
-## <a name="adding-validation-rules-to-the-movie-model"></a>Aggiunta di regole di convalida al modello Movie
+## <a name="adding-validation-rules-to-the-movie-model"></a>Aggiunta di regole di convalida al modello di film
 
-Iniziare aggiungendo una logica di convalida per il `Movie` classe.
+Per iniziare, aggiungere una logica di convalida alla classe `Movie`.
 
-Aprire il *Movie.vb* file. Aggiungere un `Imports` all'inizio del file che fa riferimento l'istruzione il [ `System.ComponentModel.DataAnnotations` ](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.aspx) dello spazio dei nomi:
+Aprire il file *Movie. vb* . Aggiungere un'istruzione `Imports` all'inizio del file che fa riferimento allo spazio dei nomi [`System.ComponentModel.DataAnnotations`](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.aspx) :
 
 [!code-vb[Main](adding-validation-to-the-model/samples/sample1.vb)]
 
-Lo spazio dei nomi fa parte di .NET Framework. Fornisce un set predefinito di attributi di convalida che è possibile applicare in modo dichiarativo a qualsiasi classe o proprietà.
+Lo spazio dei nomi fa parte del .NET Framework. Fornisce un set predefinito di attributi di convalida che è possibile applicare in modo dichiarativo a qualsiasi classe o proprietà.
 
-A questo punto aggiornare i `Movie` classe possa sfruttare i vantaggi di integrato [ `Required` ](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.requiredattribute.aspx), [ `StringLength` ](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.stringlengthattribute.aspx), e [ `Range` ](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.rangeattribute.aspx) gli attributi di convalida . Usare il codice seguente come esempio in cui applicare gli attributi.
+Aggiornare ora la classe `Movie` per sfruttare i vantaggi degli attributi di convalida [`Required`](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.requiredattribute.aspx), [`StringLength`](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.stringlengthattribute.aspx)e [`Range`](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.rangeattribute.aspx) predefiniti. Usare il codice seguente come esempio di come applicare gli attributi.
 
 [!code-vb[Main](adding-validation-to-the-model/samples/sample2.vb)]
 
-Gli attributi di convalida specificano il comportamento da applicare per le proprietà del modello a cui vengono applicati. Il `Required` attributo indica che una proprietà deve avere un valore; in questo esempio, un filmato deve avere i valori per il `Title`, `ReleaseDate`, `Genre`, e `Price` proprietà affinché sia valida. L'attributo `Range` vincola un valore all'interno di un intervallo specificato. L'attributo `StringLength` consente di impostare la lunghezza massima di una proprietà stringa e, facoltativamente, la lunghezza minima.
+Gli attributi di convalida specificano il comportamento da applicare per le proprietà del modello a cui vengono applicati. L'attributo `Required` indica che una proprietà deve avere un valore. in questo esempio, un film deve avere valori per le proprietà `Title`, `ReleaseDate`, `Genre`e `Price` per essere valido. L'attributo `Range` vincola un valore all'interno di un intervallo specificato. L'attributo `StringLength` consente di impostare la lunghezza massima di una proprietà stringa e, facoltativamente, la lunghezza minima.
 
-Codice, in primo luogo, assicura che le regole di convalida che si specifica in una classe di modello vengono applicate prima che l'applicazione deve salvare le modifiche nel database. Ad esempio, il codice seguente verrà generata un'eccezione quando la `SaveChanges` viene chiamato il metodo in quanto alcuni richiesta `Movie` mancano i valori delle proprietà e il prezzo è zero (che è compreso nell'intervallo valido).
+Code First garantisce che le regole di convalida specificate in una classe del modello vengano applicate prima che l'applicazione salvi le modifiche nel database. Il codice seguente, ad esempio, genererà un'eccezione quando viene chiamato il metodo `SaveChanges`, perché sono mancanti diversi valori di proprietà `Movie` richiesti e il prezzo è zero (che non è compreso nell'intervallo valido).
 
 [!code-vb[Main](adding-validation-to-the-model/samples/sample3.vb)]
 
-Con le regole di convalida applicate automaticamente da .NET Framework consente di rendere l'applicazione più affidabile. In questo modo inoltre non è possibile omettere la convalida di un elemento e quindi inserire involontariamente dati errati nel database.
+La presenza di regole di convalida applicate automaticamente dall'.NET Framework consente di rendere l'applicazione più affidabile. In questo modo inoltre non è possibile omettere la convalida di un elemento e quindi inserire involontariamente dati errati nel database.
 
-Ecco un elenco di codice per l'aggiornamento *Movie.vb* file:
+Ecco un listato di codice completo per il file *Movie. vb* aggiornato:
 
 [!code-vb[Main](adding-validation-to-the-model/samples/sample4.vb)]
 
-## <a name="validation-error-ui-in-aspnet-mvc"></a>Errore di convalida dell'interfaccia utente in ASP.NET MVC
+## <a name="validation-error-ui-in-aspnet-mvc"></a>Interfaccia utente di errore di convalida in ASP.NET MVC
 
-Eseguire nuovamente l'applicazione e passare al */Movies* URL.
+Eseguire di nuovo l'applicazione e passare all'URL */Movies* .
 
-Scegliere il **film creare** collegamento per aggiungere un nuovo film. Compilare il modulo con alcuni valori non validi e quindi scegliere il **Create** pulsante.
+Fare clic sul collegamento **Crea filmato** per aggiungere un nuovo film. Compilare il modulo con alcuni valori non validi, quindi fare clic sul pulsante **Crea** .
 
 [![8_validationErrors](adding-validation-to-the-model/_static/image2.png)](adding-validation-to-the-model/_static/image1.png)
 
-Si noti come il modulo automaticamente ha usato un colore di sfondo per evidenziare le caselle di testo che contengono dati non validi e ha generato un messaggio di errore di convalida appropriato accanto a ciascuna di esse. I messaggi di errore corrispondono alle stringhe di errore è stato specificato quando è annotata la `Movie` classe. Gli errori vengono applicati entrambi (tramite JavaScript) sul lato client e lato server (nel caso in cui un utente ha JavaScript disabilitato).
+Si noti che il form ha utilizzato automaticamente un colore di sfondo per evidenziare le caselle di testo che contengono dati non validi ed è stato generato un messaggio di errore di convalida appropriato accanto a ciascuna di esse. I messaggi di errore corrispondono alle stringhe di errore specificate quando è stata annotata la classe `Movie`. Gli errori vengono applicati sia sul lato client (tramite JavaScript) sia sul lato server (nel caso in cui un utente abbia JavaScript disabilitato).
 
-Dei vantaggi reale è che non è necessario modificare una singola riga di codice nel `MoviesController` classe o nel *Create.vbhtml* visualizzazione per consentire la convalida dell'interfaccia utente. Il controller e viste create automaticamente in precedenza in questa esercitazione hanno selezionato le regole di convalida specificato utilizzando gli attributi nel `Movie` classe del modello.
+Un vero vantaggio è che non è necessario modificare una singola riga di codice nella classe `MoviesController` o nella vista *create. vbhtml* per abilitare questa interfaccia utente di convalida. Il controller e le visualizzazioni creati in precedenza in questa esercitazione hanno selezionato automaticamente le regole di convalida specificate usando gli attributi nella classe del modello `Movie`.
 
-## <a name="how-validation-occurs-in-the-create-view-and-create-action-method"></a>La modalità di convalida viene eseguita nella creazione consente di visualizzare e creare il metodo di azione
+## <a name="how-validation-occurs-in-the-create-view-and-create-action-method"></a>Come viene eseguita la convalida nel metodo Create View e create Action
 
-Ci si potrebbe chiedere come la convalida dell'interfaccia utente sia stata generata senza aggiornamenti al codice nel controller o nelle viste. Il listato successivo illustra ciò che il `Create` metodi nel `MovieController` classi simili. Sono cambiati rispetto a come si creati in precedenza in questa esercitazione.
+Ci si potrebbe chiedere come la convalida dell'interfaccia utente sia stata generata senza aggiornamenti al codice nel controller o nelle viste. L'elenco successivo Mostra i metodi di `Create` nella classe `MovieController` aspetto. Sono rimasti invariati rispetto al modo in cui sono stati creati in precedenza in questa esercitazione.
 
 [!code-vb[Main](adding-validation-to-the-model/samples/sample5.vb)]
 
-Il primo metodo di azione consente di visualizzare il modulo di creazione iniziale. La seconda gestisce il post del form. La seconda `Create` chiamate al metodo `ModelState.IsValid` per verificare se il film è errori di convalida. La chiamata a questo metodo valuta tutti gli attributi di convalida applicati all'oggetto. Se l'oggetto presenta errori di convalida, il `Create` metodo rivisualizza il form. Se non sono presenti errori, il metodo salva il nuovo film nel database.
+Il primo metodo di azione Visualizza il modulo di creazione iniziale. Il secondo gestisce il post del form. Il secondo metodo `Create` chiama `ModelState.IsValid` per verificare se nel film sono presenti errori di convalida. La chiamata a questo metodo valuta tutti gli attributi di convalida applicati all'oggetto. Se l'oggetto presenta errori di convalida, il metodo `Create` Visualizza nuovamente il form. Se non sono presenti errori, il metodo salva il nuovo film nel database.
 
-Di seguito è riportato il *Create.vbhtml* modello di visualizzazione che è stato eseguito lo scaffolding in precedenza nell'esercitazione. Viene usata dai metodi di azione illustrati in precedenza per visualizzare il modulo iniziale e per visualizzarlo nuovamente in caso di errore.
+Di seguito è riportato il modello di visualizzazione *create. vbhtml* che è stato creato in precedenza nell'esercitazione. Viene usata dai metodi di azione illustrati in precedenza per visualizzare il modulo iniziale e per visualizzarlo nuovamente in caso di errore.
 
 [!code-vbhtml[Main](adding-validation-to-the-model/samples/sample6.vbhtml)]
 
-Si noti come il codice usa un' `Html.EditorFor` helper per restituire il `<input>` per ogni elemento `Movie` proprietà. Accanto a questo helper è una chiamata al `Html.ValidationMessageFor` metodo helper. Questi due metodi di supporto di lavoro con l'oggetto modello che viene passato dal controller alla vista (in questo caso, un `Movie` oggetto). Risultino automaticamente per gli attributi di convalida specificati nei messaggi di errore di modello e la visualizzazione come appropriato.
+Si noti che il codice usa un helper `Html.EditorFor` per restituire l'elemento `<input>` per ogni proprietà `Movie`. Accanto a questo helper è presente una chiamata al metodo helper `Html.ValidationMessageFor`. Questi due metodi helper funzionano con l'oggetto modello passato dal controller alla vista (in questo caso, un oggetto `Movie`). Vengono automaticamente cercati gli attributi di convalida specificati nel modello e i messaggi di errore vengono visualizzati nel modo appropriato.
 
-Che cos'è ottimo su questo approccio è che il controller né il modello di vista crea consapevoli sulle regole di convalida effettiva viene applicate o sui messaggi di errore specifici visualizzati. Le regole di convalida e le stringhe di errore vengono specificate solo nella classe `Movie`.
+L'aspetto più interessante di questo approccio è che né il controller né il modello Create View sono in grado di riconoscere le effettive regole di convalida applicate o i messaggi di errore specifici visualizzati. Le regole di convalida e le stringhe di errore vengono specificate solo nella classe `Movie`.
 
-Se si desidera modificare la logica di convalida in un secondo momento, è possibile farlo in una posizione. Non è necessario preoccuparsi dell'incoerenza delle diverse parti dell'applicazione con la modalità di applicazione delle regole perché tutta la logica di convalida verrà definita in un'unica posizione e usata ovunque. In questo modo il codice rimane molto pulito e facile da gestire e sviluppare. Il principio DRY sarà ampiamente rispettato.
+Se si desidera modificare la logica di convalida in un secondo momento, è possibile eseguire questa operazione in un'unica posizione. Non è necessario preoccuparsi dell'incoerenza delle diverse parti dell'applicazione con la modalità di applicazione delle regole perché tutta la logica di convalida verrà definita in un'unica posizione e usata ovunque. In questo modo il codice rimane molto pulito e facile da gestire e sviluppare. Il principio DRY sarà ampiamente rispettato.
 
-## <a name="adding-formatting-to-the-movie-model"></a>Aggiunta di formattazione al modello Movie
+## <a name="adding-formatting-to-the-movie-model"></a>Aggiunta della formattazione al modello di film
 
-Aprire il *Movie.vb* file. Il [ `System.ComponentModel.DataAnnotations` ](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.aspx) dello spazio dei nomi fornisce gli attributi di formattazione oltre al set predefinito di attributi di convalida. Verrà applicata il [ `DisplayFormat` ](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.displayformatattribute.aspx) attributo e un [ `DataType` ](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatype.aspx) valore di enumerazione per la data di rilascio e per i campi relativi ai prezzi. Il codice seguente illustra il `ReleaseDate` e `Price` delle proprietà con l'appropriato [ `DisplayFormat` ](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.displayformatattribute.aspx) attributo.
+Aprire il file *Movie. vb* . Lo spazio dei nomi [`System.ComponentModel.DataAnnotations`](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.aspx) fornisce attributi di formattazione oltre al set predefinito di attributi di convalida. Si applicheranno l'attributo [`DisplayFormat`](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.displayformatattribute.aspx) e un [`DataType`](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatype.aspx) valore di enumerazione alla data di rilascio e ai campi Price. Nel codice seguente vengono illustrate le proprietà `ReleaseDate` e `Price` con l'attributo [`DisplayFormat`](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.displayformatattribute.aspx) appropriato.
 
 [!code-vb[Main](adding-validation-to-the-model/samples/sample7.vb)]
 
-In alternativa, è possibile impostare in modo esplicito un [ `DataFormatString` ](https://msdn.microsoft.com/library/system.string.format.aspx) valore. Il codice seguente illustra la proprietà data di rilascio con una stringa di formato data (vale a dire, "d"). Si utilizzerà per specificare che non si vuole ora come parte della data di rilascio.
+In alternativa, è possibile impostare in modo esplicito un valore [`DataFormatString`](https://msdn.microsoft.com/library/system.string.format.aspx) . Il codice seguente illustra la proprietà Data di rilascio con una stringa di formato data (ovvero "d"). Questa operazione viene usata per specificare che non si vuole usare l'ora come parte della data di rilascio.
 
 [!code-vb[Main](adding-validation-to-the-model/samples/sample8.vb)]
 
-Nell'esempio di codice formati il `Price` proprietà come valuta.
+Il codice seguente formatta la proprietà `Price` come valuta.
 
 [!code-vb[Main](adding-validation-to-the-model/samples/sample9.vb)]
 
-L'intero `Movie` classe è illustrata di seguito.
+Di seguito è illustrata la classe completa `Movie`.
 
 [!code-vb[Main](adding-validation-to-the-model/samples/sample10.vb)]
 
-Eseguire l'applicazione e individuare il `Movies` controller.
+Eseguire l'applicazione e passare al controller di `Movies`.
 
 ![8_format_SM](adding-validation-to-the-model/_static/image3.png)
 
-Nella parte successiva della serie, si verrà esaminata l'applicazione e apportare alcuni miglioramenti a generato automaticamente `Details` e `Delete` metodi...
+Nella parte successiva della serie verrà esaminata l'applicazione e verranno apportati alcuni miglioramenti ai metodi di `Details` e `Delete` generati automaticamente.
 
 > [!div class="step-by-step"]
 > [Precedente](adding-a-new-field.md)

@@ -8,16 +8,16 @@ ms.date: 03/30/2015
 ms.assetid: 9f05ccb1-2004-4661-ad8b-c370e6c09c8e
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/unstructured-blob-storage
 msc.type: authoredcontent
-ms.openlocfilehash: 2afd4b5cf640eb97080de7e5280409f5e5347731
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: f48b2be755b84dff9b2672bd348c73107602c6dd
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74583630"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77456791"
 ---
 # <a name="unstructured-blob-storage-building-real-world-cloud-apps-with-azure"></a>Archiviazione BLOB non strutturata (compilazione di app Cloud reali con Azure)
 
-di [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+di [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
 [Scarica il progetto di correzione it](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [Scarica l'E-Book](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
@@ -25,7 +25,7 @@ di [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitte
 
 Nel capitolo precedente abbiamo esaminato gli schemi di partizionamento e illustrato come l'app Fix it archivia le immagini nel servizio BLOB del servizio di archiviazione di Azure e altri dati delle attività nel database SQL di Azure. In questo capitolo viene approfondito il servizio BLOB e viene illustrato come viene implementato nel codice del progetto Correggi it.
 
-## <a name="what-is-blob-storage"></a>Che cos'è l'archiviazione BLOB?
+## <a name="what-is-blob-storage"></a>Informazioni sull'archiviazione BLOB
 
 Il servizio BLOB del servizio di archiviazione di Azure fornisce un modo per archiviare i file nel cloud. Il servizio BLOB presenta diversi vantaggi rispetto all'archiviazione dei file in una rete locale file system:
 

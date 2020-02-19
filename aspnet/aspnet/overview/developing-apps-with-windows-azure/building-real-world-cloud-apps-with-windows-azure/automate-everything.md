@@ -8,16 +8,16 @@ ms.date: 06/12/2014
 ms.assetid: ba6e6baa-9b9f-471f-b39d-b007a3addadc
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/automate-everything
 msc.type: authoredcontent
-ms.openlocfilehash: d5c8190d0b0c91bf9e42f6ef03adc5b07a65359a
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: e741a753a36ebdaefbff8eee0b38911785c716ac
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74582882"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457167"
 ---
 # <a name="automate-everything-building-real-world-cloud-apps-with-azure"></a>Automatizzare tutto (creazione di app Cloud reali con Azure)
 
-di [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+di [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
 [Scarica il progetto di correzione it](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) o [Scarica l'E-Book](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
@@ -70,7 +70,7 @@ Il parametro `Name` specifica il nome da usare quando si creano gli account di a
 
 Al termine dello script, nel portale di gestione è possibile vedere cosa è stato creato. Sono disponibili due database:
 
-![database](automate-everything/_static/image3.png)
+![Database](automate-everything/_static/image3.png)
 
 Un account di archiviazione:
 
@@ -84,7 +84,7 @@ Nella scheda **Configura** dell'app Web è possibile vedere che le impostazioni 
 
 ![appSettings e connectionStrings](automate-everything/_static/image6.png)
 
-La cartella *automazione* contiene ora anche un file *&lt;websitename&gt;. pubxml* . In questo file vengono archiviate le impostazioni che MSBuild utilizzerà per distribuire l'applicazione nell'ambiente Azure appena creato. Ad esempio:
+La cartella *automazione* contiene ora anche un file *&lt;websitename&gt;. pubxml* . In questo file vengono archiviate le impostazioni che MSBuild utilizzerà per distribuire l'applicazione nell'ambiente Azure appena creato. Ad esempio,
 
 [!code-xml[Main](automate-everything/samples/sample1.xml)]
 
@@ -254,8 +254,8 @@ Nel [capitolo successivo](source-control.md) verrà esaminato il codice sorgente
 - [Scripter del weekend: introduzione con Azure e PowerShell](https://blogs.technet.com/b/heyscriptingguy/archive/2013/06/22/weekend-scripter-getting-started-with-windows-azure-and-powershell.aspx). In un Blog dedicato a Windows PowerShell, questo post fornisce un'ottima introduzione all'uso di PowerShell per le funzioni di gestione di Azure.
 - [Installare e configurare l'interfaccia della riga di comando multipiattaforma di Azure](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest). Esercitazione introduttiva per un Framework di scripting di Azure che funziona su Mac e Linux, nonché sui sistemi Windows.
 - [Sezione strumenti della riga di comando dell'argomento scaricare gli SDK e gli strumenti di Azure](https://azure.microsoft.com/downloads/). Pagina del portale per la documentazione e i download relativi agli strumenti da riga di comando per Azure.
-- [Automazione di tutti gli elementi con le librerie di gestione di Azure e .NET](http://www.hanselman.com/blog/PennyPinchingInTheCloudAutomatingEverythingWithTheWindowsAzureManagementLibrariesAndNET.aspx). Scott Hanselt introduce l'API di gestione .NET per Azure.
-- [Uso degli script di Windows PowerShell per la pubblicazione in ambienti di sviluppo e test](https://msdn.microsoft.com/library/azure/dn642480.aspx). Documentazione MSDN in cui viene illustrato come utilizzare gli script di pubblicazione generati automaticamente da Visual Studio per i progetti Web.
+- Post del blog di Scott Hanselman sull'[automazione completa con le librerie di gestione di Azure e .NET](http://www.hanselman.com/blog/PennyPinchingInTheCloudAutomatingEverythingWithTheWindowsAzureManagementLibrariesAndNET.aspx). Scott Hanselt introduce l'API di gestione .NET per Azure.
+- [Utilizzo degli script di Windows PowerShell per la pubblicazione in ambienti di sviluppo e test](https://msdn.microsoft.com/library/azure/dn642480.aspx). Documentazione MSDN in cui viene illustrato come utilizzare gli script di pubblicazione generati automaticamente da Visual Studio per i progetti Web.
 - [PowerShell Tools for Visual Studio 2013](https://visualstudiogallery.msdn.microsoft.com/c9eb3ba8-0c59-4944-9a62-6eee37294597). Estensione di Visual Studio che aggiunge il supporto per la lingua per Windows PowerShell in Visual Studio.
 
 > [!div class="step-by-step"]
