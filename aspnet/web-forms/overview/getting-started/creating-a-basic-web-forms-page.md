@@ -9,11 +9,11 @@ ms.assetid: a2f1c635-0817-4a9a-8c13-d5b5d29727c0
 msc.legacyurl: /web-forms/overview/getting-started/creating-a-basic-web-forms-page
 msc.type: authoredcontent
 ms.openlocfilehash: 5d13a51128eecd92a82cfd06054448582a348e11
-ms.sourcegitcommit: 84b1681d4e6253e30468c8df8a09fe03beea9309
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73445681"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78629759"
 ---
 # <a name="using-visual-studio-2013-to-create-a-basic-aspnet-45-web-forms-page"></a>Uso di Visual Studio 2013 per creare una pagina Web Form ASP.NET 4,5 di base
 
@@ -32,7 +32,7 @@ Le attività illustrate nella procedura dettagliata sono le seguenti:
 - Aggiunta di gestori eventi.
 - Esecuzione e test di una pagina da Visual Studio.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Per completare questa procedura dettagliata, è necessario:
 
@@ -58,11 +58,11 @@ In questa parte della procedura dettagliata si creerà un progetto di applicazio
 
     Verrà visualizzata la finestra di dialogo **Nuovo progetto**.
 3. Selezionare i **modelli** -&gt; **Visual C#**  -&gt; gruppo di modelli **Web** a sinistra.
-4. Scegliere il modello **applicazione Web ASP.NET** nella colonna centrale.
+4. Scegliere il modello **Applicazione Web ASP.NET** nella colonna centrale.
 5. Assegnare al progetto il nome ***BasicWebApp*** e fare clic sul pulsante **OK** .   
-![finestra di dialogo nuovo progetto](creating-a-basic-web-forms-page/_static/image2.png)
+![Finestra di dialogo Nuovo progetto](creating-a-basic-web-forms-page/_static/image2.png)
 6. Selezionare quindi il modello **Web Form** e fare clic sul pulsante **OK** per creare il progetto.  
-![finestra di dialogo nuovo progetto ASP.NET](creating-a-basic-web-forms-page/_static/image3.png)  
+![Finestra di dialogo Nuovo progetto ASP.NET](creating-a-basic-web-forms-page/_static/image3.png)  
 
     Visual Studio crea un nuovo progetto che include funzionalità predefinite basate sul modello Web Form. Non solo fornisce una pagina *Home. aspx* , una pagina *About.* aspx, una pagina *Contact. aspx* , ma include anche la funzionalità di appartenenza che registra gli utenti e salva le credenziali in modo che possano accedere al sito Web. Quando viene creata una nuova pagina, per impostazione predefinita Visual Studio Visualizza la pagina nella visualizzazione **origine** , in cui è possibile visualizzare gli elementi HTML della pagina. Nella figura seguente viene illustrato ciò che viene visualizzato nella visualizzazione **origine** se è stata creata una nuova pagina Web denominata *BasicWebApp. aspx*.  
     ![Visualizzazione Origine](creating-a-basic-web-forms-page/_static/image4.png)
@@ -101,7 +101,7 @@ Quando si crea una nuova applicazione Web form usando il modello di progetto **a
 2. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul nome dell'applicazione Web (in questa esercitazione il nome dell'applicazione è **BasicWebSite**), quindi scegliere **Aggiungi** -&gt; **nuovo elemento**.   
 Verrà visualizzata la finestra di dialogo **Aggiungi nuovo elemento**.
 3. Selezionare il **gruppo C# Visual** -&gt; modelli **Web** a sinistra. Quindi, selezionare **Web Form** nell'elenco centrale e denominarlo *FirstWebPage. aspx*.   
-    ![finestra di dialogo Aggiungi nuovo elemento](creating-a-basic-web-forms-page/_static/image6.png)
+    ![Finestra di dialogo Aggiungi nuovo elemento](creating-a-basic-web-forms-page/_static/image6.png)
 4. Fare clic su **Aggiungi** per aggiungere la pagina Web al progetto.  
 Visual Studio crea la nuova pagina e la apre.
 
@@ -180,7 +180,7 @@ Visual Studio offre diversi modi per impostare le proprietà dei controlli nella
 
     > [!NOTE] 
     > 
-    > Tutti i controlli si trovano all'interno di un elemento **form** , che include anche l'attributo **runat =&quot;server&quot;** . L'attributo **runat =&quot;server&quot;** e il prefisso **ASP:** per i tag di controllo contrassegnano i controlli in modo che vengano elaborati da ASP.NET nel server quando viene eseguita la pagina. Il codice esterno al **formato&lt;runat =&quot;server&quot;&gt;** e **&lt;script runat =&quot;server**&quot;&gt;elementi viene inviato senza modifiche al browser, motivo per cui il codice ASP.NET deve trovarsi all'interno di un elemento il cui tag di apertura contiene l'attributo **runat =&quot;server&quot;** .
+    > Tutti i controlli si trovano all'interno di un elemento **form** , che include anche l'attributo **runat =&quot;server&quot;** . L'attributo **runat =&quot;server&quot;** e il prefisso **ASP:** per i tag di controllo contrassegnano i controlli in modo che vengano elaborati da ASP.NET nel server quando viene eseguita la pagina. Il codice esterno al **formato&lt;runat =&quot;server&quot;&gt;** e **&lt;script runat =&quot;server**&quot;&gt;gli elementi vengono inviati senza modifiche al browser, motivo per cui il codice ASP.NET deve trovarsi all'interno di un elemento il cui tag di apertura contiene l'attributo **runat =&quot;server&quot;** .
 4. Successivamente, verrà aggiunta una proprietà aggiuntiva al controllo [Label](https://msdn.microsoft.com/library/system.web.ui.webcontrols.label.aspx) . Posizionare il punto di inserimento direttamente dopo **ASP: Label** nel tag **&lt;asp: Label&gt;** , quindi premere la **barra spaziatrice**.
 
     Viene visualizzato un elenco a discesa che consente di visualizzare l'elenco delle proprietà disponibili che è possibile impostare per un controllo [etichetta](https://msdn.microsoft.com/library/system.web.ui.webcontrols.label.aspx) . Questa funzionalità, definita **IntelliSense**, semplifica la visualizzazione **origine** con la sintassi dei controlli server, degli elementi HTML e di altri elementi nella pagina. Nell'illustrazione seguente viene mostrato l'elenco a discesa **IntelliSense** per il controllo [Label](https://msdn.microsoft.com/library/system.web.ui.webcontrols.label.aspx) .

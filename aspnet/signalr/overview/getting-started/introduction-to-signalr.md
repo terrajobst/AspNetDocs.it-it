@@ -9,11 +9,11 @@ ms.assetid: 0fab5e35-8c1f-43d4-8635-b8aba8766a71
 msc.legacyurl: /signalr/overview/getting-started/introduction-to-signalr
 msc.type: authoredcontent
 ms.openlocfilehash: 8dbc31a5c8d59fa55dc5b513c1a51d24d18a685f
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519401"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78536435"
 ---
 # <a name="introduction-to-signalr"></a>Introduzione a SignalR
 
@@ -39,7 +39,7 @@ SignalR fornisce un'API semplice per la creazione di chiamate a procedure remote
 
 ![Richiamo di metodi con SignalR](introduction-to-signalr/_static/image1.png)
 
-SignalR gestisce automaticamente la gestione delle connessioni e consente di trasmettere messaggi a tutti i client connessi contemporaneamente, come in una chat room. È anche possibile inviare messaggi a client specifici. La connessione tra client e server è persistente, a differenza di una connessione HTTP classica, che viene ristabilita per ogni comunicazione.
+SignalR gestisce automaticamente la gestione delle connessioni e consente di trasmettere messaggi contemporaneamente a tutti i client connessi, ad esempio una chat room. È anche possibile inviare messaggi a client specifici. La connessione tra il client e il server è permanente, a differenza di una connessione HTTP classica, che viene ristabilita per ogni comunicazione.
 
 SignalR supporta la funzionalità di "push server", in cui il codice del server può chiamare il codice client nel browser usando le remote procedure call (RPC), anziché il modello di richiesta-risposta comune attualmente sul Web.
 

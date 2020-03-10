@@ -1,132 +1,132 @@
 ---
 uid: mvc/overview/older-versions-1/contact-manager/iteration-3-add-form-validation-cs
-title: 'Iterazione #3-aggiungere la convalida dei form (c#) | Microsoft Docs'
+title: '#3 iterazione-Aggiungi convalida FormC#() | Microsoft Docs'
 author: microsoft
-description: Nella terza iterazione, aggiungiamo la convalida dei form di base. Persone è impedire l'invio di un modulo senza completare i campi del modulo richiesto. È inoltre possibile convalidare emai...
+description: Nella terza iterazione viene aggiunta la convalida dei form di base. Si impedisce agli utenti di inviare un modulo senza completare i campi dei moduli richiesti. Viene anche convalidato emai...
 ms.author: riande
 ms.date: 02/20/2009
 ms.assetid: 51a0d175-913b-43d8-95e3-840fb96ad1a9
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-3-add-form-validation-cs
 msc.type: authoredcontent
 ms.openlocfilehash: af2e86e820f60f0a3d8e3db8f78eba67ef63579a
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65123953"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78544471"
 ---
-# <a name="iteration-3--add-form-validation-c"></a>Iterazione #3-aggiungere la convalida dei form (c#)
+# <a name="iteration-3--add-form-validation-c"></a>#3 iterazione-Aggiungi convalida FormC#()
 
-by [Microsoft](https://github.com/microsoft)
+[Microsoft](https://github.com/microsoft)
 
-[Scaricare il codice](iteration-3-add-form-validation-cs/_static/contactmanager_3_cs1.zip)
+[Scarica codice](iteration-3-add-form-validation-cs/_static/contactmanager_3_cs1.zip)
 
-> Nella terza iterazione, aggiungiamo la convalida dei form di base. Persone è impedire l'invio di un modulo senza completare i campi del modulo richiesto. È anche convalidare gli indirizzi di posta elettronica e numeri di telefono.
+> Nella terza iterazione viene aggiunta la convalida dei form di base. Si impedisce agli utenti di inviare un modulo senza completare i campi dei moduli richiesti. Vengono convalidati anche gli indirizzi di posta elettronica e i numeri di telefono.
 
-## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>Creazione di un'applicazione MVC ASP.NET di gestione dei contatti (c#)
+## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>Compilazione di un'applicazione MVC di gestione deiC#contatti (ASP.NET)
 
-In questa serie di esercitazioni, creiamo un'intera applicazione di gestione dei contatti dall'inizio alla fine. L'applicazione Contact Manager consente di archiviare le informazioni di contatto - nomi, i numeri di telefono e indirizzi di posta elettronica - per un elenco di persone.
+In questa serie di esercitazioni viene creata un'intera applicazione di gestione dei contatti dall'inizio alla fine. L'applicazione Contact Manager consente di archiviare i nomi delle informazioni di contatto, i numeri di telefono e gli indirizzi di posta elettronica per un elenco di persone.
 
-Si compilerà l'applicazione a varie iterazioni. A ogni iterazione, abbiamo migliorare gradualmente l'applicazione. L'obiettivo di questo approccio iterazione più è che consentono di comprendere il motivo per ogni modifica.
+L'applicazione viene compilata su più iterazioni. Ogni iterazione migliora gradualmente l'applicazione. L'obiettivo di questo approccio di iterazione multipla è quello di consentire di comprendere il motivo di ogni modifica.
 
-- Iterazione #1 - creare l'applicazione. Nella prima iterazione, verranno create Contact Manager nel modo più semplice possibile. Viene aggiunto il supporto per le operazioni di base dei database: Creare, leggere, aggiornare ed eliminare (CRUD).
+- #1 iterazione: creare l'applicazione. Nella prima iterazione, il gestore contatti viene creato nel modo più semplice possibile. Viene aggiunto il supporto per le operazioni di base sul database: creazione, lettura, aggiornamento ed eliminazione (CRUD).
 
-- Iterazione #2 - migliorare l'applicazione aspetto interessante. In questa iterazione è migliorare l'aspetto dell'applicazione modificando il valore predefinito di pagina master visualizzazione MVC ASP.NET e foglio di stile CSS.
+- Iterazione #2: rendere l'applicazione un aspetto gradevole. In questa iterazione, si migliora l'aspetto dell'applicazione modificando la pagina master e il foglio di stile CSS predefiniti della visualizzazione MVC ASP.NET.
 
-- Iterazione #3 - aggiungere la convalida dei form. Nella terza iterazione, aggiungiamo la convalida dei form di base. Persone è impedire l'invio di un modulo senza completare i campi del modulo richiesto. È anche convalidare gli indirizzi di posta elettronica e numeri di telefono.
+- #3 iterazione: aggiungere la convalida del modulo. Nella terza iterazione viene aggiunta la convalida dei form di base. Si impedisce agli utenti di inviare un modulo senza completare i campi dei moduli richiesti. Vengono convalidati anche gli indirizzi di posta elettronica e i numeri di telefono.
 
-- Iterazione #4 - rendere l'applicazione a regime. In questo quarta iterazione, possiamo usufruire dei diversi modelli di progettazione di software per renderne più semplice da gestire e modificare l'applicazione Contact Manager. Ad esempio, è eseguire il refactoring l'applicazione per usare il modello di Repository e il modello di inserimento delle dipendenze.
+- Iterazione #4: rendere l'applicazione a regime di controllo libero. In questa quarta iterazione sono disponibili diversi modelli di progettazione software che semplificano la gestione e la modifica dell'applicazione Contact Manager. Ad esempio, si effettua il refactoring dell'applicazione per usare il modello di repository e il modello di inserimento delle dipendenze.
 
-- Iterazione #5 - creare unit test. Nell'iterazione del quinto, si semplifica l'applicazione di manutenzione e la modifica mediante l'aggiunta di unit test. È simulare le classi di modello di dati e generare unit test per i controller e logica di convalida.
+- Iterazione #5-creare unit test. Nella quinta iterazione, l'applicazione viene semplificata per la manutenzione e la modifica mediante l'aggiunta di unit test. Si simulano le classi del modello di dati e si compilano unit test per i controller e la logica di convalida.
 
-- Iterazione #6 - usare lo sviluppo basato su test. In questa iterazione sesta, viene aggiunto nuove funzionalità all'applicazione scrivendo unit test prima e scrivere codice sull'unit test. In questa iterazione, viene aggiunto gruppi di contatti.
+- #6 iterazione: usare lo sviluppo basato su test. In questa sesta iterazione vengono aggiunte nuove funzionalità all'applicazione scrivendo unit test prima e scrivendo il codice in base agli unit test. In questa iterazione vengono aggiunti gruppi di contatti.
 
-- Iterazione #7 - aggiungere funzionalità Ajax. Nell'iterazione del settimo, aggiungendo il supporto per Ajax è migliorare la velocità di risposta e le prestazioni dell'applicazione.
+- #7 iterazione: aggiungere la funzionalità AJAX. Nella settima iterazione, si migliora la velocità di risposta e le prestazioni dell'applicazione mediante l'aggiunta del supporto per AJAX.
 
 ## <a name="this-iteration"></a>Questa iterazione
 
-In questa seconda iterazione dell'applicazione Contact Manager, viene aggiunto la convalida dei form di base. Si evita che gli utenti dall'invio di un contatto senza dover immettere i valori per i campi modulo necessari. È inoltre possibile convalidare i numeri di telefono e indirizzi di posta elettronica (vedere la figura 1).
+In questa seconda iterazione dell'applicazione Contact Manager, viene aggiunta la convalida dei form di base. Si impedisce agli utenti di inviare un contatto senza immettere valori per i campi modulo richiesti. Vengono convalidati anche i numeri di telefono e gli indirizzi di posta elettronica (vedere la figura 1).
 
-[![La finestra di dialogo Nuovo progetto](iteration-3-add-form-validation-cs/_static/image1.jpg)](iteration-3-add-form-validation-cs/_static/image1.png)
+[![finestra di dialogo nuovo progetto](iteration-3-add-form-validation-cs/_static/image1.jpg)](iteration-3-add-form-validation-cs/_static/image1.png)
 
-**Figura 01**: Un modulo con la convalida ([fare clic per visualizzare l'immagine con dimensioni normali](iteration-3-add-form-validation-cs/_static/image2.png))
+**Figura 01**: un modulo con convalida ([fare clic per visualizzare l'immagine con dimensioni complete](iteration-3-add-form-validation-cs/_static/image2.png))
 
-In questa iterazione, la logica di convalida viene aggiunto direttamente per le azioni del controller. In generale, non il metodo consigliato per aggiungere la convalida a un'applicazione ASP.NET MVC. Un approccio migliore consiste nell'inserire una logica di convalida s dell'applicazione in un oggetto separato [livello di servizio](http://martinfowler.com/eaaCatalog/serviceLayer.html). Nell'iterazione successiva, è eseguire il refactoring all'applicazione Contact Manager di eseguire l'applicazione più facilmente gestibile.
+In questa iterazione viene aggiunta la logica di convalida direttamente alle azioni del controller. In generale, questo non è il metodo consigliato per aggiungere la convalida a un'applicazione MVC ASP.NET. Un approccio migliore consiste nell'inserire la logica di convalida di un'applicazione in un [livello di servizio](http://martinfowler.com/eaaCatalog/serviceLayer.html)separato. Nell'iterazione successiva si effettua il refactoring dell'applicazione Contact Manager per rendere l'applicazione più gestibile.
 
-In questa iterazione, per semplicità, si scrive tutto il codice di convalida manualmente. Invece di scrivere il codice di convalida noi stessi, è possibile sfruttare i vantaggi di un framework di convalida. Ad esempio, è possibile utilizzare Microsoft Enterprise Library convalida Application Block (VAB) per implementare la logica di convalida per l'applicazione ASP.NET MVC. Per altre informazioni su del blocco applicazione per la convalida, vedere:
+In questa iterazione, per semplificare l'operazione, si scrive tutto il codice di convalida manualmente. Invece di scrivere il codice di convalida, possiamo usufruire di un Framework di convalida. Ad esempio, è possibile usare Microsoft Enterprise Library Validation Application Block (VAB) per implementare la logica di convalida per l'applicazione ASP.NET MVC. Per ulteriori informazioni sul blocco applicazione di convalida, vedere:
 
 [*http://msdn.microsoft.com/library/dd203099.aspx*](https://msdn.microsoft.com/library/dd203099.aspx)
 
-## <a name="adding-validation-to-the-create-view"></a>Aggiunta della convalida della visualizzazione di creazione
+## <a name="adding-validation-to-the-create-view"></a>Aggiunta della convalida alla visualizzazione di creazione
 
-Let s iniziare aggiungendo la logica di convalida per la visualizzazione di creazione. Fortunatamente, perché è stato generato della visualizzazione di creazione con Visual Studio, la visualizzazione di creazione contiene già tutta la logica dell'interfaccia utente necessarie per visualizzare i messaggi di convalida. Visualizzazione di creazione è contenuta nel listato 1.
+Per iniziare, è necessario aggiungere la logica di convalida alla vista Create. Fortunatamente, poiché la creazione della vista è stata generata con Visual Studio, la vista Create contiene già tutta la logica dell'interfaccia utente necessaria per visualizzare i messaggi di convalida. La vista Create è inclusa nel listato 1.
 
-**Listato 1 - \Views\Contact\Create.aspx**
+**Listato 1-\Views\Contact\Create.aspx**
 
 [!code-aspx[Main](iteration-3-add-form-validation-cs/samples/sample1.aspx)]
 
-Si noti che la chiamata al metodo helper Html.ValidationSummary() che viene visualizzato immediatamente sopra il form HTML. Se sono presenti messaggi di errore di convalida, questo metodo visualizza i messaggi di convalida in un elenco puntato.
+Si noti la chiamata al metodo helper HTML. ValidationSummary () che viene visualizzato immediatamente sopra il form HTML. Se sono presenti messaggi di errore di convalida, questo metodo Visualizza i messaggi di convalida in un elenco puntato.
 
-Si noti che, inoltre, le chiamate a Html.ValidationMessage() visualizzati accanto a ogni campo del form. L'helper ValidationMessage() Visualizza un messaggio di errore di convalida singoli. Nel caso listato 1, viene visualizzato un asterisco, quando si verifica un errore di convalida.
+Si noti, inoltre, le chiamate a HTML. ValidationMessage () visualizzate accanto a ciascun campo del modulo. L'helper ValidationMessage () Visualizza un singolo messaggio di errore di convalida. Nel caso del listato 1, viene visualizzato un asterisco quando si verifica un errore di convalida.
 
-Infine, l'helper Html.TextBox() automaticamente esegue il rendering di una classe foglio di stile CSS quando si verifica un errore di convalida associato alla proprietà visualizzata dall'helper. L'helper Html.TextBox() esegue il rendering di una classe denominata **errore di convalida input**.
+Infine, l'helper HTML. TextBox () esegue automaticamente il rendering di una classe foglio di stile CSS quando si verifica un errore di convalida associato alla proprietà visualizzata dall'helper. L'helper HTML. TextBox () esegue il rendering di una classe denominata **Input-Validation-Error**.
 
-Quando si crea una nuova applicazione MVC ASP.NET, un foglio di stile CSS denominato viene creato automaticamente nella cartella del contenuto. Questo foglio di stile contiene le definizioni seguenti per le classi CSS correlate all'aspetto dei messaggi di errore di convalida:
+Quando si crea una nuova applicazione MVC ASP.NET, viene creato automaticamente un foglio di stile denominato site. CSS nella cartella contenuto. Questo foglio di stile contiene le seguenti definizioni per le classi CSS correlate all'aspetto dei messaggi di errore di convalida:
 
 [!code-css[Main](iteration-3-add-form-validation-cs/samples/sample2.css)]
 
-La classe di errore di convalida campo viene usata per definire lo stile dell'output sottoposto a rendering dall'helper Html.ValidationMessage(). La classe di errore di convalida input viene utilizzata per definire lo stile casella di testo (input) viene eseguito il rendering dall'helper Html.TextBox(). La classe di errori di riepilogo di convalida viene utilizzata per definire lo stile di elenco non ordinato viene eseguito il rendering dall'helper Html.ValidationSummary().
+La classe Field-Validation-Error viene usata per definire lo stile dell'output sottoposto a rendering dall'helper HTML. ValidationMessage (). La classe Input-Validation-Error viene usata per applicare uno stile alla casella di testo (input) sottoposta a rendering dall'helper HTML. TextBox (). La classe Validation-Summary-Errors viene usata per definire lo stile dell'elenco non ordinato di cui è stato eseguito il rendering dall'helper HTML. ValidationSummary ().
 
 > [!NOTE] 
 > 
 > È possibile modificare le classi del foglio di stile descritte in questa sezione per personalizzare l'aspetto dei messaggi di errore di convalida.
 
-## <a name="adding-validation-logic-to-the-create-action"></a>Aggiunta della logica di convalida l'azione di creazione
+## <a name="adding-validation-logic-to-the-create-action"></a>Aggiunta della logica di convalida all'azione di creazione
 
-Al momento, la visualizzazione di creazione non visualizza mai i messaggi di errore di convalida perché non è stato scritto la logica per generare i messaggi. Per visualizzare i messaggi di errore di convalida, è necessario aggiungere i messaggi di errore per ModelState.
+A questo punto, la vista crea non visualizza mai i messaggi di errore di convalida perché non è stata scritta la logica per generare messaggi. Per visualizzare i messaggi di errore di convalida, è necessario aggiungere i messaggi di errore a ModelState.
 
 > [!NOTE] 
 > 
-> Il metodo UpdateModel() aggiunge messaggi di errore per ModelState automaticamente quando si verifica un errore assegnando il valore di un campo del form a una proprietà. Ad esempio, se si tenta di assegnare la stringa "apple" a una proprietà data di nascita che accetta i valori DateTime, il metodo UpdateModel() aggiunge un errore per ModelState.
+> Il metodo UpdateModel () aggiunge automaticamente i messaggi di errore a ModelState quando si verifica un errore durante l'assegnazione del valore di un campo del modulo a una proprietà. Se ad esempio si tenta di assegnare la stringa "Apple" a una proprietà di data di nascita che accetta valori DateTime, il metodo UpdateModel () aggiunge un errore a ModelState.
 
-Il metodo Create () modificato nel listato 2 contiene una nuova sezione che convalida le proprietà della classe contattare prima il nuovo contatto viene inserito nel database.
+Il metodo Create () modificato nel listato 2 contiene una nuova sezione che convalida le proprietà della classe Contact prima che il nuovo contatto venga inserito nel database.
 
-**Listato 2 - Controllers\ContactController.cs (Create con la convalida)**
+**Listato 2-Controllers\ContactController.cs (crea con convalida)**
 
 [!code-csharp[Main](iteration-3-add-form-validation-cs/samples/sample3.cs)]
 
-La sezione Convalida applica quattro regole di convalida distinti:
+La sezione Validate impone quattro regole di convalida distinte:
 
-- La proprietà FirstName deve avere una lunghezza maggiore di zero (e non può essere composto esclusivamente spazi)
-- La proprietà LastName deve avere una lunghezza maggiore di zero (e non può essere composto esclusivamente spazi)
-- Se la proprietà Phone ha un valore (ha una lunghezza maggiore di 0), quindi un'espressione regolare deve corrispondere la proprietà di telefono.
-- Se la proprietà indirizzo di posta elettronica ha un valore (ha una lunghezza maggiore di 0), quindi un'espressione regolare deve corrispondere la proprietà di messaggio di posta elettronica.
+- La lunghezza della proprietà FirstName deve essere maggiore di zero e non può essere costituita solo da spazi.
+- La lunghezza della proprietà LastName deve essere maggiore di zero e non può essere costituita solo da spazi.
+- Se la proprietà Phone ha un valore (ha una lunghezza maggiore di 0), la proprietà Phone deve corrispondere a un'espressione regolare.
+- Se la proprietà email ha un valore (ha una lunghezza maggiore di 0), la proprietà email deve corrispondere a un'espressione regolare.
 
-Quando si verifica una violazione della regola di convalida, con l'aiuto del metodo AddModelError() ModelState viene aggiunto un messaggio di errore. Quando si aggiunge un messaggio a ModelState, si fornisce il nome di una proprietà e il testo di un messaggio di errore di convalida. Questo messaggio di errore viene visualizzato nella vista dai metodi helper Html.ValidationSummary() e Html.ValidationMessage().
+Quando si verifica una violazione della regola di convalida, viene aggiunto un messaggio di errore a ModelState con la guida del Metodo AddModelError (). Quando si aggiunge un messaggio a ModelState, si specifica il nome di una proprietà e il testo di un messaggio di errore di convalida. Questo messaggio di errore viene visualizzato nella visualizzazione dai metodi helper HTML. ValidationSummary () e HTML. ValidationMessage ().
 
-Dopo che vengono eseguite le regole di convalida, viene verificata la proprietà IsValid di ModelState. La proprietà IsValid restituisce false quando gli eventuali messaggi di errore di convalida sono stati aggiunti per ModelState. Se la convalida non riesce, il modulo di creazione verrà visualizzata nuovamente con i messaggi di errore.
+Dopo l'esecuzione delle regole di convalida, viene verificata la proprietà IsValid di ModelState. La proprietà IsValid restituisce false quando sono stati aggiunti messaggi di errore di convalida a ModelState. Se la convalida ha esito negativo, il modulo di creazione viene visualizzato nuovamente con i messaggi di errore.
 
 > [!NOTE] 
 > 
-> Ho le espressioni regolari per convalidare l'indirizzo di posta elettronica e numero di telefono dal repository dell'espressione regolare in [*http://regexlib.com*](http://regexlib.com)
+> Sono state ottenute le espressioni regolari per convalidare il numero di telefono e l'indirizzo di posta elettronica dal repository di espressioni regolari all' [ *http://regexlib.com* ](http://regexlib.com)
 
-## <a name="adding-validation-logic-to-the-edit-action"></a>Aggiunta di logica di convalida per l'operazione di modifica
+## <a name="adding-validation-logic-to-the-edit-action"></a>Aggiunta della logica di convalida all'azione di modifica
 
-L'azione di Edit () aggiorna un contatto. L'azione di Edit () deve seguire esattamente la stessa convalida l'azione create (). Anziché ripetere lo stesso codice di convalida, è necessario effettuare il refactoring il controller di contattare in modo che le azioni sia create () ed Edit () chiama lo stesso metodo di convalida.
+L'azione Edit () aggiorna un contatto. L'azione Edit () deve eseguire esattamente la stessa convalida dell'azione Create (). Anziché duplicare lo stesso codice di convalida, è necessario effettuare il refactoring del controller di contatto in modo che entrambe le azioni create () e Edit () chiamino lo stesso metodo di convalida.
 
-La classe controller contatto modificata è contenuta nel listato 3. Questa classe ha un nuovo metodo ValidateContact() che viene chiamato all'interno di azioni sia al metodo Edit ().
+La classe del controller dei contatti modificata è inclusa nell'elenco 3. Questa classe dispone di un nuovo metodo ValidateContact () che viene chiamato all'interno delle azioni create () e Edit ().
 
-**Listato 3 - Controllers\ContactController.cs**
+**Listato 3-Controllers\ContactController.cs**
 
 [!code-csharp[Main](iteration-3-add-form-validation-cs/samples/sample4.cs)]
 
 ## <a name="summary"></a>Riepilogo
 
-Questa iterazione, abbiamo aggiunto la convalida dei form di base per l'applicazione Contact Manager. La logica di convalida impedisce agli utenti di inviare un nuovo contatto o la modifica di un contatto esistente senza fornire valori per le proprietà FirstName e LastName. Inoltre, gli utenti devono fornire gli indirizzi di posta elettronica e numeri di telefono valido.
+In questa iterazione è stata aggiunta la convalida dei form di base all'applicazione Contact Manager. La logica di convalida impedisce agli utenti di inviare un nuovo contatto o di modificare un contatto esistente senza specificare i valori per le proprietà FirstName e LastName. Inoltre, gli utenti devono specificare numeri di telefono e indirizzi di posta elettronica validi.
 
-Questa iterazione, abbiamo aggiunto la logica di convalida all'applicazione Contact Manager nel modo più semplice possibile. Tuttavia, combinare la logica di convalida nel nostro logica dei controller creerà i problemi per noi a lungo termine. L'applicazione sarà più difficile da gestire e modificare nel tempo.
+In questa iterazione è stata aggiunta la logica di convalida all'applicazione Contact Manager nel modo più semplice possibile. Tuttavia, la combinazione della logica di convalida nella logica del controller creerà problemi a lungo termine. L'applicazione sarà più difficile da gestire e modificare nel tempo.
 
-Nell'iterazione successiva, è eseguire il refactoring la logica di convalida e logica di accesso ai database all'esterno ai controller. Daremo sfruttare alcuni principi di progettazione di software per abilitare la creazione di un'applicazione più strettamente collegata e più facilmente gestibile.
+Nell'iterazione successiva verrà effettuato il refactoring della logica di convalida e della logica di accesso al database dai controller. Si approfitteranno dei diversi principi di progettazione software per consentire a Microsoft di creare un'applicazione più a regime di controllo libero e più gestibile.
 
 > [!div class="step-by-step"]
 > [Precedente](iteration-2-make-the-application-look-nice-cs.md)

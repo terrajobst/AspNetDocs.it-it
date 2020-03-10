@@ -1,25 +1,25 @@
 ---
 uid: web-forms/videos/ajax-control-toolkit/how-do-i-use-the-aspnet-ajax-textboxwatermark-control-extender
-title: '[Procedura:] Usare il controllo Extender TextBoxWatermark controllo ASP.NET AJAX? | Microsoft Docs'
+title: '[Procedura:] Usare ASP.NET AJAX TextBoxWatermark Control Extender? | Microsoft Docs'
 author: JoeStagner
-description: In questo video si apprenderà come usare il controllo extender TextBoxWatermark di ASP.NET AJAX Control Toolkit, che consente di aggiungere nuove proprietà filigrana a un...
+description: In questo video si apprenderà come usare TextBoxWatermark Control Extender di ASP.NET AJAX Control Toolkit, che aggiunge nuove proprietà di filigrana a...
 ms.author: riande
 ms.date: 01/26/2007
 ms.assetid: a43d175e-7526-4dd9-b8ed-9348c3c3dd39
 msc.legacyurl: /web-forms/videos/ajax-control-toolkit/how-do-i-use-the-aspnet-ajax-textboxwatermark-control-extender
 msc.type: video
 ms.openlocfilehash: 1fa0e43b54d872fab6666311668f2684062062f6
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59419821"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78548006"
 ---
-# <a name="how-do-i-use-the-aspnet-ajax-textboxwatermark-control-extender"></a>[Procedura:] Usare il controllo Extender TextBoxWatermark controllo ASP.NET AJAX?
+# <a name="how-do-i-use-the-aspnet-ajax-textboxwatermark-control-extender"></a>[Procedura:] Usare ASP.NET AJAX TextBoxWatermark Control Extender?
 
-da [Joe Stagner](https://github.com/JoeStagner)
+di [Joe Stagner spiega](https://github.com/JoeStagner)
 
-In questo video si apprenderà come usare il controllo extender TextBoxWatermark di ASP.NET AJAX Control Toolkit, che consente di aggiungere nuove proprietà filigrana a tutti i controlli casella di testo standard in una pagina ASP.NET.
+In questo video si apprenderà come usare TextBoxWatermark Control Extender di ASP.NET AJAX Control Toolkit, che aggiunge nuove proprietà di filigrana a tutti i controlli TextBox standard in una pagina ASP.NET.
 
 [&#9654;Guarda il video (6 minuti)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-use-the-aspnet-ajax-textboxwatermark-control-extender)
 

@@ -10,11 +10,11 @@ ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/features-api/two-factor-authentication-using-sms-and-email-with-aspnet-identity
 msc.type: authoredcontent
 ms.openlocfilehash: 527b4392846e60dae0b216fdeabf21fd6618e4d7
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77456738"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78616683"
 ---
 # <a name="two-factorauthentication-using-sms-and-email-with-aspnet-identity"></a>Autenticazione a due fattori tramite SMS e posta elettronica con ASP.NET Identity
 
@@ -119,7 +119,7 @@ Questa esercitazione fornisce istruzioni per l'uso di Twilio o ASPSMS, ma è pos
 8. Fare clic sull'ID utente, che attiva il metodo di azione `Index` in `Manage` controller.  
   
     ![](two-factor-authentication-using-sms-and-email-with-aspnet-identity/_static/image2.png)
-9. Scegli Aggiungi.  
+9. Fare clic su Aggiungi.  
   
     ![](two-factor-authentication-using-sms-and-email-with-aspnet-identity/_static/image3.png)
 10. In pochi secondi si riceverà un messaggio di testo con il codice di verifica. Immetterla e premere **invio**.  

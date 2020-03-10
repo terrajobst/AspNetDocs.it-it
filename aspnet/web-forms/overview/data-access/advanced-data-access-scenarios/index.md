@@ -1,23 +1,23 @@
 ---
 uid: web-forms/overview/data-access/advanced-data-access-scenarios/index
-title: Scenari di accesso di dati avanzati | Microsoft Docs
+title: Scenari di accesso ai dati avanzati | Microsoft Docs
 author: rick-anderson
-description: Queste esercitazioni illustrano come usare stored procedure e le colonne calcolate e come usare join con tabelle di database come crittografare le informazioni di connessione dati...
+description: In queste esercitazioni viene illustrato come utilizzare le stored procedure e le colonne calcolate, come utilizzare i join con le tabelle di database e come crittografare le informazioni di connessione dati...
 ms.author: riande
 ms.date: 10/05/2011
 ms.assetid: 00d198ed-fddc-4fd3-a86e-3f29c5f707cc
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios
 msc.type: chapter
 ms.openlocfilehash: 25041560b9e8ff0a8c944572dad344e655100b0d
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65108539"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78533054"
 ---
 # <a name="advanced-data-access-scenarios"></a>Scenari di accesso ai dati avanzati
 
-> Queste esercitazioni illustrano come usare stored procedure e le colonne calcolate, come usare join con tabelle di database e come crittografare le informazioni di connessione dati.
+> In queste esercitazioni viene illustrato come utilizzare le stored procedure e le colonne calcolate, come utilizzare i join con le tabelle di database e come crittografare le informazioni sulla connessione dati.
 
 - [Creazione di nuove stored procedure per i TableAdapter del set di dati tipizzato (C#)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-cs.md)
 - [Uso di stored procedure esistenti per i TableAdapter del set di dati tipizzato (C#)](using-existing-stored-procedures-for-the-typed-dataset-s-tableadapters-cs.md)

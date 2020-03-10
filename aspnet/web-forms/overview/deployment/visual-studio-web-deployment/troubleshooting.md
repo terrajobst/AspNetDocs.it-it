@@ -9,11 +9,11 @@ ms.assetid: c0090595-ab3b-4b9b-9e16-7a1891e8cb2f
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/troubleshooting
 msc.type: authoredcontent
 ms.openlocfilehash: b42476fca18b04f4557a216ee205cfd9220023e8
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74623578"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78576097"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-troubleshooting"></a>Distribuzione Web ASP.NET con Visual Studio: risoluzione dei problemi
 
@@ -25,10 +25,10 @@ di [Tom Dykstra](https://github.com/tdykstra)
 
 Questa pagina descrive alcuni problemi comuni che possono verificarsi quando si distribuisce un'applicazione Web ASP.NET con Visual Studio. Per ognuna di esse sono disponibili una o più possibili cause e le soluzioni corrispondenti.
 
-Gli scenari illustrati si applicano sia ai provider di hosting di Azure che di terze parti. Per ulteriori informazioni sulla risoluzione dei problemi relativi alle app Web nel servizio app Azure, vedere le risorse seguenti:
+Gli scenari illustrati si applicano sia ai provider di hosting di Azure che di terze parti. Per altre informazioni sulla risoluzione dei problemi di app Web in Servizio app di Azure, vedere le risorse seguenti:
 
 - [Risoluzione dei problemi di un'app Web nel servizio app di Azure tramite Visual Studio](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-troubleshoot-visual-studio/)
-- [Monitorare le app Web nel servizio app Azure](https://azure.microsoft.com/documentation/articles/web-sites-monitor//)
+- [Eseguire il monitoraggio delle app Web nel servizio app di Azure](https://azure.microsoft.com/documentation/articles/web-sites-monitor//)
 - [Annunciando la versione di Windows Azure SDK 2,0 per .NET](http://https://weblogs.asp.net/scottgu/announcing-the-release-of-windows-azure-sdk-2-0-for-net) (Blog di ScottGu, viene illustrato come ottenere i log di diagnostica in Visual Studio)
 
 ## <a name="server-error-in--application---current-custom-error-settings-prevent-details-of-the-error-from-being-viewed-remotely"></a>Errore del server nell'applicazione '/'-le impostazioni degli errori personalizzati correnti impediscono la visualizzazione remota dei dettagli dell'errore
@@ -48,7 +48,7 @@ Per consentire all'applicazione di visualizzare messaggi di errore dettagliati d
 1. Se il file Web. config dell'applicazione contiene un elemento customErrors nell'elemento System. Web, impostare l'attributo mode su "off". In caso contrario, aggiungere un elemento customErrors nell'elemento System. Web con l'attributo mode impostato su "off", come illustrato nell'esempio seguente: 
 
     [!code-xml[Main](troubleshooting/samples/sample2.xml)]
-2. distribuire l'applicazione.
+2. Distribuire l'applicazione.
 3. Eseguire l'applicazione e ripetere qualsiasi operazione eseguita in precedenza che ha causato l'errore. A questo punto è possibile visualizzare il messaggio di errore effettivo.
 4. Dopo aver risolto l'errore, ripristinare l'impostazione customErrors originale e ridistribuire l'applicazione.
 
@@ -58,7 +58,7 @@ Per consentire all'applicazione di visualizzare messaggi di errore dettagliati d
 
 Quando si tenta di eseguire un progetto in Visual Studio, viene visualizzata una pagina di errore con un messaggio simile all'esempio seguente:
 
-Errore del server nell'applicazione '/' Non è possibile creare una copia shadow ' ContosoUniversity ' quando il file esiste già.
+Errore del server nell'applicazione '/'. Non è possibile creare una copia shadow ' ContosoUniversity ' quando il file esiste già.
 
 ### <a name="possible-cause-and-solution"></a>Possibili cause e soluzioni
 

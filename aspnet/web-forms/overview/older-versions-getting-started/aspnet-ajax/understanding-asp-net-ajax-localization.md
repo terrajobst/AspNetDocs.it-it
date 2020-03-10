@@ -9,11 +9,11 @@ ms.assetid: c1a35f18-bab9-41f7-8497-15530c37a09d
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/aspnet-ajax/understanding-asp-net-ajax-localization
 msc.type: authoredcontent
 ms.openlocfilehash: 003e7939accd7a68dab97441b3d999bca835b85a
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74600898"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78566220"
 ---
 # <a name="understanding-aspnet-ajax-localization"></a>Informazioni sulla localizzazione in ASP.NET AJAX
 
@@ -59,10 +59,10 @@ Nella tabella seguente sono riepilogate le convenzioni di denominazione dei file
 
 | Nomefile | Significato |
 | --- | --- |
-| Script. js | Script indipendente dalle impostazioni cultura della versione di rilascio. |
-| Script. debug. js | Uno script di debug della versione indipendente dalle impostazioni cultura. |
-| Script. en-US. js | Versione in lingua inglese, Stati Uniti script. |
-| Script.debug.es-CO. js | Script di debug-version spagnolo, Columbia. |
+| Script.js | Script indipendente dalle impostazioni cultura della versione di rilascio. |
+| Script.debug.js | Uno script di debug della versione indipendente dalle impostazioni cultura. |
+| Script.en-US.js | Versione in lingua inglese, Stati Uniti script. |
+| Script.debug.es-CO.js | Script di debug-version spagnolo, Columbia. |
 
 ## <a name="walkthrough-create-an-localized-embedded-script"></a>Procedura dettagliata: creare uno script incorporato localizzato
 
@@ -101,7 +101,7 @@ Per coloro che non hanno familiarità con la sintassi di Regex JavaScript, il te
 
 [!code-aspx[Main](understanding-asp-net-ajax-localization/samples/sample4.aspx)]
 
-1. Premi F5. Se richiesto, abilitare il debug. Quando la pagina viene caricata, premere il pulsante Elimina. Si noti che viene richiesta la lingua inglese (a meno che il computer non sia impostato su preferisci le risorse in lingua spagnola per impostazione predefinita) per la conferma.
+1. Premere F5. Se richiesto, abilitare il debug. Quando la pagina viene caricata, premere il pulsante Elimina. Si noti che viene richiesta la lingua inglese (a meno che il computer non sia impostato su preferisci le risorse in lingua spagnola per impostazione predefinita) per la conferma.
 2. Chiudere la finestra del browser e tornare a default. aspx. Nella direttiva di intestazione @Page sostituire auto per culture e UICulture con es-ES. Premere di nuovo F5 per avviare l'applicazione Web nel browser. Questa volta, si noti che viene richiesto di eliminare il file in spagnolo:
 
 [![](understanding-asp-net-ajax-localization/_static/image2.png)](understanding-asp-net-ajax-localization/_static/image1.png)

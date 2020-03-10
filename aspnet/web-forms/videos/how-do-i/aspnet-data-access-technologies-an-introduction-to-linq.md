@@ -1,24 +1,24 @@
 ---
 uid: web-forms/videos/how-do-i/aspnet-data-access-technologies-an-introduction-to-linq
-title: Tecnologie di accesso ai dati ASP.NET, un'introduzione a LINQ | Microsoft Docs
+title: Tecnologie di accesso ai dati di ASP.NET, un'introduzione a LINQ | Microsoft Docs
 author: JoeStagner
-description: LINQ rappresenta che gli sviluppatori ASP.NET preferito il meccanismo di accesso dei dati. In questo video viene fornita un'introduzione alla programmazione con LINQ e confronta dati semplice accesso betwee...
+description: LINQ è il meccanismo di accesso ai dati preferito per gli sviluppatori ASP.NET. Questo video è un'introduzione alla programmazione con LINQ e confronta Simple Data Access betwee...
 ms.author: riande
 ms.date: 10/13/2009
 ms.assetid: e6792c2a-02db-440a-9070-40a0c0952b27
 msc.legacyurl: /web-forms/videos/how-do-i/aspnet-data-access-technologies-an-introduction-to-linq
 msc.type: video
 ms.openlocfilehash: 4fd6ce813a87caf1b3ecd67c5fa59bc536db0f2e
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59401296"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78635807"
 ---
-# <a name="aspnet-data-access-technologies-an-introduction-to-linq"></a>Tecnologie di accesso ai dati ASP.NET, un'introduzione a LINQ
+# <a name="aspnet-data-access-technologies-an-introduction-to-linq"></a>Tecnologie di accesso ai dati di ASP.NET, introduzione a LINQ
 
-da [Joe Stagner](https://github.com/JoeStagner)
+di [Joe Stagner spiega](https://github.com/JoeStagner)
 
-LINQ rappresenta che gli sviluppatori ASP.NET preferito il meccanismo di accesso dei dati. In questo video viene fornita un'introduzione alla programmazione con LINQ e confronta l'accesso ai dati semplice tra ADO.NET e LINQ da una prospettiva di esperienza di sviluppatore.
+LINQ è il meccanismo di accesso ai dati preferito per gli sviluppatori ASP.NET. Questo video è un'introduzione alla programmazione con LINQ e confronta un semplice accesso ai dati tra ADO.NET e LINQ dal punto di vista dell'esperienza dello sviluppatore.
 
-[&#9654;Guarda il video (minuti 37)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/aspnet-data-access-technologies-an-introduction-to-linq)
+[&#9654;Guarda il video (37 minuti)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/aspnet-data-access-technologies-an-introduction-to-linq)

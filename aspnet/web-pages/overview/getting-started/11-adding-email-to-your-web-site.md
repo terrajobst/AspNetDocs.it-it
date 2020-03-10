@@ -1,137 +1,137 @@
 ---
 uid: web-pages/overview/getting-started/11-adding-email-to-your-web-site
-title: L'invio di posta elettronica da un Web ASP.NET le pagine del sito (Razor) | Microsoft Docs
+title: Invio di posta elettronica da un sito di Pagine Web ASP.NET (Razor) | Microsoft Docs
 author: Rick-Anderson
-description: In questo capitolo illustra come inviare un messaggio di posta elettronica automatizzati da un sito Web.
+description: In questo capitolo viene illustrato come inviare un messaggio di posta elettronica automatizzato da un sito Web.
 ms.author: riande
 ms.date: 02/20/2014
 ms.assetid: fc49bcb9-f1a9-4048-8c3f-b60951853200
 msc.legacyurl: /web-pages/overview/getting-started/11-adding-email-to-your-web-site
 msc.type: authoredcontent
 ms.openlocfilehash: 23e9717329525fb5a0ed505c9dc94505d4f9dbbe
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65130553"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78634715"
 ---
-# <a name="sending-email-from-an-aspnet-web-pages-razor-site"></a>L'invio di posta elettronica da un sito di ASP.NET Web Pages (Razor)
+# <a name="sending-email-from-an-aspnet-web-pages-razor-site"></a>Invio di posta elettronica da un sito di Pagine Web ASP.NET (Razor)
 
-da [Tom FitzMacken](https://github.com/tfitzmac)
+di [Tom FitzMacken](https://github.com/tfitzmac)
 
-> Questo articolo illustra come inviare un messaggio di posta elettronica da un sito Web quando si usa ASP.NET Web Pages (Razor).
+> Questo articolo illustra come inviare un messaggio di posta elettronica da un sito Web quando si usa Pagine Web ASP.NET (Razor).
 > 
-> Che cosa si apprenderà come:
+> Contenuto dell'esercitazione:
 > 
-> - Come inviare un messaggio di posta elettronica tramite il sito Web.
-> - Come collegare un file a un messaggio di posta elettronica.
+> - Inviare un messaggio di posta elettronica dal sito Web.
+> - Come aggiungere un file a un messaggio di posta elettronica.
 > 
-> Si tratta della funzionalità ASP.NET introdotta nell'articolo:
+> Questa è la funzionalità ASP.NET introdotta nell'articolo:
 > 
-> - Il `WebMail` helper.
+> - Helper `WebMail`.
 >   
 > 
-> ## <a name="software-versions-used-in-the-tutorial"></a>Versioni del software utilizzate nell'esercitazione
+> ## <a name="software-versions-used-in-the-tutorial"></a>Versioni del software usate nell'esercitazione
 > 
 > 
-> - ASP.NET Web Pages (Razor) 3
+> - Pagine Web ASP.NET (Razor) 3
 >   
 > 
-> Questa esercitazione si integra inoltre con ASP.NET Web Pages 2.
+> Questa esercitazione funziona anche con Pagine Web ASP.NET 2.
 
 <a id="Sending_Email_Messages"></a>
-## <a name="sending-email-messages-from-your-website"></a>L'invio di messaggi di posta elettronica tramite il sito Web
+## <a name="sending-email-messages-from-your-website"></a>Invio di messaggi di posta elettronica dal sito Web
 
-Esistono molti motivi per cui potrebbe essere necessario inviare posta elettronica tramite il sito Web. È possibile inviare i messaggi di conferma per gli utenti oppure è possibile inviare notifiche a se stessi (ad esempio, che ha registrato un nuovo utente). Il `WebMail` helper rende più semplice per inviare posta elettronica.
+Ci sono diversi motivi per cui potrebbe essere necessario inviare messaggi di posta elettronica dal sito Web. È possibile inviare messaggi di conferma agli utenti o inviare notifiche a se stessi, ad esempio se un nuovo utente ha effettuato la registrazione. Il `WebMail` Helper semplifica l'invio di messaggi di posta elettronica.
 
-Usare il `WebMail` helper, è necessario avere accesso a un server SMTP. (SMTP è l'acronimo *Simple Mail Transfer Protocol*.) Un server SMTP è un server di posta elettronica che inoltra solo messaggi al server del destinatario &#8212; è il lato in uscita del messaggio di posta elettronica. Se si usa un provider di hosting per il sito Web, probabilmente procedere alla configurazione con la posta elettronica e in modo da capire che cos'è il nome del server SMTP. Se si lavora all'interno di una rete aziendale, un amministratore o il reparto IT può in genere fornire le informazioni su un server SMTP che è possibile usare. Se si lavora da casa, è anche possibile eseguire la verifica utilizzando il provider di posta elettronica normale, che è possibile indicare il nome del proprio server SMTP. È in genere necessario:
+Per usare l'helper `WebMail`, è necessario avere accesso a un server SMTP. (SMTP è l'acronimo di *Simple Mail Transfer Protocol*). Un server SMTP è un server di posta elettronica che trasmette solo i messaggi al server &#8212; del destinatario perché è il lato in uscita del messaggio di posta elettronica. Se si usa un provider di hosting per il sito Web, è probabile che si sia configurato con un messaggio di posta elettronica e che sia in grado di indicare il nome del server SMTP. Se si lavora all'interno di una rete aziendale, un amministratore o il reparto IT può in genere fornire le informazioni su un server SMTP che è possibile usare. Se si lavora a casa, potrebbe anche essere possibile eseguire il test usando il provider di posta elettronica comune, che può indicare il nome del server SMTP. È in genere necessario:
 
-- Il nome del server SMTP.
-- Il numero di porta. Si tratta quasi sempre di 25. Tuttavia, potrebbe essere necessario usare la porta 587 ISP. Se si usa (SSL) secure sockets layer per la posta elettronica, si potrebbe essere una porta diversa. Rivolgersi al provider di posta elettronica.
+- Nome del server SMTP.
+- Numero di porta. Si tratta quasi sempre di 25. Tuttavia, il provider di servizi Internet potrebbe richiedere l'uso della porta 587. Se si utilizza Secure Sockets Layer (SSL) per la posta elettronica, potrebbe essere necessaria una porta diversa. Rivolgersi al provider di posta elettronica.
 - Credenziali (nome utente, password).
 
-In questa procedura, creare due pagine. La prima pagina ha un formato che consente agli utenti di immettere una descrizione, come se essi sono stati compilando un modulo di supporto tecnico. La prima pagina invia le informazioni a un'altra pagina. Nella seconda pagina, codice estrae le informazioni dell'utente e invia un messaggio di posta elettronica. Visualizza inoltre un messaggio di conferma che è stata ricevuta la segnalazione del problema.
+In questa procedura vengono create due pagine. La prima pagina dispone di un modulo che consente agli utenti di immettere una descrizione, come se compilassero un modulo di supporto tecnico. La prima pagina Invia le informazioni a una seconda pagina. Nella seconda pagina, il codice estrae le informazioni dell'utente e invia un messaggio di posta elettronica. Viene inoltre visualizzato un messaggio che conferma la ricezione del report sul problema.
 
 ![[immagine]](11-adding-email-to-your-web-site/_static/image1.jpg)
 
 > [!NOTE]
-> Per semplificare questo esempio, il codice inizializza il `WebMail` destra helper della pagina in cui viene utilizzato. Tuttavia, per i siti Web reali, è preferibile inserire codice di inizializzazione simile al seguente in un file globale, in modo che si inizializza il `WebMail` helper per tutti i file nel sito Web. Per altre informazioni, vedere [personalizzazione del comportamento a livello di sito per ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=202906#Setting_Values_For_Helpers).
+> Per semplificare questo esempio, il codice inizializza il `WebMail` Helper direttamente nella pagina in cui viene usato. Tuttavia, per i siti Web reali, è preferibile inserire codice di inizializzazione simile al seguente in un file globale, in modo da inizializzare l'helper `WebMail` per tutti i file nel sito Web. Per ulteriori informazioni, vedere [personalizzazione del comportamento a livello di sito per pagine Web ASP.NET](https://go.microsoft.com/fwlink/?LinkId=202906#Setting_Values_For_Helpers).
 
 1. Creare un nuovo sito Web.
-2. Aggiungere una nuova pagina denominata *EmailRequest.cshtml* e aggiungere il markup seguente: 
+2. Aggiungere una nuova pagina denominata *EmailRequest. cshtml* e aggiungere il markup seguente: 
 
     [!code-html[Main](11-adding-email-to-your-web-site/samples/sample1.html)]
 
-    Si noti che il `action` attributo dell'elemento del form è stato impostato su *ProcessRequest.cshtml*. Ciò significa che il modulo verrà inviato a tale pagina anziché indietro alla pagina corrente.
-3. Aggiungere una nuova pagina denominata *ProcessRequest.cshtml* al sito Web e aggiungere il codice e il markup seguente:   
+    Si noti che l'attributo `action` dell'elemento form è stato impostato su *ProcessRequest. cshtml*. Questo significa che il modulo verrà inviato a tale pagina anziché tornare alla pagina corrente.
+3. Aggiungere una nuova pagina denominata *ProcessRequest. cshtml* al sito Web e aggiungere il codice e il markup seguenti:   
 
     [!code-cshtml[Main](11-adding-email-to-your-web-site/samples/sample2.cshtml)]
 
-    Nel codice, è ottenere i valori dei campi modulo che sono stati inviati alla pagina. È quindi possibile chiamare il `WebMail` dell'helper `Send` metodo per creare e inviare il messaggio di posta elettronica. In questo caso, i valori da utilizzare sono costituiti da testo che si concatena con i valori che sono stati inviati dal modulo.
+    Nel codice si ottengono i valori dei campi del modulo inviati alla pagina. Chiamare quindi il metodo di `Send` dell'helper `WebMail` per creare e inviare il messaggio di posta elettronica. In questo caso, i valori da utilizzare sono costituiti da testo concatenato con i valori inviati dal form.
 
-    Il codice per questa pagina è all'interno di un `try/catch` blocco. Se per qualsiasi motivo il tentativo di inviare un messaggio di posta elettronica non funziona correttamente (ad esempio, le impostazioni non sono a destra), il codice nel `catch` blocco viene eseguito e imposta il `errorMessage` variabile all'errore che si è verificato. (Per altre informazioni sulle `try/catch` blocchi o le `<text>` tag, vedere [Introduzione a ASP.NET Web Pages di programmazione utilizzando la sintassi Razor](https://go.microsoft.com/fwlink/?LinkID=251587#ID_HandlingErrors).)
+    Il codice per questa pagina si trova all'interno di un blocco `try/catch`. Se per qualsiasi motivo il tentativo di inviare un messaggio di posta elettronica non funziona (ad esempio, le impostazioni non sono corrette), il codice nel blocco `catch` viene eseguito e imposta la variabile `errorMessage` sull'errore che si è verificato. Per ulteriori informazioni sui blocchi di `try/catch` o sul tag di `<text>`, vedere [Introduzione alla programmazione di pagine Web ASP.NET utilizzando la sintassi Razor](https://go.microsoft.com/fwlink/?LinkID=251587#ID_HandlingErrors).
 
-    Nel corpo della pagina, se il `errorMessage` variabile è vuota (impostazione predefinita), l'utente visualizza un messaggio che è stato inviato il messaggio di posta elettronica. Se il `errorMessage` variabile è impostata su true, l'utente vede un messaggio che si è verificato un problema durante l'invio del messaggio.
+    Nel corpo della pagina, se la variabile `errorMessage` è vuota (impostazione predefinita), l'utente visualizza un messaggio che indica che il messaggio di posta elettronica è stato inviato. Se la variabile `errorMessage` è impostata su true, l'utente visualizza un messaggio che indica che si è verificato un problema durante l'invio del messaggio.
 
-    Si noti che nella parte della pagina che visualizza un messaggio di errore, non esiste un test aggiuntivi: `if(debuggingFlag)`. Questa è una variabile che è possibile impostare su true se si verificano problemi durante l'invio di posta elettronica. Quando si `debuggingFlag` è true, e se è presente un problema durante l'invio di posta elettronica, viene visualizzato un messaggio di errore aggiuntive che mostra tutti i valori ASP.NET ha segnalato durante il tentativo di inviare il messaggio di posta elettronica. Avviso corretto, però: i messaggi di errore che segnala di ASP.NET quando Impossibile inviare un messaggio di posta elettronica possono essere generici. Ad esempio, se ASP.NET non riesce a contattare il server SMTP (ad esempio, perché è stato commesso un errore nel nome del server), l'errore è `Failure sending mail`.
+    Si noti che nella parte della pagina che visualizza un messaggio di errore è presente un test aggiuntivo: `if(debuggingFlag)`. Si tratta di una variabile che può essere impostata su true se si verificano problemi durante l'invio della posta elettronica. Quando `debuggingFlag` è true e se si verifica un problema durante l'invio di messaggi di posta elettronica, viene visualizzato un messaggio di errore aggiuntivo che Mostra qualsiasi ASP.NET segnalato durante il tentativo di inviare il messaggio di posta elettronica. Avviso equo, tuttavia: i messaggi di errore che ASP.NET segnala quando non è possibile inviare un messaggio di posta elettronica possono essere generici. Se, ad esempio, ASP.NET non è in grado di contattare il server SMTP, ad esempio perché è stato creato un errore nel nome del server, l'errore viene `Failure sending mail`.
 
     > [!NOTE] 
     > 
-    > **Importanti** quando viene visualizzato un messaggio di errore da un oggetto eccezione (`ex` nel codice), si *non* regolarmente passare tale messaggio tramite agli utenti. Oggetti eccezione includono spesso informazioni che gli utenti non devono essere visualizzati e che può essere anche una vulnerabilità di sicurezza. Ecco perché questo codice include la variabile `debuggingFlag` che viene usato come un'opzione per visualizzare il messaggio di errore e il motivo per cui la variabile per impostazione predefinita è impostata su false. È consigliabile impostare tale variabile su true (e pertanto visualizzare il messaggio di errore) *solo* se si riscontra un problema con l'invio di posta elettronica ed è necessario eseguire il debug. Dopo aver risolto eventuali problemi, impostare `debuggingFlag` reimpostarla su false.
+    > **Importante** Quando si riceve un messaggio di errore da un oggetto eccezione (`ex` nel codice), *non* passare periodicamente il messaggio agli utenti. Gli oggetti eccezione includono spesso informazioni che gli utenti non dovrebbero visualizzare e che possono anche essere una vulnerabilità di sicurezza. Questo è il motivo per cui questo codice include la variabile `debuggingFlag` usata come opzione per visualizzare il messaggio di errore e perché la variabile per impostazione predefinita è impostata su false. È necessario impostare la variabile su true (e pertanto visualizzare il messaggio di errore) *solo* se si verifica un problema con l'invio di posta elettronica ed è necessario eseguire il debug. Una volta risolti i problemi, impostare di nuovo `debuggingFlag` su false.
 
-    Modificare le impostazioni correlate nel codice di posta elettronica seguenti:
+    Modificare le seguenti impostazioni relative al messaggio di posta elettronica nel codice:
 
-   - Impostare `your-SMTP-host` sul nome del server SMTP che è possibile utilizzare.
-   - Impostare `your-user-name-here` per il nome utente per l'account del server SMTP.
-   - Impostare `your-account-password` alla password per l'account del server SMTP.
-   - Impostare `your-email-address-here` per il proprio indirizzo di posta elettronica. Questo è il messaggio viene inviato dall'indirizzo di posta elettronica. (Alcuni provider di posta elettronica non consentono di specificare un diverso `From` indirizzi e userà il nome utente come il `From` indirizzo.)
+   - Impostare `your-SMTP-host` sul nome del server SMTP a cui si ha accesso.
+   - Impostare `your-user-name-here` sul nome utente per l'account del server SMTP.
+   - Impostare `your-account-password` sulla password per l'account del server SMTP.
+   - Impostare `your-email-address-here` per il proprio indirizzo di posta elettronica. Si tratta dell'indirizzo di posta elettronica da cui viene inviato il messaggio. Alcuni provider di posta elettronica non consentono di specificare un indirizzo di `From` diverso e utilizzeranno il nome utente come indirizzo di `From`.
 
      > [!TIP] 
      > 
      > <a id="configuring_email_settings"></a>
      > ### <a name="configuring-email-settings"></a>Configurazione delle impostazioni di posta elettronica
      > 
-     > Può essere un problema in alcuni casi per assicurarsi di avere le impostazioni corrette per il server SMTP, numero di porta e così via. Di seguito sono riportati alcuni suggerimenti:
+     > In alcuni casi può essere difficile verificare di disporre delle impostazioni corrette per il server SMTP, il numero di porta e così via. Di seguito sono riportati alcuni suggerimenti:
      > 
-     > - Il nome del server SMTP è spesso simile `smtp.provider.com` o `smtp.provider.net`. Tuttavia, se si pubblica il sito per un provider di hosting, il nome del server SMTP a quel punto possibile `localhost`. Questo avviene perché dopo aver pubblicato e il sito è in esecuzione nel server del provider, il server di posta elettronica potrebbe essere locale dal punto di vista dell'applicazione. Questa modifica nei nomi di server potrebbe essere che necessario modificare il nome del server SMTP come parte del processo di pubblicazione.
-     > - Il numero di porta in genere è 25. Tuttavia, alcuni provider richiedono di usare la porta 587 o alcune porte.
-     > - Assicurarsi di usare le credenziali corrette. Se il sito è stata pubblicata in un provider di hosting, usare le credenziali che il provider ha segnalato in modo specifico sono per la posta elettronica. Questi potrebbero essere diversi dalle credenziali che utilizzare per la pubblicazione.
-     > - In alcuni casi non occorre credenziali affatto. Se si sta inviando e-mail tramite all'account personale, il provider di posta elettronica sappia già le proprie credenziali. Dopo aver pubblicato, è necessario usare credenziali diverse da quelle quando si testa nel computer locale.
-     > - Se il provider di posta elettronica utilizza la crittografia, è necessario impostare `WebMail.EnableSsl` a `true`.
-4. Eseguire la *EmailRequest.cshtml* pagina in un browser. (Assicurarsi che sia selezionata la pagina nel **file** dell'area di lavoro prima dell'esecuzione.)
-5. Immettere il nome e una descrizione del problema e quindi scegliere il **Submit** pulsante. Si verrà reindirizzati per il *ProcessRequest.cshtml* pagina per confermare che il messaggio e che invia un messaggio di posta elettronica. 
+     > - Il nome del server SMTP è spesso simile `smtp.provider.com` o `smtp.provider.net`. Tuttavia, se si pubblica il sito in un provider di hosting, il nome del server SMTP in quel momento potrebbe essere `localhost`. Questo avviene perché dopo la pubblicazione e il sito è in esecuzione nel server del provider, il server di posta elettronica potrebbe essere locale dal punto di vista dell'applicazione. Questa modifica nei nomi dei server potrebbe significare che è necessario modificare il nome del server SMTP come parte del processo di pubblicazione.
+     > - Il numero di porta è in genere 25. Tuttavia, per alcuni provider è necessario usare la porta 587 o un'altra porta.
+     > - Assicurarsi di usare le credenziali corrette. Se il sito è stato pubblicato in un provider di hosting, utilizzare le credenziali indicate in modo specifico dal provider per la posta elettronica. Potrebbero essere diverse dalle credenziali usate per la pubblicazione.
+     > - In alcuni casi non è necessaria alcuna credenziale. Se si sta inviando un messaggio di posta elettronica con l'ISP personale, è possibile che il provider di posta elettronica conosca già le credenziali. Dopo la pubblicazione, potrebbe essere necessario utilizzare credenziali diverse rispetto a quando si esegue il test nel computer locale.
+     > - Se il provider di posta elettronica utilizza la crittografia, è necessario impostare `WebMail.EnableSsl` su `true`.
+4. Eseguire la pagina *EmailRequest. cshtml* in un browser. Assicurarsi che la pagina sia selezionata nell'area di lavoro **file** prima di eseguirla.
+5. Immettere il nome e la descrizione del problema, quindi fare clic sul pulsante **Submit (Invia** ). Si viene reindirizzati alla pagina *ProcessRequest. cshtml* , che conferma il messaggio e che invia un messaggio di posta elettronica. 
 
     ![[immagine]](11-adding-email-to-your-web-site/_static/image2.jpg)
 
 <a id="Sending_a_File"></a>
-## <a name="sending-a-file-using-email"></a>L'invio di un File tramite posta elettronica
+## <a name="sending-a-file-using-email"></a>Invio di un file tramite posta elettronica
 
-È anche possibile inviare i file collegati per i messaggi di posta elettronica. In questa procedura, si crea un file di testo e due pagine HTML. Si userà il file di testo come allegato di posta elettronica.
+È anche possibile inviare i file collegati ai messaggi di posta elettronica. In questa procedura vengono creati un file di testo e due pagine HTML. Il file di testo verrà usato come allegato di posta elettronica.
 
-1. Nel sito Web, aggiungere un nuovo file di testo e denominarlo *MyFile*.
+1. Nel sito Web aggiungere un nuovo file di testo e denominarlo *MyFile. txt*.
 2. Copiare il testo seguente e incollarlo nel file: 
 
     `Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`
-3. Creare una pagina denominata *SendFile.cshtml* e aggiungere il markup seguente: 
+3. Creare una pagina denominata *sendfile. cshtml* e aggiungere il markup seguente: 
 
     [!code-html[Main](11-adding-email-to-your-web-site/samples/sample3.html)]
-4. Creare una pagina denominata *ProcessFile.cshtml* e aggiungere il markup seguente: 
+4. Creare una pagina denominata *ProcessFile. cshtml* e aggiungere il markup seguente: 
 
     [!code-cshtml[Main](11-adding-email-to-your-web-site/samples/sample4.cshtml)]
-5. Modificare le impostazioni correlate nel codice dell'esempio di posta elettronica seguenti:
+5. Modificare le seguenti impostazioni relative al messaggio di posta elettronica nel codice dall'esempio:
 
-    - Impostare `your-SMTP-host` al nome di un server SMTM che è possibile utilizzare.
-    - Impostare `your-user-name-here` per il nome utente per l'account del server SMTP.
-    - Impostare `your-email-address-here` per il proprio indirizzo di posta elettronica. Questo è il messaggio viene inviato dall'indirizzo di posta elettronica.
-    - Impostare `your-account-password` alla password per l'account del server SMTP.
-    - Impostare `target-email-address-here` per il proprio indirizzo di posta elettronica. (Come prima, si sarebbe in genere invia un messaggio di posta elettronica a un altro utente, ma per i test, è possibile inviarlo a se stessi).
-6. Eseguire la *SendFile.cshtml* pagina in un browser.
-7. Immettere il nome del file di testo per collegare il proprio nome e una riga dell'oggetto (*MyFile*).
-8. Fare clic sul pulsante `Submit`. Come in precedenza, si verrà reindirizzati per il *ProcessFile.cshtml* pagina per confermare che il messaggio e che invia un messaggio di posta elettronica con il file allegato.
+    - Impostare `your-SMTP-host` sul nome di un server SMTP a cui si ha accesso.
+    - Impostare `your-user-name-here` sul nome utente per l'account del server SMTP.
+    - Impostare `your-email-address-here` per il proprio indirizzo di posta elettronica. Si tratta dell'indirizzo di posta elettronica da cui viene inviato il messaggio.
+    - Impostare `your-account-password` sulla password per l'account del server SMTP.
+    - Impostare `target-email-address-here` per il proprio indirizzo di posta elettronica. Come prima, in genere si invia un messaggio di posta elettronica a un altro utente, ma per i test è possibile inviarlo a se stessi.
+6. Eseguire la pagina *sendfile. cshtml* in un browser.
+7. Immettere il nome, la riga dell'oggetto e il nome del file di testo da aggiungere (*MyFile. txt*).
+8. Fare clic sul pulsante `Submit`. Come in precedenza, si viene reindirizzati alla pagina *ProcessFile. cshtml* , che conferma il messaggio e che invia un messaggio di posta elettronica con il file allegato.
 
 <a id="Additional_Resources"></a>
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
 - [Guida alla risoluzione dei problemi delle pagine Web ASP.NET (Razor)](https://go.microsoft.com/fwlink/?LinkId=253001)
 - [Simple Mail Transfer Protocol](https://msdn.microsoft.com/library/aa480435.aspx)
-- [Personalizzazione del comportamento a livello di sito per ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=202906)
+- [Personalizzazione del comportamento a livello di sito per Pagine Web ASP.NET](https://go.microsoft.com/fwlink/?LinkId=202906)

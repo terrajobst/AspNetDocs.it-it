@@ -2,22 +2,22 @@
 uid: web-forms/videos/sql-2005/index
 title: SQL 2005 | Microsoft Docs
 author: rick-anderson
-description: Come usare SQL Server Express per aggiungere funzionalità di database per le applicazioni ASP.NET.
+description: Come usare SQL Server Express per aggiungere funzionalità di database alle applicazioni ASP.NET.
 ms.author: riande
 ms.date: 10/05/2011
 ms.assetid: cf0b487c-f387-46dd-b3bc-6b3c4af17c9c
 msc.legacyurl: /web-forms/videos/sql-2005
 msc.type: chapter
 ms.openlocfilehash: de0e83d09d0610a72915173479c9ef0541093890
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65132945"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78637907"
 ---
 # <a name="sql-2005"></a>SQL 2005
 
-> Come usare SQL Server Express per aggiungere funzionalità di database per le applicazioni ASP.NET.
+> Come usare SQL Server Express per aggiungere funzionalità di database alle applicazioni ASP.NET.
 
 - [Che cos'è un database](what-is-a-database.md)
 - [Informazioni su tabelle e record di database](understanding-database-tables-and-records.md)

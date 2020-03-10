@@ -1,25 +1,25 @@
 ---
 uid: web-forms/videos/aspnet-ajax/how-do-i-associate-ajax-client-behavior-with-an-aspnet-server-control
-title: '[Procedura:] Associare un comportamento Client AJAX a un controllo Server ASP.NET? | Microsoft Docs'
+title: '[Procedura:] Associare il comportamento del client AJAX a un controllo server ASP.NET? | Microsoft Docs'
 author: rick-anderson
-description: Informazioni su come creare un comportamento client basato su Microsoft AJAX che può essere associato a un controllo server ASP.NET in una pagina aspx. Il comportamento del client e...
+description: Informazioni su come creare un comportamento client basato su Microsoft AJAX che può essere associato a un controllo server ASP.NET in una pagina aspx. Comportamento del client e...
 ms.author: riande
 ms.date: 10/18/2007
 ms.assetid: 3a75ac02-225d-4e30-8669-0156c3ef06c7
 msc.legacyurl: /web-forms/videos/aspnet-ajax/how-do-i-associate-ajax-client-behavior-with-an-aspnet-server-control
 msc.type: video
 ms.openlocfilehash: 9fdb0665aa8a6cb038203d31f8f71a8725834cee
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59417416"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78523688"
 ---
-# <a name="how-do-i-associate-ajax-client-behavior-with-an-aspnet-server-control"></a>[Procedura:] Associare un comportamento Client AJAX a un controllo Server ASP.NET?
+# <a name="how-do-i-associate-ajax-client-behavior-with-an-aspnet-server-control"></a>[Procedura:] Associare il comportamento del client AJAX a un controllo server ASP.NET?
 
-da [Chris Pels](https://twitter.com/chrispels)
+di [Chris Pels](https://twitter.com/chrispels)
 
-Informazioni su come creare un comportamento client basato su Microsoft AJAX che può essere associato a un controllo server ASP.NET in una pagina aspx. Il comportamento del client estende la funzionalità del controllo ASP.NET standard tramite l'associazione anziché tramite la creazione di un nuovo controllo personalizzato. Pertanto, il comportamento può essere riutilizzato in più istanze o i tipi di controlli ASP.NET a seconda relativa implementazione.
+Informazioni su come creare un comportamento client basato su Microsoft AJAX che può essere associato a un controllo server ASP.NET in una pagina aspx. Il comportamento del client estende la funzionalità del controllo ASP.NET standard tramite l'associazione anziché creando un nuovo controllo personalizzato. Pertanto, il comportamento può essere riutilizzato in più istanze o tipi di controlli ASP.NET a seconda della relativa implementazione.
 
 [&#9654;Guarda il video (18 minuti)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-associate-ajax-client-behavior-with-an-aspnet-server-control)
 

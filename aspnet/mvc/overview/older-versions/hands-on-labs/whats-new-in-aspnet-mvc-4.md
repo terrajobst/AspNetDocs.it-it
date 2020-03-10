@@ -9,15 +9,15 @@ ms.assetid: 48f7feb3-872f-485d-b96f-e30011ff8c4a
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/whats-new-in-aspnet-mvc-4
 msc.type: authoredcontent
 ms.openlocfilehash: 4235f4fe666cdeb7d0821127a2b349f2ff30cd6e
-ms.sourcegitcommit: 295cf898a4c87e264b0c35c7254b0fa4169f2278
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74057036"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78539438"
 ---
 # <a name="whats-new-in-aspnet-mvc-4"></a>Novità di ASP.NET MVC 4
 
-Dal [team di Web Camp](https://twitter.com/webcamps)
+dal [team di Web Camp](https://twitter.com/webcamps)
 
 [Scarica il kit di formazione di Web Camp](https://aka.ms/webcamps-training-kit)
 
@@ -45,7 +45,7 @@ In questo laboratorio pratico si apprenderà come:
 <a id="Prerequisites"></a>
 
 <a id="Prerequisites"></a>
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>Prerequisiti
 
 Per completare il Lab, è necessario disporre degli elementi seguenti:
 
@@ -101,7 +101,7 @@ In questo esercizio si esamineranno i miglioramenti apportati ai modelli di prog
     > [!NOTE]
     > In un secondo momento sarà possibile personalizzare la soluzione ASP.NET MVC 4 che si sta creando.
 
-    ![Creazione di un nuovo progetto](whats-new-in-aspnet-mvc-4/_static/image1.png "Creazione di un nuovo progetto")
+    ![Creazione di un nuovo progetto](whats-new-in-aspnet-mvc-4/_static/image1.png "Crea un nuovo progetto")
 
     *Creazione di un nuovo progetto*
 3. Nella finestra di dialogo **New ASP.NET MVC 4 Project** selezionare il modello di progetto **applicazione Internet** e fare clic su **OK**. Assicurarsi di aver selezionato Razor come motore di visualizzazione.
@@ -203,12 +203,12 @@ ASP.NET MVC 4 semplifica lo sviluppo di siti Web per i browser per dispositivi m
 
         Il modello di progetto di applicazione per dispositivi mobili include jQuery mobile Library, una libreria open source per la compatibilità del browser per dispositivi mobili. jQuery Mobile applica un miglioramento progressivo ai browser per dispositivi mobili che supportano CSS e JavaScript. Il miglioramento progressivo consente a tutti i browser di visualizzare il contenuto di base di una pagina Web, mentre consente solo ai browser più potenti di visualizzare i contenuti avanzati. I file JavaScript e CSS, inclusi nello stile jQuery Mobile, consentono ai browser per dispositivi mobili di adattarsi al contenuto della schermata senza apportare alcuna modifica nel markup della pagina.
 
-        ![jQuery-mobile-Library-incluso nel modello](whats-new-in-aspnet-mvc-4/_static/image12.png)
+        ![jQuery-mobile-library-included-in-the-template](whats-new-in-aspnet-mvc-4/_static/image12.png)
 
         *raccolta di jQuery Mobile inclusa nel modello*
     - **Markup basato su HTML5**
 
-        ![Mobile-Application-Template-using-HTML5-markup](whats-new-in-aspnet-mvc-4/_static/image13.png)
+        ![Mobile-application-template-using-HTML5-markup](whats-new-in-aspnet-mvc-4/_static/image13.png)
 
         *Modello di applicazione mobile con markup HTML5 (login. cshtml e index. cshtml)*
 4. Premere **F5** per eseguire la soluzione.
@@ -318,7 +318,7 @@ In questa attività verrà creata una simulazione del servizio foto per recupera
 
     *Test del servizio foto fittizio*
 
-In un'implementazione reale è possibile usare [API Web ASP.NET](../../../../web-api/index.md) per implementare il servizio raccolta foto. API Web ASP.NET è un Framework che consente di creare facilmente servizi HTTP che raggiungono un'ampia gamma di client, inclusi browser e dispositivi mobili. API Web ASP.NET è la piattaforma ideale per compilare applicazioni RESTful in .NET Framework.
+In un'implementazione reale è possibile usare [API Web ASP.NET](../../../../web-api/index.md) per implementare il servizio raccolta foto. ASP.NET Web API è un framework che consente di creare facilmente servizi HTTP in grado di raggiungere un ampio numero di client, inclusi browser e dispositivi mobili. API Web ASP.NET è la piattaforma ideale per compilare applicazioni RESTful in .NET Framework.
 
 <a id="Task_2_-_Displaying_the_Photo_Gallery"></a>
 #### <a name="task-2---displaying-the-photo-gallery"></a>Attività 2-visualizzazione della raccolta foto
@@ -397,7 +397,7 @@ Uno degli aggiornamenti principali in ASP.NET MVC 4 è il supporto per lo svilup
 
     - **Views/Shared/\_layout. mobile. cshtml**: è un layout basato su jQuery per dispositivi mobili ottimizzato per una schermata più piccola. Quando il sito Web riceve una richiesta da un browser per dispositivi mobili, sostituirà il layout originale (\_layout. cshtml) con questo.
     - Un componente di visualizzazione-selezione: è costituito dalle **visualizzazioni/condivise/\_ViewSwitcher. cshtml** in visualizzazione parziale e dal controller **ViewSwitcherController.cs** . In questo componente verrà visualizzato un collegamento nei browser per dispositivi mobili per consentire agli utenti di passare alla versione desktop della pagina.  
-        ![Progetto raccolta foto con supporto per dispositivi mobili](whats-new-in-aspnet-mvc-4/_static/image23.png "Phprogetto Oto Gallery con supporto mobile ")
+        ![Progetto raccolta foto con supporto per dispositivi mobili](whats-new-in-aspnet-mvc-4/_static/image23.png "Progetto raccolta foto con supporto per dispositivi mobili")
 
         *Progetto raccolta foto con supporto per dispositivi mobili*
 4. Registrare i bundle per dispositivi mobili. A tale scopo, aprire il file **Global.asax.cs** e aggiungere la riga seguente.
@@ -516,7 +516,7 @@ In questa attività verrà illustrata l'implementazione di esempio di un Switche
 
     - Il metodo **HttpContext. ClearOverriddenBrowser ()** rimuove tutti gli agenti utente sottoposti a override per la richiesta corrente.
     - Il metodo **HttpContext. SetOverriddenBrowser ()** esegue l'override del valore dell'agente utente effettivo della richiesta utilizzando l'agente utente specificato.  
-        ![Controller ViewSwitcher](whats-new-in-aspnet-mvc-4/_static/image31.png "ViController ewSwitcher ")  
+        ![Controller ViewSwitcher](whats-new-in-aspnet-mvc-4/_static/image31.png "Controller ViewSwitcher")  
 *Controller ViewSwitcher*
 
         L'override del browser è una funzionalità di base di ASP.NET MVC 4, disponibile anche se non si installa il pacchetto jQuery. mobile. MVC. Tuttavia, questa funzionalità influisce solo sulla visualizzazione, sul layout e sulla visualizzazione parziale e non influisce sulle funzionalità che dipendono dall'oggetto Request. browser.
@@ -538,7 +538,7 @@ In questa attività verrà aggiornato il layout del desktop per includere lo swi
     ![Visualizzazione del commutatore visualizzazione nella visualizzazione desktop](whats-new-in-aspnet-mvc-4/_static/image32.png "Visualizzazione del commutatore visualizzazione nella visualizzazione desktop")
 
     *Visualizzazione del commutatore visualizzazione nella visualizzazione desktop*
-7. Passare di nuovo alla visualizzazione per dispositivi mobili e passare alla pagina **About** (http://localhost [porta]/Home/About). Si noti che, anche se non è stata creata una vista About. mobile. cshtml, viene visualizzata la pagina about usando il layout mobile (\_layout. mobile. cshtml).
+7. Passare di nuovo alla visualizzazione per dispositivi mobili e passare alla pagina **About** (http://localhost[porta]/Home/About). Si noti che, anche se non è stata creata una vista About. mobile. cshtml, viene visualizzata la pagina about usando il layout mobile (\_layout. mobile. cshtml).
 
     ![Pagina informazioni](whats-new-in-aspnet-mvc-4/_static/image33.png "Pagina About (Informazioni)")
 
@@ -589,7 +589,7 @@ Sono ora disponibili 3 layout nell'applicazione ASP.NET MVC 4:
 7. Premere **F5** per eseguire l'applicazione ed esplorare il sito nell' **emulatore Windows Phone**.
 8. Aprire un **simulatore iPhone** (vedere l' [Appendice C](#AppendixC) per istruzioni su come installare e configurare un simulatore iPhone) e passare al sito. Si noti che ogni telefono usa il modello specifico.
 
-    ![Using-different-views-for-each-mobile-dispositivo2)](whats-new-in-aspnet-mvc-4/_static/image35.png)
+    ![Using-different-views-for-each-mobile-device2](whats-new-in-aspnet-mvc-4/_static/image35.png)
 
     *Uso di visualizzazioni diverse per ogni dispositivo mobile*
 
@@ -598,7 +598,7 @@ Sono ora disponibili 3 layout nell'applicazione ASP.NET MVC 4:
 <a id="Exercise_4_Using_Asynchronous_Controllers"></a>
 ### <a name="exercise-4-using-asynchronous-controllers"></a>Esercizio 4: uso di controller asincroni
 
-Microsoft .NET Framework 4,5 introduce nuove funzionalità del linguaggio C# in e Visual Basic per offrire una nuova base per modalità asincrona nella programmazione .NET. Questa nuova base rende la programmazione asincrona simile a-e alla programmazione semplice come sincrona. A questo punto è possibile scrivere metodi di azione asincroni in ASP.NET MVC 4 usando la classe **AsyncController** . È possibile utilizzare i metodi di azione asincroni per richieste con esecuzione prolungata e non CPU. In questo modo si evita di impedire al server Web di eseguire il lavoro mentre è in corso l'elaborazione della richiesta. La classe AsyncController viene in genere utilizzata per le chiamate ai servizi Web con esecuzione prolungata.
+Microsoft .NET Framework 4,5 introduce nuove funzionalità del linguaggio C# in e Visual Basic per offrire una nuova base per modalità asincrona nella programmazione .NET. Questa nuova base rende la programmazione asincrona simile a-e alla programmazione semplice come sincrona. A questo punto è possibile scrivere metodi di azione asincroni in ASP.NET MVC 4 usando la classe **AsyncController** . È possibile utilizzare metodi di azione asincroni per le richieste a esecuzione prolungata non associate alla CPU. Ciò impedisce al server Web di bloccare l'esecuzione del lavoro mentre viene elaborata la richiesta. La classe AsyncController viene in genere utilizzata per le chiamate ai servizi Web con esecuzione prolungata.
 
 Questo esercizio illustra le nozioni di base dell'operazione asincrona in ASP.NET MVC 4. Per un'analisi più approfondita, è possibile vedere l'articolo seguente: [ [https://msdn.microsoft.com/library/ee728598%28v=vs.100%29.aspx](https://msdn.microsoft.com/library/ee728598%28v=vs.100%29.aspx)](https://msdn.microsoft.com/library/ee728598%28v=vs.100%29.aspx)
 
@@ -1010,7 +1010,7 @@ Se l'applicazione usa i database di SQL Server sarà necessario creare un server
     ![Creazione del database](whats-new-in-aspnet-mvc-4/_static/image78.png "Creazione della stringa di database")
 
     *Creazione del database*
-7. La stringa di connessione che verrà utilizzata per connettersi al database SQL in Windows Azure viene visualizzata nella casella di testo default Connection (connessione predefinita). Fare quindi clic su **Avanti**.
+7. La stringa di connessione che verrà utilizzata per connettersi al database SQL in Windows Azure viene visualizzata nella casella di testo default Connection (connessione predefinita). Scegliere quindi **Avanti**.
 
     ![Stringa di connessione che punta al database SQL](whats-new-in-aspnet-mvc-4/_static/image79.png "Stringa di connessione che punta al database SQL")
 

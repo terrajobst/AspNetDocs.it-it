@@ -1,83 +1,83 @@
 ---
 uid: mvc/overview/older-versions-1/getting-started-with-mvc/getting-started-with-mvc-part8
-title: Aggiunta di una colonna al modello. | Microsoft Docs
+title: Aggiunta di una colonna al modello | Microsoft Docs
 author: shanselman
-description: Si tratta di un'esercitazione per principianti che introduce i concetti di base di ASP.NET MVC. Creare un'applicazione web semplice che legge e scrive da un database.
+description: Questa esercitazione introduttiva illustra le nozioni di base di ASP.NET MVC. Creare una semplice applicazione Web che legge e scrive da un database.
 ms.author: riande
 ms.date: 08/14/2010
 ms.assetid: 7ae696b9-348f-4993-8ebb-a838acbe0c28
 msc.legacyurl: /mvc/overview/older-versions-1/getting-started-with-mvc/getting-started-with-mvc-part8
 msc.type: authoredcontent
 ms.openlocfilehash: 1cf092c3db3959d6f47006f1be2ba82833c5dc06
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65122854"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78543582"
 ---
 # <a name="adding-a-column-to-the-model"></a>Aggiunta di una colonna al modello
 
-da [Scott Hanselman](https://github.com/shanselman)
+di [Scott hanseln](https://github.com/shanselman)
 
-> Si tratta di un'esercitazione per principianti che introduce i concetti di base di ASP.NET MVC. Si creerà una semplice applicazione web che legge e scrive da un database. Visitare il [centro di formazione di ASP.NET MVC](../../../index.md) per trovare altri ASP.NET MVC, esercitazioni ed esempi.
+> Questa esercitazione introduttiva illustra le nozioni di base di ASP.NET MVC. Verrà creata una semplice applicazione Web che legge e scrive da un database. Visitare il [centro per l'apprendimento di ASP.NET MVC](../../../index.md) per trovare altre esercitazioni ed esempi di ASP.NET MVC.
 
-In questa sezione verrà illustrato come è possibile apportare modifiche allo schema del database e gestire le modifiche all'interno dell'applicazione.
+In questa sezione verrà illustrato in dettaglio come è possibile apportare modifiche allo schema del database e gestire le modifiche all'interno dell'applicazione.
 
-Aggiungere una colonna "Rating" alla tabella dei film. Tornare all'IDE e fare clic su Esplora Database. Fare clic con il pulsante destro tabella Movie e selezionare Apri definizione tabella.
+Aggiungere una colonna "rating" alla tabella Movie. Tornare all'IDE e fare clic sull'Esplora database. Fare clic con il pulsante destro del mouse sulla tabella Movie e selezionare Apri definizione tabella.
 
-Aggiungere una colonna di "Rating" come indicato di seguito. Poiché ora non c'è alcun classificazioni, è possibile la colonna ammette valori null. Fare clic su Salva.
+Aggiungere una colonna "classificazione" come illustrato di seguito. Poiché non sono ora disponibili valutazioni, la colonna può consentire valori null. Fare clic su Salva.
 
-[![Modifica tabella film](getting-started-with-mvc-part8/_static/image2.png)](getting-started-with-mvc-part8/_static/image1.png)
+[![la modifica della tabella Movies](getting-started-with-mvc-part8/_static/image2.png)](getting-started-with-mvc-part8/_static/image1.png)
 
-Successivamente, tornare a Esplora soluzioni e aprire il file Movies.edmx (che si trova nella cartella \Models). Fare clic con il pulsante destro sull'area di progettazione (area bianca) e selezionare il modello di aggiornamento dal Database.
+Tornare quindi al Esplora soluzioni e aprire il file Movies. edmx (che si trova nella cartella \Models). Fare clic con il pulsante destro del mouse sull'area di progettazione (l'area bianca) e selezionare Aggiorna modello da database.
 
-[![Movies - Microsoft Visual Web Developer 2010 Express (11)](getting-started-with-mvc-part8/_static/image4.png)](getting-started-with-mvc-part8/_static/image3.png)
+[![Movies-Microsoft Visual Web Developer 2010 Express (11)](getting-started-with-mvc-part8/_static/image4.png)](getting-started-with-mvc-part8/_static/image3.png)
 
-Verrà avviata la "procedura guidata Aggiorna". Scegliere la scheda aggiornamento all'interno di esso e fare clic su Fine. La classe del modello Movie verrà quindi aggiornata con la nuova colonna.
+Verrà avviata l'"aggiornamento guidato". Fare clic sulla scheda Aggiorna al suo interno e fare clic su fine. La classe del modello di film verrà aggiornata con la nuova colonna.
 
 ![Aggiornamento guidato (2)](getting-started-with-mvc-part8/_static/image5.png)
 
-Dopo aver fatto clic su Fine, è possibile visualizzare che la nuova colonna Rating è stata aggiunta all'entità film nel modello.
+Dopo aver fatto clic su fine, è possibile vedere che la nuova colonna rating è stata aggiunta all'entità Movie nel modello.
 
-[![Entità film](getting-started-with-mvc-part8/_static/image7.png)](getting-started-with-mvc-part8/_static/image6.png)
+[![entità Movie](getting-started-with-mvc-part8/_static/image7.png)](getting-started-with-mvc-part8/_static/image6.png)
 
-È stata aggiunta una colonna nel modello di database, ma le visualizzazioni non sa su di esso.
+È stata aggiunta una colonna nel modello di database, ma le visualizzazioni non lo conoscono.
 
-## <a name="update-views-with-model-changes"></a>Aggiornare le viste con le modifiche al modello
+## <a name="update-views-with-model-changes"></a>Aggiornare le visualizzazioni con modifiche al modello
 
-Esistono alcuni modi è stato possibile aggiornare i modelli di visualizzazione in modo da riflettere la nuova colonna di punteggio. Poiché abbiamo creato queste visualizzazioni da generarli tramite la finestra di dialogo Aggiungi visualizzazione, è possibile eliminarli e ricrearli nuovamente. Tuttavia, in genere le persone saranno già state apportate delle modifiche ai propri modelli di visualizzazione dalla generazione iniziale sottoposto a scaffolding e saranno necessario aggiungere o eliminare i campi manualmente, esattamente come è stato fatto con il campo ID per la creazione.
+È possibile aggiornare i modelli di visualizzazione in modo da riflettere la nuova colonna rating. Poiché le visualizzazioni sono state create tramite la finestra di dialogo Aggiungi visualizzazione, è possibile eliminarle e ricrearle. Tuttavia, in genere le persone hanno già apportato modifiche ai modelli di visualizzazione dalla generazione iniziale con impalcatura e vorranno aggiungere o eliminare i campi manualmente, esattamente come è stato fatto con il campo ID per crea.
 
-Aprire il modello di \Views\Movies\Index.aspx e aggiungere una &lt;th&gt;Rating&lt;/th&gt; nell'intestazione della tabella Movie. È stato aggiunto il mio dopo Genre. Quindi, nella stessa posizione di colonna, ma basso, aggiungere una riga per restituire il nuovo controllo Rating.
+Aprire il modello \Views\Movies\Index.aspx e aggiungere una classificazione &lt;&gt;&lt;/TH&gt; all'inizio della tabella Movie. Ho aggiunto il mio dopo Genre. Quindi, nella stessa posizione della colonna ma in basso, aggiungere una riga per restituire la nuova classificazione.
 
 [!code-aspx[Main](getting-started-with-mvc-part8/samples/sample1.aspx)]
 
-Il modello di index. aspx finale avrà un aspetto simile al seguente:
+Il modello finale index. aspx sarà simile al seguente:
 
 [!code-aspx[Main](getting-started-with-mvc-part8/samples/sample2.aspx)]
 
-È possibile quindi aprire il modello di \Views\Movies\Create.aspx e aggiungere un'etichetta e una casella di testo per la nuova proprietà di classificazione:
+Aprire quindi il modello \Views\Movies\Create.aspx e aggiungere un'etichetta e una casella di testo per la nuova proprietà rating:
 
 [!code-aspx[Main](getting-started-with-mvc-part8/samples/sample3.aspx)]
 
-Il modello di tornarci finale sarà simile al seguente e modificare titolo e replica secondaria del browser &lt;h2&gt; title su un valore come "Creazione di un film" mentre ci troviamo qui!
+Il modello di creazione. aspx finale sarà simile al seguente e modificheremo il titolo del browser e il secondario &lt;H2&gt; titolo a qualcosa come "creare un film" mentre ci siamo qui.
 
 [!code-aspx[Main](getting-started-with-mvc-part8/samples/sample4.aspx)]
 
-Eseguire l'app e a questo punto si ha un nuovo campo nel database che è stato aggiunto alla pagina Create. Aggiungere un nuovo film - questa volta con una classificazione uguale a - e fare clic su Crea.
+Eseguire l'app e ora è disponibile un nuovo campo nel database che è stato aggiunto alla pagina Create (Crea). Aggiungere un nuovo film: questa volta con una valutazione e fare clic su Crea.
 
-[![Creare un filmato - Windows Internet Explorer](getting-started-with-mvc-part8/_static/image9.png)](getting-started-with-mvc-part8/_static/image8.png)
+[![creare un film-Windows Internet Explorer](getting-started-with-mvc-part8/_static/image9.png)](getting-started-with-mvc-part8/_static/image8.png)
 
-Dopo che si fa clic su Crea, si viene reindirizzati alla pagina di indice dove si nuovo film sia elencato con la nuova colonna di classificazione nel database
+Dopo aver fatto clic su Crea, si viene inviati alla pagina di indice in cui il nuovo film è elencato con la nuova colonna rating nel database
 
-[![Movie List - Windows Internet Explorer (12)](getting-started-with-mvc-part8/_static/image11.png)](getting-started-with-mvc-part8/_static/image10.png)
+[Elenco di film ![-Windows Internet Explorer (12)](getting-started-with-mvc-part8/_static/image11.png)](getting-started-with-mvc-part8/_static/image10.png)
 
-Questa esercitazione di base tutto quello che ti a rendere i controller, associandole con viste e passano dati hardcoded. Quindi viene creato e progettato un Database e inserire alcuni dati in. Abbiamo i dati recuperati dal database e viene visualizzato in una tabella HTML. Quindi è stato aggiunto un modulo di creazione che consentono di aggiungere dati al database se stessi da all'interno dell'applicazione Web. Abbiamo aggiunto la convalida, verrà visualizzata la convalida usare JavaScript sul lato client. Infine, abbiamo modificato il database in modo da includere una nuova colonna di dati e successivamente aggiornare alle due pagine per creare e visualizzare questi nuovi dati.
+Questa esercitazione di base è stata avviata per creare i controller, associarli alle visualizzazioni e passare i dati hardcoded. È stato quindi creato e progettato un database in cui sono stati inseriti alcuni dati. I dati sono stati recuperati dal database e visualizzati in una tabella HTML. È stato quindi aggiunto un modulo di creazione che consente all'utente di aggiungere i dati al database dall'interno dell'applicazione Web. È stata aggiunta la convalida, quindi la convalida usa JavaScript sul lato client. Infine, è stato modificato il database per includere una nuova colonna di dati, quindi sono state aggiornate le due pagine per creare e visualizzare questi nuovi dati.
 
-Ora ti suggeriamo per proseguire con l'esercitazione di livello intermedio "[MVC Music Store](../../older-versions/mvc-music-store/mvc-music-store-part-1.md)", nonché i video e le risorse a molti [ https://asp.net/mvc ](https://asp.net/mvc) per altre informazioni su ASP.NET MVC.
+A questo punto, si consiglia di passare all'esercitazione di livello intermedio "[MVC Music Store](../../older-versions/mvc-music-store/mvc-music-store-part-1.md)", nonché ai numerosi video e risorse disponibili in [https://asp.net/mvc](https://asp.net/mvc) per saperne di più su ASP.NET MVC.
 
 Buona lettura.
 
-- Scott Hanselman - [ http://hanselman.com ](http://hanselman.com) e [ @shanselman ](http://twitter.com/shanselman) su Twitter.
+- Scott Hanseln- [http://hanselman.com](http://hanselman.com) e [@shanselman](http://twitter.com/shanselman) su Twitter.
 
 > [!div class="step-by-step"]
 > [Precedente](getting-started-with-mvc-part7.md)

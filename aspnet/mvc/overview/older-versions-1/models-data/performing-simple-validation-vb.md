@@ -1,119 +1,119 @@
 ---
 uid: mvc/overview/older-versions-1/models-data/performing-simple-validation-vb
-title: Esegue una convalida semplice (VB) | Microsoft Docs
+title: Esecuzione di una convalida semplice (VB) | Microsoft Docs
 author: StephenWalther
-description: Informazioni su come eseguire la convalida in un'applicazione ASP.NET MVC. In questa esercitazione, Stephen Walther introduce per lo stato del modello e l'helper di convalida HTML...
+description: Informazioni su come eseguire la convalida in un'applicazione MVC ASP.NET. In questa esercitazione, Stephen Walther introduce lo stato del modello e l'helper HTML di convalida...
 ms.author: riande
 ms.date: 03/02/2009
 ms.assetid: df6cf4b7-0bb3-4c4e-b17a-bd78a759a6bc
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/performing-simple-validation-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 46925f22b7dfc23f2bb89b8d2fff0cbd8ae49062
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65122482"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78542931"
 ---
 # <a name="performing-simple-validation-vb"></a>Esecuzione di una convalida semplice (VB)
 
-da [Stephen Walther](https://github.com/StephenWalther)
+di [Stephen Walther](https://github.com/StephenWalther)
 
-> Informazioni su come eseguire la convalida in un'applicazione ASP.NET MVC. In questa esercitazione, Stephen Walther introduce per lo stato del modello e gli helper di convalida HTML.
+> Informazioni su come eseguire la convalida in un'applicazione MVC ASP.NET. In questa esercitazione Stephen Walther introduce lo stato del modello e gli helper HTML di convalida.
 
-L'obiettivo di questa esercitazione è illustrare come è possibile eseguire la convalida all'interno di un'applicazione ASP.NET MVC. Ad esempio, informazioni su come impedire a qualcuno di invio di un modulo che non contiene un valore per un campo obbligatorio. Descrive come usare lo stato del modello e gli helper HTML di convalida.
+L'obiettivo di questa esercitazione è spiegare come è possibile eseguire la convalida in un'applicazione MVC ASP.NET. Si apprenderà ad esempio come impedire a un utente di inviare un modulo che non contiene un valore per un campo obbligatorio. Si apprenderà come usare lo stato del modello e gli helper HTML di convalida.
 
 ## <a name="understanding-model-state"></a>Informazioni sullo stato del modello
 
-Si usa lo stato del modello - o, più precisamente, dizionario di stato del modello - per rappresentare errori di convalida. L'azione create () nel listato 1, ad esempio, convalida le proprietà di una classe di prodotto prima di aggiungere la classe di prodotto a un database.
+Si usa lo stato del modello, o più accuratamente, il dizionario di stato del modello per rappresentare gli errori di convalida. Ad esempio, l'azione crea () nel listato 1 convalida le proprietà di una classe prodotto prima di aggiungere la classe prodotto a un database.
 
-Non sto consigliata aggiungere la logica di convalida o di database a un controller. Un controller deve contenere solo la logica correlata al controllo di flusso dell'applicazione. Si sta eseguendo un collegamento a semplificare le operazioni.
+Non è consigliabile aggiungere la logica di convalida o di database a un controller. Un controller deve contenere solo la logica correlata al controllo del flusso dell'applicazione. È in corso un collegamento per semplificare le operazioni.
 
-**Listing 1 - Controllers\ProductController.vb**
+**Listato 1-Controllers\ProductController.vb**
 
 [!code-vb[Main](performing-simple-validation-vb/samples/sample1.vb)]
 
-Nel listato 1, vengono convalidate le proprietà di nome, descrizione e UnitsInStock della classe di prodotto. Se una di queste proprietà ha esito negativo un test di convalida viene aggiunto un errore al dizionario di stato del modello (rappresentato dalla proprietà ModelState della classe Controller).
+Nel listato 1, vengono convalidate le proprietà Name, Description e UnitsInStock della classe Product. Se una di queste proprietà ha esito negativo di un test di convalida, viene aggiunto un errore al dizionario di stato del modello (rappresentato dalla proprietà ModelState della classe controller).
 
-Se sono presenti errori nello stato del modello la proprietà ModelState restituisce false. In tal caso, viene visualizzata di nuovo il form HTML per la creazione di un nuovo prodotto. In caso contrario, se non sono presenti errori di convalida, il nuovo prodotto viene aggiunto al database.
+Se si verificano errori nello stato del modello, la proprietà ModelState. IsValid restituisce false. In tal caso, viene visualizzato nuovamente il formato HTML per la creazione di un nuovo prodotto. In caso contrario, se non sono presenti errori di convalida, il nuovo prodotto verrà aggiunto al database.
 
-## <a name="using-the-validation-helpers"></a>Usando gli helper di convalida
+## <a name="using-the-validation-helpers"></a>Utilizzo degli helper di convalida
 
-Il framework ASP.NET MVC include due helper di convalida: l'helper Html.ValidationMessage() e l'helper Html.ValidationSummary(). Utilizzare questi due helper in una vista per visualizzare i messaggi di errore di convalida.
+Il framework ASP.NET MVC include due helper di convalida: l'helper HTML. ValidationMessage () e l'helper HTML. ValidationSummary (). Usare questi due helper in una visualizzazione per visualizzare i messaggi di errore di convalida.
 
-Gli helper Html.ValidationMessage() e Html.ValidationSummary() vengono usati nelle visualizzazioni Creazione e modifica vengono generate automaticamente per lo scaffolding di ASP.NET MVC. Seguire questi passaggi per generare la visualizzazione di creazione:
+Gli helper HTML. ValidationMessage () e HTML. ValidationSummary () vengono usati nelle visualizzazioni create e Edit generate automaticamente da ASP.NET MVC impalcature. Seguire questa procedura per generare la visualizzazione di creazione:
 
-1. L'azione create () nel controller di prodotto e scegliere l'opzione di menu **Aggiungi visualizzazione** (vedere la figura 1).
-2. Nel **Aggiungi visualizzazione** finestra di dialogo, selezionare la casella di controllo etichettato **creare una visualizzazione fortemente tipizzata** (vedere la figura 2).
-3. Dal **visualizzare i dati classe** elenco a discesa selezionare la classe Product.
-4. Dal **visualizzare il contenuto** dall'elenco a discesa selezionare Crea.
+1. Fare clic con il pulsante destro del mouse sull'azione crea () nel controller del prodotto e selezionare l'opzione di menu **Aggiungi visualizzazione** (vedere la figura 1).
+2. Nella finestra di dialogo **Aggiungi visualizzazione** selezionare la casella di controllo **Crea una visualizzazione fortemente tipizzata** (vedere la figura 2).
+3. Dall'elenco a discesa della **classe di dati View** selezionare la classe Product.
+4. Dall'elenco a discesa **Visualizza contenuto** selezionare Crea.
 5. Fare clic sul pulsante **Aggiungi**.
 
-Assicurarsi che si compila l'applicazione prima di aggiungere una visualizzazione. In caso contrario, non sarà più visualizzato l'elenco delle classi nel **visualizzare i dati classe** nell'elenco a discesa.
+Assicurarsi di compilare l'applicazione prima di aggiungere una vista. In caso contrario, l'elenco delle classi non verrà visualizzato nell'elenco a discesa della **classe di dati View** .
 
-[![La finestra di dialogo Nuovo progetto](performing-simple-validation-vb/_static/image1.jpg)](performing-simple-validation-vb/_static/image1.png)
+[![finestra di dialogo nuovo progetto](performing-simple-validation-vb/_static/image1.jpg)](performing-simple-validation-vb/_static/image1.png)
 
-**Figura 01**: Aggiunta di una vista ([fare clic per visualizzare l'immagine con dimensioni normali](performing-simple-validation-vb/_static/image2.png))
+**Figura 01**: aggiunta di una visualizzazione ([fare clic per visualizzare l'immagine con dimensioni complete](performing-simple-validation-vb/_static/image2.png))
 
-[![La finestra di dialogo Nuovo progetto](performing-simple-validation-vb/_static/image2.jpg)](performing-simple-validation-vb/_static/image3.png)
+[![finestra di dialogo nuovo progetto](performing-simple-validation-vb/_static/image2.jpg)](performing-simple-validation-vb/_static/image3.png)
 
-**Figura 02**: Creazione di una visualizzazione fortemente tipizzata ([fare clic per visualizzare l'immagine con dimensioni normali](performing-simple-validation-vb/_static/image4.png))
+**Figura 02**: creazione di una visualizzazione fortemente tipizzata ([fare clic per visualizzare l'immagine con dimensioni complete](performing-simple-validation-vb/_static/image4.png))
 
-Dopo aver completato questi passaggi, si ottiene la visualizzazione di creazione nel listato 2.
+Dopo aver completato questi passaggi, è possibile ottenere la visualizzazione create nel listato 2.
 
-**Listing 2 - Views\Product\Create.aspx**
+**Listato 2-Views\Product\Create.aspx**
 
 [!code-aspx[Main](performing-simple-validation-vb/samples/sample2.aspx)]
 
-Nel listato 2, l'helper Html.ValidationSummary() viene chiamato immediatamente sopra il form HTML. Questo supporto consente di visualizzare un elenco di messaggi di errore di convalida. L'helper Html.ValidationSummary() esegue il rendering gli errori in un elenco puntato.
+Nel listato 2, l'helper HTML. ValidationSummary () viene chiamato immediatamente sopra il form HTML. Questo helper viene utilizzato per visualizzare un elenco di messaggi di errore di convalida. L'helper HTML. ValidationSummary () esegue il rendering degli errori in un elenco puntato.
 
-Viene chiamato l'helper Html.ValidationMessage() accanto a ogni campo di form HTML. Questo supporto consente di visualizzare un messaggio di errore a destra, accanto a un campo del form. Nel caso listato 2, l'helper Html.ValidationMessage() Visualizza un asterisco, quando si verifica un errore.
+L'helper HTML. ValidationMessage () viene chiamato accanto a ognuno dei campi del form HTML. Questo helper viene usato per visualizzare un messaggio di errore accanto a un campo del modulo. Nel caso del listato 2, l'helper HTML. ValidationMessage () Visualizza un asterisco quando si verifica un errore.
 
-La pagina nella figura 3 illustra i messaggi di errore viene eseguito il rendering per gli helper di convalida quando il form viene inviato con i campi mancanti e valori non validi.
+La pagina nella figura 3 illustra i messaggi di errore di cui è stato eseguito il rendering dagli helper di convalida quando il modulo viene inviato con campi mancanti e valori non validi.
 
-[![La finestra di dialogo Nuovo progetto](performing-simple-validation-vb/_static/image3.jpg)](performing-simple-validation-vb/_static/image5.png)
+[![finestra di dialogo nuovo progetto](performing-simple-validation-vb/_static/image3.jpg)](performing-simple-validation-vb/_static/image5.png)
 
-**Figura 03**: Visualizzazione di creazione inviata con problemi ([fare clic per visualizzare l'immagine con dimensioni normali](performing-simple-validation-vb/_static/image6.png))
+**Figura 03**: creazione della vista inviata con problemi ([fare clic per visualizzare l'immagine con dimensioni complete](performing-simple-validation-vb/_static/image6.png))
 
-Si noti che l'aspetto del codice HTML di input campi vengono modificati anche quando si verifica un errore di convalida. I renderer di helper Html.TextBox() una *classe = "errore di convalida input"* attributo quando si verifica un errore di convalida associato alla proprietà viene eseguito il rendering dall'helper Html.TextBox().
+Si noti che l'aspetto dei campi di input HTML viene modificato anche quando si verifica un errore di convalida. L'helper HTML. TextBox () esegue il rendering di un attributo *Class = "Input-Validation-Error"* quando si verifica un errore di convalida associato alla proprietà sottoposta a rendering dall'helper HTML. TextBox ().
 
-Esistono tre le classi foglio di stile utilizzate per controllare l'aspetto degli errori di convalida:
+Per controllare l'aspetto degli errori di convalida sono disponibili tre classi di fogli di stile CSS:
 
-- input-errore di convalida - applicato per il &lt;input&gt; sottoposto a rendering dal Html.TextBox() helper tag.
-- campo-errore di convalida - applicato per il &lt;span&gt; tag viene eseguito il rendering dall'helper Html.ValidationMessage().
-- Riepilogo-errori di convalida - applicato per il &lt;ul&gt; tag viene eseguito il rendering dall'helper Html.ValidationSummary().
+- Input-Validation-Error-applicato al tag di input&gt; di &lt;sottoposto a rendering da HTML. TextBox () helper.
+- Field-Validation-Error-applicato al &lt;span&gt; tag sottoposto a rendering dall'helper HTML. ValidationMessage ().
+- validation-summary-errors-applicato al tag di&gt; UL di &lt;sottoposto a rendering dall'helper HTML. ValidationSummary ().
 
-È possibile modificare queste classi di foglio di stile CSS e quindi modificare l'aspetto di errori di convalida, modificando il file CSS che si trova nella cartella del contenuto.
+È possibile modificare le classi del foglio di stile CSS e quindi modificare l'aspetto degli errori di convalida modificando il file site. CSS che si trova nella cartella Content.
 
 > [!NOTE] 
 > 
-> La classe HtmlHelper include le proprietà statiche di sola lettura per il recupero della convalida i nomi relativi a CSS classi. Queste proprietà statiche sono denominate ValidationInputCssClassName, ValidationFieldCssClassName e ValidationSummaryCssClassName.
+> La classe HtmlHelper include proprietà statiche di sola lettura per il recupero dei nomi delle classi CSS correlate alla convalida. Queste proprietà statiche sono denominate ValidationInputCssClassName, ValidationFieldCssClassName e ValidationSummaryCssClassName.
 
-## <a name="prebinding-validation-and-postbinding-validation"></a>Prebinding Postbinding convalida e convalida
+## <a name="prebinding-validation-and-postbinding-validation"></a>Convalida prebinding e convalida di post-associazione
 
-Se si invia il form HTML per la creazione di un prodotto e immettere un valore non valido per il campo price e nessun valore per il campo UnitsInStock, ricevere i messaggi di convalida visualizzati nella figura 4. Questi messaggi di errore di convalida da dove provengono?
+Se si invia il modulo HTML per la creazione di un prodotto e si immette un valore non valido per il campo Price e nessun valore per il campo UnitsInStock, si otterranno i messaggi di convalida visualizzati nella figura 4. Da dove provengono i messaggi di errore di convalida?
 
-[![La finestra di dialogo Nuovo progetto](performing-simple-validation-vb/_static/image4.jpg)](performing-simple-validation-vb/_static/image7.png)
+[![finestra di dialogo nuovo progetto](performing-simple-validation-vb/_static/image4.jpg)](performing-simple-validation-vb/_static/image7.png)
 
-**Figura 04**: Prebinding gli errori di convalida ([fare clic per visualizzare l'immagine con dimensioni normali](performing-simple-validation-vb/_static/image8.png))
+**Figura 04**: errori di convalida del prebinding ([fare clic per visualizzare l'immagine con dimensioni complete](performing-simple-validation-vb/_static/image8.png))
 
-Esistono effettivamente due tipi di messaggi di errore di convalida - quelli generati prima che i campi di form HTML sono associati a una classe e quelli generati dopo che i campi del modulo sono associati alla classe. In altre parole, esistono prebinding gli errori di convalida e postbinding gli errori di convalida.
+Esistono effettivamente due tipi di messaggi di errore di convalida, quelli generati prima che i campi del modulo HTML siano associati a una classe e quelli generati dopo che i campi del modulo sono associati alla classe. In altre parole, sono presenti errori di convalida prebinding ed errori di convalida di post-binding.
 
-L'azione create () esposto dal controller di prodotto nel listato 1 accetta un'istanza della classe di prodotto. La firma del metodo di creazione simile alla seguente:
+L'azione Create () esposta dal controller del prodotto nel listato 1 accetta un'istanza della classe Product. La firma del metodo Create ha un aspetto simile al seguente:
 
 [!code-vb[Main](performing-simple-validation-vb/samples/sample3.vb)]
 
-I valori dei campi HTML dal modulo di creazione vengono associati alla classe productToCreate da un componente chiamato un raccoglitore di modelli. Il raccoglitore dei modelli predefiniti aggiunge un messaggio di errore per lo stato del modello automaticamente quando Impossibile associare un campo del form a una proprietà di form.
+I valori dei campi del form HTML dal modulo di creazione sono associati alla classe productToCreate da un elemento denominato strumento di associazione di modelli. Lo strumento di associazione di modelli predefinito aggiunge automaticamente un messaggio di errore allo stato del modello quando non è in grado di associare un campo del modulo a una proprietà Form.
 
-Lo strumento di associazione del modello predefinito non è possibile associare la stringa "apple" alla proprietà prezzo della classe di prodotto. È possibile assegnare una stringa a una proprietà decimale. Pertanto, lo strumento di associazione del modello aggiunge un errore per lo stato del modello.
+Lo strumento di associazione di modelli predefinito non è in grado di associare la stringa "Apple" alla proprietà price della classe Product. Non è possibile assegnare una stringa a una proprietà Decimal. Pertanto, lo strumento di associazione di modelli aggiunge un errore allo stato del modello.
 
-Il raccoglitore dei modelli predefiniti inoltre non è possibile assegnare il valore Nothing a una proprietà che non accetta il valore Nothing. In particolare, il gestore di associazione del modello non è possibile assegnare il valore Nothing per la proprietà UnitsInStock. Ancora una volta, lo strumento individuerebbe rinuncia e aggiunge un messaggio di errore allo stato del modello.
+Lo strumento di associazione di modelli predefinito non è inoltre in grado di assegnare il valore a una proprietà che non accetta alcun valore. In particolare, lo strumento di associazione di modelli non può assegnare alcun valore alla proprietà UnitsInStock. Ancora una volta, lo strumento di associazione di modelli consente di aggiungere un messaggio di errore allo stato del modello.
 
-Se si vuole personalizzare l'aspetto di questi prebinding i messaggi di errore è necessario creare stringhe di risorse per questi messaggi.
+Se si desidera personalizzare l'aspetto dei messaggi di errore di preassociazione, è necessario creare stringhe di risorse per questi messaggi.
 
 ## <a name="summary"></a>Riepilogo
 
-L'obiettivo di questa esercitazione è descrivere i meccanismi di base di convalida nel framework di MVC ASP.NET. Si è appreso come usare lo stato del modello e gli helper HTML di convalida. Abbiamo parlato anche la distinzione tra prebinding e postbinding convalida. In altre esercitazioni si parlerà diverse strategie per spostare il codice di convalida del controller e nelle classi di modelli.
+L'obiettivo di questa esercitazione è descrivere i meccanismi di convalida di base in ASP.NET MVC Framework. Si è appreso come usare lo stato del modello e gli helper HTML di convalida. È stata inoltre illustrata la differenza tra la convalida del prebinding e l'associazione dell'associazione. In altre esercitazioni verranno illustrate diverse strategie per lo stato di trasferimento del codice di convalida dai controller e dalle classi del modello.
 
 > [!div class="step-by-step"]
 > [Precedente](displaying-a-table-of-database-data-vb.md)

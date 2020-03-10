@@ -1,62 +1,62 @@
 ---
 uid: web-forms/overview/deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-test-environment-for-web-deployment
-title: 'Scenario: Configurazione di un ambiente di Test per la distribuzione Web | Microsoft Docs'
+title: 'Scenario: configurazione di un ambiente di test per la distribuzione Web | Microsoft Docs'
 author: jrjlee
-description: In questo argomento viene descritto uno scenario di distribuzione web tipica per sviluppatori o ambienti di test e illustra le attività da completare per impostare un intervento di servizio...
+description: Questo argomento descrive uno scenario di distribuzione Web tipico per gli ambienti di sviluppo o test e illustra le attività che è necessario completare per configurare un...
 ms.author: riande
 ms.date: 05/04/2012
 ms.assetid: 44a22ac7-1fc7-4174-b946-c6129fb6a19b
 msc.legacyurl: /web-forms/overview/deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-test-environment-for-web-deployment
 msc.type: authoredcontent
 ms.openlocfilehash: d580e550f2461837f0e8a4e477273348b49cb53e
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65132387"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78637816"
 ---
-# <a name="scenario-configuring-a-test-environment-for-web-deployment"></a>Scenario: Configurazione di un ambiente di test per la distribuzione Web
+# <a name="scenario-configuring-a-test-environment-for-web-deployment"></a>Scenario: configurazione di un ambiente di test per la distribuzione Web
 
-da [Jason Lee](https://github.com/jrjlee)
+di [Jason Lee](https://github.com/jrjlee)
 
 [Scaricare PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
-> In questo argomento viene descritto uno scenario di distribuzione web tipica per sviluppatori o ambienti di test e illustra le attività da completare per poter configurare un ambiente simile.
+> In questo argomento viene descritto uno scenario di distribuzione Web tipico per gli ambienti di sviluppo o di test e vengono illustrate le attività che è necessario completare per configurare un ambiente simile.
 
-Quando gli sviluppatori di lavorano alle applicazioni web, spesso assegnata loro l'accesso a un ambiente server che possono usare per testare le modifiche alle applicazioni in un'impostazione test realistica. Questo tipo di ambiente di sviluppo o test in genere presenta queste caratteristiche:
+Quando gli sviluppatori lavorano sulle applicazioni Web, viene spesso concesso l'accesso a un ambiente server che possono usare per testare le modifiche alle applicazioni in un'impostazione realistica. Questo tipo di ambiente di sviluppo o test presenta in genere queste caratteristiche:
 
-- L'ambiente è costituito da un singolo server web e un singolo server di database.
-- Gli sviluppatori in genere hanno privilegi administrator per i server, per consentire loro di configurare l'ambiente per i requisiti delle applicazioni.
-- Modifiche alle applicazioni distribuite in modo frequente, in modo che l'ambiente deve supportare passo a passo o la distribuzione automatica.
+- L'ambiente è costituito da un singolo server Web e da un singolo server di database.
+- Gli sviluppatori in genere hanno privilegi di amministratore per i server, per consentire loro di configurare l'ambiente in base ai requisiti delle applicazioni.
+- Le modifiche apportate alle applicazioni vengono distribuite su base frequente, quindi l'ambiente deve supportare la distribuzione automatica o a singolo passaggio.
 
-Ad esempio, nel nostro [scenario dell'esercitazione](../deploying-web-applications-in-enterprise-scenarios/enterprise-web-deployment-scenario-overview.md), Matt Hink è uno sviluppatore presso Fabrikam, Inc. Matt sta lavorando a della soluzione Contact Manager e regolarmente deve distribuire le modifiche in un ambiente di test. Matt è un amministratore nel server web di test e il server di database di test. Inizialmente, Matt deve essere in grado di distribuire la soluzione nell'ambiente di test direttamente.
+Nel nostro [scenario di esercitazione](../deploying-web-applications-in-enterprise-scenarios/enterprise-web-deployment-scenario-overview.md), ad esempio, Matt Hink è uno sviluppatore di Fabrikam, Inc. Matt sta lavorando alla soluzione Contact Manager ed è regolarmente necessario distribuire le modifiche in un ambiente di test. Matt è un amministratore del server Web di prova e del server di database di prova. Inizialmente, Matt deve essere in grado di distribuire direttamente la soluzione nell'ambiente di test.
 
 ![](scenario-configuring-a-test-environment-for-web-deployment/_static/image1.png)
 
-Lavoro avanza e dagli sviluppatori Unisciti al team, gestione contatti soluzione è configurata per l'integrazione continua (CI) in Team Foundation Server (TFS). Ogni volta che uno sviluppatore archivia il contenuto, Team Build deve compilare la soluzione, eseguire tutti gli unit test e distribuire automaticamente la soluzione nell'ambiente di test.
+Con l'avanzamento del lavoro e l'aggiunta di altri sviluppatori al team, la soluzione Contact Manager è configurata per l'integrazione continua (CI) in Team Foundation Server (TFS). Ogni volta che uno sviluppatore archivia il contenuto, Team Build deve compilare la soluzione, eseguire gli unit test e distribuire automaticamente la soluzione nell'ambiente di test.
 
 ![](scenario-configuring-a-test-environment-for-web-deployment/_static/image2.png)
 
 ## <a name="solution-overview"></a>Panoramica della soluzione
 
-L'ambiente di test deve supportare solo passaggio oppure automatizzata la distribuzione da un computer remoto, in modo che è possibile scegliere di due approcci principali. È possibile:
+L'ambiente di test deve supportare la distribuzione in un singolo passaggio o automatizzato da un computer remoto, quindi è possibile scegliere tra due approcci principali. È possibile:
 
-- Configurare il server web di test per supportare la distribuzione usando il servizio agente di distribuzione Web (il "agente remoto").
-- Configurare il server web di test per supportare la distribuzione usando il gestore di distribuzione Web.
+- Configurare il server Web di test per supportare la distribuzione utilizzando il servizio Deployment Agent Web ("agente remoto").
+- Configurare il server Web di test per supportare la distribuzione tramite il gestore Distribuzione Web.
 
 > [!NOTE]
-> È anche possibile usare [distribuzione Web su richiesta](https://technet.microsoft.com/library/ee517345(WS.10).aspx) (il "agente temp"). È simile all'approccio dell'agente remoto in termini di requisiti e vincoli.
+> È anche possibile usare [distribuzione Web su richiesta](https://technet.microsoft.com/library/ee517345(WS.10).aspx) ("agente temporaneo"). Questo approccio è simile a quello dell'agente remoto in termini di requisiti e vincoli.
 
-In questo caso, gli sviluppatori con privilegi di amministratore per i server di destinazione e l'ambiente di test non è soggetta a vincoli di sicurezza restrittivi, pertanto la scelta più ovvia consiste nel configurare il server web di test per supportare la distribuzione usando l'agente remoto. Questo è meno complesso e richiede la configurazione iniziale meno rispetto all'approccio gestore distribuzione Web. È anche necessario configurare il server di database per supportare la distribuzione e accesso remoto.
+In questo caso, gli sviluppatori dispongono dei privilegi di amministratore per i server di destinazione e l'ambiente di test non è soggetto a vincoli di sicurezza severi, quindi la scelta logica consiste nel configurare il server Web di test per supportare la distribuzione utilizzando l'agente remoto. Questo approccio è meno complesso e richiede una configurazione meno iniziale rispetto all'approccio del gestore Distribuzione Web. Sarà inoltre necessario configurare il server di database per supportare l'accesso remoto e la distribuzione.
 
-Questi argomenti includono tutte le informazioni necessarie per completare queste attività:
+In questi argomenti vengono fornite tutte le informazioni necessarie per completare le attività seguenti:
 
-- [Configurare un Server Web per la pubblicazione (agente remoto) di distribuzione Web](configuring-a-web-server-for-web-deploy-publishing-remote-agent.md). Questo argomento descrive come creare un server web che supporta la distribuzione Web di pubblicazione, usando l'approccio dell'agente remoto, a partire da una compilazione pulita di Windows Server 2008 R2.
-- [Configurare un Server di Database per la pubblicazione con distribuzione Web](configuring-a-database-server-for-web-deploy-publishing.md). Questo argomento descrive come configurare un server di database per supportare l'accesso remoto e la distribuzione, a partire da un'installazione predefinita di SQL Server 2008 R2.
+- [Configurare un server Web per la pubblicazione distribuzione Web (agente remoto)](configuring-a-web-server-for-web-deploy-publishing-remote-agent.md). Questo argomento descrive come compilare un server Web che supporta la pubblicazione di Distribuzione Web, usando l'approccio dell'agente remoto, a partire da una build pulita di Windows Server 2008 R2.
+- [Configurare un server di database per la pubblicazione distribuzione Web](configuring-a-database-server-for-web-deploy-publishing.md). In questo argomento viene descritto come configurare un server di database per supportare l'accesso remoto e la distribuzione, a partire da un'installazione predefinita di SQL Server 2008 R2.
 
 ## <a name="further-reading"></a>Ulteriori informazioni
 
-Per istruzioni sulla configurazione di un tipico ambiente di staging, vedere [Scenario: Configurazione di un ambiente di gestione temporanea per la distribuzione Web](scenario-configuring-a-staging-environment-for-web-deployment.md). Per indicazioni su come configurare un ambiente di produzione tipici, vedere [Scenario: Configurazione di un ambiente di produzione per la distribuzione Web](scenario-configuring-a-production-environment-for-web-deployment.md).
+Per istruzioni sulla configurazione di un ambiente di gestione temporanea tipico, vedere [scenario: configurazione di un ambiente di gestione temporanea per la distribuzione Web](scenario-configuring-a-staging-environment-for-web-deployment.md). Per istruzioni sulla configurazione di un ambiente di produzione tipico, vedere [scenario: configurazione di un ambiente di produzione per la distribuzione Web](scenario-configuring-a-production-environment-for-web-deployment.md).
 
 > [!div class="step-by-step"]
 > [Precedente](choosing-the-right-approach-to-web-deployment.md)

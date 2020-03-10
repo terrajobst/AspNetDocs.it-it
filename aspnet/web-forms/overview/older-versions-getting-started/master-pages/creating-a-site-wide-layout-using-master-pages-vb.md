@@ -9,11 +9,11 @@ ms.assetid: 30945276-8ed9-4b27-8e50-4309244d3559
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/creating-a-site-wide-layout-using-master-pages-vb
 msc.type: authoredcontent
 ms.openlocfilehash: c0ee6ed9d944b9a8ff2b2996e93706b8416de905
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74584141"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78639265"
 ---
 # <a name="creating-a-site-wide-layout-using-master-pages-vb"></a>Creazione di un layout a livello di sito tramite le pagine master (VB)
 
@@ -46,7 +46,7 @@ Questa è la prima esercitazione di una serie di esercitazioni che esplorano l'u
 
 Queste esercitazioni sono incentrate su concise e forniscono istruzioni dettagliate con numerose schermate per illustrare il processo in modo visivo. Ogni esercitazione è disponibile in C# e Visual Basic versioni e include un download del codice completo usato.
 
-Questa esercitazione introduttiva inizia con una panoramica delle nozioni di base della pagina master. Viene illustrato il funzionamento delle pagine master, viene illustrato come creare una pagina master e le pagine di contenuto associate mediante Visual Web Developer e come visualizzare immediatamente le modifiche apportate a una pagina master nelle pagine di contenuto. Iniziamo!
+Questa esercitazione introduttiva inizia con una panoramica delle nozioni di base della pagina master. Viene illustrato il funzionamento delle pagine master, viene illustrato come creare una pagina master e le pagine di contenuto associate mediante Visual Web Developer e come visualizzare immediatamente le modifiche apportate a una pagina master nelle pagine di contenuto. Ecco come procedere.
 
 ## <a name="understanding-how-master-pages-work"></a>Informazioni sul funzionamento delle pagine master
 

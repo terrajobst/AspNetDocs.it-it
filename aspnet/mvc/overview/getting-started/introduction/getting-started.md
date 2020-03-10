@@ -7,12 +7,12 @@ ms.date: 10/04/2018
 ms.assetid: f3d8adbe-55e7-4fd4-84a8-7155bc45c676
 msc.legacyurl: /mvc/overview/getting-started/introduction/getting-started
 msc.type: authoredcontent
-ms.openlocfilehash: c74daa37f68dda641cae97d3b0c19718f62d474d
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.openlocfilehash: ca39bc37c757c0452cf56624c8e37c04df4b41f2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77456387"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78602767"
 ---
 # <a name="getting-started-with-aspnet-mvc-5"></a>Introduzione a ASP.NET MVC 5
 
@@ -20,7 +20,7 @@ di [Rick Anderson](https://twitter.com/RickAndMSFT)
 
 [!INCLUDE [consider RP](../../../../includes/razor.md)]
 
-Questa esercitazione illustra le nozioni di base per la creazione di un'app Web ASP.NET MVC 5 con [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Il codice sorgente finale per l'esercitazione è disponibile in [GitHub](https://github.com/aspnet/AspNetDocs/tree/master/aspnet/mvc/overview/getting-started/introduction/sample/MvcMovie/MvcMovie).
+Questa esercitazione illustra le nozioni di base per la creazione di un'app Web ASP.NET MVC 5 con [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Il codice sorgente finale per l'esercitazione è disponibile in [GitHub](https://github.com/dotnet/AspNetDocs/tree/master/aspnet/mvc/overview/getting-started/introduction/sample/MvcMovie/MvcMovie).
 
 Questa esercitazione è stata scritta da [Scott Guthrie](https://weblogs.asp.net/scottgu/) ([ Twitter@scottgu](https://twitter.com/scottgu) ), [Scott hanselt](http://www.hanselman.com/blog/) (Twitter: [@shanselman](https://twitter.com/shanselman) ) e [Rick Anderson](https://twitter.com/RickAndMSFT) ( [@RickAndMSFT](https://twitter.com/#!/RickAndMSFT) )
 
@@ -29,7 +29,7 @@ Per distribuire l'app in Azure è necessario un account Azure:
 - È possibile [aprire un account Azure](https://azure.microsoft.com/pricing/free-trial/?WT.mc_id=A443DD604) gratuitamente: si ottengono crediti che è possibile usare per provare i servizi di Azure a pagamento e, anche dopo che sono stati usati, è possibile tenere l'account e usare i servizi di Azure gratuiti.
 - È possibile [attivare i benefici della sottoscrizione MSDN](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/?WT.mc_id=A443DD604): con la sottoscrizione MSDN ogni mese si accumulano crediti che è possibile usare per i servizi di Azure a pagamento.
 
-## <a name="get-started"></a>Attività iniziali
+## <a name="get-started"></a>Introduzione
 
 Per iniziare, [installare Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Quindi, aprire Visual Studio.
 
@@ -67,7 +67,7 @@ Per un elenco delle esercitazioni correnti, vedere [gli articoli consigliati per
 
 Si desidera visualizzare il sito finito in esecuzione come app Web Live? È possibile distribuire una versione completa dell'app nell'account Azure semplicemente facendo clic sul pulsante seguente.
 
-[![](https://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/?repository=https://github.com/aspnet/AspNetDocs/tree/master/aspnet/mvc/overview/getting-started/introduction/sample/MvcMovie&amp;WT.mc_id=deploy_azure_aspnet)
+[![](https://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/?repository=https://github.com/dotnet/AspNetDocs/tree/master/aspnet/mvc/overview/getting-started/introduction/sample/MvcMovie&amp;WT.mc_id=deploy_azure_aspnet)
 
 Per distribuire questa soluzione in Azure, è necessario un account Azure. Se non si dispone già di un account, utilizzare una delle seguenti opzioni per crearne uno:
 

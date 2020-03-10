@@ -9,11 +9,11 @@ ms.assetid: 4d85e9fb-91e6-41f2-9c13-754549b19c27
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/slider/using-the-slider-control-with-auto-postback-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 785d62108667fddac42994344cde265e82aca8f4
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74598378"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78553620"
 ---
 # <a name="using-the-slider-control-with-auto-postback-c"></a>Uso del controllo Slider con postback automatico (C#)
 
@@ -23,7 +23,7 @@ di [Christian Wenz](https://github.com/wenz)
 
 > Il controllo dispositivo di scorrimento in AJAX Control Toolkit fornisce un dispositivo di scorrimento grafico che può essere controllato tramite il mouse. Una volta modificato il valore, è possibile fare in modo che il dispositivo di scorrimento AutoPostBack venga modificato.
 
-## <a name="overview"></a>Panoramica di
+## <a name="overview"></a>Panoramica
 
 Il controllo dispositivo di scorrimento in AJAX Control Toolkit fornisce un dispositivo di scorrimento grafico che può essere controllato tramite il mouse. Una volta modificato il valore, è possibile fare in modo che il dispositivo di scorrimento AutoPostBack venga modificato.
 

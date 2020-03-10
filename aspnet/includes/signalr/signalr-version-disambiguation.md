@@ -1,2 +1,2 @@
 > [!WARNING]
-> Questa documentazione non per l'ultima versione di SignalR. Dare un'occhiata [ASP.NET Core SignalR](/aspnet/core/signalr/introduction).
+> Questa documentazione non è destinata alla versione più recente di SignalR. Esaminare [ASP.NET Core SignalR](/aspnet/core/signalr/introduction).

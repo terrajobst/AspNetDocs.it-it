@@ -1,25 +1,25 @@
 ---
 uid: web-forms/videos/sql-2005/getting-started-with-reporting-services
-title: Introduzione a Reporting Services | Microsoft Docs
+title: Introduzione con Reporting Services | Microsoft Docs
 author: microsoft
-description: SQL Server Reporting Services consente di progettare e distribuire report correttamente formattato e interattivi rappresentativo dei dati. Adatto per la stampa o solo...
+description: SQL Server Reporting Services consente di progettare e distribuire report perfettamente formattati e interattivi rappresentativi dei dati. Adatto per la stampa o il...
 ms.author: riande
 ms.date: 10/21/2006
 ms.assetid: f348a388-d3a2-4ea8-baf0-be2e6ef8efe1
 msc.legacyurl: /web-forms/videos/sql-2005/getting-started-with-reporting-services
 msc.type: video
 ms.openlocfilehash: 10fcdb1a2eb4ae88c9a480787612ed7a9500d73d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59409980"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78618069"
 ---
 # <a name="getting-started-with-reporting-services"></a>Introduzione a Reporting Services
 
-by [Microsoft](https://github.com/microsoft)
+[Microsoft](https://github.com/microsoft)
 
-SQL Server Reporting Services consente di progettare e distribuire report correttamente formattato e interattivi rappresentativo dei dati. Adatto per la distribuzione di stampa o online, questi report e consente di ottenere risultati professionali molto rapidamente. In questo video viene illustrato come configurare Reporting Services e Business Intelligence Development Studio per compilare report utilizzando le procedure guidate e finestre di progettazione e distribuirli al Server di Report.
+SQL Server Reporting Services consente di progettare e distribuire report perfettamente formattati e interattivi rappresentativi dei dati. Adatto per la stampa o la distribuzione online, questi report consentono di ottenere risultati professionali molto rapidamente. In questo video viene illustrato come configurare Reporting Services e il Business Intelligence Development Studio per compilare report utilizzando le procedure guidate e le finestre di progettazione e distribuirli nel server di report.
 
 [&#9654;Guarda il video (32 minuti)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/getting-started-with-reporting-services)
 

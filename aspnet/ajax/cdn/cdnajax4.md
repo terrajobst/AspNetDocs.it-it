@@ -1,6 +1,6 @@
 ---
 uid: ajax/cdn/cdnajax4
-title: Web Form ASP.NET e Ajax 4 | Microsoft Docs
+title: Web Form ASP.NET e AJAX 4 | Microsoft Docs
 author: rick-anderson
 description: ''
 ms.author: riande
@@ -9,15 +9,15 @@ ms.assetid: cced3924-251c-4c77-bef0-7992acbac106
 msc.legacyurl: /ajax/cdn/cdnajax4
 msc.type: content
 ms.openlocfilehash: dc47b025803dad8e404ef8fa3558902ff0dcbec6
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59419951"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78563350"
 ---
 # <a name="aspnet-web-forms-and-ajax-4"></a>Web Forms ASP.NET e Ajax 4
 
-Sulla rete CDN sono ospitati i file seguenti:
+I file seguenti sono ospitati nella rete CDN:
 
 - https://ajax.aspnetcdn.com/ajax/4.0/1/Date.HijriCalendar.debug.js
 - https://ajax.aspnetcdn.com/ajax/4.0/1/Date.HijriCalendar.js
@@ -56,6 +56,6 @@ Sulla rete CDN sono ospitati i file seguenti:
 - https://ajax.aspnetcdn.com/ajax/4.0/1/WebParts.js
 - https://ajax.aspnetcdn.com/ajax/4.0/1/WebUIValidation.js
 
-Nota: Gli script di globalizzazione, ad esempio FR.js-fr, sono disponibili nella cartella seguente:
+Nota: gli script di globalizzazione, ad esempio fr-FR. js, si trovano nella cartella seguente:
 
 - https://ajax.aspnetcdn.com/ajax/4.0/1/globalization/

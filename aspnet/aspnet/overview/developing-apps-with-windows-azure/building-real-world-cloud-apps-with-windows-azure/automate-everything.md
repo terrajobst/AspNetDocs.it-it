@@ -9,11 +9,11 @@ ms.assetid: ba6e6baa-9b9f-471f-b39d-b007a3addadc
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/automate-everything
 msc.type: authoredcontent
 ms.openlocfilehash: e741a753a36ebdaefbff8eee0b38911785c716ac
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457167"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78584945"
 ---
 # <a name="automate-everything-building-real-world-cloud-apps-with-azure"></a>Automatizzare tutto (creazione di app Cloud reali con Azure)
 
@@ -84,7 +84,7 @@ Nella scheda **Configura** dell'app Web è possibile vedere che le impostazioni 
 
 ![appSettings e connectionStrings](automate-everything/_static/image6.png)
 
-La cartella *automazione* contiene ora anche un file *&lt;websitename&gt;. pubxml* . In questo file vengono archiviate le impostazioni che MSBuild utilizzerà per distribuire l'applicazione nell'ambiente Azure appena creato. Ad esempio,
+La cartella *automazione* contiene ora anche un file *&lt;websitename&gt;. pubxml* . In questo file vengono archiviate le impostazioni che MSBuild utilizzerà per distribuire l'applicazione nell'ambiente Azure appena creato. Esempio:
 
 [!code-xml[Main](automate-everything/samples/sample1.xml)]
 

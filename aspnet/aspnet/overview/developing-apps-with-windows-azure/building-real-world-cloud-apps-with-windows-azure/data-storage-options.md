@@ -9,11 +9,11 @@ ms.assetid: e51fcecb-cb33-4f9e-8428-6d2b3d0fe1bf
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/data-storage-options
 msc.type: authoredcontent
 ms.openlocfilehash: 9357ed5aef39bed501cdac9ac26d46c884d4fae0
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457180"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78617803"
 ---
 # <a name="data-storage-options-building-real-world-cloud-apps-with-azure"></a>Opzioni di archiviazione dei dati (compilazione di app Cloud reali con Azure)
 
@@ -144,14 +144,14 @@ Di seguito sono riportate alcune domande da considerare quando si sceglie un app
 | Facilità di scalabilità | -Con quale frequenza e quanto è necessario ridimensionare i dati? -La piattaforma implementa in modo nativo la scalabilità orizzontale? -Quanto è facile aggiungere/rimuovere capacità (dimensioni e velocità effettiva)? I database relazionali e le tabelle non vengono partizionati automaticamente per renderli scalabili, quindi sono difficili da scalare oltre alcune limitazioni. Gli archivi dati NoSQL come l'archiviazione tabelle di Azure intrinsecamente partizionano tutti gli elementi e non esiste quasi nessun limite per l'aggiunta di partizioni. È possibile ridimensionare facilmente l'archiviazione tabelle fino a 200 terabyte, ma le dimensioni massime del database per il database SQL di Azure sono di 500 gigabyte. È possibile ridimensionare i dati relazionali partizionando i dati in più database, ma la configurazione di un'applicazione per il supporto di tale modello comporta una grande quantità di attività di programmazione. |
 | Strumentazione e gestibilità | -Quanto è facile la piattaforma per instrumentare, monitorare e gestire? È necessario essere informati sull'integrità e sulle prestazioni dell'archivio dati, pertanto è necessario conoscere in anticipo le metriche che una piattaforma offre gratuitamente e ciò che è necessario sviluppare autonomamente. |
 | Operazioni | -Quanto è semplice la piattaforma per la distribuzione e l'esecuzione in Azure? PaaS? IaaS? Linux? L'archiviazione tabelle e il database SQL sono facili da configurare in Azure. Le piattaforme che non sono soluzioni predefinite di Azure PaaS richiedono più impegno. |
-| Supporto delle API | -È disponibile un'API che semplifica l'uso della piattaforma? Per il servizio tabelle di Azure è disponibile un SDK con un'API .NET che supporta il modello di programmazione asincrona di .NET 4,5. Se si sta scrivendo un'app .NET, sarà molto più semplice scrivere e testare il codice per il servizio tabelle di Azure rispetto a un'altra piattaforma di archivio dati di colonne chiave/valore senza API o con una meno completa. |
+| Supporto dell'API | -È disponibile un'API che semplifica l'uso della piattaforma? Per il servizio tabelle di Azure è disponibile un SDK con un'API .NET che supporta il modello di programmazione asincrona di .NET 4,5. Se si sta scrivendo un'app .NET, sarà molto più semplice scrivere e testare il codice per il servizio tabelle di Azure rispetto a un'altra piattaforma di archivio dati di colonne chiave/valore senza API o con una meno completa. |
 | Integrità delle transazioni e coerenza dei dati | -È fondamentale che la piattaforma supporti le transazioni per garantire la coerenza dei dati? Per tenere traccia dei messaggi di posta elettronica in blocco inviati, le prestazioni e i costi di archiviazione dei dati bassi potrebbero essere più importanti del supporto automatico per le transazioni o l'integrità referenziale nella piattaforma dati, rendendo il servizio tabelle di Azure una scelta ottimale. Per tenere traccia dei saldi del conto bancario o degli ordini di acquisto, una piattaforma di database relazionale che fornisce garanzie transazionali complesse costituisce una scelta migliore. |
 | Continuità aziendale | -Quanto è facile eseguire backup, ripristino e ripristino di emergenza? I dati di produzione prima o dopo saranno danneggiati e sarà necessaria una funzione di annullamento. I database relazionali presentano spesso funzionalità di ripristino con granularità fine, ad esempio la possibilità di eseguire il ripristino a un momento specifico. Conoscere le funzionalità di ripristino disponibili in ogni piattaforma che si sta considerando è un fattore importante da considerare. |
-| Costo | -Se più piattaforme sono in grado di supportare il carico di lavoro dei dati, come si confrontano i costi? Se ad esempio si usa ASP.NET Identity, è possibile archiviare i dati del profilo utente nel servizio tabelle di Azure o nel database SQL di Azure. Se non sono necessarie le funzionalità di query avanzate del database SQL, è possibile scegliere le tabelle di Azure in parte perché il costo è molto inferiore per una determinata quantità di spazio di archiviazione. |
+| Costi | -Se più piattaforme sono in grado di supportare il carico di lavoro dei dati, come si confrontano i costi? Se ad esempio si usa ASP.NET Identity, è possibile archiviare i dati del profilo utente nel servizio tabelle di Azure o nel database SQL di Azure. Se non sono necessarie le funzionalità di query avanzate del database SQL, è possibile scegliere le tabelle di Azure in parte perché il costo è molto inferiore per una determinata quantità di spazio di archiviazione. |
 
 Ciò che in genere si consiglia è conoscere la risposta alle domande in ognuna di queste categorie prima di scegliere le soluzioni di archiviazione dati.
 
-Inoltre, il carico di lavoro potrebbe avere requisiti specifici che alcune piattaforme possono supportare meglio di altre. Ad esempio,
+Inoltre, il carico di lavoro potrebbe avere requisiti specifici che alcune piattaforme possono supportare meglio di altre. Esempio:
 
 - L'applicazione richiede funzionalità di controllo?
 - Quali sono i requisiti di longevità dei dati: sono necessarie funzionalità di archiviazione o eliminazione automatica?

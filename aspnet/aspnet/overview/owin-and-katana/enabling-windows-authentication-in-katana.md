@@ -2,88 +2,88 @@
 uid: aspnet/overview/owin-and-katana/enabling-windows-authentication-in-katana
 title: Abilitazione dell'autenticazione di Windows in Katana | Microsoft Docs
 author: MikeWasson
-description: "Questo articolo illustra come abilitare l'autenticazione di Windows in Katana. Viene descritto come due scenari: Utilizzo di IIS per host Katana e l'utilizzo di HttpListener di self-hosting Kat..."
+description: "Questo articolo illustra come abilitare l'autenticazione di Windows in Katana. Vengono illustrati due scenari: l'utilizzo di IIS per ospitare la Katana e l'utilizzo di HttpListener per l'hosting automatico di Kat..."
 ms.author: riande
 ms.date: 07/30/2013
 ms.assetid: 82324ef0-3b75-4f63-a217-76ef4036ec93
 msc.legacyurl: /aspnet/overview/owin-and-katana/enabling-windows-authentication-in-katana
 msc.type: authoredcontent
 ms.openlocfilehash: 3d81e7e1bf13ab63417378fba0c5ab80213f404b
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65118331"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78617180"
 ---
 # <a name="enabling-windows-authentication-in-katana"></a>Abilitazione dell'autenticazione di Windows in Katana
 
-da [Mike Wasson](https://github.com/MikeWasson)
+di [Mike Wasson](https://github.com/MikeWasson)
 
-> Questo articolo illustra come abilitare l'autenticazione di Windows in Katana. Viene descritto come due scenari: Usa IIS per ospitare Katana e uso di HttpListener di self-hosting Katana in un processo personalizzato. Barry Dorrans, David Matson e Chris Ross grazie per aver letto questo articolo.
+> Questo articolo illustra come abilitare l'autenticazione di Windows in Katana. Vengono illustrati due scenari: l'uso di IIS per ospitare la Katana e l'uso di HttpListener per ospitare in modo automatico la katana in un processo personalizzato. Grazie a Barry Dorrans, David Matson e Chris Ross per la revisione di questo articolo.
 
-Katana è l'implementazione Microsoft del [OWIN](http://owin.org/), Open Web Interface for .NET. È possibile leggere un'introduzione a OWIN e Katana [qui](an-overview-of-project-katana.md). L'architettura OWIN ha diversi livelli:
+Katana è l'implementazione Microsoft di [OWIN](http://owin.org/), l'interfaccia Web aperta per .NET. È possibile leggere un'introduzione a OWIN e Katana [qui](an-overview-of-project-katana.md). L'architettura OWIN presenta diversi livelli:
 
-- Organizzatore: Gestisce il processo in cui viene eseguita la pipeline OWIN.
-- Server: Apre un socket di rete e ascolta le richieste.
-- Middleware: Elabora la richiesta e risposta HTTP.
+- Host: gestisce il processo in cui viene eseguita la pipeline OWIN.
+- Server: apre un socket di rete e resta in attesa di richieste.
+- Middleware: elabora la richiesta e la risposta HTTP.
 
-Katana offre attualmente due server, che supportano entrambi l'autenticazione integrata di Windows:
+Katana fornisce attualmente due server, entrambi supportati dall'autenticazione integrata di Windows:
 
-- **Microsoft.Owin.Host.SystemWeb**. Usa IIS con la pipeline ASP.NET.
-- **Microsoft.Owin.Host.HttpListener**. Viene utilizzato [System.NET. HttpListener](https://msdn.microsoft.com/library/system.net.httplistener.aspx). Questo server è attualmente l'opzione predefinita quando il Self-hosting Katana.
+- **Microsoft. Owin. host. systemWeb**. Usa IIS con la pipeline ASP.NET.
+- **Microsoft. Owin. host. HttpListener**. USA [System .NET. HttpListener](https://msdn.microsoft.com/library/system.net.httplistener.aspx). Questo server è attualmente l'opzione predefinita quando si esegue l'hosting automatico di katana.
 
 > [!NOTE]
-> Katana attualmente non fornisce il middleware OWIN per l'autenticazione di Windows, perché questa funzionalità è già disponibile nel server.
+> Katana non fornisce attualmente il middleware OWIN per l'autenticazione di Windows, perché questa funzionalità è già disponibile nei server.
 
 ## <a name="windows-authentication-in-iis"></a>Autenticazione di Windows in IIS
 
-Usa systemweb, è possibile semplicemente abilitare l'autenticazione di Windows in IIS.
+Con Microsoft. Owin. host. SystemWeb è possibile abilitare semplicemente l'autenticazione di Windows in IIS.
 
-Iniziamo creando una nuova applicazione ASP.NET, usando il modello di progetto "Applicazione Web ASP.NET vuota".
+Per iniziare, creare una nuova applicazione ASP.NET usando il modello di progetto "applicazione Web vuota ASP.NET".
 
 ![](enabling-windows-authentication-in-katana/_static/image1.png)
 
-Successivamente, aggiungere i pacchetti NuGet. Dal **degli strumenti** dal menu **Gestione pacchetti NuGet**, quindi selezionare **Package Manager Console**. Nella finestra della Console di gestione pacchetti immettere il comando seguente:
+Aggiungere quindi i pacchetti NuGet. Dal menu **strumenti** selezionare **Gestione pacchetti NuGet**, quindi selezionare Console di **Gestione pacchetti**. Nella finestra Console di gestione pacchetti immettere il comando seguente:
 
 [!code-console[Main](enabling-windows-authentication-in-katana/samples/sample1.cmd)]
 
-Ora aggiungere una classe denominata `Startup` con il codice seguente:
+A questo punto aggiungere una classe denominata `Startup` con il codice seguente:
 
 [!code-csharp[Main](enabling-windows-authentication-in-katana/samples/sample2.cs)]
 
-Questo è tutto che è necessario creare un'applicazione "Hello world" per OWIN, in esecuzione in IIS. ‎Premere F5 per eseguire il debug dell'applicazione. Si dovrebbe vedere "Hello World!" Nella finestra del browser.
+Questo è tutto ciò che serve per creare un'applicazione "Hello World" per OWIN, in esecuzione in IIS. ‎Premere F5 per eseguire il debug dell'applicazione. Dovrebbe essere visualizzato "Hello World!" nella finestra del browser.
 
 ![](enabling-windows-authentication-in-katana/_static/image2.png)
 
-Successivamente, si sarà abilitare l'autenticazione di Windows in IIS Express. Dal **View** dal menu **proprietà**. Fare clic sul nome del progetto in Esplora soluzioni per visualizzare le proprietà del progetto.
+Successivamente, si Abilita l'autenticazione di Windows in IIS Express. Scegliere **Proprietà**dal menu **Visualizza** . Per visualizzare le proprietà del progetto, fare clic sul nome del progetto in Esplora soluzioni.
 
-Nel **delle proprietà** impostare nella finestra **autenticazione anonima** a **disabilitato** e impostare **l'autenticazione di Windows** a  **Abilitato**.
+Nella finestra **Proprietà** impostare **autenticazione anonima** su **disabilitato** e impostare **autenticazione di Windows** su **abilitato**.
 
 ![](enabling-windows-authentication-in-katana/_static/image3.png)
 
-Quando si esegue l'applicazione da Visual Studio, IIS Express richiederà le credenziali di Windows dell'utente. È possibile verificarlo utilizzando [Fiddler](http://fiddler2.com/home) o HTTP di un altro strumento di debug. Di seguito è riportato un esempio di risposta HTTP:
+Quando l'applicazione viene eseguita da Visual Studio, IIS Express richiederà le credenziali di Windows dell'utente. Per visualizzarlo, è possibile usare [Fiddler](http://fiddler2.com/home) o un altro strumento di debug http. Di seguito è riportato un esempio di risposta HTTP:
 
 [!code-console[Main](enabling-windows-authentication-in-katana/samples/sample3.cmd?highlight=1,5-6)]
 
-Le intestazioni WWW-Authenticate nella risposta indicano che il server supporta il [Negotiate](http://www.ietf.org/rfc/rfc4559.txt) protocollo, che usa Kerberos o NTLM.
+Le intestazioni WWW-Authenticate in questa risposta indicano che il server supporta il protocollo [Negotiate](http://www.ietf.org/rfc/rfc4559.txt) , che usa Kerberos o NTLM.
 
-In un secondo momento, quando si distribuisce l'applicazione in un server, seguire [questi passaggi](https://www.iis.net/configreference/system.webserver/security/authentication/windowsauthentication) per abilitare l'autenticazione di Windows in IIS su tale server.
+Successivamente, quando si distribuisce l'applicazione in un server, attenersi alla [procedura](https://www.iis.net/configreference/system.webserver/security/authentication/windowsauthentication) seguente per abilitare l'autenticazione di Windows in IIS su tale server.
 
 ## <a name="windows-authentication-in-httplistener"></a>Autenticazione di Windows in HttpListener
 
-Se si usa Microsoft.Owin.Host.HttpListener indipendente su Katana, è possibile abilitare l'autenticazione di Windows direttamente nel **HttpListener** istanza.
+Se si usa Microsoft. Owin. host. HttpListener per ospitare in modo autonomo la katana, è possibile abilitare l'autenticazione di Windows direttamente nell'istanza di **HttpListener** .
 
-In primo luogo, creare una nuova applicazione console. Successivamente, aggiungere i pacchetti NuGet. Dal **degli strumenti** dal menu **Gestione pacchetti NuGet**, quindi selezionare **Package Manager Console**. Nella finestra della Console di gestione pacchetti immettere il comando seguente:
+Per prima cosa, creare una nuova applicazione console. Aggiungere quindi i pacchetti NuGet. Dal menu **strumenti** selezionare **Gestione pacchetti NuGet**, quindi selezionare Console di **Gestione pacchetti**. Nella finestra Console di gestione pacchetti immettere il comando seguente:
 
 [!code-console[Main](enabling-windows-authentication-in-katana/samples/sample4.cmd)]
 
-Ora aggiungere una classe denominata `Startup` con il codice seguente:
+A questo punto aggiungere una classe denominata `Startup` con il codice seguente:
 
 [!code-csharp[Main](enabling-windows-authentication-in-katana/samples/sample5.cs)]
 
-Questa classe implementa lo stesso esempio "Hello world" dalla prima, ma imposta anche l'autenticazione di Windows come schema di autenticazione.
+Questa classe implementa lo stesso esempio "Hello World" di prima, ma imposta anche l'autenticazione di Windows come schema di autenticazione.
 
-All'interno di `Main` di funzione, avviare la pipeline OWIN:
+All'interno della funzione `Main`, avviare la pipeline OWIN:
 
 [!code-csharp[Main](enabling-windows-authentication-in-katana/samples/sample6.cs)]
 
@@ -97,4 +97,4 @@ All'interno di `Main` di funzione, avviare la pipeline OWIN:
 
 [System.Net.HttpListener](https://msdn.microsoft.com/library/system.net.httplistener.aspx)
 
-[Informazioni sull'autenticazione form OWIN in MVC 5](https://blogs.msdn.com/b/webdev/archive/2013/07/03/understanding-owin-forms-authentication-in-mvc-5.aspx)
+[Informazioni sull'autenticazione basata su form OWIN in MVC 5](https://blogs.msdn.com/b/webdev/archive/2013/07/03/understanding-owin-forms-authentication-in-mvc-5.aspx)

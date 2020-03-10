@@ -9,11 +9,11 @@ ms.assetid: d522639a-5aca-421e-9a76-d73f95607f57
 msc.legacyurl: /web-forms/overview/older-versions-security/roles/assigning-roles-to-users-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 3346e47cf604ed1d4003ca83203116666e37cb1b
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74633769"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78571771"
 ---
 # <a name="assigning-roles-to-users-c"></a>Assegnazione di ruoli agli utenti (C#)
 
@@ -29,7 +29,7 @@ L' <a id="_msoanchor_1"> </a> [esercitazione precedente](creating-and-managing-r
 
 In questa esercitazione vengono create due pagine di ASP.NET per semplificare la gestione degli utenti che appartengono ai ruoli. La prima pagina includerà le funzionalità per visualizzare gli utenti che appartengono a un determinato ruolo, i ruoli a cui appartiene un determinato utente e la possibilità di assegnare o rimuovere un determinato utente da un particolare ruolo. Nella seconda pagina verrà aumentato il controllo CreateUserWizard in modo da includere un passaggio per specificare i ruoli a cui appartiene l'utente appena creato. Questa operazione è utile negli scenari in cui un amministratore è in grado di creare nuovi account utente.
 
-Iniziamo!
+Ecco come procedere.
 
 ## <a name="listing-what-users-belong-to-what-roles"></a>Elenco degli utenti che appartengono ai ruoli
 

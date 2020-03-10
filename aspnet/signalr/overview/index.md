@@ -1,6 +1,6 @@
 ---
 uid: signalr/overview/index
-title: Materiale sussidiario SignalR | Microsoft Docs
+title: Indicazioni per SignalR | Microsoft Docs
 author: bradygaster
 description: ''
 ms.author: bradyg
@@ -9,13 +9,13 @@ ms.assetid: e57da75a-1d98-4e3c-8787-f1d7e1eb2d86
 msc.legacyurl: /signalr/overview
 msc.type: book
 ms.openlocfilehash: 8bef8a53f6d47a9274a984e0650125fb538c23f0
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59380067"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78558555"
 ---
-# <a name="signalr-guidance"></a>Materiale sussidiario di SignalR
+# <a name="signalr-guidance"></a>Linee guida per SignalR
 
 - [Introduzione](getting-started/index.md)
 
@@ -25,7 +25,7 @@ ms.locfileid: "59380067"
     - [Esercitazione: Introduzione a SignalR 2 e MVC 5](getting-started/tutorial-getting-started-with-signalr-and-mvc.md)
     - [Esercitazione: Messaggistica ad alta frequenza con SignalR 2](getting-started/tutorial-high-frequency-realtime-with-signalr.md)
     - [Esercitazione: Trasmissione server con SignalR 2](getting-started/tutorial-server-broadcast-with-signalr.md)
-    - [Laboratorio pratico: Applicazioni Web in tempo reale con SignalR](getting-started/real-time-web-applications-with-signalr.md)
+    - [Laboratorio pratico: applicazioni Web in tempo reale con SignalR](getting-started/real-time-web-applications-with-signalr.md)
 - [Guida all'API](guide-to-the-api/index.md)
 
     - [Guida all'API Hubs - Server (C#)](guide-to-the-api/hubs-api-guide-server.md)
@@ -53,7 +53,7 @@ ms.locfileid: "59380067"
     - [Scalabilità orizzontale di SignalR con SQL Server](performance/scaleout-with-sql-server.md)
     - [Test della densità di connessione di SignalR con Crank](performance/signalr-connection-density-testing-with-crank.md)
     - [Uso dei contatori delle prestazioni di SignalR in un ruolo Web di Azure](performance/using-signalr-performance-counters-in-an-azure-web-role.md)
-- [Distribuzione e hosting](deployment/index.md)
+- [Distribuzione e Hosting](deployment/index.md)
 
     - [Esercitazione: Hosting indipendente di SignalR](deployment/tutorial-signalr-self-host.md)
     - [Uso di SignalR con app Web nel servizio app di Azure](deployment/using-signalr-with-azure-web-sites.md)

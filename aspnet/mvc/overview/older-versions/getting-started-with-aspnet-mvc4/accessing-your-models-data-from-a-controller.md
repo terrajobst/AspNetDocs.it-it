@@ -9,11 +9,11 @@ ms.assetid: 61e0206d-7f32-4018-992d-0a51b48b37dc
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc4/accessing-your-models-data-from-a-controller
 msc.type: authoredcontent
 ms.openlocfilehash: 7c4aa34567ac4fb31d1ed874cf65986c4e779e66
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77456166"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78540390"
 ---
 # <a name="accessing-your-models-data-from-a-controller"></a>Accesso ai dati del modello da un controller
 
@@ -36,7 +36,7 @@ Fare clic con il pulsante destro del mouse sulla cartella *Controllers* e creare
 
 ![AddScaffoldedMovieController](accessing-your-models-data-from-a-controller/_static/image1.png)
 
-Fare clic su **Add**. Visual Studio Express crea i file e le cartelle seguenti:
+Fare clic su **Aggiungi**. Visual Studio Express crea i file e le cartelle seguenti:
 
 - *Un file MoviesController.cs* nella cartella *controller* del progetto.
 - Una cartella *Movies* nella cartella *views* del progetto.

@@ -9,11 +9,11 @@ ms.assetid: b9c29865-a34e-48bb-92c0-c443a72cb860
 msc.legacyurl: /web-forms/overview/older-versions-security/introduction/forms-authentication-configuration-and-advanced-topics-cs
 msc.type: authoredcontent
 ms.openlocfilehash: b296f31da1c73df97175d94402b4d618df425d8d
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74579434"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78641771"
 ---
 # <a name="forms-authentication-configuration-and-advanced-topics-c"></a>Configurazione dell'autenticazione basata su form e argomenti avanzati (C#)
 
@@ -44,7 +44,7 @@ Nella tabella 1 sono riepilogate le proprietà che è possibile personalizzare t
 |           dominio           | Quando si usano i ticket di autenticazione basati su cookie, questa impostazione specifica il valore del dominio del cookie. Il valore predefinito è una stringa vuota, che fa sì che il browser usi il dominio da cui è stato emesso, ad esempio www.yourdomain.com. In questo caso, il cookie <strong>non</strong> verrà inviato quando si effettuano richieste a sottodomini, ad esempio admin.yourdomain.com. Se si desidera che il cookie venga passato a tutti i sottodomini, è necessario personalizzare l'attributo di dominio impostandolo su yourdomain.com. |
 |  enableCrossAppRedirects   |                                                                                                                                                                   Valore booleano che indica se gli utenti autenticati vengono ricordati quando vengono reindirizzati agli URL in altre applicazioni Web nello stesso server. Il valore predefinito è false.                                                                                                                                                                   |
 |          loginUrl          |                                                                                                                                                                                                                      URL della pagina di accesso. Il valore predefinito è login. aspx.                                                                                                                                                                                                                      |
-|            nome            |                                                                                                                                                                                                   Quando si usano i ticket di autenticazione basati su cookie, il nome del cookie. Il valore predefinito è. ASPXAUTH.                                                                                                                                                                                                   |
+|            name            |                                                                                                                                                                                                   Quando si usano i ticket di autenticazione basati su cookie, il nome del cookie. Il valore predefinito è. ASPXAUTH.                                                                                                                                                                                                   |
 |            path            |                                                                             Quando si usano i ticket di autenticazione basati su cookie, questa impostazione specifica l'attributo path del cookie. L'attributo Path consente a uno sviluppatore di limitare l'ambito di un cookie a una particolare gerarchia di directory. Il valore predefinito è/, che informa il browser di inviare il cookie del ticket di autenticazione a qualsiasi richiesta effettuata al dominio.                                                                              |
 |         protezione         |                                                                                                                                            Indica le tecniche utilizzate per proteggere il ticket di autenticazione basata su form. I valori consentiti sono: All (impostazione predefinita); Crittografia Nessuno e la convalida. Queste impostazioni sono descritte in dettaglio nel passaggio 3.                                                                                                                                            |
 |         requireSSL         |                                                                                                                                                                                Valore booleano che indica se è necessaria una connessione SSL per trasmettere il cookie di autenticazione. Il valore predefinito è false.                                                                                                                                                                                |
@@ -244,23 +244,23 @@ Nell'esercitazione precedente, se le credenziali specificate erano valide, abbia
 
 Questi passaggi vengono replicati nel codice riportato sopra. In primo luogo, la stringa che verrà archiviata nella proprietà UserData viene formata combinando il nome della società e il titolo, delimitando i due valori con un carattere barra verticale (|).
 
-String userDataString = stringa. Concat (companyName [i], "|", titleAtCompany [i]);
+string userDataString = string.Concat(companyName[i], "|", titleAtCompany[i]);
 
 Viene quindi richiamato il metodo FormsAuthentication. GetAuthCookie, che crea il ticket di autenticazione, ne esegue la crittografia e la convalida in base alle impostazioni di configurazione e lo inserisce in un oggetto HttpCookie.
 
-HttpCookie authCookie = FormsAuthentication. GetAuthCookie (UserName. text, RememberMe. Checked);
+HttpCookie authCookie = FormsAuthentication.GetAuthCookie(UserName.Text, RememberMe.Checked);
 
 Per lavorare con FormAuthenticationTicket Embedded all'interno del cookie, è necessario chiamare il [metodo Decrypt](https://msdn.microsoft.com/library/system.web.security.formsauthentication.decrypt.aspx)della classe FormAuthentication, passando il valore del cookie.
 
-FormsAuthenticationTicket ticket = FormsAuthentication. Decrypt (authCookie. Value);
+FormsAuthenticationTicket ticket = FormsAuthentication.Decrypt(authCookie.Value);
 
 Viene quindi creata una *nuova* istanza di FormsAuthenticationTicket in base ai valori di FormsAuthenticationTicket esistenti. Tuttavia, questo nuovo ticket include le informazioni specifiche dell'utente (userDataString).
 
-FormsAuthenticationTicket newTicket = new FormsAuthenticationTicket (ticket. Versione, ticket. Nome, ticket. Emesso, ticket. Scadenza, ticket. Persistente, userDataString);
+FormsAuthenticationTicket newTicket = new FormsAuthenticationTicket(ticket.Version, ticket.Name, ticket.IssueDate, ticket.Expiration, ticket.IsPersistent, userDataString);
 
 Viene quindi crittografata (e convalidata) la nuova istanza di FormsAuthenticationTicket chiamando il [metodo Encrypt](https://msdn.microsoft.com/library/system.web.security.formsauthentication.encrypt.aspx)e vengono inseriti i dati crittografati (e convalidati) in authCookie.
 
-authCookie. Value = FormsAuthentication. Encrypt (newTicket);
+authCookie.Value = FormsAuthentication.Encrypt(newTicket);
 
 Infine, authCookie viene aggiunto alla raccolta Response. cookies e viene chiamato il metodo GetRedirectUrl per determinare la pagina appropriata per l'invio dell'utente.
 

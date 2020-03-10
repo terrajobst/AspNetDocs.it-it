@@ -9,11 +9,11 @@ ms.assetid: 128fdb5f-4c5e-42b5-b485-f3aee90a8e38
 msc.legacyurl: /web-forms/overview/data-access/custom-button-actions/adding-and-responding-to-buttons-to-a-gridview-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 5c87386e4fe2c53b39162071689f2522dcc6c7ac
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74602774"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78549644"
 ---
 # <a name="adding-and-responding-to-buttons-to-a-gridview-c"></a>Aggiunta e risposta ai pulsanti in un controllo GridView (C#)
 
@@ -245,7 +245,7 @@ La figura 20 Mostra la pagina quando si visualizzano i prodotti forniti da Homes
 
 > [!NOTE]
 > GridView (e DetailsView) possono avere anche pulsanti, LinkButton o ImageButton aggiunti ai TemplateFields. Come per il BoundField, questi pulsanti, se selezionato, provocheranno un postback, generando l'evento `RowCommand` di GridView. Quando si aggiungono i pulsanti in un TemplateField, tuttavia, la `CommandArgument` del pulsante non viene impostata automaticamente sull'indice della riga come quando si usa ButtonFields. Se è necessario determinare l'indice di riga del pulsante su cui è stato fatto clic nel gestore dell'evento `RowCommand`, è necessario impostare manualmente la proprietà `CommandArgument` del pulsante nella relativa sintassi dichiarativa all'interno di TemplateField, usando codice simile al seguente:  
-> `<asp:Button runat="server" ... CommandArgument='<%# ((GridViewRow) Container).RowIndex %>'`.
+> `<asp:Button runat="server" ... CommandArgument='<%# ((GridViewRow) Container).RowIndex %>'`
 
 ## <a name="summary"></a>Riepilogo
 

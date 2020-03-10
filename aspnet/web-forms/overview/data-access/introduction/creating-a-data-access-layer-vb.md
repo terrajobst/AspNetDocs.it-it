@@ -9,11 +9,11 @@ ms.assetid: 6227233a-6254-4b6b-9a89-947efef22330
 msc.legacyurl: /web-forms/overview/data-access/introduction/creating-a-data-access-layer-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 51c9255f80f83a68cf26decf318347752498491a
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74635429"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78604559"
 ---
 # <a name="creating-a-data-access-layer-vb"></a>Creazione di un livello di accesso ai dati (VB)
 
@@ -168,11 +168,11 @@ Questo codice non richiedeva di scrivere un solo bit di codice specifico per l'a
 
 Ogni oggetto utilizzato in questo esempio è anche fortemente tipizzato, consentendo a Visual Studio di fornire IntelliSense e il controllo dei tipi in fase di compilazione. E il meglio di tutte le DataTable restituite da TableAdapter può essere associato ai controlli Web dei dati di ASP.NET, ad esempio GridView, DetailsView, DropDownList, CheckBoxList e molti altri. Nell'esempio seguente viene illustrato come associare la DataTable restituita dal metodo `GetProducts()` a un controllo GridView in una sola riga di codice limitata all'interno del gestore dell'evento `Page_Load`.
 
-AllProducts. aspx
+AllProducts.aspx
 
 [!code-aspx[Main](creating-a-data-access-layer-vb/samples/sample2.aspx)]
 
-AllProducts. aspx. vb
+AllProducts.aspx.vb
 
 [!code-vb[Main](creating-a-data-access-layer-vb/samples/sample3.vb)]
 
@@ -230,7 +230,7 @@ Beverage. aspx
 
 [!code-aspx[Main](creating-a-data-access-layer-vb/samples/sample4.aspx)]
 
-Beverage. aspx. vb
+Beverages.aspx.vb
 
 [!code-vb[Main](creating-a-data-access-layer-vb/samples/sample5.vb)]
 
@@ -422,11 +422,11 @@ Questi dati possono essere visualizzati anche in qualsiasi ASP. Controlli Web de
 
 In questa esercitazione verranno illustrate le procedure per visualizzare tali report master-details. Per il momento, questo esempio è progettato per illustrare l'uso del metodo personalizzato aggiunto alla classe `Northwind.SuppliersRow`.
 
-SuppliersAndProducts. aspx
+SuppliersAndProducts.aspx
 
 [!code-aspx[Main](creating-a-data-access-layer-vb/samples/sample24.aspx)]
 
-SuppliersAndProducts. aspx. vb
+SuppliersAndProducts.aspx.vb
 
 [!code-vb[Main](creating-a-data-access-layer-vb/samples/sample25.vb)]
 

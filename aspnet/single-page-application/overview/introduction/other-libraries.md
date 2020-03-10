@@ -9,56 +9,56 @@ ms.assetid: a8367c6d-ef94-4dff-a010-5eff9e6eea96
 msc.legacyurl: /single-page-application/overview/introduction/other-libraries
 msc.type: authoredcontent
 ms.openlocfilehash: 64a4ad1fb411f7291a5cba634afdf4d2fdb16d55
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65116073"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78578547"
 ---
 # <a name="know-a-library-other-than-knockout"></a>Librerie diverse da Knockout
 
-by [Mads Kristensen](https://github.com/madskristensen)
+di [Mads Kristensen](https://github.com/madskristensen)
 
-Il [modello di applicazione a pagina singola (SPA)](knockoutjs-template.md) è un ottimo modo per iniziare a scrivere applicazioni a singola pagina. Il modello Usa [Knockout. js](http://knockoutjs.com/) per associare i dati dell'applicazione per gli elementi DOM.
+Il [modello di applicazione a pagina singola (Spa)](knockoutjs-template.md) è un ottimo modo per iniziare a scrivere applicazioni a singola pagina. Il modello utilizza [Knockout](http://knockoutjs.com/) per associare i dati dell'applicazione agli elementi DOM.
 
-Ma Knockout non è la libreria JavaScript sola per la creazione di applicazioni rich client. Altre librerie di risolvono problematiche simili in modi diversi. Si potrebbe preferire una unica libreria rispetto a un altro, in modo che sono stati apportati diversi i modelli creati dalla community disponibili per il download. Ognuno di questi modelli utilizza una diversa combinazione di librerie client JavaScript.
+Ma Knockout non è l'unica libreria JavaScript per la creazione di applicazioni rich client. Altre librerie risolvono problemi simili in modi diversi. È possibile che si preferisca una libreria rispetto a un'altra, quindi sono stati resi disponibili per il download diversi modelli creati dalla community. Ognuno di questi modelli USA una combinazione diversa di librerie JavaScript client.
 
-Per installare un modello creati dalla community, visitare uno dei modelli le pagine elencate di seguito e fare clic sul pulsante Download. I modelli vengono forniti come file VSIX.
+Per installare un modello creato dalla community, visitare una delle pagine del modello elencate di seguito e fare clic sul pulsante download. I modelli vengono forniti come file VSIX.
 
 ## <a name="backbonejs"></a>BackboneJS
 
-[Modello di applicazione a singola pagina backbone](../templates/backbonejs-template.md). Questo modello fornisce uno scheletro iniziale per lo sviluppo di un [backbone](http://backbonejs.org/) dell'applicazione in ASP.NET MVC. Impostazione predefinita fornisce funzionalità di accesso utente di base, tra cui la reimpostazione della password di iscrizione, accesso, utente e la conferma dell'utente con i modelli di base tramite posta elettronica.
+[Modello di Spa backbone. js](../templates/backbonejs-template.md). Questo modello fornisce uno scheletro iniziale per lo sviluppo di un'applicazione [backbone. js](http://backbonejs.org/) in ASP.NET MVC. Fornisce funzionalità di base per l'accesso degli utenti, tra cui l'iscrizione, l'accesso, la reimpostazione della password e la conferma dell'utente con i modelli di posta elettronica di base.
 
 ## <a name="breezejs"></a>BreezeJS
 
-[BreezeJS](http://www.breezejs.com/?utm_source=ms-spa) è una libreria open source per la gestione di dati complessi in un client JavaScript. Gioco da ragazzi gestisce l'esecuzione di query, memorizzazione nella cache, il rilevamento delle modifiche, convalida e altro ancora. Due modelli della funzionalità Breeze:
+[Breezejs](http://www.breezejs.com/?utm_source=ms-spa) è una libreria open source per la gestione di dati avanzati in un client JavaScript. Breeze gestisce l'esecuzione di query, la memorizzazione nella cache, il rilevamento delle modifiche, la convalida e altro ancora. Funzionalità di due modelli Breeze:
 
-- Il [Breeze/Knockout](../templates/breezeknockout-template.md) modello estende il modello di applicazione a singola pagina Knockout, che mostra con quanta facilità è possibile compilare un'applicazione a singola pagina con gioco da ragazzi per la gestione dei dati e Knockout. js per il data binding.
-- Il [Breeze/Angular](../templates/breezeangular-template.md) modello estende anche il modello di applicazione a singola pagina Knockout gioco da ragazzi, ma utilizzando il [AngularJS](http://angularjs.org) libreria per l'associazione dati, inserimento di dipendenze e la gestione dello schermo.
+- Il modello [Breeze/Knockout](../templates/breezeknockout-template.md) estende il modello di applicazione a singola pagina, mostrando con quale facilità è possibile creare un'applicazione a singola pagina con Breeze per la gestione dei dati e knockout per data binding.
+- Il modello [Breeze/angolare](../templates/breezeangular-template.md) estende anche il modello Spa Knockout con Breeze, ma usando la libreria [AngularJS](http://angularjs.org) per data binding, l'inserimento di dipendenze e la gestione dello schermo.
 
-Inoltre, il [modello Hot Towel SPA](../templates/hottowel-template.md) Usa BreezeJS.
+Inoltre, il [modello Hot scaldasalviette Spa](../templates/hottowel-template.md) USA breezejs.
 
 ## <a name="emberjs"></a>EmberJS
 
-[Modello EmberJS SPA](../templates/emberjs-template.md). Questo modello Usa [Ember](http://emberjs.com/), una libreria JavaScript di MVC potente che consente di risolvere un'ampia gamma di problematiche per la compilazione di applicazioni rich client.
+[Modello di EMBERJS Spa](../templates/emberjs-template.md). Questo modello USA [Brac](http://emberjs.com/), una potente libreria JavaScript MVC che risolve un'ampia gamma di problemi per la creazione di applicazioni rich client.
 
-Il modello di applicazione a singola pagina Ember è una nuova implementazione del modello di applicazione a singola pagina Knockout, usando creazione modello EmberJS e Handlebars.
+Il modello di Brac SPA è una nuova implementazione del modello di applicazione a singola pagina, che usa EmberJS e i modelli manubri.
 
-## <a name="hot-towel"></a>Hot Towel
+## <a name="hot-towel"></a>Asciugamano caldo
 
-[Modello di hot Towel SPA](../templates/hottowel-template.md). Questo modello offre diverse librerie JavaScript, tra cui gioco da ragazzi, Knockout, RequireJS e Twitter Bootstrap.
+[Modello Hot asciugamano Spa](../templates/hottowel-template.md). Questo modello offre diverse librerie JavaScript, tra cui Breeze, Knockout, RequireJS e Twitter bootstrap.
 
-Confrontato con altri modelli elencati di seguito, il modello Hot Towel fornisce un'applicazione più completa da cui è possibile compilare il proprio. Esistono altri concetti da tenere presenti, ma dopo aver appreso li, questo modello potrebbe essere semplicemente ciò che sta cercando. Se si vuole compilare un'applicazione a singola pagina, ma non è possibile decidere dove iniziare, usare Hot Towel e in pochi secondi si otterrà un'applicazione a singola pagina e tutti gli strumenti devi compilare su di esso.
+Rispetto agli altri modelli elencati di seguito, il modello Hot asciugamano fornisce un'applicazione più completa da cui è possibile creare i propri. Ci sono altri concetti da conoscere, ma dopo averli capiti, questo modello potrebbe essere solo quello che si sta cercando. Se si vuole creare un'applicazione a singola pagina, ma non è possibile decidere dove iniziare, usare l'asciugamano caldo e in pochi secondi sarà presente una SPA e tutti gli strumenti necessari per compilarlo.
 
 ## <a name="feature-table"></a>Tabella delle funzionalità
 
-Ecco le funzionalità fornite da ogni modello di applicazione a singola pagina:
+Di seguito sono riportate le funzionalità fornite da ogni modello di SPA:
 
-|                        | ASP.NET SPA | Backbone | Breeze/Angular | Breeze/KO |  Ember   | Hot Towel |
+|                        | ASP.NET SPA | Backbone | Breeze/angolare | Breeze/KO |  Ember   | Asciugamano caldo |
 |------------------------|-------------|----------|----------------|-----------|----------|-----------|
 |      Esempio ToDo       |  &#10003;   |          |    &#10003;    | &#10003;  | &#10003; |           |
-|     Il modello      |             | &#10003; |                |           |          | &#10003;  |
-| Navigazione e la cronologia |             | &#10003; |    &#10003;    |           | &#10003; | &#10003;  |
+|     Modello bare      |             | &#10003; |                |           |          | &#10003;  |
+| Esplorazione e cronologia |             | &#10003; |    &#10003;    |           | &#10003; | &#10003;  |
 |        Librerie       |             |          |                |           |          |           |
 |        Angular         |             |          |    &#10003;    |           |          |           |
 |    &#8195;Backbone     |             | &#10003; |                |           |          |           |

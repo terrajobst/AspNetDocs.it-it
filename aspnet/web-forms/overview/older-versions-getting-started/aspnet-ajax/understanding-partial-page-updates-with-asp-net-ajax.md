@@ -9,11 +9,11 @@ ms.assetid: 54d9df99-1161-4899-b4e8-2679c85915e7
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/aspnet-ajax/understanding-partial-page-updates-with-asp-net-ajax
 msc.type: authoredcontent
 ms.openlocfilehash: 4b87cb8f58dbd7f27b16bcb0d488ff361770d4fe
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74623043"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78545969"
 ---
 # <a name="understanding-partial-page-updates-with-aspnet-ajax"></a>Informazioni sugli aggiornamenti parziali di pagine con ASP.NET AJAX
 
@@ -103,20 +103,20 @@ Visual Studio 2008 non presenta un modello predefinito per un sito Web abilitato
 
 Proprietà abilitate per il markup:
 
-| **Nome proprietà** | **Type** | **Descrizione** |
+| **Nome proprietà** | **Tipo** | **Descrizione** |
 | --- | --- | --- |
-| AllowCustomErrors-Reindirizzamento | Bool | Specifica se utilizzare la sezione di errore personalizzata del file Web. config per gestire gli errori. |
-| AsyncPostBackError-messaggio | Stringa | Ottiene o imposta il messaggio di errore inviato al client se viene generato un errore. |
-| AsyncPostBack-timeout | Int32 | Ottiene o imposta il periodo di tempo predefinito in cui un client deve attendere il completamento della richiesta asincrona. |
-| EnableScript-globalizzazione | Bool | Ottiene o imposta un valore che indica se la globalizzazione degli script è abilitata. |
-| EnableScript-localizzazione | Bool | Ottiene o imposta un valore che indica se la localizzazione degli script è abilitata. |
+| AllowCustomErrors-Redirect | Bool | Specifica se utilizzare la sezione di errore personalizzata del file Web. config per gestire gli errori. |
+| AsyncPostBackError-Message | Stringa | Ottiene o imposta il messaggio di errore inviato al client se viene generato un errore. |
+| AsyncPostBack-Timeout | Int32 | Ottiene o imposta il periodo di tempo predefinito in cui un client deve attendere il completamento della richiesta asincrona. |
+| EnableScript-Globalization | Bool | Ottiene o imposta un valore che indica se la globalizzazione degli script è abilitata. |
+| EnableScript-Localization | Bool | Ottiene o imposta un valore che indica se la localizzazione degli script è abilitata. |
 | ScriptLoadTimeout | Int32 | Determina il numero di secondi consentiti per il caricamento degli script nel client |
 | ScriptMode | Enum (auto, debug, release, inherit) | Ottiene o imposta un valore che indica se eseguire il rendering delle versioni di rilascio degli script |
 | ScriptPath | Stringa | Ottiene o imposta il percorso radice della posizione dei file di script da inviare al client. |
 
 Proprietà solo codice:
 
-| **Nome proprietà** | **Type** | **Descrizione** |
+| **Nome proprietà** | **Tipo** | **Descrizione** |
 | --- | --- | --- |
 | AuthenticationService | AuthenticationService-Manager | Ottiene i dettagli sul proxy del servizio di autenticazione ASP.NET che verrà inviato al client. |
 | IsDebuggingEnabled | Bool | Ottiene un valore che indica se è abilitato il debug di script e codice. |
@@ -128,9 +128,9 @@ Proprietà solo codice:
 
 Metodi di codice pubblico:
 
-| **Nome metodo** | **Type** | **Descrizione** |
+| **Nome metodo** | **Tipo** | **Descrizione** |
 | --- | --- | --- |
-| SetFocus (stringa) | Void | Imposta lo stato attivo del client su un determinato controllo quando la richiesta è stata completata. |
+| SetFocus(string) | Void | Imposta lo stato attivo del client su un determinato controllo quando la richiesta è stata completata. |
 
 Discendenti markup:
 
@@ -177,7 +177,7 @@ Il controllo ScriptManager fornisce un ampio supporto per la localizzazione di s
 
 Proprietà abilitate per il markup:
 
-| **Nome proprietà** | **Type** | **Descrizione** |
+| **Nome proprietà** | **Tipo** | **Descrizione** |
 | --- | --- | --- |
 | ChildrenAsTriggers | bool | Specifica se i controlli figlio richiamano automaticamente l'aggiornamento durante il postback. |
 | RenderMode | enum (blocco, inline) | Specifica il modo in cui il contenuto verrà presentato visivamente. |
@@ -185,7 +185,7 @@ Proprietà abilitate per il markup:
 
 Proprietà solo codice:
 
-| **Nome proprietà** | **Type** | **Descrizione** |
+| **Nome proprietà** | **Tipo** | **Descrizione** |
 | --- | --- | --- |
 | IsInPartialRendering | bool | Ottiene un valore che indica se UpdatePanel supporta il rendering parziale per la richiesta corrente. |
 | ContentTemplate | ITemplate | Ottiene il modello di markup per la richiesta di aggiornamento. |
@@ -194,7 +194,7 @@ Proprietà solo codice:
 
 Metodi di codice pubblico:
 
-| **Nome metodo** | **Type** | **Descrizione** |
+| **Nome metodo** | **Tipo** | **Descrizione** |
 | --- | --- | --- |
 | Aggiornamento () | Void | Aggiorna l'UpdatePanel specificato a livello di codice. Consente a una richiesta del server di attivare un rendering parziale di un UpdatePanel altrimenti non attivato. |
 
@@ -267,7 +267,7 @@ Infine, se un'applicazione richiede l'utilizzo di UpdatePanel, le linee guida se
 
 Proprietà abilitate per il markup:
 
-| **Nome proprietà** | **Type** | **Descrizione** |
+| **Nome proprietà** | **Tipo** | **Descrizione** |
 | --- | --- | --- |
 | AssociatedUpdate-PanelID | Stringa | Specifica l'ID dell'UpdatePanel su cui deve essere segnalato questo UpdateProgress. |
 | DisplayAfter | Int | Specifica il timeout in millisecondi prima che il controllo venga visualizzato dopo l'inizio della richiesta asincrona. |
@@ -297,7 +297,7 @@ Il controllo UpdateProgress consente all'utente di conoscere che non viene ignor
 
 Insieme, questi strumenti facilitano la creazione di un'esperienza utente completa e trasparente, rendendo il lavoro del server meno evidente all'utente e interrompendo meno il flusso di lavoro.
 
-## <a name="bio"></a>Biografia
+## <a name="bio"></a>Bio
 
 Scott Cate collabora con le tecnologie Web Microsoft a partire dal 1997 ed è il Presidente di myKB.com ([www.myKB.com](http://www.myKB.com)), dove si specializza nella scrittura di applicazioni basate su ASP.NET incentrate sulle soluzioni software della Knowledge base. Scott può essere contattato tramite posta elettronica all' [scott.cate@myKB.com](mailto:scott.cate@myKB.com) o al suo blog all' [ScottCate.com](http://ScottCate.com)
 

@@ -1,25 +1,25 @@
 ---
 uid: web-forms/videos/aspnet-35/how-do-i/how-do-i-use-the-new-entity-data-source
-title: '[Procedura:] Usare la nuova origine dati di entità | Microsoft Docs'
+title: "[Procedura:] Usare la nuova origine dati dell'entità | Microsoft Docs"
 author: divega
-description: In questa introduttiva Diego Vega video illustrerà come utilizzare l'origine dati di entità in un'applicazione ASP.NET.
+description: In questo video introduttivo Diego Vega mostrerò come usare l'origine dati Entity in un'applicazione ASP.NET.
 ms.author: riande
 ms.date: 05/22/2008
 ms.assetid: ce4a5e6c-8aec-4955-a145-337f1e48af05
 msc.legacyurl: /web-forms/videos/aspnet-35/how-do-i/how-do-i-use-the-new-entity-data-source
 msc.type: video
 ms.openlocfilehash: 1c02cea5bf9b899f400cbcd07a19fe5e213decdc
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59384677"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78573031"
 ---
-# <a name="how-do-i-use-the-new-entity-data-source"></a>[Procedura:] Usare la nuova origine dati di entità
+# <a name="how-do-i-use-the-new-entity-data-source"></a>[Procedura:] Usare la nuova origine dati dell'entità
 
-da [Diego Vega](https://github.com/divega)
+di [Diego Vega](https://github.com/divega)
 
-In questa introduttiva Diego Vega video illustrerà come utilizzare l'origine dati di entità in un'applicazione ASP.NET.
+In questo video introduttivo Diego Vega mostrerò come usare l'origine dati Entity in un'applicazione ASP.NET.
 
 [&#9654;Guarda il video (11 minuti)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-use-the-new-entity-data-source)
 

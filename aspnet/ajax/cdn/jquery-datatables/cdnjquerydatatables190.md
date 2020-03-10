@@ -9,15 +9,15 @@ ms.assetid: 0f9c7b5e-bac0-40f1-b353-bd46e8759836
 msc.legacyurl: /ajax/cdn/jquery-datatables/cdnjquerydatatables190
 msc.type: content
 ms.openlocfilehash: c2f251f6b2ca9a810de5d6e7fb93886ae510094b
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59408550"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78563189"
 ---
 # <a name="jquery-datatables-190"></a>jQuery DataTables 1.9.0
 
-I file seguenti per il componente aggiuntivo jQuery DataTables i plug-in sono ospitati nella rete CDN:
+I file seguenti per i plug-in jQuery DataTables sono ospitati nella rete CDN:
 
 - https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/jquery.dataTables.js
 - https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/jquery.dataTables.min.js

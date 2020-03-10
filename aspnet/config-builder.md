@@ -7,11 +7,11 @@ ms.author: riande
 ms.date: 10/29/2018
 msc.type: content
 ms.openlocfilehash: 5299d9ab057c3096773955a7461e77a80673ebfe
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74586757"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78584511"
 ---
 # <a name="configuration-builders-for-aspnet"></a>Generatori di configurazioni per ASP.NET
 
@@ -82,7 +82,7 @@ Usare uno degli approcci seguenti per inserire sia `<appSettings/>` che `<connec
 
 * Con il `EnvironmentConfigBuilder` nella modalità di `Strict` predefinita e i nomi di chiave appropriati nel file di configurazione. Il codice e il markup precedenti prendono questo approccio. Con questo approccio **non** è possibile avere chiavi denominate in modo identico in `<appSettings/>` e `<connectionStrings/>`.
 * Usare due `EnvironmentConfigBuilder`s in modalità `Greedy` con prefissi e `stripPrefix`distinti. Con questo approccio, l'app può leggere `<appSettings/>` e `<connectionStrings/>` senza che sia necessario aggiornare il file di configurazione. Nella sezione successiva, [stripPrefix](#stripprefix), viene illustrato come eseguire questa operazione.
-* Usare due `EnvironmentConfigBuilder`s in modalità `Greedy` con prefissi distinti. Con questo approccio non è possibile avere nomi di chiave duplicati perché i nomi delle chiavi devono essere diversi per prefisso.  Ad esempio:
+* Usare due `EnvironmentConfigBuilder`s in modalità `Greedy` con prefissi distinti. Con questo approccio non è possibile avere nomi di chiave duplicati perché i nomi delle chiavi devono essere diversi per prefisso.  Esempio:
 
 [!code-xml[Main](config-builder/MyConfigBuilders/WebPrefix.config?name=snippet&highlight=11-99)]
 
@@ -103,7 +103,7 @@ Il codice precedente imposterà i valori della proprietà su:
 
 Ad esempio, usando il file *Web. config* precedente, le chiavi e i valori nell'immagine precedente dell'editor dell'ambiente e il codice precedente, vengono impostati i valori seguenti:
 
-|  Key              | Valore |
+|  Chiave              | Value |
 | ----------------- | ------------ |
 |     AppSetting_ServiceID           | AppSetting_ServiceID dalle variabili env|
 |    AppSetting_default            | AppSetting_default valore da ENV |
@@ -136,11 +136,11 @@ Il codice precedente imposterà i valori della proprietà su:
 
 Ad esempio, usando il file *Web. config* precedente, le chiavi e i valori nell'immagine precedente dell'editor dell'ambiente e il codice precedente, vengono impostati i valori seguenti:
 
-|  Key              | Valore |
+|  Chiave              | Value |
 | ----------------- | ------------ |
 |     ServiceID           | AppSetting_ServiceID dalle variabili env|
-|    predefiniti            | AppSetting_default valore da ENV |
-|    predefiniti         | ConnStr_default Val da ENV|
+|    default            | AppSetting_default valore da ENV |
+|    default         | ConnStr_default Val da ENV|
 
 ### <a name="tokenpattern"></a>tokenPattern
 
@@ -280,7 +280,7 @@ Dettagli attributo:
 * `jsonMode` - `[Flat|Sectional]`. Il valore predefinito è `Flat`. Quando `jsonMode` viene `Flat`, il file JSON è un'unica origine chiave/valore flat. I `EnvironmentConfigBuilder` e `AzureKeyVaultConfigBuilder` sono anche origini chiave/valore Flat singole. Quando la `SimpleJsonConfigBuilder` viene configurata in modalità `Sectional`:
 
   * Il file JSON viene diviso concettualmente solo al livello principale in più dizionari.
-  * Ognuno dei dizionari viene applicato solo alla sezione di configurazione che corrisponde al nome della proprietà di primo livello associato. Ad esempio:
+  * Ognuno dei dizionari viene applicato solo alla sezione di configurazione che corrisponde al nome della proprietà di primo livello associato. Esempio:
 
 ```json
     {

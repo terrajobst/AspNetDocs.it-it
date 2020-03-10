@@ -1,23 +1,23 @@
 ---
 uid: web-pages/videos/aspnet-razor-pages/index
-title: Le pagine Razor di ASP.NET | Microsoft Docs
+title: Razor Pages ASP.NET | Microsoft Docs
 author: rick-anderson
-description: Video di cui è possibile visualizzare per il drill-down in Web Pages e WebMatrix.
+description: Quali video è possibile visualizzare per eseguire il drill-down in Web Pages e WebMatrix.
 ms.author: riande
 ms.date: 05/18/2012
 ms.assetid: ffad842d-548c-40c6-84c5-10858133e972
 msc.legacyurl: /web-pages/videos/aspnet-razor-pages
 msc.type: chapter
 ms.openlocfilehash: c1889f0eab6d2df41ac6e19d433303198c4789f4
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65127793"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78633392"
 ---
 # <a name="aspnet-web-pages"></a>Pagine Web ASP.NET
 
-> Video di cui è possibile visualizzare per il drill-down in Web Pages e WebMatrix.
+> Quali video è possibile visualizzare per eseguire il drill-down in Web Pages e WebMatrix.
 
 - [Introduzione a WebMatrix e pagine Web ASP.NET](getting-started-with-webmatrix-and-aspnet-web-pages.md)
 - [Introduzione alla sintassi Razor per la programmazione Web ASP.NET](introduction-to-aspnet-web-programming-using-the-razor-syntax.md)

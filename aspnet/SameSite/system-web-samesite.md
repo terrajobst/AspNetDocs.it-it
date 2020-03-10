@@ -5,12 +5,12 @@ description: Informazioni su come usare per navigava sullostesso sito i cookie i
 ms.author: riande
 ms.date: 2/15/2019
 uid: samesite/system-web-samesite
-ms.openlocfilehash: edb368910b24be2d042afe3c19ffa1fb23245443
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.openlocfilehash: 7987a5d6c9b3a82679d42a2d381d471d56f495c2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77455705"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78546746"
 ---
 # <a name="work-with-samesite-cookies-in-aspnet"></a>Usare i cookie navigava sullostesso sito in ASP.NET
 
@@ -177,7 +177,7 @@ Questi rilevamenti sono gli agenti browser più comuni osservati che supportano 
 * L'app può visualizzare i browser non disponibili nei siti di test.
 * È necessario essere pronti ad aggiungere i rilevamenti necessari per l'ambiente.
 
-La modalità di collegamento del rilevamento varia a seconda della versione di .NET e del framework Web in uso. Il codice seguente può essere chiamato nel <xref:HTTP.HttpCookie> sito di chiamata:
+La modalità di collegamento del rilevamento varia a seconda della versione di .NET e del framework Web in uso. Il codice seguente può essere chiamato nel sito di chiamata [HttpCookie](/dotnet/api/system.web.httpcookie) :
 
 [!code-csharp[](sample/SameSiteCheck.cs?name=snippet)]
 
@@ -248,6 +248,8 @@ Google non rende disponibili versioni precedenti di Chrome. Seguire le istruzion
 * [Cromo 74 Win64](https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win_x64/638880/)
 * Se non si usa una versione a 64 bit di Windows, è possibile usare il [Visualizzatore OmahaProxy](https://omahaproxy.appspot.com/) per cercare il ramo cromo corrispondente a Chrome 74 (v 74.0.3729.108) usando le [istruzioni fornite da Chromium](https://www.chromium.org/getting-involved/download-chromium).
 
+A partire dalla versione Canary `80.0.3975.0`, la mitigazione di LAX + POST temporanea può essere disabilitata a scopo di test usando il nuovo flag `--enable-features=SameSiteDefaultChecksMethodRigorously` per consentire il test di siti e servizi nello stato finale finale della funzionalità in cui è stata rimossa la mitigazione. Per ulteriori informazioni, vedere la pagina relativa agli [aggiornamenti di navigava sullostesso sito](https://www.chromium.org/updates/same-site) per progetti Chromium
+
 #### <a name="test-with-chrome-80"></a>Test con Chrome 80 +
 
 [Scaricare](https://www.google.com/chrome/) una versione di Chrome che supporta il nuovo attributo. Al momento della stesura di questo documento, la versione corrente è Chrome 80. Chrome 80 richiede che il flag `chrome://flags/#same-site-by-default-cookies` abilitato per usare il nuovo comportamento. È inoltre consigliabile abilitare (`chrome://flags/#cookies-without-same-site-must-be-secure`) per testare il comportamento imminente per i cookie per i quali non sono abilitati attributi navigava sullostesso sito. Chrome 80 si trova nella destinazione per fare in modo che il Commuter tratti i cookie senza l'attributo come `SameSite=Lax`, anche se con un periodo di tolleranza programmato per determinate richieste. Per disabilitare il periodo di tolleranza temporizzato, Chrome 80 può essere avviato con l'argomento della riga di comando seguente:
@@ -302,6 +304,7 @@ Aggiornare il *file Web. config* in modo da includere le impostazioni di configu
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
 * [Prossime modifiche ai cookie navigava sullostesso sito in ASP.NET e ASP.NET Core](https://devblogs.microsoft.com/aspnet/upcoming-samesite-cookie-changes-in-asp-net-and-asp-net-core/)
+* [Suggerimenti per il test e il debug di navigava sullostesso sito per impostazione predefinita e "navigava sullostesso sito = None; Proteggi "cookie](https://www.chromium.org/updates/same-site/test-debug)
 * [Blog di Chromium: sviluppatori: prepararsi per la nuova navigava sullostesso sito = None; Impostazioni sicure del cookie](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)
 * [Spiegazione dei cookie navigava sullostesso sito](https://web.dev/samesite-cookies-explained/)
 * [Aggiornamenti Chrome](https://www.chromium.org/updates/same-site)

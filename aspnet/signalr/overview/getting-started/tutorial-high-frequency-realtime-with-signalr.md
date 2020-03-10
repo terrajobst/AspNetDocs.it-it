@@ -10,11 +10,11 @@ msc.legacyurl: /signalr/overview/getting-started/tutorial-high-frequency-realtim
 msc.type: authoredcontent
 ms.topic: tutorial
 ms.openlocfilehash: 2503e90735d6cfa445ee08c9e43f8443aa106096
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74600459"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78558625"
 ---
 # <a name="tutorial-create-high-frequency-real-time-app-with-signalr-2"></a>Esercitazione: creare un'app in tempo reale ad alta frequenza con SignalR 2
 
@@ -38,9 +38,9 @@ Le attività di questa esercitazione sono le seguenti:
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
-* [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/) con il carico di lavoro di **sviluppo ASP.NET e Web** .
+* [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/) con il carico di lavoro **Sviluppo ASP.NET e Web**.
 
 ## <a name="set-up-the-project"></a>Configurare il progetto
 
@@ -62,7 +62,7 @@ Questa sezione illustra come usare Visual Studio 2017 per creare un'applicazione
 
     Questo passaggio crea il file della classe *MoveShapeHub.cs* . Simultaneamente, aggiunge un set di file script e riferimenti ad assembly che supportano SignalR al progetto.
 
-1. Selezionare **strumenti** > **gestione pacchetti NuGet** > **console di gestione pacchetti**.
+1. Fare clic su **Strumenti** > **Gestione Pacchetti NuGet** > **Console di Gestione pacchetti**.
 
 1. Nella **console di gestione pacchetti**eseguire questo comando:
 

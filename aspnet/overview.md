@@ -9,11 +9,11 @@ ms.date: 08/10/2019
 msc.legacyurl: ''
 msc.type: content
 ms.openlocfilehash: aa4f627bca99f0a7ffbbb53ea45ebdcf0850fd89
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519362"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78537345"
 ---
 # <a name="aspnet-overview"></a>Panoramica di ASP.NET
 
@@ -21,7 +21,7 @@ ASP.NET è un framework Web gratuito per la creazione di grandi siti Web e appli
 
 [ASP.NET Core](https://docs.microsoft.com/aspnet/core/) è un'alternativa a ASP.NET.  Vedere le [indicazioni su come scegliere tra ASP.NET e ASP.NET Core](https://docs.microsoft.com/aspnet/core/choose-aspnet-framework).
 
-## <a name="get-started"></a>Attività iniziali
+## <a name="get-started"></a>Introduzione
 
 Installare [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019) Community Edition, un IDE gratuito per ASP.NET in Windows.
 
@@ -33,7 +33,7 @@ Ogni Framework è destinato a uno stile di sviluppo diverso. La scelta dipende d
 
 Di seguito è riportata una panoramica di ogni Framework e alcune idee su come scegliere tra di essi. Se si preferisce un video introduttivo, vedere [creazione di siti Web con ASP.NET](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/Making-Websites-with-ASPNET) e informazioni sugli [strumenti Web.](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/what-is-web-tools)
 
-|   | Se si ha esperienza con | Stile di sviluppo | Competenze |
+|   | Se si ha esperienza con | Stile di sviluppo | Esperienza |
 |-----------|----------------------|-----------------------------------------------------|----------------|
 | Web Form | Win Forms, WPF, .NET | Sviluppo rapido con una ricca libreria di controlli che incapsulano il markup HTML | RAD avanzato di livello intermedio |
 | MVC       | Ruby on Rails, .NET  | Controllo completo del markup HTML, del codice e del markup separati e dei test facile da scrivere. La scelta migliore per le applicazioni per dispositivi mobili e a singola pagina (SPA). | Livello intermedio, avanzato |
@@ -51,7 +51,7 @@ ASP.NET MVC offre opzioni avanzate e basate su criteri per creare siti Web dinam
 
 [Altre informazioni su MVC](mvc/index.md)
 
-### <a name="aspnet-web-pages"></a>Pagine Web di ASP.NET
+### <a name="aspnet-web-pages"></a>Pagine Web ASP.NET
 
 Pagine Web ASP.NET e il sintassi Razor forniscono un metodo rapido, accessibile e semplice per combinare il codice server con HTML per creare contenuti Web dinamici. È possibile connettersi ai database, aggiungere video, collegarsi ai siti di social networking e includere molte altre funzionalità che consentono di creare siti accattivanti conformi agli standard Web più recenti.
 
@@ -65,7 +65,7 @@ Inoltre, i tre Framework non sono completamente indipendenti e la scelta non imp
 
 ## <a name="web-apis"></a>API Web
 
-ASP.NET Web API è un framework che consente di creare facilmente servizi HTTP in grado di raggiungere un ampio numero di client, inclusi browser e dispositivi mobili. ASP.NET Web API è la piattaforma ideale per creare applicazioni RESTful in .NET Framework.
+ASP.NET Web API è un framework che consente di creare facilmente servizi HTTP in grado di raggiungere un ampio numero di client, inclusi browser e dispositivi mobili. API Web ASP.NET è la piattaforma ideale per compilare applicazioni RESTful in .NET Framework.
 
 [Altre informazioni su API Web](web-api/index.md)
 

@@ -9,11 +9,11 @@ ms.assetid: 400db427-27af-4f2f-abf0-5486d5e024b5
 msc.legacyurl: /signalr/overview/deployment/tutorial-signalr-self-host
 msc.type: authoredcontent
 ms.openlocfilehash: 41c8c3803923e76ef238a5c5937cbe7f81e6aa82
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74578570"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78558681"
 ---
 # <a name="tutorial-signalr-self-host"></a>Esercitazione: Self-host SignalR
 
@@ -49,7 +49,7 @@ di [Patrick Fletcher](https://github.com/pfletcher)
 >
 > Inviare commenti e suggerimenti su come questa esercitazione è stata apprezzata e su cosa è possibile migliorare nei commenti nella parte inferiore della pagina. In caso di domande non direttamente correlate all'esercitazione, è possibile pubblicarle nel [Forum di ASP.NET SignalR](https://forums.asp.net/1254.aspx/1?ASP+NET+SignalR) o in [StackOverflow.com](http://stackoverflow.com/).
 
-## <a name="overview"></a>Panoramica di
+## <a name="overview"></a>Panoramica
 
 Un server SignalR è in genere ospitato in un'applicazione ASP.NET in IIS, ma può anche essere indipendente (ad esempio in un'applicazione console o in un servizio Windows) usando la libreria Self-host. Questa libreria, come all of SignalR 2, si basa su OWIN ([Open Web Interface for .NET](http://owin.org)). OWIN definisce un'astrazione tra i server Web .NET e le applicazioni Web. OWIN separa l'applicazione Web dal server, rendendo OWIN ideale per l'hosting automatico di un'applicazione Web nel proprio processo, al di fuori di IIS.
 

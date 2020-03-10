@@ -9,11 +9,11 @@ ms.assetid: 022801d8-a327-4d0c-8780-6094c9cee00d
 msc.legacyurl: /web-forms/overview/data-access/introduction/master-pages-and-site-navigation-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 4a2b5ba8c1781f1194f951a44661a8f7dd095f41
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74578611"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78530520"
 ---
 # <a name="master-pages-and-site-navigation-vb"></a>Pagine master ed esplorazione del sito (VB)
 
@@ -51,7 +51,7 @@ Per creare una pagina master, fare clic con il pulsante destro del mouse sul nom
 
 Definire il layout di pagina a livello di sito nella pagina master. È possibile utilizzare la visualizzazione progettazione e aggiungere qualsiasi layout o controllo Web necessario oppure è possibile aggiungere manualmente il markup manualmente nella visualizzazione origine. Nella pagina master vengono usati [fogli di stile CSS](http://www.w3schools.com/css/default.asp) per il posizionamento e gli stili con le impostazioni CSS definite nel file esterno `Style.css`. Sebbene non sia possibile capire dal markup mostrato di seguito, le regole CSS sono definite in modo tale che il contenuto del `<div>`di navigazione sia assolutamente posizionato, in modo che venga visualizzato a sinistra e con una larghezza fissa di 200 pixel.
 
-Site. master
+Site.master
 
 [!code-aspx[Main](master-pages-and-site-navigation-vb/samples/sample1.aspx)]
 
@@ -129,7 +129,7 @@ Il file della mappa del sito è un file XML. Si noti che Visual Studio fornisce 
 
 Definire la mappa del sito per simulare la struttura del file system. Ovvero, aggiungere un elemento `<siteMapNode>` per ognuna delle tre cartelle e gli elementi `<siteMapNode>` figlio per ogni pagina di ASP.NET in tali cartelle, come indicato di seguito:
 
-Web. Sitemap
+Web.sitemap
 
 [!code-xml[Main](master-pages-and-site-navigation-vb/samples/sample4.xml)]
 
@@ -219,11 +219,11 @@ Verrà ora visualizzato un elenco non ordinato usando un ripetitore, ma questa v
 
 **Figura 13**: aggiungere un nuovo controllo utente Web alla cartella `UserControls` ([fare clic per visualizzare l'immagine con dimensioni complete](master-pages-and-site-navigation-vb/_static/image31.png))
 
-SectionLevelTutorialListing. ascx
+SectionLevelTutorialListing.ascx
 
 [!code-aspx[Main](master-pages-and-site-navigation-vb/samples/sample12.aspx)]
 
-SectionLevelTutorialListing. ascx. vb
+SectionLevelTutorialListing.ascx.vb
 
 [!code-vb[Main](master-pages-and-site-navigation-vb/samples/sample13.vb)]
 

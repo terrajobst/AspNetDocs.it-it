@@ -9,11 +9,11 @@ ms.assetid: f7073f50-d765-456d-9957-926ce60f35f6
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/executing-animations-using-client-side-code-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 7ef36900d20d8d07c3c6f3b63ce96568a377a0ed
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74575502"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78598161"
 ---
 # <a name="executing-animations-using-client-side-code-vb"></a>Esecuzione di animazioni tramite codice lato client (VB)
 
@@ -23,7 +23,7 @@ di [Christian Wenz](https://github.com/wenz)
 
 > Il controllo dell'animazione in ASP.NET AJAX Control Toolkit non è solo un controllo, ma un intero Framework per aggiungere animazioni a un controllo. L'esecuzione dell'animazione può anche essere attivata utilizzando codice JavaScript lato client personalizzato.
 
-## <a name="overview"></a>Panoramica di
+## <a name="overview"></a>Panoramica
 
 Il controllo dell'animazione in ASP.NET AJAX Control Toolkit non è solo un controllo, ma un intero Framework per aggiungere animazioni a un controllo. L'esecuzione dell'animazione può anche essere attivata utilizzando codice JavaScript lato client personalizzato.
 

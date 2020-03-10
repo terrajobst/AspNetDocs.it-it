@@ -6,11 +6,11 @@ ms.author: riande
 ms.date: 2/15/2019
 uid: samesite/CSharpWebForms
 ms.openlocfilehash: 50d4745eca5954275abaa59dab726e7cf7ea193f
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77458483"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78526117"
 ---
 # <a name="samesite-cookie-sample-for-aspnet-472-c-webforms"></a>Esempio di cookie navigava sullostesso sito per Web C# form ASP.NET 4.7.2
 

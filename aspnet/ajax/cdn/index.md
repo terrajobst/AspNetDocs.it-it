@@ -1,6 +1,6 @@
 ---
 uid: ajax/cdn/index
-title: Rete CDN Microsoft Ajax | Microsoft Docs
+title: Rete per la distribuzione di contenuti Microsoft AJAX | Microsoft Docs
 author: rick-anderson
 description: ''
 ms.author: riande
@@ -9,11 +9,11 @@ ms.assetid: fc98bde7-484a-4191-bba2-04d29551cb8f
 msc.legacyurl: ''
 msc.type: content
 ms.openlocfilehash: 10ee617ff5653bcc478364b7bea75bac4f4770f6
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59388855"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78564568"
 ---
 # <a name="microsoft-ajax-content-delivery-network"></a>Rete per la distribuzione di contenuti Microsoft Ajax
 
@@ -57,7 +57,7 @@ ms.locfileid: "59388855"
     - [Interfaccia utente di jQuery 1.12.1 sulla rete CDN Microsoft Ajax](jquery-ui/cdnjqueryui1121.md)
 - [Convalida di jQuery](jquery-validate/index.md)
 
-    - [jQuery Validation 1.17.0](jquery-validate/cdnjqueryvalidate1170.md)
+    - [1.17.0 di convalida jQuery](jquery-validate/cdnjqueryvalidate1170.md)
     - [Convalida di jQuery 1.16.0](jquery-validate/cdnjqueryvalidate1160.md)
     - [Convalida di jQuery 1.15.1](jquery-validate/cdnjqueryvalidate1151.md)
     - [Convalida di jQuery 1.15.0](jquery-validate/cdnjqueryvalidate1150.md)

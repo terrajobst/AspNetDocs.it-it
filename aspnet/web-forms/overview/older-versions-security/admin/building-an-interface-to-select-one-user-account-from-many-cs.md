@@ -9,11 +9,11 @@ ms.assetid: 9e4e687c-b4ec-434f-a4ef-edb0b8f365e4
 msc.legacyurl: /web-forms/overview/older-versions-security/admin/building-an-interface-to-select-one-user-account-from-many-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 8057cfbcd33c74376076363bc27940cebd522c08
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74575840"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78642534"
 ---
 # <a name="building-an-interface-to-select-one-user-account-from-many-c"></a>Creazione di un'interfaccia per la selezione di un account utente tra diversi account (C#)
 
@@ -29,7 +29,7 @@ Nell'esercitazione <a id="_msoanchor_1"> </a> [*assegnazione dei ruoli agli uten
 
 In questa esercitazione verrà compilata un'interfaccia utente di questo tipo. In particolare, l'interfaccia utente sarà costituita da una serie di LinkButton per filtrare i risultati in base alla lettera iniziale del nome utente e da un controllo GridView per visualizzare gli utenti corrispondenti. Si inizierà elencando tutti gli account utente in un controllo GridView. Quindi, nel passaggio 3, si aggiungeranno gli LinkButton del filtro. Il passaggio 4 esamina il paging dei risultati filtrati. L'interfaccia costruita nei passaggi da 2 a 4 verrà usata nelle esercitazioni successive per eseguire attività amministrative per un determinato account utente.
 
-Iniziamo!
+Ecco come procedere.
 
 ## <a name="step-1-adding-new-aspnet-pages"></a>Passaggio 1: aggiunta di nuove pagine di ASP.NET
 

@@ -9,11 +9,11 @@ ms.assetid: 7f9380c6-19f7-4c82-a019-916ec6dffc9c
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/aspnet-ajax/understanding-asp-net-ajax-debugging-capabilities
 msc.type: authoredcontent
 ms.openlocfilehash: 08ced380f3551407d757524dbc84b5feeeb5482b
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74601681"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78629507"
 ---
 # <a name="understanding-aspnet-ajax-debugging-capabilities"></a>Informazioni sulle funzionalità di debug di ASP.NET AJAX
 
@@ -222,7 +222,7 @@ La classe Sys. debug espone diverse funzioni che possono essere utilizzate per g
 | clearTrace() | Cancella l'output delle istruzioni dalle operazioni di traccia. |
 | errore (messaggio) | Determina l'arresto dell'esecuzione del programma e l'interruzione nel debugger. Il parametro del messaggio può essere utilizzato per fornire un motivo per l'errore. |
 | Trace (messaggio) | Scrive il parametro del messaggio nell'output di traccia. |
-| traceDump (oggetto, nome) | Restituisce i dati di un oggetto in un formato leggibile. Il parametro Name può essere utilizzato per fornire un'etichetta per il dump della traccia. Tutti gli oggetti secondari all'interno dell'oggetto di cui è stato eseguito il dump verranno scritti per impostazione predefinita. |
+| traceDump(object, name) | Restituisce i dati di un oggetto in un formato leggibile. Il parametro Name può essere utilizzato per fornire un'etichetta per il dump della traccia. Tutti gli oggetti secondari all'interno dell'oggetto di cui è stato eseguito il dump verranno scritti per impostazione predefinita. |
 
 La traccia lato client può essere usata in modo molto simile alla funzionalità di traccia disponibile in ASP.NET. Consente di visualizzare facilmente messaggi diversi senza interrompere il flusso dell'applicazione. L'elenco 5 Mostra un esempio di utilizzo della funzione sys. debug. Trace per scrivere nel log di traccia. Questa funzione accetta semplicemente il messaggio da scrivere come parametro.
 
@@ -307,7 +307,7 @@ Microsoft ASP.NET AJAX Technology fornisce una solida base per la creazione di a
 
 In questo articolo sono state introdotte diverse tecniche per il debug di pagine AJAX di ASP.NET, tra cui Internet Explorer con Visual Studio 2008, helper per lo sviluppo Web e Firebug. Questi strumenti possono semplificare il processo di debug complessivo, poiché è possibile accedere ai dati delle variabili, scorrere il codice riga per riga e visualizzare le istruzioni di traccia. Oltre ai diversi strumenti di debug descritti, è stato inoltre illustrato come usare la classe Sys. debug della libreria ASP.NET AJAX in un'applicazione e come è possibile usare la classe ScriptManager per caricare le versioni di debug o di rilascio degli script.
 
-## <a name="bio"></a>Biografia
+## <a name="bio"></a>Bio
 
 Dan Wahlin (Microsoft Most Valuable Professional per ASP.NET e i servizi Web XML) è un consulente per lo sviluppo in .NET e un consulente di architettura per la formazione tecnica di interfaccia ([www.interfacett.com)](http://www.interfacett.com). Dan ha fondato il sito Web di XML for ASP.NET Developers ([www.XMLforASP.NET](http://www.XMLforASP.NET)), si trova nell'ufficio del relatore di INETA e parla di diverse conferenze. Dan co-creato Professional Windows DNA (Wrox), ASP.NET: suggerimenti, esercitazioni e codice (Sams), ASP.NET 1,1 Insider Solutions, Professional ASP.NET 2,0 AJAX (Wrox), ASP.NET 2,0 MVP hack e authored XML for ASP.NET Developers (Sams). Quando non scrive codice, articoli o libri, Dan gode di scrivere e registrare musica e giocare a golf e basket con la moglie e i figli.
 

@@ -9,11 +9,11 @@ ms.assetid: 6b073fc6-524d-453d-be7c-0c30986de391
 msc.legacyurl: /web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/adding-validation-controls-to-the-datalist-s-editing-interface-vb
 msc.type: authoredcontent
 ms.openlocfilehash: f952a7bb95e956a2ad935f8bdef5c3efa7437ecb
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74621841"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78594521"
 ---
 # <a name="adding-validation-controls-to-the-datalists-editing-interface-vb"></a>Aggiunta di controlli di convalida all'interfaccia di modifica di DataList (VB)
 
@@ -29,7 +29,7 @@ Nelle esercitazioni di modifica di DataList finora, le interfacce di modifica di
 
 In questa esercitazione verrà illustrato quanto sia semplice aggiungere controlli di convalida al `EditItemTemplate` DataList per fornire un'interfaccia utente di modifica più infallibile. In particolare, questa esercitazione prende in considerazione l'esempio creato nell'esercitazione precedente e aumenta l'interfaccia di modifica per includere la convalida appropriata.
 
-## <a name="step-1-replicating-the-example-fromhandling-bll--and-dal-level-exceptionshandling-bll-and-dal-level-exceptions-vbmd"></a>Passaggio 1: replica dell'esempio dalla[gestione delle eccezioni a livello BLL e dal](handling-bll-and-dal-level-exceptions-vb.md)
+## <a name="step-1-replicating-the-example-fromhandling-bll--and-dal-level-exceptions"></a>Passaggio 1: replica dell'esempio dalla[gestione delle eccezioni a livello BLL e dal](handling-bll-and-dal-level-exceptions-vb.md)
 
 Nell'esercitazione relativa alla [gestione delle eccezioni di livello BLL e dal](handling-bll-and-dal-level-exceptions-vb.md) è stata creata una pagina che elenca i nomi e i prezzi dei prodotti in un oggetto DataList modificabile a due colonne. L'obiettivo di questa esercitazione è quello di aumentare l'interfaccia di modifica di DataList per includere i controlli di convalida. In particolare, la logica di convalida:
 

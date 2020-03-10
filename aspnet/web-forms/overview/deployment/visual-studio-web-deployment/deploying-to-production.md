@@ -9,11 +9,11 @@ ms.assetid: 416438a1-3b2f-4d27-bf53-6b76223c33bf
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/deploying-to-production
 msc.type: authoredcontent
 ms.openlocfilehash: ddc3d15f0436c4c3a24491cf0377111768da67df
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74617634"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78632783"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-deploying-to-production"></a>Distribuzione Web ASP.NET con Visual Studio: distribuzione in produzione
 
@@ -23,7 +23,7 @@ di [Tom Dykstra](https://github.com/tdykstra)
 
 > Questa serie di esercitazioni illustra come distribuire (pubblicare) un'applicazione Web ASP.NET in app Web di servizio app Azure o in un provider di hosting di terze parti, usando Visual Studio 2012 o Visual Studio 2010. Per informazioni sulla serie, vedere [la prima esercitazione della serie](introduction.md).
 
-## <a name="overview"></a>Panoramica di
+## <a name="overview"></a>Panoramica
 
 Questa esercitazione illustra come configurare un account Microsoft Azure, creare ambienti di gestione temporanea e di produzione e distribuire l'applicazione Web ASP.NET negli ambienti di gestione temporanea e di produzione usando la funzionalità di pubblicazione con un clic di Visual Studio.
 
@@ -33,7 +33,7 @@ Promemoria: se si riceve un messaggio di errore o un elemento non funziona duran
 
 ## <a name="get-a-microsoft-azure-account"></a>Ottenere un account di Microsoft Azure
 
-Se non si ha già un account Azure, è possibile creare un account di valutazione gratuito in pochi minuti. Per informazioni dettagliate, vedere [versione di valutazione gratuita di Azure](https://azure.microsoft.com/free/?WT.mc_id=A443DD604).
+Se non si ha già un account Azure, è possibile creare un account di valutazione gratuito in pochi minuti. Per informazioni dettagliate, vedere la pagina relativa alla [versione di valutazione gratuita di Azure](https://azure.microsoft.com/free/?WT.mc_id=A443DD604).
 
 ## <a name="create-a-staging-environment"></a>Creazione di un ambiente di gestione temporanea
 
@@ -55,7 +55,7 @@ In questa sezione dell'esercitazione si creerà un'app Web e un database da usar
     Viene visualizzata la procedura guidata **nuovo sito web-creazione personalizzata** . La procedura guidata **creazione personalizzata** consente di creare un sito Web e un database nello stesso momento.
 3. Nel passaggio **Crea sito Web** della procedura guidata immettere una stringa nella casella **URL** da usare come URL univoco per l'ambiente di gestione temporanea dell'applicazione. Immettere, ad esempio, ContosoUniversity-staging123 (compresi i numeri casuali alla fine per renderlo univoco nel caso in cui venga creato ContosoUniversity-staging).
 
-    L'URL completo sarà costituito da quanto immesso qui, oltre al suffisso visualizzato accanto alla casella di testo.
+    L'URL completo sarà costituito da quanto immesso in questa casella e dal suffisso visualizzato accanto alla casella di testo.
 4. Nell'elenco a discesa **area** scegliere l'area più vicina.
 
     Questa impostazione specifica i data center in cui verrà eseguita l'app Web.
@@ -67,12 +67,12 @@ In questa sezione dell'esercitazione si creerà un'app Web e un database da usar
 
     ![Passaggio Crea sito Web](deploying-to-production/_static/image1.png)
 
-    La procedura guidata consente di passare al passaggio **specificare le impostazioni del database** .
+    Verrà visualizzato il passaggio **Specify database settings** della procedura guidata.
 8. Nella casella **nome** immettere *ContosoUniversity* più un numero casuale per renderlo univoco, ad esempio *ContosoUniversity123*.
 9. Nella casella **Server** selezionare **nuovo server di database SQL**.
 10. Immettere il nome e la password di un amministratore.
 
-    Non immettere un nome e una password esistenti qui. Si sta immettendo un nuovo nome e una password che si sta definendo ora per usarli in seguito quando si accede al database.
+    Non immettere un nome e una password esistenti qui. ma un nuovo nome e una nuova password definiti in questo momento e da usare in seguito per l'accesso al database.
 11. Nella casella **Region (area** ) scegliere la stessa area selezionata per l'app Web.
 
     Mantenere il server Web e il server di database nella stessa area offre le migliori prestazioni e riduce al minimo le spese.
@@ -110,14 +110,14 @@ Ora che è stata creata un'app Web e un database per l'ambiente di gestione temp
     ![salvataggio del file con estensione publishsettings](deploying-to-production/_static/image6.png)
 
     > [!WARNING]
-    > Sicurezza: il file *. publishsettings* contiene le credenziali (non codificate) usate per amministrare le sottoscrizioni e i servizi di Azure. La procedura consigliata di sicurezza per questo file consiste nell'archiviarlo temporaneamente all'esterno delle directory di origine, ad esempio nella cartella Raccolte\documenti, e quindi eliminarlo al termine dell'importazione. Un utente malintenzionato che accede al file *publishsettings* può modificare, creare ed eliminare i servizi di Azure.
+    > Sicurezza: il file *. publishsettings* contiene le credenziali (non codificate) usate per amministrare le sottoscrizioni e i servizi di Azure. La procedura consigliata di sicurezza per questo file consiste nell'archiviarlo temporaneamente all'esterno delle directory di origine, ad esempio nella cartella Raccolte\Documenti, e quindi di eliminarlo al termine dell'importazione. Un utente malintenzionato che accede al file *publishsettings* può modificare, creare ed eliminare i servizi di Azure.
 
 ### <a name="create-a-publish-profile"></a>Creare un profilo di pubblicazione
 
 1. In Visual Studio fare clic con il pulsante destro del mouse sul progetto ContosoUniversity in **Esplora soluzioni** e scegliere **pubblica** dal menu di scelta rapida.
 
-    Verrà visualizzata la procedura guidata **Pubblica sito Web** .
-2. Fare clic sulla scheda **profilo** .
+    Viene visualizzata la procedura guidata **Pubblica sito Web** .
+2. Fare clic sulla scheda **Profilo**.
 3. Fare clic su **Importa**.
 4. Passare al file con *estensione publishsettings* scaricato in precedenza e quindi fare clic su **Apri**.
 
@@ -127,7 +127,7 @@ Ora che è stata creata un'app Web e un database per l'ambiente di gestione temp
     Quando la connessione è stata convalidata, accanto al pulsante **convalida connessione** viene visualizzato un segno di spunta verde.
 
     Per alcuni provider di hosting, quando si fa clic su **convalida connessione**, potrebbe essere visualizzata una finestra di dialogo di **errore del certificato** . In tal caso, verificare che il nome del server sia quello previsto. Se il nome del server è corretto, selezionare **Salva questo certificato per le sessioni future di Visual Studio** e fare clic su **accetta**. Questo errore indica che il provider di hosting ha scelto di evitare il costo di acquisto di un certificato SSL per l'URL in cui si esegue la distribuzione. Se si preferisce stabilire una connessione sicura usando un certificato valido, contattare il provider di hosting.
-6. Scegliere **Avanti**.
+6. Fare clic su **Avanti**.
 
     ![icona connessione riuscita e pulsante Avanti nella scheda connessione](deploying-to-production/_static/image8.png)
 7. Nella scheda **Impostazioni** espandere Opzioni di **pubblicazione file**e quindi selezionare **Escludi file dalla cartella app\_data**.
@@ -198,13 +198,13 @@ Per questa esercitazione verrà creato un file *robots. txt* .
 
     Si vuole che i motori di ricerca cataloghino l'app di produzione, quindi è necessario escludere questo file dalla distribuzione di produzione. A tale scopo, è necessario configurare un'impostazione nel profilo di pubblicazione di produzione al momento della creazione.
 
-### <a name="deploy-to-staging"></a>Distribuisci in staging
+### <a name="deploy-to-staging"></a>Eseguire la distribuzione per lo staging
 
 1. Per aprire la procedura guidata **Pubblica sito Web** , fare clic con il pulsante destro del mouse sul progetto Contoso University e scegliere **pubblica**.
 2. Verificare che il profilo di **gestione temporanea** sia selezionato.
 3. Fare clic su **Pubblica**.
 
-    Nella finestra **output** vengono visualizzate le azioni di distribuzione eseguite e viene segnalato il corretto completamento della distribuzione. Il browser predefinito si apre automaticamente all'URL dell'app Web distribuita.
+    Nella finestra **Output** vengono indicate le azioni di distribuzione effettuate e viene segnalato il corretto completamento della distribuzione. Il browser predefinito si apre automaticamente all'URL dell'app Web distribuita.
 
 ## <a name="test-in-the-staging-environment"></a>Test nell'ambiente di gestione temporanea
 
@@ -224,7 +224,7 @@ Richiedere un URL non valido per generare un errore che verrà rilevato da ELMAH
 
 L'applicazione creata viene ora eseguita nel cloud in un'app Web simile a quella che verrà usata per la produzione. Poiché tutto funziona correttamente, il passaggio successivo consiste nella distribuzione in produzione.
 
-## <a name="deploy-to-production"></a>Distribuisci in produzione
+## <a name="deploy-to-production"></a>Distribuzione nell'ambiente di produzione
 
 Il processo per la creazione di un'app Web di produzione e la distribuzione nell'ambiente di produzione è identico a quello per la gestione temporanea, tranne per il fatto che è necessario escludere la distribuzione di *robots. txt* . A tale scopo, verrà modificato il file del profilo di pubblicazione.
 
@@ -265,7 +265,7 @@ Un file *. pubxml* contiene le impostazioni relative a un profilo di pubblicazio
 
     Per ulteriori informazioni su come escludere file e cartelle, vedere è [possibile escludere specifici file o cartelle dalla distribuzione?](https://msdn.microsoft.com/library/ee942158.aspx#can_i_exclude_specific_files_or_folders_from_deployment) nelle **domande frequenti sulla distribuzione Web per Visual Studio e ASP.NET** su MSDN.
 
-### <a name="deploy-to-production"></a>Distribuisci in produzione
+### <a name="deploy-to-production"></a>Distribuzione nell'ambiente di produzione
 
 1. Aprire la procedura guidata **Pubblica sito Web** assicurarsi che sia selezionato il profilo di pubblicazione di **produzione** , quindi fare clic su **Avvia anteprima** nella scheda **Anteprima** per verificare che il file *robots. txt* non venga copiato nell'app di produzione.
 
@@ -287,7 +287,7 @@ L'app Web è stata distribuita e testata correttamente ed è disponibile pubblic
 Nell'esercitazione successiva si aggiornerà il codice dell'applicazione e si distribuirà la modifica negli ambienti di test, gestione temporanea e produzione.
 
 > [!NOTE]
-> Mentre l'applicazione è in uso nell'ambiente di produzione, è necessario implementare un piano di ripristino. Ovvero, è necessario eseguire periodicamente il backup dei database dall'app di produzione in una posizione di archiviazione sicura ed è necessario mantenere diverse generazioni di tali backup. Quando si aggiorna il database, è consigliabile eseguire una copia di backup immediatamente prima della modifica. Quindi, se si commette un errore e non lo si rileva fino a quando non viene distribuito nell'ambiente di produzione, sarà comunque possibile ripristinare il database allo stato in cui si trovava prima che venisse danneggiato. Per altre informazioni, vedere [backup e ripristino del database SQL di Azure](https://msdn.microsoft.com/library/windowsazure/jj650016.aspx).
+> Mentre l'applicazione è in uso nell'ambiente di produzione, è necessario implementare un piano di ripristino. Ovvero, è necessario eseguire periodicamente il backup dei database dall'app di produzione in una posizione di archiviazione sicura ed è necessario mantenere diverse generazioni di tali backup. Quando si aggiorna il database, è consigliabile eseguire una copia di backup immediatamente prima della modifica. Quindi, se si commette un errore e non lo si rileva fino a quando non viene distribuito nell'ambiente di produzione, sarà comunque possibile ripristinare il database allo stato in cui si trovava prima che venisse danneggiato. Per ulteriori informazioni, vedere [Backup e ripristino del database SQL di Azure](https://msdn.microsoft.com/library/windowsazure/jj650016.aspx).
 > 
 > 
 > [!NOTE]

@@ -9,11 +9,11 @@ ms.assetid: 37a1ebae-8773-408f-8645-d21da7ff9ae1
 msc.legacyurl: /mvc/overview/older-versions-1/views/passing-data-to-view-master-pages-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 9f768f47557adedc43cebfa2c092014bba5842de
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74593750"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78600107"
 ---
 # <a name="passing-data-to-view-master-pages-vb"></a>Passaggio di dati a pagine master di visualizzazione (VB)
 
@@ -27,7 +27,7 @@ ms.locfileid: "74593750"
 
 L'obiettivo di questa esercitazione è spiegare come è possibile passare i dati da un controller a una pagina master di visualizzazione. Vengono esaminate due strategie per il passaggio dei dati a una pagina master di visualizzazione. In primo luogo, viene illustrata una soluzione semplice che consente di ottenere un'applicazione difficile da gestire. Viene quindi esaminata una soluzione molto migliore che richiede un lavoro iniziale più semplice, ma comporta un'applicazione molto più gestibile.
 
-### <a name="the-problem"></a>Il problema
+### <a name="the-problem"></a>Problema
 
 Si supponga di creare un'applicazione di database di film e di voler visualizzare l'elenco delle categorie di film in ogni pagina dell'applicazione (vedere la figura 1). Si supponga inoltre che l'elenco di categorie di film sia archiviato in una tabella di database. In tal caso, sarebbe opportuno recuperare le categorie dal database ed eseguire il rendering dell'elenco di categorie di film all'interno di una pagina di visualizzazione master.
 

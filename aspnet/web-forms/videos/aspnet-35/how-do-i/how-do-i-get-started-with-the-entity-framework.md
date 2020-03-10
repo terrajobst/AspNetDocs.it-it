@@ -1,25 +1,25 @@
 ---
 uid: web-forms/videos/aspnet-35/how-do-i/how-do-i-get-started-with-the-entity-framework
-title: '[Procedura:] Introduzione a Entity Framework | Microsoft Docs'
+title: '[Procedura:] Introduzione alla Entity Framework | Microsoft Docs'
 author: adjames
-description: In questo video introduttivo, Alex James illustrerà come creare un semplice modello di dati di entità in un breve periodo di tempo.
+description: In questo video introduttivo Alex James mostrerà come creare una semplice Entity Data Model in un breve periodo di tempo.
 ms.author: riande
 ms.date: 05/22/2008
 ms.assetid: 2039bdcd-04f0-4813-b85b-4a3ccc916702
 msc.legacyurl: /web-forms/videos/aspnet-35/how-do-i/how-do-i-get-started-with-the-entity-framework
 msc.type: video
 ms.openlocfilehash: d6559ebcbce82911a4bfa37327f08bccfa3ee52d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59396868"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78573101"
 ---
-# <a name="how-do-i-get-started-with-the-entity-framework"></a>[Procedura:] Introduzione a Entity Framework
+# <a name="how-do-i-get-started-with-the-entity-framework"></a>[Procedura:] Introduzione all'Entity Framework
 
-da [Alex James](https://github.com/adjames)
+di [Alex James](https://github.com/adjames)
 
-In questo video introduttivo, Alex James illustrerà come creare un semplice modello di dati di entità in un breve periodo di tempo.
+In questo video introduttivo Alex James mostrerà come creare una semplice Entity Data Model in un breve periodo di tempo.
 
 [&#9654;Guarda il video (9 minuti)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-get-started-with-the-entity-framework)
 

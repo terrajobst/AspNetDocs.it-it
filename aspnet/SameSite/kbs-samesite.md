@@ -6,15 +6,15 @@ ms.author: riande
 ms.date: 12/03/2019
 uid: samesite/kbs-samesite
 ms.openlocfilehash: 5774fe9e3dcced8c572a24d2e696abc4b67f2b2e
-ms.sourcegitcommit: e365196c75ce93cd8967412b1cfdc27121816110
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77074878"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78545010"
 ---
 # <a name="kb-articles-that-support-samesite-in-net-framework"></a>Articoli KB che supportano navigava sullostesso sito in .NET Framework
 
-| Versione prodotto | Cumulativa | Aggiornamento |
+| Versione del prodotto | Cumulativa | Aggiorna |
 | ------------- | ------------- | --- |
 | **Windows 10 1909 e Windows Server, versione 1909** | | |
 | .NET Framework 4.8  | [Catalogo](https://www.catalog.update.microsoft.com/Search.aspx?q=4533002)  | [4533002](https://support.microsoft.com/en-us/help/4533002) |
@@ -38,7 +38,7 @@ ms.locfileid: "77074878"
 
 La tabella seguente è destinata alle versioni precedenti di Windows e Windows Server.
 
-| Versione prodotto | Sicurezza e | Rollup qualità |
+| Versione del prodotto | Sicurezza e | Rollup qualità |
 | ------------- | ------------- | --- |
 | **Windows 8.1 e Windows Server 2012 R2** | |
 | .NET Framework 4,6, 4.6.1, 4.6.2, 4,7, 4.7.1, 4.7.2 | [Catalogo](https://www.catalog.update.microsoft.com/Search.aspx?q=4533011)  | [4533011](https://support.microsoft.com/en-us/help/4533011) |

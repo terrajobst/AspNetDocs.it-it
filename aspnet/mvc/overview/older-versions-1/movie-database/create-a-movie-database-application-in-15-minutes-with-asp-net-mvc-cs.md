@@ -9,11 +9,11 @@ ms.assetid: dd1be137-91c5-47a8-8137-fecf0789c7f5
 msc.legacyurl: /mvc/overview/older-versions-1/movie-database/create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 1be5d135a44feb27626dd26a544b64cfb57b18a9
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74596023"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78541993"
 ---
 # <a name="create-a-movie-database-application-in-15-minutes-with-aspnet-mvc-c"></a>Creare un'applicazione per un database di film in 15 minuti con ASP.NET MVC (C#)
 
@@ -49,7 +49,7 @@ Per creare l'applicazione, è necessario completare ognuno dei passaggi seguenti
 4. Creare il controller MVC ASP.NET
 5. Creare le visualizzazioni MVC ASP.NET
 
-## <a name="preliminaries"></a>Preliminari
+## <a name="preliminaries"></a>Operazioni preliminari
 
 Per creare un'applicazione MVC ASP.NET, è necessario Visual Studio 2008 o Visual Web Developer 2008 Express. È anche necessario scaricare ASP.NET MVC Framework.
 
@@ -120,12 +120,12 @@ Successivamente, è necessario creare una nuova tabella di database. Nella fines
 
 <a id="0.1_table01"></a>
 
-| **Nome colonna** | **Tipo di dati** | **Consenti valori null** |
+| **Nome colonna** | **Tipo di dati** | **Consenti valori NULL** |
 | --- | --- | --- |
-| Id | Int | Falso |
-| Titolo | Nvarchar (100) | Falso |
-| Direttore | Nvarchar (100) | Falso |
-| DateReleased | DateTime | Falso |
+| Id | Int | False |
+| Titolo | Nvarchar(100) | False |
+| Responsabile | Nvarchar(100) | False |
+| DateReleased | DateTime | False |
 
 La prima colonna, ovvero la colonna ID, presenta due proprietà speciali. Prima di tutto, è necessario contrassegnare la colonna ID come colonna chiave primaria. Dopo aver selezionato la colonna ID, fare clic sul pulsante **Imposta chiave primaria** . si tratta dell'icona che ha un aspetto simile a una chiave. In secondo luogo, è necessario contrassegnare la colonna ID come colonna Identity. Nella colonna Finestra Proprietà scorrere verso il basso fino alla sezione specifica identità ed espanderla. Modificare la proprietà **is Identity** sul valore **Yes**. Al termine, la tabella dovrebbe essere simile alla figura 4.
 
@@ -158,7 +158,7 @@ Per avviare la procedura guidata Entity Data Model, attenersi alla procedura seg
 Dopo aver fatto clic sul pulsante Aggiungi, viene visualizzata la procedura guidata Entity Data Model (vedere la figura 6). Per completare la procedura guidata, attenersi alla procedura seguente:
 
 1. Nel passaggio **Scegli contenuto Model** selezionare l'opzione **genera da database** .
-2. Nel passaggio **scegliere la connessione dati** usare la connessione dati *MoviesDB. MDF* e il nome *MoviesDBEntities* per le impostazioni di connessione. Fare clic sul pulsante **Avanti** .
+2. Nel passaggio **scegliere la connessione dati** usare la connessione dati *MoviesDB. MDF* e il nome *MoviesDBEntities* per le impostazioni di connessione. Fare clic sul pulsante **Next** (Avanti).
 3. Nel passaggio **Seleziona oggetti di database** espandere il nodo tabelle e selezionare la tabella Movies. Immettere lo spazio dei nomi *MovieApp. Models* e fare clic sul pulsante **fine** .
 
 [![finestra di dialogo nuovo progetto](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-cs/_static/image6.jpg)](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-cs/_static/image11.png)
@@ -179,7 +179,7 @@ Fare doppio clic sul nome della classe nell'area di progettazione e modificare i
 
 Il passaggio successivo consiste nel creare il controller MVC ASP.NET. Un controller è responsabile del controllo del modo in cui un utente interagisce con un'applicazione MVC ASP.NET.
 
-Esegui questi passaggi:
+Attenersi ai passaggi riportati di seguito.
 
 1. Nella finestra Esplora soluzioni fare clic con il pulsante destro del mouse sulla cartella controller e selezionare l'opzione di menu **Aggiungi, controller**.
 2. Nella finestra di dialogo Aggiungi controller immettere il nome *HomeController* e selezionare la casella di controllo **Aggiungi metodi di azione per gli scenari di creazione, aggiornamento e dettagli** (vedere la figura 8).
@@ -211,7 +211,7 @@ L'elenco dei film viene passato alla visualizzazione. Tutto ciò che viene passa
 
 [!code-csharp[Main](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-cs/samples/sample2.cs)]
 
-Il metodo index () restituisce una visualizzazione denominata index. È necessario creare questa visualizzazione per visualizzare l'elenco dei record del database di film. Esegui questi passaggi:
+Il metodo index () restituisce una visualizzazione denominata index. È necessario creare questa visualizzazione per visualizzare l'elenco dei record del database di film. Attenersi ai passaggi riportati di seguito.
 
 È necessario compilare il progetto (selezionare l'opzione di menu **Compila, Compila soluzione**) prima di aprire la finestra di dialogo **Aggiungi visualizzazione** o nessuna classe verrà visualizzata nell'elenco a discesa della **classe dati di visualizzazione** .
 
@@ -259,7 +259,7 @@ Il secondo metodo Create () è stato modificato nella classe HomeController aggi
 
 [!code-csharp[Main](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-cs/samples/sample4.cs)]
 
-Visual Studio consente di creare facilmente il modulo per la creazione di un nuovo record del database di film (vedere la figura 12). Esegui questi passaggi:
+Visual Studio consente di creare facilmente il modulo per la creazione di un nuovo record del database di film (vedere la figura 12). Attenersi ai passaggi riportati di seguito.
 
 1. Fare clic con il pulsante destro del mouse sul metodo Create () nell'editor di codice e selezionare l'opzione di menu **Aggiungi visualizzazione**.
 2. Verificare che sia selezionata la casella di controllo **Crea una visualizzazione fortemente tipizzata** .

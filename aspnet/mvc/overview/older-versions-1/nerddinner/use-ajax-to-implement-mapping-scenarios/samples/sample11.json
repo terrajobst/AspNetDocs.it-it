@@ -1,7 +1,7 @@
 [
     {
         "DinnerID": 53,
-        "Title": "Dinner con la famiglia",
+        "Title": "Cena con la famiglia",
         "Latitude": 47.64312,
         "Longitude": -122.130609,
         "Description": "Fun dinner",
@@ -9,7 +9,7 @@
     },
     {
         "DinnerID": 54,
-        "Title": "Un altro Dinner",
+        "Title": "Un'altra cena",
         "Latitude": 47.632546,
         "Longitude": -122.21201,
         "Description": "Dinner with Friends",

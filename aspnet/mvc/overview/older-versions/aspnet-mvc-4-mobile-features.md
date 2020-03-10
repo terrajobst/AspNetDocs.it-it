@@ -9,13 +9,13 @@ ms.assetid: 27dc4fc8-1b51-43b0-933f-fc1b52476523
 msc.legacyurl: /mvc/overview/older-versions/aspnet-mvc-4-mobile-features
 msc.type: authoredcontent
 ms.openlocfilehash: 9716def069ca9f7115af32e16381f41bd4d13342
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457648"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78579989"
 ---
-# <a name="aspnet-mvc-4-mobile-features"></a>ASP.NET MVC 4 Mobile Features
+# <a name="aspnet-mvc-4-mobile-features"></a>Funzionalità per dispositivi mobili ASP.NET MVC 4
 
 di [Rick Anderson](https://twitter.com/RickAndMSFT)
 
@@ -57,7 +57,7 @@ In questa esercitazione si apprenderà:
 - Come creare visualizzazioni specifiche per dispositivi mobili.
 - Come creare uno strumento di selezione delle visualizzazioni che consente agli utenti di passare da una visualizzazione mobile a una visualizzazione desktop dell'applicazione.
 
-### <a name="getting-started"></a>Guida introduttiva
+### <a name="getting-started"></a>Introduzione
 
 Scaricare l'applicazione Conference-Listing per il progetto Starter usando il collegamento seguente: [download](https://go.microsoft.com/fwlink/?LinkId=228307). Quindi, in Esplora risorse, fare clic con il pulsante destro del mouse sul file *MvcMobile. zip* e scegliere **Proprietà**. Nella finestra di dialogo **Proprietà MvcMobile. zip** scegliere il pulsante **Sblocca** . L'operazione di sblocco impedisce la visualizzazione dell'avviso di sicurezza quando si tenta di utilizzare un file *ZIP* scaricato dal Web.
 

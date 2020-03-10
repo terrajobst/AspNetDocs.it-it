@@ -1,23 +1,23 @@
 ---
 uid: web-forms/overview/deployment/advanced-enterprise-web-deployment/index
-title: ASP.NET 4 - serie sulla distribuzione aziendale 4 argomenti avanzati | Microsoft Docs
+title: ASP.NET 4-argomenti avanzati della serie di distribuzione Enterprise 4 | Microsoft Docs
 author: rick-anderson
-description: Questa esercitazione illustrerà come eseguire diverse attività che sono necessari o utili in molti scenari di distribuzione enterprise.
+description: In questa esercitazione viene illustrato come eseguire varie attività richieste o desiderate in molti scenari di distribuzione aziendali.
 ms.author: riande
 ms.date: 05/16/2012
 ms.assetid: eacf0e3a-c2e9-4f77-a676-249146f393e8
 msc.legacyurl: /web-forms/overview/deployment/advanced-enterprise-web-deployment
 msc.type: chapter
 ms.openlocfilehash: f72ec780623b4240762f35e479b36895db42cee0
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65127109"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78574970"
 ---
 # <a name="aspnet-4---enterprise-deployment-series-4-advanced-topics"></a>ASP.NET 4 - Serie sulla distribuzione aziendale 4 - Argomenti avanzati
 
-> Questa esercitazione illustrerà come eseguire diverse attività che sono necessari o utili in molti scenari di distribuzione enterprise.
+> In questa esercitazione viene illustrato come eseguire varie attività richieste o desiderate in molti scenari di distribuzione aziendali.
 
 - [Distribuzione Web aziendale avanzata](advanced-enterprise-web-deployment.md)
 - [Esecuzione di una distribuzione di simulazione](performing-a-what-if-deployment.md)

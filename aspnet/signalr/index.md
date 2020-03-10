@@ -2,18 +2,18 @@
 uid: signalr/index
 title: SignalR | Microsoft Docs
 author: bradygaster
-description: Microsoft ASP.NET SignalR è una libreria per sviluppatori ASP.NET che semplifica il processo di aggiunta di funzionalità web in tempo reale alle applicazioni.
+description: Microsoft ASP.NET SignalR è una libreria per sviluppatori ASP.NET che semplifica il processo di aggiunta di funzionalità Web in tempo reale alle applicazioni.
 ms.author: bradyg
 ms.date: 10/24/2012
 ms.assetid: 282a521f-2b86-4fac-bcf6-b6d5e0fe969c
 msc.legacyurl: /signalr
 msc.type: categoryindex
 ms.openlocfilehash: fa489c79e175753635d89913aaaa15a832aa16f7
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59407588"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78558835"
 ---
 # <a name="signalr"></a>SignalR
 
@@ -27,7 +27,7 @@ ms.locfileid: "59407588"
         - [Esercitazione: Introduzione a SignalR 2 e MVC 5](overview/getting-started/tutorial-getting-started-with-signalr-and-mvc.md)
         - [Esercitazione: Messaggistica ad alta frequenza con SignalR 2](overview/getting-started/tutorial-high-frequency-realtime-with-signalr.md)
         - [Esercitazione: Trasmissione server con SignalR 2](overview/getting-started/tutorial-server-broadcast-with-signalr.md)
-        - [Laboratorio pratico: Applicazioni Web in tempo reale con SignalR](overview/getting-started/real-time-web-applications-with-signalr.md)
+        - [Laboratorio pratico: applicazioni Web in tempo reale con SignalR](overview/getting-started/real-time-web-applications-with-signalr.md)
     - [Guida all'API](overview/guide-to-the-api/index.md)
 
         - [Guida all'API Hubs - Server (C#)](overview/guide-to-the-api/hubs-api-guide-server.md)
@@ -55,7 +55,7 @@ ms.locfileid: "59407588"
         - [Scalabilità orizzontale di SignalR con SQL Server](overview/performance/scaleout-with-sql-server.md)
         - [Test della densità di connessione di SignalR con Crank](overview/performance/signalr-connection-density-testing-with-crank.md)
         - [Uso dei contatori delle prestazioni di SignalR in un ruolo Web di Azure](overview/performance/using-signalr-performance-counters-in-an-azure-web-role.md)
-    - [Distribuzione e hosting](overview/deployment/index.md)
+    - [Distribuzione e Hosting](overview/deployment/index.md)
 
         - [Esercitazione: Hosting indipendente di SignalR](overview/deployment/tutorial-signalr-self-host.md)
         - [Uso di SignalR con app Web nel servizio app di Azure](overview/deployment/using-signalr-with-azure-web-sites.md)

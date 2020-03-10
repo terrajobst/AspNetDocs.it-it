@@ -1,23 +1,23 @@
 ---
 uid: mvc/overview/getting-started/index
-title: Introduzione a ASP.NET MVC | Microsoft Docs
+title: Introduzione MVC ASP.NET | Microsoft Docs
 author: rick-anderson
-description: Informazioni su ASP.NET MVC ASP.NET MVC offre un modo potente, basato su modelli per creare siti Web dinamici che consente una netta separazione dei compiti e tale g...
+description: Informazioni su ASP.NET MVC ASP.NET MVC offre un potente sistema basato su modelli per creare siti Web dinamici che consentono una netta separazione delle problematiche e che...
 ms.author: riande
 ms.date: 08/31/2011
 ms.assetid: d916dbe0-1895-491b-8bb6-93f4594ce757
 msc.legacyurl: /mvc/overview/getting-started
 msc.type: chapter
 ms.openlocfilehash: 8e25c3a01634df6c3d9c81df8ab1738cc079d341
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65121117"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78583013"
 ---
-# <a name="aspnet-mvc-getting-started"></a>Introduzione a ASP.NET MVC
+# <a name="aspnet-mvc-getting-started"></a>Introduzione MVC ASP.NET
 
-> Il materiale sussidiario seguente spiega che cos'è ASP.NET MVC e illustra come iniziare a usare.
+> Il materiale sussidiario seguente spiega cosa è ASP.NET MVC e Mostra come iniziare.
 
 - [Introduzione ad ASP.NET MVC 5](introduction/index.md)
 

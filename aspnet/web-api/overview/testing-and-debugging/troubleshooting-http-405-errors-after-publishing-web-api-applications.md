@@ -9,11 +9,11 @@ ms.assetid: 07ec7d37-023f-43ea-b471-60b08ce338f7
 msc.legacyurl: /web-api/overview/testing-and-debugging/troubleshooting-http-405-errors-after-publishing-web-api-applications
 msc.type: authoredcontent
 ms.openlocfilehash: 1b47f1ade3619cfd010260352f6a96985ab3598b
-ms.sourcegitcommit: 84b1681d4e6253e30468c8df8a09fe03beea9309
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73445712"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78555020"
 ---
 # <a name="troubleshoot-web-api2-apps-that-work-in-visual-studio-and-fail-on-a-production-iis-server"></a>Risolvere i problemi delle app API2 Web che funzionano in Visual Studio e hanno esito negativo in un server IIS di produzione
 
@@ -29,16 +29,16 @@ Le app per le API Web usano in genere diversi verbi HTTP: GET, POST, PUT, DELETE
 
 ## <a name="what-causes-http-405-errors"></a>Causa degli errori HTTP 405
 
-Il primo passaggio per apprendere come risolvere gli errori HTTP 405 consiste nel comprendere il significato effettivo di un errore HTTP 405. Il documento di governance primario per HTTP è [RFC 2616](http://www.ietf.org/rfc/rfc2616.txt), che definisce il codice di stato HTTP 405 come ***metodo non consentito***e descrive ulteriormente questo codice di stato come una situazione in cui &quot;il metodo specificato nella riga di richiesta non è consentito per il risorsa identificata dall'URI della richiesta.&quot; in altre parole, il verbo HTTP non è consentito per l'URL specifico richiesto da un client HTTP.
+Il primo passaggio per apprendere come risolvere gli errori HTTP 405 consiste nel comprendere il significato effettivo di un errore HTTP 405. Il documento principale di amministrazione per HTTP è [RFC 2616](http://www.ietf.org/rfc/rfc2616.txt), che definisce il codice di stato HTTP 405 come ***metodo non consentito***e descrive ulteriormente questo codice di stato come una situazione in cui &quot;il metodo specificato nella riga di richiesta non è consentito per la risorsa identificata dall'URI della richiesta.&quot; in altre parole, il verbo HTTP non è consentito per l'URL specifico richiesto da un client HTTP.
 
 Come breve esame, di seguito sono riportati alcuni dei metodi HTTP più usati, come definito in RFC 2616, RFC 4918 e RFC 5789:
 
-| Metodo HTTP | Descrizione |
+| Metodo HTTP | Description |
 | --- | --- |
-| **Ottieni** | Questo metodo viene usato per recuperare i dati da un URI e probabilmente il metodo HTTP più usato. |
+| **GET** | Questo metodo viene usato per recuperare i dati da un URI e probabilmente il metodo HTTP più usato. |
 | **HEAD** | Questo metodo è molto simile al metodo GET, con la differenza che non recupera effettivamente i dati dall'URI della richiesta. Recupera semplicemente lo stato HTTP. |
-| **Inserisci** | Questo metodo viene in genere utilizzato per inviare nuovi dati all'URI. POST viene spesso usato per inviare dati del modulo. |
-| **METTERE** | Questo metodo viene in genere utilizzato per inviare dati non elaborati all'URI. PUT viene spesso usato per inviare dati JSON o XML ad applicazioni API Web. |
+| **POST** | Questo metodo viene in genere utilizzato per inviare nuovi dati all'URI. POST viene spesso usato per inviare dati del modulo. |
+| **PUT** | Questo metodo viene in genere utilizzato per inviare dati non elaborati all'URI. PUT viene spesso usato per inviare dati JSON o XML ad applicazioni API Web. |
 | **DELETE** | Questo metodo viene usato per rimuovere i dati da un URI. |
 | **OPTIONS** | Questo metodo viene in genere utilizzato per recuperare l'elenco di metodi HTTP supportati per un URI. |
 | **COPIA SPOSTAMENTO** | Questi due metodi vengono usati con WebDAV e il loro scopo è di chiara comprensione. |
@@ -69,7 +69,7 @@ In questo esempio, il client HTTP ha inviato una richiesta JSON valida all'URL p
 
 ## <a name="resolve-http-405-errors"></a>Risolvere gli errori HTTP 405
 
-Ci sono diversi motivi per cui un verbo HTTP specifico potrebbe non essere consentito, ma esiste uno scenario primario che rappresenta la causa principale di questo errore in IIS: sono definiti più gestori per lo stesso verbo/metodo e uno dei gestori blocca il gestore previsto da elaborazione della richiesta. Per mezzo della spiegazione, IIS elabora i gestori dal primo all'ultimo in base alle voci del gestore ordini nei file *ApplicationHost. config* e *Web. config* , in cui la prima combinazione corrispondente di percorso, verbo, risorsa e così via verrà usata per gestire richiesta.
+Esistono diversi motivi per cui un verbo HTTP specifico potrebbe non essere consentito, ma esiste uno scenario primario che rappresenta la causa principale di questo errore in IIS: sono definiti più gestori per lo stesso verbo/metodo e uno dei gestori blocca il gestore previsto dall'elaborazione della richiesta. Per mezzo della spiegazione, IIS elabora i gestori dal primo all'ultimo in base alle voci del gestore ordini nei file *ApplicationHost. config* e *Web. config* , in cui la prima combinazione corrispondente di percorso, verbo, risorsa e così via verrà utilizzata per gestire la richiesta.
 
 L'esempio seguente è un Estratto di un file *ApplicationHost. config* per un server IIS che ha restituito un errore HTTP 405 quando si usa il metodo Put per inviare i dati a un'applicazione API Web. In questo estratto vengono definiti diversi gestori HTTP e ogni gestore dispone di un set diverso di metodi HTTP per i quali è configurato. l'ultima voce dell'elenco è il gestore di contenuto statico, che è il gestore predefinito usato dopo che gli altri gestori hanno un chanc e per esaminare la richiesta:
 

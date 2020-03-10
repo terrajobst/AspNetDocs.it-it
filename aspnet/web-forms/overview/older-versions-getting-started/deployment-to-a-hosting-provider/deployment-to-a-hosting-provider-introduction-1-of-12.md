@@ -9,11 +9,11 @@ ms.assetid: a2d7f33b-8c4a-4b48-9fb1-9139cf9b9878
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-introduction-1-of-12
 msc.type: authoredcontent
 ms.openlocfilehash: ea88da1e6d510f706fc7ca370cfa32974c1243f8
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74587766"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78525634"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-introduction---1-of-12"></a>Distribuzione di un'applicazione Web ASP.NET con SQL Server Compact con Visual Studio: Introduzione-1 di 12
 
@@ -31,7 +31,7 @@ di [Tom Dykstra](https://github.com/tdykstra)
 > 
 > In caso di domande non direttamente correlate all'esercitazione, è possibile pubblicarle nel forum sulla distribuzione di [ASP.NET](https://forums.asp.net/26.aspx/1?Configuration+and+Deployment).
 
-## <a name="overview"></a>Panoramica di
+## <a name="overview"></a>Panoramica
 
 Queste esercitazioni consentono di eseguire prima la distribuzione in IIS nel computer di sviluppo locale per i test e quindi a un provider di hosting di terze parti. L'applicazione che verrà distribuita utilizzerà un database dell'applicazione e un database di appartenenza a ASP.NET. Si inizia con SQL Server Compact e si distribuisce in SQL Server Compact e le esercitazioni successive illustrano come distribuire le modifiche al database e come eseguire la migrazione a SQL Server.
 
@@ -77,7 +77,7 @@ Quando si verifica un errore durante la distribuzione o se il sito distribuito n
 
 I commenti sulle esercitazioni sono benvenuti e, quando l'esercitazione viene aggiornata, verranno presi in considerazione le correzioni o i suggerimenti per i miglioramenti offerti nei commenti dell'esercitazione.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Prima di iniziare, verificare di disporre di Windows 7 o versione successiva e di uno dei seguenti prodotti installati nel computer:
 

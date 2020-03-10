@@ -9,11 +9,11 @@ ms.assetid: 6d02d9f7-94e5-4140-9f51-5a6040f274f6
 msc.legacyurl: /signalr/overview/guide-to-the-api/hubs-api-guide-net-client
 msc.type: authoredcontent
 ms.openlocfilehash: d3536f1c15cd7dad7cd660becf0577e5c131f707
-ms.sourcegitcommit: 295cf898a4c87e264b0c35c7254b0fa4169f2278
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74057004"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78578792"
 ---
 # <a name="aspnet-signalr-hubs-api-guide---net-client-c"></a>Guida dell'API Hub SignalR ASP.NET-client .NETC#()
 
@@ -189,7 +189,7 @@ Per aggiungere certificati client, utilizzare il metodo `AddClientCertificate` s
 
 ## <a name="how-to-create-the-hub-proxy"></a>Come creare il proxy dell'hub
 
-Per definire i metodi sul client che un hub può chiamare dal server e per richiamare i metodi in un hub sul server, creare un proxy per l'hub chiamando `CreateHubProxy` sull'oggetto connessione. La stringa passata a `CreateHubProxy` è il nome della classe Hub o il nome specificato dall'attributo `HubName` se ne è stato usato uno nel server. La corrispondenza del nome non fa distinzione tra maiuscole e minuscole.
+Per definire i metodi sul client che un hub può chiamare dal server e per richiamare i metodi in un hub sul server, creare un proxy per l'hub chiamando `CreateHubProxy` sull'oggetto connessione. La stringa passata a `CreateHubProxy` è il nome della classe Hub o il nome specificato dall'attributo `HubName` se ne è stato usato uno nel server. La corrispondenza dei nomi non prevede alcuna distinzione tra maiuscole e minuscole.
 
 **Classe Hub nel server**
 

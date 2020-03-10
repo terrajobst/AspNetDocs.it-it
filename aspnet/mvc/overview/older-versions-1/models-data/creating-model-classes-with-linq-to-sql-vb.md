@@ -9,11 +9,11 @@ ms.assetid: a4a25a75-d71f-4509-98b4-df72e748985a
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/creating-model-classes-with-linq-to-sql-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 88a5f1037d93ef3bdc95bf60b6005ebb254ab440
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74588477"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78581270"
 ---
 # <a name="creating-model-classes-with-linq-to-sql-vb"></a>Creazione di classi di modelli con LINQ to SQL (VB)
 
@@ -63,11 +63,11 @@ Dopo aver creato il nuovo database, è possibile aprire il database facendo dopp
 
 È necessario aggiungere le colonne seguenti alla tabella di database:
 
-| **Nome colonna** | **Tipo di dati** | **Consenti valori null** |
+| **Nome colonna** | **Tipo di dati** | **Consenti valori NULL** |
 | --- | --- | --- |
-| Id | Int | Falso |
-| Titolo | Nvarchar (200) | Falso |
-| Direttore | Nvarchar (50) | Falso |
+| Id | Int | False |
+| Titolo | Nvarchar(200) | False |
+| Responsabile | Nvarchar(50) | False |
 
 È necessario eseguire due operazioni speciali nella colonna ID. Per prima cosa, è necessario contrassegnare la colonna ID come colonna chiave primaria selezionando la colonna nella Progettazione tabelle e facendo clic sull'icona di una chiave. Per LINQ to SQL è necessario specificare le colonne chiave primaria durante l'esecuzione di inserimenti o aggiornamenti sul database.
 

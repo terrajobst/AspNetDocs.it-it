@@ -1,212 +1,212 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/continuing-with-ef/what-s-new-in-the-entity-framework-4
-title: What ' s New in Entity Framework 4.0 | Microsoft Docs
+title: Novità della Entity Framework 4,0 | Microsoft Docs
 author: tdykstra
-description: Questa serie di esercitazioni si basa sull'applicazione web di Contoso University specificano che viene creato da Getting Started with serie di esercitazioni in Entity Framework 4.0. POSSO...
+description: Questa serie di esercitazioni si basa sull'applicazione Web Contoso University creata dal Introduzione con la serie di esercitazioni Entity Framework 4,0. È...
 ms.author: riande
 ms.date: 01/26/2011
 ms.assetid: 393df4a8-b1db-44c4-9db7-2b533ca887d0
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/continuing-with-ef/what-s-new-in-the-entity-framework-4
 msc.type: authoredcontent
 ms.openlocfilehash: 29d2bd61e8361b130e7b9415dad4fe1d5b847945
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65109313"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78642674"
 ---
 # <a name="whats-new-in-the-entity-framework-40"></a>Novità di Entity Framework 4.0
 
-da [Tom Dykstra](https://github.com/tdykstra)
+di [Tom Dykstra](https://github.com/tdykstra)
 
-> Questa serie di esercitazioni si basa sull'applicazione web Contoso University specificano che viene creato per il [Introduzione a Entity Framework](../getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-1.md) serie di esercitazioni. Se si non è stato completato le esercitazioni precedenti, come punto di partenza per questa esercitazione è possibile [scaricare l'applicazione](https://code.msdn.microsoft.com/ASPNET-Web-Forms-97f8ee9a) verrebbe creato. È anche possibile [scaricare l'applicazione](https://code.msdn.microsoft.com/ASPNET-Web-Forms-6c7197aa) creato dalla serie di esercitazioni complete. Se si hanno domande sulle esercitazioni, è possibile pubblicarli per i [forum di ASP.NET Entity Framework](https://forums.asp.net/1227.aspx).
+> Questa serie di esercitazioni si basa sull'applicazione Web Contoso University creata dal [Introduzione con la](../getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-1.md) serie di esercitazioni Entity Framework. Se le esercitazioni precedenti non sono state completate, come punto di partenza per questa esercitazione è possibile [scaricare l'applicazione](https://code.msdn.microsoft.com/ASPNET-Web-Forms-97f8ee9a) creata. È anche possibile [scaricare l'applicazione](https://code.msdn.microsoft.com/ASPNET-Web-Forms-6c7197aa) creata dalla serie di esercitazioni complete. In caso di domande sulle esercitazioni, è possibile pubblicarle nel [Forum di ASP.NET Entity Framework](https://forums.asp.net/1227.aspx).
 
-Nell'esercitazione precedente si è visto alcuni metodi per ottimizzare le prestazioni di un'applicazione web che usa Entity Framework. Questa esercitazione esamina alcune delle nuove funzionalità più importanti nella versione 4 di Entity Framework ed è collegato a risorse che forniscono un'introduzione più completa per tutte le nuove funzionalità. Le funzionalità evidenziate in questa esercitazione includono quanto segue:
+Nell'esercitazione precedente sono stati illustrati alcuni metodi che consentono di ottimizzare le prestazioni di un'applicazione Web che usa la Entity Framework. In questa esercitazione vengono esaminate alcune delle nuove funzionalità più importanti della versione 4 del Entity Framework e vengono forniti collegamenti a risorse che forniscono un'introduzione più completa a tutte le nuove funzionalità. Le funzionalità evidenziate in questa esercitazione includono quanto segue:
 
 - Associazioni di chiavi esterne.
-- L'esecuzione di comandi SQL definite dall'utente.
-- Sviluppo Model-first.
+- Esecuzione di comandi SQL definiti dall'utente.
+- Sviluppo del primo modello.
 - Supporto POCO.
 
-Inoltre, l'esercitazione presenteranno brevemente *lo sviluppo code first*, una funzionalità che provenga nella prossima versione di Entity Framework.
+Inoltre, l'esercitazione introdurrà brevemente *lo sviluppo Code-First*, una funzionalità che sarà disponibile nella prossima versione del Entity Framework.
 
-Per avviare l'esercitazione, avviare Visual Studio e aprire l'applicazione web di Contoso University specificano che si stava lavorando nell'esercitazione precedente.
+Per avviare l'esercitazione, avviare Visual Studio e aprire l'applicazione Web Contoso University in cui si stava lavorando nell'esercitazione precedente.
 
 ## <a name="foreign-key-associations"></a>Associazioni di chiavi esterne
 
-Nella versione 3.5 di Entity Framework sono incluse le proprietà di navigazione, ma non include le proprietà di chiave esterna nel modello di dati. Ad esempio, il `CourseID` e `StudentID` le colonne del `StudentGrade` verrebbe omesso dalla tabella il `StudentGrade` entità.
+La versione 3,5 del Entity Framework proprietà di navigazione incluse, ma non includeva proprietà di chiave esterna nel modello di dati. Ad esempio, le colonne `CourseID` e `StudentID` della tabella `StudentGrade` verrebbero omesse dall'entità `StudentGrade`.
 
 [![Image01](what-s-new-in-the-entity-framework-4/_static/image2.png)](what-s-new-in-the-entity-framework-4/_static/image1.png)
 
-Il motivo di questo approccio è che, in teoria, le chiavi esterne sono un dettaglio di implementazione fisica e non appartengono a un modello di dati concettuale. Tuttavia, per praticità, è spesso più facile lavorare con le entità nel codice quando si ha accesso diretto alle chiavi esterne.
+Il motivo di questo approccio è che, in modo rigoroso, le chiavi esterne sono un dettaglio di implementazione fisica e non appartengono a un modello di dati concettuale. In pratica, tuttavia, è spesso più facile lavorare con le entità nel codice quando si ha accesso diretto alle chiavi esterne.
 
-Per un esempio di chiavi esterne come nel modello di dati può semplificare il codice, prendere in considerazione come sarebbe al codice il *DepartmentsAdd.aspx* pagina senza di essi. Nel `Department` entità, il `Administrator` proprietà è una chiave esterna che corrisponde a `PersonID` nel `Person` entità. Per stabilire l'associazione tra un nuovo reparto e amministratore, è stato sufficiente è stato impostato il valore per il `Administrator` proprietà nel `ItemInserting` gestore dell'evento di controllo con associazione a dati:
+Per un esempio di come le chiavi esterne nel modello di dati possono semplificare il codice, considerare come sarebbe stato necessario codificare la pagina *DepartmentsAdd. aspx* senza di esse. Nell'entità `Department` la proprietà `Administrator` è una chiave esterna che corrisponde a `PersonID` nell'entità `Person`. Per stabilire l'associazione tra un nuovo reparto e il suo amministratore, è sufficiente impostare il valore per la proprietà `Administrator` nel gestore dell'evento `ItemInserting` del controllo con associazione a valori:
 
 [!code-csharp[Main](what-s-new-in-the-entity-framework-4/samples/sample1.cs)]
 
-Senza chiavi esterne nel modello di dati, è necessario gestire il `Inserting` eventi del controllo origine dati anziché il `ItemInserting` eventi del controllo con associazione a dati, per ottenere un riferimento all'entità stessa prima che l'entità viene aggiunta al set di entità. Quando si dispone di tale riferimento, è necessario stabilire l'associazione usando codice simile negli esempi seguenti:
+Senza chiavi esterne nel modello di dati, è necessario gestire l'evento `Inserting` del controllo origine dati anziché l'evento `ItemInserting` del controllo associato a dati, in modo da ottenere un riferimento all'entità stessa prima che l'entità venga aggiunta al set di entità. Quando si dispone di tale riferimento, l'associazione viene stabilita utilizzando codice simile a quello negli esempi seguenti:
 
 [!code-csharp[Main](what-s-new-in-the-entity-framework-4/samples/sample2.cs)]
 
 [!code-csharp[Main](what-s-new-in-the-entity-framework-4/samples/sample3.cs)]
 
-Come si può notare del team di Entity Framework [post di blog in associazioni di chiave esterna](https://blogs.msdn.com/b/efdesign/archive/2009/03/16/foreign-keys-in-the-entity-framework.aspx), esistono altri casi in cui la differenza tra la complessità del codice è molto più elevata. Per soddisfare le esigenze di quelli che preferiscono in tempo reale con i dettagli di implementazione del modello di dati concettuale ai fini di semplificare il codice, Entity Framework offre ora la possibilità di includere chiavi esterne nel modello di dati.
+Come si può vedere nel post del Blog del team di Entity Framework [sulle associazioni di chiavi esterne](https://blogs.msdn.com/b/efdesign/archive/2009/03/16/foreign-keys-in-the-entity-framework.aspx), esistono altri casi in cui la differenza nella complessità del codice è molto maggiore. Per soddisfare le esigenze di coloro che preferiscono vivere con i dettagli di implementazione nel modello di dati concettuale per semplificare il codice, il Entity Framework ora offre la possibilità di includere chiavi esterne nel modello di dati.
 
-Nella terminologia di Entity Framework, se si includono le chiavi esterne nel modello di dati si usa *associazioni di chiavi esterne*, e se si esclude le chiavi esterne in uso *associazioni indipendenti*.
+In Entity Framework terminologia, se si includono chiavi esterne nel modello di dati si usano *associazioni*di chiavi esterne e si escludono chiavi esterne si usano *associazioni indipendenti*.
 
-## <a name="executing-user-defined-sql-commands"></a>L'esecuzione di comandi SQL definite dall'utente
+## <a name="executing-user-defined-sql-commands"></a>Esecuzione di comandi SQL definiti dall'utente
 
-Nelle versioni precedenti di Entity Framework, si è verificato alcun approccio facile per creare i propri comandi SQL in tempo reale ed eseguirle. Entity Framework generati in modo dinamico i comandi SQL per l'utente oppure era necessario creare una stored procedure e importarlo come una funzione. Versione 4 è stato aggiunto `ExecuteStoreQuery` e `ExecuteStoreCommand` metodi di `ObjectContext` classe che rendono più semplice per poter passare tutte le query direttamente al database.
+Nelle versioni precedenti del Entity Framework non era disponibile un modo semplice per creare i propri comandi SQL in tempo reale ed eseguirli. Il Entity Framework comandi SQL generati dinamicamente oppure è necessario creare un stored procedure e importarlo come funzione. La versione 4 aggiunge `ExecuteStoreQuery` e `ExecuteStoreCommand` metodi la classe `ObjectContext` che semplificano il passaggio di una query direttamente al database.
 
-Si supponga che gli amministratori di Contoso University vogliono essere in grado di eseguire modifiche di massa nel database senza dover passare attraverso il processo di creazione di una stored procedure e importandoli nel modello di dati. La prima richiesta è per una pagina che consente di modificare il numero di crediti per tutti i corsi nel database. Nella pagina web, desiderano essere in grado di immettere un numero da usare per moltiplicare il valore di ogni `Course` della riga `Credits` colonna.
+Si supponga che gli amministratori di Contoso University vogliano essere in grado di eseguire modifiche bulk nel database senza dover completare il processo di creazione di una stored procedure e di importarli nel modello di dati. La prima richiesta è relativa a una pagina che consente di modificare il numero di crediti per tutti i corsi nel database. Nella pagina Web, è possibile immettere un numero da usare per moltiplicare il valore di ogni colonna `Credits` della riga di `Course`.
 
-Creare una nuova pagina che utilizza il *Site. master* pagina master e denominarlo *UpdateCredits.aspx*. Quindi aggiungere il markup seguente per il `Content` controllo denominato `Content2`:
+Creare una nuova pagina che usa la pagina master *site. master* e denominarla *UpdateCredits. aspx*. Aggiungere quindi il markup seguente al controllo `Content` denominato `Content2`:
 
 [!code-aspx[Main](what-s-new-in-the-entity-framework-4/samples/sample4.aspx)]
 
-Questo codice crea un `TextBox` controllo in cui l'utente può immettere il valore del moltiplicatore, una `Button` controllo fare clic per eseguire il comando e un `Label` controllo per indicare il numero di righe interessate.
+Questo markup crea un controllo `TextBox` in cui l'utente può immettere il valore del moltiplicatore, un controllo `Button` da fare clic per eseguire il comando e un controllo `Label` per indicare il numero di righe interessate.
 
-Aprire *UpdateCredits.aspx.cs*e aggiungere quanto segue `using` informativa e un gestore per il pulsante `Click` evento:
+Aprire *UpdateCredits.aspx.cs*e aggiungere l'istruzione `using` seguente e un gestore per l'evento `Click` del pulsante:
 
 [!code-csharp[Main](what-s-new-in-the-entity-framework-4/samples/sample5.cs)]
 
 [!code-csharp[Main](what-s-new-in-the-entity-framework-4/samples/sample6.cs)]
 
-Questo codice esegue il SQL `Update` utilizzando il valore nella casella di testo di comando e Usa l'etichetta per visualizzare il numero di righe interessate. Prima di eseguire la pagina, eseguire la *Courses.aspx* pagina per ottenere una panoramica "precedenti" di alcuni dati.
+Questo codice esegue il comando SQL `Update` usando il valore nella casella di testo e usa l'etichetta per visualizzare il numero di righe interessate. Prima di eseguire la pagina, eseguire la pagina *courses. aspx* per ottenere un'immagine "before" dei dati.
 
 [![Image02](what-s-new-in-the-entity-framework-4/_static/image4.png)](what-s-new-in-the-entity-framework-4/_static/image3.png)
 
-Eseguire *UpdateCredits.aspx*, immettere "10" come moltiplicatore e quindi fare clic su **Execute**.
+Eseguire *UpdateCredits. aspx*, immettere "10" come moltiplicatore e quindi fare clic su **Esegui**.
 
 [![Image03](what-s-new-in-the-entity-framework-4/_static/image6.png)](what-s-new-in-the-entity-framework-4/_static/image5.png)
 
-Eseguire la *Courses.aspx* pagina nuovamente per visualizzare i dati modificati.
+Eseguire di nuovo la pagina *courses. aspx* per visualizzare i dati modificati.
 
 [![Image04](what-s-new-in-the-entity-framework-4/_static/image8.png)](what-s-new-in-the-entity-framework-4/_static/image7.png)
 
-(Se si desidera impostare il numero di crediti sui valori originali, in *UpdateCredits.aspx.cs* cambiare `Credits * {0}` a `Credits / {0}` ed eseguire di nuovo la pagina, immettere 10 del divisore.)
+Se si desidera impostare il numero di crediti sui valori originali, in *UpdateCredits.aspx.cs* modificare `Credits * {0}` `Credits / {0}` ed eseguire di nuovo la pagina, immettendo 10 come divisore.
 
-Per altre informazioni sull'esecuzione di query definiti nel codice, vedere [come: Eseguire direttamente comandi sull'origine dati](https://msdn.microsoft.com/library/ee358769.aspx).
+Per ulteriori informazioni sull'esecuzione di query definite nel codice, vedere [procedura: eseguire direttamente comandi sull'origine dati](https://msdn.microsoft.com/library/ee358769.aspx).
 
-## <a name="model-first-development"></a>Sviluppo Model-First
+## <a name="model-first-development"></a>Sviluppo del primo modello
 
-In queste procedure dettagliate è stato creato prima di tutto il database e quindi generato il modello di dati basato sulla struttura di database. In Entity Framework 4 è possibile avviare invece con il modello di dati e generare il database basato sulla struttura del modello dati. Se si sta creando un'applicazione per cui il database non esiste già, l'approccio model-first consente di creare entità e relazioni significativi a livello concettuale per l'applicazione, mentre non doversi preoccupare dei dettagli di implementazione fisica . (Questa situazione si verifica solo attraverso le fasi iniziali dello sviluppo, tuttavia. Infine il database verrà creato e avrà i dati di produzione in esso e ricrearla dal modello non potrà più pratico; a questo punto si sarà nuovamente all'approccio database-first.)
+In queste procedure dettagliate è stato creato innanzitutto il database e quindi è stato generato il modello di dati in base alla struttura del database. Nel Entity Framework 4 è invece possibile iniziare con il modello di dati e generare il database in base alla struttura del modello di dati. Se si sta creando un'applicazione per cui il database non esiste già, l'approccio basato sul modello consente di creare entità e relazioni che hanno un significato concettuale per l'applicazione, senza preoccuparsi dei dettagli di implementazione fisica. . Questo rimane vero solo nelle fasi iniziali dello sviluppo. Infine, il database verrà creato e saranno presenti dati di produzione e la ricreazione dal modello non sarà più pratica. a questo punto si tornerà all'approccio basato sul database.
 
-In questa sezione dell'esercitazione, si sarà creare un semplice modello di dati e generare il database da quest'ultimo.
+In questa sezione dell'esercitazione verrà creato un modello di dati semplice e verrà generato il database.
 
-Nelle **Esplora soluzioni**, fare doppio clic il *DAL* cartella e selezionare **Aggiungi nuovo elemento**. Nel **Aggiungi nuovo elemento** nella finestra di dialogo **modelli installati** seleziona **Data** e quindi selezionare il **ADO.NET Entity Data Model** modello . Denominare il nuovo file *AlumniAssociationModel.edmx* e fare clic su **Add**.
+In **Esplora soluzioni**fare clic con il pulsante destro del mouse sulla cartella *dal* e scegliere **Aggiungi nuovo elemento**. Nella finestra di dialogo **Aggiungi nuovo elemento** , in **modelli installati** Selezionare **dati** e quindi selezionare il modello **ADO.NET Entity Data Model** . Denominare il nuovo file *AlumniAssociationModel. edmx* , quindi fare clic su **Aggiungi**.
 
 [![Image06](what-s-new-in-the-entity-framework-4/_static/image10.png)](what-s-new-in-the-entity-framework-4/_static/image9.png)
 
-Verrà avviata la procedura guidata Entity Data Model. Nel **Scegli contenuto Model** passaggio, seleziona **modello vuoto** e quindi fare clic su **fine**.
+Viene avviata la procedura guidata Entity Data Model. Nel passaggio **Scegli contenuto Model** selezionare **modello vuoto** , quindi fare clic su **fine**.
 
 [![Image07](what-s-new-in-the-entity-framework-4/_static/image12.png)](what-s-new-in-the-entity-framework-4/_static/image11.png)
 
-Il **Entity Data Model Designer** viene aperto con un'area di progettazione vuoto. Trascinare un' **Entity** articolo dalle **della casella degli strumenti** nell'area di progettazione.
+Viene aperta la finestra di progettazione **Entity Data Model** con un'area di progettazione vuota. Trascinare un elemento **entità** dalla **casella degli strumenti** nell'area di progettazione.
 
 [![Image08](what-s-new-in-the-entity-framework-4/_static/image14.png)](what-s-new-in-the-entity-framework-4/_static/image13.png)
 
-Modificare il nome dell'entità da `Entity1` al `Alumnus`, modificare il `Id` nome della proprietà `AlumnusId`e aggiungere una nuova proprietà scalare denominata `Name`. Per aggiungere nuove proprietà è possibile premere INVIO dopo la modifica del nome del `Id` colonna, o l'entità e scegliere **Aggiungi proprietà scalari**. Il tipo predefinito per le nuove proprietà viene `String`, che è corretto per questa dimostrazione semplice, ma naturalmente è possibile modificare elementi come tipo di dati nel **proprietà** finestra.
+Modificare il nome dell'entità da `Entity1` a `Alumnus`, modificare il nome della proprietà `Id` in `AlumnusId`e aggiungere una nuova proprietà scalare denominata `Name`. Per aggiungere nuove proprietà, è possibile premere INVIO dopo aver modificato il nome della colonna `Id` oppure fare clic con il pulsante destro del mouse sull'entità e scegliere **Aggiungi proprietà scalare**. Il tipo predefinito per le nuove proprietà è `String`, che è adatto a questa semplice dimostrazione, ma ovviamente è possibile modificare elementi come il tipo di dati nella finestra **Proprietà** .
 
-Creare un'altra entità allo stesso modo e denominarla `Donation`. Modifica il `Id` proprietà `DonationId` e aggiungere una proprietà scalare denominata `DateAndAmount`.
+Creare un'altra entità allo stesso modo e denominarla `Donation`. Modificare la proprietà `Id` in `DonationId` e aggiungere una proprietà scalare denominata `DateAndAmount`.
 
 [![Image09](what-s-new-in-the-entity-framework-4/_static/image16.png)](what-s-new-in-the-entity-framework-4/_static/image15.png)
 
-Per aggiungere un'associazione tra queste due entità, fare doppio clic sui `Alumnus` entità, selezionare **Add**, quindi selezionare **associazione**.
+Per aggiungere un'associazione tra queste due entità, fare clic con il pulsante destro del mouse sull'entità `Alumnus`, scegliere **Aggiungi**, quindi selezionare **associazione**.
 
-[![Image10](what-s-new-in-the-entity-framework-4/_static/image18.png)](what-s-new-in-the-entity-framework-4/_static/image17.png)
+[![image10](what-s-new-in-the-entity-framework-4/_static/image18.png)](what-s-new-in-the-entity-framework-4/_static/image17.png)
 
-I valori predefiniti in di **Aggiungi associazione** finestra di dialogo siano quelle corrette (uno-a-molti, includere le proprietà di navigazione, includere chiavi esterne), quindi fare clic sul **OK**.
+I valori predefiniti nella finestra di dialogo **Aggiungi associazione** sono quelli desiderati (uno-a-molti, Includi proprietà di navigazione, Includi chiavi esterne), quindi è sufficiente fare clic su **OK**.
 
 [![Image11](what-s-new-in-the-entity-framework-4/_static/image20.png)](what-s-new-in-the-entity-framework-4/_static/image19.png)
 
 La finestra di progettazione aggiunge una linea di associazione e una proprietà di chiave esterna.
 
-[![Image12](what-s-new-in-the-entity-framework-4/_static/image22.png)](what-s-new-in-the-entity-framework-4/_static/image21.png)
+[![IMAGE12](what-s-new-in-the-entity-framework-4/_static/image22.png)](what-s-new-in-the-entity-framework-4/_static/image21.png)
 
-A questo punto si è pronti per creare il database. Fare doppio clic su area di progettazione e seleziona **genera Database da modello**.
+A questo punto si è pronti per creare il database. Fare clic con il pulsante destro del mouse sull'area di progettazione e selezionare **genera database da modello**.
 
 [![Image13](what-s-new-in-the-entity-framework-4/_static/image24.png)](what-s-new-in-the-entity-framework-4/_static/image23.png)
 
-Verrà avviata la procedura guidata Crea Database. (Se vengono visualizzati avvisi che indicano che non sono mappate le entità, è possibile ignorare quelli per il momento.)
+Viene avviata la procedura guidata genera database. Se vengono visualizzati avvisi che indicano che non è stato eseguito il mapping delle entità, è possibile ignorarli per il momento.
 
-Nel **Seleziona connessione dati** passaggio, fare clic su **nuova connessione**.
+Nel passaggio **scegliere la connessione dati** fare clic su **nuova connessione**.
 
 [![Image14](what-s-new-in-the-entity-framework-4/_static/image26.png)](what-s-new-in-the-entity-framework-4/_static/image25.png)
 
-Nel **proprietà connessione** finestra di dialogo casella, selezionare l'istanza locale di SQL Server Express e il nome del database `AlumniAssociation`.
+Nella finestra di dialogo **Proprietà connessione** selezionare l'istanza di SQL Server Express locale e denominare il database `AlumniAssociation`.
 
 [![Image15](what-s-new-in-the-entity-framework-4/_static/image28.png)](what-s-new-in-the-entity-framework-4/_static/image27.png)
 
-Fare clic su **Sì** quando viene chiesto se si desidera creare il database. Quando la **Seleziona connessione dati** passaggio viene visualizzato anche in questo caso, fare clic su **successivo**.
+Fare clic su **Sì** quando viene chiesto se si desidera creare il database. Quando si visualizza di nuovo il passaggio **scegliere la connessione dati** , fare clic su **Avanti**.
 
-Nel **riepilogo e impostazioni** passaggio, fare clic su **fine**.
+Nel passaggio **Riepilogo e impostazioni** fare clic su **fine**.
 
 [![Image18](what-s-new-in-the-entity-framework-4/_static/image30.png)](what-s-new-in-the-entity-framework-4/_static/image29.png)
 
-Oggetto *con estensione SQL* file con i comandi data definition language (DDL) viene creato, ma i comandi non sono stati ancora in esecuzione.
+Viene creato un file con *estensione SQL* con i comandi Data Definition Language (DDL), ma i comandi non sono stati ancora eseguiti.
 
 [![Image20](what-s-new-in-the-entity-framework-4/_static/image32.png)](what-s-new-in-the-entity-framework-4/_static/image31.png)
 
-Usare uno strumento, ad esempio **SQL Server Management Studio** per eseguire lo script e creare le tabelle, perché è già presente quando è stato creato il `School` per il database [la prima esercitazione di introduzione a serie di esercitazioni in ](../getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-1.md). (A meno che non è scaricato il database.)
+Usare uno strumento come **SQL Server Management Studio** per eseguire lo script e creare le tabelle, come è stato fatto quando si è creato il database `School` per [la prima esercitazione nella serie introduzione tutorial](../getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-1.md). (A meno che non sia stato scaricato il database).
 
-È ora possibile usare la `AlumniAssociation` modello di dati in web pages esattamente sia stata usata la `School` modello. Per provare questo timeout, aggiungere alcuni dati alle tabelle e creare una pagina web che consente di visualizzare i dati.
+È ora possibile usare il modello di dati `AlumniAssociation` nelle pagine Web nello stesso modo in cui si usa il modello di `School`. Per provare questa operazione, aggiungere alcuni dati alle tabelle e creare una pagina Web in cui visualizzare i dati.
 
-Usando **Esplora Server**, aggiungere le righe seguenti per il `Alumnus` e `Donation` tabelle.
+Con **Esplora server**aggiungere le righe seguenti alle tabelle `Alumnus` e `Donation`.
 
 [![Image21](what-s-new-in-the-entity-framework-4/_static/image34.png)](what-s-new-in-the-entity-framework-4/_static/image33.png)
 
-Creare una nuova pagina web denominata *Alumni.aspx* che usa le *Site. master* pagina master. Aggiungere il markup seguente per il `Content` controllo denominato `Content2`:
+Creare una nuova pagina Web denominata *Alumni. aspx* che usa la pagina master *site. master* . Aggiungere il markup seguente al controllo `Content` denominato `Content2`:
 
 [!code-aspx[Main](what-s-new-in-the-entity-framework-4/samples/sample7.aspx)]
 
-Questo markup crea nidificato `GridView` controlla, quello più esterno per visualizzare i nomi alunni e quello interno per visualizzare una donazione date e importi.
+Questo markup crea i controlli di `GridView` annidati, quello esterno per visualizzare i nomi degli Alumni e quello interno per visualizzare le date e gli importi delle donazioni.
 
-Aprire *Alumni.aspx.cs*. Aggiungere un `using` istruzione per i dati di accesso di livello e un gestore per l'outer `GridView` del controllo `RowDataBound` evento:
+Aprire *Alumni.aspx.cs*. Aggiungere un'istruzione `using` per il livello di accesso ai dati e un gestore per l'evento `RowDataBound` del controllo `GridView` esterno:
 
 [!code-csharp[Main](what-s-new-in-the-entity-framework-4/samples/sample8.cs)]
 
-Questo codice associa interna `GridView` controllo usando il `Donations` proprietà di navigazione della riga corrente `Alumnus` entità.
+Questo codice associa il controllo `GridView` interno usando la proprietà di navigazione `Donations` dell'entità `Alumnus` della riga corrente.
 
 Eseguire la pagina.
 
 [![Image22](what-s-new-in-the-entity-framework-4/_static/image36.png)](what-s-new-in-the-entity-framework-4/_static/image35.png)
 
-(Nota: Questa pagina è incluso nel progetto scaricabile, ma per il funzionamento è necessario creare il database nell'istanza locale di SQL Server Express; il database non è incluso come un *mdf* del file nei *App\_dati* cartella.)
+Nota: Questa pagina è inclusa nel progetto scaricabile, ma per renderla funzionante è necessario creare il database nell'istanza di SQL Server Express locale. il database non è incluso come file con *estensione MDF* nella cartella *app\_data* .
 
-Per altre informazioni sull'utilizzo della funzionalità model-first di Entity Framework, vedere [Model-First in Entity Framework 4](https://msdn.microsoft.com/data/ff830362.aspx).
+Per ulteriori informazioni sull'utilizzo della funzionalità del primo modello del Entity Framework, vedere [Model-First in the Entity Framework 4](https://msdn.microsoft.com/data/ff830362.aspx).
 
 ## <a name="poco-support"></a>Supporto POCO
 
-Quando si usa la metodologia di design basato su dominio, è progettare le classi di dati che rappresentano i dati e il comportamento che è rilevante per il dominio aziendale. Queste classi devono essere indipendenti di alcuna tecnologia specifica utilizzata per archiviare (rendere persistente) i dati. in altre parole, deve trattarsi *non riconoscono la persistenza*. Mancato riconoscimento della persistenza può anche semplificare una classe di unit test perché il progetto di unit test può usare qualsiasi tecnologia di persistenza è più pratica per i test. Le versioni precedenti di Entity Framework offerto un supporto limitato per mancato riconoscimento della persistenza poiché le classi di entità da cui ereditare il `EntityObject` classe e quindi inclusi una vasta gamma di funzionalità specifiche di Entity Framework.
+Quando si utilizza la metodologia di progettazione basata su dominio, è possibile progettare classi di dati che rappresentano i dati e il comportamento rilevanti per il dominio aziendale. Queste classi devono essere indipendenti da qualsiasi tecnologia specifica usata per archiviare (salvare in modo permanente) i dati; in altre parole, deve essere *ignorata la persistenza*. L'ignoranza di persistenza può anche semplificare la unit test di una classe perché il progetto unit test può usare qualsiasi tecnologia di persistenza più comoda per i test. Nelle versioni precedenti del Entity Framework è stato offerto un supporto limitato per l'ignoranza di persistenza, perché le classi di entità dovevano ereditare dalla classe `EntityObject` e quindi includere una grande quantità di funzionalità specifiche di Entity Framework.
 
-Entity Framework 4 introduce la possibilità di usare le classi di entità che non ereditano dal `EntityObject` classe e quindi che non riconoscono la persistenza. Nel contesto di Entity Framework, le classi come segue in genere vengono definite *plain-old CLR Object* (POCO o poco). È possibile scrivere classi POCO manualmente, oppure è possibile generare automaticamente in base a un modello di dati esistente tramite modelli di Toolkit di trasformazione di modelli di testo (T4) forniti da Entity Framework.
+In Entity Framework 4 è stata introdotta la possibilità di utilizzare le classi di entità che non ereditano dalla classe `EntityObject` e pertanto sono ignoranti per la persistenza. Nel contesto del Entity Framework, le classi come questa sono in genere chiamate *oggetti CLR di tipo Plain Old* (POCO o poco). È possibile scrivere manualmente le classi POCO oppure è possibile generarle automaticamente in base a un modello di dati esistente usando modelli di Text Template Transformation Toolkit (T4) forniti dal Entity Framework.
 
-Per altre informazioni sull'uso di oggetti poco in Entity Framework, vedere le risorse seguenti:
+Per ulteriori informazioni sull'utilizzo di POCO in Entity Framework, vedere le risorse seguenti:
 
-- [Utilizzano entità POCO](https://msdn.microsoft.com/library/dd456853.aspx). Si tratta di un documento MSDN che viene fornita una panoramica di oggetti poco, con collegamenti ad altri documenti che contengono informazioni più dettagliate.
-- [Procedura dettagliata: Modello POCO per Entity Framework](https://blogs.msdn.com/b/adonet/archive/2010/01/25/walkthrough-poco-template-for-the-entity-framework.aspx) si tratta di un post di blog del team di sviluppo di Entity Framework, con collegamenti ad altri post di blog su poco.
+- [Utilizzo di entità poco](https://msdn.microsoft.com/library/dd456853.aspx). Si tratta di un documento MSDN che è una panoramica di POCO, con collegamenti ad altri documenti che contengono informazioni più dettagliate.
+- [Procedura dettagliata: modello poco per il Entity Framework](https://blogs.msdn.com/b/adonet/archive/2010/01/25/walkthrough-poco-template-for-the-entity-framework.aspx) Questo è un post di Blog del team di sviluppo Entity Framework, con collegamenti ad altri post di Blog su POCO.
 
-## <a name="code-first-development"></a>Sviluppo Code First
+## <a name="code-first-development"></a>Sviluppo Code-First
 
-Supporto POCO in Entity Framework 4 è necessario comunque creare un modello di dati e collegare le classi di entità nel modello di dati. La prossima versione di Entity Framework includerà una funzionalità denominata *lo sviluppo code first*. Questa funzionalità consente di usare Entity Framework con classi POCO personalizzate senza dover usare la finestra di progettazione modello di dati o un file XML del modello di dati. (Di conseguenza, questa opzione anche EnableNotification *solo codice*; *code first* e *solo codice* entrambi si riferiscono alla stessa funzionalità di Entity Framework.)
+Il supporto POCO nel Entity Framework 4 richiede ancora la creazione di un modello di dati e il collegamento delle classi di entità al modello di dati. Nella prossima versione del Entity Framework verrà inclusa una funzionalità denominata *sviluppo Code-First*. Questa funzionalità consente di utilizzare le Entity Framework con le classi POCO senza che sia necessario utilizzare Progettazione modelli di dati o un file XML del modello di dati. (Pertanto, questa opzione è stata anche chiamata *solo codice*; *Code-First* e *code-only* fanno entrambi riferimento alla stessa funzionalità Entity Framework.
 
-Per altre informazioni sull'uso l'approccio code first per lo sviluppo, vedere le risorse seguenti:
+Per ulteriori informazioni sull'utilizzo dell'approccio Code-First per lo sviluppo, vedere le risorse seguenti:
 
-- [Code First lo sviluppo con Entity Framework 4](https://weblogs.asp.net/scottgu/archive/2010/07/16/code-first-development-with-entity-framework-4.aspx). Si tratta di un post di blog di sviluppo code first presentazione di Scott Guthrie.
-- [Blog del Team di sviluppo Framework entità - post con tag CodeOnly](https://blogs.msdn.com/b/efdesign/archive/tags/codeonly/)
-- [Blog del Team di sviluppo Framework entità - post con tag Code First](https://blogs.msdn.com/b/efdesign/archive/tags/code+first/)
-- [Esercitazione su MVC Music Store - parte 4: Modelli e accesso ai dati](../../../../mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-4.md)
-- [Introduzione a MVC 3 - parte 4: Sviluppo Code First di Entity Framework](../../../../mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/adding-a-model.md)
+- [Sviluppo Code-First con Entity Framework 4](https://weblogs.asp.net/scottgu/archive/2010/07/16/code-first-development-with-entity-framework-4.aspx). Questo è un post di Blog di Scott Guthrie che introduce lo sviluppo Code-First.
+- [Blog del team di sviluppo Entity Framework-Post con tag codeonly](https://blogs.msdn.com/b/efdesign/archive/tags/codeonly/)
+- [Blog del team di sviluppo Entity Framework-Post con tag Code First](https://blogs.msdn.com/b/efdesign/archive/tags/code+first/)
+- [Esercitazione su MVC Music Store-parte 4: modelli e accesso ai dati](../../../../mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-4.md)
+- [Introduzione con MVC 3-parte 4: Entity Framework lo sviluppo Code-First](../../../../mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/adding-a-model.md)
 
-Inoltre, una nuova esercitazione MVC Code-First che consente di creare un'applicazione simile all'applicazione Contoso University viene proiettata da pubblicare nella primavera del 2011 in [https://asp.net/entity-framework/tutorials](../../../../entity-framework.md)
+Inoltre, una nuova esercitazione del codice MVC che compila un'applicazione simile all'applicazione Contoso University viene proiettata per essere pubblicata nella primavera di 2011 all' [https://asp.net/entity-framework/tutorials](../../../../entity-framework.md)
 
 ## <a name="more-information"></a>Altre informazioni
 
-Questo passaggio completa la panoramica di What ' s new in Entity Framework e questa se si continua con la serie di esercitazioni di Entity Framework. Per altre informazioni sulle nuove funzionalità di Entity Framework 4 che non sono trattati in questo caso, vedere le risorse seguenti:
+In questo modo viene completata la panoramica sulle novità del Entity Framework e questo continua con la serie di esercitazioni Entity Framework. Per ulteriori informazioni sulle nuove funzionalità di Entity Framework 4 che non sono descritte in questo articolo, vedere le risorse seguenti:
 
-- [Novità in ADO.NET](https://msdn.microsoft.com/library/ex6y04yf.aspx) argomento di MSDN sulla nuova funzionalità nella versione 4 di Entity Framework.
-- [Annuncio della versione di Entity Framework 4](https://blogs.msdn.com/b/efdesign/archive/2010/04/12/announcing-the-release-of-entity-framework-4.aspx) post di blog del team di sviluppo di Entity Framework sulle nuove funzionalità nella versione 4.
+- [Novità di ADO.NET](https://msdn.microsoft.com/library/ex6y04yf.aspx) Argomento MSDN sulle nuove funzionalità della versione 4 del Entity Framework.
+- [Annuncio del rilascio di Entity Framework 4](https://blogs.msdn.com/b/efdesign/archive/2010/04/12/announcing-the-release-of-entity-framework-4.aspx) Il post di Blog del team di sviluppo Entity Framework sulle nuove funzionalità della versione 4.
 
 > [!div class="step-by-step"]
 > [Precedente](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application.md)

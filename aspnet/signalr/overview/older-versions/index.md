@@ -1,23 +1,23 @@
 ---
 uid: signalr/overview/older-versions/index
-title: Le versioni precedenti di SignalR | Microsoft Docs
+title: Versioni precedenti di SignalR | Microsoft Docs
 author: bradygaster
-description: Documentazione relative alle versioni precedenti di SignalR.
+description: Documentazione relativa alle versioni precedenti di SignalR.
 ms.author: bradyg
 ms.date: 09/19/2014
 ms.assetid: 607f4617-380f-41fa-bf46-147e82bb8124
 msc.legacyurl: /signalr/overview/older-versions
 msc.type: chapter
 ms.openlocfilehash: f992ea30d6d4c26da105a688f42e420af86a523a
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65117113"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78558520"
 ---
 # <a name="signalr-older-versions"></a>Versioni precedenti di SignalR
 
-> Documentazione relative alle versioni precedenti di SignalR.
+> Documentazione relativa alle versioni precedenti di SignalR.
 
 - [Esercitazione: Introduzione a SignalR 1.x](tutorial-getting-started-with-signalr.md)
 - [Esercitazione: Introduzione a SignalR 1.x e MVC 4](tutorial-getting-started-with-signalr-and-mvc-4.md)

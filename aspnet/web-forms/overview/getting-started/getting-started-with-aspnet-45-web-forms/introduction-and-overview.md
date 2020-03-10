@@ -9,11 +9,11 @@ ms.assetid: 9b96eaa1-8ef0-4338-a2e8-e0f970bfaf68
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/introduction-and-overview
 msc.type: authoredcontent
 ms.openlocfilehash: 52d5eb7abe4520ebdf6667d299d055fc7619a635
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74615459"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78568222"
 ---
 # <a name="getting-started-with-aspnet-45-web-forms-and-visual-studio-2017"></a>Introduzione con Web Form ASP.NET 4,5 e Visual Studio 2017
 
@@ -83,7 +83,7 @@ Le attività della serie di esercitazioni includono:
 - Registrazione delle route per l'applicazione Web
 - Implementazione della gestione degli errori e della registrazione degli errori
 
-## <a name="overview"></a>Panoramica di
+## <a name="overview"></a>Panoramica
 
 Questa serie di esercitazioni è destinata a chi ha familiarità con i concetti di programmazione, ma è una novità di ASP.NET Web Form. Se si ha già familiarità con ASP.NET Web Forms, questa serie può comunque essere utile per apprendere le nuove funzionalità di ASP.NET 4,5. Per i lettori che non hanno familiarità con i concetti di programmazione e i Web Form ASP.NET, vedere le esercitazioni aggiuntive su Web Form disponibili nella sezione [Introduzione](../../../index.md) del sito Web ASP.NET.
 
@@ -134,7 +134,7 @@ Dopo la restituzione da PayPal, è possibile esaminare e completare l'ordine.
 
 ![Wingtip Toys-revisione degli ordini](introduction-and-overview/_static/image7.png)
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Prima di iniziare, verificare che nel computer sia installato il software seguente:
 

@@ -9,11 +9,11 @@ ms.assetid: 08815768-2702-42ae-ae85-0a59934a11d1
 msc.legacyurl: /visual-studio/overview/2013/release-notes
 msc.type: authoredcontent
 ms.openlocfilehash: d8af9c8e7ee1316a5eac90c5959d07c628154e09
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74600444"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78557932"
 ---
 # <a name="aspnet-and-web-tools-for-visual-studio-2013-release-notes"></a>Note sulla versione di ASP.NET and Web Tools per Visual Studio 2013
 
@@ -40,7 +40,7 @@ ms.locfileid: "74600444"
 - [Web Form ASP.NET](#TOC9)
 - [ASP.NET MVC 5](#TOC10)
 - [API Web ASP.NET 2](#TOC11)
-- [SignalR ASP.NET](#TOC13)
+- [ASP.NET SignalR](#TOC13)
 - [ASP.NET Identity](#TOC8)
 - [Componenti di Microsoft OWIN](#TOC7)
 - [Entity Framework 6](#ef6)
@@ -54,7 +54,7 @@ ms.locfileid: "74600444"
 ASP.NET and Web Tools per Visual Studio 2013 sono raggruppate nel programma di installazione principale e possono essere scaricate [qui](https://www.asp.net/downloads).
 
 <a id="TOC2"></a>
-## <a name="documentation"></a>Documentation
+## <a name="documentation"></a>Documentazione
 
 Le esercitazioni e altre informazioni su ASP.NET and Web Tools per Visual Studio 2013 sono disponibili dal [sito Web ASP.NET](https://www.asp.net/).
 
@@ -131,7 +131,7 @@ Visual Studio 2013 viene fornita anche con CoffeeScript e meno editor incorporat
 
 In Visual Studio 2013 con Azure SDK per .NET 2,2 è possibile usare **Esplora server** per interagire direttamente con le app Web remote. È possibile accedere all'account Azure, creare nuove app Web, configurare app, visualizzare log in tempo reale e altro ancora. Presto, dopo il rilascio dell'SDK 2,2, sarà possibile eseguire in modalità di debug in remoto in Azure. La maggior parte delle nuove funzionalità per le app Web di app Azure Service funziona anche in Visual Studio 2012 quando si installa la versione corrente di Azure SDK per .NET.
 
-Per ulteriori informazioni, vedere le seguenti risorse:
+Per altre informazioni, vedere le seguenti risorse:
 
 - [Creare un'app Web ASP.NET nel servizio app Azure](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-get-started/)
 - [Risoluzione dei problemi di un'app Web nel servizio app di Azure tramite Visual Studio](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-troubleshoot-visual-studio/)
@@ -139,7 +139,7 @@ Per ulteriori informazioni, vedere le seguenti risorse:
 <a id="publish"></a>
 ## <a name="web-publish-enhancements"></a>Miglioramenti alla pubblicazione sul Web
 
-Visual Studio 2013 include funzionalità di pubblicazione Web nuove e migliorate. Ecco alcuni di essi:
+Visual Studio 2013 include funzionalità di pubblicazione Web nuove e migliorate. Alcuni esempi sono i seguenti:
 
 - [Automatizzare facilmente la crittografia del file Web. config](https://go.microsoft.com/fwlink/?LinkId=325529). (Questo collegamento e i due punti seguenti alla documentazione su MSDN che potrebbero non essere disponibili fino alla fine del giorno 10/17).
 - [Automatizzare facilmente l'esecuzione offline di un'applicazione durante la distribuzione](https://go.microsoft.com/fwlink/?LinkId=325530).
@@ -218,7 +218,7 @@ Il routing degli attributi fornisce anche una sintassi pratica per specificare p
 
 Per altre informazioni sul routing degli attributi, vedere [routing degli attributi nell'API Web 2](../../../web-api/overview/web-api-routing-and-actions/attribute-routing-in-web-api-2.md).
 
-### <a name="oauth-20"></a>OAuth 2,0
+### <a name="oauth-20"></a>OAuth 2.0
 
 I modelli di progetto di applicazione a pagina singola e API Web supportano ora l'autorizzazione con OAuth 2,0. OAuth 2,0 è un Framework per autorizzare l'accesso client alle risorse protette. Funziona per un'ampia gamma di client, inclusi browser e dispositivi mobili.
 
@@ -280,9 +280,9 @@ Poiché l'entità per la richiesta viene propagata con la richiesta anziché bas
 
 Grazie a un altro grande contributo di Brock Allen, ASP.NET ora supporta completamente la condivisione delle richieste tra le origini (CORS).
 
-La sicurezza del browser impedisce a una pagina Web di effettuare richieste AJAX a un altro dominio. [CORS](http://www.w3.org/TR/cors/) è uno standard W3C che consente a un server di ridurre i criteri della stessa origine. Usando CORS, un server può consentire in modo esplicito alcune richieste tra origini e rifiutare altre.
+La sicurezza del browser impedisce a una pagina Web di creare richieste AJAX per un altro dominio. [CORS](http://www.w3.org/TR/cors/) è uno standard W3C che consente a un server di ridurre i criteri della stessa origine. Con CORS un server può consentire in modo esplicito alcune richieste multiorigine e rifiutarne altre.
 
-L'API Web 2 supporta ora CORS, inclusa la gestione automatica delle richieste preliminari. Per altre informazioni, vedere [Abilitazione di richieste tra le origini in API Web ASP.NET](../../../web-api/overview/security/enabling-cross-origin-requests-in-web-api.md).
+L'API Web 2 supporta ora CORS, inclusa la gestione automatica delle richieste preliminari. Per altre informazioni, vedere [Abilitare la condivisione di richieste tra le origini nelle API Web di ASP.NET](../../../web-api/overview/security/enabling-cross-origin-requests-in-web-api.md).
 
 ### <a name="authentication-filters"></a>Filtri di autenticazione
 
@@ -678,7 +678,7 @@ Soluzione:
 
 2. Testare lo scenario in un browser diverso da IE.
 
-### <a name="web-forms-scaffolding"></a>Ponteggi Web Form
+### <a name="web-forms-scaffolding"></a>Web Forms Scaffolding
 
 L'impalcatura di Web Form è stata rimossa da VS2013 e sarà disponibile in un aggiornamento futuro a Visual Studio. Tuttavia, è comunque possibile usare l'impalcatura in un progetto Web form aggiungendo dipendenze MVC e generando impalcature per MVC. Il progetto conterrà una combinazione di Web Form e MVC.
 
@@ -688,7 +688,7 @@ Per aggiungere MVC al progetto Web Form, aggiungere un nuovo elemento con impalc
 
 Se viene rilevato un errore durante l'aggiunta di un elemento con impalcatura a un progetto, è possibile che il progetto venga lasciato in uno stato incoerente. Verrà eseguito il rollback di alcune delle modifiche apportate all'impalcatura, ma non verrà eseguito il rollback di altre modifiche, ad esempio i pacchetti NuGet installati. Se viene eseguito il rollback delle modifiche della configurazione di routing, gli utenti riceveranno un errore HTTP 404 quando si passa a elementi con impalcature.
 
-Soluzione temporanea:
+Soluzione alternativa:
 
 - Per correggere l'errore per MVC, aggiungere un nuovo elemento con impalcatura e selezionare le dipendenze MVC 5 (minime o complete). Questo processo consente di aggiungere tutte le modifiche necessarie al progetto.
 - Per correggere l'errore per l'API Web:

@@ -8,12 +8,12 @@ ms.date: 10/14/2017
 ms.assetid: 8935bf14-ca6d-4a4e-9dbe-b96ce74cef49
 msc.legacyurl: /ajax/cdn
 msc.type: content
-ms.openlocfilehash: 228194a7b35e116cabae6d819e7a3a8060a3ef6a
-ms.sourcegitcommit: e365196c75ce93cd8967412b1cfdc27121816110
+ms.openlocfilehash: 92fa428608d4ac2bf56d3c6dc9c50f1449295869
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77074917"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78544513"
 ---
 # <a name="microsoft-ajax-content-delivery-network"></a>Rete per la distribuzione di contenuti Microsoft Ajax
 
@@ -22,7 +22,7 @@ ms.locfileid: "77074917"
 >
 > La rete CDN di Microsoft AJAX non dispone di un contratto di un livello superiore e superiore a quello di Azure.
 >
-> Usare [questo problema di GitHub](https://github.com/aspnet/AspNetDocs/issues/116) per segnalare problemi con la rete CDN Microsoft AJAX.
+> Usare [questo problema di GitHub](https://github.com/dotnet/AspNetDocs/issues/116) per segnalare problemi con la rete CDN Microsoft AJAX.
 
 ## <a name="table-of-contents"></a>Sommario
 
@@ -777,7 +777,7 @@ Nella rete CDN sono ospitate le versioni di [globalizzazione](https://github.com
 
 ### <a name="respond-releases-on-the-cdn"></a>Rispondere alle versioni sulla rete CDN
 
-Nella rete CDN sono ospitate le versioni di [risposta](https://github.com/scottjehl/Respond "Rispondi") seguenti:
+Nella rete CDN sono ospitate le versioni di [risposta](https://github.com/scottjehl/Respond "Risposta") seguenti:
 
 #### <a name="respond-version-142"></a>Rispondi alla versione 1.4.2
 
@@ -1180,7 +1180,7 @@ Le versioni seguenti di [http://hammerjs.github.io/](http://hammerjs.github.io/ 
 Le versioni seguenti di ASP.NET AJAX Library sono ospitate nella rete CDN. Fare clic su ogni collegamento per visualizzare l'elenco di file effettivo.
 
 - [ASP.NET Web Forms e AJAX Version 4.5.2](cdnajax452.md "Web Forms ASP.NET e Ajax 4.5.2")
-- [ASP.NET Web Forms e AJAX versione 4](cdnajax4.md "Web Form ASP.NET e Ajax 4")
+- [ASP.NET Web Forms e AJAX versione 4](cdnajax4.md "Web Forms ASP.NET e Ajax 4")
 - [ASP.NET AJAX versione 3,5](cdnajax35.md "ASP.NET Ajax 3.5")
 
 <a id="ASPNET_MVC_Releases_on_the_CDN_16"></a>
@@ -1227,7 +1227,7 @@ I seguenti file JavaScript MVC ASP.NET sono ospitati in questa rete CDN:
 - https://ajax.aspnetcdn.com/ajax/mvc/2.0/MicrosoftMvcAjax.js
 - https://ajax.aspnetcdn.com/ajax/mvc/2.0/MicrosoftMvcAjax.debug.js
 
-#### <a name="aspnet-mvc-10"></a>ASP.NET MVC 1,0
+#### <a name="aspnet-mvc-10"></a>ASP.NET MVC 1.0
 
 - https://ajax.aspnetcdn.com/ajax/mvc/1.0/MicrosoftMvcAjax.js
 - https://ajax.aspnetcdn.com/ajax/mvc/1.0/MicrosoftMvcAjax.debug.js

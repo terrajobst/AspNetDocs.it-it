@@ -1,24 +1,24 @@
 ---
 uid: web-forms/videos/how-do-i/how-do-i-use-aspnet-to-send-email-from-a-web-site
-title: '[Procedura:] Consente di inviare posta elettronica da un sito Web ASP.NET | Microsoft Docs'
+title: '[Procedura:] Usare ASP.NET per inviare messaggi di posta elettronica da un sito Web | Microsoft Docs'
 author: rick-anderson
-description: In questo video Chris Pels illustra come creare e inviare un messaggio di posta elettronica in un sito web ASP.NET. Scopri in primo luogo, le classi principali in f dello spazio dei nomi System.NET. Mail...
+description: In questo video Chris Pels illustra come creare e inviare un messaggio di posta elettronica in un sito Web ASP.NET. Per prima cosa, informazioni sulle classi principali nello spazio dei nomi System .NET. mail f...
 ms.author: riande
 ms.date: 08/28/2008
 ms.assetid: 97f7323a-efc6-4e32-9a16-b011ed2a781b
 msc.legacyurl: /web-forms/videos/how-do-i/how-do-i-use-aspnet-to-send-email-from-a-web-site
 msc.type: video
 ms.openlocfilehash: b25d5db4b849d1d265a10f3d4d89b4af0b298d47
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59397032"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78641022"
 ---
-# <a name="how-do-i-use-aspnet-to-send-email-from-a-web-site"></a>[Procedura:] Utilizzo di ASP.NET per l'invio di posta elettronica da un sito Web
+# <a name="how-do-i-use-aspnet-to-send-email-from-a-web-site"></a>[Procedura:] Usare ASP.NET per inviare messaggi di posta elettronica da un sito Web
 
-da [Chris Pels](https://twitter.com/chrispels)
+di [Chris Pels](https://twitter.com/chrispels)
 
-In questo video Chris Pels illustra come creare e inviare un messaggio di posta elettronica in un sito web ASP.NET. In primo luogo, informazioni sulle classi nello spazio dei nomi System.NET. Mail per l'invio di posta elettronica in un sito web ASP.NET core. Informazioni su come creare un messaggio di posta elettronica usando la classe MailMessage nonché come utilizzare la classe MailAddress per l'indirizzo del mittente e come includere uno o più indirizzi. Successivamente, visualizzato come messaggio di posta elettronica usando la classe SmtpClient. Infine, informazioni sulle opzioni aggiuntive per configurare il messaggio di posta elettronica, ad esempio CC, Ccn, priorità e aggiunta di allegati.
+In questo video Chris Pels illustra come creare e inviare un messaggio di posta elettronica in un sito Web ASP.NET. Per prima cosa, informazioni sulle classi principali nello spazio dei nomi System .NET. mail per l'invio di posta elettronica in un sito Web ASP.NET. Vedere come creare un messaggio di posta elettronica usando la classe MailMessage, incluso come usare la classe MailAddress per l'indirizzo from e come includere uno o più indirizzi. Quindi, vedere come viene inviato un messaggio di posta elettronica usando la classe SmtpClient. Infine, vengono fornite informazioni sulle opzioni aggiuntive per la configurazione del messaggio di posta elettronica, ad esempio CC, Ccn, priorità e aggiunta degli allegati.
 
 [&#9654;Guarda il video (25 minuti)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-use-aspnet-to-send-email-from-a-web-site)

@@ -9,11 +9,11 @@ ms.assetid: 423498f7-1a4b-44a1-b342-5f39d0bcf94f
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/aspnet-error-handling
 msc.type: authoredcontent
 ms.openlocfilehash: 9514142ca50b33470a3f4c033e4f8e319a9ee09b
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74636462"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78566682"
 ---
 # <a name="aspnet-error-handling"></a>Gestione degli errori di ASP.NET
 
@@ -25,7 +25,7 @@ di [Erik Reitan](https://github.com/Erikre)
 
 In questa esercitazione verrà modificata l'applicazione di esempio Wingtip Toys per includere la gestione degli errori e la registrazione degli errori. La gestione degli errori consentirà all'applicazione di gestire correttamente gli errori e di visualizzare i messaggi di errore di conseguenza. La registrazione degli errori consentirà di individuare e correggere gli errori che si sono verificati. Questa esercitazione si basa sull'esercitazione precedente "routing degli URL" ed è parte della serie di esercitazioni su Wingtip Toys.
 
-## <a name="what-youll-learn"></a>Cosa si apprenderà:
+## <a name="what-youll-learn"></a>Contenuto dell'esercitazione:
 
 - Come aggiungere la gestione degli errori globale alla configurazione dell'applicazione.
 - Come aggiungere la gestione degli errori a livello di applicazione, pagina e codice.
@@ -33,7 +33,7 @@ In questa esercitazione verrà modificata l'applicazione di esempio Wingtip Toys
 - Come visualizzare i messaggi di errore che non compromettono la sicurezza.
 - Come implementare la registrazione degli errori di registrazione e di gestione errori (ELMAH).
 
-## <a name="overview"></a>Panoramica di
+## <a name="overview"></a>Panoramica
 
 Le applicazioni ASP.NET devono essere in grado di gestire in modo coerente gli errori che si verificano durante l'esecuzione. ASP.NET usa il Common Language Runtime (CLR), che fornisce un modo per notificare le applicazioni degli errori in modo uniforme. Quando si verifica un errore, viene generata un'eccezione. Un'eccezione è rappresentata da qualsiasi errore, condizione o comportamento imprevisto rilevato da un'applicazione.
 
@@ -54,7 +54,7 @@ Il runtime dispone di un set di base di eccezioni derivanti dalla classe `System
 In un'applicazione Web Form ASP.NET, le eccezioni possono essere gestite in base a una gerarchia di gestione specifica. Un'eccezione può essere gestita ai livelli seguenti:
 
 - Livello applicazione
-- Livello pagina
+- A livello di pagina
 - Livello di codice
 
 Quando un'applicazione gestisce le eccezioni, è spesso possibile recuperare e visualizzare all'utente informazioni aggiuntive sull'eccezione ereditata dalla classe di eccezione. Oltre al livello di applicazione, pagina e codice, è anche possibile gestire le eccezioni a livello di modulo HTTP e usando un gestore personalizzato di IIS.
@@ -139,7 +139,7 @@ Aggiornare la configurazione aggiungendo una sezione `customErrors` al file *Web
 2. Aggiungere la sezione `customErrors` al file *Web. config* all'interno del nodo `<system.web>`, come indicato di seguito:   
 
     [!code-xml[Main](aspnet-error-handling/samples/sample8.xml?highlight=3-5)]
-3. Salvare il file *Web. config* .
+3. Salvare il file *Web.config* .
 
 La sezione `customErrors` specifica la modalità, impostata su "on". Specifica inoltre la `defaultRedirect`, che indica all'applicazione la pagina a cui passare quando si verifica un errore. È stato inoltre aggiunto un elemento Error specifico che specifica come gestire un errore 404 quando non viene trovata una pagina. Più avanti in questa esercitazione verrà aggiunta la gestione degli errori aggiuntiva che acquisirà i dettagli di un errore a livello di applicazione.
 
@@ -334,7 +334,7 @@ Desidero ringraziare i seguenti utenti che hanno apportato contributi significat
 - [Alberto Poblacion, MVP &amp; MCT, Spagna](https://mvp.microsoft.com/mvp/Alberto%20Poblacion%20Bolano-36772)
 - [Alex Thissen, Paesi Bassi](http://blog.alexthissen.nl/) (twitter: [@alexthissen](http://twitter.com/alexthissen))
 - [Andre Tournier, Stati Uniti](http://andret503.wordpress.com/)
-- Il mio Joshi, Microsoft
+- Apurva Joshi, Microsoft
 - [Bojan Vrhovnik, Slovenia](http://twitter.com/bvrhovnik)
 - [Bruno Sonnino, Brasile](http://msmvps.com/blogs/bsonnino) (twitter: [@bsonnino](http://twitter.com/bsonnino))
 - [Carlos Dos Santos, Brasile](http://www.carloscds.net/)

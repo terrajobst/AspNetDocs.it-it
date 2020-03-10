@@ -1,6 +1,6 @@
 ---
 uid: ajax/cdn/jquery-validate/cdnjqueryvalidate155
-title: jQuery Validate 1.5.5 | Microsoft Docs
+title: 1\.5.5 di convalida jQuery | Microsoft Docs
 author: rick-anderson
 description: ''
 ms.author: riande
@@ -9,15 +9,15 @@ ms.assetid: d1c0bb58-4450-464c-8db7-8ddaf2283ffa
 msc.legacyurl: /ajax/cdn/jquery-validate/cdnjqueryvalidate155
 msc.type: content
 ms.openlocfilehash: 4ed047bacdf5cb6eb7e86f1ce58d65003d2cd2f8
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59418690"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78585106"
 ---
 # <a name="jquery-validate-155"></a>Convalida di jQuery 1.5.5
 
-Sulla rete CDN sono ospitati i file seguenti:
+I file seguenti sono ospitati nella rete CDN:
 
 - https://ajax.aspnetcdn.com/ajax/jquery.validate/1.5.5/jquery.validate.js
 - https://ajax.aspnetcdn.com/ajax/jquery.validate/1.5.5/jquery.validate.min.js

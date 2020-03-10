@@ -2,22 +2,22 @@
 uid: web-forms/overview/deployment/index
 title: Distribuzione | Microsoft Docs
 author: rick-anderson
-description: Come distribuire i progetti Web Form ASP.NET in un server.
+description: Come distribuire progetti Web Form ASP.NET in un server.
 ms.author: riande
 ms.date: 08/18/2011
 ms.assetid: 05e4c88f-5101-4277-a323-b6774d98f69e
 msc.legacyurl: /web-forms/overview/deployment
 msc.type: chapter
 ms.openlocfilehash: 1483abc212b5f122ad3e2b88474c42b208bb748e
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65134296"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78640609"
 ---
 # <a name="deployment"></a>Distribuzione
 
-> Come distribuire i progetti Web Form ASP.NET in un server.
+> Come distribuire progetti Web Form ASP.NET in un server.
 
 - [Distribuzione Web ASP.NET tramite Visual Studio](visual-studio-web-deployment/index.md)
 
@@ -36,8 +36,8 @@ ms.locfileid: "65134296"
 - [ASP.NET 4 - Introduzione alla distribuzione aziendale](deploying-web-applications-in-enterprise-scenarios/index.md)
 
     - [Distribuzione di applicazioni Web in scenari aziendali tramite Visual Studio 2010](deploying-web-applications-in-enterprise-scenarios/deploying-web-applications-in-enterprise-scenarios.md)
-    - [Distribuzione Web aziendale: Panoramica dello scenario](deploying-web-applications-in-enterprise-scenarios/enterprise-web-deployment-scenario-overview.md)
-    - [Gestione del ciclo di vita delle applicazioni: Dallo sviluppo alla produzione](deploying-web-applications-in-enterprise-scenarios/application-lifecycle-management-from-development-to-production.md)
+    - [Distribuzione Web aziendale: panoramica dello scenario](deploying-web-applications-in-enterprise-scenarios/enterprise-web-deployment-scenario-overview.md)
+    - [Application Lifecycle Management: dallo sviluppo alla produzione](deploying-web-applications-in-enterprise-scenarios/application-lifecycle-management-from-development-to-production.md)
 - [ASP.NET 4 - Serie sulla distribuzione aziendale 1](web-deployment-in-the-enterprise/index.md)
 
     - [Distribuzione Web nell'organizzazione](web-deployment-in-the-enterprise/web-deployment-in-the-enterprise.md)
@@ -55,9 +55,9 @@ ms.locfileid: "65134296"
 
     - [Configurazione degli ambienti server per la distribuzione Web](configuring-server-environments-for-web-deployment/configuring-server-environments-for-web-deployment.md)
     - [Scelta dell'approccio corretto per la distribuzione Web](configuring-server-environments-for-web-deployment/choosing-the-right-approach-to-web-deployment.md)
-    - [Scenario: Configurazione di un ambiente di Test per la distribuzione Web](configuring-server-environments-for-web-deployment/scenario-configuring-a-test-environment-for-web-deployment.md)
+    - [Scenario: Configurazione di un ambiente di test per la distribuzione Web](configuring-server-environments-for-web-deployment/scenario-configuring-a-test-environment-for-web-deployment.md)
     - [Scenario: Configurazione di un ambiente di gestione temporanea per la distribuzione Web](configuring-server-environments-for-web-deployment/scenario-configuring-a-staging-environment-for-web-deployment.md)
-    - [Scenario: Configurazione di un ambiente di produzione per la distribuzione Web](configuring-server-environments-for-web-deployment/scenario-configuring-a-production-environment-for-web-deployment.md)
+    - [Scenario: Configurazione di un ambiente di produzione temporanea per la distribuzione Web](configuring-server-environments-for-web-deployment/scenario-configuring-a-production-environment-for-web-deployment.md)
     - [Configurazione di un server Web per la pubblicazione con Distribuzione Web (agente remoto)](configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-remote-agent.md)
     - [Configurazione di un server Web per la pubblicazione con Distribuzione Web (gestore di Distribuzione Web)](configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-web-deploy-handler.md)
     - [Configurazione di un server Web per la pubblicazione con Distribuzione Web (distribuzione offline)](configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-offline-deployment.md)

@@ -1,253 +1,253 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started
-title: 'Utilizzo di Entity Framework 4.0 e il controllo ObjectDataSource, parte 1: Guida introduttiva | Microsoft Docs'
+title: 'Utilizzando il Entity Framework 4,0 e il controllo ObjectDataSource, parte 1: Introduzione | Microsoft Docs'
 author: tdykstra
-description: Questa serie di esercitazioni si basa sull'applicazione web di Contoso University specificano che viene creato da Getting Started with serie di esercitazioni in Entity Framework. Se yo...
+description: Questa serie di esercitazioni si basa sull'applicazione Web Contoso University creata dal Introduzione con la serie di esercitazioni Entity Framework. Se yo...
 ms.author: riande
 ms.date: 01/26/2011
 ms.assetid: 244278c1-fec8-4255-8a8a-13bde491c4f5
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started
 msc.type: authoredcontent
 ms.openlocfilehash: 2f14707eb058d438495dd2bc4c17b976c471fc97
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65131346"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78547292"
 ---
-# <a name="using-the-entity-framework-40-and-the-objectdatasource-control-part-1-getting-started"></a>Utilizzo di Entity Framework 4.0 e il controllo ObjectDataSource, parte 1: Introduzione
+# <a name="using-the-entity-framework-40-and-the-objectdatasource-control-part-1-getting-started"></a>Utilizzando la Entity Framework 4,0 e il controllo ObjectDataSource, parte 1: Introduzione
 
-da [Tom Dykstra](https://github.com/tdykstra)
+di [Tom Dykstra](https://github.com/tdykstra)
 
-> Questa serie di esercitazioni si basa sull'applicazione web Contoso University specificano che viene creato per il [Introduzione a Entity Framework 4.0](../getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-1.md) serie di esercitazioni. Se si non è stato completato le esercitazioni precedenti, come punto di partenza per questa esercitazione è possibile [scaricare l'applicazione](https://code.msdn.microsoft.com/ASPNET-Web-Forms-97f8ee9a) verrebbe creato. È anche possibile [scaricare l'applicazione](https://code.msdn.microsoft.com/ASPNET-Web-Forms-6c7197aa) creato dalla serie di esercitazioni complete.
+> Questa serie di esercitazioni si basa sull'applicazione Web Contoso University creata dal [Introduzione con la](../getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-1.md) serie di esercitazioni Entity Framework 4,0. Se le esercitazioni precedenti non sono state completate, come punto di partenza per questa esercitazione è possibile [scaricare l'applicazione](https://code.msdn.microsoft.com/ASPNET-Web-Forms-97f8ee9a) creata. È anche possibile [scaricare l'applicazione](https://code.msdn.microsoft.com/ASPNET-Web-Forms-6c7197aa) creata dalla serie di esercitazioni complete.
 > 
-> L'applicazione web di esempio Contoso University illustra come creare applicazioni Web Form ASP.NET usando il Entity Framework 4.0 e Visual Studio 2010. L'applicazione di esempio è un sito Web per una fittizia Contoso University. Include funzionalità, come ad esempio l'ammissione di studenti, la creazione di corsi e le assegnazioni di insegnati.
+> L'applicazione Web di esempio di Contoso University illustra come creare applicazioni Web Form ASP.NET usando il Entity Framework 4,0 e Visual Studio 2010. L'applicazione di esempio è un sito Web per una fittizia Contoso University. Include funzionalità, come ad esempio l'ammissione di studenti, la creazione di corsi e le assegnazioni di insegnati.
 > 
-> L'esercitazione illustra alcuni esempi in c#. Il [esempio scaricabile](https://code.msdn.microsoft.com/ASPNET-Web-Forms-6c7197aa) contiene il codice in c# e Visual Basic.
+> Nell'esercitazione vengono illustrati C#esempi in. L' [esempio scaricabile](https://code.msdn.microsoft.com/ASPNET-Web-Forms-6c7197aa) contiene codice in C# e Visual Basic.
 > 
-> ## <a name="database-first"></a>Prima di tutto di database
+> ## <a name="database-first"></a>Database First
 > 
-> Esistono tre modi per utilizzare i dati in Entity Framework: *Database First*, *Model First*, e *Code First*. Questa esercitazione è destinata prima di Database. Per informazioni sulle differenze tra questi flussi di lavoro e linee guida su come scegliere quello più adatto per lo scenario, vedere [flussi di lavoro sviluppo di Entity Framework](https://msdn.microsoft.com/library/ms178359.aspx#dbfmfcf).
+> Sono disponibili tre modi per lavorare con i dati nella Entity Framework: *database First*, *Model First*e *Code First*. Questa esercitazione è destinata a Database First. Per informazioni sulle differenze tra questi flussi di lavoro e indicazioni su come scegliere quello più adatto allo scenario, vedere [Entity Framework flussi di lavoro di sviluppo](https://msdn.microsoft.com/library/ms178359.aspx#dbfmfcf).
 > 
 > ## <a name="web-forms"></a>Web Form
 > 
-> Ad esempio la serie di guide introduttive, questa serie di esercitazioni viene utilizzato il modello Web Form ASP.NET e si presuppone che si sappia usare con Web Form ASP.NET in Visual Studio. Se non, viene visualizzato [Introduzione a Web Form ASP.NET 4.5](../../getting-started/getting-started-with-aspnet-45-web-forms/introduction-and-overview.md). Se si preferisce usare il framework ASP.NET MVC, vedere [Introduzione a Entity Framework con MVC ASP.NET](../../../../mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md).
+> Analogamente alla serie Introduzione, questa serie di esercitazioni usa il modello Web Form ASP.NET e presuppone che l'utente sappia come usare i Web Form ASP.NET in Visual Studio. In caso contrario, vedere [Introduzione con Web form ASP.NET 4,5](../../getting-started/getting-started-with-aspnet-45-web-forms/introduction-and-overview.md). Se si preferisce usare il framework ASP.NET MVC, vedere [Introduzione con il Entity Framework con mvc ASP.NET](../../../../mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md).
 > 
 > ## <a name="software-versions"></a>Versioni del software
 > 
-> | **Illustrato nell'esercitazione** | **Si integra inoltre con** |
+> | **Mostrata nell'esercitazione** | **Funziona anche con** |
 > | --- | --- |
 > | Windows 7 | Windows 8 |
-> | Visual Studio 2010 | Visual Studio 2010 Express per Web. L'esercitazione non è stata testata con le versioni successive di Visual Studio. Esistono numerose differenze nelle opzioni del menu, finestre di dialogo e modelli. |
-> | .NET 4 | .NET 4.5 è compatibile con .NET 4, ma non l'esercitazione è stata testata con .NET 4.5. |
-> | Entity Framework 4 | L'esercitazione non è stata testata con le versioni successive di Entity Framework. A partire da Entity Framework 5, Entity Framework Usa per impostazione predefinita il `DbContext API` che è stata introdotta con Entity Framework 4.1. Il controllo EntityDataSource è stato progettato per utilizzare il `ObjectContext` API. Per informazioni su come usare EntityDataSource controllare con il `DbContext` API, vedere [questo post di blog](https://blogs.msdn.com/b/webdev/archive/2012/09/13/how-to-use-the-entitydatasource-control-with-entity-framework-code-first.aspx). |
+> | Visual Studio 2010 | Visual Studio 2010 Express per il Web. L'esercitazione non è stata testata con le versioni successive di Visual Studio. Sono presenti molte differenze tra le selezioni di menu, le finestre di dialogo e i modelli. |
+> | .NET 4 | .NET 4,5 è compatibile con le versioni precedenti di .NET 4, ma l'esercitazione non è stata testata con .NET 4,5. |
+> | Entity Framework 4 | L'esercitazione non è stata testata con versioni successive di Entity Framework. A partire da Entity Framework 5, EF USA per impostazione predefinita il `DbContext API` introdotto con EF 4,1. Il controllo EntityDataSource è stato progettato per l'uso dell'API `ObjectContext`. Per informazioni sull'uso del controllo EntityDataSource con l'API `DbContext`, vedere [questo post di Blog](https://blogs.msdn.com/b/webdev/archive/2012/09/13/how-to-use-the-entitydatasource-control-with-entity-framework-code-first.aspx). |
 > 
 > ## <a name="questions"></a>Domande
 > 
-> Se hai domande che non sono direttamente correlate con l'esercitazione, è possibile pubblicarli per i [forum di ASP.NET Entity Framework](https://forums.asp.net/1227.aspx), il [Entity Framework e LINQ al forum su entità](https://social.msdn.microsoft.com/forums/adodotnetentityframework/threads/), o [ StackOverflow.com](http://stackoverflow.com/).
+> In caso di domande che non sono direttamente correlate all'esercitazione, è possibile pubblicarle nel forum di [ASP.NET Entity Framework](https://forums.asp.net/1227.aspx), nel [Entity Framework e LINQ to Entities forum](https://social.msdn.microsoft.com/forums/adodotnetentityframework/threads/)o in [StackOverflow.com](http://stackoverflow.com/).
 
-Il `EntityDataSource` controllo consente di creare un'applicazione molto rapidamente, ma è possibile mantenere una quantità significativa di logica di business e logica di accesso ai dati richiede in genere il *aspx* pagine. Se si prevede che l'applicazione all'aumento della complessità e richiedono una manutenzione continua, puoi investire di più tempo di sviluppo fin dall'inizio per creare un *livelli* oppure *layered* struttura dell'applicazione che è più facile da gestire. Per implementare questa architettura, il livello di presentazione separare dal livello della logica di business (BLL) e il livello di accesso ai dati (DAL). Un modo per implementare questa struttura consiste nell'utilizzare il `ObjectDataSource` invece di controllare il `EntityDataSource` controllo. Quando si usa la `ObjectDataSource` (controllo), si implementa il proprio codice di accesso ai dati e quindi richiamarlo in *aspx* pagine usando un controllo dotato di molte delle stesse funzionalità degli altri controlli origine dati. Ciò consente di combinare i vantaggi di un approccio a più livelli con i vantaggi dell'uso di un controllo Web Form per l'accesso ai dati.
+Il controllo `EntityDataSource` consente di creare un'applicazione molto rapidamente, ma in genere richiede una quantità significativa di logica di business e di logica di accesso ai dati nelle pagine *aspx* . Se si prevede un aumento della complessità dell'applicazione e la necessità di una manutenzione continua, è possibile investire più tempo di sviluppo in anticipo per creare una struttura *di applicazione a* più livelli o a più *livelli* più gestibile. Per implementare questa architettura, il livello di presentazione viene separato dal livello di logica di business (BLL) e dal livello di accesso ai dati (DAL). Un modo per implementare questa struttura consiste nell'usare il controllo `ObjectDataSource` anziché il controllo `EntityDataSource`. Quando si usa il controllo `ObjectDataSource`, si implementa il proprio codice di accesso ai dati e quindi lo si richiama nelle pagine *aspx* usando un controllo con molte delle stesse funzionalità di altri controlli di origine dati. Ciò consente di combinare i vantaggi di un approccio a più livelli con i vantaggi derivanti dall'utilizzo di un controllo Web Form per l'accesso ai dati.
 
-Il `ObjectDataSource` controllo ti offre una maggiore flessibilità in anche altri modi. Dal momento che si scrittura il proprio codice di accesso ai dati, è più semplice oltre la semplice leggere, inserire, aggiornare o eliminare un tipo di entità specifiche, quali sono le attività che il `EntityDataSource` controllo progettato per l'esecuzione. Ad esempio, è possibile eseguire la registrazione di ogni volta che viene aggiornata un'entità, archiviare i dati ogni volta che viene eliminata un'entità, o automaticamente verificare e aggiornare dati correlati in base alle necessità durante l'inserimento di una riga con un valore di chiave esterna.
+Il controllo `ObjectDataSource` offre maggiore flessibilità anche in altri modi. Poiché si scrive codice di accesso ai dati personalizzato, è più semplice eseguire operazioni di lettura, inserimento, aggiornamento o eliminazione di un tipo di entità specifico, ovvero le attività che il controllo `EntityDataSource` è progettato per eseguire. Ad esempio, è possibile eseguire la registrazione ogni volta che viene aggiornata un'entità, archiviare i dati ogni volta che un'entità viene eliminata o controllare e aggiornare automaticamente i dati correlati quando necessario quando si inserisce una riga con un valore di chiave esterna.
 
-## <a name="business-logic-and-repository-classes"></a>La logica di business e le classi di Repository
+## <a name="business-logic-and-repository-classes"></a>Classi di repository e logica di business
 
-Un `ObjectDataSource` funzionamento del controllo tramite la chiamata di una classe che viene creata. La classe include metodi che recuperano e aggiornano i dati e si deve forniscono i nomi di questi metodi per il `ObjectDataSource` controllo nel markup. Durante il rendering o l'elaborazione di postback, il `ObjectDataSource` chiama i metodi che è stato specificato.
+Un controllo `ObjectDataSource` funziona richiamando una classe creata dall'utente. La classe include metodi che recuperano e aggiornano i dati e forniscono i nomi di tali metodi al controllo `ObjectDataSource` nel markup. Durante il rendering o l'elaborazione del postback, il `ObjectDataSource` chiama i metodi specificati.
 
-Oltre alle operazioni CRUD di base, la classe che viene creata per l'uso con il `ObjectDataSource` controllo potrebbe essere necessario eseguire la logica di business quando il `ObjectDataSource` legge o aggiorna i dati. Ad esempio, quando si aggiorna un reparto, potrebbe essere necessario convalidare che non gli altri reparti abbiano lo stesso amministratore perché una persona non può essere amministratore di più di un reparto.
+Oltre alle operazioni CRUD di base, la classe creata da usare con il controllo `ObjectDataSource` potrebbe dover eseguire la logica di business quando il `ObjectDataSource` legge o aggiorna i dati. Ad esempio, quando si aggiorna un reparto, potrebbe essere necessario verificare che nessun altro reparti abbia lo stesso amministratore perché una persona non può essere amministratore di più di un reparto.
 
-In alcuni `ObjectDataSource` documentazione, ad esempio il [Cenni preliminari sulla classe ObjectDataSource](https://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource.aspx), il controllo chiama una classe definita un *oggetto business* che include la logica di business sia per la logica di accesso ai dati . In questa esercitazione si creerà classi separate per la logica di business e per la logica di accesso ai dati. La classe che incapsula la logica di accesso ai dati viene chiamata un *repository*. La classe per la logica di business include metodi la logica di business sia i metodi di accesso ai dati, ma il repository per eseguire attività di accesso ai dati di chiamare i metodi di accesso ai dati.
+In alcuni `ObjectDataSource` documentazione, ad esempio la [Panoramica della classe ObjectDataSource](https://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource.aspx), il controllo chiama una classe denominata *oggetto business* che include sia la logica di business che la logica di accesso ai dati. In questa esercitazione si creeranno classi separate per la logica di business e la logica di accesso ai dati. La classe che incapsula la logica di accesso ai dati è denominata *repository*. La classe della logica di business include metodi per la logica di business e metodi di accesso ai dati, ma i metodi di accesso ai dati chiamano il repository per eseguire attività di accesso ai dati.
 
-Verrà inoltre creato un livello di astrazione tra il livello BLL e DAL che facilita l'unit test automatizzati di test del livello BLL. Questo livello di astrazione viene implementato creando un'interfaccia e usando l'interfaccia quando si crea un'istanza del repository nella classe della logica di business. Questo rende possibile per ottenere la classe di logica di business con un riferimento a qualsiasi oggetto che implementa l'interfaccia del repository. Per il normale funzionamento, è fornire un oggetto di repository che funziona con Entity Framework. Per i test, è fornire un oggetto di repository che funziona con i dati archiviati in modo che è possibile gestire facilmente, ad esempio le variabili di classe definite come le raccolte.
+Si creerà anche un livello di astrazione tra il BLL e DAL che facilita il testing unità automatizzato del BLL. Questo livello di astrazione viene implementato creando un'interfaccia e usando l'interfaccia quando si crea un'istanza del repository nella classe della logica di business. In questo modo è possibile fornire la classe della logica di business con un riferimento a qualsiasi oggetto che implementi l'interfaccia del repository. Per il funzionamento normale, è necessario fornire un oggetto repository che funzioni con il Entity Framework. Per il test, è necessario fornire un oggetto repository che funzioni con i dati archiviati in un modo che è possibile modificare facilmente, ad esempio le variabili di classe definite come raccolte.
 
-Nella figura seguente mostra la differenza tra una classe di logica di business che include la logica di accesso ai dati senza un repository e uno che usa un repository.
+La figura seguente mostra la differenza tra una classe di logica di business che include la logica di accesso ai dati senza un repository e una che usa un repository.
 
 [![Image05](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/_static/image2.png)](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/_static/image1.png)
 
-Inizierà creando pagine web in cui il `ObjectDataSource` è associato direttamente a un repository in quanto esegue solo le attività di base di accesso ai dati. Nella prossima esercitazione si crea una classe per la logica di business con la logica di convalida e associa il `ObjectDataSource` controllo invece di tale classe per la classe di repository. Si creerà anche unit test per la logica di convalida. Nella terza esercitazione di questa serie si aggiungerà l'ordinamento e filtrare le funzionalità all'applicazione.
+Si inizierà creando pagine Web in cui il controllo `ObjectDataSource` è associato direttamente a un repository perché esegue solo attività di accesso ai dati di base. Nell'esercitazione successiva si creerà una classe della logica di business con la logica di convalida e si associerà il controllo `ObjectDataSource` alla classe anziché alla classe del repository. Si creeranno anche unit test per la logica di convalida. Nella terza esercitazione della serie verrà aggiunta la funzionalità di ordinamento e filtro all'applicazione.
 
-Le pagine create in questa esercitazione usare il `Departments` set di entità del modello di dati che è stato creato nel [serie di esercitazioni con guide introduttive](../getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-1.md).
+Le pagine create in questa esercitazione funzionano con il set di entità `Departments` del modello di dati creato nella [serie di esercitazioni Introduzione](../getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-1.md).
 
 [![Image01](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/_static/image4.png)](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/_static/image3.png)
 
 [![Image02](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/_static/image6.png)](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/_static/image5.png)
 
-## <a name="updating-the-database-and-the-data-model"></a>L'aggiornamento del Database e il modello di dati
+## <a name="updating-the-database-and-the-data-model"></a>Aggiornamento del database e del modello di dati
 
-Iniziare l'esercitazione da apportare due modifiche al database, che richiedono le modifiche corrispondenti nel modello di dati che è stato creato nel [Introduzione a Entity Framework e Web Form](../getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-1.md) esercitazioni. In uno di tali esercitazioni, sono apportate modifiche nella finestra di progettazione manualmente per sincronizzare il modello di dati con il database dopo una modifica al database. In questa esercitazione si utilizzerà la finestra di progettazione **Aggiorna modello da Database** dello strumento per aggiornare automaticamente il modello di dati.
+Si inizierà questa esercitazione apportando due modifiche al database, entrambe le quali richiedono modifiche corrispondenti al modello di dati creato nel [Introduzione con le esercitazioni Entity Framework e Web Form](../getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-1.md) . In una di queste esercitazioni sono state apportate modifiche nella finestra di progettazione manualmente per sincronizzare il modello di dati con il database dopo la modifica di un database. In questa esercitazione si utilizzerà il **modello di aggiornamento** dello strumento di progettazione di database per aggiornare automaticamente il modello di dati.
 
-### <a name="adding-a-relationship-to-the-database"></a>Aggiunta di una relazione al Database
+### <a name="adding-a-relationship-to-the-database"></a>Aggiunta di una relazione al database
 
-In Visual Studio, aprire l'applicazione web di Contoso University è stato creato nel [Introduzione a Entity Framework e Web Form](../getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-1.md) serie di esercitazioni e quindi aprire il `SchoolDiagram` diagramma di database.
+In Visual Studio aprire l'applicazione Web di Contoso University creata nella [Introduzione con la serie di esercitazioni Entity Framework e Web Forms](../getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-1.md) , quindi aprire il diagramma `SchoolDiagram` database.
 
-Se si esamina il `Department` tabella nel diagramma di database, si noterà che contiene un `Administrator` colonna. Questa colonna è una chiave esterna per il `Person` tabella, ma nessuna relazione di chiave esterna viene definita nel database. È necessario creare la relazione e aggiornare il modello di dati in modo che Entity Framework può gestire automaticamente questa relazione.
+Se si esamina la tabella `Department` nel diagramma di database, si noterà che è presente una colonna `Administrator`. Questa colonna è una chiave esterna per la tabella `Person`, ma nel database non è definita alcuna relazione di chiave esterna. È necessario creare la relazione e aggiornare il modello di dati in modo che il Entity Framework possa gestire automaticamente questa relazione.
 
-Nel diagramma di database, fare doppio clic il `Department` tabella e selezionare **relazioni**.
+Nel diagramma di database fare clic con il pulsante destro del mouse sulla tabella `Department` e scegliere **relazioni**.
 
 [![Image80](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/_static/image8.png)](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/_static/image7.png)
 
-Nel **Foreign Key Relationships** fare clic su casella **Add**, quindi fare clic sui puntini di sospensione per **specifica tabelle e colonne**.
+Nella casella **Relazioni chiavi esterne** fare clic su **Aggiungi**, quindi fare clic sui puntini di sospensione per **Specifica tabelle e colonne**.
 
 [![Image81](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/_static/image10.png)](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/_static/image9.png)
 
-Nel **tabelle e colonne** finestra di dialogo casella, impostare la tabella della chiave primaria e campo `Person` e `PersonID`e impostare la tabella di chiave esterna e campo `Department` e `Administrator`. (Quando si esegue questa operazione, il nome della relazione verrà modificato da `FK_Department_Department` a `FK_Department_Person`.)
+Nella finestra di dialogo **tabelle e colonne** impostare la tabella e il campo chiave primaria su `Person` e `PersonID`, quindi impostare la tabella e il campo della chiave esterna su `Department` e `Administrator`. Quando si esegue questa operazione, il nome della relazione verrà modificato da `FK_Department_Department` a `FK_Department_Person`.
 
 [![Image82](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/_static/image12.png)](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/_static/image11.png)
 
-Fare clic su **OK** nel **tabelle e colonne** fare clic su **Chiudi** nel **Foreign Key Relationships** casella e salvare le modifiche. Se viene chiesto se si desidera salvare il `Person` e `Department` tabelle, fare clic su **Yes**.
+Fare clic su **OK** nella casella **tabelle e colonne** , fare clic su **Chiudi** nella casella **relazioni di chiave esterna** e salvare le modifiche. Se viene chiesto se si desidera salvare le tabelle `Person` e `Department`, fare clic su **Sì**.
 
 > [!NOTE]
-> Se è stata eliminata `Person` righe corrispondenti ai dati che sono già presente nel `Administrator` colonna, non sarà in grado di salvare questa modifica. In tal caso, usare l'editor di tabella in **Esplora Server** assicurarsi che le `Administrator` valore in ogni `Department` riga contiene l'ID di un record che esista effettivamente nel `Person` tabella.
+> Se sono state eliminate `Person` righe che corrispondono ai dati già presenti nella colonna `Administrator`, non sarà possibile salvare questa modifica. In tal caso, utilizzare l'editor di tabelle in **Esplora server** per assicurarsi che il valore di `Administrator` in ogni riga di `Department` contenga l'ID di un record effettivamente esistente nella tabella `Person`.
 > 
-> Dopo aver salvato la modifica, non sarà in grado di eliminare una riga dal `Person` tabella se tale utente è un amministratore del reparto. In un'applicazione di produzione, si fornirebbe un messaggio di errore specifico quando un vincolo di database impedisce un'operazione di eliminazione oppure è possibile specificare un'operazione di eliminazione a catena. Per un esempio di come specificare un'operazione di eliminazione a catena, vedere [Entity Framework e ASP.NET-Guida introduttiva parte 2](../getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-2.md).
+> Dopo aver salvato la modifica, non sarà possibile eliminare una riga dalla tabella `Person` se tale utente è un amministratore del reparto. In un'applicazione di produzione, è necessario fornire un messaggio di errore specifico quando un vincolo di database impedisce l'eliminazione o si specifica un'eliminazione a catena. Per un esempio di come specificare un'eliminazione a catena, vedere [il Entity Framework e ASP.NET – Introduzione parte 2](../getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-2.md).
 
-### <a name="adding-a-view-to-the-database"></a>Aggiunta di una vista nel database
+### <a name="adding-a-view-to-the-database"></a>Aggiunta di una visualizzazione al database
 
-Nel nuovo *Departments.aspx* pagina che si crea, si desidera fornire un elenco di riepilogo a discesa di instructors (insegnanti), con nomi nel formato "cognome, nome" in modo che gli utenti possono selezionare gli amministratori di reparto. Per renderne più semplice per farlo, si creerà una vista nel database. La visualizzazione sarà costituito semplicemente i dati necessari per l'elenco a discesa: il nome completo (correttamente formattato) e la chiave del record.
+Nella pagina New *repartitions. aspx* che verrà creata, si desidera fornire un elenco a discesa di insegnanti con i nomi nel formato "ultimo, primo" in modo che gli utenti possano selezionare gli amministratori del reparto. Per semplificare questa operazione, sarà necessario creare una vista nel database. La visualizzazione includerà solo i dati necessari per l'elenco a discesa: il nome completo (correttamente formattato) e la chiave del record.
 
-Nelle **Esplora Server**, espandere *School. mdf*, fare doppio clic sui **viste** cartella e selezionare **Aggiungi nuova vista**.
+In **Esplora server**espandere *School. MDF*, fare clic con il pulsante destro del mouse sulla cartella **views** e scegliere **Aggiungi nuova visualizzazione**.
 
 [![Image06](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/_static/image14.png)](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/_static/image13.png)
 
-Fare clic su **Close** quando il **Aggiungi tabella** viene visualizzata la finestra di dialogo e incollare l'istruzione SQL seguente nel riquadro SQL:
+Quando viene visualizzata la finestra di dialogo **Aggiungi tabella** , fare clic su **Chiudi** e incollare la seguente istruzione SQL nel riquadro SQL:
 
 [!code-sql[Main](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/samples/sample1.sql)]
 
 Salvare la vista come `vInstructorName`.
 
-### <a name="updating-the-data-model"></a>L'aggiornamento del modello di dati
+### <a name="updating-the-data-model"></a>Aggiornamento del modello di dati
 
-Nel *DAL* cartella, aprire il *SchoolModel* del file, fare doppio clic nell'area di progettazione e selezionare **Aggiorna modello da Database**.
+Nella cartella *dal* aprire il file *SchoolModel. edmx* , fare clic con il pulsante destro del mouse sull'area di progettazione e scegliere **Aggiorna modello da database**.
 
 [![Image07](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/_static/image16.png)](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/_static/image15.png)
 
-Nel **Scegli oggetti di Database** finestra di dialogo, seleziona la **Add** scheda e selezionare la vista appena creata.
+Nella finestra di dialogo **Scegli oggetti di database** selezionare la scheda **Aggiungi** e selezionare la vista appena creata.
 
 [![Image08](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/_static/image18.png)](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/_static/image17.png)
 
 Scegliere **Fine**.
 
-Nella finestra di progettazione, si noterà che lo strumento è stato creato un `vInstructorName` entità e una nuova associazione tra il `Department` e `Person` entità.
+Nella finestra di progettazione si noterà che lo strumento ha creato un'entità `vInstructorName` e una nuova associazione tra le entità `Department` e `Person`.
 
 [![Image13](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/_static/image20.png)](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/_static/image19.png)
 
 > [!NOTE]
-> Nel **Output** e **elenco errori** tasti di windows si potrebbero ricevere un messaggio di avviso che informa che lo strumento creato automaticamente un database primario per il nuovo `vInstructorName` visualizzazione. Si tratta di un comportamento previsto.
+> Nelle finestre **output** e **Elenco errori** è possibile che venga visualizzato un messaggio di avviso che informa che lo strumento ha creato automaticamente una chiave primaria per la nuova visualizzazione `vInstructorName`. Si tratta di un comportamento previsto.
 
-Quando si fa riferimento al nuovo `vInstructorName` entità nel codice, non si desidera utilizzare la convenzione di database apponendo il prefisso "v" minuscolo ad esso. Pertanto, verranno rinominate le entità e set di entità nel modello.
+Quando si fa riferimento alla nuova entità `vInstructorName` nel codice, non si desidera utilizzare la convenzione di database per il prefisso di una "v" minuscola. Pertanto, sarà possibile rinominare l'entità e il set di entità nel modello.
 
-Aprire il **modellare Browser**. Noterete che `vInstructorName` elencato come un tipo di entità e una visualizzazione.
+Aprire il **browser modello**. Viene visualizzato `vInstructorName` elencato come un tipo di entità e una vista.
 
 [![Image14](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/_static/image22.png)](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/_static/image21.png)
 
-Sotto **SchoolModel** (non **SchoolModel. Store**), fare doppio clic su **vInstructorName** e selezionare **proprietà**. Nel **delle proprietà** finestra Modifica il **nome** proprietà su "InstructorName" e modificare il **nome Set entità** proprietà su "InstructorNames".
+In **SchoolModel** (non **SchoolModel. Store**), fare clic con il pulsante destro del mouse su **vInstructorName** e scegliere **Proprietà**. Nella finestra **Proprietà** modificare la proprietà **nome** in "instructorname" e impostare la proprietà **nome set di entità** su "InstructorNames".
 
 [![Image15](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/_static/image24.png)](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/_static/image23.png)
 
-Salvare e chiudere il modello di dati e quindi ricompilare il progetto.
+Salvare e chiudere il modello di dati, quindi ricompilare il progetto.
 
-## <a name="using-a-repository-class-and-an-objectdatasource-control"></a>Utilizzo di una classe di Repository e un controllo ObjectDataSource
+## <a name="using-a-repository-class-and-an-objectdatasource-control"></a>Uso di una classe di repository e di un controllo ObjectDataSource
 
-Creare un nuovo file di classe nel *DAL* cartella, denominarla *SchoolRepository.cs*e sostituire il codice esistente con il codice seguente:
+Creare un nuovo file di classe nella cartella *dal* , denominarlo *SchoolRepository.cs*e sostituire il codice esistente con il codice seguente:
 
 [!code-csharp[Main](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/samples/sample2.cs)]
 
-Questo codice fornisce un'unica `GetDepartments` metodo che restituisce tutte le entità nel `Departments` set di entità. Poiché è certo che si accede il `Person` proprietà di navigazione per ogni riga restituita, si specifica il caricamento eager per tale proprietà utilizzando il `Include` (metodo). La classe implementa anche il `IDisposable` interfaccia per garantire che la connessione al database viene rilasciata quando viene eliminato l'oggetto.
+Questo codice fornisce un unico metodo `GetDepartments` che restituisce tutte le entità nel set di entità `Departments`. Poiché è noto che si accederà alla proprietà di navigazione `Person` per ogni riga restituita, è necessario specificare il caricamento eager per la proprietà utilizzando il metodo `Include`. La classe implementa inoltre l'interfaccia `IDisposable` per garantire che la connessione al database venga rilasciata quando l'oggetto viene eliminato.
 
 > [!NOTE]
-> Una procedura comune consiste nel creare una classe di repository per ogni tipo di entità. In questa esercitazione viene usata una classe di repository per più tipi di entità. Per altre informazioni sul modello di repository, vedere i post in [blog del team di Entity Framework](https://blogs.msdn.com/b/adonet/archive/2009/06/16/using-repository-and-unit-of-work-patterns-with-entity-framework-4-0.aspx) e [blog di Julie](http://thedatafarm.com/blog/data-access/agile-ef4-repository-part-3-fine-tuning-the-repository/).
+> Una procedura comune consiste nel creare una classe di repository per ogni tipo di entità. In questa esercitazione viene usata una classe di repository per più tipi di entità. Per ulteriori informazioni sul modello di repository, vedere i post nel [Blog del team di Entity Framework](https://blogs.msdn.com/b/adonet/archive/2009/06/16/using-repository-and-unit-of-work-patterns-with-entity-framework-4-0.aspx) e nel [Blog di Julie Lerman](http://thedatafarm.com/blog/data-access/agile-ef4-repository-part-3-fine-tuning-the-repository/).
 
-Il `GetDepartments` metodo restituisce un `IEnumerable` oggetto anziché un' `IQueryable` oggetto per garantire che la raccolta restituita è utilizzabile anche dopo aver eliminato l'oggetto repository stesso. Un `IQueryable` oggetto può causare l'accesso al database ogni volta che è possibile accedervi, ma l'oggetto repository può essere eliminato entro l'ora di un controllo con associazione a dati tenta di eseguire il rendering dei dati. È possibile restituire un altro tipo di raccolta, ad esempio un `IList` dell'oggetto anziché un `IEnumerable` oggetto. Tuttavia, restituendo un' `IEnumerable` oggetto assicura che è possibile eseguire le attività di elaborazione tipica elenco di sola lettura, ad esempio `foreach` cicli e query LINQ, ma è Impossibile aggiungere o rimuovere gli elementi nella raccolta, che potrebbe implicare che sarebbero stati tali modifiche resi persistenti nel database.
+Il metodo `GetDepartments` restituisce un oggetto `IEnumerable` anziché un oggetto `IQueryable` per assicurarsi che la raccolta restituita sia utilizzabile anche dopo l'eliminazione dell'oggetto repository stesso. Un oggetto `IQueryable` può causare l'accesso al database ogni volta che viene eseguito l'accesso, ma l'oggetto repository potrebbe essere eliminato dal momento in cui un controllo associato a dati tenta di eseguire il rendering dei dati. È possibile restituire un altro tipo di raccolta, ad esempio un oggetto `IList` anziché un oggetto `IEnumerable`. Tuttavia, la restituzione di un oggetto `IEnumerable` garantisce che sia possibile eseguire attività tipiche di elaborazione di un elenco di sola lettura, ad esempio cicli `foreach` e query LINQ, ma non è possibile aggiungere o rimuovere elementi nella raccolta, il che potrebbe implicare che tali modifiche vengano rese permanente nel database.
 
-Creare un *Departments.aspx* pagina che utilizza il *Site* pagina master e aggiungere il markup seguente nel `Content` controllo denominato `Content2`:
+Creare una pagina *Departments. aspx* che usa la pagina master *site. master* e aggiungere il markup seguente nel controllo `Content` denominato `Content2`:
 
 [!code-aspx[Main](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/samples/sample3.aspx)]
 
-Questo codice crea un' `ObjectDataSource` controllo che usa la classe di repository appena creato, e un `GridView` controllo per visualizzare i dati. Il `GridView` specifica di controllo **modificare** e **eliminare** comandi, ma non sono stati aggiunti per supportarli ancora codice.
+Questo markup crea un controllo `ObjectDataSource` che usa la classe di repository appena creata e un controllo `GridView` per visualizzare i dati. Il controllo `GridView` specifica i comandi di **modifica** ed **eliminazione** , ma non è ancora stato aggiunto il codice per supportarli.
 
-Utilizzano diverse colonne `DynamicField` controlla in modo da poter usufruire della funzionalità di formattazione e convalida automatica dei dati. Per questo scopo, è necessario chiamare il `EnableDynamicData` metodo nella `Page_Init` gestore dell'evento. (`DynamicControl` controlli non vengono usati nel `Administrator` campo perché non funzionano con le proprietà di navigazione.)
+Diverse colonne usano controlli `DynamicField` per poter sfruttare la funzionalità automatica di formattazione e convalida dei dati. Per funzionare, sarà necessario chiamare il metodo `EnableDynamicData` nel gestore eventi `Page_Init`. i controlli`DynamicControl` non vengono usati nel campo `Administrator` perché non funzionano con le proprietà di navigazione.
 
-Il `Vertical-Align="Top"` attributi verranno diventano importanti in un secondo momento quando si aggiunge una colonna che nidificato `GridView` controllo alla griglia.
+Gli attributi di `Vertical-Align="Top"` diventeranno importanti in seguito quando si aggiunge una colonna con un controllo `GridView` annidato alla griglia.
 
-Aprire il *Departments.aspx.cs* del file e aggiungere quanto segue `using` istruzione:
+Aprire il file *Departments.aspx.cs* e aggiungere l'istruzione `using` seguente:
 
 [!code-csharp[Main](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/samples/sample4.cs)]
 
-Quindi aggiungere il gestore seguente per la pagina `Init` evento:
+Aggiungere quindi il gestore seguente per l'evento `Init` della pagina:
 
 [!code-csharp[Main](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/samples/sample5.cs)]
 
-Nel *DAL* cartella, creare un nuovo file di classe denominato *Department.cs* e sostituire il codice esistente con il codice seguente:
+Nella cartella *dal* creare un nuovo file di classe denominato *Department.cs* e sostituire il codice esistente con il codice seguente:
 
 [!code-csharp[Main](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/samples/sample6.cs)]
 
-Questo codice aggiunge i metadati nel modello di dati. Specifica che il `Budget` proprietà del `Department` entità rappresenta in effetti valuta anche se il tipo di dati è `Decimal`, e specifica che il valore deve essere compreso tra 0 e $1,000,000.00. Specifica inoltre che il `StartDate` proprietà deve essere formattata come una data nel formato mm/gg/aaaa.
+Questo codice aggiunge i metadati al modello di dati. Specifica che la proprietà `Budget` dell'entità `Department` rappresenta effettivamente la valuta, anche se il tipo di dati è `Decimal`e specifica che il valore deve essere compreso tra 0 e $1.000.000,00. Specifica inoltre che la proprietà `StartDate` deve essere formattata come data nel formato mm/gg/aaaa.
 
-Eseguire la *Departments.aspx* pagina.
+Eseguire la pagina *repartitions. aspx* .
 
 [![Image01](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/_static/image26.png)](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/_static/image25.png)
 
-Si noti che anche se non è stato specificato in una stringa di formato il *Departments.aspx* markup della pagina per il **Budget** oppure **data di inizio** predefinito di colonne, valuta e date è stata applicata la formattazione a essi dal `DynamicField` controlla, utilizzando i metadati forniti nel *Department.cs* file.
+Si noti che anche se non è stata specificata una stringa di formato nel markup della pagina *Departments. aspx* per le colonne **budget** o **Data di inizio** , la formattazione predefinita per la valuta e la data è stata applicata dai controlli `DynamicField`, usando i metadati forniti nel file *Department.cs* .
 
-## <a name="adding-insert-and-delete-functionality"></a>Aggiunta di inserimento e la funzionalità di eliminazione
+## <a name="adding-insert-and-delete-functionality"></a>Aggiunta della funzionalità di inserimento ed eliminazione
 
-Aprire *SchoolRepository.cs*, aggiungere il codice seguente per creare un `Insert` metodo e un `Delete` (metodo). Il codice include anche un metodo denominato `GenerateDepartmentID` che calcola il valore della chiave record disponibile successivo per l'uso dal `Insert` (metodo). Questa operazione è necessaria perché il database non è configurato per questa operazione automaticamente per calcolare il `Department` tabella.
+Aprire *SchoolRepository.cs*, aggiungere il codice seguente per creare un metodo di `Insert` e un metodo di `Delete`. Il codice include anche un metodo denominato `GenerateDepartmentID` che calcola il successivo valore di chiave del record disponibile per l'uso da parte del `Insert` metodo. Questa operazione è necessaria perché il database non è configurato per il calcolo automatico della tabella `Department`.
 
 [!code-csharp[Main](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/samples/sample7.cs)]
 
-### <a name="the-attach-method"></a>Il metodo di collegamento
+### <a name="the-attach-method"></a>Metodo di associazione
 
-Il `DeleteDepartment` chiamate al metodo il `Attach` metodo per ristabilire il collegamento che viene mantenuto nel gestore di stato oggetto di contesto dell'oggetto tra l'entità in memoria e il database di riga rappresenta. Ciò deve precedere le chiamate al metodo il `SaveChanges` (metodo).
+Il metodo `DeleteDepartment` chiama il metodo `Attach` per ristabilire il collegamento gestito nel gestore dello stato dell'oggetto del contesto dell'oggetto tra l'entità in memoria e la riga del database che rappresenta. Questo deve verificarsi prima che il metodo chiami il metodo `SaveChanges`.
 
-Il termine *contesto dell'oggetto* fa riferimento alla classe che deriva da Entity Framework il `ObjectContext` classi utilizzabili per accedere ai set di entità e le entità. Nel codice per questo progetto, la classe è denominata `SchoolEntities`, e un'istanza è sempre denominata `context`. Contesto dell'oggetto *di gestione dello stato degli oggetti* è una classe che deriva dal `ObjectStateManager` classe. Contattare l'oggetto usa la gestione dello stato degli oggetti per archiviare gli oggetti entità e di tenere traccia se ognuno di essi è sincronizzato con la riga corrispondente nella tabella o le righe nel database.
+Il termine *contesto dell'oggetto* si riferisce alla classe Entity Framework che deriva dalla classe `ObjectContext` utilizzata per accedere ai set di entità e alle entità. Nel codice del progetto, la classe è denominata `SchoolEntities`e un'istanza di tale classe è sempre denominata `context`. Il *gestore dello stato dell'oggetto* del contesto dell'oggetto è una classe che deriva dalla classe `ObjectStateManager`. Il contatto dell'oggetto utilizza il gestore dello stato dell'oggetto per archiviare gli oggetti entità e per tenere traccia dell'eventuale sincronizzazione di ciascuno di essi con la riga o le righe della tabella corrispondente nel database.
 
-Quando si legge un'entità, il contesto dell'oggetto viene memorizzato nel gestore di stato oggetto e consente di determinare se tale rappresentazione dell'oggetto è sincronizzato con il database. Ad esempio, se si modifica un valore della proprietà, viene impostato un flag per indicare che la proprietà che è stata modificata non è più sincronizzata con il database. Quando si chiama quindi il `SaveChanges` metodo, il contesto dell'oggetto individua le operazioni da eseguire nel database perché l'oggetto stato in grado di indicare esattamente ciò che è diverso tra lo stato corrente dell'entità e lo stato del database.
+Quando si legge un'entità, il contesto dell'oggetto lo archivia nel gestore dello stato dell'oggetto e tiene traccia del fatto che la rappresentazione dell'oggetto sia sincronizzata con il database. Se, ad esempio, si modifica un valore di proprietà, viene impostato un flag per indicare che la proprietà modificata non è più sincronizzata con il database. Quindi, quando si chiama il metodo `SaveChanges`, il contesto dell'oggetto sa cosa fare nel database perché il gestore dello stato dell'oggetto conosce esattamente le differenze tra lo stato corrente dell'entità e lo stato del database.
 
-Tuttavia, questo processo in genere non funziona in un'applicazione web, perché l'istanza contesto dell'oggetto che legge un'entità, insieme a tutti gli elementi nel relativo gestore di stato di oggetto, viene eliminato dopo il rendering di una pagina. Istanza dell'oggetto di contesto che debba applicare le modifiche è una nuova istanza che viene creata un'istanza per l'elaborazione di postback. Nel caso del `DeleteDepartment` metodo, il `ObjectDataSource` controllo crea nuovamente la versione originale dell'entità per l'utente dai valori nello stato di visualizzazione, ma ciò ricreato `Department` entità non esiste nel gestore degli stati di oggetti. Se è stato chiamato il `DeleteObject` metodo su questa entità creata di nuovo, la chiamata avrà esito negativo perché il contesto dell'oggetto non sa se l'entità è sincronizzato con il database. Tuttavia, la chiamata di `Attach` metodo ristabilisce di rilevamento stesso tra ricreate entità e i valori nel database che è stato originariamente eseguito automaticamente quando l'entità è stata letta in un'istanza precedente del contesto dell'oggetto.
+Tuttavia, questo processo non funziona in genere in un'applicazione Web, perché l'istanza del contesto dell'oggetto che legge un'entità, insieme a tutti gli elementi nel relativo gestore dello stato dell'oggetto, viene eliminata dopo il rendering di una pagina. L'istanza del contesto dell'oggetto che deve applicare le modifiche è una nuova istanza di di cui è stata creata un'istanza per l'elaborazione del postback. Nel caso del metodo `DeleteDepartment`, il controllo `ObjectDataSource` ricrea la versione originale dell'entità per l'utente dai valori nello stato di visualizzazione, ma l'entità `Department` ricreata non esiste nello stato di gestione dello stato dell'oggetto. Se è stato chiamato il metodo `DeleteObject` su questa entità ricreata, la chiamata avrà esito negativo perché il contesto dell'oggetto non è in grado di stabilire se l'entità è sincronizzata con il database. Tuttavia, la chiamata al metodo `Attach` ristabilisce lo stesso rilevamento tra l'entità ricreata e i valori nel database originariamente eseguiti automaticamente quando l'entità è stata letta in un'istanza precedente del contesto dell'oggetto.
 
-Vi sono casi quando non si desidera che il contesto dell'oggetto per tenere traccia delle entità nel gestore degli stati di oggetti, ed è possibile impostare flag per evitare che tale operazione. Nelle esercitazioni successive di questa serie sono riportati alcuni esempi di questo oggetto.
+In alcuni casi non si vuole che il contesto dell'oggetto tenga traccia delle entità nel gestore dello stato dell'oggetto ed è possibile impostare i flag per impedirne l'esecuzione. Esempi di questo esempio sono illustrati nelle esercitazioni successive di questa serie.
 
-### <a name="the-savechanges-method"></a>Il metodo SaveChanges
+### <a name="the-savechanges-method"></a>Metodo SaveChanges
 
-Questa classe di repository semplice illustra i principi di base di come eseguire operazioni CRUD. In questo esempio, il `SaveChanges` metodo viene chiamato immediatamente dopo ogni aggiornamento. In un'applicazione di produzione è possibile chiamare il `SaveChanges` metodo da un metodo separato per fornire maggiore controllo sulla quando viene aggiornato il database. (Alla fine della prossima esercitazione è possibile trovare un collegamento a un white paper che illustra lo schema unit of work che è un approccio per coordinare gli aggiornamenti correlati.) Si noti inoltre che nell'esempio di `DeleteDepartment` (metodo) non include codice per gestire i conflitti di concorrenza; verrà aggiunto codice per eseguire questa operazione in un'esercitazione successiva di questa serie.
+Questa semplice classe di repository illustra i principi di base per l'esecuzione di operazioni CRUD. In questo esempio, il metodo `SaveChanges` viene chiamato immediatamente dopo ogni aggiornamento. In un'applicazione di produzione può essere necessario chiamare il metodo `SaveChanges` da un metodo separato per offrire maggiore controllo sul momento in cui il database viene aggiornato. Al termine dell'esercitazione successiva sarà disponibile un collegamento a un white paper che illustra il modello di unità di lavoro, che rappresenta un approccio per il coordinamento degli aggiornamenti correlati. Si noti inoltre che nell'esempio il metodo `DeleteDepartment` non include il codice per la gestione dei conflitti di concorrenza; il codice da eseguire verrà aggiunto in un'esercitazione successiva di questa serie.
 
-### <a name="retrieving-instructor-names-to-select-when-inserting"></a>Recuperare i nomi dei docenti per selezionare durante l'inserimento
+### <a name="retrieving-instructor-names-to-select-when-inserting"></a>Recupero dei nomi degli insegnanti da selezionare durante l'inserimento
 
-Gli utenti devono essere in grado di selezionare un amministratore da un elenco degli insegnanti in un elenco a discesa durante la creazione di nuovi reparti. Pertanto, aggiungere il codice seguente al *SchoolRepository.cs* per creare un metodo per recuperare l'elenco degli insegnanti con la vista creata in precedenza:
+Quando si creano nuovi reparti, gli utenti devono essere in grado di selezionare un amministratore da un elenco di insegnanti in un elenco a discesa. Quindi, aggiungere il codice seguente a *SchoolRepository.cs* per creare un metodo per recuperare l'elenco di docenti usando la vista creata in precedenza:
 
 [!code-csharp[Main](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/samples/sample8.cs)]
 
 ### <a name="creating-a-page-for-inserting-departments"></a>Creazione di una pagina per l'inserimento di reparti
 
-Creare un *DepartmentsAdd.aspx* pagina che utilizza il *Site* pagina e aggiungere il markup seguente nel `Content` controllo denominato `Content2`:
+Creare una pagina *DepartmentsAdd. aspx* che usa la pagina *site. master* e aggiungere il markup seguente nel controllo `Content` denominato `Content2`:
 
 [!code-aspx[Main](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/samples/sample9.aspx)]
 
-Questo codice crea due `ObjectDataSource` controlli, uno per l'inserimento di nuove `Department` entità e uno per recuperare i nomi dei docenti per il `DropDownList` controllo utilizzato per la selezione agli amministratori di reparto. Crea il markup una `DetailsView` per immettere nuovi reparti che specifica un gestore per il controllo di controllo `ItemInserting` eventi in modo che sia possibile impostare il `Administrator` valore di chiave esterna. Alla fine è un `ValidationSummary` controllo per visualizzare i messaggi di errore.
+Questo markup crea due controlli `ObjectDataSource`, uno per l'inserimento di nuove entità `Department` e uno per il recupero dei nomi degli istruttori per il controllo `DropDownList` usato per la selezione degli amministratori del reparto. Il markup crea un controllo `DetailsView` per l'immissione di nuovi reparti e specifica un gestore per l'evento `ItemInserting` del controllo in modo che sia possibile impostare il `Administrator` valore di chiave esterna. Alla fine è presente un controllo `ValidationSummary` per visualizzare i messaggi di errore.
 
-Aprire *DepartmentsAdd.aspx.cs* e aggiungere quanto segue `using` istruzione:
+Aprire *DepartmentsAdd.aspx.cs* e aggiungere l'istruzione `using` seguente:
 
 [!code-csharp[Main](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/samples/sample10.cs)]
 
-Aggiungere i metodi e la variabile di classe seguente:
+Aggiungere i metodi e la variabile di classe seguenti:
 
 [!code-csharp[Main](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/samples/sample11.cs)]
 
-Il `Page_Init` metodo abilita la funzionalità di Dynamic Data. Il gestore per il `DropDownList` del controllo `Init` evento consente di salvare un riferimento al controllo e il gestore per il `DetailsView` del controllo `Inserting` evento usa tale riferimento per ottenere il `PersonID` valore l'insegnante selezionato e l'aggiornamento il `Administrator` proprietà di chiave esterna del `Department` entità.
+Il metodo `Page_Init` Abilita Dynamic Data funzionalità di. Il gestore per l'evento `Init` del controllo `DropDownList` salva un riferimento al controllo e il gestore per l'evento `Inserting` del controllo `DetailsView` utilizza tale riferimento per ottenere il valore `PersonID` dell'insegnante selezionato e aggiornare la proprietà della chiave esterna `Administrator` dell'entità `Department`.
 
-Esecuzione della pagina, aggiungere le informazioni per un nuovo reparto e quindi scegliere il **Inserisci** collegamento.
+Eseguire la pagina, aggiungere informazioni per un nuovo reparto, quindi fare clic sul collegamento **Inserisci** .
 
 [![Image04](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/_static/image28.png)](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/_static/image27.png)
 
-Immettere i valori per un altro nuovo reparto. Immettere un numero maggiore di 1,000,000.00 nel **Budget** campo e pressione di tab per il campo successivo. Viene visualizzato un asterisco nel campo e se si posiziona il puntatore del mouse su di esso, noterete il messaggio di errore immessi nei metadati per il campo.
+Immettere i valori per un altro nuovo reparto. Immettere un numero maggiore di 1.000.000,00 nel campo **budget** e la scheda sul campo successivo. Viene visualizzato un asterisco nel campo. Se si posiziona il puntatore del mouse su di esso, è possibile visualizzare il messaggio di errore immesso nei metadati per il campo.
 
 [![Image03](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/_static/image30.png)](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/_static/image29.png)
 
-Fare clic su **inserire**, e viene visualizzato il messaggio di errore visualizzato per il `ValidationSummary` controllo nella parte inferiore della pagina.
+Fare clic su **Inserisci**per visualizzare il messaggio di errore visualizzato dal controllo `ValidationSummary` nella parte inferiore della pagina.
 
-[![Image12](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/_static/image32.png)](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/_static/image31.png)
+[![IMAGE12](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/_static/image32.png)](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/_static/image31.png)
 
-Quindi, chiudere il browser e aprire il *Departments.aspx* pagina. Aggiungere funzionalità di eliminazione per il *Departments.aspx* pagina mediante l'aggiunta di un `DeleteMethod` dell'attributo il `ObjectDataSource` (controllo) e un `DataKeyNames` dell'attributo di `GridView` controllo. I tag di apertura per questi controlli saranno ora simile all'esempio seguente:
+Chiudere quindi il browser e aprire la pagina *repartis. aspx* . Aggiungere la funzionalità delete alla pagina *Departments. aspx* aggiungendo un attributo `DeleteMethod` al controllo `ObjectDataSource` e un attributo `DataKeyNames` al controllo `GridView`. I tag di apertura per questi controlli saranno ora simili all'esempio seguente:
 
 [!code-aspx[Main](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/samples/sample12.aspx)]
 
@@ -255,66 +255,66 @@ Eseguire la pagina.
 
 [![Image09](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/_static/image34.png)](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/_static/image33.png)
 
-Eliminare il reparto è stato aggiunto durante l'esecuzione di *DepartmentsAdd.aspx* pagina.
+Eliminare il reparto aggiunto al momento dell'esecuzione della pagina *DepartmentsAdd. aspx* .
 
-## <a name="adding-update-functionality"></a>Aggiunta di funzionalità di aggiornamento
+## <a name="adding-update-functionality"></a>Aggiunta della funzionalità di aggiornamento
 
-Aprire *SchoolRepository.cs* e aggiungere quanto segue `Update` metodo:
+Aprire *SchoolRepository.cs* e aggiungere il metodo di `Update` seguente:
 
 [!code-csharp[Main](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/samples/sample13.cs)]
 
-Quando fa clic su **Update** nel *Departments.aspx* pagina, il `ObjectDataSource` controllo crea due `Department` entità da passare al `UpdateDepartment` (metodo). Una contiene i valori originali che sono stati archiviati nello stato di visualizzazione e l'altro contenente i nuovi valori immessi nel `GridView` controllo. Il codice nel `UpdateDepartment` metodo passa il `Department` entità con i valori originali per il `Attach` metodo per stabilire la tracciabilità tra l'entità e ciò che si trova nel database. Quindi il codice passa il `Department` entità con i nuovi valori per il `ApplyCurrentValues` (metodo). Il contesto dell'oggetto confronta i valori vecchi e nuovi. Se un nuovo valore è diverso da un valore precedente, il contesto dell'oggetto viene modificato il valore della proprietà. Il `SaveChanges` metodo aggiorna quindi solo le colonne modificate nel database. (Tuttavia, se la funzione di aggiornamento per questa entità è stato eseguito il mapping a una stored procedure, l'intera riga verrà aggiornata indipendentemente da quali colonne sono state modificate.)
+Quando si fa clic su **Aggiorna** nella pagina *Departments. aspx* , il controllo `ObjectDataSource` crea due entità `Department` da passare al metodo `UpdateDepartment`. Una contiene i valori originali archiviati nello stato di visualizzazione, mentre l'altra contiene i nuovi valori immessi nel controllo `GridView`. Il codice nel metodo `UpdateDepartment` passa l'entità `Department` con i valori originali al metodo `Attach` per stabilire il rilevamento tra l'entità e gli elementi presenti nel database. Quindi il codice passa l'entità `Department` con i nuovi valori al metodo `ApplyCurrentValues`. Il contesto dell'oggetto confronta i valori vecchi e nuovi. Se un nuovo valore è diverso da un valore precedente, il contesto dell'oggetto cambia il valore della proprietà. Il metodo `SaveChanges` aggiorna quindi solo le colonne modificate nel database. Tuttavia, se la funzione di aggiornamento per questa entità è stata mappata a una stored procedure, l'intera riga verrebbe aggiornata indipendentemente dalle colonne modificate.
 
-Aprire il *Departments.aspx* file e aggiungere i seguenti attributi per il `DepartmentsObjectDataSource` controllo:
+Aprire il file *Departments. aspx* e aggiungere gli attributi seguenti al controllo `DepartmentsObjectDataSource`:
 
 - `UpdateMethod="UpdateDepartment"`
 - `ConflictDetection="CompareAllValues"`   
- Questo cause per i precedenti valori archiviati in stato di visualizzazione in modo che essi possano essere confrontati con i nuovi valori nel `Update` (metodo).
+ In questo modo i valori precedenti vengono archiviati in stato di visualizzazione in modo che possano essere confrontati con i nuovi valori nel metodo `Update`.
 - `OldValuesParameterFormatString="orig{0}"`   
- Ciò indica al controllo che è il nome del parametro originale del valori `origDepartment` .
+ In questo modo si informa il controllo che il nome del parametro dei valori originali è `origDepartment`.
 
-Il markup per il tag di apertura di `ObjectDataSource` controllo sarà ora simile all'esempio seguente:
+Il markup per il tag di apertura del controllo `ObjectDataSource` ora è simile all'esempio seguente:
 
 [!code-aspx[Main](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/samples/sample14.aspx)]
 
-Aggiungere un `OnRowUpdating="DepartmentsGridView_RowUpdating"` dell'attributo di `GridView` controllo. Verrà usato per impostare il `Administrator` valore della proprietà in base alla riga a cui l'utente seleziona in un elenco a discesa. Il `GridView` ora tag di apertura è simile al seguente:
+Aggiungere un attributo `OnRowUpdating="DepartmentsGridView_RowUpdating"` al controllo `GridView`. Questa operazione verrà utilizzata per impostare il valore della proprietà `Administrator` in base alla riga selezionata dall'utente in un elenco a discesa. Il tag di apertura `GridView` ora è simile all'esempio seguente:
 
 [!code-aspx[Main](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/samples/sample15.aspx)]
 
-Aggiungere un `EditItemTemplate` di controllo per il `Administrator` colonna il `GridView` controllare, subito dopo il `ItemTemplate` controllo per la colonna:
+Aggiungere un controllo `EditItemTemplate` per la colonna `Administrator` al controllo `GridView` subito dopo il controllo `ItemTemplate` per tale colonna:
 
 [!code-aspx[Main](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/samples/sample16.aspx)]
 
-Ciò `EditItemTemplate` è simile al controllo il `InsertItemTemplate` controllare nel *DepartmentsAdd.aspx* pagina. La differenza è che il valore iniziale del controllo è impostato tramite il `SelectedValue` attributo.
+Questo controllo `EditItemTemplate` è simile al controllo `InsertItemTemplate` nella pagina *DepartmentsAdd. aspx* . La differenza consiste nel fatto che il valore iniziale del controllo viene impostato utilizzando l'attributo `SelectedValue`.
 
-Prima di `GridView` controllo, aggiungere un `ValidationSummary` controllare come è stato fatto *DepartmentsAdd.aspx* pagina.
+Prima del controllo `GridView` aggiungere un controllo `ValidationSummary` come è stato fatto nella pagina *DepartmentsAdd. aspx* .
 
 [!code-aspx[Main](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/samples/sample17.aspx)]
 
-Aprire *Departments.aspx.cs* immediatamente dopo la dichiarazione di classe parziale, aggiungere il codice seguente per creare un campo privato per fare riferimento il `DropDownList` controllo:
+Aprire *Departments.aspx.cs* e subito dopo la dichiarazione di classe parziale aggiungere il codice seguente per creare un campo privato per fare riferimento al controllo `DropDownList`:
 
 [!code-csharp[Main](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/samples/sample18.cs)]
 
-Quindi aggiungere i gestori per il `DropDownList` del controllo `Init` evento e il `GridView` del controllo `RowUpdating` evento:
+Quindi aggiungere i gestori per l'evento `Init` del controllo `DropDownList` e l'evento `RowUpdating` del controllo `GridView`:
 
 [!code-csharp[Main](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/samples/sample19.cs)]
 
-Il gestore per il `Init` evento consente di salvare un riferimento al `DropDownList` controllo nel campo della classe. Il gestore per il `RowUpdating` evento utilizza il riferimento per ottenere il valore specificato dall'utente e metterle in pratica per la `Administrator` proprietà del `Department` entità.
+Il gestore per l'evento `Init` salva un riferimento al controllo `DropDownList` nel campo della classe. Il gestore per l'evento `RowUpdating` usa il riferimento per ottenere il valore immesso dall'utente e applicarlo alla proprietà `Administrator` dell'entità `Department`.
 
-Usare il *DepartmentsAdd.aspx* pagina per aggiungere un nuovo reparto, quindi eseguire il *Departments.aspx* e fare clic su **Edit** sulla riga che è stato aggiunto.
+Utilizzare la pagina *DepartmentsAdd. aspx* per aggiungere un nuovo reparto, quindi eseguire la pagina *repartitions. aspx* , quindi fare clic su **modifica** nella riga aggiunta.
 
 > [!NOTE]
-> Non sarà in grado di modificare le righe che non è stato aggiunto (vale a dire che erano già presenti nel database), a causa di dati non validi nel database. gli amministratori per le righe che sono stati creati con il database sono gli studenti. Se si prova a modificare uno di essi, si otterrà una pagina di errore che segnala un errore, ad esempio `'InstructorsDropDownList' has a SelectedValue which is invalid because it does not exist in the list of items.`
+> Non sarà possibile modificare le righe che non sono state aggiunte, ovvero che erano già presenti nel database, a causa di dati non validi nel database. gli amministratori per le righe create con il database sono studenti. Se si tenta di modificare uno di essi, viene restituita una pagina di errore in cui viene segnalato un errore, ad esempio `'InstructorsDropDownList' has a SelectedValue which is invalid because it does not exist in the list of items.`
 
-[![Image10](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/_static/image36.png)](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/_static/image35.png)
+[![image10](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/_static/image36.png)](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/_static/image35.png)
 
-Se si immette un valore non valido **Budget** amount e quindi fare clic su **Update**, asterisco stesso e il messaggio di errore che si è visto nella vengono visualizzati i *Departments.aspx* pagina.
+Se si immette un importo di **budget** non valido e quindi si fa clic su **Aggiorna**, viene visualizzato lo stesso asterisco e il messaggio di errore visualizzato nella pagina *Departments. aspx* .
 
-Modificare un valore del campo o selezionare un altro amministratore e fare clic su **Update**. Viene visualizzata la modifica.
+Modificare il valore di un campo o selezionare un altro amministratore e fare clic su **Aggiorna**. Viene visualizzata la modifica.
 
 [![Image09](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/_static/image38.png)](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/_static/image37.png)
 
-In questo argomento completa l'introduzione all'uso del `ObjectDataSource` controllo per CRUD di base (creare, leggere, aggiornare ed eliminare) le operazioni con Entity Framework. È stata creata una semplice applicazione a più livelli, ma il livello di logica di business è ancora strettamente associato a livello di accesso ai dati, che rende più difficile il testing unità automatizzato. Nell'esercitazione verrà illustrato come implementare il modello di repository per facilitare il testing unità.
+Questa operazione completa l'introduzione all'uso del controllo `ObjectDataSource` per le operazioni CRUD di base (creazione, lettura, aggiornamento, eliminazione) con l'Entity Framework. È stata creata una semplice applicazione a più livelli, ma il livello di logica aziendale è ancora strettamente associato al livello di accesso ai dati, che complica gli unit test automatici. Nell'esercitazione seguente verrà illustrato come implementare il modello di repository per semplificare il testing unità.
 
 > [!div class="step-by-step"]
 > [avanti](using-the-entity-framework-and-the-objectdatasource-control-part-2-adding-a-business-logic-layer-and-unit-tests.md)

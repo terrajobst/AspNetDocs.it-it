@@ -1,127 +1,127 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-7
-title: Introduzione a Entity Framework 4.0 Database First e ASP.NET 4 Web Form - parte 7 | Microsoft Docs
+title: Introduzione con Entity Framework 4,0 Database First e ASP.NET 4 Web Forms-parte 7 | Microsoft Docs
 author: tdykstra
-description: L'applicazione web di esempio Contoso University illustra come creare applicazioni Web Form ASP.NET utilizzando Entity Framework. L'applicazione di esempio è...
+description: L'applicazione Web di esempio di Contoso University illustra come creare applicazioni Web Form ASP.NET usando il Entity Framework. L'applicazione di esempio è...
 ms.author: riande
 ms.date: 12/03/2010
 ms.assetid: f8afb245-b705-419c-8790-0b295e90d5e2
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-7
 msc.type: authoredcontent
 ms.openlocfilehash: 18d4b44c5e23fd6942c3adf48a33a5602e6df6d0
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65133094"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78603432"
 ---
-# <a name="getting-started-with-entity-framework-40-database-first-and-aspnet-4-web-forms---part-7"></a>Introduzione a Entity Framework 4.0 Database First e ASP.NET 4 Web Form - parte 7
+# <a name="getting-started-with-entity-framework-40-database-first-and-aspnet-4-web-forms---part-7"></a>Introduzione con Entity Framework 4,0 Database First e ASP.NET 4 Web Forms-parte 7
 
-da [Tom Dykstra](https://github.com/tdykstra)
+di [Tom Dykstra](https://github.com/tdykstra)
 
-> L'applicazione web di esempio Contoso University illustra come creare applicazioni Web Form ASP.NET usando il Entity Framework 4.0 e Visual Studio 2010. Per informazioni sulla serie di esercitazioni, vedere [la prima esercitazione della serie](the-entity-framework-and-aspnet-getting-started-part-1.md)
+> L'applicazione Web di esempio di Contoso University illustra come creare applicazioni Web Form ASP.NET usando il Entity Framework 4,0 e Visual Studio 2010. Per informazioni sulla serie di esercitazioni, vedere [la prima esercitazione della serie](the-entity-framework-and-aspnet-getting-started-part-1.md)
 
 ## <a name="using-stored-procedures"></a>Utilizzo delle stored procedure
 
-Nell'esercitazione precedente è implementato un modello di ereditarietà tabella per gerarchia. Questa esercitazione illustrerà come utilizzare le stored procedure per controllare ulteriormente l'accesso al database.
+Nell'esercitazione precedente è stato implementato un modello di ereditarietà tabella per gerarchia. In questa esercitazione verrà illustrato come utilizzare le stored procedure per ottenere un maggiore controllo sull'accesso al database.
 
-Entity Framework consente di specificare che è necessario utilizzare stored procedure per l'accesso al database. Per qualsiasi tipo di entità, è possibile specificare una stored procedure da utilizzare per la creazione, aggiornamento o l'eliminazione delle entità di quel tipo. Nel modello di dati è quindi possibile aggiungere riferimenti alle stored procedure che è possibile usare per eseguire attività quali il recupero di set di entità.
+Il Entity Framework consente di specificare che deve utilizzare le stored procedure per l'accesso al database. Per qualsiasi tipo di entità, è possibile specificare un stored procedure da usare per la creazione, l'aggiornamento o l'eliminazione di entità di quel tipo. Nel modello di dati è quindi possibile aggiungere riferimenti alle stored procedure che è possibile utilizzare per eseguire attività quali il recupero di set di entità.
 
-Utilizzo delle stored procedure è un requisito comune per l'accesso al database. In alcuni casi un amministratore del database può richiedere che l'accesso al database passano attraverso le stored procedure per motivi di sicurezza. In altri casi è possibile compilare una logica di business in alcuni dei processi di Entity Framework viene utilizzato quando si aggiorna il database. Ad esempio, ogni volta che viene eliminata un'entità è possibile copiarlo in un database di archiviazione. O ogni volta che viene aggiornata una riga si potrebbe voler scrivere una riga della tabella di registrazione che registra che ha apportato la modifica. È possibile eseguire questi tipi di attività in una stored procedure che viene chiamata ogni volta che Entity Framework elimina un'entità o aggiorna un'entità.
+L'utilizzo di stored procedure è un requisito comune per l'accesso al database. In alcuni casi, un amministratore del database può richiedere che l'accesso a tutti i database venga attraversato da stored procedure per motivi di sicurezza. In altri casi, potrebbe essere necessario creare la logica di business in alcuni dei processi utilizzati dal Entity Framework durante l'aggiornamento del database. Ad esempio, ogni volta che un'entità viene eliminata, potrebbe essere necessario copiarla in un database di archiviazione. O ogni volta che viene aggiornata una riga, potrebbe essere necessario scrivere una riga in una tabella di registrazione che registra chi ha apportato la modifica. È possibile eseguire questi tipi di attività in un stored procedure chiamato ogni volta che il Entity Framework Elimina un'entità o aggiorna un'entità.
 
-Come nell'esercitazione precedente, si creerà non tutte le nuove pagine. Al contrario, sarà necessario modificare il modo in cui che Entity Framework accede al database per alcune delle pagine è già stato creato.
+Come nell'esercitazione precedente, non verrà creata alcuna nuova pagina. Al contrario, si modificherà il modo in cui il Entity Framework accede al database per alcune delle pagine già create.
 
-In questa esercitazione si creerà le stored procedure nel database per l'inserimento `Student` e `Instructor` entità. È possibile aggiungerli al modello di dati e si specificano che Entity Framework devono usarli per l'aggiunta `Student` e `Instructor` entità al database. Si creerà inoltre una stored procedure che è possibile usare per recuperare `Course` entità.
+In questa esercitazione verranno create stored procedure nel database per l'inserimento di entità `Student` e `Instructor`. Verranno aggiunti al modello di dati e si specificherà che i Entity Framework devono utilizzarli per aggiungere `Student` e `Instructor` entità al database. Verrà inoltre creato un stored procedure che è possibile utilizzare per recuperare `Course` entità.
 
-## <a name="creating-stored-procedures-in-the-database"></a>Creazione di Stored procedure nel Database
+## <a name="creating-stored-procedures-in-the-database"></a>Creazione di stored procedure nel database
 
-(Se si usa la *School. mdf* file dal progetto disponibile per il download in questa esercitazione, è possibile ignorare questa sezione perché le stored procedure esistano già.)
+Se si usa il file *School. MDF* del progetto disponibile per il download in questa esercitazione, è possibile ignorare questa sezione perché le stored procedure esistono già.
 
-Nelle **Esplora Server**, espandere *School. mdf*, fare doppio clic su **Stored Procedures**, selezionare **Aggiungi nuova Stored Procedure**.
+In **Esplora server**espandere *School. MDF*, fare clic con il pulsante destro del mouse su **stored procedure**e scegliere **Aggiungi nuova stored procedure**.
 
 [![image15](the-entity-framework-and-aspnet-getting-started-part-7/_static/image2.png)](the-entity-framework-and-aspnet-getting-started-part-7/_static/image1.png)
 
-Copiare le istruzioni SQL seguenti e incollarle nella finestra della stored procedure, sostituendo la stored procedure scheletro.
+Copiare le istruzioni SQL seguenti e incollarle nella finestra di stored procedure, sostituendo la Skeleton stored procedure.
 
 [!code-sql[Main](the-entity-framework-and-aspnet-getting-started-part-7/samples/sample1.sql)]
 
 [![image14](the-entity-framework-and-aspnet-getting-started-part-7/_static/image4.png)](the-entity-framework-and-aspnet-getting-started-part-7/_static/image3.png)
 
-`Student` le entità hanno quattro proprietà: `PersonID`, `LastName`, `FirstName`, e `EnrollmentDate`. Il database genera automaticamente il valore ID e la stored procedure accetta parametri per le altre tre. La stored procedure restituisce il valore della chiave del record della nuova riga in modo che Entity Framework può tenere traccia di che nella versione dell'entità che conserva in memoria.
+`Student` entità hanno quattro proprietà: `PersonID`, `LastName`, `FirstName`e `EnrollmentDate`. Il database genera automaticamente il valore ID e il stored procedure accetta parametri per gli altri tre. Il stored procedure restituisce il valore della chiave di registrazione della nuova riga in modo che il Entity Framework possa tenere traccia di tale chiave nella versione dell'entità che mantiene in memoria.
 
 Salvare e chiudere la finestra di stored procedure.
 
-Creare un `InsertInstructor` stored procedure allo stesso modo, usando le istruzioni SQL seguenti:
+Creare una `InsertInstructor` stored procedure nello stesso modo, usando le istruzioni SQL seguenti:
 
 [!code-sql[Main](the-entity-framework-and-aspnet-getting-started-part-7/samples/sample2.sql)]
 
-Creare `Update` stored procedure per il `Student` e `Instructor` entità anche. (Il database esiste già un `DeletePerson` stored procedure che funzionerà per entrambe `Instructor` e `Student` entities.)
+Creare `Update` stored procedure anche per le entità `Student` e `Instructor`. Il database dispone già di un `DeletePerson` stored procedure che funzionerà sia per `Instructor` che per entità `Student`.
 
 [!code-sql[Main](the-entity-framework-and-aspnet-getting-started-part-7/samples/sample3.sql)]
 
 [!code-sql[Main](the-entity-framework-and-aspnet-getting-started-part-7/samples/sample4.sql)]
 
-In questa esercitazione verrà eseguito il mapping tutte le tre funzioni: insert, update e delete, per ogni tipo di entità. Consente a Entity Framework versione 4 è possibile mappare solo uno o due di queste funzioni alle stored procedure senza mapping di altri utenti, con una sola eccezione: se si esegue il mapping della funzione di aggiornamento, ma non della funzione di eliminazione, Entity Framework genererà un'eccezione quando si tentativo di eliminare un'entità. In Entity Framework versione 3.5, non è stato simile flessibilità nel mapping delle stored procedure: se è stata associata una funzione era necessario eseguire il mapping di tutte e tre.
+In questa esercitazione si eseguirà il mapping di tutte e tre le funzioni, INSERT, Update e DELETE, per ogni tipo di entità. Il Entity Framework versione 4 consente di eseguire il mapping di una o due di queste funzioni alle stored procedure senza eseguire il mapping degli altri, con un'unica eccezione: se si esegue il mapping della funzione di aggiornamento ma non della funzione Delete, il Entity Framework genererà un'eccezione quando si tentativo di eliminazione di un'entità. Nel Entity Framework versione 3,5, non si dispone di questa molto flessibilità nel mapping delle stored procedure: se è stato eseguito il mapping di una funzione, è necessario eseguire il mapping di tutte e tre.
 
-Per creare una stored procedure che legge piuttosto che aggiorna i dati, crearne uno che seleziona tutti gli elementi `Course` entità, usando le istruzioni SQL seguenti:
+Per creare un stored procedure che legga anziché aggiornare i dati, crearne uno che seleziona tutte `Course` entità, usando le istruzioni SQL seguenti:
 
 [!code-sql[Main](the-entity-framework-and-aspnet-getting-started-part-7/samples/sample5.sql)]
 
-## <a name="adding-the-stored-procedures-to-the-data-model"></a>Aggiunta delle Stored procedure al modello di dati
+## <a name="adding-the-stored-procedures-to-the-data-model"></a>Aggiunta di stored procedure al modello di dati
 
-Le stored procedure vengono ora definite nel database, ma devono essere aggiunti al modello di dati per renderli disponibili per Entity Framework. Aprire *SchoolModel*, fare doppio clic nell'area di progettazione e selezionare **Aggiorna modello da Database**. Nel **Add** scheda della finestra di **Scegli oggetti di Database** finestra di dialogo, espandere **Stored procedure**, selezionare le stored procedure appena create e il `DeletePerson` stored procedure e quindi fare clic su **fine**.
+Le stored procedure sono ora definite nel database, ma devono essere aggiunte al modello di dati per renderle disponibili per la Entity Framework. Aprire *SchoolModel. edmx*, fare clic con il pulsante destro del mouse sull'area di progettazione e scegliere **Aggiorna modello da database**. Nella scheda **Aggiungi** della finestra di dialogo **Seleziona oggetti di database** espandere **stored procedure**, selezionare le stored procedure appena create e il `DeletePerson` stored procedure, quindi fare clic su **fine**.
 
 [![image20](the-entity-framework-and-aspnet-getting-started-part-7/_static/image6.png)](the-entity-framework-and-aspnet-getting-started-part-7/_static/image5.png)
 
-## <a name="mapping-the-stored-procedures"></a>Mapping delle Stored procedure
+## <a name="mapping-the-stored-procedures"></a>Mapping delle stored procedure
 
-In Progettazione modelli di dati, fare doppio clic il `Student` entità e selezionare **Mapping Stored Procedure**.
+In Progettazione modelli di dati fare clic con il pulsante destro del mouse sull'entità `Student` e selezionare **Mapping stored procedure**.
 
 [![image21](the-entity-framework-and-aspnet-getting-started-part-7/_static/image8.png)](the-entity-framework-and-aspnet-getting-started-part-7/_static/image7.png)
 
-Il **Dettagli Mapping** viene visualizzata la finestra in cui è possibile specificare le stored procedure che Entity Framework devono usare per l'inserimento, aggiornamento ed eliminazione di entità di questo tipo.
+Viene visualizzata la finestra **Dettagli mapping** , in cui è possibile specificare le stored procedure che devono essere utilizzate dal Entity Framework per l'inserimento, l'aggiornamento e l'eliminazione di entità di questo tipo.
 
 [![image22](the-entity-framework-and-aspnet-getting-started-part-7/_static/image10.png)](the-entity-framework-and-aspnet-getting-started-part-7/_static/image9.png)
 
-Impostare il **inserire** funzione **InsertStudent**. La finestra Mostra un elenco di parametri delle stored procedure, ognuno dei quali deve essere mappato a una proprietà di entità. Due di queste vengono mappate automaticamente perché i nomi sono uguali. È presente nessuna proprietà di entità denominata `FirstName`, pertanto è necessario selezionare manualmente `FirstMidName` da un elenco di riepilogo che mostra le proprietà delle entità disponibili. (Infatti, è stato modificato il nome del `FirstName` proprietà `FirstMidName` nella prima esercitazione.)
+Impostare la funzione **Insert** su **InsertStudent**. La finestra Mostra un elenco di parametri di stored procedure, ognuno dei quali deve essere mappato a una proprietà dell'entità. Due di queste sono mappate automaticamente perché i nomi sono uguali. Non esiste alcuna proprietà di entità denominata `FirstName`, quindi è necessario selezionare manualmente `FirstMidName` da un elenco a discesa in cui sono visualizzate le proprietà dell'entità disponibili. Questo è dovuto al fatto che il nome della proprietà `FirstName` è stato modificato in `FirstMidName` nella prima esercitazione.
 
 [![image23](the-entity-framework-and-aspnet-getting-started-part-7/_static/image12.png)](the-entity-framework-and-aspnet-getting-started-part-7/_static/image11.png)
 
-Nella stessa **Dettagli Mapping** (finestra), mappa il `Update` funzione per il `UpdateStudent` stored procedure di (assicurarsi di specificare `FirstMidName` come valore del parametro per `FirstName`, come fatto in precedenza per il `Insert` stored procedure) e il `Delete` funzione per il `DeletePerson` stored procedure.
+Nella stessa finestra **Dettagli mapping** , eseguire il mapping della funzione `Update` al stored procedure di `UpdateStudent` (assicurarsi di specificare `FirstMidName` come valore del parametro per `FirstName`, come per il `Insert` stored procedure) e la funzione `Delete` al `DeletePerson` stored procedure.
 
-[![image01](the-entity-framework-and-aspnet-getting-started-part-7/_static/image14.png)](the-entity-framework-and-aspnet-getting-started-part-7/_static/image13.png)
+[![Image01](the-entity-framework-and-aspnet-getting-started-part-7/_static/image14.png)](the-entity-framework-and-aspnet-getting-started-part-7/_static/image13.png)
 
-Seguire la stessa procedura per eseguire il mapping di insert, update e delete di stored procedure per instructors (insegnanti) per il `Instructor` entità.
+Seguire la stessa procedura per eseguire il mapping delle stored procedure INSERT, Update e DELETE per gli insegnanti all'entità `Instructor`.
 
 [![image02](the-entity-framework-and-aspnet-getting-started-part-7/_static/image16.png)](the-entity-framework-and-aspnet-getting-started-part-7/_static/image15.png)
 
-Per le stored procedure che leggono invece di aggiornare i dati, si utilizza il **Browser modello** restituisce digitarlo finestra per eseguire il mapping della stored procedure per l'entità. In Progettazione modelli di dati, fare doppio clic su area di progettazione e seleziona **Browser modello**. Aprire il **SchoolModel. Store** nodo, quindi aprire il **Stored Procedures** nodo. Quindi scegliere il `GetCourses` stored procedure e selezionare **Aggiungi importazione di funzioni**.
+Per le stored procedure che leggono anziché aggiornare i dati, è possibile utilizzare la finestra **browser modello** per eseguire il mapping del stored procedure al tipo di entità restituito. In Progettazione modelli di dati fare clic con il pulsante destro del mouse sull'area di progettazione e scegliere **browser modello**. Aprire il nodo **SchoolModel. Store** e quindi aprire il nodo **stored procedure** . Fare quindi clic con il pulsante destro del mouse sul stored procedure `GetCourses` e scegliere **Aggiungi importazione di funzioni**.
 
 [![image24](the-entity-framework-and-aspnet-getting-started-part-7/_static/image18.png)](the-entity-framework-and-aspnet-getting-started-part-7/_static/image17.png)
 
-Nel **Aggiungi importazione di funzioni** nella finestra di dialogo **restituisce una raccolta di** seleziona **entità**e quindi selezionare `Course` come il tipo di entità restituite. Al termine, fare clic su **OK**. Salvare e chiudere il *edmx* file.
+Nella finestra di dialogo **Aggiungi importazione di funzioni** , in **restituisce una raccolta di** **entità**Select, quindi selezionare `Course` come tipo di entità restituito. Al termine, fare clic su **OK**. Salvare e chiudere il file con *estensione edmx* .
 
 [![image25](the-entity-framework-and-aspnet-getting-started-part-7/_static/image20.png)](the-entity-framework-and-aspnet-getting-started-part-7/_static/image19.png)
 
-## <a name="using-insert-update-and-delete-stored-procedures"></a>Utilizza inserimento, aggiornamento ed eliminazione di Stored procedure
+## <a name="using-insert-update-and-delete-stored-procedures"></a>Utilizzo di stored procedure di inserimento, aggiornamento ed eliminazione
 
-Le stored procedure per inserire, aggiornare ed eliminare i dati vengono usati da Entity Framework automaticamente dopo aver aggiunte al modello di dati e li mappati alle entità appropriata. È ora possibile eseguire la *StudentsAdd.aspx* pagina, e ogni volta che si crea un nuovo studente, Entity Framework userà il `InsertStudent` stored procedure per aggiungere la nuova riga per il `Student` tabella.
+Le stored procedure per l'inserimento, l'aggiornamento e l'eliminazione dei dati vengono utilizzate dal Entity Framework automaticamente dopo averle aggiunte al modello di dati e associate alle entità appropriate. È ora possibile eseguire la pagina *StudentsAdd. aspx* . ogni volta che si crea un nuovo studente, il Entity Framework utilizzerà la stored procedure `InsertStudent` per aggiungere la nuova riga alla tabella `Student`.
 
 [![image03](the-entity-framework-and-aspnet-getting-started-part-7/_static/image22.png)](the-entity-framework-and-aspnet-getting-started-part-7/_static/image21.png)
 
-Eseguire la *Students.aspx* pagina e il nuovo studente viene visualizzato nell'elenco.
+Eseguire la pagina *students. aspx* e il nuovo studente verrà visualizzato nell'elenco.
 
 [![image04](the-entity-framework-and-aspnet-getting-started-part-7/_static/image24.png)](the-entity-framework-and-aspnet-getting-started-part-7/_static/image23.png)
 
-Modificare il nome da verificare il corretto funzionamento della funzione di aggiornamento e quindi eliminare lo studente per verificare il corretto funzionamento della funzione di eliminazione.
+Modificare il nome per verificare che la funzione di aggiornamento funzioni, quindi eliminare lo studente per verificare il corretto funzionamento della funzione Delete.
 
 [![image05](the-entity-framework-and-aspnet-getting-started-part-7/_static/image26.png)](the-entity-framework-and-aspnet-getting-started-part-7/_static/image25.png)
 
-## <a name="using-select-stored-procedures"></a>Utilizzo delle Stored procedure Select
+## <a name="using-select-stored-procedures"></a>Utilizzo di stored procedure Select
 
-Entity Framework non esegue automaticamente le stored procedure, ad esempio `GetCourses`, e non possono essere utilizzati con il `EntityDataSource` controllo. A questo scopo, si chiamarli dal codice.
+Il Entity Framework non esegue automaticamente stored procedure come `GetCourses`e non è possibile utilizzarle con il controllo `EntityDataSource`. Per usarli, è possibile chiamarli dal codice.
 
-Aprire il *InstructorsCourses.aspx.cs* file. Il `PopulateDropDownLists` metodo utilizza una query LINQ-a-entità per recuperare tutte le entità course in modo che possa scorrere l'elenco in ciclo e determinare quali un insegnante è assegnato a e quelle che sono assegnate:
+Aprire il file *InstructorsCourses.aspx.cs* . Il metodo `PopulateDropDownLists` usa una query LINQ to Entities per recuperare tutte le entità Course, in modo che possa scorrere l'elenco e determinare a quali un insegnante è assegnato e quali non sono assegnate:
 
 [!code-csharp[Main](the-entity-framework-and-aspnet-getting-started-part-7/samples/sample6.cs)]
 
@@ -129,11 +129,11 @@ Sostituire con il codice seguente:
 
 [!code-csharp[Main](the-entity-framework-and-aspnet-getting-started-part-7/samples/sample7.cs)]
 
-La pagina Usa ora la `GetCourses` stored procedure per recuperare l'elenco di tutti i corsi. Eseguire la pagina per verificarne il funzionamento come in precedenza.
+La pagina ora usa il stored procedure `GetCourses` per recuperare l'elenco di tutti i corsi. Eseguire la pagina per verificare che funzioni come prima.
 
-(Le proprietà di navigazione di entità recuperata da una stored procedure potrebbero non venire popolate automaticamente con i dati relativi a tali entità, a seconda `ObjectContext` impostazioni predefinite. Per altre informazioni, vedere [caricamento di oggetti correlati](https://msdn.microsoft.com/library/bb896272.aspx) in MSDN Library.)
+(Le proprietà di navigazione delle entità recuperate da un stored procedure potrebbero non essere popolate automaticamente con i dati correlati a tali entità, a seconda `ObjectContext` impostazioni predefinite. Per ulteriori informazioni, vedere [caricamento di oggetti correlati](https://msdn.microsoft.com/library/bb896272.aspx) in MSDN Library.
 
-Nella prossima esercitazione, si apprenderà come usare la funzionalità di Dynamic Data per renderlo più facile da programmare e testare i dati formattazione e convalida le regole. Anziché specificare le regole di ogni pagina web, ad esempio le stringhe di formato di dati e o meno un campo è obbligatorio, è possibile specificare regole di questo tipo nei metadati del modello di dati e vengono applicati automaticamente in ogni pagina.
+Nell'esercitazione successiva si apprenderà come usare Dynamic Data funzionalità per semplificare la programmazione e il test delle regole di convalida e formattazione dei dati. Anziché specificare in ogni regola di pagina Web, ad esempio stringhe di formato dei dati e se un campo è obbligatorio, è possibile specificare tali regole nei metadati del modello di dati e vengono applicati automaticamente in ogni pagina.
 
 > [!div class="step-by-step"]
 > [Precedente](the-entity-framework-and-aspnet-getting-started-part-6.md)

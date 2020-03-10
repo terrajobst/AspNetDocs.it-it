@@ -1,25 +1,25 @@
 ---
 uid: web-forms/videos/migrating/intro-to-aspnet-for-jsp-developers-welcome-to-aspnet-20
-title: 'Introduzione ad ASP.NET per gli sviluppatori JSP: Benvenuti in ASP.NET 2.0 | Microsoft Docs'
+title: 'Introduzione a ASP.NET per sviluppatori JSP: Benvenuti in ASP.NET 2,0 | Microsoft Docs'
 author: microsoft
-description: In questa sessione si concentra sullo sfondo di base necessario per comprendere come ASP.NET si integra con .NET Framework e Microsoft IIS e ASP.NET.
+description: Questa sessione è incentrata sullo sfondo di base necessario per comprendere ASP.NET e sul modo in cui ASP.NET si integra con il .NET Framework e Microsoft IIS.
 ms.author: riande
 ms.date: 07/25/2006
 ms.assetid: 1a95474a-a897-4ba1-b372-8a112cb324ba
 msc.legacyurl: /web-forms/videos/migrating/intro-to-aspnet-for-jsp-developers-welcome-to-aspnet-20
 msc.type: video
 ms.openlocfilehash: 978236ae72ec0908b09901d8a8d4d3fd27770b86
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59401634"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78525277"
 ---
-# <a name="intro-to-aspnet-for-jsp-developers-welcome-to-aspnet-20"></a>Introduzione ad ASP.NET per gli sviluppatori JSP: cenni preliminari su ASP.NET 2.0
+# <a name="intro-to-aspnet-for-jsp-developers-welcome-to-aspnet-20"></a>Introduzione a ASP.NET per sviluppatori JSP: Benvenuti in ASP.NET 2,0
 
-by [Microsoft](https://github.com/microsoft)
+[Microsoft](https://github.com/microsoft)
 
-In questa sessione si concentra sullo sfondo di base necessario per comprendere come ASP.NET si integra con .NET Framework e Microsoft IIS e ASP.NET.
+Questa sessione è incentrata sullo sfondo di base necessario per comprendere ASP.NET e sul modo in cui ASP.NET si integra con il .NET Framework e Microsoft IIS.
 
 [&#9654;Guarda il video (61 minuti)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/intro-to-aspnet-for-jsp-developers-welcome-to-aspnet-20)
 

@@ -1,25 +1,25 @@
 ---
 uid: web-forms/videos/aspnet-ajax/how-do-i-implement-the-persistent-communications-pattern-with-the-updatepanel
-title: '[Procedura:] Implementare il modello di comunicazione persistente con il controllo UpdatePanel? | Microsoft Docs'
+title: '[Procedura:] Implementare il modello di comunicazione persistente con UpdatePanel? | Microsoft Docs'
 author: JoeStagner
-description: Il browser e il server in un sito Web tradizionali, non mantengono una comunicazione continua, ma comunicare solo in risposta all'utente di eseguire una determinata azione...
+description: In un sito Web tradizionale il browser e il server non mantengono una comunicazione continuativa, ma comunicano solo in risposta all'utente che esegue un Act...
 ms.author: riande
 ms.date: 08/01/2007
 ms.assetid: 49c7a74d-dce7-4d5c-8282-c7846f478e11
 msc.legacyurl: /web-forms/videos/aspnet-ajax/how-do-i-implement-the-persistent-communications-pattern-with-the-updatepanel
 msc.type: video
 ms.openlocfilehash: 2a0a286ad731751460cb9d924a4de4dfe63f45b8
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59378988"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78628737"
 ---
-# <a name="how-do-i-implement-the-persistent-communications-pattern-with-the-updatepanel"></a>[Procedura:] Implementare il modello di comunicazione persistente con il controllo UpdatePanel?
+# <a name="how-do-i-implement-the-persistent-communications-pattern-with-the-updatepanel"></a>[Procedura:] Implementare il modello di comunicazione persistente con UpdatePanel?
 
-da [Joe Stagner](https://github.com/JoeStagner)
+di [Joe Stagner spiega](https://github.com/JoeStagner)
 
-Il browser e il server in un sito Web tradizionali, non mantengono una comunicazione in corso, ma comunicare solo in risposta all'utente che esegue un'azione. In un sito Web moderne in cui la pagina diventa un contenitore di applicazione, può essere vantaggioso per il browser e il server per mantenere una comunicazione continua in modo che gli aggiornamenti a pagina possono essere eseguita senza l'utente che esegue un'azione. Ciò è noto come il modello di comunicazione persistente per AJAX. ASP.NET AJAX fornisce due modi principali per gli sviluppatori Web implementare il modello di comunicazione persistente. In questo video viene illustrato il modo semplice, che consiste nell'utilizzare UpdatePanel di ASP.NET AJAX come base per l'implementazione. In un video in un secondo momento si apprenderà come implementare lo stesso modello senza utilizzare UpdatePanel di ASP.NET AJAX.
+In un sito Web tradizionale il browser e il server non mantengono una comunicazione continuativa, ma comunicano solo in risposta all'utente che esegue un'azione. In un sito Web moderno in cui la pagina diventa un contenitore di applicazioni, può essere vantaggioso per il browser e il server mantenere una comunicazione continua, in modo che gli aggiornamenti della pagina possano verificarsi senza che l'utente esegua un'azione. Questo modello è noto come modello di comunicazione permanente per AJAX. ASP.NET AJAX offre due modi principali per gli sviluppatori Web di implementare il modello di comunicazione permanente. In questo video viene illustrato il modo più semplice, ovvero l'utilizzo di ASP.NET AJAX UpdatePanel come base dell'implementazione. In un video successivo si apprenderà come implementare lo stesso modello senza usare l'UpdatePanel ASP.NET AJAX.
 
 [&#9654;Guarda il video (12 minuti)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-implement-the-persistent-communications-pattern-with-the-updatepanel)
 

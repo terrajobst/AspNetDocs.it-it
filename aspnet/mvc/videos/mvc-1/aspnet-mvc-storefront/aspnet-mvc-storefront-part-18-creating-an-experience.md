@@ -1,25 +1,25 @@
 ---
 uid: mvc/videos/mvc-1/aspnet-mvc-storefront/aspnet-mvc-storefront-part-18-creating-an-experience
-title: "ASP.NET MVC Storefront - Parte 18: Creare un'esperienza | Microsoft Docs"
+title: "ASP.NET MVC storefront-parte 18: creazione di un'esperienza | Microsoft Docs"
 author: robconery
-description: In questo episodio mi occupo del pull di tutti i componenti tecnici interagiscono per formare un coerente 'esperienza' per l'acquirente.
+description: In questo episodio ho collaborato al pull di tutti i pezzi tecnici per formare un'esperienza coerente per gli acquirenti.
 ms.author: riande
 ms.date: 10/16/2008
 ms.assetid: 1636464e-900e-4926-bd5a-88adb5315ff9
 msc.legacyurl: /mvc/videos/mvc-1/aspnet-mvc-storefront/aspnet-mvc-storefront-part-18-creating-an-experience
 msc.type: video
 ms.openlocfilehash: 00390fe4b618f09a0b3f8bfbff513827a504626c
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59411774"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78537849"
 ---
-# <a name="aspnet-mvc-storefront-part-18-creating-an-experience"></a>ASP.NET MVC Storefront - Parte 18: Creare un'esperienza
+# <a name="aspnet-mvc-storefront-part-18-creating-an-experience"></a>ASP.NET MVC storefront-parte 18: creazione di un'esperienza
 
-da [Rob Conery](https://github.com/robconery)
+di [Rob Coney](https://github.com/robconery)
 
-In questo episodio mi occupo del pull di tutti i componenti tecnici interagiscono per formare un coerente "esperienza" per l'acquirente.
+In questo episodio ho collaborato al pull di tutti i pezzi tecnici per formare un'esperienza coerente per gli acquirenti.
 
 [&#9654;Guarda il video (21 minuti)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/aspnet-mvc-storefront-part-18-creating-an-experience)
 

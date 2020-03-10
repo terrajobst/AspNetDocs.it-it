@@ -9,11 +9,11 @@ ms.assetid: 57459065-ed7c-4dfe-ac9c-54c093abc261
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/working-with-computed-columns-cs
 msc.type: authoredcontent
 ms.openlocfilehash: ad6a96f2721510c2478f707c8eed018ae797f27a
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74603149"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78531794"
 ---
 # <a name="working-with-computed-columns-c"></a>Uso di colonne calcolate (C#)
 
@@ -111,7 +111,7 @@ Quando si fa clic su fine, la procedura guidata creerà le quattro stored proced
 
 ## <a name="step-4-including-the-computed-column-in-the-tableadapter-s-main-query"></a>Passaggio 4: includere la colonna calcolata nella query principale di TableAdapter
 
-È ora necessario aggiornare TableAdapter e DataTable creati nel passaggio 3 per includere la colonna calcolata `FullContactName`. Questa operazione include due passaggi:
+È ora necessario aggiornare TableAdapter e DataTable creati nel passaggio 3 per includere la colonna calcolata `FullContactName`. Questa operazione comporta due passaggi:
 
 1. Aggiornamento della stored procedure `Suppliers_Select` per restituire la colonna calcolata `FullContactName` e
 2. Aggiornamento del DataTable per includere una colonna di `FullContactName` corrispondente.
