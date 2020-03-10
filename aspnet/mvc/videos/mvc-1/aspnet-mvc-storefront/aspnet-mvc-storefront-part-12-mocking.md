@@ -1,29 +1,29 @@
 ---
 uid: mvc/videos/mvc-1/aspnet-mvc-storefront/aspnet-mvc-storefront-part-12-mocking
-title: 'ASP.NET MVC Storefront - Parte 12: Il comportamento fittizio | Microsoft Docs'
+title: 'ASP.NET MVC storefront-parte 12: simulazione | Microsoft Docs'
 author: robconery
-description: In questo episodio puoi implementare il comportamento fittizio in modo che è possibile testare l'azione di autenticazione per la mia UserController.
+description: In questo episodio viene implementata la simulazione per poter testare l'azione di autenticazione per la UserController.
 ms.author: riande
 ms.date: 06/19/2008
 ms.assetid: 9a0f04b9-6a49-4e2c-9c12-03ab71ab2705
 msc.legacyurl: /mvc/videos/mvc-1/aspnet-mvc-storefront/aspnet-mvc-storefront-part-12-mocking
 msc.type: video
 ms.openlocfilehash: 481b3185b2050d2ac944da8969ce68353f89a3ef
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59411527"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78537870"
 ---
-# <a name="aspnet-mvc-storefront-part-12-mocking"></a><span data-ttu-id="e3451-103">ASP.NET MVC Storefront - Parte 12: Comportamento fittizio</span><span class="sxs-lookup"><span data-stu-id="e3451-103">ASP.NET MVC Storefront Part 12: Mocking</span></span>
+# <a name="aspnet-mvc-storefront-part-12-mocking"></a><span data-ttu-id="bd10d-103">ASP.NET MVC storefront-parte 12: simulazione</span><span class="sxs-lookup"><span data-stu-id="bd10d-103">ASP.NET MVC Storefront Part 12: Mocking</span></span>
 
-<span data-ttu-id="e3451-104">da [Rob Conery](https://github.com/robconery)</span><span class="sxs-lookup"><span data-stu-id="e3451-104">by [Rob Conery](https://github.com/robconery)</span></span>
+<span data-ttu-id="bd10d-104">di [Rob Coney](https://github.com/robconery)</span><span class="sxs-lookup"><span data-stu-id="bd10d-104">by [Rob Conery](https://github.com/robconery)</span></span>
 
-<span data-ttu-id="e3451-105">In questo episodio puoi implementare il comportamento fittizio in modo che è possibile testare l'azione di autenticazione per la mia UserController.</span><span class="sxs-lookup"><span data-stu-id="e3451-105">In this episode I implement mocking so I can test my Authentication action for my UserController.</span></span>
+<span data-ttu-id="bd10d-105">In questo episodio viene implementata la simulazione per poter testare l'azione di autenticazione per la UserController.</span><span class="sxs-lookup"><span data-stu-id="bd10d-105">In this episode I implement mocking so I can test my Authentication action for my UserController.</span></span>
 
-[<span data-ttu-id="e3451-106">&#9654;Guarda il video (18 minuti)</span><span class="sxs-lookup"><span data-stu-id="e3451-106">&#9654; Watch video (18 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/aspnet-mvc-storefront-part-12-mocking)
+[<span data-ttu-id="bd10d-106">&#9654;Guarda il video (18 minuti)</span><span class="sxs-lookup"><span data-stu-id="bd10d-106">&#9654; Watch video (18 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/aspnet-mvc-storefront-part-12-mocking)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="e3451-107">[Precedente](aspnet-mvc-storefront-part-11-hooking-up-the-shopping-cart-and-using-components.md)
-> [Successivo](aspnet-mvc-storefront-part-13-dependency-injection.md)</span><span class="sxs-lookup"><span data-stu-id="e3451-107">[Previous](aspnet-mvc-storefront-part-11-hooking-up-the-shopping-cart-and-using-components.md)
+> <span data-ttu-id="bd10d-107">[Precedente](aspnet-mvc-storefront-part-11-hooking-up-the-shopping-cart-and-using-components.md)
+> [Successivo](aspnet-mvc-storefront-part-13-dependency-injection.md)</span><span class="sxs-lookup"><span data-stu-id="bd10d-107">[Previous](aspnet-mvc-storefront-part-11-hooking-up-the-shopping-cart-and-using-components.md)
 [Next](aspnet-mvc-storefront-part-13-dependency-injection.md)</span></span>

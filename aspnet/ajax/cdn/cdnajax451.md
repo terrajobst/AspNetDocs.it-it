@@ -1,6 +1,6 @@
 ---
 uid: ajax/cdn/cdnajax451
-title: Web Form ASP.NET e Ajax 4.5.1 | Microsoft Docs
+title: ASP.NET Web Forms e AJAX 4.5.1 | Microsoft Docs
 author: rick-anderson
 description: ''
 ms.author: riande
@@ -9,15 +9,15 @@ ms.assetid: d7ec655d-49b0-4968-af5e-3064616aff9a
 msc.legacyurl: /ajax/cdn/cdnajax451
 msc.type: content
 ms.openlocfilehash: a81abf2c57d1400a9c4b2f1d1febaddc9c569c6d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59414543"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78563357"
 ---
-# <a name="aspnet-web-forms-and-ajax-451"></a><span data-ttu-id="dab6e-102">Web Forms ASP.NET e Ajax 4.5.1</span><span class="sxs-lookup"><span data-stu-id="dab6e-102">ASP.NET Web Forms and Ajax 4.5.1</span></span>
+# <a name="aspnet-web-forms-and-ajax-451"></a><span data-ttu-id="ab199-102">Web Forms ASP.NET e Ajax 4.5.1</span><span class="sxs-lookup"><span data-stu-id="ab199-102">ASP.NET Web Forms and Ajax 4.5.1</span></span>
 
-<span data-ttu-id="dab6e-103">Sulla rete CDN sono ospitati i file seguenti:</span><span class="sxs-lookup"><span data-stu-id="dab6e-103">The following files are hosted on the CDN:</span></span>
+<span data-ttu-id="ab199-103">I file seguenti sono ospitati nella rete CDN:</span><span class="sxs-lookup"><span data-stu-id="ab199-103">The following files are hosted on the CDN:</span></span>
 
 - https://ajax.aspnetcdn.com/ajax/4.5.1/1/Date.HijriCalendar.debug.js
 - https://ajax.aspnetcdn.com/ajax/4.5.1/1/Date.HijriCalendar.js
@@ -56,6 +56,6 @@ ms.locfileid: "59414543"
 - https://ajax.aspnetcdn.com/ajax/4.5.1/1/WebParts.js
 - https://ajax.aspnetcdn.com/ajax/4.5.1/1/WebUIValidation.js
 
-<span data-ttu-id="dab6e-104">Nota: Gli script di globalizzazione, ad esempio FR.js-fr, sono disponibili nella cartella seguente:</span><span class="sxs-lookup"><span data-stu-id="dab6e-104">Note: The globalization scripts, such as fr-FR.js, can be found in the following folder:</span></span>
+<span data-ttu-id="ab199-104">Nota: gli script di globalizzazione, ad esempio fr-FR. js, si trovano nella cartella seguente:</span><span class="sxs-lookup"><span data-stu-id="ab199-104">Note: The globalization scripts, such as fr-FR.js, can be found in the following folder:</span></span>
 
 - https://ajax.aspnetcdn.com/ajax/4.5.1/1/globalization/

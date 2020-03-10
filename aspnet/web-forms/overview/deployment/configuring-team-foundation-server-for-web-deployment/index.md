@@ -1,28 +1,28 @@
 ---
 uid: web-forms/overview/deployment/configuring-team-foundation-server-for-web-deployment/index
-title: ASP.NET 4 - serie sulla distribuzione aziendale 3 configurazione di TFS | Microsoft Docs
+title: ASP.NET 4-serie di distribuzione aziendale 3 configurazione di TFS | Microsoft Docs
 author: rick-anderson
-description: Questa esercitazione illustrerà come configurare Team Foundation Server (TFS) 2010 per creare soluzioni e distribuire il contenuto web in diversi ambienti di destinazione.
+description: In questa esercitazione viene illustrato come configurare Team Foundation Server (TFS) 2010 per compilare soluzioni e distribuire contenuto Web in diversi ambienti di destinazione.
 ms.author: riande
 ms.date: 05/16/2012
 ms.assetid: b71d1611-5f26-40dd-8315-b65b9d69b198
 msc.legacyurl: /web-forms/overview/deployment/configuring-team-foundation-server-for-web-deployment
 msc.type: chapter
 ms.openlocfilehash: 7f0f1498ad8fa51983eef335c08754a17956058d
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65109250"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78547747"
 ---
-# <a name="aspnet-4---enterprise-deployment-series-3-configuring-tfs"></a><span data-ttu-id="4e459-103">ASP.NET 4 - Serie sulla distribuzione aziendale 3 - Configurazione di TFS</span><span class="sxs-lookup"><span data-stu-id="4e459-103">ASP.NET 4 - Enterprise Deployment Series 3 Configuring TFS</span></span>
+# <a name="aspnet-4---enterprise-deployment-series-3-configuring-tfs"></a><span data-ttu-id="9925d-103">ASP.NET 4 - Serie sulla distribuzione aziendale 3 - Configurazione di TFS</span><span class="sxs-lookup"><span data-stu-id="9925d-103">ASP.NET 4 - Enterprise Deployment Series 3 Configuring TFS</span></span>
 
-> <span data-ttu-id="4e459-104">Questa esercitazione illustrerà come configurare Team Foundation Server (TFS) 2010 per creare soluzioni e distribuire il contenuto web in diversi ambienti di destinazione.</span><span class="sxs-lookup"><span data-stu-id="4e459-104">This tutorial will show you how to configure Team Foundation Server (TFS) 2010 to build solutions and deploy web content to various target environments.</span></span>
+> <span data-ttu-id="9925d-104">In questa esercitazione viene illustrato come configurare Team Foundation Server (TFS) 2010 per compilare soluzioni e distribuire contenuto Web in diversi ambienti di destinazione.</span><span class="sxs-lookup"><span data-stu-id="9925d-104">This tutorial will show you how to configure Team Foundation Server (TFS) 2010 to build solutions and deploy web content to various target environments.</span></span>
 
-- [<span data-ttu-id="4e459-105">Configurazione di Team Foundation Server per la distribuzione Web</span><span class="sxs-lookup"><span data-stu-id="4e459-105">Configuring Team Foundation Server for Web Deployment</span></span>](configuring-team-foundation-server-for-web-deployment.md)
-- [<span data-ttu-id="4e459-106">Creazione di un progetto team in TFS</span><span class="sxs-lookup"><span data-stu-id="4e459-106">Creating a Team Project in TFS</span></span>](creating-a-team-project-in-tfs.md)
-- [<span data-ttu-id="4e459-107">Aggiunta di contenuto al controllo del codice sorgente</span><span class="sxs-lookup"><span data-stu-id="4e459-107">Adding Content to Source Control</span></span>](adding-content-to-source-control.md)
-- [<span data-ttu-id="4e459-108">Configurazione di un server di compilazione TFS per la distribuzione Web</span><span class="sxs-lookup"><span data-stu-id="4e459-108">Configuring a TFS Build Server for Web Deployment</span></span>](configuring-a-tfs-build-server-for-web-deployment.md)
-- [<span data-ttu-id="4e459-109">Creazione di una definizione di compilazione che supporta la distribuzione</span><span class="sxs-lookup"><span data-stu-id="4e459-109">Creating a Build Definition That Supports Deployment</span></span>](creating-a-build-definition-that-supports-deployment.md)
-- [<span data-ttu-id="4e459-110">Distribuzione di una compilazione specifica</span><span class="sxs-lookup"><span data-stu-id="4e459-110">Deploying a Specific Build</span></span>](deploying-a-specific-build.md)
-- [<span data-ttu-id="4e459-111">Configurazione delle autorizzazioni per la compilazione di Team Build</span><span class="sxs-lookup"><span data-stu-id="4e459-111">Configuring Permissions for Team Build Deployment</span></span>](configuring-permissions-for-team-build-deployment.md)
+- [<span data-ttu-id="9925d-105">Configurazione di Team Foundation Server per la distribuzione Web</span><span class="sxs-lookup"><span data-stu-id="9925d-105">Configuring Team Foundation Server for Web Deployment</span></span>](configuring-team-foundation-server-for-web-deployment.md)
+- [<span data-ttu-id="9925d-106">Creazione di un progetto team in TFS</span><span class="sxs-lookup"><span data-stu-id="9925d-106">Creating a Team Project in TFS</span></span>](creating-a-team-project-in-tfs.md)
+- [<span data-ttu-id="9925d-107">Aggiunta di contenuto al controllo del codice sorgente</span><span class="sxs-lookup"><span data-stu-id="9925d-107">Adding Content to Source Control</span></span>](adding-content-to-source-control.md)
+- [<span data-ttu-id="9925d-108">Configurazione di un server di compilazione TFS per la distribuzione Web</span><span class="sxs-lookup"><span data-stu-id="9925d-108">Configuring a TFS Build Server for Web Deployment</span></span>](configuring-a-tfs-build-server-for-web-deployment.md)
+- [<span data-ttu-id="9925d-109">Creazione di una definizione di compilazione che supporta la distribuzione</span><span class="sxs-lookup"><span data-stu-id="9925d-109">Creating a Build Definition That Supports Deployment</span></span>](creating-a-build-definition-that-supports-deployment.md)
+- [<span data-ttu-id="9925d-110">Distribuzione di una compilazione specifica</span><span class="sxs-lookup"><span data-stu-id="9925d-110">Deploying a Specific Build</span></span>](deploying-a-specific-build.md)
+- [<span data-ttu-id="9925d-111">Configurazione delle autorizzazioni per la compilazione di Team Build</span><span class="sxs-lookup"><span data-stu-id="9925d-111">Configuring Permissions for Team Build Deployment</span></span>](configuring-permissions-for-team-build-deployment.md)
