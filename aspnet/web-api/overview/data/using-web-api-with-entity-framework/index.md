@@ -1,6 +1,6 @@
 ---
 uid: web-api/overview/data/using-web-api-with-entity-framework/index
-title: Using Web API 2 con Entity Framework 6 | Microsoft Docs
+title: Uso dell'API Web 2 con Entity Framework 6 | Microsoft Docs
 author: rick-anderson
 description: Come creare un'applicazione API Web che usa Entity Framework per la persistenza del database.
 ms.author: riande
@@ -9,23 +9,23 @@ ms.assetid: 6c3c4f27-2fa3-49dc-bcaf-1ee3ef620f8e
 msc.legacyurl: /web-api/overview/data/using-web-api-with-entity-framework
 msc.type: chapter
 ms.openlocfilehash: a29a4450ededc8dce01711604ddc8eadc96c5ed8
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65126200"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78557554"
 ---
-# <a name="using-web-api-2-with-entity-framework-6"></a><span data-ttu-id="7714d-103">Uso dell'API Web 2 con Entity Framework 6</span><span class="sxs-lookup"><span data-stu-id="7714d-103">Using Web API 2 with Entity Framework 6</span></span>
+# <a name="using-web-api-2-with-entity-framework-6"></a><span data-ttu-id="14044-103">Uso dell'API Web 2 con Entity Framework 6</span><span class="sxs-lookup"><span data-stu-id="14044-103">Using Web API 2 with Entity Framework 6</span></span>
 
-> <span data-ttu-id="7714d-104">Come creare un'applicazione API Web che usa Entity Framework per la persistenza del database.</span><span class="sxs-lookup"><span data-stu-id="7714d-104">How to create a Web API application that uses Entity Framework for database persistence.</span></span>
+> <span data-ttu-id="14044-104">Come creare un'applicazione API Web che usa Entity Framework per la persistenza del database.</span><span class="sxs-lookup"><span data-stu-id="14044-104">How to create a Web API application that uses Entity Framework for database persistence.</span></span>
 
-- [<span data-ttu-id="7714d-105">Creare il progetto</span><span class="sxs-lookup"><span data-stu-id="7714d-105">Create the Project</span></span>](part-1.md)
-- [<span data-ttu-id="7714d-106">Aggiungere modelli e controller</span><span class="sxs-lookup"><span data-stu-id="7714d-106">Add Models and Controllers</span></span>](part-2.md)
-- [<span data-ttu-id="7714d-107">Specificare il valore di inizializzazione del database</span><span class="sxs-lookup"><span data-stu-id="7714d-107">Seed the Database</span></span>](part-3.md)
-- [<span data-ttu-id="7714d-108">Gestione delle relazioni tra entità</span><span class="sxs-lookup"><span data-stu-id="7714d-108">Handling Entity Relations</span></span>](part-4.md)
-- [<span data-ttu-id="7714d-109">Creare oggetti di trasferimento dati (DTO)</span><span class="sxs-lookup"><span data-stu-id="7714d-109">Create Data Transfer Objects (DTOs)</span></span>](part-5.md)
-- [<span data-ttu-id="7714d-110">Creare il client JavaScript</span><span class="sxs-lookup"><span data-stu-id="7714d-110">Create the JavaScript Client</span></span>](part-6.md)
-- [<span data-ttu-id="7714d-111">Creare la visualizzazione (interfaccia utente)</span><span class="sxs-lookup"><span data-stu-id="7714d-111">Create the View (UI)</span></span>](part-7.md)
-- [<span data-ttu-id="7714d-112">Visualizzare i dettagli degli elementi</span><span class="sxs-lookup"><span data-stu-id="7714d-112">Display Item Details</span></span>](part-8.md)
-- [<span data-ttu-id="7714d-113">Aggiungere un nuovo elemento al database</span><span class="sxs-lookup"><span data-stu-id="7714d-113">Add a New Item to the Database</span></span>](part-9.md)
-- [<span data-ttu-id="7714d-114">Pubblicare l'app in siti Web di Azure</span><span class="sxs-lookup"><span data-stu-id="7714d-114">Publish the App to Azure Websites</span></span>](part-10.md)
+- [<span data-ttu-id="14044-105">Creare il progetto</span><span class="sxs-lookup"><span data-stu-id="14044-105">Create the Project</span></span>](part-1.md)
+- [<span data-ttu-id="14044-106">Aggiungere modelli e controller</span><span class="sxs-lookup"><span data-stu-id="14044-106">Add Models and Controllers</span></span>](part-2.md)
+- [<span data-ttu-id="14044-107">Specificare il valore di inizializzazione del database</span><span class="sxs-lookup"><span data-stu-id="14044-107">Seed the Database</span></span>](part-3.md)
+- [<span data-ttu-id="14044-108">Gestione delle relazioni tra entità</span><span class="sxs-lookup"><span data-stu-id="14044-108">Handling Entity Relations</span></span>](part-4.md)
+- [<span data-ttu-id="14044-109">Creare oggetti di trasferimento dati (DTO)</span><span class="sxs-lookup"><span data-stu-id="14044-109">Create Data Transfer Objects (DTOs)</span></span>](part-5.md)
+- [<span data-ttu-id="14044-110">Creare il client JavaScript</span><span class="sxs-lookup"><span data-stu-id="14044-110">Create the JavaScript Client</span></span>](part-6.md)
+- [<span data-ttu-id="14044-111">Creare la visualizzazione (interfaccia utente)</span><span class="sxs-lookup"><span data-stu-id="14044-111">Create the View (UI)</span></span>](part-7.md)
+- [<span data-ttu-id="14044-112">Visualizzare i dettagli degli elementi</span><span class="sxs-lookup"><span data-stu-id="14044-112">Display Item Details</span></span>](part-8.md)
+- [<span data-ttu-id="14044-113">Aggiungere un nuovo elemento al database</span><span class="sxs-lookup"><span data-stu-id="14044-113">Add a New Item to the Database</span></span>](part-9.md)
+- [<span data-ttu-id="14044-114">Pubblicare l'app in siti Web di Azure</span><span class="sxs-lookup"><span data-stu-id="14044-114">Publish the App to Azure Websites</span></span>](part-10.md)

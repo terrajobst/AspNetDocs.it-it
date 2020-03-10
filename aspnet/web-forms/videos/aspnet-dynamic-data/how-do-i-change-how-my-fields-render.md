@@ -1,29 +1,29 @@
 ---
 uid: web-forms/videos/aspnet-dynamic-data/how-do-i-change-how-my-fields-render
-title: Come si modifica modalità di rendering campi? | Microsoft Docs
+title: Ricerca per categorie modificare il rendering di campi personali? | Microsoft Docs
 author: shanselman
-description: In questo video descrive come modificare il modo in cui vengono eseguito il rendering dei campi dati. Verrà collegare i controlli di terze parti per alcuni campi.
+description: In questo video viene illustrato come modificare la modalità di rendering dei campi dati. I controlli di terze parti per alcuni campi vengono collegati.
 ms.author: riande
 ms.date: 05/08/2008
 ms.assetid: f99da654-2148-4e66-867c-6e837b84e9d0
 msc.legacyurl: /web-forms/videos/aspnet-dynamic-data/how-do-i-change-how-my-fields-render
 msc.type: video
 ms.openlocfilehash: d0ee7dc47c6ec5ffd76baa6827b81a9ff02c6bfc
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59381016"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78624922"
 ---
-# <a name="how-do-i-change-how-my-fields-render"></a><span data-ttu-id="37a75-105">Come si modifica modalità di rendering campi?</span><span class="sxs-lookup"><span data-stu-id="37a75-105">How do I Change how my Fields render?</span></span>
+# <a name="how-do-i-change-how-my-fields-render"></a><span data-ttu-id="7ab22-105">Ricerca per categorie modificare il rendering di campi personali?</span><span class="sxs-lookup"><span data-stu-id="7ab22-105">How do I Change how my Fields render?</span></span>
 
-<span data-ttu-id="37a75-106">da [Scott Hanselman](https://github.com/shanselman)</span><span class="sxs-lookup"><span data-stu-id="37a75-106">by [Scott Hanselman](https://github.com/shanselman)</span></span>
+<span data-ttu-id="7ab22-106">di [Scott hanseln](https://github.com/shanselman)</span><span class="sxs-lookup"><span data-stu-id="7ab22-106">by [Scott Hanselman](https://github.com/shanselman)</span></span>
 
-<span data-ttu-id="37a75-107">In questo video descrive come modificare il modo in cui vengono eseguito il rendering dei campi dati.</span><span class="sxs-lookup"><span data-stu-id="37a75-107">In this video you learn how to change the way that data fields are rendered.</span></span> <span data-ttu-id="37a75-108">Verrà collegare i controlli di terze parti per alcuni campi.</span><span class="sxs-lookup"><span data-stu-id="37a75-108">You will plug in third-party controls for some fields.</span></span>
+<span data-ttu-id="7ab22-107">In questo video viene illustrato come modificare la modalità di rendering dei campi dati.</span><span class="sxs-lookup"><span data-stu-id="7ab22-107">In this video you learn how to change the way that data fields are rendered.</span></span> <span data-ttu-id="7ab22-108">I controlli di terze parti per alcuni campi vengono collegati.</span><span class="sxs-lookup"><span data-stu-id="7ab22-108">You will plug in third-party controls for some fields.</span></span>
 
-[<span data-ttu-id="37a75-109">&#9654;Guarda il video (13 minuti)</span><span class="sxs-lookup"><span data-stu-id="37a75-109">&#9654; Watch video (13 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-change-how-my-fields-render)
+[<span data-ttu-id="7ab22-109">&#9654;Guarda il video (13 minuti)</span><span class="sxs-lookup"><span data-stu-id="7ab22-109">&#9654; Watch video (13 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-change-how-my-fields-render)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="37a75-110">[Precedente](how-do-i-enable-inline-gridview-editing.md)
-> [Successivo](how-do-i-handle-business-logic-exceptions.md)</span><span class="sxs-lookup"><span data-stu-id="37a75-110">[Previous](how-do-i-enable-inline-gridview-editing.md)
+> <span data-ttu-id="7ab22-110">[Precedente](how-do-i-enable-inline-gridview-editing.md)
+> [Successivo](how-do-i-handle-business-logic-exceptions.md)</span><span class="sxs-lookup"><span data-stu-id="7ab22-110">[Previous](how-do-i-enable-inline-gridview-editing.md)
 [Next](how-do-i-handle-business-logic-exceptions.md)</span></span>
