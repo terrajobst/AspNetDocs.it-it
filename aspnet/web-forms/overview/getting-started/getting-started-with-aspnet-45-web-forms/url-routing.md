@@ -9,11 +9,11 @@ ms.assetid: 4f4bf092-c400-471f-a876-78fda0417890
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/url-routing
 msc.type: authoredcontent
 ms.openlocfilehash: 66b727b69ca4f9a3d35b67f492f9a554146e09ef
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74590718"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78587437"
 ---
 # <a name="url-routing"></a>Routing degli URL
 
@@ -25,7 +25,7 @@ di [Erik Reitan](https://github.com/Erikre)
 
 In questa esercitazione verrà modificata l'applicazione di esempio Wingtip Toys per supportare il routing degli URL. Il routing consente all'applicazione Web di usare URL semplici, più facili da ricordare e meglio supportati dai motori di ricerca. Questa esercitazione si basa sull'esercitazione precedente "appartenenza e amministrazione" ed è parte della serie di esercitazioni su Wingtip Toys.
 
-## <a name="what-youll-learn"></a>Cosa si apprenderà:
+## <a name="what-youll-learn"></a>Contenuto dell'esercitazione:
 
 - Come registrare le route per un'applicazione Web Form ASP.NET.
 - Come aggiungere route a una pagina Web.

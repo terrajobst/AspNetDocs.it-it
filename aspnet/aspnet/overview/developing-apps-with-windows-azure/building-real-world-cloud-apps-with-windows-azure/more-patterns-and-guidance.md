@@ -9,11 +9,11 @@ ms.assetid: 7e97cfc3-d830-4002-8ff7-5790d1ff49e6
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/more-patterns-and-guidance
 msc.type: authoredcontent
 ms.openlocfilehash: 57e32bf7568ecb0eb22f0f2b585310dcab2d5d43
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457076"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78584875"
 ---
 # <a name="more-patterns-and-guidance-building-real-world-cloud-apps-with-azure"></a>Altri modelli e linee guida (creazione di app Cloud reali con Azure)
 
@@ -51,7 +51,7 @@ Documentazione
 - [Failsafe: linee guida per architetture cloud resilienti](https://msdn.microsoft.com/library/windowsazure/jj853352.aspx). White paper di Marc Mercuri, Ulrich Homann e Andrew Townhill. Versione di pagina Web della serie di video FailSafe.
 - [Informazioni aggiuntive su Azure](https://azure.microsoft.com/develop/net/guidance/) Pagina del portale per la documentazione ufficiale relativa allo sviluppo di applicazioni per Azure.
 
-Videos
+Video
 
 - [Creazione di app Cloud nel mondo reale con Azure-parte 1](https://channel9.msdn.com/Events/TechEd/Australia/2013/AZR324) e [parte 2](https://channel9.msdn.com/Events/TechEd/Australia/2013/AZR325). Video della presentazione di Scott Guthrie su cui si basa questo e-book. Presentata presso Tech ed Australia nel settembre 2013. Una versione precedente della stessa presentazione è stata recapitata a Norwegian Developers Conference (NDC) nel giugno 2013: [NDC parte 1](http://vimeo.com/68215538), [NDC parte 2](http://vimeo.com/68215602).
 - [Failsafe: compilazione di servizi cloud scalabili e resilienti](https://channel9.msdn.com/Series/FailSafe). Serie di video in nove parti di Ulrich Homann, Marc Mercuri e Mark Simms. Viene presentata una visualizzazione a livello di 400 di come progettare app cloud. Questa serie è incentrata sulla teoria e sui motivi alla base degli schemi consigliati; per altre procedure dettagliate, vedere la pagina relativa alla creazione di grandi serie di Mark Simms.
