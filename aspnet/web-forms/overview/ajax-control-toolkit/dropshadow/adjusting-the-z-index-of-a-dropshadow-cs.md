@@ -9,11 +9,11 @@ ms.assetid: 14133833-e518-4347-87b9-6b6f71f14a77
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/dropshadow/adjusting-the-z-index-of-a-dropshadow-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 12bc7f0430f1f30ff964cd9547ee1e9b0aa7423c
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74574334"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78613883"
 ---
 # <a name="adjusting-the-z-index-of-a-dropshadow-c"></a>Modifica dello z index di un controllo DropShadow (C#)
 
@@ -23,7 +23,7 @@ di [Christian Wenz](https://github.com/wenz)
 
 > Il controllo DropShadow in AJAX Control Toolkit estende un pannello con un'ombreggiatura. Tuttavia, questa ombreggiatura talvolta è in conflitto con altri controlli, ad esempio il controllo del menu ASP.NET. Quando si apre una voce di menu, viene visualizzata dietro l'ombreggiatura.
 
-## <a name="overview"></a>Panoramica di
+## <a name="overview"></a>Panoramica
 
 Il controllo DropShadow in AJAX Control Toolkit estende un pannello con un'ombreggiatura. Tuttavia, questa ombreggiatura talvolta è in conflitto con altri controlli, ad esempio il controllo del menu ASP.NET. Quando si apre una voce di menu, viene visualizzata dietro l'ombreggiatura.
 

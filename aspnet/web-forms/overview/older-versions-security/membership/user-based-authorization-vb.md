@@ -9,11 +9,11 @@ ms.assetid: bc937e9d-5c14-4fc4-aec7-440da924dd18
 msc.legacyurl: /web-forms/overview/older-versions-security/membership/user-based-authorization-vb
 msc.type: authoredcontent
 ms.openlocfilehash: dfac0c6fa955e59c6ea996533f2447e89ec8d468
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74588209"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78635940"
 ---
 # <a name="user-based-authorization-vb"></a>Autorizzazione basata sull'utente (VB)
 
@@ -29,7 +29,7 @@ La maggior parte delle applicazioni Web che offrono account utente consente di l
 
 ASP.NET semplifica la definizione delle regole di autorizzazione basate sugli utenti. Con un semplice markup in `Web.config`, è possibile bloccare pagine Web specifiche o intere directory in modo che siano accessibili solo a un subset di utenti specificato. La funzionalità a livello di pagina può essere attivata o disattivata in base all'utente attualmente connesso tramite un metodo programmatico e dichiarativo.
 
-In questa esercitazione verrà illustrato come limitare l'accesso alle pagine e come limitare la funzionalità a livello di pagina tramite diverse tecniche. Iniziamo!
+In questa esercitazione verrà illustrato come limitare l'accesso alle pagine e come limitare la funzionalità a livello di pagina tramite diverse tecniche. Ecco come procedere.
 
 ## <a name="a-look-at-the-url-authorization-workflow"></a>Esaminare il flusso di lavoro di autorizzazione URL
 

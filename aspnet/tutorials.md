@@ -1,17 +1,17 @@
 ---
 uid: tutorials
-title: Esercitazioni su ASP.NET | Microsoft Docs
+title: Esercitazioni di ASP.NET | Microsoft Docs
 author: tdykstra
-description: Un elenco di procedure dettagliate per lo sviluppo di applicazioni ASP.NET.
+description: Elenco di guide dettagliate per lo sviluppo di applicazioni ASP.NET.
 ms.assetid: fddf8e5e-c055-4f81-b691-78deef871112
 ms.author: riande
 ms.date: 09/20/2017
 ms.openlocfilehash: 106b4b88d2e7de90900b7a73570ecd6140e2db66
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65113197"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78558170"
 ---
 # <a name="aspnet-tutorials"></a>Esercitazioni su ASP.NET
 
@@ -20,7 +20,7 @@ ms.locfileid: "65113197"
 Sono disponibili le seguenti guide dettagliate per lo sviluppo di applicazioni ASP.NET.
 
 > [!NOTE]
-> Alla ricerca di esercitazioni di ASP.NET Core?  Trovarle [qui](https://docs.microsoft.com/aspnet/core/tutorials/).
+> Per la ricerca di ASP.NET Core esercitazioni?  Trovarli [qui](https://docs.microsoft.com/aspnet/core/tutorials/).
 
 ## <a name="web-forms"></a>Web Form
 
@@ -60,7 +60,7 @@ Sono disponibili le seguenti guide dettagliate per lo sviluppo di applicazioni A
 * [Introduzione all'API Web 2 (C#)](web-api/overview/getting-started-with-aspnet-web-api/tutorial-your-first-web-api.md)
 * [Usare l'API Web con Web Form ASP.NET](web-api/overview/getting-started-with-aspnet-web-api/using-web-api-with-aspnet-web-forms.md)
 * [Creazione di pagine della Guida dell'API Web](web-api/overview/getting-started-with-aspnet-web-api/creating-api-help-pages.md)
-* [Laboratorio pratico: Compilare un'applicazione a pagina singola (SPA) con l'API Web ASP.NET e Angular. js](web-api/overview/getting-started-with-aspnet-web-api/build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs.md)
+* [Laboratorio pratico: creare un'applicazione a pagina singola (SPA) con l'API Web ASP.NET e Angular.js](web-api/overview/getting-started-with-aspnet-web-api/build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs.md)
 * [Creare un'API REST con il routing degli attributi nell'API Web 2](web-api/overview/web-api-routing-and-actions/create-a-rest-api-with-attribute-routing.md)
 * [Uso dell'API Web 2 con Entity Framework 6](web-api/overview/data/using-web-api-with-entity-framework/index.md)
 * [Chiamata dell'API Web da un'applicazione Windows Phone 8 (C#)](web-api/overview/mobile-clients/calling-web-api-from-a-windows-phone-8-application.md)
@@ -78,8 +78,8 @@ Sono disponibili le seguenti guide dettagliate per lo sviluppo di applicazioni A
 * [Eseguire l'hosting dell'API Web 2 in un ruolo di lavoro di Azure](web-api/overview/hosting-aspnet-web-api/host-aspnet-web-api-in-an-azure-worker-role.md)
 * [Inserimento delle dipendenze nell'API Web 2](web-api/overview/advanced/dependency-injection.md)
 * [Chiamata di un'API Web da un client .NET (C#)](web-api/overview/advanced/calling-a-web-api-from-a-net-client.md)
-* [L'invio dei dati di Form HTML nell'API Web: Dati form-urlencoded](web-api/overview/advanced/sending-html-form-data-part-1.md)
-* [L'invio dei dati di Form HTML nell'API Web: Caricamento di file e MIME Multipart](web-api/overview/advanced/sending-html-form-data-part-2.md)
+* [Invio dei dati dei moduli HTML nell'API Web: dati Form-urlencoded](web-api/overview/advanced/sending-html-form-data-part-1.md)
+* [Invio dei dati dei moduli HTML nell'API Web: caricamento di file e MIME multipart](web-api/overview/advanced/sending-html-form-data-part-2.md)
 
 ## <a name="web-pages"></a>Pagine Web
 
@@ -116,7 +116,7 @@ Sono disponibili le seguenti guide dettagliate per lo sviluppo di applicazioni A
 * [Esercitazione: Introduzione a SignalR 2 e MVC 5](signalr/overview/getting-started/tutorial-getting-started-with-signalr-and-mvc.md)
 * [Esercitazione: Messaggistica ad alta frequenza con SignalR 2](signalr/overview/getting-started/tutorial-high-frequency-realtime-with-signalr.md)
 * [Esercitazione: Trasmissione server con SignalR 2](signalr/overview/getting-started/tutorial-server-broadcast-with-signalr.md)
-* [Laboratorio pratico: Applicazioni Web in tempo reale con SignalR](signalr/overview/getting-started/real-time-web-applications-with-signalr.md)
+* [Laboratorio pratico: applicazioni Web in tempo reale con SignalR](signalr/overview/getting-started/real-time-web-applications-with-signalr.md)
 * [Unit test di applicazioni SignalR](signalr/overview/testing-and-debugging/unit-testing-signalr-applications.md)
 * [Abilitazione della traccia di SignalR](signalr/overview/testing-and-debugging/enabling-signalr-tracing.md)
 * [Scalabilità orizzontale di SignalR con il bus di servizio di Azure](signalr/overview/performance/scaleout-with-windows-azure-service-bus.md)
@@ -131,7 +131,7 @@ Sono disponibili le seguenti guide dettagliate per lo sviluppo di applicazioni A
 
 * [Aggiunta di ASP.NET Identity a un progetto Web Form vuoto o esistente](identity/overview/getting-started/adding-aspnet-identity-to-an-empty-or-existing-web-forms-project.md)
 * [Sviluppo di app ASP.NET con Azure Active Directory](identity/overview/getting-started/developing-aspnet-apps-with-windows-azure-active-directory.md)
-* [ASP.NET Identity: Uso dell'archiviazione MySQL con un Provider MySQL EntityFramework (C#)](identity/overview/getting-started/aspnet-identity-using-mysql-storage-with-an-entityframework-mysql-provider.md)
+* [ASP.NET Identity: uso dell'archiviazione MySQL con un provider MySQL EntityFramework (C#)](identity/overview/getting-started/aspnet-identity-using-mysql-storage-with-an-entityframework-mysql-provider.md)
 * [Conferma dell'account e recupero della password con ASP.NET Identity (C#)](identity/overview/features-api/account-confirmation-and-password-recovery-with-aspnet-identity.md)
 * [Autenticazione a due fattori tramite SMS e posta elettronica con ASP.NET Identity](identity/overview/features-api/two-factor-authentication-using-sms-and-email-with-aspnet-identity.md)
 * [Implementazione di un provider di archiviazione MySQL personalizzato di ASP.NET Identity](identity/overview/extensibility/implementing-a-custom-mysql-aspnet-identity-storage-provider.md)

@@ -9,11 +9,11 @@ ms.assetid: c5c14ef0-c128-4dc1-8c01-7f0fdb09e411
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3/vb/improving-the-details-and-delete-methods
 msc.type: authoredcontent
 ms.openlocfilehash: 08d80cac071907e927bb30df53c6f84a28f53156
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77456257"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78599953"
 ---
 # <a name="improving-the-details-and-delete-methods-vb"></a>Miglioramento dei dettagli e dei metodi di eliminazione (VB)
 

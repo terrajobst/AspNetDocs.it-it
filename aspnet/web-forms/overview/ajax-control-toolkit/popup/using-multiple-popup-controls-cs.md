@@ -9,11 +9,11 @@ ms.assetid: 91511b0b-311d-481f-9e7c-73f07b813b79
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/popup/using-multiple-popup-controls-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 8700fe89af591e8b481e853580b0efa0cddbf1bc
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74611634"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78612651"
 ---
 # <a name="using-multiple-popup-controls-c"></a>Uso di più controlli Popup (C#)
 
@@ -23,7 +23,7 @@ di [Christian Wenz](https://github.com/wenz)
 
 > Il dispositivo Extender PopupControl in AJAX Control Toolkit offre un modo semplice per attivare un popup quando viene attivato qualsiasi altro controllo. È anche possibile usare più di un controllo popup in una sola pagina.
 
-## <a name="overview"></a>Panoramica di
+## <a name="overview"></a>Panoramica
 
 Il dispositivo Extender PopupControl in AJAX Control Toolkit offre un modo semplice per attivare un popup quando viene attivato qualsiasi altro controllo. È anche possibile usare più di un controllo popup in una sola pagina.
 

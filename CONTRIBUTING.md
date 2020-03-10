@@ -4,14 +4,14 @@ Questo documento illustra il processo per offrire il proprio contributo per gli 
 
 ## <a name="how-to-make-a-simple-correction-or-suggestion"></a>Come effettuare una semplice correzione o suggerire una modifica
 
-Gli articoli sono archiviati nel repository come file markdown. È possibile apportare modifiche semplici al contenuto di un file markdown nel browser selezionando il collegamento **Edit** (Modifica) nell'angolo superiore destro della finestra del browser. In una finestra del browser ridotta, espandere la barra delle **opzioni** per visualizzare il collegamento **Edit** (Modifica). Seguire le istruzioni per creare una richiesta pull. La richiesta pull verrà rivista e accettata oppure verranno suggerite modifiche.
+Gli articoli sono archiviati nel repository come file markdown. È possibile apportare modifiche semplici al contenuto di un file markdown nel browser selezionando il collegamento **Edit** (Modifica) nell'angolo superiore destro della finestra del browser. In una finestra del browser ristretta espandere la barra delle **Opzioni** per visualizzare il collegamento **modifica** . Seguire le istruzioni per creare una richiesta pull (PR). La richiesta pull verrà rivista e accettata oppure verranno suggerite modifiche.
 
 ## <a name="how-to-make-a-more-complex-submission"></a>Come effettuare un invio più complesso
 
 Sono necessarie conoscenze di base di [Git e GitHub.com](https://guides.github.com/activities/hello-world/).
 
-* Aprire un [problema](https://github.com/aspnet/AspNetDocs/issues/new) che descrive ciò che si vuole fare, ad esempio modificare un articolo esistente o crearne uno nuovo. Viene spesso richiesta una traccia del documento per i nuovi argomenti suggeriti. Attendere l'approvazione dal team prima di investire molto tempo.
-* Fork le [aspnet/AspNetDocs](https://github.com/aspnet/AspNetDocs/) repository e creare un ramo per le modifiche.
+* Aprire un [problema](https://github.com/dotnet/AspNetDocs/issues/new) che descrive ciò che si vuole fare, ad esempio modificare un articolo esistente o crearne uno nuovo. Viene spesso richiesta una traccia del documento per i nuovi argomenti suggeriti. Attendere l'approvazione dal team prima di investire molto tempo.
+* Creare un fork del repository [DotNet/AspNetDocs](https://github.com/dotnet/AspNetDocs/) e creare un ramo per le modifiche.
 * Inviare una richiesta pull al master con le modifiche.
 * Se alla richiesta pull viene assegnata l'etichetta 'cla-required', [sottoscrivere il contratto di licenza per contributi](https://cla.dotnetfoundation.org/).
 * Rispondere ai commenti e suggerimenti per la richiesta pull.
@@ -24,11 +24,11 @@ Se si usa Visual Studio Code per contribuire alla documentazione ASP.NET, è pos
 
 ## <a name="markdown-syntax"></a>Sintassi di Markdown
 
-Gli articoli sono scritti nel linguaggio [DocFx Flavored Markdown (DFM)](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html), che è un superset di [GitHub Flavored Markdown (GFM)](https://guides.github.com/features/mastering-markdown/). Per esempi di sintassi DFM per le funzionalità dell'interfaccia utente comunemente usati nella documentazione di ASP.NET, vedere [modello di Markdown e metadati](https://github.com/dotnet/docs/blob/master/styleguide/template.md) nella Guida di stile repository Docs di .NET.
+Gli articoli sono scritti nel linguaggio [DocFx Flavored Markdown (DFM)](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html), che è un superset di [GitHub Flavored Markdown (GFM)](https://guides.github.com/features/mastering-markdown/). Per esempi di sintassi DFM per le funzionalità dell'interfaccia utente comunemente usate nella documentazione di ASP.NET, vedere la pagina relativa al [modello di metadati e Markdown](https://github.com/dotnet/docs/blob/master/styleguide/template.md) nella Guida di stile del repository di documentazione .NET.
 
 ## <a name="folder-structure-conventions"></a>Convenzioni per la struttura di cartelle
 
-Per ogni file markdown può esistere una cartella per le immagini e una cartella per il codice di esempio. Se l'articolo è [signalr/overview/advanced/dependency-injection.md](https://github.com/aspnet/AspNetDocs/blob/master/aspnet/signalr/overview/advanced/dependency-injection.md), le immagini presenti [signalr/Panoramica/avanzate/inserimento delle dipendenze /\_statico](https://github.com/aspnet/AspNetDocs/tree/master/aspnet/signalr/overview/advanced/dependency-injection/_static) e il progetto di app di esempio file si trovano in [signalr/Panoramica/avanzate/dipendenza-injection/samples](https://github.com/aspnet/AspNetDocs/tree/master/aspnet/signalr/overview/advanced/dependency-injection/samples). Un'immagine nel *signalr/overview/advanced/dependency-injection.md* file rendering è il seguente codice Markdown:
+Per ogni file markdown può esistere una cartella per le immagini e una cartella per il codice di esempio. Se l'articolo è [SignalR/Overview/Advanced/Dependency-Injection. MD](https://github.com/dotnet/AspNetDocs/blob/master/aspnet/signalr/overview/advanced/dependency-injection.md), le immagini si trovano in [SignalR/Overview/Advanced/Dependency-Injection/\_static](https://github.com/dotnet/AspNetDocs/tree/master/aspnet/signalr/overview/advanced/dependency-injection/_static) e i file di progetto dell'app di esempio si trovano in [SignalR/Overview/Advanced/Dependency-Injection/Samples](https://github.com/dotnet/AspNetDocs/tree/master/aspnet/signalr/overview/advanced/dependency-injection/samples). Viene eseguito il rendering di un'immagine nel file *SignalR/Overview/Advanced/Dependency-Injection. MD* con i seguenti markdown:
 
 ```md
 ![description of image for alt attribute](dependency-injection/_static/image1.png)
@@ -67,7 +67,7 @@ Come passaggio facoltativo, assicurarsi che eventuali immagini e screenshot usat
 
 ## <a name="code-snippets"></a>Frammenti di codice
 
-Gli articoli contengono spesso frammenti di codice per illustrare gli argomenti discussi. DFM consente di copiare codice nel file markdown o di fare riferimento a un file di codice separato. È preferibile usare i file di codice separati quando possibile, per ridurre al minimo la probabilità di errori nel codice. I file di codice vengono archiviati nel repository con la struttura di cartelle descritta in precedenza per i progetti di esempio.
+Gli articoli contengono spesso frammenti di codice per illustrare gli argomenti discussi. DFM consente di copiare codice nel file markdown o di fare riferimento a un file di codice separato. È preferibile usare i file di codice separati quando possibile, per ridurre al minimo la probabilità di errori nel codice. I file di codice vengono archiviati nel repository utilizzando la struttura di cartelle descritta in precedenza per i progetti di esempio.
 
 Gli esempi seguenti illustrano la [sintassi per i frammenti di codice DFM](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html#code-snippet) da usare in un file *configuration/index.md*.
 
@@ -114,7 +114,7 @@ DocFX richiede:
 
 * Scaricare e decomprimere *docfx.zip* da [DocFX releases](https://github.com/dotnet/docfx/releases) (Versioni di DocFX).
 * Aggiungere DocFX a PATH.
-* In una shell dei comandi, passare al *aspnet* cartella che contiene il *docfx* file ed eseguire il comando seguente:
+* In una shell dei comandi passare alla cartella *ASPNET* che contiene il file *docfx. JSON* ed eseguire il comando seguente:
 
   ```console
   docfx --serve
@@ -139,7 +139,7 @@ DocFX richiede:
   alias docfx-serve='mono $HOME/bin/docfx/docfx.exe --serve'
   ```
 
-* In una shell dei comandi, passare al *aspnet* cartella che contiene il *docfx* file ed eseguire il comando seguente per compilare e gestire i documenti tramite il relativo alias:
+* In una shell dei comandi passare alla cartella *ASPNET* che contiene il file *docfx. JSON* ed eseguire il comando seguente per compilare e gestire i documenti tramite il relativo alias:
 
   ```console
   docfx-serve
@@ -157,4 +157,4 @@ La [Microsoft Writing Style Guide](https://docs.microsoft.com/style-guide/welcom
 
 ## <a name="redirects"></a>Reindirizzamenti
 
-Se si elimina un articolo, si modifica il nome di file o lo si sposta in un'altra cartella, creare un reindirizzamento in modo che le persone che hanno contrassegnato l'articolo con un segnalibro non ricevano l'errore *404 Non trovato*. Aggiungere i reindirizzamenti al [file di reindirizzamento master](https://github.com/aspnet/AspNetDocs/blob/master/.openpublishing.redirection.json).
+Se si elimina un articolo, si modifica il nome di file o lo si sposta in un'altra cartella, creare un reindirizzamento in modo che le persone che hanno contrassegnato l'articolo con un segnalibro non ricevano l'errore *404 Non trovato*. Aggiungere i reindirizzamenti al [file di reindirizzamento master](https://github.com/dotnet/AspNetDocs/blob/master/.openpublishing.redirection.json).

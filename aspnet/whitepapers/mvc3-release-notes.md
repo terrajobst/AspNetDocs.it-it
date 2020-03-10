@@ -1,6 +1,6 @@
 ---
 uid: whitepapers/mvc3-release-notes
-title: MVC ASP.NET 3 | Microsoft Docs
+title: ASP.NET MVC 3 | Microsoft Docs
 author: rick-anderson
 description: ''
 ms.author: riande
@@ -9,11 +9,11 @@ ms.assetid: f44c166e-7e91-48a0-a6f8-d9285f3594e5
 msc.legacyurl: /whitepapers/mvc3-release-notes
 msc.type: content
 ms.openlocfilehash: 504202068f5db4f8614bba02e8066ffecfd15b48
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74619245"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78618048"
 ---
 # <a name="aspnet-mvc-3"></a>ASP.NET MVC 3
 
@@ -91,7 +91,7 @@ ms.locfileid: "74619245"
 - [Non responsabilità](#0.1__Toc274034231)
 
 <a id="overview"></a>
-## <a name="overview"></a>Panoramica di
+## <a name="overview"></a>Panoramica
 
 Questo documento descrive la versione di ASP.NET MVC 3 RTM per Visual Studio 2010. ASP.NET MVC è un Framework per lo sviluppo di applicazioni Web che usano il modello MVC (Model-View-Controller). Il programma di installazione di ASP.NET MVC 3 include i componenti seguenti:
 
@@ -130,7 +130,7 @@ I componenti della fase di esecuzione di ASP.NET MVC 3 richiedono il software se
 - Visual Studio 2010 o Visual Web Developer 2010 Express.
 
 <a id="documentation"></a>
-## <a name="documentation"></a>Documentation
+## <a name="documentation"></a>Documentazione
 
 La documentazione relativa a ASP.NET MVC è disponibile nel sito Web MSDN all'URL seguente:
 
@@ -169,7 +169,7 @@ Per aggiornare manualmente un'applicazione ASP.NET MVC 2 esistente alla versione
 
     [!code-console[Main](mvc3-release-notes/samples/sample1.cmd)]
 
-    Sostituirla con la stringa seguente:
+    Sostituirlo con quanto riportato di seguito:
 
     [!code-console[Main](mvc3-release-notes/samples/sample2.cmd)]
 6. In Esplora soluzioni eliminare il riferimento a *System. Web. Mvc* (che punta alla DLL della versione 2), quindi aggiungere un riferimento a *System. Web. Mvc* (v 3.0.0.0).
@@ -578,7 +578,7 @@ NomeClasse (spazio dei nomi)
 
 Nelle versioni precedenti, questo sarebbe stato visualizzato come segue:
 
-Namespace. NomeClasse
+Namespace.ClassName
 
 <a id="_Toc276711793"></a>
 ### <a name="granular-request-validation"></a>Convalida di richieste granulari
@@ -622,7 +622,7 @@ In alternativa, per disattivare la convalida delle richieste per ogni proprietà
 - Quando si modifica una visualizzazione Razor (file con estensione cshtml), la voce di menu Vai al controller in Visual Studio non sarà disponibile e non ci sono frammenti di codice.
 
 <a id="TOC_ASP_NET_3_Beta"></a>
-## <a name="aspnet-mvc-3-beta"></a>ASP.NET MVC 3 beta
+## <a name="aspnet-mvc-3-beta"></a>ASP.NET MVC 3 Beta
 
 ASP.NET MVC 3 beta è stato rilasciato il 6 ottobre 2010. Le note seguenti sono specifiche della versione beta e sono soggette a eventuali aggiornamenti o modifiche a cui viene fatto riferimento nella sezione ASP.NET MVC 3 Release Candidate riportata sopra.
 
@@ -734,14 +734,14 @@ La nuova versione include il supporto per la risoluzione delle dipendenze per i 
 ASP.NET MVC include metodi helper Ajax come i seguenti:
 
 - Ajax. ActionLink
-- Ajax. RouteLink
+- Ajax.RouteLink
 - Ajax. BeginForm
-- Ajax. BeginRouteForm
+- Ajax.BeginRouteForm
 
 Questi metodi usano JavaScript per richiamare un metodo di azione sul server invece di usare un postback completo. Questa funzionalità è stata aggiornata per sfruttare i vantaggi di jQuery in modo discreto. Anziché emettere intrusivamente script client inline, questi metodi helper separano il comportamento dal markup creando attributi HTML5 usando il prefisso *Data-Ajax* . Il comportamento viene quindi applicato al markup facendo riferimento ai file JavaScript appropriati. Assicurarsi che venga fatto riferimento ai file JavaScript seguenti:
 
-- jQuery-1.4.1. js
-- jQuery. unobtrusive. Ajax. js
+- jquery-1.4.1.js
+- jquery.unobtrusive.ajax.js
 
 Questa funzionalità è abilitata per impostazione predefinita nel file Web. config nei nuovi modelli di progetto ASP.NET MVC 3, ma è disabilitata per impostazione predefinita per i progetti esistenti. Per ulteriori informazioni, vedere [aggiunta di flag a livello di applicazione per la convalida del client e JavaScript non intrusivo](#0.1_AddedApplicationWideFlagsForClientValida) più avanti in questo documento.
 
@@ -757,9 +757,9 @@ A tale scopo, è necessario che la Proprietà ViewContext. UnobtrusiveJavaScript
 
 Assicurarsi inoltre che venga fatto riferimento ai file JavaScript seguenti.
 
-- jQuery-1.4.1. js
-- jQuery. Validate. js
-- jQuery. Validate. unintrusive. js
+- jquery-1.4.1.js
+- jquery.validate.js
+- jquery.validate.unobtrusive.js
 
 Questa funzionalità è abilitata per impostazione predefinita nel file Web. config nei nuovi modelli di progetto ASP.NET MVC 3, ma è disabilitata per impostazione predefinita per i progetti esistenti. Per ulteriori informazioni, vedere [i nuovi flag a livello di applicazione per la convalida del client e JavaScript non intrusivo](#0.1_AddedApplicationWideFlagsForClientValida) più avanti in questo documento.
 
@@ -839,7 +839,7 @@ JsonValueProviderFactory è ora registrato per impostazione predefinita.
 
 L'ordine di esecuzione dei filtri eccezioni è stato modificato per i filtri eccezioni con lo stesso valore di ordine. In ASP.NET MVC 2 e versioni precedenti, i filtri delle eccezioni sul controller con lo stesso ordine di quelli su un metodo di azione venivano eseguiti prima dei filtri delle eccezioni nel metodo di azione. Questa situazione si verifica in genere quando vengono applicati filtri eccezioni senza un valore di ordine specificato. In ASP.NET MVC 3 questo ordine è stato invertito in modo che il gestore di eccezioni più specifico venga eseguito per primo. Come nelle versioni precedenti, se la proprietà Order viene specificata in modo esplicito, i filtri vengono eseguiti nell'ordine specificato.
 
-## <a id="0.1__Toc274034230"></a>Problemi noti
+## <a id="0.1__Toc274034230"></a> Problemi noti
 
 Durante l'installazione la finestra di dialogo per l'accettazione delle condizioni di licenza è più piccola di quella prevista.
 
@@ -861,6 +861,6 @@ Esiste un problema noto che fa in modo che l'autenticazione basata su form reind
 
 ## <a id="0.1__Toc274034231"></a>Non responsabilità
 
-© 2011 Microsoft Corporation. Tutti i diritti riservati. Questo documento viene fornito "così com'è". Le informazioni contenute nel presente documento, inclusi URL e altri riferimenti a siti Web su Internet, sono soggette a modifiche senza preavviso. L'utente si assume tutti i rischi derivanti dal suo utilizzo.
+© 2011 Microsoft Corporation. Tutti i diritti sono riservati. Questo documento viene fornito "così com'è". Le informazioni e le indicazioni riportate nel presente documento, inclusi URL e altri riferimenti a siti Web Internet, sono soggette a modifica senza preavviso. L'utente le utilizza a proprio rischio.
 
 Questo documento non fornisce alcun diritto legale su qualsiasi proprietà intellettuale di un qualsiasi prodotto Microsoft. È possibile copiare e utilizzare questo documento per scopi personali o come riferimento.

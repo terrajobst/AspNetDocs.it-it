@@ -9,11 +9,11 @@ ms.assetid: 24ad086d-865e-433c-9ac9-05f1a553da16
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/introduction
 msc.type: authoredcontent
 ms.openlocfilehash: 96dd31d949633e001fc595621bedbf74e98000fc
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74640229"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78642219"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-introduction"></a>Distribuzione Web ASP.NET con Visual Studio: introduzione
 
@@ -31,7 +31,7 @@ di [Tom Dykstra](https://github.com/tdykstra)
 > 
 > Questo contenuto è disponibile anche come e-book gratuito nella [raccolta e-book di TechNet](https://social.technet.microsoft.com/wiki/contents/articles/11608.e-book-gallery-for-microsoft-technologies.aspx#ASPNETWebDeploymentusingVisualStudio).
 
-## <a name="overview"></a>Panoramica di
+## <a name="overview"></a>Panoramica
 
 Queste esercitazioni illustrano la distribuzione di un'applicazione Web ASP.NET che include SQL Server database. Verrà distribuito prima in IIS nel computer di sviluppo locale per il test e quindi nelle app Web in app Azure servizio e nel database SQL di Azure per la gestione temporanea e la produzione. Verrà illustrato come eseguire la distribuzione usando la pubblicazione con un clic di Visual Studio e verrà illustrato come eseguire la distribuzione usando la riga di comando.
 
@@ -49,7 +49,7 @@ Le esercitazioni sono destinate agli sviluppatori ASP.NET che lavorano in ambien
 La distribuzione dal [controllo del codice sorgente](../../../../aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/source-control.md) tramite un processo di [recapito continuo](../../../../aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/continuous-integration-and-continuous-delivery.md) non è trattata in queste esercitazioni, ad eccezione di un'esercitazione che illustra come eseguire la distribuzione dalla riga di comando. Per informazioni sul recapito continuo, vedere le risorse seguenti:
 
 - [Integrazione continua e recapito continuo (compilazione di app Cloud reali con Windows Azure)](../../../../aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/continuous-integration-and-continuous-delivery.md)
-- [Distribuire un'app Web nel servizio app Azure](https://azure.microsoft.com/documentation/articles/web-sites-deploy/)
+- [Distribuire un'app Web nel Servizio app di Azure](https://azure.microsoft.com/documentation/articles/web-sites-deploy/)
 - [Distribuzione di applicazioni Web in scenari aziendali](../deploying-web-applications-in-enterprise-scenarios/deploying-web-applications-in-enterprise-scenarios.md) (un set di esercitazioni più obsoleto scritto per Visual Studio 2010, che contiene ancora informazioni utili per gli ambienti aziendali).
 
 ## <a name="using-a-third-party-hosting-provider"></a>Uso di un provider di hosting di terze parti
@@ -110,7 +110,7 @@ I commenti sulle esercitazioni sono benvenuti e, quando l'esercitazione viene ag
 
 <a id="prerequisites"></a>
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Questa esercitazione è stata scritta per i prodotti seguenti:
 
@@ -154,7 +154,7 @@ Per preparare il progetto per l'esecuzione dei passaggi dell'esercitazione, segu
     Per le schermate di questa esercitazione, la cartella del progetto si trova nella directory radice dell'unità `C`:.
 2. Avviare Visual Studio e aprire il progetto.
 3. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sulla soluzione e scegliere **ripristino del pacchetto EnableNuGet**.
-4. Compila la soluzione.
+4. Compilare la soluzione.
 5. Se vengono visualizzati errori di compilazione, ripristinare manualmente i pacchetti NuGet:
 
     1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sulla soluzione e quindi scegliere **Gestisci pacchetti NuGet per la soluzione**.

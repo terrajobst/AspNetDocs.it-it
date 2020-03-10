@@ -9,11 +9,11 @@ ms.assetid: f50a5cdb-c06a-46ed-aa14-fc5b049dc8dc
 msc.legacyurl: /mvc/overview/security/aspnet-mvc-5-app-with-sms-and-email-two-factor-authentication
 msc.type: authoredcontent
 ms.openlocfilehash: c14149d802bfc0a227a839a2981dc3e8a3849c25
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457596"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78538444"
 ---
 # <a name="aspnet-mvc-5-app-with-sms-and-email-two-factor-authentication"></a>App ASP.NET MVC 5 con autenticazione a due fattori tramite SMS e posta elettronica
 
@@ -107,7 +107,7 @@ Questa esercitazione fornisce istruzioni per l'uso di Twilio o ASPSMS, ma è pos
 9. Eseguire l'app e accedere con l'account registrato in precedenza.
 10. Fare clic sull'ID utente, che attiva il metodo di azione `Index` in `Manage` controller.  
     ![](aspnet-mvc-5-app-with-sms-and-email-two-factor-authentication/_static/image3.png)
-11. Scegli Aggiungi.  
+11. Fare clic su Aggiungi.  
     ![](aspnet-mvc-5-app-with-sms-and-email-two-factor-authentication/_static/image4.png)
 12. Il metodo di azione `AddPhoneNumber` Visualizza una finestra di dialogo per immettere un numero di telefono che può ricevere messaggi SMS.
 

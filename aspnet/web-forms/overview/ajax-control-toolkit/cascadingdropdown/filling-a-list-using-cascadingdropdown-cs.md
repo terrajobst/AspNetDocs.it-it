@@ -9,11 +9,11 @@ ms.assetid: f949aafa-fe57-43b0-b722-f0dd33a900be
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/cascadingdropdown/filling-a-list-using-cascadingdropdown-cs
 msc.type: authoredcontent
 ms.openlocfilehash: b5e9874fb5b6d3e55c8af5b85d12bf1ffacc116b
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74574817"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78614212"
 ---
 # <a name="filling-a-list-using-cascadingdropdown-c"></a>Compilazione di un elenco tramite CascadingDropDown (C#)
 
@@ -23,7 +23,7 @@ di [Christian Wenz](https://github.com/wenz)
 
 > Il controllo CascadingDropDown in AJAX Control Toolkit estende un controllo DropDownList in modo che le modifiche in un controllo DropDownList carichino i valori associati in un altro DropDownList. Ad esempio, un elenco include un elenco di stati degli Stati Uniti e l'elenco successivo viene quindi riempito con le città principali in tale stato. Il primo problema da risolvere è quello di compilare effettivamente un elenco a discesa usando questo controllo.
 
-## <a name="overview"></a>Panoramica di
+## <a name="overview"></a>Panoramica
 
 Il controllo CascadingDropDown in AJAX Control Toolkit estende un controllo DropDownList in modo che le modifiche in un controllo DropDownList carichino i valori associati in un altro DropDownList. Ad esempio, un elenco include un elenco di stati degli Stati Uniti e l'elenco successivo viene quindi riempito con le città principali in tale stato. Il primo problema da risolvere è quello di compilare effettivamente un elenco a discesa usando questo controllo.
 

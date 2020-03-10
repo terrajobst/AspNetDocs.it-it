@@ -2,23 +2,23 @@
 uid: web-pages/index
 title: Pagine Web ASP.NET | Microsoft Docs
 author: rick-anderson
-description: Scarica WebMatrix & informazioni su come creare rapidamente pagine web in un modo semplice per combinare il codice server con HTML.
+description: Scarica WebMatrix & Scopri come creare rapidamente pagine Web in modo semplice per combinare il codice server con HTML.
 ms.author: riande
 ms.date: 05/18/2012
 ms.assetid: 5418ba96-ff49-4a43-9cbb-09dea4949d23
 msc.legacyurl: /web-pages
 msc.type: categoryindex
 ms.openlocfilehash: 56bf82e22b3562893ef842a90d42aa7b6ff5858f
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65114537"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78640952"
 ---
 # <a name="aspnet-web-pages"></a>Pagine Web ASP.NET
 
 > [!NOTE] 
-> WebMatrix non è più consigliata come ambiente di sviluppo integrato per ASP.NET Web Pages. Uso [Visual Studio](xref:aspnet/web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio) oppure [Visual Studio Code](https://code.visualstudio.com/).
+> WebMatrix non è più consigliato come Integrated Development Environment per Pagine Web ASP.NET. Usare [Visual Studio](xref:aspnet/web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio) o [Visual Studio Code](https://code.visualstudio.com/).
 
 - [Linee guida](overview/index.md)
 
@@ -102,7 +102,7 @@ ms.locfileid: "65114537"
         - [Creare una pagina di modifica dei dati in WebMatrix](videos/introduction/create-an-edit-data-page-in-webmatrix.md)
         - [Creare una pagina di eliminazione dei dati in WebMatrix](videos/introduction/create-a-delete-data-page-in-webmatrix.md)
         - [Pubblicare un sito Web su Internet tramite WebMatrix](videos/introduction/publish-a-website-to-the-internet-using-webmatrix.md)
-    - [Pagine Razor di ASP.NET](videos/aspnet-razor-pages/index.md)
+    - [Razor Pages ASP.NET](videos/aspnet-razor-pages/index.md)
 
         - [Introduzione a WebMatrix e pagine Web ASP.NET](videos/aspnet-razor-pages/getting-started-with-webmatrix-and-aspnet-web-pages.md)
         - [Introduzione alla sintassi Razor per la programmazione Web ASP.NET](videos/aspnet-razor-pages/introduction-to-aspnet-web-programming-using-the-razor-syntax.md)

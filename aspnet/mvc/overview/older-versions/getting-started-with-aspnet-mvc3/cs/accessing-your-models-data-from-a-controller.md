@@ -9,11 +9,11 @@ ms.assetid: 002ada5c-f114-47ab-a441-57dbdb728ea0
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/accessing-your-models-data-from-a-controller
 msc.type: authoredcontent
 ms.openlocfilehash: 2e9c7f24d426635760b613f570b85455ce71b3dc
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77458108"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78623865"
 ---
 # <a name="accessing-your-models-data-from-a-controller-c"></a>Accesso ai dati del modello da un controller (C#)
 
@@ -45,7 +45,7 @@ Fare clic con il pulsante destro del mouse sulla cartella *Controllers* e creare
 
 [![AddScaffoldedMovieController](accessing-your-models-data-from-a-controller/_static/image2.png "AddScaffoldedMovieController")](accessing-your-models-data-from-a-controller/_static/image1.png)
 
-Fare clic su **Add**. In Visual Web Developer vengono creati i file e le cartelle seguenti:
+Fare clic su **Aggiungi**. In Visual Web Developer vengono creati i file e le cartelle seguenti:
 
 - *Un file MoviesController.cs* nella cartella *controller* del progetto.
 - Una cartella *Movies* nella cartella *views* del progetto.

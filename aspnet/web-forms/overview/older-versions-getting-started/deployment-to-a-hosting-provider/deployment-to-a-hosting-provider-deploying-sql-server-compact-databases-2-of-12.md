@@ -9,11 +9,11 @@ ms.assetid: c3c76516-4c48-4153-bd03-d70e3a3edbb0
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12
 msc.type: authoredcontent
 ms.openlocfilehash: 56ceabc79947967846d342354fd033510be5f05a
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74625585"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78568117"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-deploying-sql-server-compact-databases---2-of-12"></a>Distribuzione di un'applicazione Web ASP.NET con SQL Server Compact con Visual Studio o Visual Web Developer: distribuzione di SQL Server Compact database-2 di 12
 
@@ -25,7 +25,7 @@ di [Tom Dykstra](https://github.com/tdykstra)
 > 
 > Per un'esercitazione in cui vengono illustrate le funzionalità di distribuzione introdotte dopo la versione RC di Visual Studio 2012, viene illustrato come distribuire SQL Server edizioni diverse da SQL Server Compact e viene illustrato come eseguire la distribuzione in app Azure app Web del servizio, vedere [distribuzione web ASP.NET con Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
 
-## <a name="overview"></a>Panoramica di
+## <a name="overview"></a>Panoramica
 
 Questa esercitazione illustra come configurare due database SQL Server Compact e il motore di database per la distribuzione.
 
@@ -73,11 +73,11 @@ Compilare il progetto, quindi in **Esplora soluzioni** fare clic su **Mostra tut
 
 Espandere la cartella **bin** per visualizzare le cartelle **amd64** e **x86** , quindi selezionare le cartelle, fare clic con il pulsante destro del mouse e scegliere **Includi nel progetto**.
 
-![amd64_and_x86_in_Solution_Explorer. png](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image2.png)
+![amd64_and_x86_in_Solution_Explorer.png](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image2.png)
 
 Le icone della cartella cambiano per indicare che la cartella è stata inclusa nel progetto.
 
-![Solution_Explorer_amd64_included. png](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image3.png)
+![Solution_Explorer_amd64_included.png](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image3.png)
 
 ## <a name="configuring-code-first-migrations-for-application-database-deployment"></a>Configurazione Migrazioni Code First per la distribuzione del database dell'applicazione
 
@@ -108,7 +108,7 @@ Successivamente, abilitare Migrazioni Code First.
 
 Il primo passaggio consiste nel verificare che il progetto ContosoUniversity sia impostato come progetto di avvio. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto ContosoUniversity e selezionare **Imposta come progetto di avvio**. Per trovare la stringa di connessione al database, Migrazioni Code First apparirà nel progetto di avvio.
 
-Dal menu **strumenti** fare clic su **Gestione pacchetti NuGet** e quindi su **console di gestione pacchetti**.
+Nel menu **Strumenti** fare clic su **Gestione pacchetti NuGet** e quindi su **Console di Gestione pacchetti**.
 
 ![Selecting_Package_Manager_Console](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image6.png)
 
@@ -159,7 +159,7 @@ Migrazioni Code First crea un altro file di classe nella cartella *Migrations* e
 
 Nella **console di gestione pacchetti**immettere il comando "Update-database" per creare il database ed eseguire il metodo **Seed** .
 
-![aggiornamento-database_command](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image12.png)
+![update-database_command](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image12.png)
 
 Se viene generato un errore che indica che una tabella esiste già e non può essere creata, è probabile che l'applicazione sia stata eseguita dopo l'eliminazione del database e prima dell'esecuzione `update-database`. In tal caso, eliminare nuovamente il file *School. sdf* , quindi riprovare a `update-database` comando.
 
@@ -206,7 +206,7 @@ Tornare alla scheda **sicurezza** , fare clic su **Crea utente**e aggiungere l'u
 
 Chiudere il browser. In **Esplora soluzioni**fare clic sul pulsante Aggiorna per visualizzare il nuovo file *ASPNET. sdf* .
 
-![New_aspnet. sdf_in_Solution_Explorer](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image25.png)
+![New_aspnet.sdf_in_Solution_Explorer](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image25.png)
 
 Fare clic con il pulsante destro del mouse su **ASPNET. sdf** e scegliere **Includi nel progetto**.
 
@@ -216,7 +216,7 @@ In questa sezione verranno rinominati i database in modo che le versioni di svil
 
 In **Esplora soluzioni**fare clic su **Aggiorna** ed espandere la cartella app\_data per visualizzare il database School creato in precedenza; fare clic con il pulsante destro del mouse e scegliere **Includi nel progetto**.
 
-![Including_School. sdf_in_project](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image26.png)
+![Including_School.sdf_in_project](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image26.png)
 
 Rinominare *ASPNET. sdf* in *ASPNET-prod. sdf*.
 

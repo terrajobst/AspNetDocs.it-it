@@ -9,11 +9,11 @@ ms.assetid: 44aa1ac4-6ea2-48a2-972d-52710c48eae5
 msc.legacyurl: /mvc/overview/older-versions/working-with-the-dropdownlist-box-and-jquery/adding-a-new-category-to-the-dropdownlist-using-jquery-ui
 msc.type: authoredcontent
 ms.openlocfilehash: 3207079ee468232e5f75b081421241c232936baf
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77455724"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78538836"
 ---
 # <a name="adding-a-new-category-to-the-dropdownlist-using-jquery-ui"></a>Aggiunta di una nuova categoria a DropDownList tramite l'interfaccia utente di jQuery
 
@@ -57,7 +57,7 @@ Eseguire l'applicazione e fare clic sul pulsante **Aggiungi nuovo genere** . Nel
 
 ![](adding-a-new-category-to-the-dropdownlist-using-jquery-ui/_static/image4.png)
 
-Fare clic su **Salva**. Una chiamata AJAX crea la categoria opera e quindi compila l'elenco a discesa con opera e imposta opera come genere selezionato.
+Fare clic sul pulsante **Salva**. Una chiamata AJAX crea la categoria opera e quindi compila l'elenco a discesa con opera e imposta opera come genere selezionato.
 
 ![](adding-a-new-category-to-the-dropdownlist-using-jquery-ui/_static/image5.png)
 
@@ -120,12 +120,12 @@ In questa sezione si è appreso come creare una finestra di dialogo che può ess
 
 Rick.Anderson[at]Microsoft.com
 
-### <a name="additional-references"></a>Altre informazioni di riferimento
+### <a name="additional-references"></a>Riferimenti aggiuntivi
 
 - [ASP.NET MVC – elenco a discesa a cascata-esercitazione](https://weblogs.asp.net/raduenuca/archive/2011/03/06/asp-net-mvc-cascading-dropdown-lists-tutorial-part-1-defining-the-problem-and-the-context.aspx) di [Radu Enuca](https://weblogs.asp.net/raduenuca/default.aspx)
 - [Scelta](https://harvesthq.github.com/chosen/) Un plug-in JavaScript che supporta la selezione e il filtraggio.
 
-### <a name="contributors"></a>Collaboratori
+### <a name="contributors"></a>Contributors
 
 - [Enuca Radu](https://weblogs.asp.net/raduenuca/default.aspx)
 - Jean-Sébastien Goupil

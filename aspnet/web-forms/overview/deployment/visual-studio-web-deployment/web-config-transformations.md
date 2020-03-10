@@ -9,11 +9,11 @@ ms.assetid: 5a2a927b-14cb-40bc-867a-f0680f9febd7
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/web-config-transformations
 msc.type: authoredcontent
 ms.openlocfilehash: a9d39547c94a63003442ba6fe1257693dde24b05
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74621782"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78632832"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-webconfig-file-transformations"></a>Distribuzione Web ASP.NET con Visual Studio: trasformazioni di file Web. config
 
@@ -23,7 +23,7 @@ di [Tom Dykstra](https://github.com/tdykstra)
 
 > Questa serie di esercitazioni illustra come distribuire (pubblicare) un'applicazione Web ASP.NET in app Web di servizio app Azure o in un provider di hosting di terze parti, usando Visual Studio 2012 o Visual Studio 2010. Per informazioni sulla serie, vedere [la prima esercitazione della serie](introduction.md).
 
-## <a name="overview"></a>Panoramica di
+## <a name="overview"></a>Panoramica
 
 In questa esercitazione viene illustrato come automatizzare il processo di modifica del file *Web. config* quando lo si distribuisce in ambienti di destinazione diversi. Per la maggior parte delle applicazioni sono presenti impostazioni nel file *Web. config* che devono essere diverse quando si distribuisce l'applicazione. L'automazione del processo di modifica di queste modifiche impedisce di eseguire manualmente le modifiche ogni volta che si distribuisce, il che sarebbe noioso e soggetto a errori.
 
@@ -47,7 +47,7 @@ Se le impostazioni del file *Web. config* che si desidera modificare si trovano 
 
 In **Esplora soluzioni**espandere *Web. config* per visualizzare i file di trasformazione *Web. debug. config* e *Web. Release. config* che vengono creati per impostazione predefinita per le due configurazioni di compilazione predefinite.
 
-![Web. config_transform_files](web-config-transformations/_static/image1.png)
+![Web.config_transform_files](web-config-transformations/_static/image1.png)
 
 È possibile creare file di trasformazione per le configurazioni di compilazione personalizzate facendo clic con il pulsante destro del mouse sul file Web. config e scegliendo **Aggiungi trasformazioni di configurazione** dal menu di scelta rapida. Per questa esercitazione non è necessario eseguire questa operazione e l'opzione di menu è disabilitata perché non sono state create configurazioni di compilazione personalizzate.
 

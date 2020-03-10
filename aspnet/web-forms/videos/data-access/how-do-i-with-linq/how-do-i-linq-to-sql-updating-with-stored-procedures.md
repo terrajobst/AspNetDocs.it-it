@@ -1,25 +1,25 @@
 ---
 uid: web-forms/videos/data-access/how-do-i-with-linq/how-do-i-linq-to-sql-updating-with-stored-procedures
-title: 'Procedura: LINQ to SQL: Aggiornamento con Stored procedure | Microsoft Docs'
+title: 'Ricerca per categorie: LINQ to SQL: aggiornamento con stored procedure | Microsoft Docs'
 author: scottstanfield
-description: Sostituire la logica di update, delete o insert ORM generata con quelli personalizzati tramite le stored procedure. Il video illustra inoltre in modo dettagliato come usare il Profiler SQL per...
+description: Eseguire l'override della logica di aggiornamento/eliminazione/inserimento ORM generata con le proprie stored procedure. Nel video viene inoltre illustrato in dettaglio come utilizzare SQL Profiler per...
 ms.author: riande
 ms.date: 03/13/2008
 ms.assetid: b041ea07-a174-4a57-b2a8-4ce64232bdae
 msc.legacyurl: /web-forms/videos/data-access/how-do-i-with-linq/how-do-i-linq-to-sql-updating-with-stored-procedures
 msc.type: video
 ms.openlocfilehash: b91234b1e0c163a2f6350e93e775864e32218cc0
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59390324"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78635912"
 ---
-# <a name="how-do-i-linq-to-sql-updating-with-stored-procedures"></a>Procedura: LINQ to SQL: Aggiornamento con stored procedure
+# <a name="how-do-i-linq-to-sql-updating-with-stored-procedures"></a>Ricerca per categorie: LINQ to SQL: aggiornamento con stored procedure
 
-da [Scott Stanfield](https://github.com/scottstanfield)
+di [Scott Stanfield](https://github.com/scottstanfield)
 
-Sostituire la logica di update, delete o insert ORM generata con quelli personalizzati tramite le stored procedure. Il video illustra anche in modo dettagliato come usare il Profiler SQL per monitorare le modifiche di ORM dal codice SQL generato al nostro personalizzato procs SQL archiviate. Poiché stiamo semplicemente inserendo un SQL, si applicano le stesse tecniche a c# e gli sviluppatori Visual Basic.
+Eseguire l'override della logica di aggiornamento/eliminazione/inserimento ORM generata con le proprie stored procedure. Nel video viene inoltre illustrato in dettaglio come utilizzare SQL Profiler per monitorare le modifiche nell'ORM dall'istruzione SQL generata ai processi archiviati SQL personalizzati. Poiché si sta scrivendo solo SQL, le stesse tecniche si applicano C# sia agli sviluppatori VB.
 
 [&#9654;Guarda il video (15 minuti)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-linq-to-sql-updating-with-stored-procedures)
 

@@ -1,25 +1,25 @@
 ---
 uid: web-forms/videos/vs-2005/how-do-i-set-up-distributed-load-testing-for-high-volume-tests
-title: '[Procedura:] Configurare un test di carico distribuito per i test di volumi elevati? | Microsoft Docs'
+title: '[Procedura:] Configurare il test di carico distribuito per i test di volume elevato? | Microsoft Docs'
 author: rick-anderson
-description: Visual Studio Team System consente di configurare distribuita di test di carico mediante la creazione di un test 'di rig di' che è costituito da un Controller in un computer remoto e multipl...
+description: Visual Studio Team System consente di configurare il test di carico di aggregazioni creando un rig di test che comprende un controller in un computer remoto e multipl...
 ms.author: riande
 ms.date: 07/09/2007
 ms.assetid: d5c42efc-1457-4e75-87e8-5b41c9ee8a80
 msc.legacyurl: /web-forms/videos/vs-2005/how-do-i-set-up-distributed-load-testing-for-high-volume-tests
 msc.type: video
 ms.openlocfilehash: 5916531603ed66c8e0a9448c168cb81f673e129c
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59397506"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78639825"
 ---
-# <a name="how-do-i-set-up-distributed-load-testing-for-high-volume-tests"></a>[Procedura:] Configurare un test di carico distribuito per i test di volumi elevati?
+# <a name="how-do-i-set-up-distributed-load-testing-for-high-volume-tests"></a>[Procedura:] Configurare il test di carico distribuito per i test di volume elevato?
 
-da [feed di Chris Menegay](https://twitter.com/CMenegay)
+di [Chris Menegay](https://twitter.com/CMenegay)
 
-Visual Studio Team System consente di configurare distribuita di test di carico mediante la creazione di un test "di rig di" che è costituito da un Controller in un computer remoto e più agenti sui computer remoti stesso o aggiuntivo. In questo video illustra l'installazione del Controller e agenti e quindi configurazione i test case per l'esecuzione con il Controller remoto. Come si vedrà, Visual Studio Team System rende molto semplice da configurare per i test automatizzati con volumi elevati di test di carico distribuito.
+Visual Studio Team System consente di configurare il test di carico di aggregazioni creando un "rig" di test che comprende un controller in un computer remoto e più agenti nello stesso o in computer remoti aggiuntivi. Questo video illustra come installare il controller e gli agenti e quindi configurazione i test case per l'esecuzione con il controller remoto. Come si vedrà, Visual Studio Team System rende molto semplice configurare il test di carico distribuito per i test automatizzati a volume elevato.
 
 [&#9654;Guarda il video (8 minuti)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-set-up-distributed-load-testing-for-high-volume-tests)
 

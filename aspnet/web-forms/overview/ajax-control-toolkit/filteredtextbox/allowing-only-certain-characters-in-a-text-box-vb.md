@@ -9,11 +9,11 @@ ms.assetid: 33af23f1-4016-4740-8fb2-37d1773452cd
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/filteredtextbox/allowing-only-certain-characters-in-a-text-box-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 895708ebecc30c5f35e6ecd0349604bb777cbd93
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74573960"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78613512"
 ---
 # <a name="allowing-only-certain-characters-in-a-text-box-vb"></a>Autorizzazione solo di caratteri specifici in una casella di testo (VB)
 
@@ -23,7 +23,7 @@ di [Christian Wenz](https://github.com/wenz)
 
 > I controlli di convalida ASP.NET possono garantire che nell'input utente siano consentiti solo determinati caratteri. Tuttavia, ciò non impedisce agli utenti di digitare caratteri non validi e di inviare il modulo.
 
-## <a name="overview"></a>Panoramica di
+## <a name="overview"></a>Panoramica
 
 I controlli di convalida ASP.NET possono garantire che nell'input utente siano consentiti solo determinati caratteri. Tuttavia, ciò non impedisce agli utenti di digitare caratteri non validi e di inviare il modulo.
 

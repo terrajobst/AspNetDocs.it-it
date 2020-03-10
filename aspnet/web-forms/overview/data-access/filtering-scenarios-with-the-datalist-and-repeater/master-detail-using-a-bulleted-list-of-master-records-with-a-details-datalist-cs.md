@@ -9,11 +9,11 @@ ms.assetid: c727bb73-7b59-41a1-8dc3-623c6d69e7c2
 msc.legacyurl: /web-forms/overview/data-access/filtering-scenarios-with-the-datalist-and-repeater/master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 4549ab8e64599b09c300c158bedfd5d85efafc4d
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74591609"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78606281"
 ---
 # <a name="masterdetail-using-a-bulleted-list-of-master-records-with-a-details-datalist-c"></a>Report master o di dettaglio con un elenco puntato di record master e un controllo DataList di dettagli (C#)
 

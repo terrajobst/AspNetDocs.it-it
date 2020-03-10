@@ -1,23 +1,23 @@
 ---
 uid: web-forms/overview/data-access/editing-inserting-and-deleting-data/index
-title: La modifica, inserimento ed eliminazione dei dati | Microsoft Docs
+title: Modifica, inserimento ed eliminazione di dati | Microsoft Docs
 author: rick-anderson
-description: In queste esercitazioni vedere come mappare i metodi del controllo ObjectDataSource ai metodi di livello BLL e come configurare il controllo GridView, DetailsView e FormView co...
+description: In queste esercitazioni viene illustrato come eseguire il mapping dei metodi del controllo ObjectDataSource ai metodi BLL e come configurare GridView, DetailsView e FormView Co...
 ms.author: riande
 ms.date: 10/05/2011
 ms.assetid: 9fc60498-ced4-47c6-b2cf-8d464e6aeef8
 msc.legacyurl: /web-forms/overview/data-access/editing-inserting-and-deleting-data
 msc.type: chapter
 ms.openlocfilehash: 4657a52b05c1cf8a991158f212d6b6ce849ef276
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65109047"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78607716"
 ---
 # <a name="editing-inserting-and-deleting-data"></a>Modifica, inserimento ed eliminazione dei dati
 
-> In queste esercitazioni viene visualizzato come mappare i metodi del controllo ObjectDataSource ai metodi di livello BLL e come configurare il controllo GridView, DetailsView e FormView controlli in modo da consentire agli utenti di modificare i dati.
+> In queste esercitazioni viene illustrato come eseguire il mapping dei metodi del controllo ObjectDataSource ai metodi BLL e come configurare i controlli GridView, DetailsView e FormView per consentire agli utenti di modificare i dati.
 
 - [Panoramica di inserimento, aggiornamento ed eliminazione dei dati (C#)](an-overview-of-inserting-updating-and-deleting-data-cs.md)
 - [Analisi degli eventi associati a inserimento, aggiornamento ed eliminazione (C#)](examining-the-events-associated-with-inserting-updating-and-deleting-cs.md)

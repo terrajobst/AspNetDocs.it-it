@@ -9,11 +9,11 @@ ms.assetid: 2b0df3d9-450b-4ea6-b315-4c9650722cad
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-web-config-file-transformations-3-of-12
 msc.type: authoredcontent
 ms.openlocfilehash: 9e7902bcf8a16c154aee1a982824bfaedeea7d9d
-ms.sourcegitcommit: 7b1e1784213dd4c301635f9e181764f3e2f94162
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76309236"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78634925"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-webconfig-file-transformations---3-of-12"></a>Distribuzione di un'applicazione Web ASP.NET con SQL Server Compact mediante Visual Studio o Visual Web Developer: trasformazioni di file Web. config-3 di 12
 
@@ -25,7 +25,7 @@ di [Tom Dykstra](https://github.com/tdykstra)
 > 
 > Per un'esercitazione in cui vengono illustrate le funzionalità di distribuzione introdotte dopo la versione RC di Visual Studio 2012, viene illustrato come distribuire SQL Server edizioni diverse da SQL Server Compact e viene illustrato come eseguire la distribuzione in app Azure app Web del servizio, vedere [distribuzione web ASP.NET con Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
 
-## <a name="overview"></a>Panoramica di
+## <a name="overview"></a>Panoramica
 
 In questa esercitazione viene illustrato come automatizzare il processo di modifica del file *Web. config* quando lo si distribuisce in ambienti di destinazione diversi. Per la maggior parte delle applicazioni sono presenti impostazioni nel file *Web. config* che devono essere diverse quando si distribuisce l'applicazione. L'automazione del processo di modifica di queste modifiche impedisce di eseguire manualmente le modifiche ogni volta che si distribuisce, il che sarebbe noioso e soggetto a errori.
 

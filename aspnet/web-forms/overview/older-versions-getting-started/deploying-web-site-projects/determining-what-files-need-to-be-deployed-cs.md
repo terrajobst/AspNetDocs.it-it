@@ -9,11 +9,11 @@ ms.assetid: f8d78a88-cc91-40d8-bce3-3d7954f6033b
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/determining-what-files-need-to-be-deployed-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 1dd4a1179d32f776626c08a07205dc9aabed588d
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74596421"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78636178"
 ---
 # <a name="determining-what-files-need-to-be-deployed-c"></a>Determinazione dei file da distribuire (C#)
 
@@ -47,8 +47,8 @@ Nella tabella 1 vengono riepilogati i diversi file da distribuire quando si util
 
 | **Modello di compilazione** | **Distribuire il file della parte di markup?** | **Distribuire il file di codice sorgente?** | **Distribuire gli assembly in `Bin` directory?** |
 | --- | --- | --- | --- |
-| Compilazione esplicita | Sì | No | Sì |
-| Compilazione automatica | Sì | Sì | Sì (se esiste) |
+| Compilazione esplicita | Yes | No | Yes |
+| Compilazione automatica | Yes | Yes | Sì (se esiste) |
 
 **Tabella 1:** I file distribuiti dipendono dal modello di compilazione utilizzato.
 

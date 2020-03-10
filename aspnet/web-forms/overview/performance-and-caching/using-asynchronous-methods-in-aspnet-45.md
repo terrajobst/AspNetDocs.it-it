@@ -9,11 +9,11 @@ ms.assetid: a585c9a2-7c8e-478b-9706-90f3739c50d1
 msc.legacyurl: /web-forms/overview/performance-and-caching/using-asynchronous-methods-in-aspnet-45
 msc.type: authoredcontent
 ms.openlocfilehash: 7abc3d7acc60d7d868958f2a313bc408f96c95a4
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457570"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78625195"
 ---
 # <a name="using-asynchronous-methods-in-aspnet-45"></a>Uso di metodi asincroni in ASP.NET 4.5
 
@@ -204,7 +204,7 @@ Per realizzare i vantaggi di un'applicazione Web asincrona, potrebbe essere nece
 - Se l'applicazione usa servizi Web o System.NET per comunicare con un back-end su HTTP, potrebbe essere necessario aumentare l'elemento [connectionManagement/MaxConnection](https://msdn.microsoft.com/library/fb6y0fyc(VS.110).aspx) . Per le applicazioni ASP.NET, questo è limitato dalla funzionalità di configurazione automatica a 12 volte il numero di CPU. Ciò significa che in un quad-proc è possibile avere al massimo 12 \* 4 = 48 connessioni simultanee a un endpoint IP. Poiché è associato a [AutoConfig](https://msdn.microsoft.com/library/7w2sway1(VS.110).aspx), il modo più semplice per aumentare `maxconnection` in un'applicazione ASP.NET consiste nell'impostare [System .NET. ServicePointManager. DefaultConnectionLimit](https://msdn.microsoft.com/library/system.net.servicepointmanager.defaultconnectionlimit(VS.110).aspx) a livello di codice nel metodo from `Application_Start` nel file *Global. asax* . Per un esempio, vedere il download di esempio.
 - In .NET 4,5, il valore predefinito di 5000 per [maxConcurrentRequestsPerCPU](https://blogs.msdn.com/tmarq/archive/2007/07/21/asp-net-thread-usage-on-iis-7-0-and-6-0.aspx) dovrebbe essere corretto.
 
-## <a name="contributors"></a>Collaboratori
+## <a name="contributors"></a>Contributors
 
 - [Levi Broderick](http://stackoverflow.com/users/59641/levi)
 - [Tom Dykstra](http://www.bing.com/search?q=site%3Aasp.net+%22Tom+Dykstra%22+-forums.asp.net&amp;qs=n&amp;form=QBRE&amp;pq=site%3Aasp.net+%22tom+dykstra%22+-forums.asp.net&amp;sc=8-42&amp;sp=-1&amp;sk=)

@@ -1,23 +1,23 @@
 ---
 uid: web-api/overview/odata-support-in-aspnet-web-api/odata-v4/index
-title: Supporto di OData v4 nell'API Web ASP.NET | Microsoft Docs
+title: Supporto di OData V4 in API Web ASP.NET | Microsoft Docs
 author: rick-anderson
-description: Usare l'API Web ASP.NET per creare gli endpoint che supportano OData versione 4.
+description: Usare API Web ASP.NET per creare endpoint che supportano OData versione 4.
 ms.author: riande
 ms.date: 06/26/2014
 ms.assetid: bb807fdd-0bd8-43d0-b068-e88de7e5fd87
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-v4
 msc.type: chapter
 ms.openlocfilehash: 2068b7ad8d7b47ba4dd8768e4e35a28c5cf84de3
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65132736"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78525130"
 ---
-# <a name="supporting-odata-v4-in-aspnet-web-api"></a>Supporto di OData v4 nell'API Web ASP.NET
+# <a name="supporting-odata-v4-in-aspnet-web-api"></a>Supporto di OData V4 in API Web ASP.NET
 
-> Usare l'API Web ASP.NET per creare gli endpoint che supportano OData versione 4.
+> Usare API Web ASP.NET per creare endpoint che supportano OData versione 4.
 
 - [Creare un endpoint OData v4](create-an-odata-v4-endpoint.md)
 - [Creare un'app client OData v4 (C#)](create-an-odata-v4-client-app.md)

@@ -9,11 +9,11 @@ ms.assetid: accfa16a-ab15-4c26-9ad4-babdc2a77d2e
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/introduction
 msc.type: authoredcontent
 ms.openlocfilehash: b88573b3702b755b155e8da35f5f8a67931bafc6
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457115"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78617593"
 ---
 # <a name="building-real-world-cloud-apps-with-azure"></a>Creazione di app Cloud reali con Azure
 
@@ -25,7 +25,7 @@ di [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter
 > 
 > Il contenuto è basato su una presentazione sviluppata da Scott Guthrie e consegnata da lui presso la Norwegian Developers Conference (NDC) nel giugno del 2013 ([parte 1](http://vimeo.com/68215538), [parte 2](http://vimeo.com/68215602)) e presso Microsoft Tech ed Australia a settembre, 2013 ([parte 1](https://channel9.msdn.com/Events/TechEd/Australia/2013/AZR324), [parte 2](https://channel9.msdn.com/Events/TechEd/Australia/2013/AZR325)). [Molti altri](more-patterns-and-guidance.md#acknowledgments) hanno aggiornato e migliorato il contenuto durante la transizione dal video al formato scritto.
 
-## <a name="intended-audience"></a>Destinatari
+## <a name="intended-audience"></a>Destinatari del documento
 
 Gli sviluppatori che desiderano sviluppare per il cloud, considerando un passaggio al cloud o che non hanno familiarità con lo sviluppo nel cloud, troveranno qui una panoramica concisa dei concetti e delle procedure più importanti che è necessario conoscere. I concetti sono illustrati con esempi concreti e ogni capitolo è collegato ad altre risorse per ottenere informazioni più dettagliate. Gli esempi e i collegamenti a risorse aggiuntive sono per i Framework e i servizi Microsoft, ma i principi illustrati sono applicabili anche ad altri Framework di sviluppo Web e ad ambienti cloud.
 
@@ -102,7 +102,7 @@ Questo e-book illustra tredici modelli consigliati per lo sviluppo cloud. "Patte
 - [Appendice: applicazione di esempio Fix It](the-fix-it-sample-application.md)
 
     - Problemi noti
-    - Procedure consigliate
+    - Suggerimenti
     - Come scaricare, compilare, eseguire e distribuire.
 
 Questi modelli si applicano a tutti gli ambienti cloud, ma verranno illustrati usando esempi basati su tecnologie e servizi Microsoft, ad esempio Visual Studio, Team Foundation Service, ASP.NET e Azure.

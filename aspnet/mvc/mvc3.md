@@ -9,11 +9,11 @@ ms.assetid: dddc8812-a0bc-49f9-aafb-caf2064c2b8c
 msc.legacyurl: /mvc/mvc3
 msc.type: content
 ms.openlocfilehash: 421a06c89d4dbcb05d4080033813cc6558b7c698
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74586743"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78616410"
 ---
 # <a name="aspnet-mvc-3"></a>ASP.NET MVC 3
 
@@ -132,11 +132,11 @@ Di seguito sono riportate alcune nuove funzionalità Razor:
 
 Razor include anche nuovi helper HTML, come i seguenti:
 
-- `Chart`. Esegue il rendering di un grafico, offrendo le stesse funzionalità del controllo Chart in ASP.NET 4.
-- `WebGrid`. Esegue il rendering di una griglia di dati, completando la funzionalità di paging e ordinamento.
-- `Crypto`. USA gli algoritmi di hash per creare password con salting e hash corrette.
-- `WebImage`. Esegue il rendering di un'immagine.
-- `WebMail`. Invia un messaggio di posta elettronica.
+- `Chart` Esegue il rendering di un grafico, offrendo le stesse funzionalità del controllo Chart in ASP.NET 4.
+- `WebGrid` Esegue il rendering di una griglia di dati, completando la funzionalità di paging e ordinamento.
+- `Crypto` USA gli algoritmi di hash per creare password con salting e hash corrette.
+- `WebImage` Esegue il rendering di un'immagine.
+- `WebMail` Invia un messaggio di posta elettronica.
 
 Per ulteriori informazioni su Razor, vedere le risorse seguenti:
 

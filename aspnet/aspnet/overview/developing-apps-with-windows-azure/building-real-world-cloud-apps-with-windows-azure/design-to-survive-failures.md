@@ -9,11 +9,11 @@ ms.assetid: 364ce84e-5af8-4e08-afc9-75a512b01f84
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/design-to-survive-failures
 msc.type: authoredcontent
 ms.openlocfilehash: 348232af531b5d53dc3cb46d6d2c7931d95a572d
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457128"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78617726"
 ---
 # <a name="design-to-survive-failures-building-real-world-cloud-apps-with-azure"></a>Progettazione per sopravvivere agli errori (creazione di app Cloud reali con Azure)
 

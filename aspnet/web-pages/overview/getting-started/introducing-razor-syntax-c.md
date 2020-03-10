@@ -9,11 +9,11 @@ ms.assetid: aa67d304-583b-4bf8-a231-195656cfb587
 msc.legacyurl: /web-pages/overview/getting-started/introducing-razor-syntax-c
 msc.type: authoredcontent
 ms.openlocfilehash: c2f420bb7c2f7d2e31654c20fb9ec7497a30a9f7
-ms.sourcegitcommit: 6f0e10e4ca61a1e5534b09c655fd35cdc6886c8a
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74564878"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78641575"
 ---
 # <a name="introduction-to-aspnet-web-programming-using-the-razor-syntax-c"></a>Introduzione alla programmazione Web ASP.NET con la sintassi Razor (C#)
 
@@ -73,7 +73,7 @@ Un *blocco di codice* include una o più istruzioni di codice ed è racchiuso tr
 
 Risultato visualizzato in un browser:
 
-![Razor-img2](introducing-razor-syntax-c/_static/image2.jpg)
+![Razor-Img2](introducing-razor-syntax-c/_static/image2.jpg)
 
 ### <a name="3-inside-a-block-you-end-each-code-statement-with-a-semicolon"></a>3. all'interno di un blocco, si termina ogni istruzione del codice con un punto e virgola
 
@@ -630,7 +630,7 @@ Ecco un esempio che consente di comprendere le differenze:
 
 | URL completo | `http://mycompanyserver/humanresources/CompanyPolicy.htm` |
 | --- | --- |
-| Nome server | *mycompanyserver* |
+| Nome del server | *mycompanyserver* |
 | Percorso virtuale | */humanresources/CompanyPolicy.htm* |
 | Percorso fisico | *C:\mywebsites\humanresources\CompanyPolicy.htm* |
 
@@ -709,7 +709,7 @@ Il ciclo inizia con la parola chiave `for`, seguita da tre istruzioni tra parent
 
 All'interno delle parentesi graffe è riportato il codice che verrà eseguito per ogni iterazione del ciclo. Il markup crea ogni volta un nuovo paragrafo (elemento`<p>`) e aggiunge una riga all'output, visualizzando il valore di `i` (il contatore). Quando si esegue questa pagina, l'esempio crea 11 righe che visualizzano l'output, con il testo in ogni riga che indica il numero dell'elemento.
 
-![Razor-img11](introducing-razor-syntax-c/_static/image11.jpg)
+![Razor-Img11](introducing-razor-syntax-c/_static/image11.jpg)
 
 Se si lavora con una raccolta o una matrice, spesso si usa un ciclo `foreach`. Una raccolta è un gruppo di oggetti simili e il ciclo di `foreach` consente di eseguire un'attività in ogni elemento della raccolta. Questo tipo di ciclo è utile per le raccolte, perché a differenza di un ciclo di `for`, non è necessario incrementare il contatore o impostare un limite. Al contrario, il codice del ciclo `foreach` procede semplicemente nella raccolta fino a quando non viene completato.
 
@@ -743,8 +743,8 @@ Per chiarire che si fa riferimento a proprietà e metodi nell'oggetto pagina cor
 
 È possibile utilizzare le proprietà dell'oggetto `Page` per ottenere una grande quantità di informazioni, ad esempio:
 
-- `Request`. Come si è già visto, si tratta di una raccolta di informazioni sulla richiesta corrente, tra cui il tipo di browser che ha effettuato la richiesta, l'URL della pagina, l'identità dell'utente e così via.
-- `Response`. Si tratta di una raccolta di informazioni sulla risposta (pagina) che verrà inviata al browser al termine dell'esecuzione del codice server. Ad esempio, è possibile usare questa proprietà per scrivere informazioni nella risposta. 
+- `Request` Come si è già visto, si tratta di una raccolta di informazioni sulla richiesta corrente, tra cui il tipo di browser che ha effettuato la richiesta, l'URL della pagina, l'identità dell'utente e così via.
+- `Response` Si tratta di una raccolta di informazioni sulla risposta (pagina) che verrà inviata al browser al termine dell'esecuzione del codice server. Ad esempio, è possibile usare questa proprietà per scrivere informazioni nella risposta. 
 
     [!code-cshtml[Main](introducing-razor-syntax-c/samples/sample58.cshtml)]
 
@@ -810,7 +810,7 @@ Come si può notare, i parametri vengono passati in un ordine diverso. Tuttavia,
 
 ### <a name="try-catch-statements"></a>Istruzioni try-catch
 
-Nel codice saranno spesso presenti istruzioni che potrebbero avere esito negativo per motivi esterni al controllo. Ad esempio:
+Nel codice saranno spesso presenti istruzioni che potrebbero avere esito negativo per motivi esterni al controllo. Esempio:
 
 - Se il codice tenta di creare o accedere a un file, è possibile che si verifichino errori di questo tipo. Il file desiderato potrebbe non esistere, potrebbe essere bloccato, il codice potrebbe non avere le autorizzazioni e così via.
 - Analogamente, se il codice tenta di aggiornare i record in un database, potrebbero verificarsi problemi relativi alle autorizzazioni, la connessione al database potrebbe essere eliminata, i dati da salvare potrebbero non essere validi e così via.

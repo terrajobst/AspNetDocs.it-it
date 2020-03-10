@@ -9,11 +9,11 @@ ms.assetid: ea26549d-fbbf-4973-a108-b14cd1d6de26
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/animating-in-response-to-user-interaction-cs
 msc.type: authoredcontent
 ms.openlocfilehash: d04fa680d0cd4f7fb54521ac6fbb47a2cf9a83cf
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74599898"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78614373"
 ---
 # <a name="animating-in-response-to-user-interaction-c"></a>Animazione in risposta all'interazione dell'utente (C#)
 
@@ -23,7 +23,7 @@ di [Christian Wenz](https://github.com/wenz)
 
 > Il controllo dell'animazione in ASP.NET AJAX Control Toolkit non è solo un controllo, ma un intero Framework per aggiungere animazioni a un controllo. Le animazioni possono essere avviate automaticamente o possono essere attivate dall'interazione dell'utente, ad esempio facendo clic con il mouse.
 
-## <a name="overview"></a>Panoramica di
+## <a name="overview"></a>Panoramica
 
 Il controllo dell'animazione in ASP.NET AJAX Control Toolkit non è solo un controllo, ma un intero Framework per aggiungere animazioni a un controllo. Le animazioni possono essere avviate automaticamente o possono essere attivate dall'interazione dell'utente, ad esempio facendo clic con il mouse.
 

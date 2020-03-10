@@ -9,11 +9,11 @@ ms.assetid: fe3ef85f-bdc6-4e10-9768-25aa565c01d0
 msc.legacyurl: /web-api/overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-2
 msc.type: authoredcontent
 ms.openlocfilehash: 7c5ed1bdb4b390c94907b14e208231f16ad42d96
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74600365"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78621821"
 ---
 # <a name="part-2-creating-the-domain-models"></a>Parte 2: creazione di modelli di dominio
 
@@ -36,7 +36,7 @@ Poiché i POCO non contengono proprietà aggiuntive che descrivono [lo stato del
 Si creeranno le seguenti operazioni POCO:
 
 - Prodotto
-- Order
+- Ordinamento
 - OrderDetail
 
 Per creare ogni classe, fare clic con il pulsante destro del mouse sulla cartella Models in Esplora soluzioni. Dal menu di scelta rapida selezionare **Aggiungi** e quindi selezionare **classe.**
@@ -75,7 +75,7 @@ Un [formattatore di media type](../../formats-and-model-binding/media-formatters
 
 Con la serializzazione per valore viene creato un problema se un oggetto grafico contiene riferimenti circolari. Questo è esattamente il caso con le classi `Order` e `OrderDetail`, perché ogni oggetto include un riferimento all'altro. Il formattatore segue i riferimenti, scrive ogni oggetto per valore e passa a cerchi. Pertanto, è necessario modificare il comportamento predefinito.
 
-In Esplora soluzioni espandere l'app\_cartella di avvio e aprire il file denominato WebApiConfig.cs. Aggiungere il codice seguente alla classe `WebApiConfig` :
+In Esplora soluzioni espandere l'app\_cartella di avvio e aprire il file denominato WebApiConfig.cs. Aggiungere il codice seguente alla classe `WebApiConfig`:
 
 [!code-csharp[Main](using-web-api-with-entity-framework-part-2/samples/sample4.cs?highlight=11)]
 

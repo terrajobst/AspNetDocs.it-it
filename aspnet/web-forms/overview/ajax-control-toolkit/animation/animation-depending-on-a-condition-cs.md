@@ -9,11 +9,11 @@ ms.assetid: b7a28c0d-efb9-443a-80a4-1a5ee54671cd
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/animation-depending-on-a-condition-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 476b0cf80fa7c04cd8b8f9a92060ddabb9d14c13
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74599834"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78598350"
 ---
 # <a name="animation-depending-on-a-condition-c"></a>Animazione in base a una condizione (C#)
 
@@ -23,7 +23,7 @@ di [Christian Wenz](https://github.com/wenz)
 
 > Il controllo dell'animazione in ASP.NET AJAX Control Toolkit non è solo un controllo, ma un intero Framework per aggiungere animazioni a un controllo. Se un'animazione viene eseguita o meno può dipendere anche da una condizione sotto forma di codice JavaScript.
 
-## <a name="overview"></a>Panoramica di
+## <a name="overview"></a>Panoramica
 
 Il controllo dell'animazione in ASP.NET AJAX Control Toolkit non è solo un controllo, ma un intero Framework per aggiungere animazioni a un controllo. Se un'animazione viene eseguita o meno può dipendere anche da una condizione sotto forma di codice JavaScript.
 

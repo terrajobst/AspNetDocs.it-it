@@ -9,11 +9,11 @@ ms.assetid: 7ead83bc-c08c-4b26-8617-00e07292e35c
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/transient-fault-handling
 msc.type: authoredcontent
 ms.openlocfilehash: e798cb83cfb97db63fef6dc38c8f62804461d01b
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77456855"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78617327"
 ---
 # <a name="transient-fault-handling-building-real-world-cloud-apps-with-azure"></a>Gestione degli errori temporanei (compilazione di app Cloud reali con Azure)
 
@@ -80,7 +80,7 @@ Nel [capitolo successivo](distributed-caching.md)verrà illustrato come migliora
 
 ## <a name="resources"></a>Risorse
 
-Per ulteriori informazioni, vedere le seguenti risorse:
+Per altre informazioni, vedere le seguenti risorse:
 
 Documentazione
 
@@ -91,7 +91,7 @@ Documentazione
 - [Entity Framework-resilienza della connessione/logica di ripetizione dei tentativi](https://msdn.microsoft.com/data/dn456835). Come utilizzare e personalizzare la funzionalità di gestione degli errori temporanei di Entity Framework 6.
 - [Resilienza della connessione e intercettazione dei comandi con il Entity Framework in un'applicazione MVC ASP.NET](../../../../mvc/overview/getting-started/getting-started-with-ef-using-mvc/connection-resiliency-and-command-interception-with-the-entity-framework-in-an-asp-net-mvc-application.md). Quarto in una serie di esercitazioni in nove parti, Mostra come configurare la funzionalità di resilienza della connessione EF 6 per il database SQL.
 
-Videos
+Video
 
 - [Failsafe: compilazione di servizi cloud scalabili e resilienti](https://channel9.msdn.com/Series/FailSafe). Serie in nove parti di Ulrich Homann, Marc Mercuri e Mark Simms. Presenta concetti di alto livello e principi architetturali in modo molto accessibile e interessante, con storie tratte dall'esperienza del team di consulenza clienti Microsoft (CAT) con i clienti effettivi. Vedere la discussione sugli interruttori in Episode 3 a partire da 40:55.
 - [Creazione di grandi dimensioni: lezioni apprese dai clienti di Azure-parte II](https://channel9.msdn.com/Events/Build/2012/3-030). Mark Simms parla di progettazione per errori, gestione di errori temporanei e strumentazione di tutto.

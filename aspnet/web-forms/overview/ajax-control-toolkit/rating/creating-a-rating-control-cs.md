@@ -9,11 +9,11 @@ ms.assetid: 969fb28f-2bff-4fc4-b24a-27f5e2534a37
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/rating/creating-a-rating-control-cs
 msc.type: authoredcontent
 ms.openlocfilehash: c0bf793406e378321f54f0460031c526a0b41a02
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74611560"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78612343"
 ---
 # <a name="creating-a-rating-control-c"></a>Creazione di un controllo Rating (C#)
 
@@ -23,7 +23,7 @@ di [Christian Wenz](https://github.com/wenz)
 
 > Molti siti Web, dall'e-commerce ai siti della community, offrono agli utenti la possibilità di valutare articoli o articoli. Questa operazione richiede in genere una certa attività di scrittura del codice, ma il Toolkit di controllo è a disposizione.
 
-## <a name="overview"></a>Panoramica di
+## <a name="overview"></a>Panoramica
 
 Molti siti Web, dall'e-commerce ai siti della community, offrono agli utenti la possibilità di valutare articoli o articoli. Questa operazione richiede in genere una certa attività di scrittura del codice, ma il Toolkit di controllo è a disposizione.
 

@@ -1,7 +1,7 @@
 ---
 uid: mvc/overview/getting-started/database-first-development/generating-views
-title: 'Esercitazione: Generare viste per Entity Framework Database First con app ASP.NET MVC'
-description: Questa esercitazione è incentrata sull'uso di Scaffolding di ASP.NET per generare il controller e visualizzazioni.
+title: "Esercitazione: generare visualizzazioni per Database First EF con l'app MVC ASP.NET"
+description: Questa esercitazione è incentrata sull'uso dell'impalcatura ASP.NET per generare i controller e le visualizzazioni.
 author: Rick-Anderson
 ms.author: riande
 ms.date: 01/28/2019
@@ -10,96 +10,96 @@ ms.assetid: 669367cf-8e30-4eb6-821d-10a7d9bb906c
 msc.legacyurl: /mvc/overview/getting-started/database-first-development/generating-views
 msc.type: authoredcontent
 ms.openlocfilehash: e71e13e22d8a72e1699cfc70d4d93af603edba5b
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65121222"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78616207"
 ---
-# <a name="tutorial-generate-views-for-ef-database-first-with-aspnet-mvc-app"></a>Esercitazione: Generare viste per Entity Framework Database First con app ASP.NET MVC
+# <a name="tutorial-generate-views-for-ef-database-first-with-aspnet-mvc-app"></a>Esercitazione: generare visualizzazioni per Database First EF con l'app MVC ASP.NET
 
-Usa MVC, Entity Framework e lo Scaffolding di ASP.NET, è possibile creare un'applicazione web che fornisce un'interfaccia a un database esistente. Questa serie di esercitazioni illustra come generare il codice che consente agli utenti di visualizzare, modificare, creare automaticamente ed eliminare dati che si trovano in una tabella di database. Il codice generato corrispondente alle colonne nella tabella di database.
+Usando l'impalcatura MVC, Entity Framework e ASP.NET, è possibile creare un'applicazione Web che fornisce un'interfaccia a un database esistente. Questa serie di esercitazioni illustra come generare automaticamente il codice che consente agli utenti di visualizzare, modificare, creare ed eliminare dati che si trovano in una tabella di database. Il codice generato corrisponde alle colonne nella tabella di database.
 
-Questa esercitazione è incentrata sull'uso di Scaffolding di ASP.NET per generare il controller e visualizzazioni.
+Questa esercitazione è incentrata sull'uso dell'impalcatura ASP.NET per generare i controller e le visualizzazioni.
 
 Le attività di questa esercitazione sono le seguenti:
 
 > [!div class="checklist"]
-> * Aggiungi scaffolding
-> * Aggiungere collegamenti per le nuove visualizzazioni
-> * Visualizzare le visualizzazioni per studenti
+> * Aggiungi impalcatura
+> * Aggiungere collegamenti a nuove visualizzazioni
+> * Visualizzare le visualizzazioni degli studenti
 > * Visualizzare le visualizzazioni di registrazione
 
 ## <a name="prerequisite"></a>Prerequisito
 
-* [Creare modelli di dati e applicazioni web](creating-the-web-application.md)
+* [Creare l'applicazione Web e i modelli di dati](creating-the-web-application.md)
 
-## <a name="add-scaffold"></a>Aggiungi scaffolding
+## <a name="add-scaffold"></a>Aggiungi impalcatura
 
-Si è pronti per generare il codice che fornisce operazioni di dati standard per le classi del modello. Aggiungere il codice aggiungendo un elemento di scaffolding. Sono disponibili molte opzioni per il tipo di scaffolding che è possibile aggiungere; in questa esercitazione, lo scaffold includerà un controller e visualizzazioni che corrispondono ai modelli per studenti e di registrazione che è stato creato nella sezione precedente.
+Si è pronti per generare il codice che fornirà operazioni dati standard per le classi del modello. Per aggiungere il codice, è necessario aggiungere un elemento del patibolo. Sono disponibili molte opzioni per il tipo di impalcatura che è possibile aggiungere; in questa esercitazione il patibolo includerà un controller e le visualizzazioni che corrispondono ai modelli Student e di registrazione creati nella sezione precedente.
 
-Per mantenere la coerenza del progetto, si aggiungerà il nuovo controller esistente **controller** cartella. Fare doppio clic il **controller** cartella e selezionare **Add** > **nuovo elemento di scaffolding**.
+Per mantenere la coerenza nel progetto, il nuovo controller viene aggiunto alla cartella dei **controller** esistenti. Fare clic con il pulsante destro del mouse sulla cartella **controller** e scegliere **Aggiungi** > **nuovo elemento con impalcatura**.
 
-Selezionare il **Controller MVC 5 con visualizzazioni, mediante Entity Framework** opzione. Questa opzione genererà il controller e visualizzazioni per l'aggiornamento, eliminazione, la creazione e visualizzazione dei dati nel modello.
+Selezionare il **controller MVC 5 con le visualizzazioni, usando Entity Framework** opzione. Questa opzione consente di generare il controller e le visualizzazioni per l'aggiornamento, l'eliminazione, la creazione e la visualizzazione dei dati nel modello.
 
-![Aggiungi controller mvc](generating-views/_static/image2.png)
+![Aggiungi controller MVC](generating-views/_static/image2.png)
 
-Selezionare **Student (ContosoSite.Models)** per la classe di modello e selezionare il **ContosoUniversityDataEntities (ContosoSite.Models)** per la classe del contesto. Mantenere il nome del controller come **StudentsController**.
+Selezionare **Student (ContosoSite. Models)** per la classe Model e selezionare **ContosoUniversityDataEntities (ContosoSite. Models)** per la classe Context. Mantieni il nome del controller come **StudentsController**.
 
 Fare clic su **Aggiungi**.
 
-Se si riceve un errore, è possibile che il progetto nella sezione precedente non è stata compilata. In questo caso, provare a compilare il progetto e quindi aggiungere di nuovo l'elemento di scaffolding.
+Se viene visualizzato un errore, è possibile che non sia stato compilato il progetto nella sezione precedente. In tal caso, provare a compilare il progetto, quindi aggiungere nuovamente l'elemento con impalcatura.
 
-Al termine il processo di generazione di codice, verrà visualizzato un nuovo controller e visualizzazioni del progetto **controller** e **viste** > **studenti** cartelle .
+Al termine del processo di generazione del codice, verrà visualizzato un nuovo controller e visualizzazioni nei **controller** e nelle **visualizzazioni** del progetto > cartelle **students** .
 
-Eseguire di nuovo gli stessi passaggi, ma aggiungere lo scaffolding per il **registrazione** classe. Al termine, disponibile un' **EnrollmentsController.cs** file e una cartella sotto **viste** denominato **registrazioni** con le visualizzazioni Create, Delete, i dettagli, modifica e indice.
+Eseguire di nuovo la stessa procedura, ma aggiungere un patibolo per la classe di **registrazione** . Al termine, si disporrà di un file **EnrollmentsController.cs** e di una cartella in **visualizzazioni** denominate **registrazioni** con le viste create, DELETE, Details, Edit e index.
 
-## <a name="add-links-to-new-views"></a>Aggiungere collegamenti per le nuove visualizzazioni
+## <a name="add-links-to-new-views"></a>Aggiungere collegamenti a nuove visualizzazioni
 
-Per renderne più semplice per passare alle nuove visualizzazioni, è possibile aggiungere un paio di collegamenti ipertestuali alle viste di indice per gli studenti e le registrazioni. Aprire il file dal **viste** > **Home** > *index. cshtml*, che è la home page del sito. Aggiungere il codice seguente sotto il jumbotron.
+Per semplificare l'esplorazione delle nuove visualizzazioni, è possibile aggiungere un paio di collegamenti ipertestuali alle viste degli indici per studenti e registrazioni. Aprire il file nelle **viste** > **Home** > *index. cshtml*, che corrisponde al Home page per il sito. Aggiungere il codice seguente sotto Jumbotron.
 
 [!code-cshtml[Main](generating-views/samples/sample1.cshtml)]
 
-Per il metodo ActionLink, il primo parametro è il testo da visualizzare nel collegamento. Il secondo parametro è l'azione e il terzo parametro è il nome del controller. Ad esempio, il primo collegamento punta all'azione Index in StudentsController. Il collegamento effettivo viene costruito da questi valori. Il primo collegamento in definitiva richiede agli utenti delle **index. cshtml** all'interno del file il **viste/Students** cartella.
+Per il metodo ActionLink, il primo parametro è il testo da visualizzare nel collegamento. Il secondo parametro è l'azione e il terzo parametro è il nome del controller. Il primo collegamento, ad esempio, punta all'azione index in StudentsController. Il collegamento ipertestuale effettivo viene costruito in base a questi valori. Il primo collegamento porta gli utenti al file **index. cshtml** all'interno della cartella **views/students** .
 
-## <a name="display-student-views"></a>Visualizzare le visualizzazioni per studenti
+## <a name="display-student-views"></a>Visualizzare le visualizzazioni degli studenti
 
-Si verificherà che il codice aggiunto correttamente al progetto viene visualizzato un elenco degli studenti e consente agli utenti di modificare, creare o eliminare i record di studenti nel database.
+Si verificherà che il codice aggiunto al progetto visualizzi correttamente un elenco degli studenti e consente agli utenti di modificare, creare o eliminare i record degli studenti nel database.
 
-Fare doppio clic il **viste** > **Home** > *index. cshtml* file e scegliere **Visualizza nel Browser**. Nella home page dell'applicazione, selezionare **elenco degli studenti**.
+Fare clic con il pulsante destro del **mouse sul file** > **Home** > *index. cshtml* , quindi scegliere **Visualizza nel browser**. Nella home page dell'applicazione selezionare **elenco di studenti**.
 
 ![](generating-views/_static/image6.png)
 
-Nel **indice** pagina, viene visualizzato l'elenco degli studenti e i collegamenti per modificare i dati. Selezionare il **Crea nuovo** collegare e fornire valori per un nuovo studente. Fare clic su **Create**e notare che il nuovo studente viene aggiunto all'elenco.
+Nella pagina **index** si noti l'elenco degli studenti e dei collegamenti per modificare questi dati. Selezionare il collegamento **Crea nuovo** e specificare alcuni valori per un nuovo studente. Fare clic su **Crea**. si noti che il nuovo studente viene aggiunto all'elenco.
 
-Nella **indice** pagina, selezionare la **modificare** collegamento e modificare alcuni dei valori di uno studente. Fare clic su **salvare**e notare che è stato modificato il record degli studenti.
+Tornare alla pagina **index** , selezionare il collegamento **Edit (modifica** ) e modificare alcuni dei valori di uno studente. Fare clic su **Save (Salva**). si noti che il record Student è stato modificato.
 
-Infine, selezionare il **eliminare** collegare e confermare che si desidera eliminare i record facendo il **eliminare** pulsante.
+Infine, selezionare il collegamento **Elimina** e confermare che si desidera eliminare il record facendo clic sul pulsante **Elimina** .
 
-Senza scrivere alcun codice, si sono aggiunte le viste che eseguono operazioni comuni sui dati nella tabella studenti.
+Senza scrivere codice, sono state aggiunte viste che eseguono operazioni comuni sui dati della tabella Student.
 
-Si è notato che l'etichetta di testo per un campo è basata sulla proprietà database (ad esempio **LastName**) che non è necessariamente ciò che si desidera visualizzare nella pagina web. Ad esempio, è preferibile all'etichetta **cognome**. Si correggerà questo problema di visualizzazione in un secondo momento nell'esercitazione.
+Si può notare che l'etichetta di testo per un campo è basata sulla proprietà del database, ad esempio **LastName**, che non è necessariamente ciò che si desidera visualizzare nella pagina Web. Ad esempio, è possibile preferire l'etichetta come **Cognome**. Questo problema di visualizzazione verrà risolto più avanti nell'esercitazione.
 
 ## <a name="display-enrollment-views"></a>Visualizzare le visualizzazioni di registrazione
 
-Il database include una relazione uno-a-molti tra le tabelle Student e registrazione e una relazione uno-a-molti tra le tabelle Course ed Enrollment esiste. Le viste per la registrazione di gestiscono correttamente tali relazioni. Passare alla home page per il sito e selezionare il **elenco di registrazioni** collegamento e quindi la **Crea nuovo** collegamento.
+Il database include una relazione uno-a-molti tra le tabelle Student e di registrazione e una relazione uno-a-molti tra il corso e le tabelle di registrazione. Le visualizzazioni per la registrazione gestiscono correttamente queste relazioni. Passare alla home page per il sito e selezionare il collegamento **elenco di registrazioni** , quindi il collegamento **Crea nuovo** .
 
-Nella visualizzazione di un form per la creazione di un nuovo record di registrazione. In particolare, si noti che il modulo contiene un **CourseID** elenco a discesa elenco e una **StudentID** elenco a discesa. Entrambi vengono popolate con i valori dalle tabelle correlate.
+La vista consente di visualizzare un modulo per la creazione di un nuovo record di registrazione. In particolare, si noti che il modulo contiene un elenco a discesa **CourseID** e un elenco a discesa **StudentID** . Entrambe le tabelle vengono popolate con i valori delle tabelle correlate.
 
-Inoltre, convalida dei valori forniti viene applicata automaticamente in base sul tipo di dati del campo. **Livello** richiede un numero, pertanto viene visualizzato un messaggio di errore se si tenta di fornire un valore incompatibile: *Il livello di campo deve essere un numero.*
+Inoltre, la convalida dei valori forniti viene applicata automaticamente in base al tipo di dati del campo. Il **livello** richiede un numero, pertanto viene visualizzato un messaggio di errore se si tenta di fornire un valore incompatibile: *il livello di campo deve essere un numero.*
 
-Si è verificato che le visualizzazioni generate automaticamente consentono agli utenti di lavorare con i dati nel database. Nella prossima esercitazione della serie, si sarà l'aggiornamento del database e apportare le modifiche corrispondenti nell'applicazione web.
+Si è verificato che le visualizzazioni generate automaticamente consentono agli utenti di utilizzare i dati nel database. Nell'esercitazione successiva di questa serie si aggiornerà il database e si apporteranno le modifiche corrispondenti nell'applicazione Web.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
 Le attività di questa esercitazione sono le seguenti:
 
 > [!div class="checklist"]
-> * Aggiunta di scaffolding
-> * Sono stati aggiunti collegamenti per le nuove visualizzazioni
-> * Viste visualizzate per studenti
-> * Viste di registrazione visualizzata
+> * Impalcatura aggiunta
+> * Aggiunta di collegamenti a nuove visualizzazioni
+> * Visualizzazioni degli studenti visualizzate
+> * Visualizzazioni di registrazione visualizzate
 
-Passare all'esercitazione successiva per informazioni su come modificare il database.
+Passare all'esercitazione successiva per apprendere come modificare il database.
 > [!div class="nextstepaction"]
 > [Modificare il database](changing-the-database.md)

@@ -9,11 +9,11 @@ ms.assetid: 778b9009-76f2-4665-940e-afc0e35bc917
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/dynamicpopulate/using-dynamicpopulate-with-a-user-control-and-javascript-vb
 msc.type: authoredcontent
 ms.openlocfilehash: ee5923ad6d8b101f689a0564aef8b1e0e00a7639
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74599122"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78613673"
 ---
 # <a name="using-dynamicpopulate-with-a-user-control-and-javascript-vb"></a>Uso di DynamicPopulate con un controllo utente e JavaScript (VB)
 
@@ -23,7 +23,7 @@ di [Christian Wenz](https://github.com/wenz)
 
 > Il controllo DynamicPopulate in ASP.NET AJAX Control Toolkit chiama un servizio Web o un metodo di pagina e inserisce il valore risultante in un controllo di destinazione nella pagina, senza un aggiornamento della pagina. È anche possibile attivare il popolamento usando codice JavaScript personalizzato sul lato client. Tuttavia è necessario prestare particolare attenzione quando il dispositivo Extender risiede in un controllo utente.
 
-## <a name="overview"></a>Panoramica di
+## <a name="overview"></a>Panoramica
 
 Il controllo `DynamicPopulate` in ASP.NET AJAX Control Toolkit chiama un servizio Web o un metodo di pagina e inserisce il valore risultante in un controllo di destinazione nella pagina, senza un aggiornamento della pagina. È anche possibile attivare il popolamento usando codice JavaScript personalizzato sul lato client. Tuttavia è necessario prestare particolare attenzione quando il dispositivo Extender risiede in un controllo utente.
 

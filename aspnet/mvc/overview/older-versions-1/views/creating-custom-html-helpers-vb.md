@@ -9,11 +9,11 @@ ms.assetid: f96f4800-19ef-44c0-b457-55e777eb5de8
 msc.legacyurl: /mvc/overview/older-versions-1/views/creating-custom-html-helpers-vb
 msc.type: authoredcontent
 ms.openlocfilehash: aaeadde258a2855343a5bfb1e5ee76000e04f6bd
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74593847"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78600275"
 ---
 # <a name="creating-custom-html-helpers-vb"></a>Creazione di helper HTML personalizzati (VB)
 
@@ -33,17 +33,17 @@ Un helper HTML è semplicemente un metodo che restituisce una stringa. La string
 
 Il framework ASP.NET MVC include il seguente set di helper HTML standard (non è un elenco completo):
 
-- HTML. ActionLink ()
-- HTML. BeginForm ()
-- HTML. CheckBox ()
-- HTML. DropDownList ()
-- HTML. EndForm ()
-- HTML. Hidden ()
-- HTML. ListBox ()
-- HTML. password ()
-- HTML. RadioButton ()
-- HTML. TextArea ()
-- HTML. TextBox ()
+- Html.ActionLink()
+- Html.BeginForm()
+- Html.CheckBox()
+- Html.DropDownList()
+- Html.EndForm()
+- Html.Hidden()
+- Html.ListBox()
+- Html.Password()
+- Html.RadioButton()
+- Html.TextArea()
+- Html.TextBox()
 
 Si consideri, ad esempio, il modulo nel listato 1. Questo form viene sottoposto a rendering con l'aiuto di due degli helper HTML standard (vedere la figura 1). Questo modulo usa i metodi di supporto `Html.BeginForm()` e `Html.TextBox()`.
 

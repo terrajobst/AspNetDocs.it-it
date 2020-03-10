@@ -9,11 +9,11 @@ ms.assetid: e9803150-452d-4521-97e3-d75d5599383c
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/nobot/fighting-bots-vb
 msc.type: authoredcontent
 ms.openlocfilehash: a8ca71b96cb84c97b1a60ae6a3d1a129cd1b0b10
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74606409"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78627393"
 ---
 # <a name="fighting-bots-vb"></a>Lotta contro i bot (VB)
 
@@ -23,7 +23,7 @@ di [Christian Wenz](https://github.com/wenz)
 
 > I bot automatici intonano i weblog e altri siti Web con posta indesiderata, inviando moduli di commento senza alcuna interazione dell'utente Il controllo NoBot in ASP.NET AJAX Control Toolkit può aiutare a combattere questi bot.
 
-## <a name="overview"></a>Panoramica di
+## <a name="overview"></a>Panoramica
 
 I bot automatici intonano i weblog e altri siti Web con posta indesiderata, inviando moduli di commento senza alcuna interazione dell'utente Il controllo NoBot in ASP.NET AJAX Control Toolkit può aiutare a combattere questi bot.
 

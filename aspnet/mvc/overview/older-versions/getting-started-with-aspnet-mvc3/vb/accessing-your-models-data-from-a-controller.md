@@ -9,11 +9,11 @@ ms.assetid: cad00de1-3c68-4ff4-a436-54236d449459
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3/vb/accessing-your-models-data-from-a-controller
 msc.type: authoredcontent
 ms.openlocfilehash: 37f45d8f12e3ab5c485718bcf2c59934ad272118
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457971"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78615255"
 ---
 # <a name="accessing-your-models-data-from-a-controller-vb"></a>Accesso ai dati del modello da un controller (VB)
 
@@ -33,7 +33,7 @@ In questa sezione si creerà una nuova classe `MoviesController` e si scriverà 
 
 Fare clic con il pulsante destro del mouse sulla cartella *Controllers* e creare un nuovo controller di `MoviesController`. Selezionare le opzioni seguenti:
 
-- Nome controller: **MoviesController**. Questa è l'impostazione predefinita.
+- Nome controller: **MoviesController**. (Impostazione predefinita).
 - Modello: **controller con azioni di lettura/scrittura e visualizzazioni, usando Entity Framework**.
 - Classe modello: **Movie (MvcMovie. Models)** .
 - Classe del contesto dati: **MovieDBContext (MvcMovie. Models)** .
@@ -41,7 +41,7 @@ Fare clic con il pulsante destro del mouse sulla cartella *Controllers* e creare
 
 [![5addMovieController](accessing-your-models-data-from-a-controller/_static/image2.png)](accessing-your-models-data-from-a-controller/_static/image1.png)
 
-Fare clic su **Add**. In Visual Web Developer vengono creati i file e le cartelle seguenti:
+Fare clic su **Aggiungi**. In Visual Web Developer vengono creati i file e le cartelle seguenti:
 
 - *Un file MoviesController. vb* nella cartella *controller* del progetto.
 - Una cartella *Movies* nella cartella *views* del progetto.

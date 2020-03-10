@@ -9,11 +9,11 @@ ms.assetid: 9f24fb82-c7ac-48da-b8e2-51b3da17e365
 msc.legacyurl: /web-forms/overview/presenting-and-managing-data/model-binding/retrieving-data
 msc.type: authoredcontent
 ms.openlocfilehash: 81cca22cb4752d071d2a68986ae9ac2bed737594
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74633179"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78640196"
 ---
 # <a name="retrieving-and-displaying-data-with-model-binding-and-web-forms"></a>Recupero e visualizzazione dei dati con l'associazione di modelli e Web Form
 
@@ -36,7 +36,7 @@ ms.locfileid: "74633179"
 
 ## <a name="what-youll-build"></a>Elementi da compilare
 
-In questa esercitazione verranno illustrate le operazioni seguenti:
+In questa esercitazione si apprenderà come:
 
 * Creare oggetti dati che riflettono un'università con studenti iscritti a corsi
 * Compilare le tabelle di database dagli oggetti
@@ -47,9 +47,9 @@ In questa esercitazione verranno illustrate le operazioni seguenti:
 
 1. In Visual Studio 2017 creare un progetto di **applicazione Web ASP.NET (.NET Framework)** denominato **ContosoUniversityModelBinding**.
 
-   ![Crea progetto](retrieving-data/_static/image19.png)
+   ![crea progetto](retrieving-data/_static/image19.png)
 
-2. Scegliere **OK**. Verrà visualizzata la finestra di dialogo per la selezione di un modello.
+2. Selezionare **OK**. Verrà visualizzata la finestra di dialogo per la selezione di un modello.
 
    ![seleziona Web Form](retrieving-data/_static/image3.png)
 
@@ -93,7 +93,7 @@ In questa esercitazione verranno illustrate le operazioni seguenti:
    
    4. Per la pagina master del Web Form selezionare **site. master**.
    
-   5. Scegliere **OK**.
+   5. Selezionare **OK**.
 
 ## <a name="add-the-data-model"></a>Aggiungere il modello di dati
 
@@ -121,7 +121,7 @@ Nella cartella **Models** aggiungere una classe denominata **UniversityModels.cs
 
 Questa esercitazione USA [migrazioni Code First](https://docs.microsoft.com/ef/ef6/modeling/code-first/migrations/) per creare oggetti e tabelle di database. Queste tabelle archiviano informazioni sugli studenti e sui relativi corsi.
 
-   1. Selezionare **strumenti** > **gestione pacchetti NuGet** > **console di gestione pacchetti**.
+   1. Fare clic su **Strumenti** > **Gestione Pacchetti NuGet** > **Console di Gestione pacchetti**.
 
    2. Nella **console di gestione pacchetti**eseguire questo comando:  
       `enable-migrations -ContextTypeName ContosoUniversityModelBinding.Models.SchoolContext`

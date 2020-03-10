@@ -9,11 +9,11 @@ ms.assetid: cd03a188-e947-4f55-9bda-b8bce201d8c6
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-setting-folder-permissions-6-of-12
 msc.type: authoredcontent
 ms.openlocfilehash: 85a77a196cf3458bbb2e6308838a846936cd070b
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74633583"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78630508"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-setting-folder-permissions---6-of-12"></a>Distribuzione di un'applicazione Web ASP.NET con SQL Server Compact mediante Visual Studio o Visual Web Developer: impostazione delle autorizzazioni per le cartelle-6 di 12
 
@@ -25,7 +25,7 @@ di [Tom Dykstra](https://github.com/tdykstra)
 > 
 > Per un'esercitazione in cui vengono illustrate le funzionalità di distribuzione introdotte dopo la versione RC di Visual Studio 2012, viene illustrato come distribuire SQL Server edizioni diverse da SQL Server Compact e viene illustrato come eseguire la distribuzione in app Azure app Web del servizio, vedere [distribuzione web ASP.NET con Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
 
-## <a name="overview"></a>Panoramica di
+## <a name="overview"></a>Panoramica
 
 In questa esercitazione si impostano le autorizzazioni per la cartella *ELMAH* nel sito Web distribuito in modo che l'applicazione possa creare file di log in tale cartella.
 

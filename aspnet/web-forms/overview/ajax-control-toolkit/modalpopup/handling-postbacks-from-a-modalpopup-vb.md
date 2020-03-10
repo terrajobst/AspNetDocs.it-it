@@ -9,11 +9,11 @@ ms.assetid: f70ac2b3-900f-40fa-858f-ab057904506b
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/modalpopup/handling-postbacks-from-a-modalpopup-vb
 msc.type: authoredcontent
 ms.openlocfilehash: df0b71b3e336a0d230869623473bdac24b3dd07b
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74606612"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78621527"
 ---
 # <a name="handling-postbacks-from-a-modalpopup-vb"></a>Gestione dei postback da un controllo ModalPopup (VB)
 
@@ -23,7 +23,7 @@ di [Christian Wenz](https://github.com/wenz)
 
 > Il controllo ModalPopup in AJAX Control Toolkit offre un modo semplice per creare un popup modale usando i mezzi lato client. Quando viene creato un postback dall'interno del popup, è necessario prestare particolare attenzione.
 
-## <a name="overview"></a>Panoramica di
+## <a name="overview"></a>Panoramica
 
 Il controllo ModalPopup in AJAX Control Toolkit offre un modo semplice per creare un popup modale usando i mezzi lato client. Quando viene creato un postback dall'interno del popup, è necessario prestare particolare attenzione.
 

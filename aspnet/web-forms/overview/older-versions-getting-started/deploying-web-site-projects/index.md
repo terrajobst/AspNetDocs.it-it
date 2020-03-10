@@ -2,22 +2,22 @@
 uid: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/index
 title: Distribuzione di progetti di siti Web in Visual Studio 2008 e versioni precedenti | Microsoft Docs
 author: rick-anderson
-description: Le applicazioni web ASP.NET sono progettate in genere, creano e testati in un ambiente di sviluppo locale e devono essere distribuite a una o ambiente di produzione...
+description: Le applicazioni Web ASP.NET sono in genere progettate, create e testate in un ambiente di sviluppo locale e devono essere distribuite in un ambiente di produzione o...
 ms.author: riande
 ms.date: 05/16/2012
 ms.assetid: 6f72bde8-f2f1-4e4a-94e5-494c3c153c14
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects
 msc.type: chapter
 ms.openlocfilehash: 43c2397ef4ccc5eacb2ff4c5d04f62b9c8c481b7
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65134430"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78524059"
 ---
 # <a name="deploying-web-site-projects-in-visual-studio-2008-and-earlier"></a>Distribuzione di progetti di siti Web in Visual Studio 2008 e versioni precedenti
 
-> Le applicazioni web ASP.NET sono in genere progettate, create e testate in un ambiente di sviluppo locale e debbano essere distribuite in un ambiente di produzione dopo che è pronta per il rilascio. Questa serie di esercitazioni illustra in dettaglio il processo di distribuzione.
+> Le applicazioni Web ASP.NET sono in genere progettate, create e testate in un ambiente di sviluppo locale e devono essere distribuite in un ambiente di produzione quando è pronto per il rilascio. Questa serie di esercitazioni descrive il processo di distribuzione.
 
 - [Opzioni di hosting ASP.NET (C#)](asp-net-hosting-options-cs.md)
 - [Determinazione dei file da distribuire (C#)](determining-what-files-need-to-be-deployed-cs.md)

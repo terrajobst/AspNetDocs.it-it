@@ -2,22 +2,22 @@
 uid: web-forms/videos/how-do-i/index
 title: Procedure relative | Microsoft Docs
 author: rick-anderson
-description: Come eseguire un'ampia gamma di attività comuni.
+description: Come eseguire una serie di attività comuni.
 ms.author: riande
 ms.date: 10/05/2011
 ms.assetid: 27591afa-3c14-47e6-8323-573f8f7aa862
 msc.legacyurl: /web-forms/videos/how-do-i
 msc.type: chapter
 ms.openlocfilehash: 12c988e64c5b724e04b6fc5f8eddc6a181764e1d
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65114915"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78639986"
 ---
 # <a name="how-do-i"></a>Procedure relative
 
-> Come eseguire un'ampia gamma di attività comuni.
+> Come eseguire una serie di attività comuni.
 
 - [Suggerimenti e consigli dagli esperti](how-do-i-learn-the-tips-and-tricks-of-experts.md)
 - [Creare un sito multilingua con la localizzazione](how-do-i-create-a-multi-lingual-site-with-localization.md)
@@ -73,7 +73,7 @@ ms.locfileid: "65114915"
 - [Rilevare le funzionalità del browser nelle pagine Web ASP.NET](how-do-i-detect-browser-capabilities-in-aspnet-web-pages.md)
 - [Mappare un controllo server ASP.NET all'adattatore usato per eseguirne il rendering](how-do-i-map-an-aspnet-server-control-to-the-adaptor-used-to-render-it.md)
 - [Passare informazioni da una pagina all'altra tramite una stringa di query](how-do-i-pass-information-from-one-page-to-another-using-a-query-string.md)
-- [Usare aspnet\_merge.exe Utilità agli assembly di tipo Merge](how-do-i-use-the-aspnet_mergeexe-utility-to-merge-assemblies.md)
+- [Utilizzare l'utilità ASPNET\_merge. exe per unire assembly](how-do-i-use-the-aspnet_mergeexe-utility-to-merge-assemblies.md)
 - [Implementare un postback tra pagine in ASP.NET](how-do-i-implement-a-cross-page-postback-in-aspnet.md)
 - [Aggiungere controlli a una pagina Web ASP.NET a livello di codice](how-do-i-add-controls-to-an-aspnet-web-page-programmatically.md)
 - [Usare un campo nascosto per archiviare e modificare informazioni sul lato client](how-do-i-use-a-hidden-field-to-store-and-manipulate-client-side-information.md)

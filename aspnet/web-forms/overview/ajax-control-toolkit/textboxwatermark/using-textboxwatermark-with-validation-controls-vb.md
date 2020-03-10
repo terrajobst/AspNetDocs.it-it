@@ -9,11 +9,11 @@ ms.assetid: e6c2cb98-f745-4bc8-973a-813879c8a891
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/textboxwatermark/using-textboxwatermark-with-validation-controls-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 141cae26c9e52be510e2a5a8f816cbac977dcf3d
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74597254"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78627043"
 ---
 # <a name="using-textboxwatermark-with-validation-controls-vb"></a>Uso di TextBoxWatermark con i controlli di convalida (VB)
 
@@ -23,7 +23,7 @@ di [Christian Wenz](https://github.com/wenz)
 
 > Il controllo TextBoxWatermark in AJAX Control Toolkit estende una casella di testo in modo che un testo venga visualizzato all'interno della casella. Quando un utente fa clic sulla casella, viene svuotato. Se l'utente lascia la casella senza immettere il testo, il testo precompilato viene nuovamente visualizzato. Questo potrebbe essere in conflitto con i controlli di convalida di ASP.NET nella stessa pagina, ma questi problemi possono essere superati.
 
-## <a name="overview"></a>Panoramica di
+## <a name="overview"></a>Panoramica
 
 Il controllo `TextBoxWatermark` in AJAX Control Toolkit estende una casella di testo in modo che un testo venga visualizzato all'interno della casella. Quando un utente fa clic sulla casella, viene svuotato. Se l'utente lascia la casella senza immettere il testo, il testo precompilato viene nuovamente visualizzato. Questo potrebbe essere in conflitto con i controlli di convalida di ASP.NET nella stessa pagina, ma questi problemi possono essere superati.
 

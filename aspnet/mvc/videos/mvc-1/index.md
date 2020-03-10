@@ -9,11 +9,11 @@ ms.assetid: a780d06b-36cd-410a-b95a-b6b935b5a7fa
 msc.legacyurl: /mvc/videos/mvc-1
 msc.type: chapter
 ms.openlocfilehash: abfd0d416e93adb6c691e5268c919e8b8b8f42d0
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65120609"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78537604"
 ---
 # <a name="aspnet-mvc-1"></a>ASP.NET MVC 1
 
@@ -21,31 +21,31 @@ ms.locfileid: "65120609"
 
 - [ASP.NET MVC Storefront](aspnet-mvc-storefront/index.md)
 
-    - [ASP.NET MVC StoreFront-parte 1: Panoramica e discussione dell'architettura](aspnet-mvc-storefront/aspnet-mvc-storefront-part-1-architectural-discussion-and-overview.md)
-    - [ASP.NET MVC StoreFront-parte 2: Schema repository](aspnet-mvc-storefront/aspnet-mvc-storefront-part-2-the-repository-pattern.md)
-    - [ASP.NET MVC StoreFront-parte 3: Pipe e filtri](aspnet-mvc-storefront/aspnet-mvc-storefront-part-3-pipes-and-filters.md)
-    - [ASP.NET MVC StoreFront-parte 4: Spike LINQ To Sql](aspnet-mvc-storefront/aspnet-mvc-storefront-part-4-linq-to-sql-spike.md)
-    - [ASP.NET MVC StoreFront-parte 5: Globalization](aspnet-mvc-storefront/aspnet-mvc-storefront-part-5-globalization.md)
-    - [ASP.NET MVC StoreFront-parte 6: Completamento del Repository e le attività iniziali dell'interfaccia utente](aspnet-mvc-storefront/aspnet-mvc-storefront-part-6-finishing-the-repository-and-initial-ui-work.md)
-    - [ASP.NET MVC StoreFront-parte 7: Routing e lavoro dell'interfaccia utente](aspnet-mvc-storefront/aspnet-mvc-storefront-part-7-routing-and-ui-work.md)
-    - [ASP.NET MVC StoreFront-parte 8: Test controller, iterazione 1 completata](aspnet-mvc-storefront/aspnet-mvc-storefront-part-8-testing-controllers-iteration-1-complete.md)
-    - [ASP.NET MVC StoreFront-parte 9: Carrello della spesa](aspnet-mvc-storefront/aspnet-mvc-storefront-part-9-the-shopping-cart.md)
-    - [ASP.NET MVC StoreFront-parte 10: Shopping Cart refactoring e autorizzazione](aspnet-mvc-storefront/aspnet-mvc-storefront-part-10-shopping-cart-refactor-and-authorization.md)
-    - [ASP.NET MVC StoreFront-parte 11: Associazione di carrello della spesa e l'uso di componenti](aspnet-mvc-storefront/aspnet-mvc-storefront-part-11-hooking-up-the-shopping-cart-and-using-components.md)
-    - [ASP.NET MVC StoreFront-parte 12: Il comportamento fittizio](aspnet-mvc-storefront/aspnet-mvc-storefront-part-12-mocking.md)
-    - [ASP.NET MVC StoreFront-parte 13: Inserimento di dipendenze](aspnet-mvc-storefront/aspnet-mvc-storefront-part-13-dependency-injection.md)
-    - [ASP.NET MVC StoreFront-parte 14: Interazione Rich Client](aspnet-mvc-storefront/aspnet-mvc-storefront-part-14-rich-client-interaction.md)
-    - [ASP.NET MVC StoreFront-parte 15: Revisione del codice pubblica](aspnet-mvc-storefront/aspnet-mvc-storefront-part-15-public-code-review.md)
-    - [ASP.NET MVC StoreFront-parte 16: Modifica dell'appartenenza con OpenID](aspnet-mvc-storefront/aspnet-mvc-storefront-part-16-membership-redo-with-openid.md)
-    - [ASP.NET MVC StoreFront-parte 17: Completamento della transazione con Jeff Atwood](aspnet-mvc-storefront/aspnet-mvc-storefront-part-17-checkout-with-jeff-atwood.md)
-    - [ASP.NET MVC StoreFront-parte 18: Esperienza di creazione](aspnet-mvc-storefront/aspnet-mvc-storefront-part-18-creating-an-experience.md)
-    - [ASP.NET MVC StoreFront-parte 19: Elaborazione degli ordini con flusso di lavoro di Windows](aspnet-mvc-storefront/aspnet-mvc-storefront-part-19-processing-orders-with-windows-workflow.md)
-    - [ASP.NET MVC StoreFront-parte 19a: Windows Workflow Followup](aspnet-mvc-storefront/aspnet-mvc-storefront-part-19a-windows-workflow-followup.md)
-    - [ASP.NET MVC StoreFront-parte 20: Logging](aspnet-mvc-storefront/aspnet-mvc-storefront-part-20-logging.md)
-    - [ASP.NET MVC StoreFront-parte 21: Gestore di ordini e personalizzazione](aspnet-mvc-storefront/aspnet-mvc-storefront-part-21-order-manager-and-personalization.md)
-    - [ASP.NET MVC StoreFront-parte 22: Ristrutturazione, reindirizzamento e PayPal](aspnet-mvc-storefront/aspnet-mvc-storefront-part-22-restructuring-rerouting-and-paypal.md)
-    - [ASP.NET MVC StoreFront-parte 23: Introduzione a Domain-Driven Design](aspnet-mvc-storefront/aspnet-mvc-storefront-part-23-getting-started-with-domain-driven-design.md)
-    - [ASP.NET MVC StoreFront-parte 24: Fine](aspnet-mvc-storefront/aspnet-mvc-storefront-part-24-finis.md)
+    - [ASP.NET MVC Storefront - Parte 1: panoramica e discussione dell'architettura](aspnet-mvc-storefront/aspnet-mvc-storefront-part-1-architectural-discussion-and-overview.md)
+    - [ASP.NET MVC Storefront - Parte 2: modello di Repository](aspnet-mvc-storefront/aspnet-mvc-storefront-part-2-the-repository-pattern.md)
+    - [ASP.NET MVC Storefront - Parte 3: pipe e filtri](aspnet-mvc-storefront/aspnet-mvc-storefront-part-3-pipes-and-filters.md)
+    - [ASP.NET MVC Storefront - Parte 4: spike Linq To Sql](aspnet-mvc-storefront/aspnet-mvc-storefront-part-4-linq-to-sql-spike.md)
+    - [ASP.NET MVC Storefront - Parte 5: globalizzazione](aspnet-mvc-storefront/aspnet-mvc-storefront-part-5-globalization.md)
+    - [ASP.NET MVC Storefront - Parte 6: completamento del repository e operazioni iniziali sull'interfaccia utente](aspnet-mvc-storefront/aspnet-mvc-storefront-part-6-finishing-the-repository-and-initial-ui-work.md)
+    - [ASP.NET MVC Storefront - Parte 7: routing e operazioni sull'interfaccia utente](aspnet-mvc-storefront/aspnet-mvc-storefront-part-7-routing-and-ui-work.md)
+    - [ASP.NET MVC Storefront - Parte 8: test dei controller, iterazione 1 completata](aspnet-mvc-storefront/aspnet-mvc-storefront-part-8-testing-controllers-iteration-1-complete.md)
+    - [ASP.NET MVC Storefront - Parte 9: carrello](aspnet-mvc-storefront/aspnet-mvc-storefront-part-9-the-shopping-cart.md)
+    - [ASP.NET MVC Storefront - Parte 10: refactoring e autorizzazione del carrello](aspnet-mvc-storefront/aspnet-mvc-storefront-part-10-shopping-cart-refactor-and-authorization.md)
+    - [ASP.NET MVC Storefront - Parte 11: associazione del carrello e uso dei componenti](aspnet-mvc-storefront/aspnet-mvc-storefront-part-11-hooking-up-the-shopping-cart-and-using-components.md)
+    - [ASP.NET MVC Storefront - Parte 12: comportamento fittizio](aspnet-mvc-storefront/aspnet-mvc-storefront-part-12-mocking.md)
+    - [ASP.NET MVC Storefront - Parte 13: inserimento delle dipendenze](aspnet-mvc-storefront/aspnet-mvc-storefront-part-13-dependency-injection.md)
+    - [ASP.NET MVC Storefront - Parte 14: interazione rich client](aspnet-mvc-storefront/aspnet-mvc-storefront-part-14-rich-client-interaction.md)
+    - [ASP.NET MVC Storefront - Parte 15: revisione del codice pubblica](aspnet-mvc-storefront/aspnet-mvc-storefront-part-15-public-code-review.md)
+    - [ASP.NET MVC Storefront - Parte 16: modifica dell'appartenenza con OpenID](aspnet-mvc-storefront/aspnet-mvc-storefront-part-16-membership-redo-with-openid.md)
+    - [ASP.NET MVC Storefront - Parte 17: completamento della transazione con Jeff Atwood](aspnet-mvc-storefront/aspnet-mvc-storefront-part-17-checkout-with-jeff-atwood.md)
+    - [ASP.NET MVC Storefront - Parte 18: creazione dell'esperienza](aspnet-mvc-storefront/aspnet-mvc-storefront-part-18-creating-an-experience.md)
+    - [ASP.NET MVC Storefront - Parte 19: elaborazione degli ordini con il flusso di lavoro di Windows](aspnet-mvc-storefront/aspnet-mvc-storefront-part-19-processing-orders-with-windows-workflow.md)
+    - [ASP.NET MVC Storefront - Parte 19a: completamento del flusso di lavoro di Windows](aspnet-mvc-storefront/aspnet-mvc-storefront-part-19a-windows-workflow-followup.md)
+    - [ASP.NET MVC Storefront - Parte 20: registrazione](aspnet-mvc-storefront/aspnet-mvc-storefront-part-20-logging.md)
+    - [ASP.NET MVC Storefront - Parte 21: gestore degli ordini e personalizzazione](aspnet-mvc-storefront/aspnet-mvc-storefront-part-21-order-manager-and-personalization.md)
+    - [ASP.NET MVC Storefront - Parte 22: ristrutturazione, reindirizzamento e PayPal](aspnet-mvc-storefront/aspnet-mvc-storefront-part-22-restructuring-rerouting-and-paypal.md)
+    - [ASP.NET MVC Storefront - Parte 23: introduzione alla progettazione basata su domini](aspnet-mvc-storefront/aspnet-mvc-storefront-part-23-getting-started-with-domain-driven-design.md)
+    - [ASP.NET MVC Storefront - Parte 24: fine](aspnet-mvc-storefront/aspnet-mvc-storefront-part-24-finis.md)
 - [Discussioni](conference-presentations/index.md)
 
     - [Creazione di NerdDinner.com con Microsoft ASP.NET Model View Controller (MVC)](conference-presentations/creating-nerddinnercom-with-microsoft-aspnet-model-view-controller-mvc.md)

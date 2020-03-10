@@ -9,11 +9,11 @@ ms.assetid: 5bb4587f-5bcd-44f5-b368-3c1709162b35
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/displaying-a-table-of-database-data-vb
 msc.type: authoredcontent
 ms.openlocfilehash: f2e2489ac8455913f55c746dbe05b9fe8272285b
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74590780"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78543015"
 ---
 # <a name="displaying-a-table-of-database-data-vb"></a>Visualizzazione di una tabella di dati del database (VB)
 
@@ -31,12 +31,12 @@ Verrà visualizzato il set di record della tabella del database Movies. La tabel
 
 <a id="0.4_table01"></a>
 
-| **Nome colonna** | **Tipo di dati** | **Consenti valori null** |
+| **Nome colonna** | **Tipo di dati** | **Consenti valori NULL** |
 | --- | --- | --- |
-| Id | Int | Falso |
-| Titolo | Nvarchar (200) | Falso |
-| Direttore | NVarchar (50) | Falso |
-| DateReleased | DateTime | Falso |
+| Id | Int | False |
+| Titolo | Nvarchar(200) | False |
+| Responsabile | NVarchar(50) | False |
+| DateReleased | DateTime | False |
 
 Per rappresentare la tabella Movies nell'applicazione ASP.NET MVC, è necessario creare una classe di modello. In questa esercitazione si userà Microsoft Entity Framework per creare le classi del modello.
 
@@ -53,7 +53,7 @@ Per avviare la procedura guidata Entity Data Model, attenersi alla procedura seg
 Dopo aver fatto clic sul pulsante Aggiungi, viene visualizzata la procedura guidata Entity Data Model (vedere la figura 1). Per completare la procedura guidata, attenersi alla procedura seguente:
 
 1. Nel passaggio **Scegli contenuto Model** selezionare l'opzione **genera da database** .
-2. Nel passaggio **scegliere la connessione dati** usare la connessione dati *MoviesDB. MDF* e il nome *MoviesDBEntities* per le impostazioni di connessione. Fare clic sul pulsante **Avanti** .
+2. Nel passaggio **scegliere la connessione dati** usare la connessione dati *MoviesDB. MDF* e il nome *MoviesDBEntities* per le impostazioni di connessione. Fare clic sul pulsante **Next** (Avanti).
 3. Nel passaggio **Seleziona oggetti di database** espandere il nodo tabelle e selezionare la tabella Movies. Immettere i *modelli* dello spazio dei nomi e fare clic sul pulsante **fine** .
 
 [![la creazione di classi LINQ to SQL](displaying-a-table-of-database-data-vb/_static/image1.jpg)](displaying-a-table-of-database-data-vb/_static/image1.png)

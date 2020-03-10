@@ -9,11 +9,11 @@ ms.assetid: 9ef2c4f1-a305-4e0a-9fb8-bfbd9ef331d9
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc4/adding-a-new-field-to-the-movie-model-and-table
 msc.type: authoredcontent
 ms.openlocfilehash: d966b95163f64b20a17d2327a12c5d6c44a4a66b
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457700"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78615087"
 ---
 # <a name="adding-a-new-field-to-the-movie-model-and-table"></a>Aggiunta di un nuovo campo al modello di filmato e alla tabella
 
@@ -156,7 +156,7 @@ Fare clic sul collegamento **Crea nuovo** per aggiungere un nuovo film. Si noti 
 
 ![7_CreateRioII](adding-a-new-field-to-the-movie-model-and-table/_static/image14.png)
 
-Fare clic su **Crea**. Il nuovo film, incluso il rating, viene ora visualizzato nell'elenco dei film:
+Scegliere **Crea**. Il nuovo film, incluso il rating, viene ora visualizzato nell'elenco dei film:
 
 ![7_ourNewMovie_SM](adding-a-new-field-to-the-movie-model-and-table/_static/image15.png)
 

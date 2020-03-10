@@ -1,25 +1,25 @@
 ---
 uid: web-forms/videos/authentication/add-custom-data-to-the-authentication-method
-title: Aggiungere dati personalizzati per il metodo di autenticazione | Microsoft Docs
+title: Aggiungere dati personalizzati al metodo di autenticazione | Microsoft Docs
 author: JoeStagner
-description: Joe Stagner continua l'esplorazione di autenticazione ASP.NET tramite la configurazione del metodo di autenticazione per aggiungere dati personalizzati per il ticket di autenticazione...
+description: Joe Stagner spiega continuerà l'esplorazione dell'autenticazione di ASP.NET configurando il metodo di autenticazione per aggiungere dati personalizzati al ticket di autenticazione...
 ms.author: riande
 ms.date: 07/16/2008
 ms.assetid: 940bdecc-ae0f-448f-a189-405efa614049
 msc.legacyurl: /web-forms/videos/authentication/add-custom-data-to-the-authentication-method
 msc.type: video
 ms.openlocfilehash: 29326c8d6831456b15ba9485be40f8beb441b125
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59381510"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78638803"
 ---
 # <a name="add-custom-data-to-the-authentication-method"></a>Aggiungere dati personalizzati al metodo di autenticazione
 
-da [Joe Stagner](https://github.com/JoeStagner)
+di [Joe Stagner spiega](https://github.com/JoeStagner)
 
-Joe Stagner continua l'esplorazione di autenticazione ASP.NET tramite la configurazione del metodo di autenticazione per aggiungere dati personalizzati per il ticket di autenticazione utilizzato da ASP.NET. Per altre informazioni su questa demo, si trova un'esercitazione [qui](../../overview/older-versions-security/introduction/forms-authentication-configuration-and-advanced-topics-vb.md).
+Joe Stagner spiega continuerà l'esplorazione dell'autenticazione di ASP.NET configurando il metodo di autenticazione per aggiungere dati personalizzati al ticket di autenticazione usato da ASP.NET. Per altre informazioni su questa demo, vedere [qui](../../overview/older-versions-security/introduction/forms-authentication-configuration-and-advanced-topics-vb.md)un'esercitazione.
 
 [&#9654;Guarda il video (14 minuti)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/add-custom-data-to-the-authentication-method)
 

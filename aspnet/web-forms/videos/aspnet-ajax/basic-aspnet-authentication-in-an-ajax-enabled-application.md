@@ -1,27 +1,27 @@
 ---
 uid: web-forms/videos/aspnet-ajax/basic-aspnet-authentication-in-an-ajax-enabled-application
-title: Applicazione attivata l'autenticazione ASP.NET di base in AJAX | Microsoft Docs
+title: Autenticazione ASP.NET di base in un'applicazione abilitata per AJAX | Microsoft Docs
 author: JoeStagner
-description: In questo video illustrerò l'autenticazione basata su autenticazione nell'applicazione web attiva AJAX utilizzando forme base di ASP.NET.
+description: In questo video illustrerò l'autenticazione nell'applicazione Web AJAX Enable usando l'autenticazione basata su form di base di ASP.NET.
 ms.author: riande
 ms.date: 04/10/2008
 ms.assetid: 782eca6d-51d6-4c8e-b2ea-59dfa567740a
 msc.legacyurl: /web-forms/videos/aspnet-ajax/basic-aspnet-authentication-in-an-ajax-enabled-application
 msc.type: video
 ms.openlocfilehash: 5b723e97a0faac1c2b1dffb634f530d9a3cfc59c
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59404247"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78630193"
 ---
 # <a name="basic-aspnet-authentication-in-an-ajax-enabled-application"></a>Autenticazione ASP.NET di base in un'applicazione compatibile con AJAX
 
-da [Joe Stagner](https://github.com/JoeStagner)
+di [Joe Stagner spiega](https://github.com/JoeStagner)
 
-In questo video illustrerò l'autenticazione basata su autenticazione nell'applicazione web attiva AJAX utilizzando forme base di ASP.NET.
+In questo video illustrerò l'autenticazione nell'applicazione Web AJAX Enable usando l'autenticazione basata su form di base di ASP.NET.
 
-[&#9654;Guarda il video (minuti 31)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/basic-aspnet-authentication-in-an-ajax-enabled-application)
+[&#9654;Guarda il video (31 minuti)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/basic-aspnet-authentication-in-an-ajax-enabled-application)
 
 > [!div class="step-by-step"]
 > [Precedente](implement-infinite-data-patterns-in-ajax.md)

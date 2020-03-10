@@ -9,11 +9,11 @@ ms.assetid: 3f42edd9-c5b8-4712-9055-970f7d38e350
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/improving-the-details-and-delete-methods
 msc.type: authoredcontent
 ms.openlocfilehash: 54d7be8fe1bff604ae9c9e9914d7c6426ab85c1c
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457505"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78615311"
 ---
 # <a name="improving-the-details-and-delete-methods-c"></a>Miglioramento dei dettagli e dei metodi di eliminazione (C#)
 

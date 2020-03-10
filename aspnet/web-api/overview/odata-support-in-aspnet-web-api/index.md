@@ -1,8 +1,8 @@
 ---
 uid: web-api/overview/odata-support-in-aspnet-web-api/index
-title: "OData nell'API Web ASP.NET: ASP.NET 4.x"
+title: OData in API Web ASP.NET-ASP.NET 4. x
 author: rick-anderson
-description: Come creare gli endpoint OData nell'API Web ASP.NET per ASP.NET 4.x
+description: Come creare endpoint OData in API Web ASP.NET per ASP.NET 4. x
 ms.author: riande
 ms.date: 08/17/2012
 ms.custom: seoapril2019
@@ -10,15 +10,15 @@ ms.assetid: 9151c605-e911-4f24-95b5-ca310b105abf
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api
 msc.type: chapter
 ms.openlocfilehash: 6d84b458a02b63b24334b137afdb5b710d91c5ee
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65133163"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78598763"
 ---
-# <a name="odata-in-aspnet-web-api"></a>OData nell'API Web ASP.NET
+# <a name="odata-in-aspnet-web-api"></a>OData in API Web ASP.NET
 
-> Come creare gli endpoint OData nell'API Web ASP.NET per ASP.NET 4.x. OData è un protocollo di accesso di dati per il web. Fornisce un metodo uniforme per eseguire query e modificare set di dati. API Web supporta la versione 3 e versione 4 del protocollo OData.
+> Come creare endpoint OData in API Web ASP.NET per ASP.NET 4. x. OData è un protocollo di accesso ai dati per il Web. Consente di eseguire query e modificare i set di dati in modo uniforme. L'API Web supporta sia la versione 3 che la versione 4 del protocollo OData.
 
 - [OData v4](odata-v4/index.md)
 

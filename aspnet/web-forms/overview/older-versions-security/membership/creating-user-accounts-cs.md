@@ -9,11 +9,11 @@ ms.assetid: f175278c-6079-4d91-b9b4-2493ed43d9ec
 msc.legacyurl: /web-forms/overview/older-versions-security/membership/creating-user-accounts-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 955592320e7d36c7ae3b9c03a361bee2183f1776
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74625238"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78631978"
 ---
 # <a name="creating-user-accounts-c"></a>Creazione di account utente (C#)
 
@@ -29,7 +29,7 @@ di [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 Oltre ad apprendere come creare nuovi account utente, sarà necessario aggiornare anche il sito Web demo creato per l'esercitazione *<a id="_msoanchor_2"></a>[Panoramica dell'autenticazione basata su form](../introduction/an-overview-of-forms-authentication-cs.md)* tutorial e quindi migliorato nell'esercitazione relativa alla configurazione dell' *<a id="https://www.asp.net/learn/security/tutorial-03-cs.aspx"></a>autenticazione basata su form e agli argomenti avanzati*. L'applicazione Web demo include una pagina di accesso che convalida le credenziali degli utenti da coppie di nome utente/password hardcoded. Inoltre, `Global.asax` include codice che crea oggetti `IPrincipal` e `IIdentity` personalizzati per gli utenti autenticati. La pagina di accesso viene aggiornata per convalidare le credenziali degli utenti rispetto al Framework di appartenenza e rimuovere l'entità personalizzata e la logica di identità.
 
-Iniziamo!
+Ecco come procedere.
 
 ## <a name="the-forms-authentication-and-membership-checklist"></a>Elenco di controllo per l'autenticazione basata su form e l'appartenenza
 
@@ -146,7 +146,7 @@ Il metodo `CreateUser` dispone di quattro overload, ognuno dei quali accetta un 
 
 Questi quattro overload differiscono per la quantità di informazioni raccolte. Il primo overload, ad esempio, richiede solo il nome utente e la password per il nuovo account utente, mentre il secondo richiede anche l'indirizzo di posta elettronica dell'utente.
 
-Questi overload sono disponibili perché le informazioni necessarie per creare un nuovo account utente dipendono dalle impostazioni di configurazione del provider di appartenenze. Nell'esercitazione *<a id="_msoanchor_8"></a>[creazione dello schema di appartenenza in SQL Server](creating-the-membership-schema-in-sql-server-cs.md)* è stato esaminato come specificare le impostazioni di configurazione del provider di appartenenza in `Web.config`. Nella tabella 2 è incluso un elenco completo delle impostazioni di configurazione.
+Questi overload sono disponibili perché le informazioni necessarie per creare un nuovo account utente dipendono dalle impostazioni di configurazione del provider di appartenenze. Nella esercitazione *<a id="_msoanchor_8"></a>[creazione dello schema di appartenenza in SQL Server](creating-the-membership-schema-in-sql-server-cs.md)* è stato esaminato come specificare le impostazioni di configurazione del provider di appartenenza in `Web.config`. Nella tabella 2 è incluso un elenco completo delle impostazioni di configurazione.
 
 Una di queste impostazioni di configurazione del provider di appartenenze che influisca sui `CreateUser` overload che possono essere usati è l'impostazione `requiresQuestionAndAnswer`. Se `requiresQuestionAndAnswer` è impostato su `true` (impostazione predefinita), quando si crea un nuovo account utente è necessario specificare una domanda e una risposta di sicurezza. Queste informazioni vengono usate in un secondo momento se l'utente deve reimpostare o modificare la password. In particolare, in quel momento vengono visualizzate le domande di sicurezza e devono immettere la risposta corretta per poter reimpostare o modificare la password. Di conseguenza, se la `requiresQuestionAndAnswer` è impostata su `true` quindi la chiamata di uno dei primi due overload `CreateUser` genera un'eccezione perché la domanda e la risposta di sicurezza risultano mancanti. Poiché l'applicazione è attualmente configurata in modo da richiedere una domanda e una risposta di sicurezza, sarà necessario usare uno degli ultimi due overload quando si crea l'utente a livello di codice.
 
@@ -204,7 +204,7 @@ Dopo aver creato alcuni account utente, verificare che gli account siano stati c
 Mentre l'archivio utenti di appartenenza include ora le informazioni sull'account Bruce e Tito, è ancora necessario implementare la funzionalità che consente a Bruce o Tito di accedere al sito. Attualmente, `Login.aspx` convalida le credenziali dell'utente rispetto a un set hardcoded di coppie nome utente/password, che *non convalida le* credenziali fornite rispetto al framework delle appartenenze. Per visualizzare ora i nuovi account utente nel `aspnet_Users` e `aspnet_Membership` le tabelle dovranno essere sufficienti. Nell'esercitazione successiva, *<a id="_msoanchor_9"></a>[convalida delle credenziali utente rispetto all'archivio utenti di appartenenza](validating-user-credentials-against-the-membership-user-store-cs.md)* , la pagina di accesso verrà aggiornata in modo da convalidare l'archivio delle appartenenze.
 
 > [!NOTE]
-> Se non viene visualizzato alcun utente nel database di `SecurityTutorials.mdf`, è possibile che l'applicazione Web utilizzi il provider di appartenenze predefinito, `AspNetSqlMembershipProvider`, che usa il database di `ASPNETDB.mdf` come archivio utente. Per determinare se questo è il problema, fare clic sul pulsante Aggiorna nel Esplora soluzioni. Questo è il problema se è stato aggiunto un database denominato `ASPNETDB.mdf` alla cartella `App_Data`. Tornare al passaggio 4 dell'esercitazione *<a id="_msoanchor_10"></a>[creazione dello schema di appartenenza in SQL Server](creating-the-membership-schema-in-sql-server-cs.md)* per istruzioni su come configurare correttamente il provider di appartenenze.
+> Se non viene visualizzato alcun utente nel database di `SecurityTutorials.mdf`, è possibile che l'applicazione Web utilizzi il provider di appartenenze predefinito, `AspNetSqlMembershipProvider`, che usa il database di `ASPNETDB.mdf` come archivio utente. Per determinare se questo è il problema, fare clic sul pulsante Aggiorna nel Esplora soluzioni. Questo è il problema se è stato aggiunto un database denominato `ASPNETDB.mdf` alla cartella `App_Data`. Tornare al passaggio 4 della *<a id="_msoanchor_10"></a>[creazione dello schema di appartenenza in SQL Server](creating-the-membership-schema-in-sql-server-cs.md)* esercitazione per istruzioni su come configurare correttamente il provider di appartenenze.
 
 Nella maggior parte degli scenari di creazione di account utente, il visitatore viene presentato con alcune interfacce per immettere il nome utente, la password, la posta elettronica e altre informazioni essenziali, a quel punto viene creato un nuovo account. In questo passaggio è stato illustrato come creare manualmente un'interfaccia e quindi come usare il metodo `Membership.CreateUser` per aggiungere a livello di codice il nuovo account utente in base agli input dell'utente. Il nostro codice, tuttavia, ha appena creato il nuovo account utente. Non ha eseguito alcuna azione di completamento, ad esempio l'accesso dell'utente al sito con l'account utente appena creato o l'invio di un messaggio di posta elettronica di conferma all'utente. Questi passaggi aggiuntivi richiedono codice aggiuntivo nel gestore dell'evento `Click` del pulsante.
 
@@ -310,7 +310,7 @@ Nella figura 15 viene illustrata una schermata di `CreatingUserAccounts.aspx` qu
 **Figura 15**: I nomi utente con spazi iniziali o finali non sono consentiti ([fare clic per visualizzare l'immagine con dimensioni complete](creating-user-accounts-cs/_static/image45.png))
 
 > [!NOTE]
-> Viene visualizzato un esempio di utilizzo del controllo dell'evento CreateUserWizard `CreatedUser` nell'esercitazione relativa all' *<a id="_msoanchor_11"></a>[archiviazione di informazioni aggiuntive sull'utente](storing-additional-user-information-cs.md)* .
+> Viene visualizzato un esempio di utilizzo dell'evento del controllo CreateUserWizard `CreatedUser` nell'esercitazione relativa all'esercitazione *<a id="_msoanchor_11"></a>[archiviazione di informazioni aggiuntive sull'utente](storing-additional-user-information-cs.md)* .
 
 ## <a name="summary"></a>Riepilogo
 

@@ -9,11 +9,11 @@ ms.assetid: 49d8a66c-3ea8-4087-839f-179d1d94512a
 msc.legacyurl: /web-forms/overview/data-access/editing-inserting-and-deleting-data/handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 2b9cdb5af6f33171b191d5a80473c7796eb098d9
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74589137"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78608388"
 ---
 # <a name="handling-bll--and-dal-level-exceptions-in-an-aspnet-page-c"></a>Gestione delle eccezioni a livello BLL e DAL in una pagina ASP.NET (C#)
 
@@ -35,7 +35,7 @@ Come illustrato nell' [esercitazione precedente](examining-the-events-associated
 
 Sono già stati esaminati gli eventi che si sono verificati durante il passaggio 1 e si è visto come possono essere usati per personalizzare i parametri di input o annullare l'operazione. In questa esercitazione verranno illustrati gli eventi che vengono attivati dopo il completamento dell'operazione. Con questi gestori di eventi di post-livello è possibile, tra le altre cose, determinare se si è verificata un'eccezione durante l'operazione e gestirla normalmente, visualizzando un messaggio di errore descrittivo e informativo sullo schermo anziché l'impostazione predefinita per il ASP.NET standard pagina eccezione.
 
-Per illustrare l'uso di questi eventi di post-livello, è possibile creare una pagina in cui sono elencati i prodotti in un GridView modificabile. Quando si aggiorna un prodotto, se viene generata un'eccezione, nella pagina ASP.NET verrà visualizzato un breve messaggio sopra il GridView che spiega che si è verificato un problema. Iniziamo!
+Per illustrare l'uso di questi eventi di post-livello, è possibile creare una pagina in cui sono elencati i prodotti in un GridView modificabile. Quando si aggiorna un prodotto, se viene generata un'eccezione, nella pagina ASP.NET verrà visualizzato un breve messaggio sopra il GridView che spiega che si è verificato un problema. Ecco come procedere.
 
 ## <a name="step-1-creating-an-editable-gridview-of-products"></a>Passaggio 1: creazione di un GridView modificabile di prodotti
 

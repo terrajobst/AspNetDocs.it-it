@@ -1,23 +1,23 @@
 ---
 uid: mvc/overview/getting-started/database-first-development/index
-title: Introduzione a Entity Framework 6 Database prima di tutto con MVC 5 | Microsoft Docs
+title: Introduzione con Entity Framework 6 Database First usando MVC 5 | Microsoft Docs
 author: rick-anderson
-description: Questa serie illustra come usare lo sviluppo di Database First per la creazione di un'applicazione MVC 5 con Entity Framework
+description: Questa serie Mostra come usare Database First sviluppo per la creazione di un'applicazione MVC 5 con Entity Framework
 ms.author: riande
 ms.date: 09/17/2013
 ms.assetid: 3437215a-c4ba-46ed-8378-d61c79c9d38c
 msc.legacyurl: /mvc/overview/getting-started/database-first-development
 msc.type: chapter
 ms.openlocfilehash: 0b47981d3e28458b702e73988b8dc5cd7f0e0afa
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65121208"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78616186"
 ---
-# <a name="getting-started-with-entity-framework-6-database-first-using-mvc-5"></a>Introduzione a Entity Framework 6 Database prima di tutto con MVC 5
+# <a name="getting-started-with-entity-framework-6-database-first-using-mvc-5"></a>Introduzione con Entity Framework 6 Database First usando MVC 5
 
-> Questa serie illustra come usare lo sviluppo di Database First per la creazione di un'applicazione MVC 5 con Entity Framework
+> Questa serie Mostra come usare Database First sviluppo per la creazione di un'applicazione MVC 5 con Entity Framework
 
 - [Introduzione a Database First di Entity Framework 6 con MVC 5](setting-up-database.md)
 - [Creazione dell'applicazione Web e dei modelli di dati](creating-the-web-application.md)

@@ -9,11 +9,11 @@ ms.assetid: 041854a5-ea8c-4de0-82f1-121ba6cb2893
 msc.legacyurl: /web-forms/overview/older-versions-security/admin/unlocking-and-approving-user-accounts-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 4a7474676b8f502c583e226678de2b275e0ea3c7
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74590560"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78637522"
 ---
 # <a name="unlocking-and-approving-user-accounts-vb"></a>Sblocco e approvazione degli account utente (VB)
 

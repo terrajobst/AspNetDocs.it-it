@@ -1,146 +1,146 @@
 ---
 uid: aspnet/web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio
-title: Programmazione di ASP.NET Web Pages (Razor) con Visual Studio | Microsoft Docs
+title: Programmazione Pagine Web ASP.NET (Razor) con Visual Studio | Microsoft Docs
 author: Rick-Anderson
-description: In questa appendice spiega come è possibile usare Visual Studio 2010 o Visual Web Developer 2010 Express al programma ASP.NET Web Pages con sintassi Razor.
+description: In questa appendice viene illustrato come è possibile utilizzare Visual Studio 2010 o Visual Web Developer 2010 Express per programmare Pagine Web ASP.NET con il sintassi Razor.
 ms.author: riande
 ms.date: 02/13/2014
 ms.assetid: 0acfec5a-48f2-4766-a801-a0f426966f0a
 msc.legacyurl: /web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio
 msc.type: authoredcontent
 ms.openlocfilehash: 1a76098779d05912bf7bdf2de5fdce024770752c
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65134616"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78633511"
 ---
-# <a name="programming-aspnet-web-pages-razor-using-visual-studio"></a>Programmazione di ASP.NET Web Pages (Razor) con Visual Studio
+# <a name="programming-aspnet-web-pages-razor-using-visual-studio"></a>Programmazione Pagine Web ASP.NET (Razor) con Visual Studio
 
-da [Tom FitzMacken](https://github.com/tfitzmac)
+di [Tom FitzMacken](https://github.com/tfitzmac)
 
-> Questo articolo illustra come è possibile usare Visual Studio o Visual Web Developer Express al programma siti Web di ASP.NET Web Pages (Razor).
+> Questo articolo illustra come è possibile usare Visual Studio o Visual Web Developer Express per i siti Web di programma Pagine Web ASP.NET (Razor).
 >
 > Contenuto dell'esercitazione
 >
-> - Che cosa è necessario installare (se qualsiasi elemento) per l'utilizzo con ASP.NET Web Pages nella versione di Visual Studio.
-> - Come aggiungere il supporto per ASP.NET Web Pages a Visual Web Developer 2010 Express.
-> - Come usare le funzionalità in Visual Studio per lavorare con le pagine Razor di ASP.NET, tra cui IntelliSense e il debugger.
+> - Cosa è necessario installare (se necessario) per lavorare con Pagine Web ASP.NET nella versione di Visual Studio.
+> - Come aggiungere il supporto per Pagine Web ASP.NET a Visual Web Developer 2010 Express.
+> - Come usare le funzionalità di Visual Studio per lavorare con le pagine Razor di ASP.NET, tra cui IntelliSense e il debugger.
 >
 >
-> ## <a name="software-versions-used-in-the-tutorial"></a>Versioni del software utilizzate nell'esercitazione
+> ## <a name="software-versions-used-in-the-tutorial"></a>Versioni del software usate nell'esercitazione
 >
 >
-> - ASP.NET Web Pages (Razor) 3
+> - Pagine Web ASP.NET (Razor) 3
 > - Visual Studio 2013
 > - WebMatrix 3
 >
 >
-> Questa esercitazione funziona anche con ASP.NET Web Pages 2, Visual Studio 2012, Visual Studio 2010 e WebMatrix 2.
+> Questa esercitazione funziona anche con Pagine Web ASP.NET 2, Visual Studio 2012, Visual Studio 2010 e WebMatrix 2.
 
-È possibile programmare ASP.NET Web pages con sintassi Razor usando WebMatrix o molti altri editor di codice. È inoltre possibile utilizzare Microsoft Visual Studio che è un ambiente completo di sviluppo integrato (IDE) che fornisce un potente set di strumenti per la creazione di molti tipi di applicazioni (non solo siti Web). Per usare le pagine Razor di ASP.NET, è possibile usare [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).
+È possibile programmare le pagine Web di ASP.NET con sintassi Razor usando WebMatrix o molti altri editor di codice. È anche possibile usare Microsoft Visual Studio che è un Integrated Development Environment completo (IDE) che fornisce un potente set di strumenti per la creazione di molti tipi di applicazioni (non solo siti Web). Per lavorare con ASP.NET Razor Pages, è possibile usare [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).
 
-Due funzionalità particolarmente utile fornite da Visual Studio per la programmazione con le pagine web ASP.NET Razor sono:
+Due funzionalità particolarmente utili fornite da Visual Studio per la programmazione con le pagine Web di ASP.NET Razor sono:
 
 - *IntelliSense*. La funzionalità IntelliSense incorporata in Visual Studio è più completa di IntelliSense in WebMatrix.
-- *Debugger*. Il debugger consente di risolvere i problemi del codice mediante l'arresto di un programma mentre è in esecuzione, esaminano le variabili e scorrere il codice riga per riga.
+- *Debugger*. Il debugger consente di risolvere i problemi del codice arrestando un programma mentre è in esecuzione, esaminando le variabili ed eseguendo il codice riga per riga.
 
-## <a name="using-visual-studio-with-different-versions-of-aspnet-web-pages"></a>Usare Visual Studio con versioni diverse delle pagine Web ASP.NET
+## <a name="using-visual-studio-with-different-versions-of-aspnet-web-pages"></a>Uso di Visual Studio con versioni diverse di Pagine Web ASP.NET
 
-Per sviluppare le app web ASP.NET in Visual Studio 2017, installare il **sviluppo ASP.NET e web** carico di lavoro.
+Per sviluppare app Web ASP.NET in Visual Studio 2017, installare il carico di lavoro **sviluppo di ASP.NET e Web** .
 
-Visual Studio 2012 e Visual Studio 2013 includono il supporto per ASP.NET Web Pages. (I pacchetti che sono necessari per supportare le pagine Web ASP.NET vengono installati quando si installa Visual Studio).
+Visual Studio 2012 e Visual Studio 2013 includono il supporto per Pagine Web ASP.NET. I pacchetti necessari per supportare Pagine Web ASP.NET vengono installati quando si installa Visual Studio.
 
-Visual Studio 2010 non include il supporto per impostazione predefinita per ASP.NET Web Pages. Per usare ASP.NET Web Pages con Visual Studio 2010, è necessario installare il pacchetto di ASP.NET MVC. Per ottenere ASP.NET Web Pages 2, si installa ASP.NET MVC 4.
+Per impostazione predefinita, in Visual Studio 2010 non è incluso il supporto per Pagine Web ASP.NET. Per usare Pagine Web ASP.NET con Visual Studio 2010, è necessario installare il pacchetto MVC ASP.NET. Per ottenere Pagine Web ASP.NET 2, installare ASP.NET MVC 4.
 
-La tabella seguente riepiloga il supporto per ASP.NET Web Pages in versioni diverse di Visual Studio.
+Nella tabella seguente viene riepilogato il supporto per Pagine Web ASP.NET in versioni diverse di Visual Studio.
 
 |  | Visual Studio 2010 | Visual Studio 2012 | Visual Studio 2013 |
 | --- | --- | --- | --- |
-| **ASP.NET Web Pages 2** | Installare ASP.NET MVC 4 | (Inclusi) | (Inclusi) |
-| **Pagine Web ASP.NET 3** |  | Aggiornamento ad ASP.NET Web Pages 3 tramite NuGet | (Inclusi) |
+| **Pagine Web ASP.NET 2** | Installare ASP.NET MVC 4 | Incluso | Incluso |
+| **Pagine Web ASP.NET 3** |  | Eseguire l'aggiornamento a Pagine Web ASP.NET 3 tramite NuGet | Incluso |
 
-Per lavorare con Visual Studio 2010, vedere [installazione del supporto per pagine Web ASP.NET in Visual Studio 2010](#vs2010support).
+Per lavorare con Visual Studio 2010, vedere [installazione del supporto per pagine Web ASP.NET in Visual studio 2010](#vs2010support).
 
-## <a name="launching-visual-studio-from-webmatrix"></a>Avviare Visual Studio da WebMatrix
+## <a name="launching-visual-studio-from-webmatrix"></a>Avvio di Visual Studio da WebMatrix
 
-Se si è iniziato un progetto in WebMatrix e tornare a Visual Studio, WebMatrix ti offre un pulsante per aprire facilmente il progetto in Visual Studio. È necessario disporre di Visual Studio installata nel computer di questo pulsante di abilitazione. L'immagine seguente mostra il pulsante in WebMatrix.
+Se è stato avviato un progetto in WebMatrix e si vuole passare a Visual Studio, WebMatrix fornisce un pulsante per aprire facilmente il progetto in Visual Studio. Per abilitare questo pulsante è necessario che Visual Studio sia installato nel computer. La figura seguente mostra il pulsante in WebMatrix.
 
-![Avviare Visual Studio](program-asp-net-web-pages-in-visual-studio/_static/image1.png)
+![avvia Visual Studio](program-asp-net-web-pages-in-visual-studio/_static/image1.png)
 
-Quando si fa clic sul pulsante, il progetto viene aperto in Visual Studio. È possibile passare alternativamente tra WebMatrix e Visual Studio senza problemi. Verrà informati se tutti i file sono stati modificati in altro ambiente e devono essere ricaricati per ottenere le modifiche più recenti.
+Quando si fa clic sul pulsante, il progetto viene aperto in Visual Studio. È possibile passare da WebMatrix a Visual Studio e viceversa senza problemi. Si riceverà una notifica se i file sono stati modificati nell'altro ambiente ed è necessario ricaricarli per ottenere le modifiche più recenti.
 
-## <a name="creating-aspnet-razor-site-in-visual-studio"></a>La creazione del sito ASP.NET Razor in Visual Studio
+## <a name="creating-aspnet-razor-site-in-visual-studio"></a>Creazione del sito Razor di ASP.NET in Visual Studio
 
-Per creare un sito Web di Razor di ASP.NET in Visual Studio:
+Per creare un sito Web ASP.NET Razor in Visual Studio:
 
 1. Aprire Visual Studio.
-2. Nel **File** menu, fare clic su **nuovo sito Web**.
+2. Scegliere **nuovo sito Web**dal menu **file** .
 
-    ![Crea nuovo sito web](program-asp-net-web-pages-in-visual-studio/_static/image2.png)
-3. Nel **nuovo sito Web** finestra di dialogo, selezionare la lingua da utilizzare (Visual c# o Visual Basic).
-4. Selezionare il **sito Web ASP.NET (Razor)** modello.
+    ![Crea nuovo sito Web](program-asp-net-web-pages-in-visual-studio/_static/image2.png)
+3. Nella finestra di dialogo **nuovo sito Web** selezionare la lingua da utilizzare (Visual C# o Visual Basic).
+4. Selezionare il modello di **sito Web ASP.NET (Razor)** .
 
     ![sito Razor](program-asp-net-web-pages-in-visual-studio/_static/image3.png)
 5. Fare clic su **OK**.
 
-Il nuovo progetto esiste e viene popolato con alcune pagine web predefiniti che consentono di iniziare.
+Il nuovo progetto esiste e viene popolato con alcune pagine Web predefinite che consentono di iniziare.
 
 ### <a name="using-intellisense"></a>Using IntelliSense
 
-Ora che è stato creato un sito, è possibile visualizzare il funzionamento di IntelliSense in Visual Studio.
+Ora che è stato creato un sito, è possibile vedere come funziona IntelliSense in Visual Studio.
 
-1. Nel sito Web appena creata, aprire il *cshtml* pagina.
-2. Dopo il `<h3>` tag nella pagina digitare `@ServerInfo.` (incluso il punto). Si noti come IntelliSense visualizza i metodi disponibili per il `ServerInfo` helper in un elenco a discesa.
+1. Nel sito Web appena creato aprire la pagina *default. cshtml* .
+2. Dopo i tag `<h3>` nella pagina digitare `@ServerInfo.` (incluso il punto). Si noti che IntelliSense Visualizza i metodi disponibili per l'helper `ServerInfo` in un elenco a discesa.
 
-    ![intellisense](program-asp-net-web-pages-in-visual-studio/_static/image4.png)
-3. Selezionare il `GetHtml` metodo dall'elenco e quindi premere INVIO. IntelliSense viene compilato automaticamente nel metodo. (Come con qualsiasi metodo in c#, è necessario aggiungere `()` caratteri dopo il metodo.) Il codice completo per il `GetHtml` metodo simile al seguente:
+    ![IntelliSense](program-asp-net-web-pages-in-visual-studio/_static/image4.png)
+3. Selezionare il metodo `GetHtml` dall'elenco e quindi premere INVIO. IntelliSense compila automaticamente il metodo. Come con qualsiasi metodo in C#, è necessario aggiungere `()` caratteri dopo il metodo. Il codice completo per il metodo `GetHtml` è simile all'esempio seguente:
 
     [!code-cshtml[Main](program-asp-net-web-pages-in-visual-studio/samples/sample1.cshtml)]
-4. Premere CTRL+F5 per eseguire la pagina. Questo è l'aspetto delle pagine quando visualizzata in un browser:
+4. Premere CTRL + F5 per eseguire la pagina. Questo è l'aspetto della pagina quando viene visualizzato in un browser:
 
     ![pagina predefinita nel browser](program-asp-net-web-pages-in-visual-studio/_static/image5.png)
 5. Chiudere il browser.
 
-### <a name="using-the-debugger"></a>Uso del Debugger
+### <a name="using-the-debugger"></a>Uso del debugger
 
-1. In cima il *default. cshtml* pagina, dopo la riga che inizia con `Page.Title`, aggiungere la riga di codice seguente:
+1. Nella parte superiore della pagina *default. cshtml* , dopo la riga che inizia con `Page.Title`, aggiungere la riga di codice seguente:
 
     [!code-csharp[Main](program-asp-net-web-pages-in-visual-studio/samples/sample2.cs)]
-2. Sul margine grigio dell'editor a sinistra del codice, fare clic accanto a questa nuova riga per aggiungere un *punto di interruzione*. Un punto di interruzione è un indicatore che indica al debugger di interrompere l'esecuzione del programma a questo punto, è possibile visualizzare ciò che accade.
+2. Nel margine grigio dell'editor a sinistra del codice, fare clic su Avanti accanto alla nuova riga per aggiungere un punto di *interruzione*. Un punto di interruzione è un indicatore che indica al debugger di arrestare l'esecuzione del programma in quel momento, in modo da poter vedere cosa accade.
 
     ![Imposta punto di interruzione](program-asp-net-web-pages-in-visual-studio/_static/image6.png)
-3. Rimuovere la chiamata ai `ServerInfo.GetHtml` metodo e aggiungere una chiamata al `@myTime` variabile al suo posto. Questa chiamata consente di visualizzare il valore di tempo corrente restituito dalla nuova riga di codice.
-4. Premere F5 per eseguirla nel debugger. La pagina si interrompe al punto di interruzione impostato. L'immagine seguente mostra la pagina aspetto nell'editor con il punto di interruzione (giallo).
+3. Rimuovere la chiamata al metodo `ServerInfo.GetHtml` e aggiungere una chiamata alla variabile `@myTime` al suo posto. Questa chiamata consente di visualizzare il valore dell'ora corrente restituito dalla nuova riga di codice.
+4. Premere F5 per eseguire la pagina nel debugger. La pagina viene arrestata in corrispondenza del punto di interruzione impostato. La figura seguente mostra l'aspetto della pagina nell'editor con il punto di interruzione (in giallo).
 
-    ![punto di interruzione di debug](program-asp-net-web-pages-in-visual-studio/_static/image7.png)
-5. Nella barra degli strumenti di Debug, scegliere il **Esegui istruzione** (o preme F11) per eseguire la riga successiva del codice. Ogni volta che si fa clic su questo pulsante, l'esecuzione si arriva alla riga successiva del codice.
+    ![punto di interruzione debug](program-asp-net-web-pages-in-visual-studio/_static/image7.png)
+5. Sulla barra degli strumenti Debug fare clic sul pulsante Esegui **istruzione** (o premere F11) per eseguire la riga di codice successiva. Ogni volta che si fa clic su questo pulsante, l'esecuzione viene spostata alla riga di codice successiva.
 
-    ![Eseguire l'istruzione pulsante](program-asp-net-web-pages-in-visual-studio/_static/image8.png)
-6. Esaminare il valore della `myTime` variabile posizionando il puntatore del mouse su di esso o esaminando i valori visualizzati nei **variabili locali** e **Stack di chiamate** windows. Visual Studio visualizza il valore della variabile.
+    ![Pulsante Esegui istruzione](program-asp-net-web-pages-in-visual-studio/_static/image8.png)
+6. Esaminare il valore della variabile `myTime` tenendo premuto il puntatore del mouse o controllando i valori visualizzati nelle finestre **variabili locali** e **stack di chiamate** . Visual Studio Visualizza il valore della variabile.
 
-    ![valore di ora Show](program-asp-net-web-pages-in-visual-studio/_static/image9.png)
-7. Dopo aver completato la variabile di analisi e l'avanzamento tramite codice, premere F5 per continuare l'esecuzione della pagina senza interruzione in corrispondenza di ogni riga. Al termine scorrere tutto il codice, il browser visualizza la pagina.
+    ![Mostra valore ora](program-asp-net-web-pages-in-visual-studio/_static/image9.png)
+7. Quando si è terminato di esaminare la variabile ed eseguire il codice istruzione per istruzione, premere F5 per continuare a eseguire la pagina senza fermarsi a ogni riga. Al termine dell'esecuzione del codice, il browser Visualizza la pagina.
 
-Per altre informazioni sul debugger e su come eseguire il debug di codice in Visual Studio, vedere [procedura dettagliata: Il debug delle pagine Web in Visual Web Developer](https://msdn.microsoft.com/library/z9e7w6cs.aspx).
+Per ulteriori informazioni sul debugger e su come eseguire il debug di codice in Visual Studio, vedere [procedura dettagliata: debug di pagine Web in Visual Web Developer](https://msdn.microsoft.com/library/z9e7w6cs.aspx).
 
-## <a name="using-razor-in-aspnet-mvc-projects-with-visual-studio"></a>Uso di Razor in progetti ASP.NET MVC con Visual Studio
+## <a name="using-razor-in-aspnet-mvc-projects-with-visual-studio"></a>Uso di Razor nei progetti MVC ASP.NET con Visual Studio
 
-La sintassi Razor anche è ampiamente usata in progetti ASP.NET MVC. MVC è un modo potente, basato su modelli per creare siti Web dinamici. Se il sito Web ASP.NET Web Pages è più difficile da gestire, è possibile provare a convertirlo in un'applicazione ASP.NET MVC. Per un esempio di creazione di un'applicazione MVC, vedere [Introduzione a ASP.NET MVC 5](../../../mvc/overview/getting-started/introduction/getting-started.md).
+Il sintassi Razor viene inoltre ampiamente utilizzato nei progetti MVC ASP.NET. MVC è un metodo potente basato su modelli per la creazione di siti Web dinamici. Se il sito di Pagine Web ASP.NET diventa difficile da gestire, è consigliabile provare a convertirlo in un'applicazione MVC ASP.NET. Per un esempio di creazione di un'applicazione MVC, vedere [Introduzione con ASP.NET MVC 5](../../../mvc/overview/getting-started/introduction/getting-started.md).
 
 <a id="vs2010support"></a>
-## <a name="installing-support-for-aspnet-web-pages-in-visual-studio-2010"></a>Installazione del supporto per le pagine Web ASP.NET in Visual Studio 2010
+## <a name="installing-support-for-aspnet-web-pages-in-visual-studio-2010"></a>Installazione del supporto per Pagine Web ASP.NET in Visual Studio 2010
 
-In questa sezione viene illustrato come installare Visual Web Developer Express 2010 e gli strumenti di pagine Web ASP.NET per Visual Studio.
+In questa sezione viene illustrato come installare Visual Web Developer Express 2010 e gli strumenti di Pagine Web ASP.NET per Visual Studio.
 
-1. Se si ha già l'installazione guidata piattaforma Web, scaricarlo dall'URL seguente:
+1. Se non si dispone ancora dell'installazione guidata piattaforma Web, scaricarla dall'URL seguente:
 
     [https://www.microsoft.com/web/downloads/platform.aspx](https://www.microsoft.com/web/downloads/platform.aspx)
 2. Eseguire l'installazione guidata piattaforma Web.
-3. Scegliere il **prodotti** scheda.
+3. Fare clic sulla scheda **prodotti** .
 
     ![Scheda prodotti WebPI](program-asp-net-web-pages-in-visual-studio/_static/image10.png)
-4. Cercare **ASP.NET MVC 4** (per ASP.NET Web Pages 2) e quindi fare clic su **Add**. Questi prodotti includono gli strumenti di Visual Studio per la creazione di siti Web di ASP.NET Razor.
+4. Cercare **ASP.NET MVC 4** (per pagine Web ASP.NET 2) e quindi fare clic su **Aggiungi**. Questi prodotti includono Visual Studio Tools per la creazione di siti Web Razor ASP.NET.
 
     ![Opzioni di installazione di WebPi](program-asp-net-web-pages-in-visual-studio/_static/image11.png)
-5. Fare clic su **installare** per completare l'installazione.
+5. Fare clic su **Installa** per completare l'installazione.

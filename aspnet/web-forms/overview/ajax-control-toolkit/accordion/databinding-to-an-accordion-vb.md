@@ -9,11 +9,11 @@ ms.assetid: b19f0875-7d3e-4ecf-baa1-a0c693c765b3
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/accordion/databinding-to-an-accordion-vb
 msc.type: authoredcontent
 ms.openlocfilehash: bfb31940c0395c7ed1d5d471fb8fb686b66c59ad
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74599967"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78614520"
 ---
 # <a name="databinding-to-an-accordion-vb"></a>Data binding a un controllo Accordion (VB)
 
@@ -23,7 +23,7 @@ di [Christian Wenz](https://github.com/wenz)
 
 > Il controllo di Accordion in AJAX Control Toolkit offre più riquadri e consente all'utente di visualizzarne uno alla volta. I pannelli vengono in genere dichiarati all'interno della pagina stessa, ma il binding a un'origine dati offre maggiore flessibilità.
 
-## <a name="overview"></a>Panoramica di
+## <a name="overview"></a>Panoramica
 
 Il controllo di Accordion in AJAX Control Toolkit offre più riquadri e consente all'utente di visualizzarne uno alla volta. I pannelli vengono in genere dichiarati all'interno della pagina stessa, ma il binding a un'origine dati offre maggiore flessibilità.
 

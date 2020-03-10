@@ -1,27 +1,27 @@
 ---
 uid: mvc/videos/mvc-2/aspnet-mvc-for-the-rest-of-us/aspnet-mvc-for-the-rest-of-us-part-2
-title: 'ASP.NET MVC per tutti: Parte 2 | Microsoft Docs'
+title: 'ASP.NET MVC per il resto degli Stati Uniti: parte 2 | Microsoft Docs'
 author: JoeStagner
-description: In questo Video di Microsoft Joe Stagner compila una funzionalità "Contattaci" per un'applicazione ASP.NET MVC mediante l'aggiunta di una vista, la logica del Controller e un modello personalizzato a t...
+description: In questo video Microsoft Joe Stagner spiega crea una funzionalità "Contattaci" per un'applicazione MVC ASP.NET aggiungendo una vista, una logica del controller e un modello personalizzato a t...
 ms.author: riande
 ms.date: 04/22/2010
 ms.assetid: d27fbb54-353f-4d79-b465-403ff8e0538b
 msc.legacyurl: /mvc/videos/mvc-2/aspnet-mvc-for-the-rest-of-us/aspnet-mvc-for-the-rest-of-us-part-2
 msc.type: video
 ms.openlocfilehash: 17a144dfe2fb9f34ceb15644b44828ec6aeaf577
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59399671"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78537625"
 ---
-# <a name="aspnet-mvc-for-the-rest-of-us-part-2"></a>ASP.NET MVC per tutti: Parte 2
+# <a name="aspnet-mvc-for-the-rest-of-us-part-2"></a>ASP.NET MVC per il resto degli Stati Uniti: parte 2
 
-da [Joe Stagner](https://github.com/JoeStagner)
+di [Joe Stagner spiega](https://github.com/JoeStagner)
 
-In questo Video di Microsoft Joe Stagner compila una funzionalità "Contattaci" per un'applicazione ASP.NET MVC mediante l'aggiunta di una vista, la logica del Controller e un modello personalizzato per l'applicazione ASP.NET predefinita. Verranno visualizzate alcune delle differenze fondamentali tra l'utilizzo con ASP.NET MVC o Web Form ASP.NET.
+In questo video Microsoft Joe Stagner spiega crea una funzionalità "Contattaci" per un'applicazione MVC ASP.NET aggiungendo una vista, una logica del controller e un modello personalizzato all'applicazione ASP.NET predefinita. Verranno visualizzate alcune delle differenze fondamentali tra l'utilizzo di ASP.NET MVC e ASP.NET Web Form.
 
-[&#9654;Guarda il video (minuti 31)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/aspnet-mvc-for-the-rest-of-us-part-2)
+[&#9654;Guarda il video (31 minuti)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/aspnet-mvc-for-the-rest-of-us-part-2)
 
 > [!div class="step-by-step"]
 > [Precedente](aspnet-mvc-for-the-rest-of-us-part-1.md)

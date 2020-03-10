@@ -1,97 +1,97 @@
 ---
 uid: web-api/overview/security/working-with-ssl-in-web-api
-title: Uso di SSL in API Web | Microsoft Docs
+title: Uso di SSL nell'API Web | Microsoft Docs
 author: MikeWasson
-description: Viene illustrato come usare SSL con l'API Web ASP.NET, incluso l'uso di certificati client SSL.
+description: Viene illustrato come utilizzare SSL con API Web ASP.NET, incluso l'utilizzo di certificati client SSL.
 ms.author: riande
 ms.date: 02/22/2019
 ms.assetid: 97f6164f-59cf-45c0-b820-e4aa29b45396
 msc.legacyurl: /web-api/overview/security/working-with-ssl-in-web-api
 msc.type: authoredcontent
 ms.openlocfilehash: 31589b3713b1f1a9b98d12906bfef81f8bf5e3f9
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59386155"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78598637"
 ---
-# <a name="working-with-ssl-in-web-api"></a>Uso di SSL in API Web
+# <a name="working-with-ssl-in-web-api"></a>Working with SSL in Web API (in inglese)
 
-da [Mike Wasson](https://github.com/MikeWasson)
+di [Mike Wasson](https://github.com/MikeWasson)
 
-Numerosi schemi di autenticazione comuni non sono sicuri sul protocollo HTTP normale. In particolare, l'autenticazione di base e autenticazione basata su form inviano credenziali non crittografate. Per essere sicuri, questi schemi di autenticazione *necessario* utilizzare SSL. Inoltre, i certificati client SSL utilizzabile per autenticare i client.
+Diversi schemi di autenticazione comuni non sono sicuri su HTTP normale. In particolare, l'autenticazione di base e l'autenticazione basata su form inviano credenziali non crittografate. Per garantire la sicurezza, questi schemi di autenticazione *devono* usare SSL. Inoltre, è possibile usare i certificati client SSL per autenticare i client.
 
-## <a name="enabling-ssl-on-the-server"></a>Abilitazione di SSL nel Server
+## <a name="enabling-ssl-on-the-server"></a>Abilitazione di SSL nel server
 
-Per configurare SSL in IIS 7 o versioni successive:
+Per configurare SSL in IIS 7 o versione successiva:
 
-- Creare o ottenere un certificato. Per i test, è possibile creare un certificato autofirmato.
-- Aggiungere un binding HTTPS.
+- Creare o ottenere un certificato. Per il test, è possibile creare un certificato autofirmato.
+- Aggiungere un'associazione HTTPS.
 
-Per informazioni dettagliate, vedere [come impostazione di SSL in IIS 7](https://www.iis.net/learn/manage/configuring-security/how-to-set-up-ssl-on-iis).
+Per informazioni dettagliate, vedere [come configurare SSL in IIS 7](https://www.iis.net/learn/manage/configuring-security/how-to-set-up-ssl-on-iis).
 
-Per il test locale, è possibile abilitare SSL in IIS Express da Visual Studio. Nella finestra Proprietà impostare **SSL abilitato** al **True**. Prendere nota del valore di **URL SSL**; usare questo URL per testare le connessioni HTTPS.
+Per il test locale, è possibile abilitare SSL in IIS Express da Visual Studio. Nella Finestra Proprietà impostare **SSL abilitato** su **true**. Prendere nota del valore dell' **URL SSL**. utilizzare questo URL per testare le connessioni HTTPS.
 
 ![](working-with-ssl-in-web-api/_static/image1.png)
 
-### <a name="enforcing-ssl-in-a-web-api-controller"></a>Imporre SSL in un Controller API Web
+### <a name="enforcing-ssl-in-a-web-api-controller"></a>Applicazione di SSL in un controller API Web
 
-Se hai un HTTPS e un binding HTTP, i client possono comunque usare HTTP per accedere al sito. È possibile consentire alcune risorse necessarie per essere disponibile tramite HTTP, mentre altre risorse richiedono SSL. In tal caso, usare un filtro azione per richiedere SSL per le risorse protette. Il codice seguente mostra un filtro di autenticazione di API Web che verifica la presenza di SSL:
+Se si dispone di un'associazione HTTPS e HTTP, i client possono comunque utilizzare HTTP per accedere al sito. È possibile consentire che alcune risorse siano disponibili tramite HTTP, mentre altre risorse richiedono SSL. In tal caso, usare un filtro azioni per richiedere SSL per le risorse protette. Il codice seguente illustra un filtro di autenticazione di API Web che verifica la presenza di SSL:
 
 [!code-csharp[Main](working-with-ssl-in-web-api/samples/sample1.cs)]
 
-Aggiungere il filtro selezionato per eventuali azioni di API Web che richiedono SSL:
+Aggiungere questo filtro a tutte le azioni di API Web che richiedono SSL:
 
 [!code-csharp[Main](working-with-ssl-in-web-api/samples/sample2.cs)]
 
-## <a name="ssl-client-certificates"></a>Certificati Client SSL
+## <a name="ssl-client-certificates"></a>Certificati client SSL
 
-SSL consente l'autenticazione tramite certificati di infrastruttura a chiave pubblica. Il server deve fornire un certificato che autentica il server al client. È meno comune per il client di fornire un certificato al server, ma si tratta di un'opzione per l'autenticazione dei client. Per usare i certificati client con SSL, è necessario un modo per distribuire i certificati firmati agli utenti. Per molti tipi di applicazioni, questo non costituisce una buona esperienza utente, ma in alcuni ambienti (ad esempio, aziendale) può risultare appropriato.
+SSL fornisce l'autenticazione tramite certificati di infrastruttura a chiave pubblica. Il server deve fornire un certificato che autentica il server per il client. È meno comune per il client fornire un certificato al server, ma questa è un'opzione per l'autenticazione dei client. Per usare i certificati client con SSL, è necessario un modo per distribuire i certificati firmati agli utenti. Per molti tipi di applicazioni, questa non sarà un'esperienza utente corretta, ma in alcuni ambienti (ad esempio, Enterprise) può essere fattibile.
 
 | Vantaggi | Svantaggi |
 | --- | --- |
-| -Credenziali certificate sono più avanzate rispetto a nome utente/password. -SSL fornisce un canale sicuro completo, con l'autenticazione, l'integrità del messaggio e la crittografia dei messaggi. | -È necessario ottenere e gestire i certificati PKI. -La piattaforma client deve supportare i certificati client SSL. |
+| -Le credenziali del certificato sono più avanzate di nome utente/password. -SSL fornisce un canale sicuro completo, con autenticazione, integrità dei messaggi e crittografia dei messaggi. | -È necessario ottenere e gestire i certificati PKI. -La piattaforma client deve supportare i certificati client SSL. |
 
-Per configurare IIS per accettare certificati client, aprire Gestione IIS e procedere come segue:
+Per configurare IIS in modo che accetti i certificati client, aprire Gestione IIS e seguire questa procedura:
 
-1. Fare clic sul nodo del sito nella visualizzazione albero.
-2. Fare doppio clic il **impostazioni SSL** funzionalità nel riquadro centrale.
-3. Sotto **certificati Client**, selezionare una delle opzioni seguenti: 
+1. Fare clic sul nodo sito nella visualizzazione albero.
+2. Fare doppio clic sulla funzionalità **Impostazioni SSL** nel riquadro centrale.
+3. In **certificati client**selezionare una di queste opzioni: 
 
-    - **Accettare**: IIS accetterà un certificato dal client, ma non ne richiede.
-    - **Richiedi**: È necessario un certificato client. (Per abilitare questa opzione, è necessario selezionare anche "Richiedi SSL")
+    - **Accept**: IIS accetterà un certificato dal client, ma non ne richieda uno.
+    - **Richiedi**: richiedere un certificato client. (Per abilitare questa opzione, è necessario selezionare anche "Richiedi SSL")
 
 È anche possibile impostare queste opzioni nel file ApplicationHost. config:
 
 [!code-xml[Main](working-with-ssl-in-web-api/samples/sample3.xml)]
 
-Il **SslNegotiateCert** flag significa IIS accetterà un certificato dal client, ma non ne richiede (equivalente all'opzione "Accept" in Gestione IIS). Per richiedere un certificato, impostare il **SslRequireCert** flag. Per i test, è anche possibile impostare queste opzioni in IIS Express, il applicationhost locale. File di configurazione che si trova in "Documents\IISExpress\config".
+Il flag **SslNegotiateCert** indica che IIS accetterà un certificato dal client, ma non ne richiede uno (equivalente all'opzione "Accept" in Gestione IIS). Per richiedere un certificato, impostare il flag **SslRequireCert** . Per il test, è anche possibile impostare queste opzioni in IIS Express nel file ApplicationHost locale. File di configurazione, situato in "Documents\IISExpress\config".
 
-### <a name="creating-a-client-certificate-for-testing"></a>Creazione di un certificato Client per i test
+### <a name="creating-a-client-certificate-for-testing"></a>Creazione di un certificato client per il test
 
-A scopo di test, è possibile usare [MakeCert.exe](/windows/desktop/SecCrypto/makecert) per creare un certificato client. Creare innanzitutto un'autorità radice di test:
+A scopo di test, è possibile utilizzare [Makecert. exe](/windows/desktop/SecCrypto/makecert) per creare un certificato client. Prima di tutto, creare un'autorità radice di test:
 
 [!code-console[Main](working-with-ssl-in-web-api/samples/sample4.cmd)]
 
-Makecert verrà chiesto di immettere una password per la chiave privata.
+MakeCert chiederà di immettere una password per la chiave privata.
 
-Successivamente, aggiungere il certificato per il test del server "Trusted Root archivio Autorità di certificazione", come indicato di seguito:
+Aggiungere quindi il certificato all'archivio "autorità di certificazione radice attendibili" del server di test, come indicato di seguito:
 
 1. Aprire MMC.
-2. Sotto **File**, selezionare **Aggiungi/Rimuovi Snap-In**.
-3. Selezionare **Account del Computer**.
+2. In **file**selezionare **Aggiungi/Rimuovi snap-in**.
+3. Selezionare **account computer**.
 4. Selezionare **computer locale** e completare la procedura guidata.
-5. Nel riquadro di spostamento, espandere il nodo "Radice autorità di certificazione".
-6. Nel **azione** dal menu **tutte le attività**, quindi fare clic su **importazione** per avviare l'importazione guidata certificati.
-7. Individuare il file di certificato, Tempca.
-8. Fare clic su **aperto**, quindi fare clic su **successivo** e completare la procedura guidata. (Verrà richiesto di immettere nuovamente la password.)
+5. Nel riquadro di spostamento espandere il nodo "autorità di certificazione radice attendibili".
+6. Scegliere **tutte le attività**dal menu **azione** , quindi fare clic su **Importa** per avviare l'importazione guidata certificati.
+7. Individuare il file del certificato, TempCA. cer.
+8. Fare clic su **Apri**, quindi su **Avanti** e completare la procedura guidata. (Verrà richiesto di immettere nuovamente la password).
 
-A questo punto creare un certificato client sia firmata dal primo certificato:
+A questo punto creare un certificato client firmato dal primo certificato:
 
 [!code-console[Main](working-with-ssl-in-web-api/samples/sample5.cmd)]
 
-### <a name="using-client-certificates-in-web-api"></a>Utilizzo dei certificati Client in API Web
+### <a name="using-client-certificates-in-web-api"></a>Uso dei certificati client nell'API Web
 
-Sul lato server, è possibile ottenere il certificato client chiamando [GetClientCertificate](https://msdn.microsoft.com/library/system.net.http.httprequestmessageextensions.getclientcertificate.aspx) nel messaggio di richiesta. Il metodo restituisce null se nessun certificato client. In caso contrario, restituisce un **X509Certificate2** istanza. Usare questo oggetto per ottenere informazioni dal certificato, ad esempio l'autorità emittente e il soggetto. È quindi possibile usare queste informazioni per l'autenticazione e/o autorizzazione.
+Sul lato server, è possibile ottenere il certificato client chiamando [GetClientCertificate](https://msdn.microsoft.com/library/system.net.http.httprequestmessageextensions.getclientcertificate.aspx) nel messaggio di richiesta. Il metodo restituisce null se non è presente alcun certificato client. In caso contrario, restituisce un'istanza di **X509Certificate2** . Utilizzare questo oggetto per ottenere informazioni dal certificato, ad esempio l'autorità emittente e il soggetto. È quindi possibile usare queste informazioni per l'autenticazione e/o l'autorizzazione.
 
 [!code-csharp[Main](working-with-ssl-in-web-api/samples/sample6.cs)]

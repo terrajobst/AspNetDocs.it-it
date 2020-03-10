@@ -9,11 +9,11 @@ ms.assetid: 7d82d5e9-0619-4f22-9e03-32a6d52940a5
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/single-sign-on
 msc.type: authoredcontent
 ms.openlocfilehash: 1ca93cce22487295a24aae95437b3e69dfc5b504
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457141"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78617446"
 ---
 # <a name="single-sign-on-building-real-world-cloud-apps-with-azure"></a>Single Sign-on (creazione di app Cloud reali con Azure)
 
@@ -42,7 +42,7 @@ La Azure AD consente di creare una directory nel cloud. Si tratta di una funzion
 
 Può essere completamente indipendente dalla Active Directory locale; è possibile inserire tutti gli elementi desiderati e autenticarli nelle app Internet.
 
-![Active Directory di Windows Azure](single-sign-on/_static/image2.png)
+![Microsoft Azure Active Directory](single-sign-on/_static/image2.png)
 
 In alternativa, è possibile integrarlo con Active Directory locale.
 
@@ -68,7 +68,7 @@ Nel portale di gestione fare clic sulla scheda Active Directory.
 
 Si dispone automaticamente di un tenant Azure AD per l'account Azure ed è possibile fare clic sul pulsante **Aggiungi** nella parte inferiore della pagina per creare directory aggiuntive. Potrebbe essere necessario un ambiente di testing e uno per la produzione, ad esempio. Valutare con attenzione il nome di una nuova directory. Se si usa il nome per la directory e si usa di nuovo il nome per uno degli utenti, questa operazione può generare confusione.
 
-![Aggiungere un'istanza di Active Directory](single-sign-on/_static/image6.png)
+![Aggiungi directory](single-sign-on/_static/image6.png)
 
 Il portale offre supporto completo per la creazione, l'eliminazione e la gestione di utenti in questo ambiente. Per aggiungere un utente, ad esempio, passare alla scheda **utenti** e fare clic sul pulsante **Aggiungi utente** .
 
@@ -177,7 +177,7 @@ Il [capitolo successivo](data-storage-options.md) esamina le opzioni di archivia
 <a id="resources"></a>
 ## <a name="resources"></a>Risorse
 
-Per ulteriori informazioni, vedere le seguenti risorse:
+Per altre informazioni, vedere le seguenti risorse:
 
 - [Documentazione di Azure Active Directory](https://docs.microsoft.com/azure/active-directory/). Pagina del portale per Azure AD documentazione nel sito di windowsazure.com. Per esercitazioni dettagliate, vedere la sezione **sviluppare** .
 - [Multi-factor authentication di Azure](https://docs.microsoft.com/azure/multi-factor-authentication/). Pagina del portale per la documentazione sull'autenticazione a più fattori in Azure.

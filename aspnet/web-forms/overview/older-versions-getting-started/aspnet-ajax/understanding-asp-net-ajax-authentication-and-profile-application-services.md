@@ -9,11 +9,11 @@ ms.assetid: 6ab4efb6-aab6-45ac-ad2c-bdec5848ef9e
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/aspnet-ajax/understanding-asp-net-ajax-authentication-and-profile-application-services
 msc.type: authoredcontent
 ms.openlocfilehash: cab9acb1ffd75cca87f6c575a6abdd000235828e
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74635686"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78640532"
 ---
 # <a name="understanding-aspnet-ajax-authentication-and-profile-application-services"></a>Informazioni sui servizi di autenticazione e applicazione del profilo di ASP.NET AJAX
 
@@ -57,12 +57,12 @@ Una volta abilitato e configurato il servizio di autenticazione AJAX, lo script 
 
 Il metodo login () avvia una richiesta di autenticazione delle credenziali dell'utente. Questo metodo è asincrono e non blocca l'esecuzione.
 
-*Parametri*
+*Parametri:*
 
 | **Nome parametro** | **Significato** |
 | --- | --- |
-| userName | Richiesto. Nome utente da autenticare. |
-| Password di | Facoltativo (il valore predefinito è null). Password dell'utente. |
+| userName | Obbligatorio. Nome utente da autenticare. |
+| password | Facoltativo (il valore predefinito è null). Password dell'utente. |
 | isPersistent | Facoltativo (il valore predefinito è false). Indica se il cookie di autenticazione dell'utente deve essere mantenuto tra le sessioni. Se false, l'utente si disconnetterà alla chiusura del browser o alla scadenza della sessione. |
 | redirectUrl | Facoltativo (il valore predefinito è null). URL al quale reindirizzare il browser al completamento dell'autenticazione. Se questo parametro è null o una stringa vuota, non si verifica alcun reindirizzamento. |
 | customInfo | Facoltativo (il valore predefinito è null). Questo parametro è attualmente inutilizzato ed è riservato per un utilizzo futuro. |
@@ -70,7 +70,7 @@ Il metodo login () avvia una richiesta di autenticazione delle credenziali dell'
 | failedCallback | Facoltativo (il valore predefinito è null). Funzione da chiamare quando l'account di accesso ha avuto esito negativo. Se specificato, questo parametro esegue l'override della proprietà defaultFailedCallback. |
 | userContext | Facoltativo (il valore predefinito è null). Dati del contesto utente personalizzati che devono essere passati alle funzioni di callback. |
 
-*Valore restituito:*
+*Return Value* (Valore restituito):
 
 Questa funzione non include un valore restituito. Al completamento di una chiamata a questa funzione, tuttavia, vengono inclusi diversi comportamenti:
 
@@ -82,7 +82,7 @@ Questa funzione non include un valore restituito. Al completamento di una chiama
 
 Il metodo Logout () rimuove il cookie delle credenziali e disconnette l'utente corrente dall'applicazione Web.
 
-*Parametri*
+*Parametri:*
 
 | **Nome parametro** | **Significato** |
 | --- | --- |
@@ -91,7 +91,7 @@ Il metodo Logout () rimuove il cookie delle credenziali e disconnette l'utente c
 | failedCallback | Facoltativo (il valore predefinito è null). Funzione da chiamare quando l'account di accesso ha avuto esito negativo. Se specificato, questo parametro esegue l'override della proprietà defaultFailedCallback. |
 | userContext | Facoltativo (il valore predefinito è null). Dati del contesto utente personalizzati che devono essere passati alle funzioni di callback. |
 
-*Valore restituito:*
+*Return Value* (Valore restituito):
 
 Questa funzione non include un valore restituito. Al completamento di una chiamata a questa funzione, tuttavia, vengono inclusi diversi comportamenti:
 
@@ -107,11 +107,11 @@ Il riferimento alla funzione specificato da questa proprietà deve avere la firm
 
 [!code-javascript[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample2.js)]
 
-*Parametri*
+*Parametri:*
 
 | **Nome parametro** | **Significato** |
 | --- | --- |
-| Errore | Specifica le informazioni sull'errore. |
+| error | Specifica le informazioni sull'errore. |
 | userContext | Specifica le informazioni sul contesto utente fornite quando è stata chiamata la funzione di accesso o di disconnessione. |
 | methodName | Nome del metodo chiamante. |
 
@@ -123,7 +123,7 @@ Il riferimento alla funzione specificato da questa proprietà deve avere la firm
 
 [!code-javascript[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample3.js)]
 
-*Parametri*
+*Parametri:*
 
 | **Nome parametro** | **Significato** |
 | --- | --- |
@@ -139,7 +139,7 @@ Il riferimento alla funzione specificato da questa proprietà deve avere la firm
 
 [!code-javascript[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample4.js)]
 
-*Parametri*
+*Parametri:*
 
 | **Nome parametro** | **Significato** |
 | --- | --- |
@@ -203,7 +203,7 @@ Il campo proprietà espone tutti i dati di profilo configurati come proprietà f
 
 Carica un elenco selezionato o tutte le proprietà dal server.
 
-*Parametri*
+*Parametri:*
 
 | **Nome parametro** | **Significato** |
 | --- | --- |
@@ -220,7 +220,7 @@ Se il parametro `propertyNames` non viene specificato, tutte le proprietà confi
 
 Il metodo Save () Salva l'elenco di proprietà specificato (o tutte le proprietà) nel profilo ASP.NET dell'utente.
 
-*Parametri*
+*Parametri:*
 
 | **Nome parametro** | **Significato** |
 | --- | --- |
@@ -241,11 +241,11 @@ Il riferimento alla funzione specificato da questa proprietà deve avere la firm
 
 [!code-javascript[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample9.js)]
 
-*Parametri*
+*Parametri:*
 
 | **Nome parametro** | **Significato** |
 | --- | --- |
-| Errore di | Specifica le informazioni sull'errore. |
+| Errore | Specifica le informazioni sull'errore. |
 | userContext | Specifica le informazioni sul contesto utente fornite quando è stata chiamata la funzione Load o Save. |
 | methodName | Nome del metodo chiamante. |
 
@@ -257,7 +257,7 @@ Il riferimento alla funzione specificato da questa proprietà deve avere la firm
 
 [!code-javascript[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample10.js)]
 
-*Parametri*
+*Parametri:*
 
 | **Nome parametro** | **Significato** |
 | --- | --- |
@@ -273,7 +273,7 @@ Il riferimento alla funzione specificato da questa proprietà deve avere la firm
 
 [!code-javascript[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample11.js)]
 
-*Parametri*
+*Parametri:*
 
 | **Nome parametro** | **Significato** |
 | --- | --- |

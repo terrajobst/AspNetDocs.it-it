@@ -9,11 +9,11 @@ ms.assetid: 8b013630-842c-4d44-a6fc-c6be43e7210f
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-configuring-project-properties-4-of-12
 msc.type: authoredcontent
 ms.openlocfilehash: 6e63e75dca3d776fb9a1bd7e420ef48891daac69
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569804"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78625860"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-configuring-project-properties---4-of-12"></a>Distribuzione di un'applicazione Web ASP.NET con SQL Server Compact mediante Visual Studio o Visual Web Developer: configurazione delle proprietà del progetto-4 di 12
 
@@ -25,7 +25,7 @@ di [Tom Dykstra](https://github.com/tdykstra)
 > 
 > Per un'esercitazione in cui vengono illustrate le funzionalità di distribuzione introdotte dopo la versione RC di Visual Studio 2012, viene illustrato come distribuire SQL Server edizioni diverse da SQL Server Compact e viene illustrato come eseguire la distribuzione in app Azure app Web del servizio, vedere [distribuzione web ASP.NET con Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
 
-## <a name="overview"></a>Panoramica di
+## <a name="overview"></a>Panoramica
 
 Alcune opzioni di distribuzione vengono configurate nelle proprietà del progetto archiviate nel file di progetto (file con *estensione csproj* o *VBPROJ* ). Nella maggior parte dei casi, i valori predefiniti di queste impostazioni sono quelli desiderati, ma è possibile usare l'interfaccia utente delle **proprietà del progetto** incorporata in Visual Studio per usare queste impostazioni se è necessario modificarle. In questa esercitazione vengono esaminate le impostazioni di distribuzione nelle **proprietà del progetto**. Si crea anche un file segnaposto che causa la distribuzione di una cartella vuota.
 

@@ -9,11 +9,11 @@ ms.assetid: 21a178de-4c5a-4211-8a9c-74ec576c0f30
 msc.legacyurl: /mvc/overview/older-versions/using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc/using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-2
 msc.type: authoredcontent
 ms.openlocfilehash: 325cc90eb6e717c47863eda6253e0d48d796386b
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77455893"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78614975"
 ---
 # <a name="using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc---part-2"></a>Uso del calendario popup per HTML5 e jQuery UI DatePicker con ASP.NET MVC-parte 2
 
@@ -73,7 +73,7 @@ Selezionare la casella **di controllo Crea come visualizzazione parziale** . Ver
 
 ![](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-2/_static/image2.png)
 
-Fare clic su **Add**. Viene creato un modello *DateTime. cshtml* in *Views\Shared\DisplayTemplates.* .
+Fare clic su **Aggiungi**. Viene creato un modello *DateTime. cshtml* in *Views\Shared\DisplayTemplates.* .
 
 Nella figura seguente viene illustrata la cartella *views* in **Esplora soluzioni** dopo la creazione dei modelli di visualizzazione e di editor `DateTime`.
 

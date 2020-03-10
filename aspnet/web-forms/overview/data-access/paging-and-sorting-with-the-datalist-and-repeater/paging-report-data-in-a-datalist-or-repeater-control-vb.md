@@ -9,11 +9,11 @@ ms.assetid: bbd6b7f7-b98a-48b4-93f3-341d6a4f53c0
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting-with-the-datalist-and-repeater/paging-report-data-in-a-datalist-or-repeater-control-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 5c65ca1f263e41748d99323dbdf1c28fdd077246
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74570347"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78620442"
 ---
 # <a name="paging-report-data-in-a-datalist-or-repeater-control-vb"></a>Suddivisione in pagine dei dati dei report in un controllo DataList o Repeater (VB)
 

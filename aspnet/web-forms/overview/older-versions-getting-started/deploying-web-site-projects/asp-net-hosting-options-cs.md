@@ -9,11 +9,11 @@ ms.assetid: 89a1d2bc-fdfd-4c5c-a3b0-49a08baaf63a
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/asp-net-hosting-options-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 2eafa750167d89fa996a442633e79dce3d5b85bd
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74620771"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78637172"
 ---
 # <a name="aspnet-hosting-options-c"></a>Opzioni di hosting ASP.NET (C#)
 
@@ -42,7 +42,7 @@ Questo è il primo di una serie di esercitazioni che esaminano i passaggi necess
 - Strategie per l'aggiornamento uniforme del database nell'ambiente di produzione con le modifiche apportate durante lo sviluppo.
 - Tecniche per la registrazione degli errori che si verificano in fase di produzione e modi per notificare agli sviluppatori quando si verifica un errore.
 
-Queste esercitazioni sono pensate per essere concise e fornire istruzioni dettagliate con numerose schermate per illustrare il processo in modo visivo. Questa esercitazione introduttiva fornisce una panoramica del processo di distribuzione di ASP.NET e suggerimenti per la ricerca di un provider di hosting Web. Iniziamo!
+Queste esercitazioni sono pensate per essere concise e fornire istruzioni dettagliate con numerose schermate per illustrare il processo in modo visivo. Questa esercitazione introduttiva fornisce una panoramica del processo di distribuzione di ASP.NET e suggerimenti per la ricerca di un provider di hosting Web. Ecco come procedere.
 
 ## <a name="an-overview-of-the-aspnet-deployment-process"></a>Panoramica del processo di distribuzione di ASP.NET
 

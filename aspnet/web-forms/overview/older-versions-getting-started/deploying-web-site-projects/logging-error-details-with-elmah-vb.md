@@ -9,11 +9,11 @@ ms.assetid: a5f0439f-18b2-4c89-96ab-75b02c616f46
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/logging-error-details-with-elmah-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 46b7fc22807c8cb9f47ff035639815d7b6104735
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74622352"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78525711"
 ---
 # <a name="logging-error-details-with-elmah-vb"></a>Registrazione dei dettagli degli errori con ELMAH (VB)
 
@@ -31,7 +31,7 @@ Un altro punto problematico si concentra sulla complessità del monitoraggio del
 
 Un'alternativa al sistema di monitoraggio dello stato è la registrazione degli errori dei moduli e dei gestori (ELMAH), un [sistema di registrazione degli errori](http://www.raboof.com/)open source gratuito creato da. La differenza più significativa tra i due sistemi è la capacità di ELAMH di visualizzare un elenco di errori e i dettagli di un errore specifico da una pagina Web e come feed RSS. ELMAH è più facile da configurare rispetto al monitoraggio dell'integrità perché registra solo gli errori. Inoltre, ELMAH include il supporto per le applicazioni ASP.NET 1. x, ASP.NET 2,0 e ASP.NET 3,5 e viene fornito con un'ampia gamma di provider di origine dei log.
 
-Questa esercitazione illustra i passaggi necessari per l'aggiunta di ELMAH a un'applicazione ASP.NET. Iniziamo!
+Questa esercitazione illustra i passaggi necessari per l'aggiunta di ELMAH a un'applicazione ASP.NET. Ecco come procedere.
 
 > [!NOTE]
 > Il sistema di monitoraggio dell'integrità e ELMAH hanno entrambi set di vantaggi e svantaggi. Si consiglia di provare entrambi i sistemi e di decidere quale sia la soluzione più adatta alle proprie esigenze.

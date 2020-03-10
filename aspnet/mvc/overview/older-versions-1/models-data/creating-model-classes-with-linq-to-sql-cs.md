@@ -9,11 +9,11 @@ ms.assetid: f84b4a16-e8bb-49e8-87a0-1832879a3501
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/creating-model-classes-with-linq-to-sql-cs
 msc.type: authoredcontent
 ms.openlocfilehash: c27d1ffac3846fe4bc13b32c2ae91a63b2493126
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74590126"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78543540"
 ---
 # <a name="creating-model-classes-with-linq-to-sql-c"></a>Creazione di classi di modelli con LINQ to SQL (C#)
 
@@ -61,11 +61,11 @@ La finestra di Esplora server viene chiamata finestra di Esplora database quando
 
 È necessario aggiungere le colonne seguenti alla tabella di database:
 
-| **Nome colonna** | **Tipo di dati** | **Consenti valori null** |
+| **Nome colonna** | **Tipo di dati** | **Consenti valori NULL** |
 | --- | --- | --- |
-| Id | Int | Falso |
-| Titolo | Nvarchar (200) | Falso |
-| Direttore | Nvarchar (50) | Falso |
+| Id | Int | False |
+| Titolo | Nvarchar(200) | False |
+| Responsabile | Nvarchar(50) | False |
 
 È necessario eseguire due operazioni speciali nella colonna ID. Per prima cosa, è necessario contrassegnare la colonna ID come colonna chiave primaria selezionando la colonna nella Progettazione tabelle e facendo clic sull'icona di una chiave. Per LINQ to SQL è necessario specificare le colonne chiave primaria durante l'esecuzione di inserimenti o aggiornamenti sul database.
 

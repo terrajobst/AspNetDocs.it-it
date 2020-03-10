@@ -9,11 +9,11 @@ ms.assetid: 82b8dea0-f062-4ee4-8784-3ffa30fbb1ca
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/command-line-deployment
 msc.type: authoredcontent
 ms.openlocfilehash: 13cfe4492398b59f2c80394689cc113ccb218c60
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74634197"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78630921"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-command-line-deployment"></a>Distribuzione Web ASP.NET con Visual Studio: distribuzione da riga di comando
 
@@ -23,7 +23,7 @@ di [Tom Dykstra](https://github.com/tdykstra)
 
 > Questa serie di esercitazioni illustra come distribuire (pubblicare) un'applicazione Web ASP.NET in app Web di servizio app Azure o in un provider di hosting di terze parti, usando Visual Studio 2012 o Visual Studio 2010. Per informazioni sulla serie, vedere [la prima esercitazione della serie](introduction.md).
 
-## <a name="overview"></a>Panoramica di
+## <a name="overview"></a>Panoramica
 
 Questa esercitazione illustra come richiamare la pipeline di pubblicazione Web di Visual Studio dalla riga di comando. Questa operazione è utile per gli scenari in cui si vuole [automatizzare il processo di distribuzione](../../../../aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/continuous-integration-and-continuous-delivery.md) anziché eseguirlo manualmente in Visual Studio, in genere usando un [sistema di controllo della versione del codice sorgente](../../../../aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/source-control.md).
 
@@ -102,7 +102,7 @@ Per la pubblicazione da riga di comando sono supportati tre metodi di pubblicazi
 
 La configurazione e la piattaforma di compilazione devono essere impostate in Visual Studio o dalla riga di comando. I profili di pubblicazione includono proprietà denominate `LastUsedBuildConfiguration` e `LastUsedPlatform`, ma non è possibile impostare queste proprietà per determinare la modalità di compilazione del progetto. Per altre informazioni, vedere [MSBuild: come impostare la proprietà di configurazione](http://sedodream.com/2012/10/27/MSBuildHowToSetTheConfigurationProperty.aspx) nel Blog di Sayed Hashimi.
 
-## <a name="deploy-to-staging"></a>Distribuisci in staging
+## <a name="deploy-to-staging"></a>Eseguire la distribuzione per lo staging
 
 Per eseguire la distribuzione in Azure, è necessario aggiungere la password alla riga di comando. Se la password è stata salvata nel profilo di pubblicazione in Visual Studio, è stata archiviata in formato crittografato nel file con *estensione pubxml. User* . Il file non è accessibile da MSBuild quando si esegue una distribuzione da riga di comando, quindi è necessario passare la password in un parametro della riga di comando.
 
@@ -119,7 +119,7 @@ Per eseguire la distribuzione in Azure, è necessario aggiungere la password all
 
     Come illustrato in precedenza per l'ambiente di test, potrebbe essere necessario creare alcuni studenti per visualizzare le statistiche nella pagina **About (informazioni** ).
 
-## <a name="deploy-to-production"></a>Distribuisci in produzione
+## <a name="deploy-to-production"></a>Distribuzione nell'ambiente di produzione
 
 Il processo di distribuzione nell'ambiente di produzione è simile al processo di gestione temporanea.
 

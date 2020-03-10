@@ -9,11 +9,11 @@ ms.assetid: 1642132a-1ca5-4872-983f-ab59fc8865d3
 msc.legacyurl: /web-forms/overview/older-versions-security/membership/storing-additional-user-information-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 24b96e86bc93e03d2639b73e35ed1fd1271bac5a
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74641456"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78634869"
 ---
 # <a name="storing-additional-user-information-c"></a>Archiviazione di informazioni utente aggiuntive (C#)
 
@@ -29,7 +29,7 @@ ASP. Il Framework di appartenenza di NET offre un'interfaccia flessibile per la 
 
 Spesso, le applicazioni devono archiviare informazioni aggiuntive sull'utente non incluse nel framework delle appartenenze. Ad esempio, un rivenditore online potrebbe dover consentire a ogni utente di archiviare gli indirizzi di spedizione e fatturazione, le informazioni di pagamento, le preferenze di recapito e il numero di telefono di contatto. Ogni ordine del sistema è inoltre associato a un determinato account utente.
 
-La classe `MembershipUser` non include proprietà come `PhoneNumber` o `DeliveryPreferences` o `PastOrders`. Quindi, in che modo è possibile tenere traccia delle informazioni utente richieste dall'applicazione e integrarle con il framework delle appartenenze? In questa esercitazione si risponderà a questa domanda compilando un'applicazione guestbook molto rudimentale. In questo modo, si esamineranno diverse opzioni per la modellazione delle informazioni utente in un database e quindi si vedrà come associare questi dati agli account utente creati dal framework delle appartenenze. Iniziamo!
+La classe `MembershipUser` non include proprietà come `PhoneNumber` o `DeliveryPreferences` o `PastOrders`. Quindi, in che modo è possibile tenere traccia delle informazioni utente richieste dall'applicazione e integrarle con il framework delle appartenenze? In questa esercitazione si risponderà a questa domanda compilando un'applicazione guestbook molto rudimentale. In questo modo, si esamineranno diverse opzioni per la modellazione delle informazioni utente in un database e quindi si vedrà come associare questi dati agli account utente creati dal framework delle appartenenze. Ecco come procedere.
 
 ## <a name="step-1-creating-the-guestbook-applications-data-model"></a>Passaggio 1: creazione del modello di dati dell'applicazione Guestbook
 

@@ -9,11 +9,11 @@ ms.assetid: cfe2a6a0-1e56-4dc8-9537-c8ec76ba96a4
 msc.legacyurl: /web-forms/overview/data-access/introduction/creating-a-data-access-layer-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 5aaf97dc8448dcb7b94ef2e4e23f34fd37ac4426
-ms.sourcegitcommit: 6f0e10e4ca61a1e5534b09c655fd35cdc6886c8a
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74115507"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78605042"
 ---
 # <a name="creating-a-data-access-layer-c"></a>Creazione di un livello di accesso ai dati (C#)
 
@@ -168,7 +168,7 @@ Questo codice non richiedeva di scrivere un solo bit di codice specifico per l'a
 
 Ogni oggetto utilizzato in questo esempio è anche fortemente tipizzato, consentendo a Visual Studio di fornire IntelliSense e il controllo dei tipi in fase di compilazione. E il meglio di tutte le DataTable restituite da TableAdapter può essere associato ai controlli Web dei dati di ASP.NET, ad esempio GridView, DetailsView, DropDownList, CheckBoxList e molti altri. Nell'esempio seguente viene illustrata l'associazione della DataTable restituita dal metodo **GetProducts ()** a un controllo GridView in poche righe di codice limitate all'interno della **pagina\_** gestore dell'evento Load.
 
-AllProducts. aspx
+AllProducts.aspx
 
 [!code-aspx[Main](creating-a-data-access-layer-cs/samples/sample2.aspx)]
 
@@ -422,7 +422,7 @@ Questi dati possono essere visualizzati anche in qualsiasi ASP. Controlli Web de
 
 In questa esercitazione verranno illustrate le procedure per visualizzare tali report master-details. Per il momento, questo esempio è stato progettato per illustrare l'uso del metodo personalizzato aggiunto alla classe **Northwind. SuppliersRow** .
 
-SuppliersAndProducts. aspx
+SuppliersAndProducts.aspx
 
 [!code-aspx[Main](creating-a-data-access-layer-cs/samples/sample24.aspx)]
 

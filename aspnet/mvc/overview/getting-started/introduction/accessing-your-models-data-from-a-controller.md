@@ -9,11 +9,11 @@ ms.assetid: caa1ba4a-f9f0-4181-ba21-042e3997861d
 msc.legacyurl: /mvc/overview/getting-started/introduction/accessing-your-models-data-from-a-controller
 msc.type: authoredcontent
 ms.openlocfilehash: 5d882d765133d32d3acdba9ffb5d43b69119a273
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457232"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78615920"
 ---
 # <a name="accessing-your-models-data-from-a-controller"></a>Accesso ai dati del modello da un controller
 
@@ -41,7 +41,7 @@ Nella finestra di dialogo **Aggiungi impalcatura** fare clic su **controller MVC
   
 ![](accessing-your-models-data-from-a-controller/_static/image3.png)   
 
-Fare clic su **Add**. Se viene restituito un errore, è probabile che l'applicazione non sia stata compilata prima di iniziare ad aggiungere il controller. In Visual Studio vengono creati i file e le cartelle seguenti:
+Fare clic su **Aggiungi**. Se viene restituito un errore, è probabile che l'applicazione non sia stata compilata prima di iniziare ad aggiungere il controller. In Visual Studio vengono creati i file e le cartelle seguenti:
 
 - *Un file MoviesController.cs* nella cartella *Controllers* .
 - Una cartella *Views\Movies* .

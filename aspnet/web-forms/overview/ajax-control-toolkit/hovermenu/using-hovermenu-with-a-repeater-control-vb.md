@@ -9,11 +9,11 @@ ms.assetid: 7f07c112-cd4f-4427-9699-57cfab2791fd
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/hovermenu/using-hovermenu-with-a-repeater-control-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 9386aa2fe3a6174bbed52218337107733cb1fa99
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74606677"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78621576"
 ---
 # <a name="using-hovermenu-with-a-repeater-control-vb"></a>Uso di HoverMenu con un controllo Repeater (VB)
 
@@ -23,7 +23,7 @@ di [Christian Wenz](https://github.com/wenz)
 
 > Il controllo HoverMenu in AJAX Control Toolkit fornisce un semplice effetto popup: quando il puntatore del mouse viene posizionato su un elemento, un popup viene visualizzato in una posizione specificata. È anche possibile usare questo controllo all'interno di un Repeater.
 
-## <a name="overview"></a>Panoramica di
+## <a name="overview"></a>Panoramica
 
 Il controllo `HoverMenu` in AJAX Control Toolkit fornisce un semplice effetto popup: quando il puntatore del mouse viene posizionato su un elemento, un popup viene visualizzato in una posizione specificata. È anche possibile usare questo controllo all'interno di un Repeater.
 

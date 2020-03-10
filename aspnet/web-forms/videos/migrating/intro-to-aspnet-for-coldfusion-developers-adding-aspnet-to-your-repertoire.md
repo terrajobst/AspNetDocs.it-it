@@ -1,25 +1,25 @@
 ---
 uid: web-forms/videos/migrating/intro-to-aspnet-for-coldfusion-developers-adding-aspnet-to-your-repertoire
-title: 'Introduzione ad ASP.NET per gli sviluppatori ColdFusion: Aggiunta di ASP.NET al repertorio | Microsoft Docs'
+title: 'Introduzione a ASP.NET per gli sviluppatori ColdFusion: aggiunta di ASP.NET al proprio repertorio | Microsoft Docs'
 author: microsoft
-description: Questa sessioni Mostra un confronto di codice semplice ma real world tra ColdFusion e ASP.NET.
+description: Questa sessione Mostra un confronto di codice semplice ma reale tra ColdFusion e ASP.NET.
 ms.author: riande
 ms.date: 07/25/2006
 ms.assetid: 835a2484-e9e5-468e-9e43-5ae4e61531b6
 msc.legacyurl: /web-forms/videos/migrating/intro-to-aspnet-for-coldfusion-developers-adding-aspnet-to-your-repertoire
 msc.type: video
 ms.openlocfilehash: 644996c713f589c09b991589cf940f73c798809f
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59388569"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78638768"
 ---
-# <a name="intro-to-aspnet-for-coldfusion-developers-adding-aspnet-to-your-repertoire"></a>Introduzione ad ASP.NET per gli sviluppatori ColdFusion: aggiunta di ASP.NET al repertorio
+# <a name="intro-to-aspnet-for-coldfusion-developers-adding-aspnet-to-your-repertoire"></a>Introduzione a ASP.NET per gli sviluppatori ColdFusion: aggiunta di ASP.NET al proprio repertorio
 
-by [Microsoft](https://github.com/microsoft)
+[Microsoft](https://github.com/microsoft)
 
-Questa sessioni Mostra un confronto di codice semplice ma real world tra ColdFusion e ASP.NET.
+Questa sessione Mostra un confronto di codice semplice ma reale tra ColdFusion e ASP.NET.
 
 [&#9654;Guarda il video (49 minuti)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/intro-to-aspnet-for-coldfusion-developers-adding-aspnet-to-your-repertoire)
 
