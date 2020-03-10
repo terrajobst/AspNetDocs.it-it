@@ -9,11 +9,11 @@ ms.assetid: ddf6252f-9413-4c0c-a360-2cef8d231717
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-a-code-only-update-8-of-12
 msc.type: authoredcontent
 ms.openlocfilehash: e4d094ef84a747c36ce05ddb0e3d1ce0391d5605
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74572726"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78564407"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-deploying-a-code-only-update---8-of-12"></a>Distribuzione di un'applicazione Web ASP.NET con SQL Server Compact con Visual Studio o Visual Web Developer: distribuzione di un aggiornamento di solo codice-8 di 12
 
@@ -25,7 +25,7 @@ di [Tom Dykstra](https://github.com/tdykstra)
 > 
 > Per un'esercitazione in cui vengono illustrate le funzionalità di distribuzione introdotte dopo la versione RC di Visual Studio 2012, viene illustrato come distribuire SQL Server edizioni diverse da SQL Server Compact e viene illustrato come eseguire la distribuzione in app Azure app Web del servizio, vedere [distribuzione web ASP.NET con Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
 
-## <a name="overview"></a>Panoramica di
+## <a name="overview"></a>Panoramica
 
 Dopo la distribuzione iniziale, il lavoro di manutenzione e sviluppo del sito Web continua e, prima di lungo, sarà necessario distribuire un aggiornamento. Questa esercitazione illustra il processo di distribuzione di un aggiornamento nel codice dell'applicazione. Questo aggiornamento non implica una modifica del database. verranno visualizzate le differenze relative alla distribuzione di una modifica del database nell'esercitazione successiva.
 
@@ -110,7 +110,7 @@ Nella finestra di dialogo **Carica file** selezionare l' *app\_file offline. htm
 
 [![Upload_dialog_box_in_File_Manager](deployment-to-a-hosting-provider-deploying-a-code-only-update-8-of-12/_static/image14.png)](deployment-to-a-hosting-provider-deploying-a-code-only-update-8-of-12/_static/image13.png)
 
-Individuare l'URL del sito. Si noterà che viene visualizzata la pagina *app\_offline. htm* invece della Home page.
+Passare all'URL del proprio sito. Si noterà che viene visualizzata la pagina *app\_offline. htm* invece della Home page.
 
 [![App_offline. htm_page_in_production](deployment-to-a-hosting-provider-deploying-a-code-only-update-8-of-12/_static/image16.png)](deployment-to-a-hosting-provider-deploying-a-code-only-update-8-of-12/_static/image15.png)
 

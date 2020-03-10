@@ -9,6 +9,6 @@ Prendere in considerazione l'uso di [ASP.NET Core API Web](/aspnet/core/web-api)
 * Sistema di configurazione basato su ambiente e pronto per il cloud.
 * Inserimento delle dipendenze predefinito.
 * Una pipeline di richiesta HTTP leggera, ad alte prestazioni e modulare.
-* Possibilità di ospitare in [gheppio](/aspnet/core/fundamentals/servers/kestrel), [IIS] (xrif: host-and-deploy/IIS/index, [http. sys](xref:fundamentals/servers/httpsys), [nginx](xref:host-and-deploy/linux-nginx), [Apache](xref:host-and-deploy/linux-apache)e [Docker](xref:host-and-deploy/docker/index).
+* Possibilità di ospitare in [gheppio](/aspnet/core/fundamentals/servers/kestrel), [IIS](xref:host-and-deploy/iis/index), [http. sys](xref:fundamentals/servers/httpsys), [nginx](xref:host-and-deploy/linux-nginx), [Apache](xref:host-and-deploy/linux-apache)e [Docker](xref:host-and-deploy/docker/index).
 * Controllo delle versioni side-by-side.
 * Gli strumenti che semplificano lo sviluppo del web moderno.

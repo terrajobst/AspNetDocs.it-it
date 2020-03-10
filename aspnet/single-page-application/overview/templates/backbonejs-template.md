@@ -9,11 +9,11 @@ ms.assetid: 00aca413-f067-4108-9bd1-cf21e64a2646
 msc.legacyurl: /single-page-application/overview/templates/backbonejs-template
 msc.type: authoredcontent
 ms.openlocfilehash: 7297db7d5b35a53b40f9d9162960e529a167bd12
-ms.sourcegitcommit: e365196c75ce93cd8967412b1cfdc27121816110
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77074891"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78558226"
 ---
 # <a name="backbone-template"></a>Modello Backbone
 
@@ -87,7 +87,7 @@ Ecco il codice in Navigation. TS per associare gli eventi:
 
 [!code-csharp[Main](backbonejs-template/samples/sample4.cs)]
 
-**Modelli**
+**Models**
 
 I modelli sono definiti in ~/scripts/Application/Models. Tutti i modelli hanno tre elementi di base: gli attributi predefiniti, le regole di convalida e un endpoint lato server. Ecco un esempio tipico:
 
@@ -113,7 +113,7 @@ Esaminiamo ora il lato server.
 
 In un'applicazione a pagina singola, il server svolge solo un piccolo ruolo nell'interfaccia utente. In genere, il server esegue il rendering della pagina iniziale e quindi invia e riceve i dati JSON.
 
-Il modello ha due controller MVC: `HomeController` esegue il rendering della pagina iniziale e `SupportsController` viene usato per confermare nuovi account utente e reimpostare le password. Tutti gli altri controller nel modello sono API Web ASP.NET controller che inviano e ricevono dati JSON. Per impostazione predefinita, i controller utilizzano la nuova classe `WebSecurity` per eseguire attività correlate all'utente. Tuttavia, hanno anche costruttori facoltativi che consentono di passare delegati per queste attività. Questo rende più semplice il test e consente di sostituire `WebSecurity` con altri elementi, usando un contenitore IoC. Di seguito è fornito un esempio:
+Il modello ha due controller MVC: `HomeController` esegue il rendering della pagina iniziale e `SupportsController` viene usato per confermare nuovi account utente e reimpostare le password. Tutti gli altri controller nel modello sono API Web ASP.NET controller che inviano e ricevono dati JSON. Per impostazione predefinita, i controller utilizzano la nuova classe `WebSecurity` per eseguire attività correlate all'utente. Tuttavia, hanno anche costruttori facoltativi che consentono di passare delegati per queste attività. Questo rende più semplice il test e consente di sostituire `WebSecurity` con altri elementi, usando un contenitore IoC. Ecco un esempio:
 
 [!code-csharp[Main](backbonejs-template/samples/sample8.cs)]
 

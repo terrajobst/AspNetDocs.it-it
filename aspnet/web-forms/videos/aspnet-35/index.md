@@ -1,23 +1,23 @@
 ---
 uid: web-forms/videos/aspnet-35/index
-title: ASP.NET 3.5 | Microsoft Docs
+title: ASP.NET 3,5 | Microsoft Docs
 author: rick-anderson
-description: Come compilare applicazioni ASP.NET 3.5, con particolare attenzione alle nuove funzionalità.
+description: Come compilare applicazioni ASP.NET 3,5, con un'enfasi sulle nuove funzionalità.
 ms.author: riande
 ms.date: 10/05/2011
 ms.assetid: 2e6e9c24-bb97-446a-b05e-1bd88824d352
 msc.legacyurl: /web-forms/videos/aspnet-35
 msc.type: chapter
 ms.openlocfilehash: 369f3f1516dace0c7d8fc3a87b2d50ec71889de0
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65133780"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78572996"
 ---
 # <a name="aspnet-35"></a>ASP.NET 3.5
 
-> Come compilare applicazioni ASP.NET 3.5, con particolare attenzione alle nuove funzionalità.
+> Come compilare applicazioni ASP.NET 3,5, con un'enfasi sulle nuove funzionalità.
 
 - [Procedure](how-do-i/index.md)
 
@@ -37,7 +37,7 @@ ms.locfileid: "65133780"
     - [Supporto di ASP.NET AJAX in Visual Studio 2008](aspnet-ajax/aspnet-ajax-support-in-visual-studio-2008.md)
     - [Aggiunta di funzionalità AJAX a una pagina ASP.NET esistente](aspnet-ajax/adding-ajax-functionality-to-an-existing-aspnet-page.md)
     - [Creazione e uso di un servizio Web compatibile con AJAX in un sito Web](aspnet-ajax/creating-and-using-an-ajax-enabled-web-service-in-a-web-site.md)
-    - [ASP.NET AJAX: Una dimostrazione di ASP.NET AJAX](aspnet-ajax/aspnet-ajax-a-demonstration-of-aspnet-ajax.md)
+    - [ASP.NET AJAX: dimostrazione di ASP.NET AJAX](aspnet-ajax/aspnet-ajax-a-demonstration-of-aspnet-ajax.md)
     - [ADO.NET Data Services con supporto di ASP.NET AJAX](aspnet-ajax/adonet-data-services-with-aspnet-ajax-support.md)
     - [Introduzione alla cronologia di ASP.NET Ajax](aspnet-ajax/introduction-to-aspnet-ajax-history.md)
     - [Uso della combinazione di script per migliorare le prestazioni di AJAX](aspnet-ajax/using-script-combining-to-improve-ajax-performance.md)

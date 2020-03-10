@@ -9,11 +9,11 @@ ms.assetid: 75af2e17-6ed3-4d24-8ea1-bc340027c318
 msc.legacyurl: /single-page-application/overview/templates/hottowel-template
 msc.type: authoredcontent
 ms.openlocfilehash: eeab69e75546791978bb09d7823d95caf9dca1a0
-ms.sourcegitcommit: e365196c75ce93cd8967412b1cfdc27121816110
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77075060"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78578484"
 ---
 # <a name="hot-towel-template"></a>Modello Hot Towel
 
@@ -45,7 +45,7 @@ All'interno della cartella dell'app:
 - Durandal
 - servizi
 - ViewModels
-- viste
+- visualizzazioni
 
 La cartella dell'app contiene una raccolta di moduli. Questi moduli incapsulano la funzionalità e dichiarano le dipendenze da altri moduli. La cartella Views contiene il codice HTML per l'applicazione e la cartella ViewModels contiene la logica di presentazione per le visualizzazioni (un modello MVVM comune). La cartella Services è la soluzione ideale per ospitare i servizi comuni che potrebbero essere necessari per l'applicazione, ad esempio il recupero dei dati HTTP o l'interazione di archiviazione locale. È comune che più ViewModel riutilizzino il codice dei moduli del servizio.
 
@@ -63,7 +63,7 @@ Hot asciugaman si basa sulla struttura di MVC ASP.NET familiare e potente.
 ## <a name="featured-libraries"></a>Librerie in primo piano
 
 - ASP.NET MVC
-- ASP.NET Web API
+- API Web ASP.NET
 - Ottimizzazione Web ASP.NET-aggregazione e minification
 - Gestione avanzata dei dati di [Breeze. js](http://Breezejs.com)
 - [Durandal. js](http://Durandaljs.com) -spostamento e composizione visualizzazione

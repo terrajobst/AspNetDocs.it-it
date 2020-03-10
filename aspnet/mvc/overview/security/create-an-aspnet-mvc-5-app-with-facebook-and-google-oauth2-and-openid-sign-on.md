@@ -9,11 +9,11 @@ ms.assetid: 81ee500f-fc37-40d6-8722-f1b64720fbb6
 msc.legacyurl: /mvc/overview/security/create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on
 msc.type: authoredcontent
 ms.openlocfilehash: dd2e55d68ceb5a90134e394c00f3a3a231cb27d6
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457687"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78566080"
 ---
 # <a name="create-an-aspnet-mvc-5-app-with-facebook-twitter-linkedin-and-google-oauth2-sign-on-c"></a>Creare un'app ASP.NET MVC 5 con l'accesso OAuth2 di Facebook, Twitter, LinkedIn e Google (C#)
 
@@ -28,7 +28,7 @@ di [Rick Anderson](https://twitter.com/RickAndMSFT)
 > Nell'esercitazione viene inoltre illustrato come aggiungere i dati del profilo per l'utente e come utilizzare l'API di appartenenza per aggiungere ruoli. Questa esercitazione è stata scritta da [Rick Anderson](https://blogs.msdn.com/rickAndy) (Seguimi su Twitter: [@RickAndMSFT](https://twitter.com/RickAndMSFT) ).
 
 <a id="start"></a>
-## <a name="getting-started"></a>Guida introduttiva
+## <a name="getting-started"></a>Introduzione
 
 Per iniziare, installare ed eseguire [Visual Studio Express 2013 per il Web](https://go.microsoft.com/fwlink/?LinkId=299058) o [Visual Studio 2013](https://go.microsoft.com/fwlink/?LinkId=306566). Installare Visual Studio [2013 Update 3](https://go.microsoft.com/fwlink/?LinkId=390521) o versione successiva. Per informazioni su Dropbox, GitHub, LinkedIn, Instagram, buffer, Salesforce, STEAM, Stack Exchange, TripIt, TIC, Twitter, Yahoo! e altro ancora, vedere questo [progetto di esempio](https://github.com/matthewdunsdon/oauthforaspnet).
 
@@ -148,7 +148,7 @@ Per connettersi a provider di autenticazione come Google e Facebook, sarà neces
 11. Dopo avere immesso le credenziali, verrà richiesto di concedere le autorizzazioni all'applicazione Web appena creata:
   
     ![](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/_static/image20.png)
-12. Fare clic su **Accetta**. A questo punto si verrà reindirizzati alla pagina **Register** dell'applicazione MvcAuth in cui è possibile registrare il proprio account Google. Sarà possibile modificare il nome di registrazione dell'indirizzo di posta elettronica locale usato per l'account Gmail, anche se in generale è preferibile mantenere l'alias di posta elettronica predefinito, ovvero quello usato per l'autenticazione. Fare clic su **Registra**.  
+12. Fare clic **Accept**. A questo punto si verrà reindirizzati alla pagina **Register** dell'applicazione MvcAuth in cui è possibile registrare il proprio account Google. Sarà possibile modificare il nome di registrazione dell'indirizzo di posta elettronica locale usato per l'account Gmail, anche se in generale è preferibile mantenere l'alias di posta elettronica predefinito, ovvero quello usato per l'autenticazione. Fare clic su **Register**.  
   
     ![](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/_static/image21.png)
 

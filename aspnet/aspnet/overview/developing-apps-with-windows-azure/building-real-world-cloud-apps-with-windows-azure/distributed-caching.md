@@ -9,11 +9,11 @@ ms.assetid: 406518e9-3817-49ce-8b90-e82bc461e2c0
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/distributed-caching
 msc.type: authoredcontent
 ms.openlocfilehash: 87a7516415895e761d1589fd459b93e5c15c0f85
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77456998"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78583545"
 ---
 # <a name="distributed-caching-building-real-world-cloud-apps-with-azure"></a>Caching distribuito (compilazione di app Cloud reali con Azure)
 
@@ -98,7 +98,7 @@ Documentazione
 - [Procedure consigliate per la progettazione di servizi su larga scala nei servizi cloud di Azure](https://msdn.microsoft.com/library/windowsazure/jj717232.aspx). W. White paper di Mark Simms e Michael Thomassy. Vedere la sezione relativa alla memorizzazione nella cache distribuita.
 - [Memorizzazione nella cache distribuita nel percorso alla scalabilità](https://msdn.microsoft.com/magazine/dd942840.aspx). Un articolo di MSDN Magazine precedente (2009), ma una chiara Introduzione alla memorizzazione nella cache distribuita in generale. approfondisce le sezioni relative alla memorizzazione nella cache dei white paper di Safety e Best Practices.
 
-Videos
+Video
 
 - [Failsafe: compilazione di servizi cloud scalabili e resilienti](https://channel9.msdn.com/Series/FailSafe). Serie in nove parti di Ulrich Homann, Marc Mercuri e Mark Simms. Viene presentata una visualizzazione a livello di 400 di come progettare app cloud. Questa serie è incentrata sulla teoria e sui motivi per cui; per altre procedure dettagliate, vedere la pagina relativa alla creazione di grandi serie di Mark Simms. Vedere la discussione sulla memorizzazione nella cache in Episode 3 a partire da 1:24:14.
 - [Creazione di grandi dimensioni: lezioni apprese dai clienti di Azure-parte i](https://channel9.msdn.com/Events/Build/2012/3-029). Simon Davies illustra la memorizzazione nella cache distribuita a partire da 46:00. In modo analogo alla serie failsafe, ma passa ad altre procedure dettagliate. La presentazione è stata data il 31 ottobre 2012, quindi non copre il servizio di memorizzazione nella cache di app Web nel servizio app Azure introdotto in 2013.

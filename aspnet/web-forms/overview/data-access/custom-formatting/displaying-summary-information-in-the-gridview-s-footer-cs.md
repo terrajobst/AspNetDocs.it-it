@@ -9,11 +9,11 @@ ms.assetid: d50edc31-9286-4c6a-8635-be09e72752a4
 msc.legacyurl: /web-forms/overview/data-access/custom-formatting/displaying-summary-information-in-the-gridview-s-footer-cs
 msc.type: authoredcontent
 ms.openlocfilehash: b258a2bdeaea8da4e9c5c5d8043b167d94e1e817
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74616796"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78548895"
 ---
 # <a name="displaying-summary-information-in-the-gridviews-footer-c"></a>Visualizzazione di informazioni di riepilogo nel piè di pagina del controllo GridView (C#)
 

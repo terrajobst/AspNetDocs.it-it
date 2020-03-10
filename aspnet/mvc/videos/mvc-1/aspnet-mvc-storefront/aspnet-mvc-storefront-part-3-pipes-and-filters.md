@@ -1,25 +1,25 @@
 ---
 uid: mvc/videos/mvc-1/aspnet-mvc-storefront/aspnet-mvc-storefront-part-3-pipes-and-filters
-title: 'ASP.NET MVC Storefront - Parte 3: Pipe e filtri | Microsoft Docs'
+title: 'ASP.NET MVC storefront-parte 3: pipe e filtri | Microsoft Docs'
 author: robconery
-description: Rob Conery vengono illustrati i commenti e suggerimenti da parte 1 e 2 e quindi approfondire l'implementazione di pipe e filtri nel repository di IQueryable.
+description: Rob Coney illustra i commenti e i suggerimenti delle parti 1 e 2 e quindi analizza l'implementazione di pipe e filtri nel repository IQueryable.
 ms.author: riande
 ms.date: 05/27/2008
 ms.assetid: 69de22ba-0129-4bb9-b32a-e99319ee8021
 msc.legacyurl: /mvc/videos/mvc-1/aspnet-mvc-storefront/aspnet-mvc-storefront-part-3-pipes-and-filters
 msc.type: video
 ms.openlocfilehash: fb9ee14d0bc06ba0a0b994a3eaeb08ddb6ed8c36
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59403253"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78537751"
 ---
-# <a name="aspnet-mvc-storefront-part-3-pipes-and-filters"></a>ASP.NET MVC Storefront - Parte 3: Pipe e filtri
+# <a name="aspnet-mvc-storefront-part-3-pipes-and-filters"></a>ASP.NET MVC storefront-parte 3: pipe e filtri
 
-da [Rob Conery](https://github.com/robconery)
+di [Rob Coney](https://github.com/robconery)
 
-Rob Conery vengono illustrati i commenti e suggerimenti da parte 1 e 2 e quindi approfondire l'implementazione di pipe e filtri nel repository di IQueryable.
+Rob Coney illustra i commenti e i suggerimenti delle parti 1 e 2 e quindi analizza l'implementazione di pipe e filtri nel repository IQueryable.
 
 [&#9654;Guarda il video (16 minuti)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/aspnet-mvc-storefront-part-3-pipes-and-filters)
 

@@ -9,11 +9,11 @@ ms.assetid: 664ec95e-b0c9-4f43-a39f-798d0f2a7e08
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/checkout-and-payment-with-paypal
 msc.type: authoredcontent
 ms.openlocfilehash: 62d00a86c6c5845fb894896df65002c7086d039f
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74615139"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78565408"
 ---
 # <a name="checkout-and-payment-with-paypal"></a>Completamento della transazione e pagamento con PayPal
 
@@ -31,7 +31,7 @@ Sono disponibili diversi processori di pagamento di terze parti che si specializ
 > 
 > L'applicazione di esempio Wingtip Toys è stata progettata per illustrare le funzionalità e i concetti specifici di ASP.NET disponibili per gli sviluppatori Web di ASP.NET. Questa applicazione di esempio non è stata ottimizzata per tutte le circostanze possibili per quanto riguarda la scalabilità e la sicurezza.
 
-## <a name="what-youll-learn"></a>Cosa si apprenderà:
+## <a name="what-youll-learn"></a>Contenuto dell'esercitazione:
 
 - Come limitare l'accesso a pagine specifiche in una cartella.
 - Come creare un carrello acquisti noto da un carrello acquisti anonimo.
@@ -92,10 +92,10 @@ Verranno ora create la cartella *checkout* e le pagine che verranno visualizzate
 6. Come in precedenza, selezionare il file *site. master* come pagina master.
 7. Aggiungere le seguenti pagine aggiuntive alla cartella *checkout* utilizzando la stessa procedura precedente:   
 
-    - CheckoutReview. aspx
-    - CheckoutComplete. aspx
-    - CheckoutCancel. aspx
-    - CheckoutError. aspx
+    - CheckoutReview.aspx
+    - CheckoutComplete.aspx
+    - CheckoutCancel.aspx
+    - CheckoutError.aspx
 
 ### <a name="add-a-webconfig-file"></a>Aggiungere un file Web. config
 
@@ -104,10 +104,10 @@ Se si aggiunge un nuovo file *Web. config* alla cartella *checkout* , sarà poss
 1. Fare clic con il pulsante destro del mouse sulla cartella *checkout* e scegliere **Aggiungi** -&gt; **nuovo elemento**.  
    Verrà visualizzata la finestra di dialogo **Aggiungi nuovo elemento**.
 2. Selezionare il **gruppo C# Visual** -&gt; modelli **Web** a sinistra. Quindi, nel riquadro centrale selezionare file di **configurazione Web**, accettare il nome predefinito di *Web. config*, quindi selezionare **Aggiungi**.
-3. Sostituire il contenuto XML esistente nel file *Web. config* con il codice seguente:  
+3. Sostituire il contenuto XML esistente nel file *Web.config* con il contenuto seguente:  
 
     [!code-xml[Main](checkout-and-payment-with-paypal/samples/sample4.xml)]
-4. Salvare il file *Web. config* .
+4. Salvare il file *Web.config* .
 
 Il file *Web. config* specifica che è necessario negare l'accesso alle pagine contenute nella cartella *checkout* a tutti gli utenti sconosciuti dell'applicazione Web. Tuttavia, se l'utente ha registrato un account ed è connesso, sarà un utente noto e avrà accesso alle pagine nella cartella *checkout* .
 
@@ -116,7 +116,7 @@ Il file *Web. config* specifica che è necessario negare l'accesso alle pagine c
 <a id="SSLWebForms"></a>
 ## <a name="enable-ssl-for-the-project"></a>Abilitare SSL per il progetto
 
- Secure Sockets Layer (SSL) è un protocollo definito per consentire ai server Web e ai client Web di comunicare in modo più sicuro tramite l'uso della crittografia. Quando non si usa SSL, i dati inviati tra il client e il server sono aperti all'analisi dei pacchetti da parte di chiunque abbia accesso fisico alla rete. Inoltre, diversi schemi di autenticazione comuni non sono sicuri su HTTP normale. In particolare, l'autenticazione di base e l'autenticazione basata su form inviano credenziali non crittografate. Per garantire la sicurezza, questi schemi di autenticazione devono usare SSL. 
+ Secure Sockets Layer (SSL) è un protocollo definito per consentire ai server Web e ai client Web di comunicare in modo più sicuro tramite l'uso della crittografia. Quando non si usa SSL, i dati inviati tra il client e il server possono essere soggetti allo sniffing dei pacchetti da qualsiasi soggetto con accesso fisico alla rete. Inoltre, numerosi schemi di autenticazione comuni non sono sicuri sul protocollo HTTP normale. In particolare, l'autenticazione di base e l'autenticazione basata su form inviano credenziali non crittografate. Per essere sicuri, questi schemi di autenticazione devono usare il protocollo SSL. 
 
 1. In **Esplora soluzioni**fare clic sul progetto **WingtipToys** , quindi premere **F4** per visualizzare la finestra **Proprietà** .
 2. Modificare **SSL abilitato** in `true`.
@@ -126,24 +126,24 @@ Il file *Web. config* specifica che è necessario negare l'accesso alle pagine c
 4. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto **WingtipToys** e scegliere **proprietà**.
 5. Nella scheda a sinistra fare clic su **Web**.
 6. Modificare l' **URL del progetto** in modo da usare l' **URL SSL** salvato in precedenza.   
-    ![proprietà Web del progetto](checkout-and-payment-with-paypal/_static/image5.png)
-7. Per salvare la pagina, premere **CTRL + S**.
-8. Premere **CTRL+F5** per eseguire l'applicazione. Visual Studio visualizzerà un'opzione che consente di evitare gli avvisi SSL.
-9. Fare clic su **Sì** per considerare attendibile il certificato SSL IIS Express e continuare.   
-    ![IIS Express i dettagli del certificato SSL](checkout-and-payment-with-paypal/_static/image6.png)  
- Viene visualizzato un avviso di sicurezza.
-10. Fare clic su **Sì** per installare il certificato nel localhost.   
-    ![finestra di dialogo avviso di sicurezza](checkout-and-payment-with-paypal/_static/image7.png)  
+    ![Proprietà del progetto Web](checkout-and-payment-with-paypal/_static/image5.png)
+7. Per salvare la pagina, premere **CTRL+S**.
+8. Premere **CTRL+F5** per eseguire l'applicazione. In Visual Studio verrà visualizzata un'opzione che consente di evitare eventuali avvisi SSL.
+9. Fare clic su **Sì** per considerare attendibile il certificato SSL di IIS Express e continuare.   
+    ![Dettagli del certificato SSL di IIS Express](checkout-and-payment-with-paypal/_static/image6.png)  
+ Verrà visualizzato un avviso di sicurezza.
+10. Fare clic su **Sì** per installare il certificato per l'host locale.   
+    ![Finestra di dialogo Avviso di sicurezza](checkout-and-payment-with-paypal/_static/image7.png)  
  Verrà visualizzata la finestra del browser.
 
 È ora possibile testare facilmente l'applicazione Web in locale usando SSL.
 
 <a id="OAuthWebForms"></a>
-## <a name="add-an-oauth-20-provider"></a>Aggiungere un provider OAuth 2,0
+## <a name="add-an-oauth-20-provider"></a>Aggiungere un provider OAuth 2.0
 
 ASP.NET Web Form fornisce opzioni avanzate per l'appartenenza e l'autenticazione. Questi miglioramenti includono OAuth. OAuth è un protocollo aperto che consente l'autorizzazione sicura in un metodo semplice e standard da applicazioni Web, per dispositivi mobili e desktop. Il modello Web Form ASP.NET usa OAuth per esporre Facebook, Twitter, Google e Microsoft come provider di autenticazione. Sebbene in questa esercitazione venga usato solo Google come provider di autenticazione, è possibile modificare facilmente il codice per usare uno dei provider. I passaggi per l'implementazione di altri provider sono molto simili a quelli che verranno visualizzati in questa esercitazione.
 
-Oltre all'autenticazione, l'esercitazione utilizzerà anche i ruoli per implementare l'autorizzazione. Solo gli utenti aggiunti al ruolo `canEdit` saranno in grado di modificare i dati (creare, modificare o eliminare i contatti).
+Oltre all'autenticazione, nell'esercitazione verranno utilizzati anche i ruoli per implementare l'autorizzazione. Solo gli utenti aggiunti al ruolo `canEdit` saranno in grado di modificare i dati, ovvero creare, modificare o eliminare i contatti.
 
 > [!NOTE] 
 > 
@@ -152,12 +152,12 @@ Oltre all'autenticazione, l'esercitazione utilizzerà anche i ruoli per implemen
 La procedura seguente consente di aggiungere un provider di autenticazione Google.
 
 1. Aprire l' *App\_file Start\Startup.auth.cs* .
-2. Rimuovere i caratteri di commento dal metodo `app.UseGoogleAuthentication()` in modo che il metodo venga visualizzato come segue: 
+2. Rimuovere i caratteri di commento dal metodo `app.UseGoogleAuthentication()` in modo da ottenere il codice seguente: 
 
     [!code-csharp[Main](checkout-and-payment-with-paypal/samples/sample5.cs)]
-3. Passare a [Google Developers Console](https://console.developers.google.com/). Sarà anche necessario accedere con l'account di posta elettronica per sviluppatori di Google (gmail.com). Se non si dispone di un account Google, selezionare il collegamento **creare un account** .   
-   Successivamente, verrà visualizzata la **console Google Developers**.   
-    ![console di Google Developers](checkout-and-payment-with-paypal/_static/image8.png)
+3. Passare a [Google Developers Console](https://console.developers.google.com/). Sarà necessario eseguire l'accesso con l'account di posta elettronica per sviluppatori di Google (gmail.com). Se non si dispone di un account Google, selezionare il collegamento **Crea un account** .   
+   Verrà quindi visualizzata la pagina **Google Developers Console**.   
+    ![Google Developers Console](checkout-and-payment-with-paypal/_static/image8.png)
 4. Fare clic sul pulsante **Crea progetto** e immettere un nome e un ID per il progetto (è possibile usare i valori predefiniti). Quindi, fare clic sulla casella di controllo **contratto** e sul pulsante **Crea** .  
 
     ![Google-nuovo progetto](checkout-and-payment-with-paypal/_static/image9.png)
@@ -165,16 +165,16 @@ La procedura seguente consente di aggiungere un provider di autenticazione Googl
    In pochi secondi verrà creato il nuovo progetto e nel browser verrà visualizzata la pagina nuovi progetti.
 5. Nella scheda a sinistra fare clic su **api &amp; autenticazione**, quindi fare clic su **credenziali**.
 6. Fare clic su **Crea nuovo ID client** in **OAuth**.   
-   Verrà visualizzata la finestra di dialogo **Crea ID client** .   
-    ![Google-Crea ID client](checkout-and-payment-with-paypal/_static/image10.png)
+   Verrà visualizzata la finestra di dialogo **Create Client ID** .   
+    ![Google - creare ID Client](checkout-and-payment-with-paypal/_static/image10.png)
 7. Nella finestra di dialogo **Crea ID client** , salvare l' **applicazione Web** predefinita per il tipo di applicazione.
 8. Impostare le **origini JavaScript autorizzate** sull'URL SSL usato in precedenza in questa esercitazione (`https://localhost:44300/` a meno che non siano stati creati altri progetti SSL).   
-   Questo URL è l'origine dell'applicazione. Per questo esempio, verrà immesso solo l'URL di test localhost. Tuttavia, è possibile immettere più URL per tenere conto di localhost e di produzione.
-9. Impostare l' **URI di reindirizzamento autorizzato** come segue: 
+   Questo URL rappresenta l'origine dell'applicazione. Per questo esempio, sarà necessario immettere solo l'URL di test localhost. Tuttavia, è possibile immettere più URL per tenere conto di localhost e di produzione.
+9. Per **Authorized Redirect URI** immettere le impostazioni seguenti: 
 
     [!code-html[Main](checkout-and-payment-with-paypal/samples/sample6.html)]
 
-   Questo valore è l'URI che ASP.NET gli utenti OAuth per comunicare con il server OAuth Google. Ricordare l'URL SSL usato in precedenza (`https://localhost:44300/`, a meno che non siano stati creati altri progetti SSL).
+   Questo valore è l'URI che verrà usato da ASP.NET OAuth per comunicare con il server OAuth di Google. Ricordare l'URL SSL usato in precedenza (`https://localhost:44300/`, a meno che non siano stati creati altri progetti SSL).
 10. Fare clic sul pulsante **Crea ID client** .
 11. Nel menu a sinistra di Google Developers console fare clic sulla voce di menu della **schermata di consenso** , quindi impostare l'indirizzo di posta elettronica e il nome del prodotto. Una volta completato il modulo, fare clic su **Salva**.
 12. Fare clic sulla voce di menu **API** , scorrere verso il basso e fare clic sul pulsante **off** accanto a **Google + API**.   
@@ -185,16 +185,16 @@ La procedura seguente consente di aggiungere un provider di autenticazione Googl
 14. In Visual Studio aggiornare il metodo `UseGoogleAuthentication` della pagina *Startup.auth.cs* copiando e incollando l' **ID client** e il **segreto client** nel metodo. I valori relativi all' **ID client** e al **segreto client** riportati di seguito sono esempi e non funzioneranno. 
 
     [!code-csharp[Main](checkout-and-payment-with-paypal/samples/sample7.cs?highlight=64-65)]
-15. Premere **CTRL + F5** per compilare ed eseguire l'applicazione. Fare clic sul collegamento **Accedi** .
+15. Premere **CTRL+F5** per compilare ed eseguire l'applicazione. Fare clic sul collegamento **Accedi** .
 16. In **Usa un altro servizio per accedere**fare clic su **Google**.  
-    Accesso ![](checkout-and-payment-with-paypal/_static/image11.png)
+    ![Accesso](checkout-and-payment-with-paypal/_static/image11.png)
 17. Se è necessario immettere le credenziali, si verrà reindirizzati al sito Google in cui verranno immesse le credenziali.  
-    ![Google-accesso](checkout-and-payment-with-paypal/_static/image12.png)
+    ![Google - accesso](checkout-and-payment-with-paypal/_static/image12.png)
 18. Dopo aver immesso le credenziali, verrà richiesto di concedere le autorizzazioni all'applicazione Web appena creata.  
-    ![Account del servizio predefinito del progetto](checkout-and-payment-with-paypal/_static/image13.png)
-19. Fare clic su **Accetto**. A questo punto si verrà reindirizzati alla pagina **Register** dell'applicazione **WingtipToys** in cui è possibile registrare il proprio account Google.  
-    ![eseguire la registrazione con l'account Google](checkout-and-payment-with-paypal/_static/image14.png)
-20. È possibile modificare il nome di registrazione dell'indirizzo di posta elettronica locale usato per l'account Gmail, ma in genere si vuole tenere l'alias di posta elettronica predefinito, ovvero quello usato per l'autenticazione. Fare clic su Accedi come illustrato **in** precedenza.
+    ![Account del servizio di progetto predefinito](checkout-and-payment-with-paypal/_static/image13.png)
+19. Fare clic **Accept**. A questo punto si verrà reindirizzati alla pagina **Register** dell'applicazione **WingtipToys** in cui è possibile registrare il proprio account Google.  
+    ![Registrare con l'Account Google](checkout-and-payment-with-paypal/_static/image14.png)
+20. Sarà possibile modificare il nome di registrazione dell'indirizzo di posta elettronica locale usato per l'account Gmail, anche se in generale è preferibile mantenere l'alias di posta elettronica predefinito, ovvero quello usato per l'autenticazione. Fare clic su Accedi come illustrato **in** precedenza.
 
 ### <a name="modifying-login-functionality"></a>Modifica della funzionalità di accesso
 
@@ -305,9 +305,9 @@ La maggior parte del codice PayPal viene posizionata in un'unica classe. Questa 
 
 La classe NVPAPICaller contiene la maggior parte della funzionalità PayPal. Il codice nella classe fornisce i metodi necessari per effettuare un acquisto di test dall'ambiente di test di PayPal. Per effettuare acquisti vengono usate le tre funzioni PayPal seguenti:
 
-- funzione `SetExpressCheckout`
-- funzione `GetExpressCheckoutDetails`
-- funzione `DoExpressCheckoutPayment`
+- Funzione `SetExpressCheckout`
+- Funzione `GetExpressCheckoutDetails`
+- Funzione `DoExpressCheckoutPayment`
 
 Il metodo `ShortcutExpressCheckout` raccoglie le informazioni di acquisto del test e i dettagli del prodotto dal carrello acquisti e chiama la funzione `SetExpressCheckout` PayPal. Il metodo `GetCheckoutDetails` conferma i dettagli di acquisto e chiama la funzione `GetExpressCheckoutDetails` PayPal prima di effettuare l'acquisto del test. Il metodo `DoCheckoutPayment` completa l'acquisto di test dall'ambiente di test chiamando la funzione `DoExpressCheckoutPayment` PayPal. Il codice rimanente supporta i metodi e il processo PayPal, ad esempio stringhe di codifica, decodifica di stringhe, elaborazione di matrici e determinazione delle credenziali.
 
@@ -381,7 +381,7 @@ Il controllo **DetailsView** viene utilizzato per visualizzare i dettagli dell'o
 
 > [!NOTE] 
 > 
-> **Punta**
+> **Suggerimento**
 > 
 > Nel markup della pagina *CheckoutReview. aspx* si noti che il tag `<ItemStyle>` viene usato per modificare lo stile degli elementi all'interno del controllo **DetailsView** nella parte inferiore della pagina. Visualizzando la pagina nella **visualizzazione progettazione** (selezionando **progetta** nell'angolo inferiore sinistro di Visual Studio), quindi selezionando il controllo **DetailsView** e selezionando lo **Smart tag** (l'icona a forma di freccia nella parte superiore destra del controllo), sarà possibile visualizzare le attività di **DetailsView**.
 > 
@@ -482,7 +482,7 @@ Esaminando i dati aggiornati nel database dell'applicazione di esempio Wingtip T
  Potrebbe essere necessario selezionare l'icona **Mostra tutti i file** per la cartella.
 4. Fare clic con il pulsante destro del mouse sul file di database *wingtiptoys. MDF* e scegliere **Apri**.  
     Viene visualizzato **Esplora server** .
-5. Espandere la cartella **tabelle** .
+5. Espandere la cartella **Tabelle** .
 6. Fare clic con il pulsante destro del mouse sulla tabella **Orders**e scegliere **Mostra dati tabella**.  
  Viene visualizzata la tabella **Orders** .
 7. Esaminare la colonna **PaymentTransactionID** per confermare le transazioni riuscite. 

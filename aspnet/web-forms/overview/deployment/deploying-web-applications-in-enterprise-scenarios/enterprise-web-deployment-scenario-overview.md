@@ -2,121 +2,121 @@
 uid: web-forms/overview/deployment/deploying-web-applications-in-enterprise-scenarios/enterprise-web-deployment-scenario-overview
 title: 'Distribuzione Web aziendale: Panoramica dello scenario | Microsoft Docs'
 author: jrjlee
-description: Questa serie di esercitazioni pratiche Usa una soluzione di esempio con un livello di complessità, insieme a uno scenario di distribuzione azienda fittizia, realistico per fornire un parametro ref...
+description: Questo set di esercitazioni usa una soluzione di esempio con un livello di complessità realistico, insieme a uno scenario di distribuzione aziendale fittizio, per fornire un riferimento...
 ms.author: riande
 ms.date: 05/03/2012
 ms.assetid: aa862153-4cd8-4e33-beeb-abf502c6664f
 msc.legacyurl: /web-forms/overview/deployment/deploying-web-applications-in-enterprise-scenarios/enterprise-web-deployment-scenario-overview
 msc.type: authoredcontent
 ms.openlocfilehash: 9786879844da13c21e6a953b1ab24b29ca8121e2
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65109137"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78574130"
 ---
 # <a name="enterprise-web-deployment-scenario-overview"></a>Distribuzione Web aziendale: Panoramica dello scenario
 
-da [Jason Lee](https://github.com/jrjlee)
+di [Jason Lee](https://github.com/jrjlee)
 
 [Scaricare PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
-> Questa serie di esercitazioni pratiche Usa una soluzione di esempio con un livello di complessità, insieme a uno scenario di distribuzione azienda fittizia, realistico per fornire un'implementazione di riferimento e per assegnare le attività e procedure dettagliate di contesto comune. In questo argomento viene descritto lo scenario dell'esercitazione e introduce la soluzione di esempio.
+> Questo set di esercitazioni usa una soluzione di esempio con un livello di complessità realistico, insieme a uno scenario di distribuzione aziendale fittizio, per fornire un'implementazione di riferimento e per fornire le attività e le procedure dettagliate di un contesto comune. In questo argomento viene descritto lo scenario dell'esercitazione e viene introdotta la soluzione di esempio.
 
 ## <a name="scenario-description"></a>Descrizione dello scenario
 
-Fabrikam, Inc., una società fittizia, consiste nel creare una soluzione che consente ai team di vendita remoti archiviare e recuperare le informazioni di contatto da un'interfaccia web.
+Fabrikam, Inc., una società fittizia, sta creando una soluzione che consente ai team di vendita remoti di archiviare e recuperare le informazioni di contatto da un'interfaccia Web.
 
-I processi di Application Lifecycle Management (ALM) Fabrikam, Inc. richiedono la soluzione per la distribuzione in tre ambienti del server in varie fasi del processo di sviluppo software:
+I processi di Application Lifecycle Management (ALM) in Fabrikam, Inc. richiedono che la soluzione venga distribuita in tre ambienti server in diverse fasi del processo di sviluppo del software:
 
-- Un ambiente di test o "sandbox" per gli sviluppatori.
-- Un ambiente di gestione temporanea basato sulla intranet.
-- Un ambiente di produzione con connessione Internet.
+- Un ambiente di testing per sviluppatori o "sandbox".
+- Ambiente di gestione temporanea basato su Intranet.
+- Ambiente di produzione con connessione Internet.
 
-Ognuno di questi ambienti ha requisiti di protezione e configurazione diversa, e ognuno pone sfide della distribuzione univoco.
+Ognuno di questi ambienti presenta requisiti di configurazione e di sicurezza diversi e ognuno pone problemi di distribuzione univoci.
 
-### <a name="the-fabrikam-inc-server-infrastructure"></a>The Fabrikam, Inc. Infrastruttura server
+### <a name="the-fabrikam-inc-server-infrastructure"></a>Infrastruttura di Fabrikam, Inc. Server
 
-Si tratta dell'infrastruttura di sviluppo e la distribuzione ad alto livello in Fabrikam, Inc.
+Si tratta dell'infrastruttura di sviluppo e distribuzione di alto livello di Fabrikam, Inc.
 
 ![](enterprise-web-deployment-scenario-overview/_static/image1.png)
 
-La workstation di sviluppo, l'infrastruttura di controllo di origine, l'ambiente di test per sviluppatori e l'ambiente di staging che si trovano tutti nella rete intranet all'interno del dominio Fabrikam.net. In una rete perimetrale (detta anche DMZ DMZ e subnet schermata), che è isolata dalla rete intranet da un firewall si trova l'ambiente di produzione. Si tratta di uno scenario di distribuzione comune: è in genere isolare i server web con connessione Internet dell'infrastruttura server interni tramite l'uso di firewall o server gateway.
+Le workstation per sviluppatori, l'infrastruttura di controllo del codice sorgente, l'ambiente di test per sviluppatori e l'ambiente di gestione temporanea si trovano tutti nella rete Intranet all'interno del dominio Fabrikam.net. L'ambiente di produzione risiede in una rete perimetrale (nota anche come subnet schermata), che è isolata dalla rete Intranet da un firewall. Si tratta di uno scenario di distribuzione comune: i server Web con connessione Internet vengono in genere isolati dall'infrastruttura server interna tramite l'utilizzo di firewall o server gateway.
 
 In questo esempio:
 
-- Un server di Team Foundation Server (TFS) 2010 con un server di compilazione separata fornisce funzionalità di integrazione continua (CI) e controllo del codice sorgente.
-- L'ambiente di test per sviluppatori include un server web Internet Information Services (IIS) 7.5 e un server di database di SQL Server 2008 R2.
-- L'ambiente di produzione include più i server web IIS 7.5 sincronizzati da un server di controller di Web Farm Framework (WFF), insieme a un server di database di SQL Server 2008 R2. In pratica, il server di database può usare clustering o il mirroring per migliorare la scalabilità e disponibilità.
-- Ambiente di gestione temporanea è progettata per replicare la configurazione dell'ambiente di produzione fedelmente possibile.
-- I criteri di isolamento rete e firewall non consentono la distribuzione diretta e automatizzata dalla rete intranet alla rete perimetrale.
+- Un server Team Foundation Server (TFS) 2010 con un server di compilazione separato fornisce funzionalità di controllo del codice sorgente e integrazione continua (CI).
+- L'ambiente di test per sviluppatori include un server Web Internet Information Services (IIS) 7,5 e un server di database SQL Server 2008 R2.
+- L'ambiente di produzione include più server Web IIS 7,5 sincronizzati da un server del controller WFF (Web Farm Framework), insieme a un server di database SQL Server 2008 R2. In pratica, il server di database può utilizzare il clustering o il mirroring per migliorare la scalabilità e la disponibilità.
+- L'ambiente di gestione temporanea è progettato per replicare il più possibile la configurazione dell'ambiente di produzione.
+- Il firewall e i criteri di isolamento rete non consentono la distribuzione automatica diretta dalla Intranet alla rete perimetrale.
 
-La configurazione della ognuno di questi ambienti è descritto più dettagliatamente nella seconda esercitazione [configurazione di ambienti Server per la distribuzione Web](../configuring-server-environments-for-web-deployment/configuring-server-environments-for-web-deployment.md).
+La configurazione di ognuno di questi ambienti è descritta più dettagliatamente nella seconda esercitazione Configurazione degli [ambienti server per la distribuzione Web](../configuring-server-environments-for-web-deployment/configuring-server-environments-for-web-deployment.md).
 
 ### <a name="team-roles-for-alm"></a>Ruoli del team per ALM
 
-Tali utenti siano coinvolti nella creazione, la gestione, compilazione e la pubblicazione della soluzione Contact Manager:
+Questi utenti sono interessati alla creazione, alla gestione, alla compilazione e alla pubblicazione della soluzione Contact Manager:
 
-- Matt Hink è uno sviluppatore di applicazioni web presso Fabrikam, Inc. È parte del team ha sviluppato questa soluzione Contact Manager utilizzando Visual Studio 2010. Matt con diritti di amministratore completo per i server nell'ambiente di test per sviluppatori, che gli consente di configurare l'ambiente in base alle sue esigenze. Ha anche accesso utente all'istanza di Visual Studio 2010 TFS in cui si archivia il codice sorgente per la soluzione Contact Manager.
-- Rob Walters è un amministratore del server per il team di sviluppo Fabrikam, Inc. Rob ha accesso come amministratore nel server TFS in modo che è possibile configurare tutti gli aspetti di TFS e Team Build. Rob inoltre dispone di accesso amministrativo per il test e i server web di staging e agisce come l'amministratore del database (DBA) per i server di database di test e ambienti di staging. Rob ha configurato Team Build nel server TFS per eseguire queste attività:
+- Matt Hink è uno sviluppatore di applicazioni Web di Fabrikam, Inc. Fa parte del team che ha sviluppato la soluzione Contact Manager con Visual Studio 2010. Matt dispone di diritti di amministratore completi per i server nell'ambiente di test per sviluppatori, che consente di configurare l'ambiente in base alle proprie esigenze. Dispone inoltre dell'accesso utente all'istanza di Visual Studio 2010 TFS in cui archivia il codice sorgente per la soluzione Contact Manager.
+- Rob Walters è un amministratore del server per il team di sviluppo Fabrikam, Inc. Rob dispone di accesso amministrativo al server TFS in modo da poter configurare tutti gli aspetti di TFS e Team Build. Rob dispone inoltre dell'accesso amministrativo ai server Web di test e di gestione temporanea e funge da amministratore di database (DBA) per i server di database negli ambienti di test e di gestione temporanea. Rob ha configurato Team Build nel server TFS per eseguire queste attività:
 
-    - Compilare ed eseguire unit test sull'applicazione ogni volta che un utente archivia un file da TFS. Si tratta degli elementi di configurazione.
-    - Distribuire automaticamente l'applicazione Contact Manager nell'ambiente di test dopo l'applicazione passa gli unit test. Ciò include il database di pubblicazione per il server di test nella distribuzione iniziale ed eventuali aggiornamenti al database dopo la distribuzione iniziale.
-    - Distribuire l'applicazione Contact Manager all'ambiente di staging in un unico passaggio processo.
-    - Creare un pacchetto Web che un amministratore del server Web e un amministratore di database possono utilizzare per pubblicare l'applicazione nell'ambiente di produzione.
-- Lisa Andrews è responsabile della distribuzione di applicazioni per il server di produzione di Fabrikam, Inc. un amministratore del server. Anna ha accesso in lettura alla condivisione in cui il Team di TFS Build archivia il pacchetto di distribuzione web quando viene compilata l'applicazione Contact Manager. Anna ha anche accesso amministrativo ai server web di produzione, in modo che Anna possa distribuire l'applicazione nell'ambiente di produzione. Inoltre, Anna agisce come l'amministratore di database che consente di distribuire i database e gli aggiornamenti del database al server di database nell'ambiente di produzione.
+    - Compilare ed eseguire unit test sull'applicazione ogni volta che un utente archivia un file in TFS. Questa operazione è denominata CI.
+    - Distribuire automaticamente l'applicazione Contact Manager nell'ambiente di test dopo che l'applicazione ha superato gli unit test. Ciò include la pubblicazione del database nei server di prova durante la distribuzione iniziale ed eventuali aggiornamenti al database dopo la distribuzione iniziale.
+    - Distribuire l'applicazione Contact Manager nell'ambiente di gestione temporanea in un processo a un solo passaggio.
+    - Creare un pacchetto Web che può essere utilizzato da un amministratore del server Web e da un amministratore di database per pubblicare l'applicazione nell'ambiente di produzione.
+- Lisa Andrews è un amministratore del server responsabile della distribuzione di applicazioni nei server Fabrikam, Inc. Production. Ha accesso in lettura alla condivisione in cui il Team Build di TFS archivia il pacchetto di distribuzione Web dopo aver compilato l'applicazione Contact Manager. Dispone inoltre dell'accesso amministrativo ai server Web di produzione, in modo da poter distribuire l'applicazione in produzione. Inoltre, agisce da DBA che distribuisce i database e gli aggiornamenti del database nel server di database nell'ambiente di produzione.
 
 <a id="_The_Contact_Manager"></a>
 
 ### <a name="the-contact-manager-solution"></a>Soluzione Contact Manager
 
-La soluzione di gestione dei contatti è progettata per consentire agli utenti registrati, ha eseguito l'accesso di aggiungere e modificare le informazioni di contatto tramite un'interfaccia web. La soluzione Contact Manager è costituita da quattro progetti singoli:
+La soluzione Contact Manager è progettata per consentire agli utenti registrati e registrati di aggiungere e modificare le informazioni di contatto tramite un'interfaccia Web. La soluzione Contact Manager è costituita da quattro progetti singoli:
 
 ![](enterprise-web-deployment-scenario-overview/_static/image2.png)
 
-- **ContactManager.Mvc**. Si tratta di un progetto di applicazione web ASP.NET MVC 3 che rappresenta il punto di ingresso per la soluzione. Offre alcune funzionalità di applicazione web di base, ad esempio offrendo agli utenti la possibilità di creare e visualizzare i dettagli dei contatti. L'applicazione si basa su un servizio Windows Communication Foundation (WCF) per gestire i contatti e un database di servizi di applicazioni ASP.NET per gestire l'autenticazione e autorizzazione.
-- **ContactManager.Database**. Si tratta di un progetto di database di Visual Studio 2010. Il progetto definisce lo schema per un database che archivia i dettagli di contatto.
-- **ContactManager.Service**. Si tratta di un progetto di servizio web WCF. L'oggetto espone WCF crea un endpoint che consente ai chiamanti di eseguire, recuperare, aggiornare ed eliminazione (CRUD) nel database di gestione contatti. Il servizio si basa sul database Contact Manager e l'assembly ContactManager.Common.dll.
-- **ContactManager.Common**. Si tratta di un progetto di libreria di classi. Il servizio WCF si basa sui tipi definiti in questo assembly.
+- **ContactManager. Mvc**. Si tratta di un progetto di applicazione Web MVC3 ASP.NET che rappresenta il punto di ingresso per la soluzione. Offre funzionalità di base per le applicazioni Web, ad esempio per fornire agli utenti la possibilità di creare e visualizzare i dettagli dei contatti. L'applicazione si basa su un servizio Windows Communication Foundation (WCF) per gestire i contatti e un database dei servizi dell'applicazione ASP.NET per gestire l'autenticazione e l'autorizzazione.
+- **ContactManager. database**. Si tratta di un progetto di database di Visual Studio 2010. Il progetto definisce lo schema per un database in cui sono archiviati i dettagli del contatto.
+- **ContactManager. Service**. Si tratta di un progetto di servizio Web WCF. WCF espone un endpoint che consente ai chiamanti di eseguire operazioni di creazione, recupero, aggiornamento ed eliminazione (CRUD) nel database Contact Manager. Il servizio si basa sul database Contact Manager e sull'assembly ContactManager. Common. dll.
+- **ContactManager. Common**. Si tratta di un progetto libreria di classi. Il servizio WCF si basa sui tipi definiti in questo assembly.
 
-Nella prima esercitazione di questa serie, viene fornita una revisione completa della soluzione e i requisiti di distribuzione [distribuzione Web aziendale](../web-deployment-in-the-enterprise/web-deployment-in-the-enterprise.md).
+Nella prima esercitazione di questa serie, [distribuzione Web nell'azienda](../web-deployment-in-the-enterprise/web-deployment-in-the-enterprise.md), viene fornita una panoramica completa della soluzione e dei relativi requisiti di distribuzione.
 
 <a id="_Deployment_Tasks"></a>
 
 ## <a name="deployment-tasks"></a>Attività di distribuzione
 
-Esistono diverse attività distinte coinvolti nella distribuzione delle applicazioni in ambienti diversi in un'organizzazione di grandi dimensioni. Queste sono le attività principali che coprono le esercitazioni:
+Sono disponibili diverse attività distinte per la distribuzione di applicazioni in ambienti diversi in un'organizzazione di grandi dimensioni. Queste sono le attività principali trattate dalle esercitazioni:
 
 ![](enterprise-web-deployment-scenario-overview/_static/image3.png)
 
-Ecco un elenco di ogni passaggio nel processo di distribuzione dal punto di vista degli utenti descritto in precedenza in questo documento:
+Di seguito è riportato un elenco di tutti i passaggi del processo di distribuzione dal punto di vista degli utenti descritti in precedenza in questo documento:
 
-1. Tutti i membri del team di rivedere la soluzione Contact Manager in Visual Studio 2010, per determinare i problemi e requisiti di distribuzione chiave.
-2. Matt Hink può distribuire la soluzione Contact Manager direttamente dalla workstation dello sviluppatore nell'ambiente di test per sviluppatori, per condurre un test iniziale della logica di distribuzione.
-3. Matt Hink aggiunge all'applicazione di controllo del codice sorgente in TFS.
-4. Rob Walters crea diverse definizioni di compilazione per la soluzione Contact Manager nel Team Build. Una definizione di compilazione Usa integrazione continua per distribuire la soluzione nell'ambiente di test per sviluppatori, ogni volta che un utente archivia nuovo codice. Un'altra definizione di compilazione consente agli utenti di attivare le distribuzioni nell'ambiente di gestione temporanea in base alle esigenze.
-5. Ogni volta che un utente archivia nuovo codice, Team Build automaticamente compila i componenti della soluzione, eseguire gli unit test e distribuisce la soluzione per l'ambiente di test per sviluppatori se la compilazione ha avuto esito positivo e unit test superati.
-6. Quando un utente viene attivata una distribuzione in ambiente di gestione temporanea, la soluzione è incluso nel pacchetto e distribuita in un unico passaggio processo. Questo processo genera anche un pacchetto per la distribuzione manuale per l'ambiente di produzione.
-7. Lisa Andrews distribuisce l'applicazione nell'ambiente di produzione importando manualmente il pacchetto web creato nel passaggio 6.
+1. Tutti i membri del team verificano la soluzione Contact Manager in Visual Studio 2010 per determinare i requisiti e i problemi di distribuzione chiave.
+2. Matt Hink può distribuire la soluzione Contact Manager direttamente dalla workstation per sviluppatori all'ambiente di test per sviluppatori, per condurre un test iniziale della logica di distribuzione.
+3. Matt Hink aggiunge l'applicazione al controllo del codice sorgente in TFS.
+4. Rob Walters crea varie definizioni di compilazione per la soluzione Contact Manager in Team Build. Una definizione di compilazione USA CI per distribuire la soluzione nell'ambiente di test per sviluppatori ogni volta che un utente archivia un nuovo codice. Un'altra definizione di compilazione consente agli utenti di attivare le distribuzioni nell'ambiente di gestione temporanea secondo necessità.
+5. Ogni volta che un utente archivia un nuovo codice, Team Build compila automaticamente i componenti della soluzione, esegue unit test e distribuisce la soluzione nell'ambiente di test per sviluppatori se la compilazione ha avuto esito positivo e gli unit test sono stati superati.
+6. Quando un utente attiva una distribuzione nell'ambiente di gestione temporanea, la soluzione viene assemblata e distribuita in un processo a un solo passaggio. Questo processo genera anche un pacchetto per la distribuzione manuale nell'ambiente di produzione.
+7. Lisa Andrews distribuisce l'applicazione nell'ambiente di produzione importando manualmente il pacchetto Web creato nel passaggio 6.
 
-### <a name="key-deployment-issues"></a>Problemi di distribuzione chiave
+### <a name="key-deployment-issues"></a>Problemi di distribuzione principali
 
-La soluzione Contact Manager e lo scenario di Fabrikam, Inc. evidenziare vari comuni e le problematiche che potrebbero verificarsi quando si distribuisce soluzioni su larga scala e complesso. Ad esempio:
+La soluzione Contact Manager e lo scenario Fabrikam, Inc. evidenziano vari problemi comuni e sfide che possono verificarsi quando si distribuiscono soluzioni complesse di livello aziendale. Esempio:
 
-- È necessario essere in grado di distribuire progetti in più ambienti, ad esempio per gli sviluppatori o ambienti di test, server di produzione e le piattaforme di gestione temporanea. La soluzione deve essere distribuito con le impostazioni di configurazione diversi per ogni ambiente.
-- È necessario distribuire contemporaneamente come parte di un processo di compilazione e distribuzione automatizzato o passo a passo più progetti dipendenti.
-- È necessario essere in grado di alla distribuzione di unità da un processo automatizzato. Ad esempio, si desidera utilizzare un processo di integrazione continua per distribuire applicazioni web in un ambiente di staging quando viene archiviato nuovo codice.
-- È necessario essere in grado di controllare il processo di distribuzione e impostare le variabili di distribuzione dall'esterno di Visual Studio, come gli sviluppatori sono in genere non hanno le credenziali necessarie per ogni ambiente di destinazione o le impostazioni di configurazione corretto.
-- È necessario distribuire i progetti di database basata sullo schema e mantenere i dati esistenti nelle distribuzioni successive.
-- È necessario distribuire i database dei membri in base a hoc senza la distribuzione di dati dell'account utente. È necessario anche aggiornare lo schema dei database di appartenenza distribuito senza perdita di dati di account utente esistente.
-- È necessario escludere determinati file o cartelle quando si distribuisce contenuto in diversi ambienti di destinazione.
+- È necessario essere in grado di distribuire progetti in più ambienti, ad esempio gli ambienti di sviluppo o test, le piattaforme di staging e i server di produzione. La soluzione deve essere distribuita con impostazioni di configurazione diverse per ogni ambiente.
+- È necessario distribuire simultaneamente più progetti dipendenti come parte di un processo di compilazione e distribuzione automatizzato in un singolo passaggio.
+- È necessario essere in grado di gestire la distribuzione da un processo automatizzato. Ad esempio, si vuole usare un processo CI per distribuire le applicazioni Web in un ambiente di gestione temporanea quando viene archiviato nuovo codice.
+- È necessario essere in grado di controllare il processo di distribuzione e impostare le variabili di distribuzione dall'esterno di Visual Studio, poiché è improbabile che gli sviluppatori abbiano le impostazioni di configurazione corrette o le credenziali necessarie per ogni ambiente di destinazione.
+- È necessario distribuire progetti di database basati su schema e mantenere i dati esistenti nelle distribuzioni successive.
+- È necessario distribuire i database di appartenenza su base ad hoc senza distribuire i dati dell'account utente. Potrebbe inoltre essere necessario aggiornare lo schema dei database di appartenenza distribuiti senza perdere i dati dell'account utente esistente.
+- È necessario escludere determinati file o cartelle quando si distribuisce il contenuto in diversi ambienti di destinazione.
 
-Inoltre, la gestione di distribuzione quando gli aggiornamenti sono incrementali e frequenti genera un'eccezione di alcune problematiche aggiuntive. Ad esempio:
+Inoltre, la gestione della distribuzione quando gli aggiornamenti sono frequenti e incrementale genera ulteriori problemi. Esempio:
 
-- Ogni volta che uno sviluppatore archivia nuovo codice, si eseguono unit test. Si vuole solo distribuire la soluzione se il codice passa gli unit test.
-- Quando si distribuisce un'applicazione web in un ambiente di gestione temporanea o produzione, si desidera reindirizzare gli utenti a un *app\_offline.htm* file per la durata del processo di distribuzione.
-- Si desidera registrare le attività di distribuzione. Il processo di distribuzione deve inviare le notifiche di posta elettronica delle distribuzioni di esito positivo o negativo ai destinatari designati.
-- Se una distribuzione automatica non riesce, il processo di distribuzione deve ripetere la distribuzione corrente o distribuire il pacchetto web precedente.
+- Gli unit test vengono eseguiti ogni volta che uno sviluppatore archivia un nuovo codice. Si desidera distribuire la soluzione solo se il codice supera gli unit test.
+- Quando si distribuisce un'applicazione Web in un ambiente di gestione temporanea o di produzione, si desidera reindirizzare gli utenti a un' *app\_file offline. htm* per la durata del processo di distribuzione.
+- Si desidera registrare le attività di distribuzione. Il processo di distribuzione deve inviare notifiche tramite posta elettronica di distribuzioni con esito positivo o negativo ai destinatari designati.
+- Se una distribuzione automatica ha esito negativo, il processo di distribuzione deve ritentare la distribuzione corrente o distribuire invece il precedente pacchetto Web.
 
 > [!div class="step-by-step"]
 > [Precedente](deploying-web-applications-in-enterprise-scenarios.md)

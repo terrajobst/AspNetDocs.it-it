@@ -9,11 +9,11 @@ ms.assetid: 9cad0833-486a-4474-a7f3-7715542ec4ce
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/deploying-a-database-update
 msc.type: authoredcontent
 ms.openlocfilehash: 805eb84c24764cf921291f89054435601dbac48e
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74636824"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78547740"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-deploying-a-database-update"></a>Distribuzione Web ASP.NET con Visual Studio: distribuzione di un aggiornamento del database
 
@@ -23,7 +23,7 @@ di [Tom Dykstra](https://github.com/tdykstra)
 
 > Questa serie di esercitazioni illustra come distribuire (pubblicare) un'applicazione Web ASP.NET in app Web di servizio app Azure o in un provider di hosting di terze parti, usando Visual Studio 2012 o Visual Studio 2010. Per informazioni sulla serie, vedere [la prima esercitazione della serie](introduction.md).
 
-## <a name="overview"></a>Panoramica di
+## <a name="overview"></a>Panoramica
 
 In questa esercitazione si apportano modifiche al database e modifiche del codice correlate, si verificano le modifiche in Visual Studio, quindi si distribuisce l'aggiornamento negli ambienti di test, di gestione temporanea e di produzione.
 
@@ -129,7 +129,7 @@ Per eseguire la distribuzione usando il provider dbDacFx, è sufficiente selezio
 
 1. Aprire la procedura guidata **Pubblica sito Web** facendo clic con il pulsante destro del mouse sul progetto ContosoUniversity e scegliendo **pubblica**.
 2. Selezionare il profilo di **test** .
-3. Fare clic sulla scheda **Impostazioni** .
+3. Fare clic sulla scheda **Impostazioni**.
 4. In **DefaultConnection**selezionare **Aggiorna database**.
 5. Disabilitare gli script aggiuntivi configurati per l'esecuzione per la distribuzione iniziale:
 

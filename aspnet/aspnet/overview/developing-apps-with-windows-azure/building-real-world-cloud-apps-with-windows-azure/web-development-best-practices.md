@@ -9,11 +9,11 @@ ms.assetid: 52d6c941-2cd9-442f-9872-2c798d6d90cd
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/web-development-best-practices
 msc.type: authoredcontent
 ms.openlocfilehash: dfd8a3ac2328d3f17dfbe36e68b37d181177b0f4
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457089"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78583461"
 ---
 # <a name="web-development-best-practices-building-real-world-cloud-apps-with-azure"></a>Procedure consigliate per lo sviluppo Web (compilazione di app Cloud reali con Azure)
 

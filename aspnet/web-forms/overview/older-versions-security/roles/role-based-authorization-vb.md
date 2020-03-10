@@ -9,11 +9,11 @@ ms.assetid: 83b4f5a4-4f5a-4380-ba33-f0b5c5ac6a75
 msc.legacyurl: /web-forms/overview/older-versions-security/roles/role-based-authorization-vb
 msc.type: authoredcontent
 ms.openlocfilehash: feb3e5eb992284033853e67bfab3872243cefe39
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74570971"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78573157"
 ---
 # <a name="role-based-authorization-vb"></a>Autorizzazione basata sui ruoli (VB)
 
@@ -31,7 +31,7 @@ Oltre all'autorizzazione URL, sono state esaminate anche le tecniche dichiarativ
 
 Applicare le regole di autorizzazione in base all'utente può crescere in un incubo di contabilità. Un approccio più gestibile consiste nell'usare l'autorizzazione basata sui ruoli. La buona notizia è che gli strumenti a disposizione per applicare le regole di autorizzazione funzionano correttamente con i ruoli come per gli account utente. Le regole di autorizzazione URL possono specificare ruoli anziché utenti. Il controllo LoginView, che esegue il rendering di output diversi per utenti autenticati e anonimi, può essere configurato in modo da visualizzare contenuti diversi in base ai ruoli dell'utente connesso. E l'API roles include metodi per determinare i ruoli dell'utente connesso.
 
-Questa esercitazione inizia con un'occhiata al modo in cui il Framework dei ruoli associa i ruoli di un utente al contesto di sicurezza. Viene quindi esaminato come applicare le regole di autorizzazione degli URL basate sui ruoli. In seguito, verrà esaminato l'utilizzo di metodi dichiarativi e programmatici per modificare i dati visualizzati e la funzionalità offerta da una pagina ASP.NET. Iniziamo!
+Questa esercitazione inizia con un'occhiata al modo in cui il Framework dei ruoli associa i ruoli di un utente al contesto di sicurezza. Viene quindi esaminato come applicare le regole di autorizzazione degli URL basate sui ruoli. In seguito, verrà esaminato l'utilizzo di metodi dichiarativi e programmatici per modificare i dati visualizzati e la funzionalità offerta da una pagina ASP.NET. Ecco come procedere.
 
 ## <a name="understanding-how-roles-are-associated-with-a-users-security-context"></a>Informazioni sul modo in cui i ruoli sono associati al contesto di sicurezza di un utente
 

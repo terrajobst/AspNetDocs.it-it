@@ -9,11 +9,11 @@ ms.assetid: a89d6f32-b71b-4036-8ff7-5f8ac2a6eca8
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12
 msc.type: authoredcontent
 ms.openlocfilehash: c5281a42596d95e725b32e652c75785abe0fd64e
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74640601"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78573465"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-migrating-to-sql-server---10-of-12"></a>Distribuzione di un'applicazione Web ASP.NET con SQL Server Compact con Visual Studio o Visual Web Developer: migrazione a SQL Server-10 di 12
 
@@ -25,7 +25,7 @@ di [Tom Dykstra](https://github.com/tdykstra)
 > 
 > Per un'esercitazione in cui vengono illustrate le funzionalità di distribuzione introdotte dopo la versione RC di Visual Studio 2012, viene illustrato come distribuire SQL Server edizioni diverse da SQL Server Compact e viene illustrato come eseguire la distribuzione in app Azure app Web del servizio, vedere [distribuzione web ASP.NET con Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
 
-## <a name="overview"></a>Panoramica di
+## <a name="overview"></a>Panoramica
 
 Questa esercitazione illustra come eseguire la migrazione da SQL Server Compact a SQL Server. Questo può essere utile per sfruttare le funzionalità di SQL Server che SQL Server Compact non supporta, ad esempio stored procedure, trigger, viste o replica. Per ulteriori informazioni sulle differenze tra SQL Server Compact e SQL Server, vedere l'esercitazione sulla [distribuzione di SQL Server Compact](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12.md) .
 
@@ -112,7 +112,7 @@ La scheda **pacchetto/pubblica SQL** è generalmente disabilitata perché specif
 
 Fare clic su **Importa da Web. config**.
 
-![Selecting_Import_from_Web. config](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/_static/image5.png)
+![Selecting_Import_from_Web.config](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/_static/image5.png)
 
 Visual Studio cerca le stringhe di connessione nel file *Web. config* , ne trova uno per il database di appartenenza e uno per il database School e aggiunge una riga corrispondente a ogni stringa di connessione nella tabella delle **voci del database** . Le stringhe di connessione trovate per i database di SQL Server Compact esistenti e il passaggio successivo consiste nel configurare come e dove distribuire questi database.
 
@@ -224,7 +224,7 @@ In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto 
 
 Selezionare la scheda **profilo** .
 
-Fare clic su **Gestisci profili**.
+Fare clic su **Manage Profiles** (Gestisci profili).
 
 Selezionare **test**, fare clic su **Rimuovi**e quindi su **Chiudi**.
 
@@ -244,7 +244,7 @@ Nella casella **sito/applicazione** immettere *Default Web site/ContosoUniversit
 
 Nella casella **URL di destinazione** immettere `http://localhost/ContosoUniversity/`.
 
-Scegliere **Avanti**.
+Fare clic su **Avanti**.
 
 Nella scheda **Impostazioni** viene visualizzato un avviso indicante che la scheda **Pubblicazione/creazione pacchetto SQL** è stata configurata ed è possibile eseguirne l'override facendo clic su Abilita nuovi miglioramenti alla pubblicazione del database. Per questa distribuzione non si desidera ignorare le impostazioni della scheda **pubblicazione/pubblicazione pacchetto SQL** , quindi è sufficiente fare clic su **Avanti**.
 
@@ -347,7 +347,7 @@ In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto 
 
 Selezionare la scheda **profilo** .
 
-Fare clic su **Gestisci profili**.
+Fare clic su **Manage Profiles** (Gestisci profili).
 
 Selezionare **produzione**, fare clic su **Rimuovi**e quindi su **Chiudi**.
 
@@ -398,7 +398,7 @@ Aprire il file *Web. config* e sostituire l'elemento `connectionStrings` con il 
 
 In **Esplora soluzioni**selezionare il progetto ContosoUniversity e quindi fare clic su **configurazione ASP.NET** nel menu **progetto** .
 
-Fare clic sulla scheda Sicurezza.
+Selezionare la scheda Sicurezza.
 
 Fare clic su **Crea o Gestisci ruoli**, quindi creare un ruolo di **amministratore** .
 

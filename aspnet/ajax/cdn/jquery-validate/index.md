@@ -1,6 +1,6 @@
 ---
 uid: ajax/cdn/jquery-validate/index
-title: jQuery Validate | Microsoft Docs
+title: Convalida jQuery | Microsoft Docs
 author: rick-anderson
 description: ''
 ms.author: riande
@@ -9,15 +9,15 @@ ms.assetid: a266cc44-f514-4913-9768-5b382380184d
 msc.legacyurl: /ajax/cdn/jquery-validate
 msc.type: folder
 ms.openlocfilehash: 83214b38d112707ef67ce94ff2757f1fc0f5f920
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59389805"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78585036"
 ---
 # <a name="jquery-validate"></a>Convalida di jQuery
 
-- [jQuery Validation 1.17.0](cdnjqueryvalidate1170.md)
+- [1.17.0 di convalida jQuery](cdnjqueryvalidate1170.md)
 - [Convalida di jQuery 1.16.0](cdnjqueryvalidate1160.md)
 - [Convalida di jQuery 1.15.1](cdnjqueryvalidate1151.md)
 - [Convalida di jQuery 1.15.0](cdnjqueryvalidate1150.md)

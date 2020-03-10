@@ -1,131 +1,131 @@
 ---
 uid: mvc/overview/older-versions-1/nerddinner/create-a-database
-title: Creare un Database | Microsoft Docs
+title: Creare un database | Microsoft Docs
 author: microsoft
-description: Passaggio 2 mostra i passaggi per creare il database che contengono tutte le la cena e conferma la partecipazione dei dati per la nostra applicazione NerdDinner.
+description: Nel passaggio 2 sono illustrati i passaggi per creare il database contenente tutti i dati di Dinner and RSVP per l'applicazione NerdDinner.
 ms.author: riande
 ms.date: 07/27/2010
 ms.assetid: 983f3ffa-08b8-4868-b8c9-aa34593fc683
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/create-a-database
 msc.type: authoredcontent
 ms.openlocfilehash: b0aa7c8cdf741f44e09ed18e2b2f73fe6bf786ae
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65117470"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78581004"
 ---
 # <a name="create-a-database"></a>Creare un database
 
-by [Microsoft](https://github.com/microsoft)
+[Microsoft](https://github.com/microsoft)
 
 [Scaricare PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
 
-> Si tratta di passaggio 2 di una liberazione [esercitazione sull'applicazione "NerdDinner"](introducing-the-nerddinner-tutorial.md) che si interromperanno-dettaglio come compilare una piccola, ma completa, applicazione web con ASP.NET MVC 1.
+> Questo è il passaggio 2 di un' [esercitazione gratuita sull'applicazione "NerdDinner"](introducing-the-nerddinner-tutorial.md) che illustra come creare un'applicazione Web di piccole dimensioni ma completa usando ASP.NET MVC 1.
 > 
-> Passaggio 2 mostra i passaggi per creare il database che contengono tutte le la cena e conferma la partecipazione dei dati per la nostra applicazione NerdDinner.
+> Nel passaggio 2 sono illustrati i passaggi per creare il database contenente tutti i dati di Dinner and RSVP per l'applicazione NerdDinner.
 > 
-> Se si usa ASP.NET MVC 3, è consigliabile seguire le [Guida introduttiva con MVC 3](../../older-versions/getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3.md) oppure [MVC Music Store](../../older-versions/mvc-music-store/mvc-music-store-part-1.md) esercitazioni.
+> Se si usa ASP.NET MVC 3, è consigliabile seguire le esercitazioni [Introduzione con MVC 3](../../older-versions/getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3.md) o [MVC Music Store](../../older-versions/mvc-music-store/mvc-music-store-part-1.md) .
 
-## <a name="nerddinner-step-2-creating-the-database"></a>NerdDinner Step 2: Creazione del Database
+## <a name="nerddinner-step-2-creating-the-database"></a>NerdDinner passaggio 2: creazione del database
 
-Verrà usato un database per archiviare tutti i dati Dinner e RSVP per la nostra applicazione NerdDinner.
+Verrà usato un database per archiviare tutti i dati di Dinner and RSVP per l'applicazione NerdDinner.
 
-La procedura seguente illustra la creazione del database usando l'edizione gratuita di SQL Server Express (che è possibile installare facilmente tramite V2 del [Microsoft Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx)). Tutto il codice verrà scritta funziona con SQL Server Express e la versione completa di SQL Server.
+I passaggi seguenti illustrano la creazione del database usando l'edizione gratuita di SQL Server Express (che è possibile installare facilmente usando V2 del [installazione guidata piattaforma Web Microsoft](https://www.microsoft.com/web/downloads/platform.aspx)). Tutto il codice che scriviamo funziona sia con SQL Server Express che con l'SQL Server completo.
 
-### <a name="creating-a-new-sql-server-express-database"></a>Crea un nuovo database di SQL Server Express
+### <a name="creating-a-new-sql-server-express-database"></a>Creazione di un nuovo database di SQL Server Express
 
-Si sarà iniziare facendo clic con il progetto web e quindi selezionare il **Add -&gt;nuovo elemento** comando di menu:
+Si inizia facendo clic con il pulsante destro del mouse sul progetto Web e quindi scegliendo il comando di menu **aggiungi&gt;nuovo elemento** :
 
 ![](create-a-database/_static/image1.png)
 
-Verrà visualizzata una finestra di dialogo "Aggiungi nuovo elemento" Visual Studio. Verrà filtrare in base alla categoria "Dati" e selezionare il modello di elemento "Database di SQL Server":
+Verrà visualizzata la finestra di dialogo "Aggiungi nuovo elemento" di Visual Studio. Si filtra in base alla categoria "data" e si seleziona il modello di elemento "SQL Server database":
 
 ![](create-a-database/_static/image2.png)
 
-Denominiamo il database di SQL Server Express che vogliamo creare "NerdDinner.mdf" e fare clic su ok. Visual Studio richiederà quindi noi se si vuole aggiungere il file al nostro \App\_directory dei dati (che è già una directory di installazione con sia in lettura e scrittura ACL di sicurezza):
+Denominare il database SQL Server Express si vuole creare "NerdDinner. mdf" e fare clic su OK. Visual Studio chiederà se si desidera aggiungere questo file alla directory \app\_data (ovvero una directory già impostata con ACL di sicurezza di lettura e scrittura):
 
 ![](create-a-database/_static/image3.png)
 
-Facciamo clic su "Sì" e il nuovo database verrà creato e aggiunto al nostro Esplora soluzioni:
+Si farà clic su "Sì" e il nuovo database verrà creato e aggiunto al Esplora soluzioni:
 
 ![](create-a-database/_static/image4.png)
 
-### <a name="creating-tables-within-our-database"></a>Creazione di tabelle all'interno di Database
+### <a name="creating-tables-within-our-database"></a>Creazione di tabelle nel database
 
-È ora disponibile un nuovo database vuoto. È possibile aggiungervi alcune tabelle.
+È ora disponibile un nuovo database vuoto. È ora possibile aggiungere alcune tabelle.
 
-A tale scopo è visualizzata finestra scheda "Esplora Server" all'interno di Visual Studio, che consente di gestire server e database. Database di SQL Server Express archiviati nel \App\_cartella dati dell'applicazione verrà visualizzato automaticamente all'interno di Esplora Server. È facoltativamente possibile usare l'icona "Connettersi al Database" nella parte superiore della finestra "Esplora Server" per aggiungere altri database di SQL Server (locali e remoti) oltre all'elenco:
+A tale scopo, si passerà alla finestra della scheda "Esplora server" all'interno di Visual Studio, che consente di gestire i database e i server. SQL Server Express database archiviati nella cartella \App\_data dell'applicazione verranno visualizzati automaticamente all'interno del Esplora server. Facoltativamente, è possibile usare l'icona "Connetti al database" nella parte superiore della finestra "Esplora server" per aggiungere anche ulteriori database SQL Server (sia locali che remoti) all'elenco:
 
 ![](create-a-database/_static/image5.png)
 
-Due tabelle verrà aggiunto al database NerdDinner: uno per archiviare i nostri Dinners e l'altro per tenere traccia delle accettazioni RSVP ad essi. È possibile creare nuove tabelle facendo clic sulla cartella "Tabelle" all'interno di database e scegliendo il comando di menu "Aggiungi nuova tabella":
+Nel database NerdDinner vengono aggiunte due tabelle, una per archiviare le cene e l'altra per tenere traccia delle accettazioni RSVP. È possibile creare nuove tabelle facendo clic con il pulsante destro del mouse sulla cartella "tabelle" all'interno del database e scegliendo il comando di menu "Aggiungi nuova tabella":
 
 ![](create-a-database/_static/image6.png)
 
-Verrà aperta una finestra di progettazione di una tabella che consente di configurare lo schema della tabella. Per la tabella "Dinners" si aggiungerà 10 colonne di dati:
+Verrà aperta una finestra di progettazione tabelle che consente di configurare lo schema della tabella. Per la tabella "cene" si aggiungeranno 10 colonne di dati:
 
 ![](create-a-database/_static/image7.png)
 
-Si vuole la colonna "DinnerID" sia una chiave primaria univoca per la tabella. È possibile configurare questa impostazione facendo clic sulla colonna "DinnerID" e scegliendo la voce di menu "Imposta chiave primaria":
+Si vuole che la colonna "DinnerID" sia una chiave primaria univoca per la tabella. È possibile configurarlo facendo clic con il pulsante destro del mouse sulla colonna "DinnerID" e scegliendo la voce di menu "Imposta chiave primaria":
 
 ![](create-a-database/_static/image8.png)
 
-Oltre a rendere DinnerID una chiave primaria, è necessario anche lo configura come una colonna di "identity" il cui valore viene incrementato automaticamente man mano che nuove righe di dati vengono aggiunti alla tabella (vale a dire la prima riga Dinner inserita avrà un DinnerID pari a 1, il secondo inserito riga sarà necessario un DinnerID 2, e così via).
+Oltre a rendere DinnerID una chiave primaria, è necessario configurarla anche come colonna "Identity", il cui valore viene incrementato automaticamente man mano che vengono aggiunte nuove righe di dati alla tabella, ovvero la prima riga inserita Dinner avrà DinnerID 1, la seconda riga inserita. il valore di DinnerID sarà 2 e così via.
 
-È possibile farlo, selezionare la colonna "DinnerID" e quindi usare l'editor "Proprietà delle colonne" per impostare la proprietà "(Is Identity)" nella colonna su "Sì". Si userà le impostazioni predefinite standard di identità (partono da 1 e incrementare di 1 in ogni nuova riga Dinner):
+A tale scopo, selezionare la colonna "DinnerID" e quindi utilizzare l'editor "Proprietà colonna" per impostare la proprietà "(identità)" della colonna su "Sì". Si utilizzeranno le impostazioni predefinite di identità standard (a partire da 1 e Increment 1 per ogni nuova riga di Dinner):
 
 ![](create-a-database/_static/image9.png)
 
-La tabella verranno quindi salvate, digitando Ctrl + S oppure usando il **File -&gt;salvare** comando di menu. Verrà richiesto di assegnare un nome di tabella. Denominiamo "Dinners":
+La tabella verrà quindi salvata digitando CTRL + S o usando il comando di menu **file-&gt;Salva** . Verrà richiesto di assegnare un nome alla tabella. Denominarlo "dinners":
 
 ![](create-a-database/_static/image10.png)
 
-La nuova tabella Dinners verrà quindi visualizzato entro il database in Esplora server.
+La nuova tabella dinners verrà visualizzata nel database in Esplora server.
 
-È quindi possibile ripetere i passaggi precedenti e creare una tabella "RSVP". La tabella con include 3 colonne. Verranno della colonna RsvpID come chiave primaria di installazione e rendono inoltre una colonna identity:
+Si ripeteranno quindi i passaggi precedenti e si creerà una tabella "RSVP". Questa tabella con tre colonne. Si imposta la colonna RsvpID come chiave primaria e la si imposta anche come colonna Identity:
 
 ![](create-a-database/_static/image11.png)
 
-È possibile salvarlo e assegnare il nome "RSVP".
+Lo salviamo e diamo il nome "RSVP".
 
-### <a name="setting-up-a-foreign-key-relationship-between-tables"></a>Impostazione di una relazione di chiave esterna tra le tabelle
+### <a name="setting-up-a-foreign-key-relationship-between-tables"></a>Impostazione di una relazione di chiave esterna tra tabelle
 
-Ora abbiamo due tabelle all'interno di database. L'ultimo passaggio della progettazione dello schema sarà per impostare una relazione "uno-a-molti" tra queste due tabelle, in modo che è possibile associare ogni riga Dinner con zero o più righe RSVP che si applicano a esso. Faremo configurando colonna "DinnerID" della tabella RSVP per avere una relazione di chiave esterna nella colonna "DinnerID" nella tabella "Dinners".
+Sono ora disponibili due tabelle nel database. L'ultima fase di progettazione dello schema consiste nell'impostare una relazione "uno-a-molti" tra queste due tabelle, in modo da poter associare ogni riga della cena a zero o più righe RSVP che vi si applicano. Questa operazione viene eseguita configurando la colonna "DinnerID" della tabella RSVP per avere una relazione di chiave esterna con la colonna "DinnerID" nella tabella "dinners".
 
-A tale scopo che verrà aperto il contenuto della tabella RSVP all'interno di progettazione tabelle facendovi doppio clic in Esplora server. La colonna "DinnerID" all'interno di esso, quindi selezioniamo destro del mouse e scegliere "Relazioni in corso" comando del menu di scelta rapida:
+A tale scopo, verrà aperta la tabella RSVP in Progettazione tabelle facendo doppio clic su di essa in Esplora server. Selezionare quindi la colonna "DinnerID" al suo interno, fare clic con il pulsante destro del mouse e scegliere "relazioni". comando del menu di scelta rapida:
 
 ![](create-a-database/_static/image12.png)
 
-Verrà visualizzata una finestra di dialogo che è possibile usare per le relazioni di programma di installazione tra le tabelle:
+Verrà visualizzata una finestra di dialogo che è possibile usare per configurare le relazioni tra le tabelle:
 
 ![](create-a-database/_static/image13.png)
 
-Si sarà fare clic sul pulsante "Aggiungi" per aggiungere una nuova relazione nella finestra di dialogo. Dopo aver aggiunto una relazione, si sarà espandere il nodo di visualizzazione ad albero "Specifica di tabelle e colonne" all'interno della griglia delle proprietà a destra della finestra di dialogo e quindi fare clic sul pulsante "..." a destra:
+Si farà clic sul pulsante "Aggiungi" per aggiungere una nuova relazione alla finestra di dialogo. Una volta aggiunta una relazione, espandere il nodo della visualizzazione albero "tabelle e colonne" nella griglia delle proprietà a destra della finestra di dialogo, quindi fare clic su "...". a destra del pulsante:
 
 ![](create-a-database/_static/image14.png)
 
-Fare clic sul pulsante "...", verrà visualizzata un'altra finestra di dialogo che consente di specificare quali tabelle e colonne sono coinvolte nella relazione, nonché consentono di assegnare un nome della relazione.
+Fare clic su "..." verrà visualizzata un'altra finestra di dialogo che consente di specificare le tabelle e le colonne che interessano la relazione, oltre a consentire di assegnare un nome alla relazione.
 
-Si verrà modificare la tabella di chiave primaria affinché sia "Dinners" e selezionare la colonna "DinnerID" all'interno della tabella Dinners come chiave primaria. La tabella RSVP sarà la tabella di chiave esterna e il RSVP. Colonna DinnerID sarà associato come la chiave esterna:
+La tabella della chiave primaria verrà modificata in "dinners" e la colonna "DinnerID" nella tabella dinners verrà selezionata come chiave primaria. La tabella RSVP sarà la tabella di chiave esterna e l'operazione RSVP. La colonna DinnerID verrà associata come chiave esterna:
 
 ![](create-a-database/_static/image15.png)
 
-Ora ogni riga della tabella RSVP verrà associato a una riga nella tabella cena. SQL Server verrà mantenere l'integrità referenziale per noi – e impediscono di aggiunta di una nuova riga RSVP se non fa riferimento a una riga Dinner valida. Anche impedirà noi l'eliminazione di una riga Dinner se non esistono ancora RSVP righe che fanno riferimento a esso.
+Ogni riga della tabella RSVP verrà ora associata a una riga nella tabella dinner. SQL Server manterrà l'integrità referenziale per gli Stati Uniti e ci impedirà di aggiungere una nuova riga RSVP se non punta a una riga di cena valida. Si eviterà inoltre di eliminare una riga di Dinner se vi sono ancora righe RSVP che vi fanno riferimento.
 
-### <a name="adding-data-to-our-tables"></a>Aggiunta di dati per le tabelle
+### <a name="adding-data-to-our-tables"></a>Aggiunta di dati alle tabelle
 
-È possibile completare aggiungendo alcuni dati di esempio alla nostra tabella Dinners. È possibile aggiungere dati a una tabella facendo clic su di esso in Esplora Server e scegliendo il comando "Mostra dati tabella":
+Per completare l'aggiunta di alcuni dati di esempio, vedere la tabella dinners. È possibile aggiungere dati a una tabella facendovi clic con il pulsante destro del mouse all'interno del Esplora server e scegliendo il comando "Mostra dati tabella":
 
 ![](create-a-database/_static/image16.png)
 
-Si aggiungerà poche righe di dati Dinner che è possibile usare in un secondo momento come iniziare a implementare l'applicazione:
+Verranno aggiunte alcune righe di dati di Dinner che è possibile usare in un secondo momento, quando si inizia a implementare l'applicazione:
 
 ![](create-a-database/_static/image17.png)
 
 ### <a name="next-step"></a>Passo successivo
 
-Abbiamo completato la creazione di database. Creare ora le classi di modello che è possibile usare per eseguire una query e aggiornarlo.
+La creazione del database è stata completata. A questo punto è possibile creare le classi del modello che è possibile usare per eseguire query e aggiornarle.
 
 > [!div class="step-by-step"]
 > [Precedente](create-a-new-aspnet-mvc-project.md)

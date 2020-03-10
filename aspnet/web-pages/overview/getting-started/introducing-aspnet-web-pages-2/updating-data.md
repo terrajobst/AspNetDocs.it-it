@@ -1,122 +1,122 @@
 ---
 uid: web-pages/overview/getting-started/introducing-aspnet-web-pages-2/updating-data
-title: Introduzione a pagine Web ASP.NET - aggiornamento di dati del Database | Microsoft Docs
+title: Introduzione all'Pagine Web ASP.NET aggiornamento dei dati del database | Microsoft Docs
 author: Rick-Anderson
-description: Questa esercitazione illustra come aggiornare la voce (modifica) un database esistente quando si usa ASP.NET Web Pages (Razor). Si presuppone di aver completato la serie th...
+description: Questa esercitazione illustra come aggiornare (modificare) una voce di database esistente quando si usa Pagine Web ASP.NET (Razor). Si presuppone che sia stata completata la serie...
 ms.author: riande
 ms.date: 01/02/2018
 ms.assetid: ac86ec9c-6b69-485b-b9e0-8b9127b13e6b
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/updating-data
 msc.type: authoredcontent
 ms.openlocfilehash: 8f8bcfb7d9d2416a2699776cadbdaae8e12415ba
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65131795"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78574228"
 ---
-# <a name="introducing-aspnet-web-pages---updating-database-data"></a>Introduzione a pagine Web ASP.NET - aggiornamento di dati del Database
+# <a name="introducing-aspnet-web-pages---updating-database-data"></a>Introduzione all'Pagine Web ASP.NET aggiornamento dei dati del database
 
-da [Tom FitzMacken](https://github.com/tfitzmac)
+di [Tom FitzMacken](https://github.com/tfitzmac)
 
-> Questa esercitazione illustra come aggiornare la voce (modifica) un database esistente quando si usa ASP.NET Web Pages (Razor). Si presuppone di aver completato la serie attraverso [immissione di dati da usando form con ASP.NET Web Pages](entering-data.md).
+> Questa esercitazione illustra come aggiornare (modificare) una voce di database esistente quando si usa Pagine Web ASP.NET (Razor). Si presuppone che sia stata completata la serie mediante l' [immissione di dati tramite i form utilizzando pagine Web ASP.NET](entering-data.md).
 > 
-> Che cosa si apprenderà come:
+> Contenuto dell'esercitazione:
 > 
-> - Come selezionare un singolo record nel `WebGrid` helper.
+> - Come selezionare un singolo record nell'helper `WebGrid`.
 > - Come leggere un singolo record da un database.
-> - Come caricare un modulo con i valori del record del database in background.
+> - Come precaricare un form con i valori del record del database.
 > - Come aggiornare un record esistente in un database.
-> - Come archiviare le informazioni nella pagina senza visualizzarla.
+> - Modalità di archiviazione delle informazioni nella pagina senza visualizzazione.
 > - Come usare un campo nascosto per archiviare le informazioni.
 >   
 > 
-> Le funzionalità/tecnologie illustrate:
+> Funzionalità/tecnologie discusse:
 > 
-> - Il `WebGrid` helper.
-> - Il codice SQL `Update` comando.
+> - Helper `WebGrid`.
+> - Comando SQL `Update`.
 > - Metodo `Database.Execute` .
 > - Campi nascosti (`<input type="hidden">`).
 
 ## <a name="what-youll-build"></a>Scopo dell'esercitazione
 
-Nell'esercitazione precedente, è stato descritto come aggiungere un record a un database. In questo caso, si apprenderà come visualizzare un record per la modifica. Nel *film* pagina, si aggiornerà il `WebGrid` helper, in modo che venga visualizzato un **modifica** collegamento accanto a ogni film:
+Nell'esercitazione precedente si è appreso come aggiungere un record a un database. In questo articolo verrà illustrato come visualizzare un record per la modifica. Nella pagina *Movies* verrà aggiornato l'helper `WebGrid` in modo da visualizzare un collegamento di **modifica** accanto a ogni film:
 
-![WebGrid visualizzare con un collegamento "Modifica" per ogni film](updating-data/_static/image1.png)
+![Visualizzazione WebGrid con un collegamento ' Edit ' per ogni film](updating-data/_static/image1.png)
 
-Quando si sceglie la **modifica** collegamento, consente a un'altra pagina, in cui le informazioni relative al filmato è già in un form:
+Quando si fa clic sul collegamento **modifica** , viene configurata una pagina diversa, in cui le informazioni sul film sono già in un formato:
 
-![Modifica pagina film che mostra di film da modificare](updating-data/_static/image2.png)
+![Modifica la pagina di film che mostra il film da modificare](updating-data/_static/image2.png)
 
-È possibile modificare i valori. Quando si inviano le modifiche, il codice nella pagina Aggiorna il database e consente di tornare all'elenco di film.
+È possibile modificare qualsiasi valore. Quando si inviano le modifiche, il codice nella pagina Aggiorna il database e riporta all'elenco di film.
 
-Questa parte del processo funziona quasi esattamente come le *AddMovie.cshtml* pagina creata nell'esercitazione precedente, in modo che la maggior parte di questa esercitazione sarà familiare.
+Questa parte del processo funziona quasi esattamente come la pagina *AddMovie. cshtml* creata nell'esercitazione precedente, quindi la maggior parte di questa esercitazione sarà familiare.
 
-Esistono diversi modi, è possibile implementare un metodo per modificare un film singoli. L'approccio illustrato è stato scelto perché è facile da implementare e facile da comprendere.
+È possibile implementare un modo per modificare un singolo film in diversi modi. L'approccio illustrato è stato scelto perché è facile da implementare e facile da comprendere.
 
-## <a name="adding-an-edit-link-to-the-movie-listing"></a>Aggiunta di un collegamento di modifica per l'elenco di film
+## <a name="adding-an-edit-link-to-the-movie-listing"></a>Aggiunta di un collegamento di modifica all'elenco di film
 
-Per iniziare, si aggiornerà il *film* pagina in modo che ogni film anche l'elenco contenga un' **modificare** collegamento.
+Per iniziare, è necessario aggiornare la pagina dei *film* in modo che ogni voce di film includa anche un collegamento di **modifica** .
 
-Aprire il *Movies.cshtml* file.
+Aprire il file *Movies. cshtml* .
 
-Nel corpo della pagina, modificare il `WebGrid` markup mediante l'aggiunta di una colonna. Ecco il markup modificato:
+Nel corpo della pagina modificare il markup `WebGrid` aggiungendo una colonna. Ecco il markup modificato:
 
 [!code-html[Main](updating-data/samples/sample1.html?highlight=6)]
 
-La nuova colonna è questa:
+La nuova colonna è la seguente:
 
 [!code-html[Main](updating-data/samples/sample2.html)]
 
-Il punto di questo articolo è mostrare un collegamento (`<a>` elemento) con il testo "Modifica". Siamo dopo consiste nel creare un collegamento che è simile al seguente quando viene eseguita la pagina, con la `id` valore diverso per ogni film:
+Il punto di questa colonna consiste nel visualizzare un collegamento (`<a>` elemento) il cui testo indica "Edit". In seguito, viene creato un collegamento simile al seguente quando viene eseguita la pagina, con il valore `id` diverso per ogni film:
 
 [!code-css[Main](updating-data/samples/sample3.css)]
 
-Questo collegamento verrà richiamato una pagina denominata *EditMovie*, e lo passerà la stringa di query `?id=7` a tale pagina.
+Questo collegamento richiama una pagina denominata *EditMovie*e passa la stringa di query `?id=7` a tale pagina.
 
-La sintassi per la nuova colonna potrebbe sembrare un po' complessa, ma solo perché scoperte diversi elementi. Ogni singolo elemento è semplice. Se concentrerà sul solo il `<a>` elemento, noterete che questo markup:
+La sintassi della nuova colonna potrebbe sembrare un po' complessa, ma ciò è dovuto al fatto che combina diversi elementi. Ogni singolo elemento è semplice. Se si concentra solo sull'elemento `<a>`, viene visualizzato questo markup:
 
 [!code-html[Main](updating-data/samples/sample4.html)]
 
-Alcune informazioni di base sul funzionamento della griglia: nella griglia vengono visualizzate righe, una per ogni record di database, e visualizza le colonne per ogni campo nel record del database. Mentre viene creato ogni riga della griglia, il `item` oggetto contiene i record del database (elemento) per quella riga. Questa disposizione consente di ottenere i dati per la riga di codice. Questo è ciò che vedete qui: l'espressione `item.ID` riceve il valore ID della voce di database corrente. È possibile ottenere i valori del database (title, genre o year) allo stesso modo usando `item.Title`, `item.Genre`, o `item.Year`.
+Informazioni di base sul funzionamento della griglia: nella griglia vengono visualizzate le righe, una per ogni record di database e vengono visualizzate le colonne per ogni campo nel record del database. Mentre ogni riga della griglia viene costruita, l'oggetto `item` contiene il record del database (elemento) per la riga. Questa disposizione consente di ottenere un modo nel codice per ottenere i dati per la riga. Questo è ciò che viene visualizzato: l'espressione `item.ID` sta ottenendo il valore ID dell'elemento del database corrente. È possibile ottenere i valori del database (titolo, genere o anno) allo stesso modo usando `item.Title`, `item.Genre`o `item.Year`.
 
-L'espressione `"~/EditMovie?id=@item.ID` combina la parte dell'URL di destinazione a livello di codice (`~/EditMovie?id=`) riferendo questo ID in modo dinamico derivato. (Si è visto il `~` operatore nell'esercitazione precedente; è un operatore di ASP.NET che rappresenta la radice del sito Web corrente.)
+L'espressione `"~/EditMovie?id=@item.ID` combina la parte hardcoded dell'URL di destinazione (`~/EditMovie?id=`) con questo ID derivato dinamicamente. Nell'esercitazione precedente è stato visto l'operatore `~`, ovvero un operatore ASP.NET che rappresenta la radice del sito Web corrente.
 
-Il risultato è che questa parte del markup nella colonna semplicemente produce un risultato analogo il markup seguente in fase di esecuzione:
+Il risultato è che questa parte del markup nella colonna produce semplicemente qualcosa di simile al markup seguente in fase di esecuzione:
 
 [!code-xml[Main](updating-data/samples/sample5.xml)]
 
-Naturalmente, il valore effettivo del `id` sarà diverso per ogni riga.
+Naturalmente, il valore effettivo di `id` sarà diverso per ogni riga.
 
 ## <a name="creating-a-custom-display-for-a-grid-column"></a>Creazione di una visualizzazione personalizzata per una colonna della griglia
 
-A questo punto eseguire il backup per la colonna della griglia. Le tre colonne in origine era la griglia visualizzata solo i valori dei dati (titolo, il genere e anno). Questa visualizzazione è specificato passando il nome della colonna del database &mdash; ad esempio, `grid.Column("Title")`.
+Tornare alla colonna della griglia. Le tre colonne originariamente presenti nella griglia visualizzavano solo i valori dei dati (titolo, genere e anno). Questa visualizzazione è stata specificata passando il nome della colonna di database &mdash; ad esempio `grid.Column("Title")`.
 
-Questa nuova **modifica** colonna di collegamento è diverso. Anziché specificare un nome di colonna, si sta passando un `format` parametro. Questo parametro consente di definire markup che il `WebGrid` helper verrà eseguito il rendering con il `item` valore per visualizzare i dati della colonna in grassetto o colore verde o in qualsiasi formato che si desidera. Ad esempio, se si vuole ottenere il titolo da visualizzare in grassetto, è possibile creare una colonna come in questo esempio:
+La nuova colonna **modifica** collegamento è diversa. Anziché specificare un nome di colonna, viene passato un parametro di `format`. Questo parametro consente di definire il markup che verrà eseguito dal `WebGrid` Helper insieme al valore `item` per visualizzare i dati della colonna come grassetto o verde o nel formato desiderato. Se ad esempio si desidera che il titolo appaia in grassetto, è possibile creare una colonna come nell'esempio seguente:
 
 [!code-html[Main](updating-data/samples/sample6.html)]
 
-(I vari `@` caratteri presenti il `format` proprietà contrassegnare la transizione tra i tag e un valore del codice.)
+I vari `@` caratteri visualizzati nella proprietà `format` contrassegnano la transizione tra il markup e un valore di codice.
 
-Dopo aver appreso informazioni sul `format` proprietà, è più facile da comprendere come le nuove **modifica** colonna di collegamento viene raccolto:
+Quando si è a conoscenza della proprietà `format`, è più facile comprendere il modo in cui viene inserita la nuova colonna di collegamento **Edit (modifica** ):
 
 [!code-html[Main](updating-data/samples/sample7.html)]
 
-La colonna è costituita da *solo* del markup che esegue il rendering di collegamento, inoltre alcune informazioni (ID) che viene estratto il record del database per la riga.
+La colonna è costituita *solo* dal markup che esegue il rendering del collegamento, più alcune informazioni (ID) estratte dal record del database per la riga.
 
 > [!TIP]
 > 
-> **I parametri denominati e i parametri posizionali per un metodo**
+> **Parametri denominati e parametri posizionali per un metodo**
 > 
-> Numero di volte dopo aver chiamato un metodo e passati parametri a esso, è sufficiente elencati i valori dei parametri separati da virgole. Di seguito sono riportati alcuni esempi:
+> Molte volte quando è stato chiamato un metodo e passati parametri, sono stati semplicemente elencati i valori dei parametri separati da virgole. Di seguito sono riportati alcuni esempi:
 > 
 > `db.Execute(insertCommand, title, genre, year)`
 > 
 > `Validation.RequireField("title", "You must enter a title")`
 > 
-> È non è importante tenere presente il problema quando si è visto prima di tutto questo codice, ma in ogni caso, si sta passando i parametri ai metodi in un ordine specifico &mdash; vale a dire, l'ordine in cui i parametri sono definiti in tale metodo. Per la `db.Execute` e `Validation.RequireFields`, se combinare l'ordine dei valori passati, si otterrebbe un messaggio di errore quando la pagina viene eseguito, o almeno alcuni risultati imprevisti. Ovviamente, è necessario conoscere l'ordine per passare i parametri in. (In WebMatrix, IntelliSense aiutano individuare il nome, tipo e ordine dei parametri.)
+> Il problema non è stato menzionato quando si è visto per la prima volta questo codice, ma in ogni caso si passano parametri ai metodi in un ordine specifico &mdash;, in particolare, l'ordine in cui i parametri sono definiti in tale metodo. Per `db.Execute` e `Validation.RequireFields`, se si mescola l'ordine dei valori passati, viene restituito un messaggio di errore durante l'esecuzione della pagina o almeno alcuni risultati strani. Ovviamente, è necessario essere a conoscenza dell'ordine in cui passare i parametri. (In WebMatrix, IntelliSense consente di comprendere il nome, il tipo e l'ordine dei parametri).
 > 
-> Come alternativa al passaggio di valori in ordine, è possibile usare *parametri denominati*. (Il passaggio di parametri nell'ordine è nota come utilizzo *parametri posizionali*.) Per i parametri denominati, si include in modo esplicito il nome del parametro quando si passa il relativo valore. Si usa parametri denominati già un numero di volte in queste esercitazioni. Ad esempio:
+> In alternativa al passaggio dei valori nell'ordine, è possibile usare *parametri denominati*. Il passaggio di parametri in ordine è noto come utilizzo di *parametri posizionali*. Per i parametri denominati, è necessario includere in modo esplicito il nome del parametro al passaggio del relativo valore. In queste esercitazioni sono già stati usati parametri denominati. Esempio:
 > 
 > [!code-csharp[Main](updating-data/samples/sample8.cs)]
 > 
@@ -124,185 +124,185 @@ La colonna è costituita da *solo* del markup che esegue il rendering di collega
 > 
 > [!code-css[Main](updating-data/samples/sample9.css)]
 > 
-> I parametri denominati sono utili per un paio di casi, specialmente quando un metodo accetta numerosi parametri. Uno è quando si desidera passare solo uno o due parametri, ma i valori che si desidera passare non sono tra le posizioni di primo nell'elenco dei parametri. Un'altra situazione è quando si vuole rendere il codice più leggibile, passando i parametri nell'ordine in cui la scelta più sensata all'utente.
+> I parametri denominati sono utili per alcune situazioni, soprattutto quando un metodo accetta molti parametri. Uno è quando si desidera passare solo uno o due parametri, ma i valori che si desidera passare non sono tra le prime posizioni nell'elenco di parametri. Un'altra situazione è quando si vuole rendere il codice più leggibile passando i parametri nell'ordine più sensato.
 > 
-> Ovviamente, per usare i parametri denominati, è necessario conoscere i nomi dei parametri. WebMatrix IntelliSense possono *mostrare* si i nomi, ma non è attualmente completarle automaticamente.
+> Ovviamente, per usare i parametri denominati, è necessario conoscerne i nomi. Con IntelliSense di WebMatrix è possibile *visualizzare* i nomi, ma attualmente non è possibile compilarli automaticamente.
 
-## <a name="creating-the-edit-page"></a>Creazione della pagina Edit
+## <a name="creating-the-edit-page"></a>Creazione della pagina di modifica
 
-Ora è possibile creare il *EditMovie* pagina. Quando gli utenti fanno clic la **modifica** collegamento, si otterrà in questa pagina.
+A questo punto è possibile creare la pagina *EditMovie* . Quando gli utenti fanno clic sul collegamento di **modifica** , finiranno in questa pagina.
 
-Creare una pagina denominata *EditMovie.cshtml* e sostituire quello presente nel file con il markup seguente:
+Creare una pagina denominata *EditMovie. cshtml* e sostituire gli elementi del file con il markup seguente:
 
 [!code-cshtml[Main](updating-data/samples/sample10.cshtml)]
 
-Questo markup e codice è simile a quello che hai *AddMovie* pagina. È una piccola differenza nel testo per il pulsante di invio. Come con la *AddMovie* pagina, è presente un `Html.ValidationSummary` chiamata che verrà visualizzati gli errori di convalida se presenti. Questa volta abbiamo stiamo escludendo le chiamate a `Validation.Message`, dal momento che gli errori vengono visualizzati nel riepilogo di convalida. Come indicato nell'esercitazione precedente, è possibile usare il riepilogo di convalida e i singoli messaggi di errore in varie combinazioni.
+Questo markup e codice è simile a quello presente nella pagina *AddMovie* . Il testo per il pulsante Invia presenta una piccola differenza. Come per la pagina *AddMovie* , esiste una chiamata `Html.ValidationSummary` che visualizzerà eventuali errori di convalida. Questa volta sono state escluse le chiamate a `Validation.Message`, poiché gli errori verranno visualizzati nel Riepilogo di convalida. Come indicato nell'esercitazione precedente, è possibile usare il riepilogo di convalida e i singoli messaggi di errore in varie combinazioni.
 
-Si noti anche in questo caso che la `method` attributo del `<form>` elemento è impostato su `post`. Come con le *AddMovie.cshtml* pagina, questa pagina apporta le modifiche al database. Pertanto, questo modulo è necessario eseguire un `POST` operazione. (Per altre informazioni sulla differenza tra `GET` e `POST` operazioni, vedere la [GET, POST e HTTP verbo Safety](form-basics.md#GET,_POST,_and_HTTP_Verb_Safety) intestazione laterale nell'esercitazione nei form HTML.)
+Si noti di nuovo che l'attributo `method` dell'elemento `<form>` è impostato su `post`. Come per la pagina *AddMovie. cshtml* , questa pagina apporta modifiche al database. Questo modulo deve pertanto eseguire un'operazione di `POST`. Per ulteriori informazioni sulla differenza tra le operazioni `GET` e `POST`, vedere la barra laterale relativa alla [sicurezza dei verbi Get, post e http](form-basics.md#GET,_POST,_and_HTTP_Verb_Safety) nell'esercitazione sui moduli HTML.
 
-Come si è visto in un'esercitazione precedente, il `value` vengono impostati gli attributi delle caselle di testo con il codice Razor per precaricare li. Stavolta, però, si usa variabili come `title` e `genre` per tale attività anziché `Request.Form["title"]`:
+Come si è visto in un'esercitazione precedente, gli attributi `value` delle caselle di testo vengono impostati con il codice Razor per poterli precaricare. Questa volta, tuttavia, si usano variabili come `title` e `genre` per l'attività anziché `Request.Form["title"]`:
 
 `<input type="text" name="title" value="@title" />`
 
-Come prima, questo markup verrà precaricare i valori della casella di testo con i valori di film. Verrà visualizzato a breve perché è utile usare le variabili, questa volta invece di usare il `Request` oggetto.
+Come in precedenza, questo markup precarica i valori della casella di testo con i valori dei film. Questo è il motivo per cui è utile usare le variabili in questo momento invece di usare l'oggetto `Request`.
 
-È inoltre disponibile un `<input type="hidden">` elemento in questa pagina. Questo elemento archivia l'ID del film senza renderlo visibile nella pagina. L'ID viene passato inizialmente per la pagina in base usando un valore di stringa di query (`?id=7` o simili nell'URL). Inserendo il valore ID in un campo nascosto, è possibile assicurarsi che sia disponibile quando il form viene inviato, anche se non è più necessario l'accesso all'URL originale della pagina è stata richiamata con.
+In questa pagina è presente anche un elemento `<input type="hidden">`. Questo elemento archivia l'ID film senza renderlo visibile nella pagina. L'ID viene passato inizialmente alla pagina usando un valore della stringa di query (`?id=7` o simile nell'URL). Inserendo il valore ID in un campo nascosto, è possibile assicurarsi che sia disponibile quando il modulo viene inviato, anche se non è più possibile accedere all'URL originale con cui è stata richiamata la pagina.
 
-A differenza di *AddMovie* pagina, il codice per il *EditMovie* pagina contiene due funzioni distinte. La prima funzione è che, quando la pagina viene visualizzata per la prima volta (e *solo* quindi), il codice ottiene l'ID del film dalla stringa di query. Il codice quindi utilizza l'ID per leggere il film corrispondente all'esterno del database e visualizzare (Precarica), nelle caselle di testo.
+A differenza della pagina *AddMovie* , il codice per la pagina *EditMovie* ha due funzioni distinte. La prima funzione è che, quando la pagina viene visualizzata per la prima volta (e *solo* successivamente), il codice ottiene l'ID del film dalla stringa di query. Il codice usa quindi l'ID per leggere il film corrispondente dal database e visualizzarlo (precaricato) nelle caselle di testo.
 
-La seconda funzione è che quando l'utente sceglie il **Invia modifiche** pulsante, il codice deve leggere i valori di caselle di testo e la successiva convalida. Il codice ha anche aggiornare l'elemento di database con i nuovi valori. Questa tecnica è analoga all'aggiunta di un record, come illustrato nelle *AddMovie*.
+La seconda funzione è che, quando l'utente fa clic sul pulsante **Submit Changes** , il codice deve leggere i valori delle caselle di testo e convalidarli. Il codice deve anche aggiornare l'elemento del database con i nuovi valori. Questa tecnica è simile all'aggiunta di un record, come si è visto in *AddMovie*.
 
-## <a name="adding-code-to-read-a-single-movie"></a>Aggiunta di codice per leggere un singolo filmato
+## <a name="adding-code-to-read-a-single-movie"></a>Aggiunta di codice per la lettura di un singolo film
 
-Per eseguire la prima funzione, aggiungere questo codice nella parte superiore della pagina:
+Per eseguire la prima funzione, aggiungere il codice seguente nella parte superiore della pagina:
 
 [!code-cshtml[Main](updating-data/samples/sample11.cshtml)]
 
-La maggior parte di questo codice si trova all'interno di un blocco che inizia `if(!IsPost)`. Il `!` operatore significa "not", in modo che l'espressione significa *se la richiesta non ha un invio post*, che costituisce un metodo indiretto viene espresso indicando *se la richiesta è la prima volta che questa pagina è stata eseguita*. Come indicato in precedenza, questo codice deve essere eseguito *solo* alla prima esecuzione della pagina. Se si non racchiudere il codice in `if(!IsPost)`, viene eseguito ogni volta che la pagina viene richiamata, se la prima volta oppure in risposta a un pulsante fare clic su.
+La maggior parte di questo codice si trova all'interno di un blocco che inizia `if(!IsPost)`. L'operatore `!` significa "not", pertanto l'espressione indica *se la richiesta non è*di tipo post, ovvero *se la richiesta è la prima volta che la pagina è stata eseguita*. Come indicato in precedenza, questo codice deve essere eseguito *solo* la prima volta che la pagina viene eseguita. Se il codice non è stato chiuso in `if(!IsPost)`, viene eseguito ogni volta che viene richiamata la pagina, sia che si tratti della prima volta o in risposta a un clic su un pulsante.
 
-Si noti che il codice include un `else` bloccare questo momento. Come detto in precedenza quando è stato introdotto `if` blocchi, talvolta si desidera eseguire codice alternativo se non viene soddisfatta la condizione che si sta testando. Ovvero in questo caso. Se la condizione ha esito positivo (ovvero, se l'ID passato alla pagina è ok), leggere una riga dal database. Tuttavia, se la condizione non viene superato, il `else` blocco viene eseguito e il codice imposta un messaggio di errore.
+Si noti che nel codice è incluso un blocco `else` questa volta. Come abbiamo detto quando abbiamo introdotto blocchi di `if`, a volte si vuole eseguire codice alternativo se la condizione che si sta testando non è vera. Questo è il caso. Se la condizione passa, ovvero se l'ID passato alla pagina è OK, viene letta una riga dal database. Tuttavia, se la condizione non viene superata, il blocco `else` viene eseguito e il codice imposta un messaggio di errore.
 
-## <a name="validating-a-value-passed-to-the-page"></a>La convalida di un valore passato alla pagina
+## <a name="validating-a-value-passed-to-the-page"></a>Convalida di un valore passato alla pagina
 
-Il codice Usa `Request.QueryString["id"]` per ottenere l'ID che viene passato alla pagina. Il codice consente di verificare che in realtà è stato passato un valore per l'ID. Se è stato passato alcun valore, il codice imposta un errore di convalida.
+Il codice USA `Request.QueryString["id"]` per ottenere l'ID passato alla pagina. Il codice consente di verificare che sia stato effettivamente passato un valore per l'ID. Se non è stato passato alcun valore, il codice imposta un errore di convalida.
 
-Questo codice illustra un modo diverso per convalidare le informazioni. Nell'esercitazione precedente, si è lavorato con i `Validation` helper. I campi per la convalida è stata registrata, ASP.NET automaticamente e ha la convalida visualizzati gli errori usando `Html.ValidationMessage` e `Html.ValidationSummary`. In questo caso, tuttavia, si effettua non realmente la convalida dell'input dell'utente. Al contrario, si effettua la convalida di un valore che è stato passato alla pagina da un' posizione. Il `Validation` helper che non esegue automaticamente.
+Questo codice mostra un modo diverso per convalidare le informazioni. Nell'esercitazione precedente è stato usato il `Validation` helper. Sono stati registrati i campi da convalidare e ASP.NET automaticamente la convalida ed è stato visualizzato l'errore usando `Html.ValidationMessage` e `Html.ValidationSummary`. In questo caso, tuttavia, non viene convalidato l'input dell'utente. Al contrario, si sta convalidando un valore che è stato passato alla pagina da altrove. Il `Validation` Helper non esegue questa operazione.
 
-Pertanto, è controllare il valore manualmente, eseguendo il test con `if(!Request.QueryString["ID"].IsEmpty()`). Se si è verificato un problema, è possibile visualizzare l'errore utilizzando `Html.ValidationSummary`, come accadeva con le `Validation` helper. A tale scopo, si chiama `Validation.AddFormError` e passarlo a un messaggio da visualizzare. `Validation.AddFormError` è un metodo incorporato che consente di definire messaggi personalizzati da unire con il sistema di convalida che ha già familiarità. (Più avanti in questa esercitazione parleremo come rendere questo processo di convalida più solido.)
+Pertanto, è possibile controllare il valore autonomamente, eseguendone il test con `if(!Request.QueryString["ID"].IsEmpty()`). Se si verifica un problema, è possibile visualizzare l'errore usando `Html.ValidationSummary`, come è stato fatto con l'helper `Validation`. A tale scopo, chiamare `Validation.AddFormError` e passare un messaggio da visualizzare. `Validation.AddFormError` è un metodo incorporato che consente di definire messaggi personalizzati che si collegano al sistema di convalida con cui si ha già familiarità. Più avanti in questa esercitazione parleremo di come rendere il processo di convalida più affidabile.
 
-Dopo aver verificato che vi sia un ID per il film, il codice legge il database, cercando solo un elemento singolo database. (Probabilmente si noterà il modello generale per le operazioni di database: aprire il database, definire un'istruzione SQL ed eseguire l'istruzione.) Questa volta, il codice SQL `Select` istruzione include `WHERE ID = @0`. Poiché l'ID è univoco, può essere restituito un solo record.
+Dopo aver verificato che sia presente un ID per il film, il codice legge il database, cercando solo un singolo elemento di database. Probabilmente si è notato il modello generale per le operazioni di database: aprire il database, definire un'istruzione SQL ed eseguire l'istruzione. Questa volta, l'istruzione SQL `Select` include `WHERE ID = @0`. Poiché l'ID è univoco, è possibile restituire un solo record.
 
-La query viene eseguita usando `db.QuerySingle` (non `db.Query`, come è stato utilizzato per l'elenco dei filmati), e il codice inserisce il risultato nel `row` variabile. Il nome `row` è arbitrario; puoi le variabili di qualsiasi nome desiderato. Le variabili inizializzate in alto vengono compilate con i dettagli di film in modo che questi valori possono essere visualizzati nelle caselle di testo.
+La query viene eseguita usando `db.QuerySingle` (non `db.Query`, come è stato usato per l'elenco dei film) e il codice inserisce il risultato nella variabile `row`. Il nome `row` è arbitrario; è possibile assegnare un nome a tutte le variabili. Le variabili inizializzate in alto vengono quindi compilate con i dettagli del film in modo che questi valori possano essere visualizzati nelle caselle di testo.
 
-## <a name="testing-the-edit-page-so-far"></a>Test della pagina Edit (fino a questo momento)
+## <a name="testing-the-edit-page-so-far"></a>Test della pagina di modifica (finora)
 
-Se si desidera testare la pagina, eseguire la *film* ora e fare clic su un **modificare** collegamento accanto a eventuali film. Verrà visualizzato il *EditMovie* compilato pagina con i dettagli per il film selezionato:
+Se si vuole testare la pagina, eseguire ora la pagina dei *filmati* e fare clic su un collegamento di **modifica** accanto a qualsiasi film. Verrà visualizzata la pagina *EditMovie* con i dettagli compilati per il film selezionato:
 
-![Modifica pagina film che mostra di film da modificare](updating-data/_static/image3.png)
+![Modifica la pagina di film che mostra il film da modificare](updating-data/_static/image3.png)
 
-Si noti che l'URL della pagina include un elemento, ad esempio `?id=10` (o un altro numero). Finora hai testato che **Edit** collega nel *film* pagina lavoro, che la pagina viene letta l'ID dalla stringa di query, e che il database di eseguire una query per ottenere un record singolo filmato sia funzionante.
+Si noti che l'URL della pagina include qualcosa come `?id=10` (o un altro numero). Fino a questo punto è stato testato che i collegamenti di **modifica** nella pagina *film* funzionano, che la pagina sta leggendo l'ID dalla stringa di query e che la query di database per ottenere un singolo record cinematografico funziona.
 
-È possibile modificare le informazioni relative al filmato, ma non accade nulla quando si fa clic su **Invia modifiche**.
+È possibile modificare le informazioni sul film, ma non accade nulla quando si fa clic su **Invia modifiche**.
 
 ## <a name="adding-code-to-update-the-movie-with-the-users-changes"></a>Aggiunta di codice per aggiornare il film con le modifiche dell'utente
 
-Nel *EditMovie.cshtml* , per implementare la seconda funzione (salvataggio delle modifiche), aggiungere il codice seguente all'interno di parentesi graffa di chiusura di `@` blocco. (Se non si conosce esattamente dove inserire il codice, è possibile esaminare i [elenco di codice per la pagina Modifica film](#Complete_Page_Listing_for_EditMovie) che compare alla fine di questa esercitazione.)
+Nel file *EditMovie. cshtml* , per implementare la seconda funzione (salvando le modifiche), aggiungere il codice seguente solo all'interno della parentesi graffa di chiusura del blocco `@`. Se non si è certi del modo in cui inserire il codice, è possibile esaminare il [Listato di codice completo per la pagina Modifica film](#Complete_Page_Listing_for_EditMovie) visualizzata alla fine di questa esercitazione.
 
 [!code-csharp[Main](updating-data/samples/sample12.cs)]
 
-Anche in questo caso è simile al codice in questo markup e codice *AddMovie*. Il codice è in un `if(IsPost)` bloccare, poiché questo codice viene eseguito solo quando l'utente fa clic il **Invia modifiche** pulsante &mdash; , ovvero quando (e solo quando) ha inviato il form. In questo caso, non si usa un test come `if(IsPost && Validation.IsValid())`, vale a dire, da non combinare entrambi i test tramite and. In questa pagina, prima di tutto determinare se è presente l'invio di un form (`if(IsPost)`) e registrare solo i campi per la convalida. Quindi è possibile testare i risultati della convalida (`if(Validation.IsValid()`). Il flusso è leggermente diverso da quella di *AddMovie.cshtml* pagina, ma l'effetto è lo stesso.
+Anche in questo caso, questo markup e codice è simile al codice in *AddMovie*. Il codice si trova in un blocco di `if(IsPost)`, perché questo codice viene eseguito solo quando l'utente fa clic sul pulsante **Invia modifiche** &mdash; ovvero, quando (e solo quando) il form è stato inviato. In questo caso, non si sta usando un test come `if(IsPost && Validation.IsValid())`, ovvero non vengono combinati entrambi i test tramite e. In questa pagina è necessario innanzitutto determinare se è presente un modulo di invio (`if(IsPost)`) e quindi registrare solo i campi per la convalida. È quindi possibile testare i risultati della convalida (`if(Validation.IsValid()`). Il flusso è leggermente diverso rispetto alla pagina *AddMovie. cshtml* , ma l'effetto è lo stesso.
 
-Ottenere i valori di caselle di testo usando `Request.Form["title"]` e un codice simile per gli altri `<input>` elementi. Si noti che questa volta, il codice di ottenere l'ID del film all'esterno del campo nascosto (`<input type="hidden">`). Quando la pagina è stata eseguita la prima volta, il codice segue l'ID dalla stringa di query. Si ottiene il valore del campo nascosto per assicurarsi di ottenere l'ID del film che originariamente è stato visualizzato, nel caso in cui la stringa di query è stata modificata in qualche modo da allora.
+Per ottenere i valori delle caselle di testo, è possibile usare `Request.Form["title"]` e codice simile per gli altri elementi di `<input>`. Si noti che questa volta il codice ottiene l'ID del film dal campo nascosto (`<input type="hidden">`). Quando la pagina è stata eseguita per la prima volta, il codice ha ottenuto l'ID dalla stringa di query. È possibile ottenere il valore dal campo nascosto per assicurarsi di ottenere l'ID del film originariamente visualizzato, nel caso in cui la stringa di query sia stata modificata in qualche modo da allora.
 
-La differenza fondamentale tra i *AddMovie* codice e questo codice è che in questo codice è usare il codice SQL `Update` istruzione anziché il `Insert Into` istruzione. L'esempio seguente illustra la sintassi SQL `Update` istruzione:
+La differenza molto importante tra il codice *AddMovie* e questo codice è che in questo codice si usa l'istruzione SQL `Update` anziché l'istruzione `Insert Into`. Nell'esempio seguente viene illustrata la sintassi dell'istruzione SQL `Update`:
 
 `UPDATE table SET col1="value", col2="value", col3="value" ... WHERE ID = value`
 
-È possibile specificare tutte le colonne in qualsiasi ordine, e non necessariamente aggiornare tutte le colonne durante un `Update` operazione. (Non è possibile aggiornare l'ID, in quanto che risparmierebbe in vigore il record come nuovo record, e che non è consentito per un `Update` operazione.)
+È possibile specificare qualsiasi colonna in qualsiasi ordine e non è necessario aggiornare tutte le colonne durante un'operazione di `Update`. Non è possibile aggiornare l'ID, perché sarebbe in effetti salvare il record come un nuovo record e non è consentito per un'operazione di `Update`.
 
 > [!NOTE] 
 > 
-> **Importanti** il `Where` clausola con l'ID è molto importante, perché questo è come il database sappia quale database record che si desidera aggiornare. Se è stata interrotta la `Where` clausola, il database aggiornerebbero *ogni* record nel database. Nella maggior parte dei casi, sarebbe una situazione di emergenza.
+> **Importante** La clausola `Where` con l'ID è molto importante, perché questo è il modo in cui il database è in grado di riconoscere il record del database che si desidera aggiornare. Se si esce dalla clausola `Where`, il database aggiornerà *ogni* record del database. Nella maggior parte dei casi, si tratta di una situazione di emergenza.
 
-Nel codice, i valori da aggiornare vengono passati all'istruzione SQL con i segnaposto. Per ripetere quanto abbiamo detto prima: per motivi di sicurezza *solo* usare i segnaposto per passare i valori in un'istruzione SQL.
+Nel codice i valori da aggiornare vengono passati all'istruzione SQL usando i segnaposto. Per ripetere quanto detto in precedenza: per motivi di sicurezza, usare *solo* i segnaposto per passare i valori a un'istruzione SQL.
 
-Dopo che il codice Usa `db.Execute` per eseguire il `Update` istruzione, viene reindirizzato alla pagina di presentazione, in cui è possibile visualizzare le modifiche.
+Quando il codice USA `db.Execute` per eseguire l'istruzione `Update`, viene reindirizzato alla pagina di elenco, in cui è possibile visualizzare le modifiche.
 
 > [!TIP] 
 > 
-> **Istruzioni SQL differenti, diversi metodi**
+> **Diverse istruzioni SQL, metodi diversi**
 > 
-> Si potrebbe notare l'uso di metodi leggermente diversi per eseguire diverse istruzioni SQL. Per eseguire una `Select` query che potrebbero restituisce più record, si utilizza il `Query` (metodo). Per eseguire una `Select` query che già conosci restituirà un solo elemento di database, si utilizza il `QuerySingle` (metodo). Per eseguire comandi che apportano modifiche, ma che non restituiscono gli elementi di database, si utilizza il `Execute` (metodo).
+> Si potrebbe notare che si usano metodi leggermente diversi per eseguire istruzioni SQL diverse. Per eseguire una query `Select` che potenzialmente restituisce più record, utilizzare il metodo `Query`. Per eseguire una query `Select` che si sa restituirà un solo elemento del database, si userà il metodo `QuerySingle`. Per eseguire comandi che apportano modifiche ma che non restituiscono elementi di database, usare il metodo `Execute`.
 > 
-> È necessario avere diversi metodi in quanto ognuno di essi restituisce risultati diversi, come già illustrato la differenza tra `Query` e `QuerySingle`. (Il `Execute` metodo effettivamente restituisce un valore anche &mdash; vale a dire, il numero di righe di database che sono stati interessati dal comando &mdash; ma si è stati ignorando che finora.)
+> È necessario disporre di metodi diversi perché ognuno di essi restituisce risultati diversi, come si è già visto nella differenza tra `Query` e `QuerySingle`. Il metodo `Execute` restituisce effettivamente un valore anche &mdash; nome, il numero di righe del database interessate dal comando &mdash; ma che finora è stato ignorato.
 > 
-> Naturalmente, il `Query` metodo può restituire solo una riga di database. ASP.NET, tuttavia, Considera sempre i risultati del `Query` metodo come una raccolta. Anche se il metodo restituisce una sola riga, è necessario estrarre tale singola riga dalla raccolta. Pertanto, nelle situazioni in cui si *conoscere* verranno restituite solo una riga, è un po' più comodo usare `QuerySingle`.
+> Naturalmente, il metodo `Query` potrebbe restituire solo una riga di database. Tuttavia, ASP.NET considera sempre i risultati del metodo `Query` come raccolta. Anche se il metodo restituisce una sola riga, è necessario estrarre l'unica riga dalla raccolta. Pertanto, nelle situazioni in cui si è *certi* di ottenere una sola riga, è più comodo utilizzare `QuerySingle`.
 > 
-> Esistono alcuni altri metodi che eseguono tipi specifici di operazioni di database. È possibile trovare un elenco dei metodi di database nel [riferimento rapido di ASP.NET Web Pages API](../../api-reference/asp-net-web-pages-api-reference.md#Data).
+> Esistono altri metodi che eseguono tipi specifici di operazioni di database. È possibile trovare un elenco di metodi di database nel [riferimento rapido all'API pagine Web ASP.NET](../../api-reference/asp-net-web-pages-api-reference.md#Data).
 
-## <a name="making-validation-for-the-id-more-robust"></a>Effettua la convalida per l'ID più affidabile
+## <a name="making-validation-for-the-id-more-robust"></a>Esecuzione della convalida per l'ID più affidabile
 
-La prima volta che viene eseguita la pagina, si ottiene l'ID del film dalla stringa di query in modo che è possibile passare a ottenere il film dal database. È stata verificata la realtà è stato un valore da passare a cercare, che è avvenuto tramite questo codice:
+La prima volta che la pagina viene eseguita, si ottiene l'ID film dalla stringa di query, in modo che sia possibile recuperare il filmato dal database. Si è verificato che in realtà era presente un valore da cercare, operazione eseguita usando il codice seguente:
 
 [!code-csharp[Main](updating-data/samples/sample13.cs)]
 
-Questo codice è stato usato per assicurarsi che se un utente per il *EditMovies* pagina senza selezionare prima un film nel *film* pagina, la pagina verrà visualizzato un messaggio di errore descrittivo. (In caso contrario, gli utenti verrebbero visualizzato un errore che sarebbe probabilmente sufficiente confonderli).
+Questo codice è stato usato per assicurarsi che se un utente raggiunge la pagina *EditMovies* senza prima selezionare un film nella pagina dei *film* , nella pagina verrà visualizzato un messaggio di errore descrittivo. In caso contrario, gli utenti visualizzeranno un errore che probabilmente ne confonderebbe.
 
-Tuttavia, la convalida non è molto efficace. La pagina potrebbe anche essere chiamata con questi errori:
+Questa convalida, tuttavia, non è molto affidabile. È possibile che la pagina venga richiamata anche con gli errori seguenti:
 
 - L'ID non è un numero. Ad esempio, la pagina potrebbe essere richiamata con un URL come `http://localhost:nnnnn/EditMovie?id=abc`.
-- L'ID è un numero, ma fa riferimento a un filmato che non esiste (ad esempio, `http://localhost:nnnnn/EditMovie?id=100934`).
+- L'ID è un numero, ma fa riferimento a un film che non esiste, ad esempio `http://localhost:nnnnn/EditMovie?id=100934`.
 
-Se si è interessati a visualizzare gli errori risultanti da questi URL, eseguire la *film* pagina. Selezionare un film per modificare e quindi modificare l'URL del *EditMovie* pagina a un URL che contiene un carattere alfabetico, ID o l'ID di un film inesistente.
+Se si è interessati a visualizzare gli errori derivanti da questi URL, eseguire la pagina *Movies* . Selezionare un filmato da modificare, quindi modificare l'URL della pagina *EditMovie* in un URL che contiene un ID alfabetico o l'ID di un film inesistente.
 
-Quindi, cosa fare? La prima correzione consiste nell'assicurarsi che non solo è un ID passato alla pagina, ma che l'ID è un numero intero. Modificare il codice per il `!IsPost` test come illustrato in questo esempio:
+Quindi, cosa devi fare? La prima correzione consiste nel verificare che non solo sia un ID passato alla pagina, ma che l'ID sia un numero intero. Modificare il codice per il test di `!IsPost` come nell'esempio seguente:
 
 [!code-csharp[Main](updating-data/samples/sample14.cs)]
 
-È stato aggiunto una seconda condizione il `IsEmpty` test, collegate con `&&` (AND logico):
+È stata aggiunta una seconda condizione al test di `IsEmpty`, collegato con `&&` (AND logico):
 
 [!code-csharp[Main](updating-data/samples/sample15.cs)]
 
-Si ricorderà dal [Introduzione alla programmazione di ASP.NET Web Pages](../introducing-razor-syntax-c.md) esercitazione che metodi come `AsBool` un `AsInt` convertire una stringa di caratteri in un altro tipo di dati. Il `IsInt` metodo (e altri, come `IsBool` e `IsDateTime`) sono simili. Tuttavia, eseguono il test solo se si *possibile* convertire la stringa, senza eseguire effettivamente la conversione. Quindi, qui significa fondamentalmente *se il valore di stringa di query può essere convertito in un numero intero...* .
+È possibile ricordare dall'esercitazione [introduttiva a pagine Web ASP.NET Programming](../introducing-razor-syntax-c.md) che metodi come `AsBool` un `AsInt` convertire una stringa di caratteri in un altro tipo di dati. Il metodo `IsInt` e altri elementi, ad esempio `IsBool` e `IsDateTime`, sono simili. Tuttavia, verificano solo se è *possibile* convertire la stringa senza eseguire effettivamente la conversione. Quindi, qui si dice essenzialmente *se il valore della stringa di query può essere convertito in un numero intero...* .
 
-Potenziale problema sta cercando un film che non esiste. Il codice per ottenere un film è simile a questo codice:
+L'altro potenziale problema sta cercando un film inesistente. Il codice per ottenere un filmato ha un aspetto simile al seguente:
 
 [!code-csharp[Main](updating-data/samples/sample16.cs)]
 
-Se si passa una `movieId` valore per il `QuerySingle` metodo che non corrisponde a un film effettivo, non viene restituito e le istruzioni che seguono (ad esempio, `title=row.Title`) comportare errori.
+Se si passa un valore `movieId` al metodo `QuerySingle` che non corrisponde a un film effettivo, non viene restituito nulla e le istruzioni che seguono, ad esempio `title=row.Title`, generano errori.
 
-Anche in questo caso è facile apportare la correzione. Se il `db.QuerySingle` metodo non restituisce alcun risultato, il `row` variabile sarà null. Sarà pertanto possibile controllare se il `row` variabile è null prima di provare a ottenere i valori da quest'ultimo. Il codice seguente aggiunge un' `if` blocco intorno alle istruzioni che ottengono i valori fuori il `row` oggetto:
+Anche in questo caso, c'è una semplice correzione. Se il metodo `db.QuerySingle` non restituisce alcun risultato, la variabile `row` sarà null. Quindi, è possibile verificare se la variabile `row` è null prima di tentare di ottenere i valori. Il codice seguente aggiunge un blocco di `if` intorno alle istruzioni che ottengono i valori dall'oggetto `row`:
 
 [!code-csharp[Main](updating-data/samples/sample17.cs)]
 
-Con questi due test di convalida aggiuntivi, la pagina diventa più valide. Il codice completo per il `!IsPost` ramo avrà ora un aspetto simile all'esempio:
+Con questi due test di convalida aggiuntivi, la pagina diventa più a prova di Bullet. Il codice completo per il ramo `!IsPost` ora è simile a questo esempio:
 
 [!code-csharp[Main](updating-data/samples/sample18.cs)]
 
-Si noterà che ancora una volta che questa attività è un utilizzo corretto per un `else` blocco. Se il test non superati, il `else` blocchi impostato i messaggi di errore.
+Si noterà ancora una volta che questa attività è un valido utilizzo per un blocco di `else`. Se i test non vengono superati, il `else` blocca la configurazione dei messaggi di errore.
 
 ## <a name="adding-a-link-to-return-to-the-movies-page"></a>Aggiunta di un collegamento per tornare alla pagina Movies
 
-Un dettaglio finale e utile consiste nell'aggiungere un collegamento al *film* pagina. Nel flusso ordinario di eventi, gli utenti inizieranno al *film* e fare clic su un **modificare** collegamento. Che viene visualizzato il *EditMovie* pagina, in cui possono modificare il film e fare clic sul pulsante. Dopo che il codice ha elaborato la modifica, reindirizzato al *film* pagina.
+Un dettaglio finale e utile consiste nell'aggiungere un collegamento alla pagina *Movies* . Nel flusso di eventi normali, gli utenti inizieranno dalla pagina dei *film* e faranno clic su un collegamento di **modifica** . Che li porta alla pagina *EditMovie* , in cui è possibile modificare il film e fare clic sul pulsante. Dopo che il codice ha elaborato la modifica, viene reindirizzato alla pagina *Movies* .
 
 Tuttavia:
 
-- L'utente potrebbe decidere di non apportare alcuna modifica.
-- L'utente potrebbe essere stato ricevuto da questa pagina senza prima avere scelto un' **Edit** clic sul collegamento nella *film* pagina.
+- L'utente potrebbe decidere di non modificare alcun elemento.
+- È possibile che l'utente abbia ottenuto questa pagina senza prima fare clic su un collegamento di **modifica** nella pagina dei *filmati* .
 
-In entrambi i casi, si desidera semplificare per poter tornare all'elenco principale. È facile apportare la correzione &mdash; aggiungere il markup seguente subito dopo la chiusura `</form>` tag nel markup:
+In entrambi i casi, si desidera semplificare il ritorno all'elenco principale. Si tratta di una soluzione semplice &mdash; aggiungere il markup seguente subito dopo il tag di chiusura `</form>` nel markup:
 
 [!code-html[Main](updating-data/samples/sample19.html)]
 
-Questo markup Usa la stessa sintassi per un `<a>` elemento che si è visto in un' posizione. L'URL include `~` può indicare "radice del sito Web".
+Questo markup usa la stessa sintassi per un elemento `<a>` che si è visto altrove. L'URL include `~` significa "radice del sito Web".
 
-## <a name="testing-the-movie-update-process"></a>Testare il processo di aggiornamento di film
+## <a name="testing-the-movie-update-process"></a>Test del processo di aggiornamento del film
 
-A questo punto è possibile testare. Eseguire la *film* e fare clic su **modificare** accanto a un filmato. Quando la *EditMovie* verrà visualizzata la pagina, apportare modifiche al film e fare clic su **Invia modifiche**. Quando viene visualizzato l'elenco di film, assicurarsi che le modifiche vengono visualizzate.
+A questo punto è possibile eseguire il test. Eseguire la pagina *filmati* e fare clic su **modifica** accanto a un film. Quando viene visualizzata la pagina *EditMovie* , modificare il film e fare clic su **Invia modifiche**. Quando viene visualizzato l'elenco dei film, verificare che le modifiche siano visualizzate.
 
-Per assicurarsi che funzioni correttamente la convalida, fare clic su **modifica** per un altro film. Quando si raggiunge il *EditMovie* pagina, deseleziona il **Genre** campo (o **anno** campo o entrambi) e provare a inviare le modifiche. Verrà visualizzato un errore, come previsto:
+Per assicurarsi che la convalida funzioni, fare clic su **modifica** per un altro film. Quando si arriva alla pagina *EditMovie* , deselezionare il campo **genere** (o il campo **anno** o entrambi) e provare a inviare le modifiche. Verrà visualizzato un errore, come previsto:
 
-![Modifica pagina film che mostri gli errori di convalida](updating-data/_static/image4.png)
+![Modifica pagina film con errori di convalida](updating-data/_static/image4.png)
 
-Fare clic sui **tornare all'elenco dei filmati** collegamento per ignorare le modifiche e tornare alle *film* pagina.
+Fare clic sul collegamento **Return to Movie Listing** per abbandonare le modifiche e tornare alla pagina *Movies* .
 
-## <a name="coming-up-next"></a>In arrivo
+## <a name="coming-up-next"></a>Prossimi
 
-Nella prossima esercitazione, verrà illustrato come eliminare un record di film.
+Nell'esercitazione successiva si vedrà come eliminare un record di film.
 
-## <a name="complete-listing-for-movie-page-updated-with-edit-links"></a>Elenco completo per la pagina di film (aggiornata con i collegamenti di modifica)
+## <a name="complete-listing-for-movie-page-updated-with-edit-links"></a>Elenco completo per la pagina di film (aggiornato con i collegamenti di modifica)
 
 [!code-cshtml[Main](updating-data/samples/sample20.cshtml)]
 
 <a id="Complete_Page_Listing_for_EditMovie"></a>
-## <a name="complete-page-listing-for-edit-movie-page"></a>Completare l'elenco di pagina per pagina film di modifica
+## <a name="complete-page-listing-for-edit-movie-page"></a>Elenco di pagine complete per la pagina Modifica film
 
 [!code-cshtml[Main](updating-data/samples/sample21.cshtml)]
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-- [Introduzione alla programmazione Web ASP.NET usando la sintassi Razor](../../getting-started/introducing-razor-syntax-c.md)
-- [Istruzione SQL UPDATE](http://www.w3schools.com/sql/sql_update.asp) sul sito W3Schools
+- [Introduzione alla programmazione Web di ASP.NET tramite la sintassi Razor](../../getting-started/introducing-razor-syntax-c.md)
+- [Istruzione SQL Update](http://www.w3schools.com/sql/sql_update.asp) nel sito di W3Schools
 
 > [!div class="step-by-step"]
 > [Precedente](entering-data.md)

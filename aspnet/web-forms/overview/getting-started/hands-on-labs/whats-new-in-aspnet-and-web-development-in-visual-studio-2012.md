@@ -1,56 +1,56 @@
 ---
 uid: web-forms/overview/getting-started/hands-on-labs/whats-new-in-aspnet-and-web-development-in-visual-studio-2012
-title: What ' s New in ASP.NET e sviluppo Web in Visual Studio 2012 | Microsoft Docs
+title: Novità di ASP.NET e sviluppo Web in Visual Studio 2012 | Microsoft Docs
 author: rick-anderson
-description: La nuova versione di Visual Studio introduce una serie di miglioramenti finalizzate soprattutto a migliorare l'esperienza e le prestazioni quando si lavora con tecnologie Web...
+description: La nuova versione di Visual Studio introduce una serie di miglioramenti che riguardano il miglioramento dell'esperienza e delle prestazioni quando si lavora con le tecnologie Web....
 ms.author: riande
 ms.date: 02/18/2013
 ms.assetid: 6d40d276-1642-4a77-b6c9-02ac914f6805
 msc.legacyurl: /web-forms/overview/getting-started/hands-on-labs/whats-new-in-aspnet-and-web-development-in-visual-studio-2012
 msc.type: authoredcontent
 ms.openlocfilehash: 80c77ec65ed86b06e417d3f6ba608e404c46768b
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65132094"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78525935"
 ---
 # <a name="whats-new-in-aspnet-and-web-development-in-visual-studio-2012"></a>Novità di ASP.NET e dello sviluppo Web in Visual Studio 2012
 
-da [Camp Web Team](https://twitter.com/webcamps)
+dal [team di Web Camp](https://twitter.com/webcamps)
 
-> La nuova versione di Visual Studio introduce una serie di miglioramenti finalizzate soprattutto a migliorare l'esperienza e le prestazioni quando si lavora con tecnologie Web. Editor di Visual Studio per CSS, JavaScript e HTML sono stata completamente rinnovato per includere molti dei riquadri di codice più ricercate, ad esempio IntelliSense e il rientro automatico. Relativamente alle prestazioni, creazione di bundle e minimizzazione adesso sono integrate, come il tempo di caricamento di funzionalità incorporate per ridurre facilmente la pagina.
+> La nuova versione di Visual Studio introduce una serie di miglioramenti mirati a migliorare l'esperienza e le prestazioni quando si lavora con le tecnologie Web. Gli editor di Visual Studio per CSS, JavaScript e HTML sono stati completamente rinnovati per includere molti degli strumenti di codice più richiesti, come IntelliSense e il rientro automatico. Per quanto riguarda le prestazioni, la creazione di bundle e minification sono ora integrate come funzionalità predefinite per ridurre facilmente i tempi di caricamento delle pagine.
 > 
-> Visual Studio consente di lavorare con le tecnologie più recenti di sito Web. È possibile usare frammenti di codice CSS3 multibrowser per assicurarsi che il sito funziona indipendentemente dalla piattaforma client, sfruttando i vantaggi delle nuove funzionalità e gli elementi HTML5.
+> Visual Studio consente di usare le tecnologie più recenti per i siti Web. È possibile usare i frammenti di codice CSS3 tra browser per assicurarsi che il sito funzioni indipendentemente dalla piattaforma client, sfruttando al tempo stesso i nuovi elementi e funzionalità di HTML5.
 > 
-> La scrittura e la profilatura del codice JavaScript deve essere più semplice con questa versione di Visual Studio. Gli elenchi di IntelliSense, funzionalità di navigazione e la documentazione XML integrate sono ora disponibili per il codice JavaScript. Il catalogo di JavaScript è ora disponibile a tua disposizione. Inoltre, è possibile controllare la conformità di ECMAScript5 con gli script e rilevare gli errori di sintassi in una fase iniziale.
+> La scrittura e la profilatura di codice JavaScript dovrebbe essere più semplice con questa versione di Visual Studio. Gli elenchi IntelliSense, le funzionalità di navigazione e la documentazione XML integrate sono ora disponibili per il codice JavaScript. È ora disponibile il catalogo JavaScript a portata di mano. Inoltre, è possibile controllare la conformità di ECMAScript5 con gli script e rilevare errori di sintassi in una fase iniziale.
 > 
-> Ultimo, ma non meno importante, questa versione di Visual Studio implementa incorporati e minimizzazione. I file di script e fogli di stile verranno compressi e compressi in modo che il sito è più veloce.
+> Infine, la versione di Visual Studio implementa la creazione di bundle e minification predefiniti. I file di script e i fogli di stile verranno compressi e compressi in modo che il sito venga eseguito più velocemente.
 > 
-> Questa esercitazione illustra i miglioramenti e nuove funzionalità descritte in precedenza applicando modifiche minime a un'applicazione Web di esempio fornita nella cartella di origine.
+> In questa esercitazione vengono illustrati i miglioramenti e le nuove funzionalità descritte in precedenza applicando modifiche minime a un'applicazione Web di esempio fornita nella cartella di origine.
 > 
-> Tutto il codice di esempio e frammenti di codice sono inclusi nel Web Camp Kit di formazione, disponibile all'indirizzo [ https://go.microsoft.com/fwlink/?LinkID=248297&clcid=0x409 ](https://go.microsoft.com/fwlink/?LinkID=248297&clcid=0x409).
+> Tutti i codici e i frammenti di codice di esempio sono inclusi nel kit di formazione di Web Camp, disponibile all' [https://go.microsoft.com/fwlink/?LinkID=248297&clcid=0x409](https://go.microsoft.com/fwlink/?LinkID=248297&clcid=0x409).
 
 <a id="Objectives"></a>
 
 <a id="Objectives"></a>
 ### <a name="objectives"></a>Obiettivi
 
-In questo laboratorio pratico, si apprenderà come:
+In questo laboratorio pratico si apprenderà come:
 
-- Usare le nuove funzionalità e miglioramenti nell'editor CSS
-- Usare le nuove funzionalità e miglioramenti nell'editor HTML
-- Usare le nuove funzionalità e miglioramenti nell'editor JavaScript
-- Configurare e usare aggregazione e minimizzazione
+- Utilizzare le nuove funzionalità e i miglioramenti disponibili nell'editor CSS
+- Utilizzare le nuove funzionalità e i miglioramenti nell'editor HTML
+- Utilizzare le nuove funzionalità e i miglioramenti dell'editor JavaScript
+- Configurare e usare la creazione di bundle e minification
 
 <a id="Prerequisites"></a>
 
 <a id="Prerequisites"></a>
 ### <a name="prerequisites"></a>Prerequisiti
 
-- [Microsoft Visual Studio Express 2012 per Web](https://www.microsoft.com/visualstudio/eng/products/visual-studio-express-for-web) o superiore (leggere [appendice A](#AppendixA) per istruzioni su come installarlo).
-- [Windows PowerShell](https://support.microsoft.com/kb/968930/) (per gli script di installazione - già installati in Windows 8 e Windows Server 2008 R2)
-- [Internet Explorer 10](https://windows.microsoft.com/internet-explorer/products/ie/home) - o un browser compatibile con HTML5
+- [Microsoft Visual Studio Express 2012 per Web](https://www.microsoft.com/visualstudio/eng/products/visual-studio-express-for-web) o Superior (leggere [l'appendice a](#AppendixA) per istruzioni su come installarlo).
+- [Windows PowerShell](https://support.microsoft.com/kb/968930/) (per gli script di installazione-già installato in Windows 8 e windows Server 2008 R2)
+- [Internet Explorer 10](https://windows.microsoft.com/internet-explorer/products/ie/home) o un browser compatibile con HTML5
 
 <a id="Exercises"></a>
 
@@ -59,224 +59,224 @@ In questo laboratorio pratico, si apprenderà come:
 
 Questo laboratorio pratico include gli esercizi seguenti:
 
-1. [Esercizio 1: Novità nell'Editor CSS](#Exercise1)
-2. [Esercizio 2: Quali sono le novità dell'Editor HTML](#Exercise2)
-3. [Esercizio 3: Novità nell'Editor JavaScript](#Exercise3)
-4. [Esercizio 4: Creazione di bundle e minimizzazione](#Exercise4)
+1. [Esercizio 1: novità dell'editor CSS](#Exercise1)
+2. [Esercizio 2: novità dell'editor HTML](#Exercise2)
+3. [Esercizio 3: novità dell'editor JavaScript](#Exercise3)
+4. [Esercizio 4: creazione di bundle e minification](#Exercise4)
 
-Tempo stimato per completare questa esercitazione: **60 minuti**.
+Tempo stimato per il completamento del Lab: **60 minuti**.
 
 <a id="Exercise1"></a>
 
 <a id="Exercise_1_Whats_New_in_the_CSS_Editor"></a>
-### <a name="exercise-1-whats-new-in-the-css-editor"></a>Esercizio 1: Novità nell'Editor CSS
+### <a name="exercise-1-whats-new-in-the-css-editor"></a>Esercizio 1: novità dell'editor CSS
 
-Gli sviluppatori Web devono essere familiari con molti le difficoltà correlate alla modalità di modifica CSS. Uno dei problemi più gravi di applicazione di stili CSS è la compatibilità tra browser. Spesso, si verifica che, dopo l'applicazione di stili per il sito, noterete che ha un aspetto diverso se viene aperto in un altro browser o dal dispositivo. Pertanto, si può impiegare molto tempo nel risolvere tali problemi visual per rendersi conto che, quando si infine consentire il funzionamento in un browser, questa viene suddivisa in altri.
+Gli sviluppatori Web devono conoscere molte delle difficoltà correlate alla modifica CSS. Uno dei principali problemi di stile CSS è la compatibilità tra browser. Spesso si verifica che, dopo aver applicato gli stili al sito, si noti che l'aspetto è diverso se lo si apre in un altro browser o dispositivo. Pertanto, è possibile dedicare molto tempo alla correzione di questi problemi visivi per tenere presente che, quando il lavoro viene infine eseguito in un unico browser, il problema si interrompe negli altri.
 
-Visual Studio include ora le funzionalità che consentono agli sviluppatori di accedere a, lavoro e organizzare i fogli di stile CSS in modo efficace. In questo esercizio, si soddisferà le nuove funzionalità per un'organizzazione effettiva e l'edizione, nonché i frammenti di codice CSS3 per garantire la compatibilità tra browser.
+Visual Studio include ora funzionalità che consentono agli sviluppatori di accedere, lavorare e organizzare i fogli di stile CSS in modo efficace. In questo esercizio si soddisferanno le nuove funzionalità per un'organizzazione e un'edizione efficaci, nonché i frammenti di codice CSS3 per la compatibilità tra browser.
 
 <a id="Ex1Task1"></a>
 
 <a id="Task_1_-_New_Editor_Features"></a>
-#### <a name="task-1---new-editor-features"></a>Attività 1 - nuove funzionalità dell'Editor
+#### <a name="task-1---new-editor-features"></a>Attività 1: nuove funzionalità dell'editor
 
-In questa attività, scoprirai le nuove funzionalità dell'Editor CSS. Questo nuovo editor consentirà di aumentare la produttività, sfruttando i vantaggi del nuovo rientro intelligente, i commenti del codice migliorata e l'elenco di IntelliSense migliorata.
+In questa attività verranno individuate le nuove funzionalità dell'editor CSS. Questo nuovo editor consente di aumentare la produttività sfruttando il nuovo rientro intelligente, i commenti del codice migliorati e l'elenco avanzato di IntelliSense.
 
-1. Avviare **Visual Studio** e aprire il **WhatsNewASPNET.sln** soluzione che si trova nel **Source\WhatsNewASPNET** cartella della presente esercitazione.
-2. In Esplora soluzioni aprire il **CSS** file che si trova sotto il **stili** cartella. Assicurarsi che il **Editor di testo** sono visibili sulla barra degli strumenti. A tale scopo, selezionare il **View** | **barre degli strumenti** opzione di menu e controllare il **Editor di testo** opzioni. Si noterà che, poiché questa nuova versione, il **commento** pulsante (![comment-pulsante](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image1.png) ) e il **Rimuovi commento** pulsante (![rimuovere il commento-pulsante](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image2.png)) vengono inoltre abilitate per l'editor CSS.
+1. Avviare **Visual Studio** e aprire la soluzione **WhatsNewASPNET. sln** disponibile nella cartella **Source\WhatsNewASPNET** di questo Lab.
+2. In Esplora soluzioni aprire il file **site. CSS** che si trova nella cartella **stili** . Verificare che gli strumenti **editor di testo** siano visibili sulla barra degli strumenti. A tale scopo, selezionare l'opzione di menu **visualizza** | **barre degli strumenti** e selezionare le opzioni dell' **editor di testo** . Si noterà che, dal momento che questa nuova versione, il pulsante di **Commento** (![pulsante di commento](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image1.png)) e il pulsante Rimuovi **Commento** (![uncomment-Button](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image2.png)) sono abilitati anche per l'editor CSS.
 
-    ![Abilitazione dell'Editor e strumenti CSS](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image3.png "abilitazione Editor e strumenti CSS")
+    ![Abilitazione di editor e strumenti CSS](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image3.png "Abilitazione di editor e strumenti CSS")
 
-    *Abilitazione dell'Editor e strumenti CSS*
-3. Scorrere verso il codice e selezionare qualsiasi definizione di classe CSS. Scegliere il **commento** (![commento (pulsante)](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image4.png) ) pulsante per commentare le righe selezionate. Scegliere il **Rimuovi commento** (![pulsante di rimuovere il commento](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image5.png) ) pulsante per annullare le modifiche.
-4. Fare clic sui **Comprimi** (![Comprimi](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image6.png) ) e **Espandi** (![espandere](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image7.png) ) pulsanti che si trovano sul margine sinistro del testo. Si noti che è ora possibile nascondere gli stili che non si usa per avere una visualizzazione più chiara.
+    *Abilitazione di editor e strumenti CSS*
+3. Scorrere il codice e selezionare una definizione di classe CSS. Fare clic sul pulsante **Comment** (![commento-pulsante](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image4.png)) per commentare le righe selezionate. Fare quindi clic sul pulsante **Rimuovi commento** (![rimuovi commento](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image5.png)) per annullare le modifiche.
+4. Fare clic sui pulsanti **Comprimi** (![Comprimi](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image6.png)) ed **Espandi** (![Espandi](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image7.png)) situati sul margine sinistro del testo. Si noti che è ora possibile nascondere gli stili che non si usano per avere una visualizzazione più pulita.
 
-    ![Compressione delle classi CSS](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image8.png "classi CSS di compressione")
+    ![Compressione delle classi CSS](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image8.png "Compressione delle classi CSS")
 
     *Compressione delle classi CSS*
-5. Assicurarsi che la funzionalità di rientro intelligente è abilitata. Selezionare il **degli strumenti** | **opzioni** opzione di menu e quindi selezionare il **Editor di testo** | **CSS**  |  **Formattazione** pagina nel riquadro sinistro della schermata. Verificare i **rientro gerarchico** opzione.
+5. Verificare che la funzionalità di rientro intelligente sia abilitata. Selezionare l'opzione di menu **strumenti** | **Opzioni** , quindi selezionare **editor di testo** | pagina **formattazione** | **CSS** nel riquadro sinistro della schermata. Controllare l'opzione di **rientro gerarchico** .
 
-    ![Abilitazione di rientro gerarchico](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image9.png "abilitazione rientro gerarchico")
+    ![Abilitazione del rientro gerarchico](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image9.png "Abilitazione del rientro gerarchico")
 
-    *Abilitazione di rientro gerarchico*
-6. Trovare la definizione della classe principale (.main) e aggiungere uno stile agli elementi div. Si noterà che il codice consente di allineare automaticamente, aiutare gli utenti per trovare l'elemento padre le classi in modo immediato.
+    *Abilitazione del rientro gerarchico*
+6. Individuare la definizione della classe principale (. Main) e aggiungere uno stile agli elementi div. Si noterà che il codice viene allineato automaticamente per consentire agli utenti di trovare le classi padre a colpo d'occhio.
 
     CSS
 
     [!code-css[Main](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/samples/sample1.css)]
 
-    ![Allineamento gerarchico in CSS](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image10.png "allineamento gerarchico in CSS")
+    ![Allineamento gerarchico in CSS](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image10.png "Allineamento gerarchico in CSS")
 
     *Allineamento gerarchico in CSS*
-7. All'interno **.main div** classe, individuare il cursore alla fine di **bordo: 0px;**  e premere **invio** per visualizzare l'elenco di IntelliSense. Iniziare a digitare **top** e notare come l'elenco viene filtrato durante la digitazione. Nell'elenco vengono visualizzati gli elementi che contengono **superiore** in qualsiasi parte della parola (nelle versioni precedenti di Visual Studio, l'elenco viene filtrato per gli elementi che *begin* con il termine).
+7. All'interno della classe **div. Main** individuare il cursore alla fine del **bordo: 0Px** e premere **invio** per visualizzare l'elenco di IntelliSense. Iniziare a digitare **Top** e notare il modo in cui l'elenco viene filtrato durante la digitazione. Nell'elenco vengono visualizzati gli elementi che contengono **Top** in qualsiasi parte della parola (nelle versioni precedenti di Visual Studio, l'elenco viene filtrato in base agli elementi che *iniziano* con il termine).
 
-    ![Miglioramenti di IntelliSense in CSS](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image11.png "miglioramenti di IntelliSense CSS")
+    ![Miglioramenti di IntelliSense in CSS](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image11.png "Miglioramenti di IntelliSense in CSS")
 
-    *Miglioramenti di IntelliSense CSS*
+    *Miglioramenti di IntelliSense in CSS*
 
 <a id="Ex1Task2"></a>
 
 <a id="Task_2_-_The_Color_Picker"></a>
-#### <a name="task-2---the-color-picker"></a>Attività 2: la selezione colori
+#### <a name="task-2---the-color-picker"></a>Attività 2: selezione colori
 
-In questa attività consente di individuare che la nuova selezione colori CSS integrato in Visual Studio IntelliSense.
+In questa attività verrà individuato il nuovo selettore colori CSS integrato in Visual Studio IntelliSense.
 
-1. Nelle **CSS,** individuare la definizione di classe di intestazione (.header) e posizionare il cursore accanto a **colore di sfondo** attributo, tra il &quot;:&quot; e &quot; # &quot; caratteri nella riga di codice **.**
+1. In **site. CSS** individuare la definizione della classe di intestazione (. Header) e posizionare il cursore accanto a attributo **background-color** tra i &quot;:&quot; e &quot;#caratteri &quot; nella riga di codice **.**
 
-    ![Individuazione del cursore](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image12.png "individuando il cursore")
+    ![Individuazione del cursore](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image12.png "Individuazione del cursore")
 
     *Individuazione del cursore*
-2. Eliminare il **virgola** (:) e scrivere nuovamente per visualizzare la selezione colori. Si noti che i colori di primo che verranno visualizzati i colori più frequenti del sito. Se si sceglie il colore bianco, al codice colore HTML (#fff) sostituirà il codice colore corrente nel foglio di stile.
+2. Elimina i **due punti** (:) e scriverlo di nuovo per visualizzare la selezione colori. Si noti che i primi colori visualizzati sono i colori più frequenti del sito. Se si fa clic sul colore bianco, il codice colore HTML (#fff) sostituirà il codice colore corrente nel foglio di stile.
 
-    ![Selezione colori](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image13.png "selezione colori")
+    ![Selezione colori](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image13.png "Selezione colori")
 
     *Selezione colori*
-3. Premere il **Expand** (![com](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image14.png) ) pulsante nella selezione colori per visualizzare la sfumatura di colore e quindi trascinare il cursore sfumatura per selezionare un colore diverso. Successivamente, fare clic sui **contagocce** e selezionare un colore dalla schermata. Si noti che il valore di colore di sfondo cambia dinamicamente mentre si sposta il cursore.
+3. Premere il pulsante **Espandi** (![com](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image14.png)) nella selezione colori per visualizzare la sfumatura di colore, quindi trascinare il cursore sfumatura per selezionare un colore diverso. Successivamente, fare clic sul pulsante **contagocce** e selezionare qualsiasi colore dalla schermata. Si noti che il valore del colore di sfondo cambia dinamicamente mentre si sposta il cursore.
 
-    ![Sfumatura di colore della selezione](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image15.png "sfumatura di colore della selezione")
+    ![Sfumatura selezione colori](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image15.png "Sfumatura selezione colori")
 
-    *Sfumatura di colore della selezione*
-4. Nel **opacità** dispositivo di scorrimento, spostare il selettore al centro della barra per ridurre l'opacità. Si noti che il valore di colore di sfondo cambia ora la scala in RGBA.
+    *Sfumatura selezione colori*
+4. Nel dispositivo di scorrimento **Opacity** spostare il selettore al centro della barra per ridurre l'opacità. Si noti che il valore del colore di sfondo ora modifica la scala in RGBA.
 
-    ![Selezione colori opacità](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image16.png "barev opacità")
+    ![Opacità selezione colori](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image16.png "Opacità selezione colori")
 
-    *Selezione colori opacità*
+    *Opacità selezione colori*
 
     > [!NOTE]
-    > La definizione di colore RGBA (rosso, verde, blu e alfa) in CSS3 consente di definire il valore di opacità di colore per un singolo elemento. A differenza **opacità -** un simile attributo CSS **-** colori RGBA sono compatibili anche con i browser più recenti.
+    > La definizione di colore RGBA (Red, Green, Blue, Alpha) in CSS3 consente di definire il valore di opacità del colore per un singolo elemento. Diversamente dall' **opacità,** un attributo CSS simile **-** colori RGBA sono compatibili anche con i browser più recenti.
 
 <a id="Ex1Task3"></a>
 
 <a id="Task_3_-_CSS_Compatible_Code_Snippets"></a>
-#### <a name="task-3---css-compatible-code-snippets"></a>Attività 3: i frammenti di codice compatibile CSS
+#### <a name="task-3---css-compatible-code-snippets"></a>Attività 3: frammenti di codice compatibili con CSS
 
-In questa attività si apprenderà come usare frammenti di codice CSS3 compatibile tra browser per implementare alcune funzionalità nel tuo sito Web.
+In questa attività si apprenderà come usare frammenti di codice CSS3 compatibili tra browser per implementare alcune funzionalità nel sito Web.
 
-1. Nel **CSS** del file, individuare il **intestazione** CSS (.header) definizione di classe e posizionare il cursore sotto il **/ \*raggio bordo\* /** segnaposto per aggiungere un nuovo frammento di codice. Premere **invio** per visualizzare l'elenco di IntelliSense e tipo **radius** per filtrare l'elenco. Selezionare il **border-radius** opzione dall'elenco con un doppio clic e quindi premere il **scheda** chiave per inserire il frammento di codice. Quindi, digitare raggio dimensioni espresse in pixel e quindi premere **invio**. Ad esempio, digitare **15px**.
+1. Nel file **site. CSS** individuare l' **intestazione** definizione di classe CSS (. Header) e posizionare il cursore sotto il **/\*RADIUS bordo\*/** segnaposto per aggiungere un nuovo frammento di codice. Premere **invio** per visualizzare l'elenco di IntelliSense e digitare **RADIUS** per filtrare l'elenco. Selezionare l'opzione **border-radius** dall'elenco con un doppio clic e quindi premere **Tab** per inserire il frammento di codice. Quindi, digitare una dimensione del raggio in pixel e premere **invio**. Ad esempio, digitare **15px**.
 
-    Gli attributi di CSS3 aggiunti dal frammento forniranno i bordi arrotondati nella maggior parte dei browser conformità HTML5, tra cui Mozilla e nei browser basati su WebKit.
+    Gli attributi CSS3 aggiunti dal frammento eseguiranno il rendering di bordi arrotondati nella maggior parte dei browser di conformità HTML5, inclusi i browser basati su Mozilla e WebKit.
 
-    ![Uso di un frammento border-radius](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image17.png "usando un frammento di codice border-radius")
+    ![Uso di un frammento border-radius](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image17.png "Uso di un frammento border-radius")
 
     *Uso di un frammento border-radius*
-2. Applicare le stesse **bordo** frammenti di codice nello stile di pagina (.page).
+2. Applicare gli stessi frammenti di **bordo** nello stile della pagina (. pagina).
 
     CSS
 
     [!code-css[Main](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/samples/sample2.css)]
-3. Premere **F5** per eseguire la soluzione. Si noti che ogni pagina ora è arrotondato bordi.
+3. Premere **F5** per eseguire la soluzione. Si noti che ogni pagina dispone ora di bordi arrotondati.
 
-    ![Gli angoli arrotondati](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image18.png "gli angoli arrotondati")
+    ![Angoli arrotondati](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image18.png "Angoli arrotondati")
 
     *Angoli arrotondati*
 4. Chiudere il browser e tornare a Visual Studio.
-5. Aprire il **Custom. CSS** file che si trova sotto il **stili** cartella e posizionare il cursore all'interno **div.images ul li img** definizione di classe.
-6. Premere INVIO per visualizzare l'elenco di IntelliSense, digitare **ombreggiatura di casella** e premere il **scheda** chiave due volte per inserire il frammento di codice shadow predefinito nella definizione di classe. Impostazioni per i valori di shadow **10px 10px 5px #888**. Quindi, digitare **border-radius** e inserire il frammento di codice. Tipo di **15px** per impostare le dimensioni di radius e premere **invio**.
+5. Aprire il file **Custom. CSS** che si trova nella cartella **stili** e posizionare il cursore all'interno della definizione della classe **div. images ul li IMG** .
+6. Premere INVIO per visualizzare l'elenco IntelliSense, digitare **box-shadow** e premere il tasto **Tab** due volte per inserire il frammento di codice shadow predefinito all'interno della definizione della classe. Impostare i valori Shadow su **10px 10px 5px #888**. Quindi, digitare **border-radius** e inserire il frammento di codice. Digitare **15px** per impostare le dimensioni del raggio e premere **invio**.
 
-    ![Arrotondare gli angoli con ombreggiatura](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image19.png "arrotondati gli angoli con ombreggiatura")
+    ![Angoli arrotondati con ombreggiatura](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image19.png "Angoli arrotondati con ombreggiatura")
 
     *Angoli arrotondati con ombreggiatura*
 
     > [!NOTE]
-    > In questo momento, l'attributo shadow viene inserita con il prefisso corrispondente (moz, webkit, o) per supportare Mozilla e i browser Webkit (Chrome, Safari, Konkeror).
-7. Creare una nuova classe **div.images ul li img:hover** sotto il **div.images ul li img** definizione di classe e posizionare il cursore all'interno delle parentesi **.**
+    > Al momento, l'attributo shadow viene inserito con il prefisso corrispondente (Moz, WebKit, o) per supportare i browser Mozilla e WebKit (Chrome, Safari, Konkeror).
+7. Creare una nuova classe **div. images ul li img:** passare il puntatore del mouse sotto la definizione della classe **div. images ul li IMG** e posizionare il cursore all'interno delle parentesi **.**
 
     CSS
 
     [!code-css[Main](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/samples/sample3.css)]
-8. Tipo di **trasformare** e premere il **scheda** chiave due volte per inserire il frammento di codice di trasformazione. Quindi, immettere **rotate(-15deg)** per modificare il valore dell'angolo di rotazione quando le immagini sono passaggio del mouse.
+8. Digitare **Transform** e premere il tasto **Tab** due volte per inserire il frammento di trasformazione. Quindi, immettere **Rotate (-15deg)** per modificare il valore dell'angolo di rotazione quando si passa il mouse sulle immagini.
 
     CSS
 
     [!code-css[Main](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/samples/sample4.css)]
-9. Premere **F5** per eseguire la soluzione e passare alla pagina di CSS3. Si noti che le immagini hanno angoli arrotondati e casella ombreggiature. Posizionare il mouse sopra le immagini e guardarli ruotare.
+9. Premere **F5** per eseguire la soluzione e passare alla pagina CSS3. Si noti che le immagini hanno angoli arrotondati e ombreggiature di box. Posizionare il puntatore del mouse sulle immagini e controllare la rotazione.
 
-    ![Frammento di codice la rotazione di un'immagine di trasformare](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image20.png "frammento trasformazione ruotare un'immagine")
+    ![Trasformare un frammento di codice in un'immagine](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image20.png "Trasformare un frammento di codice in un'immagine")
 
-    *Trasformare frammento ruotare un'immagine*
+    *Trasformare un frammento di codice in un'immagine*
 
     > [!NOTE]
-    > Se si usa Internet Explorer 10 e non è possibile vedere le ombreggiature, assicurarsi che la modalità documento è impostata su standard di IE10. Premere **F12** per aprire Strumenti di sviluppo di Internet Explorer e fare clic su **modalità documento** modificare a standard di IE10.
+    > Se si utilizza Internet Explorer 10 e non è possibile visualizzare le ombre, verificare che la modalità documento sia impostata su standard IE10. Premere **F12** per aprire gli strumenti di sviluppo di Internet Explorer e fare clic su **modalità documento** per modificare gli standard IE10.
 
     ![about-us](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image21.png)
 
 <a id="Exercise2"></a>
 
 <a id="Exercise_2_Whats_New_in_the_HTML_Editor"></a>
-### <a name="exercise-2-whats-new-in-the-html-editor"></a>Esercizio 2: Quali sono le novità dell'Editor HTML
+### <a name="exercise-2-whats-new-in-the-html-editor"></a>Esercizio 2: novità dell'editor HTML
 
-Visual Studio include un editor HTML migliorato. Alcuni dei miglioramenti inclusi in questa versione sono rientri in documenti HTML, frammenti di codice HTML5, iniziale HTML e corrispondenza tag di fine e la convalida HTML. In questo esercizio, verranno visualizzate come queste modifiche migliorano la necessaria la padronanza quando si lavora nel markup di sito Web.
+Visual Studio include un editor HTML migliorato. Alcuni dei miglioramenti inclusi in questa versione sono i rientri intelligenti nei documenti HTML, i frammenti di codice HTML5, la corrispondenza dei tag di inizio e di fine HTML e la convalida HTML. In questo esercizio verrà illustrato il modo in cui queste modifiche migliorano la fluidità quando si utilizza il markup del sito Web.
 
-Come l'editor CSS, editor HTML è stato anche migliorato. La maggior parte di questi miglioramenti sono più piccoli che semplifica la vita dello sviluppatore Web. Elementi come altri frammenti di codice per HTML5, rientri, corrispondenti ai tag di inizio e fine quando modifica e convalida come destinazione del documento HTML DOCTYPE sono riportati alcuni di questi miglioramenti.
+Analogamente all'editor CSS, è stato migliorato anche l'editor HTML. La maggior parte di questi miglioramenti è più piccola che semplificano la vita degli sviluppatori Web. Alcuni di questi miglioramenti sono elementi come altri frammenti di codice per HTML5, i rientri intelligenti, i tag di inizio e di fine corrispondenti durante la modifica e la convalida che fanno riferimento al documento DOCTYPE del documento HTML.
 
 <a id="Ex2Task1"></a>
 
 <a id="Task_1_-_Improved_DOCTYPE_Validation"></a>
-#### <a name="task-1---improved-doctype-validation"></a>Attività 1: convalida di DOCTYPE migliorata
+#### <a name="task-1---improved-doctype-validation"></a>Attività 1-convalida del DOCTYPE migliorata
 
-L'editor HTML include ora la possibilità di controllare il tipo di documento della pagina, anche se la definizione potrebbe essere nella pagina master. A seconda del tipo di documento della pagina, l'editor HTML convaliderà il set corretto delle regole e verrà filtrato l'elenco di IntelliSense, prendere in considerazione gli elementi di tipo di documento.
+L'editor HTML è ora in grado di controllare il DOCTYPE della pagina, anche se la definizione potrebbe trovarsi nella pagina master. A seconda del DOCTYPE della pagina, l'editor HTML viene convalidato con il set di regole corretto e l'elenco IntelliSense viene filtrato considerando gli elementi DOCTYPE.
 
-In questa attività si modificherà il tipo di documento di una pagina per vedere come il comportamento dell'editor HTML cambia di conseguenza.
+In questa attività si modificherà il DOCTYPE di una pagina per vedere come il comportamento dell'editor HTML cambierà di conseguenza.
 
-1. Se non è già aperto, avviare **Visual Studio** e aprire il **WhatsNewASPNET.sln** soluzione che si trova nel **Source\WhatsNewASPNET** cartella della presente esercitazione.
-2. Aprire il **Site. master** pagina.
-3. Si noti che lo Schema di destinazione per la convalida della barra degli strumenti. Il comportamento dell'editor HTML (convalida, IntelliSense e così via) verrà modificato in modo corretto per adattare il tipo di documento selezionata.
+1. Se non è già aperto, avviare **Visual Studio** e aprire la soluzione **WhatsNewASPNET. sln** disponibile nella cartella **Source\WhatsNewASPNET** di questo Lab.
+2. Aprire la pagina **site. master** .
+3. Si noti lo schema di destinazione per la barra degli strumenti di convalida. Il comportamento dell'editor HTML (convalida, IntelliSense e così via) cambierà correttamente per adattarsi al DOCTYPE selezionato.
 
-    ![Utilizza Doctype nella barra degli strumenti Modifica origine HTML](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image22.png "Doctype di utilizzo nella barra degli strumenti Modifica origine HTML")
+    ![USA DOCTYPE nella barra degli strumenti modifica origine HTML](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image22.png "USA DOCTYPE nella barra degli strumenti modifica origine HTML")
 
-    *Utilizza Doctype nella barra degli strumenti Modifica origine HTML*
-4. Modificare lo Schema di destinazione in formato HTML 4.01.
+    *USA DOCTYPE nella barra degli strumenti modifica origine HTML*
+4. Modificare lo schema di destinazione in HTML 4,01.
 
-    ![Modifica tipo di documento nella barra degli strumenti Modifica origine HTML](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image23.png "Doctype modifica nella barra degli strumenti Modifica origine HTML")
+    ![Modifica del DOCTYPE nella barra degli strumenti modifica origine HTML](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image23.png "Modifica del DOCTYPE nella barra degli strumenti modifica origine HTML")
 
-    *Modifica tipo di documento nella barra degli strumenti Modifica origine HTML*
-5. Posizionare il cursore sotto il **corpo** elemento e iniziare a digitare il nome di un elemento HTML5 (ad esempio **video**). Si noti che l'elemento non è disponibile nell'elenco di IntelliSense.
+    *Modifica del DOCTYPE nella barra degli strumenti modifica origine HTML*
+5. Posizionare il cursore sotto l'elemento **Body** e iniziare a digitare il nome di un elemento HTML5 (ad esempio, **video**). Si noti che l'elemento non è disponibile nell'elenco di IntelliSense.
 
-    ![Gli elementi HTML5 non elencati](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image24.png "elementi HTML5 non elencati")
+    ![Elementi HTML5 non elencati](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image24.png "Elementi HTML5 non elencati")
 
     *Elementi HTML5 non elencati*
-6. Annullare le modifiche allo Schema di destinazione per la convalida della barra degli strumenti, Selezione tipo di documento: XHTML5 nell'elenco a discesa.
+6. Annullare le modifiche apportate allo schema di destinazione per la barra degli strumenti di convalida, selezionando DOCTYPE: XHTML5 dall'elenco a discesa.
 
-    ![Utilizza Doctype nella barra degli strumenti Modifica origine HTML](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image25.png "Doctype di utilizzo nella barra degli strumenti Modifica origine HTML")
+    ![USA DOCTYPE nella barra degli strumenti modifica origine HTML](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image25.png "USA DOCTYPE nella barra degli strumenti modifica origine HTML")
 
-    *Reimpostare Doctype nella barra degli strumenti Modifica origine HTML*
-7. Posizionare il cursore sotto il **corpo** elemento e iniziare a digitare nuovamente un elemento HTML5 (ad esempio, come **video**). Si noti che gli elementi HTML5 sono ora disponibili nell'elenco di IntelliSense.
+    *Reimposta DOCTYPE nella barra degli strumenti modifica origine HTML*
+7. Posizionare il cursore sotto l'elemento **Body** e iniziare a digitare di nuovo un elemento HTML5 (ad esempio, **video**). Si noti che gli elementi HTML5 sono ora disponibili nell'elenco di IntelliSense.
 
-    ![Gli elementi HTML5 essere elencati](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image26.png "elementi HTML5 essere elencati")
+    ![Elementi HTML5 elencati](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image26.png "Elementi HTML5 elencati")
 
-    *Elementi HTML5 essere elencati*
+    *Elementi HTML5 elencati*
 
 <a id="Ex2Task2"></a>
 
 <a id="Task_2_-_StartEnd_Tags_Automatic_Update"></a>
-#### <a name="task-2---startend-tags-automatic-update"></a>Attività 2: inizio/fine aggiornamento automatico dei tag
+#### <a name="task-2---startend-tags-automatic-update"></a>Attività 2: aggiornamento automatico di tag di inizio/fine
 
-A questo punto, Visual Studio aggiorna il codice HTML di apertura o chiusura di tag dell'elemento che si sta modificando in modo da corrispondere tra loro. Questa nuova funzionalità migliorerà la produttività durante la modifica di tag HTML.
+Visual Studio ora aggiorna i tag di apertura o chiusura HTML dell'elemento che si sta modificando in modo che corrispondano tra loro. Questa nuova funzionalità consente di migliorare la produttività quando si modificano i tag HTML.
 
-1. Nel **default. aspx** pagina, aggiungere un' **H3** elemento con un titolo (ad esempio, Visual Studio 2012 Rocks!).
+1. Nella pagina **default. aspx** aggiungere un elemento **H3** con un titolo, ad esempio Visual Studio 2012 Rocks!.
 
     [!code-aspx[Main](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/samples/sample5.aspx)]
-2. Modifica il **H3** tag e il tipo **H2** o **H1.**
+2. Modificare il tag **H3** e digitare **H2** o **H1.**
 
-    Si noti che il tag di fine viene aggiornato automaticamente. È inoltre possibile modificare il tag di fine per verificare che il tag di inizio Aggiorna di conseguenza troppo.
+    Si noti che il tag di fine si aggiorna automaticamente. È anche possibile modificare il tag di fine per verificare che il tag di inizio venga aggiornato di conseguenza.
 
-    ![L'aggiornamento automatico del tag di fine](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image27.png "aggiornamento automatico del tag di fine")
+    ![Aggiornamento automatico del tag di fine](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image27.png "Aggiornamento automatico del tag di fine")
 
     *Aggiornamento automatico del tag di fine*
 
 <a id="Ex2Task3"></a>
 
 <a id="Task_3_-_New_HTML5_Code_Snippets"></a>
-#### <a name="task-3---new-html5-code-snippets"></a>Attività 3: nuovi frammenti di codice HTML5
+#### <a name="task-3---new-html5-code-snippets"></a>Attività 3-nuovi frammenti di codice HTML5
 
-Visual Studio ora include diversi frammenti di codice HTML5. In questa attività si userà alcuni di questi frammenti di codice.
+Visual Studio include ora diversi frammenti di codice HTML5. In questa attività verranno usati alcuni dei frammenti di codice.
 
-1. Aggiungere una nuova cartella denominata **audio** alla radice della cartella del sito web. Aprire l'Explorer di Windows e copiare i file audio nel **audio** cartella della **WhatsNewASPNET.sln** soluzione.
-2. Nel **default. aspx** pagina, posizionare il cursore sotto il Web11 Rocks!! Intestazione. Tipo di **audio** e premere il tasto TAB.
+1. Aggiungere una nuova cartella denominata **audio** alla radice della cartella del sito Web. Aprire Esplora risorse e copiare tutti i file audio nella cartella **audio** della soluzione **WhatsNewASPNET. sln** .
+2. Nella pagina **default. aspx** individuare il cursore sotto Web11 Rocks! Intestazione. Digitare **audio** e premere il tasto TAB.
 
-    Il nuovo editor HTML include frammenti di codice per il contenuto HTML5. Ricordarsi di usare la definizione del tipo di documento appropriata per abilitare i frammenti HTML5.
+    Il nuovo editor HTML include frammenti di codice per il contenuto HTML5. Ricordarsi di usare la definizione DOCTYPE corretta per abilitare i frammenti di codice HTML5.
 
-    ![Inserimento di frammenti di codice HTML5](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image28.png "inserimento di frammenti di codice HTML5")
+    ![Inserimento di frammenti di codice HTML5](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image28.png "Inserimento di frammenti di codice HTML5")
 
     *Inserimento di frammenti di codice HTML5*
 3. Aggiornare l'origine audio in modo che punti a un file audio esistente.
@@ -284,421 +284,421 @@ Visual Studio ora include diversi frammenti di codice HTML5. In questa attività
     [!code-aspx[Main](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/samples/sample6.aspx)]
 
     > [!NOTE]
-    > È necessario aggiungere il file audio alla soluzione.
+    > Sarà necessario aggiungere il file audio alla soluzione.
 4. Premere **F5** per eseguire il sito e riprodurre l'audio.
 
-    ![Esecuzione del controllo audio](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image29.png "che esegue il controllo audio")
+    ![Esecuzione del controllo audio](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image29.png "Esecuzione del controllo audio")
 
     *Esecuzione del controllo audio*
 
     > [!NOTE]
-    > È anche possibile provare più frammenti di codice inclusi in Visual Studio, ad esempio video, nella figura, e così via.
-5. A questo punto, provare a inserire un controllo in una parte della pagina. Ad esempio, provare a inserire un **GridView** (controllo), ma anziché digitare  **&lt;datta,** inizia a digitare  **&lt;GV**. Si noti che l'elenco di IntelliSense mostra le **asp: GridView** controllo.
+    > È anche possibile provare altri frammenti di codice inclusi in Visual Studio, ad esempio video, figure e così via.
+5. A questo punto, provare a inserire un controllo in una parte della pagina. Ad esempio, provare a inserire un controllo **GridView** , ma anziché digitare **&lt;GRI,** iniziare a digitare **&lt;GV**. Si noti che l'elenco IntelliSense mostra il controllo **ASP: GridView** .
 
-    IntelliSense nell'Editor HTML offre ora ricerca titolo le maiuscole/minuscole, nonché parziale corrispondente (il recupero di tutti gli elementi che contiene il termine).
+    IntelliSense nell'editor HTML ora fornisce la ricerca con maiuscole e minuscole, nonché la corrispondenza parziale (recupero di tutti gli elementi che contengono il termine).
 
-    ![Inserimento di un controllo GridView con IntelliSense Elenca](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image30.png "inserimento di un controllo GridView con elenchi di IntelliSense")
+    ![Inserimento di un controllo GridView con elenchi IntelliSense](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image30.png "Inserimento di un controllo GridView con elenchi IntelliSense")
 
-    *Inserimento di un controllo GridView con elenchi di IntelliSense*
+    *Inserimento di un controllo GridView con elenchi IntelliSense*
 
-    Se si digita  **&lt;griglia** verranno visualizzati tutti gli elementi che corrispondono al termine, ma Visual Studio suggerisce il **gridview** controllo:
+    Se si digita **&lt;griglia** , si otterranno tutti gli elementi che corrispondono al termine, ma in Visual Studio viene suggerito il controllo **GridView** :
 
-    ![Inserimento di un controllo GridView con elenchi di IntelliSense e individuare corrispondenze parziali](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image31.png "inserimento di un controllo GridView con elenchi di IntelliSense e individuare corrispondenze parziali")
+    ![Inserimento di un controllo GridView con elenchi IntelliSense e corrispondenza parziale](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image31.png "Inserimento di un controllo GridView con elenchi IntelliSense e corrispondenza parziale")
 
-    *Inserimento di un controllo GridView con elenchi di IntelliSense e individuare corrispondenze parziali*
+    *Inserimento di un controllo GridView con elenchi IntelliSense e corrispondenza parziale*
 
 <a id="Ex2Task4"></a>
 
 <a id="Task_4_-_HTML_Editor_Smart_Tags"></a>
-#### <a name="task-4---html-editor-smart-tags"></a>Attività 4: Editor HTML Smart tag
+#### <a name="task-4---html-editor-smart-tags"></a>Attività 4-smart tag dell'editor HTML
 
-Un altro miglioramento nell'Editor HTML è la funzionalità Smart tag. Gli smart tag rendono più semplice eseguire attività di sviluppo comuni o ripetitive in base al controllo. Questa funzionalità era già disponibile nella finestra di progettazione HTML, ma non nell'Editor HTML.
+Un altro miglioramento nell'editor HTML è la funzionalità smart tag. Gli smart tag facilitano l'esecuzione di attività di sviluppo comuni o ripetitive in base al controllo. Questa funzionalità era già disponibile nella finestra di progettazione HTML, ma non nell'editor HTML.
 
-1. Aprire **Site. master** e individuare le **asp: Menu** elemento. Posizionare il cursore sul tag di inizio e notare che l'icona piccola visualizzata nella parte inferiore dell'elemento - fare clic per aprire il menu smart tag. Si noti che occorre accedere rapidamente ad alcune attività correlate al controllo Menu.
+1. Aprire **site. master** e individuare l'elemento **ASP: menu** . Posizionare il cursore sul tag di inizio. si noti che il glifo piccolo visualizzato nella parte inferiore dell'elemento, fare clic su di esso per aprire il menu attività intelligenti. Si noti che è possibile accedere rapidamente ad alcune attività correlate al controllo menu.
 
-    ![Attività per il controllo Menu Smart](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image32.png "intelligente attività per il controllo Menu")
+    ![Smart Task per il controllo menu](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image32.png "Smart Task per il controllo menu")
 
-    *Smart task per il controllo Menu*
+    *Smart Task per il controllo menu*
 
 <a id="Ex2Task5"></a>
 
 <a id="Task_5_-_Smart_Indentation"></a>
 #### <a name="task-5---smart-indentation"></a>Attività 5: rientro intelligente
 
-Una delle procedure consigliate in formato HTML è il rientro di elementi annidati per mantenere il codice leggibile. In Visual Studio 2012, si noterà che l'editor rientra automaticamente gli elementi durante la scrittura di codice.
+Una delle procedure consigliate in HTML è rientrare negli elementi annidati per rendere leggibile il codice. In Visual Studio 2012 si noterà che l'editor rientro automaticamente gli elementi durante la scrittura del codice.
 
 > [!NOTE]
-> Nella versione precedente di Visual Studio, erano disponibili rientri nell'editor XML, ma non nell'editor HTML.
+> Nella versione precedente di Visual Studio, il rientro intelligente era disponibile nell'editor XML ma non nell'editor HTML.
 
-1. Assicurarsi che la configurazione di rientri sull'Editor HTML è impostata su rientro intelligente. A tale scopo, selezionare il **strumenti | Le opzioni** l'opzione di menu e quindi selezionare il **Editor di testo | HTML | Schede** pagina nel riquadro sinistro della schermata. Selezionare l'opzione rientro intelligente.
+1. Verificare che la configurazione dei rientri nell'editor HTML sia impostata sul rientro intelligente. A tale scopo, selezionare gli **strumenti |** Opzione di menu opzioni e quindi selezionare l' **editor di testo | HTML | Pagina schede** nel riquadro sinistro della schermata. Selezionare l'opzione Smart Indent.
 
-    ![Le impostazioni dell'Editor HTML](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image33.png "le impostazioni dell'Editor HTML")
+    ![Impostazioni dell'editor HTML](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image33.png "Impostazioni dell'editor HTML")
 
-    *Impostazioni dell'Editor HTML*
-2. Nel **default. aspx** pagina, rimuovere tutto il contenuto nell'elemento audio.
-3. Posizionare il cursore alla fine dell'apertura **audio** elemento e premere **invio**.
+    *Impostazioni dell'editor HTML*
+2. Nella pagina **default. aspx** rimuovere tutto il contenuto sotto l'elemento audio.
+3. Posizionare il cursore alla fine dell'elemento **audio** di apertura e premere **invio**.
 
-    Si noti che la nuova posizione del cursore ha un livello aggiuntivo di rientro.
+    Si noti che la nuova posizione del cursore ha un livello di rientro aggiuntivo.
 
-    ![Rientro automatico nell'Editor HTML](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image34.png "rientro automatico nell'Editor HTML")
+    ![Rientro intelligente nell'editor HTML](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image34.png "Rientro intelligente nell'editor HTML")
 
-    *Rientro intelligente nell'Editor HTML*
-4. Ripristinare i tag audio con il contenuto è stato rimosso oppure chiudere **default. aspx** senza salvare le modifiche.
+    *Rientro intelligente nell'editor HTML*
+4. Ripristinare il tag audio con il contenuto rimosso o chiudere **default. aspx** senza salvare le modifiche.
 
 <a id="Ex2Task6"></a>
 
 <a id="Task_6_-_Extract_to_User_Control"></a>
-#### <a name="task-6---extract-to-user-control"></a>Attività 6: Estrai nel controllo utente
+#### <a name="task-6---extract-to-user-control"></a>Attività 6: estrarre il controllo utente
 
-Gli strumenti di Refactoring in Visual Studio, inclusi, ad esempio l'estrazione di una parte di codice per una funzione, sono eccezionali funzionalità che facilitano l'analisi utilizzo software e il refactoring del codice esistente. La controparte per le pagine ASP.NET sarebbe l'estrazione del codice HTML a un controllo utente. Tale operazione manualmente comporta diversi passaggi, ad esempio la creazione di un nuovo controllo utente, lo spostamento di sezione di codice al controllo utente, la registrazione di un prefisso di tag per il controllo utente e, infine, un'istanza del controllo utente nelle pagine. A questo punto, il nuovo *Estrai nel controllo utente* strumento esegue automaticamente tutti i passaggi per l'utente.
+Gli strumenti di refactoring inclusi in Visual Studio, ad esempio l'estrazione di una parte di codice in una funzione, sono ottime funzionalità che facilitano il miglioramento e il refactoring del codice esistente. La controparte per le pagine ASP.NET è l'estrazione del codice HTML per un controllo utente. L'operazione manuale comporta diversi passaggi, ad esempio la creazione di un nuovo controllo utente, lo stato di una sezione di codice nel controllo utente, la registrazione di un prefisso di tag per il controllo utente e infine la creazione di un'istanza del controllo utente sulle pagine. A questo punto, il nuovo strumento *Estrai in controllo utente* esegue automaticamente tutti questi passaggi.
 
-In questa attività si userà l'estrazione di nuovo all'operazione contesto controllo utente per generare un nuovo controllo utente dal codice selezionato.
+In questa attività verrà usata la nuova operazione contestuale Estrai al controllo utente per generare un nuovo controllo utente dal codice selezionato.
 
-1. Nel **default. aspx** pagina, selezionare la **H2** e **audio** elementi.
-2. Fare clic e selezionare **Estrai nel controllo utente**.
+1. Nella pagina **default. aspx** selezionare gli elementi **H2** e **audio** .
+2. Fare clic con il pulsante destro del mouse e scegliere **Estrai nel controllo utente**.
 
-    ![Estrarre all'opzione di menu controllo utente](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image35.png "estrarre all'opzione di menu controllo utente")
+    ![Opzione di menu Estrai in controllo utente](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image35.png "Opzione di menu Estrai in controllo utente")
 
-    *Estrarre all'opzione di menu controllo utente*
-3. Digitare un nome per il nuovo controllo utente. Ad esempio, **Jukebox.ascx**, quindi fare clic su **OK**.
+    *Opzione di menu Estrai in controllo utente*
+3. Digitare un nome per il nuovo controllo utente. Ad esempio, **Jukebox. ascx**, quindi fare clic su **OK**.
 
-    ![Salvataggio del controllo utente estratti](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image36.png "salvando il controllo utente estratti")
+    ![Salvataggio del controllo utente Estratto](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image36.png "Salvataggio del controllo utente Estratto")
 
-    *Salvataggio del controllo utente estratti*
-4. Si noti che il codice selezionato è stato estratto in un controllo utente e nel percorso originale del codice selezionato è stato sostituito con un'istanza del nuovo controllo utente.
+    *Salvataggio del controllo utente Estratto*
+4. Si noti che il codice selezionato è stato estratto in un controllo utente e il percorso originale del codice selezionato è stato sostituito con un'istanza del nuovo controllo utente.
 
-    ![Pagina aggiornati automaticamente per usare il nuovo controllo utente](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image37.png "pagina aggiornati automaticamente per usare il nuovo controllo utente")
+    ![Pagina aggiornata automaticamente per usare il nuovo controllo utente](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image37.png "Pagina aggiornata automaticamente per usare il nuovo controllo utente")
 
-    *Pagina aggiornati automaticamente per usare il nuovo controllo utente*
-5. Premere **F5** per eseguire la pagina e verificare il corretto funzionamento di controllo.
+    *Pagina aggiornata automaticamente per usare il nuovo controllo utente*
+5. Premere **F5** per eseguire la pagina e verificare il funzionamento del controllo.
 
 <a id="Exercise3"></a>
 
 <a id="Exercise_3_Whats_New_in_the_JavaScript_Editor"></a>
-### <a name="exercise-3-whats-new-in-the-javascript-editor"></a>Esercizio 3: Novità nell'Editor JavaScript
+### <a name="exercise-3-whats-new-in-the-javascript-editor"></a>Esercizio 3: novità dell'editor JavaScript
 
-La scrittura o modifica del codice JavaScript non è un compito facile, in particolare quando l'applicazione inizia a crescere in dimensioni e si ritrova di gestione di file lunghi e centinaia di funzioni. Gli sviluppatori di script in genere necessario eseguire operazioni aggiuntive per mantenere la leggibilità di codice e spostarsi tra i file. Con l'inclusione delle librerie JavaScript come jQuery, navigazione dello script è diventato un problema a causa della lunghezza di codice.
+La scrittura o la modifica di codice JavaScript non è un'attività semplice, soprattutto quando l'applicazione inizia ad aumentare le dimensioni e ci si trova a gestire file lunghi e centinaia di funzioni. Gli sviluppatori di script devono in genere eseguire alcune operazioni aggiuntive per mantenere la leggibilità del codice e spostarsi tra i file. Con l'inclusione di librerie JavaScript come jQuery, l'esplorazione degli script è diventata una sfida a causa della lunghezza del codice.
 
-Visual Studio ha rinnovato l'editor JavaScript con il suggerimento per rendere la modalità di codice accessibile e organizzate. Molte funzionalità di Visual Studio che esisteva già nel C# o editor di Visual Basic vengono ora implementate nell'editor JavaScript: Vai a definizione, il rientro automatico, documentazione e la convalida quando si scrive. Con l'elenco di IntelliSense rinnovato sarà il catalogo di funzione JavaScript a tua disposizione.
+Visual Studio ha rinnovato l'editor JavaScript con la promessa di rendere la modalità del codice accessibile e organizzata. Molte funzionalità di Visual Studio già esistenti negli C# editor di o VB sono ora implementate nell'editor JavaScript: Vai a definizione, rientro automatico, documentazione e convalida durante la scrittura. Con l'elenco di IntelliSense rinnovato, il catalogo delle funzioni JavaScript sarà a portata di mano.
 
-In questo esercizio, si apprenderà alcune delle nuove funzionalità e miglioramenti dell'editor JavaScript. Verrà sfogliare i file di esempio e individuare ognuna delle nuove caratteristiche che consentono la programmazione JavaScript più efficiente all'interno di Visual Studio 2012.
+In questo esercizio si apprenderanno alcune delle nuove funzionalità e i miglioramenti dell'editor JavaScript. Si esploreranno i file di esempio e si scopriranno le nuove caratteristiche che rendono più efficiente la programmazione JavaScript in Visual Studio 2012.
 
 <a id="Ex3Task1"></a>
 
 <a id="Task_1_-_JavaScript_Editor_New_Features"></a>
-#### <a name="task-1---javascript-editor-new-features"></a>Attività 1: nuove funzionalità dell'Editor JavaScript
+#### <a name="task-1---javascript-editor-new-features"></a>Attività 1-nuove funzionalità dell'editor JavaScript
 
-Questa attività verrà presentate alcune delle nuove funzionalità dell'editor JavaScript, concentrandosi sulla organizzare il codice e garantendo un'esperienza utente migliore.
+Questa attività introdurrà alcune delle nuove funzionalità dell'editor JavaScript, che si concentrano sull'organizzazione del codice e sull'esperienza utente migliore.
 
-1. Se non è già aperto, avviare **Visual Studio** e aprire il **WhatsNewASPNET.sln** soluzione che si trova nel **Source\WhatsNewASPNET** cartella della presente esercitazione.
-2. Premere **F5** per eseguire l'applicazione, quindi fare clic sul collegamento JavaScript nella barra di spostamento. Aggiornare la pagina più volte e controllare come l'incremento del contatore.
+1. Se non è già aperto, avviare **Visual Studio** e aprire la soluzione **WhatsNewASPNET. sln** disponibile nella cartella **Source\WhatsNewASPNET** di questo Lab.
+2. Premere **F5** per eseguire l'applicazione, quindi fare clic sul collegamento JavaScript nella barra di spostamento. Aggiornare la pagina più volte e verificare l'incremento del contatore.
 
-    ![Contatore di pagine](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image38.png "contatore di pagine")
+    ![Contatore pagine](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image38.png "Contatore pagine")
 
-    *Contatore di pagine*
+    *Contatore pagine*
 3. Chiudere il browser e tornare a Visual Studio.
-4. Aprire il **JavaScript.aspx** pagina e individuare le **&lt;script&gt;** blocco (mostrato sotto).
+4. Aprire la pagina **JavaScript. aspx** e individuare il blocco di **script&lt;&gt;** (mostrato di seguito).
 
-    Il codice seguente usa l'archiviazione locale HTML5 per archiviare una *pageLoadCount* variabile che archivia il numero di volte in cui la pagina è stata visitata dall'utente corrente. Archiviazione locale è un database chiave-valore sul lato client, introdotto con lo standard HTML5. I dati vengono salvati nel computer locale, all'interno del browser dell'utente.
+    Il codice seguente usa l'archiviazione locale HTML5 per archiviare una variabile *pageLoadCount* che archivia il numero di volte in cui la pagina è stata visitata dall'utente corrente. L'archiviazione locale è un database chiave-valore lato client introdotto con lo standard HTML5. I dati vengono salvati nel computer locale, all'interno del browser dell'utente.
 
     [!code-html[Main](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/samples/sample7.html)]
 
     > [!NOTE]
-    > Verificare che la dichiarazione DOCTYPE è impostato su XHTML5 prima di procedere con i passaggi successivi.
-5. Modificare il codice e si noti che IntelliSense per JavaScript include le funzionalità HTML5, come archiviazione locale e i relativi metodi interni.
+    > Assicurarsi che DOCTYPE sia impostato su XHTML5 prima di procedere con i passaggi successivi.
+5. Modificare il codice e notare che IntelliSense per JavaScript include funzionalità HTML5, come l'archiviazione locale e i relativi metodi interni.
 
-    ![Le funzionalità HTML5 JavaScript di JavaScript](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image39.png "HTML5 JavaScript le funzionalità di JavaScript")
+    ![Funzionalità JavaScript HTML5 in JavaScript](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image39.png "Funzionalità JavaScript HTML5 in JavaScript")
 
-    *Funzionalità HTML5 JavaScript di JavaScript*
-6. Fare clic su qualsiasi parentesi quadra aperta (**{**) dalla creazione di script di codice e notare che le parentesi quadre sono evidenziate.
+    *Funzionalità JavaScript HTML5 in JavaScript*
+6. Fare clic su una parentesi quadra aperta ( **{** ) dal codice di script e notare che le parentesi sono evidenziate.
 
-    ![Le parentesi vengono evidenziate](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image40.png "parentesi vengono evidenziate")
+    ![Parentesi quadre evidenziate](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image40.png "Parentesi quadre evidenziate")
 
-    *Le parentesi vengono evidenziate*
-7. Rimuovere il commento la funzione **testAutoAlign()** (selezionare le tre righe ed è possibile usare **CTRL** + **K**; **CTRL** + **U**) e individuare il cursore all'interno del codice della funzione. Premere INVIO per aggiungere una seconda riga. Si noti che il codice è ora **allineato** e **rientrato automaticamente**.
+    *Parentesi quadre evidenziate*
+7. Rimuovere il commento dalla funzione **testAutoAlign ()** (selezionare le tre righe ed è possibile usare **CTRL** + **K**; **CTRL** + **U**) e individuare il cursore all'interno del codice della funzione. Premere INVIO per aggiungere una seconda riga. Si noti che il codice è ora **allineato** e **rientrato automaticamente**.
 
-    ![Il codice JavaScript viene automaticamente allineato](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image41.png "codice JavaScript viene automaticamente allineato")
+    ![Il codice JavaScript è allineato automaticamente](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image41.png "Il codice JavaScript è allineato automaticamente")
 
-    *Il codice JavaScript viene automaticamente allineato*
+    *Il codice JavaScript è allineato automaticamente*
 
 <a id="Ex3Task2"></a>
 
 <a id="Task_2_-_Validating_JavaScript"></a>
-#### <a name="task-2---validating-javascript"></a>Attività 2 - durante la convalida di JavaScript
+#### <a name="task-2---validating-javascript"></a>Attività 2: convalida di JavaScript
 
-In questa attività consente di individuare la nuova convalida di JavaScript per lo standard di ECMAScript5. Questa funzionalità consente di scrivere codice JavaScript conforme, mentre i problemi di scripting impedendo prima distribuzione del sito.
+In questa attività verrà individuata la nuova convalida JavaScript per lo standard ECMAScript5. Questa funzionalità consentirà di scrivere codice JavaScript conforme, evitando problemi di script prima della distribuzione del sito.
 
 > [!NOTE]
-> Visual Studio 2010 implementato ECMAStript3 conformità, anche se Visual Studio 2012 offre la conformità di ECMAScript5.
+> Visual Studio 2010 ha implementato la conformità ECMAStript3, mentre Visual Studio 2012 fornisce la conformità ECMAScript5.
 
-1. Aprire **ECMA5script5.js** sotto il **Scripts\custom** cartella del progetto. A questo punto si testerà la convalida di ECMAScript5 standard.
+1. Aprire **ECMA5script5. js** che si trova nella cartella del progetto **Scripts\custom** . A questo punto si verificherà la convalida per lo standard ECMAScript5.
 
     [!code-html[Main](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/samples/sample8.html)]
 
-    È possibile consultare il &quot; **utilizzare strict** &quot; direzione nella prima riga del file, che consente di ECMAScript5 **modalità strict**. Questa modalità consiste in un subset del linguaggio che chiarisce ambiguità dall'edizione precedente e aggiunge alcune nuove funzionalità, ad esempio getter e setter, supporto della libreria per JSON e reflection più complete sulle proprietà degli oggetti.
-2. Aprire il **elenco errori** se non è già aperta (**visualizzazione** menu | **Elenco errori**). Si noti che il **funzione** dichiarazione è sottolineata. Questo avviene perché in ECMA5 funzioni standard non possono essere annidate all'interno di strutture di linguaggio. Nel messaggio di errore elenco riportato di seguito si vedranno i dettagli di avviso.
+    È possibile estrarre il &quot; **usare strict** &quot; Direction nella prima riga del file, che Abilita la **modalità ECMAScript5 Strict**. Questa modalità è costituita da un subset del linguaggio che chiarisce le ambiguità dell'edizione precedente e aggiunge alcune nuove funzionalità, quali getter e setter, il supporto della libreria per JSON e una reflection più completa sulle proprietà dell'oggetto.
+2. Aprire il **Elenco errori** se non è già aperto (menu**Visualizza** | **Elenco errori**). Si noti che la dichiarazione di **funzione** è sottolineata. Ciò è dovuto al fatto che le funzioni standard ECMA5 non possono essere annidate all'interno di strutture di linguaggio. Nell'elenco degli errori riportato di seguito vengono visualizzati i dettagli dell'avviso.
 
-    ![Messaggio di errore di convalida di JavaScript](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image42.png "messaggio di errore di convalida di JavaScript")
+    ![Messaggio di errore di convalida JavaScript](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image42.png "Messaggio di errore di convalida JavaScript")
 
-    *Messaggio di errore di convalida di JavaScript*
-3. Impostare come commento il **&quot;utilizzare strict&quot;** direzione e notare che non vengono più visualizzati errori, ma vengono mantenuti gli avvisi.
-4. Nell'ultima riga del file, qualsiasi stringa, ad esempio scrivere **&quot;testare&quot;** (incluse le virgolette per indicare è sotto forma di stringa). Scrivere un periodo accanto alla stringa da visualizzare l'elenco di IntelliSense e selezionare il **trim** opzione.
+    *Messaggio di errore di convalida JavaScript*
+3. Impostare come commento il **&quot;usare strict&quot;** Direction e notare che gli errori scompaiono, ma gli avvisi rimangono.
+4. Nell'ultima riga del file scrivere qualsiasi stringa come **&quot;test&quot;** (includere le virgolette per indicare che si tratta di una stringa). Scrivere un punto accanto alla stringa per visualizzare l'elenco IntelliSense e selezionare l'opzione **Trim** .
 
-    Nello standard ECMAScript5, variabili e i valori stringa dispongono anche di metodi di stringa definiti, ad esempio trim, lettere maiuscole, ricerca e sostituzione.
+    In ECMAScript5 standard, i valori di stringa e le variabili hanno anche metodi di stringa definiti, ad esempio trim, maiuscole, Search e Replace.
 
-    ![Elenco di IntelliSense in JavaScript](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image43.png "elenco IntelliSense in JavaScript")
+    ![Elenco IntelliSense in JavaScript](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image43.png "Elenco IntelliSense in JavaScript")
 
-    *Elenco di IntelliSense in JavaScript*
+    *Elenco IntelliSense in JavaScript*
 
 <a id="Ex3Task3"></a>
 
 <a id="Task_3_-_XML_Documentation_for_JavaScript"></a>
-#### <a name="task-3---xml-documentation-for-javascript"></a>Attività 3: la documentazione XML per JavaScript
+#### <a name="task-3---xml-documentation-for-javascript"></a>Attività 3-documentazione XML per JavaScript
 
-In questa attività verranno analizzate le funzionalità di Visual Studio per la documentazione XML in JavaScript. Verrà visualizzato che l'elenco di IntelliSense per JavaScript Mostra ora la documentazione XML di ogni funzione. Inoltre, si scoprirà che la funzionalità di navigazione in JavaScript.
+In questa attività verranno analizzate le funzionalità di Visual Studio per la documentazione XML in JavaScript. Verrà visualizzato l'elenco JavaScript IntelliSense che ora Mostra la documentazione XML di ogni funzione. Inoltre, la funzionalità di navigazione viene individuata in JavaScript.
 
-1. Aprire **XMLDoc.js** file che si trova **gli scriptpersonalizzati/** cartella del progetto. Questo file contiene la documentazione XML in ognuna delle funzioni JavaScript.
+1. Aprire il file **xmldoc. js** che si trova nella cartella **Scripts/progetto personalizzata** . Questo file contiene la documentazione XML su ognuna delle funzioni JavaScript.
 
-    ![Documentazione XML JavaScript integrato di IntelliSense](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image44.png "integrata della documentazione XML JavaScript IntelliSense")
+    ![Documentazione XML di JavaScript integrata in IntelliSense](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image44.png "Documentazione XML di JavaScript integrata in IntelliSense")
 
-    *Documentazione XML JavaScript integrata di IntelliSense*
-2. Di seguito **aggiungere** funzionare in **XMLDoc.js** del file, creare una nuova funzione denominata **test**.
-3. Nel **testare** function, chiamare il **moltiplicare** funzione che riceve due parametri. Si noti che la casella della descrizione comando viene visualizzato il **moltiplicare** documentazione della funzione.
+    *Documentazione XML di JavaScript integrata in IntelliSense*
+2. Sotto **aggiungere** la funzione nel file **xmldoc. js** , creare una nuova funzione denominata **test**.
+3. Nella funzione di **test** chiamare la funzione **Multiply** che riceve due parametri. Si noti che la casella Descrizione comando Mostra la documentazione relativa alla funzione **Multiply** .
 
     [!code-javascript[Main](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/samples/sample9.js)]
 
-    ![Documentazione XML per le funzioni JavaScript](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image45.png "documentazione XML per le funzioni JavaScript")
+    ![Documentazione XML per funzioni JavaScript](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image45.png "Documentazione XML per funzioni JavaScript")
 
-    *Documentazione XML per le funzioni JavaScript*
-4. Completare l'istruzione di chiamata di funzione e il tipo di un *dot* per aprire l'elenco di IntelliSense per il valore restituito. Si noti che Visual Studio sta rilevando i **restituire** valore nella documentazione, considerando il valore sotto forma di numero.
+    *Documentazione XML per funzioni JavaScript*
+4. Completare l'istruzione di chiamata di funzione e digitare un *punto* per aprire l'elenco IntelliSense sul valore restituito. Si noti che Visual Studio rileva il valore **restituito** nella documentazione, considerando il valore come numero.
 
-    ![Documentazione XML per i tipi restituiti](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image46.png "documentazione XML per i tipi restituiti")
+    ![Documentazione XML per i tipi restituiti](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image46.png "Documentazione XML per i tipi restituiti")
 
     *Documentazione XML per i tipi restituiti*
-5. A questo punto, inserire una chiamata per aggiungere una funzione. Si noti che l'editor JavaScript supporta ora gli overload della funzione. Quando si scrive un nome di funzione, sarà possibile selezionare uno qualsiasi degli overload disponibili specificato nella documentazione.
+5. A questo punto, inserire una chiamata per aggiungere la funzione. Si noti che l'editor JavaScript supporta ora gli overload della funzione. Quando si scrive un nome di funzione, sarà possibile selezionare uno degli overload disponibili specificati nella documentazione.
 
-    ![Documentazione XML per gli overload](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image47.png "documentazione XML per gli overload")
+    ![Documentazione XML per gli overload](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image47.png "Documentazione XML per gli overload")
 
     *Documentazione XML per gli overload*
-6. Aprire **GotoDefinition.js** del file e individuare le **$().html()** chiamata di funzione. Individuare il cursore sul **html**.
-7. Premere **F12** e passare alla definizione. Si noti che è ora possibile accedere ed esplorare il codice JavaScript senza usare la **trovare** dello strumento.
-8. Individuare il cursore sull'istruzione jQuery prima del blocco di firme nella parte inferiore del file di codice. Premere **F12**. Passerà a file di libreria jQuery. Si noti che è anche possibile spostarsi tra i file di jQuery utilizzando **F12**.
+6. Aprire il file **GotoDefinition. js** e individuare la chiamata di funzione **$ (). html ()** . Individuare il cursore in **HTML**.
+7. Premere **F12** e passare alla definizione. Si noti che è ora possibile accedere al codice JavaScript ed esplorarlo senza usare lo strumento **trova** .
+8. Individuare il cursore sull'istruzione jQuery prima del blocco della firma nella parte inferiore del file di codice. Premere **F12**. Si passerà al file della libreria jQuery. Si noti che è anche possibile spostarsi tra i file jQuery usando **F12**.
 
-    ![Passare alle definizioni di jQuery](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image48.png "passando alle definizioni di jQuery")
+    ![Spostamento nelle definizioni jQuery](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image48.png "Spostamento nelle definizioni jQuery")
 
-    *Passare alle definizioni di jQuery*
+    *Spostamento nelle definizioni jQuery*
 
 > [!NOTE]
-> Assicurarsi che GotoDefinition.js siano presenti errori di sintassi prima di salvare il file.
+> Prima di salvare il file, assicurarsi che GotoDefinition. js non presenti errori di sintassi.
 
 <a id="Exercise4"></a>
 
 <a id="Exercise_4_Bundling_and_Minification"></a>
-### <a name="exercise-4-bundling-and-minification"></a>Esercizio 4: Creazione di bundle e minimizzazione
+### <a name="exercise-4-bundling-and-minification"></a>Esercizio 4: creazione di bundle e minification
 
-Quante volte si dei siti Web include file CSS o JavaScript di più? Si tratta di uno scenario molto comune in cui creazione di bundle e minimizzazione consente di ridurre le dimensioni del file e rendere il sito prestazioni più rapide. La nuova funzionalità di creazione di bundle in ASP.NET 4.5 comprime un set di file JS o CSS in un singolo elemento e minimizzazione (rimozione di spazi vuoti non necessari, rimuovendo i commenti, riducendo gli identificatori) contenuto riduce le dimensioni.
+Quante volte i siti Web includono più di un file JavaScript o CSS? Si tratta di uno scenario molto comune in cui la creazione di bundle e minification può consentire di ridurre le dimensioni del file e velocizzare il sito. La nuova funzionalità di aggregazione in ASP.NET 4,5 comprime un set di file JS o CSS in un singolo elemento e ne riduce le dimensioni minimizzazionendo il contenuto, ovvero rimuovendo gli spazi vuoti non necessari, rimuovendo i commenti, riducendo gli identificatori.
 
-Creazione di bundle e minimizzazione in ASP.NET 4.5 viene eseguita in fase di esecuzione, in modo che il processo può identificare l'agente utente (ad esempio Internet Explorer, Mozilla e così via) e di conseguenza, migliorare la compressione indicando come destinazione dal browser dell'utente (ad esempio, la rimozione e comunque Mozilla specifico Quando la richiesta proviene da Internet Explorer).
+La creazione di bundle e minification in ASP.NET 4,5 viene eseguita in fase di esecuzione, in modo che il processo possa identificare l'agente utente, ad esempio IE, Mozilla e così via, e quindi migliorare la compressione impostando come destinazione il browser utente, ad esempio rimuovendo informazioni specifiche di Mozilla Quando la richiesta deriva da Internet Explorer).
 
-In questo esercizio, si apprenderà come abilitare e usare i diversi tipi di aggregazione e minimizzazione in ASP.NET 4.5.
+In questo esercizio verrà illustrato come abilitare e usare i diversi tipi di aggregazione e minification in ASP.NET 4,5.
 
 <a id="Ex4Task1"></a>
 
 <a id="Task_1_-_Installing_the_Bundling_and_Minification_Package_from_NuGet"></a>
-#### <a name="task-1---installing-the-bundling-and-minification-package-from-nuget"></a>Attività 1: installare la creazione di bundle e minimizzazione pacchetto da NuGet
+#### <a name="task-1---installing-the-bundling-and-minification-package-from-nuget"></a>Attività 1-installazione del pacchetto di bundle e minification da NuGet
 
-1. Se non è già aperto, avviare **Visual Studio** e aprire il **WhatsNewASPNET.sln** soluzione che si trova nel **Source\WhatsNewASPNET** cartella della presente esercitazione.
-2. Aprire la Console di gestione pacchetti NuGet. A questo scopo, usare il menu di scelta **View** | **Other Windows** | **Package Manager Console**.
+1. Se non è già aperto, avviare **Visual Studio** e aprire la soluzione **WhatsNewASPNET. sln** disponibile nella cartella **Source\WhatsNewASPNET** di questo Lab.
+2. Aprire la console di gestione pacchetti NuGet. A tale scopo, utilizzare la **visualizzazione** menu | **altra** console di **Gestione pacchetti**di Windows | .
 
-    ![Apertura di file:///C:/Users/User/AppData/Local/Temp/Marker3744//media/44462/Multiple-Stylesheets-and-JavaScript-files-in-the-application.pngconsole Gestione pacchetti](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image49.png "aprendo la console di gestione pacchetti")
+    ![Apertura di file:///C:/Users/User/AppData/Local/Temp/Marker3744//media/44462/Multiple-Stylesheets-and-JavaScript-files-in-the-application.pngconsole di gestione pacchetti](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image49.png "Apertura della console di gestione pacchetti")
 
-    *Aprire la console di gestione pacchetti*
-3. Nel **Console di gestione pacchetti** tipo **Install-Package Microsoft.Web.Optimization** , quindi premere **invio**.
+    *Apertura della console di gestione pacchetti*
+3. Nella **console di gestione pacchetti** digitare **Install-Package Microsoft. Web. Optimization** e premere **invio**.
 
 <a id="Ex4Task2"></a>
 
 <a id="Task_2_-_Default_Bundles"></a>
-#### <a name="task-2---default-bundles"></a>Attività 2: Bundle predefiniti
+#### <a name="task-2---default-bundles"></a>Attività 2: bundle predefiniti
 
-Il modo più semplice per usare aggregazione e minimizzazione è abilitare bundle predefiniti. Questo metodo Usa le convenzioni per consentire di fare riferimento alla versione in bundle e minimizzata per i file JS e CSS in una cartella.
+Il modo più semplice per usare la creazione di bundle e minification consiste nell'abilitare i bundle predefiniti. Questo metodo usa le convenzioni per consentire di fare riferimento alla versione in bundle e minimizzati per i file JS e CSS in una cartella.
 
-In questa attività si apprenderà come abilitare e fare riferimento ai file JS e CSS in bundle e minimizzati e visualizzare l'output risultante.
+In questa attività si apprenderà come abilitare e fare riferimento ai file in bundle e minimizzati JS e CSS e visualizzare l'output risultante.
 
-1. Se non è già aperto, avviare **Visual Studio** e aprire il **WhatsNewASPNET.sln** soluzione che si trova nel **Source\WhatsNewASPNET** cartella della presente esercitazione.
-2. Nel **Esplora soluzioni**, espandere il **stili**, **Scripts\custom** e **Scripts\bundle** cartelle.
+1. Se non è già aperto, avviare **Visual Studio** e aprire la soluzione **WhatsNewASPNET. sln** disponibile nella cartella **Source\WhatsNewASPNET** di questo Lab.
+2. Nella **Esplora soluzioni**espandere le cartelle **Styles**, **Scripts\custom** e **Scripts\bundle** .
 
-    Si noti che l'applicazione usa più CSS e JS il file.
+    Si noti che l'applicazione usa più di un file CSS e JS.
 
-    ![I file più fogli di stile e JavaScript dell'applicazione](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image50.png "JavaScript e fogli di stile più file nell'applicazione")
+    ![Più fogli di stile e file JavaScript nell'applicazione](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image50.png "Più fogli di stile e file JavaScript nell'applicazione")
 
-    *Più file JavaScript e fogli di stile nell'applicazione*
-3. Aprire il **Global.asax.cs** file.
+    *Più fogli di stile e file JavaScript nell'applicazione*
+3. Aprire il file **Global.asax.cs** .
 
-    Si noti che il nuovo **Microsoft.Web.Optimization** dello spazio dei nomi viene impostata come commento all'inizio del file. Rimuovere il commento di utilizzo della direttiva da includere le funzionalità di creazione di bundle e minimizzazione.
+    Si noti che il nuovo spazio dei nomi **Microsoft. Web. Optimization** è impostato come commento all'inizio del file. Rimuovere il commento dalla direttiva using per includere le funzionalità di aggregazione e minification.
 
     [!code-csharp[Main](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/samples/sample10.cs)]
-4. Individuare il **Application\_avviare** (metodo).
+4. Individuare l' **applicazione\_metodo Start** .
 
-    In questo metodo, rimuovere il commento dalla chiamata EnableDefaultBundles come illustrato nel frammento di codice riportato di seguito. Ciò consente di fare riferimento a una raccolta di bundle di file CSS in una cartella usando il percorso alla cartella, oltre al &quot;CSS&quot; o nella &quot;JS&quot; suffisso.
+    In questo metodo rimuovere il commento dalla chiamata a EnableDefaultBundles come illustrato nel frammento di codice riportato di seguito. In questo modo è possibile fare riferimento a una raccolta in bundle di file CSS in una cartella usando il percorso di tale cartella, oltre al&quot; CSS &quot;o al suffisso&quot; &quot;JS.
 
     [!code-csharp[Main](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/samples/sample11.cs)]
-5. Aprire il **Optimization.aspx** del file e individuare il controllo contenuto per **HeadContent**.
+5. Aprire il file **Optimization. aspx** e individuare il controllo contenuto per **HeadContent**.
 
-    Si noti che i file CSS e i file JS hanno un singolo tag di cui viene fatto riferimento.
+    Si noti che i file CSS e i file JS hanno un unico tag a cui si fa riferimento.
 
     [!code-aspx[Main](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/samples/sample12.aspx)]
 
     > [!NOTE]
-    > Questo codice è a scopo dimostrativo. In teoria, si farà riferimento i bundle nel file Site. master. In questo codice di esempio, si noterà che alcuni dei file aggregati anche viene fatto riferimento dal file Site. master, rendendo questo ultimo riferimento ridondante.
-6. Si noti che i collegamenti Usa le convenzioni di creazione di bundle il **href** attributo per ottenere i file di tutti i CSS o JS dagli stili e Scripts\custom cartella rispettivamente.
+    > Questo codice è a scopo dimostrativo. Idealmente, si faranno riferimento ai bundle nel file site. master. In questo esempio di codice si noterà che il file site. master fa riferimento anche ad alcuni file in bundle, rendendo ridondante l'ultimo riferimento.
+6. Si noti che i collegamenti usano le convenzioni di raggruppamento nell'attributo **href** per ottenere tutti i file CSS o js rispettivamente dalla cartella Styles e Scripts\custom.
 
-    È possibile usare il percorso **script/custom/JS** come illustrato di seguito per aggregare e minimizzare tutti i file JS all'interno di un **gli scriptpersonalizzati/** cartella. Questo è il comportamento predefinito con i bundle predefiniti.
+    È possibile usare il percorso **Scripts/Custom/JS** come illustrato di seguito per aggregare e minimizzare tutti i file js all'interno di una cartella **Scripts/Custom** . Questo è il comportamento predefinito con i bundle predefiniti.
 
     [!code-aspx[Main](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/samples/sample13.aspx)]
-7. Aprire il **Styles\Site.css** file.
+7. Aprire il file **Styles\Site.CSS** .
 
-    Si noti che il file CSS originale contiene codice rientrato, gli spazi vuoti e commenti che aumentare le dimensioni del file. (Anche i file JavaScript contiene spazi vuoti e commenti).
+    Si noti che il file CSS originale contiene codice rientrato, spazi vuoti e commenti che ingrandiscono il file. (Anche il file JavaScript contiene spazi vuoti e commenti).
 
-    ![Uno di foglio di stile CSS originale file nella cartella Scripts](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image51.png "uno di foglio di stile CSS originale file nella cartella Scripts")
+    ![Uno dei file CSS originali nella cartella degli script](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image51.png "Uno dei file CSS originali nella cartella degli script")
 
-    *Uno dei file CSS originali nella cartella Scripts*
-8. Premere **F5** per eseguire l'applicazione e spostarsi tra le **ottimizzazione** pagina.
-9. Fare clic sui **Bundle CSS** collegamento per scaricare e aprire il file.
+    *Uno dei file CSS originali nella cartella degli script*
+8. Premere **F5** per eseguire l'applicazione e passare alla pagina **ottimizzazione** .
+9. Fare clic sul collegamento **CSS bundle** per scaricare e aprire il file.
 
-    Estrarre il file nel bundle minimizzato. Si noterà che sono stati rimossi gli spazi vuoti, commenti e i caratteri di rientro, la generazione di un file più piccolo.
+    Estrarre il file minimizzati in bundle. Si noterà che tutti gli spazi vuoti, i commenti e i caratteri di rientro sono stati rimossi, generando un file più piccolo.
 
-    ![I file CSS di bundle](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image52.png "file CSS in bundle")
+    ![File CSS in bundle](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image52.png "File CSS in bundle")
 
     *File CSS in bundle*
-10. Fare ora clic la **Bundle JS** collegamento per aprire il file JavaScript in bundle. È possibile ignorare tranquillamente l'explorer di avviso. Si noti che i file JavaScript con il **personalizzato** cartella vengono inoltre in bundle e minimizzati.
+10. A questo punto fare clic sul collegamento **JS bundle** per aprire il file JavaScript in bundle. È possibile ignorare l'avviso di Explorer. Si noti che anche i file JavaScript nella cartella **personalizzata** sono aggregati e minimizzati.
 
-    ![I file JavaScript di bundle](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image53.png "file JavaScript in bundle")
+    ![File JavaScript in bundle](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image53.png "File JavaScript in bundle")
 
-    *File di bundle JavaScript*
+    *File JavaScript in bundle*
 
-    L'abilitazione della compressione per i file CSS o JS era molto più complessa nella versione precedente di ASP.NET. A questo punto, come si è visto, è sufficiente aggiungere una riga nel *Global. asax* per abilitare la creazione di bundle di file e quindi fare riferimento a file aggregati dal sito.
+    L'abilitazione della compressione per i file CSS o JS è stata molto più complicata nella versione precedente di ASP.NET. A questo punto, come si è visto, è sufficiente aggiungere una riga nel file *Global. asax* per abilitare il raggruppamento e quindi fare riferimento ai file in bundle dal sito.
 
 <a id="Ex4Task3"></a>
 
 <a id="Task_3_-_Static_Bundles"></a>
-#### <a name="task-3---static-bundles"></a>Attività 3: aggregazioni statici
+#### <a name="task-3---static-bundles"></a>Attività 3-aggregazioni statiche
 
-L'approccio di aggregazione statici consente di personalizzare il set di file di bundle, il riferimento e il metodo di minimizzazione che verrà utilizzato.
+L'approccio con Bundle statico consente di personalizzare il set di file da aggregare, il riferimento e il metodo minification che verranno usati.
 
-In questa attività si configurerà un bundle statico per definire un set specifico di file da aggregare e minimizzare.
+In questa attività verrà configurato un bundle statico per definire un set specifico di file da aggregare e minimizzare.
 
 1. Chiudere il browser.
-2. Aprire il **Global.asax.cs** del file e individuare il **applicazione\_avviare** (metodo).
-3. Rimuovere il commento il codice di aggregazione statici come illustrato nel codice seguente.
+2. Aprire il file **Global.asax.cs** e individuare l' **applicazione\_metodo Start** .
+3. Rimuovere il commento dal codice del bundle statico come illustrato nel codice riportato di seguito.
 
-    Si sta definendo un bundle statico che verrà fatto riferimento con il &quot; **~/StaticBundle** &quot; percorso virtuale e usare **JsMinify** per minimizzazione di tutti i file specificati con il **AddFile** (metodo). Infine, si aggiunge il bundle statico per il **BundleTable** e abilitarlo.
+    Si sta definendo un bundle statico a cui verrà fatto riferimento con il &quot; **~/StaticBundle**&quot; percorso virtuale e si userà **JsMinify** per minification di tutti i file specificati con il metodo **AddFile** . Infine, si aggiunge il bundle statico al **BundleTable** e lo si Abilita.
 
-    Si noti che i file non si trovano nella stessa posizione; si tratta di un altro vantaggio rispetto la creazione di bundle predefinita.
+    Si noti che i file non si trovano nella stessa posizione; si tratta di un altro vantaggio rispetto al raggruppamento predefinito.
 
     [!code-csharp[Main](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/samples/sample14.cs)]
-4. Aprire il **Optimization.aspx** file.
+4. Aprire il file **Optimization. aspx** .
 
-    Si noti che il collegamento a **statici JS Bundle** Usa il percorso è stato dichiarato quando è stato configurato il bundle statico nel file Global.asax.cs: **/StaticBundle**.
+    Si noti che il collegamento al **bundle JS statico** usa il percorso dichiarato quando è stato configurato il bundle statico nel file Global.asax.cs: **/StaticBundle**.
 
     [!code-aspx[Main](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/samples/sample15.aspx)]
-5. Premere **F5** per eseguire l'applicazione, quindi passare per il **ottimizzazione** pagina.
-6. Fare clic sui **Bundle JS statico** collegamento per aprire il file.
+5. Premere **F5** per eseguire l'applicazione, quindi passare alla pagina **ottimizzazione** .
+6. Fare clic sul collegamento del **bundle JS statico** per aprire il file.
 
-    Si noti che il minimizzata in bundle file JavaScript sono riportato l'output per tutti i file JavaScript configurato nel file di bundle statici nel percorso &quot;/StaticBundle&quot;.
+    Si noti che il file JavaScript in bundle minimizzati è l'output per tutti i file JavaScript configurati nel file di bundle statico nel percorso &quot;/StaticBundle&quot;.
 
-    ![Bundle di file statici JavaScript](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image54.png "bundle di file JavaScript statico")
+    ![Bundle di file JavaScript statici](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image54.png "Bundle di file JavaScript statici")
 
-    *Aggregare i file statici di JavaScript*
+    *Bundle di file JavaScript statici*
 7. Chiudere il browser e tornare a Visual Studio.
 
 <a id="Ex4Task4"></a>
 
 <a id="Task_4_-_Dynamic_Folder_Bundles"></a>
-#### <a name="task-4---dynamic-folder-bundles"></a>Attività 4: bundle di cartelle dinamici
+#### <a name="task-4---dynamic-folder-bundles"></a>Attività 4: bundle di cartelle dinamiche
 
-In questa attività si apprenderà come configurare il bundle di cartelle dinamici. La potenza di creazione di bundle dinamiche è che è possibile includere static JavaScript, nonché altri file nei linguaggi che viene compilato in JavaScript e richiedono pertanto, alcune operazioni di elaborazione prima che venga eseguita la creazione di bundle.
+In questa attività si apprenderà come configurare i bundle di cartelle dinamiche. La potenza della creazione di bundle dinamica è che è possibile includere codice JavaScript statico, oltre ad altri file nei linguaggi compilati in JavaScript e, di conseguenza, richiedere alcune elaborazioni prima dell'esecuzione del raggruppamento.
 
-In questo esempio, si apprenderà come usare il **DynamicFolderBundle** classe per creare un bundle dinamico per i file scritti in CofeeScript. CofeeScript è un linguaggio di programmazione che viene compilato in JavaScript e fornisce una sintassi più semplice per la scrittura di codice JavaScript, migliorando la leggibilità e brevità di JavaScript.
+In questo esempio si apprenderà come usare la classe **DynamicFolderBundle** per creare un bundle dinamico per i file scritti in CofeeScript. CofeeScript è un linguaggio di programmazione che si compila in JavaScript e fornisce una sintassi più semplice per la scrittura di codice JavaScript, migliorando la brevità e la leggibilità di JavaScript.
 
-1. Aprire il **Global.asax.cs** del file e individuare il **applicazione\_avviare** (metodo).
-2. Rimuovere il commento il codice di aggregazione dinamica, come illustrato nel codice seguente.
+1. Aprire il file **Global.asax.cs** e individuare l' **applicazione\_metodo Start** .
+2. Rimuovere il commento dal codice del bundle dinamico come illustrato nel codice riportato di seguito.
 
-    Si sta definendo un bundle di cartelle dinamici che verrà usato il **CoffeeMinify** processore minimizzazione personalizzato che verrà applicato solo ai file con il &quot; **. Coffee** &quot; (estensione File CoffeeScript). Si noti che è possibile usare un criterio di ricerca per selezionare i file di bundle all'interno di una cartella, ad esempio '\*. Coffee '.
+    Si sta definendo un bundle di cartelle dinamiche che userà il processore minification personalizzato **CoffeeMinify** che verrà applicato solo ai file con l'estensione &quot; **. Coffee**&quot; (file coffeescript). Si noti che è possibile usare un criterio di ricerca per selezionare i file da raggruppare in una cartella, ad esempio "\*. Coffee".
 
     [!code-csharp[Main](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/samples/sample16.cs)]
-3. Aprire la Console di gestione pacchetti NuGet. A questo scopo, usare il menu di scelta **View** | **Other Windows** | **Package Manager Console**.
-4. Nel **Console di gestione pacchetti** tipo **Install-Package CoffeeSharp** , quindi premere **invio**.
-5. Fare clic sui **Mostra tutti i file** pulsante il **Esplora soluzioni** finestra
+3. Aprire la console di gestione pacchetti NuGet. A tale scopo, utilizzare la **visualizzazione** menu | **altra** console di **Gestione pacchetti**di Windows | .
+4. Nella **console di gestione pacchetti** digitare **Install-Package CoffeeSharp** e premere **invio**.
+5. Fare clic sul pulsante **Mostra tutti i file** nella finestra **Esplora soluzioni**
 
-    ![Visualizzando tutti i file](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image55.png "visualizzando tutti i file")
+    ![Visualizzazione di tutti i file](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image55.png "Visualizzazione di tutti i file")
 
-    *Visualizzando tutti i file*
-6. Fare clic il **CoffeeMinify.cs** del file nei **Esplora soluzioni** e selezionare **Includi nel progetto**
+    *Visualizzazione di tutti i file*
+6. Fare clic con il pulsante destro del mouse sul file **CoffeeMinify.cs** nel **Esplora soluzioni** e scegliere **Includi nel progetto**
 
-    ![Includere il file CoffeeMinify.cs nel progetto](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image56.png "includere il file CoffeeMinify.cs nel progetto")
+    ![Includere il file CoffeeMinify.cs nel progetto](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image56.png "Includere il file CoffeeMinify.cs nel progetto")
 
     *Includere il file CoffeeMinify.cs nel progetto*
-7. Aprire il **CoffeeMinify.cs** file.
+7. Aprire il file **CoffeeMinify.cs** .
 
-    Questa classe eredita da JsMinify per minimizzare l'output JavaScript risultante dalla compilazione di codice CoffeeScript. Chiama il compilatore CoffeeScript per generare il codice JavaScript prima e quindi lo invia al metodo JsMinify.Process per minimizzare il codice risultante.
+    Questa classe eredita da JsMinify a minimizzare l'output JavaScript risultante dalla compilazione del codice CoffeeScript. Chiama il compilatore CoffeeScript per generare prima il codice JavaScript e quindi lo invia al metodo JsMinify. Process per minimizzare il codice risultante.
 
     [!code-csharp[Main](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/samples/sample17.cs)]
-8. Aprire il **Script1.coffee** e **Script2.coffee** dei file dal **bundle discript/** cartella.
+8. Aprire i file **Script1. Coffee** e **Script2. Coffee** dalla cartella **Scripts/bundle** .
 
-    Questi file includerà il codice CoffeScript devono essere elaborate durante la creazione di bundle con la classe CoffeeMinify.
+    Questi file includeranno il codice CoffeScript da compilare durante l'esecuzione del raggruppamento con la classe CoffeeMinify.
 
-    Per motivi di semplicità, i file CoffeeScript forniti sono includendo solo il codice di esempio CoffeeScript. I commenti vengono esclusi dal processo JsMinify.
+    Per motivi di semplicità, i file CoffeeScript forniti includono solo il codice di esempio CoffeeScript. I commenti sono esclusi dal processo JsMinify.
 
-    ![File CoffeeScript](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image57.png "file CoffeeScript")
+    ![File CoffeeScript](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image57.png "File CoffeeScript")
 
     *File CoffeeScript*
 
     > [!NOTE]
-    > [CofeeScript](https://github.com/jashkenas/coffeescript/) fornisce una sintassi più semplice per la scrittura di codice JavaScript, migliorando la leggibilità e brevità di JavaScript, nonché l'aggiunta di altre funzionalità come la comprensione di matrice e criteri di ricerca.
-9. Aprire il **Optimization.aspx** file e individuare i collegamenti di bundle.
+    > [CofeeScript](https://github.com/jashkenas/coffeescript/) fornisce una sintassi più semplice per scrivere codice JavaScript, migliorare la brevità e la leggibilità di JavaScript, nonché aggiungere altre funzionalità, ad esempio la comprensione e la corrispondenza dei modelli.
+9. Aprire il file **Optimization. aspx** e individuare i collegamenti del bundle.
 
-    Si noti che il collegamento a **dinamica JS Bundle** a cui fa riferimento il **bundle di script/** cartella utilizzando il **/caffè** suffisso è stato configurato per il bundle della cartella dinamica.
+    Si noti che il collegamento a **Dynamic JS bundle** fa riferimento alla cartella **Scripts/bundle** usando il suffisso **/Coffee** configurato per il bundle della cartella dinamica.
 
     [!code-aspx[Main](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/samples/sample18.aspx)]
-10. Premere **F5** per eseguire l'applicazione, quindi passare per il **ottimizzazione** pagina.
-11. Fare clic sui **dinamica JS Bundle** collegamento per aprire il file generato.
+10. Premere **F5** per eseguire l'applicazione, quindi passare alla pagina **ottimizzazione** .
+11. Fare clic sul collegamento **Dynamic JS bundle** per aprire il file generato.
 
-    Si noti che il contenuto che era incluso in questo bundle contiene solo **. Coffee** file. È anche possibile vedere che il codice CoffeeScript è stato compilato in JavaScript e le righe di commento è stato rimosso.
+    Si noti che il contenuto incluso in questo bundle contiene solo file **. Coffee** . È anche possibile notare che il codice CoffeeScript è stato compilato in JavaScript e che le righe impostate come commento sono state rimosse.
 
-    ![File JS dinamici del bundle](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image58.png "bundle file JS dinamica")
+    ![Bundle di file JS dinamici](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image58.png "Bundle di file JS dinamici")
 
-    *File JS dinamici del bundle*
+    *Bundle di file JS dinamici*
 
 > [!NOTE]
-> Inoltre, è possibile distribuire questa applicazione per siti Web di Azure seguenti [appendice b: Pubblicazione di un'applicazione ASP.NET MVC 4 con distribuzione Web](#AppendixB).
+> Inoltre, è possibile distribuire l'applicazione in siti Web di Microsoft Azure dopo [l'Appendice B: pubblicazione di un'applicazione ASP.NET MVC 4 con distribuzione Web](#AppendixB).
 
 <a id="Summary"></a>
 ## <a name="summary"></a>Riepilogo
 
-Questa esercitazione consente di comprendere che cos'è ASP.NET e sviluppo Web in Visual Studio 2012 e su come sfruttare la vasta gamma di miglioramenti in Visual Studio 2012.
+Questo Lab ti aiuta a comprendere il nuovo sviluppo di ASP.NET e Web in Visual Studio 2012 e come sfruttare i vantaggi offerti dalla varietà di miglioramenti in Visual Studio 2012.
 
-Completando questa pratica, si è appresa come usare le nuove funzionalità e miglioramenti nell'editor di Visual Studio 2012 per CSS, JavaScript e HTML. Inoltre, si è appresa come Visual Studio 2012 implementa incorporati e minimizzazione.
+Completando questo laboratorio pratico, è stato illustrato come utilizzare le nuove funzionalità e i miglioramenti apportati agli editor di Visual Studio 2012 per CSS, JavaScript e HTML. Inoltre, è stato illustrato come Visual Studio 2012 implementa la creazione di bundle e minification predefiniti.
 
 <a id="AppendixA"></a>
 
 <a id="Appendix_A_Installing_Visual_Studio_Express_2012_for_Web"></a>
-## <a name="appendix-a-installing-visual-studio-express-2012-for-web"></a>Appendice a: Installazione di Visual Studio Express 2012 per Web
+## <a name="appendix-a-installing-visual-studio-express-2012-for-web"></a>Appendice A: installazione di Visual Studio Express 2012 per il Web
 
-È possibile installare **Microsoft Visual Studio Express 2012 per Web** o da un'altra &quot;Express&quot; versione utilizzando il **[Microsoft Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx)**. Le istruzioni seguenti consentono di eseguire i passaggi necessari per installare *Visual studio Express 2012 per Web* utilizzando *installazione guidata piattaforma Web Microsoft*.
+È possibile installare **Microsoft Visual Studio Express 2012 per il Web** o un'altra versione &quot;Express&quot; usando il **[installazione guidata piattaforma Web Microsoft](https://www.microsoft.com/web/downloads/platform.aspx)** . Le istruzioni seguenti illustrano i passaggi necessari per installare *Visual Studio Express 2012 per il Web* con *installazione guidata piattaforma Web Microsoft*.
 
-1. Passare a [ [ https://go.microsoft.com/?linkid=9810169 ](https://go.microsoft.com/?linkid=9810169) ](https://go.microsoft.com/?linkid=9810169). In alternativa, se è già stato installato installazione guidata piattaforma Web, è possibile aprire e cercare il prodotto &quot; <em>Visual Studio Express 2012 per Web con Windows Azure SDK</em>&quot;.
-2. Fare clic su **Installa ora**. Se non hai **instalace Webové Platformy** si verrà reindirizzati per scaricarlo e installarlo prima di tutto.
-3. Una volta **instalace Webové Platformy** è aperto, fare clic su **installare** per avviare il programma di installazione.
+1. Passare a [[https://go.microsoft.com/?linkid=9810169](https://go.microsoft.com/?linkid=9810169)](https://go.microsoft.com/?linkid=9810169). In alternativa, se è già stata installata l'installazione guidata piattaforma Web, è possibile aprirla e cercare il prodotto &quot;<em>Visual Studio Express 2012 per il Web con Windows Azure SDK</em>&quot;.
+2. Fare clic su **Installa ora**. Se non si dispone dell' **installazione guidata piattaforma Web** , si verrà reindirizzati per il download e l'installazione iniziale.
+3. Quando l'installazione **guidata piattaforma Web** è aperta, fare clic su **Installa** per avviare l'installazione.
 
-    ![Installa Visual Studio Express](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image59.png "installa Visual Studio Express")
+    ![Installa Visual Studio Express](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image59.png "Installa Visual Studio Express")
 
     *Installa Visual Studio Express*
-4. Leggere i termini e le licenze di tutti i prodotti e fare clic su **accetto** per continuare.
+4. Leggere tutti i termini e le licenze dei prodotti e fare clic su **Accetto** per continuare.
 
-    ![Accettare le condizioni di licenza](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image60.png)
+    ![Accettazione delle condizioni di licenza](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image60.png)
 
-    *Accettare le condizioni di licenza*
-5. Attendere finché non viene completato il processo di download e l'installazione.
+    *Accettazione delle condizioni di licenza*
+5. Attendere il completamento del processo di download e installazione.
 
     ![Stato dell'installazione](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image61.png)
 
@@ -708,155 +708,155 @@ Completando questa pratica, si è appresa come usare le nuove funzionalità e mi
     ![Installazione completata](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image62.png)
 
     *Installazione completata*
-7. Fare clic su **Exit** per chiudere l'installazione guidata piattaforma Web.
-8. Per aprire Visual Studio Express per Web, fare clic per il **avviare** schermata e iniziare la scrittura &quot; **Visual Studio Express**&quot;, quindi fare clic sul **Visual Studio Express per Web** il riquadro.
+7. Fare clic su **Esci** per chiudere l'installazione guidata piattaforma Web.
+8. Per aprire Visual Studio Express per il Web, passare alla schermata **Start** e iniziare a scrivere &quot;**visual Studio Express**&quot;, quindi fare clic sul riquadro **vs Express per il Web** .
 
-    ![Visual Studio Express per il riquadro Web](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image63.png)
+    ![Riquadro VS Express per il Web](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image63.png)
 
-    *Visual Studio Express per il riquadro Web*
+    *Riquadro VS Express per il Web*
 
 ---
 
 <a id="AppendixB"></a>
 
 <a id="Appendix_B_Publishing_an_ASPNET_MVC_4_Application_using_Web_Deploy"></a>
-## <a name="appendix-b-publishing-an-aspnet-mvc-4-application-using-web-deploy"></a>Appendice b: Pubblicazione di un'applicazione ASP.NET MVC 4 con distribuzione Web
+## <a name="appendix-b-publishing-an-aspnet-mvc-4-application-using-web-deploy"></a>Appendice B: pubblicazione di un'applicazione ASP.NET MVC 4 con Distribuzione Web
 
-In questa appendice spiega come creare un nuovo sito web dal portale di gestione di Azure e pubblicare l'applicazione che è stato ottenuto seguendo il lab, sfruttando la funzionalità di pubblicazione di distribuzione Web fornita da Azure.
+In questa appendice verrà illustrato come creare un nuovo sito Web dalla portale di gestione di Windows Azure e come pubblicare l'applicazione ottenuta seguendo il Lab, sfruttando la funzionalità di pubblicazione Distribuzione Web fornita da Windows Azure.
 
 <a id="Ex1Task1"></a>
 
 <a id="Task_1_-_Creating_a_New_Web_Site_from_the_Windows_Azure_Portal"></a>
-#### <a name="task-1---creating-a-new-web-site-from-the-windows-azure-portal"></a>Attività 1: creazione di un nuovo sito Web di Windows portale di Azure
+#### <a name="task-1---creating-a-new-web-site-from-the-windows-azure-portal"></a>Attività 1: creazione di un nuovo sito Web dal portale di Windows Azure
 
-1. Andare alla [portale di gestione di Windows Azure](https://manage.windowsazure.com/) e accedere usando le credenziali di Microsoft associate alla sottoscrizione.
+1. Accedere al [portale di gestione di Windows Azure](https://manage.windowsazure.com/) e accedere con le credenziali Microsoft associate alla sottoscrizione.
 
     > [!NOTE]
-    > Con Windows Azure Puoi ospitare gratuitamente 10 siti Web ASP.NET e la scalabilità orizzontale man mano che aumenta il traffico. È possibile effettuare l'iscrizione [qui](https://aka.ms/aspnet-hol-azure).
+    > Con Windows Azure è possibile ospitare gratuitamente 10 siti Web ASP.NET e quindi ridimensionarli in base alla crescita del traffico. È possibile iscriversi [qui](https://aka.ms/aspnet-hol-azure).
 
-    ![Accedere al portale di Azure](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image64.png "accedere al portale di Azure")
+    ![Accedere a Windows portale di Azure](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image64.png "Accedere a Windows portale di Azure")
 
-    *Accedere al portale di gestione di Azure*
-2. Fare clic su **New** sulla barra dei comandi.
+    *Accedere a portale di gestione di Windows Azure*
+2. Fare clic su **nuovo** sulla barra dei comandi.
 
-    ![Creazione di un nuovo sito Web](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image65.png "creando un nuovo sito Web")
+    ![Creazione di un nuovo sito Web](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image65.png "Creazione di un nuovo sito Web")
 
     *Creazione di un nuovo sito Web*
-3. Fare clic su **Compute** | **sito Web**. Quindi selezionare **creazione rapida** opzione. Specificare un URL disponibile per il nuovo sito web e fare clic su **Crea sito Web**.
+3. Fare clic su **calcolo** | **sito Web**. Quindi selezionare opzione **creazione rapida** . Fornire un URL disponibile per il nuovo sito Web e fare clic su **Crea sito Web**.
 
     > [!NOTE]
-    > Un sito Web di Microsoft Azure è l'host per un'applicazione web in esecuzione nel cloud che è possibile controllare e gestire. L'opzione Creazione rapida consente di distribuire un'applicazione web completa per il sito Web Microsoft Azure all'esterno del portale. Non include i passaggi per la configurazione di un database.
+    > Un sito Web di Microsoft Azure è l'host di un'applicazione Web in esecuzione nel cloud che è possibile controllare e gestire. L'opzione Creazione rapida consente di distribuire un'applicazione Web completata nel sito Web di Windows Azure dall'esterno del portale. Non sono inclusi i passaggi per la configurazione di un database.
 
-    ![Creazione di un nuovo sito Web utilizzando Creazione rapida](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image66.png "creando un nuovo sito Web mediante Creazione rapida")
+    ![Creazione di un nuovo sito Web mediante creazione rapida](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image66.png "Creazione di un nuovo sito Web mediante creazione rapida")
 
-    *Creazione di un nuovo sito Web utilizzando Creazione rapida*
-4. Attendere finché il nuovo **sito Web** viene creato.
-5. Dopo aver creato il sito Web fare clic sul collegamento sotto i **URL** colonna. Verificare che il nuovo sito Web sia in funzione.
+    *Creazione di un nuovo sito Web mediante creazione rapida*
+4. Attendere la creazione del nuovo **sito Web** .
+5. Una volta creato il sito Web, fare clic sul collegamento nella colonna **URL** . Verificare che il nuovo sito Web sia funzionante.
 
-    ![Passare al nuovo sito web](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image67.png "passare al nuovo sito web")
+    ![Esplorazione del nuovo sito Web](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image67.png "Esplorazione del nuovo sito Web")
 
-    *Passare al nuovo sito web*
+    *Esplorazione del nuovo sito Web*
 
-    ![Sito Web in esecuzione](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image68.png "sito Web in esecuzione")
+    ![Sito Web in esecuzione](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image68.png "Sito Web in esecuzione")
 
     *Sito Web in esecuzione*
-6. Tornare al portale e fare clic sul nome del sito web con il **nome** colonna per visualizzare le pagine di gestione.
+6. Tornare al portale e fare clic sul nome del sito Web nella colonna **nome** per visualizzare le pagine di gestione.
 
-    ![Aprire le pagine di gestione sito web](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image69.png "aprire le pagine di gestione sito web")
+    ![Apertura delle pagine di gestione del sito Web](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image69.png "Apertura delle pagine di gestione del sito Web")
 
-    *Aprire le pagine di gestione sito Web*
-7. Nel **Dashboard** nella pagina il **riepilogo rapido** fare clic sui **Scarica profilo di pubblicazione** collegamento.
+    *Apertura delle pagine di gestione del sito Web*
+7. Nella sezione **Riepilogo rapido** della pagina **Dashboard** fare clic sul collegamento **Scarica profilo di pubblicazione** .
 
     > [!NOTE]
-    > Il *profilo di pubblicazione* contiene tutte le informazioni necessarie per pubblicare un'applicazione web in un sito Web di Azure per ogni metodo di pubblicazione abilitato. Il profilo di pubblicazione contiene l'URL, le credenziali dell'utente e stringhe di database necessarie per connettersi a e l'autenticazione in ognuno degli endpoint per cui è abilitato un metodo di pubblicazione. **Microsoft WebMatrix 2**, **Microsoft Visual Studio Express per Web** e **Microsoft Visual Studio 2012** supportano la lettura dei profili di pubblicazione per automatizzare la configurazione di questi programmi per pubblicazione di applicazioni web in siti Web di Windows Azure.
+    > Il *profilo di pubblicazione* contiene tutte le informazioni necessarie per pubblicare un'applicazione Web in un sito Web di Windows Azure per ogni metodo di pubblicazione abilitato. Nel profilo di pubblicazione sono contenuti gli URL, le credenziali utente e le stringhe di database necessari per la connessione e l'autenticazione in ognuno degli endpoint per cui è abilitato un metodo di pubblicazione. **Microsoft WebMatrix 2**, **Microsoft Visual Studio Express per il Web** e **Microsoft Visual Studio 2012** supportano la lettura di profili di pubblicazione per automatizzare la configurazione di questi programmi per la pubblicazione di applicazioni Web in siti Web di Windows Azure.
 
-    ![Download del sito web di profilo di pubblicazione](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image70.png "scaricando il sito web di profilo di pubblicazione")
+    ![Download del profilo di pubblicazione del sito Web](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image70.png "Download del profilo di pubblicazione del sito Web")
 
-    *Profilo di pubblicazione scaricato il sito Web*
-8. Scaricare il file di profilo di pubblicazione in una posizione nota. In questo esercizio ulteriormente si vedrà come usare questo file per pubblicare un'applicazione web a un siti Web di Windows Azure da Visual Studio.
+    *Download del profilo di pubblicazione del sito Web*
+8. Scaricare il file del profilo di pubblicazione in un percorso noto. Più avanti in questo esercizio verrà illustrato come utilizzare questo file per pubblicare un'applicazione Web in siti Web di Windows Azure da Visual Studio.
 
-    ![Salvare il file di profilo di pubblicazione](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image71.png "salvataggio del profilo di pubblicazione")
+    ![Salvataggio del file del profilo di pubblicazione](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image71.png "Salvataggio del profilo di pubblicazione")
 
-    *Salvare il file di profilo di pubblicazione*
+    *Salvataggio del file del profilo di pubblicazione*
 
 <a id="Ex1Task2"></a>
 
 <a id="Task_2_-_Configuring_the_Database_Server"></a>
-#### <a name="task-2---configuring-the-database-server"></a>Attività 2: configurare il Server di Database
+#### <a name="task-2---configuring-the-database-server"></a>Attività 2: configurazione del server di database
 
-Se l'applicazione Usa SQL Server database è necessario creare un Database di SQL server. Se si vuole distribuire una semplice applicazione che non Usa SQL Server è possibile ignorare questa attività.
+Se l'applicazione usa i database di SQL Server sarà necessario creare un server di database SQL. Se si desidera distribuire una semplice applicazione che non utilizza SQL Server è possibile ignorare questa attività.
 
-1. È necessario un server di Database SQL per archiviare il database dell'applicazione. È possibile visualizzare i server di Database SQL dalla sottoscrizione nel portale di gestione di Microsoft Azure all'indirizzo **database Sql** | **server** | **del Server Dashboard**. Se non si dispone di un server creato, è possibile crearne una usando il **Add** pulsante sulla barra dei comandi. Annotare il **nome server e URL, nome dell'account di accesso amministratore e la password**, come verranno usati nelle attività successiva. Non creare il database, come verrà creato in una fase successiva.
+1. Per archiviare il database dell'applicazione, sarà necessario un server di database SQL. È possibile visualizzare i server del database SQL dalla sottoscrizione nel portale di gestione di Microsoft Azure in **database sql** | **Server** | **Dashboard del server**. Se non è stato creato un server, è possibile crearne uno usando il pulsante **Aggiungi** sulla barra dei comandi. Annotare il **nome e l'URL del server, il nome e la password dell'account di accesso dell'amministratore**, che verranno usati nelle attività successive. Non creare ancora il database, perché verrà creato in una fase successiva.
 
-    ![Dashboard di Server di Database SQL](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image72.png "Dashboard di Server di Database SQL")
+    ![Dashboard del server di database SQL](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image72.png "Dashboard del server di database SQL")
 
-    *Dashboard di Server di Database SQL*
-2. Nell'attività successiva si testerà la connessione al database da Visual Studio, per questo motivo è necessario includere l'indirizzo IP locale nell'elenco del server del **indirizzi IP consentiti**. A tale scopo, fare clic su **configura**, selezionare l'indirizzo IP dal **indirizzo IP Client corrente** e incollarlo nel **indirizzo IP iniziale** e **l'indirizzoIPfinale** caselle di testo. Immettere un nome per la regola, quindi scegliere il ![add-client-ip-address-ok-button](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image73.png) pulsante.
+    *Dashboard del server di database SQL*
+2. Nell'attività successiva verrà testato la connessione al database da Visual Studio. per questo motivo, è necessario includere l'indirizzo IP locale nell'elenco di **indirizzi IP consentiti**del server. A tale scopo, fare clic su **Configura**, selezionare l'indirizzo IP da **indirizzo IP client corrente** e incollarlo nelle caselle di testo indirizzo IP **iniziale** e **indirizzo IP finale** . Immettere un nome per la regola e fare clic sul pulsante ![Aggiungi-client-IP-address-OK-pulsante](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image73.png).
 
-    ![Aggiunta indirizzo IP del Client](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image74.png)
+    ![Aggiunta dell'indirizzo IP del client](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image74.png)
 
-    *Aggiunta indirizzo IP del Client*
-3. Una volta il **indirizzo IP del Client** viene aggiunto a indirizzi IP consentiti elenco, fare clic su **salvare** per confermare le modifiche.
+    *Aggiunta dell'indirizzo IP del client*
+3. Una volta aggiunto l' **indirizzo IP del client** all'elenco indirizzi IP consentiti, fare clic su **Salva** per confermare le modifiche.
 
-    ![Confermare le modifiche](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image75.png)
+    ![Conferma modifiche](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image75.png)
 
-    *Confermare le modifiche*
+    *Conferma modifiche*
 
 <a id="Ex1Task3"></a>
 
 <a id="Task_3_-_Publishing_an_ASPNET_MVC_4_Application_using_Web_Deploy"></a>
-#### <a name="task-3---publishing-an-aspnet-mvc-4-application-using-web-deploy"></a>Attività 3: pubblicare un'applicazione ASP.NET MVC 4 con distribuzione Web
+#### <a name="task-3---publishing-an-aspnet-mvc-4-application-using-web-deploy"></a>Attività 3: pubblicazione di un'applicazione ASP.NET MVC 4 con Distribuzione Web
 
-1. Tornare alla soluzione ASP.NET MVC 4. Nel **Esplora soluzioni**, fare clic sul progetto sito web e selezionare **Publish**.
+1. Tornare alla soluzione ASP.NET MVC 4. Nella **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto di sito Web e scegliere **pubblica**.
 
-    ![Pubblicazione dell'applicazione](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image76.png "pubblicazione dell'applicazione")
+    ![Pubblicazione dell'applicazione](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image76.png "Pubblicazione dell'applicazione")
 
-    *Pubblicazione del sito web*
-2. Importare il profilo di pubblicazione che è stato salvato nella prima attività.
+    *Pubblicazione del sito Web*
+2. Importare il profilo di pubblicazione salvato nella prima attività.
 
-    ![L'importazione del profilo di pubblicazione](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image77.png "l'importazione del profilo di pubblicazione")
+    ![Importazione del profilo di pubblicazione](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image77.png "Importazione del profilo di pubblicazione")
 
     *Importazione del profilo di pubblicazione*
-3. Fare clic su **convalidare la connessione**. Dopo aver completata la convalida fare clic su **successivo**.
+3. Fare clic su **convalida connessione**. Al termine della convalida, fare clic su **Avanti**.
 
     > [!NOTE]
-    > La convalida è stata completata una volta che visualizzato un segno di spunta verde accanto al pulsante convalida connessione.
+    > La convalida è completa quando viene visualizzato un segno di spunta verde accanto al pulsante Convalida connessione.
 
-    ![La convalida connessione](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image78.png "convalida della connessione")
+    ![Convalida della connessione](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image78.png "Convalida della connessione")
 
     *Convalida della connessione*
-4. Nel **impostazioni** nella pagina il **database** sezione, fare clic sul pulsante accanto alla casella di testo della connessione di database (vale a dire **DefaultConnection**).
+4. Nella pagina **Impostazioni** , nella sezione **database** , fare clic sul pulsante accanto alla casella di testo della connessione del database, ad esempio **DefaultConnection**.
 
-    ![Configurazione della distribuzione Web](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image79.png "configurazione della distribuzione Web")
+    ![Configurazione distribuzione Web](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image79.png "Configurazione distribuzione Web")
 
-    *Configurazione della distribuzione Web*
+    *Configurazione distribuzione Web*
 5. Configurare la connessione al database come segue:
 
-   - Nel **nome Server** digitare l'URL server di Database SQL tramite il *tcp:* prefisso.
-   - Nelle **nome utente** digitare il nome dell'account di accesso amministratore server.
-   - Nelle **Password** digitare la password dell'account di accesso amministratore server.
+   - In **nome server** Digitare l'URL del server di database SQL utilizzando il prefisso *TCP:* .
+   - In **nome utente** Digitare il nome di accesso dell'amministratore del server.
+   - In **password** Digitare la password di accesso dell'amministratore del server.
    - Digitare un nuovo nome di database, ad esempio: *MVC4SampleDB*.
 
-     ![Configurazione di stringa di connessione di destinazione](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image80.png "configurazione stringa di connessione di destinazione")
+     ![Configurazione della stringa di connessione di destinazione](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image80.png "Configurazione della stringa di connessione di destinazione")
 
-     *Configurazione di stringa di connessione di destinazione*
+     *Configurazione della stringa di connessione di destinazione*
 6. Fare quindi clic su **OK**. Quando viene richiesto di creare il database, fare clic su **Sì**.
 
-    ![Creazione del database](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image81.png "creazione della stringa di database")
+    ![Creazione del database](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image81.png "Creazione della stringa di database")
 
     *Creazione del database*
-7. La stringa di connessione che si userà per connettersi al Database SQL di Windows Azure viene visualizzata all'interno di connessione predefinita nella casella di testo. Scegliere quindi **Avanti**.
+7. La stringa di connessione che verrà utilizzata per connettersi al database SQL in Windows Azure viene visualizzata nella casella di testo default Connection (connessione predefinita). Scegliere quindi **Avanti**.
 
-    ![Stringa di connessione che punta al Database SQL](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image82.png "stringa di connessione che punta al Database SQL")
+    ![Stringa di connessione che punta al database SQL](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image82.png "Stringa di connessione che punta al database SQL")
 
-    *Stringa di connessione che punta al Database SQL*
-8. Nel **Preview** pagina, fare clic su **Publish**.
+    *Stringa di connessione che punta al database SQL*
+8. Nella pagina **Anteprima** fare clic su **pubblica**.
 
-    ![Pubblicazione dell'applicazione web](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image83.png "pubblicazione dell'applicazione web")
+    ![Pubblicazione dell'applicazione Web](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image83.png "Pubblicazione dell'applicazione Web")
 
-    *Pubblicazione dell'applicazione web*
-9. Al termine del processo di pubblicazione, il browser predefinito verrà aperto il sito web pubblicato.
+    *Pubblicazione dell'applicazione Web*
+9. Al termine del processo di pubblicazione, nel browser predefinito viene aperto il sito Web pubblicato.
 
-    ![Applicazione pubblicata in Azure](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image84.png "applicazione pubblicata in Windows Azure")
+    ![Applicazione pubblicata in Windows Azure](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image84.png "Applicazione pubblicata in Windows Azure")
 
-    *Pubblicata dell'applicazione in Windows Azure*
+    *Applicazione pubblicata in Windows Azure*

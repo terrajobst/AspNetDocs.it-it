@@ -9,11 +9,11 @@ ms.assetid: aadc5fa4-8215-4fc7-afd5-bcd2ef879728
 msc.legacyurl: /mvc/overview/security/xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages
 msc.type: authoredcontent
 ms.openlocfilehash: 1965063a9b613d0e2857cddcc2165f5fda64ec0c
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77455529"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78559353"
 ---
 # <a name="xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages"></a>Prevenzione di XSRF/CSRF in ASP.NET MVC e pagine Web
 
@@ -163,7 +163,7 @@ Lo sviluppatore può configurare il sistema anti-XSRF dall'avvio dell'applicazio
 | --- | --- |
 | **AdditionalDataProvider** | Un [IAntiForgeryAdditionalDataProvider](https://msdn.microsoft.com/library/system.web.helpers.iantiforgeryadditionaldataprovider(v=vs.111).aspx) che fornisce dati aggiuntivi durante la generazione di token e utilizza dati aggiuntivi durante la convalida del token. Il valore predefinito è *null*. Per ulteriori informazioni, vedere la sezione [IAntiForgeryAdditionalDataProvider](https://msdn.microsoft.com/library/system.web.helpers.iantiforgeryadditionaldataprovider(v=vs.111).aspx) . |
 | **CookieName** | Stringa che fornisce il nome del cookie HTTP usato per archiviare il token di sessione anti-XSRF. Se questo valore non è impostato, verrà generato automaticamente un nome in base al percorso virtuale distribuito dell'applicazione. Il valore predefinito è *null*. |
-| **RequireSsl** | Valore booleano che determina se è necessario inviare i token anti-XSRF su un canale protetto da SSL. Se questo valore è *true*, tutti i cookie generati automaticamente avranno il flag "Secure" impostato e le API anti-XSRF generano se vengono chiamate dall'interno di una richiesta non inviata tramite SSL. Il valore predefinito *false*. |
+| **RequireSsl** | Valore booleano che determina se è necessario inviare i token anti-XSRF su un canale protetto da SSL. Se questo valore è *true*, tutti i cookie generati automaticamente avranno il flag "Secure" impostato e le API anti-XSRF generano se vengono chiamate dall'interno di una richiesta non inviata tramite SSL. Il valore predefinito è *false*. |
 | **SuppressIdentityHeuristicChecks** | Valore booleano che determina se il sistema anti-XSRF deve disattivare il supporto per le identità basate sulle attestazioni. Se questo valore è *true*, il sistema presuppone che *IIdentity.Name* sia appropriato per l'uso come identificatore univoco per singolo utente e non tenterà un *IClaimsIdentity* o *ClClaimsIdentity* speciale, come descritto nella sezione [autenticazione basata su WIF/ACS/attestazioni](#_WIF_ACS) . Il valore predefinito è `false`. |
 | **UniqueClaimTypeIdentifier** | Stringa che indica il tipo di attestazione appropriato per l'utilizzo come identificatore univoco per utente. Se questo valore è impostato e l'oggetto *IIdentity* corrente è basato sulle attestazioni, il sistema tenterà di estrarre un'attestazione del tipo specificato da *UniqueClaimTypeIdentifier*e il valore corrispondente verrà usato al posto del nome utente dell'utente durante la generazione del token del campo. Se il tipo di attestazione non viene trovato, il sistema non riuscirà a eseguire la richiesta. Il valore predefinito è *null*, che indica che il sistema deve usare la tupla (provider di identità, identificatore nome) come descritto in precedenza al posto del nome utente dell'utente. |
 

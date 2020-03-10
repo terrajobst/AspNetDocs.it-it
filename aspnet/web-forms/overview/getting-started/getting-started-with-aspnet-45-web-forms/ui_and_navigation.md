@@ -9,11 +9,11 @@ ms.assetid: 5c76891d-e515-4885-b576-76bd2c494efe
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/ui_and_navigation
 msc.type: authoredcontent
 ms.openlocfilehash: ac1dcaf1ba911fdcaeb3845c6836ec771733d93e
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74636810"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78643556"
 ---
 # <a name="ui-and-navigation"></a>Interfaccia utente ed esplorazione
 
@@ -25,7 +25,7 @@ di [Erik Reitan](https://github.com/Erikre)
 
 In questa esercitazione verrà modificata l'interfaccia utente dell'applicazione Web predefinita per supportare le funzionalità dell'applicazione front-end Toys Store Wingtip. Inoltre, si aggiungerà la navigazione semplice e con associazione a dati. Questa esercitazione si basa sull'esercitazione precedente "creare il livello di accesso ai dati" ed è parte della serie di esercitazioni su Wingtip Toys.
 
-## <a name="what-youll-learn"></a>Cosa si apprenderà:
+## <a name="what-youll-learn"></a>Contenuto dell'esercitazione:
 
 - Come modificare l'interfaccia utente per supportare le funzionalità dell'applicazione front Wingtip Toys Store.
 - Come configurare un elemento HTML5 per includere l'esplorazione delle pagine.
@@ -93,11 +93,11 @@ L'attributo `CodeBehind` contenuto nella direttiva `@Page` specifica il nome del
 
 ### <a name="updating-the-master-page"></a>Aggiornamento della pagina master
 
-In ASP.NET Web Forms le pagine master consentono di creare un layout coerente per le pagine dell'applicazione. Una singola pagina master definisce l'aspetto e il comportamento standard desiderati per tutte le pagine (o un gruppo di pagine) nell'applicazione. È quindi possibile creare singole pagine di contenuto che contengono il contenuto che si desidera visualizzare, come illustrato in precedenza. Quando gli utenti richiedono le pagine di contenuto, ASP.NET le unisce con la pagina master per produrre l'output che combina il layout della pagina master con il contenuto della pagina di contenuto.
+In Web Form ASP.NET le pagine master consentono di creare un layout uniforme per le pagine dell'applicazione. Una singola pagina master definisce l'aspetto e il comportamento standard da applicare a tutte le pagine (o a un gruppo di pagine) dell'applicazione. È quindi possibile creare singole pagine di contenuto che contengono il contenuto che si desidera visualizzare, come illustrato in precedenza. Quando gli utenti richiedono le pagine di contenuto, ASP.NET le unisce alla pagina master per generare l'output che combina il layout della pagina master con il contenuto della pagina di contenuto.
 
 Il nuovo sito necessita di un singolo logo da visualizzare in ogni pagina. Per aggiungere questo logo, è possibile modificare il codice HTML nella pagina master.
 
-1. In **Esplora soluzioni**individuare e aprire la pagina **site. master** .
+1. In **Esplora soluzioni**trovare e aprire la pagina **Site.Master** .
 2. Se la pagina è in visualizzazione **progettazione** , passare alla visualizzazione **origine** .
 3. Aggiornare la pagina master **modificando o aggiungendo** il markup evidenziato in giallo: 
 
@@ -208,7 +208,7 @@ Questo codice visualizzerà tutte le categorie del database. Il controllo **List
 
 > [!NOTE] 
 > 
-> **Punta**
+> **Suggerimento**
 > 
 > Quando si aggiunge codice digitando durante lo sviluppo, è possibile essere certi che un membro valido di un oggetto venga trovato perché i controlli dati fortemente tipizzati mostrano i membri disponibili in base a IntelliSense. IntelliSense offre scelte di codice appropriate per il contesto durante la digitazione di codice, ad esempio proprietà, metodi e oggetti.
 
@@ -257,7 +257,7 @@ A questo punto è possibile esaminare i dati contenuti nel file di database *win
     Viene visualizzato **Esplora server** . 
 
     ![Interfaccia utente e navigazione-Esplora server](ui_and_navigation/_static/image8.png)
-4. Espandere la cartella *tabelle* .
+4. Espandere la cartella *Tabelle* .
 5. Fare clic con il pulsante destro del mouse sulla tabella **Products**e scegliere **Mostra dati tabella**.  
  Viene visualizzata la tabella **Products** . 
 

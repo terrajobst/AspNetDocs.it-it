@@ -1,25 +1,25 @@
 ---
 uid: mvc/videos/mvc-1/aspnet-mvc-storefront/aspnet-mvc-storefront-part-22-restructuring-rerouting-and-paypal
-title: 'ASP.NET MVC Storefront - Parte 22: Ristrutturazione, reindirizzamento e PayPal | Microsoft Docs'
+title: 'ASP.NET MVC storefront-parte 22: ristrutturazione, reindirizzamento e PayPal | Microsoft Docs'
 author: robconery
-description: In questo episodio ristrutturano un bit per alcune operazioni di pulizia. Inoltre possibile modificare le route per essere molto più semplice. Infine, aggiungere PayPal come parametri Opzio un'estrazione...
+description: In questo episodio, ho ristrutturato un po' per eliminare alcuni elementi. Modifico anche le route in modo che siano molto più semplici. Infine, aggiungo PayPal come Optio di checkout...
 ms.author: riande
 ms.date: 10/16/2008
 ms.assetid: 81190124-d0f6-4e4b-a48f-2613cc5a6aa7
 msc.legacyurl: /mvc/videos/mvc-1/aspnet-mvc-storefront/aspnet-mvc-storefront-part-22-restructuring-rerouting-and-paypal
 msc.type: video
 ms.openlocfilehash: 772ddf69baf8daf5d3f0b13ed92efb80c561c38b
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59388832"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78537772"
 ---
-# <a name="aspnet-mvc-storefront-part-22-restructuring-rerouting-and-paypal"></a>ASP.NET MVC Storefront - Parte 22: Ristrutturazione, reindirizzamento e PayPal
+# <a name="aspnet-mvc-storefront-part-22-restructuring-rerouting-and-paypal"></a>ASP.NET MVC storefront-parte 22: ristrutturazione, reindirizzamento e PayPal
 
-da [Rob Conery](https://github.com/robconery)
+di [Rob Coney](https://github.com/robconery)
 
-In questo episodio ristrutturano un bit per alcune operazioni di pulizia. Inoltre possibile modificare le route per essere molto più semplice. Infine, aggiungere PayPal come opzione di completamento della transazione.
+In questo episodio, ho ristrutturato un po' per eliminare alcuni elementi. Modifico anche le route in modo che siano molto più semplici. Infine, aggiungo PayPal come opzione di estrazione.
 
 [&#9654;Guarda il video (45 minuti)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/aspnet-mvc-storefront-part-22-restructuring-rerouting-and-paypal)
 

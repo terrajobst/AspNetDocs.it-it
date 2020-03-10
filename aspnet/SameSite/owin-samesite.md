@@ -6,11 +6,11 @@ ms.author: riande
 ms.date: 12/6/2019
 uid: owin-samesite
 ms.openlocfilehash: a3353fd0f0332899aaba26b83aea0ff7c3a6d19b
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77455737"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78546214"
 ---
 # <a name="samesite-cookies-and-the-open-web-interface-for-net-owin"></a>Cookie navigava sullostesso sito e Open Web Interface for .NET (OWIN)
 

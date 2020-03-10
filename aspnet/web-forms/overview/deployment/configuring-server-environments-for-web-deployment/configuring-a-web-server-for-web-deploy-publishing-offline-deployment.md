@@ -9,11 +9,11 @@ ms.assetid: ba92788f-9f03-44b1-b6b2-af8413e6a35d
 msc.legacyurl: /web-forms/overview/deployment/configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-offline-deployment
 msc.type: authoredcontent
 ms.openlocfilehash: f93cf11085fb19afb97b71aca8f638bd88fe658b
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74621095"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78547782"
 ---
 # <a name="configuring-a-web-server-for-web-deploy-publishing-offline-deployment"></a>Configurazione di un server Web per la pubblicazione con Distribuzione Web (distribuzione offline)
 
@@ -23,7 +23,7 @@ di [Jason Lee](https://github.com/jrjlee)
 
 > In questo argomento viene descritto come configurare un server Web IIS per supportare la pubblicazione e la distribuzione Web offline.
 > 
-> Quando si utilizza Distribuzione Web lo strumento di distribuzione Web Internet Information Services (IIS) 2,0 o versione successiva, è possibile utilizzare tre approcci principali per ottenere le applicazioni o i siti in un server Web. Procedi così:
+> Quando si utilizza Distribuzione Web lo strumento di distribuzione Web Internet Information Services (IIS) 2,0 o versione successiva, è possibile utilizzare tre approcci principali per ottenere le applicazioni o i siti in un server Web. È possibile:
 > 
 > - Utilizzare il *servizio distribuzione Web agente remoto*. Questo approccio richiede una minore configurazione del server Web, ma è necessario fornire le credenziali di un amministratore del server locale per distribuire qualsiasi elemento al server.
 > - Utilizzare il *gestore distribuzione Web*. Questo approccio è molto più complesso e richiede un impegno iniziale maggiore per la configurazione del server Web. Tuttavia, quando si utilizza questo approccio, è possibile configurare IIS in modo da consentire agli utenti non amministratori di eseguire la distribuzione. Il gestore Distribuzione Web è disponibile solo in IIS 7 o versioni successive.
@@ -145,7 +145,7 @@ Sebbene non si stiano impedendo la distribuzione del contenuto nel sito Web pred
     > [!NOTE]
     > In un ambiente di produzione, probabilmente si desidera ospitare il sito Web sulla porta 80 e configurare un'intestazione host, insieme ai record DNS corrispondenti. Per ulteriori informazioni sulla configurazione delle intestazioni host in IIS 7, vedere [configurare un'intestazione host per un sito Web (IIS 7)](https://technet.microsoft.com/library/cc753195(WS.10).aspx). Per ulteriori informazioni sul ruolo server DNS in Windows Server 2008 R2, vedere [Panoramica del server](https://technet.microsoft.com/library/cc770392.aspx) DNS e [server DNS](https://technet.microsoft.com/windowsserver/dd448607).
 9. Nel riquadro **Azioni** sotto **Modifica sito**, fare clic su **Binding**.
-10. Nella finestra di dialogo **binding sito** fare clic su **Aggiungi**.
+10. Nella finestra di dialogo **Binding sito** fare clic su **Aggiungi**.
 
     ![](configuring-a-web-server-for-web-deploy-publishing-offline-deployment/_static/image5.png)
 11. Nella finestra di dialogo **Aggiungi binding sito** impostare l' **indirizzo IP** e la **porta** in modo che corrispondano alla configurazione del sito esistente.
@@ -155,7 +155,7 @@ Sebbene non si stiano impedendo la distribuzione del contenuto nel sito Web pred
 
     > [!NOTE]
     > Il primo binding del sito consente di accedere al sito localmente usando l'indirizzo IP e la porta o `http://localhost:85`. Il secondo binding del sito consente di accedere al sito da altri computer del dominio usando il nome del computer, ad esempio http://proweb1:85).
-13. Nella finestra di dialogo **binding sito** fare clic su **Chiudi**.
+13. Nella finestra di dialogo **Binding sito** fare clic su **Chiudi**.
 14. Nel riquadro **connessioni** fare clic su **pool di applicazioni**.
 15. Nel riquadro **pool di applicazioni** fare clic con il pulsante destro del mouse sul nome del pool di applicazioni e quindi scegliere **impostazioni di base**. Per impostazione predefinita, il nome del pool di applicazioni corrisponderà al nome del sito Web (ad esempio, **DemoSite**).
 16. Nell'elenco **.NET Framework versione** selezionare **.NET Framework v 4.0.30319**, quindi fare clic su **OK**.
@@ -181,8 +181,8 @@ L'approccio più comune consiste nell'assegnare autorizzazioni al gruppo **IIS\_
 
 1. In Esplora risorse passare al percorso della cartella locale.
 2. Fare clic con il pulsante destro del mouse sulla cartella, quindi scegliere **Proprietà**.
-3. Nella scheda **sicurezza** fare clic su **modifica**e quindi su **Aggiungi**.
-4. Fare clic su **percorsi**. Nella finestra di dialogo **percorsi** selezionare il server locale e quindi fare clic su **OK**.
+3. Nella scheda **Security** fare clic su **Edit** e quindi su **Add**.
+4. Fare clic su **Località**. Nella finestra di dialogo **percorsi** selezionare il server locale e quindi fare clic su **OK**.
 
     ![](configuring-a-web-server-for-web-deploy-publishing-offline-deployment/_static/image8.png)
 5. Nella finestra di dialogo **Seleziona utenti o gruppi** digitare **IIS\_IUSRS**, fare clic su **Controlla nomi**, quindi fare clic su **OK**.

@@ -1,25 +1,25 @@
 ---
 uid: web-forms/videos/data-access/linq-videos-from-the-vb-team/how-do-i-enable-xml-intellisense-and-use-xml-namespaces
-title: '[Procedura:] Abilitare XML IntelliSense e usare spazi dei nomi XML? | Microsoft Docs'
+title: '[Procedura:] Abilitare IntelliSense XML e utilizzare gli spazi dei nomi XML? | Microsoft Docs'
 author: bethmassi
-description: Gli sviluppatori Visual Basic verranno illustrato come abilitare l'utilizzo di schemi XML IntelliSense e come spazi dei nomi XML vengono usate quando l'esecuzione di query e creazione di documenti XML.
+description: Visual Basic gli sviluppatori apprenderanno come abilitare IntelliSense XML usando gli schemi e come vengono usati gli spazi dei nomi XML durante l'esecuzione di query e la creazione di documenti XML.
 ms.author: riande
 ms.date: 11/15/2007
 ms.assetid: cdccd601-c0fe-4e56-9c38-7ef027de3481
 msc.legacyurl: /web-forms/videos/data-access/linq-videos-from-the-vb-team/how-do-i-enable-xml-intellisense-and-use-xml-namespaces
 msc.type: video
 ms.openlocfilehash: d58385ae1e88346fe6e408030eefcfb23cab7977
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59390584"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78575159"
 ---
-# <a name="how-do-i-enable-xml-intellisense-and-use-xml-namespaces"></a>[Procedura:] Abilitare XML IntelliSense e usare spazi dei nomi XML?
+# <a name="how-do-i-enable-xml-intellisense-and-use-xml-namespaces"></a>[Procedura:] Abilitare IntelliSense XML e utilizzare gli spazi dei nomi XML?
 
-da [Beth Massi](https://github.com/bethmassi)
+di [Beth Massi](https://github.com/bethmassi)
 
-Gli sviluppatori Visual Basic verranno illustrato come abilitare l'utilizzo di schemi XML IntelliSense e come spazi dei nomi XML vengono usate quando l'esecuzione di query e creazione di documenti XML.
+Visual Basic gli sviluppatori apprenderanno come abilitare IntelliSense XML usando gli schemi e come vengono usati gli spazi dei nomi XML durante l'esecuzione di query e la creazione di documenti XML.
 
 [&#9654;Guarda il video (13 minuti)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-enable-xml-intellisense-and-use-xml-namespaces)
 

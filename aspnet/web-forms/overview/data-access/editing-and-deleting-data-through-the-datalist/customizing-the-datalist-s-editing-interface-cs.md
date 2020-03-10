@@ -9,11 +9,11 @@ ms.assetid: a5d13067-ddfb-4c36-8209-0f69fd40e45c
 msc.legacyurl: /web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/customizing-the-datalist-s-editing-interface-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 81f5a7f6737f544f577447f263dbd37dbc8279d9
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74623668"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78594122"
 ---
 # <a name="customizing-the-datalists-editing-interface-c"></a>Personalizzazione dell'interfaccia di modifica di DataList (C#)
 
@@ -109,7 +109,7 @@ Con questi due gestori eventi sul posto, facendo clic sul pulsante modifica vien
 
 Per fare in modo che nell'interfaccia di modifica vengano visualizzati i valori dei prodotti correnti, è necessario utilizzare la sintassi DataBinding per assegnare i valori dei campi dati ai valori del controllo Web appropriati. La sintassi di associazione dati può essere applicata tramite la finestra di progettazione passando alla schermata Modifica modelli e selezionando il collegamento Modifica DataBindings dagli smart tag dei controlli Web. In alternativa, è possibile aggiungere la sintassi DataBinding direttamente al markup dichiarativo.
 
-Assegnare il valore `ProductName` campo dati alla proprietà `ProductName` casella di testo `Text`, i valori del campo dati `CategoryID` e `SupplierID` alle proprietà `Categories` e `Suppliers` DropDownList `SelectedValue` e il valore del campo `Discontinued` dati alla proprietà `Discontinued` della casella di controllo. Dopo aver apportato queste modifiche, tramite la finestra di progettazione o direttamente tramite il markup dichiarativo, rivedere la pagina tramite un browser e fare clic sul pulsante modifica per chef Anton s Gumbo Mix. Come illustrato nella figura 9, la sintassi di associazione dati ha aggiunto i valori correnti nelle caselle di testo, DropDownList e casella di controllo.
+Assegnare il valore `ProductName` campo dati alla proprietà `ProductName` casella di testo `Text`, i valori del campo dati `CategoryID` e `SupplierID` alle proprietà `Categories` e `Suppliers` DropDownList `SelectedValue` e il valore del campo `Discontinued` dati alla proprietà `Discontinued` della casella di controllo.`Checked` Dopo aver apportato queste modifiche, tramite la finestra di progettazione o direttamente tramite il markup dichiarativo, rivedere la pagina tramite un browser e fare clic sul pulsante modifica per chef Anton s Gumbo Mix. Come illustrato nella figura 9, la sintassi di associazione dati ha aggiunto i valori correnti nelle caselle di testo, DropDownList e casella di controllo.
 
 [![facendo clic sul pulsante modifica viene visualizzata l'interfaccia di modifica](customizing-the-datalist-s-editing-interface-cs/_static/image26.png)](customizing-the-datalist-s-editing-interface-cs/_static/image25.png)
 

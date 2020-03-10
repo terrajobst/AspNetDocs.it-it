@@ -9,11 +9,11 @@ ms.assetid: 6b9ae3c4-0274-4170-a1bb-9df9c546b2a9
 msc.legacyurl: /web-api/overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-3
 msc.type: authoredcontent
 ms.openlocfilehash: f39be7a84e85db93487d246e9f8cb59c401fe5ce
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74600035"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78556049"
 ---
 # <a name="part-3-creating-an-admin-controller"></a>Parte 3: creazione di un controller di amministrazione
 
@@ -64,12 +64,12 @@ Un **DbSet** rappresenta un set di entità su cui è possibile eseguire una quer
 
 La classe `AdminController` definisce cinque metodi che implementano la funzionalità CRUD di base. Ogni metodo corrisponde a un URI che il client può richiamare:
 
-| Controller (metodo) | Descrizione | URI | Metodo HTTP |
+| Controller (metodo) | Description | URI | Metodo HTTP |
 | --- | --- | --- | --- |
 | GetProducts | Ottiene tutti i prodotti. | API/prodotti | GET |
 | GetProduct | Trova un prodotto in base all'ID. | API/prodotti/*ID* | GET |
 | PutProduct | Aggiorna un prodotto. | API/prodotti/*ID* | PUT |
-| Postprodotto | Crea un nuovo prodotto. | API/prodotti | Inserisci |
+| PostProduct | Crea un nuovo prodotto. | API/prodotti | INSERISCI |
 | DeleteProduct | Elimina un prodotto. | API/prodotti/*ID* | DELETE |
 
 Ogni metodo chiama `OrdersContext` per eseguire una query sul database. I metodi che modificano la chiamata della raccolta (PUT, POST e DELETE) `db.SaveChanges` per rendere permanente le modifiche al database. I controller vengono creati per ogni richiesta HTTP e quindi eliminati, quindi è necessario salvare le modifiche prima che un metodo venga restituito.

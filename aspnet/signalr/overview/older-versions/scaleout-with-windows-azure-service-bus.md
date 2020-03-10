@@ -1,6 +1,6 @@
 ---
 uid: signalr/overview/older-versions/scaleout-with-windows-azure-service-bus
-title: Scalabilità orizzontale di SignalR con il Bus di servizio di Azure (SignalR 1.x) | Microsoft Docs
+title: Scalabilità orizzontale di SignalR con il bus di servizio di Azure (SignalR 1. x) | Microsoft Docs
 author: bradygaster
 description: ''
 ms.author: bradyg
@@ -9,103 +9,103 @@ ms.assetid: 501db899-e68c-49ff-81b2-1dc561bfe908
 msc.legacyurl: /signalr/overview/older-versions/scaleout-with-windows-azure-service-bus
 msc.type: authoredcontent
 ms.openlocfilehash: e64f84db00b571c01ea52f48d1ac1af46698d391
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65117003"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78558415"
 ---
 # <a name="signalr-scaleout-with-azure-service-bus-signalr-1x"></a>Scale-out di SignalR con il bus di servizio di Azure (SignalR 1.x)
 
-dal [Mike Wasson](https://github.com/MikeWasson), [Patrick Fletcher](https://github.com/pfletcher)
+di [Mike Wasson](https://github.com/MikeWasson), [Patrick Fletcher](https://github.com/pfletcher)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
 
-In questa esercitazione si distribuirà un'applicazione di SignalR per un ruolo Web di Azure di Windows, utilizzando il backplane del Bus di servizio per distribuire i messaggi per ogni istanza del ruolo.
+In questa esercitazione verrà distribuita un'applicazione SignalR a un ruolo Web di Windows Azure, usando il backplane del bus di servizio per distribuire i messaggi a ogni istanza del ruolo.
 
 ![](scaleout-with-windows-azure-service-bus/_static/image1.png)
 
 Prerequisiti:
 
-- Un account di Windows Azure.
-- Il [Windows Azure SDK](https://go.microsoft.com/fwlink/?linkid=254364&amp;clcid=0x409).
+- Un account Windows Azure.
+- [Windows Azure SDK](https://go.microsoft.com/fwlink/?linkid=254364&amp;clcid=0x409).
 - Visual Studio 2012.
 
-È anche compatibile con il backplane del bus di servizio [Service Bus per Windows Server](https://msdn.microsoft.com/library/windowsazure/dn282144.aspx), versione 1.1. Tuttavia, non compatibile con la versione 1.0 di Service Bus per Windows Server.
+Il backplane del bus di servizio è compatibile anche con il [bus di servizio per Windows Server](https://msdn.microsoft.com/library/windowsazure/dn282144.aspx), versione 1,1. Tuttavia, non è compatibile con la versione 1,0 del bus di servizio per Windows Server.
 
 ## <a name="pricing"></a>Prezzi
 
-Backplane del Bus di servizio Usa gli argomenti per inviare messaggi. Per informazioni più aggiornate sui prezzi, vedere [del Bus di servizio](https://azure.microsoft.com/pricing/details/service-bus/). Al momento della stesura di questo articolo, è possibile inviare 1.000.000 di messaggi al mese per meno di $1. Backplane invia un messaggio del bus di servizio per ogni chiamata di un metodo dell'hub SignalR. Esistono anche alcuni messaggi di controllo per le connessioni, disconnessioni, unita tramite join o uscire da gruppi e così via. Nella maggior parte delle applicazioni, la maggior parte del traffico di messaggi sarà chiamate del metodo dell'hub.
+Il backplane del bus di servizio usa gli argomenti per inviare i messaggi. Per le informazioni più aggiornate sui prezzi, vedere [Service Bus](https://azure.microsoft.com/pricing/details/service-bus/). Al momento della stesura di questo articolo, è possibile inviare 1 milione messaggi al mese per meno di $1. Il backplane Invia un messaggio del bus di servizio per ogni chiamata di un metodo dell'hub SignalR. Sono inoltre presenti alcuni messaggi di controllo per le connessioni, le disconnessioni, il join o la uscita dei gruppi e così via. Nella maggior parte delle applicazioni, la maggior parte del traffico dei messaggi sarà chiamata al metodo dell'hub.
 
 ## <a name="overview"></a>Panoramica
 
-Prima di passare all'esercitazione dettagliata, ecco una rapida panoramica delle azioni da eseguire.
+Prima di arrivare all'esercitazione dettagliata, di seguito viene illustrata una rapida panoramica delle operazioni che si intende eseguire.
 
-1. Usare il portale di Azure per creare un nuovo spazio dei nomi del Bus di servizio.
-2. Aggiungere i pacchetti NuGet per l'applicazione: 
+1. Usare il portale di Azure di Windows per creare un nuovo spazio dei nomi del bus di servizio.
+2. Aggiungere i pacchetti NuGet all'applicazione: 
 
-    - [Microsoft.AspNet.SignalR](http://nuget.org/packages/Microsoft.AspNet.SignalR)
-    - [Microsoft.AspNet.SignalR.ServiceBus](http://www.nuget.org/packages/SignalR.WindowsAzureServiceBus)
-3. Creare un'applicazione di SignalR.
-4. Aggiungere il codice seguente al Global. asax per configurare il backplane: 
+    - [Microsoft. AspNet. SignalR](http://nuget.org/packages/Microsoft.AspNet.SignalR)
+    - [Microsoft. AspNet. SignalR. ServiceBus](http://www.nuget.org/packages/SignalR.WindowsAzureServiceBus)
+3. Creare un'applicazione SignalR.
+4. Aggiungere il codice seguente a Global. asax per configurare il backplane: 
 
     [!code-csharp[Main](scaleout-with-windows-azure-service-bus/samples/sample1.cs)]
 
-Per ogni applicazione, selezionare un valore diverso per "YourAppName". Non utilizzare lo stesso valore tra più applicazioni.
+Per ogni applicazione, selezionare un valore diverso per "YourAppName". Non usare lo stesso valore tra più applicazioni.
 
 ## <a name="create-the-azure-services"></a>Creare i servizi di Azure
 
-Creare un servizio Cloud, come descritto in [come creare e distribuire un servizio Cloud](https://docs.microsoft.com/azure/cloud-services/cloud-services-how-to-create-deploy). Seguire i passaggi nella sezione "procedura: Creare un servizio cloud con creazione rapida". Per questa esercitazione, non occorre caricare un certificato.
+Creare un servizio cloud, come descritto in [come creare e distribuire un servizio cloud](https://docs.microsoft.com/azure/cloud-services/cloud-services-how-to-create-deploy). Seguire i passaggi nella sezione "procedura: creare un servizio cloud usando creazione rapida". Per questa esercitazione non è necessario caricare un certificato.
 
 ![](scaleout-with-windows-azure-service-bus/_static/image2.png)
 
-Creare un nuovo spazio dei nomi del Bus di servizio, come descritto in [procedura per usare Service Bus argomenti/sottoscrizioni](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions). Seguire i passaggi nella sezione "Creare un servizio Namespace".
+Creare un nuovo spazio dei nomi del bus di servizio, come descritto in [come usare gli argomenti/sottoscrizioni del bus di servizio](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions). Seguire i passaggi nella sezione "creare uno spazio dei nomi del servizio".
 
 ![](scaleout-with-windows-azure-service-bus/_static/image3.png)
 
 > [!NOTE]
-> Assicurarsi di selezionare la stessa area per il servizio cloud e lo spazio dei nomi del Bus di servizio.
+> Assicurarsi di selezionare la stessa area per il servizio cloud e lo spazio dei nomi del bus di servizio.
 
 ## <a name="create-the-visual-studio-project"></a>Creare il progetto di Visual Studio
 
-Avviare Visual Studio. Dal **File** menu, fare clic su **nuovo progetto**.
+Avviare Visual Studio. Scegliere **Nuovo progetto** dal menu **File**.
 
-Nel **nuovo progetto** finestra di dialogo espandere **Visual c#**. Sotto **modelli installati**, selezionare **Cloud** e quindi selezionare **servizio Cloud Azure**. Mantenere il valore predefinito di .NET Framework 4.5. Denominare l'applicazione ChatService e fare clic su **OK**.
+Nella finestra di dialogo **nuovo progetto** espandere oggetto **visivo C#** . In **modelli installati**selezionare **cloud** , quindi selezionare **servizio cloud di Microsoft Azure**. Mantieni il valore predefinito .NET Framework 4,5. Assegnare all'applicazione il nome ChatService e fare clic su **OK**.
 
 ![](scaleout-with-windows-azure-service-bus/_static/image4.png)
 
-Nel **nuovo servizio Cloud Azure** finestra di dialogo, selezionare Web ruoli di ASP.NET MVC 4. Fare clic sul pulsante freccia destra (**&gt;**) per aggiungere il ruolo alla soluzione.
+Nella finestra di dialogo **nuovo servizio cloud di Windows Azure** selezionare ruolo Web ASP.NET MVC 4. Fare clic sul pulsante freccia destra ( **&gt;** ) per aggiungere il ruolo alla soluzione.
 
-Posizionare il mouse sul nuovo ruolo, quindi sull'icona della matita visibile. Fare clic su questa icona per rinominare il ruolo. Nome del ruolo "SignalRChat", quindi scegliere **OK**.
+Posizionare il puntatore del mouse sul nuovo ruolo, in modo che sia visibile l'icona della matita. Fare clic su questa icona per rinominare il ruolo. Assegnare al ruolo il nome "SignalRChat" e fare clic su **OK**.
 
 ![](scaleout-with-windows-azure-service-bus/_static/image5.png)
 
-Nel **nuovo progetto ASP.NET MVC 4** procedura guidata, selezionare **applicazione Internet**. Fare clic su **OK**. La creazione guidata progetto crea due progetti:
+Nella creazione guidata **nuovo progetto ASP.NET MVC 4** selezionare **applicazione Internet**. Fare clic su **OK**. La creazione guidata progetto crea due progetti:
 
-- ChatService: Questo progetto è l'applicazione di Windows Azure. Definisce i ruoli di Azure e altre opzioni di configurazione.
-- SignalRChat: Questo progetto è il progetto ASP.NET MVC 4.
+- ChatService: questo progetto è l'applicazione Windows Azure. Definisce i ruoli di Azure e altre opzioni di configurazione.
+- SignalRChat: questo progetto è il progetto ASP.NET MVC 4.
 
-## <a name="create-the-signalr-chat-application"></a>Creare l'applicazione di Chat di SignalR
+## <a name="create-the-signalr-chat-application"></a>Creare l'applicazione di chat SignalR
 
-Per creare l'applicazione di chat, seguire i passaggi nell'esercitazione [Introduzione a SignalR e MVC 4](tutorial-getting-started-with-signalr-and-mvc-4.md).
+Per creare l'applicazione di chat, seguire i passaggi descritti nell'esercitazione [Introduzione con SignalR e MVC 4](tutorial-getting-started-with-signalr-and-mvc-4.md).
 
-Usare NuGet per installare le librerie necessarie. Dal **degli strumenti** dal menu **Gestione pacchetti NuGet**, quindi selezionare **Package Manager Console**. Nel **Console di gestione pacchetti** finestra, immettere i comandi seguenti:
+Usare NuGet per installare le librerie necessarie. Dal menu **strumenti** selezionare **Gestione pacchetti NuGet**, quindi selezionare Console di **Gestione pacchetti**. Nella finestra **console di gestione pacchetti** immettere i comandi seguenti:
 
 [!code-powershell[Main](scaleout-with-windows-azure-service-bus/samples/sample2.ps1)]
 
-Usare il `-ProjectName` opzione per installare i pacchetti per il progetto ASP.NET MVC, piuttosto che il progetto Azure.
+Usare l'opzione `-ProjectName` per installare i pacchetti nel progetto MVC ASP.NET, invece che nel progetto Windows Azure.
 
-## <a name="configure-the-backplane"></a>Configurare il Backplane
+## <a name="configure-the-backplane"></a>Configurare il backplane
 
-Nel file Global. asax dell'applicazione, aggiungere il codice seguente:
+Nel file Global. asax dell'applicazione aggiungere il codice seguente:
 
 [!code-csharp[Main](scaleout-with-windows-azure-service-bus/samples/sample3.cs)]
 
-A questo punto è necessario ottenere la stringa di connessione del bus di servizio. Nel portale di Azure, selezionare lo spazio dei nomi del bus di servizio è stato creato e fare clic sull'icona di tasto di scelta rapida.
+A questo punto è necessario ottenere la stringa di connessione del bus di servizio. Nella portale di Azure selezionare lo spazio dei nomi del bus di servizio creato e fare clic sull'icona del tasto di scelta.
 
 ![](scaleout-with-windows-azure-service-bus/_static/image6.png)
 
-Copiare la stringa di connessione negli Appunti, quindi incollarlo nella *connectionString* variabile.
+Copiare la stringa di connessione negli Appunti, quindi incollarla nella variabile *ConnectionString* .
 
 ![](scaleout-with-windows-azure-service-bus/_static/image7.png)
 
@@ -113,40 +113,40 @@ Copiare la stringa di connessione negli Appunti, quindi incollarlo nella *connec
 
 ## <a name="deploy-to-azure"></a>Distribuire in Azure
 
-In Esplora soluzioni espandere la **ruoli** cartella all'interno del progetto ChatService.
+In Esplora soluzioni espandere la cartella **ruoli** all'interno del progetto ChatService.
 
 ![](scaleout-with-windows-azure-service-bus/_static/image8.png)
 
-Il ruolo SignalRChat e scegliere **proprietà**. Scegliere la scheda **Configurazione**. Sotto **istanze** selezionare 2. È anche possibile impostare le dimensioni VM su **molto piccola**.
+Fare clic con il pulsante destro del mouse sul ruolo SignalRChat e scegliere **Proprietà**. Selezionare la scheda **configurazione** . In **istanze** selezionare 2. È anche possibile impostare le dimensioni della macchina virtuale su un numero molto **basso**.
 
 ![](scaleout-with-windows-azure-service-bus/_static/image9.png)
 
 Salvare le modifiche.
 
-In Esplora soluzioni fare clic sul progetto le ChatService. Selezionare **Pubblica**.
+In Esplora soluzioni fare clic con il pulsante destro del mouse sul progetto ChatService. Selezionare **Pubblica**.
 
 ![](scaleout-with-windows-azure-service-bus/_static/image10.png)
 
-Se questa è la prima pubblicazione ora Windows Azure, è necessario scaricare le credenziali. Nel **pubblica** procedura guidata, fare clic su "Accedi scaricare le credenziali". Verrà chiesto di accedere al portale di Azure e scaricare un file di impostazioni di pubblicazione.
+Se è la prima volta che si esegue la pubblicazione in Windows Azure, è necessario scaricare le credenziali. Nella **pubblicazione** guidata, fare clic su "Accedi per scaricare le credenziali". Verrà richiesto di accedere al portale di Azure di Windows e di scaricare un file di impostazioni di pubblicazione.
 
 ![](scaleout-with-windows-azure-service-bus/_static/image11.png)
 
-Fare clic su **importazione** e selezionare il file di impostazioni di pubblicazione scaricato.
+Fare clic su **Importa** e selezionare il file di impostazioni di pubblicazione scaricato.
 
-Scegliere **Avanti**. Nel **impostazioni di pubblicazione** finestra di dialogo, sotto **servizio Cloud**, selezionare il servizio cloud creato in precedenza.
+Fare clic su **Avanti**. Nella finestra di dialogo **impostazioni di pubblicazione** , in **servizio cloud**, selezionare il servizio cloud creato in precedenza.
 
 ![](scaleout-with-windows-azure-service-bus/_static/image12.png)
 
-Fare clic su **Pubblica**. Possono volerci alcuni minuti per distribuire l'applicazione e avviare le macchine virtuali.
+Fare clic su **Pubblica**. La distribuzione dell'applicazione e l'avvio delle macchine virtuali potrebbero richiedere alcuni minuti.
 
-A questo punto quando si esegue l'applicazione di chat, istanze del ruolo di comunicano tramite il Bus di servizio di Azure, usando un argomento del Bus di servizio. Un argomento è una coda di messaggi che consente a più sottoscrittori.
+Ora, quando si esegue l'applicazione di chat, le istanze del ruolo comunicano tramite il bus di servizio di Azure, usando un argomento del bus di servizio. Un argomento è una coda di messaggi che consente più Sottoscrittori.
 
-Backplane crea automaticamente gli argomenti e sottoscrizioni. Per visualizzare le sottoscrizioni e attività del messaggio, aprire il portale di Azure, selezionare lo spazio dei nomi del Bus di servizio e fare clic su "Argomenti".
+Il backplane crea automaticamente l'argomento e le sottoscrizioni. Per visualizzare le sottoscrizioni e l'attività del messaggio, aprire il portale di Azure, selezionare lo spazio dei nomi del bus di servizio e fare clic su "argomenti".
 
 ![](scaleout-with-windows-azure-service-bus/_static/image13.png)
 
-Rende necessari alcuni minuti per l'attività del messaggio da visualizzare nel dashboard.
+Per la visualizzazione dell'attività del messaggio nel dashboard sono necessari alcuni minuti.
 
 ![](scaleout-with-windows-azure-service-bus/_static/image14.png)
 
-SignalR gestisce la durata di argomento. Fino a quando l'applicazione viene distribuita, non tentare di eliminare gli argomenti manualmente o modificare le impostazioni per l'argomento.
+SignalR gestisce la durata dell'argomento. Finché l'applicazione viene distribuita, non provare a eliminare manualmente gli argomenti o a modificare le impostazioni dell'argomento.

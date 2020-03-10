@@ -9,11 +9,11 @@ ms.assetid: 7958d725-e958-4566-a85b-535eeb985f94
 msc.legacyurl: /mvc/overview/getting-started/recommended-resources-for-mvc
 msc.type: authoredcontent
 ms.openlocfilehash: 11f4a7cae8d425873b1828a9e5f51471def954fb
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457154"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78582194"
 ---
 # <a name="mvc-recommended-resources"></a>Risorse consigliate su MVC
 
@@ -274,7 +274,7 @@ di [Rick Anderson](https://twitter.com/RickAndMSFT)
 
 <a id="mobile"></a>
 
-## <a name="mobile"></a>Dispositivi mobili
+## <a name="mobile"></a>Cellulare
 
 - [Esercitazione su ASP.NET MVC 4 per dispositivi mobili](../older-versions/aspnet-mvc-4-mobile-features.md)
 - [Video Creazione di siti Web intuitivi per dispositivi mobili con MVC 4](https://www.bitcast.io/v/building-mobile-friendly-websites-with-mvc-4)
@@ -327,7 +327,7 @@ di [Rick Anderson](https://twitter.com/RickAndMSFT)
 
 <a id="best"></a>
 
-## <a name="best-practices"></a>Procedure consigliate
+## <a name="best-practices"></a>Suggerimenti
 
 - [Operazioni da eseguire e da evitare in ASP.NET](../../../aspnet/overview/web-development-best-practices/what-not-to-do-in-aspnet-and-what-to-do-instead.md)
 - [Elenco di controllo per sviluppatori Web](http://webdevchecklist.com/aspnet)

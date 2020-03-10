@@ -9,11 +9,11 @@ ms.assetid: 83af9f5f-9a00-4f83-8afc-e98bdd49014e
 msc.legacyurl: /web-forms/overview/older-versions-security/roles/creating-and-managing-roles-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 825e2afb750925637d308b7ceb35e1b02b708c1d
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74586380"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78565387"
 ---
 # <a name="creating-and-managing-roles-vb"></a>Creazione e gestione di ruoli (VB)
 
@@ -31,7 +31,7 @@ In genere consente di classificare gli utenti in gruppi o *ruoli* e quindi di ap
 
 ASP.NET offre un framework dei ruoli per definire i ruoli e associarli agli account utente. Con il Framework dei ruoli è possibile creare ed eliminare ruoli, aggiungere o rimuovere utenti da un ruolo, determinare il set di utenti che appartengono a un determinato ruolo e indicare se un utente appartiene a un ruolo specifico. Una volta configurato il Framework dei ruoli, è possibile limitare l'accesso alle pagine in base al ruolo con le regole di autorizzazione URL e visualizzare o nascondere informazioni aggiuntive o funzionalità in una pagina in base ai ruoli dell'utente attualmente connesso.
 
-In questa esercitazione vengono esaminati i passaggi necessari per configurare il Framework dei ruoli. In seguito, le pagine Web vengono compilate per creare ed eliminare i ruoli. Nell'esercitazione <a id="_msoanchor_2"> </a> [*assegnazione dei ruoli agli utenti*](assigning-roles-to-users-vb.md) si osserverà come aggiungere e rimuovere utenti dai ruoli. Nell' <a id="_msoanchor_3"> </a>esercitazione sull' [*autorizzazione basata sui ruoli*](role-based-authorization-vb.md) viene illustrato come limitare l'accesso alle pagine in base al ruolo, insieme a come modificare la funzionalità della pagina a seconda del ruolo dell'utente visitato. Iniziamo!
+In questa esercitazione vengono esaminati i passaggi necessari per configurare il Framework dei ruoli. In seguito, le pagine Web vengono compilate per creare ed eliminare i ruoli. Nell'esercitazione <a id="_msoanchor_2"> </a> [*assegnazione dei ruoli agli utenti*](assigning-roles-to-users-vb.md) si osserverà come aggiungere e rimuovere utenti dai ruoli. Nell' <a id="_msoanchor_3"> </a>esercitazione sull' [*autorizzazione basata sui ruoli*](role-based-authorization-vb.md) viene illustrato come limitare l'accesso alle pagine in base al ruolo, insieme a come modificare la funzionalità della pagina a seconda del ruolo dell'utente visitato. Ecco come procedere.
 
 ## <a name="step-1-adding-new-aspnet-pages"></a>Passaggio 1: aggiunta di nuove pagine di ASP.NET
 

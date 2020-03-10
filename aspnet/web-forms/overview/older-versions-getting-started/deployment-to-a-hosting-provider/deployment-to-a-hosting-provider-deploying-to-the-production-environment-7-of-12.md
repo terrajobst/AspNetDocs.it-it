@@ -9,11 +9,11 @@ ms.assetid: b83ab819-2b05-4776-b7b4-79ef78d457a5
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12
 msc.type: authoredcontent
 ms.openlocfilehash: db838633accdedd7c0693b126a007e254ca681e4
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74627459"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78568019"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-deploying-to-the-production-environment---7-of-12"></a>Distribuzione di un'applicazione Web ASP.NET con SQL Server Compact mediante Visual Studio o Visual Web Developer: distribuzione nell'ambiente di produzione-7 di 12
 
@@ -25,7 +25,7 @@ di [Tom Dykstra](https://github.com/tdykstra)
 > 
 > Per un'esercitazione in cui vengono illustrate le funzionalità di distribuzione introdotte dopo la versione RC di Visual Studio 2012, viene illustrato come distribuire SQL Server edizioni diverse da SQL Server Compact e viene illustrato come eseguire la distribuzione in app Azure app Web del servizio, vedere [distribuzione web ASP.NET con Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
 
-## <a name="overview"></a>Panoramica di
+## <a name="overview"></a>Panoramica
 
 In questa esercitazione si configura un account con un provider di hosting e si distribuisce l'applicazione Web ASP.NET nell'ambiente di produzione usando la funzionalità di pubblicazione con un solo clic di Visual Studio.
 
@@ -99,7 +99,7 @@ Selezionare la scheda **pubblicazione sul Web** .
 
 ![Scheda pubblicazione sul Web del pannello di controllo](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image21.png)
 
-Creazione di credenziali da utilizzare per la pubblicazione sul Web immettendo un nome utente e una password. È possibile immettere le stesse credenziali utilizzate per accedere al pannello di controllo. Quindi fare clic su **Abilita**.
+Creazione di credenziali da utilizzare per la pubblicazione sul Web immettendo un nome utente e una password. È possibile immettere le stesse credenziali utilizzate per accedere al pannello di controllo. Fare quindi clic su **Attiva**.
 
 ![Pannello di controllo creare le credenziali di pubblicazione](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image22.png)
 
@@ -129,7 +129,7 @@ Quando si fa clic su convalida connessione, potrebbe essere visualizzata una fin
 
 ![Errore certificato](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image27.png)
 
-Scegliere **Avanti**.
+Fare clic su **Avanti**.
 
 Nella sezione **database** della scheda **Impostazioni** immettere gli stessi valori immessi per il profilo di pubblicazione del test. Sono disponibili le stringhe di connessione necessarie negli elenchi a discesa.
 
@@ -140,7 +140,7 @@ Nella sezione **database** della scheda **Impostazioni** immettere gli stessi va
 
 ![Scheda Impostazioni della procedura guidata Pubblica sito Web](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image28.png)
 
-Scegliere **Avanti**.
+Fare clic su **Avanti**.
 
 Nella scheda **Anteprima** fare clic su **Avvia anteprima** per visualizzare un elenco dei file che verranno copiati. Viene visualizzato lo stesso elenco visualizzato in precedenza quando è stato distribuito in IIS nel computer locale.
 
@@ -148,7 +148,7 @@ Prima di pubblicare, modificare il nome del profilo in modo che il file di trasf
 
 ![Procedura guidata Pubblica sito Web Gestisci profili](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image29.png)
 
-Nella finestra di dialogo **modifica profili di pubblicazione Web** selezionare il profilo di produzione, fare clic su **Rinomina**e modificare il nome del profilo in produzione. Quindi fare clic su **Chiudi**.
+Nella finestra di dialogo **modifica profili di pubblicazione Web** selezionare il profilo di produzione, fare clic su **Rinomina**e modificare il nome del profilo in produzione. e quindi fare clic su **Chiudi**.
 
 ![Finestra di dialogo Modifica profili di pubblicazione Web](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image30.png)
 

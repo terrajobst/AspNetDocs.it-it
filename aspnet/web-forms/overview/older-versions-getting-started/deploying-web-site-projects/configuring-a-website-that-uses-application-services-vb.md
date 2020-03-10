@@ -9,11 +9,11 @@ ms.assetid: 9c31a42f-d8bb-4c0f-9ccc-597d4f70ac42
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/configuring-a-website-that-uses-application-services-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 19e7258b558372259c7554a36c6ad73ce572dfa8
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74588732"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78642100"
 ---
 # <a name="configuring-a-website-that-uses-application-services-vb"></a>Configurazione di un sito Web che usa i servizi per le applicazioni (VB)
 
@@ -127,7 +127,7 @@ Per verificare che gli oggetti di database dei servizi dell'applicazione siano s
 
 ### <a name="copying-user-accounts-from-development-to-production"></a>Copia degli account utente dallo sviluppo alla produzione
 
-Quando si utilizzano le classi del provider `SqlMembershipProvider` e `SqlRoleProvider` per archiviare le informazioni dei servizi dell'applicazione in un database SQL Server, le informazioni sull'account utente e sul ruolo vengono archiviate in un'ampia gamma di tabelle di database, tra cui `aspnet_Users`, `aspnet_Membership`, `aspnet_Roles`e `aspnet_UsersInRoles`. Se durante lo sviluppo si creano account utente nell'ambiente di sviluppo, è possibile replicare tali account utente in produzione copiando i record corrispondenti dalle tabelle di database applicabili. Se è stata utilizzata la pubblicazione guidata database per distribuire gli oggetti di database dei servizi applicazioni, è possibile che sia stata anche scelta la copia dei record, in modo che gli account utente creati in fase di sviluppo siano anche in produzione. Tuttavia, a seconda delle impostazioni di configurazione, è possibile che gli utenti i cui account sono stati creati in fase di sviluppo e copiati in produzione non siano in grado di accedere dal sito Web di produzione. Che cosa offre?
+Quando si utilizzano le classi del provider `SqlMembershipProvider` e `SqlRoleProvider` per archiviare le informazioni dei servizi dell'applicazione in un database SQL Server, le informazioni sull'account utente e sul ruolo vengono archiviate in un'ampia gamma di tabelle di database, tra cui `aspnet_Users`, `aspnet_Membership`, `aspnet_Roles`e `aspnet_UsersInRoles`. Se durante lo sviluppo si creano account utente nell'ambiente di sviluppo, è possibile replicare tali account utente in produzione copiando i record corrispondenti dalle tabelle di database applicabili. Se è stata utilizzata la pubblicazione guidata database per distribuire gli oggetti di database dei servizi applicazioni, è possibile che sia stata anche scelta la copia dei record, in modo che gli account utente creati in fase di sviluppo siano anche in produzione. Tuttavia, a seconda delle impostazioni di configurazione, è possibile che gli utenti i cui account sono stati creati in fase di sviluppo e copiati in produzione non siano in grado di accedere dal sito Web di produzione. Quali sono i vantaggi?
 
 Le classi del provider `SqlMembershipProvider` e `SqlRoleProvider` sono state progettate in modo da consentire a un singolo database di fungere da archivio utente per più applicazioni, in cui ogni applicazione può, in teoria, avere utenti con nomi utente e ruoli sovrapposti con lo stesso nome. Per consentire questa flessibilità, il database gestisce un elenco di applicazioni nella tabella `aspnet_Applications` e ogni utente è associato a una di queste applicazioni. In particolare, la tabella `aspnet_Users` dispone di una colonna `ApplicationId` che associa ogni utente a un record nella tabella `aspnet_Applications`.
 

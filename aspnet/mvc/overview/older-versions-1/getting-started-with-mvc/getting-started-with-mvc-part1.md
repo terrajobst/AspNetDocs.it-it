@@ -1,84 +1,84 @@
 ---
 uid: mvc/overview/older-versions-1/getting-started-with-mvc/getting-started-with-mvc-part1
-title: Introduzione ad ASP.NET MVC | Microsoft Docs
+title: Introduzione a ASP.NET MVC | Microsoft Docs
 author: shanselman
-description: Si tratta di un'esercitazione per principianti che introduce i concetti di base di ASP.NET MVC. Creare un'applicazione web semplice che legge e scrive da un database.
+description: Questa esercitazione introduttiva illustra le nozioni di base di ASP.NET MVC. Creare una semplice applicazione Web che legge e scrive da un database.
 ms.author: riande
 ms.date: 08/14/2010
 ms.assetid: bf4a1c19-0a94-4208-b268-a96ddcf26946
 msc.legacyurl: /mvc/overview/older-versions-1/getting-started-with-mvc/getting-started-with-mvc-part1
 msc.type: authoredcontent
 ms.openlocfilehash: f8f0014776ba1313119e8c39c63a216b0fc864e7
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65123130"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78581585"
 ---
 # <a name="intro-to-aspnet-mvc"></a>Introduzione ad ASP.NET MVC
 
-da [Scott Hanselman](https://github.com/shanselman)
+di [Scott hanseln](https://github.com/shanselman)
 
 > > [!NOTE]
-> > Una versione aggiornata se è disponibile in questa esercitazione [Ecco](../../getting-started/introduction/getting-started.md) utilizzando [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013). La nuova esercitazione Usa ASP.NET MVC 5, che offre numerosi miglioramenti in questa esercitazione.
+> > Una versione aggiornata se questa esercitazione è disponibile [qui](../../getting-started/introduction/getting-started.md) usando [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013). La nuova esercitazione USA ASP.NET MVC 5, che fornisce molti miglioramenti rispetto a questa esercitazione.
 >
 >
-> Si tratta di un'esercitazione per principianti che introduce i concetti di base di ASP.NET MVC. Si creerà una semplice applicazione web che legge e scrive da un database. Visitare il [centro di formazione di ASP.NET MVC](../../../index.md) per trovare altri ASP.NET MVC, esercitazioni ed esempi.
+> Questa esercitazione introduttiva illustra le nozioni di base di ASP.NET MVC. Verrà creata una semplice applicazione Web che legge e scrive da un database. Visitare il [centro per l'apprendimento di ASP.NET MVC](../../../index.md) per trovare altre esercitazioni ed esempi di ASP.NET MVC.
 
-Creare la prima applicazione Web MVC ASP.NET utilizzando [Visual Web Developer 2010 Express](https://www.microsoft.com/express/Web/). Ci assicureremo una piccola applicazione elenco di film che verrà creato e l'elenco di film invia i tuoi commenti.
+È ora necessario creare la prima applicazione Web MVC ASP.NET con [Visual Web Developer 2010 Express](https://www.microsoft.com/express/Web/). Verrà creata un'applicazione di elenco di film che ci consentirà di creare ed elencare i film.
 
 ## <a name="what-youll-build"></a>Scopo dell'esercitazione
 
-Ecco due schermate dell'applicazione che verrà compilata. Si avrà una semplice tabella di film con varie colonne.
+Ecco due screenshot dell'applicazione che verrà compilata. Si disporrà di una semplice tabella di filmati con varie colonne.
 
-[![Movie List - Windows Internet Explorer (12)](getting-started-with-mvc-part1/_static/image2.png)](getting-started-with-mvc-part1/_static/image1.png)
+[Elenco di film ![-Windows Internet Explorer (12)](getting-started-with-mvc-part1/_static/image2.png)](getting-started-with-mvc-part1/_static/image1.png)
 
-E sarà necessario un modulo creare in modo che possiamo aggiungere all'elenco di film.
+Ed è possibile creare un modulo per aggiungere film all'elenco.
 
-[![Creare un filmato - Windows Internet Explorer (2)](getting-started-with-mvc-part1/_static/image4.png)](getting-started-with-mvc-part1/_static/image3.png)
+[![creare un film-Windows Internet Explorer (2)](getting-started-with-mvc-part1/_static/image4.png)](getting-started-with-mvc-part1/_static/image3.png)
 
-## <a name="skills-youll-learn"></a>Competenze
+## <a name="skills-youll-learn"></a>Acquisizione di competenze
 
-Questa esercitazione insegnerà le nozioni di base della creazione di un'applicazione Web ASP.NET MVC con Visual Studio. Si apprenderà come:
+Questa esercitazione illustra le nozioni di base per la creazione di un'applicazione Web MVC ASP.NET con Visual Studio. Si apprenderà come:
 
-- Come creare un nuovo progetto ASP.NET MVC
-- Come creare un nuovo Database con SQL Server
-- Come creare visualizzazioni e controller MVC ASP.NET
+- Come creare un nuovo progetto MVC ASP.NET
+- Come creare un nuovo database con SQL Server
+- Come creare controller e visualizzazioni MVC ASP.NET
 - Come recuperare e visualizzare i dati
 - Come modificare i dati e abilitare la convalida dei dati
 - Come aggiornare lo schema del database
 
 ## <a name="get-started"></a>Introduzione
 
-Iniziare eseguendo Visual Web Developer 2010 Express (che chiamerò "VWD" nel) e selezionare Nuovo progetto dalla schermata Start.
+Per iniziare, eseguire Visual Web Developer 2010 Express, che chiamerò "VWD" da ora in poi, e selezionare nuovo progetto dalla schermata Start.
 
-Visual Web Developer è un IDE, o ambiente di sviluppo integrato. Come si usa Microsoft Word per scrivere documenti, si userà un IDE per creare applicazioni. È presente una barra degli strumenti nella parte superiore che mostra le diverse opzioni disponibili si, nonché i menu potrebbe anche avere utilizzato per selezionare File | Nuovo progetto.
+Visual Web Developer è un IDE o un ambiente di sviluppo integrato. Proprio come si usa Microsoft Word per scrivere documenti, si userà un IDE per creare applicazioni. Nella parte superiore sono disponibili una barra degli strumenti che mostra le varie opzioni disponibili, nonché il menu che è possibile usare per selezionare il file | Nuovo progetto.
 
 [![Microsoft Visual Web Developer 2010 Express](getting-started-with-mvc-part1/_static/image6.png)](getting-started-with-mvc-part1/_static/image5.png)
 
 ## <a name="creating-your-first-application"></a>Creazione della prima applicazione
 
-È possibile creare applicazioni con Visual Basic o Visual c#. Per il momento, selezionare Visual c# a sinistra, quindi selezionare "Applicazione Web ASP.NET MVC 2". Denominare il progetto "Movies" e fare clic su OK.
+È possibile creare applicazioni usando Visual Basic o Visual C#. Per il momento selezionare oggetto C# visivo a sinistra, quindi scegliere "ASP.NET MVC 2 Web Application". Denominare il progetto "Movies" e fare clic su OK.
 
-[![Nuovo progetto](getting-started-with-mvc-part1/_static/image8.png)](getting-started-with-mvc-part1/_static/image7.png)
+[![nuovo progetto](getting-started-with-mvc-part1/_static/image8.png)](getting-started-with-mvc-part1/_static/image7.png)
 
-Sul lato destro è di Esplora soluzioni con tutti i file e cartelle all'interno dell'applicazione. Finestra al centro di big data è possibile modificare il codice e trascorrono la maggior parte del tempo. Visual Studio usato un modello predefinito per il progetto ASP.NET MVC che appena creato, in modo che sia subito un'applicazione funzionante non esegue alcuna operazione. Si tratta di una semplice "Hello World! progetto che è un buon punto di partenza per la nostra applicazione.
+Sul lato destro è presente la Esplora soluzioni che Mostra tutti i file e le cartelle dell'applicazione. La finestra grande al centro è la posizione in cui si modifica il codice e si dedica la maggior parte del tempo. Visual Studio ha usato un modello predefinito per il progetto MVC ASP.NET appena creato ed è quindi disponibile un'applicazione funzionante senza eseguire alcuna operazione. Si tratta di una semplice "Hello World! progetto ed è un punto di partenza ideale per l'applicazione.
 
 [![Microsoft Visual Web Developer 2010 Express](getting-started-with-mvc-part1/_static/image10.png)](getting-started-with-mvc-part1/_static/image9.png)
 
-Selezionare il pulsante "play" alla barra degli strumenti.
+Selezionare il pulsante "Riproduci" sulla barra degli strumenti.
 
 ![Avvia debug](getting-started-with-mvc-part1/_static/image11.png)
 
-È una freccia verde rivolta verso destra che verrà compilato il programma e avviare l'applicazione in un web browser.
+Si tratta di una freccia verde che punta a destra che compilerà il programma e avvierà l'applicazione in un Web browser.
 
-*NOTA: È invece possibile premere F5 sulla tastiera o selezionare Debug -&gt;Avvia debug dal menu "Debug".*
+*Nota: è possibile premere F5 sulla tastiera oppure selezionare debug-&gt;avviare il debug dal menu "debug".*
 
-In questo modo Visual Web Developer avviare un server web di sviluppo ed eseguire l'applicazione web (non esistono alcuna configurazione o passaggi manuali necessari per abilitare questa opzione). Quindi verrà avviato un browser e configurarlo per Sfoglia home page dell'applicazione. Notare che la barra degli indirizzi del browser viene visualizzato "localhost" e non un valore come example.com sotto. Ciò avviene perché localhost fa sempre riferimento al proprio computer locale - che in questo caso è in esecuzione l'applicazione, che abbiamo appena creato.
+In questo modo, Visual Web Developer avvierà un server Web di sviluppo ed eseguirà l'applicazione Web (per abilitare questa operazione non è necessaria alcuna configurazione o procedura manuale). Viene quindi avviato un browser e configurato per l'esplorazione della Home page dell'applicazione. Si noti che la barra degli indirizzi del browser indica "localhost" e non un elemento come example.com. Questo perché localhost fa sempre riferimento al computer locale, che in questo caso esegue l'applicazione appena compilata.
 
-[![Home Page](getting-started-with-mvc-part1/_static/image13.png)](getting-started-with-mvc-part1/_static/image12.png)
+[Home page di ![](getting-started-with-mvc-part1/_static/image13.png)](getting-started-with-mvc-part1/_static/image12.png)
 
-Impostazione predefinita questo modello predefinito include è due pagine alla visita e una pagina di accesso basic. È possibile modificare il comportamento dell'applicazione e scopri un po' su ASP.NET MVC nel processo. Chiudere il browser e consente di modificare il codice.
+Questo modello predefinito fornisce due pagine da visitare e una pagina di accesso di base. Modificare il funzionamento di questa applicazione e apprendere un po' di ASP.NET MVC nel processo. Chiudere il browser e modificare il codice.
 
 > [!div class="step-by-step"]
 > [avanti](getting-started-with-mvc-part2.md)

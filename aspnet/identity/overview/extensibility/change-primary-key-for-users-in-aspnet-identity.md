@@ -10,15 +10,15 @@ ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/extensibility/change-primary-key-for-users-in-aspnet-identity
 msc.type: authoredcontent
 ms.openlocfilehash: 0afea8eacfc646f1489b87629fdb2d437815d88c
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519141"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78584462"
 ---
 # <a name="change-primary-key-for-users-in-aspnet-identity"></a>Modifica della chiave primaria per gli utenti in ASP.NET Identity
 
-da [Tom FitzMacken](https://github.com/tfitzmac)
+di [Tom FitzMacken](https://github.com/tfitzmac)
 
 > In Visual Studio 2013, l'applicazione Web predefinita utilizza un valore stringa per la chiave per gli account utente. ASP.NET Identity consente di modificare il tipo di chiave per soddisfare i requisiti dei dati. Ad esempio, è possibile modificare il tipo della chiave da una stringa a un numero intero.
 > 
@@ -32,7 +32,7 @@ da [Tom FitzMacken](https://github.com/tfitzmac)
 
 Per eseguire la procedura descritta in questa esercitazione, è necessario avere Visual Studio 2013 Update 2 (o versione successiva) e un'applicazione Web creata dal modello di applicazione Web ASP.NET. Il modello è stato modificato nell'aggiornamento 3. In questo argomento viene illustrato come modificare il modello in Update 2 e Update 3.
 
-Di seguito sono elencate le diverse sezioni di questo argomento:
+Questo argomento è suddiviso nelle sezioni seguenti:
 
 - [Modificare il tipo della chiave nella classe utente Identity](#userclass)
 - [Aggiungere classi Identity personalizzate che usano il tipo di chiave](#customclass)

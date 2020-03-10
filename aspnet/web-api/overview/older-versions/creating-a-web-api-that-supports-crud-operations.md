@@ -10,11 +10,11 @@ ms.assetid: c125ca47-606a-4d6f-a1fc-1fc62928af93
 msc.legacyurl: /web-api/overview/older-versions/creating-a-web-api-that-supports-crud-operations
 msc.type: authoredcontent
 ms.openlocfilehash: a096fd1c54df33b40115907a5c2517b2e3fec5b8
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74600342"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78556203"
 ---
 # <a name="enabling-crud-operations-in-aspnet-web-api-1"></a>Abilitazione di operazioni CRUD in API Web ASP.NET 1
 
@@ -41,7 +41,7 @@ L'API prodotti esporrà i metodi seguenti.
 | Ottenere un elenco di tutti i prodotti | GET | /api/products |
 | Ottenere un prodotto in base all'ID | GET | *ID* /API/Products/ |
 | Ottenere un prodotto per categoria | GET | /API/Products? Category =*categoria* |
-| Creare un nuovo prodotto | Inserisci | /api/products |
+| Creare un nuovo prodotto | INSERISCI | /api/products |
 | Aggiornare un prodotto | PUT | *ID* /API/Products/ |
 | Eliminare un prodotto | DELETE | *ID* /API/Products/ |
 
@@ -85,7 +85,7 @@ Un *modello* è un oggetto che rappresenta i dati nell'applicazione. In API Web 
 
 Per l'API ProductStore, i dati sono costituiti da prodotti, quindi verrà creata una nuova classe denominata `Product`.
 
-Se Esplora soluzioni non è ancora visibile, fare clic sul menu **Visualizza** e selezionare **Esplora soluzioni**. In Esplora soluzioni fare clic con il pulsante destro del mouse sulla cartella **Models** . Dal menu di scelta rapida selezionare **Aggiungi**e quindi selezionare **classe**. Denominare la classe &quot;&quot;prodotto.
+Se Esplora soluzioni non è ancora visibile, fare clic sul menu **Visualizza** e quindi selezionare **Esplora soluzioni**. In Esplora soluzioni fare clic con il pulsante destro del mouse sulla cartella **Models** . Dal menu di scelta rapida selezionare **Aggiungi**e quindi selezionare **classe**. Denominare la classe &quot;&quot;prodotto.
 
 ![](creating-a-web-api-that-supports-crud-operations/_static/image3.png)
 
@@ -124,7 +124,7 @@ Se si è lavorato con ASP.NET MVC, si ha già familiarità con i controller. In 
 
 Andare avanti ed eliminare ValuesController, facendo clic con il pulsante destro del mouse sul file in Esplora soluzioni e scegliendo **Elimina.** Aggiungere ora un nuovo controller, come indicato di seguito:
 
-In **Esplora soluzioni**fare clic con il pulsante destro del mouse sulla cartella Controllers. Selezionare **Aggiungi** e quindi **controller**.
+In **Esplora soluzioni** fare clic sulla cartella Controller. Selezionare **Aggiungi** e quindi selezionare **Controller**.
 
 ![](creating-a-web-api-that-supports-crud-operations/_static/image6.png)
 
@@ -135,7 +135,7 @@ Nella procedura guidata **Aggiungi controller** assegnare un nome al controller 
 > [!NOTE]
 > Non è necessario inserire i controller in una cartella denominata Controllers. Il nome della cartella non è importante. si tratta semplicemente di un modo pratico per organizzare i file di origine.
 
-L' **Aggiunta guidata controller** creerà un file denominato ProductsController.cs nella cartella Controllers. Se il file non è già aperto, fare doppio clic sul file per aprirlo. Aggiungere la seguente istruzione **using** :
+L' **Aggiunta guidata controller** creerà un file denominato ProductsController.cs nella cartella Controllers. Se non è già aperto, fare doppio clic sul file per aprirlo. Aggiungere l'istruzione **using** seguente:
 
 [!code-csharp[Main](creating-a-web-api-that-supports-crud-operations/samples/sample4.cs)]
 

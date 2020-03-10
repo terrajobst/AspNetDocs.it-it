@@ -9,11 +9,11 @@ ms.assetid: c76dbc35-a914-4ee3-919c-4f4d1fa05104
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/deploying-a-code-update
 msc.type: authoredcontent
 ms.openlocfilehash: 3881833bfe2a50a38a357614f92f434a04a8ab08
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74626773"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78567403"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-deploying-a-code-update"></a>Distribuzione Web ASP.NET con Visual Studio: distribuzione di un aggiornamento del codice
 
@@ -23,13 +23,13 @@ di [Tom Dykstra](https://github.com/tdykstra)
 
 > Questa serie di esercitazioni illustra come distribuire (pubblicare) un'applicazione Web ASP.NET in app Web di servizio app Azure o in un provider di hosting di terze parti, usando Visual Studio 2012 o Visual Studio 2010. Per informazioni sulla serie, vedere [la prima esercitazione della serie](introduction.md).
 
-## <a name="overview"></a>Panoramica di
+## <a name="overview"></a>Panoramica
 
 Dopo la distribuzione iniziale, il lavoro di manutenzione e sviluppo del sito Web continua e, prima di lungo, sarà necessario distribuire un aggiornamento. Questa esercitazione illustra il processo di distribuzione di un aggiornamento nel codice dell'applicazione. L'aggiornamento implementato e distribuito in questa esercitazione non implica una modifica del database. verranno visualizzate le differenze relative alla distribuzione di una modifica del database nell'esercitazione successiva.
 
 Promemoria: se si riceve un messaggio di errore o un elemento non funziona durante l'esercitazione, assicurarsi di controllare la pagina relativa alla [risoluzione dei problemi](troubleshooting.md).
 
-## <a name="make-a-code-change"></a>Apportare una modifica al codice
+## <a name="make-a-code-change"></a>Effettuare una modifica del codice
 
 Come semplice esempio di aggiornamento dell'applicazione, si aggiungerà alla pagina degli **insegnanti** un elenco di corsi insegnato dall'insegnante selezionato.
 
@@ -53,7 +53,7 @@ Prima di poter usare i profili di pubblicazione per eseguire la distribuzione in
 
 1. Aprire la procedura guidata **Pubblica sito Web** facendo clic con il pulsante destro del mouse sul progetto ContosoUniversity e scegliendo **pubblica**.
 2. Fare clic sul profilo **test** nell'elenco a discesa **profilo** .
-3. Fare clic sulla scheda **Impostazioni** .
+3. Fare clic sulla scheda **Impostazioni**.
 4. In **DefaultConnection** nella sezione **database** deselezionare la casella di controllo **Aggiorna database** .
 5. Fare clic sulla scheda **profilo** , quindi fare clic sul profilo di **gestione temporanea** nell'elenco a discesa **profilo** .
 6. Quando viene chiesto se si desidera salvare le modifiche apportate al profilo di **test** , fare clic su **Sì**.
@@ -184,7 +184,7 @@ Si supponga di non avere lo sfondo blu e di voler ripristinare il colore origina
 
     Viene visualizzata una finestra in cui sono illustrate le differenze tra il file locale e la versione dell'ambiente di destinazione.
 
-    ![Diff-Content/site. CSS](deploying-a-code-update/_static/image13.png)
+    ![Diff-Content/Site.css](deploying-a-code-update/_static/image13.png)
 4. In **Esplora soluzioni**fare nuovamente clic con il pulsante destro del mouse su **site. CSS** e scegliere **Pubblica sito. CSS**.
 
     La finestra **attività di pubblicazione Web** indica che il file è stato pubblicato.

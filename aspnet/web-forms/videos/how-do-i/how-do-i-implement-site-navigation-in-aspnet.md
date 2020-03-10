@@ -1,24 +1,24 @@
 ---
 uid: web-forms/videos/how-do-i/how-do-i-implement-site-navigation-in-aspnet
-title: '[Procedura:] Esplorazione del sito di implementare in ASP.NET? | Microsoft Docs'
+title: '[Procedura:] Implementare lo spostamento nel sito in ASP.NET? | Microsoft Docs'
 author: rick-anderson
-description: In questo video abbiamo informazioni su come definire una mappa del sito e usarla con i controlli server Menu, TreeView e Sitemap. Viene illustrato come utilizzare una mappa del sito in una pagina master...
+description: In questo video viene illustrato come definire una Sitemap e usarla con i controlli menu, TreeView e Sitemap server. Si vedrà come usare una Sitemap in una pagina master...
 ms.author: riande
 ms.date: 10/18/2007
 ms.assetid: 889e8100-a80c-41c0-bfeb-7d466c754548
 msc.legacyurl: /web-forms/videos/how-do-i/how-do-i-implement-site-navigation-in-aspnet
 msc.type: video
 ms.openlocfilehash: 527d928b46ac5bfedc841d5ffacb4e5baa74eb54
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59416454"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78567732"
 ---
-# <a name="how-do-i-implement-site-navigation-in-aspnet"></a>[Procedura:] Esplorazione del sito di implementare in ASP.NET?
+# <a name="how-do-i-implement-site-navigation-in-aspnet"></a>[Procedura:] Implementare lo spostamento nel sito in ASP.NET?
 
-da [Chris Pels](https://twitter.com/chrispels)
+di [Chris Pels](https://twitter.com/chrispels)
 
-In questo video abbiamo informazioni su come definire una mappa del sito e usarla con i controlli server Menu, TreeView e Sitemap. È possibile vedere come usare una mappa del sito in una pagina master per i menu a livello di sito e come possiamo funzionalità sitemaps singola o multipla in una pagina. È inoltre, verrà illustrato come integrare una mappa del sito con i ruoli ASP.NET utilizzando "rimozione di sicurezza" per mostrare o nascondere le opzioni di menu per gli utenti con diversi livelli di accesso in modo dinamico.
+In questo video viene illustrato come definire una Sitemap e usarla con i controlli menu, TreeView e Sitemap server. Viene illustrato come utilizzare una Sitemap in una pagina master per i menu a livello di sito e come è possibile disporre di una o più Sitemap in una pagina. Viene inoltre illustrato come integrare una Sitemap con i ruoli ASP.NET utilizzando "taglio di sicurezza" per visualizzare o nascondere in modo dinamico le opzioni di menu per gli utenti con livelli di accesso diversi.
 
 [&#9654;Guarda il video (29 minuti)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-implement-site-navigation-in-aspnet)

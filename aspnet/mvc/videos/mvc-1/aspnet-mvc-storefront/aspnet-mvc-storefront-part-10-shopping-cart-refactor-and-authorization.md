@@ -1,25 +1,25 @@
 ---
 uid: mvc/videos/mvc-1/aspnet-mvc-storefront/aspnet-mvc-storefront-part-10-shopping-cart-refactor-and-authorization
-title: 'ASP.NET MVC Storefront - Parte 10: Shopping Cart refactoring e autorizzazione | Microsoft Docs'
+title: 'ASP.NET MVC storefront-parte 10: refactoring del carrello acquisti e autorizzazione | Microsoft Docs'
 author: robconery
-description: Rob effettua il refactoring iniziale andare al carrello della spesa e implementa il nucleo di un sistema di appartenenze tramite l'appartenenza di ASP.NET.
+description: Rob effettua il refactoring iniziale del carrello acquisti e implementa il nucleo di un sistema di appartenenze usando l'appartenenza a ASP.NET.
 ms.author: riande
 ms.date: 05/27/2008
 ms.assetid: 24ee3167-c5ae-45e1-9636-299231e5eae0
 msc.legacyurl: /mvc/videos/mvc-1/aspnet-mvc-storefront/aspnet-mvc-storefront-part-10-shopping-cart-refactor-and-authorization
 msc.type: video
 ms.openlocfilehash: 57cac8d4fc2ee70689e625ed7c22cea0cb3bc4d9
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59408082"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78537884"
 ---
-# <a name="aspnet-mvc-storefront-part-10-shopping-cart-refactor-and-authorization"></a>ASP.NET MVC Storefront - Parte 10: Refactoring e autorizzazione del carrello
+# <a name="aspnet-mvc-storefront-part-10-shopping-cart-refactor-and-authorization"></a>ASP.NET MVC storefront-parte 10: refactoring e autorizzazione del carrello acquisti
 
-da [Rob Conery](https://github.com/robconery)
+di [Rob Coney](https://github.com/robconery)
 
-Rob effettua il refactoring iniziale andare al carrello della spesa e implementa il nucleo di un sistema di appartenenze tramite l'appartenenza di ASP.NET.
+Rob effettua il refactoring iniziale del carrello acquisti e implementa il nucleo di un sistema di appartenenze usando l'appartenenza a ASP.NET.
 
 [&#9654;Guarda il video (25 minuti)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/aspnet-mvc-storefront-part-10-shopping-cart-refactor-and-authorization)
 

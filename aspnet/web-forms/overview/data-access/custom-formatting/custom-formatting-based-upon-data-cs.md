@@ -9,11 +9,11 @@ ms.assetid: 871a4574-f89c-4214-b786-79253ed3653b
 msc.legacyurl: /web-forms/overview/data-access/custom-formatting/custom-formatting-based-upon-data-cs
 msc.type: authoredcontent
 ms.openlocfilehash: d8f3fa337eda0ceed041475ecb52f8b378b9fbba
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74600771"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78549315"
 ---
 # <a name="custom-formatting-based-upon-data-c"></a>Formattazione personalizzata in base ai dati (C#)
 

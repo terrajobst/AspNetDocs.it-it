@@ -2,71 +2,71 @@
 uid: mvc/overview/older-versions-1/getting-started-with-mvc/getting-started-with-mvc-part7
 title: Aggiunta della convalida al modello | Microsoft Docs
 author: shanselman
-description: Si tratta di un'esercitazione per principianti che introduce i concetti di base di ASP.NET MVC. Creare un'applicazione web semplice che legge e scrive da un database.
+description: Questa esercitazione introduttiva illustra le nozioni di base di ASP.NET MVC. Creare una semplice applicazione Web che legge e scrive da un database.
 ms.author: riande
 ms.date: 08/14/2010
 ms.assetid: aa7b3e8e-e23d-49f1-b160-f99a7f2982bd
 msc.legacyurl: /mvc/overview/older-versions-1/getting-started-with-mvc/getting-started-with-mvc-part7
 msc.type: authoredcontent
 ms.openlocfilehash: 9403be574324c34edf93bef1e0e4fd7ba68a3a9d
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65122768"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78543645"
 ---
 # <a name="adding-validation-to-the-model"></a>Aggiunta della convalida al modello
 
-da [Scott Hanselman](https://github.com/shanselman)
+di [Scott hanseln](https://github.com/shanselman)
 
-> Si tratta di un'esercitazione per principianti che introduce i concetti di base di ASP.NET MVC. Si creerà una semplice applicazione web che legge e scrive da un database. Visitare il [centro di formazione di ASP.NET MVC](../../../index.md) per trovare altri ASP.NET MVC, esercitazioni ed esempi.
+> Questa esercitazione introduttiva illustra le nozioni di base di ASP.NET MVC. Verrà creata una semplice applicazione Web che legge e scrive da un database. Visitare il [centro per l'apprendimento di ASP.NET MVC](../../../index.md) per trovare altre esercitazioni ed esempi di ASP.NET MVC.
 
-In questa sezione si intende implementare il supporto necessario per abilitare la convalida dell'input all'interno dell'applicazione. Si farà in modo che il contenuto del database sia sempre corretto e fornire messaggi di errore utili agli utenti finali quando si prova a immettere dati dei film che non è validi. Inizieremo mediante l'aggiunta di un piccolo per la logica di convalida per la classe di film.
+In questa sezione verrà implementato il supporto necessario per abilitare la convalida dell'input all'interno dell'applicazione. Assicuriamo che il contenuto del database sia sempre corretto e che gli utenti finali forniscano messaggi di errore utili quando provano a immettere dati di film non validi. Si inizierà aggiungendo una piccola logica di convalida alla classe Movie.
 
-Fare clic con il pulsante destro sulla cartella del modello e selezionare Add Class. Assegnare un nome classe del film.
+Fare clic con il pulsante destro del mouse sulla cartella del modello e scegliere Aggiungi classe. Denominare il film della classe.
 
-Quando abbiamo creato il modello di entità film in precedenza, l'IDE creato una classe di film. Infatti, può essere parte della classe di film in un file e parte in un altro. Si tratta di una classe parziale. Dobbiamo estende la classe di film da un altro file.
+Quando il modello di entità Movie è stato creato in precedenza, l'IDE ha creato una classe Movie. Di fatto, parte della classe Movie può trovarsi in un file e parte in un altro. Si tratta di una classe parziale. La classe Movie verrà estesa da un altro file.
 
-Si creerà una classe parziale film che punta a una "classe buddy" con alcuni attributi contenenti hint per la convalida al sistema. Verranno contrassegnare il titolo e il prezzo come obbligatorio e anche insistere che il prezzo di essere all'interno di un determinato intervallo. Fare clic con il pulsante destro della cartella Models e scegliere Aggiungi classe. Denominare la classe film e fare clic sul pulsante OK. Ecco l'aspetto di classe film parziale come.
+Verrà creata una classe di film parziale che punta a una "classe Buddy" con alcuni attributi che daranno suggerimenti di convalida al sistema. Il titolo e il prezzo verranno contrassegnati secondo le esigenze e anche il prezzo rientra in un determinato intervallo. Fare clic con il pulsante destro del mouse sulla cartella Models e scegliere Aggiungi classe. Denominare il film della classe e fare clic sul pulsante OK. Ecco la nostra classe di film parziale.
 
 [!code-csharp[Main](getting-started-with-mvc-part7/samples/sample1.cs)]
 
-Eseguire nuovamente l'applicazione e provare a immettere un film con un prezzo maggiori di 100. Si otterrà un errore dopo aver inviato il form. L'errore viene intercettato sul lato server e si verifica dopo l'invio del Form. Si noti come helper HTML predefiniti di ASP.NET MVC sono stati in grado di visualizzare il messaggio di errore e gestire i valori per noi all'interno di elementi nella casella di testo:
+Eseguire nuovamente l'applicazione e provare a immettere un film con un prezzo superiore a 100. Si riceverà un errore dopo l'invio del modulo. L'errore viene rilevato sul lato server e si verifica dopo la pubblicazione del modulo. Si noti che gli helper HTML incorporati in ASP.NET MVC erano sufficientemente intelligenti per visualizzare il messaggio di errore e mantenere i valori per Microsoft negli elementi TextBox:
 
 [![CreateMovieWithValidation](getting-started-with-mvc-part7/_static/image2.png)](getting-started-with-mvc-part7/_static/image1.png)
 
-Questo è particolarmente efficace, ma sarebbe bello se potremmo l'utente viene informato sul lato client, immediatamente, prima che il server viene coinvolto.
+Si tratta di una soluzione ottimale, ma sarebbe interessante se avessimo potuto informare l'utente sul lato client, immediatamente prima che il server venisse occupato.
 
-È possibile abilitare alcune convalide sul lato client con JavaScript.
+È ora abilitata la convalida lato client con JavaScript.
 
-## <a name="adding-client-side-validation"></a>Aggiunta della convalida lato Client
+## <a name="adding-client-side-validation"></a>Aggiunta della convalida lato client
 
-Poiché la classe di film dispone già di alcuni attributi di convalida, è necessario solo aggiungere alcuni file JavaScript per il modello di vista di tornarci e aggiungere una riga di codice per abilitare la convalida lato client per l'implementazione.
+Poiché la classe Movie include già alcuni attributi di convalida, è sufficiente aggiungere alcuni file JavaScript al modello di vista Create. aspx e aggiungere una riga di codice per abilitare la convalida lato client.
 
-Dall'interno VWD passare la cartella visualizzazioni/film e apriamo tornarci.
+Dall'interno della VWD andare alla cartella Views/Movie e aprire create. aspx.
 
-Aprire la cartella degli script in Esplora soluzioni e trascinare tre gli script seguenti all'interno di &lt;head&gt; tag.
+Aprire la cartella Scripts nella Esplora soluzioni e trascinare i tre script seguenti in all'interno del tag Head&gt; &lt;.
 
 - MicrosoftAjax.js
 - MicrosoftMvcValidation.js
 
-Si desidera che questi file script vengono visualizzati nell'ordine indicato.
+Si desidera che questi file di script vengano visualizzati in questo ordine.
 
 [!code-html[Main](getting-started-with-mvc-part7/samples/sample2.html)]
 
-Inoltre, aggiungere quest'unica riga sopra il Html.BeginForm:
+Aggiungere anche questa riga singola sopra il codice HTML. BeginForm:
 
 [!code-aspx[Main](getting-started-with-mvc-part7/samples/sample3.aspx)]
 
-Ecco il codice illustrato all'interno dell'IDE.
+Ecco il codice visualizzato nell'IDE.
 
-[![Movies - Microsoft Visual Web Developer 2010 Express (10)](getting-started-with-mvc-part7/_static/image4.png)](getting-started-with-mvc-part7/_static/image3.png)
+[![Movies-Microsoft Visual Web Developer 2010 Express (10)](getting-started-with-mvc-part7/_static/image4.png)](getting-started-with-mvc-part7/_static/image3.png)
 
-Eseguire l'applicazione e accedere di nuovo /Movies/Create e fare clic su Crea senza dover immettere tutti i dati. I messaggi di errore vengono visualizzati immediatamente senza la pagina flash che viene associato l'invio di dati fino al server. Si tratta poiché ASP.NET MVC è ora la convalida dell'input sia il client (tramite JavaScript) e nel server.
+Eseguire l'applicazione e visitare di nuovo/Movies/Create e fare clic su Crea senza immettere i dati. I messaggi di errore vengono visualizzati immediatamente senza il flash di pagina associato all'invio dei dati fino al server. Questo perché ASP.NET MVC sta convalidando l'input sia nel client (tramite JavaScript) che nel server.
 
-[![Create - Windows Internet Explorer](getting-started-with-mvc-part7/_static/image6.png)](getting-started-with-mvc-part7/_static/image5.png)
+[![creare-Windows Internet Explorer](getting-started-with-mvc-part7/_static/image6.png)](getting-started-with-mvc-part7/_static/image5.png)
 
-Ciò è bene Questo punto, aggiungere una colonna aggiuntiva al database.
+Si tratta di un aspetto positivo. A questo punto, aggiungere una colonna aggiuntiva al database.
 
 > [!div class="step-by-step"]
 > [Precedente](getting-started-with-mvc-part6.md)

@@ -9,11 +9,11 @@ ms.assetid: 0bbf7a6e-d7eb-4091-91e4-fff892777f32
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/create_the_data_access_layer
 msc.type: authoredcontent
 ms.openlocfilehash: 0fcf050474a57be9ed53ec0783a6d6b7dde2bf4c
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74575755"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78544926"
 ---
 # <a name="create-the-data-access-layer"></a>Creare il livello di accesso ai dati
 
@@ -25,7 +25,7 @@ di [Erik Reitan](https://github.com/Erikre)
 
 Questa esercitazione descrive come creare, accedere e verificare i dati da un database usando ASP.NET Web Forms e Entity Framework Code First. Questa esercitazione si basa sull'esercitazione precedente "creare il progetto" ed è parte della serie di esercitazioni su Wingtip Toy Store. Al termine di questa esercitazione, verrà compilato un gruppo di classi di accesso ai dati che si trovano nella cartella *Models* del progetto.
 
-## <a name="what-youll-learn"></a>Cosa si apprenderà:
+## <a name="what-youll-learn"></a>Contenuto dell'esercitazione:
 
 - Come creare i modelli di dati.
 - Come inizializzare e inizializzare il database.
@@ -178,7 +178,7 @@ Nell'esercitazione successiva verrà aggiornata l'interfaccia utente, verranno a
 [Guida per principianti alla Entity Framework ADO.NET](https://msdn.microsoft.com/data/ee712907)   
 [Sviluppo di Code First con Entity Framework](http://www.msteched.com/2010/Europe/DEV212) (video)   
 [Code First le relazioni  API Fluent](https://msdn.microsoft.com/data/hh134698)  
-[Annotazioni dei dati di Code First](https://msdn.microsoft.com/data/gg193958)  
+[Annotazioni dei dati per Code First](https://msdn.microsoft.com/data/gg193958)  
 [Miglioramenti della produttività per la Entity Framework](https://blogs.msdn.com/b/efdesign/archive/2010/06/21/productivity-improvements-for-the-entity-framework.aspx?wa=wsignin1.0)
 
 > [!div class="step-by-step"]

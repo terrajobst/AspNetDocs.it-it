@@ -9,11 +9,11 @@ ms.assetid: 2ce36f78-8ecb-4ab1-b748-6d0ab633ea3f
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/create-the-project
 msc.type: authoredcontent
 ms.openlocfilehash: 62918b17f42e54dfe4e45a08927b1039dcbb7012
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74576060"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78571988"
 ---
 # <a name="create-the-project"></a>Creare il progetto
 
@@ -25,7 +25,7 @@ di [Erik Reitan](https://github.com/Erikre)
 
 In questa esercitazione verrà creato, esaminato ed eseguito il progetto predefinito in Visual Studio, che consente di acquisire familiarità con le funzionalità di ASP.NET. Si esaminerà anche l'ambiente di Visual Studio.
 
-## <a name="what-youll-learn"></a>Cosa si apprenderà:
+## <a name="what-youll-learn"></a>Contenuto dell'esercitazione:
 
 - Creazione di un nuovo progetto Web Form.
 - Struttura di file del progetto Web Form.
@@ -35,12 +35,12 @@ In questa esercitazione verrà creato, esaminato ed eseguito il progetto predefi
 
 ## <a name="creating-the-project"></a>Creazione del progetto
 
-1. Apri Visual Studio.
+1. Aprire Visual Studio.
 2. Scegliere **nuovo progetto** dal menu **file** in Visual Studio. 
 
     ![Crea la voce di menu progetto-nuovo progetto](create-the-project/_static/image1.png)
 3. Selezionare i **modelli** -&gt; **Visual C#**  -&gt; gruppo di modelli **Web** a sinistra.
-4. Scegliere il modello **applicazione Web ASP.NET** nella colonna centrale.  
+4. Scegliere il modello **Applicazione Web ASP.NET** nella colonna centrale.  
  Questa serie di esercitazioni USA .NET Framework 4.5.2.
 5. Assegnare al progetto il nome *WingtipToys* e scegliere il pulsante **OK** . 
 
@@ -49,7 +49,7 @@ In questa esercitazione verrà creato, esaminato ed eseguito il progetto predefi
     > [!NOTE]
     > Il nome del progetto in questa serie di esercitazioni è **WingtipToys**. Si consiglia di usare questo nome di progetto *esatto* in modo che il codice fornito in tutta la serie di esercitazioni funzioni come previsto.
 
-6. Fare clic sul pulsante **Modifica autenticazione** . Selezionare **singoli account utente** e fare clic sul pulsante **OK** .
+6. Fare clic sul pulsante **Modifica autenticazione**. Selezionare **singoli account utente** e fare clic sul pulsante **OK** .
 
 7. Selezionare il modello **Web Form** e fare clic sul pulsante **OK** .
 
@@ -96,7 +96,7 @@ Visual Studio crea alcuni file e cartelle iniziali per il progetto. I primi file
 | *Default. aspx* | In genere, la prima pagina viene visualizzata quando l'applicazione viene eseguita in un browser. |
 | *Site. master* | Pagina che consente di creare un layout coerente e di utilizzare il comportamento standard per le pagine dell'applicazione. |
 | *Global. asax* | File facoltativo che contiene il codice per rispondere agli eventi a livello di applicazione e a livello di sessione generati da ASP.NET o da moduli HTTP. |
-| *Web. config* | Dati di configurazione per un'applicazione. |
+| *Web.config* | Dati di configurazione per un'applicazione. |
 
 ### <a name="running-the-default-web-application"></a>Esecuzione dell'applicazione Web predefinita
 

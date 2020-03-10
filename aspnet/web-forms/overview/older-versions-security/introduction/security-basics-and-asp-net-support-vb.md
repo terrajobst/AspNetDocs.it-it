@@ -9,11 +9,11 @@ ms.assetid: ab68a92b-fc81-40a4-a7dc-406625d2c5d4
 msc.legacyurl: /web-forms/overview/older-versions-security/introduction/security-basics-and-asp-net-support-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 99e986013cb5a923ddb150022013e3a75852ce55
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74621622"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78575341"
 ---
 # <a name="security-basics-and-aspnet-support-vb"></a>Nozioni di base sulla sicurezza e supporto di ASP.NET (VB)
 
@@ -40,7 +40,7 @@ Questa è la prima esercitazione di una serie di esercitazioni che esploreranno 
 
 Queste esercitazioni sono incentrate su concise e forniscono istruzioni dettagliate con numerose schermate per illustrare il processo in modo visivo. Ogni esercitazione è disponibile in C# e Visual Basic versioni e include un download del codice completo usato. Questa prima esercitazione è incentrata sui concetti di sicurezza da un punto di vista generale e pertanto non contiene codice associato.
 
-In questa esercitazione verranno illustrati i concetti di sicurezza importanti e le funzionalità disponibili in ASP.NET per semplificare l'implementazione dell'autenticazione basata su form, dell'autorizzazione, degli account utente e dei ruoli. Iniziamo!
+In questa esercitazione verranno illustrati i concetti di sicurezza importanti e le funzionalità disponibili in ASP.NET per semplificare l'implementazione dell'autenticazione basata su form, dell'autorizzazione, degli account utente e dei ruoli. Ecco come procedere.
 
 > [!NOTE]
 > La sicurezza è un aspetto importante di qualsiasi applicazione che si estende su decisioni fisiche, tecnologiche e di criteri e richiede un elevato livello di pianificazione e conoscenza del dominio. Questa serie di esercitazioni non è concepita come guida per lo sviluppo di applicazioni Web sicure. Piuttosto, si concentra specificamente sull'autenticazione basata su form, sull'autorizzazione, sugli account utente e sui ruoli. Mentre alcuni concetti sulla sicurezza che si basano su questi problemi sono discussi in questa serie, altri vengono lasciati inesplorati.

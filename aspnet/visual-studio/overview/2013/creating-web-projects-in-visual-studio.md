@@ -9,11 +9,11 @@ ms.assetid: 61941e64-0c0d-4996-9270-cb8ccfd0cabc
 msc.legacyurl: /visual-studio/overview/2013/creating-web-projects-in-visual-studio
 msc.type: authoredcontent
 ms.openlocfilehash: fbb4cd7afa2506879d47bce980bf0164aad40c2c
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519271"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78555223"
 ---
 # <a name="creating-aspnet-web-projects-in-visual-studio-2013"></a>Creazione di progetti Web ASP.NET in Visual Studio 2013
 
@@ -54,18 +54,18 @@ Nei passaggi seguenti viene illustrato come creare un progetto Web:
 3. Nel riquadro destro fare clic sulla casella **di controllo aggiungi Application Insights al progetto** se si desidera il monitoraggio dello stato e dell'utilizzo dell'applicazione. Per altre informazioni, vedere [Monitorare le prestazioni di applicazioni Web](https://azure.microsoft.com/documentation/articles/app-insights-web-monitor-performance/).
 4. Specificare il **nome**del progetto, la **posizione**e altre opzioni, quindi fare clic su **OK**.
 
-    Verrà visualizzata la finestra di dialogo **nuovo progetto ASP.NET** .
+    Verrà visualizzata la finestra di dialogo **Nuovo progetto ASP.NET**.
 
     ![Finestra di dialogo Nuovo progetto](creating-web-projects-in-visual-studio/_static/image2.png)
 5. Fare clic su un modello.
 
-    ![Seleziona un modello](creating-web-projects-in-visual-studio/_static/image3.png)
+    ![Selezionare un modello:](creating-web-projects-in-visual-studio/_static/image3.png)
 6. Se si desidera aggiungere il supporto per Framework aggiuntivi non inclusi nel modello, fare clic sulla casella di controllo appropriata. Nell'esempio illustrato, è possibile aggiungere MVC e/o l'API Web a un progetto Web Form.
 
     ![Aggiungi Framework](creating-web-projects-in-visual-studio/_static/image4.png)
 7. <a id="testproj"></a>Se si desidera aggiungere un progetto di unit test, fare clic su **Aggiungi unit test**.
 
-    ![Aggiungi test unità](creating-web-projects-in-visual-studio/_static/image5.png)
+    ![Aggiungere unit test](creating-web-projects-in-visual-studio/_static/image5.png)
 8. Se si desidera un metodo di autenticazione diverso da quello fornito dal modello per impostazione predefinita, fare clic su **Modifica autenticazione**.
 
     ![Pulsante Configura autenticazione](creating-web-projects-in-visual-studio/_static/image6.png)
@@ -257,7 +257,7 @@ Se si usa progettazione Web Form in Visual Studio, si noti che la finestra di pr
 
 Quando si seleziona un modello, la casella di controllo per i Framework utilizzati dal modello viene selezionata automaticamente. Se ad esempio si seleziona il modello **Web Form** , la casella di controllo **Web Form** è selezionata e non è possibile cancellarla.
 
-![Seleziona un modello](creating-web-projects-in-visual-studio/_static/image21.png)
+![Selezionare un modello:](creating-web-projects-in-visual-studio/_static/image21.png)
 
 ![Aggiungi Framework](creating-web-projects-in-visual-studio/_static/image22.png)
 
@@ -317,13 +317,13 @@ ASP.NET Identity è una scelta ottimale se si crea un sito Web Internet che è p
 
 Per ulteriori informazioni sull'opzione account utente singoli, vedere le risorse seguenti:
 
-- [www.asp.net/identity](../../../identity/index.md). Documentazione su ASP.NET Identity nel sito Web ASP.NET.
+- [www.ASP.NET/Identity](../../../identity/index.md). Documentazione su ASP.NET Identity nel sito Web ASP.NET.
 - [Creare un'App ASP.NET MVC 5 con Facebook e Google OAuth2 e OpenID sign-on](../../../mvc/overview/security/create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on.md). Viene inoltre illustrato come personalizzare i dati del profilo utente.
 - [API Web-servizi di autenticazione esterni](../../../web-api/overview/security/external-authentication-services.md)
 - [Aggiunta di account di accesso esterni all'applicazione ASP.NET in Visual Studio 2013](https://blogs.msdn.com/b/webdev/archive/2013/06/27/adding-external-logins-to-your-asp-net-application-in-visual-studio-2013.aspx)
 
 <a id="orgauth"></a>
-### <a name="organizational-accounts"></a>Account aziendali
+### <a name="organizational-accounts"></a>Account dell'organizzazione
 
 Se si seleziona **account aziendali**, l'applicazione di esempio verrà configurata per l'utilizzo di Windows Identity Foundation (WIF) per l'autenticazione basata sugli account utente in Azure Active Directory (Azure ad, che include Office 365) o Active Directory di Windows Server. Per ulteriori informazioni, vedere [Opzioni di autenticazione degli account aziendali](#orgauthoptions) più avanti in questo argomento.
 

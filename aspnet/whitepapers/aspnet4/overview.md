@@ -9,11 +9,11 @@ ms.assetid: d7729af4-1eda-4ff2-8b61-dbbe4fc11d10
 msc.legacyurl: /whitepapers/aspnet4
 msc.type: content
 ms.openlocfilehash: ecde48f6bd88ee5f569bfeb8b70c26a50bc869c2
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74576866"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78630172"
 ---
 # <a name="aspnet-4-and-visual-studio-2010-web-development-overview"></a>Panoramica sullo sviluppo Web con ASP.NET 4 e Visual Studio 2010
 
@@ -496,7 +496,7 @@ Per sostituire completamente la funzionalità di definizione delle funzionalità
 
 #### <a name="caching-the-httpbrowsercapabilities-object"></a>Memorizzazione nella cache dell'oggetto HttpBrowserCapabilities
 
-L'esempio precedente presenta un problema, ovvero il codice viene eseguito ogni volta che il provider personalizzato viene richiamato per ottenere l'oggetto *HttpBrowserCapabilities* . Questa operazione può verificarsi più volte durante ogni richiesta. Nell'esempio, il codice per il provider non esegue molte operazioni. Tuttavia, se il codice nel provider personalizzato esegue un lavoro significativo per ottenere l'oggetto *HttpBrowserCapabilities* , ciò può influire sulle prestazioni. Per evitare che ciò accada, è possibile memorizzare nella cache l'oggetto *HttpBrowserCapabilities* . Esegui questi passaggi:
+L'esempio precedente presenta un problema, ovvero il codice viene eseguito ogni volta che il provider personalizzato viene richiamato per ottenere l'oggetto *HttpBrowserCapabilities* . Questa operazione può verificarsi più volte durante ogni richiesta. Nell'esempio, il codice per il provider non esegue molte operazioni. Tuttavia, se il codice nel provider personalizzato esegue un lavoro significativo per ottenere l'oggetto *HttpBrowserCapabilities* , ciò può influire sulle prestazioni. Per evitare che ciò accada, è possibile memorizzare nella cache l'oggetto *HttpBrowserCapabilities* . Attenersi ai passaggi riportati di seguito.
 
 1. Creare una classe che deriva da *HttpCapabilitiesProvider*, come quella nell'esempio seguente: 
 
@@ -927,8 +927,8 @@ Per impostazione predefinita, quando un'applicazione Web o un sito Web è destin
 
 Il valore per *controlRenderingCompatibility* è una stringa, che consente nuove definizioni di versione potenziali nelle versioni future. Nella versione corrente sono supportati i valori seguenti per questa proprietà:
 
-- "3,5". Questa impostazione indica il rendering e il markup legacy. Il markup sottoposto a rendering dai controlli è compatibile con le versioni precedenti del 100% e l'impostazione della proprietà *xhtmlConformance* viene rispettata.
-- "4,0". Se la proprietà ha questa impostazione, i controlli server Web ASP.NET eseguono le operazioni seguenti:
+- "3.5". Questa impostazione indica il rendering e il markup legacy. Il markup sottoposto a rendering dai controlli è compatibile con le versioni precedenti del 100% e l'impostazione della proprietà *xhtmlConformance* viene rispettata.
+- "4.0". Se la proprietà ha questa impostazione, i controlli server Web ASP.NET eseguono le operazioni seguenti:
 - La proprietà *xhtmlConformance* viene sempre considerata come "Strict". Di conseguenza, i controlli eseguono il rendering del markup XHTML 1,0 Strict.
 - La disabilitazione di controlli non di input non esegue più il rendering degli stili non validi.
 - gli elementi *div* intorno ai campi nascosti hanno ora lo stile in modo che non interferiscano con le regole CSS create dall'utente.
@@ -1364,18 +1364,18 @@ I siti Web seguenti forniscono informazioni aggiuntive su ASP.NET 4 e Visual Stu
 
 Il presente documento è una versione preliminare e può essere modificato in modo sostanziale prima della versione finale commerciale del software qui descritto.
 
-Le informazioni contenute in questo documento rappresentano la posizione attuale di Microsoft Corporation alla data della pubblicazione rispetto alle questioni trattate. Poiché Microsoft risponde alle condizioni del mercato in evoluzione, non sono da intendersi come un impegno da parte di Microsoft; inoltre, Microsoft non può garantire l'accuratezza delle informazioni presentate successivamente alla data della pubblicazione.
+Le informazioni contenute nel presente documento rappresentano l'attuale opinione di Microsoft Corporation circa le problematiche discusse alla data della pubblicazione. Poiché Microsoft deve rispondere ai cambiamenti delle condizioni di mercato, il presente documento non deve essere interpretato quale un impegno da parte di Microsoft e Microsoft non può garantire l'accuratezza delle informazioni presentate dopo la data di pubblicazione.
 
-Il presente articolo ha carattere puramente informativo. MICROSOFT ESCLUDE OGNI GARANZIA, ESPRESSA, IMPLICITA O DI LEGGE NEI CONFRONTI DELLE INFORMAZIONI FORNITE NEL PRESENTE DOCUMENTO.
+Il presente white paper è fornito solo a scopi informativi. MICROSOFT NON RILASCIA ALCUNA GARANZIA, ESPRESSA, IMPLICITA O LEGALE, IN MERITO ALLE INFORMAZIONI DEL PRESENTE DOCUMENTO.
 
-Il rispetto di tutte le leggi applicabili in materia di copyright è esclusivamente a carico dell'utente. Fermi restando tutti i diritti coperti da copyright, nessuna parte di questo documento potrà comunque essere riprodotta o inserita in un sistema di riproduzione o trasmessa in qualsiasi forma e con qualsiasi mezzo (in formato elettronico, meccanico, su fotocopia, come registrazione o altro) per qualsiasi scopo, senza il permesso scritto di Microsoft Corporation.
+Il rispetto di tutte le leggi applicabili in materia di copyright è a esclusivo carico dell'utente. Senza limitare i diritti sanciti dal copyright, nessuna parte di questo documento può essere riprodotta, memorizzata o inserita in un sistema di ricerca o trasmessa in qualsiasi forma o mezzo (elettronico o meccanico, mediante fotocopia, registrazione o altro), per alcuno scopo, senza l'autorizzazione scritta di Microsoft Corporation.
 
-Microsoft può essere titolare di brevetti, domande di brevetto, marchi, copyright o altri diritti di proprietà intellettuale relativi all'oggetto della presente documentazione. Salvo quanto espressamente previsto in un contratto scritto di licenza Microsoft, la consegna della presente documentazione non implica la concessione di alcuna licenza su tali brevetti, marchi, copyright o altra proprietà intellettuale.
+Microsoft può essere titolare di brevetti, domande di brevetto, marchi, copyright o altri diritti di proprietà intellettuale relativi all'oggetto del presente documento. Salvo quanto espressamente previsto in un contratto scritto di licenza Microsoft, la consegna del presente documento non implica la concessione di alcuna licenza su tali brevetti, marchi, copyright o altra proprietà intellettuale.
 
 Se non specificato diversamente, le aziende, le organizzazioni, i prodotti, i nomi di dominio, gli indirizzi di posta elettronica, i logo, le persone, le località e gli eventi riportati in questo documento sono fittizi e nessuna associazione con nessuna società, organizzazione, prodotto, nome di dominio, indirizzo di posta elettronica Indirizzo, logo, persona, luogo o evento è intenzionale o può essere dedotto.
 
-© 2009 Microsoft Corporation. Tutti i diritti riservati.
+© 2009 Microsoft Corporation. Tutti i diritti sono riservati.
 
 Microsoft e Windows sono marchi registrati o marchi di Microsoft Corporation negli Stati Uniti e/o in altri paesi.
 
-Altri nomi di prodotti e società citati nel presente documento possono essere marchi dei rispettivi proprietari.
+I nomi di società e prodotti reali citati nel presente documento possono essere marchi dei rispettivi proprietari.

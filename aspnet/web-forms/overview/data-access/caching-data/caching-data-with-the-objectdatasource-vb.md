@@ -9,11 +9,11 @@ ms.assetid: 2e56a733-5512-48a6-9276-70a65bbe4d5d
 msc.legacyurl: /web-forms/overview/data-access/caching-data/caching-data-with-the-objectdatasource-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 16f20d9a0f4f677073174d680418b278dba40b07
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74612140"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78550491"
 ---
 # <a name="caching-data-with-the-objectdatasource-vb"></a>Memorizzazione di dati nella cache con ObjectDataSource (VB)
 

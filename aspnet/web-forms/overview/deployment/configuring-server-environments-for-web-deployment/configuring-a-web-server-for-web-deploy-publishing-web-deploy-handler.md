@@ -9,11 +9,11 @@ ms.assetid: 90ebf911-1c46-4470-b876-1335bd0f590f
 msc.legacyurl: /web-forms/overview/deployment/configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-web-deploy-handler
 msc.type: authoredcontent
 ms.openlocfilehash: baaebd32f08d3c6b861572c5c5a16ec0fb70aaf0
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74589030"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78568565"
 ---
 # <a name="configuring-a-web-server-for-web-deploy-publishing-web-deploy-handler"></a>Configurazione di un server Web per la pubblicazione con Distribuzione Web (gestore di Distribuzione Web)
 
@@ -21,7 +21,7 @@ ms.locfileid: "74589030"
 
 > In questo argomento viene descritto come configurare un server Web Internet Information Services (IIS) per supportare la pubblicazione e la distribuzione Web utilizzando il gestore di Distribuzione Web IIS.
 > 
-> Quando si lavora con Distribuzione Web 2,0 o versioni successive, è possibile usare tre approcci principali per ottenere le applicazioni o i siti su un server Web. Procedi così:
+> Quando si lavora con Distribuzione Web 2,0 o versioni successive, è possibile usare tre approcci principali per ottenere le applicazioni o i siti su un server Web. È possibile:
 > 
 > - Utilizzare il *servizio distribuzione Web agente remoto*. Questo approccio richiede una minore configurazione del server Web, ma è necessario fornire le credenziali di un amministratore del server locale per distribuire qualsiasi elemento al server.
 > - Utilizzare il *gestore distribuzione Web*. Questo approccio è molto più complesso e richiede un impegno iniziale maggiore per la configurazione del server Web. Tuttavia, quando si utilizza questo approccio, è possibile configurare IIS in modo da consentire agli utenti non amministratori di eseguire la distribuzione. Il gestore Distribuzione Web è disponibile solo in IIS 7 o versioni successive.
@@ -86,7 +86,7 @@ In questo caso, è necessario installare questi elementi:
 
     > [!NOTE]
     > È ora possibile avviare l'installazione guidata piattaforma Web in qualsiasi momento dal menu **Start** . A tale scopo, fare clic sul menu **Start** , scegliere **tutti i programmi**, quindi **installazione guidata piattaforma Web Microsoft**.
-3. Nella parte superiore della finestra **installazione guidata piattaforma Web** fare clic su **prodotti**.
+3. Nella parte superiore della finestra **Installazione guidata piattaforma Web** fare clic su **Prodotti**.
 4. Sul lato sinistro della finestra, nel riquadro di spostamento fare clic su **Framework**.
 5. Nella riga **Microsoft .NET Framework 4** , se il .NET Framework non è ancora installato, fare clic su **Aggiungi**.
 
@@ -204,7 +204,7 @@ Sebbene non si stiano impedendo la distribuzione del contenuto nel sito Web pred
     > [!NOTE]
     > In un ambiente di produzione, probabilmente si desidera ospitare il sito Web sulla porta 80 e configurare un'intestazione host, insieme ai record DNS corrispondenti. Per ulteriori informazioni sulla configurazione delle intestazioni host in IIS 7, vedere [configurare un'intestazione host per un sito Web (IIS 7)](https://technet.microsoft.com/library/cc753195(WS.10).aspx). Per ulteriori informazioni sul ruolo server DNS in Windows Server, vedere [Panoramica del server](https://technet.microsoft.com/library/cc770392.aspx) DNS e [server DNS](https://technet.microsoft.com/windowsserver/dd448607).
 9. Nel riquadro **Azioni** sotto **Modifica sito**, fare clic su **Binding**.
-10. Nella finestra di dialogo **binding sito** fare clic su **Aggiungi**.
+10. Nella finestra di dialogo **Binding sito** fare clic su **Aggiungi**.
 
     ![](configuring-a-web-server-for-web-deploy-publishing-web-deploy-handler/_static/image12.png)
 11. Nella finestra di dialogo **Aggiungi binding sito** impostare l' **indirizzo IP** e la **porta** in modo che corrispondano alla configurazione del sito esistente.
@@ -214,7 +214,7 @@ Sebbene non si stiano impedendo la distribuzione del contenuto nel sito Web pred
 
     > [!NOTE]
     > Il primo binding del sito consente di accedere al sito localmente usando l'indirizzo IP e la porta o `http://localhost:85`. Il secondo binding del sito consente di accedere al sito da altri computer del dominio usando il nome del computer, ad esempio http://stageweb1:85).
-13. Nella finestra di dialogo **binding sito** fare clic su **Chiudi**.
+13. Nella finestra di dialogo **Binding sito** fare clic su **Chiudi**.
 14. Nel riquadro **connessioni** fare clic su **pool di applicazioni**.
 15. Nel riquadro **pool di applicazioni** fare clic con il pulsante destro del mouse sul nome del pool di applicazioni e quindi scegliere **impostazioni di base**. Per impostazione predefinita, il nome del pool di applicazioni corrisponderà al nome del sito Web (ad esempio, **DemoSite**).
 16. Nell'elenco **versione CLR .NET** selezionare **.NET CLR v 4.0.30319**, quindi fare clic su **OK**.
@@ -240,8 +240,8 @@ L'approccio più comune consiste nell'assegnare autorizzazioni al gruppo **IIS\_
 
 1. In Esplora risorse passare al percorso della cartella locale.
 2. Fare clic con il pulsante destro del mouse sulla cartella, quindi scegliere **Proprietà**.
-3. Nella scheda **sicurezza** fare clic su **modifica**e quindi su **Aggiungi**.
-4. Fare clic su **percorsi**. Nella finestra di dialogo **percorsi** selezionare il server locale e quindi fare clic su **OK**.
+3. Nella scheda **Security** fare clic su **Edit** e quindi su **Add**.
+4. Fare clic su **Località**. Nella finestra di dialogo **percorsi** selezionare il server locale e quindi fare clic su **OK**.
 
     ![](configuring-a-web-server-for-web-deploy-publishing-web-deploy-handler/_static/image15.png)
 5. Nella finestra di dialogo **Seleziona utenti o gruppi** digitare **IIS\_IUSRS**, fare clic su **Controlla nomi**, quindi fare clic su **OK**.
@@ -275,8 +275,8 @@ Per impostazione predefinita, il servizio gestione Web IIS è in ascolto sulla p
 
 | Direzione | Da porta | Alla porta | Tipo di porta |
 | --- | --- | --- | --- |
-| Inserimento in | Qualsiasi | 8172 | TCP |
-| Inserimento in | 8172 | Qualsiasi | TCP |
+| In ingresso | Qualsiasi | 8172 | TCP |
+| In uscita | 8172 | Qualsiasi | TCP |
 
 Per ulteriori informazioni sulla configurazione delle regole in Windows Firewall, vedere [configurazione delle regole del firewall](https://technet.microsoft.com/library/dd448559(WS.10).aspx). Per i firewall di terze parti, consultare la documentazione del prodotto.
 

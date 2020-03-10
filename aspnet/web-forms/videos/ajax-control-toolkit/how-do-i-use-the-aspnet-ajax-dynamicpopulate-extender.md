@@ -1,25 +1,25 @@
 ---
 uid: web-forms/videos/ajax-control-toolkit/how-do-i-use-the-aspnet-ajax-dynamicpopulate-extender
-title: '[Procedura:] Usare il dispositivo Extender DynamicPopulate ASP.NET AJAX? | Microsoft Docs'
+title: '[Procedura:] Usare il dispositivo Extender ASP.NET AJAX DynamicPopulate? | Microsoft Docs'
 author: JoeStagner
-description: Guarda una dimostrazione dell'utilizzo l'extender DynamicPopulate di ASP.NET AJAX per popolare in modo dinamico un'area di una pagina web con i risultati di un'autorità di certificazione asincrono...
+description: Osservare una dimostrazione dell'uso di ASP.NET AJAX DynamicPopulate Extender per popolare dinamicamente un'area di una pagina Web con i risultati di una CA asincrona...
 ms.author: riande
 ms.date: 01/31/2007
 ms.assetid: 1c83e543-3f56-42ed-9d10-ac3f8dd26093
 msc.legacyurl: /web-forms/videos/ajax-control-toolkit/how-do-i-use-the-aspnet-ajax-dynamicpopulate-extender
 msc.type: video
 ms.openlocfilehash: 674eabeb5e3678662a0f523899d83ba66a61dbd2
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59415999"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78563735"
 ---
-# <a name="how-do-i-use-the-aspnet-ajax-dynamicpopulate-extender"></a>[Procedura:] Usare il dispositivo Extender DynamicPopulate ASP.NET AJAX?
+# <a name="how-do-i-use-the-aspnet-ajax-dynamicpopulate-extender"></a>[Procedura:] Usare il dispositivo Extender ASP.NET AJAX DynamicPopulate?
 
-da [Joe Stagner](https://github.com/JoeStagner)
+di [Joe Stagner spiega](https://github.com/JoeStagner)
 
-Guarda una dimostrazione dell'utilizzo l'extender DynamicPopulate di ASP.NET AJAX per popolare in modo dinamico un'area di una pagina web con i risultati di una chiamata asincrona a un metodo web.
+Osservare una dimostrazione dell'uso di ASP.NET AJAX DynamicPopulate Extender per popolare dinamicamente un'area di una pagina Web con i risultati di una chiamata asincrona a un metodo Web.
 
 [&#9654;Guarda il video (11 minuti)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-use-the-aspnet-ajax-dynamicpopulate-extender)
 

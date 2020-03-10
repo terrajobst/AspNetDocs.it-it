@@ -9,11 +9,11 @@ ms.assetid: 684f0c28-a490-4e5b-b5e5-5dfb77464b49
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/cascadingdropdown/using-cascadingdropdown-with-a-database-cs
 msc.type: authoredcontent
 ms.openlocfilehash: bcf453170d17807b4e3b2d2a8b545cba43139f89
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74599816"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78597860"
 ---
 # <a name="using-cascadingdropdown-with-a-database-c"></a>Uso di CascadingDropDown con un database (C#)
 
@@ -23,7 +23,7 @@ di [Christian Wenz](https://github.com/wenz)
 
 > Il controllo CascadingDropDown in AJAX Control Toolkit estende un controllo DropDownList in modo che le modifiche in un controllo DropDownList carichino i valori associati in un altro DropDownList. Per consentire il funzionamento di questo, è necessario creare un servizio Web speciale.
 
-## <a name="overview"></a>Panoramica di
+## <a name="overview"></a>Panoramica
 
 Il controllo CascadingDropDown in AJAX Control Toolkit estende un controllo DropDownList in modo che le modifiche in un controllo DropDownList carichino i valori associati in un altro DropDownList. Ad esempio, un elenco include un elenco di stati degli Stati Uniti e l'elenco successivo viene quindi riempito con le città principali in tale stato. Per consentire il funzionamento di questo, è necessario creare un servizio Web speciale.
 
@@ -66,7 +66,7 @@ La firma dei metodi Web chiamati da CascadingDropDown è la seguente:
 
 [!code-csharp[Main](using-cascadingdropdown-with-a-database-cs/samples/sample6.cs)]
 
-Il valore restituito deve quindi essere una matrice di tipo `CascadingDropDownNameValue` definita da Control Toolkit. Il metodo `GetVendors()` è piuttosto semplice da implementare: il codice si connette al database AdventureWorks ed esegue una query sui primi 25 fornitori. Il primo parametro nel costruttore `CascadingDropDownNameValue` è la didascalia della voce dell'elenco, il secondo valore (attributo value nell'elemento &lt;`option`&gt; di HTML). Ecco il codice:
+Il valore restituito deve quindi essere una matrice di tipo `CascadingDropDownNameValue` definita da Control Toolkit. Il metodo `GetVendors()` è piuttosto semplice da implementare: il codice si connette al database AdventureWorks ed esegue una query sui primi 25 fornitori. Il primo parametro nel costruttore `CascadingDropDownNameValue` è la didascalia della voce dell'elenco, il secondo valore (attributo value nell'elemento &lt;`option`&gt; di HTML). Il codice è il seguente:
 
 [!code-csharp[Main](using-cascadingdropdown-with-a-database-cs/samples/sample7.cs)]
 

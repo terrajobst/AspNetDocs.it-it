@@ -2,22 +2,22 @@
 uid: web-forms/videos/aspnet-35/visual-studio-editor/index
 title: Editor di Visual Studio | Microsoft Docs
 author: rick-anderson
-description: Questa serie di video illustra nuove funzionalità dell'editor di Visual Studio 2008, tra cui supporto avanzato per JavaScript e CSS.
+description: Questa serie di video illustra le nuove funzionalità dell'editor di Visual Studio 2008, incluso il supporto avanzato per JavaScript e CSS.
 ms.author: riande
 ms.date: 11/14/2011
 ms.assetid: 8d424d7b-5206-4790-a068-36d01c05ceb0
 msc.legacyurl: /web-forms/videos/aspnet-35/visual-studio-editor
 msc.type: chapter
 ms.openlocfilehash: 7ee31f7c7800c01701baad4e134433164bb48f66
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65133768"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78572954"
 ---
 # <a name="visual-studio-editor"></a>Editor di Visual Studio
 
-> Questa serie di video illustra nuove funzionalità dell'editor di Visual Studio 2008, tra cui supporto avanzato per JavaScript e CSS.
+> Questa serie di video illustra le nuove funzionalità dell'editor di Visual Studio 2008, incluso il supporto avanzato per JavaScript e CSS.
 
 - [Supporto delle nuove funzionalità di progettazione in Visual Studio 2008](new-designer-support-in-visual-studio-2008.md)
 - [Supporto di JavaScript IntelliSense in Visual Studio 2008](javascript-intellisense-support-in-visual-studio-2008.md)

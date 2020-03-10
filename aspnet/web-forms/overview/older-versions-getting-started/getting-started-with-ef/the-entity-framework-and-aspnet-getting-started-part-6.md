@@ -1,161 +1,161 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-6
-title: Introduzione a Entity Framework 4.0 Database First e ASP.NET 4 Web Form - parte 6 | Microsoft Docs
+title: Introduzione con Entity Framework 4,0 Database First e ASP.NET 4 Web Form-parte 6 | Microsoft Docs
 author: tdykstra
-description: L'applicazione web di esempio Contoso University illustra come creare applicazioni Web Form ASP.NET utilizzando Entity Framework. L'applicazione di esempio è...
+description: L'applicazione Web di esempio di Contoso University illustra come creare applicazioni Web Form ASP.NET usando il Entity Framework. L'applicazione di esempio è...
 ms.author: riande
 ms.date: 12/03/2010
 ms.assetid: 994a5496-c648-4830-b03c-55bb43f325d2
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-6
 msc.type: authoredcontent
 ms.openlocfilehash: 8bfbe74f90eb03ea9aab7610842ef2578e80d113
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65133287"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78564225"
 ---
-# <a name="getting-started-with-entity-framework-40-database-first-and-aspnet-4-web-forms---part-6"></a>Introduzione a Entity Framework 4.0 Database First e ASP.NET 4 Web Form - parte 6
+# <a name="getting-started-with-entity-framework-40-database-first-and-aspnet-4-web-forms---part-6"></a>Introduzione con Entity Framework 4,0 Database First e ASP.NET 4 Web Forms-parte 6
 
-da [Tom Dykstra](https://github.com/tdykstra)
+di [Tom Dykstra](https://github.com/tdykstra)
 
-> L'applicazione web di esempio Contoso University illustra come creare applicazioni Web Form ASP.NET usando il Entity Framework 4.0 e Visual Studio 2010. Per informazioni sulla serie di esercitazioni, vedere [la prima esercitazione della serie](the-entity-framework-and-aspnet-getting-started-part-1.md)
+> L'applicazione Web di esempio di Contoso University illustra come creare applicazioni Web Form ASP.NET usando il Entity Framework 4,0 e Visual Studio 2010. Per informazioni sulla serie di esercitazioni, vedere [la prima esercitazione della serie](the-entity-framework-and-aspnet-getting-started-part-1.md)
 
 ## <a name="implementing-table-per-hierarchy-inheritance"></a>Implementazione dell'ereditarietà tabella per gerarchia
 
-Nell'esercitazione precedente è lavorare con i dati correlati aggiungendo ed eliminando le relazioni e aggiungendo una nuova entità che ha una relazione a un'entità esistente. In questa esercitazione viene illustrato come implementare l'ereditarietà nel modello di dati.
+Nell'esercitazione precedente sono stati usati dati correlati aggiungendo ed eliminando relazioni e aggiungendo una nuova entità con una relazione con un'entità esistente. In questa esercitazione viene illustrato come implementare l'ereditarietà nel modello di dati.
 
-Nella programmazione orientata agli oggetti, è possibile utilizzare l'ereditarietà per renderlo più facile lavorare con le classi correlate. Ad esempio, è possibile creare `Instructor` e `Student` classi che derivano da un `Person` classe di base. È possibile creare gli stessi tipi di strutture di ereditarietà tra le entità in Entity Framework.
+Nella programmazione orientata a oggetti è possibile utilizzare l'ereditarietà per semplificare l'utilizzo delle classi correlate. Ad esempio, è possibile creare `Instructor` e `Student` classi che derivano da una classe di base `Person`. È possibile creare gli stessi tipi di strutture di ereditarietà tra le entità nel Entity Framework.
 
-In questa parte dell'esercitazione, è non creare nuove pagine web. Al contrario, verrà aggiunto entità derivate nel modello di dati e modificare pagine esistenti per usare le nuove entità.
+In questa parte dell'esercitazione non verrà creata alcuna nuova pagina Web. Al contrario, è necessario aggiungere entità derivate al modello di dati e modificare le pagine esistenti per utilizzare le nuove entità.
 
-## <a name="table-per-hierarchy-versus-table-per-type-inheritance"></a>Tabella per gerarchia e dell'ereditarietà tabella per tipo
+## <a name="table-per-hierarchy-versus-table-per-type-inheritance"></a>Ereditarietà tabella per gerarchia rispetto a tabella per tipo
 
-Un database può archiviare informazioni sugli oggetti correlati in una tabella o in più tabelle. Ad esempio, nelle `School` database, il `Person` tabella include informazioni relative a studenti e docenti in un'unica tabella. Alcune colonne si applicano solo a instructors (insegnanti) (`HireDate`), altre solo gli studenti (`EnrollmentDate`) e alcuni a entrambi (`LastName`, `FirstName`).
+Un database può archiviare informazioni sugli oggetti correlati in una tabella o in più tabelle. Nel database `School`, ad esempio, nella tabella `Person` sono incluse informazioni su studenti e docenti in una singola tabella. Alcune colonne sono valide solo per gli insegnanti (`HireDate`), alcune solo per gli studenti (`EnrollmentDate`) e alcune a entrambe (`LastName`, `FirstName`).
 
-[![Image11](the-entity-framework-and-aspnet-getting-started-part-6/_static/image2.png)](the-entity-framework-and-aspnet-getting-started-part-6/_static/image1.png)
+[![image11](the-entity-framework-and-aspnet-getting-started-part-6/_static/image2.png)](the-entity-framework-and-aspnet-getting-started-part-6/_static/image1.png)
 
-È possibile configurare Entity Framework per creare `Instructor` e `Student` entità che ereditano dal `Person` entità. Il modello di generazione di una struttura di ereditarietà di entità da una singola tabella di database è definito *tabella per gerarchia* ereditarietà.
+È possibile configurare la Entity Framework per creare `Instructor` e `Student` entità che ereditano dall'entità `Person`. Questo modello di generazione di una struttura di ereditarietà delle entità da una singola tabella di database è denominato ereditarietà *tabella per gerarchia* (TPH).
 
-Per i corsi, il `School` database utilizza un modello diverso. Corsi online e i corsi in sede vengono archiviati in tabelle separate, ognuna delle quali ha una chiave esterna che punta al `Course` tabella. Informazioni comuni a entrambi i tipi di corso vengono archiviate solo nel `Course` tabella.
+Per i corsi, il database `School` usa un modello diverso. I corsi online e i corsi in sede vengono archiviati in tabelle distinte, ognuna delle quali dispone di una chiave esterna che fa riferimento alla tabella `Course`. Le informazioni comuni a entrambi i tipi di corso sono archiviate solo nella tabella `Course`.
 
-[![image12](the-entity-framework-and-aspnet-getting-started-part-6/_static/image4.png)](the-entity-framework-and-aspnet-getting-started-part-6/_static/image3.png)
+[![IMAGE12](the-entity-framework-and-aspnet-getting-started-part-6/_static/image4.png)](the-entity-framework-and-aspnet-getting-started-part-6/_static/image3.png)
 
-È possibile configurare il modello di dati Entity Framework in modo che `OnlineCourse` e `OnsiteCourse` entità di ereditano il `Course` entità. Questo modello di generazione di una struttura di ereditarietà di entità da tabelle separate per ogni tipo, con ogni tabella separata Riferendosi di nuovo a una tabella che archivia i dati comuni a tutti i tipi, viene chiamato *tabella per tipo* ereditarietà (TPT).
+È possibile configurare il modello di dati Entity Framework in modo che `OnlineCourse` e `OnsiteCourse` entità ereditino dall'entità `Course`. Questo modello di generazione di una struttura di ereditarietà delle entità da tabelle separate per ogni tipo, con ogni tabella separata che fa riferimento a una tabella in cui vengono archiviati i dati comuni a tutti i tipi, viene chiamato ereditarietà *tabella per tipo* (TPT).
 
-Criteri di ereditarietà tabella per gerarchia offrono in genere prestazioni migliori in Entity Framework rispetto ai modelli di ereditarietà tabella per tipo, in quanto possono comportare modelli TPT query join complesse. Questa procedura dettagliata viene illustrato come implementare l'ereditarietà. È possibile farlo attenendosi alla procedura seguente:
+I modelli di ereditarietà TPH offrono in genere prestazioni migliori nel Entity Framework rispetto ai modelli di ereditarietà TPT, perché i modelli TPT possono generare query join complesse. Questa procedura dettagliata illustra come implementare l'ereditarietà TPH. Per eseguire questa operazione, seguire questa procedura:
 
-- Creare `Instructor` e `Student` tipi di entità che derivano da `Person`.
-- Spostare le proprietà relative alle entità derivata dal `Person` entità alle entità derivata.
-- Impostare vincoli sulle proprietà in tipi derivati.
-- Rendere il `Person` entità un'entità astratta.
-- Ogni mappa derivato entità per il `Person` tabella con una condizione che specifica la modalità determinare se un `Person` rappresenta di tipo derivato di riga.
+- Creare `Instructor` e `Student` i tipi di entità che derivano da `Person`.
+- Spostare le proprietà che riguardano le entità derivate dall'entità `Person` alle entità derivate.
+- Impostare vincoli sulle proprietà nei tipi derivati.
+- Rendere l'entità `Person` un'entità astratta.
+- Eseguire il mapping di ogni entità derivata alla tabella `Person` con una condizione che specifica come determinare se una riga `Person` rappresenta tale tipo derivato.
 
 ## <a name="adding-instructor-and-student-entities"></a>Aggiunta di entità Instructor e Student
 
-Aprire il <em>SchoolModel</em> del file, fare doppio clic su un'area non occupata nella finestra di progettazione, seleziona <strong>Add</strong>, quindi selezionare <strong>entità</strong><em>.</em>
+Aprire il file <em>SchoolModel. edmx</em> , fare clic con il pulsante destro del mouse su un'area non occupata nella finestra di progettazione, selezionare <strong>Aggiungi</strong>, quindi selezionare <strong>entità</strong><em>.</em>
 
-[![image01](the-entity-framework-and-aspnet-getting-started-part-6/_static/image6.png)](the-entity-framework-and-aspnet-getting-started-part-6/_static/image5.png)
+[![Image01](the-entity-framework-and-aspnet-getting-started-part-6/_static/image6.png)](the-entity-framework-and-aspnet-getting-started-part-6/_static/image5.png)
 
-Nel **Aggiungi entità** della finestra di dialogo Nome entità `Instructor` e impostare relativo **tipo di Base** possibilità `Person`.
+Nella finestra di dialogo **Aggiungi entità** assegnare un nome all'entità `Instructor` e impostare l'opzione relativa al **tipo di base** su `Person`.
 
 [![image02](the-entity-framework-and-aspnet-getting-started-part-6/_static/image8.png)](the-entity-framework-and-aspnet-getting-started-part-6/_static/image7.png)
 
-Fare clic su **OK**. La finestra di progettazione crea un' `Instructor` entità che deriva dal `Person` entità. La nuova entità non dispone ancora di tutte le proprietà.
+Fare clic su **OK**. La finestra di progettazione crea un'entità `Instructor` che deriva dall'entità `Person`. La nuova entità non dispone ancora di alcuna proprietà.
 
 [![image03](the-entity-framework-and-aspnet-getting-started-part-6/_static/image10.png)](the-entity-framework-and-aspnet-getting-started-part-6/_static/image9.png)
 
-Ripetere la procedura per creare un `Student` entità che deriva anche da `Person`.
+Ripetere la procedura per creare un'entità `Student` che deriva anche da `Person`.
 
-Solo instructors (insegnanti) includono date di assunzione, pertanto è necessario spostare la proprietà dal `Person` entità al `Instructor` entità. Nel `Person` entità, fare doppio clic il `HireDate` proprietà e fare clic su **Taglia**. Quindi fare doppio clic su **delle proprietà** nel `Instructor` entità e fare clic su **Incolla**.
+Solo gli insegnanti hanno date di assunzione, quindi è necessario spostare tale proprietà dall'entità `Person` all'entità `Instructor`. Nell'entità `Person` fare clic con il pulsante destro del mouse sulla proprietà `HireDate` e scegliere **taglia**. Fare quindi clic con il pulsante destro del mouse su **Proprietà** nell'entità `Instructor` e scegliere **Incolla**.
 
 [![image04](the-entity-framework-and-aspnet-getting-started-part-6/_static/image12.png)](the-entity-framework-and-aspnet-getting-started-part-6/_static/image11.png)
 
-La data di assunzione di un `Instructor` entità non può essere null. Fare doppio clic sul `HireDate` proprietà, fare clic su **proprietà**, quindi nel **proprietà** modificano `Nullable` a `False`.
+La data di assunzione di un'entità `Instructor` non può essere null. Fare clic con il pulsante destro del mouse sulla proprietà `HireDate`, scegliere **Proprietà**, quindi nella finestra **Proprietà** modificare `Nullable` in `False`.
 
 [![image05](the-entity-framework-and-aspnet-getting-started-part-6/_static/image14.png)](the-entity-framework-and-aspnet-getting-started-part-6/_static/image13.png)
 
-Ripetere la procedura per spostare il `EnrollmentDate` proprietà dal `Person` entità al `Student` entità. Assicurarsi di impostare anche `Nullable` al `False` per il `EnrollmentDate` proprietà.
+Ripetere la procedura per spostare la proprietà `EnrollmentDate` dall'entità `Person` all'entità `Student`. Assicurarsi di impostare anche `Nullable` su `False` per la proprietà `EnrollmentDate`.
 
-Ora che un `Person` entità include solo le proprietà comuni ai `Instructor` e `Student` entità (a parte le proprietà di navigazione, che non vengono spostati), l'entità può essere utilizzato solo come un'entità di base della struttura di ereditarietà. Pertanto, è necessario assicurare che non sia mai considerata come entità indipendenti. Fare doppio clic sul `Person` entità, selezionare **proprietà**e quindi nel **proprietà** finestra modificare il valore della **astratta** proprietà  **True**.
+Ora che un'entità `Person` dispone solo delle proprietà comuni alle entità `Instructor` e `Student` (eccetto le proprietà di navigazione, che non vengono spostate), l'entità può essere utilizzata solo come entità di base nella struttura di ereditarietà. Pertanto, è necessario assicurarsi che non venga mai considerata come un'entità indipendente. Fare clic con il pulsante destro del mouse sull'entità `Person`, scegliere **Proprietà**, quindi nella finestra **Proprietà** modificare il valore della proprietà **abstract** in **true**.
 
 [![image06](the-entity-framework-and-aspnet-getting-started-part-6/_static/image16.png)](the-entity-framework-and-aspnet-getting-started-part-6/_static/image15.png)
 
 ## <a name="mapping-instructor-and-student-entities-to-the-person-table"></a>Mapping di entità Instructor e Student alla tabella Person
 
-È ora necessario indicare a Entity Framework come distinguere `Instructor` e `Student` entità del database.
+A questo punto è necessario indicare all'Entity Framework come distinguere tra `Instructor` e `Student` entità nel database.
 
-Fare doppio clic il `Instructor` entità e selezionare **Mapping di tabelle**. Nel **Dettagli Mapping** finestra, fare clic su **aggiungere una tabella o vista** e selezionare **persona**.
+Fare clic con il pulsante destro del mouse sull'entità `Instructor` e selezionare **mapping tabella**. Nella finestra **Dettagli mapping** fare clic su **Aggiungi tabella o vista** e selezionare **persona**.
 
 [![image07](the-entity-framework-and-aspnet-getting-started-part-6/_static/image18.png)](the-entity-framework-and-aspnet-getting-started-part-6/_static/image17.png)
 
-Fare clic su **aggiungere una condizione**, quindi selezionare **HireDate**.
+Fare clic su **Aggiungi condizione**e quindi selezionare **assunto**.
 
 [![image09](the-entity-framework-and-aspnet-getting-started-part-6/_static/image20.png)](the-entity-framework-and-aspnet-getting-started-part-6/_static/image19.png)
 
-Change **operatore** al **viene** e **valore / proprietà** a **non Null**.
+Modificare **operator** in **is** e **value/Property** su **not null**.
 
 [![image10](the-entity-framework-and-aspnet-getting-started-part-6/_static/image22.png)](the-entity-framework-and-aspnet-getting-started-part-6/_static/image21.png)
 
-Ripetere la procedura per la `Students` entità, che specifica che l'entità è mappata al `Person` tabella quando il `EnrollmentDate` colonna non null. Quindi salvare e chiudere il modello di dati.
+Ripetere la procedura per l'entità `Students`, specificando che questa entità viene mappata alla tabella `Person` quando la colonna `EnrollmentDate` non è null. Quindi salvare e chiudere il modello di dati.
 
-Compilare il progetto per creare le nuove entità come classi e renderli disponibili nella finestra di progettazione.
+Compilare il progetto per creare le nuove entità come classi e renderle disponibili nella finestra di progettazione.
 
-## <a name="using-the-instructor-and-student-entities"></a>Usando l'entità Instructor e Student
+## <a name="using-the-instructor-and-student-entities"></a>Uso delle entità Instructor e Student
 
-Durante la creazione di pagine web che usano i dati student e instructor, è associato a dati per il `Person` del set di entità e filtrati in base il `HireDate` o `EnrollmentDate` proprietà per limitare i dati restituiti per gli studenti o docenti. Tuttavia, a questo punto quando si associa ogni controllo origine dati per il `Person` del set di entità, è possibile specificare che solo `Student` o `Instructor` i tipi di entità devono essere selezionati. Perché Entity Framework in grado di differenziare gli studenti e docenti nel `Person` set di entità, è possibile rimuovere il `Where` le impostazioni di proprietà immesso manualmente a tale scopo.
+Quando sono state create le pagine Web che funzionano con i dati di Student e Instructor, i dati sono stati associati al set di entità `Person` ed è stato eseguito il filtro sulla proprietà `HireDate` o `EnrollmentDate` per limitare i dati restituiti a studenti o docenti. Tuttavia, quando si associa ogni controllo origine dati al set di entità `Person`, è possibile specificare che devono essere selezionati solo i tipi di entità `Student` o `Instructor`. Poiché il Entity Framework sa come distinguere gli studenti e i docenti nel set di entità `Person`, è possibile rimuovere le impostazioni della proprietà `Where` immesse manualmente a tale scopo.
 
-Nella progettazione di Visual Studio, è possibile specificare tipo di entità che un `EntityDataSource` controllo dovrebbe selezionare nel **EntityTypeFilter** casella di riepilogo a discesa del `Configure Data Source` procedura guidata, come illustrato nell'esempio seguente.
+Nella finestra di progettazione di Visual Studio è possibile specificare il tipo di entità che un controllo `EntityDataSource` deve selezionare nella casella di riepilogo a discesa **EntityTypeFilter** della procedura guidata `Configure Data Source`, come illustrato nell'esempio seguente.
 
-[![image13](the-entity-framework-and-aspnet-getting-started-part-6/_static/image24.png)](the-entity-framework-and-aspnet-getting-started-part-6/_static/image23.png)
+[![Image13](the-entity-framework-and-aspnet-getting-started-part-6/_static/image24.png)](the-entity-framework-and-aspnet-getting-started-part-6/_static/image23.png)
 
-E il **delle proprietà** finestra è possibile rimuovere `Where` valori clausola che non sono più necessari, come illustrato nell'esempio seguente.
+Nella finestra **Proprietà** è possibile rimuovere `Where` valori della clausola che non sono più necessari, come illustrato nell'esempio seguente.
 
 [![image14](the-entity-framework-and-aspnet-getting-started-part-6/_static/image26.png)](the-entity-framework-and-aspnet-getting-started-part-6/_static/image25.png)
 
-Tuttavia, poiché è stato modificato il markup per `EntityDataSource` controlli da usare il `ContextTypeName` attributo, non è possibile eseguire il **Configura origine dati** procedura guidata in `EntityDataSource` controlli che è già stato creato. Pertanto, si apporteranno le modifiche necessarie modificando invece markup.
+Tuttavia, poiché il markup per `EntityDataSource` controlli è stato modificato in modo da utilizzare l'attributo `ContextTypeName`, non è possibile eseguire la **Configurazione guidata origine dati** nei controlli `EntityDataSource` già creati. Pertanto, verranno apportate le modifiche necessarie cambiando invece il markup.
 
-Aprire il *Students.aspx* pagina. Nel `StudentsEntityDataSource` controllano, rimuovere il `Where` dell'attributo e aggiungere un `EntityTypeFilter="Student"` attributo. Il markup sarà ora simile all'esempio seguente:
+Aprire la pagina *students. aspx* . Nel controllo `StudentsEntityDataSource` rimuovere l'attributo `Where` e aggiungere un `EntityTypeFilter="Student"` attributo. Il markup sarà simile all'esempio seguente:
 
 [!code-aspx[Main](the-entity-framework-and-aspnet-getting-started-part-6/samples/sample1.aspx)]
 
-Impostando il `EntityTypeFilter` attributo assicura che il `EntityDataSource` controllo selezionerà solo il tipo di entità specificato. Se si desidera recuperare entrambe `Student` e `Instructor` tipi di entità, non si imposta questo attributo. (È disponibile l'opzione di recupero di più tipi di entità con una `EntityDataSource` controllo solo se si usa il controllo per l'accesso ai dati di sola lettura. Se si usa un `EntityDataSource` controlla allo scopo di inserire, aggiornare o eliminare entità e se il set di entità è associato a può contenere più tipi, è possibile usare solo con un tipo di entità e che è necessario impostare questo attributo.)
+Impostando l'attributo `EntityTypeFilter` si garantisce che il controllo `EntityDataSource` selezioni solo il tipo di entità specificato. Se si desidera recuperare i tipi di entità `Student` e `Instructor`, non impostare questo attributo. (È possibile recuperare più tipi di entità con uno `EntityDataSource` controllo solo se si usa il controllo per l'accesso ai dati di sola lettura. Se si usa un controllo `EntityDataSource` per inserire, aggiornare o eliminare entità e se il set di entità a cui è associato può contenere più tipi, è possibile usare un solo tipo di entità ed è necessario impostare questo attributo.
 
-Ripetere la procedura per la `SearchEntityDataSource` controllare, ad eccezione del fatto rimuovere solo la parte del `Where` attributo che consente di selezionare `Student` entità invece di rimuovere completamente la proprietà. Il tag di apertura del controllo sarà ora simile all'esempio seguente:
+Ripetere la procedura per il controllo `SearchEntityDataSource`, eccetto rimuovere solo la parte dell'attributo `Where` che seleziona `Student` entità anziché rimuovere completamente la proprietà. Il tag di apertura del controllo sarà simile all'esempio seguente:
 
 [!code-aspx[Main](the-entity-framework-and-aspnet-getting-started-part-6/samples/sample2.aspx)]
 
-Eseguire la pagina per verificare che continuerà a funzionare come in precedenza.
+Eseguire la pagina per verificare che funzioni ancora come prima.
 
 [![image15](the-entity-framework-and-aspnet-getting-started-part-6/_static/image28.png)](the-entity-framework-and-aspnet-getting-started-part-6/_static/image27.png)
 
-Aggiornare le pagine seguenti creato nelle esercitazioni precedenti in modo che utilizzino il nuovo `Student` e `Instructor` entità anziché `Person` entità, quindi eseguirli per verificare che funzionino come in precedenza:
+Aggiornare le pagine seguenti create nelle esercitazioni precedenti in modo che usino le nuove entità `Student` e `Instructor` invece di `Person` entità, quindi eseguirle per verificare che funzionino come prima:
 
-- Nelle *StudentsAdd.aspx*, aggiungere `EntityTypeFilter="Student"` per il `StudentsEntityDataSource` controllo. Il markup sarà ora simile all'esempio seguente: 
+- In *StudentsAdd. aspx*aggiungere `EntityTypeFilter="Student"` al controllo `StudentsEntityDataSource`. Il markup sarà simile all'esempio seguente: 
 
     [!code-aspx[Main](the-entity-framework-and-aspnet-getting-started-part-6/samples/sample3.aspx)]
 
     [![image16](the-entity-framework-and-aspnet-getting-started-part-6/_static/image30.png)](the-entity-framework-and-aspnet-getting-started-part-6/_static/image29.png)
-- Nelle *About*, aggiungere `EntityTypeFilter="Student"` per il `StudentStatisticsEntityDataSource` controllare e rimuovere `Where="it.EnrollmentDate is not null"`. Il markup sarà ora simile all'esempio seguente: 
+- In *About. aspx*aggiungere `EntityTypeFilter="Student"` al controllo `StudentStatisticsEntityDataSource` e rimuovere `Where="it.EnrollmentDate is not null"`. Il markup sarà simile all'esempio seguente: 
 
     [!code-aspx[Main](the-entity-framework-and-aspnet-getting-started-part-6/samples/sample4.aspx)]
 
-    [![Image17](the-entity-framework-and-aspnet-getting-started-part-6/_static/image32.png)](the-entity-framework-and-aspnet-getting-started-part-6/_static/image31.png)
-- Nelle *Instructors.aspx* e *InstructorsCourses.aspx*, aggiungere `EntityTypeFilter="Instructor"` per i `InstructorsEntityDataSource` controllare e rimuovere `Where="it.HireDate is not null"`. Il markup *Instructors.aspx* ora simile al seguente: 
+    [![image17](the-entity-framework-and-aspnet-getting-started-part-6/_static/image32.png)](the-entity-framework-and-aspnet-getting-started-part-6/_static/image31.png)
+- In *Instructors. aspx* e *InstructorsCourses. aspx*aggiungere `EntityTypeFilter="Instructor"` al controllo `InstructorsEntityDataSource` e rimuovere `Where="it.HireDate is not null"`. Il markup in *Instructors. aspx* è ora simile all'esempio seguente: 
 
     [!code-aspx[Main](the-entity-framework-and-aspnet-getting-started-part-6/samples/sample5.aspx)]
 
     [![image18](the-entity-framework-and-aspnet-getting-started-part-6/_static/image34.png)](the-entity-framework-and-aspnet-getting-started-part-6/_static/image33.png)
 
-    Il markup *InstructorsCourses.aspx* sarà ora simile all'esempio seguente:
+    Il markup in *InstructorsCourses. aspx* sarà simile all'esempio seguente:
 
     [!code-aspx[Main](the-entity-framework-and-aspnet-getting-started-part-6/samples/sample6.aspx)]
 
-    [![Image19](the-entity-framework-and-aspnet-getting-started-part-6/_static/image36.png)](the-entity-framework-and-aspnet-getting-started-part-6/_static/image35.png)
+    [![image19](the-entity-framework-and-aspnet-getting-started-part-6/_static/image36.png)](the-entity-framework-and-aspnet-getting-started-part-6/_static/image35.png)
 
-In seguito a queste modifiche, è stata migliorata la manutenibilità dell'applicazione Contoso University in diversi modi. Si è spostati logica di selezione e convalida dal livello dell'interfaccia utente (*aspx* markup) e ha reso parte integrante del livello di accesso ai dati. Ciò aiuta a isolare il codice dell'applicazione di modifiche che è possibile apportare in futuro per lo schema del database o il modello di dati. Ad esempio, è possibile decidere che gli studenti potrebbero assumere come ausilio degli insegnanti e pertanto otterrebbe una data di assunzione. È quindi possibile aggiungere una nuova proprietà per differenziare gli studenti da istruttori e aggiornare il modello di dati. Nessun codice nell'applicazione web dovrà essere modificato, ad eccezione di dove si desidera mostrare una data di assunzione per gli studenti. Un altro vantaggio dell'aggiunta `Instructor` e `Student` entità è che il codice sia più facilmente comprensibile rispetto a quando definito `Person` gli oggetti che erano in realtà studenti o instructors (insegnanti).
+In seguito a queste modifiche, è stata migliorata la gestibilità dell'applicazione Contoso University in diversi modi. È stata spostata la logica di selezione e di convalida dal livello dell'interfaccia utente (markup *. aspx* ) ed è stata resa parte integrante del livello di accesso ai dati. Questo consente di isolare il codice dell'applicazione da modifiche che è possibile apportare in futuro allo schema del database o al modello di dati. Ad esempio, è possibile decidere che gli studenti potrebbero essere assunti come ausilio per i docenti e quindi ottenere una data di assunzione. È quindi possibile aggiungere una nuova proprietà per distinguere gli studenti dagli insegnanti e aggiornare il modello di dati. Non è necessario modificare il codice nell'applicazione Web, tranne nel caso in cui si volesse visualizzare una data di assunzione per gli studenti. Un altro vantaggio offerto dall'aggiunta di `Instructor` e `Student` entità è che il codice è più facilmente comprensibile rispetto a quando si fa riferimento a oggetti `Person` che erano effettivamente studenti o docenti.
 
-A questo punto si è appreso come implementare un modello di ereditarietà in Entity Framework. Nell'esercitazione seguente, si apprenderà come usare stored procedure per avere maggiore controllo sul modo in cui Entity Framework accede al database.
+A questo punto è stato illustrato un modo per implementare un modello di ereditarietà nel Entity Framework. Nell'esercitazione seguente verrà illustrato come utilizzare le stored procedure per avere un maggiore controllo sul modo in cui il Entity Framework accede al database.
 
 > [!div class="step-by-step"]
 > [Precedente](the-entity-framework-and-aspnet-getting-started-part-5.md)

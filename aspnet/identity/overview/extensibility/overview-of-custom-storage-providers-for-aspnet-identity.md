@@ -10,15 +10,15 @@ ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/extensibility/overview-of-custom-storage-providers-for-aspnet-identity
 msc.type: authoredcontent
 ms.openlocfilehash: 21baedf6285b411f89627df9ca25d47a2a42e387
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519102"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78584413"
 ---
 # <a name="overview-of-custom-storage-providers-for-aspnet-identity"></a>Panoramica dei provider di archiviazione personalizzati per ASP.NET Identity
 
-da [Tom FitzMacken](https://github.com/tfitzmac)
+di [Tom FitzMacken](https://github.com/tfitzmac)
 
 > ASP.NET Identity è un sistema estensibile che consente di creare un provider di archiviazione personalizzato e di inserirlo nell'applicazione senza riutilizzare l'applicazione. In questo argomento viene descritto come creare un provider di archiviazione personalizzato per ASP.NET Identity. Vengono illustrati i concetti importanti per la creazione di un provider di archiviazione personalizzato, ma non si tratta di una procedura dettagliata per l'implementazione di un provider di archiviazione personalizzato.
 > 
@@ -38,7 +38,7 @@ Per impostazione predefinita, il sistema ASP.NET Identity archivia le informazio
 
 ASP.NET Identity è incluso per impostazione predefinita in molti dei modelli di Visual Studio 2013. È possibile ottenere gli aggiornamenti ASP.NET Identity tramite il [pacchetto NuGet Microsoft ASPNET Identity EntityFramework](http://www.nuget.org/packages/Microsoft.AspNet.Identity.EntityFramework/).
 
-In questo argomento sono incluse le sezioni seguenti:
+Questo argomento include le sezioni seguenti:
 
 - [Informazioni sull'architettura](#architecture)
 - [Informazioni sui dati archiviati](#data)
@@ -68,12 +68,12 @@ Non è necessario personalizzare le classi Manager perché quando si crea una nu
 
 Per implementare un provider di archiviazione personalizzato, è necessario comprendere i tipi di dati utilizzati con ASP.NET Identity e decidere quali funzionalità sono rilevanti per l'applicazione.
 
-| Data | Descrizione |
+| Dati | Description |
 | --- | --- |
-| Utenti di | Utenti registrati del sito Web. Include l'ID utente e il nome utente. Potrebbe includere una password con hash se gli utenti eseguono l'accesso con credenziali specifiche per il sito (invece di usare le credenziali di un sito esterno come Facebook) e l'indicatore di sicurezza per indicare se sono state apportate modifiche alle credenziali utente. Potrebbe includere anche l'indirizzo di posta elettronica, il numero di telefono, se è abilitata l'autenticazione a due fattori, il numero corrente di accessi non riusciti e se un account è stato bloccato. |
+| Utenti | Utenti registrati del sito Web. Include l'ID utente e il nome utente. Potrebbe includere una password con hash se gli utenti eseguono l'accesso con credenziali specifiche per il sito (invece di usare le credenziali di un sito esterno come Facebook) e l'indicatore di sicurezza per indicare se sono state apportate modifiche alle credenziali utente. Potrebbe includere anche l'indirizzo di posta elettronica, il numero di telefono, se è abilitata l'autenticazione a due fattori, il numero corrente di accessi non riusciti e se un account è stato bloccato. |
 | Attestazioni utente | Set di istruzioni (o attestazioni) sull'utente che rappresenta l'identità dell'utente. Consente di abilitare un'espressione maggiore dell'identità dell'utente che può essere eseguita tramite i ruoli. |
 | Account di accesso utente | Informazioni sul provider di autenticazione esterno, ad esempio Facebook, da usare per la registrazione in un utente. |
-| Ruoli di | Gruppi di autorizzazione per il sito. Include l'ID del ruolo e il nome del ruolo (ad esempio, "admin" o "Employee"). |
+| Ruoli | Gruppi di autorizzazione per il sito. Include l'ID del ruolo e il nome del ruolo (ad esempio, "admin" o "Employee"). |
 
 <a id="dal"></a>
 ## <a name="create-the-data-access-layer"></a>Creare il livello di accesso ai dati
@@ -86,7 +86,7 @@ Per un'implementazione MySQL di repository di dati per ASP.NET Identity 2,0, ved
 
 Nel livello di accesso ai dati fornire la logica per salvare i dati da ASP.NET Identity all'origine dati. Il livello di accesso ai dati per il provider di archiviazione personalizzato potrebbe includere le classi seguenti per archiviare le informazioni relative a utenti e ruoli.
 
-| Classe | Descrizione | Esempio |
+| Classe | Description | Esempio |
 | --- | --- | --- |
 | Contesto | Incapsula le informazioni per la connessione al meccanismo di persistenza e l'esecuzione di query. Questa classe è fondamentale per il livello di accesso ai dati. Per le altre classi di dati è necessaria un'istanza di questa classe per eseguire le operazioni. Si inizializzano inoltre le classi dell'archivio con un'istanza di questa classe. | [MySQLDatabase](https://github.com/aspnet/samples/blob/master/samples/aspnet/Identity/AspNet.Identity.MySQL/MySQLDatabase.cs) |
 | Archiviazione utente | Archivia e recupera le informazioni utente, ad esempio il nome utente e l'hash della password. | [UserTable (MySQL)](https://github.com/aspnet/samples/blob/master/samples/aspnet/Identity/AspNet.Identity.MySQL/UserTable.cs) |
@@ -216,7 +216,7 @@ Nell'esempio seguente viene illustrata una classe di archivio ruoli. Il parametr
 
 - **IRoleStore&lt;TRole&gt;**  
   L'interfaccia [IRoleStore](https://msdn.microsoft.com/library/dn468195.aspx) definisce i metodi da implementare nella classe dell'archivio dei ruoli. Contiene i metodi per la creazione, l'aggiornamento, l'eliminazione e il recupero di ruoli.
-- **RoleStore&lt;TRole&gt;**  
+- **Nell'rolestore&lt;TRole&gt;**  
   Per personalizzare nell'rolestore, creare una classe che implementi l'interfaccia IRoleStore. È necessario implementare questa classe solo se si desidera utilizzare i ruoli nel sistema. Il costruttore che accetta un parametro denominato *database* di tipo ExampleDatabase è solo un esempio di come passare la classe di accesso ai dati. Ad esempio, nell'implementazione di MySQL, questo costruttore accetta un parametro di tipo MySQLDatabase.  
   
   Per un'implementazione completa, vedere [nell'rolestore (MySQL)](https://github.com/aspnet/samples/blob/master/samples/aspnet/Identity/AspNet.Identity.MySQL/RoleStore.cs) .

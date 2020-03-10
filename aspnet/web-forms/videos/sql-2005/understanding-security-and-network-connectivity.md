@@ -1,25 +1,25 @@
 ---
 uid: web-forms/videos/sql-2005/understanding-security-and-network-connectivity
-title: Informazioni sulla sicurezza e connettività di rete | Microsoft Docs
+title: Informazioni sulla sicurezza e sulla connettività di rete | Microsoft Docs
 author: microsoft
-description: Principianti di SQL Server verranno illustrato come distinguere tra i file di database di SQL Server e i processi di SQL Server. Esplorare gli scenari per la connessione a SQL Server e...
+description: SQL Server principianti apprenderà come distinguere tra i file di database SQL Server e i processi di SQL Server. Esplora gli scenari per la connessione a SQL Server E...
 ms.author: riande
 ms.date: 03/20/2006
 ms.assetid: 5a0df3fa-07d9-4762-b9db-1824dcd8a31a
 msc.legacyurl: /web-forms/videos/sql-2005/understanding-security-and-network-connectivity
 msc.type: video
 ms.openlocfilehash: 9f4bf5f0e0658c1fc7e883a0a5544b1f0fc96809
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59395628"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78547964"
 ---
 # <a name="understanding-security-and-network-connectivity"></a>Informazioni sulla sicurezza e la connettività di rete
 
-by [Microsoft](https://github.com/microsoft)
+[Microsoft](https://github.com/microsoft)
 
-Principianti di SQL Server verranno illustrato come distinguere tra i file di database di SQL Server e i processi di SQL Server. Esplorare gli scenari per la connessione al database di SQL Server Express, abilitare e disabilitare le istanze utente, le autorizzazioni di accesso e altre misure di sicurezza.
+SQL Server principianti apprenderà come distinguere tra i file di database SQL Server e i processi di SQL Server. Esplorare scenari per la connessione a database di SQL Server Express, l'abilitazione e la disabilitazione di istanze utente, autorizzazioni di accesso e altre precauzioni per la sicurezza.
 
 [&#9654;Guarda il video (40 minuti)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/understanding-security-and-network-connectivity)
 

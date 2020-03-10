@@ -1,291 +1,291 @@
 ---
 uid: web-pages/overview/getting-started/introducing-aspnet-web-pages-2/getting-started
-title: Guida introduttiva | Microsoft Docs
+title: Introduzione | Microsoft Docs
 author: Rick-Anderson
-description: WebMatrix non è più consigliata come ambiente di sviluppo integrato per ASP.NET Web Pages. Usare Visual Studio o Visual Studio Code. Questo materiale sussidiario un...
+description: WebMatrix non è più consigliato come Integrated Development Environment per Pagine Web ASP.NET. Usare Visual Studio o Visual Studio Code. Questa guida...
 ms.author: riande
 ms.date: 05/28/2015
 ms.assetid: a36d3bdf-ef1b-47a4-b932-3a0cf4cad716
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/getting-started
 msc.type: authoredcontent
 ms.openlocfilehash: bb863f8605e6f8faca3b285607b63a3e88e83012
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65128548"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78547103"
 ---
 # <a name="getting-started"></a>Introduzione
 
-da [Tom FitzMacken](https://github.com/tfitzmac)
+di [Tom FitzMacken](https://github.com/tfitzmac)
 
 [!INCLUDE[](~/includes/rp.md)]
 
 > > [!NOTE] 
 > > 
-> > WebMatrix non è più consigliata come ambiente di sviluppo integrato per ASP.NET Web Pages. Uso [Visual Studio](../program-asp-net-web-pages-in-visual-studio.md) oppure [Visual Studio Code](https://code.visualstudio.com/).
+> > WebMatrix non è più consigliato come Integrated Development Environment per Pagine Web ASP.NET. Usare [Visual Studio](../program-asp-net-web-pages-in-visual-studio.md) o [Visual Studio Code](https://code.visualstudio.com/).
 > 
 > 
-> Questo materiale sussidiario e applicazione offre una panoramica di ASP.NET Web Pages (2 o versioni successive) e la sintassi Razor, un framework leggero per la creazione di siti Web dinamici. Offre anche WebMatrix, uno strumento per la creazione di siti e pagine.
+> Questa guida e questa applicazione offrono una panoramica di Pagine Web ASP.NET (versione 2 o successiva) e sintassi Razor, un framework leggero per la creazione di siti Web dinamici. Introduce inoltre WebMatrix, uno strumento per la creazione di pagine e siti.
 > 
-> **Livello**: Novità di ASP.NET Web Pages.  
-> **Si presuppone che le competenze**: HTML, fogli di stile CSS basic (CSS).
+> **Level**: nuovo pagine Web ASP.NET.  
+> **Competenze presupposte**: HTML, fogli di stile CSS di base.
 > 
-> Contenuto dell'esercitazione nella prima esercitazione del set di:
+> Che verrà illustrato nella prima esercitazione del set:
 > 
-> - Quale tecnologia ASP.NET Web Pages è e cosa serve.
-> - Che cos'è WebMatrix.
+> - Che cos'è Pagine Web ASP.NET tecnologia e a cosa serve.
+> - Cosa è WebMatrix.
 > - Come installare tutti gli elementi.
-> - Come creare un sito Web con WebMatrix.
+> - Come creare un sito Web usando WebMatrix.
 >   
 > 
-> Le funzionalità/tecnologie illustrate:
+> Funzionalità/tecnologie discusse:
 > 
 > - Installazione guidata piattaforma Web Microsoft.
 > - WebMatrix.
-> - *con estensione cshtml* pagine
+> - pagine *. cshtml*
 >   
 > 
-> Mike Pope originariamente scrisse in questa esercitazione. Tom FitzMacken aggiornato per Microsoft WebMatrix 3.
+> Mike Pope ha originariamente scritto questa esercitazione. Tom FitzMacken è stato aggiornato per Microsoft WebMatrix 3.
 > 
-> ## <a name="software-versions-used-in-the-tutorial"></a>Versioni del software utilizzate nell'esercitazione
+> ## <a name="software-versions-used-in-the-tutorial"></a>Versioni del software usate nell'esercitazione
 > 
 > 
-> - ASP.NET Web Pages (Razor) 2
+> - Pagine Web ASP.NET (Razor) 2
 > - WebMatrix 3
 
-## <a name="what-should-you-know"></a>Cosa è necessario sapere?
+## <a name="what-should-you-know"></a>Cosa si può sapere?
 
-Si presuppone che si abbia familiarità con:
+Si presuppone che l'utente abbia familiarità con:
 
-- **HTML**. Non è necessaria alcuna competenza approfondita. Senza entrare in spiegazioni HTML, ma non è possibile inoltre utilizzare operazioni complesse. Forniremo collegamenti alle esercitazioni HTML in cui si pensa che risultano utili.
-- **CSS (Cascading style sheet)**. Uguale a con il linguaggio HTML.
-- **Concetti di base dei database**. Se è stato usato un foglio di calcolo per i dati e ordinata e filtrata di dati, ad esempio il livello di esperienza in genere si presuppone per questa serie di esercitazioni.
+- **HTML**. Non è necessaria alcuna esperienza approfondita. Non verrà illustrato il codice HTML, ma non verrà usato alcun complesso. Verranno forniti i collegamenti alle esercitazioni HTML in cui riteniamo che siano utili.
+- **Fogli di stile CSS**. Uguale a quello del codice HTML.
+- **Idee di base sul database**. Se è stato usato un foglio di calcolo per i dati e sono stati ordinati e filtrati i dati, questo è il livello di esperienza che in genere si presuppone per questa serie di esercitazioni.
 
-Si presuppone che si è interessati alla programmazione di base di apprendimento. ASP.NET Web Pages utilizza un linguaggio di programmazione c# denominato. Non è necessario avere le nozioni di programmazione, solo un interesse a riguardo. Se hai mai scritto codice JavaScript in una pagina web prima di, hai una vasta gamma di sfondo.
+Si presuppone anche che l'utente sia interessato alla programmazione di base. Pagine Web ASP.NET utilizzare un linguaggio di programmazione C#denominato. Non è necessario avere alcun background nella programmazione, ma solo un interesse. Se in precedenza è stato scritto codice JavaScript in una pagina Web, si ha a che fare con molti retroscena.
 
-Si noti che se si ha familiarità con la programmazione, si noterà che questa esercitazione è stata impostata inizialmente aumenta lentamente mentre vengono erogate accelerare i programmatori non esperti. Man mano che oltre le esercitazioni di alcuni prima, però, sarà presente a meno di base di programmazione per spiegare e cose si sposta lungo in una clip più veloce.
+Si noti che se si ha familiarità con la programmazione, è possibile che questo set di esercitazioni venga inizialmente spostato lentamente mentre i nuovi programmatori si avvicinano alla velocità. Mentre le prime esercitazioni sono state superate, tuttavia, sarà disponibile una programmazione di base per spiegare e le cose si sposteranno in un clip più rapido.
 
-## <a name="what-do-you-need"></a>Che cosa serve?
+## <a name="what-do-you-need"></a>Quali sono gli elementi necessari?
 
 Ecco cosa è necessario:
 
 - Un computer che esegue Windows 8, Windows 7, Windows Server 2008 o Windows Server 2012.
-- Una connessione internet attiva.
-- Privilegi di amministratore (richiesto per il processo di installazione).
+- Una connessione Internet attiva.
+- Privilegi di amministratore (necessari per il processo di installazione).
 
-## <a name="what-is-aspnet-web-pages"></a>Che cos'è ASP.NET Web Pages?
+## <a name="what-is-aspnet-web-pages"></a>Che cos'è Pagine Web ASP.NET?
 
-ASP.NET Web Pages è un framework che è possibile usare per creare pagine web dinamiche. Una semplice pagina web HTML è statico. il contenuto è determinato dal markup HTML predefinito è nella pagina. Le pagine dinamiche, ad esempio quelli creati con ASP.NET Web Pages consentono di creare il contenuto della pagina in tempo reale, tramite codice.
+Pagine Web ASP.NET è un Framework che è possibile utilizzare per creare pagine Web dinamiche. Una semplice pagina Web HTML è statica; il contenuto è determinato dal markup HTML fisso presente nella pagina. Le pagine dinamiche come quelle create con Pagine Web ASP.NET consentono di creare rapidamente il contenuto della pagina usando il codice.
 
-Le pagine dinamiche consentono di eseguire moltissime operazioni. È possibile chiedere a un utente per l'input tramite un modulo e quindi modificare la pagina Visualizza o l'aspetto. È possibile richiedere informazioni da un utente, salvarlo in un database e quindi pubblicarla in un secondo momento. È possibile inviare tramite posta elettronica dal proprio sito. È possibile interagire con altri servizi nel web (ad esempio, un servizio di mapping) e generare le pagine che si integrano le informazioni da tali origini.
+Le pagine dinamiche consentono di eseguire tutti i tipi di operazioni. È possibile chiedere a un utente di immettere l'input usando un modulo e quindi modificare la visualizzazione della pagina o l'aspetto. È possibile ottenere informazioni da un utente, salvarle in un database e quindi elencarle successivamente. È possibile inviare messaggi di posta elettronica dal sito. È possibile interagire con altri servizi sul Web (ad esempio, un servizio di mapping) e produrre pagine che integrano le informazioni provenienti da tali origini.
 
 ## <a name="what-is-webmatrix"></a>Che cos'è WebMatrix?
 
-WebMatrix è uno strumento che integra un editor di pagine web, un'utilità di database, un server web per il test, pagine e funzionalità per la pubblicazione del sito Web a Internet. WebMatrix è gratuita ed è facile da installare e facile da usare. (Funziona anche per semplici pagine HTML, nonché per altre tecnologie come PHP.)
+WebMatrix è uno strumento che integra un editor di pagine Web, un'utilità di database, un server Web per il test delle pagine e funzionalità per la pubblicazione di un sito Web su Internet. WebMatrix è gratuito ed è facile da installare e facile da usare. (Funziona anche per le pagine HTML semplici, nonché per altre tecnologie come PHP).
 
-Non è in realtà *hanno* usare WebMatrix per lavorare con ASP.NET Web Pages. È possibile creare pagine con un testo dell'editor, ad esempio e testare le pagine usando un server web che è possibile utilizzare. Tuttavia, WebMatrix è tutto molto semplice, in modo che queste esercitazioni userà WebMatrix in tutto.
+In *realtà non è necessario usare* WebMatrix per lavorare con pagine Web ASP.NET. È possibile creare pagine usando un editor di testo, ad esempio, e le pagine di test usando un server Web a cui si ha accesso. Tuttavia, WebMatrix lo rende molto semplice, quindi queste esercitazioni utilizzeranno WebMatrix in tutto.
 
-## <a name="about-these-tutorials"></a>Su queste esercitazioni
+## <a name="about-these-tutorials"></a>Informazioni sulle esercitazioni
 
-Questa serie di esercitazioni è un'introduzione a come utilizzare ASP.NET Web Pages. Sono disponibili 9 esercitazioni totale in questa serie di esercitazioni introduttiva. Relativo parte di una serie di set di esercitazioni che va dalla meno esperti di ASP.NET Web Pages alla creazione di siti Web reali, dall'aspetto professionale.
+Questo set di esercitazioni è un'introduzione a come usare Pagine Web ASP.NET. Questo set di esercitazioni introduttive include 9 esercitazioni totali. Fa parte di una serie di set di esercitazioni che consentono di Pagine Web ASP.NET novizio per la creazione di siti Web reali e dall'aspetto professionale.
 
-Questa prima esercitazione di concentrati è nastavit che illustra le nozioni di base dell'uso con ASP.NET Web Pages. Al termine, è possibile lavorare con set di esercitazioni aggiuntive prelevare dove termina questo e di esplorare le pagine Web in modo più approfondito.
+Il primo set di esercitazioni si concentra sulla visualizzazione delle nozioni di base su come usare Pagine Web ASP.NET. Al termine, è possibile usare set di esercitazioni aggiuntivi che prevedono il punto in cui termina e che esplorano le pagine Web in modo più approfondito.
 
-È deliberatamente passare facilmente le spiegazioni dettagliate. E ogni volta che viene illustrato un elemento, per questa serie di esercitazioni è sempre scegliere il modo in cui si pensa è più facile da comprendere. Set di esercitazioni successive approfondiscono e descrive gli approcci più flessibile o più efficienti (anche più divertente). Ma tali esercitazioni richiedono la comprensione prima di tutto le nozioni di base.
+Le spiegazioni approfondite sono deliberatamente semplici. E ogni volta che viene visualizzato qualcosa, per questo set di esercitazioni è sempre necessario scegliere il modo più facile da comprendere. I set di esercitazioni successivi sono più approfonditi e mostrano un approccio più efficiente o più flessibile (anche più divertente). Tuttavia, per queste esercitazioni è necessario comprendere prima di tutto le nozioni di base.
 
-La serie di esercitazioni che appena avviata descrive queste funzionalità di ASP.NET Web Pages:
+Il set di esercitazioni appena avviato illustra le seguenti funzionalità di Pagine Web ASP.NET:
 
-- Introduzione e tutto ciò è installato. (Che è in questa esercitazione che si sta leggendo).
-- Le nozioni di base della programmazione di ASP.NET Web Pages.
+- Introduzione e recupero di tutti gli elementi installati. Nell'esercitazione che si sta leggendo.
+- Nozioni di base sulla programmazione Pagine Web ASP.NET.
 - Creazione di un database.
-- La creazione e l'elaborazione di un modulo di input utente.
-- Aggiunta, aggiornamento ed eliminazione dei dati nel database.
+- Creazione ed elaborazione di un modulo di input dell'utente.
+- Aggiunta, aggiornamento ed eliminazione di dati nel database.
 
-## <a name="what-will-you-create"></a>Che cosa sarà necessario creare?
+## <a name="what-will-you-create"></a>Che cosa creerai?
 
-Imposta questa esercitazione e le successive ruotano intorno a un sito Web in cui è possibile elencare i film che si desidera. Sarà in grado di immettere film, modificarli e visualizzarne l'elenco. Ecco un paio di pagine di cui che si creerà in questa serie di esercitazioni. Il primo screenshot Mostra il film listato pagina che verrà creata:
+Questo set di esercitazioni e versioni successive si riferiscono a un sito Web in cui è possibile elencare i film desiderati. Potrai immettere filmati, modificarli ed elencarli. Di seguito sono riportate alcune delle pagine che verranno create in questo set di esercitazioni. Il primo Mostra la pagina dell'elenco di film che verrà creata:
 
-![Impostandolo Movie app che mostra un elenco di film](getting-started/_static/image1.png)
+![App Movie finshed che mostra un elenco di film](getting-started/_static/image1.png)
 
-Ed ecco la pagina che consente di aggiungere nuove informazioni relative al filmato al sito:
+Ecco la pagina che consente di aggiungere nuove informazioni sul film al sito:
 
-![App completata film che mostra la pagina Aggiungi film](getting-started/_static/image2.png)
+![App film completata che mostra la pagina Aggiungi film](getting-started/_static/image2.png)
 
-Compilazione di set di esercitazioni successive in questo set e aggiungere ulteriori funzionalità, quali il caricamento di immagini, consentire agli utenti l'accesso, l'invio di posta elettronica e l'integrazione con i social media.
+I set di esercitazioni successivi compilano su questo set e aggiungono altre funzionalità, ad esempio il caricamento di immagini, l'accesso degli utenti, l'invio di messaggi di posta elettronica e l'integrazione con i social media.
 
-## <a name="see-this-app-running-on-azure"></a>Vedere questa App in esecuzione in Azure
+## <a name="see-this-app-running-on-azure"></a>Vedi questa app in esecuzione in Azure
 
-Si desidera vedere il sito completo in esecuzione come un'app web in tempo reale? È possibile distribuire una versione completa dell'app al tuo account Azure, facendo semplicemente clic sul pulsante seguente.
+Si desidera visualizzare il sito finito in esecuzione come app Web Live? È possibile distribuire una versione completa dell'app nell'account Azure semplicemente facendo clic sul pulsante seguente.
 
 [![](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/?WT.mc_id=deploy_azure_aspnet&repository=https://github.com/tfitzmac/WebPagesMovies)
 
-È necessario un account di Azure per distribuire questa soluzione in Azure. Se non hai già un account, sono disponibili le opzioni seguenti:
+Per distribuire questa soluzione in Azure, è necessario un account Azure. Se non si dispone già di un account, sono disponibili le opzioni seguenti:
 
-- [Aprire un account Azure gratuito](https://azure.microsoft.com/pricing/free-trial/?WT.mc_id=A443DD604) -ricevono crediti è possibile usare per provare i servizi di Azure a pagamento e anche dopo che sono abituati fino è possibile mantenere l'account e usare i servizi Azure gratuiti.
-- [Attivare i benefici della sottoscrizione MSDN](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/?WT.mc_id=A443DD604) -la sottoscrizione MSDN si accumulano crediti ogni mese in cui è possibile usare per i servizi di Azure a pagamento.
+- [Apri un account Azure](https://azure.microsoft.com/pricing/free-trial/?WT.mc_id=A443DD604) gratuitamente: puoi ottenere crediti che puoi usare per provare i servizi di Azure a pagamento e, anche dopo che sono stati usati, puoi tenere l'account e usare i servizi di Azure gratuiti.
+- [Attiva i vantaggi per gli abbonati MSDN](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/?WT.mc_id=A443DD604) : l'abbonamento MSDN ti offre crediti ogni mese che puoi usare per i servizi di Azure a pagamento.
 
-## <a name="installing-everything"></a>Installazione di tutti gli elementi
+## <a name="installing-everything"></a>Installazione di tutto
 
-È possibile installare tutti gli elementi usando l'installazione guidata piattaforma Web Microsoft. In effetti, l'installazione guidata e quindi usarla per installare tutti gli altri elementi.
+È possibile installare tutti gli elementi usando l'installazione guidata piattaforma Web da Microsoft. In pratica, si installa il programma di installazione e quindi lo si usa per installare tutto il resto.
 
-Per usare le pagine Web, è necessario essere avere almeno Windows XP con SP3 installati o Windows Server 2008 o versione successiva.
+Per utilizzare le pagine Web, è necessario disporre almeno di Windows XP con SP3 installato o Windows Server 2008 o versione successiva.
 
-Nel [pagina Web Pages](../../../index.md) del sito Web ASP.NET, fare clic su **installare**.
+Nella [pagina pagine Web](../../../index.md) del sito Web ASP.NET fare clic su **Installa**.
 
-![Visualizzazione del sito Web ASP.NET &quot;installa WebMatrix&quot; pulsante](getting-started/_static/image3.png)
+![Sito Web ASP.NET che mostra il pulsante Installa&quot; WebMatrix &quot;](getting-started/_static/image3.png)
 
-Viene chiesto di accettare le condizioni di licenza e informativa sulla privacy prima di installare WebMatrix.
+Viene richiesto di accettare le condizioni di licenza e l'informativa sulla privacy prima di installare WebMatrix.
 
-![accettare i termini per iniziare l'installazione](getting-started/_static/image4.png)
+![accetta il termine per iniziare l'installazione](getting-started/_static/image4.png)
 
-Fare clic su **eseguiti** per avviare l'installazione. (Se si desidera salvare il programma di installazione, fare clic su **salvare** e quindi eseguire il programma di installazione dalla cartella in cui è stato salvato.)
+Fare clic su **Esegui** per avviare l'installazione. Se si desidera salvare il programma di installazione, fare clic su **Salva** e quindi eseguire il programma di installazione dalla cartella in cui è stato salvato.
 
 ![](getting-started/_static/image5.png)
 
-Viene visualizzata l'installazione guidata piattaforma Web, pronto per l'installazione di WebMatrix. Fare clic su **Installa**.
+Viene visualizzata l'installazione guidata piattaforma Web, pronta per l'installazione di WebMatrix. Fare clic su **Installa**.
 
 ![](getting-started/_static/image6.png)
 
-Il processo di installazione determina ciò che deve installare nel computer e avvia il processo. A seconda esattamente ciò che deve essere installato, il processo può richiedere da qualche istante per alcuni minuti. Selezionare **accetto** per accettare le condizioni di licenza.
+Il processo di installazione consente di specificare le informazioni da installare nel computer e di avviare il processo. A seconda di ciò che deve essere installato, il processo può richiedere da pochi istanti a diversi minuti. Selezionare **Accetto per accettare le** condizioni di licenza.
 
 ## <a name="hello-webmatrix"></a>Hello, WebMatrix
 
-Al termine, il processo di installazione può avviare automaticamente WebMatrix. In caso contrario, in Windows, dal **avviare** dal menu di avvio **Microsoft WebMatrix**.
+Al termine, il processo di installazione può avviare WebMatrix automaticamente. In caso contrario, in Windows, dal menu **Start** , avviare **Microsoft WebMatrix**.
 
-Quando si avvia WebMatrix per la prima volta, si ha la possibilità di accedere a Microsoft Azure con l'account Microsoft. Effettuando l'accesso, si riceverà 10 App web gratuito tramite Azure. Queste App web gratuito offrono un modo pratico per testare le app. Se si ha già un account Azure, ma è necessario un abbonamento MSDN, puoi [attivare i benefici della sottoscrizione MSDN](https://www.windowsazure.com/pricing/member-offers/msdn-benefits-details/?WT.mc_id=A443DD604). In caso contrario, è possibile creare un account di valutazione gratuito in pochi minuti. Per informazioni dettagliate, vedere [versione di valutazione gratuita di Azure](https://azure.microsoft.com/free/?WT.mc_id=A443DD604).
+Quando si avvia WebMatrix per la prima volta, si ha la possibilità di accedere a Microsoft Azure con il account Microsoft. Eseguendo l'accesso, si riceveranno 10 app Web gratuite tramite Azure. Queste app Web gratuite offrono un modo pratico per testare le app. Se non si ha già un account Azure, ma si dispone di un abbonamento MSDN, è possibile [attivare i vantaggi dell'abbonamento MSDN](https://www.windowsazure.com/pricing/member-offers/msdn-benefits-details/?WT.mc_id=A443DD604). In caso contrario, è possibile creare un account di valutazione gratuito in pochi minuti. Per informazioni dettagliate, vedere la pagina relativa alla [versione di valutazione gratuita di Azure](https://azure.microsoft.com/free/?WT.mc_id=A443DD604).
 
-Non è necessario accedere adesso per continuare questa esercitazione. Se non riesci a questo punto, si avrà ancora la possibilità di accedere in seguito. L'ultima [argomento](publishing.md) in questa esercitazione, serie illustra come distribuire il sito Web di Azure; pertanto, è necessario accedere per completare questo argomento.
+Non è necessario eseguire l'accesso in questo momento per continuare con questa esercitazione. Se non si accede ora, sarà comunque possibile accedere in seguito. L'ultimo [argomento](publishing.md) di questa serie di esercitazioni illustra come distribuire il sito Web in Azure. per completare questo argomento, è quindi necessario eseguire l'accesso.
 
-A questo punto, accedere con l'account Microsoft o select **non ora** nell'angolo inferiore destro.
+A questo punto, accedere con il account Microsoft o selezionare **non ora** nell'angolo inferiore destro.
 
 ![Accedi](getting-started/_static/image7.png)
 
-Per iniziare, è possibile creare un sito Web vuoto e aggiungere una pagina. In un'esercitazione più avanti in questo set si proveranno con uno dei modelli di sito Web predefinito.
+Per iniziare, si creerà un sito Web vuoto e si aggiungerà una pagina. In un'esercitazione successiva di questo set verrà riprodotto uno dei modelli di sito Web predefiniti.
 
-Nella finestra di avvio, fare clic su **New**.
+Nella finestra di avvio fare clic su **nuovo**.
 
-![Schermata di avvio di WebMatrix](getting-started/_static/image8.png)
+![Schermata iniziale di WebMatrix](getting-started/_static/image8.png)
 
-I modelli sono file precompilati e le pagine per i diversi tipi di siti Web. Per visualizzare tutti i modelli disponibili per impostazione predefinita, selezionare l'opzione di raccolta di modelli.
+I modelli sono file e pagine predefiniti per diversi tipi di siti Web. Per visualizzare tutti i modelli disponibili per impostazione predefinita, selezionare l'opzione raccolta modelli.
 
-![Raccolta di modelli di Select](getting-started/_static/image9.png)
+![Selezionare la raccolta di modelli](getting-started/_static/image9.png)
 
-Nel **avvio rapido** finestra, seleziona **sito vuoto** dal **ASP.NET** raggruppare e denominare il nuovo sito "WebPagesMovies".
+Nella finestra di **avvio rapido** selezionare **sito vuoto** dal gruppo **ASP.NET** e assegnare al nuovo sito il nome "WebPagesMovies".
 
-![Finestra di avvio rapido di WebMatrix con modello di sito vuoto](getting-started/_static/image10.png)
+![Finestra Avvio rapido WebMatrix con un modello di sito vuoto selezionato](getting-started/_static/image10.png)
 
-Scegliere **Avanti**.
+Fare clic su **Avanti**.
 
-Se hanno effettuato l'accesso al tuo account Microsoft, sarà possibile l'opportunità di creare il sito in Azure. In base al nome del sito, il nome predefinito della **WebPagesMovies.azurewebsites.net** viene suggerito; tuttavia, il punto esclamativo indica che questo nome non è disponibile in Windows Azure. Per semplicità, selezionare **Skip** ignorare Crea subito il sito web in Azure. Più avanti in questa serie, il sito verranno pubblicate in Azure.
+Se è stato effettuato l'accesso alla account Microsoft, si avrà la possibilità di creare il sito in Azure. In base al nome del sito, viene suggerito il nome predefinito **WebPagesMovies.azurewebsites.NET** . Tuttavia, il punto esclamativo indica che questo nome non è disponibile in Windows Azure. Per semplicità, selezionare **Ignora** per ignorare la creazione del sito Web in Azure al momento. Più avanti in questa serie, il sito verrà pubblicato in Azure.
 
-![creare il sito di azure](getting-started/_static/image11.png)
+![Crea sito di Azure](getting-started/_static/image11.png)
 
 WebMatrix crea e apre il sito:
 
 ![Nuovo sito WebPagesMovies aperto in WebMatrix](getting-started/_static/image12.png)
 
-Nella parte superiore, è presente una barra di accesso rapido e una barra multifunzione. In basso a sinistra, viene visualizzato il selettore dell'area di lavoro in cui si passa tra le attività (**Site**, **file**, **database**, **report**). Nella parte destra è il riquadro del contenuto per l'editor e i report. E nella parte inferiore si vedrà in alcuni casi una barra di notifica per i messaggi.
+Nella parte superiore sono disponibili una barra di accesso rapido e una barra multifunzione. In basso a sinistra viene visualizzato il selettore dell'area di lavoro in cui si passa da un'attività all'altra (**sito**, **file**, **database**, **report**). A destra è presente il riquadro del contenuto per l'editor e per i report. Nella parte inferiore verrà occasionalmente visualizzata una barra di notifica per i messaggi.
 
-Si apprenderà più su WebMatrix e delle relative funzionalità man mano che procede attraverso queste esercitazioni.
+Verranno fornite ulteriori informazioni su WebMatrix e sulle relative funzionalità durante l'esercitazione.
 
 ## <a name="creating-a-web-page"></a>Creazione di una pagina Web
 
-Per acquisire familiarità con ASP.NET Web Pages e WebMatrix, si creerà una semplice pagina.
+Per acquisire familiarità con WebMatrix e Pagine Web ASP.NET, è possibile creare una pagina semplice.
 
-Nel selettore dell'area di lavoro, selezionare la **file** dell'area di lavoro. Questa area di lavoro consente di lavorare con file e cartelle. Il riquadro a sinistra mostra la struttura di file del sito. Le modifiche della barra multifunzione per visualizzare le attività correlate ai file.
+Nel selettore dell'area di lavoro selezionare l'area di lavoro **file** . Questa area di lavoro consente di usare file e cartelle. Il riquadro sinistro mostra la struttura di file del sito. La barra multifunzione cambia per visualizzare le attività correlate ai file.
 
-![Area di lavoro di file in WebMatrix](getting-started/_static/image13.png)
+![Area di lavoro file in WebMatrix](getting-started/_static/image13.png)
 
-Nella barra multifunzione, fare clic sulla freccia sotto **New** e quindi fare clic su **nuovo File**.
+Sulla barra multifunzione fare clic sulla freccia in **nuovo** e quindi su **nuovo file**.
 
-![Usando il &quot;New&quot; comando sulla barra multifunzione per creare un nuovo file](getting-started/_static/image14.png)
+![Uso del comando &quot;nuovo&quot; nella barra multifunzione per creare un nuovo file](getting-started/_static/image14.png)
 
-WebMatrix consente di visualizzare un elenco di tipi di file. Selezionare **CSHTML**e il **nome** , digitare "HelloWorld". Una pagina con estensione CSHTML è una pagina ASP.NET Web Pages.
+WebMatrix Visualizza un elenco di tipi di file. Selezionare **cshtml**e nella casella **nome** digitare "HelloWorld". Una pagina CSHTML è una pagina Pagine Web ASP.NET.
 
-![Creazione di una nuova pagina CSHTML denominato HelloWorld.cshtml](getting-started/_static/image15.png)
+![Creazione di una nuova pagina CSHTML denominata HelloWorld. cshtml](getting-started/_static/image15.png)
 
 Fare clic su **OK**.
 
-WebMatrix consente di creare la pagina e viene aperto nell'editor.
+WebMatrix crea la pagina e la apre nell'editor.
 
 ![La nuova pagina HelloWorld nell'editor di WebMatrix](getting-started/_static/image16.png)
 
-Come può notare, la pagina contiene principalmente ordinario il markup HTML, ad eccezione di un blocco nella parte superiore che si presenta come segue:
+Come si può notare, la pagina contiene principalmente il markup HTML comune, ad eccezione di un blocco nella parte superiore simile al seguente:
 
 [!code-cshtml[Main](getting-started/samples/sample1.cshtml)]
 
-Questa cartella per l'aggiunta di codice, come si vedrà a breve.
+Per l'aggiunta di codice, come si vedrà a breve.
 
-Si noti che le diverse parti della pagina &mdash; i nomi degli elementi, attributi e testo, oltre il blocco nella parte superiore, ovvero sono tutte in diversi colori. Questa operazione viene definita *evidenziazione della sintassi*, risulta più semplice mantenere tutto chiaro. È una delle funzionalità che rende più semplice lavorare con le pagine web in WebMatrix.
+Si noti che le diverse parti della pagina &mdash; i nomi degli elementi, gli attributi e il testo, più il blocco nella parte superiore, sono tutti in colori diversi. Questa operazione è denominata *evidenziazione della sintassi*e rende più semplice la cancellazione di tutti gli elementi. Si tratta di una delle funzionalità che semplificano l'utilizzo delle pagine Web in WebMatrix.
 
-Aggiungere il contenuto per il `<head>` e `<body>` elementi, come illustrato nell'esempio seguente. (Se si desidera, è possibile semplicemente copiare il blocco seguente e sostituire l'intera pagina esistente con questo codice.)
+Aggiungere contenuto per la `<head>` e `<body>` elementi come nell'esempio seguente. Se si desidera, è sufficiente copiare il blocco seguente e sostituire l'intera pagina esistente con questo codice.
 
 [!code-cshtml[Main](getting-started/samples/sample2.cshtml)]
 
-Nella barra di accesso rapido o nella **File** menu, fare clic su **salvare**.
+Nella barra di accesso rapido o nel menu **file** fare clic su **Salva**.
 
-![Pulsante Salva nella barra di accesso rapido WebMatrix](getting-started/_static/image17.png)
+![Pulsante Salva nella barra di accesso rapido di WebMatrix](getting-started/_static/image17.png)
 
 ## <a name="testing-the-page"></a>Test della pagina
 
-Nel **file** dell'area di lavoro, fare doppio clic sui *HelloWorld.cshtml* e quindi fare clic su **Avvia nel browser**.
+Nell'area di lavoro **file** , fare clic con il pulsante destro del mouse sulla pagina *HelloWorld. cshtml* , quindi fare clic su **Avvia nel browser**.
 
-![Esecuzione di una pagina con il pulsante Esegui sulla barra multifunzione di WebMatrix](getting-started/_static/image18.png)
+![Esecuzione di una pagina con il pulsante Esegui nella barra multifunzione di WebMatrix](getting-started/_static/image18.png)
 
-WebMatrix avvia un server web incorporato, IIS Express, che è possibile usare per testare le pagine nel computer. (Senza IIS Express in WebMatrix, è necessario pubblicare la pagina a un server web in un punto prima che è possibile eseguirne il test.) Verrà visualizzata la pagina nel browser predefinito.
+WebMatrix avvia un server Web incorporato (IIS Express) che può essere usato per testare le pagine del computer. Senza IIS Express in WebMatrix, è necessario pubblicare la pagina in un server Web in un punto qualsiasi prima di poterla testare. La pagina viene visualizzata nel browser predefinito.
 
 ![&quot;Hello World&quot; pagina in esecuzione nel browser](getting-started/_static/image19.png)
 
-Si noti che quando si testa una pagina in WebMatrix, l'URL nel browser è simile `http://localhost:33651/HelloWorld.cshtml.` il nome *localhost* fa riferimento a un server locale, vale a dire che la pagina è gestita da un server web nel proprio computer. Come accennato, WebMatrix include un programma di server web denominato IIS Express che viene eseguito quando si avvia una pagina.
+Si noti che quando si esegue il test di una pagina in WebMatrix, l'URL nel browser è simile `http://localhost:33651/HelloWorld.cshtml.` il nome *localhost* fa riferimento a un server locale, vale a dire che la pagina viene gestita da un server Web che si trova nel computer. Come indicato, WebMatrix include un programma server Web denominato IIS Express che viene eseguito quando si avvia una pagina.
 
-Il numero dopo *localhost* (ad esempio, *localhost:33651*) fa riferimento a una *il numero di porta* nel computer. Questo è il numero di "canale" che IIS Express viene utilizzato per il sito Web specifico. Quando si crea un sito ed è diverso per ogni sito che si crea, il numero di porta viene selezionato in modo casuale dall'intervallo di 1024 e 65536. (Quando si testa il proprio sito, il numero di porta verrà quasi certamente essere un numero diverso da quello 33561.) Utilizzando una porta diversa per ogni sito Web, IIS Express possono mantenere semplici che dei siti di comunicare con.
+Il numero dopo *localhost* (ad esempio, *localhost: 33651*) si riferisce a un *numero di porta* nel computer. Questo è il numero del "canale" usato IIS Express per questo particolare sito Web. Il numero di porta viene selezionato in modo casuale dall'intervallo compreso tra 1024 e 65536 quando si crea il sito ed è diverso per ogni sito creato. Quando si esegue il test del proprio sito, il numero di porta sarà quasi certamente un numero diverso rispetto a 33561. Utilizzando una porta diversa per ogni sito Web, IIS Express possibile mantenerne i siti con cui sta parlando.
 
-In seguito quando si pubblica il sito in un server web pubblico, non si visualizzano più *localhost* nell'URL. A questo punto, si noterà un URL più tipico come `http://myhostingsite/mywebsite/HelloWorld.cshtml` o qualunque sia la pagina è. Verranno fornite ulteriori informazioni sulla pubblicazione di un sito più avanti in questa serie di esercitazioni.
+In un secondo momento, quando si pubblica il sito in un server Web pubblico, non viene più visualizzato *localhost* nell'URL. A questo punto, verrà visualizzato un URL più tipico, ad esempio `http://myhostingsite/mywebsite/HelloWorld.cshtml` o qualsiasi altra pagina. Verranno fornite ulteriori informazioni sulla pubblicazione di un sito più avanti in questa serie di esercitazioni.
 
-## <a name="adding-some-server-side-code"></a>Aggiunta di codice lato Server
+## <a name="adding-some-server-side-code"></a>Aggiunta di codice sul lato server
 
 Chiudere il browser e tornare alla pagina in WebMatrix.
 
-Aggiungere una riga per il blocco di codice in modo che risulti simile al codice seguente:
+Aggiungere una riga al blocco di codice in modo che abbia un aspetto simile al codice seguente:
 
 [!code-cshtml[Main](getting-started/samples/sample3.cshtml)]
 
-Questo è un po' di codice Razor. È probabile che chiaro che ottiene la data e ora correnti e inserire tale valore in una *variabile* denominata `currentDateTime`. Si leggeranno informazioni sulla sintassi Razor nella prossima esercitazione.
+Questo è un po' di codice Razor. È probabilmente chiaro che ottiene la data e l'ora correnti e inserisce tale valore in una *variabile* denominata `currentDateTime`. Ulteriori informazioni su sintassi Razor verranno fornite nell'esercitazione successiva.
 
-Nel corpo della pagina, dopo il `<p>Hello World!</p>` elemento, aggiungere quanto segue:
+Nel corpo della pagina, dopo l'elemento `<p>Hello World!</p>` aggiungere quanto segue:
 
 [!code-html[Main](getting-started/samples/sample4.html)]
 
-Questo codice ottiene il valore inserito nel `currentDateTime` variabili nella parte superiore e lo inserisce nel markup della pagina. Il `@` carattere contrassegna il codice ASP.NET Web Pages nella pagina.
+Questo codice ottiene il valore inserito nella variabile `currentDateTime` nella parte superiore e lo inserisce nel markup della pagina. Il carattere `@` contrassegna il codice Pagine Web ASP.NET nella pagina.
 
-Eseguire nuovamente la pagina (WebMatrix consente di salvare le modifiche per l'utente prima dell'esecuzione della pagina). Questa volta che viene visualizzata la data e ora nella pagina.
+Eseguire di nuovo la pagina (WebMatrix Salva le modifiche prima di eseguire la pagina). Questa volta vengono visualizzati la data e l'ora nella pagina.
 
-![&quot;Hello World&quot; pagina in esecuzione nel browser con una visualizzazione cronologica generata dinamicamente](getting-started/_static/image20.png)
+![&quot;Hello World&quot; pagina in esecuzione nel browser con una visualizzazione dell'ora generata dinamicamente](getting-started/_static/image20.png)
 
-Attendere alcuni istanti e quindi aggiornare la pagina nel browser. La visualizzazione di data e ora viene aggiornata.
+Attendere qualche minuto e quindi aggiornare la pagina nel browser. La visualizzazione della data e dell'ora è aggiornata.
 
-Nel browser, esaminare il codice sorgente della pagina. Sembra che il markup seguente:
+Nel browser esaminare l'origine della pagina. Il markup è simile al seguente:
 
 [!code-html[Main](getting-started/samples/sample5.html)]
 
-Si noti che il `@{ }` blocco nella parte superiore non è presente. Si noti inoltre che la data e ora viene visualizzata una stringa effettiva di caratteri (`1/18/2012 2:49:50 PM` o qualunque), non `@currentDateTime` , ad esempio è presente nel *cshtml* pagina. Che cosa è successo qui è che, durante l'esecuzione della pagina, ASP.NET elaborato tutto il codice (molto poco in questo caso) che è stato contrassegnato con `@`. Output del codice e che l'output è stato inserito nella pagina.
+Si noti che il blocco `@{ }` nella parte superiore non è presente. Si noti inoltre che la visualizzazione di data e ora Mostra una stringa di caratteri effettiva (`1/18/2012 2:49:50 PM` o qualsiasi altra), non `@currentDateTime` come nella pagina *. cshtml* . Ciò che è successo è che, quando è stata eseguita la pagina, ASP.NET ha elaborato tutto il codice (in questo caso pochissimo) contrassegnato con `@`. Il codice produce l'output e tale output è stato inserito nella pagina.
 
-## <a name="this-is-what-aspnet-web-pages-are-about"></a>Questo è ciò che riguardano le pagine Web ASP.NET
+## <a name="this-is-what-aspnet-web-pages-are-about"></a>Questo è il Pagine Web ASP.NET
 
-Quando si legge che ASP.NET Web Pages produce contenuto web dinamico, ho illustrato di seguito è l'idea. La pagina che appena creata contiene lo stesso markup HTML che si è visto prima. Può anche contenere codice che è possibile eseguire moltissime operazioni. In questo esempio, ha il compito di ottenere la data e ora correnti. Come si è visto, è possibile inserire nei codice HTML per produrre l'output della pagina. Quando un utente richiede un *cshtml* pagina nel browser, ASP.NET elabora la pagina mentre è ancora in tutti i vantaggi del server web. ASP.NET inserisce l'output del codice (se presente) nella pagina HTML. Quando viene eseguita l'elaborazione di codice, ASP.NET invia la pagina risultante nel browser. Tutti i browser che mai ottiene è HTML. Ecco un diagramma:
+Quando si legge che Pagine Web ASP.NET produce contenuto Web dinamico, ciò che si è visto qui è l'idea. La pagina appena creata contiene lo stesso markup HTML illustrato in precedenza. Può inoltre contenere codice in grado di eseguire qualsiasi tipo di attività. In questo esempio, è stata la semplice attività di ottenere la data e l'ora correnti. Come si è visto, è possibile intercalare il codice con il codice HTML per produrre output nella pagina. Quando un utente richiede una pagina con *estensione cshtml* nel browser, ASP.NET elabora la pagina mentre è ancora in mano al server Web. ASP.NET inserisce l'output del codice, se presente, nella pagina come HTML. Al termine dell'elaborazione del codice, ASP.NET invia la pagina risultante al browser. Tutto il browser ottenuto è HTML. Ecco un diagramma:
 
-![Flusso concettuale del modo in cui ASP.NET genera l'errore HTML in modo dinamico](getting-started/_static/image21.png)
+![Flusso concettuale del modo in cui ASP.NET genera in modo dinamico il codice HTML](getting-started/_static/image21.png)
 
-L'idea è semplice, ma esistono molte attività interessante che può eseguire il codice e in molti modi interessanti in cui è possibile aggiungere in modo dinamico contenuto HTML alla pagina. E ASP.NET *cshtml* pagine, come in qualsiasi pagina HTML, possono includere anche codice che viene eseguito nel browser stesso (codice di JavaScript e jQuery). Si esamineranno tutte queste operazioni in questa serie di esercitazioni e in quelle successive.
+L'idea è semplice, ma ci sono molte attività interessanti che il codice è in grado di eseguire e sono disponibili molti modi interessanti per aggiungere dinamicamente contenuto HTML alla pagina. Le pagine ASP.NET *. cshtml* , come qualsiasi pagina HTML, possono includere anche codice eseguito nel browser stesso (codice JavaScript e jQuery). Si esamineranno tutti questi elementi in questo set di esercitazioni e in quelli successivi.
 
-## <a name="coming-up-next"></a>In arrivo
+## <a name="coming-up-next"></a>Prossimi
 
-Nella prossima esercitazione della serie, si Esplora un po' più di programmazione ASP.NET Web Pages.
+Nell'esercitazione successiva di questa serie si esplorerà Pagine Web ASP.NET programmazione.
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-[Creare un sito Web ASP.NET da zero](https://www.microsoft.com/web/post/create-an-aspnet-website-from-scratch). Si tratta di un'esercitazione in cui è in particolare sull'utilizzo di WebMatrix (non ASP.NET Web Pages). Diventa un po' più in dettaglio alcune delle funzionalità aggiuntive di WebMatrix che non verranno illustrati in questa serie di esercitazioni.
+[Creare un sito web ASP.NET da zero](https://www.microsoft.com/web/post/create-an-aspnet-website-from-scratch). Si tratta di un'esercitazione che descrive in modo specifico l'uso di WebMatrix (non Pagine Web ASP.NET). Questa esercitazione illustra in dettaglio alcune delle funzionalità aggiuntive di WebMatrix che non verranno trattate in questa esercitazione.
 
 > [!div class="step-by-step"]
 > [avanti](intro-to-web-pages-programming.md)

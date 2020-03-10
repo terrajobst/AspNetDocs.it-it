@@ -9,11 +9,11 @@ ms.assetid: 262843d6-43a2-4f1c-82d9-0b90ae6df0cf
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-v3/creating-an-odata-endpoint
 msc.type: authoredcontent
 ms.openlocfilehash: e68a454398f109dfd089be9c9a44d3fe662acc2f
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74600425"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78556413"
 ---
 # <a name="creating-an-odata-v3-endpoint-with-web-api-2"></a>Creazione di un endpoint OData v3 con l'API Web 2
 
@@ -66,7 +66,7 @@ Nella finestra di dialogo **nuovo progetto ASP.NET** selezionare il modello **vu
 
 Un *modello* è un oggetto che rappresenta i dati nell'applicazione. Per questa esercitazione, è necessario un modello che rappresenti un prodotto. Il modello corrisponde al tipo di entità OData.
 
-In Esplora soluzioni fare clic con il pulsante destro del mouse sulla cartella Models. Dal menu di scelta rapida selezionare **Aggiungi** e quindi selezionare **classe**.
+In Esplora soluzioni fare clic con il pulsante destro del mouse sulla cartella Modelli. Nel menu di scelta rapida selezionare **Aggiungi** e quindi selezionare **Classe**.
 
 ![](creating-an-odata-endpoint/_static/image3.png)
 
@@ -90,7 +90,7 @@ Compilare il progetto ora. Nel passaggio successivo verranno usate alcune impalc
 
 Un *controller* è una classe che gestisce le richieste HTTP. Si definisce un controller separato per ogni set di entità nel servizio OData. In questa esercitazione verrà creato un singolo controller.
 
-In Esplora soluzioni fare clic con il pulsante destro del mouse sulla cartella Controllers. Selezionare **Aggiungi** e quindi **controller**.
+In Esplora soluzioni fare clic con il pulsante destro del mouse sulla cartella Controllers. Selezionare **Aggiungi** e quindi selezionare **Controller**.
 
 ![](creating-an-odata-endpoint/_static/image5.png)
 
@@ -152,7 +152,7 @@ Il primo parametro è un nome descrittivo per la route. I client del servizio no
 
 In questo passaggio si utilizzerà Entity Framework per inizializzare il database con alcuni dati di test. Questo passaggio è facoltativo, ma consente di testare immediatamente l'endpoint OData.
 
-Dal menu **strumenti** selezionare **Gestione pacchetti NuGet**, quindi selezionare Console di **Gestione pacchetti**. Nella finestra console di gestione pacchetti immettere il comando seguente:
+Dal menu **strumenti** selezionare **Gestione pacchetti NuGet**, quindi selezionare Console di **Gestione pacchetti**. Nella finestra Console di gestione pacchetti immettere il comando seguente:
 
 [!code-console[Main](creating-an-odata-endpoint/samples/sample5.cmd)]
 
@@ -187,7 +187,7 @@ Utilizzando Fiddler, immettere l'URI seguente nella scheda **Composer** : `http:
 
 ![](creating-an-odata-endpoint/_static/image13.png)
 
-Fare clic sul pulsante **Execute (Esegui** ). Fiddler invia una richiesta HTTP GET all'applicazione. Verrà visualizzata la risposta nell'elenco sessioni Web. Se tutto funziona, il codice di stato sarà 200.
+Fare clic sul pulsante **Esegui** . Fiddler invia una richiesta HTTP GET all'applicazione. Verrà visualizzata la risposta nell'elenco sessioni Web. Se tutto funziona, il codice di stato sarà 200.
 
 ![](creating-an-odata-endpoint/_static/image14.png)
 
@@ -240,7 +240,7 @@ OData supporta diversi formati di serializzazione:
 
 Per impostazione predefinita, l'API Web usa il formato AtomPubJSON "Light".
 
-Per ottenere il formato AtomPub, impostare l'intestazione Accept su "Application/Atom + XML". Di seguito è riportato un esempio di corpo della risposta:
+Per ottenere il formato AtomPub, impostare l'intestazione Accept su "Application/Atom + XML". Di seguito è riportato il corpo di una risposta di esempio:
 
 [!code-console[Main](creating-an-odata-endpoint/samples/sample13.cmd)]
 

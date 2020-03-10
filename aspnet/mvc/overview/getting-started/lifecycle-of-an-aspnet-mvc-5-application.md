@@ -2,36 +2,36 @@
 uid: mvc/overview/getting-started/lifecycle-of-an-aspnet-mvc-5-application
 title: Ciclo di vita di un'applicazione ASP.NET MVC 5 | Microsoft Docs
 author: cephalin
-description: Scaricare un documento PDF che rappresenta graficamente i ciclo di vita di un'applicazione ASP.NET MVC 5. Questo ciclo di vita documento viene fornita una panoramica del ciclo di vita MVC un...
+description: Scaricare un documento PDF che grafici il ciclo di vita di un'applicazione ASP.NET MVC 5. Questo documento del ciclo di vita fornisce una visualizzazione di alto livello del ciclo di vita MVC...
 ms.author: riande
 ms.date: 02/28/2014
 ms.assetid: 9c1e3a75-b644-4480-8326-11300b1ec4b3
 msc.legacyurl: /mvc/overview/getting-started/lifecycle-of-an-aspnet-mvc-5-application
 msc.type: authoredcontent
 ms.openlocfilehash: f4a9b3fb61552b070db11fba617b5627fcd71cd5
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65124089"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78582201"
 ---
 # <a name="lifecycle-of-an-aspnet-mvc-5-application"></a>Ciclo di vita di un'applicazione ASP.NET MVC 5
 
-da [Cephas Lin](https://github.com/cephalin)
+di [Cinquepalmi Lin](https://github.com/cephalin)
 
-[Scaricare il documento PDF](lifecycle-of-an-aspnet-mvc-5-application/_static/lifecycle-of-an-aspnet-mvc-5-application1.pdf)
+[Scarica documento PDF](lifecycle-of-an-aspnet-mvc-5-application/_static/lifecycle-of-an-aspnet-mvc-5-application1.pdf)
 
-Qui è possibile scaricare un documento PDF grafici il ciclo di vita di ogni applicazione di ASP.NET MVC 5, dalla ricezione HTTP richiesta per l'invio della risposta HTTP al client. È progettato come un strumento di apprendimento per gli utenti che hanno familiarità con ASP.NET MVC e anche come riferimento per coloro che richiedono approfondire alcuni aspetti specifici dell'applicazione. Il documento PDF presenta le funzionalità seguenti:
+Qui è possibile scaricare un documento PDF che esegue il grafico del ciclo di vita di ogni applicazione ASP.NET MVC 5, dalla ricezione della richiesta HTTP per l'invio della risposta HTTP al client. È stato progettato sia come strumento didattico per coloro che non hanno familiarità con ASP.NET MVC, sia come riferimento per gli utenti che devono analizzare aspetti specifici dell'applicazione. Il documento PDF presenta le funzionalità seguenti:
 
-- Rilevanti [HttpApplication](https://msdn.microsoft.com/library/system.web.httpapplication.aspx) fasi che aiutano a comprendere dove MVC integra le [ciclo di vita dell'applicazione ASP.NET](https://msdn.microsoft.com/library/bb470252.aspx).
-- Una panoramica generale del ciclo di vita dell'applicazione MVC, dove è possibile comprendere le fasi principali che ogni applicazione MVC di passa attraverso la pipeline di elaborazione della richiesta.  
+- Fasi di [HttpApplication](https://msdn.microsoft.com/library/system.web.httpapplication.aspx) pertinenti che consentono di capire dove MVC si integra nel [ciclo di vita dell'applicazione ASP.NET](https://msdn.microsoft.com/library/bb470252.aspx).
+- Una visualizzazione di alto livello del ciclo di vita dell'applicazione MVC, in cui è possibile comprendere le fasi principali in cui ogni applicazione MVC passa attraverso la pipeline di elaborazione delle richieste.  
     ![](lifecycle-of-an-aspnet-mvc-5-application/_static/image1.jpg)
-- Visualizzazione dettagli che mostra drill nei dettagli della pipeline di elaborazione della richiesta. È possibile confrontare la visualizzazione di alto livello e la visualizzazione dettagli per vedere come vengono raccolti i dettagli di cicli di vita in varie fasi. [Scarica il PDF](lifecycle-of-an-aspnet-mvc-5-application/_static/lifecycle-of-an-aspnet-mvc-5-application1.pdf) per ottenere una visualizzazione più grande.
+- Visualizzazione dettagli che mostra i dettagli della pipeline di elaborazione delle richieste. È possibile confrontare la visualizzazione di alto livello e la visualizzazione dettagli per vedere come vengono raccolti i dettagli relativi ai cicli di vita nelle varie fasi. [Scaricare il file PDF](lifecycle-of-an-aspnet-mvc-5-application/_static/lifecycle-of-an-aspnet-mvc-5-application1.pdf) per visualizzare una visualizzazione più ampia.
     ![](lifecycle-of-an-aspnet-mvc-5-application/_static/image2.jpg)
-- Selezione host e lo scopo di tutti i metodi sottoponibili a override nel [Controller](https://msdn.microsoft.com/library/system.web.mvc.controller.aspx) oggetto nella pipeline di elaborazione della richiesta. È possibile o non abbia la necessità di eseguire l'override di qualsiasi metodo di uno, ma è importante comprendere il loro ruolo nel ciclo di vita dell'applicazione in modo che sia possibile scrivere codice nella fase del ciclo di vita appropriato per ottenere l'effetto desiderato.
-- Diagrammi-up entusiasmante che mostra come ognuno dei tipi di filtro (autenticazione, autorizzazione, azioni e risultati) viene richiamata.
-- Collega a un articolo utile o blog da ogni punto di interesse nella visualizzazione dettagli.
+- Posizione e scopo di tutti i metodi sottoponibili a override nell'oggetto [controller](https://msdn.microsoft.com/library/system.web.mvc.controller.aspx) nella pipeline di elaborazione delle richieste. È possibile che non sia necessario eseguire l'override di un metodo, ma è importante comprenderne il ruolo nel ciclo di vita dell'applicazione, in modo da poter scrivere il codice nella fase appropriata del ciclo di vita per l'effetto desiderato.
+- Diagrammi esplosi che mostrano come vengono richiamati tutti i tipi di filtro (autenticazione, autorizzazione, azione e risultato).
+- Collegamento a un articolo o un blog utile da ogni punto di interesse nella visualizzazione dettagli.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Questo documento soddisfa l'esigenza? Apprezziamo i tuoi commenti. Se hai domande sul ciclo di vita di ASP.NET MVC nell'applicazione [Stackoverflow](http://stackoverflow.com/help) e il [forum su ASP.NET MVC](https://forums.asp.net/1146.aspx) sono uno spazio eccezionale per chiedere. Seguire [me](https://twitter.com/Cephas_MSFT) su twitter in modo che è possibile ottenere gli aggiornamenti nella mio esercitazioni più recenti.
+Questo documento soddisfa le esigenze? I commenti e i suggerimenti degli utenti sono molto apprezzati. In caso di domande sul ciclo di vita di ASP.NET MVC nell'applicazione, [StackOverflow](http://stackoverflow.com/help) e i [Forum MVC ASP.NET](https://forums.asp.net/1146.aspx) sono ottimi. [Seguimi su Twitter per poter](https://twitter.com/Cephas_MSFT) ottenere gli aggiornamenti sulle mie ultime esercitazioni.

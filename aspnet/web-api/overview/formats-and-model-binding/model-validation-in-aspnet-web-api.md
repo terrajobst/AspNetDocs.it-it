@@ -1,8 +1,8 @@
 ---
 uid: web-api/overview/formats-and-model-binding/model-validation-in-aspnet-web-api
-title: 'Convalida del modello in API Web ASP.NET: ASP.NET 4.x'
+title: Convalida del modello in API Web ASP.NET-ASP.NET 4. x
 author: MikeWasson
-description: Panoramica della convalida del modello in API Web ASP.NET per ASP.NET 4.x.
+description: Panoramica della convalida del modello in API Web ASP.NET per ASP.NET 4. x.
 ms.author: riande
 ms.date: 07/20/2012
 ms.custom: seoapril2019
@@ -10,79 +10,79 @@ ms.assetid: 7d061207-22b8-4883-bafa-e89b1e7749ca
 msc.legacyurl: /web-api/overview/formats-and-model-binding/model-validation-in-aspnet-web-api
 msc.type: authoredcontent
 ms.openlocfilehash: 531a66b7ab642bd012663517640f2766f1917f25
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65112813"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78557239"
 ---
-# <a name="model-validation-in-aspnet-web-api"></a>Convalida del modello in API Web ASP.NET
+# <a name="model-validation-in-aspnet-web-api"></a>Convalida di modelli in API Web ASP.NET
 
-da [Mike Wasson](https://github.com/MikeWasson)
+di [Mike Wasson](https://github.com/MikeWasson)
 
-Questo articolo illustra come annotare i modelli, usare le annotazioni per la convalida dei dati e la gestione degli errori di convalida nell'API web. Quando un client invia dati all'API Web, spesso si desidera convalidare i dati prima di eseguire qualsiasi elaborazione. 
+Questo articolo illustra come annotare i modelli, usare le annotazioni per la convalida dei dati e gestire gli errori di convalida nell'API Web. Quando un client invia dati all'API Web, spesso si vuole convalidare i dati prima di eseguire qualsiasi elaborazione. 
 
 ## <a name="data-annotations"></a>Annotazioni dei dati
 
-Nell'API Web ASP.NET, è possibile usare gli attributi dal [System.ComponentModel.DataAnnotations](/dotnet/api/system.componentmodel.dataannotations) dello spazio dei nomi per impostare le regole di convalida per le proprietà nel modello. Si consideri il modello seguente:
+In API Web ASP.NET, è possibile utilizzare gli attributi dello spazio dei nomi [System. ComponentModel. DataAnnotations](/dotnet/api/system.componentmodel.dataannotations) per impostare le regole di convalida per le proprietà del modello. Si consideri il modello seguente:
 
 [!code-csharp[Main](model-validation-in-aspnet-web-api/samples/sample1.cs)]
 
-Se è stata usata la convalida del modello in ASP.NET MVC, si dovrebbe avere familiarità. Il **necessari** attributo indica che il `Name` proprietà non può essere null. Il **Range** attributo indica che `Weight` deve essere compreso tra 0 e 999.
+Se è stata usata la convalida del modello in ASP.NET MVC, l'aspetto dovrebbe essere familiare. L'attributo **required** indica che la proprietà `Name` non deve essere null. L'attributo **Range** indica che `Weight` deve essere compreso tra 0 e 999.
 
-Si supponga che un client invia una richiesta POST con la rappresentazione JSON seguente:
+Si supponga che un client invii una richiesta POST con la rappresentazione JSON seguente:
 
 [!code-json[Main](model-validation-in-aspnet-web-api/samples/sample2.json)]
 
-È possibile vedere che il client non comprendeva i `Name` proprietà, che è contrassegnato come obbligatorio. Quando Web API converte il codice JSON in una `Product` istanza, vengono convalidate le `Product` contro gli attributi di convalida. Nell'ambito dell'azione del controller, è possibile controllare se il modello è valido:
+È possibile notare che il client non include la proprietà `Name`, che è contrassegnata come obbligatoria. Quando l'API Web converte il codice JSON in un'istanza di `Product`, convalida l'`Product` rispetto agli attributi di convalida. Nell'azione del controller è possibile verificare se il modello è valido:
 
 [!code-csharp[Main](model-validation-in-aspnet-web-api/samples/sample3.cs)]
 
-Convalida del modello non garantisce che i dati del client sono sicuri. Potrebbe essere necessaria una convalida aggiuntiva in altri livelli dell'applicazione. (Ad esempio, il livello di dati potrebbe imporre vincoli di chiave esterna). L'esercitazione [uso di API Web con Entity Framework](../data/using-web-api-with-entity-framework/part-1.md) esamina alcuni di questi problemi.
+La convalida del modello non garantisce che i dati client siano sicuri. Potrebbe essere necessaria una convalida aggiuntiva in altri livelli dell'applicazione. Ad esempio, il livello dati potrebbe applicare vincoli di chiave esterna. L'esercitazione sull' [uso dell'API Web con Entity Framework](../data/using-web-api-with-entity-framework/part-1.md) esamina alcuni di questi problemi.
 
-**"Under-Posting"**: Registrazione correggerà si verifica quando il client esclude alcune proprietà. Si supponga, ad esempio, che il client invia la seguente:
+**"In**-posting": il sottoposting si verifica quando il client lascia alcune proprietà. Si supponga, ad esempio, che il client invii quanto segue:
 
 [!code-json[Main](model-validation-in-aspnet-web-api/samples/sample4.json)]
 
-In questo caso, il client non sono stati specificati valori per `Price` o `Weight`. Il formattatore JSON assegna un valore predefinito pari a zero per le proprietà mancante.
+In questo caso, il client non ha specificato valori per `Price` o `Weight`. Il formattatore JSON assegna un valore predefinito pari a zero alle proprietà mancanti.
 
 ![](model-validation-in-aspnet-web-api/_static/image1.png)
 
-Lo stato del modello è valido, poiché lo zero è un valore valido per queste proprietà. Se si tratta di un problema dipende dallo scenario. Ad esempio, in un'operazione di aggiornamento, si potrebbe voler distinguere tra "0" e "non impostata." Per forzare i client per impostare un valore, impostare la proprietà che ammette valori null e viene impostata la **necessari** attributo:
+Lo stato del modello è valido perché zero è un valore valido per queste proprietà. Il fatto che si tratti di un problema dipende dallo scenario. In un'operazione di aggiornamento, ad esempio, potrebbe essere necessario distinguere tra "zero" e "not set". Per forzare i client a impostare un valore, rendere Nullable la proprietà e impostare l'attributo **required** :
 
 [!code-csharp[Main](model-validation-in-aspnet-web-api/samples/sample5.cs?highlight=1-2)]
 
-**"Over-Posting"**: Un client può anche inviare *altre* dati quanto ci si aspetterebbe. Ad esempio:
+**"Overposting"** : un client può anche inviare *più* dati del previsto. Esempio:
 
 [!code-json[Main](model-validation-in-aspnet-web-api/samples/sample6.json)]
 
-In questo caso, il codice JSON include una proprietà ("colore") che non esiste nel `Product` modello. In questo caso, il formattatore JSON ignora semplicemente questo valore. (Il formattatore XML esegue la stessa). Evitare l'overposting può causare problemi se il modello contiene le proprietà che si devono essere di sola lettura. Ad esempio:
+In questo caso, il codice JSON include una proprietà ("color") che non esiste nel modello di `Product`. In questo caso, il formattatore JSON ignora semplicemente questo valore. Il formattatore XML esegue la stessa operazione. La sovrascrittura causa problemi se il modello dispone di proprietà che si desidera essere di sola lettura. Esempio:
 
 [!code-csharp[Main](model-validation-in-aspnet-web-api/samples/sample7.cs)]
 
-Preferibile che gli utenti per l'aggiornamento di `IsAdmin` proprietà ed elevare se stesso agli amministratori. La strategia più sicura consiste nell'usare una classe di modello che corrisponde esattamente a ciò che il client è autorizzato a inviare:
+Non si vuole che gli utenti aggiornino la proprietà `IsAdmin` e si elevano agli amministratori. La strategia più sicura consiste nell'usare una classe modello che corrisponda esattamente a ciò che il client è autorizzato a inviare:
 
 [!code-csharp[Main](model-validation-in-aspnet-web-api/samples/sample8.cs)]
 
 > [!NOTE]
-> Post di blog di Brad Wilson "[vs: convalida dell'Input. Convalida del modello in ASP.NET MVC](http://bradwilson.typepad.com/blog/2010/01/input-validation-vs-model-validation-in-aspnet-mvc.html)"dispone per una trattazione correggerà la registrazione, evitare l'overposting. Anche se il post è su ASP.NET MVC 2, i problemi sono ancora rilevanti per l'API Web.
+> Il post di Blog di Brad Wilson "convalida dell'[input e convalida dei modelli in ASP.NET MVC](http://bradwilson.typepad.com/blog/2010/01/input-validation-vs-model-validation-in-aspnet-mvc.html)" presenta una descrizione approfondita di sottoposta e overposting. Sebbene il post sia relativo a ASP.NET MVC 2, i problemi sono ancora rilevanti per l'API Web.
 
 ## <a name="handling-validation-errors"></a>Gestione degli errori di convalida
 
-API Web non restituire un errore automaticamente al client quando si verifica un errore di convalida. È responsabilità dell'azione del controller per verificare lo stato del modello e rispondere in modo appropriato.
+L'API Web non restituisce automaticamente un errore al client quando la convalida ha esito negativo. Spetta all'azione del controller controllare lo stato del modello e rispondere in modo appropriato.
 
-È anche possibile creare un filtro azioni per controllare lo stato del modello prima che venga richiamato l'azione del controller. Il codice seguente viene illustrato un esempio:
+È inoltre possibile creare un filtro azione per verificare lo stato del modello prima che venga richiamata l'azione del controller. Il codice seguente mostra un esempio:
 
 [!code-csharp[Main](model-validation-in-aspnet-web-api/samples/sample9.cs)]
 
-Se si verifica un errore di convalida del modello, questo filtro restituisce una risposta HTTP che contiene gli errori di convalida. In tal caso, non viene richiamata l'azione del controller.
+Se la convalida del modello ha esito negativo, questo filtro restituisce una risposta HTTP che contiene gli errori di convalida. In tal caso, l'azione del controller non viene richiamata.
 
 [!code-console[Main](model-validation-in-aspnet-web-api/samples/sample10.cmd)]
 
-Per applicare il filtro selezionato a tutti i controller API Web, aggiungere un'istanza del filtro per il **HttpConfiguration.Filters** raccolta durante la configurazione:
+Per applicare questo filtro a tutti i controller API Web, aggiungere un'istanza del filtro alla raccolta **HttpConfiguration. filters** durante la configurazione:
 
 [!code-csharp[Main](model-validation-in-aspnet-web-api/samples/sample11.cs)]
 
-Un'altra opzione consiste nell'impostare il filtro come attributo in singoli controller o azioni del controller:
+Un'altra opzione consiste nell'impostare il filtro come attributo per singoli controller o azioni del controller:
 
 [!code-csharp[Main](model-validation-in-aspnet-web-api/samples/sample12.cs)]

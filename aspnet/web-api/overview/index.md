@@ -1,8 +1,8 @@
 ---
 uid: web-api/overview/index
-title: Web delle linee guida per API - ASP.NET 4.x
+title: Guida all'API Web-ASP.NET 4. x
 author: rick-anderson
-description: Elenco di materiale sussidiario di ASP.NET Web API per ASP.NET 4.x
+description: Elenco di linee guida API Web ASP.NET per ASP.NET 4. x
 ms.author: riande
 ms.date: 01/17/2012
 ms.custom: seoapril2019
@@ -10,13 +10,13 @@ ms.assetid: daca6735-b5d3-4ef5-af33-ee682926238b
 msc.legacyurl: /web-api/overview
 msc.type: book
 ms.openlocfilehash: 304c0d71e5e18f9d3f0768464fe39d6e6946600d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59422902"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78556504"
 ---
-# <a name="web-api-guidance"></a>Materiale sussidiario di API Web
+# <a name="web-api-guidance"></a>Indicazioni sull'API Web
 
 - [Introduzione](getting-started-with-aspnet-web-api/index.md)
 
@@ -24,7 +24,7 @@ ms.locfileid: "59422902"
     - [Risultati delle azioni nell'API Web 2](getting-started-with-aspnet-web-api/action-results.md)
     - [Usare l'API Web con Web Form ASP.NET](getting-started-with-aspnet-web-api/using-web-api-with-aspnet-web-forms.md)
     - [Creazione di pagine della Guida dell'API Web](getting-started-with-aspnet-web-api/creating-api-help-pages.md)
-    - [Laboratorio pratico: Compilare un'applicazione a pagina singola (SPA) con l'API Web ASP.NET e Angular. js](getting-started-with-aspnet-web-api/build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs.md)
+    - [Laboratorio pratico: creare un'applicazione a pagina singola (SPA) con l'API Web ASP.NET e Angular.js](getting-started-with-aspnet-web-api/build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs.md)
 - [Routing](web-api-routing-and-actions/index.md)
 
     - [Routing nell'API Web](web-api-routing-and-actions/routing-in-aspnet-web-api.md)
@@ -112,8 +112,8 @@ ms.locfileid: "59422902"
     - [Chiamata di un'API Web da un client .NET (C#)](advanced/calling-a-web-api-from-a-net-client.md)
     - [Gestori di messaggi HTTP nell'API Web](advanced/http-message-handlers.md)
     - [Gestori di messaggi HttpClient nell'API Web](advanced/httpclient-message-handlers.md)
-    - [L'invio dei dati di Form HTML nell'API Web: Dati form-urlencoded](advanced/sending-html-form-data-part-1.md)
-    - [L'invio dei dati di Form HTML nell'API Web: Caricamento di file e MIME Multipart](advanced/sending-html-form-data-part-2.md)
+    - [Invio dei dati dei moduli HTML nell'API Web: dati Form-urlencoded](advanced/sending-html-form-data-part-1.md)
+    - [Invio dei dati dei moduli HTML nell'API Web: caricamento di file e MIME multipart](advanced/sending-html-form-data-part-2.md)
     - [Cookie HTTP nell'API Web ASP.NET](advanced/http-cookies.md)
 - [Versioni](releases/index.md)
 

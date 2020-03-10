@@ -1,25 +1,25 @@
 ---
 uid: mvc/videos/mvc-2/how-do-i/aspnet-mvc-how-10-minute-technical-video-for-developers
-title: 'ASP.NET MVC: In che modo? video tecnico di 10 minuti per gli sviluppatori | Microsoft Docs'
+title: 'ASP.NET MVC: come? video tecnico di 10 minuti per gli sviluppatori | Microsoft Docs'
 author: robconery
-description: Una breve panoramica di cosa si intende per utilizzare ASP.NET MVC.
+description: Una breve panoramica del funzionamento di ASP.NET MVC.
 ms.author: riande
 ms.date: 08/21/2009
 ms.assetid: 8aef4323-19d5-4b64-95a1-cec156f7cae5
 msc.legacyurl: /mvc/videos/mvc-2/how-do-i/aspnet-mvc-how-10-minute-technical-video-for-developers
 msc.type: video
 ms.openlocfilehash: 8c7d9c57007da3b75ba7d71fe88528ad45b7c6e6
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59421875"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78537520"
 ---
-# <a name="aspnet-mvc-how-10-minute-technical-video-for-developers"></a>ASP.NET MVC: In che modo? video tecnico di 10 minuti per gli sviluppatori
+# <a name="aspnet-mvc-how-10-minute-technical-video-for-developers"></a>ASP.NET MVC: come? video tecnico di 10 minuti per sviluppatori
 
-da [Rob Conery](https://github.com/robconery)
+di [Rob Coney](https://github.com/robconery)
 
-Una breve panoramica di cosa si intende per utilizzare ASP.NET MVC.
+Una breve panoramica del funzionamento di ASP.NET MVC.
 
 [&#9654;Guarda il video (11 minuti)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/aspnet-mvc-how-10-minute-technical-video-for-developers)
 

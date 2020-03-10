@@ -9,17 +9,17 @@ ms.assetid: 3e9f6e7d-8967-4586-94d5-d3a122f12529
 msc.legacyurl: /web-forms/overview/deployment/advanced-enterprise-web-deployment/taking-web-applications-offline-with-web-deploy
 msc.type: authoredcontent
 ms.openlocfilehash: ba60664a0c3daa0650cd7e7cfc4ab9da08df3440
-ms.sourcegitcommit: e365196c75ce93cd8967412b1cfdc27121816110
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77075138"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78526068"
 ---
 # <a name="taking-web-applications-offline-with-web-deploy"></a>Impostazione delle applicazioni Web in modalità offline con Distribuzione Web
 
 di [Jason Lee](https://github.com/jrjlee)
 
-[Scarica PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Scaricare PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > In questo argomento viene descritto come portare offline un'applicazione Web per la durata di una distribuzione automatizzata mediante lo strumento di distribuzione Web Internet Information Services (IIS) (Distribuzione Web). Gli utenti che selezionano l'applicazione Web vengono reindirizzati a un' *App\_file offline. htm* fino al completamento della distribuzione.
 

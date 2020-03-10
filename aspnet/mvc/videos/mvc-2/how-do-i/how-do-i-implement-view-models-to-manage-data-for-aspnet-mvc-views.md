@@ -1,25 +1,25 @@
 ---
 uid: mvc/videos/mvc-2/how-do-i/how-do-i-implement-view-models-to-manage-data-for-aspnet-mvc-views
-title: 'Procedura: Implementare i modelli di visualizzazione per gestire i dati per le visualizzazioni ASP.NET MVC? | Microsoft Docs'
+title: 'Procedura: implementare modelli di visualizzazione per gestire i dati per le visualizzazioni MVC ASP.NET | Microsoft Docs'
 author: rick-anderson
-description: In questo video Chris Pels illustra come usare il concetto di una &quot;modello di visualizzazione&quot; per la gestione dei dati per le visualizzazioni ASP.NET MVC. Prima di tutto un progetto MVC di esempio è cre...
+description: In questo video Chris Pels illustra come usare il concetto di un modello di visualizzazione &quot;&quot; per la gestione dei dati per le visualizzazioni MVC ASP.NET. Per prima cosa, un progetto MVC di esempio è cre...
 ms.author: riande
 ms.date: 12/11/2009
 ms.assetid: 22f55d63-78f7-44fd-9107-f74cbe16022b
 msc.legacyurl: /mvc/videos/mvc-2/how-do-i/how-do-i-implement-view-models-to-manage-data-for-aspnet-mvc-views
 msc.type: video
 ms.openlocfilehash: 5f883c4ab42e71fc76df221c2b282e124a3d97bd
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59423019"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78537485"
 ---
-# <a name="how-do-i-implement-view--models-to-manage-data-for-aspnet-mvc-views"></a>Procedura: Implementare i modelli di visualizzazione per gestire i dati per le visualizzazioni ASP.NET MVC?
+# <a name="how-do-i-implement-view--models-to-manage-data-for-aspnet-mvc-views"></a>Procedura: implementare modelli di visualizzazione per gestire i dati per le visualizzazioni MVC ASP.NET
 
-da [Chris Pels](https://twitter.com/chrispels)
+di [Chris Pels](https://twitter.com/chrispels)
 
-In questo video Chris Pels illustra come usare il concetto di un "modello di visualizzazione" per la gestione dei dati per le visualizzazioni ASP.NET MVC. In primo luogo, viene creato un progetto MVC di esempio che usa un oggetto ViewDataDictionary per creare un pacchetto e passare i dati da un controller a una visualizzazione. Successivamente, viene creata una classe che rappresenta un modello di visualizzazione per una visualizzazione nel progetto MVC di esempio. Come parte di questa implementazione, vengono illustrati i vantaggi dell'approccio basato sul modello di visualizzazione. Infine, è disponibile una discussione su come suddividere la logica dell'applicazione quando si usa un'implementazione del modello di visualizzazione.
+In questo video Chris Pels illustra come usare il concetto di "modello di visualizzazione" per la gestione dei dati per le visualizzazioni MVC ASP.NET. In primo luogo, viene creato un progetto MVC di esempio che usa un oggetto ViewDataDictionary per creare il pacchetto e passare i dati da un controller a una vista. Viene quindi creata una classe che rappresenta un modello di visualizzazione per una vista nel progetto MVC di esempio. Come parte di questa implementazione, vengono illustrati i vantaggi dell'approccio del modello di visualizzazione. Infine, viene illustrato come partizionare la logica dell'applicazione quando si usa un'implementazione del modello di visualizzazione.
 
 [&#9654;Guarda il video (21 minuti)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-implement-view-models-to-manage-data-for-aspnet-mvc-views)
 

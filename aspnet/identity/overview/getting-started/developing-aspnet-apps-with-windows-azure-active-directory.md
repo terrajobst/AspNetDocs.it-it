@@ -10,11 +10,11 @@ ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/getting-started/developing-aspnet-apps-with-windows-azure-active-directory
 msc.type: authoredcontent
 ms.openlocfilehash: 28425ea8d1312dfc6e14df9677396f2cbcf6f16d
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77456725"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78583853"
 ---
 # <a name="developing-aspnet-apps-with-azure-active-directory"></a>Sviluppo di app ASP.NET con Azure Active Directory
 
@@ -34,7 +34,7 @@ In questa esercitazione viene illustrato come creare un'applicazione ASP.NET con
 
 1. Accedere al [portale di gestione di Azure](https://manage.windowsazure.com/).
 2. Tutti gli account Azure contengono una **directory predefinita** , fare clic su di essa, quindi fare clic sulla scheda **utenti** nella parte superiore della pagina (vedere l'immagine seguente).
-3. Fare clic su Add User.
+3. Fare clic su Aggiungi utente.
     ![](developing-aspnet-apps-with-windows-azure-active-directory/_static/image1.png)
 4. Creare un nuovo utente con il ruolo di **amministratore globale** . Fare clic su **utenti** nel menu in alto, quindi fare clic sul pulsante **Aggiungi utente** sulla barra dei comandi.
 5. Nella finestra di dialogo **Aggiungi utente** immettere un nome per il nuovo utente e quindi fare clic sulla freccia a destra.

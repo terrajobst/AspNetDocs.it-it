@@ -9,11 +9,11 @@ ms.assetid: ec1cec4c-a75f-47af-a2ba-b1e2f971d24b
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/project-properties
 msc.type: authoredcontent
 ms.openlocfilehash: b2811791a897c9166f6222c23dddc6921e5267ab
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74614951"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78643598"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-project-properties"></a>Distribuzione Web ASP.NET con Visual Studio: proprietà del progetto
 
@@ -23,7 +23,7 @@ di [Tom Dykstra](https://github.com/tdykstra)
 
 > Questa serie di esercitazioni illustra come distribuire (pubblicare) un'applicazione Web ASP.NET in app Web di servizio app Azure o in un provider di hosting di terze parti, usando Visual Studio 2012 o Visual Studio 2010. Per informazioni sulla serie, vedere [la prima esercitazione della serie](introduction.md).
 
-## <a name="overview"></a>Panoramica di
+## <a name="overview"></a>Panoramica
 
 Alcune opzioni di distribuzione vengono configurate nelle proprietà del progetto archiviate nel file di progetto (file con *estensione csproj* o *VBPROJ* ). Nella maggior parte dei casi, i valori predefiniti di queste impostazioni sono quelli desiderati, ma è possibile usare l'interfaccia utente delle **proprietà del progetto** incorporata in Visual Studio per usare queste impostazioni se è necessario modificarle. In questa esercitazione vengono esaminate le impostazioni di distribuzione nelle **proprietà del progetto**. Si crea anche un file segnaposto che causa la distribuzione di una cartella vuota.
 

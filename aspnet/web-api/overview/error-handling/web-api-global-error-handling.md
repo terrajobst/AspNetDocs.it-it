@@ -10,17 +10,17 @@ ms.assetid: bffd7863-f63b-4b23-a13c-372b5492e9fb
 msc.legacyurl: /web-api/overview/error-handling/web-api-global-error-handling
 msc.type: authoredcontent
 ms.openlocfilehash: 94f2d6d31d0b37f9bb0077e6258c70a2dfb1918d
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457739"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78557281"
 ---
 # <a name="global-error-handling-in-aspnet-web-api-2"></a>Gestione degli errori globale in API Web ASP.NET 2
 
 di [David Matson](https://github.com/davidmatson), [Rick Anderson](https://twitter.com/RickAndMSFT)
 
-Questo argomento fornisce una panoramica della gestione degli errori globale in API Web ASP.NET 2 per ASP.NET 4. x. Attualmente non esiste alcun modo semplice nell'API Web per registrare o gestire gli errori a livello globale. Alcune eccezioni non gestite possono essere elaborate tramite [filtri eccezioni](exception-handling.md), ma in alcuni casi non è possibile gestire i filtri eccezioni. Ad esempio,
+Questo argomento fornisce una panoramica della gestione degli errori globale in API Web ASP.NET 2 per ASP.NET 4. x. Attualmente non esiste alcun modo semplice nell'API Web per registrare o gestire gli errori a livello globale. Alcune eccezioni non gestite possono essere elaborate tramite [filtri eccezioni](exception-handling.md), ma in alcuni casi non è possibile gestire i filtri eccezioni. Esempio:
 
 1. Eccezioni generate dai costruttori dei controller.
 2. Eccezioni generate dai gestori di messaggi.

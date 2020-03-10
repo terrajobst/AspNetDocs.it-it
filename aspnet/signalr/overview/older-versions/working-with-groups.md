@@ -1,122 +1,122 @@
 ---
 uid: signalr/overview/older-versions/working-with-groups
-title: Uso dei gruppi in SignalR 1.x | Microsoft Docs
+title: Uso dei gruppi in SignalR 1. x | Microsoft Docs
 author: bradygaster
-description: In questo argomento viene descritto come rendere persistenti le informazioni di appartenenza al gruppo con l'API dell'Hub.
+description: Questo argomento descrive come salvare in modo permanente le informazioni sull'appartenenza ai gruppi con l'API Hub.
 ms.author: bradyg
 ms.date: 10/21/2013
 ms.assetid: 22929efd-68c9-4609-b76d-f8ba42fda01e
 msc.legacyurl: /signalr/overview/older-versions/working-with-groups
 msc.type: authoredcontent
 ms.openlocfilehash: 5f50dc162d6cdcfbf2261e6a751f5f99078d5c54
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65113684"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78579366"
 ---
 # <a name="working-with-groups-in-signalr-1x"></a>Uso dei gruppi in SignalR 1.x
 
-dal [Patrick Fletcher](https://github.com/pfletcher), [Tom FitzMacken](https://github.com/tfitzmac)
+di [Patrick Fletcher](https://github.com/pfletcher), [Tom FitzMacken](https://github.com/tfitzmac)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
 
-> In questo argomento viene descritto come aggiungere utenti ai gruppi e rendere persistenti le informazioni di appartenenza al gruppo.
+> In questo argomento viene descritto come aggiungere utenti ai gruppi e salvare in modo permanente le informazioni sull'appartenenza al gruppo.
 
 ## <a name="overview"></a>Panoramica
 
-Gruppi in SignalR forniscono un metodo per la trasmissione di messaggi per sottoinsiemi specifici di client connessi. Un gruppo può avere qualsiasi numero di client e un client può essere un membro di un numero qualsiasi di gruppi. Non è necessario creare in modo esplicito gruppi. In effetti, la prima volta che specificarne il nome in una chiamata a Groups.Add viene automaticamente creato un gruppo, e viene eliminata quando si rimuove l'ultima connessione dall'appartenenza al suo interno. Per un'introduzione all'uso dei gruppi, vedere [come gestire l'appartenenza al gruppo dalla classe Hub](index.md) nell'API di hub - Guida di Server.
+I gruppi in SignalR forniscono un metodo per la trasmissione di messaggi a subset specificati di client connessi. Un gruppo può avere un numero qualsiasi di client e un client può essere un membro di un numero qualsiasi di gruppi. Non è necessario creare gruppi in modo esplicito. In effetti, un gruppo viene creato automaticamente la prima volta che si specifica il nome in una chiamata a groups. Add e viene eliminato quando si rimuove l'ultima connessione dall'appartenenza al gruppo. Per un'introduzione all'uso dei gruppi, vedere [come gestire l'appartenenza a un gruppo dalla classe Hub](index.md) nella Guida dell'API Hub-server.
 
-Non è disponibile alcuna API per ottenere un elenco di appartenenza al gruppo o un elenco di gruppi. SignalR invia messaggi al client e i gruppi basati su un modello pub/sub e il server non venga mantenuto un elenco di gruppi o appartenenze ai gruppi. Ciò consente di ottimizzare la scalabilità, perché ogni volta che si aggiunge un nodo a una web farm, qualsiasi stato che gestisce SignalR deve essere propagata nel nuovo nodo.
+Non è disponibile alcuna API per ottenere un elenco di appartenenza a un gruppo o un elenco di gruppi. SignalR invia messaggi a client e gruppi basati su un modello di pubblicazione/sottoscrizione e il server non gestisce gli elenchi di gruppi o appartenenze a gruppi. Ciò consente di massimizzare la scalabilità, perché ogni volta che si aggiunge un nodo a un Web farm, qualsiasi stato mantenuto da SignalR deve essere propagato al nuovo nodo.
 
-Quando si aggiunge un utente a un gruppo usando il `Groups.Add` metodo, l'utente riceve i messaggi indirizzati a tale gruppo per la durata della connessione corrente, ma l'appartenenza dell'utente in tale gruppo non viene mantenuto oltre la connessione corrente. Se si desidera mantenere in modo permanente informazioni sui gruppi e appartenenza al gruppo, è necessario archiviare i dati in un repository, ad esempio un database o l'archiviazione tabelle di Azure. Quindi, ogni volta che un utente si connette all'applicazione, recuperare dal repository di quali gruppi a cui appartiene l'utente e aggiungere manualmente l'utente a tali gruppi.
+Quando si aggiunge un utente a un gruppo utilizzando il metodo `Groups.Add`, l'utente riceve i messaggi indirizzati a tale gruppo per la durata della connessione corrente, ma l'appartenenza dell'utente al gruppo non viene salvata in modo permanente oltre la connessione corrente. Se si desidera mantenere in modo permanente le informazioni sui gruppi e l'appartenenza a un gruppo, è necessario archiviare i dati in un repository, ad esempio un database o l'archiviazione tabelle di Azure. Quindi, ogni volta che un utente si connette all'applicazione, si recupera dal repository a cui appartiene l'utente e si aggiunge manualmente tale utente a tali gruppi.
 
-Quando si riconnette dopo un'interruzione temporanea, l'utente nuovamente unisce automaticamente i gruppi assegnati in precedenza. Automaticamente la nuova partecipazione a un gruppo si applica solo quando la riconnessione, non quando si stabilisce una nuova connessione. Un token di firma digitale viene passato dal client che contiene l'elenco dei gruppi assegnati in precedenza. Se si desidera verificare se l'utente appartiene a gruppi di richiesta, è possibile eseguire l'override del comportamento predefinito.
+Quando si esegue la riconnessione dopo un'ininterrottità temporanea, l'utente aggiunge automaticamente i gruppi assegnati in precedenza. Il ricollegamento automatico di un gruppo si applica solo quando si esegue la riconnessione, non quando si stabilisce una nuova connessione. Un token firmato digitalmente viene passato dal client che contiene l'elenco dei gruppi assegnati in precedenza. Se si desidera verificare se l'utente appartiene ai gruppi richiesti, è possibile eseguire l'override del comportamento predefinito.
 
 Questo argomento include le sezioni seguenti:
 
 - [Aggiunta e rimozione di utenti](#add)
-- [La chiamata a membri di un gruppo](#call)
-- [L'appartenenza al gruppo di archiviazione in un database](#storedatabase)
-- [L'archiviazione l'appartenenza al gruppo di nell'archiviazione tabelle di Azure](#storeazuretable)
-- [Verifica per determinare se l'appartenenza al gruppo durante la riconnessione](#verify)
+- [Chiamata di membri di un gruppo](#call)
+- [Archiviazione dell'appartenenza a un gruppo in un database](#storedatabase)
+- [Archiviazione dell'appartenenza al gruppo nell'archiviazione tabelle di Azure](#storeazuretable)
+- [Verifica dell'appartenenza al gruppo durante la riconnessione](#verify)
 
 <a id="add"></a>
 
 ## <a name="adding-and-removing-users"></a>Aggiunta e rimozione di utenti
 
-Per aggiungere o rimuovere utenti da un gruppo, si chiama il [Add](https://msdn.microsoft.com/library/microsoft.aspnet.signalr.igroupmanager.add(v=vs.111).aspx) oppure [rimuovere](https://msdn.microsoft.com/library/microsoft.aspnet.signalr.igroupmanager.remove(v=vs.111).aspx) metodi e passare il nome del gruppo come parametri e l'id di connessione dell'utente. Non devi rimuovere manualmente un utente da un gruppo, al termine della connessione.
+Per aggiungere o rimuovere utenti da un gruppo, chiamare i metodi di [aggiunta](https://msdn.microsoft.com/library/microsoft.aspnet.signalr.igroupmanager.add(v=vs.111).aspx) o [rimozione](https://msdn.microsoft.com/library/microsoft.aspnet.signalr.igroupmanager.remove(v=vs.111).aspx) e passare il nome dell'ID di connessione e del gruppo dell'utente come parametri. Non è necessario rimuovere manualmente un utente da un gruppo al termine della connessione.
 
-L'esempio seguente mostra le `Groups.Add` e `Groups.Remove` metodi usati nei metodi dell'Hub.
+Nell'esempio seguente vengono illustrati i metodi `Groups.Add` e `Groups.Remove` usati nei metodi dell'hub.
 
 [!code-csharp[Main](working-with-groups/samples/sample1.cs?highlight=5,10)]
 
-Il `Groups.Add` e `Groups.Remove` metodi eseguiti in modo asincrono.
+I metodi `Groups.Add` e `Groups.Remove` vengono eseguiti in modo asincrono.
 
-Se si desidera aggiungere un client a un gruppo e inviare immediatamente un messaggio al client tramite il gruppo, è necessario assicurarsi che il metodo Groups.Add termina per prima. Esempi di codice seguenti illustrano come eseguire questa operazione, una con il codice che funziona in .NET 4.5 e uno con il codice che funziona in .NET 4.
+Se si desidera aggiungere un client a un gruppo e inviare immediatamente un messaggio al client tramite il gruppo, è necessario assicurarsi che il metodo groups. Add completi prima di tutto. Gli esempi di codice seguenti illustrano come eseguire questa operazione, una usando il codice che funziona in .NET 4,5 e uno usando il codice che funziona in .NET 4.
 
-#### <a name="asynchronous-net-45-example"></a>Asincrona .NET 4.5 esempio
+#### <a name="asynchronous-net-45-example"></a>Esempio .NET 4,5 asincrono
 
 [!code-csharp[Main](working-with-groups/samples/sample2.cs?highlight=1,3)]
 
-#### <a name="asynchronous-net-4-example"></a>Asincrona .NET 4 esempio
+#### <a name="asynchronous-net-4-example"></a>Esempio .NET 4 asincrono
 
 [!code-csharp[Main](working-with-groups/samples/sample3.cs?highlight=3-4)]
 
-In generale, non è necessario includere `await` quando si chiama il `Groups.Remove` metodo perché l'id di connessione che si sta tentando di rimuovere potrebbe non essere più disponibile. In tal caso, `TaskCanceledException` viene generata dopo che la richiesta scade. Se l'applicazione deve verificare che l'utente è stato rimosso dal gruppo prima di inviare un messaggio al gruppo, è possibile aggiungere `await` prima di Groups.Remove e quindi catch il `TaskCanceledException` eccezioni che potrebbero essere generate.
+In generale, non è consigliabile includere `await` quando si chiama il metodo `Groups.Remove` perché l'ID connessione che si sta tentando di rimuovere potrebbe non essere più disponibile. In tal caso, `TaskCanceledException` viene generata dopo il timeout della richiesta. Se l'applicazione deve verificare che l'utente sia stato rimosso dal gruppo prima di inviare un messaggio al gruppo, è possibile aggiungere `await` prima dei gruppi. rimuovere, quindi rilevare l'eccezione `TaskCanceledException` che potrebbe essere generata.
 
 <a id="call"></a>
 
-## <a name="calling-members-of-a-group"></a>La chiamata a membri di un gruppo
+## <a name="calling-members-of-a-group"></a>Chiamata di membri di un gruppo
 
-È possibile inviare messaggi a tutti i membri di un gruppo o solo i membri specificati del gruppo, come illustrato negli esempi seguenti.
+È possibile inviare messaggi a tutti i membri di un gruppo o solo ai membri specificati del gruppo, come illustrato negli esempi seguenti.
 
-- **Tutti i** connessi i client in un gruppo specificato. 
+- **Tutti** i client connessi in un gruppo specificato. 
 
     [!code-css[Main](working-with-groups/samples/sample4.css)]
-- Tutti i client in un gruppo specificato connessi **eccetto il client specificati**, identificato dall'ID di connessione. 
+- Tutti i client connessi in un gruppo specificato, **ad eccezione dei client specificati**, identificati dall'ID connessione. 
 
     [!code-csharp[Main](working-with-groups/samples/sample5.cs)]
-- Tutti i client in un gruppo specificato connessi **eccetto il client chiamante**. 
+- Tutti i client connessi in un gruppo specificato **eccetto il client chiamante**. 
 
     [!code-css[Main](working-with-groups/samples/sample6.css)]
 
 <a id="storedatabase"></a>
 
-## <a name="storing-group-membership-in-a-database"></a>L'appartenenza al gruppo di archiviazione in un database
+## <a name="storing-group-membership-in-a-database"></a>Archiviazione dell'appartenenza a un gruppo in un database
 
-Gli esempi seguenti illustrano come mantenere le informazioni utente e gruppo in un database. È possibile usare qualsiasi tecnologia di accesso ai dati; Tuttavia, l'esempio seguente viene illustrato come definire i modelli usando Entity Framework. Questi modelli di entità corrispondono ai campi e tabelle di database. Struttura dei dati potrebbe variare notevolmente a seconda dei requisiti dell'applicazione. In questo esempio include una classe denominata `ConversationRoom` che potrebbe essere univoco per un'applicazione che consente agli utenti di aggiungersi conversazioni relativi ad argomenti diversi, ad esempio sportivo o garden. Questo esempio include anche una classe per le connessioni. La classe di connessione non è assolutamente necessaria per l'appartenenza al gruppo di rilevamento, ma è spesso parte di una soluzione efficace per tenere traccia degli utenti.
+Negli esempi seguenti viene illustrato come mantenere le informazioni sui gruppi e sugli utenti in un database. È possibile utilizzare qualsiasi tecnologia di accesso ai dati; Nell'esempio seguente viene tuttavia illustrato come definire i modelli utilizzando Entity Framework. Questi modelli di entità corrispondono a tabelle e campi di database. La struttura dei dati potrebbe variare notevolmente in base ai requisiti dell'applicazione. Questo esempio include una classe denominata `ConversationRoom` che sarebbe univoca per un'applicazione che consente agli utenti di partecipare a conversazioni su argomenti diversi, ad esempio Sports o Gardening. Questo esempio include anche una classe per le connessioni. La classe Connection non è assolutamente necessaria per tenere traccia dell'appartenenza al gruppo, ma fa spesso parte di una soluzione affidabile per tenere traccia degli utenti.
 
 [!code-csharp[Main](working-with-groups/samples/sample7.cs)]
 
-Quindi, nell'hub, è possibile recuperare le informazioni di gruppo e utente dal database e aggiungere manualmente l'utente ai gruppi appropriati. L'esempio non include codice per tenere traccia delle connessioni utente. In questo esempio, il `await` parola chiave non viene applicata prima `Groups.Add` perché un messaggio non viene inviato immediatamente ai membri del gruppo. Se si desidera inviare un messaggio a tutti i membri del gruppo immediatamente dopo aver aggiunto il nuovo membro, si desidera applicare il `await` (parola chiave) per assicurarsi che l'operazione asincrona è stata completata.
+Quindi, nell'hub è possibile recuperare le informazioni sul gruppo e sull'utente dal database e aggiungere manualmente l'utente ai gruppi appropriati. Nell'esempio non è incluso il codice per tenere traccia delle connessioni utente. In questo esempio, la parola chiave `await` non viene applicata prima `Groups.Add` perché un messaggio non viene inviato immediatamente ai membri del gruppo. Se si desidera inviare un messaggio a tutti i membri del gruppo immediatamente dopo aver aggiunto il nuovo membro, è opportuno applicare la parola chiave `await` per assicurarsi che l'operazione asincrona sia stata completata.
 
 [!code-csharp[Main](working-with-groups/samples/sample8.cs)]
 
 <a id="storeazuretable"></a>
 
-## <a name="storing-group-membership-in-azure-table-storage"></a>L'archiviazione l'appartenenza al gruppo di nell'archiviazione tabelle di Azure
+## <a name="storing-group-membership-in-azure-table-storage"></a>Archiviazione dell'appartenenza al gruppo nell'archiviazione tabelle di Azure
 
-Utilizzo dell'archiviazione tabelle di Azure per archiviare le informazioni utente e gruppo è simile all'uso di un database. L'esempio seguente illustra un'entità di tabella che archivia il nome utente e il nome del gruppo.
+L'uso dell'archiviazione tabelle di Azure per archiviare informazioni sui gruppi e sugli utenti è simile all'uso di un database. Nell'esempio seguente viene illustrata un'entità Table che archivia il nome utente e il nome del gruppo.
 
 [!code-csharp[Main](working-with-groups/samples/sample9.cs)]
 
-Nell'hub, recuperare i gruppi assegnati quando l'utente si connette.
+Nell'hub è possibile recuperare i gruppi assegnati quando l'utente si connette.
 
 [!code-csharp[Main](working-with-groups/samples/sample10.cs)]
 
 <a id="verify"></a>
 
-## <a name="verifying-group-membership-when-reconnecting"></a>Verifica per determinare se l'appartenenza al gruppo durante la riconnessione
+## <a name="verifying-group-membership-when-reconnecting"></a>Verifica dell'appartenenza al gruppo durante la riconnessione
 
-Per impostazione predefinita, SignalR nuovamente assegna automaticamente un utente ai gruppi appropriati durante la riconnessione dopo un'interruzione temporanea, ad esempio quando una connessione viene eliminata e ristabilita prima del timeout della connessione. Informazioni sui gruppi dell'utente viene passati un token durante la riconnessione, e tale token viene verificato nel server. Per informazioni sul processo di verifica per la nuova partecipazione a gruppi di utenti, vedere [la nuova partecipazione a gruppi durante la riconnessione](index.md).
+Per impostazione predefinita, SignalR assegna automaticamente un utente ai gruppi appropriati quando si riconnette da un'interruzione temporanea, ad esempio quando una connessione viene eliminata e ristabilita prima del timeout della connessione. Le informazioni sul gruppo dell'utente vengono passate a un token durante la riconnessione e il token viene verificato nel server. Per informazioni sul processo di verifica per il join di utenti ai gruppi, vedere [riunione di gruppi durante la riconnessione](index.md).
 
-In generale, si dovrebbe usare il comportamento predefinito di automaticamente la nuova partecipazione a gruppi in riconnessione. SignalR gruppi non sono intesi come meccanismo di sicurezza per limitare l'accesso ai dati sensibili. Tuttavia, se l'applicazione deve controllare l'appartenenza al gruppo dell'utente durante la riconnessione, è possibile eseguire l'override del comportamento predefinito. Modifica del comportamento predefinito può aggiungere un carico di lavoro al database perché l'appartenenza al gruppo dell'utente deve essere recuperato per ciascun riconnessione anziché solo quando l'utente si connette.
+In generale, è consigliabile usare il comportamento predefinito di riunione automatica dei gruppi durante la riconnessione. I gruppi SignalR non sono intesi come meccanismo di sicurezza per limitare l'accesso ai dati sensibili. Tuttavia, se l'applicazione deve controllare l'appartenenza a un gruppo di un utente durante la riconnessione, è possibile eseguire l'override del comportamento predefinito. La modifica del comportamento predefinito può aggiungere un carico di lavoro al database perché è necessario recuperare l'appartenenza a un gruppo di un utente per ogni riconnessione anziché solo quando l'utente si connette.
 
-Se è necessario verificare l'appartenenza al gruppo in riconnessione, creare un nuovo modulo di pipeline dell'hub che restituisce un elenco dei gruppi assegnati, come illustrato di seguito.
+Se è necessario verificare l'appartenenza al gruppo per la riconnessione, creare un nuovo modulo della pipeline Hub che restituisca un elenco di gruppi assegnati, come illustrato di seguito.
 
 [!code-csharp[Main](working-with-groups/samples/sample11.cs)]
 
-Aggiungere quindi tale modulo alla pipeline dell'hub, come evidenziato di seguito.
+Aggiungere quindi il modulo alla pipeline dell'hub, come illustrato di seguito.
 
 [!code-csharp[Main](working-with-groups/samples/sample12.cs?highlight=10)]

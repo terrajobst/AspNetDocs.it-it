@@ -9,11 +9,11 @@ ms.assetid: 5e2bb092-cb22-4511-ad0a-22ae12dd99b3
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-a-sql-server-database-update-11-of-12
 msc.type: authoredcontent
 ms.openlocfilehash: 0894c0ac24737e66b6960ef3d48aa17f78c6aa1d
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74621062"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78528126"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-deploying-a-sql-server-database-update---11-of-12"></a>Distribuzione di un'applicazione Web ASP.NET con SQL Server Compact con Visual Studio o Visual Web Developer: distribuzione di un aggiornamento del database SQL Server-11 di 12
 
@@ -25,7 +25,7 @@ di [Tom Dykstra](https://github.com/tdykstra)
 > 
 > Per un'esercitazione in cui vengono illustrate le funzionalità di distribuzione introdotte dopo la versione RC di Visual Studio 2012, viene illustrato come distribuire SQL Server edizioni diverse da SQL Server Compact e viene illustrato come eseguire la distribuzione in siti Web di Microsoft Azure, vedere [distribuzione web ASP.NET con Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
 
-## <a name="overview"></a>Panoramica di
+## <a name="overview"></a>Panoramica
 
 Questa esercitazione illustra come distribuire un aggiornamento del database in un database di SQL Server completo. Poiché Migrazioni Code First esegue tutte le operazioni di aggiornamento del database, il processo è quasi identico a quello che è stato fatto per SQL Server Compact nell'esercitazione [distribuzione di un aggiornamento del database](deployment-to-a-hosting-provider-deploying-a-database-update-9-of-12.md) .
 
@@ -47,7 +47,7 @@ Nel progetto ContosoUniversity aprire *Instructors. aspx* e aggiungere un nuovo 
 
 [!code-aspx[Main](deployment-to-a-hosting-provider-deploying-a-sql-server-database-update-11-of-12/samples/sample3.aspx)]
 
-Compila la soluzione.
+Compilare la soluzione.
 
 Aprire la finestra **console di gestione pacchetti** e selezionare CONTOSOUNIVERSITY. dal come **progetto predefinito**.
 
@@ -73,7 +73,7 @@ Aprire la procedura guidata **Pubblica sito Web** , quindi passare alla scheda *
 
 Selezionare il profilo di pubblicazione del **test** .
 
-Selezionare la scheda **Impostazioni**.
+Fare clic sulla scheda **Impostazioni**.
 
 Fare clic su **Abilita miglioramenti alla pubblicazione del nuovo database**.
 
@@ -119,7 +119,7 @@ Aprire di nuovo la procedura guidata **Pubblica sito Web** , quindi fare clic su
 
 Nella scheda **connessione** modificare l' **URL di destinazione** con il valore appropriato se si utilizza un URL temporaneo.
 
-Scegliere **Avanti**.
+Fare clic su **Avanti**.
 
 Nella scheda **Impostazioni** fare clic su **Abilita nuovi miglioramenti alla pubblicazione del database**.
 
@@ -157,7 +157,7 @@ Desidero ringraziare i seguenti utenti che hanno apportato contributi significat
 
 - [Alberto Poblacion, MVP &amp; MCT, Spagna](https://mvp.support.microsoft.com/profile/Alberto)
 - Jarod Ferguson, MVP per lo sviluppo di piattaforme dati, Stati Uniti
-- Duro Mittal, Microsoft
+- Harsh Mittal, Microsoft
 - [Kristina Olson, Microsoft](https://blogs.iis.net/krolson/default.aspx)
 - [Mike Pope, Microsoft](http://www.mikepope.com/blog/DisplayBlog.aspx)
 - Sauro Srivastava, Microsoft

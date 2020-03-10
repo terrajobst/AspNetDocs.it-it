@@ -2,118 +2,118 @@
 uid: mvc/overview/older-versions-1/getting-started-with-mvc/getting-started-with-mvc-part3
 title: Aggiunta di una vista | Microsoft Docs
 author: shanselman
-description: Si tratta di un'esercitazione per principianti che introduce i concetti di base di ASP.NET MVC. Creare un'applicazione web semplice che legge e scrive da un database.
+description: Questa esercitazione introduttiva illustra le nozioni di base di ASP.NET MVC. Creare una semplice applicazione Web che legge e scrive da un database.
 ms.author: riande
 ms.date: 08/14/2010
 ms.assetid: e8f1515c-c277-47ff-a23e-224118f13f02
 msc.legacyurl: /mvc/overview/older-versions-1/getting-started-with-mvc/getting-started-with-mvc-part3
 msc.type: authoredcontent
 ms.openlocfilehash: 462b1210c45da67058899193afcea973f3daf122
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65123045"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78581557"
 ---
 # <a name="adding-a-view"></a>Aggiunta di una visualizzazione
 
-da [Scott Hanselman](https://github.com/shanselman)
+di [Scott hanseln](https://github.com/shanselman)
 
-> Si tratta di un'esercitazione per principianti che introduce i concetti di base di ASP.NET MVC. Si creerà una semplice applicazione web che legge e scrive da un database. Visitare il [centro di formazione di ASP.NET MVC](../../../index.md) per trovare altri ASP.NET MVC, esercitazioni ed esempi.
+> Questa esercitazione introduttiva illustra le nozioni di base di ASP.NET MVC. Verrà creata una semplice applicazione Web che legge e scrive da un database. Visitare il [centro per l'apprendimento di ASP.NET MVC](../../../index.md) per trovare altre esercitazioni ed esempi di ASP.NET MVC.
 
-In questa sezione si intende esaminare come possiamo nostra classe HelloWorldController utilizzare un file di modello di visualizzazione per incapsulare correttamente la generazione di risposte HTML a un client.
+In questa sezione si esaminerà come è possibile fare in modo che la classe HelloWorldController usi un file modello di visualizzazione per incapsulare in modo semplice la generazione di risposte HTML a un client.
 
-Iniziamo con un modello di visualizzazione con il metodo di indice. Il metodo viene chiamato indice ed è nell'HelloWorldController. Attualmente il metodo Index () restituisce una stringa con un messaggio hardcoded nella classe Controller.
+Si inizierà con un modello di visualizzazione con il metodo index. Il metodo è denominato index e si trova in HelloWorldController. Attualmente il metodo index () restituisce una stringa con un messaggio hardcoded nella classe controller.
 
 [!code-csharp[Main](getting-started-with-mvc-part3/samples/sample1.cs)]
 
-Modifichiamo ora il metodo Index deve invece essere come segue:
+A questo punto, modificare il metodo dell'indice in modo che sia simile al seguente:
 
 [!code-csharp[Main](getting-started-with-mvc-part3/samples/sample2.cs)]
 
-Questo punto, aggiungere un modello di visualizzazione per il progetto che è possibile usare per il metodo Index (). A tale scopo, fare doppio clic con il puntatore del mouse in una posizione al centro il metodo di indice e fare clic su Aggiungi visualizzazione...
+A questo punto, aggiungere un modello di vista al progetto che è possibile usare per il metodo index (). A tale scopo, fare clic con il pulsante destro del mouse con il mouse in un punto all'interno del metodo index e scegliere Aggiungi visualizzazione.
 
 ![immagine](getting-started-with-mvc-part3/_static/image1.png)
 
-Verrà visualizzata la finestra di dialogo "Aggiungi visualizzazione" ci fornisce alcune opzioni per il modo in cui si vuole creare un modello di visualizzazione che può essere utilizzato dal metodo di indice. Per il momento, non apportare alcuna modifica e fare clic sul pulsante Aggiungi.
+Verrà visualizzata la finestra di dialogo "Aggiungi visualizzazione" che fornisce alcune opzioni per la creazione di un modello di visualizzazione che può essere usato dal metodo di indice. Per il momento, non modificare nulla e fare semplicemente clic sul pulsante Aggiungi.
 
-[![Visualizza finestra di dialogo Aggiungi](getting-started-with-mvc-part3/_static/image3.png)](getting-started-with-mvc-part3/_static/image2.png)
+[![finestra di dialogo Aggiungi visualizzazione](getting-started-with-mvc-part3/_static/image3.png)](getting-started-with-mvc-part3/_static/image2.png)
 
-Dopo che si fa clic su Aggiungi, una nuova cartella e un nuovo file verranno visualizzati nella cartella della soluzione, come illustrato di seguito. Ora è disponibile una cartella HelloWorld in viste e un file index. aspx all'interno della cartella.
+Dopo aver fatto clic su Aggiungi, nella cartella della soluzione verrà visualizzata una nuova cartella e un nuovo file, come illustrato di seguito. A questo punto è disponibile una cartella HelloWorld in views e un file index. aspx all'interno di tale cartella.
 
 [![solutionexplorerwithindex](getting-started-with-mvc-part3/_static/image5.png)](getting-started-with-mvc-part3/_static/image4.png)
 
-Il nuovo file di indice è già aperta e pronta per la modifica. Aggiungere il testo sotto il primo &lt;h2&gt;indice&lt;/h2&gt; , ad esempio "Hello World".
+Anche il nuovo file di indice è già aperto e pronto per la modifica. Aggiungere testo sotto il primo &lt;H2&gt;index&lt;/H2&gt; like "Hello World".
 
 [!code-html[Main](getting-started-with-mvc-part3/samples/sample3.html)]
 
-Eseguire l'applicazione e visitare [ `http://localhost:xx/HelloWorld` ](http://localhostxx) nuovamente nel browser. Il metodo di indice nel controller in questo esempio non effettuata alcuna operazione, ma è stata eseguita la chiamata "View() restituito" indicato che si desidera utilizzare un file di modello di visualizzazione per il rendering di una risposta al client. Perché non si ha specificato il nome del file del modello di visualizzazione da usare in modo esplicito, per impostazione predefinita MVC ASP.NET usando il file index. aspx della visualizzazione all'interno della cartella \Views\HelloWorld. A questo punto viene visualizzata la stringa che è hardcoded nella nostra vista.
+Eseguire l'applicazione e visitare di nuovo [`http://localhost:xx/HelloWorld`](http://localhostxx) nel browser. Il metodo index nel controller in questo esempio non ha eseguito alcuna operazione, ma ha chiamato "Return View ()" che indicava che volevamo usare un file di modello di visualizzazione per eseguire il rendering di una risposta al client. Poiché non è stato specificato in modo esplicito il nome del file di modello di visualizzazione da usare, ASP.NET MVC ha utilizzato il file di visualizzazione index. aspx nella cartella \Views\HelloWorld. A questo punto viene visualizzata la stringa che è stata hardcoded nella visualizzazione.
 
-[![Index - Windows Internet Explorer](getting-started-with-mvc-part3/_static/image7.png)](getting-started-with-mvc-part3/_static/image6.png)
+[Indice ![-Windows Internet Explorer](getting-started-with-mvc-part3/_static/image7.png)](getting-started-with-mvc-part3/_static/image6.png)
 
-Sembra abbastanza positivo. Si noti tuttavia che il titolo del Browser afferma "Index", il titolo della pagina big dice "Applicazione MVC." È possibile modificare quelle.
+Sembra abbastanza valido. Si noti, tuttavia, che il titolo del browser dice "index" e il titolo grande nella pagina indica "My MVC Application". Modificare le modifiche.
 
-### <a name="changing-views-and-master-pages"></a>Modifica delle viste e le pagine Master
+### <a name="changing-views-and-master-pages"></a>Modifica di viste e pagine master
 
-In primo luogo, è possibile modificare il testo "Applicazione MVC." Tale testo viene condivisa e viene visualizzato in ogni pagina. Viene effettivamente visualizzato in un'unica posizione nel codice, anche se è in ogni pagina nell'app. Passare alla cartella /Views/Shared in Esplora soluzioni e aprire il file Site. master. Questo file viene chiamato una pagina Master ed è condivisa "shell" che utilizzano tutte le altre pagine.
+Prima di tutto, modificare il testo "applicazione MVC". Il testo è condiviso e viene visualizzato in ogni pagina. Viene effettivamente visualizzato in una sola posizione nel codice, anche se si trova in ogni pagina dell'app. Passare alla cartella/Views/Shared. nel Esplora soluzioni e aprire il file site. master. Questo file è denominato pagina master ed è la "Shell" condivisa usata da tutte le altre pagine.
 
-Si noti che un testo con la dicitura ContentPlaceholder "MainContent" in questo file.
+Si noti un testo che indica ContentPlaceholder "MainContent" in questo file.
 
 [!code-aspx[Main](getting-started-with-mvc-part3/samples/sample4.aspx)]
 
-Tale segnaposto è dove tutte le pagine create verranno visualizzate "wrapping" nella pagina master. Provare a modificare il titolo, quindi eseguire l'app e visitare più pagine. Si noterà che la modifica di uno venga visualizzata in più pagine.
+Il segnaposto è il punto in cui vengono visualizzate tutte le pagine create, "incapsulate" nella pagina master. Provare a modificare il titolo, quindi eseguire l'app e visitare più pagine. Si noterà che l'unica modifica viene visualizzata in più pagine.
 
 [!code-html[Main](getting-started-with-mvc-part3/samples/sample5.html)]
 
-A questo punto ogni pagina avrà l'intestazione primaria - ovvero H1 - di "My MVC Movie applicazione". Che gestisce il testo bianco nella parte superiore sono condivisi tra tutte le pagine.
+A questo punto, ogni pagina avrà l'intestazione principale, ovvero H1 "My MVC Movie Application". Che gestisce il testo bianco nella parte superiore che viene condiviso tra tutte le pagine.
 
-Ecco il Site. master nella sua interezza con il titolo modificato:
+Ecco il sito. master nel suo complesso con il titolo modificato:
 
 [!code-aspx[Main](getting-started-with-mvc-part3/samples/sample6.aspx)]
 
-A questo punto, è possibile modificare il titolo della pagina di indice.
+A questo punto, modificare il titolo della pagina di indice.
 
-Aprire /HelloWorld/Index.aspx. Ecco due modi per modificare. In primo luogo, il titolo che viene visualizzato nel titolo del browser, quindi l'intestazione secondaria - ovvero H2 - anche. Renderà ciascuno leggermente diverso, è possibile visualizzare il frammento di codice viene modificato quale parte dell'app.
+Apri/HelloWorld/Index.aspx. Ci sono due posizioni da modificare. In primo luogo, il titolo visualizzato nel titolo del browser, quindi anche l'intestazione secondaria, che è H2. Li rendo leggermente diversi, in modo da poter visualizzare il bit di codice modificato che parte dell'app.
 
 [!code-aspx[Main](getting-started-with-mvc-part3/samples/sample7.aspx)]
 
-Eseguire l'app e visitare /Movies. Si noti che il titolo del browser, l'intestazione primaria e le intestazioni secondarie sono cambiati. È facile apportare cambiamenti nella tua app con piccole modifiche alla visualizzazione.
+Eseguire l'app e visitare/Movies. Si noti che il titolo del browser, l'intestazione primaria e le intestazioni secondarie sono state modificate. È facile apportare modifiche importanti all'app con piccole modifiche alla visualizzazione.
 
-[![Movie List - Windows Internet Explorer](getting-started-with-mvc-part3/_static/image9.png)](getting-started-with-mvc-part3/_static/image8.png)
+[Elenco di film ![-Windows Internet Explorer](getting-started-with-mvc-part3/_static/image9.png)](getting-started-with-mvc-part3/_static/image8.png)
 
-Il numero minimo di "data" (in questo caso "Hello World!" messaggio) era difficile anche se codificati. Abbiamo V (viste) e abbiamo C (controller), ma ancora alcun M (modello). A breve si verrà illustrato come creare un database e recuperare i dati del modello da quest'ultimo.
+Un po' di "dati", in questo caso "Hello World!" Message) è stato hardcoded. Sono disponibili V (visualizzazioni) e C (controller), ma non M (modello) ancora. A breve verrà illustrato come creare un database e recuperare i dati del modello.
 
-## <a name="passing-a-viewmodel"></a>Il passaggio di un elemento ViewModel
+## <a name="passing-a-viewmodel"></a>Passaggio di un ViewModel
 
-Prima di passare a un database e comunicare con informazioni sui modelli, tuttavia, esaminiamo innanzitutto "ViewModel". Si tratta di oggetti che rappresentano novità richiede un modello di vista per eseguire il rendering di una risposta HTML a un client. Essi vengono in genere creati passata da una classe Controller da un modello di vista e deve contenere solo i dati che richiede il modello di vista - e non oltre.
+Prima di passare a un database e parlare dei modelli, tuttavia, parliamo di "ViewModels". Si tratta di oggetti che rappresentano gli elementi richiesti da un modello di visualizzazione per eseguire il rendering di una risposta HTML a un client. Vengono in genere creati e passati da una classe controller a un modello di visualizzazione e devono contenere solo i dati richiesti dal modello di visualizzazione e non più.
 
-In precedenza con l'esempio HelloWorld, il metodo di azione Welcome () ha richiesto un nome e un parametro numTimes e restituirlo al browser. Invece di ottenere il Controller di continuare a eseguire il rendering di questa risposta direttamente, creiamo invece una classe piccola per contenere i dati e quindi passarlo un modello di vista per eseguire il rendering nuovamente la risposta HTML utilizzarlo. In questo modo il Controller si occupa di un aspetto e il modello di vista altro – ci permette di mantenere pulita "separazione delle problematiche" all'interno dell'applicazione.
+In precedenza, con l'esempio HelloWorld, il metodo di azione Welcome () accettava un nome e un parametro numTimes e lo restituiva al browser. Anziché fare in modo che il controller continui a eseguire direttamente il rendering di questa risposta, si crea invece una piccola classe per contenere tali dati e quindi lo si passa a un modello di visualizzazione per eseguire il rendering della risposta HTML utilizzandola. In questo modo il controller è interessato da una sola cosa e dal modello di vista un altro, consentendo di mantenere pulita la "separazione dei problemi" all'interno dell'applicazione.
 
-Tornare al file HelloWorldController.cs e aggiungere una nuova classe "WelcomeViewModel" e modificare il metodo di completamento dell'installazione all'interno del controller. Ecco il HelloWorldController.cs completa con la nuova classe nello stesso file.
+Tornare al file HelloWorldController.cs e aggiungere una nuova classe "WelcomeViewModel" e modificare il metodo Welcome all'interno del controller. Di seguito è riportato il HelloWorldController.cs completo con la nuova classe nello stesso file.
 
 [!code-csharp[Main](getting-started-with-mvc-part3/samples/sample8.cs)]
 
-Anche se è su più righe, il metodo iniziale è davvero solo due istruzioni del codice. La prima istruzione in pacchetti i due parametri in un oggetto ViewModel e la seconda passa l'oggetto risultante alla visualizzazione.
+Anche se si trova su più righe, il metodo di benvenuto è in realtà solo due istruzioni di codice. La prima istruzione inserisce i due parametri in un oggetto ViewModel e il secondo passa l'oggetto risultante nella visualizzazione.
 
-A questo punto è necessario un modello di vista Welcome! Fare clic con il pulsante destro del metodo iniziale e selezionare Aggiungi visualizzazione. Questa volta, si sarà controllare "Crea una visualizzazione fortemente tipizzata" e selezionare la classe WelcomeViewModel dall'elenco a discesa. Questa nuova visualizzazione verrà solo a conoscenza WelcomeViewModels e non altri tipi di oggetti.
+A questo punto è necessario un modello di visualizzazione iniziale. Fare clic con il pulsante destro del mouse sul metodo Welcome e scegliere Aggiungi visualizzazione. Questa volta, si verificherà "crea una visualizzazione fortemente tipizzata" e si seleziona la classe WelcomeViewModel dall'elenco a discesa. Questa nuova visualizzazione saprà solo WelcomeViewModels e nessun altro tipo di oggetti.
 
-> *NOTA: È necessario avere compilato una sola volta dopo l'aggiunta di WelcomeViewModel per venga visualizzato nell'elenco a discesa.*
+> *Nota: è necessario avere compilato una volta dopo aver aggiunto il WelcomeViewModel per da visualizzare nell'elenco a discesa.*
 
-Ecco come dovrebbe risultare la finestra di dialogo Aggiungi visualizzazione. Fare clic sul pulsante Aggiungi. ![Aggiungere che un cerchio di visualizzazione](getting-started-with-mvc-part3/_static/image10.png)
+Ecco come dovrebbe essere visualizzata la finestra di dialogo Aggiungi visualizzazione. Fare clic sul pulsante Aggiungi. ![Aggiungi visualizzazione con cerchio](getting-started-with-mvc-part3/_static/image10.png)
 
-Aggiungere questo codice sotto la &lt;h2&gt; in Welcome.aspx di nuovo. Illustreremo apportare un ciclo e dal benvenuto come tutte le volte che l'utente indicato che si deve!
+Aggiungere questo codice sotto l'&gt; &lt;H2 nel nuovo Welcome. aspx. Facciamo un ciclo e dico Hello il numero di volte in cui l'utente dice che è necessario.
 
 [!code-aspx[Main](getting-started-with-mvc-part3/samples/sample9.aspx)]
 
-Inoltre, si noti che mentre si digita che poiché l'avevamo detto visualizzazione relativi il WelcomeViewModel (sono sposate, ricordare?) che viene visualizzato Intellisense utile ogni volta che si fa riferimento l'oggetto modello come illustra lo screenshot seguente:
+Si noti anche che, durante la digitazione, è stata rilevata questa visualizzazione del WelcomeViewModel (sono sposati, ricordati?) che si ottengono utili IntelliSense ogni volta che si fa riferimento all'oggetto modello come illustrato nello screenshot seguente:
 
-[![Codice sorgente NumTime](getting-started-with-mvc-part3/_static/image12.png)](getting-started-with-mvc-part3/_static/image11.png)
+[Codice sorgente ![NumTime](getting-started-with-mvc-part3/_static/image12.png)](getting-started-with-mvc-part3/_static/image11.png)
 
-Eseguire l'applicazione e visitare `http://localhost:xx/HelloWorld/Welcome?name=Scott&numtimes=4` nuovamente. A questo punto è in corso il reindirizzamento dei dati dall'URL, viene passato automaticamente nel Controller, il Controller in pacchetti i dati in un elemento ViewModel e passa tale oggetto nella visualizzazione. La vista che consente di visualizzare i dati in formato HTML all'utente.
+Eseguire l'applicazione e visitare di nuovo `http://localhost:xx/HelloWorld/Welcome?name=Scott&numtimes=4`. Ora che i dati sono stati rilevati dall'URL, vengono passati al nostro controller automaticamente, il controller inserisce i dati in un ViewModel e passa tale oggetto alla visualizzazione. Visualizzazione che Visualizza i dati in formato HTML per l'utente.
 
-[![Attività iniziali - Windows Internet Explorer](getting-started-with-mvc-part3/_static/image14.png)](getting-started-with-mvc-part3/_static/image13.png)
+[![benvenuto-Windows Internet Explorer](getting-started-with-mvc-part3/_static/image14.png)](getting-started-with-mvc-part3/_static/image13.png)
 
-Tutto ciò rappresenta una sorta di "M" per il modello, ma non il tipo di database. Diamo ciò che abbiamo appreso e creare un database di film.
+Beh, era un tipo di "M" per il modello, ma non il tipo di database. Diamo un'appreso e creiamo un database di filmati.
 
 > [!div class="step-by-step"]
 > [Precedente](getting-started-with-mvc-part2.md)

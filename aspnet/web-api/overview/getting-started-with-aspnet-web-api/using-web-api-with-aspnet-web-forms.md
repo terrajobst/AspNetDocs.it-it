@@ -1,8 +1,8 @@
 ---
 uid: web-api/overview/getting-started-with-aspnet-web-api/using-web-api-with-aspnet-web-forms
-title: Uso dell'API Web con Web Form ASP.NET - ASP.NET 4.x
+title: Uso dell'API Web con ASP.NET Web Forms-ASP.NET 4. x
 author: MikeWasson
-description: Esercitazione con il codice passo passo per aggiungere l'API Web a un'applicazione di form ASP.NET per ASP.NET 4.x
+description: Esercitazione con codice Step by Step per aggiungere un'API Web a un'applicazione ASP.NET Forms per ASP.NET 4. x
 ms.author: riande
 ms.date: 04/03/2012
 ms.custom: seoapril2019
@@ -10,99 +10,99 @@ ms.assetid: 25da8c3f-4e90-4946-9765-4f160985e1e4
 msc.legacyurl: /web-api/overview/getting-started-with-aspnet-web-api/using-web-api-with-aspnet-web-forms
 msc.type: authoredcontent
 ms.openlocfilehash: ae553b62998fefd128e12711cbde958ea42d8c63
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59422577"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78556777"
 ---
 # <a name="using-web-api-with-aspnet-web-forms"></a>Usare l'API Web con Web Forms ASP.NET
 
-da [Mike Wasson](https://github.com/MikeWasson)
+di [Mike Wasson](https://github.com/MikeWasson)
 
-Questa esercitazione illustra i passaggi per aggiungere l'API Web a un'applicazione Web Form ASP.NET tradizionale in ASP.NET 4.x. 
+Questa esercitazione illustra la procedura per aggiungere un'API Web a un'applicazione Web Forms ASP.NET tradizionale in ASP.NET 4. x. 
 
 ## <a name="overview"></a>Panoramica
 
-Anche se viene incluso nel pacchetto di API Web ASP.NET con ASP.NET MVC, è facile aggiungere l'API Web a un'applicazione Web Form ASP.NET tradizionale.
+Sebbene API Web ASP.NET sia incluso in un pacchetto con ASP.NET MVC, è facile aggiungere un'API Web a un'applicazione Web Form ASP.NET tradizionale.
 
-Per usare l'API Web in un'applicazione Web Form, esistono due passaggi principali:
+Per usare l'API Web in un'applicazione Web Form, è necessario eseguire due passaggi principali:
 
-- Aggiungere un controller API Web da cui deriva il **ApiController** classe.
-- Aggiungere una tabella di route per il **Application\_avviare** (metodo).
+- Aggiungere un controller API Web che deriva dalla classe **ApiController** .
+- Aggiungere una tabella di route al metodo di **avvio dell'applicazione\_** .
 
-## <a name="create-a-web-forms-project"></a>Creare un progetto di Web Form
+## <a name="create-a-web-forms-project"></a>Creare un progetto Web Form
 
-Avviare Visual Studio e selezionare **nuovo progetto** dalle **avviare** pagina. E viceversa, il **File** dal menu **New** e quindi **progetto**.
+Avviare Visual Studio e selezionare **nuovo progetto** nella pagina **iniziale** . In alternativa, scegliere **nuovo** dal menu **file** , quindi **progetto**.
 
-Nel **modelli** riquadro, selezionare **modelli installati** ed espandere le **Visual c#** nodo. Sotto **Visual c#**, selezionare **Web**. Nell'elenco dei modelli di progetto, selezionare **applicazione Web Form ASP.NET**. Immettere un nome per il progetto e fare clic su **OK**.
+Nel riquadro **modelli** selezionare **modelli installati** ed espandere il nodo  **C# visivo** . In **Visual C#** Selezionare **Web**. Nell'elenco dei modelli di progetto selezionare **ASP.NET Web Forms Application**. Immettere un nome per il progetto e fare clic su **OK**.
 
 ![](using-web-api-with-aspnet-web-forms/_static/image1.png)
 
-## <a name="create-the-model-and-controller"></a>Creare il modello e Controller
+## <a name="create-the-model-and-controller"></a>Creare il modello e il controller
 
-Questa esercitazione Usa le stesse classi del modello e controller come il [introduttiva](tutorial-your-first-web-api.md) esercitazione.
+Questa esercitazione usa le stesse classi di modello e controller dell'esercitazione [Introduzione](tutorial-your-first-web-api.md) .
 
-In primo luogo, aggiungere una classe di modello. Nelle **Esplora soluzioni**, fare clic sul progetto e selezionare **Aggiungi classe**. Denominare la classe Product e aggiungere l'implementazione seguente:
+In primo luogo, aggiungere una classe modello. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul progetto e scegliere **Aggiungi classe**. Denominare la classe Product e aggiungere l'implementazione seguente:
 
 [!code-csharp[Main](using-web-api-with-aspnet-web-forms/samples/sample1.cs)]
 
-Successivamente, aggiungere un controller API Web al progetto., una *controller* è l'oggetto che gestisce le richieste HTTP per l'API Web.
+Successivamente, aggiungere un controller API Web al progetto., un *controller* è l'oggetto che gestisce le richieste HTTP per l'API Web.
 
 In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto. Selezionare **Aggiungi nuovo elemento**.
 
 ![](using-web-api-with-aspnet-web-forms/_static/image2.png)
 
-Sotto **modelli installati**, espandere **Visual c#** e selezionare **Web**. Quindi, nell'elenco dei modelli, selezionare **classe Controller API Web**. Denominare il controller "ProductsController" e fare clic su **Add**.
+In **modelli installati**espandere **Visual C#**  e selezionare **Web**. Quindi, dall'elenco dei modelli, selezionare **classe controller API Web**. Assegnare al controller il nome "ProductsController" e fare clic su **Aggiungi**.
 
 ![](using-web-api-with-aspnet-web-forms/_static/image3.png)
 
-Il **Aggiungi nuovo elemento** procedura guidata creerà un file denominato ProductsController.cs. Eliminare i metodi che è inclusa la procedura guidata e aggiungere i metodi seguenti:
+La procedura guidata **Aggiungi nuovo elemento** creerà un file denominato ProductsController.cs. Eliminare i metodi inclusi nella procedura guidata e aggiungere i metodi seguenti:
 
 [!code-csharp[Main](using-web-api-with-aspnet-web-forms/samples/sample2.cs)]
 
-Per altre informazioni sul codice in questo controller, vedere la [introduttiva](tutorial-your-first-web-api.md) esercitazione.
+Per ulteriori informazioni sul codice in questo controller, vedere l'esercitazione [Introduzione](tutorial-your-first-web-api.md) .
 
-## <a name="add-routing-information"></a>Aggiungere le informazioni di Routing
+## <a name="add-routing-information"></a>Aggiungi informazioni di routing
 
-Successivamente, si aggiungerà una route URI in modo che gli URI nel formato &quot;/API/prodotti/&quot; vengono indirizzati al controller.
+Successivamente, verrà aggiunta una route URI in modo che gli URI del modulo &quot;/API/Products/&quot; vengano indirizzati al controller.
 
-Nelle **Esplora soluzioni**, fare doppio clic su Global. asax per aprire il file code-behind Global.asax.cs. Aggiungere la seguente istruzione **using**.
+In **Esplora soluzioni**fare doppio clic su Global. asax per aprire il file code-behind Global.asax.cs. Aggiungere la seguente istruzione **using** .
 
 [!code-csharp[Main](using-web-api-with-aspnet-web-forms/samples/sample3.cs)]
 
-Quindi aggiungere il codice seguente per il **Application\_avviare** metodo:
+Aggiungere quindi il codice seguente all' **applicazione\_metodo Start** :
 
 [!code-csharp[Main](using-web-api-with-aspnet-web-forms/samples/sample4.cs)]
 
-Per altre informazioni sulle tabelle di routing, vedere [Routing in API Web ASP.NET](../web-api-routing-and-actions/routing-in-aspnet-web-api.md).
+Per ulteriori informazioni sulle tabelle di routing, vedere [routing in API Web ASP.NET](../web-api-routing-and-actions/routing-in-aspnet-web-api.md).
 
-## <a name="add-client-side-ajax"></a>Aggiungere AJAX lato Client
+## <a name="add-client-side-ajax"></a>Aggiungi AJAX sul lato client
 
-Questo è tutto che è necessario creare un'API web che i client possono accedere. A questo punto è possibile aggiungere una pagina HTML che usa jQuery per chiamare l'API.
+È sufficiente creare un'API Web a cui i client possono accedere. A questo punto è possibile aggiungere una pagina HTML che usa jQuery per chiamare l'API.
 
-Assicurarsi che la pagina master (ad esempio, *Site. master*) include una `ContentPlaceHolder` con `ID="HeadContent"`:
+Verificare che la pagina master (ad esempio, *site. master*) includa un `ContentPlaceHolder` con `ID="HeadContent"`:
 
 [!code-html[Main](using-web-api-with-aspnet-web-forms/samples/sample8.html)]
 
-Aprire il file default. aspx. Sostituire il testo boilerplate nella sezione del contenuto principale, come illustrato:
+Aprire il file default. aspx. Sostituire il testo standard che si trova nella sezione contenuto principale, come illustrato:
 
 [!code-aspx[Main](using-web-api-with-aspnet-web-forms/samples/sample5.aspx)]
 
-Successivamente, aggiungere un riferimento al file di origine jQuery nel `HeaderContent` sezione:
+Aggiungere quindi un riferimento al file di origine jQuery nella sezione `HeaderContent`:
 
 [!code-aspx[Main](using-web-api-with-aspnet-web-forms/samples/sample6.aspx?highlight=2)]
 
-Nota: È possibile aggiungere facilmente il riferimento allo script trascinando e rilasciando il file dalla **Esplora soluzioni** nella finestra dell'editor di codice.
+Nota: è possibile aggiungere facilmente il riferimento allo script trascinando il file da **Esplora soluzioni** nella finestra dell'editor di codice.
 
 ![](using-web-api-with-aspnet-web-forms/_static/image4.png)
 
-Sotto il tag di script jQuery, aggiungere il seguente blocco di script:
+Sotto il tag di script jQuery aggiungere il blocco di script seguente:
 
 [!code-html[Main](using-web-api-with-aspnet-web-forms/samples/sample7.html)]
 
-Quando il documento viene caricato, lo script esegue una richiesta AJAX &quot;api/prodotti&quot;. La richiesta restituisce un elenco di prodotti in formato JSON. Lo script aggiunge le informazioni sul prodotto per la tabella HTML.
+Quando il documento viene caricato, questo script esegue una richiesta AJAX per &quot;API/Products&quot;. La richiesta restituisce un elenco di prodotti in formato JSON. Lo script aggiunge le informazioni sul prodotto alla tabella HTML.
 
-Quando si esegue l'applicazione, dovrebbe essere simile al seguente:
+Quando si esegue l'applicazione, l'aspetto dovrebbe essere simile al seguente:
 
 ![](using-web-api-with-aspnet-web-forms/_static/image5.png)

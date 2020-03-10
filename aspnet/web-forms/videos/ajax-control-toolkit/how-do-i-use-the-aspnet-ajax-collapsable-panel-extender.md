@@ -1,25 +1,25 @@
 ---
 uid: web-forms/videos/ajax-control-toolkit/how-do-i-use-the-aspnet-ajax-collapsable-panel-extender
-title: '[Procedura:] Usare il dispositivo Extender Pannello comprimibile di ASP.NET AJAX? | Microsoft Docs'
+title: "[Procedura:] Usare l'Extender Panel ASP.NET AJAX. | Microsoft Docs"
 author: JoeStagner
-description: In questo video si apprenderà come usare l'Extender Pannello comprimibile di ASP.NET AJAX per consentire all'utente di mostrare o nascondere il contenuto in una pagina web in modo dinamico.
+description: In questo video si apprenderà come usare l'Extender Panel ASP.NET AJAX che consente all'utente di visualizzare o nascondere in modo dinamico il contenuto in una pagina Web.
 ms.author: riande
 ms.date: 01/31/2007
 ms.assetid: d54549cd-e832-4bfa-b490-52e58a8a03c4
 msc.legacyurl: /web-forms/videos/ajax-control-toolkit/how-do-i-use-the-aspnet-ajax-collapsable-panel-extender
 msc.type: video
 ms.openlocfilehash: dd652bf604e5b0ca838b5e50714b8923a4fb25c5
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59398358"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78563924"
 ---
-# <a name="how-do-i-use-the-aspnet-ajax-collapsable-panel-extender"></a>[Procedura:] Usare il dispositivo Extender Pannello comprimibile di ASP.NET AJAX?
+# <a name="how-do-i-use-the-aspnet-ajax-collapsable-panel-extender"></a>[Procedura:] Usare l'Extender Panel ASP.NET AJAX.
 
-da [Joe Stagner](https://github.com/JoeStagner)
+di [Joe Stagner spiega](https://github.com/JoeStagner)
 
-In questo video si apprenderà come usare l'Extender Pannello comprimibile di ASP.NET AJAX per consentire all'utente di mostrare o nascondere il contenuto in una pagina web in modo dinamico.
+In questo video si apprenderà come usare l'Extender Panel ASP.NET AJAX che consente all'utente di visualizzare o nascondere in modo dinamico il contenuto in una pagina Web.
 
 [&#9654;Guarda il video (11 minuti)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-use-the-aspnet-ajax-collapsable-panel-extender)
 

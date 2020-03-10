@@ -2,22 +2,22 @@
 uid: mvc/overview/older-versions-1/models-data/index
 title: Modelli (dati) | Microsoft Docs
 author: rick-anderson
-description: In questa serie di esercitazioni descrive come usare ASP.NET MVC con Entity Framework Microsoft. Nel corso di questa esercitazione, si compila un'applicazione web...
+description: In questa serie di esercitazioni si apprenderà come usare ASP.NET MVC con Microsoft Entity Framework. Nel corso di questa esercitazione si creerà un'applicazione Web...
 ms.author: riande
 ms.date: 09/28/2011
 ms.assetid: 9086d8a8-7952-4a7e-82a7-724d48178555
 msc.legacyurl: /mvc/overview/older-versions-1/models-data
 msc.type: chapter
 ms.openlocfilehash: e4e4cce840d46ceceeb3ea77db91ad99d73ef483
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65117581"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78581151"
 ---
 # <a name="models-data"></a>Modelli (dati)
 
-> In questa serie di esercitazioni descrive come usare ASP.NET MVC con Entity Framework Microsoft. Nel corso di questa esercitazione, si compila un'applicazione web che illustra come selezionare, inserire, aggiornare ed eliminare i dati del database tramite Entity Framework.
+> In questa serie di esercitazioni si apprenderà come usare ASP.NET MVC con Microsoft Entity Framework. Nel corso di questa esercitazione viene compilata un'applicazione Web che illustra come selezionare, inserire, aggiornare ed eliminare i dati del database usando il Entity Framework.
 
 - [Creazione di classi di modelli con Entity Framework (C#)](creating-model-classes-with-the-entity-framework-cs.md)
 - [Creazione di classi di modelli con LINQ to SQL (C#)](creating-model-classes-with-linq-to-sql-cs.md)
