@@ -9,21 +9,21 @@ ms.assetid: f28e8c8e-5e0f-4bc3-af69-2e6e18a6d100
 msc.legacyurl: /web-pages/videos/aspnet-razor-pages/displaying-data-in-a-chart-part-2
 msc.type: video
 ms.openlocfilehash: c6ba20f28cf577defd9d5262ffe3b576a90aeb59
-ms.sourcegitcommit: 84b1681d4e6253e30468c8df8a09fe03beea9309
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73445625"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78641477"
 ---
-# <a name="displaying-data-in-a-chart-part-2"></a><span data-ttu-id="c286b-103">Visualizzazione dei dati in un grafico (parte 2)</span><span class="sxs-lookup"><span data-stu-id="c286b-103">Displaying Data in a Chart (Part 2)</span></span>
+# <a name="displaying-data-in-a-chart-part-2"></a><span data-ttu-id="ed300-103">Visualizzazione dei dati in un grafico (parte 2)</span><span class="sxs-lookup"><span data-stu-id="ed300-103">Displaying Data in a Chart (Part 2)</span></span>
 
-<span data-ttu-id="c286b-104">di [Joe Stagner spiega](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="c286b-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
+<span data-ttu-id="ed300-104">di [Joe Stagner spiega](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="ed300-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
 
-<span data-ttu-id="c286b-105">Accompagnamento video per l'esercitazione visualizzazione dei dati in un grafico (parte 2)</span><span class="sxs-lookup"><span data-stu-id="c286b-105">Video accompaniment to the Displaying Data in a Chart (Part 2) tutorial</span></span>
+<span data-ttu-id="ed300-105">Accompagnamento video per l'esercitazione visualizzazione dei dati in un grafico (parte 2)</span><span class="sxs-lookup"><span data-stu-id="ed300-105">Video accompaniment to the Displaying Data in a Chart (Part 2) tutorial</span></span>
 
-<span data-ttu-id="c286b-106">[&#9654;Guarda il video (9 minuti)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/displaying-data-in-a-chart-(part-2))</span><span class="sxs-lookup"><span data-stu-id="c286b-106">[&#9654; Watch video (9 minutes)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/displaying-data-in-a-chart-(part-2))</span></span>
+<span data-ttu-id="ed300-106">[&#9654;Guarda il video (9 minuti)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/displaying-data-in-a-chart-(part-2))</span><span class="sxs-lookup"><span data-stu-id="ed300-106">[&#9654; Watch video (9 minutes)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/displaying-data-in-a-chart-(part-2))</span></span>
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="c286b-107">[Precedente](displaying-data-in-a-chart-part-1.md)
-> [Successivo](working-with-files.md)</span><span class="sxs-lookup"><span data-stu-id="c286b-107">[Previous](displaying-data-in-a-chart-part-1.md)
+> <span data-ttu-id="ed300-107">[Precedente](displaying-data-in-a-chart-part-1.md)
+> [Successivo](working-with-files.md)</span><span class="sxs-lookup"><span data-stu-id="ed300-107">[Previous](displaying-data-in-a-chart-part-1.md)
 [Next](working-with-files.md)</span></span>
