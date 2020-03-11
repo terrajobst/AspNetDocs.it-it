@@ -9,11 +9,11 @@ ms.assetid: 9ef3e893-bebe-4b13-9fe5-8b71720dd85e
 msc.legacyurl: /web-forms/overview/older-versions-security/membership/creating-user-accounts-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 01be198c329f372ddcd529ad8a369f2d3426a9fc
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74628462"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78586821"
 ---
 # <a name="creating-user-accounts-vb"></a>Creazione di account utente (VB)
 
@@ -29,7 +29,7 @@ di [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 Oltre ad apprendere come creare nuovi account utente, sarà necessario aggiornare anche il sito Web demo creato per la prima volta nell'esercitazione *<a id="_msoanchor_2"></a>[Panoramica dell'autenticazione basata su form](../introduction/an-overview-of-forms-authentication-vb.md)* e quindi migliorato nell'esercitazione relativa alla configurazione dell' *<a id="_msoanchor_3"></a>[autenticazione basata su form e agli argomenti avanzati](../introduction/forms-authentication-configuration-and-advanced-topics-vb.md)* . L'applicazione Web demo include una pagina di accesso che convalida le credenziali degli utenti da coppie di nome utente/password hardcoded. Inoltre, `Global.asax` include codice che crea oggetti `IPrincipal` e `IIdentity` personalizzati per gli utenti autenticati. La pagina di accesso viene aggiornata per convalidare le credenziali degli utenti rispetto al Framework di appartenenza e rimuovere l'entità personalizzata e la logica di identità.
 
-Iniziamo!
+Ecco come procedere.
 
 ## <a name="the-forms-authentication-and-membership-checklist"></a>Elenco di controllo per l'autenticazione basata su form e l'appartenenza
 
