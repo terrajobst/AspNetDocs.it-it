@@ -9,11 +9,11 @@ ms.assetid: 8be9a51b-ea6b-46c7-bfa2-476d9b14c24c
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/creating-stored-procedures-and-user-defined-functions-with-managed-code-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 0ac5f71d519689a9dc84fb82a04196d520cca6e1
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74610257"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78551303"
 ---
 # <a name="creating-stored-procedures-and-user-defined-functions-with-managed-code-vb"></a>Creazione di stored procedure e funzioni definite dall'utente con codice gestito (VB)
 
@@ -136,7 +136,7 @@ Tutti gli oggetti di database gestiti possono accedere a un [oggetto`SqlContext`
 
 ## <a name="step-4-deploying-the-managed-stored-procedure"></a>Passaggio 4: distribuzione della stored procedure gestita
 
-Con questo codice, è possibile eseguire la distribuzione nel database Northwind. La distribuzione di un progetto SQL Server compilerà il codice in un assembly, registrerà l'assembly con il database e creerà gli oggetti corrispondenti nel database e li collegherà ai metodi appropriati nell'assembly. Il set esatto di attività eseguite dall'opzione Deploy è stato scritto più precisamente nel passaggio 13. Fare clic con il pulsante destro del mouse sul nome del progetto `ManagedDatabaseConstructs` nel Esplora soluzioni e scegliere l'opzione Distribuisci. Tuttavia, la distribuzione ha esito negativo con l'errore seguente: sintassi non corretta in prossimità di ' EXTERNAL '. Per abilitare questa funzionalità, potrebbe essere necessario impostare il livello di compatibilità del database corrente su un valore superiore. Vedere la guida per la `sp_dbcmptlevel`di stored procedure.
+Con questo codice, è possibile eseguire la distribuzione nel database Northwind. La distribuzione di un progetto SQL Server compilerà il codice in un assembly, registrerà l'assembly con il database e creerà gli oggetti corrispondenti nel database e li collegherà ai metodi appropriati nell'assembly. Il set esatto di attività eseguite dall'opzione Deploy è stato scritto più precisamente nel passaggio 13. Fare clic con il pulsante destro del mouse sul nome del progetto `ManagedDatabaseConstructs` nel Esplora soluzioni e scegliere l'opzione Distribuisci. Tuttavia, la distribuzione ha esito negativo con l'errore seguente: sintassi non corretta in prossimità di ' EXTERNAL '. Per abilitare tale caratteristica può essere necessario impostare su un valore superiore il livello di compatibilità del database corrente. Vedere la guida per la `sp_dbcmptlevel`di stored procedure.
 
 Questo messaggio di errore si verifica quando si tenta di registrare l'assembly con il database Northwind. Per registrare un assembly con un database SQL Server 2005, è necessario che il livello di compatibilità del database sia impostato su 90. Per impostazione predefinita, i nuovi database SQL Server 2005 hanno un livello di compatibilità pari a 90. Tuttavia, i database creati con Microsoft SQL Server 2000 hanno un livello di compatibilità predefinito pari a 80. Poiché il database Northwind inizialmente era un database di Microsoft SQL Server 2000, il livello di compatibilità è attualmente impostato su 80 e pertanto deve essere aumentato a 90 per poter registrare gli oggetti di database gestiti.
 

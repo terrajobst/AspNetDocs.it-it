@@ -9,11 +9,11 @@ ms.assetid: 0e91842c-7f10-4aed-8c23-4ee3e2774014
 msc.legacyurl: /web-forms/overview/data-access/caching-data/using-sql-cache-dependencies-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 5bc27a08e39606c25b8f99d6ea057d2a853f08a6
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74612134"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78550421"
 ---
 # <a name="using-sql-cache-dependencies-c"></a>Uso delle dipendenze della cache SQL (C#)
 

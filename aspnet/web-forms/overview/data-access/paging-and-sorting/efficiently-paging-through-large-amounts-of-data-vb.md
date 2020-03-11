@@ -9,11 +9,11 @@ ms.assetid: 3e20e64a-8808-4b49-88d6-014e2629d56f
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting/efficiently-paging-through-large-amounts-of-data-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 0c788c4109d0d2839de969c628399290376a1ccd
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74612988"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78589943"
 ---
 # <a name="efficiently-paging-through-large-amounts-of-data-vb"></a>Suddivisione in pagine efficiente di grandi quantità di dati (VB)
 
@@ -300,10 +300,10 @@ Un articolo di My, il [paging personalizzato in ASP.NET 2,0 con SQL Server 2005]
 
 |  | **Durata media (sec)** | **Letture** |
 | --- | --- | --- |
-| **Impaginazione predefinita di SQL Profiler** | 1,411 | 383 |
-| **SQL Profiler di paging personalizzato** | 0,002 | 29 |
-| **Traccia ASP.NET di paging predefinita** | 2,379 | *N/A* |
-| **Traccia ASP.NET di paging personalizzato** | 0,029 | *N/A* |
+| **Impaginazione predefinita di SQL Profiler** | 1.411 | 383 |
+| **SQL Profiler di paging personalizzato** | 0.002 | 29 |
+| **Traccia ASP.NET di paging predefinita** | 2.379 | *N/D* |
+| **Traccia ASP.NET di paging personalizzato** | 0.029 | *N/D* |
 
 Come si può notare, il recupero di una particolare pagina di dati richiede 354 meno letture in media e completate in una frazione del tempo. Nella pagina ASP.NET è stato personalizzato che la pagina è stata in grado di eseguire il rendering fino al 1/100<sup>°</sup> del tempo richiesto quando si utilizza il paging predefinito. Vedere [l'articolo](http://aspnet.4guysfromrolla.com/articles/031506-1.aspx) per altre informazioni su questi risultati, insieme al codice e a un database che è possibile scaricare per riprodurre questi test nel proprio ambiente.
 

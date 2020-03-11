@@ -9,11 +9,11 @@ ms.assetid: 61aa4e08-aa81-4aeb-8ebe-19ba7a65e04c
 msc.legacyurl: /web-forms/overview/older-versions-security/membership/validating-user-credentials-against-the-membership-user-store-cs
 msc.type: authoredcontent
 ms.openlocfilehash: aaf6df6f52253ef0f7369a7e77211b6786b97db1
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74618306"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78523828"
 ---
 # <a name="validating-user-credentials-against-the-membership-user-store-c"></a>Convalida delle credenziali utente rispetto all'archivio utente di appartenenza (C#)
 
@@ -29,7 +29,7 @@ di [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 Analogamente alla creazione di account utente, è possibile convalidare le credenziali a livello di programmazione o in modo dichiarativo. L'API di appartenenza include un metodo per convalidare le credenziali di un utente a livello di codice rispetto all'archivio utente. ASP.NET viene fornito con il controllo Web login, che esegue il rendering di un'interfaccia utente con caselle di testo per nome utente e password e un pulsante per l'accesso.
 
-In questa esercitazione verrà illustrato come convalidare le credenziali di un utente rispetto all'archivio utente di appartenenza utilizzando sia il metodo programmatico che il controllo di accesso. Si esaminerà anche come personalizzare l'aspetto e il comportamento del controllo di accesso. Iniziamo!
+In questa esercitazione verrà illustrato come convalidare le credenziali di un utente rispetto all'archivio utente di appartenenza utilizzando sia il metodo programmatico che il controllo di accesso. Si esaminerà anche come personalizzare l'aspetto e il comportamento del controllo di accesso. Ecco come procedere.
 
 ## <a name="step-1-validating-credentials-against-the-membership-user-store"></a>Passaggio 1: convalida delle credenziali rispetto all'archivio utenti di appartenenza
 

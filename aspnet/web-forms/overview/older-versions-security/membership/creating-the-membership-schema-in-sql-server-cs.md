@@ -9,11 +9,11 @@ ms.assetid: b4ac129d-1b8e-41ca-a38f-9b19d7c7bb0e
 msc.legacyurl: /web-forms/overview/older-versions-security/membership/creating-the-membership-schema-in-sql-server-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 97623e7c13ab7799b9dadbb8e52be8e0cd99e252
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74595207"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78575334"
 ---
 # <a name="creating-the-membership-schema-in-sql-server-c"></a>Creazione dello schema di appartenenza in SQL Server (C#)
 
@@ -33,7 +33,7 @@ Come illustrato nell'esercitazione <a id="Tutorial1"> </a> [*nozioni di base sul
 
 Questa esercitazione inizia con l'analisi delle tecniche per l'aggiunta dello schema necessario al database per poter utilizzare il `SqlMembershipProvider`. In seguito, verranno esaminate le tabelle principali nello schema e ne verranno illustrate le finalità e l'importanza. Questa esercitazione termina con un'occhiata a come indicare a un'applicazione ASP.NET il provider che il Framework di appartenenza deve usare.
 
-Iniziamo!
+Ecco come procedere.
 
 ## <a name="step-1-deciding-where-to-place-the-user-store"></a>Passaggio 1: decidere dove posizionare l'archivio utente
 
@@ -206,9 +206,9 @@ Nella tabella 1 sono illustrate le tre colonne che potrebbero essere simili per 
 
 | **Tecnica di archiviazione&lt;\_O3A\_p/&gt;** | **Password&lt;\_O3A\_p/&gt;** | **PasswordFormat&lt;\_O3A\_p/&gt;** | **PasswordSalt&lt;\_O3A\_p/&gt;** |
 | --- | --- | --- | --- |
-| Cancella | MySecret! | 0 | tTnkPlesqissc2y2SMEygA = = |
-| Hash | 2oXm6sZHWbTHFgjgkGQsc2Ec9ZM = | 1 | wFgjUfhdUFOCKQiI61vtiQ = = |
-| Crittografati | 62RZgDvhxykkqsMchZ0Yly7HS6onhpaoCYaRxV8g0F4CW56OXUU3e7Inza9j9BKp | 2 | LSRzhGS/AA/oqAXGLHJNBw = = |
+| Cancella | MySecret! | 0 | tTnkPlesqissc2y2SMEygA== |
+| Hash | 2oXm6sZHWbTHFgjgkGQsc2Ec9ZM= | 1 | wFgjUfhdUFOCKQiI61vtiQ== |
+| Crittografato | 62RZgDvhxykkqsMchZ0Yly7HS6onhpaoCYaRxV8g0F4CW56OXUU3e7Inza9j9BKp | 2 | LSRzhGS/aa/oqAXGLHJNBw== |
 
 **Tabella 1**: valori di esempio per i campi relativi alla password durante l'archiviazione del segreto della password.
 
