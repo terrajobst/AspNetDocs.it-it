@@ -8,12 +8,12 @@ ms.date: 11/28/2017
 ms.custom: seoapril2019
 msc.legacyurl: /web-api/overview/getting-started-with-aspnet-web-api/tutorial-your-first-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: 3e35c2bc0e46dfdb4544b772775eddd533f27be3
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: 2717d93f47be9d4a6548731d8deeca312b25f39f
+ms.sourcegitcommit: 9e3ca74997a67c18589729d4b7303799905473eb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78556798"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79084049"
 ---
 # <a name="get-started-with-aspnet-web-api-2-c"></a>Introduzione a API Web ASP.NET 2 (C#)
 
@@ -104,7 +104,7 @@ Il controller definisce due metodi che restituiscono i prodotti:
 - Il metodo `GetAllProducts` restituisce l'intero elenco di prodotti come **IEnumerable&lt;tipo di&gt;prodotto** .
 - Il metodo `GetProduct` Cerca un singolo prodotto in base al relativo ID.
 
-La procedura è terminata. Si dispone di un'API Web funzionante. Ogni metodo sul controller corrisponde a uno o più URI:
+L'operazione è terminata. Si dispone di un'API Web funzionante. Ogni metodo sul controller corrisponde a uno o più URI:
 
 | Controller (metodo) | URI |
 | --- | --- |
@@ -137,7 +137,7 @@ Sostituire tutti gli elementi in questo file con i seguenti elementi:
 
 Per ottenere un elenco di prodotti, inviare una richiesta HTTP GET a &quot;&quot;/API/Products.
 
-La funzione jQuery [getJSON](http://api.jquery.com/jQuery.getJSON/) invia una richiesta AJAX. Per la risposta contiene una matrice di oggetti JSON. La funzione `done` specifica un callback che viene chiamato se la richiesta ha esito positivo. Nel callback, il DOM viene aggiornato con le informazioni sul prodotto.
+La funzione jQuery [getJSON](http://api.jquery.com/jQuery.getJSON/) invia una richiesta AJAX. La risposta contiene una matrice di oggetti JSON. La funzione `done` specifica un callback che viene chiamato se la richiesta ha esito positivo. Nel callback, il DOM viene aggiornato con le informazioni sul prodotto.
 
 [!code-html[Main](tutorial-your-first-web-api/samples/sample4.html)]
 
@@ -165,7 +165,7 @@ Se si immette un ID non valido, il server restituisce un errore HTTP:
 
 ## <a name="using-f12-to-view-the-http-request-and-response"></a>Uso di F12 per visualizzare la richiesta e la risposta HTTP
 
-Quando si utilizza un servizio HTTP, può essere molto utile visualizzare i messaggi di richiesta e richiesta HTTP. A tale scopo, è possibile usare gli strumenti di sviluppo F12 in Internet Explorer 9. Da Internet Explorer 9 Premere **F12** per aprire gli strumenti. Fare clic sulla scheda **rete** e premere **Avvia acquisizione**. Tornare quindi alla pagina Web e premere **F5** per ricaricare la pagina Web. Internet Explorer acquisirà il traffico HTTP tra il browser e il server Web. La visualizzazione riepilogo Mostra tutto il traffico di rete per una pagina:
+Quando si utilizza un servizio HTTP, può essere molto utile visualizzare i messaggi di richiesta e risposta HTTP. A tale scopo, è possibile usare gli strumenti di sviluppo F12 in Internet Explorer 9. Da Internet Explorer 9 Premere **F12** per aprire gli strumenti. Fare clic sulla scheda **rete** e premere **Avvia acquisizione**. Tornare quindi alla pagina Web e premere **F5** per ricaricare la pagina Web. Internet Explorer acquisirà il traffico HTTP tra il browser e il server Web. La visualizzazione riepilogo Mostra tutto il traffico di rete per una pagina:
 
 ![](tutorial-your-first-web-api/_static/image14.png)
 
